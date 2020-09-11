@@ -1,0 +1,12 @@
+StatScreen:
+#incext Png2Dmp "StatScreen.png" --lz77
+StatScreenPal:
+#incext Png2Dmp "StatScreen.png" --palette-only
+
+//Stat screen
+PUSH
+ORG $88638
+POIN StatScreen
+ORG $88640
+POIN StatScreenPal
+POP

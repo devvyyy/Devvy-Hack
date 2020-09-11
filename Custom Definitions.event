@@ -1,0 +1,61 @@
+#define FreeSpace 0x1000000
+//#define FreeSpace 0xb2a610
+//#define FreeSpace2 0x1077c30
+#define FreeSpaceBLRange 0x1c1ec0
+#define Free_Space FreeSpace
+//#define AnimTableEntry(index) "ORG NewClassAnimTable - 0x20 + (index * 0x20)
+
+#define ChapterTileset(chapter, object, palette, config) "PUSH; ORG 0x8b0890 + (148* chapter) + 4; SHORT object; BYTE palette config; POP"
+#define ChapterTileAnims(chapter, anim1, anim2) "PUSH; ORG 0x8b0890 + (148* chapter) + 9; BYTE anim1 anim2; POP"
+
+#ifndef ItemTable
+  #define ItemTable 0x809B10
+#endif
+
+#ifndef DebuffTable
+  #define DebuffTable     0x0203F100
+  #define DebuffTableSize 0x00000900
+#endif
+
+#define LunarBrace MoonBracelet
+#define SolarBrace SunBracelet
+
+// Attribute for defining items with passive stat bonuses
+#define PASSIVE_ITEM_BOOSTS_ATTR 0x00800000
+
+// this is for if you use the legacy way of define item attributes in your table (this is for byte 3)
+// (which is sadly what the included table also does TODO: fix that)
+#define PassiveBoosts 0x80
+
+#include "Engine Hacks/SkillSystem/skill_definitions.event"
+
+// #define __DEBUG__ // Uncomment to get the Debug startup menu :p
+
+// CHARACTERS
+#define Zane Eirika
+#define Zane 0x1
+#define Akatsuki 0x1
+#define Akat 0x1
+#define Kelik 0x1
+#define Lord1 0x1
+#define Wustenhoff 0x2
+#define Wusten 0x2
+#define Atheya 0x3
+#define Bronson 0x4
+#define Brigitta 0x5
+
+// CHARACTER NAMES
+#define ZaneName 0x212
+//#define WustenName 0x213
+//#define AtheyName 0x214
+//#define BronsName 0x215
+//#define BrigitName 0x216
+
+// CHARACTER DESCRIPTIONS (Ignore)
+//#define WustenDesc 0x26E
+//#define AtheyDesc 0x26F
+//#define BronsDesc 0x270
+//#define BrigitDesc 0x271
+
+// WEAPONS
+#define IronLabrys 0xBF

@@ -1,0 +1,17 @@
+//Snow Bern by Venno and ZoramineFae
+    ALIGN 4
+    SnowBernImage:
+    #incext Png2Dmp "SnowBern/SnowBernImage.png" --lz77
+
+    ALIGN 4
+    SnowBernMapConfig:
+    #incext compress "SnowBern/SnowBernMapConfig.mapchip_config"
+
+    ALIGN 4
+    SnowBernPalette:
+    #incbin "SnowBern/SnowyPalette.bin"
+
+
+    EventPointerTable(0x51, SnowBernPalette)
+    EventPointerTable(0x52, SnowBernMapConfig)
+    EventPointerTable(0x50, SnowBernImage)

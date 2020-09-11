@@ -1,0 +1,56 @@
+#ifndef tilesetAnimation
+    #define tilesetAnimation(speed, size, pointer)    "BYTE speed 0; SHORT size; POIN pointer"
+#endif
+
+ALIGN 4
+BernAnim0:
+#incbin "Map Animations/Frame0.dmp"
+BernAnim1:
+#incbin "Map Animations/Frame1.dmp"
+BernAnim2:
+#incbin "Map Animations/Frame2.dmp"
+BernAnim3:
+#incbin "Map Animations/Frame3.dmp"
+BernAnim4:
+#incbin "Map Animations/Frame4.dmp"
+BernAnim5:
+#incbin "Map Animations/Frame5.dmp"
+BernAnim6:
+#incbin "Map Animations/Frame6.dmp"
+BernAnim7:
+#incbin "Map Animations/Frame7.dmp"
+BernAnim8:
+#incbin "Map Animations/Frame8.dmp"
+BernAnim9:
+#incbin "Map Animations/Frame9.dmp"
+BernAnim10:
+#incbin "Map Animations/Frame10.dmp"
+BernAnim11:
+#incbin "Map Animations/Frame11.dmp"
+BernAnim12:
+#incbin "Map Animations/Frame12.dmp"
+BernAnim13:
+#incbin "Map Animations/Frame13.dmp"
+BernAnim14:
+#incbin "Map Animations/Frame14.dmp"
+BernAnim15:
+#incbin "Map Animations/Frame15.dmp"
+
+MountainTileAnims:
+tilesetAnimation(0x1C,0x1000,BernAnim0)
+tilesetAnimation(0x1C,0x1000,BernAnim1)
+tilesetAnimation(0x1C,0x1000,BernAnim2)
+tilesetAnimation(0x1C,0x1000,BernAnim3)
+tilesetAnimation(0x1C,0x1000,BernAnim4)
+tilesetAnimation(0x1C,0x1000,BernAnim5)
+tilesetAnimation(0x1C,0x1000,BernAnim6)
+tilesetAnimation(0x1C,0x1000,BernAnim7)
+tilesetAnimation(0x1C,0x1000,BernAnim8)
+tilesetAnimation(0x1C,0x1000,BernAnim9)
+tilesetAnimation(0x1C,0x1000,BernAnim10)
+tilesetAnimation(0x1C,0x1000,BernAnim11)
+tilesetAnimation(0x1C,0x1000,BernAnim12)
+tilesetAnimation(0x1C,0x1000,BernAnim13)
+tilesetAnimation(0x1C,0x1000,BernAnim14)
+tilesetAnimation(0x1C,0x1000,BernAnim15)
+WORD 0 0

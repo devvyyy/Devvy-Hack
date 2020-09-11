@@ -1,0 +1,180 @@
+#ifndef ClassAnimTable
+  #ifdef _FE8_
+    #define ClassAnimTable (0xc00008-0x20)
+  #endif
+  #ifdef _FE7_
+    #define ClassAnimTable (0xe00008-0x20)
+  #endif
+#endif
+
+#define AnimTableEntry(index) "ORG ClassAnimTable + (index * 0x20)"
+
+#define SwordAnim(Animation) "BYTE Swords 0x01 ; SHORT Animation"
+#define SpearAnim(Animation) "BYTE Lances 0x01 ; SHORT Animation"
+#define AxeAnim(Animation) "BYTE Axes 0x01 ; SHORT Animation"
+#define HandAxeAnim(Animation) "BYTE HandAxe 0x00 ; SHORT Animation ; BYTE Tomahawk 0x00 ; SHORT Animation ; BYTE Hatchet 0x00 ; SHORT Animation"
+#define BowAnim(Animation) "BYTE Bows 0x01 ; SHORT Animation"
+#define StaffAnim(Animation) "BYTE Staves 0x01 ; SHORT Animation"
+#define AnimaAnim(Animation) "BYTE Anima 0x01 ; SHORT Animation"
+#define LightAnim(Animation) "BYTE Light 0x01 ; SHORT Animation"
+#define DarkAnim(Animation) "BYTE Dark 0x01 ; SHORT Animation"
+#define UnarmedAnim(Animation) "BYTE Disarmed 0x01 ; SHORT Animation"
+#define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
+
+//////////////Installed animations go here:
+
+ALIGN 4 //Akatsuki Still edited by Feier and Pikmin1211
+{
+#include "Akatsuki/Sword/Installer.event"
+}
+ALIGN 4
+{
+#include "Akatsuki/Unarmed/Installer.event"
+}
+ALIGN 4 //Mercenary by TEAM SALVAGED
+{
+#include "Mercenary/Sword/Installer.event"
+}
+ALIGN 4
+{
+#include "Mercenary/Unarmed/Installer.event"
+}
+ALIGN 4 //Archer by DerTheVaporeon and flasuban
+{
+#include "Archer M/Bow/Installer.event"
+}
+ALIGN 4
+{
+#include "Archer M/Unarmed/Installer.event"
+}
+ALIGN 4 //Cavalier (F) by TEAM SALVAGED
+{
+#include "Cavalier F/1. Sword/Sword Installer.event"
+}
+ALIGN 4
+{
+#include "Cavalier F/2. Lance/Lance Installer.event"
+}
+{
+ALIGN 4
+#include "Cavalier F/8. Unarmed/Unarmed Installer.event"
+}
+{
+ALIGN 4 //Cavalier (M) by TEAM SALVAGED
+#include "Cavalier M/Sword/Installer.event"
+}
+ALIGN 4
+{
+#include "Cavalier M/Lance/Installer.event"
+}
+ALIGN 4
+{
+#include "Cavalier M/3. Axe/Axe Installer.event"
+}
+ALIGN 4
+{
+#include "Cavalier M/4. Handaxe/Handaxe Installer.event"
+}
+ALIGN 4
+{
+#include "Cavalier M/8. Unarmed/Unarmed Installer.event"
+}
+ALIGN 4 //Knight by TEAM SALVAGED
+{
+#include "Knight/Sword/Sword Installer.event"
+}
+ALIGN 4
+{
+#include "Knight/Lance/Lance Installer.event"
+}
+ALIGN 4
+{
+#include "Knight/Axe/Axe Installer.event"
+}
+ALIGN 4
+{
+//#include "Knight/Hand Axe/Hand Axe Installer.event"
+}
+ALIGN 4
+{
+#include "Knight/Handaxe/Installer.event"
+}
+ALIGN 4
+{
+#include "Knight/Unarmed/Unarmed Installer.event"
+}
+ALIGN 4 //Paladin (M) by TEAM SALVAGED
+{
+#include "PaladinM/Sword/Sword Installer.event"
+}
+ALIGN 4
+{
+#include "PaladinM/Lance/Lance Installer.event"
+}
+ALIGN 4
+{
+#include "PaladinM/Unarmed/Unarmed Installer.event"
+}
+ALIGN 4 //Soldier by Alusq
+{
+#include "Soldier/Lance/Installer.event"
+}
+ALIGN 4
+{
+#include "Soldier/Unarmed/Installer.event"
+}
+
+
+
+
+AkatAnim:
+SwordAnim(0x03)
+UnarmedAnim(0x04)
+WORD 0x0    // Seperator
+
+MercAnim:
+SwordAnim(0x0B)
+UnarmedAnim(0x0C)
+WORD 0x0    // Seperator
+
+SoldAnim:
+SpearAnim(0x98)
+UnarmedAnim(0x99)
+WORD 0x0    // Seperator
+
+ArcherAnim:
+BowAnim(0x26)
+UnarmedAnim(0x27)
+WORD 0x0    // Seperator
+
+CavalierMAnim:
+SwordAnim(0x34)
+SpearAnim(0x35)
+AxeAnim(0xA0)
+HandAxeAnim(0xA1)
+UnarmedAnim(0x36)
+WORD 0x0    // Seperator
+
+CavalierFAnim:
+SwordAnim(0x37)
+SpearAnim(0x38)
+UnarmedAnim(0x39)
+WORD 0x0    // Seperator
+
+KnightAnim:
+SwordAnim(0x40)
+SpearAnim(0x41)
+AxeAnim(0x42)
+HandAxeAnim(0x43)
+UnarmedAnim(0xA2)
+WORD 0x0    // Seperator
+
+PaladinMAnim:
+SwordAnim(0x3A)
+SpearAnim(0x3B)
+AxeAnim(0xA3)
+HandAxeAnim(0xA4)
+UnarmedAnim(0x3C)
+WORD 0x0    // Seperator
+
+ALIGN 4

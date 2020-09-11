@@ -1,0 +1,68 @@
+    PROTECT 0xC00000
+
+
+#ifdef _FE8_
+    #include "EAstdlib.event"
+    #include "Custom Definitions.event"
+
+    ORG FreeSpace
+
+    #include "repointedTextTable.event"
+
+    //Text first for Text ID definitions
+    #include "Text/Install Text Data.event"
+    MESSAGE Used text space ends at currentOffset
+
+    //CSV tables
+ALIGN 4
+    #include "Tables/Table Installer.event"
+    MESSAGE Used table space ends at currentOffset
+
+    //Engine Hacks
+    #include "Engine Hacks/_MasterHackInstaller.event"
+    #include "Engine Hacks/FillAIRangeMapFix/Installer.event" //By hypergammaspaces
+    #include "Engine Hacks/Magby3/Installer.event" //By Tequila
+    #include "Engine Hacks/DSFEAvoid/Installer.event" //By GratedSchtick
+    #include "Engine Hacks/Reorganize/Installer.event" //By Pikmin1211
+    #include "Engine Hacks/WalkingSoundsFix/Installer.event"
+    #include "Engine Hacks/ImprovedSoundMixer/Installer.event"
+    #include "Engine Hacks/ModularMinimugBox/Installers/MMBInstallerRunaboxLHT.event" //By Zane Avernathy and Runa
+    #include "Engine Hacks/ShowHealAmount/Installer.event" //By Tequila
+    #include "Engine Hacks/Edits.txt"
+    MESSAGE Used hax space ends at currentOffset
+
+    //Events
+    #include "Events/Release_map.event"
+    #include "Events/WorldMapEvents.event"
+
+    //Portraits
+    #include "Portraits/Zane.txt"
+
+    //Animations
+    #include "Animations/Master Animation Installer.event"
+
+    //Map Sprites
+ALIGN 4
+    #include "Map Sprites/Map Sprites.txt"
+
+    //Maps
+    #include "Maps/Master Map Installer.event"
+
+    //Tilesets
+    #include "Tilesets/Tileset Installer.event"
+
+    //Music
+ALIGN 4
+    #include "Music/Music Installer.event"
+
+    //Misc
+    #include "Misc/Misc Installer.event"
+
+    //Text
+//    #include "Text/ChapterText/chapter1.txt"
+    
+	
+    MESSAGE Used free space ends at currentOffset
+#else
+    ERROR You are not assembling FE8 events!
+#endif
