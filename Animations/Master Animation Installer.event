@@ -39,6 +39,22 @@ ALIGN 4
 {
 #include "Mercenary/Unarmed/Installer.event"
 }
+ALIGN 4 //Hero by TEAM SALVAGED
+{
+#include "Hero/Sword/Installer.event"
+}
+ALIGN 4
+{
+#include "Hero/Axe/Installer.event"
+}
+ALIGN 4
+{
+#include "Hero/HandAxe/Installer.event"
+}
+ALIGN 4
+{
+#include "Hero/Unarmed/Installer.event"
+}
 ALIGN 4 //Archer by DerTheVaporeon and flasuban
 {
 #include "Archer M/Bow/Installer.event"
@@ -135,6 +151,13 @@ WORD 0x0    // Seperator
 MercAnim:
 SwordAnim(0x0B)
 UnarmedAnim(0x0C)
+WORD 0x0    // Seperator
+
+HeroAnim:
+SwordAnim(0x0D)
+AxeAnim(0x0E)
+HandAxeAnim(0x0F)
+UnarmedAnim(0x10)
 WORD 0x0    // Seperator
 
 SoldAnim:
