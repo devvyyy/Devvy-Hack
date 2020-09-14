@@ -1,0 +1,7 @@
+PUSH
+    ORG $51f68
+    POIN BattleFrame
+POP
+BattleFrame:
+    MESSAGE Battle frame gfx at currentOffset
+    #incext Png2Dmp "YourExportedBattleframeTiles.png" --lz77
