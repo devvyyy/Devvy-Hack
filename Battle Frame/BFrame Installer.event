@@ -1,0 +1,38 @@
+//battle frames
+PUSH
+//New Battle Frame:
+    ORG $51f68
+    POIN BattleFrame
+    ORG $51fc8
+    POIN BF_EN
+    ORG $52088
+    POIN BF_PN
+    ORG $52028
+    POIN BF_EW
+    ORG $52164
+    POIN BF_PW  
+    ORG $80201c
+    #incbin "battleTSA.bin"
+	ORG $802558
+    #incbin "battletileset.pal.bin"
+POP
+
+ALIGN 4
+BattleFrame:
+#incbin "BattleScreenTSA2.dmp"
+
+ALIGN 4
+BF_EN:
+#incbin "EN_Name.img.bin"
+
+ALIGN 4
+BF_PN:
+#incbin "PL_Name.img.bin"
+
+ALIGN 4
+BF_EW:
+#incbin "EN_Weap.img.bin"
+
+ALIGN 4
+BF_PW:
+#incbin "PL_Weap.img.bin"  
