@@ -41,21 +41,21 @@ ALIGN 4
 }
 ALIGN 4 //Hero by TEAM SALVAGED
 {
-#include "Hero/Sword/Installer.event"
+#include "Hero/Sword/Sword Installer.event"
 }
 ALIGN 4
 {
-#include "Hero/Axe/Installer.event"
+#include "Hero/Axe/Axe Installer.event"
 }
 ALIGN 4
 {
-#include "Hero/HandAxe/Installer.event"
+#include "Hero/HandAxe/Handaxe Installer.event"
 }
 ALIGN 4
 {
-#include "Hero/Unarmed/Installer.event"
+#include "Hero/Unarmed/Unarmed Installer.event"
 }
-ALIGN 4 //Archer by DerTheVaporeon and flasuban
+ALIGN 4 //Archer (M) by DerTheVaporeon and flasuban
 {
 #include "Archer M/Bow/Installer.event"
 }
@@ -65,18 +65,18 @@ ALIGN 4
 }
 ALIGN 4 //Cavalier (F) by TEAM SALVAGED
 {
-#include "Cavalier F/1. Sword/Sword Installer.event"
+#include "Cavalier F/Sword/Sword Installer.event"
 }
 ALIGN 4
 {
-#include "Cavalier F/2. Lance/Lance Installer.event"
+#include "Cavalier F/Lance/Lance Installer.event"
 }
-{
 ALIGN 4
-#include "Cavalier F/8. Unarmed/Unarmed Installer.event"
-}
 {
+#include "Cavalier F/Unarmed/Unarmed Installer.event"
+}
 ALIGN 4 //Cavalier (M) by TEAM SALVAGED
+{
 #include "Cavalier M/Sword/Installer.event"
 }
 ALIGN 4
@@ -85,15 +85,15 @@ ALIGN 4
 }
 ALIGN 4
 {
-#include "Cavalier M/3. Axe/Axe Installer.event"
+#include "Cavalier M/Axe/Axe Installer.event"
 }
 ALIGN 4
 {
-#include "Cavalier M/4. Handaxe/Handaxe Installer.event"
+#include "Cavalier M/Handaxe/Handaxe Installer.event"
 }
 ALIGN 4
 {
-#include "Cavalier M/8. Unarmed/Unarmed Installer.event"
+#include "Cavalier M/Unarmed/Unarmed Installer.event"
 }
 ALIGN 4 //Knight by TEAM SALVAGED
 {
@@ -121,15 +121,15 @@ ALIGN 4
 }
 ALIGN 4 //Paladin (M) by TEAM SALVAGED
 {
-#include "PaladinM/Sword/Sword Installer.event"
+#include "Paladin M/Sword/Sword Installer.event"
 }
 ALIGN 4
 {
-#include "PaladinM/Lance/Lance Installer.event"
+#include "Paladin M/Lance/Lance Installer.event"
 }
 ALIGN 4
 {
-#include "PaladinM/Unarmed/Unarmed Installer.event"
+#include "Paladin M/Unarmed/Unarmed Installer.event"
 }
 ALIGN 4 //Soldier by Alusq
 {
@@ -139,6 +139,19 @@ ALIGN 4
 {
 #include "Soldier/Unarmed/Installer.event"
 }
+ALIGN 4 //Magician
+{
+#include "Magician/Magic/Installer.event"
+}
+ALIGN 4
+{
+#include "Magician/Unarmed/Installer.event"
+}
+ALIGN 4 //Occultist
+{
+#include "Occultist/Magic/Installer.event"
+}
+
 
 
 
@@ -165,7 +178,7 @@ SpearAnim(0x98)
 UnarmedAnim(0x99)
 WORD 0x0    // Seperator
 
-ArcherAnim:
+ArcherMAnim:
 BowAnim(0x26)
 UnarmedAnim(0x27)
 WORD 0x0    // Seperator
@@ -198,6 +211,16 @@ SpearAnim(0x3B)
 AxeAnim(0xA3)
 HandAxeAnim(0xA4)
 UnarmedAnim(0x3C)
+WORD 0x0    // Seperator
+
+MagicianAnim:
+AnimaAnim(0x6A)
+UnarmedAnim(0x6B)
+WORD 0x0    // Seperator
+
+OccultistAnim:
+AnimaAnim(0xA3)
+UnarmedAnim(0xA3)
 WORD 0x0    // Seperator
 
 ALIGN 4
