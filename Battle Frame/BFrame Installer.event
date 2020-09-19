@@ -1,38 +1,88 @@
-//battle frames
+// Battle Screen
+// TSA1 - pointer at 51CBC // length 180
+// TSA2 - pointer at 51CC0 // length 540
+// TSA3 - pointer at 51378 // length 210
+// TSA4 - pointer at 51380 // length 224
+// TSA5 - pointer at 52170 // length 80
+// TSA Single - pointer at 5141C // length 224
+
+{
+
+ALIGN 4
+MainTiles:
+#incbin "Main.dmp"
+
+ALIGN 4
+LeftName:
+#incbin "LeftName.dmp"
+
+ALIGN 4
+RightName:
+#incbin "RightName.dmp"
+
+ALIGN 4
+LeftWeapon:
+#incbin "LeftItem.dmp"
+
+ALIGN 4
+RightWeapon:
+#incbin "RightItem.dmp"
+
+ALIGN 4
+MainPalette:
+#incbin "Battle Frame_pal.dmp"
+
+ALIGN 4
+MainTSA1:
+#incbin "TSA1.dmp"
+
+ALIGN 4
+MainTSA2:
+#incbin "TSA2.dmp"
+
+ALIGN 4
+MainTSA3:
+#incbin "TSA3.dmp"
+
+ALIGN 4
+MainTSA4:
+#incbin "TSA4.dmp"
+
+ALIGN 4
+MainTSA5:
+#incbin "TSA5.dmp"
+
+ALIGN 4
+MainTSASingle:
+#incbin "TSASingle.dmp"
+
 PUSH
-//New Battle Frame:
-    ORG $51f68
-    POIN BattleFrame
-    ORG $51fc8
-    POIN BF_EN
-    ORG $52088
-    POIN BF_PN
-    ORG $52028
-    POIN BF_EW
-    ORG $52164
-    POIN BF_PW  
-    ORG $80201c
-    #incbin "battleTSA.bin"
-	ORG $802558
-    #incbin "battletileset.pal.bin"
+
+	ORG 0x51F68
+    POIN MainTiles
+    ORG 0x51FC8
+    POIN LeftName
+    ORG 0x52088
+    POIN RightName
+    ORG 0x52028
+    POIN LeftWeapon
+    ORG 0x52164
+    POIN RightWeapon
+    ORG 0x52178
+    POIN MainPalette
+    ORG 0x51CBC
+    POIN MainTSA1
+    ORG 0x51CC0
+    POIN MainTSA2
+    ORG 0x51378
+    POIN MainTSA3
+    ORG 0x51380
+    POIN MainTSA4
+    ORG 0x52170
+    POIN MainTSA5
+    ORG 0x5141C
+    POIN MainTSASingle
+
 POP
 
-ALIGN 4
-BattleFrame:
-#incbin "BattleScreenTSA2.dmp"
-
-ALIGN 4
-BF_EN:
-#incbin "EN_Name.img.bin"
-
-ALIGN 4
-BF_PN:
-#incbin "PL_Name.img.bin"
-
-ALIGN 4
-BF_EW:
-#incbin "EN_Weap.img.bin"
-
-ALIGN 4
-BF_PW:
-#incbin "PL_Weap.img.bin"  
+}
