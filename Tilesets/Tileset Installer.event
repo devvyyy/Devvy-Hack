@@ -11,13 +11,10 @@
     SnowBernPalette:
     #incbin "SnowBern/SnowyPalette.bin"
 
-    ALIGN 4
-    SnowBernAnim:
-    #include "SnowBern/MapAnims.txt"
-
     EventPointerTable(0x51, SnowBernPalette)
     EventPointerTable(0x52, SnowBernMapConfig)
     EventPointerTable(0x50, SnowBernImage)
+    EventPointerTable(0xD0, SnowBernAnims)
 
 #ifndef tilesetAnimation
     #define tilesetAnimation(speed, size, pointer)    "BYTE speed 0; SHORT size; POIN pointer"
@@ -25,39 +22,40 @@
 
 ALIGN 4
 BernAnim0:
-#incbin "SnowBern/Frame0.dmp"
+#incext png2dmp "SnowBern/Frame0.png"
 BernAnim1:
-#incbin "SnowBern/Frame1.dmp"
+#incext png2dmp "SnowBern/Frame1.png"
 BernAnim2:
-#incbin "SnowBern/Frame2.dmp"
+#incext png2dmp "SnowBern/Frame2.png"
 BernAnim3:
-#incbin "SnowBern/Frame3.dmp"
+#incext png2dmp "SnowBern/Frame3.png"
 BernAnim4:
-#incbin "SnowBern/Frame4.dmp"
+#incext png2dmp "SnowBern/Frame4.png"
 BernAnim5:
-#incbin "SnowBern/Frame5.dmp"
+#incext png2dmp "SnowBern/Frame5.png"
 BernAnim6:
-#incbin "SnowBern/Frame6.dmp"
+#incext png2dmp "SnowBern/Frame6.png"
 BernAnim7:
-#incbin "SnowBern/Frame7.dmp"
+#incext png2dmp "SnowBern/Frame7.png"
 BernAnim8:
-#incbin "SnowBern/Frame8.dmp"
+#incext png2dmp "SnowBern/Frame8.png"
 BernAnim9:
-#incbin "SnowBern/Frame9.dmp"
+#incext png2dmp "SnowBern/Frame9.png"
 BernAnim10:
-#incbin "SnowBern/Frame10.dmp"
+#incext png2dmp "SnowBern/Frame10.png"
 BernAnim11:
-#incbin "SnowBern/Frame11.dmp"
+#incext png2dmp "SnowBern/Frame11.png"
 BernAnim12:
-#incbin "SnowBern/Frame12.dmp"
+#incext png2dmp "SnowBern/Frame12.png"
 BernAnim13:
-#incbin "SnowBern/Frame13.dmp"
+#incext png2dmp "SnowBern/Frame13.png"
 BernAnim14:
-#incbin "SnowBern/Frame14.dmp"
+#incext png2dmp "SnowBern/Frame14.png"
 BernAnim15:
-#incbin "SnowBern/Frame15.dmp"
+#incext png2dmp "SnowBern/Frame15.png"
 
-SnowBernAnim:
+ALIGN 4
+SnowBernAnims:
 tilesetAnimation(0x1C,0x1000,BernAnim0)
 tilesetAnimation(0x1C,0x1000,BernAnim1)
 tilesetAnimation(0x1C,0x1000,BernAnim2)
