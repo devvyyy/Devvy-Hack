@@ -11,6 +11,10 @@
     SnowBernPalette:
     #incbin "SnowBern/SnowyPalette.bin"
 
+    ALIGN 4
+    SnowBernAnim:
+    #include "SnowBern/MapAnims.txt"
+
     EventPointerTable(0x51, SnowBernPalette)
     EventPointerTable(0x52, SnowBernMapConfig)
     EventPointerTable(0x50, SnowBernImage)
