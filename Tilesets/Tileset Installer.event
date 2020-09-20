@@ -16,6 +16,7 @@
     EventPointerTable(0x50, SnowBernImage)
     EventPointerTable(0xD0, SnowBernAnims)
 
+ALIGN 4
 #ifndef tilesetAnimation
     #define tilesetAnimation(speed, size, pointer)    "BYTE speed 0; SHORT size; POIN pointer"
 #endif
@@ -73,3 +74,4 @@ tilesetAnimation(0x1C,0x1000,BernAnim13)
 tilesetAnimation(0x1C,0x1000,BernAnim14)
 tilesetAnimation(0x1C,0x1000,BernAnim15)
 WORD 0 0
+ALIGN 4
