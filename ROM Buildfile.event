@@ -19,6 +19,7 @@ ALIGN 4
     MESSAGE Used table space ends at currentOffset
 
     //Engine Hacks
+ALIGN 4
     #include "Engine Hacks/_MasterHackInstaller.event"
     #include "Engine Hacks/FillAIRangeMapFix/Installer.event" //By hypergammaspaces
     #include "Engine Hacks/Magby3/Installer.event" //By Tequila
@@ -33,13 +34,16 @@ ALIGN 4
     MESSAGE Used hax space ends at currentOffset
 
     //Events
+ALIGN 4
     #include "Events/Release_map.event"
     #include "Events/WorldMapEvents.event"
 
     //Portraits
+ALIGN 4
     #include "Portraits/Zane.txt"
 
     //Animations
+ALIGN 4
     #include "Animations/Master Animation Installer.event"
 
     //Map Sprites
@@ -47,9 +51,11 @@ ALIGN 4
     #include "Map Sprites/Map Sprites.txt"
 
     //Maps
+ALIGN 4
     #include "Maps/Master Map Installer.event"
 
     //Tilesets
+ALIGN 4
     #include "Tilesets/Tileset Installer.event"
 
     //Music
@@ -57,9 +63,11 @@ ALIGN 4
     #include "Music/Music Installer.event"
 
     //Misc
+ALIGN 4
     #include "Misc/Misc Installer.event"
 
     //Battle Frame
+ALIGN 4
     #include "Battle Frame/BFrame Installer.event"
 
     //Text
