@@ -1,4 +1,4 @@
-@Inspire: +3 Atk to allies above 50% HP within two spaces.
+@Inspire: +3 Atk to allies above 50% HP.
 .equ InspireID, AuraSkillCheck+4
 .thumb
 push {r4-r7,lr}
