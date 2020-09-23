@@ -95,6 +95,18 @@ ALIGN 4
 {
 #include "Cavalier M/Unarmed/Unarmed Installer.event"
 }
+ALIGN 4 //Wyvern Rider (F) by Flasuban, eCut
+{
+#include "Wyvern F/Axe/Installer.event"
+}
+ALIGN 4
+{
+#include "Wyvern F/Hand Axe/Installer.event"
+}
+ALIGN 4
+{
+#include "Wyvern F/Unarmed/Installer.event"
+}
 ALIGN 4 //Knight by TEAM SALVAGED
 {
 #include "Knight/Sword/Sword Installer.event"
@@ -195,6 +207,12 @@ CavalierFAnim:
 SwordAnim(0x37)
 SpearAnim(0x38)
 UnarmedAnim(0x39)
+WORD 0x0    // Seperator
+
+WyvernFAnim:
+AxeAnim(0x58)
+HandAxeAnim(0x59)
+UnarmedAnim(0x5A)
 WORD 0x0    // Seperator
 
 KnightAnim:
