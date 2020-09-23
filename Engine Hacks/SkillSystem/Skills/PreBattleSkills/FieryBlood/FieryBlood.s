@@ -22,9 +22,9 @@ beq End
 
 @add 4 damage
 mov r1, #0x5a
-ldrh r0, [r4, r1] @atk
-add r0, #4
-strh r0, [r4,r1]
+ldrh r0, [r2, r1] @atk
+add r0, #2
+strh r0, [r2,r1]
 
 End:
 pop {r4-r7, r15}
