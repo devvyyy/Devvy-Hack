@@ -25,18 +25,15 @@ ldr r1, SergeantID
 cmp r0, #0
 beq GoBack
 
-@hit
-mov r0, r4
-add r0,#0x60
-ldrh r3,[r0]
-add r3,#10
-strh r3,[r0]
-
-@avoid
-add r0,#0x62
-ldrh r3,[r0]
-add r3,#10
-strh r3,[r0]
+@add 10 hit and avoid
+mov r1, #0x60
+ldrh r0, [r4, r1] @hit
+add r0, #10
+strh r0, [r4,r1]
+mov r1, #0x62
+ldrh r0, [r4, r1] @avoid
+add r0, #10
+strh r0, [r4,r1]
 
 GoBack:
 pop {r4-r7}
