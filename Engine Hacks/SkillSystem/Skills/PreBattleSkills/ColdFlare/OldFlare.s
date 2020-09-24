@@ -20,14 +20,10 @@ ldrb r3, [r3]
 cmp r3, #4
 beq End
 
-@Above 75% hp
-ldrb r0, [r4, #0x12]
-lsr r0, #2 @max hp/2
-mov r1,#0x3
-mul r0, r1
-ldrb r1, [r4, #0x13] @currhp
-cmp r1, r0
-blt End
+ldrb r0, [r4, #0x18] 
+ldrb r1, [r5, #0x18] @defender res
+cmp r0, r1
+ble End @skip if res is less or equal
 
 @add res/4 speed
 mov  r1, #0x5E
