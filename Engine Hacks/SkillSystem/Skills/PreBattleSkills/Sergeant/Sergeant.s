@@ -12,9 +12,9 @@ mov r5, r1
 
 @check range
 ldr r0,=#0x203A4D4 @battle stats
-ldrb r0,[r0,#1] @range
+ldrb r0,[r0,#2] @range
 cmp r0,#1
-ble GoBack
+bgt GoBack
 
 @check for skill
 ldr r0, SkillTester
