@@ -90,6 +90,7 @@ ALIGN 4
 BeginningScene:
 ENUT 0x1 //no more boss quotes
 ENUT 0x2 //no more death quotes
+MUSC 0x1
 LOAD1 0x1 EnemyUnits
 ENUN
 LOAD1 0x1 EnemyUnits2
@@ -100,16 +101,10 @@ LOAD1 0x0 Units2
 ENUN
 LOAD1 0x0 MoreUnits
 ENUN
-// FADI 10
-// MOVE 0 Carlyle [7,10]
-// ENUN
-//   StartBattle //scripted fight setup
-//   MissedAttack(0,0) //Seth misses
-//   NormalDamage(1,0) //Valter hits
-//   EndAttack
-// FIG1 Carlyle Aias 0
-// STAL 60
-// FADU 10
+TEXTSTART
+TEXTSHOW Prologue1
+TEXTEND
+FADI 16
 GotoPrepScreen
 
 EndingScene:
