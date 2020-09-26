@@ -151,6 +151,14 @@ ALIGN 4
 {
 #include "Soldier/Unarmed/Installer.event"
 }
+ALIGN 4 //Deserter by Alusq
+{
+#include "Deserter/Lance/Installer.event"
+}
+ALIGN 4
+{
+#include "Deserter/Unarmed/Installer.event"
+}
 ALIGN 4 //Magician
 {
 #include "Magician/Magic/Installer.event"
@@ -163,10 +171,6 @@ ALIGN 4 //Occultist
 {
 #include "Occultist/Magic/Installer.event"
 }
-
-
-
-
 
 AkatAnim:
 SwordAnim(0x03)
@@ -188,6 +192,11 @@ WORD 0x0    // Seperator
 SoldAnim:
 SpearAnim(0x98)
 UnarmedAnim(0x99)
+WORD 0x0    // Seperator
+
+DeserterAnim:
+SpearAnim(0xA4)
+UnarmedAnim(0xA5)
 WORD 0x0    // Seperator
 
 ArcherMAnim:
