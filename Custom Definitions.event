@@ -29,6 +29,8 @@
 
 #include "Engine Hacks/SkillSystem/skill_definitions.event"
 
+#define ItemIconSlot(slot,path) "ORG 0x5926F4+(0x80*slot); #incext Png2Dmp path"
+
 // #define __DEBUG__ // Uncomment to get the Debug startup menu :p
 
 // CHARACTERS
