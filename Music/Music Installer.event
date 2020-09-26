@@ -57,10 +57,14 @@ ALIGN 4
 //Wall of Defense by Alusq
 
 ALIGN 4
-//Venus Lightning by Tristan_Hollow
+//Venus Lighthouse by Tristan_Hollow
+SongTable(0x5E,song0D,1)
+#include "VenusLighthouse.event"
 
 ALIGN 4
 //Mission to Deep Space
+SongTable(0x64,song0B,1)
+#include "DeepSpace.event"
 
 ALIGN 4
 //Oblivion's Joy
@@ -104,7 +108,9 @@ SongTable(0xC5,song03D7,1)
 #include "FinalShowdown.event"
 
 ALIGN 4
-//Last Battle Decision from midishrine	
+//Last Battle Decision from midishrine
+SongTable(0x63,song03AA,1)
+#include "LastBattleDecision.event"
 
 ALIGN 4
 //Runa Song by Runa
@@ -151,18 +157,28 @@ ALIGN 4
 
 ALIGN 4
 //Like a Glint of Light from khinsider 
+SongTable(0x5D,song03A9,1)
+#include "GlintOfLight.event"
 
 ALIGN 4
 //Master of Water by Bill_307
+SongTable(0x5F,song03CB,1)
+#include "MasterOfWater.event"
 
 ALIGN 4
 //Endless Battle
+SongTable(0x62,song03A1,1)
+#include "EndlessBattle.event"
 
 ALIGN 4
 //Eternal Hydrogen from khinsider
+SongTable(0xDA,song03A5,1)
+#include "EternalHydrogen.event"
 
 ALIGN 4
 //Battle from khinsider
+SongTable(0xD9,song03A4,1)
+#include "BattleBoF3.event"
 
 ALIGN 4
 //Empty Town by floofykins
@@ -193,12 +209,18 @@ ALIGN 4
 
 ALIGN 4
 //Dreaming
+SongTable(0xDB,song03A6,1)
+#include "Dreaming.event"
 
 ALIGN 4
 //And Thus Fate Becomes Cruel
+SongTable(0xA8,song03A3,1)
+#include "FateBecomesCruel.event"
 
 ALIGN 4
 //Ring of Revolving Fate
+SongTable(0xA9,songE9,1)
+#include "RingOfFate.event"
 
 ALIGN 4
 //The Tale Told By The Wind
