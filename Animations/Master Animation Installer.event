@@ -131,6 +131,22 @@ ALIGN 4
 {
 #include "Knight/Unarmed/Unarmed Installer.event"
 }
+ALIGN 4 //General by Leo_link, Nuramon, Iscaneus
+{
+#include "General/Sword/Sword Installer.event"
+}
+{
+#include "General/Lance/Lance Installer.event"
+}
+{
+#include "General/Axe/Axe Installer.event"
+}
+{
+#include "General/Handaxe/Handaxe Installer.event"
+}
+{
+#include "General/Unarmed/Unarmed Installer.event"
+}
 ALIGN 4 //Paladin (M) by TEAM SALVAGED
 {
 #include "Paladin M/Sword/Sword Installer.event"
@@ -230,6 +246,14 @@ SpearAnim(0x41)
 AxeAnim(0x42)
 HandAxeAnim(0x43)
 UnarmedAnim(0xA2)
+WORD 0x0    // Seperator
+
+GeneralAnim:
+SwordAnim(0x44)
+SpearAnim(0x45)
+AxeAnim(0x46)
+HandAxeAnim(0x47)
+UnarmedAnim(0x48)
 WORD 0x0    // Seperator
 
 PaladinMAnim:
