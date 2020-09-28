@@ -63,6 +63,14 @@ ALIGN 4
 {
 #include "Archer M/Unarmed/Installer.event"
 }
+ALIGN 4 //Hunter (M) by Leo_link, Spud, MeatOfJustice
+{
+#include "Hunter M/Bow/Installer.event"
+}
+ALIGN 4
+{
+#include "Hunter M/Unarmed/Installer.event"
+}
 ALIGN 4 //Cavalier (F) by TEAM SALVAGED
 {
 #include "Cavalier F/Sword/Sword Installer.event"
@@ -218,6 +226,11 @@ WORD 0x0    // Seperator
 ArcherMAnim:
 BowAnim(0x26)
 UnarmedAnim(0x27)
+WORD 0x0    // Seperator
+
+HunterMAnim:
+BowAnim(0xA6)
+UnarmedAnim(0xA7)
 WORD 0x0    // Seperator
 
 CavalierMAnim:

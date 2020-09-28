@@ -61,6 +61,12 @@ BYTE 0x09
 BYTE 0xda
 POP
 
+//Fast Level-Ups
+PUSH
+ORG 0x07F464
+BYTE 0x0A
+POP
+
 
 //Skip very begining world map
 PUSH
