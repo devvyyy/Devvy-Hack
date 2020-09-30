@@ -1,0 +1,1 @@
+drag and drop your wav(Must be 8 bit and have a frequency of 22050) onto the .bat file, and itll output a .bin.
