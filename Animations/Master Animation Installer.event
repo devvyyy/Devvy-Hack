@@ -191,6 +191,14 @@ ALIGN 4
 {
 #include "Soldier/Unarmed/Installer.event"
 }
+ALIGN 4 //Sword Brigand by Monkeybard, Miguel-Rojo
+{
+#include "Raider/Sword/Installer.event"
+}
+ALIGN 4
+{
+#include "Raider/Unarmed/Installer.event"
+}
 ALIGN 4 //Deserter by Alusq
 {
 #include "Deserter/Lance/Installer.event"
@@ -232,6 +240,11 @@ WORD 0x0    // Seperator
 SoldAnim:
 SpearAnim(0x98)
 UnarmedAnim(0x99)
+WORD 0x0    // Seperator
+
+RaiderAnim:
+SwordAnim(0xA8)
+UnarmedAnim(0xA9)
 WORD 0x0    // Seperator
 
 DeserterAnim:

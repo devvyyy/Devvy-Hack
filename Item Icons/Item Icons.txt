@@ -43,10 +43,21 @@ ItemIconSlot(0xCA,"IronRifle.png")
 ItemIconSlot(0xCB,"SteelRifle.png")
 ItemIconSlot(0xCC,"SilverRifle.png")
 ItemIconSlot(0xAC,"Arcticus.png")
-ItemIconSlot(0x84,"Earth.png")
-ItemIconSlot(0x85,"Sun.png")
-ItemIconSlot(0x86,"Moon.png")
-ItemIconSlot(0x87,"Heaven.png")
+
+//0x81 - horse icon
+//0x82 - flying icon
+//0x83 - wyvern icon
+
+ORG 0x5926F4+(0x80*0x84)
+#incbin "Earth.dmp"
+ORG 0x5926F4+(0x80*0x85)
+#incbin "Sun.dmp"
+ORG 0x5926F4+(0x80*0x86)
+#incbin "Moon.dmp"
+ORG 0x5926F4+(0x80*0x87)
+#incbin "Heaven.dmp"
+
+
 
 POP
 
