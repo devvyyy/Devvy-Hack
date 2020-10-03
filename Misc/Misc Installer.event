@@ -10,3 +10,11 @@ POIN StatScreen
 ORG $88640
 POIN StatScreenPal
 POP
+
+//Clean Title Screen
+PUSH
+ORG $AAC5AC
+#incbin "FireEmblem.dmp"
+ORG $AACEDC
+#incbin "SacredStones.dmp"
+POP
