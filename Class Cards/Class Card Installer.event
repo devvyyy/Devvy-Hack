@@ -1,0 +1,7 @@
+ALIGN 4
+DeserterCard:
+#incbin "DeserterCard.dmp"
+DeserterCardPalette:
+#incbin "DeserterCardPalette.dmp"
+DeserterClassCard:
+setCardEntry(0x9B, DeserterCard,DeserterCardPalette)

@@ -3,5 +3,20 @@
 #include eastdlib.event
 
 SetChapterData(0,0x50,0,0x51,0x52,0x4,Map,0xD0,0,0x6)
+EventPointerTable(0x6, MapChanges)
 Map:
 #incbin "Epic_data.dmp"
+
+MapChanges:
+TileMap(1,1,14,2,1,Door)
+TileMap(2,1,8,3,2,Secret)
+TileMapEnd
+
+Door:
+SHORT 0xeb8 0xe38 
+ALIGN 4
+
+Secret:
+SHORT 0xeb8 0xfb8 0xfb8 0xeb8 0xfb8 0xfb8 0xfb8 
+ALIGN 4
+
