@@ -1,451 +1,601 @@
 #define SetConvoBackground(Index, ImagePointer, TSAPointer, PalettePointer) "PUSH; ORG ConvoBackgroundTable + (Index * 0xC); POIN ImagePointer TSAPointer PalettePointer; POP"
-
+ALIGN 4
 SparseForestImage:
 #incbin "SparseForestImage.bin"
 
+ALIGN 4
 SparseForestTSA:
 #incbin "SparseForestTSA.bin"
 
+ALIGN 4
 SparseForestPalette:
 #incbin "SparseForestPalette.bin"
 
+ALIGN 4
 VillageGateImage:
 #incbin "VillageGateImage.bin"
 
+ALIGN 4
 VillageGateTSA:
 #incbin "VillageGateTSA.bin"
 
+ALIGN 4
 VillageGatePalette:
 #incbin "VillageGatePalette.bin"
 
+ALIGN 4
 ForestOutskirtsImage:
 #incbin "ForestOutskirtsImage.bin"
 
+ALIGN 4
 ForestOutskirtsTSA:
 #incbin "ForestOutskirtsTSA.bin"
 
+ALIGN 4
 ForestOutskirtsPalette:
 #incbin "ForestOutskirtsPalette.bin"
 
+ALIGN 4
 InsideBrightHouseImage:
 #incbin "InsideBrightHouseImage.bin"
 
+ALIGN 4
 InsideBrightHouseTSA:
 #incbin "InsideBrightHouseTSA.bin"
 
+ALIGN 4
 InsideBrightHousePalette:
 #incbin "InsideBrightHousePalette.bin"
 
+ALIGN 4
 LakesideImage:
 #incbin "LakesideImage.bin"
 
+ALIGN 4
 LakesideTSA:
 #incbin "LakesideTSA.bin"
 
+ALIGN 4
 LakesidePalette:
 #incbin "LakesidePalette.bin"
 
+ALIGN 4
 InsideBrightHouse2Image:
 #incbin "InsideBrightHouse2Image.bin"
 
+ALIGN 4
 InsideBrightHouse2TSA:
 #incbin "InsideBrightHouse2TSA.bin"
 
+ALIGN 4
 InsideBrightHouse2Palette:
 #incbin "InsideBrightHouse2Palette.bin"
 
+ALIGN 4
 ForestPathImage:
 #incbin "ForestPathImage.bin"
 
+ALIGN 4
 ForestPathTSA:
 #incbin "ForestPathTSA.bin"
 
+ALIGN 4
 ForestPathPalette:
 #incbin "ForestPathPalette.bin"
 
+ALIGN 4
 FortInteriorImage:
 #incbin "FortInteriorImage.bin"
 
+ALIGN 4
 FortInteriorTSA:
 #incbin "FortInteriorTSA.bin"
 
+ALIGN 4
 FortInteriorPalette:
 #incbin "FortInteriorPalette.bin"
 
+ALIGN 4
 OutsideHouseImage:
 #incbin "OutsideHouseImage.bin"
 
+ALIGN 4
 OutsideHouseTSA:
 #incbin "OutsideHouseTSA.bin"
 
+ALIGN 4
 OutsideHousePalette:
 #incbin "OutsideHousePalette.bin"
 
+ALIGN 4
 BlackImage:
 #incbin "BlackImage.bin"
 
+ALIGN 4
 BlackTSA:
 #incbin "BlackTSA.bin"
 
+ALIGN 4
 BlackPalette:
 #incbin "BlackPalette.bin"
 
+ALIGN 4
 FortRealImage:
 #incbin "ForRealFortInsideImage.bin"
 
+ALIGN 4
 FortRealTSA:
 #incbin "ForRealFortInsideTSA.bin"
 
+ALIGN 4
 FortRealPalette:
 #incbin "ForRealFortInsidePalette.bin"
 
+ALIGN 4
 ArmyCampImage:
 #incbin "ArmyCampImage.bin"
 
+ALIGN 4
 ArmyCampTSA:
 #incbin "ArmyCampTSA.bin"
 
+ALIGN 4
 ArmyCampPalette:
 #incbin "ArmyCampPalette.bin"
 
+ALIGN 4
 VillageImage:
 #incbin "VillageImage.bin"
 
+ALIGN 4
 VillageTSA:
 #incbin "VillageTSA.bin"
 
+ALIGN 4
 VillagePalette:
 #incbin "VillagePalette.bin"
 
+ALIGN 4
 WarriorTentImage:
 #incbin "WarriorTentImage.bin"
 
+ALIGN 4
 WarriorTentTSA:
 #incbin "WarriorTentTSA.bin"
 
+ALIGN 4
 WarriorTentPalette:
 #incbin "WarriorTentPalette.bin"
 
+ALIGN 4
 Village2Image:
 #incbin "Village2Image.bin"
 
+ALIGN 4
 Village2TSA:
 #incbin "Village2TSA.bin"
 
+ALIGN 4
 Village2Palette:
 #incbin "Village2Palette.bin"
 
+ALIGN 4
 ForestMorningImage:
 #incbin "ForestMorningImage.bin"
 
+ALIGN 4
 ForestMorningTSA:
 #incbin "ForestMorningTSA.bin"
 
+ALIGN 4
 ForestMorningPalette:
 #incbin "ForestMorningPalette.bin"
 
+ALIGN 4
 TavernImage:
 #incbin "TavernImage.bin"
 
+ALIGN 4
 TavernTSA:
 #incbin "TavernTSA.bin"
 
+ALIGN 4
 TavernPalette:
 #incbin "TavernPalette.bin"
 
+ALIGN 4
 ThroneRoomNightImage:
 #incbin "ThroneRoomNightImage.bin"
 
+ALIGN 4
 ThroneRoomNightTSA:
 #incbin "ThroneRoomNightTSA.bin"
 
+ALIGN 4
 ThroneRoomNightPalette:
 #incbin "ThroneRoomNightPalette.bin"
 
+ALIGN 4
 ForestImage:
 #incbin "ForestImage.bin"
 
+ALIGN 4
 ForestTSA:
 #incbin "ForestTSA.bin"
 
+ALIGN 4
 ForestPalette:
 #incbin "ForestPalette.bin"
 
+ALIGN 4
 HealerTentImage:
 #incbin "HealerTentImage.bin"
 
+ALIGN 4
 HealerTentTSA:
 #incbin "HealerTentTSA.bin"
 
+ALIGN 4
 HealerTentPalette:
 #incbin "HealerTentPalette.bin"
 
+ALIGN 4
 CaravanImage:
 #incbin "CaravanImage.bin"
 
+ALIGN 4
 CaravanTSA:
 #incbin "CaravanTSA.bin"
 
+ALIGN 4
 CaravanPalette:
 #incbin "CaravanPalette.bin"
 
+ALIGN 4
 FortNightImage:
 #incbin "FortNightImage.bin"
 
+ALIGN 4
 FortNightTSA:
 #incbin "FortNightTSA.bin"
 
+ALIGN 4
 FortNightPalette:
 #incbin "FortNightPalette.bin"
 
+ALIGN 4
 ForestNightImage:
 #incbin "ForestNightImage.bin"
 
+ALIGN 4
 ForestNightTSA:
 #incbin "ForestNightTSA.bin"
 
+ALIGN 4
 ForestNightPalette:
 #incbin "ForestNightPalette.bin"
 
+ALIGN 4
 HillsNightImage:
 #incbin "HillsNightImage.bin"
 
+ALIGN 4
 HillsNightTSA:
 #incbin "HillsNightTSA.bin"
 
+ALIGN 4
 HillsNightPalette:
 #incbin "HillsNightPalette.bin"
 
+ALIGN 4
 ForestWinterDayImage:
 #incbin "ForestWinterDay.bin"
 
+ALIGN 4
 ForestWinterDayTSA:
 #incbin "ForestWinterDayTSA.bin"
 
+ALIGN 4
 ForestWinterDayPalette:
 #incbin "ForestWinterDayPalette.bin"
 
+ALIGN 4
 ForestOutskirtsWinterDayImage:
 #incbin "ForestOutskirtsWinterDay.bin"
 
+ALIGN 4
 ForestOutskirtsWinterDayTSA:
 #incbin "ForestOutskirtsWinterDayTSA.bin"
 
+ALIGN 4
 ForestOutskirtsWinterDayPalette:
 #incbin "ForestOutskirtsWinterDayPalette.bin"
 
+ALIGN 4
 ArmyCampWinterNightImage:
 #incbin "ArmyCampWinterNightImage.bin"
 
+ALIGN 4
 ArmyCampWinterNightTSA:
 #incbin "ArmyCampWinterNightTSA.bin"
 
+ALIGN 4
 ArmyCampWinterNightPalette:
 #incbin "ArmyCampWinterNightPalette.bin"
 
+ALIGN 4
 InsideHouseNightImage:
 #incbin "InsideHouseNightImage.bin"
 
+ALIGN 4
 InsideHouseNightTSA:
 #incbin "InsideHouseNightTSA.bin"
 
+ALIGN 4
 InsideHouseNightPalette:
 #incbin "InsideHouseNightPalette.bin"
 
+ALIGN 4
 AltarImage:
 #incbin "AltarImage.bin"
 
+ALIGN 4
 AltarTSA:
 #incbin "AltarTSA.bin"
 
+ALIGN 4
 AltarPalette:
 #incbin "AltarPalette.bin"
 
+ALIGN 4
 TownImage:
 #incbin "TownImage.bin"
 
+ALIGN 4
 TownTSA:
 #incbin "TownTSA.bin"
 
+ALIGN 4
 TownPalette:
 #incbin "TownPalette.bin"
 
+ALIGN 4
 OutsideCastleImage:
 #incbin "OutsideCastleImage.bin"
 
+ALIGN 4
 OutsideCastleTSA:
 #incbin "OutsideCastleTSA.bin"
 
+ALIGN 4
 OutsideCastlePalette:
 #incbin "OutsideCastlePalette.bin"
 
+ALIGN 4
 CastleHallwayImage:
 #incbin "CastleHallwayImage.bin"
 
+ALIGN 4
 CastleHallwayTSA:
 #incbin "CastleHallwayTSA.bin"
 
+ALIGN 4
 CastleHallwayPalette:
 #incbin "CastleHallwayPalette.bin"
 
+ALIGN 4
 BedroomNightImage:
 #incbin "BedroomNightImage.bin"
 
+ALIGN 4
 BedroomNightTSA:
 #incbin "BedroomNightTSA.bin"
 
+ALIGN 4
 BedroomNightPalette:
 #incbin "BedroomNightPalette.bin"
 
+ALIGN 4
 MeetingRoomImage:
 #incbin "MeetingRoomImage.bin"
 
+ALIGN 4
 MeetingRoomTSA:
 #incbin "MeetingRoomTSA.bin"
 
+ALIGN 4
 MeetingRoomPalette:
 #incbin "MeetingRoomPalette.bin"
 
+ALIGN 4
 WetlandsImage:
 #incbin "WetlandsImage.bin"
 
+ALIGN 4
 WetlandsTSA:
 #incbin "WetlandsTSA.bin"
 
+ALIGN 4
 WetlandsPalette:
 #incbin "WetlandsPalette.bin"
 
+ALIGN 4
 MountainNightImage:
 #incbin "MountainNightImage.bin"
 
+ALIGN 4
 MountainNightTSA:
 #incbin "MountainNightTSA.bin"
 
+ALIGN 4
 MountainNightPalette:
 #incbin "MountainNightPalette.bin"
 
+ALIGN 4
 OutsideGateImage:
 #incbin "OutsideGateImage.bin"
 
+ALIGN 4
 OutsideGateTSA:
 #incbin "OutsideGateTSA.bin"
 
+ALIGN 4
 OutsideGatePalette:
 #incbin "OutsideGatePalette.bin"
 
+ALIGN 4
 WoodsImage:
 #incbin "WoodsImage.bin"
 
+ALIGN 4
 WoodsTSA:
 #incbin "WoodsTSA.bin"
 
+ALIGN 4
 WoodsPalette:
 #incbin "WoodsPalette.bin"
 
+ALIGN 4
 BedroomDayImage:
 #incbin "BedroomDayImage.bin"
 
+ALIGN 4
 BedroomDayTSA:
 #incbin "BedroomDayTSA.bin"
 
+ALIGN 4
 BedroomDayPalette:
 #incbin "BedroomDayPalette.bin"
 
+ALIGN 4
 CampsiteImage:
 #incbin "CampsiteImage.bin"
 
+ALIGN 4
 CampsiteTSA:
 #incbin "CampsiteTSA.bin"
 
+ALIGN 4
 CampsitePalette:
 #incbin "CampsitePalette.bin"
 
+ALIGN 4
 CastleRuinsImage:
 #incbin "CastleRuinsImage.bin"
 
+ALIGN 4
 CastleRuinsTSA:
 #incbin "CastleRuinsTSA.bin"
 
+ALIGN 4
 CastleRuinsPalette:
 #incbin "CastleRuinsPalette.bin"
 
+ALIGN 4
 DiningRoomImage:
 #incbin "DiningRoomImage.bin"
 
+ALIGN 4
 DiningRoomTSA:
 #incbin "DiningRoomTSA.bin"
 
+ALIGN 4
 DiningRoomPalette:
 #incbin "DiningRoomPalette.bin"
 
+ALIGN 4
 ForestOpeningImage:
 #incbin "ForestOpeningImage.bin"
 
+ALIGN 4
 ForestOpeningTSA:
 #incbin "ForestOpeningTSA.bin"
 
+ALIGN 4
 ForestOpeningPalette:
 #incbin "ForestOpeningPalette.bin"
 
+ALIGN 4
 OfficeImage:
 #incbin "OfficeImage.bin"
 
+ALIGN 4
 OfficeTSA:
 #incbin "OfficeTSA.bin"
 
+ALIGN 4
 OfficePalette:
 #incbin "OfficePalette.bin"
 
+ALIGN 4
 RuinsImage:
 #incbin "RuinsImage.bin"
 
+ALIGN 4
 RuinsTSA:
 #incbin "RuinsTSA.bin"
 
+ALIGN 4
 RuinsPalette:
 #incbin "RuinsPalette.bin"
 
+ALIGN 4
 TallForestImage:
 #incbin "TallForestImage.bin"
 
+ALIGN 4
 TallForestTSA:
 #incbin "TallForestTSA.bin"
 
+ALIGN 4
 TallForestPalette:
 #incbin "TallForestPalette.bin"
 
+ALIGN 4
 ThroneRoomImage:
 #incbin "ThroneRoomImage.bin"
 
+ALIGN 4
 ThroneRoomTSA:
 #incbin "ThroneRoomTSA.bin"
 
+ALIGN 4
 ThroneRoomPalette:
 #incbin "ThroneRoomPalette.bin"
 
+ALIGN 4
 VillageGate2Image:
 #incbin "VillageGate2Image.bin"
 
+ALIGN 4
 VillageGate2TSA:
 #incbin "VillageGate2TSA.bin"
 
+ALIGN 4
 VillageGate2Palette:
 #incbin "VillageGate2Palette.bin"
 
+ALIGN 4
 VillageNightImage:
 #incbin "VillageNightImage.bin"
 
+ALIGN 4
 VillageNightTSA:
 #incbin "VillageNightTSA.bin"
 
+ALIGN 4
 VillageNightPalette:
 #incbin "VillageNightPalette.bin"
 
+ALIGN 4
 InsideHouseClosedImage:
 #incbin "InsideHouseClosedImage.bin"
 
+ALIGN 4
 InsideHouseClosedTSA:
 #incbin "InsideHouseClosedTSA.bin"
 
+ALIGN 4
 InsideHouseClosedPalette:
 #incbin "InsideHouseClosedPalette.bin"
+ALIGN 4
