@@ -3,144 +3,148 @@
 #define setMugEntryExtend(mugEntry, mugLocation, mouthX, mouthY, eyeX, eyeY, extend1X, extend1Y, extend2X, extend2Y)"PUSH; ORG PortraitTable+mugEntry*0x1C; POIN mugLocation; POIN mugLocation+0x1624; POIN mugLocation+0x1604; POIN mugLocation+0x1004; BYTE extend1X extend1Y extend2X extend2Y; BYTE mouthX mouthY eyeX eyeY; BYTE 1 0 1 0; POP"
 
 // Player Characters
-ALIGN 4 //Zane by Lenh
+ALIGN 16 //Zane by Lenh
 Zane_Mug:
 #incext PortraitFormatter "Zane.png"
 setMugEntry(0x2, Zane_Mug, 3, 5, 3, 3)
 
-ALIGN 4
+ALIGN 16
 Stilton_Mug:
 #incext PortraitFormatter "Stilton.png"
 setMugEntryExtend(0x3, Stilton_Mug, 3, 5, 3, 3, 10, 4, 0, 0)
 
-ALIGN 4 //Erik by Lenh, Busk, Levin
+ALIGN 16 //Erik by Lenh, Busk, Levin
 Erik_Mug:
 #incext PortraitFormatter "Erik.png"
 setMugEntry(0x4, Erik_Mug, 2, 6, 3, 4)
 
-ALIGN 4
+ALIGN 16
 Wess_Mug:
 #incext PortraitFormatter "Wess.png"
 setMugEntry(0x5, Wess_Mug, 3, 4, 3, 3)
 
-ALIGN 4 //Bronson edited by BuskHusker
+ALIGN 16 //Bronson edited by BuskHusker
 Bronson_Mug:
 #incext PortraitFormatter "Bronson.png"
 setMugEntry(0x6, Bronson_Mug, 3, 5, 2, 3)
 
-ALIGN 4 //Wustenhoff edited by Lenh
+ALIGN 16 //Wustenhoff edited by Lenh
 Wustenhoff_Mug:
 #incext PortraitFormatter "Wustenhoff.png"
 setMugEntryExtend(0x7, Wustenhoff_Mug, 3, 4, 3, 2, 10, 4, 0, 0)
 
-ALIGN 4 //Tammy by Levin
+ALIGN 16 //Tammy by Levin
 Tammy_Mug:
 #incext PortraitFormatter "Tammy.png"
 setMugEntry(0x8, Tammy_Mug, 2, 6, 3, 4)
 
-ALIGN 4 //Moose edited by Lenh
+ALIGN 16 //Moose edited by Lenh
 Moose_Mug:
 #incext PortraitFormatter "Moose.png"
 setMugEntry(0x9, Moose_Mug, 3, 5, 3, 3)
 
-ALIGN 4 //Atheya by Laurent_Lacroix
+ALIGN 16 //Atheya by Laurent_Lacroix
 Atheya_Mug:
 #incext PortraitFormatter "Atheya.png"
 setMugEntry(0x10, Atheya_Mug, 3, 5, 3, 3)
 
-ALIGN 4 //Xord by Laurent_Lacroix
+ALIGN 16 //Xord by Laurent_Lacroix
 Xord_Mug:
 #incext PortraitFormatter "Xord.png"
 setMugEntry(0x0A, Xord_Mug, 3, 5, 2, 2)
 
-ALIGN 4 //Vangarre by Laurent_Lacroix
+ALIGN 16 //Vangarre by Laurent_Lacroix
 Vangarre_Mug:
 #incext PortraitFormatter "Vangarre.png"
 setMugEntry(0x0B, Vangarre_Mug, 3, 5, 3, 3)
 
-ALIGN 4 //Abernathy by Levin
+ALIGN 16 //Abernathy by Levin
 Abernathy_Mug:
 #incext PortraitFormatter "Abernathy.png"
 setMugEntry(0x0C, Abernathy_Mug, 2, 6, 3, 4)
 
-ALIGN 4 //Matthias by Levin
+ALIGN 16 //Matthias by Levin
 Matthias_Mug:
 #incext PortraitFormatter "Matthias.png"
 setMugEntry(0x0D, Matthias_Mug, 3, 5, 3, 3)
 
-ALIGN 4 //Flan by Laurent_Lacroix
+ALIGN 16 //Flan by Laurent_Lacroix
 Flan_Mug:
 #incext PortraitFormatter "Flan.png"
 setMugEntry(0x0E, Flan_Mug, 3, 5, 3, 3)
 
-ALIGN 4 //Brigitta by Laurent_Lacroix
+ALIGN 16 //Brigitta by Laurent_Lacroix
 Brigitta_Mug:
 #incext PortraitFormatter "Brigitta.png"
 setMugEntry(0x0F, Brigitta_Mug, 3, 5, 3, 3)
 
-ALIGN 4
+ALIGN 16
 Wulfric_Mug:
 #incext PortraitFormatter "Wulfric.png"
 setMugEntry(0x11, Wulfric_Mug, 3, 5, 2, 3)
 
-ALIGN 4 //Zenair by Laurent_Lacroix
+ALIGN 16 //Zenair by Laurent_Lacroix
 Zenair_Mug:
 #incext PortraitFormatter "Zenair.png"
 setMugEntry(0x12, Zenair_Mug, 3, 5, 3, 3)
 
-ALIGN 4 //Adele by Levin
+ALIGN 16 //Adele by Levin
 Adele_Mug:
 #incext PortraitFormatter "Adele.png"
 setMugEntry(0x13, Adele_Mug, 2, 5, 3, 3)
 
-ALIGN 4 //Aloys edited by Blade
+ALIGN 16 //Aloys edited by Blade
 Aloys_Mug:
 #incext PortraitFormatter "Aloys.png"
 setMugEntry(0x14, Aloys_Mug, 3, 4, 3, 3)
 
-ALIGN 4 //Kevron by Laurent_Lacroix
+ALIGN 16 //Kevron by Laurent_Lacroix
 Kevron_Mug:
 #incext PortraitFormatter "Kevron.png"
 setMugEntry(0x15, Kevron_Mug, 3, 5, 3, 3)
 
-ALIGN 4 //Wilfried by hypergammaspaces, monkeybard
+ALIGN 16 //Wilfried by hypergammaspaces, monkeybard
 Wilfried_Mug:
 #incext PortraitFormatter "Wilfried.png"
 setMugEntry(0x16, Wilfried_Mug, 3, 5, 3, 3)
 
-ALIGN 4 //Solum by Laurent_Lacroix
+ALIGN 16 //Solum by Laurent_Lacroix
 Solum_Mug:
 #incext PortraitFormatter "Solum.png"
 setMugEntry(0x17, Solum_Mug, 3, 5, 3, 3)
 
-ALIGN 4
+ALIGN 16
 Sren_Mug:
 #incext PortraitFormatter "Sren.png"
 setMugEntry(0x18, Sren_Mug, 3, 4, 3, 2)
 
-ALIGN 4 //Lili by Laurent Lacroix
+ALIGN 16 //Lili by Laurent Lacroix
 Lili_Mug:
 #incext PortraitFormatter "Lili.png"
 setMugEntry(0x19, Lili_Mug, 3, 6, 3, 4)
 
-ALIGN 4 //Hildr by Laurent Lacroix
+ALIGN 16 //Hildr by Laurent Lacroix
 Hildr_Mug:
 #incext PortraitFormatter "Hildr.png"
 setMugEntry(0x1A, Hildr_Mug, 3, 6, 3, 4)
 
-ALIGN 4 //Evelyn by Laurent Lacroix
+ALIGN 16 //Evelyn by Laurent Lacroix
 Evelyn_Mug:
 #incext PortraitFormatter "Evelyn.png"
 setMugEntry(0x1B, Evelyn_Mug, 3, 6, 3, 4)
 
-ALIGN 4 //Irene by Laurent Lacroix
+ALIGN 16 //Irene by Laurent Lacroix
 Irene_Mug:
 #incext PortraitFormatter "Irene.png"
 setMugEntry(0x1C, Irene_Mug, 3, 6, 3, 4)
 
+ALIGN 16 //Brulee edited by Lenh and hypergammaspaces
+Brulee_Mug:
+#incext PortraitFormatter "BruleeV2.png"
+setMugEntryExtend(0x1D, Brulee_Mug, 3, 5, 3, 3, 10, 4, 0, 0)
 
 //Bad Guys
-ALIGN 4 //Sai by hypergammaspaces
+ALIGN 16 //Sai by hypergammaspaces
 Sai_Mug:
 #incext PortraitFormatter "Sai.png"
 setMugEntry(0x30, Sai_Mug, 3, 5, 3, 3)
