@@ -1,0 +1,278 @@
+#######################################################
+#7D monm_mg1 Monk Anima
+#
+#When importing to FEditorAdv delete # and after each line.
+#######################################################
+/// - Mode 1               #Melee Animation
+C07                               #Start attack animation; should be preceeded by 0x03
+C03                               #Start attack animation; should be followed by 0x07
+1 p- Magic1.png
+C32
+5 p- Magic2.png
+C15                                     #Slight vibration of screen
+C2B                                     #Play armored unit "leaping" SFE
+9 p- Magic3.png
+15 p- Magic21.png
+7 p- Magic4.png
+C14                                     #Heavy vibration of screen
+C2B                                     #Play armored unit "leaping" SFE
+8 p- Magic5.png
+C05                               #Call spell associated with equipped weapon
+C31
+5 p- Magic6.png
+6 p- Magic7.png
+6 p- Magic8.png
+C14             
+C01                               #NOP
+5 p- Magic9.png
+C15                                     #Slight vibration of screen
+C2B                                     #Play armored unit "leaping" SFE
+7 p- Magic10.png
+5 p- Magic11.png
+C06                               #Begin opponent's turn after hit.next code 0D.
+5 p- Magic1.png
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 3               #Melee Critical Animation
+C07                               #Start attack animation; should be preceeded by 0x03
+C03                               #Start attack animation; should be followed by 0x07
+3 p- Magic1.png
+5 p- Magic13.png
+6 p- Magic14.png
+5 p- Magic13.png
+6 p- Magic14.png
+5 p- Magic13.png
+6 p- Magic14.png
+5 p- Magic13.png
+6 p- Magic14.png
+5 p- Magic13.png
+6 p- Magic14.png
+5 p- Magic13.png
+6 p- Magic14.png
+5 p- Magic13.png
+6 p- Magic14.png
+7 p- Magic13.png
+5 p- Magic1.png
+C32
+6 p- Magic2.png
+C14                                     #Heavy vibration of screen
+C2B                                     #Play armored unit "leaping" SFE
+C2F
+C28
+3 p- Magic3.png
+4 p- Magic19.png
+5 p- Magic20.png
+4 p- Magic19.png
+3 p- Magic3.png
+3 p- Magic3.png
+4 p- Magic19.png
+5 p- Magic20.png
+4 p- Magic19.png
+3 p- Magic3.png
+3 p- Magic3.png
+4 p- Magic19.png
+5 p- Magic20.png
+4 p- Magic19.png
+3 p- Magic3.png
+3 p- Magic3.png
+4 p- Magic19.png
+5 p- Magic20.png
+4 p- Magic19.png
+3 p- Magic3.png
+3 p- Magic3.png
+4 p- Magic19.png
+5 p- Magic20.png
+4 p- Magic19.png
+10 p- Magic21.png
+C46
+C39
+17 p- Magic3.png
+7 p- Magic4.png
+8 p- Magic5.png
+C14                                     #Heavy vibration of screen
+C2B                                     #Play armored unit "leaping" SFE
+C05                               #Call spell associated with equipped weapon
+C31
+10 p- Magic6.png
+6 p- Magic7.png
+6 p- Magic8.png
+C14             
+C01                               #NOP
+5 p- Magic9.png
+C15                                     #Slight vibration of screen
+C2B                                     #Play armored unit "leaping" SFE
+7 p- Magic10.png
+5 p- Magic11.png
+C06                               #Begin opponent's turn after hit.next code 0D.
+5 p- Magic1.png
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 5               #Ranged Animation 
+C07                               #Start attack animation; should be preceeded by 0x03
+C03                               #Start attack animation; should be followed by 0x07
+1 p- Magic1.png
+C32
+5 p- Magic2.png
+C15                                     #Slight vibration of screen
+C2B                                     #Play armored unit "leaping" SFE
+9 p- Magic3.png
+15 p- Magic21.png
+7 p- Magic4.png
+C14                                     #Heavy vibration of screen
+C2B                                     #Play armored unit "leaping" SFE
+8 p- Magic5.png
+C05                               #Call spell associated with equipped weapon
+C31
+5 p- Magic6.png
+6 p- Magic7.png
+6 p- Magic8.png
+C14             
+C01                               #NOP
+5 p- Magic9.png
+C15                                     #Slight vibration of screen
+C2B                                     #Play armored unit "leaping" SFE
+7 p- Magic10.png
+5 p- Magic11.png
+C06                               #Begin opponent's turn after hit.next code 0D.
+5 p- Magic1.png
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 6               #Ranged Critical Animation
+C07                               #Start attack animation; should be preceeded by 0x03
+C03                               #Start attack animation; should be followed by 0x07
+3 p- Magic1.png
+5 p- Magic13.png
+6 p- Magic14.png
+5 p- Magic13.png
+6 p- Magic14.png
+5 p- Magic13.png
+6 p- Magic14.png
+5 p- Magic13.png
+6 p- Magic14.png
+5 p- Magic13.png
+6 p- Magic14.png
+5 p- Magic13.png
+6 p- Magic14.png
+5 p- Magic13.png
+6 p- Magic14.png
+7 p- Magic13.png
+5 p- Magic1.png
+C32
+6 p- Magic2.png
+C14                                     #Heavy vibration of screen
+C2B                                     #Play armored unit "leaping" SFE
+C2F
+C28
+3 p- Magic3.png
+4 p- Magic19.png
+5 p- Magic20.png
+4 p- Magic19.png
+3 p- Magic3.png
+3 p- Magic3.png
+4 p- Magic19.png
+5 p- Magic20.png
+4 p- Magic19.png
+3 p- Magic3.png
+3 p- Magic3.png
+4 p- Magic19.png
+5 p- Magic20.png
+4 p- Magic19.png
+3 p- Magic3.png
+3 p- Magic3.png
+4 p- Magic19.png
+5 p- Magic20.png
+4 p- Magic19.png
+3 p- Magic3.png
+3 p- Magic3.png
+4 p- Magic19.png
+5 p- Magic20.png
+4 p- Magic19.png
+10 p- Magic21.png
+C46
+C39
+17 p- Magic3.png
+7 p- Magic4.png
+C14                                     #Heavy vibration of screen
+C2B                                     #Play armored unit "leaping" SFE
+8 p- Magic5.png
+C05                               #Call spell associated with equipped weapon
+C31
+10 p- Magic6.png
+6 p- Magic7.png
+6 p- Magic8.png
+C14             
+C01                               #NOP
+5 p- Magic9.png
+C15                                     #Slight vibration of screen
+C2B                                     #Play armored unit "leaping" SFE
+7 p- Magic10.png
+5 p- Magic11.png
+C06                               #Begin opponent's turn after hit.next code 0D.
+5 p- Magic1.png
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 7               #Dodge Melee Attack
+C02                               #Start of dodge
+1 p- Magic1.png
+C0E                               #Start of dodging frames (should go after standing frame and before dodging animation)
+3 p- Magic2.png
+C2B                                     #Play armored unit "leaping" SFE
+4 p- Magic3.png
+C01                               #NOP
+3 p- Magic2.png
+1 p- Magic1.png
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 8               #Dodge Ranged Attack
+C02                               #Start of dodge
+1 p- Magic1.png
+C0E                               #Start of dodging frames (should go after standing frame and before dodging animation)
+3 p- Magic2.png
+C2B                                     #Play armored unit "leaping" SFE
+4 p- Magic3.png
+C01                               #NOP
+3 p- Magic2.png
+1 p- Magic1.png
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 9               #Equiped with Melee Weapon
+1 p- Magic1.png
+C01                               #NOP
+~~~
+/// - Mode 10               #Standing motions
+1 p- Magic1.png
+C01                               #NOP
+~~~
+/// - Mode 11               #Equiped with Ranged weapon
+1 p- Magic1.png
+C01                               #NOP
+~~~
+/// - Mode 12               #Attack Missed Animation
+C07                               #Start attack animation; should be preceeded by 0x03
+C03                               #Start attack animation; should be followed by 0x07
+1 p- Magic1.png
+C32
+5 p- Magic2.png
+C15                                     #Slight vibration of screen
+C2B                                     #Play armored unit "leaping" SFE
+17 p- Magic3.png
+7 p- Magic4.png
+C14                                     #Heavy vibration of screen
+C2B                                     #Play armored unit "leaping" SFE
+8 p- Magic5.png
+C05                               #Call spell associated with equipped weapon
+5 p- Magic6.png
+6 p- Magic7.png
+6 p- Magic8.png
+C14             
+C01                               #NOP
+5 p- Magic9.png
+C15                                     #Slight vibration of screen
+C2B                                     #Play armored unit "leaping" SFE
+7 p- Magic10.png
+5 p- Magic11.png
+C06                               #Begin opponent's turn after hit.next code 0D.
+5 p- Magic1.png
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - End of animation

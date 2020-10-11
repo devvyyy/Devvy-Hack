@@ -31,6 +31,14 @@ ALIGN 4
 {
 #include "Akatsuki/Unarmed/Installer.event"
 }
+ALIGN 4 //Wustenhoff
+{
+#include "Wustenhoff/Staff/Staff Installer.event"
+}
+ALIGN 4
+{
+#include "Wustenhoff/Magic/Magic Installer.event"
+}
 ALIGN 4 //Mercenary by TEAM SALVAGED
 {
 #include "Mercenary/Sword/Installer.event"
@@ -231,6 +239,13 @@ ALIGN 4 //Occultist
 AkatAnim:
 SwordAnim(0x03)
 UnarmedAnim(0x04)
+WORD 0x0    // Seperator
+
+WustenAnim:
+StaffAnim(0x01)
+AnimaAnim(0x02)
+LightAnim(0x02)
+DarkAnim(0x02)
 WORD 0x0    // Seperator
 
 MercAnim:
