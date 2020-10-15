@@ -53,7 +53,7 @@ DuelistsSkill:
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
 add     r0,#0x62    @Move to the attacker's avoid.
 ldrh    r3,[r0]     @Load the attacker's avoid into r3.
-add     r3,#0x1E    @Add 30 to the attacker's avoid.
+add     r3,#0x14    @Add 20 to the attacker's avoid.
 strh    r3,[r0]     @Store attacker avoid.
 b       SkillReturn
 
@@ -68,7 +68,7 @@ DartingSkill:
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
 add     r0,#0x5E    @Move to the attacker's AS.
 ldrh    r3,[r0]     @Load the attacker's AS into r3.
-add     r3,#0x03    @Add 5 to the attacker's AS.
+add     r3,#0x03    @Add 3 to the attacker's AS.
 strh    r3,[r0]     @Store attacker AS.
 b       SkillReturn
 WardingSkill:
@@ -85,7 +85,7 @@ bne SkillReturn
 ldr r0, =0x203a4ec
 @ add     r0,#0x5A    @Move to the defender's damage.
 @ ldrh    r3,[r0]     @Load the defender's damage into r3.
-@ sub     r3,#0x14    @Subtract 20 from the defender's avoid.
+@ sub     r3,#0x07    @Subtract 7 from the defender's avoid.
 @ strh    r3,[r0]     @Store defender avoid.
 
 @testing
@@ -99,7 +99,7 @@ CertainSkill:
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
 add     r0,#0x60    @Move to the attacker's hit.
 ldrh    r3,[r0]     @Load the attacker's hit into r3.
-add     r3,#0x1E    @Add 30 to the attacker's hit.
+add     r3,#0x14    @Add 20 to the attacker's hit.
 strh    r3,[r0]     @Store attacker hit.
 b       SkillReturn
 ArmoredSkill:
@@ -116,7 +116,7 @@ bne SkillReturn
 ldr r0, =0x203a4ec
 @ add     r0,#0x5A    @Move to the defender's damage.
 @ ldrh    r3,[r0]     @Load the defender's damage into r3.
-@ sub     r3,#10    @Subtract 20 from the defender's avoid.
+@ sub     r3,#07    @Subtract 7 from the defender's avoid.
 @ strh    r3,[r0]     @Store defender avoid.
 
 @testing
@@ -130,7 +130,7 @@ QuickDrawSkill:
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
 add     r0,#0x5a    @Move to the attacker's dmg.
 ldrh    r3,[r0]     @Load the attacker's dmg into r3.
-add     r3,#4    @Add 4 to the attacker's dmg.
+add     r3,#2    @Add 2 to the attacker's dmg.
 strh    r3,[r0]     @Store attacker dmg.
 b       SkillReturn
 
