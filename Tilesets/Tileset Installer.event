@@ -17,6 +17,26 @@
     EventPointerTable(0x52, SnowBernMapConfig)
     EventPointerTable(0x50, SnowBernImage)
     EventPointerTable(0xD0, SnowBernAnims)
+	
+	//Improved Castle by N426
+    ALIGN 4
+    CastleImage:
+    #incext Png2Dmp "Castle/Improved Castle Object_Palette Snowy.png" --lz77
+
+    ALIGN 4
+    CastleConfig:
+    #incext compress "Castle/Castle Update Config.mapchip_config"
+
+    ALIGN 4
+    CastlePalette:
+    #incbin "Castle/SnowCastlePal.bin"
+
+
+    ALIGN 4
+	EventPointerTable(0x18, CastleImage)
+    EventPointerTable(0x19, CastlePalette)
+    EventPointerTable(0x1A, CastleConfig)
+	EventPointerTable(0x1C, CastleAnims)
 
 ALIGN 4
 #ifndef tilesetAnimation
@@ -77,3 +97,36 @@ tilesetAnimation(0x1C,0x1000,BernAnim14)
 tilesetAnimation(0x1C,0x1000,BernAnim15)
 WORD 0 0
 ALIGN 4
+
+ALIGN 4
+CastleAnim0:
+#incext png2dmp "Castle/Frame0.png"
+CastleAnim1:
+#incext png2dmp "Castle/Frame1.png"
+CastleAnim2:
+#incext png2dmp "Castle/Frame2.png"
+CastleAnim3:
+#incext png2dmp "Castle/Frame3.png"
+CastleAnim4:
+#incext png2dmp "Castle/Frame4.png"
+CastleAnim5:
+#incext png2dmp "Castle/Frame5.png"
+CastleAnim6:
+#incext png2dmp "Castle/Frame6.png"
+CastleAnim7:
+#incext png2dmp "Castle/Frame7.png"
+
+ALIGN 4
+CastleAnims:
+tilesetAnimation(0x1C,0x1000,CastleAnim0)
+tilesetAnimation(0x1C,0x1000,CastleAnim1)
+tilesetAnimation(0x1C,0x1000,CastleAnim2)
+tilesetAnimation(0x1C,0x1000,CastleAnim3)
+tilesetAnimation(0x1C,0x1000,CastleAnim4)
+tilesetAnimation(0x1C,0x1000,CastleAnim5)
+tilesetAnimation(0x1C,0x1000,CastleAnim6)
+tilesetAnimation(0x1C,0x1000,CastleAnim7)
+WORD 0 0
+ALIGN 4
+
+
