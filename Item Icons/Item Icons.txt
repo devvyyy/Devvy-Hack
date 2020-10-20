@@ -1,16 +1,19 @@
-//Item Icons by Wan, CardCafe, Lisandra Brave, LordGlenn, Zelix, Zane, Orihara_Saki, Camdar, Peerless, Jeorge Reds, and Venno
+//Item Icons by Ruby, Wan, CardCafe, Lisandra Brave, LordGlenn, Zelix, Zane, Orihara_Saki, Camdar, Peerless, Jeorge Reds, and Venno
 
 PUSH
 ItemIconSlot(0x00,"IronSword.png")
 ItemIconSlot(0x02,"SteelSword.png")
 ItemIconSlot(0x03,"SilverSword.png")
 ItemIconSlot(0x04,"IronBlade.png")
+ItemIconSlot(0x04,"SteelBlade.png")
 ItemIconSlot(0x06,"SilverBlade.png")
 ItemIconSlot(0x07,"PoisonSword.png")
+ItemIconSlot(0x11,"Lancereaver.png")
 ItemIconSlot(0x0A,"BraveSword.png")
 ItemIconSlot(0x0C,"BestWeapon.png")
 ItemIconSlot(0x0D,"Armorslayer.png")
 ItemIconSlot(0x0E,"Wyrmslayer.png")
+ItemIconSlot(0x12,"Zanbato.png")
 ItemIconSlot(0x13,"IronLance.png")
 ItemIconSlot(0x15,"SteelLance.png")
 ItemIconSlot(0x17,"ToxinLance.png")
@@ -19,13 +22,16 @@ ItemIconSlot(0x19,"KillerLance.png")
 ItemIconSlot(0x1A,"Horseslayer.png")
 ItemIconSlot(0x1B,"Javelin.png")
 ItemIconSlot(0x1C,"Spear.png")
+ItemIconSlot(0x1D,"Axereaver.png")
 ItemIconSlot(0x1E,"IronAxe.png")
 ItemIconSlot(0x20,"SilverAxe.png")
 ItemIconSlot(0x21,"PoisonAxe.png")
 ItemIconSlot(0x22,"BraveAxe.png")
+ItemIconSlot(0x24,"Halberd.png")
 ItemIconSlot(0x25,"Hammer.png")
-ItemIconSlot(0x28,"HandAxe.png")
-ItemIconSlot(0x29,"Tomahawk.png")
+ItemIconSlot(0x27,"HandAxe.png")
+ItemIconSlot(0x28,"Tomahawk.png")
+ItemIconSlot(0x29,"Swordreaver.png")
 ItemIconSlot(0x2B,"IronBow.png")
 ItemIconSlot(0x2C,"SteelBow.png")
 ItemIconSlot(0x2D,"SilverBow.png")
@@ -33,6 +39,21 @@ ItemIconSlot(0x2E,"PoisonBow.png")
 ItemIconSlot(0x2F,"KillerBow.png")
 ItemIconSlot(0x30,"BraveBow.png")
 ItemIconSlot(0x32,"Longbow.png")
+ItemIconSlot(0x49,"Heal.png")
+ItemIconSlot(0x4A,"Mend.png")
+ItemIconSlot(0x4B,"Recover.png")
+ItemIconSlot(0x4C,"Physic.png")
+ItemIconSlot(0x4D,"Fortify.png")
+ItemIconSlot(0x4E,"Restore.png")
+ItemIconSlot(0x4F,"Silence.png")
+ItemIconSlot(0x50,"Sleep.png")
+ItemIconSlot(0x51,"Berserk.png")
+ItemIconSlot(0x52,"Warp.png")
+ItemIconSlot(0x53,"Rescue.png")
+ItemIconSlot(0x54,"Torch.png")
+ItemIconSlot(0x55,"Hammerne.png")
+ItemIconSlot(0x56,"Unlock.png")
+ItemIconSlot(0x57,"Barrier.png")
 ItemIconSlot(0x97,"IronLabrys.png")
 ItemIconSlot(0x98,"SteelLabrys.png")
 ItemIconSlot(0x99,"SilverLabrys.png")
@@ -42,25 +63,15 @@ ItemIconSlot(0x9C,"SilverGlaive.png")
 ItemIconSlot(0xCA,"IronRifle.png")
 ItemIconSlot(0xCB,"SteelRifle.png")
 ItemIconSlot(0xCC,"SilverRifle.png")
+ItemIconSlot(0xA7,"PiercingLance.png")
 ItemIconSlot(0xAC,"Arcticus.png")
 ItemIconSlot(0xAD,"FireSword.png")
 ItemIconSlot(0x36,"Fire.png")
 ItemIconSlot(0x37,"Thunder.png")
 ItemIconSlot(0xDE,"WustenPRF.png")
-
-//0x81 - horse icon
-//0x82 - flying icon
-//0x83 - wyvern icon
-
-ORG 0x5926F4+(0x80*0x84)
-#incbin "Earth.dmp"
-ORG 0x5926F4+(0x80*0x85)
-#incbin "Sun.dmp"
-ORG 0x5926F4+(0x80*0x86)
-#incbin "Moon.dmp"
-ORG 0x5926F4+(0x80*0x87)
-#incbin "Heaven.dmp"
-
+ItemIconSlot(0x6A,"Vulnerary.png")
+ItemIconSlot(0x6B,"Elixir.png")
+ItemIconSlot(0x6C,"PureWater.png")
 
 
 POP

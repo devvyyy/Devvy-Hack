@@ -1,3 +1,10 @@
+//Affinity Icon Palette
+PUSH
+    ORG 0x5996F4
+    #incbin "weaponpalette.bin"
+    MESSAGE Item palette updated currentOffset
+POP
+
 //Vulnerary Heal Amount
 PUSH
 ORG 0x2FEC6
