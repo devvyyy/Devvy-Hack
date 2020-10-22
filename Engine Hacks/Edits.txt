@@ -11,6 +11,15 @@ ORG 0x2FEC6
 BYTE 0x0F
 POP
 
+//Thracia trading
+PUSH
+ORG 0x229A8
+SHORT 0x1C00
+
+ORG 0x22A10
+SHORT 0x1C00
+POP
+
 //Prevent character event freezes
 PUSH
 ORG $F25C

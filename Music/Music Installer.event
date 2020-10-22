@@ -19,6 +19,11 @@ SongTable(0x1,song01,0)
 #include "HisWorld.event"
 
 ALIGN 4
+// Before Battle
+SongTable(0x34,song34,0)
+#include "Preps.event"
+
+ALIGN 4
 // Confidence In The Domination
 SongTable(0x19,song1E,0)
 #include "Confidence.event"
@@ -40,8 +45,13 @@ SongTable(0x1A,song03DF,0)
 
 ALIGN 4
 //Victory is Near
-SongTable(0x10,song10,1)
+SongTable(0x03E7,song10,1)
 #include "Victory.event"
+
+ALIGN 4
+//Power to Tomorrow
+SongTable(0x10,song03E7,1)
+#include "PowerTomorrow.event"
 
 ALIGN 4
 //Together We Ride! by SaXor_The_Nobody
@@ -228,6 +238,8 @@ SongTable(0xA9,songE9,1)
 
 ALIGN 4
 //The Tale Told By The Wind
+SongTable(0x43,TaleToldByWind,0)
+#include "TaleToldByWind.event"
 
 ALIGN 4
 //Blameless Thoughts

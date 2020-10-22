@@ -158,6 +158,11 @@ Rosenfeld_Mug:
 #incext PortraitFormatter "Rosenfeld.png"
 setMugEntry(0x20, Rosenfeld_Mug, 3, 5, 4, 3)
 
+ALIGN 16
+Affogato_Mug: //Affogato edited by BuskHusker
+#incext PortraitFormatter "Affogato.png"
+setMugEntryExtend(0x21, Affogato_Mug, 3, 5, 3, 3, 10, 4, 0, 0)
+
 //Bad Guys
 ALIGN 16 //Sai by hypergammaspaces
 Sai_Mug:
