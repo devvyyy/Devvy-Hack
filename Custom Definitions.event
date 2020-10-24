@@ -32,6 +32,8 @@
 
 #define ItemIconSlot(slot,path) "ORG 0x5926F4+(0x80*slot); #incext Png2Dmp path"
 
+#define CharacterConditionalDialog(character,alivetext,deadtext) "CHECK_ALIVE character; BEQ 1 0x0 0xC; Text(alivetext); GOTO 2; LABEL 1; Text(deadtext); LABEL 2"
+
 // #define __DEBUG__ // Uncomment to get the Debug startup menu :p
 
 // CHARACTERS
@@ -49,6 +51,7 @@
 #define Bronson 0x4
 #define Brigitta 0x5
 #define Affogato 0x7
+#define Affo 0x7
 #define Edgelord 0x2E
 #define Edgelords 0x2E
 #define EvilCult 0x2E

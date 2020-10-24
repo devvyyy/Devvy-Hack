@@ -66,12 +66,6 @@ UNIT Brigitta  Soldier 0x1 Level(1, Ally, 0)    [6,11] 0b 0x0 0x0 0x0 [IronLance
 UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [6,10] 0b 0x0 0x0 0x0 [KillerBow, 0xC3,] [0x0,0x0,0x0,0x0]
 UNIT
 
-Units2:
-UNIT
-
-MoreUnits:
-UNIT
-
 EnemyUnits:
 UNIT Cultist Shaman 0x1 Level(1, Enemy, 0)     [7,3] 0b 0x0 0x0 0x0 [Flux,] NeverMoveAI
 UNIT Cultist Shaman 0x1 Level(1, Enemy, 0)      [10,14] 0b 0x0 0x0 0x0 [Flux,] NeverMoveAI
@@ -100,18 +94,12 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
-ENUT 0x1 //no more boss quotes
-ENUT 0x2 //no more death quotes
 MUSC 0x1
 LOAD1 0x1 EnemyUnits
 ENUN
 LOAD1 0x1 EnemyUnits2
 ENUN
 LOAD1 0x0 Units1 //0x0 instead of 0x1 seems to be for allies on maps with prep screens
-ENUN
-LOAD1 0x0 Units2
-ENUN
-LOAD1 0x0 MoreUnits
 ENUN
 TEXTSTART
 TEXTSHOW Prologue1
@@ -120,7 +108,7 @@ FADI 16
 GotoPrepScreen
 
 EndingScene:
-ASMC 0x85C71 0x381F5 0x37CF9 //show records screen
+CharacterConditionalDialog(Affogato,Placeholder1,Placeholder2)
 STAL 120
 EVBIT_F 0x2
 MNTS 0x1 //return to title screen

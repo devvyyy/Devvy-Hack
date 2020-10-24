@@ -1,0 +1,53 @@
+#define SongTableOffset  0x224470
+#define SongTable(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT Group Group; POP"
+SongTable(03D7,everything_i_feel_is_in_this_sword,5)
+
+    #include "MPlayDef.event"
+
+    #define    loop_sfx_grp_everything_i_feel_is_in_this_sword  everything_i_feel_is_in_this_sword_map
+    #define    loop_sfx_pri_everything_i_feel_is_in_this_sword  0
+    #define    loop_sfx_rev_everything_i_feel_is_in_this_sword  0
+    #define    loop_sfx_mvl_everything_i_feel_is_in_this_sword  127
+    #define    loop_sfx_key_everything_i_feel_is_in_this_sword  0
+    #define    loop_sfx_tbs_everything_i_feel_is_in_this_sword  1
+    #define    loop_sfx_exg_everything_i_feel_is_in_this_sword  0
+    #define    loop_sfx_cmp_everything_i_feel_is_in_this_sword  1
+
+    ALIGN 4
+
+loop_sfx_1:
+    BYTE        VOL     127*loop_sfx_mvl/mxv
+    BYTE    KEYSH   loop_sfx_key_everything_i_feel_is_in_this_sword+0
+    BYTE        VOICE   0
+    BYTE        TIE     Cn3   v064
+    BYTE    W96
+loop_sfx_1_B1:
+    BYTE    W96
+    BYTE    W96
+    BYTE    GoTo
+     POIN2    loop_sfx_1_B1
+loop_sfx_1_B2:
+    BYTE    W06
+    BYTE        EOT     Cn3 
+    BYTE    FINE
+
+    ALIGN 4
+
+everything_i_feel_is_in_this_sword:
+    BYTE    1    // NumTrks
+    BYTE    0    // NumBlks
+    BYTE    loop_sfx_pri_everything_i_feel_is_in_this_sword    // Priority
+    BYTE    loop_sfx_rev_everything_i_feel_is_in_this_sword    // Reverb.
+
+    POIN2    loop_sfx_grp_everything_i_feel_is_in_this_sword
+
+    POIN2    loop_sfx_1
+
+    
+everything_i_feel_is_in_this_sword_map:
+WORD $3c00
+POIN everything_i_feel_is_in_this_sword_wav
+WORD $FF00FF
+
+everything_i_feel_is_in_this_sword_wav:
+#incbin "everything_i_feel_is_in_this_sword.bin"
