@@ -1,32 +1,32 @@
 //Event file generated from Sappy .s format.
 	#include "MPlayDef.event"
 
-	#define	song03DF_grp  voicegroup001
-	#define	song03DF_pri  0
-	#define	song03DF_rev  0
-	#define	song03DF_mvl  127
-	#define	song03DF_key  0
-	#define	song03DF_tbs  1
-	#define	song03DF_exg  0
-	#define	song03DF_cmp  1
+	#define	song1A_grp  voicegroup001
+	#define	song1A_pri  0
+	#define	song1A_rev  0
+	#define	song1A_mvl  127
+	#define	song1A_key  0
+	#define	song1A_tbs  1
+	#define	song1A_exg  0
+	#define	song1A_cmp  1
 
 	// .rodata
-	//	song03DF
+	//	song1A
 	ALIGN 4
 
 
 //**************** Track 1 (Midi-Chn.0) ****************//
 
-song03DF_001:
+song1A_001:
 // 000   ----------------------------------------
- BYTE   KEYSH   song03DF_key+0
-Label_0_0166CC86:
- BYTE   TEMPO   210*song03DF_tbs/2
+ BYTE   KEYSH   song1A_key+0
+Label_0_011F3C4E:
+ BYTE   TEMPO   210*song1A_tbs/2
  BYTE   VOICE   30
- BYTE   VOL   42*song03DF_mvl/mxv
+ BYTE   VOL   42*song1A_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   MOD 0
- BYTE   FnM2
+ BYTE   CnM2  v005
  BYTE   BEND   c_v+0
  BYTE   N11  Cn2  v116
  BYTE   W12
@@ -56,7 +56,7 @@ Label_0_0166CC86:
  BYTE   Ds3
  BYTE   W48
 // 001   ----------------------------------------
-Label_0_0166CCB2:
+Label_0_011F3C7B:
  BYTE   W24
  BYTE   BEND   c_v-1
  BYTE   W01
@@ -124,7 +124,7 @@ Label_0_0166CCB2:
  BYTE   Ds3
  BYTE   W01
 // 002   ----------------------------------------
-Label_0_0166CCFB:
+Label_0_011F3CC4:
  BYTE   BEND   c_v-1
  BYTE   W72
  BYTE   Ds3
@@ -195,9 +195,10 @@ Label_0_0166CCFB:
  BYTE   W01
  BYTE   Ds3
  BYTE   W48
- BYTE   PATT
-  POIN2 Label_0_0166CCB2
 // 004   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0_011F3C7B
+// 005   ----------------------------------------
  BYTE   EOT
  BYTE   Gn3
  BYTE   BEND   c_v-52
@@ -230,16 +231,17 @@ Label_0_0166CCFB:
  BYTE   W02
  BYTE   Ds3
  BYTE   W01
+// 006   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_0_0166CCFB
-// 005   ----------------------------------------
+  POIN2 Label_0_011F3CC4
+// 007   ----------------------------------------
  BYTE   EOT
  BYTE   Gs3
  BYTE   BEND   c_v-52
  BYTE   W01
  BYTE   FnM2
  BYTE   W01
-Label_0_0166CD7E:
+Label_0_011F3D47:
  BYTE   BEND   c_v+0
  BYTE   N11  Fn2  v116
  BYTE   W12
@@ -285,8 +287,8 @@ Label_0_0166CD7E:
  BYTE   Ds3
  BYTE   W06
  BYTE   PEND 
-// 006   ----------------------------------------
-Label_0_0166CDB1:
+// 008   ----------------------------------------
+Label_0_011F3D7A:
  BYTE   W36
  BYTE   BEND   c_v-1
  BYTE   W01
@@ -326,8 +328,8 @@ Label_0_0166CDB1:
  BYTE   As2
  BYTE   W12
  BYTE   PEND 
-// 007   ----------------------------------------
-Label_0_0166CDDD:
+// 009   ----------------------------------------
+Label_0_011F3DA6:
  BYTE   N11  Cn3  v116
  BYTE   W12
  BYTE   Fs3
@@ -382,8 +384,8 @@ Label_0_0166CDDD:
  BYTE   CsM2
  BYTE   W01
  BYTE   PEND 
-// 008   ----------------------------------------
-Label_0_0166CE18:
+// 010   ----------------------------------------
+Label_0_011F3DE1:
  BYTE   BEND   c_v+0
  BYTE   N11  Fn2  v116
  BYTE   W12
@@ -411,8 +413,8 @@ Label_0_0166CE18:
  BYTE   Ds3
  BYTE   W18
  BYTE   PEND 
-// 009   ----------------------------------------
-Label_0_0166CE39:
+// 011   ----------------------------------------
+Label_0_011F3E02:
  BYTE   W12
  BYTE   BEND   c_v-64
  BYTE   N22  Fn3  v116
@@ -455,7 +457,7 @@ Label_0_0166CE39:
  BYTE   Gs3
  BYTE   W12
  BYTE   PEND 
-// 010   ----------------------------------------
+// 012   ----------------------------------------
  BYTE   Fn3
  BYTE   W12
  BYTE   Cs3
@@ -483,17 +485,22 @@ Label_0_0166CE39:
  BYTE   W12
  BYTE   Ds3
  BYTE   W12
+// 013   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_0_0166CD7E
+  POIN2 Label_0_011F3D47
+// 014   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_0_0166CDB1
+  POIN2 Label_0_011F3D7A
+// 015   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_0_0166CDDD
+  POIN2 Label_0_011F3DA6
+// 016   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_0_0166CE18
+  POIN2 Label_0_011F3DE1
+// 017   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_0_0166CE39
-// 011   ----------------------------------------
+  POIN2 Label_0_011F3E02
+// 018   ----------------------------------------
  BYTE   N11  Fn3  v116
  BYTE   W12
  BYTE   Cs3
@@ -510,8 +517,8 @@ Label_0_0166CE39:
  BYTE   W12
  BYTE   Cn3
  BYTE   W12
-// 012   ----------------------------------------
-Label_0_0166CEB6:
+// 019   ----------------------------------------
+Label_0_011F3E7F:
  BYTE   BEND   c_v-64
  BYTE   N72  Cn4  v116
  BYTE   W01
@@ -541,8 +548,8 @@ Label_0_0166CEB6:
  BYTE   N72  Fn4
  BYTE   W24
  BYTE   PEND 
-// 013   ----------------------------------------
-Label_0_0166CED8:
+// 020   ----------------------------------------
+Label_0_011F3EA1:
  BYTE   W21
  BYTE   BEND   c_v-1
  BYTE   W01
@@ -611,8 +618,8 @@ Label_0_0166CED8:
  BYTE   W32
  BYTE   W01
  BYTE   PEND 
-// 014   ----------------------------------------
-Label_0_0166CF20:
+// 021   ----------------------------------------
+Label_0_011F3EE9:
  BYTE   W24
  BYTE   N72  Ds4  v116
  BYTE   W44
@@ -658,30 +665,33 @@ Label_0_0166CF20:
  BYTE   CnM2
  BYTE   W01
  BYTE   PEND 
+// 022   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_0_0166CEB6
+  POIN2 Label_0_011F3E7F
+// 023   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_0_0166CED8
+  POIN2 Label_0_011F3EA1
+// 024   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_0_0166CF20
-// 015   ----------------------------------------
+  POIN2 Label_0_011F3EE9
+// 025   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_0_0166CC86
-// 016   ----------------------------------------
+  POIN2 Label_0_011F3C4E
+// 026   ----------------------------------------
  BYTE   W12
  BYTE   FINE
 
 //**************** Track 2 (Midi-Chn.1) ****************//
 
-song03DF_002:
+song1A_002:
 // 000   ----------------------------------------
- BYTE   KEYSH   song03DF_key+0
-Label_1_0166CF92:
+ BYTE   KEYSH   song1A_key+0
+Label_1_011F3F31:
  BYTE   VOICE   30
- BYTE   VOL   42*song03DF_mvl/mxv
+ BYTE   VOL   42*song1A_mvl/mxv
  BYTE   PAN   c_v-30
  BYTE   MOD 0
- BYTE   FnM2
+ BYTE   CnM2  v005
  BYTE   BEND   c_v+1
  BYTE   N05  Cn0  v088
  BYTE   W12
@@ -711,7 +721,7 @@ Label_1_0166CF92:
  BYTE   Ds3
  BYTE   W48
 // 001   ----------------------------------------
-Label_1_0166CFBD:
+Label_1_011F3F5D:
  BYTE   W24
  BYTE   BEND   c_v-1
  BYTE   W01
@@ -778,7 +788,7 @@ Label_1_0166CFBD:
  BYTE   Ds3
  BYTE   W01
 // 002   ----------------------------------------
-Label_1_0166D006:
+Label_1_011F3FA6:
  BYTE   BEND   c_v-1
  BYTE   W72
  BYTE   Ds3
@@ -848,9 +858,10 @@ Label_1_0166D006:
  BYTE   W01
  BYTE   Ds3
  BYTE   W48
- BYTE   PATT
-  POIN2 Label_1_0166CFBD
 // 004   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_1_011F3F5D
+// 005   ----------------------------------------
  BYTE   EOT
  BYTE   Ds3
  BYTE   BEND   c_v-52
@@ -882,9 +893,10 @@ Label_1_0166D006:
  BYTE   W02
  BYTE   Ds3
  BYTE   W01
+// 006   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_1_0166D006
-// 005   ----------------------------------------
+  POIN2 Label_1_011F3FA6
+// 007   ----------------------------------------
  BYTE   EOT
  BYTE   En3
  BYTE   BEND   c_v-52
@@ -897,21 +909,21 @@ Label_1_0166D006:
  BYTE   W06
  BYTE   En3
  BYTE   W24
-// 006   ----------------------------------------
+// 008   ----------------------------------------
  BYTE   W96
-// 007   ----------------------------------------
+// 009   ----------------------------------------
  BYTE   W18
  BYTE   Gs3
  BYTE   W06
  BYTE   En3
  BYTE   W72
-// 008   ----------------------------------------
- BYTE   W96
-// 009   ----------------------------------------
- BYTE   W96
 // 010   ----------------------------------------
  BYTE   W96
 // 011   ----------------------------------------
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   W96
+// 013   ----------------------------------------
  BYTE   En3
  BYTE   N11  Cn3  v084
  BYTE   W12
@@ -956,7 +968,7 @@ Label_1_0166D006:
  BYTE   W02
  BYTE   Ds3
  BYTE   W06
-// 012   ----------------------------------------
+// 014   ----------------------------------------
  BYTE   W36
  BYTE   Ds3
  BYTE   W01
@@ -995,7 +1007,7 @@ Label_1_0166D006:
  BYTE   W12
  BYTE   Fn3
  BYTE   W12
-// 013   ----------------------------------------
+// 015   ----------------------------------------
  BYTE   Gn3
  BYTE   W12
  BYTE   Cs4
@@ -1049,7 +1061,7 @@ Label_1_0166D006:
  BYTE   W02
  BYTE   CsM2
  BYTE   W01
-// 014   ----------------------------------------
+// 016   ----------------------------------------
  BYTE   En3
  BYTE   N11  Cn3  v084
  BYTE   W12
@@ -1076,7 +1088,7 @@ Label_1_0166D006:
  BYTE   W01
  BYTE   Ds3
  BYTE   W18
-// 015   ----------------------------------------
+// 017   ----------------------------------------
  BYTE   En3
  BYTE   W48
  BYTE   CnM2
@@ -1098,7 +1110,7 @@ Label_1_0166D006:
  BYTE   W12
  BYTE   Fn4
  BYTE   W12
-// 016   ----------------------------------------
+// 018   ----------------------------------------
  BYTE   Cn4
  BYTE   W12
  BYTE   Gs3
@@ -1126,8 +1138,8 @@ Label_1_0166D006:
  BYTE   W12
  BYTE   Gn3
  BYTE   W12
-// 017   ----------------------------------------
-Label_1_0166D183:
+// 019   ----------------------------------------
+Label_1_011F4123:
  BYTE   BEND   c_v-64
  BYTE   N72  Fn3  v100
  BYTE   W01
@@ -1157,8 +1169,8 @@ Label_1_0166D183:
  BYTE   N72  Cn4
  BYTE   W24
  BYTE   PEND 
-// 018   ----------------------------------------
-Label_1_0166D1A5:
+// 020   ----------------------------------------
+Label_1_011F4145:
  BYTE   W21
  BYTE   BEND   c_v-1
  BYTE   W01
@@ -1227,8 +1239,8 @@ Label_1_0166D1A5:
  BYTE   W32
  BYTE   W01
  BYTE   PEND 
-// 019   ----------------------------------------
-Label_1_0166D1ED:
+// 021   ----------------------------------------
+Label_1_011F418D:
  BYTE   W24
  BYTE   N72  As3  v100
  BYTE   W44
@@ -1274,27 +1286,30 @@ Label_1_0166D1ED:
  BYTE   CnM2
  BYTE   W01
  BYTE   PEND 
+// 022   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_1_0166D183
+  POIN2 Label_1_011F4123
+// 023   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_1_0166D1A5
+  POIN2 Label_1_011F4145
+// 024   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_1_0166D1ED
-// 020   ----------------------------------------
+  POIN2 Label_1_011F418D
+// 025   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_1_0166CF92
-// 021   ----------------------------------------
+  POIN2 Label_1_011F3F31
+// 026   ----------------------------------------
  BYTE   W12
  BYTE   FINE
 
 //**************** Track 3 (Midi-Chn.2) ****************//
 
-song03DF_003:
+song1A_003:
 // 000   ----------------------------------------
- BYTE   KEYSH   song03DF_key+0
-Label_2_0166D25E:
+ BYTE   KEYSH   song1A_key+0
+Label_2_011F41D5:
  BYTE   VOICE   99
- BYTE   VOL   35*song03DF_mvl/mxv
+ BYTE   VOL   35*song1A_mvl/mxv
  BYTE   PAN   c_v+40
  BYTE   BEND   c_v+0
  BYTE   N10  Cn3  v076
@@ -1314,7 +1329,7 @@ Label_2_0166D25E:
  BYTE   Cn4
  BYTE   W12
 // 001   ----------------------------------------
-Label_2_0166D278:
+Label_2_011F41EF:
  BYTE   N10  Cn3  v076
  BYTE   W12
  BYTE   Fn3
@@ -1333,7 +1348,7 @@ Label_2_0166D278:
  BYTE   W12
  BYTE   PEND 
 // 002   ----------------------------------------
-Label_2_0166D28B:
+Label_2_011F4202:
  BYTE   N10  Cs3  v076
  BYTE   W12
  BYTE   Gs3
@@ -1368,12 +1383,14 @@ Label_2_0166D28B:
  BYTE   W12
  BYTE   Cn4
  BYTE   W12
- BYTE   PATT
-  POIN2 Label_2_0166D278
- BYTE   PATT
-  POIN2 Label_2_0166D28B
 // 004   ----------------------------------------
-Label_2_0166D2B8:
+ BYTE   PATT
+  POIN2 Label_2_011F41EF
+// 005   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_2_011F4202
+// 006   ----------------------------------------
+Label_2_011F422F:
  BYTE   N10  Fn3  v076
  BYTE   W12
  BYTE   Fn4
@@ -1391,8 +1408,8 @@ Label_2_0166D2B8:
  BYTE   Fn4
  BYTE   W12
  BYTE   PEND 
-// 005   ----------------------------------------
-Label_2_0166D2CB:
+// 007   ----------------------------------------
+Label_2_011F4242:
  BYTE   N10  Fn3  v076
  BYTE   W12
  BYTE   As3
@@ -1410,8 +1427,8 @@ Label_2_0166D2CB:
  BYTE   Gs3
  BYTE   W12
  BYTE   PEND 
-// 006   ----------------------------------------
-Label_2_0166D2DE:
+// 008   ----------------------------------------
+Label_2_011F4255:
  BYTE   N10  As3  v076
  BYTE   W12
  BYTE   Ds4
@@ -1429,8 +1446,8 @@ Label_2_0166D2DE:
  BYTE   As3
  BYTE   W12
  BYTE   PEND 
-// 007   ----------------------------------------
-Label_2_0166D2F1:
+// 009   ----------------------------------------
+Label_2_011F4268:
  BYTE   N10  Cs3  v076
  BYTE   W12
  BYTE   Cs4
@@ -1448,7 +1465,7 @@ Label_2_0166D2F1:
  BYTE   Cs4
  BYTE   W12
  BYTE   PEND 
-// 008   ----------------------------------------
+// 010   ----------------------------------------
  BYTE   Cs3
  BYTE   W12
  BYTE   Gn3
@@ -1465,7 +1482,7 @@ Label_2_0166D2F1:
  BYTE   W12
  BYTE   Gs3
  BYTE   W12
-// 009   ----------------------------------------
+// 011   ----------------------------------------
  BYTE   As3
  BYTE   W12
  BYTE   Ds4
@@ -1482,15 +1499,19 @@ Label_2_0166D2F1:
  BYTE   W12
  BYTE   Cn3
  BYTE   W12
+// 012   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_2_0166D2B8
+  POIN2 Label_2_011F422F
+// 013   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_2_0166D2CB
+  POIN2 Label_2_011F4242
+// 014   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_2_0166D2DE
+  POIN2 Label_2_011F4255
+// 015   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_2_0166D2F1
-// 010   ----------------------------------------
+  POIN2 Label_2_011F4268
+// 016   ----------------------------------------
  BYTE   N10  Cs3  v076
  BYTE   W12
  BYTE   Gn3
@@ -1507,7 +1528,7 @@ Label_2_0166D2F1:
  BYTE   W12
  BYTE   Fn3
  BYTE   W12
-// 011   ----------------------------------------
+// 017   ----------------------------------------
  BYTE   Gn3
  BYTE   W12
  BYTE   Cn4
@@ -1524,8 +1545,8 @@ Label_2_0166D2F1:
  BYTE   W12
  BYTE   Cn3
  BYTE   W12
-// 012   ----------------------------------------
-Label_2_0166D35A:
+// 018   ----------------------------------------
+Label_2_011F42D1:
  BYTE   N10  Fn3  v076
  BYTE   W12
  BYTE   Fn4
@@ -1543,8 +1564,8 @@ Label_2_0166D35A:
  BYTE   Fn4
  BYTE   W12
  BYTE   PEND 
-// 013   ----------------------------------------
-Label_2_0166D36D:
+// 019   ----------------------------------------
+Label_2_011F42E4:
  BYTE   N10  Ds4  v076
  BYTE   W12
  BYTE   Fn4
@@ -1562,7 +1583,7 @@ Label_2_0166D36D:
  BYTE   Ds4
  BYTE   W12
  BYTE   PEND 
-// 014   ----------------------------------------
+// 020   ----------------------------------------
  BYTE   Ds3
  BYTE   W12
  BYTE   Ds4
@@ -1579,11 +1600,13 @@ Label_2_0166D36D:
  BYTE   W12
  BYTE   Ds4
  BYTE   W12
+// 021   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_2_0166D35A
+  POIN2 Label_2_011F42D1
+// 022   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_2_0166D36D
-// 015   ----------------------------------------
+  POIN2 Label_2_011F42E4
+// 023   ----------------------------------------
  BYTE   N10  Ds3  v076
  BYTE   W12
  BYTE   Ds4
@@ -1600,21 +1623,21 @@ Label_2_0166D36D:
  BYTE   W12
  BYTE   As3
  BYTE   W12
-// 016   ----------------------------------------
+// 024   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_2_0166D25E
-// 017   ----------------------------------------
+  POIN2 Label_2_011F41D5
+// 025   ----------------------------------------
  BYTE   W12
  BYTE   FINE
 
 //**************** Track 4 (Midi-Chn.3) ****************//
 
-song03DF_004:
+song1A_004:
 // 000   ----------------------------------------
- BYTE   KEYSH   song03DF_key+0
-Label_3_0166D3BA:
+ BYTE   KEYSH   song1A_key+0
+Label_3_011F432C:
  BYTE   VOICE   90
- BYTE   VOL   30*song03DF_mvl/mxv
+ BYTE   VOL   30*song1A_mvl/mxv
  BYTE   PAN   c_v-30
  BYTE   N06  Cn5  v092
  BYTE   W12
@@ -1633,7 +1656,7 @@ Label_3_0166D3BA:
  BYTE   Ds5
  BYTE   W12
 // 001   ----------------------------------------
-Label_3_0166D3D3:
+Label_3_011F4345:
  BYTE   N06  Gn5  v088
  BYTE   W12
  BYTE   Cn5
@@ -1652,7 +1675,7 @@ Label_3_0166D3D3:
  BYTE   W12
  BYTE   PEND 
 // 002   ----------------------------------------
-Label_3_0166D3E6:
+Label_3_011F4358:
  BYTE   N06  Fn5  v088
  BYTE   W12
  BYTE   Gs5
@@ -1687,20 +1710,22 @@ Label_3_0166D3E6:
  BYTE   W12
  BYTE   Ds5
  BYTE   W12
- BYTE   PATT
-  POIN2 Label_3_0166D3D3
- BYTE   PATT
-  POIN2 Label_3_0166D3E6
 // 004   ----------------------------------------
-Label_3_0166D413:
+ BYTE   PATT
+  POIN2 Label_3_011F4345
+// 005   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_3_011F4358
+// 006   ----------------------------------------
+Label_3_011F4385:
  BYTE   W72
  BYTE   N11  Fn3  v116
  BYTE   W12
  BYTE   Gn3
  BYTE   W12
  BYTE   PEND 
-// 005   ----------------------------------------
-Label_3_0166D41B:
+// 007   ----------------------------------------
+Label_3_011F438D:
  BYTE   N11  Gs3  v116
  BYTE   W12
  BYTE   As3
@@ -1712,8 +1737,8 @@ Label_3_0166D41B:
  BYTE   N68  Fn4
  BYTE   W48
  BYTE   PEND 
-// 006   ----------------------------------------
-Label_3_0166D429:
+// 008   ----------------------------------------
+Label_3_011F439B:
  BYTE   W24
  BYTE   N11  Fn3  v116
  BYTE   W12
@@ -1728,8 +1753,8 @@ Label_3_0166D429:
  BYTE   Gn4
  BYTE   W12
  BYTE   PEND 
-// 007   ----------------------------------------
-Label_3_0166D439:
+// 009   ----------------------------------------
+Label_3_011F43AB:
  BYTE   N68  Fn4  v116
  BYTE   W72
  BYTE   N11  Fn3
@@ -1737,7 +1762,7 @@ Label_3_0166D439:
  BYTE   Gn3
  BYTE   W12
  BYTE   PEND 
-// 008   ----------------------------------------
+// 010   ----------------------------------------
  BYTE   Gs3
  BYTE   W12
  BYTE   As3
@@ -1754,7 +1779,7 @@ Label_3_0166D439:
  BYTE   W12
  BYTE   Fn4
  BYTE   W12
-// 009   ----------------------------------------
+// 011   ----------------------------------------
  BYTE   Cs4
  BYTE   W12
  BYTE   Gs3
@@ -1771,15 +1796,19 @@ Label_3_0166D439:
  BYTE   W12
  BYTE   As3
  BYTE   W12
+// 012   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_3_0166D413
+  POIN2 Label_3_011F4385
+// 013   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_3_0166D41B
+  POIN2 Label_3_011F438D
+// 014   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_3_0166D429
+  POIN2 Label_3_011F439B
+// 015   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_3_0166D439
-// 010   ----------------------------------------
+  POIN2 Label_3_011F43AB
+// 016   ----------------------------------------
  BYTE   N11  Gs3  v116
  BYTE   W12
  BYTE   As3
@@ -1788,7 +1817,7 @@ Label_3_0166D439:
  BYTE   W12
  BYTE   Gn4
  BYTE   W60
-// 011   ----------------------------------------
+// 017   ----------------------------------------
  BYTE   W36
  BYTE   Ds4
  BYTE   W12
@@ -1800,46 +1829,47 @@ Label_3_0166D439:
  BYTE   W12
  BYTE   As3
  BYTE   W12
-// 012   ----------------------------------------
-Label_3_0166D48C:
+// 018   ----------------------------------------
+Label_3_011F43FE:
  BYTE   N44  Cn4  v116
  BYTE   W72
  BYTE   Fn4
  BYTE   W24
  BYTE   PEND 
-// 013   ----------------------------------------
+// 019   ----------------------------------------
  BYTE   W48
  BYTE   As3
  BYTE   W48
-// 014   ----------------------------------------
+// 020   ----------------------------------------
  BYTE   W24
  BYTE   Ds4
  BYTE   W72
+// 021   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_3_0166D48C
-// 015   ----------------------------------------
+  POIN2 Label_3_011F43FE
+// 022   ----------------------------------------
  BYTE   W48
  BYTE   N44  As3  v116
  BYTE   W48
-// 016   ----------------------------------------
+// 023   ----------------------------------------
  BYTE   W24
  BYTE   Ds4
  BYTE   W72
-// 017   ----------------------------------------
+// 024   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_3_0166D3BA
-// 018   ----------------------------------------
+  POIN2 Label_3_011F432C
+// 025   ----------------------------------------
  BYTE   W12
  BYTE   FINE
 
 //**************** Track 5 (Midi-Chn.4) ****************//
 
-song03DF_005:
+song1A_005:
 // 000   ----------------------------------------
- BYTE   KEYSH   song03DF_key+0
-Label_4_0166D4B2:
+ BYTE   KEYSH   song1A_key+0
+Label_4_011F4421:
  BYTE   VOICE   33
- BYTE   VOL   46*song03DF_mvl/mxv
+ BYTE   VOL   46*song1A_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   TIE  Cn1  v127
  BYTE   W96
@@ -1871,7 +1901,7 @@ Label_4_0166D4B2:
  BYTE   EOT
  BYTE   W02
 // 006   ----------------------------------------
-Label_4_0166D4D5:
+Label_4_011F4444:
  BYTE   N11  Fn1  v127
  BYTE   W12
  BYTE   N01
@@ -1890,7 +1920,7 @@ Label_4_0166D4D5:
  BYTE   W12
  BYTE   PEND 
 // 007   ----------------------------------------
-Label_4_0166D4E8:
+Label_4_011F4457:
  BYTE   N11  Fn1  v127
  BYTE   W12
  BYTE   N11
@@ -1909,7 +1939,7 @@ Label_4_0166D4E8:
  BYTE   W12
  BYTE   PEND 
 // 008   ----------------------------------------
-Label_4_0166D4FB:
+Label_4_011F446A:
  BYTE   N01  Ds1  v127
  BYTE   W12
  BYTE   N11
@@ -1928,7 +1958,7 @@ Label_4_0166D4FB:
  BYTE   W12
  BYTE   PEND 
 // 009   ----------------------------------------
-Label_4_0166D50E:
+Label_4_011F447D:
  BYTE   N11  Cs1  v127
  BYTE   W12
  BYTE   N01
@@ -1963,17 +1993,22 @@ Label_4_0166D50E:
  BYTE   W12
  BYTE   N11
  BYTE   W12
- BYTE   PATT
-  POIN2 Label_4_0166D4FB
- BYTE   PATT
-  POIN2 Label_4_0166D4D5
- BYTE   PATT
-  POIN2 Label_4_0166D4E8
- BYTE   PATT
-  POIN2 Label_4_0166D4FB
- BYTE   PATT
-  POIN2 Label_4_0166D50E
 // 011   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_011F446A
+// 012   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_011F4444
+// 013   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_011F4457
+// 014   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_011F446A
+// 015   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_011F447D
+// 016   ----------------------------------------
  BYTE   N11  Cs1  v127
  BYTE   W12
  BYTE   N11
@@ -1990,68 +2025,68 @@ Label_4_0166D50E:
  BYTE   W12
  BYTE   N11
  BYTE   W12
-// 012   ----------------------------------------
- BYTE   N01
- BYTE   W12
- BYTE   N11
- BYTE   W12
- BYTE   N11
- BYTE   W12
- BYTE   N01
- BYTE   W12
- BYTE   N11
- BYTE   W12
- BYTE   N11
- BYTE   W12
- BYTE   N01
- BYTE   W12
- BYTE   N11
- BYTE   W12
-// 013   ----------------------------------------
- BYTE   TIE  Fn1
- BYTE   W96
-// 014   ----------------------------------------
- BYTE   W44
- BYTE   W02
- BYTE   EOT
- BYTE   W02
- BYTE   TIE  Ds1
- BYTE   W48
-// 015   ----------------------------------------
- BYTE   W92
- BYTE   W02
- BYTE   EOT
- BYTE   W02
-// 016   ----------------------------------------
- BYTE   TIE  Fn1
- BYTE   W96
 // 017   ----------------------------------------
+ BYTE   N01
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N01
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+ BYTE   N01
+ BYTE   W12
+ BYTE   N11
+ BYTE   W12
+// 018   ----------------------------------------
+ BYTE   TIE  Fn1
+ BYTE   W96
+// 019   ----------------------------------------
  BYTE   W44
  BYTE   W02
  BYTE   EOT
  BYTE   W02
  BYTE   TIE  Ds1
  BYTE   W48
-// 018   ----------------------------------------
+// 020   ----------------------------------------
  BYTE   W92
  BYTE   W02
  BYTE   EOT
  BYTE   W02
-// 019   ----------------------------------------
+// 021   ----------------------------------------
+ BYTE   TIE  Fn1
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   W44
+ BYTE   W02
+ BYTE   EOT
+ BYTE   W02
+ BYTE   TIE  Ds1
+ BYTE   W48
+// 023   ----------------------------------------
+ BYTE   W92
+ BYTE   W02
+ BYTE   EOT
+ BYTE   W02
+// 024   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_4_0166D4B2
-// 020   ----------------------------------------
+  POIN2 Label_4_011F4421
+// 025   ----------------------------------------
  BYTE   W12
  BYTE   FINE
 
 //**************** Track 6 (Midi-Chn.5) ****************//
 
-song03DF_006:
+song1A_006:
 // 000   ----------------------------------------
- BYTE   KEYSH   song03DF_key+0
-Label_5_0166D592:
+ BYTE   KEYSH   song1A_key+0
+Label_5_011F4500:
  BYTE   VOICE   62
- BYTE   VOL   35*song03DF_mvl/mxv
+ BYTE   VOL   35*song1A_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   TIE  Cn2  v108
  BYTE   TIE  Gn2
@@ -2083,7 +2118,7 @@ Label_5_0166D592:
 // 006   ----------------------------------------
  BYTE   EOT
  BYTE   Cs2  v056
-Label_5_0166D5BD:
+Label_5_011F452B:
  BYTE   TIE  Cn3  v072
  BYTE   TIE  Fn3
  BYTE   W96
@@ -2100,7 +2135,7 @@ Label_5_0166D5BD:
 // 009   ----------------------------------------
  BYTE   EOT
  BYTE   As2  v063
-Label_5_0166D5D1:
+Label_5_011F453F:
  BYTE   TIE  Gs2  v072
  BYTE   TIE  Cs3
  BYTE   W96
@@ -2117,50 +2152,39 @@ Label_5_0166D5D1:
 // 012   ----------------------------------------
  BYTE   EOT
  BYTE   As2  v063
- BYTE   PATT
-  POIN2 Label_5_0166D5BD
 // 013   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_011F452B
+// 014   ----------------------------------------
  BYTE   W48
  BYTE   EOT
  BYTE   Cn3  v065
  BYTE   TIE  As2  v072
  BYTE   TIE  Ds3
  BYTE   W48
-// 014   ----------------------------------------
- BYTE   W96
 // 015   ----------------------------------------
+ BYTE   W96
+// 016   ----------------------------------------
  BYTE   EOT
  BYTE   As2  v063
+// 017   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_5_0166D5D1
-// 016   ----------------------------------------
+  POIN2 Label_5_011F453F
+// 018   ----------------------------------------
  BYTE   W48
  BYTE   EOT
  BYTE   Gs2  v061
  BYTE   TIE  As2  v072
  BYTE   TIE  Ds3
  BYTE   W48
-// 017   ----------------------------------------
- BYTE   W96
-// 018   ----------------------------------------
- BYTE   EOT
- BYTE   As2  v063
- BYTE   PATT
-  POIN2 Label_5_0166D5BD
 // 019   ----------------------------------------
- BYTE   W48
- BYTE   EOT
- BYTE   Cn3  v065
- BYTE   TIE  As2  v072
- BYTE   TIE  Ds3
- BYTE   W48
-// 020   ----------------------------------------
  BYTE   W96
-// 021   ----------------------------------------
+// 020   ----------------------------------------
  BYTE   EOT
  BYTE   As2  v063
+// 021   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_5_0166D5BD
+  POIN2 Label_5_011F452B
 // 022   ----------------------------------------
  BYTE   W48
  BYTE   EOT
@@ -2173,23 +2197,38 @@ Label_5_0166D5D1:
 // 024   ----------------------------------------
  BYTE   EOT
  BYTE   As2  v063
- BYTE   GoTo
-  POIN2 Label_5_0166D592
 // 025   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_011F452B
+// 026   ----------------------------------------
+ BYTE   W48
+ BYTE   EOT
+ BYTE   Cn3  v065
+ BYTE   TIE  As2  v072
+ BYTE   TIE  Ds3
+ BYTE   W48
+// 027   ----------------------------------------
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   EOT
+ BYTE   As2  v063
+ BYTE   GoTo
+  POIN2 Label_5_011F4500
+// 029   ----------------------------------------
  BYTE   W12
  BYTE   FINE
 
 //**************** Track 7 (Midi-Chn.6) ****************//
 
-song03DF_007:
+song1A_007:
 // 000   ----------------------------------------
- BYTE   KEYSH   song03DF_key+0
-Label_6_0166DB56:
+ BYTE   KEYSH   song1A_key+0
+Label_6_011F45A8:
  BYTE   VOICE   30
  BYTE   PAN   c_v+40
- BYTE   VOL   28*song03DF_mvl/mxv
+ BYTE   VOL   28*song1A_mvl/mxv
  BYTE   MOD 0
- BYTE   CnM2
+ BYTE   CnM2  v000
  BYTE   N05  Gn4  v096
  BYTE   W06
  BYTE   Gs4
@@ -2223,7 +2262,7 @@ Label_6_0166DB56:
  BYTE   Ds3
  BYTE   W36
 // 001   ----------------------------------------
-Label_6_0166DB86:
+Label_6_011F45D9:
  BYTE   W36
  BYTE   BEND   c_v-1
  BYTE   W01
@@ -2272,7 +2311,7 @@ Label_6_0166DB86:
  BYTE   Cs3
  BYTE   W12
 // 002   ----------------------------------------
-Label_6_0166DBB9:
+Label_6_011F460C:
  BYTE   BEND   c_v-64
  BYTE   TIE  Gs3  v112
  BYTE   W01
@@ -2314,7 +2353,7 @@ Label_6_0166DBB9:
  BYTE   W01
  BYTE   PEND 
 // 003   ----------------------------------------
-Label_6_0166DBE5:
+Label_6_011F4638:
  BYTE   BEND   c_v-17
  BYTE   W01
  BYTE   Gn1
@@ -2364,9 +2403,10 @@ Label_6_0166DBE5:
  BYTE   W01
  BYTE   Ds3
  BYTE   W36
- BYTE   PATT
-  POIN2 Label_6_0166DB86
 // 004   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_6_011F45D9
+// 005   ----------------------------------------
  BYTE   EOT
  BYTE   Gn3
  BYTE   BEND   c_v-52
@@ -2380,11 +2420,13 @@ Label_6_0166DBE5:
  BYTE   W12
  BYTE   Cs3
  BYTE   W12
+// 006   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_6_0166DBB9
+  POIN2 Label_6_011F460C
+// 007   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_6_0166DBE5
-// 005   ----------------------------------------
+  POIN2 Label_6_011F4638
+// 008   ----------------------------------------
  BYTE   EOT
  BYTE   Gs3
  BYTE   BEND   c_v-52
@@ -2425,7 +2467,7 @@ Label_6_0166DBE5:
  BYTE   W02
  BYTE   Fn2
  BYTE   W01
-Label_6_0166DC6A:
+Label_6_011F46BD:
  BYTE   BEND   c_v-7
  BYTE   W01
  BYTE   Cn3
@@ -2436,7 +2478,7 @@ Label_6_0166DC6A:
  BYTE   W02
  BYTE   Ds3
  BYTE   W42
-// 006   ----------------------------------------
+// 009   ----------------------------------------
  BYTE   Ds3
  BYTE   W01
  BYTE   Dn3
@@ -2473,7 +2515,7 @@ Label_6_0166DC6A:
  BYTE   Gs2
  BYTE   W12
  BYTE   PEND 
-Label_6_0166DC9D:
+Label_6_011F46F0:
  BYTE   N11  As2  v112
  BYTE   W12
  BYTE   Cn3
@@ -2501,7 +2543,7 @@ Label_6_0166DC9D:
  BYTE   W02
  BYTE   Fn2
  BYTE   W01
-// 007   ----------------------------------------
+// 010   ----------------------------------------
  BYTE   An2
  BYTE   W01
  BYTE   Cn3
@@ -2513,7 +2555,7 @@ Label_6_0166DC9D:
  BYTE   Ds3
  BYTE   W42
  BYTE   PEND 
-Label_6_0166DCC8:
+Label_6_011F471B:
  BYTE   BEND   c_v-1
  BYTE   W01
  BYTE   Dn3
@@ -2539,7 +2581,7 @@ Label_6_0166DCC8:
  BYTE   W12
  BYTE   Gs2
  BYTE   W12
-// 008   ----------------------------------------
+// 011   ----------------------------------------
  BYTE   As2
  BYTE   W12
  BYTE   Cn3
@@ -2560,7 +2602,7 @@ Label_6_0166DCC8:
  BYTE   Ds3
  BYTE   W06
  BYTE   PEND 
-Label_6_0166DCFB:
+Label_6_011F474E:
  BYTE   W24
  BYTE   BEND   c_v-64
  BYTE   N22  Fn3  v112
@@ -2581,7 +2623,7 @@ Label_6_0166DCFB:
  BYTE   W01
  BYTE   Ds3
  BYTE   W12
-// 009   ----------------------------------------
+// 012   ----------------------------------------
  BYTE   N11  Gn3
  BYTE   W12
  BYTE   BEND   c_v-64
@@ -2621,7 +2663,7 @@ Label_6_0166DCFB:
  BYTE   W01
  BYTE   Ds3
  BYTE   W06
-// 010   ----------------------------------------
+// 013   ----------------------------------------
  BYTE   N11  Gn3
  BYTE   W12
  BYTE   Ds3
@@ -2639,7 +2681,7 @@ Label_6_0166DCFB:
  BYTE   W12
  BYTE   Gs2
  BYTE   W12
-// 011   ----------------------------------------
+// 014   ----------------------------------------
  BYTE   As2
  BYTE   W12
  BYTE   Cn3
@@ -2667,15 +2709,19 @@ Label_6_0166DCFB:
  BYTE   W02
  BYTE   Fn2
  BYTE   W01
+// 015   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_6_0166DC6A
+  POIN2 Label_6_011F46BD
+// 016   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_6_0166DC9D
+  POIN2 Label_6_011F46F0
+// 017   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_6_0166DCC8
+  POIN2 Label_6_011F471B
+// 018   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_6_0166DCFB
-// 012   ----------------------------------------
+  POIN2 Label_6_011F474E
+// 019   ----------------------------------------
  BYTE   N11  Gs3  v112
  BYTE   W12
  BYTE   Fn3
@@ -2692,7 +2738,7 @@ Label_6_0166DCFB:
  BYTE   W12
  BYTE   En3
  BYTE   W12
-// 013   ----------------------------------------
+// 020   ----------------------------------------
  BYTE   Cn3
  BYTE   W12
  BYTE   BEND   c_v-64
@@ -2723,8 +2769,8 @@ Label_6_0166DCFB:
  BYTE   W01
  BYTE   N72  Fn4
  BYTE   W12
-// 014   ----------------------------------------
-Label_6_0166DDBC:
+// 021   ----------------------------------------
+Label_6_011F480F:
  BYTE   W32
  BYTE   W01
  BYTE   BEND   c_v-1
@@ -2793,8 +2839,8 @@ Label_6_0166DDBC:
  BYTE   Ds3
  BYTE   W21
  BYTE   PEND 
-// 015   ----------------------------------------
-Label_6_0166DE04:
+// 022   ----------------------------------------
+Label_6_011F4857:
  BYTE   W36
  BYTE   N72  Ds4  v112
  BYTE   W44
@@ -2822,7 +2868,7 @@ Label_6_0166DE04:
  BYTE   Gn1
  BYTE   W02
  BYTE   PEND 
-// 016   ----------------------------------------
+// 023   ----------------------------------------
  BYTE   Ds1
  BYTE   W01
  BYTE   As0
@@ -2869,25 +2915,27 @@ Label_6_0166DE04:
  BYTE   W01
  BYTE   N72  Fn4
  BYTE   W12
+// 024   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_6_0166DDBC
+  POIN2 Label_6_011F480F
+// 025   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_6_0166DE04
-// 017   ----------------------------------------
+  POIN2 Label_6_011F4857
+// 026   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_6_0166DB56
-// 018   ----------------------------------------
+  POIN2 Label_6_011F45A8
+// 027   ----------------------------------------
  BYTE   W12
  BYTE   FINE
 
 //**************** Track 8 (Midi-Chn.7) ****************//
 
-song03DF_008:
+song1A_008:
 // 000   ----------------------------------------
- BYTE   KEYSH   song03DF_key+0
-Label_7_0166D701:
- BYTE   VOICE   127
- BYTE   VOL   46*song03DF_mvl/mxv
+ BYTE   KEYSH   song1A_key+0
+Label_7_011F48B9:
+ BYTE   VOICE   124
+ BYTE   VOL   46*song1A_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   N12  Cn1  v127
  BYTE   N12  An2
@@ -2899,7 +2947,7 @@ Label_7_0166D701:
  BYTE   N12  As1  v080
  BYTE   W24
 // 001   ----------------------------------------
-Label_7_0166D718:
+Label_7_011F48D0:
  BYTE   N12  Cn1  v127
  BYTE   W12
  BYTE   N12
@@ -2933,7 +2981,7 @@ Label_7_0166D718:
  BYTE   Gn1
  BYTE   W12
 // 003   ----------------------------------------
-Label_7_0166D748:
+Label_7_011F4900:
  BYTE   N12  Cn1  v127
  BYTE   N12  An2
  BYTE   W36
@@ -2944,10 +2992,11 @@ Label_7_0166D748:
  BYTE   N12  As1  v080
  BYTE   W24
  BYTE   PEND 
- BYTE   PATT
-  POIN2 Label_7_0166D718
 // 004   ----------------------------------------
-Label_7_0166D75F:
+ BYTE   PATT
+  POIN2 Label_7_011F48D0
+// 005   ----------------------------------------
+Label_7_011F4917:
  BYTE   W24
  BYTE   N12  Cn1  v127
  BYTE   N12  As1  v080
@@ -2962,7 +3011,7 @@ Label_7_0166D75F:
  BYTE   Gn1
  BYTE   W12
  BYTE   PEND 
-// 005   ----------------------------------------
+// 006   ----------------------------------------
  BYTE   Cn1
  BYTE   N12  An2
  BYTE   W36
@@ -2974,8 +3023,8 @@ Label_7_0166D75F:
  BYTE   N12
  BYTE   N12  As1  v080
  BYTE   W24
-// 006   ----------------------------------------
-Label_7_0166D784:
+// 007   ----------------------------------------
+Label_7_011F493C:
  BYTE   W12
  BYTE   N12  Dn1  v127
  BYTE   N12  As1  v080
@@ -2989,7 +3038,7 @@ Label_7_0166D784:
  BYTE   N12  As1  v080
  BYTE   W12
  BYTE   PEND 
-// 007   ----------------------------------------
+// 008   ----------------------------------------
  BYTE   W24
  BYTE   Cn1  v127
  BYTE   N12  As1  v080
@@ -2999,7 +3048,7 @@ Label_7_0166D784:
  BYTE   W24
  BYTE   Cn1  v127
  BYTE   W12
-// 008   ----------------------------------------
+// 009   ----------------------------------------
  BYTE   N12
  BYTE   N12  As1  v080
  BYTE   W36
@@ -3009,9 +3058,10 @@ Label_7_0166D784:
  BYTE   Cn1  v127
  BYTE   N12  As1  v080
  BYTE   W24
+// 010   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_7_0166D784
-// 009   ----------------------------------------
+  POIN2 Label_7_011F493C
+// 011   ----------------------------------------
  BYTE   W24
  BYTE   N12  Cn1  v127
  BYTE   N12  As1  v080
@@ -3024,7 +3074,7 @@ Label_7_0166D784:
  BYTE   Cn1
  BYTE   N12  Gn1
  BYTE   W12
-// 010   ----------------------------------------
+// 012   ----------------------------------------
  BYTE   Cn1
  BYTE   N12  An2
  BYTE   W36
@@ -3038,8 +3088,8 @@ Label_7_0166D784:
  BYTE   N12  As1  v080
  BYTE   N12  Fn2  v120
  BYTE   W24
-// 011   ----------------------------------------
-Label_7_0166D7ED:
+// 013   ----------------------------------------
+Label_7_011F49A5:
  BYTE   W12
  BYTE   N12  Dn1  v127
  BYTE   N12  As1  v080
@@ -3056,35 +3106,36 @@ Label_7_0166D7ED:
  BYTE   N12  Fn2  v120
  BYTE   W12
  BYTE   PEND 
-// 012   ----------------------------------------
- BYTE   W24
- BYTE   Cn1  v127
- BYTE   N12  As1  v080
- BYTE   N12  Fn2  v120
- BYTE   W36
- BYTE   Dn1  v127
- BYTE   N12  As1  v080
- BYTE   N12  Fn2  v120
- BYTE   W24
- BYTE   Cn1  v127
- BYTE   W12
-// 013   ----------------------------------------
- BYTE   N12
- BYTE   N12  As1  v080
- BYTE   N12  Fn2  v120
- BYTE   W36
- BYTE   Dn1  v127
- BYTE   N12  As1  v080
- BYTE   N12  Fn2  v120
- BYTE   W36
- BYTE   Cn1  v127
- BYTE   N12  As1  v080
- BYTE   N12  Fn2  v120
- BYTE   W24
- BYTE   PATT
-  POIN2 Label_7_0166D7ED
 // 014   ----------------------------------------
  BYTE   W24
+ BYTE   Cn1  v127
+ BYTE   N12  As1  v080
+ BYTE   N12  Fn2  v120
+ BYTE   W36
+ BYTE   Dn1  v127
+ BYTE   N12  As1  v080
+ BYTE   N12  Fn2  v120
+ BYTE   W24
+ BYTE   Cn1  v127
+ BYTE   W12
+// 015   ----------------------------------------
+ BYTE   N12
+ BYTE   N12  As1  v080
+ BYTE   N12  Fn2  v120
+ BYTE   W36
+ BYTE   Dn1  v127
+ BYTE   N12  As1  v080
+ BYTE   N12  Fn2  v120
+ BYTE   W36
+ BYTE   Cn1  v127
+ BYTE   N12  As1  v080
+ BYTE   N12  Fn2  v120
+ BYTE   W24
+// 016   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_7_011F49A5
+// 017   ----------------------------------------
+ BYTE   W24
  BYTE   N12  Cn1  v127
  BYTE   N12  As1  v080
  BYTE   N12  Fn2  v120
@@ -3098,10 +3149,11 @@ Label_7_0166D7ED:
  BYTE   Cn1
  BYTE   N12  Gn1
  BYTE   W12
+// 018   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_7_0166D748
-// 015   ----------------------------------------
-Label_7_0166D862:
+  POIN2 Label_7_011F4900
+// 019   ----------------------------------------
+Label_7_011F4A1A:
  BYTE   N12  Cn1  v127
  BYTE   W12
  BYTE   N12
@@ -3118,13 +3170,16 @@ Label_7_0166D862:
  BYTE   N12  As1  v080
  BYTE   W12
  BYTE   PEND 
+// 020   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_7_0166D75F
+  POIN2 Label_7_011F4917
+// 021   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_7_0166D748
+  POIN2 Label_7_011F4900
+// 022   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_7_0166D862
-// 016   ----------------------------------------
+  POIN2 Label_7_011F4A1A
+// 023   ----------------------------------------
  BYTE   W24
  BYTE   N12  Cn1  v127
  BYTE   N12  As1  v080
@@ -3140,31 +3195,31 @@ Label_7_0166D862:
  BYTE   W12
  BYTE   Gn1
  BYTE   W12
-// 017   ----------------------------------------
+// 024   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_7_0166D701
-// 018   ----------------------------------------
+  POIN2 Label_7_011F48B9
+// 025   ----------------------------------------
  BYTE   W12
  BYTE   FINE
 
 //******************************************************//
 	ALIGN 4
 
-song03DF:
+song1A:
 	BYTE	8	// NumTrks
 	BYTE	0	// NumBlks
-	BYTE	song03DF_pri	// Priority
-	BYTE	song03DF_rev	// Reverb.
+	BYTE	song1A_pri	// Priority
+	BYTE	song1A_rev	// Reverb.
     
-	POIN2	song03DF_grp
+	POIN2	song1A_grp
     
-	POIN2	song03DF_001
-	POIN2	song03DF_002
-	POIN2	song03DF_003
-	POIN2	song03DF_004
-	POIN2	song03DF_005
-	POIN2	song03DF_006
-	POIN2	song03DF_007
-	POIN2	song03DF_008
+	POIN2	song1A_001
+	POIN2	song1A_002
+	POIN2	song1A_003
+	POIN2	song1A_004
+	POIN2	song1A_005
+	POIN2	song1A_006
+	POIN2	song1A_007
+	POIN2	song1A_008
 
 	

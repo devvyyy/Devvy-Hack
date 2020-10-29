@@ -29,9 +29,15 @@ TurnBasedEvents:
 END_MAIN
 
 CharacterBasedEvents:
-CharacterEventBothWays(0x10,TalkEvent, Eirika, Ephraim)
+CharacterEventBothWays(0x10,TalkingTextTest, Zane, Wustenhoff)
 END_MAIN
 
+TalkingTextTest:
+	Text(Placeholder1)
+	MURE 2
+	NoFade
+	ENDA
+	
 LocationBasedEvents:
 Chest(HandAxe,0,12)
 Chest(Elixir,1,11)
@@ -43,6 +49,7 @@ END_MAIN
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+AREA 0xF TalismanThing [1,10] [3,10]
 END_MAIN
 
 Dunno1:
@@ -95,11 +102,11 @@ ALIGN 4
 
 BeginningScene:
 MUSC 0x1
+LOAD1 0x0 Units1 //0x0 instead of 0x1 seems to be for allies on maps with prep screens
 LOAD1 0x1 EnemyUnits
 ENUN
 LOAD1 0x1 EnemyUnits2
 ENUN
-LOAD1 0x0 Units1 //0x0 instead of 0x1 seems to be for allies on maps with prep screens
 ENUN
 TEXTSTART
 TEXTSHOW Prologue1
@@ -140,6 +147,7 @@ LABEL 0
 	ENDA
 	
 	// HouseEvent(HouseText, HouseBG)
+	
 
 FreezeAllEnemies:
 VeinActivation
@@ -147,8 +155,19 @@ ASMC FreezeAllASMC|1
 NoFade
 ENDA
 
-TalkEvent:
-Text(0xc0a)
+TalismanThing:
+SVAL 0x2 0x0
+CALL 0x9EE1B8 // this and sval check if the unit triggering the area is a player unit
+TILECHANGE 2
+CUMO Zane // loads a cursor
+STAL 60
+CURE // removes the cursor
+TEXTSTART
+TEXTSHOW Placeholder1
+TEXTEND
+SVAL 0x3 Talisman
+GIVEITEMTO 0xFFFF
+REMA
 NoFade
 ENDA
 

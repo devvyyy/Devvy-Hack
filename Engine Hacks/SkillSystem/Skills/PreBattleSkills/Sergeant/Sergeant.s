@@ -10,12 +10,6 @@ push {r4-r7,lr}
 mov r4, r0
 mov r5, r1
 
-@check range
-ldr r0,=#0x203A4D4 @battle stats
-ldrb r0,[r0,#2] @range
-cmp r0,#1
-bgt GoBack
-
 @check for skill
 ldr r0, SkillTester
 mov lr, r0
@@ -25,14 +19,21 @@ ldr r1, SergeantID
 cmp r0, #0
 beq GoBack
 
-@add 10 hit and avoid
-mov r1, #0x60
-ldrh r0, [r4, r1] @hit
-add r0, #10
-strh r0, [r4,r1]
-mov r1, #0x62
-ldrh r0, [r4, r1] @avoid
-add r0, #10
+@make sure we're in combat (or combat prep)
+ldrb r3, =gBattleData
+ldrb r3, [r3]
+cmp r3, #4
+beq End
+
+mov r2, #0x14 @attacker str
+ldrb r0, [r4, r2] 
+ldrb r1, [r5, #0x15] @defender def
+cmp r0, r1
+ble End @skip if str is less or equal
+
+mov r1, #0x5c
+ldrh r0, [r4, r1]
+add r0, #2
 strh r0, [r4,r1]
 
 GoBack:
