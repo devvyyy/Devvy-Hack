@@ -168,6 +168,16 @@ Ulrich_Mug:
 #incext PortraitFormatter "UlrichV2.png"
 setMugEntryExtend(0x22, Ulrich_Mug, 3, 5, 2, 3, 10, 4, 0, 0)
 
+ALIGN 16
+Ansgar_Mug:
+#incext PortraitFormatter "Ansgar.png"
+setMugEntryExtend(0x23, Ansgar_Mug, 3, 5, 2, 3, 10, 4, 0, 2)
+
+ALIGN 16
+Zopf_Mug:
+#incext PortraitFormatter "Zopf.png"
+setMugEntry(0x24, Zopf_Mug, 3, 5, 3, 3)
+
 //Bad Guys
 ALIGN 16 //Sai by hypergammaspaces
 Sai_Mug:
