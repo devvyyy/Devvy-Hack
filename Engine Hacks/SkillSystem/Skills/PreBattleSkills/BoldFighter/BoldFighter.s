@@ -31,7 +31,7 @@ lsr r0, #1 @max/2
 cmp r1, r0
 ble End
 
-@add 2 AS
+@add a fuck ton of AS
 mov r1, #0x5E
 ldrh r0, [r4, r1] @AS
 add r0, #99

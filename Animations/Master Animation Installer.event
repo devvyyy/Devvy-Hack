@@ -205,6 +205,14 @@ ALIGN 4
 }
 ALIGN 4
 {
+#include "Paladin M/Axe/Axe Installer.event"
+}
+ALIGN 4
+{
+#include "Paladin M/HandAxe/Handaxe Installer.event"
+}
+ALIGN 4
+{
 #include "Paladin M/Unarmed/Unarmed Installer.event"
 }
 ALIGN 4 //Soldier by Alusq
@@ -340,8 +348,8 @@ WORD 0x0    // Seperator
 PaladinMAnim:
 SwordAnim(0x3A)
 SpearAnim(0x3B)
-AxeAnim(0xA3)
-HandAxeAnim(0xA4)
+AxeAnim(0xAA)
+HandAxeAnim(0xAB)
 UnarmedAnim(0x3C)
 WORD 0x0    // Seperator
 

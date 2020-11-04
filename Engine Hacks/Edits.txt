@@ -1,3 +1,20 @@
+//Skip to Normal
+{
+PUSH; ORG 0xA20164
+    POIN (prFixedDifficulty+1)
+POP
+
+prFixedDifficulty:
+    SHORT (0x2200 | 1) // Difficulty: 0 for easy, 1 for normal, 2 for hard
+    SHORT 0x2300
+    SHORT 0x212A
+    SHORT 0x5442
+    SHORT 0x213D
+    SHORT 0x5443
+    SHORT 0x4770
+    ALIGN 4
+}
+
 //Affinity Icon Palette
 PUSH
     ORG 0x5996F4
