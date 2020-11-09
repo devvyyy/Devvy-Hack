@@ -1,3 +1,11 @@
+
+//Minimap Palette
+PUSH
+    ORG 0x0A1FFB0
+    #incbin "MiniMap.bin"
+    MESSAGE SNOW MINIMAPS
+POP
+
 //Skip to Normal
 {
 PUSH; ORG 0xA20164

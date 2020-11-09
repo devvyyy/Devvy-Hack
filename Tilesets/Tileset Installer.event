@@ -1,4 +1,24 @@
-//Snow Bern by Venno and ZoramineFae
+	//Snow Fields by DerTheVaporeon
+	
+	//ALIGN 4
+    //SnowFieldsImage:
+    //#incext Png2Dmp "SnowFields/SnowFieldsImage.png" --lz77
+	
+	ALIGN 4
+    SnowFieldsPalette:
+    #incbin "SnowFields/SnowFieldsPalette.bin"
+	
+	//ALIGN 4
+    //SnowFieldsMapConfig:
+    //#incext compress "SnowFields/SnowFields.mapchip_config"
+
+	ALIGN 4
+	//EventPointerTable(0x1, SnowFieldsImage)
+    EventPointerTable(0x2, SnowFieldsPalette)
+	//EventPointerTable(0x3, SnowFieldsMapConfig)
+
+
+	//Snow Bern by Venno and ZoramineFae
     ALIGN 4
     SnowBernImage:
     #incext Png2Dmp "SnowBern/SnowBernImage.png" --lz77
@@ -10,8 +30,7 @@
     ALIGN 4
     SnowBernPalette:
     #incbin "SnowBern/SnowyPalette.bin"
-
-
+	
     ALIGN 4
     EventPointerTable(0x51, SnowBernPalette)
     EventPointerTable(0x52, SnowBernMapConfig)
