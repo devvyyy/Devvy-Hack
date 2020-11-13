@@ -1,0 +1,197 @@
+
+////////////////////////////////////////////////////
+//                                                //
+// Disassembled with Nintenlord's Event Assembler //
+// Version: 11.0.0.0                              //
+// Game: FE8                                      //
+// File: FE8_clean.gba                            //
+// Offset: $9EC66C                                //
+//                                                //
+////////////////////////////////////////////////////
+
+EventPointerTable(0x7, PointerList)
+
+VeinEffect(0, FreezeAllEnemies)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+POIN $0 $0 $0
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+CharacterEventBothWays(0x10,TalkingTextTest, Zane, Wustenhoff)
+END_MAIN
+
+TalkingTextTest:
+	Text(Placeholder1)
+	MURE 2
+	NoFade
+	ENDA
+	
+LocationBasedEvents:
+Chest(HandAxe,0,12)
+Chest(Elixir,1,11)
+Chest(SteelBlade,11,8)
+Door(1,14)
+Door(2,14)
+Seize(2,5)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+AREA 0xF TalismanThing [1,10] [3,10]
+END_MAIN
+
+Dunno1:
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+Units1:
+UNIT Zane  EirikaLord 0x1 Level(1, Ally, 0)   [7,10] 0b 0x0 0x0 0x0 [IronSword, Lockpick, PureWater,] [0x0,0x0,0x0,0x0]
+UNIT Wustenhoff 0x1 0x1 Level(10, Ally, 0)  [8,10] 0b 0x0 0x0 0x0 [0xC7, Mend,] [0x0,0x0,0x0,0x0]
+UNIT Atheya  0x20 0x1 Level(1, Ally, 0)     [7,11] 0b 0x0 0x0 0x0 [IronAxe, Vulnerary] [0x0,0x0,0x0,0x0]
+UNIT Bronson  0x54 0x1 Level(1, Ally, 0)  [8,11] 0b 0x0 0x0 0x0 [0xBC,] [0x0,0x0,0x0,0x0]
+UNIT Brigitta  Soldier 0x1 Level(1, Ally, 0)    [6,11] 0b 0x0 0x0 0x0 [IronLance, Elixir] [0x0,0x0,0x0,0x0]
+UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [6,10] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
+UNIT
+
+EnemyUnits:
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [7,3] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)      [10,14] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)      [12,12] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)      [13,7] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)      [0,17] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT Cultist 0x58 0x1 Level(1, Enemy, 1)      [14,2] 0b 0x0 0x0 0x0 [Flux,] [0,0,4,0]
+UNIT Cultist 0x58 0x1 Level(1, Enemy, 1)      [1,12] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)      [4,6] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT Marcellus 0x58 0x1 Level(5, Enemy, 1)      [2,5] 0b 0x0 0x0 0x0 [Flux,] [0,3,4,32]
+
+UNIT
+
+EnemyUnits2:
+UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [10,4] 0b 0x0 0x0 0x0 [IronAxe,] [0x0,0x0,0x4,0x0]
+UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [4,16] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
+UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [2,16] 0b 0x0 0x0 0x0 [SteelLance,] AttackInRangeAI
+UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [6,5] 0b 0x0 0x0 0x0 [IronLance,] [0,0,4,0]
+UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [11,9] 0b 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
+UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [6,14] 0b 0x0 0x0 0x0 [SteelAxe,] AttackInRangeAI
+UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [14,10] 0b 0x0 0x0 0x0 [IronAxe,] [0,0,4,0]
+UNIT BadGuy 0x57 0x1 Level(1, Enemy, 1)     [13,16] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
+UNIT BadGuy 0x57 0x1 Level(1, Enemy, 1)     [12,3] 0b 0x0 0x0 0x0 [SteelSword,] [0,0,4,0]
+
+UNIT
+
+Traps1:
+Vein(9,23,0x0,DV1Desc) //freeze enemies
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+BeginningScene:
+LOAD1 0x0 Units1
+LOAD1 0x1 EnemyUnits
+ENUN
+LOAD1 0x1 EnemyUnits2
+ENUN
+MUSC 0x7
+TEXTSTART
+SVAL 0x2 0x3C
+SVAL 0x3 Investigation
+CALL 0x9EE310
+REMA
+CLEAN
+MUSC 0x1
+CAM1 0x1
+CUMO 0x1
+STAL 60
+CURE
+TEXTSHOW NoooBadGuys
+TEXTEND
+FADI 16
+GotoPrepScreen
+ENDA
+
+EndingScene:
+CharacterConditionalDialog(Affogato,Placeholder1,Placeholder2)
+STAL 120
+EVBIT_F 0x2
+MNTS 0x1 //return to title screen
+NoFade
+ENDA
+
+VillageEvent:
+	VillageEventItem(VillageText, Village, Boots)
+
+HouseEvent:
+	// Set parameters
+	SVAL r1 NiceThighsID
+	SVAL r2 (-1) // (-1) is active unit
+	
+	// Check if unit has skill
+	// If they have, goto label #0 (end)
+	ASMC (ASMC_HasSkill+1)
+	BNE 0 rC r0
+	
+	// Learn skill to unit
+	ASMC (ASMC_LearnNewSkill+1)
+	
+LABEL 0
+	// end
+	
+	Text(HouseText)
+	
+	NoFade
+	ENDA
+	
+	// HouseEvent(HouseText, HouseBG)
+	
+
+FreezeAllEnemies:
+VeinActivation
+ASMC FreezeAllASMC|1
+NoFade
+ENDA
+
+TalismanThing:
+SVAL 0x2 0x0
+CALL 0x9EE1B8
+TILECHANGE 0x2
+CUMO 0x1
+STAL 60
+CURE
+TEXTSHOW Placeholder1
+TEXTEND
+REMA
+SVAL 0x3 0x61
+GIVEITEMTO 0xFFFF
+EVBIT_T 0x7
+ENDA
+
+ShopItems:
+SHLI Thunder Elfire Nosferatu Divine Mend Physic PureWater Elixir
+ALIGN 4
+
+ArmoryItems:
+SHLI SteelAxe SteelLance SteelBow SteelSword HandAxe Javelin
+ALIGN 4

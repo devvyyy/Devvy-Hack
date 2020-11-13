@@ -79,7 +79,19 @@ ALIGN 4
 {
 #include "Swordsman F/Unarmed/Installer.event"
 }
-ALIGN 4 //Warrior by Pushwall
+ALIGN 4 //Fighter by Leo_link
+{
+#include "Fighter/Axe/Installer.event"
+}
+ALIGN 4
+{
+#include "Fighter/Handaxe/Installer.event"
+}
+ALIGN 4
+{
+#include "Fighter/Unarmed/Installer.event"
+}
+ALIGN 4 //Warrior by Leo_link, Nuramon, Spud
 {
 #include "Warrior/Axe/Axe Installer.event"
 }
@@ -118,6 +130,12 @@ ALIGN 4 //Cavalier (F) by TEAM SALVAGED
 ALIGN 4
 {
 #include "Cavalier F/Lance/Lance Installer.event"
+}
+{
+#include "Cavalier F/Axe/Axe Installer.event"
+}
+{
+#include "Cavalier F/Handaxe/Handaxe Installer.event"
 }
 ALIGN 4
 {
@@ -320,6 +338,8 @@ WORD 0x0    // Seperator
 CavalierFAnim:
 SwordAnim(0x37)
 SpearAnim(0x38)
+AxeAnim(0xAC)
+HandAxeAnim(0xAD)
 UnarmedAnim(0x39)
 WORD 0x0    // Seperator
 
@@ -359,7 +379,7 @@ UnarmedAnim(0x6B)
 WORD 0x0    // Seperator
 
 OccultistAnim:
-AnimaAnim(0xA3)
+DarkAnim(0xA3)
 UnarmedAnim(0xA3)
 WORD 0x0    // Seperator
 

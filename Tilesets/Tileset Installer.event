@@ -16,6 +16,25 @@
 	//EventPointerTable(0x1, SnowFieldsImage)
     EventPointerTable(0x2, SnowFieldsPalette)
 	//EventPointerTable(0x3, SnowFieldsMapConfig)
+	
+	//Snow Village by N426
+	
+	ALIGN 4
+    SnowVillageImage:
+    #incext Png2Dmp "SnowVillage/SnowVillageImage.png" --lz77
+	
+	ALIGN 4
+    SnowVillagePalette:
+    #incbin "SnowVillage/SnowVillagePalette.bin"
+	
+	ALIGN 4
+    SnowVillageMapConfig:
+    #incext compress "SnowVillage/SnowVillage.mapchip_config"
+
+	ALIGN 4
+	EventPointerTable(0xE, SnowVillageImage)
+    EventPointerTable(0xF, SnowVillagePalette)
+	EventPointerTable(0x10, SnowVillageMapConfig)
 
 
 	//Snow Bern by Venno and ZoramineFae
