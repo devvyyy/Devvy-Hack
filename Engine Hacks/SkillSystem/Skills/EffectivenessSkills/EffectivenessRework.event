@@ -52,6 +52,7 @@ ItemEffectivenessPtr(Aircalibur, FlierEffectiveness)
 ItemEffectivenessPtr(0xC3, FlierEffectiveness)
 ItemEffectivenessPtr(0xC4, FlierEffectiveness)
 ItemEffectivenessPtr(0xC5, FlierEffectiveness)
+ItemEffectivenessPtr(0xC8, FlierAndHorse1)
 
 //Protector item (macro still works, even if it's wrongly named)
 ItemEffectivenessPtr(DelphiShield, FlierProtection)
@@ -87,6 +88,10 @@ WORD 0
 FlierAndMonster2: //Nidhogg
 SetWeaponEffectiveness(FlierType, 6)
 SetWeaponEffectiveness(MonsterType, 4)
+WORD 0
+FlierAndHorse1: //Nidhogg
+SetWeaponEffectiveness(HorseType, 6)
+SetWeaponEffectiveness(FlierType, 4)
 WORD 0
 
 #define SetProtection(type_list) "SHORT 0 type_list"

@@ -153,6 +153,16 @@ ALIGN 4
 //Tears of Sylph
 
 ALIGN 4
+//Lightning by Jay Reichard
+SongTable(0x59,song59,0)
+#include "Lightning.event"
+
+ALIGN 4
+//Retreat
+SongTable(0x3F,song3F,1)
+#include "Retreat.event"
+
+ALIGN 4
 //Field from khinsider
 SongTable(0xC3,song2B,1)
 #include "Field.event"
@@ -255,6 +265,8 @@ ALIGN 4
 
 ALIGN 4
 //Hard Chain Reaction
+SongTable(0x58,song0386,0)
+#include "HardChainReaction.event"
 
 ALIGN 4
 //Ray of Darkness, Ray of Light
