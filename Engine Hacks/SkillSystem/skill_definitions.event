@@ -128,6 +128,20 @@
 //By Sme
 #define WhitePoolID 224
 
+//Skyguard: +4 defense against flying enemies if within 3 spaces of an ally flier.
+//By Sme
+#define SkyguardID 12
+
+//Horseguard: +4 defense against horseback enemies if within 3 spaces of an ally horse rider.
+//By Sme
+#define HorseguardID 144
+
+//Armorboost: +4 attack and defense against armored enemies if within 3 spaces of an armored ally.
+//By Sme
+#define ArmorboostID 145
+#define ArmorBoostID ArmorboostID //Alias\
+
+
 
 //Debuff Skills
 
@@ -234,27 +248,27 @@
 
 //Keep Up: At start of turn, if unit is within 3 spaces of an ally with Canto or Canto+, unit gains +2 Mov.
 //By Sme
-#define KeepUpID 38
+#define KeepUpID 255
 
 //Indoor March: At start of turn, if unit is on indoor terrain, unit gains +2 Mov.
 //By Sme
-#define IndoorMarchID 39
+#define IndoorMarchID 255
 
 //Nature Rush: At start of turn, if unit is on natural terrain, unit gains +2 Mov.
 //By Sme
-#define NatureRushID 147
+#define NatureRushID 255
 
 
 //Mug-Loading Skills
 
 //Quantum Visage: Face changes every time it's looked at.
 //By Leonarth
-#define RandomMugID 255
+#define RandomMugID 146
 
 
 //Identity Problems: This unit can't decide on a name or face.
 //By Leonarth
-#define IdentityProblemsID 255
+#define IdentityProblemsID 147
 
 
 //Post-Battle Skills
@@ -267,13 +281,13 @@
 //By Tequila
 #define CantoID 11
 
-//Canto+: Can move again after attacking and other actions.
-//By Tequila
-#define CantoPlusID 3
-
 //Close Call: Can move 2 spaces after attacking.
 //By MinN
 #define CloseCallID 135
+
+//Canto+: Can move again after attacking and other actions.
+//By Tequila
+#define CantoPlusID 3
 
 //Despoil: Obtain a Red Gem after attacking and defeating an enemy. (Luck % activation)
 //Author Unknown (Initial Commit)
@@ -317,7 +331,7 @@
 
 //Gridmaster: Movement skills do not end your action.
 //By Sme
-#define GridmasterID 252
+#define GridmasterID 255
 
 
 //Pre-Battle Skills
@@ -342,10 +356,6 @@
 //By Darrman
 #define HeroesDeathBlowID 149
 
-//Bold Fighter: Auto-double on player phase.
-//By Rossendale
-#define BoldFighterID 254
-
 //Breaker Skills:  +50 Hit/Avo when enemy has the specified weapon type equipped.
 //By Rossendale
 #define SwordbreakerID 19
@@ -361,6 +371,10 @@
 //Steadfast: Gain +1 AS for every two squares moved.
 //Kelik Zenair
 #define SteadfastID 117 
+
+//Charge+: Charge+: If unit has used up all movement, gain brave effect.
+//By Sme
+#define ChargePlusID 255
 
 //Critical Force: Base critical is Skl * 1.5.
 //Author Unknown (Initial Commit)
@@ -416,11 +430,31 @@
 
 //Faire Skills: +4 damage when equipping a weapon of the specified type.
 //Author Unknown (Initial Commit)
-#define SwordfaireID 255
-#define LancefaireID 255
+#define SwordfaireID 38
+#define LancefaireID 39
 #define AxefaireID 255
 #define BowfaireID 255
 #define TomefaireID 255
+
+//Atlas: Deals damage = Str/4.
+//Kelik Zenair
+#define AtlasID 165
+
+//Cold Flare: On player phase, grants Spd +(Res/4).
+//Kelik Zenair
+#define ColdFlareID 237
+
+//Intrepid: If HP = 100%, weapons are brave.
+//Kelik Zenair
+#define IntrepidID 120
+
+//Sergeant: If foe uses melee, hit/avoid +10.
+//Kelik Zenair
+#define SergeantID 239
+
+//Fair Fight: If foe is not mounted, AS +2.
+//Kelik Zenair
+#define FairFightID 193
 
 //Vigor: Grants Atk = HP/4
 //Kelik Zenair
@@ -434,13 +468,17 @@
 //Kelik Zenair
 #define LastResortID 40
 
-//Fiery Blood: +2 damage when HP is not at max.
+//Fiery Blood: +4 damage when HP is not at max.
 //Author Unknown (Initial Commit)
 #define FieryBloodID 98
 
 //Storm Blood: +2 speed when HP is not at max.
 //Kelik Zenair
 #define StormBloodID 153
+
+//Foreign Princess: Foreign army units take -2/+2 damage dealt/taken.
+//By Sme
+#define ForeignPrincessID 88
 
 //Fortune: This unit cannot be crit.
 //By Sme
@@ -476,15 +514,11 @@
 
 //Life and Death: +10 to damage dealt and taken.
 //Author Unknown (Initial Commit)
-#define LifeAndDeathID 255
+#define LifeAndDeathID 81
 
 //Light Weight: When holding three or less items, attack speed +3.
 //Author Unknown (Initial Commit)
 #define LightWeightID 115
-
-//Fair Fight: If foe is not mounted, AS +2.
-//Kelik Zenair
-#define FairFightID 193
 
 //Loyalty: When within 2 spaces of a Lord, -3 damage taken, +15% hit.
 //By Datagne
@@ -514,22 +548,6 @@
 //By Zeta
 #define PerfectionistID 190
 
-//Atlas: Deals damage = Str/4.
-//Kelik Zenair
-#define AtlasID 165
-
-//Cold Flare: On player phase, grants Spd +(Res/4).
-//Kelik Zenair
-#define ColdFlareID 237
-
-//Intrepid: If HP = 100%, weapons are brave.
-//Kelik Zenair
-#define IntrepidID 120
-
-//Sergeant: If foe uses melee, hit/avoid +10.
-//Kelik Zenair
-#define SergeantID 239
-
 //Prescience: When initiating battle, Hit and Avo +15.
 //By Sme
 #define PrescienceID 226
@@ -537,6 +555,11 @@
 //Puissance: +3 Damage when the user's Strength is higher than the enemy's.
 //By Zeta
 #define PuissanceID 191
+
+//Quick Riposte: If defending and HP is 50% or higher, unit doubles and attacker does not double.
+//By Sme
+#define QuickRiposteID 218 
+
 
 //Quick/Slow Burn: Hit and Avoid bonus increasing or decreasing each turn, maximum +15.
 //Author Unknown (Initial Commit)
@@ -567,6 +590,10 @@
 //By Sme
 #define AlertStanceID 244
 #define AlertStancePlusID 245
+
+//Bold Fighter: Auto-double on player phase.
+//By Rossendale
+#define BoldFighterID 254
 
 //Thunderstorm: If weapon weight > enemy W. Weight, +2 dmg, +15% hit, +5% crit.
 //By Datagne
@@ -606,7 +633,7 @@
 
 // Arcane Blade: When initiating battle at 1 range: Add 3+(Mag/2) to Hit and Crit.
 //By Zeta
-#define ArcaneBladeID 169
+#define ArcaneBladeID 255
 
 //Blue Flame: Attack +2. When adjacent to an ally, Attack +4.
 //By Sme
@@ -614,7 +641,7 @@
 
 //Double Lion: All weapons are treated as brave.
 //By Sme
-#define DoubleLionID 124
+#define DoubleLionID 255
 
 //Thighdeology: If a unit within 3 tiles has Nice Thighs, gain +2 Attack and +20 Hit.
 //By Sme
@@ -645,7 +672,7 @@
 
 //Bane: Leave the opponent at 1 HP. (Skill/2 % activation)
 //Author Unknown (Initial Commit)
-#define BaneID 255
+#define BaneID 124
 
 //Barricade: Damage taken is halved after first being struck.
 //By Snakey1
@@ -657,7 +684,7 @@
 
 //Black Magic: Skill% chance to inflict a random status.
 //By Tequila
-#define BlackMagicID 255
+#define BlackMagicID 169
 
 //Colossus: Triples Strength. (Skill % activation)
 //Author Unknown (Initial Commit)
@@ -677,7 +704,7 @@
 
 //Deadeye: Doubles hit rate. Skill% chance to inflict sleep.
 //By Sme
-#define DeadeyeID 255
+#define DeadeyeID 252
 
 //Devil's Luck: Immune to Devil Reversal. Gives unit's Devil Reversal to the enemy. (31-Luck % chance of Devil Reversal).
 //By Leonarth
@@ -697,6 +724,10 @@
 //Dragon Fang: 1.5x damage. (Skill% activation)
 //By Sme
 #define DragonFangID 253
+
+//Eclipse: Leave opponent with 1 HP. (Skill % activation)
+//By Sme
+#define EclipseID 255
 
 //Enrage: Inflict berserk status. (Skill% activation)
 //By Sme
@@ -796,11 +827,17 @@
 #define DazzleID 141
 
 //Desperation: If HP < 50%, double attacks occur immediately.
-#define DesperationID 33 //DONE by ??? (Initial Commit)
+//By ??? (Initial Commit)
+#define DesperationID 33 
 
 //Assassinate: When initiating battle at 1 range: +2 Damage, double attacks occur before counter.
 //By Zeta
 #define AssassinateID 255
+
+//Moonlight: Cannot double but opponent cannot counterattack.
+//By Sme
+#define MoonlightID 255
+
 
 
 //Stat Modifier Skills
@@ -825,7 +862,7 @@
 
 //Fortress Resistance: 5 Res, -3 Str/Mag
 //By Leonarth
-#define FortressResistanceID 255
+#define FortressResistanceID 171
 
 //Life and Death: Grants +5 Atk/Mag/Spd, -5 Def/Res.
 //By Leonarth
@@ -836,7 +873,7 @@
 #define PushStrID 255
 #define PushMagID 255
 #define PushSklID 255
-#define PushSpdID 171
+#define PushSpdID 255
 #define PushDefID 255
 #define PushResID 255
 
@@ -904,7 +941,7 @@
 
 //Pivot: Allows unit to move to the opposite side of an adjacent ally.
 //By StanH
-#define PivotID 136 //DONE by StanH
+#define PivotID 136
 
 //Reposition: Allows unit to pull an adjacent ally to its opposite side.
 //By StanH
@@ -913,6 +950,10 @@
 //Swap: Allows unit to swap positions with an adjacent ally.
 //By StanH
 #define SwapID 138
+
+//Swarp: Allows unit to swap positions with a distant ally.
+//Be Sme
+#define SwarpID 255
 
 //Steal: Unit can steal items.
 //By Tequila
@@ -940,6 +981,10 @@
 //Vantage: If HP < 50%, strike first when attacked.
 //Author Unknown (Initial Commit)
 #define VantageID 32
+
+//Catch 'Em All: Grants the user every skill.
+//By Leonarth
+#define CatchEmAllID 151
 
 //Vantage+: User always attacks first, even if attacked. Negates crits.
 //By SD9k
@@ -1025,9 +1070,13 @@
 //By Sme
 #define BoonID 207
 
+//Synchronize: Statuses are also applied to the attacker.
+//By Sme
+#define SynchronizeID 236
+
 //Bargain: Halves prices in shops.
 //By Sme
-#define BargainID 236
+#define BargainID 255
 
 //Poise: +1 Move. Negates enemy hit bonus from weapon triangle advantage.
 //By Zeta
@@ -1037,6 +1086,10 @@
 //By Sme
 #define AmischeID 255
 
+//Triangle Attack: Allows this unit to perform a triangle attack with 2 other units who have this skill.
+#define TriangleAttackID 255
+
+
 //Biorhythm Skills: Double or halve biorhythm effects.
 //By Sme
 #define TempestID 248 //Requires Biorhythm
@@ -1045,27 +1098,13 @@
 
 //Display-Only Skills
 
-#define CunningID 12
+#define CunningID 255
 #define NiceThighsID 50
 #define PersonalityID 109
 
 
 //Broken Skills
-
-#define Roll12ID 144
-#define TraceID 145
-#define CatchEmAllID 151
-#define TriangleAttackID 255
+#define Roll12ID 255
+#define TraceID 255
 
 
-///WIP Skills
-
-#define ForeignPrincessID 88
-#define QuickRiposteID 218 
-#define EclipseID 255
-#define SkyguardID 255
-#define HorseguardID 255
-#define ArmorboostID 255
-#define ArmorBoostID ArmorboostID //Alias
-#define ChargePlusID 255
-#define MoonlightID 255

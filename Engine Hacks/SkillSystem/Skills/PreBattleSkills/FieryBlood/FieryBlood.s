@@ -20,10 +20,10 @@ ldr r1, FieryBloodID
 cmp r0, #0
 beq End
 
-@add 2 damage
+@add 4 damage
 mov r1, #0x5a
 ldrh r0, [r4, r1] @atk
-add r0, #2
+add r0, #4
 strh r0, [r4,r1]
 
 End:

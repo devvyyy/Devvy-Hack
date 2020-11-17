@@ -1,5 +1,41 @@
 
 ALIGN 4
+Steadfast:
+#incbin "Steadfast/Steadfast.dmp"
+POIN SkillTester
+WORD SteadfastID
+
+ALIGN 4
+Intrepid:
+#incbin "Intrepid/Intrepid.dmp"
+POIN SkillTester
+WORD IntrepidID
+
+ALIGN 4
+Sergeant:
+#incbin "Sergeant/Sergeant.dmp"
+POIN SkillTester
+WORD SergeantID
+
+ALIGN 4
+ColdFlare:
+#incbin "ColdFlare/ColdFlare.dmp"
+POIN SkillTester
+WORD ColdFlareID
+
+ALIGN 4
+Atlas:
+#incbin "Atlas/Atlas.dmp"
+POIN SkillTester
+WORD AtlasID
+
+ALIGN 4
+Whirlwind:
+#incbin "Whirlwind/Whirlwind.dmp"
+POIN SkillTester
+WORD WhirlwindID
+
+ALIGN 4
 Vigor:
 #incbin "Vigorous/Vigor.dmp"
 POIN SkillTester
@@ -97,12 +133,6 @@ POIN SkillTester
 WORD FieryBloodID
 
 ALIGN 4
-StormBlood:
-#incbin "StormBlood/StormBlood.dmp"
-POIN SkillTester
-WORD StormBloodID
-
-ALIGN 4
 Fortune:
 #incbin "Fortune/Fortune.dmp"
 POIN SkillTester
@@ -172,15 +202,10 @@ POIN SkillTester
 WORD LightWeightID
 
 ALIGN 4
-FairFight:
-#incbin "FairFight/FairFight.dmp"
-POIN SkillTester
-WORD FairFightID
-
-ALIGN 4
 Loyalty:
 #incbin "Loyalty/Loyalty.dmp"
 POIN SkillTester
+POIN AuraSkillCheck
 WORD LoyaltyID
 
 ALIGN 4
@@ -224,42 +249,6 @@ Perfectionist:
 #incbin "Perfectionist/Perfectionist.dmp"
 POIN SkillTester
 WORD PerfectionistID
-
-ALIGN 4
-Steadfast:
-#incbin "Steadfast/Steadfast.dmp"
-POIN SkillTester
-WORD SteadfastID
-
-ALIGN 4
-Intrepid:
-#incbin "Intrepid/Intrepid.dmp"
-POIN SkillTester
-WORD IntrepidID
-
-ALIGN 4
-Sergeant:
-#incbin "Sergeant/Sergeant.dmp"
-POIN SkillTester
-WORD SergeantID
-
-ALIGN 4
-ColdFlare:
-#incbin "ColdFlare/ColdFlare.dmp"
-POIN SkillTester
-WORD ColdFlareID
-
-ALIGN 4
-Atlas:
-#incbin "Atlas/Atlas.dmp"
-POIN SkillTester
-WORD AtlasID
-
-ALIGN 4
-Whirlwind:
-#incbin "Whirlwind/Whirlwind.dmp"
-POIN SkillTester
-WORD WhirlwindID
 
 ALIGN 4
 Prescience:
@@ -405,3 +394,16 @@ ChargePlus:
 POIN SkillTester
 WORD ChargePlusID
 POIN prMovGetter
+
+ALIGN 4
+ForeignPrincess:
+#incbin "ForeignPrincess/ForeignPrincess.dmp"
+POIN SkillTester
+WORD ForeignPrincessID
+
+ALIGN 4
+QuickRiposte:
+#incbin "QuickRiposte/QuickRiposte.dmp"
+POIN SkillTester
+WORD QuickRiposteID
+

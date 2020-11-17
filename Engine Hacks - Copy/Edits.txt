@@ -1,0 +1,232 @@
+// Remove arrow wiggling advancing RN
+PUSH
+ORG 0x1A774
+    SHORT 0x2000 0
+POP
+
+// Remove Link Arena
+PUSH
+ORG $AB90E
+	BYTE 0x00 0x00 0x00 0x20
+POP
+
+// Party leader becomes first deployed
+PUSH
+ORG $3325A 
+	BYTE 0x21 0xE0
+POP
+
+// allows swapping of forced characters
+PUSH
+  ORG 0x33750
+    BYTE 0x00 0x20 0x00 0x00
+  ORG 0x9543E
+    BYTE 0x00 0x20 0x00 0x00
+POP
+
+//changes supply and seize to affo
+PUSH
+ORG 0x23F88
+	BYTE 0x07
+ORG 0x37B86
+	BYTE 0x07
+POP
+
+PUSH
+// Remove Creature Campaign
+ORG $AB944
+	BYTE 0x00 0x00 0x00 0x20
+POP
+
+//Seize
+PUSH
+ORG 0x037B8A
+BYTE 0x07
+ORG 0x037B96
+BYTE 0x07
+ORG 0x33274
+BYTE 0x07
+ORG 0x3327C
+BYTE 0x07
+POP
+
+//Minimap Palette
+PUSH
+    ORG 0x0A1FFB0
+    #incbin "MiniMap.bin"
+    MESSAGE SNOW MINIMAPS
+POP
+
+//Skip to Normal
+{
+PUSH; ORG 0xA20164
+    POIN (prFixedDifficulty+1)
+POP
+
+prFixedDifficulty:
+    SHORT (0x2200 | 1) // Difficulty: 0 for easy, 1 for normal, 2 for hard
+    SHORT 0x2300
+    SHORT 0x212A
+    SHORT 0x5442
+    SHORT 0x213D
+    SHORT 0x5443
+    SHORT 0x4770
+    ALIGN 4
+}
+
+//Affinity Icon Palette
+PUSH
+    ORG 0x5996F4
+    #incbin "weaponpalette.bin"
+    MESSAGE Item palette updated currentOffset
+POP
+
+//Vulnerary Heal Amount
+PUSH
+ORG 0x2FEC6
+BYTE 0x0F
+POP
+
+//Thracia trading
+PUSH
+ORG 0x229A8
+SHORT 0x1C00
+
+ORG 0x22A10
+SHORT 0x1C00
+POP
+
+//Prevent character event freezes
+PUSH
+ORG $F25C
+BYTE 0x00 0x20
+ORG $102D4
+BYTE 0x00 0x20
+ORG $10804
+BYTE 0x00 0x20
+POP
+
+//Luminola Sound
+PUSH
+ORG 0x225A90
+BYTE 0x88
+BYTE 0x2A
+BYTE 0x58
+BYTE 0x08
+BYTE 0x07
+BYTE 0x00
+BYTE 0x07
+BYTE 0x00
+ORG 0x225A98
+BYTE 0xA4
+BYTE 0x2A
+BYTE 0x58
+BYTE 0x08
+BYTE 0x06
+BYTE 0x00
+BYTE 0x06
+BYTE 0x00
+ORG 0x225AA0
+BYTE 0xC0
+BYTE 0x2A
+BYTE 0x58
+BYTE 0x08
+BYTE 0x06
+BYTE 0x00
+BYTE 0x06
+BYTE 0x00
+POP
+
+
+//Epic BLUE TEXT
+PUSH
+ORG 0x59EF10
+BYTE 0xFB
+BYTE 0x7F
+BYTE 0xC4
+BYTE 0x28
+BYTE 0x11
+BYTE 0x5B
+BYTE 0xB4
+BYTE 0x6F
+BYTE 0xE3
+BYTE 0x2C
+BYTE 0x8E
+POP
+
+//Portrait Height
+PUSH
+ORG 0x5C3C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POIN 0x5C9C
+POP
+
+//Fast Healing
+PUSH
+ORG 0x07BCE2
+BYTE 0x20
+BYTE 0x34
+BYTE 0x24
+BYTE 0x04
+BYTE 0x24
+BYTE 0x0c
+BYTE 0x00
+BYTE 0x00
+BYTE 0x00
+BYTE 0x00
+BYTE 0x8c
+BYTE 0x42
+BYTE 0x09
+BYTE 0xda
+POP
+
+//Fast Level-Ups
+PUSH
+ORG 0x07F464
+BYTE 0x0A
+POP
+
+
+//Skip very beginning world map
+PUSH
+ORG $A39768
+EVBIT_MODIFY 0x1
+SKIPWN
+ENDA
+POP
+
+//Removes EXP Gain from Class 0x53
+PUSH
+ORG 0x02C3FE
+BYTE 0x0
+POP
+
+//Epic Light Snow Behind GUI
+PUSH
+ORG 0x030366
+BYTE 0xC0
+//Epic Blizzard Behind GUI
+ORG 0x03066D
+BYTE 0x24
+POP

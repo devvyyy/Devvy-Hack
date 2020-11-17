@@ -88,12 +88,6 @@ POIN SkillTester
 WORD CantoPlusID
 
 ALIGN 4
-CloseCall:
-#incbin "CloseCall/CloseCall.dmp"
-POIN SkillTester
-WORD CloseCallID
-
-ALIGN 4
 ReMove:
 #incbin "ReMove/remove.dmp"
 POIN SkillTester
@@ -120,6 +114,7 @@ WORD ACTION_MOVETARGET
 WORD ACTION_MOVEACTIVE
 WORD ACTION_SWAP
 WORD ACTION_PUSH
+WORD ACTION_SWARP
 
 
 PUSH //some changes to vanilla code to make everything work

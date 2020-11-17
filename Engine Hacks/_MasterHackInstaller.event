@@ -80,8 +80,8 @@ POP
   //Negative Stat Boosts
   #include "Necessary/NegativeStatBoosts/NegativeStatBoosts.event"
 
-  //Dragon Veins
-  #include "ExternalHacks/DragonVeins/DragonVeins.event"
+  //Trap Rework (Dragon Veins & Heal Tiles)
+  #include "ExternalHacks/TrapRework/TrapRework.event"
   
   //Proper Range Getters
   #include "ExternalHacks/ProperRangeGetters/ProperRangeGetters/ProperRangeGetters.event"
@@ -178,6 +178,12 @@ POP
   //Narrow Fonts by Scraiza
   ALIGN 4
   #include "ExternalHacks/NarrowFont/NarrowFontInstaller.event"
+  
+  //Item Effect Revamp by Teraspark
+  #include "Necessary/ItemEffectRevamp/IERevamp_Installer.event"
+  
+  //Durability-Based Items, for Skill Scrolls
+  #include "Necessary/DurabilityBasedItems/DurabilityBasedItems.event"
 
   ALIGN 4
   #include "SkillSystem/SkillSystemInstaller.event"
