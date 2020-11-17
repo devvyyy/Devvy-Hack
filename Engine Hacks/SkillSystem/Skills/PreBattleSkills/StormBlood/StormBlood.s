@@ -21,7 +21,7 @@ cmp r0, #0
 beq End
 
 @add 2 speed
-mov r1, #0x5c
+mov r1, #0x5E
 ldrh r0, [r4, r1] @spd
 add r0, #2
 strh r0, [r4,r1]
