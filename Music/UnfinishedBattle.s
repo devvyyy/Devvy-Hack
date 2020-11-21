@@ -1,33 +1,33 @@
 	.include "MPlayDef.s"
 
-	.equ	song19_grp, voicegroup000
-	.equ	song19_pri, 0
-	.equ	song19_rev, 0
-	.equ	song19_mvl, 127
-	.equ	song19_key, 0
-	.equ	song19_tbs, 1
-	.equ	song19_exg, 0
-	.equ	song19_cmp, 1
+	.equ	songEC_grp, voicegroup000
+	.equ	songEC_pri, 0
+	.equ	songEC_rev, 0
+	.equ	songEC_mvl, 127
+	.equ	songEC_key, 0
+	.equ	songEC_tbs, 1
+	.equ	songEC_exg, 0
+	.equ	songEC_cmp, 1
 
 	.section .rodata
-	.global	song19
+	.global	songEC
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song19_001:
+songEC_001:
 @ 000   ----------------------------------------
- .byte   KEYSH , song19_key+0
- .byte   TEMPO , 160*song19_tbs/2
+ .byte   KEYSH , songEC_key+0
+ .byte   TEMPO , 160*songEC_tbs/2
  .byte   VOICE , 65
  .byte   PAN , c_v+26
- .byte   VOL , 37*song19_mvl/mxv
+ .byte   VOL , 37*songEC_mvl/mxv
  .byte   W96
 @ 001   ----------------------------------------
  .byte   W96
 @ 002   ----------------------------------------
-Label_0_01057030:
+Label_0_0128A410:
  .byte   N36 ,Bn3 ,v100
  .byte   W36
  .byte   N12 ,En3
@@ -56,7 +56,7 @@ Label_0_01057030:
  .byte   N06 ,An3 ,v056
  .byte   W06
 @ 003   ----------------------------------------
-Label_0_01057065:
+Label_0_0128A445:
  .byte   N48 ,Cn4 ,v100
  .byte   N06 ,Dn4 ,v072
  .byte   W06
@@ -69,7 +69,7 @@ Label_0_01057065:
  .byte   W42
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_0_0105707A:
+Label_0_0128A45A:
  .byte   N06 ,Gn3 ,v072
  .byte   N36 ,An3 ,v100
  .byte   W06
@@ -102,7 +102,7 @@ Label_0_0105707A:
  .byte   W06
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_0_010570B8:
+Label_0_0128A498:
  .byte   N06 ,Dn4 ,v072
  .byte   N48 ,En4 ,v100
  .byte   W06
@@ -236,13 +236,13 @@ Label_0_010570B8:
  .byte   W06
 @ 011   ----------------------------------------
  .byte   PATT
-  .word Label_0_01057065
+  .word Label_0_0128A445
 @ 012   ----------------------------------------
  .byte   PATT
-  .word Label_0_0105707A
+  .word Label_0_0128A45A
 @ 013   ----------------------------------------
  .byte   PATT
-  .word Label_0_010570B8
+  .word Label_0_0128A498
 @ 014   ----------------------------------------
  .byte   N06 ,Dn4 ,v072
  .byte   N06 ,En4 ,v100
@@ -366,17 +366,17 @@ Label_0_010570B8:
  .byte   W96
 @ 028   ----------------------------------------
  .byte   GOTO
-  .word Label_0_01057030
+  .word Label_0_0128A410
  .byte   FINE
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song19_002:
+songEC_002:
 @ 000   ----------------------------------------
- .byte   KEYSH , song19_key+0
+ .byte   KEYSH , songEC_key+0
  .byte   VOICE , 41
  .byte   PAN , c_v-26
- .byte   VOL , 37*song19_mvl/mxv
+ .byte   VOL , 37*songEC_mvl/mxv
  .byte   N12 ,An2 ,v100
  .byte   N12 ,An3
  .byte   W12
@@ -405,7 +405,7 @@ song19_002:
  .byte   N06 ,Bn3 ,v056
  .byte   W12
 @ 002   ----------------------------------------
-Label_1_010572BD:
+Label_1_0128A69D:
  .byte   N36 ,Bn3 ,v100
  .byte   W36
  .byte   N12 ,En3
@@ -434,7 +434,7 @@ Label_1_010572BD:
  .byte   N06 ,An3 ,v056
  .byte   W06
 @ 003   ----------------------------------------
-Label_1_010572F2:
+Label_1_0128A6D2:
  .byte   N48 ,Cn4 ,v100
  .byte   N06 ,Dn4 ,v072
  .byte   W06
@@ -447,7 +447,7 @@ Label_1_010572F2:
  .byte   W42
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_1_01057307:
+Label_1_0128A6E7:
  .byte   N06 ,Gn3 ,v072
  .byte   N36 ,An3 ,v100
  .byte   W06
@@ -480,7 +480,7 @@ Label_1_01057307:
  .byte   W06
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_1_01057345:
+Label_1_0128A725:
  .byte   N06 ,Dn4 ,v072
  .byte   N48 ,En4 ,v100
  .byte   W06
@@ -614,13 +614,13 @@ Label_1_01057345:
  .byte   W06
 @ 011   ----------------------------------------
  .byte   PATT
-  .word Label_1_010572F2
+  .word Label_1_0128A6D2
 @ 012   ----------------------------------------
  .byte   PATT
-  .word Label_1_01057307
+  .word Label_1_0128A6E7
 @ 013   ----------------------------------------
  .byte   PATT
-  .word Label_1_01057345
+  .word Label_1_0128A725
 @ 014   ----------------------------------------
  .byte   N06 ,Dn4 ,v072
  .byte   N06 ,En4 ,v100
@@ -745,7 +745,7 @@ Label_1_01057345:
  .byte   Fs4 ,v072
  .byte   W06
 @ 019   ----------------------------------------
-Label_1_01057526:
+Label_1_0128A906:
  .byte   N06 ,Fs4 ,v056
  .byte   W12
  .byte   Dn4 ,v100
@@ -835,7 +835,7 @@ Label_1_01057526:
  .byte   W06
 @ 023   ----------------------------------------
  .byte   PATT
-  .word Label_1_01057526
+  .word Label_1_0128A906
 @ 024   ----------------------------------------
  .byte   N06 ,Gn4 ,v100
  .byte   W06
@@ -904,16 +904,16 @@ Label_1_01057526:
  .byte   W12
 @ 028   ----------------------------------------
  .byte   GOTO
-  .word Label_1_010572BD
+  .word Label_1_0128A69D
  .byte   FINE
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song19_003:
+songEC_003:
 @ 000   ----------------------------------------
- .byte   KEYSH , song19_key+0
+ .byte   KEYSH , songEC_key+0
  .byte   VOICE , 0
- .byte   VOL , 29*song19_mvl/mxv
+ .byte   VOL , 29*songEC_mvl/mxv
  .byte   PAN , c_v-26
  .byte   N04 ,Fn2 ,v100
  .byte   W06
@@ -948,7 +948,7 @@ song19_003:
  .byte   An4
  .byte   W06
 @ 001   ----------------------------------------
-Label_2_01057652:
+Label_2_0128AA32:
  .byte   N04 ,Fn5 ,v100
  .byte   W06
  .byte   Cn5
@@ -983,7 +983,7 @@ Label_2_01057652:
  .byte   W06
  .byte   PEND 
 @ 002   ----------------------------------------
-Label_2_01057675:
+Label_2_0128AA55:
  .byte   N04 ,Bn4 ,v100
  .byte   W06
  .byte   Gn4
@@ -1018,7 +1018,7 @@ Label_2_01057675:
  .byte   W06
  .byte   PEND 
 @ 003   ----------------------------------------
-Label_2_01057698:
+Label_2_0128AA78:
  .byte   N04 ,Cn5 ,v100
  .byte   W06
  .byte   Gn4
@@ -1053,7 +1053,7 @@ Label_2_01057698:
  .byte   W06
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_2_010576BB:
+Label_2_0128AA9B:
  .byte   N04 ,Cn5 ,v100
  .byte   W06
  .byte   An4
@@ -1088,7 +1088,7 @@ Label_2_010576BB:
  .byte   W06
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_2_010576DE:
+Label_2_0128AABE:
  .byte   N04 ,En5 ,v100
  .byte   W06
  .byte   Bn4
@@ -1123,7 +1123,7 @@ Label_2_010576DE:
  .byte   W06
  .byte   PEND 
 @ 006   ----------------------------------------
-Label_2_01057701:
+Label_2_0128AAE1:
  .byte   N04 ,En5 ,v100
  .byte   W06
  .byte   Cn5
@@ -1158,7 +1158,7 @@ Label_2_01057701:
  .byte   W06
  .byte   PEND 
 @ 007   ----------------------------------------
-Label_2_01057724:
+Label_2_0128AB04:
  .byte   N04 ,Bn4 ,v100
  .byte   W06
  .byte   Fs4
@@ -1193,7 +1193,7 @@ Label_2_01057724:
  .byte   W06
  .byte   PEND 
 @ 008   ----------------------------------------
-Label_2_01057747:
+Label_2_0128AB27:
  .byte   N04 ,Gn5 ,v100
  .byte   W06
  .byte   En5
@@ -1262,25 +1262,25 @@ Label_2_01057747:
  .byte   W06
 @ 010   ----------------------------------------
  .byte   PATT
-  .word Label_2_01057675
+  .word Label_2_0128AA55
 @ 011   ----------------------------------------
  .byte   PATT
-  .word Label_2_01057698
+  .word Label_2_0128AA78
 @ 012   ----------------------------------------
  .byte   PATT
-  .word Label_2_010576BB
+  .word Label_2_0128AA9B
 @ 013   ----------------------------------------
  .byte   PATT
-  .word Label_2_010576DE
+  .word Label_2_0128AABE
 @ 014   ----------------------------------------
  .byte   PATT
-  .word Label_2_01057701
+  .word Label_2_0128AAE1
 @ 015   ----------------------------------------
  .byte   PATT
-  .word Label_2_01057724
+  .word Label_2_0128AB04
 @ 016   ----------------------------------------
  .byte   PATT
-  .word Label_2_01057747
+  .word Label_2_0128AB27
 @ 017   ----------------------------------------
  .byte   N04 ,Cn3 ,v100
  .byte   W06
@@ -1315,7 +1315,7 @@ Label_2_01057747:
  .byte   An4
  .byte   W06
 @ 018   ----------------------------------------
-Label_2_010577CF:
+Label_2_0128ABAF:
  .byte   N10 ,En4 ,v100
  .byte   W12
  .byte   En3
@@ -1335,22 +1335,22 @@ Label_2_010577CF:
  .byte   PEND 
 @ 019   ----------------------------------------
  .byte   PATT
-  .word Label_2_010577CF
+  .word Label_2_0128ABAF
 @ 020   ----------------------------------------
  .byte   PATT
-  .word Label_2_010577CF
+  .word Label_2_0128ABAF
 @ 021   ----------------------------------------
  .byte   PATT
-  .word Label_2_010577CF
+  .word Label_2_0128ABAF
 @ 022   ----------------------------------------
  .byte   PATT
-  .word Label_2_010577CF
+  .word Label_2_0128ABAF
 @ 023   ----------------------------------------
  .byte   PATT
-  .word Label_2_010577CF
+  .word Label_2_0128ABAF
 @ 024   ----------------------------------------
  .byte   PATT
-  .word Label_2_010577CF
+  .word Label_2_0128ABAF
 @ 025   ----------------------------------------
  .byte   N04 ,Cn5 ,v100
  .byte   W06
@@ -1419,25 +1419,25 @@ Label_2_010577CF:
  .byte   W06
 @ 027   ----------------------------------------
  .byte   PATT
-  .word Label_2_01057652
+  .word Label_2_0128AA32
 @ 028   ----------------------------------------
  .byte   GOTO
-  .word Label_2_01057675
+  .word Label_2_0128AA55
  .byte   FINE
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song19_004:
+songEC_004:
 @ 000   ----------------------------------------
- .byte   KEYSH , song19_key+0
+ .byte   KEYSH , songEC_key+0
  .byte   VOICE , 40
  .byte   PAN , c_v+26
- .byte   VOL , 37*song19_mvl/mxv
+ .byte   VOL , 37*songEC_mvl/mxv
  .byte   W96
 @ 001   ----------------------------------------
  .byte   W96
 @ 002   ----------------------------------------
-Label_3_0105785A:
+Label_3_0128AC3A:
  .byte   W96
 @ 003   ----------------------------------------
  .byte   W96
@@ -1502,7 +1502,7 @@ Label_3_0105785A:
  .byte   Fs3 ,v072
  .byte   W06
 @ 019   ----------------------------------------
-Label_3_0105789E:
+Label_3_0128AC7E:
  .byte   N06 ,Fs3 ,v056
  .byte   W12
  .byte   Dn3 ,v100
@@ -1593,7 +1593,7 @@ Label_3_0105789E:
  .byte   W06
 @ 023   ----------------------------------------
  .byte   PATT
-  .word Label_3_0105789E
+  .word Label_3_0128AC7E
 @ 024   ----------------------------------------
  .byte   N06 ,Gn3 ,v100
  .byte   W06
@@ -1634,43 +1634,43 @@ Label_3_0105789E:
  .byte   W96
 @ 028   ----------------------------------------
  .byte   GOTO
-  .word Label_3_0105785A
+  .word Label_3_0128AC3A
  .byte   FINE
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song19_005:
+songEC_005:
 @ 000   ----------------------------------------
- .byte   KEYSH , song19_key+0
+ .byte   KEYSH , songEC_key+0
  .byte   VOICE , 41
  .byte   PAN , c_v+26
- .byte   VOL , 37*song19_mvl/mxv
+ .byte   VOL , 37*songEC_mvl/mxv
  .byte   W96
 @ 001   ----------------------------------------
  .byte   W96
 @ 002   ----------------------------------------
-Label_4_0105797A:
+Label_4_0128AD5A:
  .byte   N92 ,Gn2 ,v072
  .byte   N92 ,Bn2
  .byte   N92 ,En3
  .byte   W96
  .byte   PEND 
 @ 003   ----------------------------------------
-Label_4_01057983:
+Label_4_0128AD63:
  .byte   N92 ,Gn2 ,v072
  .byte   N92 ,Cn3
  .byte   N92 ,En3
  .byte   W96
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_4_0105798C:
+Label_4_0128AD6C:
  .byte   N92 ,An2 ,v072
  .byte   N92 ,Cn3
  .byte   N92 ,En3
  .byte   W96
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_4_01057995:
+Label_4_0128AD75:
  .byte   N44 ,Gn2 ,v072
  .byte   N44 ,Bn2
  .byte   N44 ,En3
@@ -1682,9 +1682,9 @@ Label_4_01057995:
  .byte   PEND 
 @ 006   ----------------------------------------
  .byte   PATT
-  .word Label_4_01057983
+  .word Label_4_0128AD63
 @ 007   ----------------------------------------
-Label_4_010579A9:
+Label_4_0128AD89:
  .byte   N92 ,Fs2 ,v072
  .byte   N92 ,Bn2
  .byte   N92 ,Ds3
@@ -1692,7 +1692,7 @@ Label_4_010579A9:
  .byte   PEND 
 @ 008   ----------------------------------------
  .byte   PATT
-  .word Label_4_01057995
+  .word Label_4_0128AD75
 @ 009   ----------------------------------------
  .byte   N44 ,Cn3 ,v072
  .byte   N44 ,En3
@@ -1704,25 +1704,25 @@ Label_4_010579A9:
  .byte   W48
 @ 010   ----------------------------------------
  .byte   PATT
-  .word Label_4_0105797A
+  .word Label_4_0128AD5A
 @ 011   ----------------------------------------
  .byte   PATT
-  .word Label_4_01057983
+  .word Label_4_0128AD63
 @ 012   ----------------------------------------
  .byte   PATT
-  .word Label_4_0105798C
+  .word Label_4_0128AD6C
 @ 013   ----------------------------------------
  .byte   PATT
-  .word Label_4_01057995
+  .word Label_4_0128AD75
 @ 014   ----------------------------------------
  .byte   PATT
-  .word Label_4_01057983
+  .word Label_4_0128AD63
 @ 015   ----------------------------------------
  .byte   PATT
-  .word Label_4_010579A9
+  .word Label_4_0128AD89
 @ 016   ----------------------------------------
  .byte   PATT
-  .word Label_4_01057995
+  .word Label_4_0128AD75
 @ 017   ----------------------------------------
  .byte   N44 ,Cn3 ,v072
  .byte   N44 ,Ds3
@@ -1754,17 +1754,17 @@ Label_4_010579A9:
  .byte   W96
 @ 028   ----------------------------------------
  .byte   GOTO
-  .word Label_4_0105797A
+  .word Label_4_0128AD5A
  .byte   FINE
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song19_006:
+songEC_006:
 @ 000   ----------------------------------------
- .byte   KEYSH , song19_key+0
+ .byte   KEYSH , songEC_key+0
  .byte   VOICE , 42
  .byte   PAN , c_v-26
- .byte   VOL , 33*song19_mvl/mxv
+ .byte   VOL , 33*songEC_mvl/mxv
  .byte   TIE ,En5 ,v072
  .byte   W96
 @ 001   ----------------------------------------
@@ -1775,7 +1775,7 @@ song19_006:
  .byte   N44 ,Dn5
  .byte   W48
 @ 002   ----------------------------------------
-Label_5_01057A1B:
+Label_5_0128ADFB:
  .byte   W96
 @ 003   ----------------------------------------
  .byte   W96
@@ -1848,16 +1848,16 @@ Label_5_01057A1B:
  .byte   W48
 @ 028   ----------------------------------------
  .byte   GOTO
-  .word Label_5_01057A1B
+  .word Label_5_0128ADFB
  .byte   FINE
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song19_007:
+songEC_007:
 @ 000   ----------------------------------------
- .byte   KEYSH , song19_key+0
+ .byte   KEYSH , songEC_key+0
  .byte   VOICE , 34
- .byte   VOL , 40*song19_mvl/mxv
+ .byte   VOL , 40*songEC_mvl/mxv
  .byte   N12 ,Fn1 ,v100
  .byte   W12
  .byte   N12
@@ -1871,7 +1871,7 @@ song19_007:
  .byte   N24 ,Fn2 ,v100
  .byte   W12
 @ 001   ----------------------------------------
-Label_6_01057A6D:
+Label_6_0128AE4D:
  .byte   W12
  .byte   N12 ,Fn1 ,v100
  .byte   W12
@@ -1893,7 +1893,7 @@ Label_6_01057A6D:
  .byte   W06
  .byte   PEND 
 @ 002   ----------------------------------------
-Label_6_01057A84:
+Label_6_0128AE64:
  .byte   N12 ,En1 ,v100
  .byte   W12
  .byte   N12
@@ -1920,7 +1920,7 @@ Label_6_01057A84:
  .byte   W06
  .byte   PEND 
 @ 003   ----------------------------------------
-Label_6_01057AA2:
+Label_6_0128AE82:
  .byte   N12 ,Cn2 ,v100
  .byte   W12
  .byte   N12
@@ -1941,7 +1941,7 @@ Label_6_01057AA2:
  .byte   W12
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_6_01057AB9:
+Label_6_0128AE99:
  .byte   N12 ,An1 ,v100
  .byte   W12
  .byte   N12
@@ -1962,7 +1962,7 @@ Label_6_01057AB9:
  .byte   W12
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_6_01057AD0:
+Label_6_0128AEB0:
  .byte   N12 ,En1 ,v100
  .byte   W12
  .byte   En2
@@ -1981,7 +1981,7 @@ Label_6_01057AD0:
  .byte   W12
  .byte   PEND 
 @ 006   ----------------------------------------
-Label_6_01057AE3:
+Label_6_0128AEC3:
  .byte   N12 ,Cn2 ,v100
  .byte   W12
  .byte   N12
@@ -2002,7 +2002,7 @@ Label_6_01057AE3:
  .byte   W12
  .byte   PEND 
 @ 007   ----------------------------------------
-Label_6_01057AFA:
+Label_6_0128AEDA:
  .byte   N12 ,Bn1 ,v100
  .byte   W12
  .byte   N12
@@ -2056,22 +2056,22 @@ Label_6_01057AFA:
  .byte   W12
 @ 010   ----------------------------------------
  .byte   PATT
-  .word Label_6_01057A84
+  .word Label_6_0128AE64
 @ 011   ----------------------------------------
  .byte   PATT
-  .word Label_6_01057AA2
+  .word Label_6_0128AE82
 @ 012   ----------------------------------------
  .byte   PATT
-  .word Label_6_01057AB9
+  .word Label_6_0128AE99
 @ 013   ----------------------------------------
  .byte   PATT
-  .word Label_6_01057AD0
+  .word Label_6_0128AEB0
 @ 014   ----------------------------------------
  .byte   PATT
-  .word Label_6_01057AE3
+  .word Label_6_0128AEC3
 @ 015   ----------------------------------------
  .byte   PATT
-  .word Label_6_01057AFA
+  .word Label_6_0128AEDA
 @ 016   ----------------------------------------
  .byte   N12 ,En1 ,v100
  .byte   W12
@@ -2117,7 +2117,7 @@ Label_6_01057AFA:
  .byte   Cn2
  .byte   W12
 @ 018   ----------------------------------------
-Label_6_01057B87:
+Label_6_0128AF67:
  .byte   N12 ,En1 ,v100
  .byte   W12
  .byte   N12
@@ -2141,19 +2141,19 @@ Label_6_01057B87:
  .byte   PEND 
 @ 019   ----------------------------------------
  .byte   PATT
-  .word Label_6_01057B87
+  .word Label_6_0128AF67
 @ 020   ----------------------------------------
  .byte   PATT
-  .word Label_6_01057B87
+  .word Label_6_0128AF67
 @ 021   ----------------------------------------
  .byte   PATT
-  .word Label_6_01057B87
+  .word Label_6_0128AF67
 @ 022   ----------------------------------------
  .byte   PATT
-  .word Label_6_01057B87
+  .word Label_6_0128AF67
 @ 023   ----------------------------------------
  .byte   PATT
-  .word Label_6_01057B87
+  .word Label_6_0128AF67
 @ 024   ----------------------------------------
  .byte   N12 ,En1 ,v100
  .byte   W12
@@ -2206,20 +2206,20 @@ Label_6_01057B87:
  .byte   W12
 @ 027   ----------------------------------------
  .byte   PATT
-  .word Label_6_01057A6D
+  .word Label_6_0128AE4D
 @ 028   ----------------------------------------
  .byte   GOTO
-  .word Label_6_01057A84
+  .word Label_6_0128AE64
  .byte   FINE
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song19_008:
+songEC_008:
 @ 000   ----------------------------------------
- .byte   KEYSH , song19_key+0
+ .byte   KEYSH , songEC_key+0
  .byte   VOICE , 57
  .byte   PAN , c_v+26
- .byte   VOL , 37*song19_mvl/mxv
+ .byte   VOL , 37*songEC_mvl/mxv
  .byte   N12 ,An3 ,v100
  .byte   N12 ,An4
  .byte   W12
@@ -2240,7 +2240,7 @@ song19_008:
  .byte   N48 ,An4
  .byte   W12
 @ 001   ----------------------------------------
-Label_7_01057C28:
+Label_7_0128B008:
  .byte   W36
  .byte   N48 ,Bn3 ,v100
  .byte   N06 ,An4 ,v056
@@ -2250,7 +2250,7 @@ Label_7_01057C28:
  .byte   W12
  .byte   PEND 
 @ 002   ----------------------------------------
-Label_7_01057C38:
+Label_7_0128B018:
  .byte   W96
 @ 003   ----------------------------------------
  .byte   W96
@@ -2323,25 +2323,25 @@ Label_7_01057C38:
  .byte   W12
 @ 027   ----------------------------------------
  .byte   PATT
-  .word Label_7_01057C28
+  .word Label_7_0128B008
 @ 028   ----------------------------------------
  .byte   GOTO
-  .word Label_7_01057C38
+  .word Label_7_0128B018
  .byte   FINE
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-song19_009:
+songEC_009:
 @ 000   ----------------------------------------
- .byte   KEYSH , song19_key+0
+ .byte   KEYSH , songEC_key+0
  .byte   VOICE , 57
  .byte   PAN , c_v-25
- .byte   VOL , 37*song19_mvl/mxv
+ .byte   VOL , 37*songEC_mvl/mxv
  .byte   W96
 @ 001   ----------------------------------------
  .byte   W96
 @ 002   ----------------------------------------
-Label_8_01057C8A:
+Label_8_0128B06A:
  .byte   W96
 @ 003   ----------------------------------------
  .byte   W96
@@ -2404,16 +2404,16 @@ Label_8_01057C8A:
  .byte   W96
 @ 028   ----------------------------------------
  .byte   GOTO
-  .word Label_8_01057C8A
+  .word Label_8_0128B06A
  .byte   FINE
 
 @**************** Track 10 (Midi-Chn.9) ****************@
 
-song19_010:
+songEC_010:
 @ 000   ----------------------------------------
- .byte   KEYSH , song19_key+0
+ .byte   KEYSH , songEC_key+0
  .byte   VOICE , 121
- .byte   VOL , 44*song19_mvl/mxv
+ .byte   VOL , 44*songEC_mvl/mxv
  .byte   PAN , c_v-1
  .byte   N06 ,Dn1 ,v100
  .byte   N72 ,Cs2
@@ -2500,7 +2500,7 @@ song19_010:
  .byte   N06 ,Dn1 ,v056
  .byte   W06
 @ 002   ----------------------------------------
-Label_9_01057D54:
+Label_9_0128B134:
  .byte   N12 ,Cn1 ,v100
  .byte   N96 ,Cs2
  .byte   N96 ,Gn2
@@ -2526,7 +2526,7 @@ Label_9_01057D54:
  .byte   W12
  .byte   PEND 
 @ 003   ----------------------------------------
-Label_9_01057D79:
+Label_9_0128B159:
  .byte   N12 ,Cn1 ,v100
  .byte   W12
  .byte   As1
@@ -2546,7 +2546,7 @@ Label_9_01057D79:
  .byte   W12
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_9_01057D90:
+Label_9_0128B170:
  .byte   N12 ,Cn1 ,v100
  .byte   W12
  .byte   N06
@@ -2570,7 +2570,7 @@ Label_9_01057D90:
  .byte   W12
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_9_01057DAE:
+Label_9_0128B18E:
  .byte   N12 ,Cn1 ,v100
  .byte   W12
  .byte   As1
@@ -2599,12 +2599,12 @@ Label_9_01057DAE:
  .byte   PEND 
 @ 006   ----------------------------------------
  .byte   PATT
-  .word Label_9_01057D54
+  .word Label_9_0128B134
 @ 007   ----------------------------------------
  .byte   PATT
-  .word Label_9_01057D79
+  .word Label_9_0128B159
 @ 008   ----------------------------------------
-Label_9_01057DDD:
+Label_9_0128B1BD:
  .byte   N12 ,Cn1 ,v100
  .byte   N48 ,Cs2
  .byte   N48 ,Gn2
@@ -2637,7 +2637,7 @@ Label_9_01057DDD:
  .byte   W06
  .byte   PEND 
 @ 009   ----------------------------------------
-Label_9_01057E13:
+Label_9_0128B1F3:
  .byte   N12 ,Cn1 ,v100
  .byte   N96 ,Cs2
  .byte   N96 ,Gn2
@@ -2665,30 +2665,30 @@ Label_9_01057E13:
  .byte   PEND 
 @ 010   ----------------------------------------
  .byte   PATT
-  .word Label_9_01057D54
+  .word Label_9_0128B134
 @ 011   ----------------------------------------
  .byte   PATT
-  .word Label_9_01057D79
+  .word Label_9_0128B159
 @ 012   ----------------------------------------
  .byte   PATT
-  .word Label_9_01057D90
+  .word Label_9_0128B170
 @ 013   ----------------------------------------
  .byte   PATT
-  .word Label_9_01057DAE
+  .word Label_9_0128B18E
 @ 014   ----------------------------------------
  .byte   PATT
-  .word Label_9_01057D54
+  .word Label_9_0128B134
 @ 015   ----------------------------------------
  .byte   PATT
-  .word Label_9_01057D79
+  .word Label_9_0128B159
 @ 016   ----------------------------------------
  .byte   PATT
-  .word Label_9_01057DDD
+  .word Label_9_0128B1BD
 @ 017   ----------------------------------------
  .byte   PATT
-  .word Label_9_01057E13
+  .word Label_9_0128B1F3
 @ 018   ----------------------------------------
-Label_9_01057E61:
+Label_9_0128B241:
  .byte   N12 ,Cn1 ,v100
  .byte   N06 ,Dn1
  .byte   N96 ,Cs2
@@ -2730,7 +2730,7 @@ Label_9_01057E61:
  .byte   W06
  .byte   PEND 
 @ 019   ----------------------------------------
-Label_9_01057E9F:
+Label_9_0128B27F:
  .byte   N12 ,Cn1 ,v100
  .byte   N06 ,Dn1
  .byte   W06
@@ -2850,10 +2850,10 @@ Label_9_01057E9F:
  .byte   W06
 @ 022   ----------------------------------------
  .byte   PATT
-  .word Label_9_01057E61
+  .word Label_9_0128B241
 @ 023   ----------------------------------------
  .byte   PATT
-  .word Label_9_01057E9F
+  .word Label_9_0128B27F
 @ 024   ----------------------------------------
  .byte   N12 ,Cn1 ,v100
  .byte   N06 ,Dn1
@@ -2926,29 +2926,29 @@ Label_9_01057E9F:
  .byte   W60
 @ 028   ----------------------------------------
  .byte   GOTO
-  .word Label_9_01057D54
+  .word Label_9_0128B134
  .byte   FINE
 
 @******************************************************@
 	.align	2
 
-song19:
+songEC:
 	.byte	10	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song19_pri	@ Priority
-	.byte	song19_rev	@ Reverb.
+	.byte	songEC_pri	@ Priority
+	.byte	songEC_rev	@ Reverb.
     
-	.word	song19_grp
+	.word	songEC_grp
     
-	.word	song19_001
-	.word	song19_002
-	.word	song19_003
-	.word	song19_004
-	.word	song19_005
-	.word	song19_006
-	.word	song19_007
-	.word	song19_008
-	.word	song19_009
-	.word	song19_010
+	.word	songEC_001
+	.word	songEC_002
+	.word	songEC_003
+	.word	songEC_004
+	.word	songEC_005
+	.word	songEC_006
+	.word	songEC_007
+	.word	songEC_008
+	.word	songEC_009
+	.word	songEC_010
 
 	.end
