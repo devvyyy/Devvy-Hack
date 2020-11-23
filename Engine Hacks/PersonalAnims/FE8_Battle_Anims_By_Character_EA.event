@@ -1,0 +1,40 @@
+//Battle animation lists based on character and class
+//By Tequila
+
+#ifndef _FE8_
+	ERROR This is intended for FE8.
+#endif
+
+#include EAStdlib.event
+#include "Extensions/Hack Installation.txt"
+#ifndef FreeSpace
+	#define FreeSpace 0xB2B000
+	ORG FreeSpace
+#endif
+
+PUSH
+
+ORG $573C6
+BL(0x57CAC)
+ORG $573F0
+BL(0x57CAC)
+
+ORG $57D04
+SHORT 0x4800 0x4700; POIN Battle_Anims_By_Character|1 
+
+POP
+
+ALIGN 4
+Battle_Anims_By_Character:
+#incbin "Battle_Anims_By_Character.dmp"
+POIN BattleAnimListByCharTable
+
+ALIGN 4
+BattleAnimListByCharTable:
+BYTE 0x07 0x55 0 0; POIN AffoHunterAnimList
+WORD 0 //Terminator
+
+AffoHunterAnimList:
+BYTE 3 1; SHORT 0xAE //swords
+BYTE 9 1; SHORT 0xAF //unarmed
+WORD 0 //terminator
