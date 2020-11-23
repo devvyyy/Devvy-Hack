@@ -1,0 +1,64 @@
+//ASMC Check Suite by Sme, Set Suite and lyn adaptation by hypergammaspaces
+//All of these expect a char ID in memory slot 2. You can use 0xFFFF to use the active unit's ID.
+//Check item looks for item ID in memory slot 3.
+//Check weapon rank looks for weapon type in slot 3.
+
+ALIGN 4
+#include "ASMC_Setters_and_Getters.lyn.event"
+ALIGN 4
+
+MapAnimGetExp:
+WORD $000002 $08015360+1 //AddSkipThread2
+WORD $000002 $0807a940+1 //MoveCameraOntoSubject
+WORD $02000E $0 //Wait 2frame
+WORD $14000E $0 //Wait 20frame
+WORD $000002 $0807aa4c+1 //DisplayMapAnimExpBar
+WORD $00000E $0 //Wait 0frame
+WORD $000002 $0802CC1C+1 //SaveInstigatorFromBattle
+WORD $010006; POIN gProc_PopR_AnimsOnWrapper //popup rework, replace this with the standard weapon broke/rank increased if not using. it's what's at $9A3600
+WORD $000D $089A3620 //goto MapBattleEndCleanup
+WORD $0 $0 //term
+ALIGN 4
+
+//Getters
+#define CheckLevel(Character) "SVAL 0x2 Character; ASMC CheckLevelASMC|1"
+#define CheckExperience(Character) "SVAL 0x2 Character; ASMC CheckExperienceASMC|1"
+#define CheckMaxHP(Character) "SVAL 0x2 Character; ASMC CheckMaxHPASMC|1"
+#define CheckCurrentHP(Character) "SVAL 0x2 Character; ASMC CheckCurrentHPASMC|1"
+#define CheckStrength(Character) "SVAL 0x2 Character; ASMC CheckStrengthASMC|1"
+#define CheckSkill(Character) "SVAL 0x2 Character; ASMC CheckSkillASMC|1"
+#define CheckSpeed(Character) "SVAL 0x2 Character; ASMC CheckSpeedASMC|1"
+#define CheckDefense(Character) "SVAL 0x2 Character; ASMC CheckDefenseASMC|1"
+#define CheckResistance(Character) "SVAL 0x2 Character; ASMC CheckResistanceASMC|1"
+#define CheckConstitution(Character) "SVAL 0x2 Character; ASMC CheckConstitutionASMC|1"
+#define CheckMovement(Character) "SVAL 0x2 Character; ASMC CheckMovementASMC|1"
+#define CheckInventory(Character,Item) "SVAL 0x2 Character; SVAL 0x3 Item; ASMC CheckHasItemASMC|1"
+#define CheckSwordRank(Character) "SVAL 0x2 Character; SVAL 0x3 0; ASMC CheckWeaponRankASMC|1"
+#define CheckLanceRank(Character) "SVAL 0x2 Character; SVAL 0x3 1; ASMC CheckWeaponRankASMC|1"
+#define CheckAxeRank(Character) "SVAL 0x2 Character; SVAL 0x3 2; ASMC CheckWeaponRankASMC|1"
+#define CheckBowRank(Character) "SVAL 0x2 Character; SVAL 0x3 3; ASMC CheckWeaponRankASMC|1"
+#define CheckStaffRank(Character) "SVAL 0x2 Character; SVAL 0x3 4; ASMC CheckWeaponRankASMC|1"
+#define CheckAnimaRank(Character) "SVAL 0x2 Character; SVAL 0x3 5; ASMC CheckWeaponRankASMC|1"
+#define CheckLightRank(Character) "SVAL 0x2 Character; SVAL 0x3 6; ASMC CheckWeaponRankASMC|1"
+#define CheckDarkRank(Character) "SVAL 0x2 Character; SVAL 0x3 7; ASMC CheckWeaponRankASMC|1"
+#define CheckStatusEffect(Character) "SVAL 0x2 Character; ASMC CheckStatusEffectASMC|1"
+#define CheckStatusDuration(Character) "SVAL 0x2 Character; ASMC CheckStatusDurationASMC|1"
+
+//Setters
+#define GiveExperience(Character,Amount) "SVAL 0x2 Character; SVAL 0x3 Amount; ASMC GiveExperienceASMC|1"
+#define GiveMaxHP(Character,Amount) "SVAL 0x2 Character; SVAL 0x3 Amount; ASMC GiveMaxHPASMC|1"
+#define GiveStrength(Character,Amount) "SVAL 0x2 Character; SVAL 0x3 Amount; ASMC GiveStrengthASMC|1"
+#define GiveSkill(Character,Amount) "SVAL 0x2 Character; SVAL 0x3 Amount; ASMC GiveSkillASMC|1"
+#define GiveSpeed(Character,Amount) "SVAL 0x2 Character; SVAL 0x3 Amount; ASMC GiveSpeedASMC|1"
+#define GiveLuck(Character,Amount) "SVAL 0x2 Character; SVAL 0x3 Amount; ASMC GiveLuckASMC|1"
+#define GiveDefense(Character,Amount) "SVAL 0x2 Character; SVAL 0x3 Amount; ASMC GiveDefenseASMC|1"
+#define GiveResistance(Character,Amount) "SVAL 0x2 Character; SVAL 0x3 Amount; ASMC GiveResistanceASMC|1"
+//Rank is in slot 4
+#define GiveSwordRank(Character,Amount) "SVAL 0x2 Character; SVAL 0x3 Amount; SVAL 0x4 0; ASMC GiveWeaponRankASMC|1"
+#define GiveLanceRank(Character,Amount) "SVAL 0x2 Character; SVAL 0x3 Amount; SVAL 0x4 1; ASMC GiveWeaponRankASMC|1"
+#define GiveAxeRank(Character,Amount) "SVAL 0x2 Character; SVAL 0x3 Amount; SVAL 0x4 2; ASMC GiveWeaponRankASMC|1"
+#define GiveBowRank(Character,Amount) "SVAL 0x2 Character; SVAL 0x3 Amount; SVAL 0x4 3; ASMC GiveWeaponRankASMC|1"
+#define GiveStaffRank(Character,Amount) "SVAL 0x2 Character; SVAL 0x3 Amount; SVAL 0x4 4; ASMC GiveWeaponRankASMC|1"
+#define GiveAnimaRank(Character,Amount) "SVAL 0x2 Character; SVAL 0x3 Amount; SVAL 0x4 5; ASMC GiveWeaponRankASMC|1"
+#define GiveLightRank(Character,Amount) "SVAL 0x2 Character; SVAL 0x3 Amount; SVAL 0x4 6; ASMC GiveWeaponRankASMC|1"
+#define GiveDarkRank(Character,Amount) "SVAL 0x2 Character; SVAL 0x3 Amount; SVAL 0x4 7; ASMC GiveWeaponRankASMC|1"

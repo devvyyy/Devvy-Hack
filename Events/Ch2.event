@@ -1,0 +1,129 @@
+EventPointerTable(0xA, PointerList)
+
+PointerList:
+	POIN TurnBasedEvents
+	POIN CharacterBasedEvents
+	POIN LocationBasedEvents
+	POIN MiscBasedEvents
+	POIN Dunno1 Dunno2 Dunno3 Tutorial
+	POIN Traps1 Traps2
+	POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+	POIN $0 $0 $0
+	POIN $0 $0 $0
+	POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+
+	END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+
+	END_MAIN
+
+MiscBasedEvents:
+	CauseGameOverIfLordDies
+	END_MAIN
+
+LocationBasedEvents:
+Village(0x9,SnaringVillage,10,2)
+House(0x0,House1,2,11)
+House(0x0,House2,5,9)
+	END_MAIN
+
+Dunno1:
+
+	END_MAIN
+
+Dunno2:
+
+	END_MAIN
+
+Dunno3:
+
+	END_MAIN
+
+Tutorial:
+
+	END_MAIN
+
+Units1:
+UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [6,10] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
+UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [7,10] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
+UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [8,10] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
+UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [9,10] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
+UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [6,11] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
+UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [7,11] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
+UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [8,11] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
+UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [9,11] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
+UNIT
+
+EnemyUnits:
+UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [1,2] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
+
+UNIT
+
+Traps1:
+	ENDTRAP
+	ALIGN 4
+
+Traps2:
+	ENDTRAP
+	ALIGN 4
+
+BeginningScene:
+	LOAD1 0x1 Units1
+	LOAD1 0x1 EnemyUnits
+	ENUN
+	GotoPrepScreen
+	ENDA
+
+EndingScene:
+	MNC2 0x2
+	NoFade
+	ENDA
+	
+SnaringVillage:
+MUSI // lowers music volume
+TEXTSTART
+CHECK_ACTIVEID Affogato
+BEQ 0x0 0xC 0x0
+	SVAL 0x2 0x3D
+	SVAL 0x3 SnaringVillageText
+	CALL 0x9EE310
+	REMA
+	CALL 0x591F40
+	SVAL 0x3 0xC8
+  GIVEITEMTO 0xFFFF
+	GOTO 0x1
+LABEL 0x0
+SVAL 0x2 0x3D
+SVAL 0x3 SnaringVillageNoText
+CALL 0x9EE310
+REMA
+SVAL 0x3 0xC8
+GIVEITEMTO 0xFFFF
+LABEL 0x1
+MUNO // increases music volume
+NoFade
+ENDA
+
+House1:
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+SVAL 0x2 0x1 // decides background 
+SVAL 0x3 Placeholder1 // decides text id
+CALL 0x9EE310 // runs the text
+MUNO // increases music volume
+NoFade
+ENDA
+
+House2:
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+SVAL 0x2 0x1 // decides background 
+SVAL 0x3 Placeholder2 // decides text id
+CALL 0x9EE310 // runs the text
+MUNO // increases music volume
+NoFade
+ENDA
