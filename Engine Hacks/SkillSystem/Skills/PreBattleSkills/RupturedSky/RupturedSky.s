@@ -1,15 +1,15 @@
 .thumb
-.equ AtlasID, SkillTester+4
+.equ RupturedSkyID, SkillTester+4
 
 push {r4-r7, lr}
 mov r4, r0 @atkr
 mov r5, r1 @dfdr
 
-@has Atlas
+@has Ruptured Sky
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r4 @attacker data
-ldr r1, AtlasID
+ldr r1, RupturedSkyID
 .short 0xf800
 cmp r0, #0
 beq End
@@ -20,10 +20,10 @@ ldrb r3, [r3]
 cmp r3, #4
 beq End
 
-@add str/4 damage
+@add enemy atk/4 attack
 mov  r1, #0x5A
-ldrh r0, [r4, r1] @strength
-ldrb r2, [r4, #0x14] @res
+ldrh r0, [r4, r1] @attack
+ldrb r2, [r5, #0x14] @atk
 lsr  r2, #2
 add  r0, r2
 strh r0, [r4,r1]
@@ -34,4 +34,4 @@ pop {r4-r7, r15}
 .ltorg
 SkillTester:
 @Poin SkillTester
-@WORD AtlasID
+@WORD RupturedSkyID

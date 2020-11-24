@@ -20,11 +20,11 @@
 	//Snow Village by N426
 	
 	ALIGN 4
-    SnowVillageImage:
+    SnowVillageTilesetImage:
     #incext Png2Dmp "SnowVillage/SnowVillageImage.png" --lz77
 	
 	ALIGN 4
-    SnowVillagePalette:
+    SnowVillageTilesetPalette:
     #incbin "SnowVillage/SnowVillagePalette.bin"
 	
 	ALIGN 4
@@ -32,8 +32,8 @@
     #incext compress "SnowVillage/SnowVillage.mapchip_config"
 
 	ALIGN 4
-	EventPointerTable(0xE, SnowVillageImage)
-    EventPointerTable(0xF, SnowVillagePalette)
+	EventPointerTable(0xE, SnowVillageTilesetImage)
+    EventPointerTable(0xF, SnowVillageTilesetPalette)
 	EventPointerTable(0x10, SnowVillageMapConfig)
 
 
