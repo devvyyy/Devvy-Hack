@@ -15,6 +15,13 @@ SHORT $4718 $46C0
 #include "SpurSkills/SpurSkills.event"
 
 ALIGN 4
+ChainReaction:
+#incbin "ChainReaction/ChainReaction.dmp"
+POIN AuraSkillCheck
+WORD ChainReactionID
+
+
+ALIGN 4
 Warlock:
 #incbin "Warlock/Warlock.dmp"
 POIN AuraSkillCheck

@@ -28,6 +28,10 @@
 //Kelik Zenair
 #define BlackfireID 51
 
+//Chain Reaction: brave effect to adjacent melee allies with full hp
+//Kelik Zenair
+#define ChainReactionID 52
+
 //Warlock: Adjacent allies target foe's Res.
 //Kelik Zenair
 #define WarlockID 222
@@ -70,7 +74,7 @@
 
 //Gentilhomme: Female allies within 2 tiles receive -2 damage.
 //Author Unknown (Initial Commit)
-#define GentilhommeID 52 
+#define GentilhommeID 255
 
 //Hex: -15 avoid to all adjacent enemies.
 //By Snakey1
@@ -448,9 +452,17 @@
 //Kelik Zenair
 #define IntrepidID 120
 
-//Intrepid: If foe's HP = 100%, weapons ignore defenses.
+//Lunatic: If foe's HP = 100%, weapons ignore defenses.
 //Kelik Zenair
 #define LunaticID 18
+
+//Heavy Duty: If con > foes con, -3 atk on foe.
+//Kelik Zenair
+#define HeavyDutyID 88
+
+//Ruptured Sky: Deals damage = 25% of foe's Atk.
+//Kelik Zenair
+#define RupturedSkyID 220
 
 //Sergeant: If foe uses melee, hit/avoid +10.
 //Kelik Zenair
@@ -482,7 +494,7 @@
 
 //Foreign Princess: Foreign army units take -2/+2 damage dealt/taken.
 //By Sme
-#define ForeignPrincessID 88
+#define ForeignPrincessID 255
 
 //Fortune: This unit cannot be crit.
 //By Sme
@@ -506,7 +518,7 @@
 
 //Insight: Hit +20.
 //By Sme
-#define InsightID 220
+#define InsightID 255
 
 //Knight Aspirant: When above 75% health, +2 damage, +15% avoid.
 //By Datagne
