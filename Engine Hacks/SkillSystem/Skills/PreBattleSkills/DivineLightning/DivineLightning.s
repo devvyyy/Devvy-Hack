@@ -11,10 +11,10 @@ ldrb r0,[r0,#2] @range
 cmp r0,#1
 bne End
 
-ldrb r0, [r5, #0x15] @attacker spd
-ldrb r1, [r4, #0x15] @defender spd
-cmp r0, r1
-ble End @skip if spd is less or equal
+ldrb r0, [r4, #0x15] @attacker spd
+ldrb r1, [r5, #0x15] @defender spd
+cmp r1, r0
+ble End @skip if spd is higher or equal
 
 @has Divine Lightning
 ldr r0, SkillTester
