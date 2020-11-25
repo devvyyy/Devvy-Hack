@@ -47,9 +47,9 @@ cmp r6, r7
 ble End
 
 @Add stuff
-mov r1, #0x5A
-ldrh r0, [r5, r1]
-sub r0, #0x3
+mov r1, #0x5C
+ldrh r0, [r4, r1]
+add r0, #0x3
 strh r0, [r4,r1]
 
 End:

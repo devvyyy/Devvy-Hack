@@ -11,8 +11,8 @@ mov r5, r1
 @hp not at full
 ldrb r0, [r4, #0x12] @max hp
 ldrb r1, [r4, #0x13] @curr hp
-cmp r0, r1
-bne End @skip if not max hp
+cmp r1, r0
+blt Done
 
 mov r0, r4       @Move attacker data into r1.
 mov r1, #0x4c    @Move to the attacker's weapon ability
@@ -40,13 +40,6 @@ mov r2,#0x20 @brave flag
 orr r1,r2
 str r1,[r0]
 
-@testing
-mov r0, r4
-add r0, #0x5c @attacker defense
-ldrh r3, [r0]
-add r3, #2
-strh r3, [r0]
-
 Done:
 pop {r4-r7}
 pop {r0}
@@ -56,3 +49,4 @@ bx r0
 AuraSkillCheck:
 @ POIN AuraSkillCheck
 @ WORD ChainReactionID
+
