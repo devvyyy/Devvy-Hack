@@ -26,6 +26,7 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TURN 0x0 Thieves1 [4,0] 0x0
 END_MAIN
 
 CharacterBasedEvents:
@@ -83,7 +84,6 @@ UNIT Cultist 0x58 0x1 Level(1, Enemy, 1)      [14,2] 0b 0x0 0x0 0x0 [Flux,] [0,0
 UNIT Cultist 0x58 0x1 Level(1, Enemy, 1)      [1,12] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
 UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)      [4,6] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
 UNIT Marcellus 0x58 0x1 Level(5, Enemy, 1)      [2,5] 0b 0x0 0x0 0x0 [Flux,] [0,3,4,32]
-
 UNIT
 
 EnemyUnits2:
@@ -91,13 +91,16 @@ UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [10,4] 0b 0x0 0x0 0x0 [IronAxe,] 
 UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [4,16] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
 UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [2,16] 0b 0x0 0x0 0x0 [SteelLance,] AttackInRangeAI
 UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [6,5] 0b 0x0 0x0 0x0 [IronLance,] [0,0,4,0]
-UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [11,9] 0b 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
-UNIT BadGuy 0x54 0x1 Level(3, Enemy, 1)     [12,5] 0b 0x0 0x0 0x0 [Javelin,] [0,3,4,32]
+UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [11,9] DropItem 0x0 0x0 0x0 [Javelin,] AttackInRangeAI
+UNIT BadGuy 0x54 0x1 Level(3, Enemy, 1)     [12,5] 0b 0x0 0x0 0x0 [SteelLance,] [0,3,4,32]
 UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [6,14] 0b 0x0 0x0 0x0 [SteelAxe, Elixir,] AttackInRangeAI
 UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [14,10] 0b 0x0 0x0 0x0 [IronAxe,] [0,0,4,0]
 UNIT BadGuy 0x57 0x1 Level(1, Enemy, 1)     [13,16] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
 UNIT BadGuy 0x57 0x1 Level(1, Enemy, 1)     [12,3] 0b 0x0 0x0 0x0 [SteelSword,] AttackInRangeAI
+UNIT
 
+ThiefRein1:
+UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [4,11] 0b 0x0 0x0 0x0 [SteelSword, ChestKey, ChestKey,] AttackInRangeAI
 UNIT
 
 Traps1:
@@ -187,6 +190,13 @@ REMA
 SVAL 0x3 0x61
 GIVEITEMTO 0xFFFF
 EVBIT_T 0x7
+ENDA
+
+Thieves1:
+CAM1 [4,11]
+LOAD1 0x1 ThiefRein1
+ENUN
+NoFade
 ENDA
 
 ShopItems:
