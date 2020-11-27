@@ -5,6 +5,7 @@ DeserterCardPalette:
 #incbin "DeserterCardPalette.dmp"
 DeserterClassCard:
 setCardEntry(0x9B, DeserterCard,DeserterCardPalette)
+
 ALIGN 4
 RaiderCard:
 #incbin "RaiderCard.dmp"
@@ -12,3 +13,11 @@ RaiderCardPalette:
 #incbin "RaiderCardPalette.dmp"
 RaiderClassCard:
 setCardEntry(0x9C, RaiderCard,RaiderCardPalette)
+
+ALIGN 4
+PirateCard:
+#incbin "PirateCard.dmp"
+PirateCardPalette:
+#incbin "PirateCardPalette.dmp"
+PirateClassCard:
+setCardEntry(0x8C, PirateCard,PirateCardPalette)
