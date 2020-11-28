@@ -19,10 +19,37 @@ ALIGN 32
 CharacterBasedEvents:
 
 	END_MAIN
-
+	
+ALIGN 32
 MiscBasedEvents:
+AFEV 0x3 CheckIfWin1 0xB
+AFEV 0x3 CheckIfWin2 0xA
 	CauseGameOverIfLordDies
 	END_MAIN
+	
+ALIGN 32
+CheckIfWin1:
+CHECK_EVENTID 0xA
+BEQ 0x0 0xC 0x0
+CHECK_EVENTID 0xB
+BEQ 0x0 0xC 0x0
+ENUT 0x3
+CALL (EndingScene)
+LABEL 0x0
+EVBIT_T 0x7
+ENDA
+
+ALIGN 32
+CheckIfWin2:
+CHECK_EVENTID 0xB
+BEQ 0x0 0xC 0x0
+CHECK_EVENTID 0xA
+BEQ 0x0 0xC 0x0
+ENUT 0x3
+CALL (EndingScene)
+LABEL 0x0
+EVBIT_T 0x7
+ENDA
 
 LocationBasedEvents:
 Village(0x9,SnaringVillage,10,2)
@@ -45,6 +72,10 @@ Dunno3:
 Tutorial:
 
 	END_MAIN
+	
+StartEvent1:
+UNIT Biscotti PegasusKnight 0x0 Level(5, Enemy, 1)         [14,3]  0 0 1 REDA14R3        [Javelin]   NeverMoveAI
+UNIT
 
 Units1:
 UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [6,10] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
@@ -58,11 +89,25 @@ UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [9,11] 0b 0x0 0x0 0x0 [IronBow, 0xC3,
 UNIT
 
 EnemyUnits:
-UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [1,2] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
+UNIT Biscotti PegasusKnight 0x1 Level(5, Enemy, 0)     [17,1]  0 0 1 REDA17R0 [IronLance,] AttackInRangeAI
+UNIT Wreyvine Soldier 0x1 Level(2, Enemy, 1)     [10,3] 0 0 1 REDA13R3 [IronLance,] AttackInRangeAI
+UNIT Wreyvine Soldier 0x1 Level(2, Enemy, 1)     [16,5] 0 0 1 REDA17R5 [IronLance,] AttackInRangeAI
+UNIT Kisra Priest 0x1 Level(4, Enemy, 0)     [1,2]  0 0 1 REDA1R0 [IronLance,] AttackInRangeAI
+UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [2,3] 0 0 1 REDA2R0 [Flux,] AttackInRangeAI
+UNIT BadGuy Brigand 0x1 Level(2, Enemy, 1)     [1,2] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
+UNIT BadGuy Brigand 0x1 Level(2, Enemy, 1)     [1,2] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
+UNIT
 
+RosenRein:
+UNIT Rosen Fighter 0x1 Level(4, Ally, 0)   [6,10] 0b 0x0 0x0 0x0 [IronAxe,] [0x0,0x0,0x0,0x0]
+UNIT
+
+LiliRein:
+UNIT Lili Monk 0x1 Level(2, Ally, 0)   [6,10] 0b 0x0 0x0 0x0 [Divine, Lightning,] [0x0,0x0,0x0,0x0]
 UNIT
 
 Traps1:
+BLST [14,4] Ballista
 	ENDTRAP
 	ALIGN 4
 

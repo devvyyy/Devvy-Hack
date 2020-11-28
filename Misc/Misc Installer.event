@@ -18,3 +18,17 @@ ORG $AAC5AC
 ORG $AACEDC
 #incbin "SacredStones.dmp"
 POP
+
+ArrowPng:
+#incbin "VanillaArrow.dmp"
+
+ArrowPalette:
+#incbin "VanillaArrowPal.bin"
+
+PUSH
+ORG $32E98
+POIN ArrowPng
+
+ORG $32EA0
+POIN ArrowPalette
+POP
