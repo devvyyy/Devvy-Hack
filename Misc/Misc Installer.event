@@ -1,9 +1,9 @@
+//Stat screen
 StatScreen:
 #incext Png2Dmp "StatScreen.png" --lz77
 StatScreenPal:
 #incext Png2Dmp "StatScreen.png" --palette-only
 
-//Stat screen
 PUSH
 ORG $88638
 POIN StatScreen
@@ -19,6 +19,7 @@ ORG $AACEDC
 #incbin "SacredStones.dmp"
 POP
 
+//Movement Arrow
 ArrowPng:
 #incbin "VanillaArrow.dmp"
 
@@ -32,3 +33,30 @@ POIN ArrowPng
 ORG $32EA0
 POIN ArrowPalette
 POP
+
+//Menu Banner
+//ALIGN 4
+//MenuBannerImage:
+//#incbin "Banner.dmp"
+//ALIGN 4
+//MenuBannerPal:
+//#incbin "BannerPal.bin"
+
+//PUSH
+//ORG 0x896A4
+//POIN MenuBannerImage
+//ORG 0x895E0
+//POIN MenuBannerPal
+//POP
+
+//Save Menu
+//ALIGN 4
+//NewSaveMenu:
+//#incext Png2Dmp "SaveMenu.png" --lz77
+
+//PUSH
+//ORG $A8EDC
+//POIN NewSaveMenu
+//ORG $AA43C
+//POIN NewSaveMenu
+//POP

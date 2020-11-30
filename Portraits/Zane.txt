@@ -43,17 +43,17 @@ Moose_Mug:
 #incext PortraitFormatter "Moose.png"
 setMugEntry(0x9, Moose_Mug, 3, 5, 3, 3)
 
-ALIGN 16 //Atheya by Laurent_Lacroix
+ALIGN 16 //Atheya by Laurent Lacroix
 Atheya_Mug:
 #incext PortraitFormatter "Atheya.png"
 setMugEntry(0x10, Atheya_Mug, 3, 5, 3, 3)
 
-ALIGN 16 //Xord by Laurent_Lacroix
+ALIGN 16 //Xord by Laurent Lacroix
 Xord_Mug:
 #incext PortraitFormatter "Xord.png"
 setMugEntry(0x0A, Xord_Mug, 3, 5, 2, 2)
 
-ALIGN 16 //Vangarre by Laurent_Lacroix
+ALIGN 16 //Vangarre by Laurent Lacroix
 Vangarre_Mug:
 #incext PortraitFormatter "Vangarre.png"
 setMugEntry(0x0B, Vangarre_Mug, 3, 5, 3, 3)
@@ -68,12 +68,12 @@ Matthias_Mug:
 #incext PortraitFormatter "Matthias.png"
 setMugEntry(0x0D, Matthias_Mug, 3, 5, 3, 3)
 
-ALIGN 16 //Flan by Laurent_Lacroix
+ALIGN 16 //Flan by Laurent Lacroix
 Flan_Mug:
 #incext PortraitFormatter "Flan.png"
 setMugEntry(0x0E, Flan_Mug, 3, 5, 3, 3)
 
-ALIGN 16 //Brigitta by Laurent_Lacroix
+ALIGN 16 //Brigitta by Laurent Lacroix
 Brigitta_Mug:
 #incext PortraitFormatter "Brigitta.png"
 setMugEntry(0x0F, Brigitta_Mug, 3, 5, 3, 3)
@@ -83,7 +83,7 @@ Wulfric_Mug:
 #incext PortraitFormatter "Wulfric.png"
 setMugEntry(0x11, Wulfric_Mug, 3, 5, 2, 3)
 
-ALIGN 16 //Zenair by Laurent_Lacroix
+ALIGN 16 //Zenair by Laurent Lacroix
 Zenair_Mug:
 #incext PortraitFormatter "Zenair.png"
 setMugEntry(0x12, Zenair_Mug, 3, 5, 3, 3)
@@ -98,7 +98,7 @@ Aloys_Mug:
 #incext PortraitFormatter "Aloys.png"
 setMugEntry(0x14, Aloys_Mug, 3, 4, 3, 2)
 
-ALIGN 16 //Kevron by Laurent_Lacroix
+ALIGN 16 //Kevron by Laurent Lacroix
 Kevron_Mug:
 #incext PortraitFormatter "Kevron.png"
 setMugEntry(0x15, Kevron_Mug, 3, 5, 3, 3)
@@ -108,7 +108,7 @@ Wilfried_Mug:
 #incext PortraitFormatter "Wilfried.png"
 setMugEntry(0x16, Wilfried_Mug, 3, 5, 3, 3)
 
-ALIGN 16 //Solum by Laurent_Lacroix
+ALIGN 16 //Solum by Laurent Lacroix
 Solum_Mug:
 #incext PortraitFormatter "Solum.png"
 setMugEntry(0x17, Solum_Mug, 3, 5, 3, 3)
@@ -156,7 +156,7 @@ setMugEntry(0x1F, Sequin_Mug, 3, 5, 3, 3)
 ALIGN 16
 Rosenfeld_Mug:
 #incext PortraitFormatter "Rosenfeld.png"
-setMugEntry(0x20, Rosenfeld_Mug, 3, 5, 4, 3)
+setMugEntry(0x20, Rosenfeld_Mug, 3, 5, 2, 2)
 
 ALIGN 16
 Affogato_Mug: //Affogato edited by BuskHusker
@@ -187,6 +187,11 @@ ALIGN 16
 Pandoro_Mug:
 #incext PortraitFormatter "Pandoro.png"
 setMugEntry(0x26, Pandoro_Mug, 6, 4, 5, 0)
+
+ALIGN 16
+Latte_Mug: //Latte by Laurent Lacroix
+#incext PortraitFormatter "Latte.png"
+setMugEntryExtend(0x27, Latte_Mug, 4, 5, 3, 3, 10, 4, 0, 0)
 
 //Bad Guys
 ALIGN 16 //Sai by hypergammaspaces

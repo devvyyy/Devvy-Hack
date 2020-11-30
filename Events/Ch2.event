@@ -13,6 +13,8 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TURN 0x0 RosenEvent [2,0] 0x0
+TURN 0x0 LiliEvent [3,0] 0x0
 	END_MAIN
 
 ALIGN 32
@@ -22,15 +24,13 @@ CharacterBasedEvents:
 	
 ALIGN 32
 MiscBasedEvents:
-AFEV 0x3 CheckIfWin1 0xB
-AFEV 0x3 CheckIfWin2 0xA
+AFEV 0x0 CheckIfWin1 0xA
+AFEV 0x0 CheckIfWin2 0xB
 	CauseGameOverIfLordDies
 	END_MAIN
 	
 ALIGN 32
 CheckIfWin1:
-CHECK_EVENTID 0xA
-BEQ 0x0 0xC 0x0
 CHECK_EVENTID 0xB
 BEQ 0x0 0xC 0x0
 ENUT 0x3
@@ -41,8 +41,6 @@ ENDA
 
 ALIGN 32
 CheckIfWin2:
-CHECK_EVENTID 0xB
-BEQ 0x0 0xC 0x0
 CHECK_EVENTID 0xA
 BEQ 0x0 0xC 0x0
 ENUT 0x3
@@ -85,29 +83,73 @@ UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [9,10] 0b 0x0 0x0 0x0 [IronBow, 0xC3,
 UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [6,11] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
 UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [7,11] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
 UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [8,11] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
-UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [9,11] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
+UNIT Latte Archer_F 0x1 Level(2, Ally, 0)   [9,11] 0b 0x0 0x0 0x0 [IronBow, Longbow] [0x0,0x0,0x0,0x0]
 UNIT
 
 EnemyUnits:
-UNIT Biscotti PegasusKnight 0x1 Level(5, Enemy, 0)     [17,1]  0 0 1 REDA17R0 [IronLance,] AttackInRangeAI
-UNIT Wreyvine Soldier 0x1 Level(2, Enemy, 1)     [10,3] 0 0 1 REDA13R3 [IronLance,] AttackInRangeAI
-UNIT Wreyvine Soldier 0x1 Level(2, Enemy, 1)     [16,5] 0 0 1 REDA17R5 [IronLance,] AttackInRangeAI
-UNIT Kisra Priest 0x1 Level(4, Enemy, 0)     [1,2]  0 0 1 REDA1R0 [IronLance,] AttackInRangeAI
-UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [2,3] 0 0 1 REDA2R0 [Flux,] AttackInRangeAI
-UNIT BadGuy Brigand 0x1 Level(2, Enemy, 1)     [1,2] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
-UNIT BadGuy Brigand 0x1 Level(2, Enemy, 1)     [1,2] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
+UNIT Biscotti PegasusKnight 0x1 Level(5, Enemy, 0)     [17,1]  DropItem 0 1 REDA17R0 [IronLance, Elixir,] [0,3,4,32]
+UNIT Wreyvine Soldier 0x1 Level(2, Enemy, 1)     [13,3] 0 0 1 REDA10R3 [IronLance,] AttackInRangeAI
+UNIT Wreyvine Soldier 0x1 Level(2, Enemy, 1)     [17,5] 0 0 1 REDA16R5 [IronLance,] AttackInRangeAI
+UNIT Wreyvine Soldier 0x1 Level(2, Enemy, 1)     [17,5] 0 0 1 REDA17R3 [IronLance,] AttackInRangeAI
+UNIT Wreyvine LCav 0x1 Level(2, Enemy, 1)     [13,3] 0 0 1 REDA15R2 [IronLance,] [0,0,4,0]
+UNIT Wreyvine LCav 0x1 Level(2, Enemy, 1)     [13,3] 0 0 1 REDA13R5 [IronLance,] [0,0,4,0]
+UNIT Wreyvine AArmor 0x1 Level(3, Enemy, 1)     [17,5] DropItem 0 1 REDA18R5 [IronAxe, HandAxe] [0,3,4,32]
+UNIT Wreyvine Soldier 0x1 Level(3, Enemy, 1)     [17,5] 0 0 1 REDA14R7 [Javelin, Vulnerary] [0,3,4,32]
+UNIT Wreyvine Deserter 0x1 Level(3, Enemy, 1)     [1,1] 0 0 1 REDA3R1 [SteelGlaive, Javelin] [0,3,4,32]
+UNIT Wreyvine PegasusKnight 0x1 Level(2, Enemy, 1)     [18,8] 0 0 1 REDA16R8 [IronLance,] [0,0,4,0]
+UNIT Wreyvine PegasusKnight 0x1 Level(3, Enemy, 1)     [8,0] 0 0 1 REDA6R0 [Javelin,] AttackInRangeAI
+UNIT Wreyvine PegasusKnight 0x1 Level(3, Enemy, 1)     [8,0] 0 0 1 REDA5R1 [SteelLance,] AttackInRangeAI
+UNIT Wreyvine PegasusKnight 0x1 Level(3, Enemy, 1)     [8,0] 0 0 1 REDA7R3 [IronLance,] AttackInRangeAI
+UNIT Kisra Priest 0x1 Level(4, Enemy, 0)     [1,0]  DropItem 0 1 REDA2R1 [Physic, Warp,] [0,3,4,32]
+UNIT BadGuy Raider 0x1 Level(4, Enemy, 1)     [1,0]  0 0 1 REDA1R1 [SteelBlade, Sagitar,] [0,3,4,32]
+UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [1,0] 0 0 1 REDA0R4 [Flux, Vulnerary] AttackInRangeAI
+UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [0,10] 0 0 1 REDA2R8 [Flux,] AttackInRangeAI
+UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [0,10] 0 0 1 REDA1R12 [Flux,] [0,0,4,0]
+UNIT BadGuy Raider 0x1 Level(2, Enemy, 1)     [4,12] 0 0 1 REDA3R11 [SteelSword,] AttackInRangeAI
+UNIT BadGuy Brigand 0x1 Level(2, Enemy, 1)     [1,1] 0 0 1 REDA2R4 [SteelAxe,] BrigandAI
+UNIT BadGuy Brigand 0x1 Level(3, Enemy, 1)     [0,10] 0 0 1 REDA4R9 [SteelAxe,] AttackInRangeAI
+UNIT BadGuy LArmor 0x1 Level(3, Enemy, 1)     [1,1] 0 0 1 REDA1R6 [IronGlaive, Javelin] [0,3,4,32]
+UNIT BadGuy Hunter 0x1 Level(3, Enemy, 1)     [2,0] 0b 0x0 0x0 0x0 [Longbow,] [0,3,4,32]
+UNIT BadGuy Hunter 0x1 Level(3, Enemy, 1)     [18,13] 0b 0x0 0x0 REDA18R12 [SteelBow,] [0,0,4,0]
+UNIT BadGuy SCav 0x1 Level(3, Enemy, 1)     [15,13] 0b 0x0 0x0 REDA13R11 [IronSword,] [0,0,4,0]
+
 UNIT
 
 RosenRein:
-UNIT Rosen Fighter 0x1 Level(4, Ally, 0)   [6,10] 0b 0x0 0x0 0x0 [IronAxe,] [0x0,0x0,0x0,0x0]
+UNIT Rosen Fighter 0x1 Level(4, Ally, 0)   [16,13] 0 0 1 REDA15R12 [IronAxe,] [0x0,0x0,0x0,0x0]
 UNIT
 
 LiliRein:
-UNIT Lili Monk 0x1 Level(2, Ally, 0)   [6,10] 0b 0x0 0x0 0x0 [Divine, Lightning,] [0x0,0x0,0x0,0x0]
+UNIT Lili Monk 0x1 Level(2, Ally, 0)   [0,10] 0 0 1 REDA2R10 [Divine, Lightning,] [0x0,0x0,0x0,0x0]
 UNIT
+
+RosenEvent:
+	LOAD1 0x1 RosenRein
+	ENUN
+	CAM1 Rosenfeld
+	STAL 20
+	CUMO Rosenfeld
+	TEXTSTART
+	Text(RosenAppearing)
+	TEXTEND
+	NoFade
+	ENDA
+	
+LiliEvent:
+	LOAD1 0x1 LiliRein
+	ENUN
+	CAM1 Lili
+	STAL 20
+	CUMO Lili
+	TEXTSTART
+	Text(LiliAppearing)
+	TEXTEND
+	NoFade
+	ENDA
 
 Traps1:
 BLST [14,4] Ballista
+BLST [7,12] Ballista
 	ENDTRAP
 	ALIGN 4
 
