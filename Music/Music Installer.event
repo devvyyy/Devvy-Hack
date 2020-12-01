@@ -39,6 +39,16 @@ SongTable(0x19,song19,0)
 #include "Confidence.event"
 
 ALIGN 4
+// Start the Justice ~Attack
+SongTable(0x01F0,song01F0,0)
+#include "ThraciaAttack.event"
+
+ALIGN 4
+// Start the Justice ~Defend
+SongTable(0x01F1,song01F1,0)
+#include "ThraciaDefend.event"
+
+ALIGN 4
 // Sublime Domain
 SongTable(0x1B,song1B,0)
 #include "Sublime.event"

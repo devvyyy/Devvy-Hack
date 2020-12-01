@@ -5,7 +5,8 @@ ORG 2*0xFF+SkillDescTable
 
 #define SkillDescription(skillID,description) "PUSH; ORG 2*skillID+SkillDescTable; SHORT description; POP"
 
-
+SkillDescription(MegalovaniaID,SD_Megalovania)
+SkillDescription(RayDarkID,SD_RayDark)
 SkillDescription(ConnivingID,SD_Conniving)
 SkillDescription(ChainReactionID,SD_ChainReaction)
 SkillDescription(RupturedSkyID,SD_RupturedSky)
