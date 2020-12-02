@@ -82,11 +82,11 @@
 
 //Hex: -15 avoid to all adjacent enemies.
 //By Snakey1
-#define HexID 186
+#define HexID 200
 
 //Infiltrator: If within 2 spaces of two or more enemies, gain +3 damage and +15% hit.
 //By Datagne
-#define InfiltratorID 200
+#define InfiltratorID 255
 
 //Inspiration: Allies within 2 tiles deal +2 damage and receive -2 damage.
 //Author Unknown (Initial Commit)
@@ -234,7 +234,7 @@
 
 //Forager: Recover 20% HP each turn if on a Plain, Forest or Mountain.
 //By Leonarth
-#define ForagerID 176
+#define ForagerID 255
 
 //Imbue: Recover HP equal to Magic at the start of each turn.
 //By Sme
@@ -248,7 +248,7 @@
 
 //Armor March: At start of turn, if unit is adjacent to an armor ally, unit and adjacent armor allies gain +2 Mov.
 //By Leonarth
-#define ArmorMarchID 174
+#define ArmorMarchID 146
 
 //Pass: Can move through enemy units.
 //By Tequila
@@ -271,7 +271,7 @@
 
 //Quantum Visage: Face changes every time it's looked at.
 //By Leonarth
-#define RandomMugID 146
+#define RandomMugID 255
 
 
 //Identity Problems: This unit can't decide on a name or face.
@@ -305,6 +305,58 @@
 //By circleseverywhere
 #define FuryID 140
 
+//Heal 1: restores 3 hp after combat.
+//Kelik Zenair
+#define Heal1ID 184
+
+//Heal 2: restores 5 hp after combat.
+//Kelik Zenair
+#define Heal2ID 185
+
+//Heal 3: restores 7 hp after combat.
+//Kelik Zenair
+#define Heal3ID 186
+
+//Heal 4: restores 10 hp after combat.
+//Kelik Zenair
+#define Heal4ID 187
+
+//Anima 1: adjacent allies get +1 atk.
+//Kelik Zenair
+#define Anima1ID 173
+
+//Anima 2: adjacent allies get +2 atk.
+//Kelik Zenair
+#define Anima2ID 174
+
+//Anima 3: adjacent allies get +3 atk.
+//Kelik Zenair
+#define Anima3ID 175
+
+//Anima 4: adjacent allies get +4 atk.
+//Kelik Zenair
+#define Anima4ID 176
+
+//Dark 1: adjacent foes lose 1 atk.
+//Kelik Zenair
+#define Dark1ID 133
+
+//Dark 2: adjacent foes lose 2 atk.
+//Kelik Zenair
+#define Dark2ID 134
+
+//Dark 3: adjacent foes lose 3 atk.
+//Kelik Zenair
+#define Dark3ID 151
+
+//Dark 4: adjacent foes lose 4 atk.
+//Kelik Zenair
+#define Dark4ID 152
+
+//Dark 5: foes in 2 spaces lose 2 atk.
+//Kelik Zenair
+#define Dark5ID 195
+
 //Galeforce: Move again after attacking and defeating an enemy.
 //Author Unknown (Initial Commit)
 #define GaleforceID 48
@@ -315,11 +367,11 @@
 
 //Poison Strike: Deals damage equal to 20% of the enemy's max HP after battle this unit initiates.
 //By Snakey1
-#define PoisonStrikeID 184
+#define PoisonStrikeID 255
 
 //Grisly Wound: Deals damage equal to 20% of the enemy's max HP after every battle.
 //By Snakey1
-#define GrislyWoundID 185
+#define GrislyWoundID 255
 
 //Powerstaff: Get another action after using a staff.
 //By Sme
@@ -346,7 +398,7 @@
 
 //Axefaith: Axes can't lose durability, and grants +Luck*1.5 Hit when wielding axes.
 //By 2WB & Colorz
-#define AxeFaithID 173
+#define AxeFaithID 255
 #define AxefaithID AxeFaithID //Alias
 
 //Battle Veteran: Gain +1 damage and +5% Hit per 10 levels unit has.
@@ -546,7 +598,7 @@
 
 //Loyalty: When within 2 spaces of a Lord, -3 damage taken, +15% hit.
 //By Datagne
-#define LoyaltyID 195
+#define LoyaltyID 255
 
 //Lucky Seven: +20 Hit and Avoid until the 7th turn.
 //Author Unknown (Initial Commit)
@@ -587,8 +639,8 @@
 
 //Quick/Slow Burn: Hit and Avoid bonus increasing or decreasing each turn, maximum +15.
 //Author Unknown (Initial Commit)
-#define QuickBurnID 133
-#define SlowBurnID 134
+#define QuickBurnID 255
+#define SlowBurnID 255
 
 //Short Shield: Gain 6 defense against attacks recieved in melee.
 //By Sme
@@ -696,11 +748,11 @@
 
 //Bane: Leave the opponent at 1 HP. (Skill/2 % activation)
 //Author Unknown (Initial Commit)
-#define BaneID 124
+#define BaneID 255
 
 //Barricade: Damage taken is halved after first being struck.
 //By Snakey1
-#define BarricadeID 187
+#define BarricadeID 124
 
 //Barricade+: In combat, damage recieved equals half of the damage when struck last.
 //By Snakey1
@@ -1008,11 +1060,11 @@
 
 //Catch 'Em All: Grants the user every skill.
 //By Leonarth
-#define CatchEmAllID 151
+#define CatchEmAllID 255
 
 //Vantage+: User always attacks first, even if attacked. Negates crits.
 //By SD9k
-#define VantagePlusID 152
+#define VantagePlusID 255
 
 //Nihil: Cancels the opponent's skills in combat.
 //Author Unknown (Initial Commit)
@@ -1067,8 +1119,8 @@
 
 //Inspiring Tune: Refreshing a unit grants them +2 Pow/Def until the next turn.
 //By Leonarth
-#define VigorDanceID 175
-#define InspiringTuneID 175 //Alias
+#define VigorDanceID 255
+#define InspiringTuneID 255 //Alias
 
 //Liquid Ooze: Attackers trying to gain HP from attacking this unit lose it instead.
 //By Leonarth

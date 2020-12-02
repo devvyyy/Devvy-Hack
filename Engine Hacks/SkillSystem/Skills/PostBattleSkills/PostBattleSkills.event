@@ -26,6 +26,35 @@ POIN FuryEvent
 #include "Fury/FuryEvent.event"
 
 ALIGN 4
+Heal1:
+#incbin "Heal1/Heal1.dmp"
+POIN SkillTester
+WORD Heal1ID
+POIN Heal1Event
+#include "Heal1/Heal1.event"
+
+ALIGN 4
+Heal2:
+#incbin "Heal2/Heal2.dmp"
+POIN SkillTester
+WORD Heal2ID
+POIN Heal1Event
+
+ALIGN 4
+Heal3:
+#incbin "Heal3/Heal3.dmp"
+POIN SkillTester
+WORD Heal3ID
+POIN Heal1Event
+
+ALIGN 4
+Heal4:
+#incbin "Heal4/Heal4.dmp"
+POIN SkillTester
+WORD Heal4ID
+POIN Heal1Event
+
+ALIGN 4
 #include "PoisonStrikeGrislyWound/PoisonStrikeGrislyWound.lyn.event"
 
 #ifdef RESIDUAL_DAMAGE_REQUIRES_BATTLE_DAMAGE
