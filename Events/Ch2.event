@@ -15,6 +15,11 @@ PointerList:
 TurnBasedEvents:
 TURN 0x0 RosenEvent [2,0] 0x0
 TURN 0x0 LiliEvent [3,0] 0x0
+TURN 0x0 ShamanReinforcementsLeft [3,0] 0x0
+TURN 0x0 DisplayLingerText [4,0] 0x0
+TURN 0x0 GetOutOfSpawnPls [5,0] 0x0
+TURN 0x0 LeftFortRein[6,0] 0x0
+TURN 0x0 RightFortRein[8,0] 0x0
 	END_MAIN
 
 ALIGN 32
@@ -99,9 +104,8 @@ UNIT Wreyvine Deserter 0x1 Level(3, Enemy, 1)     [1,1] 0 0 1 REDA3R1 [SteelGlai
 UNIT Wreyvine PegasusKnight 0x1 Level(3, Enemy, 1)     [8,0] 0 0 1 REDA6R0 [Javelin,] AttackInRangeAI
 UNIT Wreyvine PegasusKnight 0x1 Level(3, Enemy, 1)     [8,0] 0 0 1 REDA5R1 [SteelLance,] AttackInRangeAI
 UNIT Wreyvine PegasusKnight 0x1 Level(3, Enemy, 1)     [8,0] 0 0 1 REDA7R3 [IronLance,] AttackInRangeAI
-UNIT Kisra Priest 0x1 Level(4, Enemy, 0)     [1,0]  DropItem 0 1 REDA2R1 [Physic, Warp,] [0,3,4,32]
+UNIT Kisra Priest 0x1 Level(4, Enemy, 0)     [1,0]  DropItem 0 1 REDA2R1 [Physic, Warp,] [14,3,4,32]
 UNIT BadGuy Raider 0x1 Level(4, Enemy, 1)     [1,0]  0 0 1 REDA1R1 [SteelBlade, Sagitar,] [0,3,4,32]
-UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [1,0] 0 0 1 REDA0R4 [Flux,] AttackInRangeAI
 UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [0,10] 0 0 1 REDA2R8 [Flux,] AttackInRangeAI
 UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [0,10] 0 0 1 REDA1R12 [Flux, Vulnerary] [0,0,4,0]
 UNIT BadGuy Brigand 0x1 Level(2, Enemy, 1)     [1,1] 0 0 1 REDA2R4 [SteelAxe,] BrigandAI
@@ -112,9 +116,24 @@ UNIT BadGuy Hunter 0x1 Level(3, Enemy, 1)     [18,13] 0b 0x0 0x0 REDA18R12 [Stee
 UNIT BadGuy SCav 0x1 Level(3, Enemy, 1)     [15,13] 0b 0x0 0x0 REDA13R11 [IronSword,] [0,0,4,0]
 UNIT
 
-Reinforcements1:
+SReinforcements1:
 UNIT Wreyvine PegasusKnight 0x1 Level(2, Enemy, 1)     [18,8] 0 0 1 REDA16R8 [IronLance,] [0,0,4,0]
-UNIT Wreyvine Mercenary 0x1 Level(2, Enemy, 1)     [18,8] 0 0 1 REDA18R6 [SteelSword,] AttackInRangeAI
+UNIT Wreyvine Mercenary 0x1 Level(2, Enemy, 1)     [18,8] 0 0 1 REDA18R6 [SteelSword,] [0,0,4,0]
+UNIT
+
+SReinforcements2:
+UNIT Wreyvine ACav 0x1 Level(2, Enemy, 1)     [13,3] 0 0 1 REDA12R3 [SteelAxe,] [0,0,4,0]
+UNIT Wreyvine SCav 0x1 Level(2, Enemy, 1)     [13,3] 0 0 1 REDA14R3 [SteelSword,] [0,0,4,0]
+UNIT
+
+BReinforcements1:
+UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [3,3] 0 0 1 REDA2R5 [Flux,] [0,0,4,0]
+UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [0,10] 0 0 1 REDA1R9 [Flux,] [0,0,4,0]
+UNIT
+
+BReinforcements2:
+UNIT BadGuy Deserter 0x1 Level(3, Enemy, 1)     [4,12] 0 0 1 REDA5R12 [SteelLance,] [0,0,4,0]
+UNIT BadGuy Hunter 0x1 Level(3, Enemy, 1)     [4,12] 0 0 1 REDA3R12 [Longbow,] [0,0,4,0]
 UNIT
 
 RosenRein:
@@ -148,6 +167,50 @@ LiliEvent:
 	TEXTEND
 	NoFade
 	ENDA
+	
+ShamanReinforcementsLeft:
+CAM1 [3,6]
+	LOAD1 0x1 BReinforcements1
+	ENUN
+	STAL 20
+	TEXTSTART
+	Text(LiliDivineLightning)
+	TEXTEND
+	NoFade
+	ENDA
+	
+GetOutOfSpawnPls:
+CAM1 [8,10]
+	LOAD1 0x1 BReinforcements2
+	ENUN
+	STAL 20
+	NoFade
+	ENDA
+	
+RightFortRein:
+CAM1 [13,3]
+	LOAD1 0x1 SReinforcements1
+	ENUN
+	STAL 20
+	NoFade
+	ENDA
+
+LeftFortRein:
+CAM1 [17,5]
+	LOAD1 0x1 SReinforcements2
+	ENUN
+	STAL 20
+	NoFade
+	ENDA
+
+DisplayLingerText:
+CAM1 [8,10]
+	TEXTSTART
+	Text(LingerWarning)
+	TEXTEND
+	NoFade
+	ENDA
+
 
 Traps1:
 BLST [14,4] Ballista

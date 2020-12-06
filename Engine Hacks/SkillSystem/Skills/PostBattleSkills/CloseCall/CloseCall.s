@@ -35,12 +35,12 @@ bne End
 //cmp	r0,r1
 //beq	End
 
-ldr	r1,=#0x8018BD8	@check if can move again
-mov	lr, r1
-.short	0xF800
-lsl	r0, #0x18
-cmp	r0, #0x00
-beq	End
+//ldr	r1,=#0x8018BD8	@check if can move again
+//mov	lr, r1
+//.short	0xF800
+//lsl	r0, #0x18
+//cmp	r0, #0x00
+//beq	End
 
 @check if already Cantoing
 ldr	r0, [r4,#0x0C]	@status bitfield
