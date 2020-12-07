@@ -1,3 +1,9 @@
+//Hardcoded BGs fix
+PUSH
+ORG 0xE836
+BYTE 0x04 0xE0
+POP
+
 // Remove arrow wiggling advancing RN
 PUSH
 ORG 0x1A774
@@ -87,13 +93,26 @@ ORG 0x2FEC6
 BYTE 0x0F
 POP
 
-//Thracia trading
+//Thracia rescue trading
 PUSH
 ORG 0x229A8
 SHORT 0x1C00
 
 ORG 0x22A10
 SHORT 0x1C00
+POP
+
+//Thracia item trading
+PUSH
+ORG 0x022f50
+BYTE 0xc0
+BYTE 0x46
+ORG 0x02D772
+BYTE 0x1B
+ORG 0x09E3B8
+BYTE 0x1C
+ORG 0x09E8F2
+BYTE 0x1C
 POP
 
 //Prevent character event freezes
@@ -206,7 +225,6 @@ PUSH
 ORG 0x07F464
 BYTE 0x0A
 POP
-
 
 //Skip very beginning world map
 PUSH

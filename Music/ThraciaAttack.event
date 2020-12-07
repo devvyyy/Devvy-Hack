@@ -20,11 +20,11 @@
 song01F0_001:
 // 000   ----------------------------------------
  BYTE   KEYSH   song01F0_key+0
-Label_0_012A9802:
+Label_0_012AB3FE:
  BYTE   TEMPO   158*song01F0_tbs/2
  BYTE   VOICE   48
  BYTE   PAN   c_v+20
- BYTE   VOL   58*song01F0_mvl/mxv
+ BYTE   VOL   48*song01F0_mvl/mxv
  BYTE   N03  As3  v100
  BYTE   N03  As4
  BYTE   W06
@@ -120,7 +120,7 @@ Label_0_012A9802:
  BYTE   W72
 // 007   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_0_012A9802
+  POIN2 Label_0_012AB3FE
  BYTE   FINE
 
 //**************** Track 2 (Midi-Chn.1) ****************//
@@ -128,10 +128,10 @@ Label_0_012A9802:
 song01F0_002:
 // 000   ----------------------------------------
  BYTE   KEYSH   song01F0_key+0
-Label_1_012A9890:
+Label_1_012AB48C:
  BYTE   VOICE   48
  BYTE   PAN   c_v+6
- BYTE   VOL   58*song01F0_mvl/mxv
+ BYTE   VOL   48*song01F0_mvl/mxv
  BYTE   W48
  BYTE   N06  Gs3  v100
  BYTE   W06
@@ -144,7 +144,7 @@ Label_1_012A9890:
  BYTE   N24  As2
  BYTE   W24
 // 001   ----------------------------------------
-Label_1_012A98A4:
+Label_1_012AB4A0:
  BYTE   N06  Bn1  v100
  BYTE   N06  Bn2
  BYTE   W12
@@ -204,7 +204,7 @@ Label_1_012A98A4:
  BYTE   W06
 // 004   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_1_012A98A4
+  POIN2 Label_1_012AB4A0
 // 005   ----------------------------------------
  BYTE   W12
  BYTE   N12  Fn2  v100
@@ -231,7 +231,7 @@ Label_1_012A98A4:
  BYTE   W72
 // 007   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_1_012A9890
+  POIN2 Label_1_012AB48C
  BYTE   FINE
 
 //**************** Track 3 (Midi-Chn.2) ****************//
@@ -239,10 +239,10 @@ Label_1_012A98A4:
 song01F0_003:
 // 000   ----------------------------------------
  BYTE   KEYSH   song01F0_key+0
-Label_2_012A9922:
+Label_2_012AB51E:
  BYTE   VOICE   58
  BYTE   PAN   c_v-1
- BYTE   VOL   67*song01F0_mvl/mxv
+ BYTE   VOL   57*song01F0_mvl/mxv
  BYTE   N96  As0  v100
  BYTE   W96
 // 001   ----------------------------------------
@@ -260,7 +260,7 @@ Label_2_012A9922:
  BYTE   W96
 // 007   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_2_012A9922
+  POIN2 Label_2_012AB51E
  BYTE   FINE
 
 //**************** Track 4 (Midi-Chn.3) ****************//
@@ -268,9 +268,9 @@ Label_2_012A9922:
 song01F0_004:
 // 000   ----------------------------------------
  BYTE   KEYSH   song01F0_key+0
-Label_3_012A993B:
+Label_3_012AB537:
  BYTE   VOICE   57
- BYTE   VOL   60*song01F0_mvl/mxv
+ BYTE   VOL   50*song01F0_mvl/mxv
  BYTE   PAN   c_v-33
  BYTE   W96
 // 001   ----------------------------------------
@@ -323,7 +323,7 @@ Label_3_012A993B:
  BYTE   W24
 // 007   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_3_012A993B
+  POIN2 Label_3_012AB537
  BYTE   FINE
 
 //**************** Track 5 (Midi-Chn.4) ****************//
@@ -331,9 +331,9 @@ Label_3_012A993B:
 song01F0_005:
 // 000   ----------------------------------------
  BYTE   KEYSH   song01F0_key+0
-Label_4_012A997E:
+Label_4_012AB57A:
  BYTE   VOICE   47
- BYTE   VOL   53*song01F0_mvl/mxv
+ BYTE   VOL   43*song01F0_mvl/mxv
  BYTE   PAN   c_v-44
  BYTE   N12  As2  v100
  BYTE   W36
@@ -366,7 +366,7 @@ Label_4_012A997E:
  BYTE   N04  Fs2  v080
  BYTE   W04
 // 003   ----------------------------------------
-Label_4_012A99AC:
+Label_4_012AB5A8:
  BYTE   N12  As2  v100
  BYTE   W24
  BYTE   N12
@@ -384,7 +384,7 @@ Label_4_012A99AC:
  BYTE   PEND 
 // 004   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_4_012A99AC
+  POIN2 Label_4_012AB5A8
 // 005   ----------------------------------------
  BYTE   N12  As2  v100
  BYTE   W12
@@ -400,7 +400,7 @@ Label_4_012A99AC:
  BYTE   W24
 // 007   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_4_012A997E
+  POIN2 Label_4_012AB57A
  BYTE   FINE
 
 //**************** Track 6 (Midi-Chn.5) ****************//
@@ -408,9 +408,9 @@ Label_4_012A99AC:
 song01F0_006:
 // 000   ----------------------------------------
  BYTE   KEYSH   song01F0_key+0
-Label_5_012A99D7:
+Label_5_012AB5D3:
  BYTE   VOICE   47
- BYTE   VOL   53*song01F0_mvl/mxv
+ BYTE   VOL   43*song01F0_mvl/mxv
  BYTE   PAN   c_v+43
  BYTE   N12  As1  v100
  BYTE   W36
@@ -443,7 +443,7 @@ Label_5_012A99D7:
  BYTE   N04  Fs1  v080
  BYTE   W04
 // 003   ----------------------------------------
-Label_5_012A9A05:
+Label_5_012AB601:
  BYTE   N12  As1  v100
  BYTE   W24
  BYTE   N12
@@ -461,7 +461,7 @@ Label_5_012A9A05:
  BYTE   PEND 
 // 004   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_5_012A9A05
+  POIN2 Label_5_012AB601
 // 005   ----------------------------------------
  BYTE   N12  As1  v100
  BYTE   W12
@@ -477,7 +477,7 @@ Label_5_012A9A05:
  BYTE   W24
 // 007   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_5_012A99D7
+  POIN2 Label_5_012AB5D3
  BYTE   FINE
 
 //**************** Track 7 (Midi-Chn.6) ****************//
@@ -485,9 +485,9 @@ Label_5_012A9A05:
 song01F0_007:
 // 000   ----------------------------------------
  BYTE   KEYSH   song01F0_key+0
-Label_6_012A9A30:
+Label_6_012AB62C:
  BYTE   VOICE   36
- BYTE   VOL   44*song01F0_mvl/mxv
+ BYTE   VOL   34*song01F0_mvl/mxv
  BYTE   PAN   c_v-13
  BYTE   N24  Bn1  v108
  BYTE   W36
@@ -542,7 +542,7 @@ Label_6_012A9A30:
  BYTE   W12
 // 007   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_6_012A9A30
+  POIN2 Label_6_012AB62C
  BYTE   FINE
 
 //**************** Track 8 (Midi-Chn.7) ****************//
@@ -550,9 +550,9 @@ Label_6_012A9A30:
 song01F0_008:
 // 000   ----------------------------------------
  BYTE   KEYSH   song01F0_key+0
-Label_7_012A9A75:
+Label_7_012AB671:
  BYTE   VOICE   124
- BYTE   VOL   56*song01F0_mvl/mxv
+ BYTE   VOL   46*song01F0_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   N06  Fs1  v060
  BYTE   N30  Cs2  v108
@@ -777,7 +777,7 @@ Label_7_012A9A75:
  BYTE   W06
 // 007   ----------------------------------------
  BYTE   GoTo
-  POIN2 Label_7_012A9A75
+  POIN2 Label_7_012AB671
  BYTE   FINE
 
 //******************************************************//
