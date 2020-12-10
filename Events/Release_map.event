@@ -138,31 +138,34 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
-LOAD1 0x0 Units1
 LOAD1 0x1 EnemyUnits
 ENUN
 LOAD1 0x1 EnemyUnits2
 ENUN
 MUSC 0x7
 TEXTSTART
-SVAL 0x2 0x3C
-SVAL 0x3 Prologue1
+SVAL 0x2 0x3D
+SVAL 0x3 SirItsBad
 CALL 0x9EE310
 REMA
+FADI 16
 CLEAN
-MUSC 0x1
-CAM1 0x7
-CUMO 0x1
-STAL 60
-CURE
-TEXTSHOW Prologue2
-TEXTEND
+MUSC 0x28
+TEXTSTART
+SVAL 0x2 0x3C
+SVAL 0x3 NooAffosATrainee
+CALL 0x9EE310
+REMA
+LOAD1 0x0 Units1
+FADU 16
+_0x2629 0x7
+STAL 20
 FADI 16
 GotoPrepScreen
 ENDA
 
 EndingScene:
-CharacterConditionalDialog(Affogato,Placeholder1,Placeholder2)
+CharacterConditionalDialog(Breve,Placeholder1,Placeholder2)
 STAL 120
 EVBIT_F 0x2
 FADI 16
