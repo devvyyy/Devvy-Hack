@@ -1,6 +1,4 @@
 
-#ifdef DRAGON_VEINS
-
 //Dragon Veins by Crazycolorz5 with additions from circleseverywhere
 //Converted to Trap Rework by Sme
 
@@ -12,6 +10,11 @@
 #define Vein(XX,YY,EffectID) "BYTE DragonVeinTrapID XX YY EffectID 0x0 0x0"
 #define Vein(XX,YY,EffectID, TextID) "BYTE DragonVeinTrapID XX YY EffectID; SHORT TextID"
 #define VeinActivation "EARTHQUAKE_START 0x0; MUSS DragonVeinSFXID; STAL 0x20; FlashWhite; STAL 0xC0; EARTHQUAKE_END; MURE 0x06; STAL 0x40"
+
+#ifndef SongTableOffset
+  #define SongTableOffset 0x224470
+  #define SongTable(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT Group Group; POP"
+#endif
 
 
 
@@ -87,14 +90,13 @@ DragonVeinVoicemap:
 DragonVeinWav:
   #incbin "bin/DragonVein_wav.dmp"
 
-#ifndef SongTableOffset
-    #define SongTableOffset 0x224470
-    #define SongTable(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT Group Group; POP"
-  #endif // SongTableOffset
-
 SongTable(DragonVeinSFXID,DragonVeinSFX,7)
 
-#ifdef DRAGON_VEIN_SKILL_REQUIRED
+
+
+
+
+  #ifdef DRAGON_VEIN_SKILL_REQUIRED
   VeinUsability:
     #incbin "asm/DragonVeinUsability.dmp"
     WORD DragonVeinTrapID
@@ -110,12 +112,8 @@ SongTable(DragonVeinSFXID,DragonVeinSFX,7)
     WORD DragonsBloodID
   #endif
 
-
-
   VeinEffect:
     #incbin "asm/DragonVeinExecution.dmp"
     POIN DragonVeinEffectTableOffset
 
-
-#endif // DRAGON_VEINS
 

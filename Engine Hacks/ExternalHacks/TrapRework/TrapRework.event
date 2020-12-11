@@ -1,21 +1,7 @@
-
-#ifndef TRAP_REWORK
-
-#ifdef DRAGON_VEINS
-	#define TRAP_REWORK
-#endif // DRAGON_VEINS
-
-#ifdef HEAL_TILES
-	#define TRAP_REWORK
-#endif // HEAL_TILES
-
-#endif // TRAP_REWORK
-
-#ifdef TRAP_REWORK
-
 #ifndef TRAP_REWORK_INSTALLED
 	#define TRAP_REWORK_INSTALLED
 
+	
 	
 	//vanilla trap ID defs
 	#define BallistaTrapID 1
@@ -132,26 +118,15 @@
 	TrapBreakableTerrainList: 
 	TrapBreakableTerrain(0x34,0xFF,20) 		//Snag
 	TrapBreakableTerrain(0x1C,0xFE,0xFF) 	//Wall
+	TrapBreakableTerrain(0x1F,0xFC,40) 		//Door
 	TrapBreakableTerrainListEnd
 	
 
+	//Example usages
 	#include "Modules/DragonVeins/DragonVeins.event"
 	#include "Modules/HealTiles/HealTiles.event"
+	#include "Modules/TelliusTorches/TelliusTorches.event"
 	
-	//This is here to satiate a hardcoded requirement if heal tiles are not installed.
-	#ifndef HEAL_TILES
-	HealTileTrapIDLink:
-	WORD 0
-	#endif // HEAL_TILES
-	
-	//Tellius Torches are not included in this distribution,
-	//but there are references to it in the code still.
-	//This exists to satiate them, remove it if you add Tellius Torches.
-	TelliusTorchTrapIDLink:
-	TelliusTorchOffMapSpriteIDLink:
-	TelliusTorchOnMapSpriteIDLink:
-	WORD 0
+
 	
 #endif // TRAP_REWORK_INSTALLED
-
-#endif // TRAP_REWORK
