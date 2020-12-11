@@ -53,8 +53,8 @@ to go through you![AN]
 [MoveRight][OpenRight]
 Sir,[.4] the hooded figures[Beat] They[N]
 ransacked my bakery![AN]
-Without the bread,[.4] how are we[N]
-going to feed the town?[AN]
+Without the bread,[.4] we may not have enough[N]
+food to last the winter![AN]
 [OpenLeft]I see[Beat] Ma'am,[.4] I'm afraid[N]
 there's not much we can do.[AN]
 
@@ -104,11 +104,19 @@ have to back me up.[A][ToggleSmile][X]
 I-[.4]I'm Thomas.[.6] I'm a new recruit,[N]
 [.4]you see[Beat][AN]
 
-[OpenMidLeft]Get him![AN]
+[OpenMidLeft][Beat][AN]
+[OpenRight][MoveMidRight]
+[OpenMidLeft][MoveRight]
 
-[OpenRight][MoveRight]Ha-[.4]ha[Beat]?[AN]
-It would be nice to get[N]
-backup here[Beat][A][X]
+[OpenMidRight][MoveMidRight][ClearFace][LoadAffo]
+[OpenRight]You[Beat][AN]
+[OpenMidRight][MoveFarRight]H-[.4]Hey,[.4] wait![AN]
+
+[OpenRight]To think you would come back[N]
+here[Beat][AN]
+Men![.6] Surround him![.6] You won't[N]
+abandon us again![A][X]
+
 
 ## Investigation
 # verified

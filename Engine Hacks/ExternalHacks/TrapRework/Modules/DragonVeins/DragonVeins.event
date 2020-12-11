@@ -11,10 +11,6 @@
 #define Vein(XX,YY,EffectID, TextID) "BYTE DragonVeinTrapID XX YY EffectID; SHORT TextID"
 #define VeinActivation "EARTHQUAKE_START 0x0; MUSS DragonVeinSFXID; STAL 0x20; FlashWhite; STAL 0xC0; EARTHQUAKE_END; MURE 0x06; STAL 0x40"
 
-#ifndef SongTableOffset
-  #define SongTableOffset 0x224470
-  #define SongTable(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT Group Group; POP"
-#endif
 
 
 
@@ -27,7 +23,7 @@ ALIGN 4
 DragonVeinEffectTableOffset:
 ORG currentOffset+(256*4)
 
-
+/*
 //install map sprite
 PUSH
 	ORG (0x8AF880+0x8*VeinMapSpriteID)
@@ -37,15 +33,18 @@ PUSH
     ORG $2e444 //prevent suspend from breaking the game
       SHORT 0
 POP
+*/
 
 
 ALIGN 4
 VeinInitialization:
 #incbin "asm/Initialize.dmp"
 
+/*
 ALIGN 4
 VeinGraphics:
 #incbin "bin/sparkle_final_4_Sheet.dmp"
+*/
 
 
 PUSH
@@ -72,7 +71,7 @@ VeinTextBox:
   #incbin "asm/dv_display.dmp"
 
 
-
+/*
 ALIGN 4
 DragonVeinSFXData:
   #incbin "bin/DragonVeinSFX.dmp"
@@ -86,12 +85,14 @@ DragonVeinVoicemap:
   WORD $3c00
   POIN DragonVeinWav
   WORD $FF00FF
+  */
 
+/*
 DragonVeinWav:
   #incbin "bin/DragonVein_wav.dmp"
 
 SongTable(DragonVeinSFXID,DragonVeinSFX,7)
-
+*/
 
 
 

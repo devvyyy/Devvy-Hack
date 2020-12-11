@@ -29,6 +29,7 @@
 	POP
 	
 	
+	/*
 	//install example map sprite
 	PUSH
 		ORG (0x8AF880+0x8*ExampleMapSpriteID)
@@ -39,6 +40,7 @@
 
 	ExampleMapSpriteGraphics:
 	#incext Png2Dmp "bin/Sigil.png" --lz77
+	*/
 	
 	
 	ALIGN 4
@@ -61,11 +63,12 @@
 	ALIGN 4
 	TrapFogLightSourceTable: //ext1 is read as strength of light source
 	FILL (256*1)
-	MESSAGE TrapFogLightSourceTable
 	ALIGN 4
 	TrapLightRuneImpassableTable:
 	FILL (256*1)
 
+	// breaks charity
+	/*
 
 	#include "asm/TrapRework_BreakableTerrain.lyn.event"
 
@@ -99,10 +102,11 @@
 		jumpToHack(TrapRework_DoNewHideMapSprite)
 
 		ORG $57C20
-		jumpToHack(TrapRework_NewForceMapAnimsForTrap) 
+		jumpToHack(TrapRework_NewForceMapAnimsForTrap)
 
 		ORG $8CA3C
 		jumpToHack(TrapRework_NewTerrainHPDisplay) 
+
 	POP
 
-
+	*/
