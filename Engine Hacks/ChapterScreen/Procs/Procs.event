@@ -1,0 +1,139 @@
+// Procs and proc routines
+
+ALIGN 4
+Proc_ChIntro:
+#include "ChIntro/ChIntro.event"
+  ALIGN 4
+  Init_BGSeg1:
+  #include "ChIntro/Init_BGSeg1.lyn.event"
+    ALIGN 4
+    GetGemMask:
+    #include "ChIntro/GetGemMask.lyn.event"
+  ALIGN 4
+  Init_Relief:
+  #include "ChIntro/Init_Relief.lyn.event"
+  ALIGN 4
+  PlaySfx:
+  #include "ChIntro/PlaySfx.lyn.event"
+  ALIGN 4
+  End_Seg1:
+  #include "ChIntro/End_Seg1.lyn.event"
+  ALIGN 4
+  Init_BGSeg2:
+  #include "ChIntro/Init_BGSeg2.lyn.event"
+  ALIGN 4
+  Loop_WhiteIn:
+  #include "ChIntro/Loop_WhiteIn.lyn.event"
+  ALIGN 4
+  Update_Relief:
+  #include "ChIntro/Update_Relief.lyn.event"
+  ALIGN 4
+  Loop_WhiteOut:
+  #include "ChIntro/Loop_WhiteOut.lyn.event"
+  ALIGN 4
+  Init_BGSeg3:
+  #include "ChIntro/Init_BGSeg3.lyn.event"
+  ALIGN 4
+  Loop_Title:
+  #include "ChIntro/Loop_Title.lyn.event"
+  ALIGN 4
+  End_Seg3:
+  #include "ChIntro/End_Seg3.lyn.event"
+  ALIGN 4
+  FadeOutSfx:
+  #include "ChIntro/FadeOutSfx.lyn.event"
+  ALIGN 4
+  InitBattleMapBG:
+  #include "ChIntro/Init_BattleMapBG.lyn.event"
+  ALIGN 4
+  Loop_FadeIn:
+  #include "ChIntro/Loop_FadeIn.lyn.event"
+  ALIGN 4
+  Loop_FadeOut:
+  #include "ChIntro/Loop_FadeOut.lyn.event"
+  
+
+ALIGN 4
+Proc_ScrollPalMist:
+#include "Mist/ScrollPalMist.event"
+  ALIGN 4
+  Init_Mist:
+  #include "Mist/Init_Mist.lyn.event"
+  ALIGN 4
+  Init_ScrollPalMist:
+  #include "Mist/Init_ScrollPalMist.lyn.event"
+  ALIGN 4
+  Loop_ScrollPalMist:
+  #include "Mist/Loop_ScrollPalMist.lyn.event"
+
+
+ALIGN 4
+Proc_Gem:
+#include "Gem/Gem.event"
+  ALIGN 4
+  Init_Move:
+  #include "Gem/Init_Move.lyn.event"
+  ALIGN 4
+  Init_Spiral:
+  #include "Gem/Init_Spiral.lyn.event"
+  ALIGN 4
+  Init_Line:
+  #include "Gem/Init_Line.lyn.event"
+  ALIGN 4
+  Loop_Move:
+  #include "Gem/Loop_Move.lyn.event"
+  ALIGN 4
+  End_Spiral:
+  #include "Gem/End_Spiral.lyn.event"
+  ALIGN 4
+  End_Line:
+  #include "Gem/End_Line.lyn.event"
+  ALIGN 4
+  Loop_FadeOutMist:
+  #include "Gem/Loop_FadeOutMist.lyn.event"
+  ALIGN 4
+  Init_Anim:
+  #include "Gem/Init_Anim.lyn.event"
+  ALIGN 4
+  Init_Shine:
+  #include "Gem/Init_Shine.lyn.event"
+  ALIGN 4
+  Loop_Shine:
+  #include "Gem/Loop_Shine.lyn.event"
+  
+
+ALIGN 4
+Proc_ScrollTitleBG:
+#include "TitleBG/ScrollTitleBG.event"
+  ALIGN 4
+  Init_TitleBG:
+  #include "TitleBG/Init_TitleBG.lyn.event"
+  ALIGN 4
+  Loop_ScrollInTitleBG:
+  #include "TitleBG/Loop_ScrollInTitleBG.lyn.event"
+  ALIGN 4
+  Loop_ScrollTitleBG:
+  #include "TitleBG/Loop_ScrollTitleBG.lyn.event"
+  
+
+ALIGN 4
+Proc_MapSprites:
+#include "MapSprites/MapSprites.event"
+  ALIGN 4
+  Proc_Dummy:
+  #include "MapSprites/Dummy/Dummy.event"
+  ALIGN 4
+  Init_MapSprites:
+  #include "MapSprites/Init_MapSprites.lyn.event"
+  ALIGN 4
+  Loop_MapSprites:
+  #include "MapSprites/Loop_MapSprites.lyn.event"
+    ALIGN 4
+    VRAMupdate:
+    #include "MapSprites/VRAMupdate.lyn.event"
+    ALIGN 4
+    DrawUnitCheck:
+    #include "MapSprites/DrawUnitCheck.lyn.event"
+    ALIGN 4
+    CalcMov:
+    #include "MapSprites/CalculateMovement.lyn.event"

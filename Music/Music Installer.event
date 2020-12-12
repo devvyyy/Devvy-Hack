@@ -13,15 +13,30 @@ voicegroup001:
 #define MapMusicGroup 1
 #define SFXGroup 6
 
+//Chapter Intros
+SongTable(0x318,song0318,0)
+#include "ChapterIntro0.event"
+SongTable(0x319,song0318,0)
+SongTable(0x31A,song0318,0)
+SongTable(0x31B,song0318,0)
+SongTable(0x31C,song0318,0)
+SongTable(0x31D,song0318,0)
+SongTable(0x31E,song0318,0)
+
 ALIGN 4
 // His World ~Akatsuki's Theme~ by A_Reliable_Chair
 SongTable(0x1,song01,0)
 #include "HisWorld.event"
 
 ALIGN 4
-// Before Battle
+//Before Battle
 SongTable(0x34,song34,0)
 #include "Preps.event"
+
+//Why Are We Without Hope...
+//SongTable(0x34,song012D,0)
+SongTable(0x93,song012D,0)
+#include "WhyAreWeWithoutHope.event"
 
 ALIGN 4
 //Heroes of Mana
@@ -202,6 +217,11 @@ ALIGN 4
 //Retreat
 SongTable(0x3F,song3F,0)
 #include "Retreat.event"
+
+ALIGN 4
+//Sadness/Me on Tuesdays
+SongTable(0x3E,song3E,0)
+#include "Sadness.event"
 
 ALIGN 4
 //Field from khinsider

@@ -1,0 +1,104 @@
+// Graphics
+
+// Mist
+ALIGN 4
+MistPalette:
+#incbin "Mist/MistPalettes.dmp"
+ALIGN 4
+MistBG:
+//#incext Png2Dmp "Mist/Mist.png" --lz77
+#incbin "Mist/Mist.dmp"
+
+// Relief
+ALIGN 4
+ReliefPalette:
+#incbin "Relief/ReliefPalettes.dmp"
+ALIGN 4
+ReliefBG:
+//#incext Png2Dmp "Relief/Relief.png" --lz77
+#incbin "Relief/Relief.dmp"
+
+// Gem
+ALIGN 4
+GemObject64x64:
+//#incext Png2Dmp "Gem/gemred.png" --lz77
+#incbin "Gem/gem64x64.dmp"
+//Gempalettes
+  ALIGN 4
+  GemPaletteRed:
+  //#incext Png2Dmp "Gem/gemred.png" --palette-only
+  #incbin "Gem/gemred_pal.dmp"
+  GemPaletteOrange:
+  //#incext Png2Dmp "Gem/gemorange.png" --palette-only
+  #incbin "Gem/gemorange_pal.dmp"
+  GemPaletteYellow:
+  //#incext Png2Dmp "Gem/gemyellow.png" --palette-only
+  #incbin "Gem/gemyellow_pal.dmp"
+  GemPaletteGreen:
+  //#incext Png2Dmp "Gem/gemgreen.png" --palette-only
+  #incbin "Gem/gemgreen_pal.dmp"
+  GemPaletteBlue:
+  //#incext Png2Dmp "Gem/gemblue.png" --palette-only
+  #incbin "Gem/gemblue_pal.dmp"
+  GemPalettePurple:
+  //#incext Png2Dmp "Gem/gempurple.png" --palette-only
+  #incbin "Gem/gempurple_pal.dmp"
+
+//GemObjectAnimation
+  ALIGN 4
+  GemAnim0:
+  //#incext Png2Dmp "Gem/gemanim0.png" --lz77
+  #incbin "Gem/gemanim0.dmp"
+  ALIGN 4
+  GemAnim1:
+  //#incext Png2Dmp "Gem/gemanim1.png" --lz77
+  #incbin "Gem/gemanim1.dmp"
+  ALIGN 4
+  GemAnim2:
+  //#incext Png2Dmp "Gem/gemanim2.png" --lz77
+  #incbin "Gem/gemanim2.dmp"
+  ALIGN 4
+  GemAnim3:
+  //#incext Png2Dmp "Gem/gemanim3.png" --lz77
+  #incbin "Gem/gemanim3.dmp"
+  ALIGN 4
+  GemAnim4:
+  //#incext Png2Dmp "Gem/gemanim4.png" --lz77
+  #incbin "Gem/gemanim4.dmp"
+  ALIGN 4
+  GemAnim5:
+  //#incext Png2Dmp "Gem/gemanim5.png" --lz77
+  #incbin "Gem/gemanim5.dmp"
+  ALIGN 4
+  GemAnim6:
+  //#incext Png2Dmp "Gem/gemanim6.png" --lz77
+  #incbin "Gem/gemanim6.dmp"
+  ALIGN 4
+  GemAnim7:
+  //#incext Png2Dmp "Gem/gemanim7.png" --lz77
+  #incbin "Gem/gemanim7.dmp"
+  ALIGN 4
+  GemAnim8:
+  //#incext Png2Dmp "Gem/gemanim8.png" --lz77
+  #incbin "Gem/gemanim8.dmp"
+  ALIGN 4
+  GemAnim9:
+  //#incext Png2Dmp "Gem/gemanim9.png" --lz77
+  #incbin "Gem/gemanim9.dmp"
+  ALIGN 4
+  GemAnim10:
+  //#incext Png2Dmp "Gem/gemanim10.png" --lz77
+  #incbin "Gem/gemanim10.dmp"
+  ALIGN 4
+  GemAnim11:
+  //#incext Png2Dmp "Gem/gemanim11.png" --lz77
+  #incbin "Gem/gemanim11.dmp"
+  
+// TitleBG
+ALIGN 4
+TitleBGPalette:
+#incbin "TitleBG/TitleBGPalettes.dmp"
+ALIGN 4
+TitleBG:
+//#incext Png2Dmp "Title/TitleBG.png" --lz77
+#incbin "TitleBG/TitleBG.dmp"

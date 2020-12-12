@@ -27,6 +27,7 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TURN 0x0 RunawayThieves [2,0] 0x0
+TURN 0x0 OMGMyHero [3,0] 0x0
 TURN 0x0 Thieves1 [4,0] 0x0
 TURN 0x0 BaseWarning [5,0] 0x0
 TURN 0x0 ShamanRein1 [6,0] 0x0
@@ -114,6 +115,10 @@ ThievesGoBrr:
 UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [14,18] DropItem 0x0 0x0 0x0 [IronSword, DevilAxe,] [6,12,4,0]
 UNIT
 
+AkatsukiPrologue:
+UNIT Akatsuki Trickster 0x1 Level(5, Enemy, 0)     [0,6]  DropItem 0 1 REDA1R5 [SteelBlade,SteelBlade,SteelBlade,SteelBlade,] [0,3,4,32]
+UNIT
+
 ThiefRein1:
 UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [4,11] 0b 0x0 0x0 0x0 [SteelSword, ChestKey, ChestKey,] LootingThiefAI
 UNIT
@@ -130,7 +135,6 @@ UNIT
 
 Traps1:
 Vein(9,23,0x0,DV1Desc) //freeze enemies
-TelliusTorchOn(1,1,1)
 ENDTRAP
 ALIGN 4
 
@@ -152,13 +156,12 @@ REMA
 FADI 16
 CLEAN
 MUSC 0xE4
+LOAD1 0x0 Units1
 TEXTSTART
 SVAL 0x2 0x3C
 SVAL 0x3 NooAffosATrainee
 CALL 0x9EE310
 REMA
-LOAD1 0x0 Units1
-FADU 16
 _0x2629 0x7
 STAL 20
 FADI 16
@@ -221,6 +224,19 @@ ENUN
 NoFade
 ENDA
 
+
+OMGMyHero:
+CAM1 [2,5]
+LOAD1 0x1 AkatsukiPrologue
+TEXTSTART
+TEXTSHOW DoorTrick
+TEXTEND
+MOVE 0x3C Akatsuki [0,6]
+DISA_IF Akatsuki
+ENUN
+NoFade
+ENDA
+
 ShamanRein1:
 CAM1 [7,9]
 LOAD1 0x1 Reinforcements1
@@ -245,9 +261,7 @@ CURE
 TEXTSHOW Placeholder1
 TEXTEND
 REMA
-SVAL 0x3 0x61
-GIVEITEMTO 0xFFFF
-EVBIT_T 0x7
+NoFade
 ENDA
 
 Thieves1:

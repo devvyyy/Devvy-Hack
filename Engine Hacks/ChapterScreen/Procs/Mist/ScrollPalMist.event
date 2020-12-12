@@ -1,0 +1,6 @@
+// Set up Mist in BG
+PROC_CALL_ROUTINE(Init_Mist+0x1)
+// Scroll mist and loop through mist palettes.
+PROC_CALL_ROUTINE(Init_ScrollPalMist+0x1)
+PROC_LOOP_ROUTINE(Loop_ScrollPalMist+0x1)
+PROC_END

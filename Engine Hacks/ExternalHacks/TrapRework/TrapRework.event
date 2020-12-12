@@ -24,9 +24,16 @@
 	#define NPCTrapPaletteWord 0xFFFFE080
 	#define GreyTrapPaletteWord 0xFFFFF080
 	#define GrayTrapPaletteWord GreyTrapPaletteWord //language is dumb
-	
+
 	#define ExampleMapSpriteTrapID 0x10
 	#define ExampleMapSpriteID 0x66
+	
+	#define SigilTrapID 0x11
+	#define RedSigilTrapID 0x12
+	#define GreenSigilTrapID 0x13
+	#define TorchTrapID 0x14
+	#define SigilTrapMapSprite 0x66
+	#define TorchTrapMapSprite 0x84
 	
 	
 	#include "TrapRework_Internal.event"
@@ -48,6 +55,10 @@
 	SetTrapEventInit(MineTrapID,$378D6)
 	SetTrapEventInit(GorgonEggTrapID,$378EC)
 	SetTrapEventInit(LightRuneTrapID,0)
+	SetTrapEventInit(SigilTrapID,TrapRework_GenericInitializer)
+	//SetTrapEventInit(TorchTrapID,TrapRework_TorchInitializer)
+	SetTrapEventInit(RedSigilTrapID,TrapRework_GenericInitializer)
+	SetTrapEventInit(GreenSigilTrapID,TrapRework_GenericInitializer)
 	
 	
 	#define SetTrapMapSprite(trapID,mapSpriteID) "PUSH; ORG TrapMapSpriteTable+(trapID-1); BYTE mapSpriteID; POP"
@@ -66,6 +77,10 @@
 	SetTrapMapSprite(MineTrapID,0)
 	SetTrapMapSprite(GorgonEggTrapID,0)
 	SetTrapMapSprite(LightRuneTrapID,0x66) //light rune map sprite
+	SetTrapMapSprite(SigilTrapID,SigilTrapMapSprite)
+	SetTrapMapSprite(TorchTrapID,TorchTrapMapSprite)
+	SetTrapMapSprite(RedSigilTrapID,SigilTrapMapSprite)
+	SetTrapMapSprite(GreenSigilTrapID,SigilTrapMapSprite)
 	
 	//Macro for setting unique cases on trap map sprites
 	#define SetTrapMapSpriteFunc(trapID,ptr) "PUSH; ORG (TrapMapSpriteFuncTable+((trapID-1)*4)); POIN ptr; POP"
@@ -76,13 +91,16 @@
 	#define SetTrapMapSpritePalette(trapID,paletteWord) "PUSH; ORG TrapMapSpritePaletteTable+(4*(trapID-1)); WORD paletteWord; POP"
 	
 	SetTrapMapSpritePalette(LightRuneTrapID,LightRuneTrapPaletteWord)
+	SetTrapMapSpritePalette(SigilTrapID,PlayerTrapPaletteWord)
+	SetTrapMapSpritePalette(TorchTrapID,EnemyTrapPaletteWord)
+	SetTrapMapSpritePalette(RedSigilTrapID,EnemyTrapPaletteWord)
+	SetTrapMapSpritePalette(GreenSigilTrapID,NPCTrapPaletteWord)
 	
 	
-
 	//These 3 macros are all you need to define a new trap w/ map sprite
-	SetTrapEventInit(ExampleMapSpriteTrapID,TrapRework_GenericInitializer)
-	SetTrapMapSprite(ExampleMapSpriteTrapID,ExampleMapSpriteID) //thief map sprite
-	SetTrapMapSpritePalette(ExampleMapSpriteTrapID,NPCTrapPaletteWord)
+	//SetTrapEventInit(ExampleMapSpriteTrapID,TrapRework_GenericInitializer)
+	//SetTrapMapSprite(ExampleMapSpriteTrapID,ExampleMapSpriteID) //thief map sprite
+	//SetTrapMapSpritePalette(ExampleMapSpriteTrapID,NPCTrapPaletteWord)
 	
 	
 	//Use this macro in your events to place a map sprite trap
@@ -99,6 +117,7 @@
 	#define SetLightSourceTrap(trapID) "PUSH; ORG (TrapFogLightSourceTable+trapID); BYTE 1; POP"
 	
 	SetLightSourceTrap(TorchStaffTrapID)
+	SetLightSourceTrap(TorchTrapID)
 	
 	//Macro for setting traps as impassable, like light runes
 	#define SetImpassableTrap(trapID) "PUSH; ORG (TrapLightRuneImpassableTable+trapID); BYTE 1; POP"
@@ -118,7 +137,7 @@
 	TrapBreakableTerrainList: 
 	TrapBreakableTerrain(0x34,0xFF,20) 		//Snag
 	TrapBreakableTerrain(0x1C,0xFE,0xFF) 	//Wall
-	TrapBreakableTerrain(0x1F,0xFC,40) 		//Door
+	//TrapBreakableTerrain(0x1F,0xFC,40) 		//Door
 	TrapBreakableTerrainListEnd
 	
 
@@ -126,7 +145,10 @@
 	#include "Modules/DragonVeins/DragonVeins.event"
 	#include "Modules/HealTiles/HealTiles.event"
 	#include "Modules/TelliusTorches/TelliusTorches.event"
-	
+
+	#define BlueSigil(x,y) "MapSpriteTrap(SigilTrapID,x,y)"
+	#define RedSigil(x,y) "MapSpriteTrap(RedSigilTrapID,x,y)"
+	#define GreenSigil(x,y) "MapSpriteTrap(GreenSigilTrapID,x,y)"
 
 	
 #endif // TRAP_REWORK_INSTALLED

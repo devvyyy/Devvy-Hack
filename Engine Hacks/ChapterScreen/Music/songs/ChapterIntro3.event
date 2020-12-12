@@ -1,0 +1,980 @@
+//Event file generated from Sappy .s format.
+        #include "MPlayDef.event"
+        #define    ChapterIntro3_grp  voicegroup000
+        #define    ChapterIntro3_pri  0
+        #define    ChapterIntro3_rev  0
+        #define    ChapterIntro3_key  0
+        // .rodata
+        // ChapterIntro3
+        ALIGN  4
+//****************** Track 0 (Midi-Chn.0) ******************//
+ChapterIntro3_0:
+        BYTE   KEYSH   ChapterIntro3_key+0
+// 000   ----------------------------------------
+        BYTE   TEMPO   120/2
+        BYTE           VOICE   81
+        BYTE           VOL     60
+        BYTE           TIE     Cn1   v100
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W54
+        BYTE           VOL     55
+        BYTE   W03
+        BYTE                   50
+        BYTE   W03
+        BYTE                   45
+        BYTE   W03
+        BYTE                   40
+        BYTE   W03
+        BYTE                   35
+        BYTE   W03
+        BYTE                   30
+        BYTE   W03
+        BYTE                   25
+        BYTE   W03
+        BYTE                   20
+        BYTE   W03
+        BYTE                   15
+        BYTE   W03
+        BYTE                   10
+        BYTE   W03
+        BYTE                   5
+        BYTE   W03
+        BYTE                   0
+        BYTE   W09
+// 002   ----------------------------------------
+        BYTE   W30
+        BYTE           EOT
+        BYTE   W66
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W48
+ChapterIntro3_0_LOOP:
+        BYTE   W48
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W48
+        BYTE   GoTo
+         POIN2  ChapterIntro3_0_LOOP
+        BYTE   FINE
+//****************** Track 1 (Midi-Chn.1) ******************//
+ChapterIntro3_1:
+        BYTE   KEYSH   ChapterIntro3_key+0
+// 000   ----------------------------------------
+        BYTE           VOL     40
+        BYTE           VOICE   127
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE           N12     Gs4   v100
+        BYTE   W12
+        BYTE                   Gs4
+        BYTE   W12
+        BYTE                   Gs4
+        BYTE   W72
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W48
+ChapterIntro3_1_LOOP:
+        BYTE   W48
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W48
+        BYTE   GoTo
+         POIN2  ChapterIntro3_1_LOOP
+        BYTE   FINE
+//****************** Track 2 (Midi-Chn.2) ******************//
+ChapterIntro3_2:
+        BYTE   KEYSH   ChapterIntro3_key+0
+// 000   ----------------------------------------
+        BYTE           VOL     20
+        BYTE           VOICE   100
+        BYTE   W48
+        BYTE           N12     Cn5   v100
+        BYTE   W12
+        BYTE                   Bn4
+        BYTE   W12
+        BYTE                   As4
+        BYTE   W24
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W48
+ChapterIntro3_2_LOOP:
+        BYTE   W48
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W48
+        BYTE   GoTo
+         POIN2  ChapterIntro3_2_LOOP
+        BYTE   FINE
+//****************** Track 3 (Midi-Chn.3) ******************//
+ChapterIntro3_3:
+        BYTE   KEYSH   ChapterIntro3_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   118
+        BYTE           VOL     80
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W48
+        BYTE           N30     Bn2   v100
+        BYTE   W30
+        BYTE           VOICE   117
+        BYTE           VOL     100
+        BYTE   W18
+// 002   ----------------------------------------
+        BYTE   W03
+        BYTE           N06     Gn1
+        BYTE   W32
+        BYTE   W01
+        BYTE           VOICE   111
+        BYTE           VOL     50
+        BYTE           N24     Ds4
+        BYTE   W60
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W48
+ChapterIntro3_3_LOOP:
+        BYTE   W48
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W48
+        BYTE   GoTo
+         POIN2  ChapterIntro3_3_LOOP
+        BYTE   FINE
+//****************** Track 4 (Midi-Chn.4) ******************//
+ChapterIntro3_4:
+        BYTE   KEYSH   ChapterIntro3_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   81
+        BYTE           VOL     60
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W48
+        BYTE           N12     Gn2   v100
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W24
+        BYTE                   Fn2
+        BYTE   W12
+// 003   ----------------------------------------
+ChapterIntro3_4_3:
+        BYTE           N12     Gn2   v100
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W24
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W24
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE   PEND
+// 004   ----------------------------------------
+        BYTE                   Gn2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W24
+        BYTE                   As2
+        BYTE   W12
+ChapterIntro3_4_LOOP:
+        BYTE           N12     Ds2   v100
+        BYTE   W12
+        BYTE                   Ds2
+        BYTE   W24
+        BYTE                   Dn2
+        BYTE   W12
+// 005   ----------------------------------------
+ChapterIntro3_4_5:
+        BYTE           N12     Ds2   v100
+        BYTE   W12
+        BYTE                   Ds2
+        BYTE   W24
+        BYTE                   Dn2
+        BYTE   W12
+        BYTE                   Ds2
+        BYTE   W12
+        BYTE                   Ds2
+        BYTE   W24
+        BYTE                   Dn2
+        BYTE   W12
+        BYTE   PEND
+// 006   ----------------------------------------
+        BYTE                   Ds2
+        BYTE   W12
+        BYTE                   Ds2
+        BYTE   W24
+        BYTE                   Bn2
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W24
+        BYTE                   Bn2
+        BYTE   W12
+// 007   ----------------------------------------
+ChapterIntro3_4_7:
+        BYTE           N12     Cn3   v100
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W24
+        BYTE                   Bn2
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W24
+        BYTE                   Bn2
+        BYTE   W12
+        BYTE   PEND
+// 008   ----------------------------------------
+ChapterIntro3_4_8:
+        BYTE           N12     Cn3   v100
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W24
+        BYTE                   Cs3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W24
+        BYTE                   Cs3
+        BYTE   W12
+        BYTE   PEND
+// 009   ----------------------------------------
+ChapterIntro3_4_9:
+        BYTE           N12     Dn3   v100
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W24
+        BYTE                   Cs3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W24
+        BYTE                   Cs3
+        BYTE   W12
+        BYTE   PEND
+// 010   ----------------------------------------
+ChapterIntro3_4_10:
+        BYTE           N12     Fn3   v100
+        BYTE   W12
+        BYTE           N24     Fs3
+        BYTE   W24
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W24
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE   PEND
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_4_3
+// 012   ----------------------------------------
+        BYTE           N12     Gn2   v100
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W24
+        BYTE                   As2
+        BYTE   W12
+        BYTE                   Ds2
+        BYTE   W12
+        BYTE                   Ds2
+        BYTE   W24
+        BYTE                   Dn2
+        BYTE   W12
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_4_5
+// 014   ----------------------------------------
+        BYTE           N12     Ds2   v100
+        BYTE   W12
+        BYTE                   Ds2
+        BYTE   W24
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W24
+        BYTE                   Bn2
+        BYTE   W12
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_4_7
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_4_8
+// 017   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_4_9
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_4_10
+// 019   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_4_3
+// 020   ----------------------------------------
+        BYTE           N12     Gn2   v100
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W24
+        BYTE                   As2
+        BYTE   W12
+        BYTE   GoTo
+         POIN2  ChapterIntro3_4_LOOP
+        BYTE   FINE
+//****************** Track 5 (Midi-Chn.5) ******************//
+ChapterIntro3_5:
+        BYTE   KEYSH   ChapterIntro3_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   127
+        BYTE           VOL     100
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W72
+        BYTE           N12     Cn3   v100
+        BYTE   W24
+// 003   ----------------------------------------
+ChapterIntro3_5_3:
+        BYTE   W24
+        BYTE           N12     Cn3   v100
+        BYTE   W48
+        BYTE                   Cn3
+        BYTE   W24
+        BYTE   PEND
+// 004   ----------------------------------------
+        BYTE   W24
+        BYTE                   Cn3
+        BYTE   W24
+ChapterIntro3_5_LOOP:
+        BYTE   W24
+        BYTE           N12     Cn3   v100
+        BYTE   W24
+// 005   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_5_3
+// 006   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_5_3
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_5_3
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_5_3
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_5_3
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_5_3
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_5_3
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_5_3
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_5_3
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_5_3
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_5_3
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_5_3
+// 017   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_5_3
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_5_3
+// 019   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_5_3
+// 020   ----------------------------------------
+        BYTE   W24
+        BYTE           N12     Cn3   v100
+        BYTE   W24
+        BYTE   GoTo
+         POIN2  ChapterIntro3_5_LOOP
+        BYTE   FINE
+//****************** Track 6 (Midi-Chn.6) ******************//
+ChapterIntro3_6:
+        BYTE   KEYSH   ChapterIntro3_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   127
+        BYTE           VOL     60
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+ChapterIntro3_6_3:
+        BYTE   W24
+        BYTE           N12     Ds4   v100
+        BYTE   W24
+        BYTE                   Ds4
+        BYTE   W24
+        BYTE                   Ds4
+        BYTE   W12
+        BYTE                   Ds4
+        BYTE   W12
+        BYTE   PEND
+// 004   ----------------------------------------
+        BYTE                   Ds4
+        BYTE   W24
+        BYTE                   Ds4
+        BYTE   W24
+ChapterIntro3_6_LOOP:
+        BYTE   W48
+// 005   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_6_3
+// 006   ----------------------------------------
+ChapterIntro3_6_6:
+        BYTE           N12     Ds4   v100
+        BYTE   W24
+        BYTE                   Ds4
+        BYTE   W72
+        BYTE   PEND
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_6_3
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_6_6
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_6_3
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_6_6
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_6_3
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_6_6
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_6_3
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_6_6
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_6_3
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_6_6
+// 017   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_6_3
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_6_6
+// 019   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_6_3
+// 020   ----------------------------------------
+        BYTE           N12     Ds4   v100
+        BYTE   W24
+        BYTE                   Ds4
+        BYTE   W24
+        BYTE   GoTo
+         POIN2  ChapterIntro3_6_LOOP
+        BYTE   FINE
+//****************** Track 7 (Midi-Chn.7) ******************//
+ChapterIntro3_7:
+        BYTE   KEYSH   ChapterIntro3_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   91
+        BYTE           VOL     30
+        BYTE           PAN     c_v+63
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W06
+        BYTE           TIE     As3   v100
+        BYTE   W05
+        BYTE           PAN     c_v+61
+        BYTE   W01
+        BYTE                   c_v+56
+        BYTE   W01
+        BYTE                   c_v+51
+        BYTE   W01
+        BYTE                   c_v+46
+        BYTE   W01
+        BYTE                   c_v+41
+        BYTE   W01
+        BYTE                   c_v+36
+        BYTE   W01
+        BYTE                   c_v+31
+        BYTE   W01
+        BYTE                   c_v+26
+        BYTE   W01
+        BYTE                   c_v+21
+        BYTE   W01
+        BYTE                   c_v+16
+        BYTE   W01
+        BYTE                   c_v+11
+        BYTE   W01
+        BYTE                   c_v+6
+        BYTE   W01
+        BYTE                   c_v+1
+        BYTE   W01
+        BYTE                   c_v+0
+        BYTE   W72
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W24
+        BYTE           EOT
+        BYTE   W24
+ChapterIntro3_7_LOOP:
+        BYTE   W48
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W48
+        BYTE   GoTo
+         POIN2  ChapterIntro3_7_LOOP
+        BYTE   FINE
+//****************** Track 8 (Midi-Chn.8) ******************//
+ChapterIntro3_8:
+        BYTE   KEYSH   ChapterIntro3_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   105
+        BYTE           VOL     0
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W48
+        BYTE           TIE     Gn1   v100
+        BYTE   W42
+        BYTE   W01
+        BYTE           VOL     10
+        BYTE   W05
+// 003   ----------------------------------------
+        BYTE   W14
+        BYTE                   20
+        BYTE   W19
+        BYTE                   30
+        BYTE   W19
+        BYTE                   40
+        BYTE   W20
+        BYTE                   50
+        BYTE   W19
+        BYTE                   60
+        BYTE   W05
+// 004   ----------------------------------------
+        BYTE   W36
+        BYTE           EOT
+        BYTE           N12     As1
+        BYTE   W12
+ChapterIntro3_8_LOOP:
+        BYTE           TIE     Ds1   v100
+        BYTE   W48
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+ChapterIntro3_8_6:
+        BYTE   W36
+        BYTE           EOT     Ds1
+        BYTE           N12     Gn1   v100
+        BYTE   W12
+        BYTE           TIE     Cn2
+        BYTE   W48
+        BYTE   PEND
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+ChapterIntro3_8_8:
+        BYTE   W36
+        BYTE           EOT     Cn2
+        BYTE           N12     Cs2   v100
+        BYTE   W12
+        BYTE           TIE     Dn2
+        BYTE   W48
+        BYTE   PEND
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+ChapterIntro3_8_10:
+        BYTE   W36
+        BYTE           EOT     Dn2
+        BYTE           N12     An1   v100
+        BYTE   W12
+        BYTE           TIE     Gn1
+        BYTE   W48
+        BYTE   PEND
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W36
+        BYTE           EOT
+        BYTE           N12     As1
+        BYTE   W12
+        BYTE           TIE     Ds1
+        BYTE   W48
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_8_6
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_8_8
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  ChapterIntro3_8_10
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W36
+        BYTE           EOT     Gn1
+        BYTE           N12     As1   v100
+        BYTE   W12
+        BYTE   GoTo
+         POIN2  ChapterIntro3_8_LOOP
+        BYTE   FINE
+//***************** Track 9 (Midi-Chn.10) ******************//
+ChapterIntro3_9:
+        BYTE   KEYSH   ChapterIntro3_key+0
+// 000   ----------------------------------------
+        BYTE   W28
+        BYTE           VOICE   74
+        BYTE   W04
+        BYTE           VOL     60
+        BYTE   W64
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W48
+ChapterIntro3_9_LOOP:
+        BYTE   W48
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W48
+        BYTE           N24     Gn4   v100
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE                   Fs4
+        BYTE   W12
+// 011   ----------------------------------------
+        BYTE           N24     Gn4
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE                   Fs4
+        BYTE   W12
+        BYTE           N24     Gn4
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE                   Fs4
+        BYTE   W12
+// 012   ----------------------------------------
+        BYTE                   Gn4
+        BYTE   W12
+        BYTE                   As4
+        BYTE   W12
+        BYTE                   Gn4
+        BYTE   W12
+        BYTE                   Fs4
+        BYTE   W12
+        BYTE           N24     Ds4
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE                   Dn4
+        BYTE   W12
+// 013   ----------------------------------------
+        BYTE           N24     Ds4
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE                   Dn4
+        BYTE   W12
+        BYTE           N24     Ds4
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE                   Dn4
+        BYTE   W12
+// 014   ----------------------------------------
+        BYTE                   Ds4
+        BYTE   W12
+        BYTE                   Fs4
+        BYTE   W12
+        BYTE                   Ds4
+        BYTE   W12
+        BYTE                   Dn4
+        BYTE   W12
+        BYTE           N24     Cn4
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE                   Bn3
+        BYTE   W12
+// 015   ----------------------------------------
+        BYTE           N24     Cn4
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE                   Bn3
+        BYTE   W12
+        BYTE           N24     Cn4
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE                   Bn3
+        BYTE   W12
+// 016   ----------------------------------------
+        BYTE                   Cn4
+        BYTE   W12
+        BYTE                   Ds4
+        BYTE   W12
+        BYTE                   Cn4
+        BYTE   W12
+        BYTE                   Cs4
+        BYTE   W12
+        BYTE           N24     Dn4
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE                   Cs4
+        BYTE   W12
+// 017   ----------------------------------------
+        BYTE           N24     Dn4
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE                   Cs4
+        BYTE   W12
+        BYTE           N24     Dn4
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE                   Cs4
+        BYTE   W12
+// 018   ----------------------------------------
+        BYTE                   Dn4
+        BYTE   W12
+        BYTE           N24     Fs4
+        BYTE   W84
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W48
+        BYTE   GoTo
+         POIN2  ChapterIntro3_9_LOOP
+        BYTE   FINE
+//********************** End of Song ***********************//
+        ALIGN  4
+ChapterIntro3:
+        BYTE   10                      // Num Tracks
+        BYTE   0                       // Unknown
+        BYTE   ChapterIntro3_pri       // Priority
+        BYTE   ChapterIntro3_rev       // Reverb
+        POIN2   ChapterIntro3_grp      
+        POIN2   ChapterIntro3_0
+        POIN2   ChapterIntro3_1
+        POIN2   ChapterIntro3_2
+        POIN2   ChapterIntro3_3
+        POIN2   ChapterIntro3_4
+        POIN2   ChapterIntro3_5
+        POIN2   ChapterIntro3_6
+        POIN2   ChapterIntro3_7
+        POIN2   ChapterIntro3_8
+        POIN2   ChapterIntro3_9
+        

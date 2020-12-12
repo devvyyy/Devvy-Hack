@@ -1,0 +1,46 @@
+// GEM SEGMENT 1, affine sprites, spiral, line
+PROC_CALL_ROUTINE(Init_Move+0x1)
+
+PROC_CALL_ROUTINE(Init_Spiral+0x1)
+PROC_LABEL(0x1)
+  PROC_CALL_ROUTINE(Loop_Move+0x1)
+  PROC_CALL_ROUTINE(Loop_Move+0x1)
+  PROC_CALL_ROUTINE(Loop_Move+0x1)
+  PROC_CALL_ROUTINE(Loop_Move+0x1)
+  PROC_CALL_ROUTINE(Loop_Move+0x1)
+  PROC_CALL_ROUTINE(Loop_Move+0x1)
+  PROC_SLEEP(0x0)
+  PROC_CALL_ROUTINE(End_Spiral+0x1)
+  PROC_GOTO(0x1)
+  
+SpiralEnd:
+PROC_CALL_ROUTINE(Init_Line+0x1)
+PROC_LABEL(0x2)
+  PROC_CALL_ROUTINE(Loop_Move+0x1)
+  PROC_CALL_ROUTINE(Loop_Move+0x1)
+  PROC_CALL_ROUTINE(Loop_Move+0x1)
+  PROC_CALL_ROUTINE(Loop_Move+0x1)
+  PROC_CALL_ROUTINE(Loop_Move+0x1)
+  PROC_CALL_ROUTINE(Loop_Move+0x1)
+  PROC_SLEEP(0x0)
+  PROC_CALL_ROUTINE(Loop_FadeOutMist+0x1)
+  PROC_CALL_ROUTINE(End_Line+0x1)
+  PROC_GOTO(0x2)
+  
+LineEnd:
+// GEM SEGMENT 2, regular sprites, animated
+PROC_END_ALL(Proc_ScrollPalMist)
+PROC_CALL_ROUTINE(Init_Anim+0x1)
+
+PROC_CALL_ROUTINE(Init_Shine+0x1)
+PROC_LABEL(0x3)
+  PROC_CALL_ROUTINE(Loop_Shine+0x1)
+  PROC_CALL_ROUTINE(Loop_Shine+0x1)
+  PROC_CALL_ROUTINE(Loop_Shine+0x1)
+  PROC_CALL_ROUTINE(Loop_Shine+0x1)
+  PROC_CALL_ROUTINE(Loop_Shine+0x1)
+  PROC_CALL_ROUTINE(Loop_Shine+0x1)
+  PROC_SLEEP(0x0)
+  PROC_GOTO(0x3)
+
+PROC_END
