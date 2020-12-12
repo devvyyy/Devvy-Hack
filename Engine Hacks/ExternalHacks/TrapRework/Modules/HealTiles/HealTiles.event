@@ -19,7 +19,6 @@ SetTrapMapSprite(HealTilesTrapID,HealMapSpriteID)
 SetTrapMapSpritePalette(HealTilesTrapID,EnemyTrapPaletteWord)
 SetTrapMapSpriteFunc(HealTilesTrapID,HealTiles_MapSpriteFunc)
 
-/*
 
 PUSH
 	ORG (0x8AF880+0x8*HealMapSpriteID)
@@ -34,4 +33,4 @@ HealGraphics:
 #incbin "sparkle_final_4.dmp"
 
 
-*/
+	

@@ -19,9 +19,6 @@
 .global TrapRework_GenericInitializer
 .type TrapRework_GenericInitializer, %function
 
-.global TrapRework_TorchInitializer
-.type TrapRework_TorchInitializer, %function
-
 .global TrapRework_NewRefreshTrapFogVision
 .type TrapRework_NewRefreshTrapFogVision, %function
 
@@ -136,27 +133,6 @@ bx r3
 .ltorg
 .align
 
-
-
-
-
-
-TrapRework_TorchInitializer:
-ldrb r0,[r5,#1] @x coord
-ldrb r1,[r5,#2] @y coord
-ldrb r2,[r5] @trap ID
-blh SpawnTrap @returns pointer to trap data in RAM
-mov r2, #0x4 @4 vision range
-strb r2, [r0, #0x3]
-
-ldrb r1,[r5,#3]
-strb r1,[r0,#3]
-
-ldr r3,=Init_ReturnPoint
-bx r3
-
-.ltorg
-.align
 
 
 

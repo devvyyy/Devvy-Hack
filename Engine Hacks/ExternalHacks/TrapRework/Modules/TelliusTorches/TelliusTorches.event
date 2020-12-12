@@ -14,9 +14,6 @@
 
 
 	SetTrapEventInit(TelliusTorchTrapID,TelliusTorchInitialization)
-
-	SetTrapEventInit(TorchTrapID,TelliusTorchInitialization)
-
 	SetTrapMapSprite(TelliusTorchTrapID,TelliusTorchOnMapSpriteID)
 	SetTrapMapSpritePalette(TelliusTorchTrapID,EnemyTrapPaletteWord)	
 	SetLightSourceTrap(TelliusTorchTrapID)
@@ -33,8 +30,7 @@
 	BYTE TelliusTorchOnMapSpriteID
 	
 	#include "TelliusTorches.lyn.event"
-	
-	/*	
+		
 	ALIGN 4
 	LitTorchTrapGfx: //torch map sprites by L95
 	#incext Png2Dmp "lit_torch.png" --lz77
@@ -56,14 +52,11 @@
 		POIN UnlitTorchTrapGfx
 	
 	POP
-	*/
 	
 
 	//macros for usage, starting in the off or on positions
 	#define TelliusTorchOff(x,y,visionRange) "BYTE TelliusTorchTrapID x y 0 visionRange 0"
 	#define TelliusTorchOn(x,y,visionRange) "BYTE TelliusTorchTrapID x y visionRange visionRange 0"
-
-	#define TorchTrap(x,y,visionRange) "BYTE TorchTrapID x y visionRange visionRange 0"
 	
 	
 #endif // TELLIUS_TORCHES_INSTALLED
