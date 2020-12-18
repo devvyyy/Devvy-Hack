@@ -8,6 +8,13 @@ push {r4-r7,lr}
 mov r4, r0
 mov r5, r1
 
+mov r0, r4       @Move attacker data into r1.
+mov r1, #0x4c    @Move to the attacker's weapon ability
+ldr r1, [r0,r1]
+mov r2, #0x42
+tst r1, r2
+bne     Done @do nothing if magic bit set
+
 CheckSkill:
 @now check for the skill
 ldr r0, AuraSkillCheck
@@ -23,16 +30,9 @@ beq Done
 mov r0,r4
 add r0,#0x4C @item ability word
 ldr r1,[r0]
-mov r2,#0x2 @target res flag
+mov r2,#0x20 @target res flag
 orr r1,r2
 str r1,[r0]
-
-@testing
-mov r0, r4
-add r0, #0x5c @attacker defense
-ldrh r3, [r0]
-add r3, #2
-strh r3, [r0]
 
 Done:
 pop {r4-r7}

@@ -20,6 +20,8 @@ TURN 0x0 DisplayLingerText [4,0] 0x0
 TURN 0x0 GetOutOfSpawnPls [5,0] 0x0
 TURN 0x0 LeftFortRein[6,0] 0x0
 TURN 0x0 RightFortRein[8,0] 0x0
+TURN 0x0 BiscottiChargeWarn[8,0] 0x80
+TURN 0x0 BiscottiCharge[9,0] 0x0
 	END_MAIN
 
 ALIGN 32
@@ -165,6 +167,18 @@ LiliEvent:
 	TEXTSTART
 	Text(LiliAppearing)
 	TEXTEND
+	NoFade
+	ENDA
+	
+BiscottiChargeWarn:
+	CharacterConditionalDialog(Biscotti,Placeholder1,Placeholder2)
+	NoFade
+	ENDA
+
+BiscottiCharge:
+	SVAL 0x1 0x00040000
+	CHAI Biscotti
+	CharacterConditionalDialog(Biscotti,Placeholder1,Placeholder2)
 	NoFade
 	ENDA
 	

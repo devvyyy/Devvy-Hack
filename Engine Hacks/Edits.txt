@@ -4,25 +4,25 @@ ORG 0xE836
 BYTE 0x04 0xE0
 POP
 
-// Remove arrow wiggling advancing RN
+//Remove arrow wiggling advancing RN
 PUSH
 ORG 0x1A774
     SHORT 0x2000 0
 POP
 
-// Remove Link Arena
+//Remove Link Arena
 PUSH
 ORG $AB90E
 	BYTE 0x00 0x00 0x00 0x20
 POP
 
-// Party leader becomes first deployed
+//Party leader becomes first deployed
 PUSH
 ORG $3325A 
 	BYTE 0x21 0xE0
 POP
 
-// allows swapping of forced characters
+//Allows swapping of forced characters
 PUSH
   ORG 0x33750
     BYTE 0x00 0x20 0x00 0x00
@@ -30,7 +30,7 @@ PUSH
     BYTE 0x00 0x20 0x00 0x00
 POP
 
-//changes supply and seize to affo
+//Changes supply and seize to affo
 PUSH
 ORG 0x23F88
 	BYTE 0x07
@@ -39,7 +39,7 @@ ORG 0x37B86
 POP
 
 PUSH
-// Remove Creature Campaign
+//Remove Creature Campaign
 ORG $AB944
 	BYTE 0x00 0x00 0x00 0x20
 POP

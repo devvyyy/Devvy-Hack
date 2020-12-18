@@ -228,12 +228,13 @@ ENDA
 OMGMyHero:
 CAM1 [2,5]
 LOAD1 0x1 AkatsukiPrologue
+MUSC 0x107
 TEXTSTART
 TEXTSHOW DoorTrick
 TEXTEND
-MOVE 0x3C Akatsuki [0,6]
-DISA_IF Akatsuki
+MOVE 0x0 Akatsuki [0,6]
 ENUN
+DISA_IF 0x1
 NoFade
 ENDA
 
