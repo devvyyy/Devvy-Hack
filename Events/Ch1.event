@@ -171,14 +171,14 @@ LiliEvent:
 	ENDA
 	
 BiscottiChargeWarn:
-	CharacterConditionalDialog(Biscotti,Placeholder1,Placeholder2)
+	ChargeWarning(Biscotti,BisWarnText)
 	NoFade
 	ENDA
 
 BiscottiCharge:
 	SVAL 0x1 0x00040000
 	CHAI Biscotti
-	CharacterConditionalDialog(Biscotti,Placeholder1,Placeholder2)
+	ChargeWarning(Biscotti,BisChargeText)
 	NoFade
 	ENDA
 	

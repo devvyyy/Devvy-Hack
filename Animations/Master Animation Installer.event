@@ -301,7 +301,15 @@ ALIGN 4
 {
 #include "Magician/Unarmed/Installer.event"
 }
-ALIGN 4 //Occultist
+ALIGN 4 //Seer
+{
+#include "Seer/Magic/Installer.event"
+}
+ALIGN 4
+{
+#include "Magician/Unarmed/Installer.event"
+}
+ALIGN 4 //Occultist Still edited by Pikmin1211
 {
 #include "Occultist/Newer/Installer.event"
 }
@@ -413,6 +421,12 @@ WORD 0x0    // Seperator
 MagicianAnim:
 AnimaAnim(0x6A)
 UnarmedAnim(0x6B)
+WORD 0x0    // Seperator
+
+SeerAnim:
+LightAnim(0xB0)
+DarkAnim(0xB0)
+UnarmedAnim(0xB0)
 WORD 0x0    // Seperator
 
 OccultistAnim:
