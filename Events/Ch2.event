@@ -13,7 +13,8 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-
+TURN 0x0 KaneTammyRecruit [1,0] 0x0
+TURN 0x0 PandanRecruit [2,0] 0x0
 	END_MAIN
 
 ALIGN 32
@@ -61,17 +62,30 @@ UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [6,1] 0b 0x0 0x0 0x0 [IronBow, IronRi
 	
 WoohooSnowDay:
 UNIT Kane Seer 0x1 Level(4, Ally, 0)   [8,0] 0b 0x0 0x0 0x0 [DarkTome2,Elixir,] [0x0,0x0,0x0,0x0]
-UNIT Brulee Priest 0x1 Level(3, Ally, 0)   [9,0] 0b 0x0 0x0 0x0 [Heal,Barrier] [0x0,0x0,0x0,0x0]
+UNIT Tammy Cleric 0x1 Level(3, Ally, 0)   [9,0] 0b 0x0 0x0 0x0 [Heal,Barrier] [0x0,0x0,0x0,0x0]
+	UNIT
+	
+LunaPirate:
+UNIT Pandoro Pirate 0x1 Level(4, Enemy, 0)   [15,2] 0b 0x0 0x0 0x0 [IronLabrys,] [0x0,0x0,0x0,0x0]
 	UNIT
 
 EnemyUnits:
 UNIT Bandit Brigand 0x1 Level(3, Enemy, 1)     [3,3] 0b 0x0 0x0 0x0 [SteelAxe,] AttackInRangeAI
 UNIT Bandit Brigand 0x1 Level(4, Enemy, 1)     [3,11] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
+UNIT Bandit Deserter 0x1 Level(4, Enemy, 1)     [5,10] 0b 0x0 0x0 0x0 [SteelLance,] AttackInRangeAI
+UNIT Bandit Archer 0x1 Level(4, Enemy, 1)     [10,4] 0b 0x0 0x0 0x0 [IronBow] AttackInRangeAI
+UNIT UPirate Pirate 0x1 Level(4, Enemy, 1)     [14,4] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
+UNIT UPirate Pirate 0x1 Level(4, Enemy, 1)     [13,6] DropItem 0x0 0x0 0x0 [SteelAxe,HandAxe,] ChargeAI
+UNIT Cultist Occultist 0x1 Level(4, Enemy, 1)     [13,6] DropItem 0x0 0x0 0x0 [DarkTome1,] ChargeAI
+UNIT Cultist Shaman 0x1 Level(4, Enemy, 1)     [8,3] DropItem 0x0 0x0 0x0 [DarkTome1,] AttackInRangeAI
 	UNIT
 
 Traps1:
 BlueSigil(2,13)
 BlueSigil(3,13)
+TelliusTorchOn(2,4,1)
+TelliusTorchOn(5,10,1)
+TelliusTorchOn(15,3,1)
 	ENDTRAP
 	ALIGN 4
 
@@ -81,7 +95,6 @@ Traps2:
 
 BeginningScene:
 	LOAD1 0x1 Units1
-	LOAD1 0x1 WoohooSnowDay
 	LOAD1 0x1 EnemyUnits
 	ENUN
 	GotoPrepScreen
@@ -91,3 +104,11 @@ EndingScene:
 	MNC2 0x3
 	NoFade
 	ENDA
+	
+PandanRecruit:
+	LOAD1 0x1 LunaPirate
+ENDA
+
+KaneTammyRecruit:
+	LOAD1 0x1 WoohooSnowDay
+ENDA

@@ -71,6 +71,22 @@ ALIGN 4
 {
 #include "Hero/Unarmed/Unarmed Installer.event"
 }
+ALIGN 4 //Halberdier by TBA, Spud, MeatOfJustice
+{
+#include "Sentinel/Lance/Lance Installer.event"
+}
+ALIGN 4
+{
+#include "Sentinel/Axe/Axe Installer.event"
+}
+ALIGN 4
+{
+#include "Sentinel/Handaxe/Handaxe Installer.event"
+}
+ALIGN 4
+{
+#include "Sentinel/Unarmed/Unarmed Installer.event"
+}
 ALIGN 4 //Swordsman M by Leo_link, Tsushi and Iscaneus
 {
 #include "Swordsman M/Sword/Installer.event"
@@ -87,9 +103,13 @@ ALIGN 4
 {
 #include "Swordsman F/Unarmed/Installer.event"
 }
+//ALIGN 4 //Bald Swordmaster by L95, Insert Later
+//{
+//#include "BaldSwordmaster/Sword/Installer.event"
+//}
 ALIGN 4 //Fighter by Leo_link
 {
-#include "Fighter/Axe/Newer/Installer.event"
+#include "Fighter/Axe/Installer.event"
 }
 ALIGN 4
 {
@@ -317,6 +337,14 @@ ALIGN 4 //Monk by Eldritch Abomination
 {
 #include "Monk/Magic/Installer.event"
 }
+ALIGN 4 //Parson
+{
+#include "Parson/Magic/Light Installer.event"
+}
+#include "Parson/Staff/Staff Installer.event"
+{
+#include "Parson/Unarmed/Unarmed Installer.event"
+}
 
 AkatAnim:
 SwordAnim(0x03)
@@ -360,6 +388,13 @@ WORD 0x0    // Seperator
 DeserterAnim:
 SpearAnim(0xA4)
 UnarmedAnim(0xA5)
+WORD 0x0    // Seperator
+
+HalberdAnim:
+SpearAnim(0xB5)
+AxeAnim(0xB6)
+HandAxeAnim(0xB7)
+UnarmedAnim(0xB8)
 WORD 0x0    // Seperator
 
 ArcherMAnim:
@@ -432,6 +467,12 @@ WORD 0x0    // Seperator
 OccultistAnim:
 DarkAnim(0xA3)
 UnarmedAnim(0xA3)
+WORD 0x0    // Seperator
+
+ParsonAnim:
+LightAnim(0xB1)
+StaffAnim(0xB2)
+UnarmedAnim(0xB3)
 WORD 0x0    // Seperator
 
 ALIGN 4

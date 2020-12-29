@@ -41,7 +41,7 @@ mov	lr,r0
 mov	r0,r4			@unit to check
 ldr	r1,CantoID		@skill
 mov	r2,#0			@can_trade
-mov	r3,#3			@range
+mov	r3,#2			@range
 .short	0xf800
 cmp r0,#0
 bne Set
@@ -51,7 +51,7 @@ mov	lr,r0
 mov	r0,r4			@unit to check
 ldr	r1,CantoPlusID	@skill
 mov	r2,#0			@can_trade
-mov	r3,#3			@range
+mov	r3,#2			@range
 .short	0xf800
 cmp r0,#0
 bne Set

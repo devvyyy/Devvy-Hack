@@ -36,6 +36,12 @@
 #define CharacterConditionalDialog(character,alivetext,deadtext) "CHECK_ALIVE character; BEQ 1 0x0 0xC; Text(alivetext); GOTO 2; LABEL 1; Text(deadtext); LABEL 2"
 #define IfAliveDialog(character,alivetext) "CHECK_ALIVE character; BEQ 1 0x0 0xC; Text(alivetext); LABEL 1"
 #define ChargeWarning(character,alivetext) "CHECK_ALIVE character; BEQ 1 0x0 0xC;CAM1 character;STAL 20; CUMO character; Text(alivetext); LABEL 1"
+#define CameraCursor(character) "CAM1 character; STAL 20; CUMO character"
+#define BossAI [0,3,4,32]
+#define StillAI [0,3,4,32]
+#define NoMoveAI [0,3,4,32]
+#define ChargeAI [0,0,4,0]
+#define ThiefAI [6,12,4,0]
 
 //item ID for skill scroll
 #define SkillScroll 0xBC
@@ -51,6 +57,7 @@
 #define BadGuy 0x2F
 #define Wreyvine 0x7F
 #define USoldier 0x7F
+#define UPirate 0x30
 
 // PORTRAITS
 #define ZanePort 0x2
