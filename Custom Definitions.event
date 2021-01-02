@@ -35,6 +35,10 @@
 
 #define CharacterConditionalDialog(character,alivetext,deadtext) "CHECK_ALIVE character; BEQ 1 0x0 0xC; Text(alivetext); GOTO 2; LABEL 1; Text(deadtext); LABEL 2"
 #define IfAliveDialog(character,alivetext) "CHECK_ALIVE character; BEQ 1 0x0 0xC; Text(alivetext); LABEL 1"
+#define IfAliveDialog2(character,alivetext) "CHECK_ALIVE character; BEQ 2 0x0 0xC; Text(alivetext); LABEL 2"
+#define IfAliveDialog3(character,alivetext) "CHECK_ALIVE character; BEQ 3 0x0 0xC; Text(alivetext); LABEL 3"
+#define IfAliveDialog4(character,alivetext) "CHECK_ALIVE character; BEQ 4 0x0 0xC; Text(alivetext); LABEL 4"
+#define IfAliveDialog5(character,alivetext) "CHECK_ALIVE character; BEQ 5 0x0 0xC; Text(alivetext); LABEL 5"
 #define ChargeWarning(character,alivetext) "CHECK_ALIVE character; BEQ 1 0x0 0xC;CAM1 character;STAL 20; CUMO character; Text(alivetext); LABEL 1"
 #define CameraCursor(character) "CAM1 character; STAL 20; CUMO character"
 #define BossAI [0,3,4,32]
@@ -88,3 +92,31 @@
 #define EarthAff 0xA
 #define HeavenAff 0xB
 #define VoidAff 0xC
+
+// TILESETS
+#define TSFieldsObject 0x1
+#define TSFieldsPalette 0x2
+#define TSSnowFieldsPalette 0x2
+#define TSFieldsConfig 0x3
+#define TSFieldsMAnims 0xD0
+
+#define TSFE6FieldsObject 0x2E
+#define TSFE6FieldsPalette 0x2F
+#define TSFE6FieldsConfig 0x30
+#define TSFE6FieldsMAnims 0xD0
+
+#define TSVillageObject 0xE
+#define TSVillagePalette 0xF
+#define TSVillageConfig 0x10
+#define TSVillageMAnims 0x12
+
+#define TSCastleObject 0x18
+#define TSCastlePalette 0x19
+#define TSCastleConfig 0x1A
+#define TSCastleMAnims 0x1C
+
+#define TSSnowBernObject 0x50
+#define TSSnowBernPalette 0x51
+#define TSSnowBernConfig 0x52
+#define TSSnowBernMAnims 0xD0
+

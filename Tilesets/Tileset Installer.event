@@ -17,6 +17,35 @@
     EventPointerTable(0x2, SnowFieldsPalette)
 	//EventPointerTable(0x3, SnowFieldsMapConfig)
 	
+	//Snow Fields (FE6) by N426
+	
+	ALIGN 4
+    FE6SnowFieldsTilesetImage:
+    #incext Png2Dmp "FE6SnowFields/FE6SnowFieldsImage.png" --lz77
+	
+	ALIGN 4
+    FE6SnowFieldsTilesetPalette:
+    #incbin "FE6SnowFields/FE6SnowFieldsPalette.dmp"
+	
+//	ALIGN 4
+//    FE6SnowFieldsTilesetSunsetPalette:
+//    #incbin "FE6SnowFields/FE6SnowFieldsSunsetPalette.bin"
+	
+//	ALIGN 4
+//    FE6SnowFieldsTilesetNightPalette:
+//    #incbin "FE6SnowFields/FE6SnowFieldsNightPalette.bin"
+	
+	ALIGN 4
+    FE6SnowFieldsTilesetMapConfig:
+    #incext compress "FE6SnowFields/FE6SnowFields.mapchip_config"
+
+	ALIGN 4
+	EventPointerTable(0x2E, FE6SnowFieldsTilesetImage)
+    EventPointerTable(0x2F, FE6SnowFieldsTilesetPalette)
+//	EventPointerTable(0x34, FE6SnowFieldsTilesetSunsetPalette)
+//	EventPointerTable(0x38, FE6SnowFieldsTilesetNightPalette)
+	EventPointerTable(0x30, FE6SnowFieldsTilesetMapConfig)
+	
 	//Snow Village by N426
 	
 	ALIGN 4
@@ -38,6 +67,7 @@
 
 
 	//Snow Bern by Venno and ZoramineFae
+	
     ALIGN 4
     SnowBernImage:
     #incext Png2Dmp "SnowBern/SnowBernImage.png" --lz77
