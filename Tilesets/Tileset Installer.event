@@ -29,11 +29,11 @@
 	
 //	ALIGN 4
 //    FE6SnowFieldsTilesetSunsetPalette:
-//    #incbin "FE6SnowFields/FE6SnowFieldsSunsetPalette.bin"
+//   #incbin "FE6SnowFields/FE6SnowFieldsSunsetPalette.dmp"
 	
 //	ALIGN 4
 //    FE6SnowFieldsTilesetNightPalette:
-//    #incbin "FE6SnowFields/FE6SnowFieldsNightPalette.bin"
+//    #incbin "FE6SnowFields/FE6SnowFieldsNightPalette.dmp"
 	
 	ALIGN 4
     FE6SnowFieldsTilesetMapConfig:
@@ -42,8 +42,8 @@
 	ALIGN 4
 	EventPointerTable(0x2E, FE6SnowFieldsTilesetImage)
     EventPointerTable(0x2F, FE6SnowFieldsTilesetPalette)
-//	EventPointerTable(0x34, FE6SnowFieldsTilesetSunsetPalette)
-//	EventPointerTable(0x38, FE6SnowFieldsTilesetNightPalette)
+//	EventPointerTable(0x38, FE6SnowFieldsTilesetSunsetPalette)
+//	EventPointerTable(0x34, FE6SnowFieldsTilesetNightPalette)
 	EventPointerTable(0x30, FE6SnowFieldsTilesetMapConfig)
 	
 	//Snow Village by N426
