@@ -29,6 +29,7 @@ MiscBasedEvents:
 LocationBasedEvents:
 Arrive(2,13)
 Arrive(3,13)
+Village(0x8,LightningMcQueen,1,9)
 	END_MAIN
 
 Dunno1:
@@ -69,7 +70,7 @@ UNIT Atheya 0x20 0x1 Level(4, Ally, 0)   [0,3] 0b 0x0 0x0 0x0 [IronAxe,] [0x0,0x
 	UNIT
 	
 LunaPirate:
-UNIT Pandoro Pirate 0x1 Level(4, Enemy, 0)   [15,2] 0b 0x0 0x0 0x0 [IronLabrys,] BossAI
+UNIT Pandoro Pirate 0x1 Level(4, Enemy, 0)   [15,2] 0b 0x0 0x0 0x0 [IronLabrys,PureWater] BossAI
 	UNIT
 
 EnemyUnits:
@@ -111,6 +112,7 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+	Text(ForestNightBG,Ch2Opening1)
 	LOAD1 0x1 Units1
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 LunaPirate
@@ -119,6 +121,7 @@ BeginningScene:
 	ENDA
 
 EndingScene:
+	Text(NightSVillageBG,Ch2Ending1)
 	MNC2 0x3
 	NoFade
 	ENDA
@@ -130,4 +133,8 @@ ENDA
 
 TammyRecruit:
 	LOAD1 0x1 WoohooSnowDay
+ENDA
+
+LightningMcQueen:
+VillageEventItem(SlowVillageText, HouseBG1, Slow)
 ENDA

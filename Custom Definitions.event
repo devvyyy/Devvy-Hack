@@ -33,6 +33,7 @@
 
 #define GrowthBonus(HPB,StrB,MagB,SklB,SpdB,DefB,ResB,LckB) "BYTE 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 HPB StrB SklB SpdB DefB ResB LckB MagB 0x0 0x0"
 
+//Macros
 #define CharacterConditionalDialog(character,alivetext,deadtext) "CHECK_ALIVE character; BEQ 1 0x0 0xC; Text(alivetext); GOTO 2; LABEL 1; Text(deadtext); LABEL 2"
 #define IfAliveDialog(character,alivetext) "CHECK_ALIVE character; BEQ 1 0x0 0xC; Text(alivetext); LABEL 1"
 #define IfAliveDialog2(character,alivetext) "CHECK_ALIVE character; BEQ 2 0x0 0xC; Text(alivetext); LABEL 2"
@@ -41,11 +42,43 @@
 #define IfAliveDialog5(character,alivetext) "CHECK_ALIVE character; BEQ 5 0x0 0xC; Text(alivetext); LABEL 5"
 #define ChargeWarning(character,alivetext) "CHECK_ALIVE character; BEQ 1 0x0 0xC;CAM1 character;STAL 20; CUMO character; Text(alivetext); LABEL 1"
 #define CameraCursor(character) "CAM1 character; STAL 20; CUMO character"
+#define MusicChange(song) "MUSC song"
 #define BossAI [0,3,4,32]
 #define StillAI [0,3,4,32]
 #define NoMoveAI [0,3,4,32]
 #define ChargeAI [0,0,4,0]
 #define ThiefAI [6,12,4,0]
+
+//Backgrounds
+#define HouseBG1 0x0
+#define HouseBG2 0x1
+#define GrassHouseBG 0x2
+#define OutsideGVillageBG 0x3
+#define Fields1BG 0x4
+#define MountainGVillageBG 0x4
+#define HousesGVillageBG 0x6
+#define ThickForestBG 0x7
+#define InsideTentBG 0x8
+#define InsideBaseBG 0x9
+#define InsideCastleNightBG 0xB
+#define ForestNightBG 0xC
+#define SnowTentsNightBG 0xE
+#define InsideBrightTentBG 0xF
+#define QuartersBG 0x17
+#define RadiantDawnBG 0x2B
+#define NightSVillageBG 0x2C
+#define BlackBG 0x35
+#define SnowFieldBG 0x36
+#define SnowFieldsBG 0x36
+#define SnowTents1BG 0x38
+#define SnowTents2BG 0x39
+#define SnowCampireBG 0x3A
+#define SnowMountainBG 0x3B
+#define OutsideSnowCastleBG 0x3C
+#define SnowVillageBG 0x3D
+#define SnowHouseBG 0x3E
+
+
 
 //item ID for skill scroll
 #define SkillScroll 0xBC
@@ -54,6 +87,7 @@
 
 //#define __DEBUG__ // Uncomment to get the Debug startup menu :p
 
+//Units
 #define Edgelord 0x2E
 #define Edgelords 0x2E
 #define EvilCult 0x2E
@@ -63,10 +97,10 @@
 #define USoldier 0x7F
 #define UPirate 0x30
 
-// PORTRAITS
+// Mugs
 #define ZanePort 0x2
 
-// WEAPONS
+// Weapons
 #define Arcticus 0xC2
 #define IronRifle 0xC3
 #define SteelRifle 0xC4
@@ -79,7 +113,7 @@
 #define SilverLabrys 0xC1
 #define Sagitar 0xCA
 
-// AFFINITIES
+// Affinities
 #define FireAff 0xD
 #define ThunderAff 0x2
 #define WindAff 0x3
@@ -93,7 +127,7 @@
 #define HeavenAff 0xB
 #define VoidAff 0xC
 
-// TILESETS
+// Tilesets
 #define TSFieldsObject 0x1
 #define TSFieldsPalette 0x2
 #define TSSnowFieldsPalette 0x2

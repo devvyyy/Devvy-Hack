@@ -27,13 +27,13 @@
     FE6SnowFieldsTilesetPalette:
     #incbin "FE6SnowFields/FE6SnowFieldsPalette.dmp"
 	
-//	ALIGN 4
-//    FE6SnowFieldsTilesetSunsetPalette:
-//   #incbin "FE6SnowFields/FE6SnowFieldsSunsetPalette.dmp"
+	ALIGN 4
+    FE6SnowFieldsTilesetSunsetPalette:
+    #incbin "FE6SnowFields/FE6SnowFieldsSunsetPalette.dmp"
 	
-//	ALIGN 4
-//    FE6SnowFieldsTilesetNightPalette:
-//    #incbin "FE6SnowFields/FE6SnowFieldsNightPalette.dmp"
+	ALIGN 4
+    FE6SnowFieldsTilesetNightPalette:
+    #incbin "FE6SnowFields/FE6SnowFieldsNightPalette.dmp"
 	
 	ALIGN 4
     FE6SnowFieldsTilesetMapConfig:
@@ -42,8 +42,8 @@
 	ALIGN 4
 	EventPointerTable(0x2E, FE6SnowFieldsTilesetImage)
     EventPointerTable(0x2F, FE6SnowFieldsTilesetPalette)
-//	EventPointerTable(0x38, FE6SnowFieldsTilesetSunsetPalette)
-//	EventPointerTable(0x34, FE6SnowFieldsTilesetNightPalette)
+	EventPointerTable(0x34, FE6SnowFieldsTilesetSunsetPalette)
+	EventPointerTable(0x60, FE6SnowFieldsTilesetNightPalette)
 	EventPointerTable(0x30, FE6SnowFieldsTilesetMapConfig)
 	
 	//Snow Village by N426
@@ -57,11 +57,16 @@
     #incbin "SnowVillage/SnowVillagePalette.bin"
 	
 	ALIGN 4
+	SnowVillageSunsetPalette:
+	#incbin "SnowVillage/SnowVillageSunsetPal.dmp"
+	 
+	ALIGN 4
     SnowVillageMapConfig:
     #incext compress "SnowVillage/SnowVillage.mapchip_config"
 
 	ALIGN 4
 	EventPointerTable(0xE, SnowVillageTilesetImage)
+	EventPointerTable(0x38, SnowVillageSunsetPalette)
     EventPointerTable(0xF, SnowVillageTilesetPalette)
 	EventPointerTable(0x10, SnowVillageMapConfig)
 
