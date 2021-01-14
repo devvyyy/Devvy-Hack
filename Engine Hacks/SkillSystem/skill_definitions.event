@@ -24,6 +24,10 @@
 //Author Unknown (Initial Commit)
 #define AnathemaID 94
 
+//Daredevil: If unit is within 3 spaces of an enemy archer, hit/crit +20
+//Kelik Zenair
+#define DaredevilID 222
+
 //Blackfire: Adjacent foes deal 2 less damage.
 //Kelik Zenair
 #define BlackfireID 51
@@ -38,7 +42,7 @@
 
 //Warlock: Adjacent allies target foe's Res.
 //Kelik Zenair
-#define WarlockID 222
+#define WarlockID 255
 
 //Inspire: +3 Atk to allies above 50% HP within two spaces.
 //Kelik Zenair
@@ -536,6 +540,10 @@
 //Kelik Zenair
 #define FairFightID 193
 
+//Sanctuary: neutralizes wta penalties
+//Kelik Zenair
+#define SanctuaryID 156
+
 //Vigor: Grants Atk = HP/4
 //Kelik Zenair
 #define VigorID 42
@@ -657,7 +665,7 @@
 //Stance Skills: Bonus to stats when defending.
 //By Snakey1
 #define BracingStanceID 155
-#define DartingStanceID 156
+#define DartingStanceID 255
 #define FierceStanceID 157
 #define KestrelStanceID 158
 #define MirrorStanceID 159
@@ -1156,7 +1164,7 @@
 
 //Synchronize: Statuses are also applied to the attacker.
 //By Sme
-#define SynchronizeID 236
+#define SynchronizeID 255
 
 //Bargain: Halves prices in shops.
 //By Sme
@@ -1164,7 +1172,7 @@
 
 //Poise: +1 Move. Negates enemy hit bonus from weapon triangle advantage.
 //By Zeta
-#define PoiseID 255
+#define PoiseID 236
 
 //Amische: This unit's religion disallows them from using non-Iron weaponry.
 //By Sme
