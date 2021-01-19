@@ -42,6 +42,8 @@
 #define IfAliveDialog5(character,alivetext) "CHECK_ALIVE character; BEQ 5 0x0 0xC; Text(alivetext); LABEL 5"
 #define ChargeWarning(character,alivetext) "CHECK_ALIVE character; BEQ 1 0x0 0xC;CAM1 character;STAL 20; CUMO character; Text(alivetext); LABEL 1"
 #define CameraCursor(character) "CAM1 character; STAL 20; CUMO character"
+#define CameraMove(character) "CAM1 [character]"
+#define Highlight(character) "CUMO [character]"
 #define MusicChange(song) "MUSC song"
 #define BossAI [0,3,4,32]
 #define StillAI [0,3,4,32]

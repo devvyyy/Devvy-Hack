@@ -55,6 +55,7 @@ END_MAIN
 MiscBasedEvents:
 CauseGameOverIfLordDies
 AREA 0xF TalismanThing [1,10] [3,10]
+AREA 0xE WallSus [0,11] [4,14]
 END_MAIN
 
 Dunno1:
@@ -263,6 +264,17 @@ TEXTSHOW Placeholder1
 TEXTEND
 REMA
 NoFade
+ENDA
+
+WallSus:
+CALL 0x9EE1B8
+CAM1[1,10]
+CUMO[1,10]
+CAM1[2,10]
+CUMO[2,10]
+CAM1[3,10]
+CUMO[3,10]
+TEXTSHOW WhenTheWallIsSus
 ENDA
 
 Thieves1:

@@ -68,7 +68,7 @@ Matthias_Mug:
 #incext PortraitFormatter "Matthias.png"
 setMugEntry(0x0D, Matthias_Mug, 3, 5, 3, 3)
 
-ALIGN 16 //Flan by Laurent Lacroix
+ALIGN 16 //Flan by Laurent Lacroix, Levin
 Flan_Mug:
 #incext PortraitFormatter "Flan.png"
 setMugEntry(0x0E, Flan_Mug, 2, 5, 3, 3)
@@ -207,6 +207,11 @@ ALIGN 16
 Latte_Mug: //Latte by Laurent Lacroix
 #incext PortraitFormatter "Latte.png"
 setMugEntryExtend(0x27, Latte_Mug, 4, 5, 3, 3, 10, 4, 0, 0)
+
+ALIGN 16
+Stroganoff_Mug: //Stroganoff edited by Levin
+#incext PortraitFormatter "Stroganoff.png"
+setMugEntryExtend(0x29, Stroganoff_Mug, 3, 5, 3, 2, 0, 4, 10, 4)
 
 //Bad Guys
 ALIGN 16 //Sai by hypergammaspaces

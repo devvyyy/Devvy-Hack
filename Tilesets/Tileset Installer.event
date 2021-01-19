@@ -1,3 +1,8 @@
+ALIGN 4
+#ifndef tilesetAnimation
+    #define tilesetAnimation(speed, size, pointer)    "BYTE speed 0; SHORT size; POIN pointer"
+#endif
+
 	//Snow Fields by DerTheVaporeon
 	
 	//ALIGN 4
@@ -69,7 +74,8 @@
 	EventPointerTable(0x38, SnowVillageSunsetPalette)
     EventPointerTable(0xF, SnowVillageTilesetPalette)
 	EventPointerTable(0x10, SnowVillageMapConfig)
-
+	EventPointerTable(0x12, SnowVillageAnims)
+	
 
 	//Snow Bern by Venno and ZoramineFae
 	
@@ -110,11 +116,61 @@
     EventPointerTable(0x19, CastlePalette)
     EventPointerTable(0x1A, CastleConfig)
 	EventPointerTable(0x1C, CastleAnims)
+	
+	ALIGN 4
+SVillageAnim0:
+#incext png2dmp "SnowVillage/SVillageAnims/SnowV0.png"
+SVillageAnim1:
+#incext png2dmp "SnowVillage/SVillageAnims/SnowV1.png"
+SVillageAnim2:
+#incext png2dmp "SnowVillage/SVillageAnims/SnowV2.png"
+SVillageAnim3:
+#incext png2dmp "SnowVillage/SVillageAnims/SnowV3.png"
+SVillageAnim4:
+#incext png2dmp "SnowVillage/SVillageAnims/SnowV4.png"
+SVillageAnim5:
+#incext png2dmp "SnowVillage/SVillageAnims/SnowV5.png"
+SVillageAnim6:
+#incext png2dmp "SnowVillage/SVillageAnims/SnowV6.png"
+SVillageAnim7:
+#incext png2dmp "SnowVillage/SVillageAnims/SnowV7.png"
+SVillageAnim8:
+#incext png2dmp "SnowVillage/SVillageAnims/SnowV8.png"
+SVillageAnim9:
+#incext png2dmp "SnowVillage/SVillageAnims/SnowV9.png"
+SVillageAnim10:
+#incext png2dmp "SnowVillage/SVillageAnims/SnowV10.png"
+SVillageAnim11:
+#incext png2dmp "SnowVillage/SVillageAnims/SnowV11.png"
+SVillageAnim12:
+#incext png2dmp "SnowVillage/SVillageAnims/SnowV12.png"
+SVillageAnim13:
+#incext png2dmp "SnowVillage/SVillageAnims/SnowV13.png"
+SVillageAnim14:
+#incext png2dmp "SnowVillage/SVillageAnims/SnowV14.png"
+SVillageAnim15:
+#incext png2dmp "SnowVillage/SVillageAnims/SnowV15.png"
 
 ALIGN 4
-#ifndef tilesetAnimation
-    #define tilesetAnimation(speed, size, pointer)    "BYTE speed 0; SHORT size; POIN pointer"
-#endif
+SnowVillageAnims:
+tilesetAnimation(0x1C,0x1000,SVillageAnim0)
+tilesetAnimation(0x1C,0x1000,SVillageAnim1)
+tilesetAnimation(0x1C,0x1000,SVillageAnim2)
+tilesetAnimation(0x1C,0x1000,SVillageAnim3)
+tilesetAnimation(0x1C,0x1000,SVillageAnim4)
+tilesetAnimation(0x1C,0x1000,SVillageAnim5)
+tilesetAnimation(0x1C,0x1000,SVillageAnim6)
+tilesetAnimation(0x1C,0x1000,SVillageAnim7)
+tilesetAnimation(0x1C,0x1000,SVillageAnim8)
+tilesetAnimation(0x1C,0x1000,SVillageAnim9)
+tilesetAnimation(0x1C,0x1000,SVillageAnim10)
+tilesetAnimation(0x1C,0x1000,SVillageAnim11)
+tilesetAnimation(0x1C,0x1000,SVillageAnim12)
+tilesetAnimation(0x1C,0x1000,SVillageAnim13)
+tilesetAnimation(0x1C,0x1000,SVillageAnim14)
+tilesetAnimation(0x1C,0x1000,SVillageAnim15)
+WORD 0 0
+ALIGN 4
 
 ALIGN 4
 BernAnim0:
