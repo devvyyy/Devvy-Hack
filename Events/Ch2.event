@@ -19,7 +19,9 @@ TURN 0x0 AtheyaRecruit [2,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-
+CharacterEventBothWays(0xA, PandoroRecruit, Affogato, Pandoro)
+CharacterEventBothWays(0xA, PandoroRecruit, Tammy, Pandoro)
+CharacterEventBothWays(0xA, PandoroRecruit, Ulrich, Pandoro)
 	END_MAIN
 
 MiscBasedEvents:
@@ -27,9 +29,9 @@ MiscBasedEvents:
 	END_MAIN
 
 LocationBasedEvents:
-Arrive(2,13)
-Arrive(3,13)
-Village(0x8,LightningMcQueen,1,9)
+Arrive(14,1)
+Arrive(14,2)
+Village(0x8,LightningMcQueen,11,11)
 	END_MAIN
 
 Dunno1:
@@ -49,28 +51,27 @@ Tutorial:
 	END_MAIN
 
 Units1:
-UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [2,0] 0b 0x0 0x0 0x0 [IronBow, IronRifle,] [0x0,0x0,0x0,0x0]
-UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [3,0] 0b 0x0 0x0 0x0 [IronBow, IronRifle,] [0x0,0x0,0x0,0x0]
-UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [4,0] 0b 0x0 0x0 0x0 [IronBow, IronRifle,] [0x0,0x0,0x0,0x0]
-UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [5,0] 0b 0x0 0x0 0x0 [IronBow, IronRifle,] [0x0,0x0,0x0,0x0]
-UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [6,0] 0b 0x0 0x0 0x0 [IronBow, IronRifle,] [0x0,0x0,0x0,0x0]
-UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [2,1] 0b 0x0 0x0 0x0 [IronBow, IronRifle,] [0x0,0x0,0x0,0x0]
-UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [3,1] 0b 0x0 0x0 0x0 [IronBow, IronRifle,] [0x0,0x0,0x0,0x0]
-UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [4,1] 0b 0x0 0x0 0x0 [IronBow, IronRifle,] [0x0,0x0,0x0,0x0]
-UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [5,1] 0b 0x0 0x0 0x0 [IronBow, IronRifle,] [0x0,0x0,0x0,0x0]
-UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [6,1] 0b 0x0 0x0 0x0 [IronBow, IronRifle,] [0x0,0x0,0x0,0x0]
+LoadUnit(4,18)
+LoadUnit(5,18)
+LoadUnit(6,18)
+LoadUnit(4,19)
+LoadUnit(5,19)
+LoadUnit(6,19)
+LoadUnit(4,20)
+LoadUnit(5,20)
+LoadUnit(6,20)
 	UNIT
 	
 WoohooSnowDay:
-UNIT Tammy Cleric 0x1 Level(3, Ally, 0)   [9,0] 0b 0x0 0x0 0x0 [Heal,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Tammy Cleric 0x1 Level(3, Ally, 0)   [14,20] 0b 0x0 0x0 REDA14R18 [Heal,Elixir] [0x0,0x0,0x0,0x0]
 	UNIT
 	
 DiveBombWyvern:
-UNIT Atheya 0x20 0x1 Level(4, Ally, 0)   [0,3] 0b 0x0 0x0 0x0 [IronAxe,] [0x0,0x0,0x0,0x0]
+UNIT Atheya 0x20 0x1 Level(4, Ally, 0)   [5,0] 0b 0x0 0x0 REDA0R0 [IronAxe,Vulnerary] [0x0,0x0,0x0,0x0]
 	UNIT
 	
 LunaPirate:
-UNIT Pandoro Pirate 0x1 Level(4, Enemy, 0)   [15,2] 0b 0x0 0x0 0x0 [IronLabrys,PureWater] BossAI
+UNIT Pandoro Pirate 0x1 Level(4, Enemy, 0)   [0,14] 0b 0x0 0x0 0x0 [IronLabrys,PureWater] BossAI
 	UNIT
 
 EnemyUnits:
@@ -99,11 +100,11 @@ UNIT Bandit Deserter 0x1 Level(5, Enemy, 1)     [3,12] 0b 0x0 0x0 0x0 [ShortSpea
 	UNIT
 
 Traps1:
-BlueSigil(2,13)
-BlueSigil(3,13)
-TelliusTorchOn(2,4,1)
-TelliusTorchOn(5,10,1)
-TelliusTorchOn(15,3,1)
+BlueSigil(14,1)
+BlueSigil(14,2)
+TelliusTorchOn(7,18,1)
+TelliusTorchOn(1,14,1)
+TelliusTorchOn(6,0,1)
 	ENDTRAP
 	ALIGN 4
 
@@ -129,6 +130,16 @@ EndingScene:
 
 AtheyaRecruit:
 	LOAD1 0x1 DiveBombWyvern
+ENDA
+
+PandoroRecruit:
+MUSS 0x30
+STAL 33
+STORETOSOMETHING 0x0
+Text(Placeholder1)
+MURE 0x2
+CUSA Pandoro
+NoFade
 ENDA
 
 TammyRecruit:

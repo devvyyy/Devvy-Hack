@@ -8,18 +8,28 @@ Map:
 #incbin "Chapter2_data.dmp"
 
 MapChanges:
-TileMap(4,0,8,1,1,DoorClosed)
-TileMap(3,0,8,3,2,Destroyed)
-TileMap(2,14,5,1,1,Chest1)
-TileMap(1,15,1,1,1,Chest2)
+TileMap(6,11,11,3,2,Destroyed)
+TileMap(5,11,11,3,2,Destroyed2)
+TileMap(4,11,11,1,1,DoorClosed)
+TileMap(3,11,11,1,1,DoorClosed2)
+TileMap(2,1,13,1,1,Chest1)
+TileMap(1,0,15,1,1,Chest2)
 TileMapEnd
+
+Destroyed:
+SHORT 0xca4 0xca8 0xcac 0xd24 0xd28 0xd2c 
+ALIGN 4
+
+Destroyed2:
+SHORT 0xca4 0xca8 0xcac 0xd24 0xd28 0xd2c 
+ALIGN 4
 
 DoorClosed:
 SHORT 0x80 
 ALIGN 4
 
-Destroyed:
-SHORT 0xca4 0xca8 0xcac 0xd24 0xd28 0xd2c 
+DoorClosed2:
+SHORT 0x80 
 ALIGN 4
 
 Chest1:

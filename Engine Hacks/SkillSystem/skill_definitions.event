@@ -434,7 +434,11 @@
 
 //Steadfast: Gain +1 AS for every two squares moved.
 //Kelik Zenair
-#define SteadfastID 117 
+#define SteadfastID 117
+
+//Galestorm: If foe can't counter, auto-double.
+//Kelik Zenair
+#define GalestormID 131
 
 //Charge+: Charge+: If unit has used up all movement, gain brave effect.
 //By Sme
@@ -489,7 +493,7 @@
 
 //Even/Odd Rhythm: +10 Hit and Avoid on even or odd numbered turns.
 //Author Unknown (Initial Commit)
-#define OddRhythmID 131
+#define OddRhythmID 255
 #define EvenRhythmID 132
 
 //Faire Skills: +4 damage when equipping a weapon of the specified type.
@@ -1062,6 +1066,10 @@
 //By Tequila
 #define WaryFighterID 4
 
+//Bulwark: If within 2 spaces of an armored ally, unit can't be doubled.
+//Kelik Zenair
+#define BulwarkID 206
+
 //Savior: Can rescue without penalties.
 //Author Unknown (Initial Commit)
 #define SaviorID 7
@@ -1109,7 +1117,7 @@
 
 //Hero: +30% skill activation rate when HP is below 50%.
 //By Sme
-#define HeroID 206
+#define HeroID 255
 
 //Rightful King: +10% to Skill activation rate.
 //Author Unknown (Initial Commit)

@@ -204,6 +204,11 @@ Pandoro_Mug:
 setMugEntry(0x26, Pandoro_Mug, 6, 4, 5, 0)
 
 ALIGN 16
+Eis_Mug:
+#incext PortraitFormatter "Eiskaffee.png"
+setMugEntry(0x2A, Eis_Mug, 3, 5, 3, 3)
+
+ALIGN 16
 Latte_Mug: //Latte by Laurent Lacroix
 #incext PortraitFormatter "Latte.png"
 setMugEntryExtend(0x27, Latte_Mug, 4, 5, 3, 3, 10, 4, 0, 0)
@@ -213,7 +218,7 @@ Stroganoff_Mug: //Stroganoff edited by Levin
 #incext PortraitFormatter "Stroganoff.png"
 setMugEntryExtend(0x29, Stroganoff_Mug, 3, 5, 3, 2, 0, 4, 10, 4)
 
-//Bad Guys
+// Bad Guys
 ALIGN 16 //Sai by hypergammaspaces
 Sai_Mug:
 #incext PortraitFormatter "Sai.png"
@@ -238,6 +243,14 @@ ALIGN 16 //Lefse by Laurent Lacroix
 Lefse_Mug:
 #incext PortraitFormatter "Lefse.png"
 setMugEntry(0x34, Lefse_Mug, 2, 6, 2, 4)
+
+
+// Lol
+ALIGN 16 //lol
+ItHim:
+#incext PortraitFormatter "idk.png"
+setMugEntryExtend(0x64, ItHim, 3, 5, 3, 3, 0, 4, 0, 0)
+
 
 
 

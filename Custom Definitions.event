@@ -33,24 +33,6 @@
 
 #define GrowthBonus(HPB,StrB,MagB,SklB,SpdB,DefB,ResB,LckB) "BYTE 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 HPB StrB SklB SpdB DefB ResB LckB MagB 0x0 0x0"
 
-//Macros
-#define CharacterConditionalDialog(character,alivetext,deadtext) "CHECK_ALIVE character; BEQ 1 0x0 0xC; Text(alivetext); GOTO 2; LABEL 1; Text(deadtext); LABEL 2"
-#define IfAliveDialog(character,alivetext) "CHECK_ALIVE character; BEQ 1 0x0 0xC; Text(alivetext); LABEL 1"
-#define IfAliveDialog2(character,alivetext) "CHECK_ALIVE character; BEQ 2 0x0 0xC; Text(alivetext); LABEL 2"
-#define IfAliveDialog3(character,alivetext) "CHECK_ALIVE character; BEQ 3 0x0 0xC; Text(alivetext); LABEL 3"
-#define IfAliveDialog4(character,alivetext) "CHECK_ALIVE character; BEQ 4 0x0 0xC; Text(alivetext); LABEL 4"
-#define IfAliveDialog5(character,alivetext) "CHECK_ALIVE character; BEQ 5 0x0 0xC; Text(alivetext); LABEL 5"
-#define ChargeWarning(character,alivetext) "CHECK_ALIVE character; BEQ 1 0x0 0xC;CAM1 character;STAL 20; CUMO character; Text(alivetext); LABEL 1"
-#define CameraCursor(character) "CAM1 character; STAL 20; CUMO character"
-#define CameraMove(character) "CAM1 [character]"
-#define Highlight(character) "CUMO [character]"
-#define MusicChange(song) "MUSC song"
-#define BossAI [0,3,4,32]
-#define StillAI [0,3,4,32]
-#define NoMoveAI [0,3,4,32]
-#define ChargeAI [0,0,4,0]
-#define ThiefAI [6,12,4,0]
-
 //Backgrounds
 #define HouseBG1 0x0
 #define HouseBG2 0x1

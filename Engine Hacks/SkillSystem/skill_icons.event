@@ -6,6 +6,12 @@ SkillIcons:
 #define SkillIcon(skillID) "128*skillID+SkillIcons"
 
 
+ORG SkillIcon(BulwarkID)
+#incbin "SkillIcons/Bulwark.dmp"
+
+ORG SkillIcon(GalestormID)
+#incbin "SkillIcons/Fusillade.dmp"
+
 ORG SkillIcon(SanctuaryID)
 #incbin "SkillIcons/Sanctuary.dmp"
 
