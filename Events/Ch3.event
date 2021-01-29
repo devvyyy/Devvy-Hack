@@ -46,20 +46,26 @@ Tutorial:
 	END_MAIN
 
 Units1:
-LoadUnit(0,15)
-LoadUnit(1,15)
-LoadUnit(2,15)
-LoadUnit(3,15)
-LoadUnit(4,15)
 LoadUnit(0,16)
 LoadUnit(1,16)
 LoadUnit(2,16)
 LoadUnit(3,16)
 LoadUnit(4,16)
+LoadUnit(0,17)
+LoadUnit(1,17)
+LoadUnit(2,17)
+LoadUnit(3,17)
+LoadUnit(4,17)
 	UNIT
 
 EnemyUnits:
 UNIT Bandit Brigand 0x1 Level(3, Enemy, 1)     [13,1] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
+UNIT Bandit Brigand 0x1 Level(3, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
+	UNIT
+	
+YoItThem:
+UNIT Stroganoff AArmor 0x1 Level(6, NPC, 0)     [10,8] 0b 0x0 0x0 0x0 [SteelLabrys,Dracoshield] AttackInRangeAI
+UNIT Eiskaffee Hunter 0x1 Level(4, NPC, 0)     [11,9] 0b 0x0 0x0 0x0 [SteelBow,IronRifle] AttackInRangeAI
 	UNIT
 
 Traps1:
@@ -72,11 +78,12 @@ Traps2:
 
 BeginningScene:
 	LOAD1 0x1 EnemyUnits
+	LOAD1 0x1 YoItThem
 	ENUN
 	GotoPrepScreen
 	ENDA
 
 EndingScene:
-	MNC2 next_chapter
+	MNC2 0x4
 	NoFade
 	ENDA
