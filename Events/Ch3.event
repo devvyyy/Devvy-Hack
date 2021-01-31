@@ -18,15 +18,24 @@ TurnBasedEvents:
 
 ALIGN 32
 CharacterBasedEvents:
-
+CharacterEventBothWays(0xA, StroganRecruit, Affogato, Stroganoff)
+CharacterEventBothWays(0xB, EisRecruit, Affogato, Eiskaffee)
+CharacterEventBothWays(0xA, StroganRecruit2, Eiskaffee, Stroganoff)
+CharacterEventBothWays(0xB, EisRecruit2, Stroganoff, Eiskaffee)
 	END_MAIN
 
 MiscBasedEvents:
 	CauseGameOverIfLordDies
+	AREA 0xE DropThePlank [8,15] [8,15]
+	AREA 0xF BarrelRoll [0,0] [3,1]
 	END_MAIN
 
 LocationBasedEvents:
-
+Vendor(ShopBruh,13,13)
+Armory(ArmoryBruh,2,3)
+Village(0x8,SolVillage,2,6)
+Village(0x9,FlambergeVillage,14,7)
+House(0x0,House1,16,7)
 	END_MAIN
 
 Dunno1:
@@ -69,6 +78,7 @@ UNIT Eiskaffee Hunter 0x1 Level(4, NPC, 0)     [11,9] 0b 0x0 0x0 0x0 [SteelBow,I
 	UNIT
 
 Traps1:
+GreenSigil(8,15)
 	ENDTRAP
 	ALIGN 4
 
@@ -87,3 +97,107 @@ EndingScene:
 	MNC2 0x4
 	NoFade
 	ENDA
+	
+DropThePlank:
+SVAL 0x2 0x0
+CALL 0x9EE1B8
+SOUN 0x2D2
+TILECHANGE 5
+RemoveTrapAtCoords(8,15)
+STAL 30
+NoFade
+ENDA
+
+StroganRecruit:
+MUSS 0x30
+STAL 33
+Text(Placeholder1)
+MURE 0x2
+CUSA Stroganoff
+NoFade
+ENDA
+
+StroganRecruit2:
+MUSS 0x30
+STAL 33
+Text(Placeholder2)
+MURE 0x2
+CUSA Stroganoff
+NoFade
+ENDA
+
+EisRecruit:
+MUSS 0x30
+STAL 33
+Text(Placeholder1)
+MURE 0x2
+CUSA Eiskaffee
+NoFade
+ENDA
+
+EisRecruit2:
+MUSS 0x30
+STAL 33
+Text(Placeholder2)
+MURE 0x2
+CUSA Eiskaffee
+NoFade
+ENDA
+
+BarrelRoll:
+SVAL 0x2 0x0
+CALL 0x9EE1B8
+Text(Placeholder1)
+GiveItem(AngelicRobe,0xFFFF)
+NoFade
+ENDA
+
+FountainFunny:
+SVAL 0x2 0x0
+CALL 0x9EE1B8
+Text(Placeholder2)
+GiveItem(GoddessIcon,0xFFFF)
+NoFade
+ENDA
+
+House1:
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+SVAL 0x2 0x1 // decides background 
+SVAL 0x3 Placeholder1 // decides text id
+CALL 0x9EE310 // runs the text
+MUNO // increases music volume
+NoFade
+ENDA
+
+SolVillage:
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+SVAL 0x2 0x1 // decides background 
+SVAL 0x3 SolVillageText // decides text id
+CALL 0x9EE310 // runs the text
+MUNO // increases music volume
+GiveItemWithDurability(0xBC,0xF,0xFFFF)
+NoFade
+ENDA
+
+FlambergeVillage:
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+SVAL 0x2 0x1 // decides background 
+SVAL 0x3 FlambergeVillageText // decides text id
+CALL 0x9EE310 // runs the text
+MUNO // increases music volume
+	CALL 0x591F40
+	SVAL 0x3 0xC6
+  GIVEITEMTO 0xFFFF
+NoFade
+ENDA
+
+ShopBruh:
+SHLI Fire Light1 Flux Heal Vulnerary
+ALIGN 4
+
+ArmoryBruh:
+SHLI IronSword SteelSword IronLance SteelLance IronAxe SteelAxe IronBow SteelBow
+ALIGN 4

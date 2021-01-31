@@ -21,7 +21,7 @@
 .endm
 
 
-
+.equ RefreshTerrainMap,0x8019A65
 
 
 .equ SpawnTrap,0x802E2B8 @r0 = x coord, r1 = y coord, r2 = trap ID
@@ -40,6 +40,8 @@ ldrb r1,[r5,#3] @initial vision range
 strb r1,[r0,#3] 
 ldrb r1,[r5,#4] @set vision range
 strb r1,[r0,#4]
+
+blh RefreshTerrainMap
 
 ldr r3,=Init_ReturnPoint
 bx r3

@@ -1,3 +1,9 @@
+//Nerfed Thief Vision
+PUSH
+ORG $178C2
+BYTE 0x01
+POP
+
 //Sound Quality
 //PUSH
 //ORG $D06f4
@@ -252,5 +258,5 @@ ORG 0x030366
 BYTE 0xC0
 //Epic Blizzard Behind GUI
 ORG 0x03066D
-BYTE 0x24
+BYTE 0x18
 POP

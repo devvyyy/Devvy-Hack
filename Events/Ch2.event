@@ -15,6 +15,14 @@ PointerList:
 TurnBasedEvents:
 TURN 0x0 TammyRecruit [1,0] 0x0
 TURN 0x0 AtheyaRecruit [2,0] 0x0
+TURN 0x0 OhHeckItHim [2,0] 0x80
+TURN 0x0 BridgeRein [3,0] 0x0
+TURN 0x0 BoatRein [4,0] 0x0
+TURN 0x0 UhOhTimeToRun [4,0] 0x80
+TURN 0x0 MountainRein [5,0] 0x0
+TURN 0x0 RunRunRunRun [5,0] 0x0
+TURN 0x0 EastRein [6,0] 0x0
+TURN 0x0 NorthRein [7,0] 0x0
 	END_MAIN
 
 ALIGN 32
@@ -32,6 +40,8 @@ LocationBasedEvents:
 Arrive(14,1)
 Arrive(14,2)
 Village(0x8,LightningMcQueen,11,11)
+Village(0x9,SallyCars,4,3)
+House(0x0,OgrimHouseEpic,7,8)
 	END_MAIN
 
 Dunno1:
@@ -77,37 +87,68 @@ UNIT Pandoro Pirate 0x1 Level(4, Enemy, 0)   [0,14] 0b 0x0 0x0 0x0 [IronLabrys,P
 	UNIT
 
 OhGodOhFuck:
-UNIT Ogrim Parson 0x1 Level(1, Enemy, 0)   [7,8] DropItem 0x0 0x0 REDA7R11 [Light2,Fear,Boots] ChargeAI
+UNIT Ogrim Parson 0x1 Level(1, Enemy, 0)   [7,8] DropItem 0x0 0x0 REDA7R9 [Light2,Fear,Boots] DoNothingAI
 	UNIT
 
 EnemyUnits:
-UNIT Bandit Brigand 0x1 Level(3, Enemy, 1)     [12,7] DropItem 0x0 0x0 0x0 [SteelAxe,] AttackInRangeAI
-UNIT Bandit Brigand 0x1 Level(4, Enemy, 1)     [7,6] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
-UNIT Bandit Deserter 0x1 Level(4, Enemy, 1)     [5,11] 0b 0x0 0x0 0x0 [SteelLance,] AttackInRangeAI
-UNIT Bandit Deserter 0x1 Level(4, Enemy, 1)     [10,6] 0b 0x0 0x0 0x0 [SteelLance,] AttackInRangeAI
-UNIT Bandit Archer 0x1 Level(4, Enemy, 1)     [10,9] 0b 0x0 0x0 0x0 [IronBow] AttackInRangeAI
+UNIT HolyGuard Brigand 0x1 Level(3, Enemy, 1)     [12,7] DropItem 0x0 0x0 0x0 [SteelAxe,] AttackInRangeAI
+UNIT HolyGuard AArmor 0x1 Level(5, Enemy, 1)     [4,7] DropItem 0x0 0x0 0x0 [HandAxe,SteelLabrys] BossAI
+UNIT HolyGuard AArmor 0x1 Level(5, Enemy, 1)     [5,7] DropItem 0x0 0x0 0x0 [Sagitar,SteelBlade] BossAI
+UNIT HolyGuard Brigand 0x1 Level(4, Enemy, 1)     [7,6] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
+UNIT HolyGuard Deserter 0x1 Level(4, Enemy, 1)     [5,11] 0b 0x0 0x0 0x0 [SteelLance,] AttackInRangeAI
+UNIT HolyGuard Deserter 0x1 Level(4, Enemy, 1)     [10,6] 0b 0x0 0x0 0x0 [SteelLance,Javelin] BossAI
+UNIT HolyGuard Mercenary 0x1 Level(4, Enemy, 1)     [11,6] 0b 0x0 0x0 0x0 [SteelSword,Elixir] BossAI
+UNIT HolyGuard Archer 0x1 Level(4, Enemy, 1)     [10,9] 0b 0x0 0x0 0x0 [IronBow] AttackInRangeAI
 UNIT UPirate Pirate 0x1 Level(4, Enemy, 1)     [4,10] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
 UNIT UPirate Pirate 0x1 Level(4, Enemy, 1)     [3,15] DropItem 0x0 0x0 0x0 [SteelAxe,HandAxe,] ChargeAI
 UNIT UPirate Shaman 0x1 Level(4, Enemy, 1)     [5,6] 0b 0x0 0x0 0x0 [DarkTome2,] AttackInRangeAI
 UNIT UPirate Shaman 0x1 Level(3, Enemy, 1)     [8,12] 0b 0x0 0x0 0x0 [DarkTome1,] AttackInRangeAI
-UNIT Bandit Archer 0x1 Level(5, Enemy, 1)     [6,13] 0b 0x0 0x0 0x0 [SteelBow] ChargeAI
-UNIT Bandit Deserter 0x1 Level(5, Enemy, 1)     [9,14] 0b 0x0 0x0 0x0 [SteelLance,Javelin,] AttackInRangeAI
-UNIT Bandit SCav 0x1 Level(4, Enemy, 1)     [7,0] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
-UNIT Bandit SCav 0x1 Level(3, Enemy, 1)     [6,0] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
-UNIT Bandit LCav 0x1 Level(3, Enemy, 1)     [14,2] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
-UNIT Bandit SCav 0x1 Level(3, Enemy, 1)     [14,1] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
+UNIT HolyGuard Archer 0x1 Level(5, Enemy, 1)     [6,13] 0b 0x0 0x0 0x0 [SteelBow] ChargeAI
+UNIT HolyGuard Deserter 0x1 Level(5, Enemy, 1)     [9,14] 0b 0x0 0x0 0x0 [SteelLance,Javelin,] AttackInRangeAI
+UNIT HolyGuard SCav 0x1 Level(4, Enemy, 1)     [7,0] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
+UNIT HolyGuard SCav 0x1 Level(3, Enemy, 1)     [6,0] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
+UNIT HolyGuard LCav 0x1 Level(3, Enemy, 1)     [14,2] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
+UNIT HolyGuard SCav 0x1 Level(3, Enemy, 1)     [14,1] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
 UNIT UPirate Pirate 0x1 Level(4, Enemy, 1)     [1,11] 0b 0x0 0x0 0x0 [IronLabrys,] ChargeAI
-UNIT Bandit Mercenary 0x1 Level(5, Enemy, 1)     [0,5] DropItem 0x0 0x0 0x0 [IronSword,Sagitar] BossAI
-UNIT Bandit Mercenary 0x1 Level(5, Enemy, 1)     [13,12] DropItem 0x0 0x0 0x0 [SteelSword] BossAI
-UNIT Bandit Mercenary 0x1 Level(5, Enemy, 1)     [9,18] DropItem 0x0 0x0 0x0 [IronSword] ChargeAI
+UNIT HolyGuard Mercenary 0x1 Level(5, Enemy, 1)     [0,5] 0b 0x0 0x0 0x0 [IronSword,Sagitar] BossAI
+UNIT HolyGuard Mercenary 0x1 Level(5, Enemy, 1)     [13,12] 0b 0x0 0x0 0x0 [SteelSword] BossAI
+UNIT HolyGuard Mercenary 0x1 Level(6, Enemy, 1)     [9,18] 0b 0x0 0x0 0x0 [IronSword,RedGem] ChargeAI
 UNIT Cultist Shaman 0x1 Level(4, Enemy, 1)     [5,16] 0b 0x0 0x0 0x0 [DarkII,] AttackInRangeAI
-UNIT Bandit Raider 0x1 Level(4, Enemy, 1)     [8,9] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
+UNIT HolyGuard Raider 0x1 Level(4, Enemy, 1)     [8,9] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
 UNIT Cultist Occultist 0x1 Level(4, Enemy, 1)     [3,0] 0b 0x0 0x0 0x0 [DarkTome1,] ChargeAI
 UNIT Cultist Occultist 0x1 Level(4, Enemy, 1)     [14,5] 0b 0x0 0x0 0x0 [DarkTome1,] ChargeAI
 UNIT Cultist Shaman 0x1 Level(4, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [DarkTome1,EnergyRing] AttackInRangeAI
 UNIT 0x48 Parson 0x1 Level(6, Enemy, 1)     [11,1] DropItem 0x0 0x0 0x0 [Light3,GoddessIcon] BossAI
-UNIT Bandit Deserter 0x1 Level(5, Enemy, 1)     [11,2] 0b 0x0 0x0 0x0 [ShortSpear,] BossAI
+UNIT HolyGuard Deserter 0x1 Level(5, Enemy, 1)     [11,2] 0b 0x0 0x0 0x0 [ShortSpear,] BossAI
 	UNIT
+	
+BridgeEnemies:
+UNIT HolyGuard ACav 0x1 Level(5, Enemy, 1)     [14,2] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
+UNIT HolyGuard SCav 0x1 Level(5, Enemy, 1)     [14,1] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
+UNIT
+
+
+BoatEnemies:
+UNIT UPirate Pirate 0x1 Level(5, Enemy, 1)     [1,16] 0b 0x0 0x0 REDA1R15 [IronAxe,HandAxe] StallOneTurnAI
+UNIT UPirate Pirate 0x1 Level(5, Enemy, 1)     [1,16] 0b 0x0 0x0 0x0 [IronAxe,HandAxe] StallOneTurnAI
+UNIT
+
+MountainEnemies:
+UNIT HolyGuard PegRider 0x1 Level(5, Enemy, 1)     [1,16] 0b 0x0 0x0 REDA1R15 [IronLance] StallOneTurnAI
+UNIT HolyGuard PegRider 0x1 Level(4, Enemy, 1)     [1,16] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
+UNIT
+
+EastEnemies:
+UNIT UPirate Pirate 0x1 Level(5, Enemy, 1)     [14,7] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
+UNIT Cultist Occultist 0x1 Level(6, Enemy, 1)     [14,9] 0b 0x0 0x0 0x0 [DarkTome2] ChargeAI
+UNIT Cultist Occultist 0x1 Level(6, Enemy, 1)     [14,14] 0b 0x0 0x0 0x0 [DarkTome2] ChargeAI
+UNIT
+
+NorthEnemies:
+UNIT Cultist Shaman 0x1 Level(5, Enemy, 1)     [6,0] 0b 0x0 0x0 REDA6R1 [DarkTome2] ChargeAI
+UNIT Cultist Occultist 0x1 Level(6, Enemy, 1)     [7,0] 0b 0x0 0x0 REDA7R1 [DarkTome1] ChargeAI
+UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [9,0] 0b 0x0 0x0 REDA9R1 [DarkTome2] ChargeAI
+UNIT
 
 Traps1:
 BlueSigil(14,1)
@@ -123,11 +164,11 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-	Text(ForestNightBG,Ch2Opening1)
 	LOAD1 0x1 Units1
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 LunaPirate
 	ENUN
+	Text(ForestNightBG,Ch2Opening1)
 	GotoPrepScreen
 	ENDA
 
@@ -139,14 +180,16 @@ EndingScene:
 	
 
 AtheyaRecruit:
+CAM1 [2,1]
 	LOAD1 0x1 DiveBombWyvern
+CameraCursor(Atheya)
+Text(Placeholder1)
 	NoFade
 ENDA
 
 PandoroRecruit:
 MUSS 0x30
 STAL 33
-STORETOSOMETHING 0x0
 Text(Placeholder1)
 MURE 0x2
 CUSA Pandoro
@@ -155,8 +198,91 @@ ENDA
 
 TammyRecruit:
 	LOAD1 0x1 WoohooSnowDay
+CameraCursor(Tammy)
+Text(Placeholder2)
+NoFade
+ENDA
+
+BridgeRein:
+CAM1 [11,2]
+	LOAD1 0x1 BridgeEnemies
+NoFade
+ENDA
+
+BoatRein:
+CAM1 [1,14]
+	LOAD1 0x1 BoatEnemies
+NoFade
+ENDA
+
+MountainRein:
+CAM1 [2,1]
+	LOAD1 0x1 MountainEnemies
+NoFade
+ENDA
+
+EastRein:
+CAM1 [13,2]
+	LOAD1 0x1 EastEnemies
+NoFade
+ENDA
+
+NorthRein:
+CAM1 [8,2]
+	LOAD1 0x1 NorthEnemies
+NoFade
 ENDA
 
 LightningMcQueen:
-VillageEventItem(SlowVillageText, HouseBG1, Slow)
+VillageEventItem(SlowHouseText, HouseBG1, Slow)
 ENDA
+
+SallyCars:
+VillageEventItem(SwordreaverHouseText, HouseBG1, Swordreaver)
+ENDA
+
+OgrimHouseEpic:
+MUSI // lowers music volume
+TEXTSTART
+CHECK_ACTIVEID Affogato
+BEQ 0x0 0xC 0x0
+	SVAL 0x2 0x1
+	SVAL 0x3 OgrimHouse
+	CALL 0x9EE310
+	REMA
+	GOTO 0x1
+LABEL 0x0
+SVAL 0x2 0x1
+SVAL 0x3 OgrimAffoHouse
+CALL 0x9EE310
+REMA
+LABEL 0x1
+MUNO // increases music volume
+NoFade
+ENDA
+
+OhHeckItHim:
+CAM1[7,8]
+Text(HouseBG2, Placeholder1)
+LOAD1 0x1 OhGodOhFuck
+CameraCursor(Ogrim)
+	TEXTSTART
+	Text(Placeholder2)
+	TEXTEND
+NoFade
+ENDA
+
+UhOhTimeToRun:
+	ChargeWarning(Ogrim,OgrimChargeWarning)
+NoFade
+ENDA
+
+RunRunRunRun:
+	SVAL 0x1 0x00040000
+	CHAI Ogrim
+	ChargeWarning(Ogrim,OgrimChargeText)
+	NoFade
+	ENDA
+NoFade
+ENDA
+
