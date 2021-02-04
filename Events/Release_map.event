@@ -91,7 +91,7 @@ EnemyUnits:
 UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [7,3] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
 UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)      [10,14] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
 UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)      [12,12] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
-UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)      [13,7] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)      [13,7] 0b 0x0 0x0 0x0 [Flux,Speedwing] AttackInRangeAI
 UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)      [0,17] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
 UNIT Cultist 0x58 0x1 Level(1, Enemy, 1)      [14,2] 0b 0x0 0x0 0x0 [Flux,] [0,0,4,0]
 UNIT Cultist 0x58 0x1 Level(1, Enemy, 1)      [1,12] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
@@ -108,7 +108,7 @@ UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [11,9] DropItem 0x0 0x0 0x0 [Javelin
 UNIT BadGuy 0x54 0x1 Level(3, Enemy, 1)     [12,5] 0b 0x0 0x0 0x0 [SteelLance,] [0,3,4,32]
 UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [6,14] 0b 0x0 0x0 0x0 [SteelAxe, Elixir,] AttackInRangeAI
 UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [14,10] 0b 0x0 0x0 0x0 [IronAxe,] [0,0,4,0]
-UNIT BadGuy 0x57 0x1 Level(1, Enemy, 1)     [13,16] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
+UNIT BadGuy 0x57 0x1 Level(1, Enemy, 1)     [13,16] DropItem 0x0 0x0 0x0 [IronSword,RedGem] AttackInRangeAI
 UNIT BadGuy 0x57 0x1 Level(1, Enemy, 1)     [12,3] 0b 0x0 0x0 0x0 [SteelSword,] AttackInRangeAI
 UNIT
 
@@ -272,11 +272,15 @@ SVAL 0x2 0x0
 CALL 0x9EE1B8
 CAM1[1,10]
 CUMO[1,10]
+STAL 30
 CAM1[2,10]
 CUMO[2,10]
+STAL 30
 CAM1[3,10]
 CUMO[3,10]
-TEXTSHOW WhenTheWallIsSus
+STAL 30
+Text(WhenTheWallIsSus)
+NoFade
 ENDA
 
 Thieves1:
