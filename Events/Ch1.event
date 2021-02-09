@@ -202,18 +202,12 @@ CAM1 [8,10]
 	ENDA
 	
 RightFortRein:
-CAM1 [13,3]
-	LOAD1 0x1 SReinforcements1
-	ENUN
-	STAL 20
+SpawnReinforcements(SReinforcements1)
 	NoFade
 	ENDA
 
 LeftFortRein:
-CAM1 [17,5]
-	LOAD1 0x1 SReinforcements2
-	ENUN
-	STAL 20
+SpawnReinforcements(SReinforcements2)
 	NoFade
 	ENDA
 

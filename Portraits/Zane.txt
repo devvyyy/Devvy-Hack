@@ -218,6 +218,21 @@ Stroganoff_Mug: //Stroganoff edited by Levin
 #incext PortraitFormatter "Stroganoff.png"
 setMugEntryExtend(0x29, Stroganoff_Mug, 3, 5, 3, 2, 0, 4, 10, 4)
 
+ALIGN 16
+Cortado_Mug: //Cortado by Laurent Lacroix
+#incext PortraitFormatter "Cortado.png"
+setMugEntry(0x2B, Cortado_Mug, 3, 5, 3, 3)
+
+ALIGN 16
+Mocha_Mug: //Mocha by Laurent Lacroix
+#incext PortraitFormatter "Mocha.png"
+setMugEntry(0x2C, Mocha_Mug, 4, 6, 4, 4)
+
+ALIGN 16
+Doppio_Mug: //Doppio by Laurent Lacroix
+#incext PortraitFormatter "Doppio.png"
+setMugEntry(0x2D, Doppio_Mug, 4, 5, 4, 3)
+
 // Bad Guys
 ALIGN 16 //Sai by hypergammaspaces
 Sai_Mug:
@@ -244,12 +259,24 @@ Lefse_Mug:
 #incext PortraitFormatter "Lefse.png"
 setMugEntry(0x34, Lefse_Mug, 2, 6, 2, 4)
 
+ALIGN 16 //Alicot by Laurent Lacroix
+Alicot_Mug:
+#incext PortraitFormatter "Alicot.png"
+setMugEntry(0x35, Alicot_Mug, 3, 5, 3, 3)
 
 // Lol
 ALIGN 16 //lol
 ItHim:
 #incext PortraitFormatter "idk.png"
 setMugEntryExtend(0x64, ItHim, 3, 5, 3, 3, 0, 4, 0, 0)
+
+SoldierGeneric: //Soldier Generic by hypergammaspaces
+#incext PortraitFormatter "Soldier.png"
+setMugEntry(0x6A, SoldierGeneric, 3, 6, 3, 4)
+
+AffoSoldier: //Helmet by hypergammaspaces
+#incext PortraitFormatter "AffoSoldier.png"
+setMugEntry(0x49, AffoSoldier, 3, 5, 3, 3)
 
 
 

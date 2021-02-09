@@ -222,12 +222,9 @@ CAM1 [7,11]
 	ENDA
 
 RunawayThieves:
-CAM1 [14,18]
-LOAD1 0x1 ThievesGoBrr
-ENUN
+SpawnReinforcements(ThievesGoBrr)
 NoFade
 ENDA
-
 
 OMGMyHero:
 CAM1 [2,5]
@@ -241,16 +238,12 @@ NoFade
 ENDA
 
 ShamanRein1:
-CAM1 [7,9]
-LOAD1 0x1 Reinforcements1
-ENUN
+SpawnReinforcements(Reinforcements1)
 NoFade
 ENDA
 
 ShamanRein2:
-CAM1 [14,8]
-LOAD1 0x1 Reinforcements2
-ENUN
+SpawnReinforcements(Reinforcements2)
 NoFade
 ENDA
 
@@ -258,6 +251,9 @@ TalismanThing:
 SVAL 0x2 0x0
 CALL 0x9EE1B8
 TILECHANGE 0x2
+RemoveTrapAtCoords(1,10)
+RemoveTrapAtCoords(2,10)
+RemoveTrapAtCoords(3,10)
 CUMO 0x1
 STAL 60
 CURE
@@ -284,9 +280,7 @@ NoFade
 ENDA
 
 Thieves1:
-CAM1 [4,11]
-LOAD1 0x1 ThiefRein1
-ENUN
+SpawnReinforcements(ThiefRein1)
 NoFade
 ENDA
 

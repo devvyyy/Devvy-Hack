@@ -4,7 +4,6 @@
 //#define FreeSpace2 0x1077c30
 #define FreeSpaceBLRange 0x1c1ec0
 #define Free_Space FreeSpace
-#define IsPointer 0x8000000
 #define DefaultAP 0x81CAA20
 
 #define ChapterTileset(chapter, object, palette, config) "PUSH; ORG 0x8b0890 + (148* chapter) + 4; SHORT object; BYTE palette config; POP"
@@ -141,4 +140,344 @@
 #define TSSnowBernPalette 0x51
 #define TSSnowBernConfig 0x52
 #define TSSnowBernMAnims 0xD0
+
+// Music
+#define HisWorldBGM 0x1
+#define EpicMomentBGM 0x1
+#define DelusionalExtremitiesBGM 0x9
+#define DelusionalBGM 0x9
+#define ConfidenceBGM 0x19
+#define ChaseOfShadowBGM 0x1A
+#define SublimeDomainBGM 0x1B
+#define SiegfriedThemeBGM 0x1B
+#define DelusionalExtremities 0xC1
+#define FirstStepBGM 0xC2
+#define FieldBGM 0xC3
+#define OblivionsJoyBGM 0xC4
+#define FinalShowdownBGM 0xC5
+#define SilverWillBGM 0xC6
+#define BattleBoFBGM 0xD9
+#define EternalHydrogenBGM 0xDA
+#define DreamingBGM 0xDB
+#define GlintOfLightBGM 0x5D
+#define VenusLighthouseBGM 0x5E
+#define MasterOfWaterBGM 0x5F
+#define EndlessBattleBGM 0x62
+#define EBPrologueBGM 0x94
+#define ChangeHistoryBGM 0x143
+#define LastBattleBGM 0x63
+#define DeepSpaceBGM 0x64
+#define TenseMovementsBGM 0x12F
+#define OldKingdomBGM 0x13A
+#define CruelFateBGM 0xA8
+#define RevolvingFateBGM 0xA9
+#define BadGuySongBGM 0xA9
+#define RealOrNotBGM 0xAD
+#define FinalMap1BGM 0xAD
+#define TimeOfFateBGM 0x12E
+#define FinalMap2BGM 0x12E
+#define KnightsOfWindBGM 0x12D
+#define FeenaBGM 0xE1
+#define WallOfDefenseBGM 0xE0
+#define ForestOfCelcetaBGM 0x144
+#define ThraciaAttackBGM 0x1F0
+#define ThraciaDefendBGM 0x1F1
+#define ThraciaBossBGM 0x1F2
+#define LightningBGM 0x59
+#define ChainReactionBGM 0x58
+#define StrangeEncountersBGM 0xAE
+#define BattleFieldsBGM 0xB2
+#define MightyBlowBGM 0x105
+#define UnfinishedBattleBGM 0xEC
+#define PronouncementBGM 0x104
+#define DarkLightRayBGM 0x29
+#define RunaSongBGM 0xEE
+#define HeroesOfManaBGM 0x2C
+#define UnderSiegeBGM 0xE4
+#define VPEBGM 0xF3
+#define GumshoesThemeBGM 0x30
+#define DarkCavernsBGM 0x107
+#define ComingFuryBGM 0x10B
+#define TheThiefBGM 0x33
+#define KeenEdgeBGM 0x34
+#define FightingSpiritBGM 0x35
+#define ErnstBGM 0x36
+#define AdvanceBGM 0x24
+#define TensionBGM 0x25
+#define RaidBGM 0x26
+#define ReunionBGM 0x27
+#define IndignationBGM 0x28
+#define SorrowBGM 0x29
+#define SolveRiddle 0x2E
+#define SolveTheRiddle 0x2E
+#define LightsInTheDark 0x2F
+#define TogetherWeRide 0x30
+#define RecruitThemeBGM 0x2E
+#define VictoryBGM 0x31
+#define Victory1 0x31
+#define VictorySad 0x32
+#define Victory2 0x32
+#define PrepThemeBGM 0x34
+
+
+// PList
+#define PrologueMap 0x4
+#define PrologueTileChange 0x6
+#define PrologueEvent 0x7
+
+#define Ch1Map 0x8
+#define Ch1TileChange 0x9
+#define Ch1Event 0xA
+
+#define Ch2Map 0xB
+#define Ch2TileChange 0xC
+#define Ch2Event 0xD
+
+#define Ch3Map 0x11
+#define Ch3TileChange 0x13
+#define Ch3Event 0x14
+
+#define Ch4Map 0x15
+#define Ch4TileChange 0x16
+#define Ch4Event 0x17
+
+#define Ch5xMap 0x1B
+#define Ch5xTileChange 0x1D
+#define Ch5xEvent 0x1E
+
+#define Ch5Map 0x1F
+#define Ch5TileChange 0x20
+#define Ch5Event 0x21
+
+#define Ch6Map 0x22
+#define Ch6TileChange 0x23
+#define Ch6Event 0x24
+
+#define Ch7Map 0x25
+#define Ch7TileChange 0x26
+#define Ch7Event 0x27
+
+#define Ch8Map 0x28
+#define Ch8TileChange 0x29
+#define Ch8Event 0x2A
+
+#define Ch9AMap 0x2B
+#define Ch9ATileChange 0x2C
+#define Ch9AEvent 0x2D
+
+#define Ch9BMap 0x69
+#define Ch9BTileChange 0x6A
+#define Ch9BEvent 0x6B
+
+#define Ch10AMap 0x31
+#define Ch10ATileChange 0x32
+#define Ch10AEvent 0x33
+
+#define Ch10BMap 0x6F
+#define Ch10BTileChange 0x70
+#define Ch10BEvent 0x71
+
+#define Ch11AMap 0xCF
+#define Ch11ATileChange 0xD0
+#define Ch11AEvent 0xD1
+
+#define Ch11BMap 0xD2
+#define Ch11BTileChange 0xD4
+#define Ch11BEvent 0xD5
+
+#define Ch12AMap 0x35
+#define Ch12ATileChange 0x36
+#define Ch12AEvent 0x37
+
+#define Ch12BMap 0x73
+#define Ch12BTileChange 0x74
+#define Ch12BEvent 0x75
+
+#define Ch13AMap 0x39
+#define Ch13ATileChange 0x3A
+#define Ch13AEvent 0x3B
+
+#define Ch13BMap 0x76
+#define Ch13BTileChange 0x77
+#define Ch13BEvent 0x78
+
+#define Ch14AMap 0x3F
+#define Ch14ATileChange 0x40
+#define Ch14AEvent 0x41
+
+#define Ch14BMap 0x7C
+#define Ch14BTileChange 0x7E
+#define Ch14BEvent 0x7F
+
+#define Ch15Map 0x45
+#define Ch15TileChange 0x46
+#define Ch15Event 0x47
+#define Ch15AEvent Ch15Event
+#define Ch15BEvent 0x80
+
+#define Ch16Map 0x49
+#define Ch16TileChange 0x4A
+#define Ch16Event 0x4B
+#define Ch16AEvent Ch16Event
+#define Ch16BEvent 0x81
+
+#define Ch17Map 0x4D
+#define Ch17TileChange 0x4E
+#define Ch17Event 0x4F
+#define Ch17AEvent Ch17Event
+#define Ch17BEvent 0x82
+
+#define Ch18Map 0x53
+#define Ch18TileChange 0x55
+#define Ch18Event 0x56
+#define Ch18AEvent Ch18Event
+#define Ch18BEvent 0x83
+
+#define Ch19Map 0x58
+#define Ch19TileChange 0x59
+#define Ch19Event 0x5A
+#define Ch19AEvent Ch19Event
+#define Ch19BEvent 0x84
+
+#define Ch20Map 0x5C
+#define Ch20TileChange 0x5D
+#define Ch20Event 0x5E
+#define Ch20AEvent Ch20Event
+#define Ch20BEvent 0x85
+
+#define Ch21Map 0x62
+#define Ch21TileChange 0x63
+#define Ch21Event 0x64
+#define Ch21AEvent Ch21Event
+#define Ch21BEvent 0x86
+
+#define Ch21xMap 0x65
+#define Ch21xTileChange 0x66
+#define Ch21xEvent 0x67
+#define Ch21xAEvent Ch21xEvent
+#define Ch21xBEvent 0x87
+
+#define Tower1Map 0x8B
+#define Tower1TileChange 0x8C
+#define Tower1Event 0x8D
+
+#define Tower2Map 0x8E
+#define Tower2TileChange 0x8F
+#define Tower2Event 0x90
+
+#define Tower3Map 0x91
+#define Tower3TileChange 0x92
+#define Tower3Event 0x93
+
+#define Tower4Map 0x94
+#define Tower4TileChange 0x95
+#define Tower4Event 0x96
+
+#define Tower5Map 0x97
+#define Tower5TileChange 0x98
+#define Tower5Event 0x99
+
+#define Tower6Map 0x9A
+#define Tower6TileChange 0x9B
+#define Tower6Event 0x9C
+
+#define Tower7Map 0x9D
+#define Tower7TileChange 0x9E
+#define Tower7Event 0x9F
+
+#define Tower8Map 0xA0
+#define Tower8TileChange 0xA1
+#define Tower8Event 0xA2
+
+#define Lagdou1Map 0xA4
+#define Lagdou1TileChange 0xA5
+#define Lagdou1Event 0xA6
+
+#define Lagdou2Map 0xA7
+#define Lagdou2TileChange 0xA8
+#define Lagdou2Event 0xA9
+
+#define Lagdou3Map 0xAA
+#define Lagdou3TileChange 0xAB
+#define Lagdou3Event 0xAC
+
+#define Lagdou4Map 0xAD
+#define Lagdou4TileChange 0xAE
+#define Lagdou4Event 0xAF
+
+#define Lagdou5Map 0xB0
+#define Lagdou5TileChange 0xB1
+#define Lagdou5Event 0xB2
+
+#define Lagdou6Map 0xB3
+#define Lagdou6TileChange 0xB4
+#define Lagdou6Event 0xB5
+
+#define Lagdou7Map 0xB6
+#define Lagdou7TileChange 0xB7
+#define Lagdou7Event 0xB8
+
+#define Lagdou8Map 0xBA
+#define Lagdou8TileChange 0xBB
+#define Lagdou8Event 0xBC
+
+#define Lagdou9Map 0xBD
+#define Lagdou9TileChange 0xBE
+#define Lagdou9Event 0xBF
+
+#define Lagdou10Map 0xC0
+#define Lagdou10TileChange 0xC1
+#define Lagdou10Event 0xC2
+
+#define CastleFreliaMap 0xC3
+#define CastleFreliaTileChange 0xC4
+#define CastleFreliaEvent 0xC5
+
+#define MelkaenCoastMap 0xC6
+#define MelkaenCoastTileChange 0xC7
+#define MelkaenCoastEvent 0xC8
+
+#define LinkArenaMap 0xC9
+
+#define Dummy1Map 0xCA
+#define Dummy1Event 0xCB
+
+#define Dummy2Map 0xCC
+#define Dummy2Event 0xCD
+
+#define Cutscene1Map 0xD6
+
+#define Cutscene2Map 0xD7
+
+#define Cutscene3Map 0xD8
+
+#define Cutscene4Map 0xD9
+#define Cutscene4TileChange 0xDA
+
+#define Cutscene5Map 0xDB
+
+#define Cutscene6Map 0xDC
+
+#define Cutscene7Map 0xDD
+
+#define Cutscene8Map 0xDE
+#define Cutscene8TileChange 0xDF
+
+#define Cutscene9Map 0xE0
+#define Cutscene9TileChange 0xE1
+
+#define Cutscene10Map 0xE2
+#define Cutscene10TileChange 0xE3
+
+#define Cutscene11Map 0xE4
+
+#define Cutscene12Map 0xE5
+
+#define Cutscene13Map 0xE7
+
+#define Cutscene14Map 0xE8
+
+#define Cutscene15Map 0xE9
+
+#define Cutscene16Map 0xEB
 

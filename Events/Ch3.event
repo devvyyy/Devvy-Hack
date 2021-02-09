@@ -13,15 +13,23 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-
+TURN 0x0 TopRightRein [3,0] 0x0
+TURN 0x0 TopLeftRein [5,0] 0x0
+TURN 0x0 WaterfallRein [6,0] 0x0
+TURN 0x0 BottomRightRein [7,0] 0x0
 	END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0xA, StroganRecruit, Affogato, Stroganoff)
 CharacterEventBothWays(0xB, EisRecruit, Affogato, Eiskaffee)
+CharacterEventBothWays(0xC, DoppioRecruit, Affogato, Doppio)
 CharacterEventBothWays(0xA, StroganRecruit2, Eiskaffee, Stroganoff)
 CharacterEventBothWays(0xB, EisRecruit2, Stroganoff, Eiskaffee)
+CharacterEventBothWays(0xC, DoppioRecruit2, Stroganoff, Doppio)
+CharacterEventBothWays(0xA, StroganRecruit3, Doppio, Stroganoff)
+CharacterEventBothWays(0xB, EisRecruit3, Doppio, Eiskaffee)
+CharacterEventBothWays(0xC, DoppioRecruit3, Eiskaffee, Doppio)
 	END_MAIN
 
 MiscBasedEvents:
@@ -31,6 +39,7 @@ MiscBasedEvents:
 	END_MAIN
 
 LocationBasedEvents:
+Seize(13,1)
 Vendor(ShopBruh,13,13)
 Armory(ArmoryBruh,2,3)
 Village(0x8,SolVillage,2,6)
@@ -68,17 +77,65 @@ LoadUnit(4,17)
 	UNIT
 
 EnemyUnits:
-UNIT Bandit Brigand 0x1 Level(3, Enemy, 1)     [13,1] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
-UNIT Bandit Brigand 0x1 Level(3, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
+UNIT Alicot General 0x1 Level(2, Enemy, 0)     [13,1] 0b 0x0 0x0 0x0 [SteelBlade,Spear,Tomahawk] BossAI
+UNIT Cultist Shaman 0x1 Level(5, Enemy, 1)     [16,2] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT BadGuy LArmor 0x1 Level(6, Enemy, 1)     [6,8] 0b 0x0 0x0 0x0 [SteelLance,Javelin,] BossAI
+UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [13,16] 0b 0x0 0x0 0x0 [DarkTome2,] AttackInRangeAI
+UNIT BadGuy Raider 0x1 Level(5, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [SteelSword,] AttackInRangeAI
+UNIT BadGuy Deserter 0x1 Level(5, Enemy, 1)     [1,13] 0b 0x0 0x0 0x0 [SteelLance,Javelin] AttackInRangeAI
+UNIT BadGuy Deserter 0x1 Level(6, Enemy, 1)     [13,3] DropItem 0x0 0x0 0x0 [IronLabrys,Javelin] ChargeAI
+UNIT BadGuy Brigand 0x1 Level(5, Enemy, 1)     [0,11] 0b 0x0 0x0 0x0 [IronLabrys,Elixir] AttackInRangeAI
+UNIT UPirate Pirate 0x1 Level(5, Enemy, 1)     [16,15] 0b 0x0 0x0 0x0 [IronLabrys] StallOneTurnAI
+UNIT UPirate Pirate 0x1 Level(6, Enemy, 1)     [14,14] 0b 0x0 0x0 0x0 [IronLabrys] AttackInRangeAI
+UNIT UPirate Pirate 0x1 Level(6, Enemy, 1)     [15,17] 0b 0x0 0x0 0x0 [SteelAxe,HandAxe] StallOneTurnAI
+UNIT BadGuy SCav 0x1 Level(5, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
+UNIT BadGuy SCav 0x1 Level(5, Enemy, 1)     [16,11] 0b 0x0 0x0 0x0 [IronSword,] ChargeAI
+UNIT BadGuy SCav 0x1 Level(6, Enemy, 1)     [1,8] 0b 0x0 0x0 0x0 [SteelSword,SecretBook] ChargeAI
+UNIT BadGuy Raider 0x1 Level(6, Enemy, 1)     [4,7] 0b 0x0 0x0 0x0 [SteelSword,] AttackInRangeAI
+UNIT Cultist Occultist 0x1 Level(6, Enemy, 1)     [16,2] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
+UNIT Cultist Occultist 0x1 Level(5, Enemy, 1)     [11,17] 0b 0x0 0x0 0x0 [Flux,] StallOneTurnAI
+UNIT Cultist Shaman 0x1 Level(7, Enemy, 1)     [0,6] 0b 0x0 0x0 0x0 [DarkTome2,Talisman] BossAI
+UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [2,12] 0b 0x0 0x0 0x0 [DarkTome2] AttackInRangeAI
+UNIT Cultist Hunter 0x1 Level(6, Enemy, 1)     [4,11] 0b 0x0 0x0 0x0 [Longbow,Vulnerary] BossAI
+UNIT Cultist Hunter 0x1 Level(6, Enemy, 1)     [4,11] 0b 0x0 0x0 0x0 [Longbow,Vulnerary] BossAI
+UNIT BadGuy ACav 0x1 Level(5, Enemy, 1)     [15,13] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
+UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [7,16] 0b 0x0 0x0 0x0 [IronBow,] AttackInRangeAI
+UNIT Cultist Mage 0x1 Level(5, Enemy, 1)     [16,8] 0b 0x0 0x0 0x0 [Fire,] ChargeAI
+UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
+UNIT BadGuy Myrmidon 0x1 Level(5, Enemy, 1)     [9,11] 0b 0x0 0x0 0x0 [SteelSword,EnergyRing] AttackInRangeAI
 	UNIT
 	
+	
+	
+Rein1:
+UNIT BadGuy Raider 0x1 Level(6, Enemy, 1)     [16,7] 0b 0x0 0x0 0x0 [IronSword,] ChargeAI
+UNIT BadGuy LCav 0x1 Level(5, Enemy, 1)     [16,16] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
+	UNIT
+	
+Rein2:
+UNIT Cultist Mage 0x1 Level(6, Enemy, 1)     [0,0] 0b 0x0 0x0 0x0 [Thunder,] ChargeAI
+UNIT Cultist Occultist 0x1 Level(6, Enemy, 1)     [1,0] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
+	UNIT
+
+Rein3:
+UNIT UPirate Pirate 0x1 Level(6, Enemy, 1)     [9,17] 0b 0x0 0x0 0x0 [IronLabrys] ChargeAI
+UNIT UPirate Pirate 0x1 Level(6, Enemy, 1)     [10,17] 0b 0x0 0x0 0x0 [IronLabrys, HandAxe] ChargeAI
+	UNIT
+	
+Rein4:
+UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [15,0] 0b 0x0 0x0 0x0 [Flux] ChargeAI
+UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [DarkTome2] ChargeAI
+	UNIT
+
 YoItThem:
 UNIT Stroganoff AArmor 0x1 Level(6, NPC, 0)     [10,8] 0b 0x0 0x0 0x0 [SteelLabrys,Dracoshield] AttackInRangeAI
 UNIT Eiskaffee Hunter 0x1 Level(4, NPC, 0)     [11,9] 0b 0x0 0x0 0x0 [SteelBow,IronRifle] AttackInRangeAI
+UNIT Doppio Soldier 0x1 Level(5, NPC, 0)     [12,8] 0b 0x0 0x0 0x0 [KillerLance, Elixir] ChargeAI
 	UNIT
 
 Traps1:
 GreenSigil(8,15)
+BLST [4,10] KillerBallista
 	ENDTRAP
 	ALIGN 4
 
@@ -126,6 +183,15 @@ CUSA Stroganoff
 NoFade
 ENDA
 
+StroganRecruit3:
+MUSS 0x30
+STAL 33
+Text(Placeholder2)
+MURE 0x2
+CUSA Stroganoff
+NoFade
+ENDA
+
 EisRecruit:
 MUSS 0x30
 STAL 33
@@ -144,11 +210,67 @@ CUSA Eiskaffee
 NoFade
 ENDA
 
+EisRecruit3:
+MUSS 0x30
+STAL 33
+Text(Placeholder2)
+MURE 0x2
+CUSA Eiskaffee
+NoFade
+ENDA
+
+DoppioRecruit:
+MUSS 0x30
+STAL 33
+Text(Placeholder1)
+MURE 0x2
+CUSA Doppio
+NoFade
+ENDA
+
+DoppioRecruit2:
+MUSS 0x30
+STAL 33
+Text(Placeholder2)
+MURE 0x2
+CUSA Doppio
+NoFade
+ENDA
+
+DoppioRecruit3:
+MUSS 0x30
+STAL 33
+Text(Placeholder2)
+MURE 0x2
+CUSA Doppio
+NoFade
+ENDA
+
 BarrelRoll:
 SVAL 0x2 0x0
 CALL 0x9EE1B8
 Text(Placeholder1)
 GiveItem(0x89,0xFFFF)
+NoFade
+ENDA
+
+BottomRightRein:
+SpawnReinforcements(Rein1)
+NoFade
+ENDA
+
+TopLeftRein:
+SpawnReinforcements(Rein2)
+NoFade
+ENDA
+
+WaterfallRein:
+SpawnReinforcements(Rein3)
+NoFade
+ENDA
+
+TopRightRein:
+SpawnReinforcements(Rein4)
 NoFade
 ENDA
 
