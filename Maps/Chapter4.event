@@ -8,11 +8,16 @@ Map:
 #incbin "Chapter4_data.dmp"
 
 MapChanges:
+TileMap(4,6,6,1,2,BigCrack)
 TileMap(0,2,5,1,1,MountCrack)
 TileMap(1,4,1,1,2,DoorCrack)
 TileMap(2,8,4,1,2,CliffCrack)
 TileMap(3,12,5,1,1,ChokeCrack)
 TileMapEnd
+
+BigCrack:
+SHORT 0x210 0x4b8 
+ALIGN 4
 
 MountCrack:
 SHORT 0x8bc 
