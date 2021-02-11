@@ -37,8 +37,10 @@ CharacterEventBothWays(0xC, DoppioRecruit3, Eiskaffee, Doppio)
 
 MiscBasedEvents:
 	CauseGameOverIfLordDies
+	AREA 0xE FountainFunny [7,3] [7,3]
 	AREA 0xE DropThePlank [8,15] [8,15]
 	AREA 0xF BarrelRoll [0,0] [3,1]
+	AREA 0xF LolWhy [6,13] [10,13]
 	END_MAIN
 
 LocationBasedEvents:
@@ -80,7 +82,7 @@ LoadUnit(4,17)
 	UNIT
 
 EnemyUnits:
-UNIT Alicot SArmor 0x1 Level(2, Enemy, 0)     [13,1] 0b 0x0 0x0 0x0 [SteelBlade,Dracoshield] BossAI
+UNIT Alicot SArmor 0x1 Level(2, Enemy, 0)     [13,1] 0b 0x0 0x0 0x0 [SteelBlade,Flamberge,Dracoshield] BossAI
 UNIT Cultist Shaman 0x1 Level(5, Enemy, 1)     [16,2] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
 UNIT Cultist SCav 0x1 Level(5, Enemy, 1)     [11,2] 0b 0x0 0x0 0x0 [SteelSword,] AttackInRangeAI
 UNIT BadGuy LArmor 0x1 Level(6, Enemy, 1)     [6,8] 0b 0x0 0x0 0x0 [SteelLance,Javelin,] BossAI
@@ -119,7 +121,7 @@ UNIT Cultist Occultist 0x1 Level(6, Enemy, 1)     [1,0] 0b 0x0 0x0 0x0 [Flux,] C
 	UNIT
 
 Rein3:
-UNIT UPirate Pirate 0x1 Level(6, Enemy, 1)     [9,17] 0b 0x0 0x0 0x0 [IronLabrys] StallOneTurnAI
+UNIT UPirate Pirate 0x1 Level(6, Enemy, 1)     [9,17] 0b 0x0 0x0 0x0 [Hammer] StallOneTurnAI
 UNIT UPirate Pirate 0x1 Level(6, Enemy, 1)     [10,17] 0b 0x0 0x0 0x0 [IronLabrys, HandAxe] StallOneTurnAI
 	UNIT
 	
@@ -129,12 +131,12 @@ UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [DarkTome2]
 	UNIT
 
 Rein5:
-UNIT BadGuy ACav 0x1 Level(5, Enemy, 1)     [1,17] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
+UNIT BadGuy ACav 0x1 Level(5, Enemy, 1)     [1,17] 0b 0x0 0x0 0x0 [Halberd,] ChargeAI
 UNIT BadGuy SCav 0x1 Level(5, Enemy, 1)     [2,17] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
 	UNIT
 
 Rein6:
-UNIT BadGuy LCav 0x1 Level(6, Enemy, 1)     [16,4] 0b 0x0 0x0 0x0 [SteelLance,Javelin] ChargeAI
+UNIT BadGuy LCav 0x1 Level(6, Enemy, 1)     [16,4] 0b 0x0 0x0 0x0 [HeavySpear,Javelin] ChargeAI
 UNIT BadGuy ACav 0x1 Level(5, Enemy, 1)     [16,5] 0b 0x0 0x0 0x0 [IronLabrys,] ChargeAI
 	UNIT
 
@@ -313,6 +315,14 @@ SVAL 0x2 0x0
 CALL 0x9EE1B8
 Text(Placeholder2)
 GiveItem(GoddessIcon,0xFFFF)
+NoFade
+ENDA
+
+LolWhy:
+SVAL 0x2 0x0
+CALL 0x9EE1B8
+Text(Placeholder2)
+GiveItem(PureWater,0xFFFF)
 NoFade
 ENDA
 
