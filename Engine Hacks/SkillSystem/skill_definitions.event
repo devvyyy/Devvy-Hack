@@ -48,6 +48,10 @@
 //Kelik Zenair
 #define InspireID 44
 
+//BitterCold: foes not at full hp take 2 more magic damage.
+//holy shit why is my room so cold
+#define BitterColdID 91
+
 //Blood Tide: Atk and Hit +5 to adjacent allies.
 //By Sme
 #define BloodTideID 255
@@ -126,7 +130,7 @@
 
 //Tantivy: +10 Hit/Avoid if there are no allies within 3 tiles.
 //Author Unknown (Initial Commit)
-#define TantivyID 91
+#define TantivyID 255
 
 //Up With Arch: Adjacent ally units gain might equal to half this unit's might. (Only if name starts with "Arch")
 //Author Unknown (Initial Commit)
@@ -608,6 +612,10 @@
 //By Datagne
 #define KnightAspirantID 203
 
+//Falcon: When foe's below 75% health, +3 AS.
+//Kelik Zenair
+#define FalconID 67
+
 //Whirlwind: When above 75% health, +15% crit.
 //Kelik Zenair
 #define WhirlwindID 81
@@ -635,6 +643,10 @@
 //Natural Cover: -3 damage taken when on terrain with effects.
 //Author Unknown (Initial Commit)
 #define NaturalCoverID 100
+
+//Thunderclap: +15 crit when enemy is on terrain with effects.
+//Kelik Zenair
+#define ThunderClapID 155
 
 //Opportunist: +4 damage if the foe cannot counter.
 //By Tequila
@@ -676,7 +688,7 @@
 
 //Stance Skills: Bonus to stats when defending.
 //By Snakey1
-#define BracingStanceID 155
+#define BracingStanceID 255
 #define DartingStanceID 255
 #define FierceStanceID 157
 #define KestrelStanceID 158
@@ -792,7 +804,7 @@
 
 //Colossus: Triples Strength. (Skill % activation)
 //Author Unknown (Initial Commit)
-#define ColossusID 67
+#define ColossusID 255
 
 //Corona: Negate enemy resistance. (Skill% activation)
 //By Sme

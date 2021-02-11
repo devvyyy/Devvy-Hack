@@ -2,31 +2,36 @@
 
 #include eastdlib.event
 
-SetChapterData(5,0xE,0,0x38,0x10,0x1B,Map,0x1C,0,0x1D)
-EventPointerTable(0x1D, MapChanges)
+SetChapterData(5,0x2E,0,0x2F,0x30,0x15,Map,0x5,0,0x16)
+EventPointerTable(0x16, MapChanges)
 Map:
 #incbin "Chapter5_data.dmp"
 
 MapChanges:
-TileMap(0,2,5,1,1,MountCrack)
-TileMap(1,4,1,1,2,DoorCrack)
-TileMap(2,8,4,1,2,CliffCrack)
-TileMap(3,12,5,1,1,ChokeCrack)
+TileMap(0,1,14,1,1,WestDoor)
+TileMap(1,0,12,3,3,WestDestroy)
+TileMap(2,13,6,1,1,EastDoor)
+TileMap(3,12,4,3,3,EastDestroy)
+TileMap(4,7,4,3,1,Ch4Snag)
 TileMapEnd
 
-MountCrack:
-SHORT 0x8bc 
+WestDoor:
+SHORT 0x80 
 ALIGN 4
 
-DoorCrack:
-SHORT 0xab8 0x834 
+WestDestroy:
+SHORT 0xc1c 0xc20 0xc24 0xc9c 0xca0 0xca4 0xd1c 0xd20 0xd24 
 ALIGN 4
 
-CliffCrack:
-SHORT 0xab8 0x8c0 
+EastDoor:
+SHORT 0x80 
 ALIGN 4
 
-ChokeCrack:
-SHORT 0x14 
+EastDestroy:
+SHORT 0xc1c 0xc20 0xc24 0xc9c 0xca0 0xca4 0xd1c 0xd20 0xd24 
+ALIGN 4
+
+Ch4Snag:
+SHORT 0xc 0x94 0xa0 
 ALIGN 4
 

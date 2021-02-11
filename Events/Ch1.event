@@ -98,7 +98,7 @@ UNIT Biscotti PegasusKnight 0x1 Level(5, Enemy, 0)     [17,1]  DropItem 0 1 REDA
 UNIT Wreyvine Soldier 0x1 Level(2, Enemy, 1)     [13,3] 0 0 1 REDA10R3 [IronLance,] AttackInRangeAI
 UNIT Wreyvine Soldier 0x1 Level(2, Enemy, 1)     [17,5] 0 0 1 REDA16R5 [IronLance,] AttackInRangeAI
 UNIT Wreyvine Soldier 0x1 Level(2, Enemy, 1)     [17,5] 0 0 1 REDA17R3 [IronLance,] AttackInRangeAI
-UNIT Wreyvine LCav 0x1 Level(2, Enemy, 1)     [13,3] 0 0 1 REDA15R2 [IronLance,] [0,0,4,0]
+UNIT Wreyvine LCav 0x1 Level(2, Enemy, 1)     [13,3] 0 0 1 REDA15R2 [Horseslayer,] [0,0,4,0]
 UNIT Wreyvine LCav 0x1 Level(2, Enemy, 1)     [13,3] 0 0 1 REDA13R5 [IronLance,] [0,0,4,0]
 UNIT Wreyvine AArmor 0x1 Level(3, Enemy, 1)     [17,5] DropItem 0 1 REDA18R5 [IronAxe, HandAxe] [0,3,4,32]
 UNIT Wreyvine Soldier 0x1 Level(3, Enemy, 1)     [17,5] 0 0 1 REDA14R7 [Javelin, Vulnerary] [0,3,4,32]
@@ -107,7 +107,7 @@ UNIT Wreyvine PegasusKnight 0x1 Level(3, Enemy, 1)     [8,0] 0 0 1 REDA6R0 [Jave
 UNIT Wreyvine PegasusKnight 0x1 Level(3, Enemy, 1)     [8,0] 0 0 1 REDA5R1 [SteelLance,] AttackInRangeAI
 UNIT Wreyvine PegasusKnight 0x1 Level(3, Enemy, 1)     [8,0] 0 0 1 REDA7R3 [IronLance,] AttackInRangeAI
 UNIT Kisra Priest 0x1 Level(4, Enemy, 0)     [1,0]  DropItem 0 1 REDA2R1 [Physic, Warp,] [14,3,4,32]
-UNIT BadGuy Raider 0x1 Level(4, Enemy, 1)     [1,0]  0 0 1 REDA1R1 [SteelBlade, Sagitar,] [0,3,4,32]
+UNIT BadGuy Raider 0x1 Level(4, Enemy, 1)     [1,0]  0 0 1 REDA1R1 [Armorslayer, Sagitar,] [0,3,4,32]
 UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [0,10] 0 0 1 REDA2R8 [Flux,] AttackInRangeAI
 UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [0,10] 0 0 1 REDA1R12 [Flux, Vulnerary] [0,0,4,0]
 UNIT BadGuy Brigand 0x1 Level(2, Enemy, 1)     [1,1] 0 0 1 REDA2R4 [SteelAxe,] BrigandAI
@@ -231,7 +231,7 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-MusicChange(0x26)
+MusicChange(Tension)
 Text(SnowMountainBG, Ch1Opening1)
 	LOAD1 0x1 Units1
 	LOAD1 0x1 EnemyUnits
@@ -240,6 +240,7 @@ Text(SnowMountainBG, Ch1Opening1)
 	ENDA
 
 EndingScene:
+Music(VictoryBGM)
 Text(SnowMountainBG, Ch1Ending1)
 	MNC2 0x2
 	NoFade

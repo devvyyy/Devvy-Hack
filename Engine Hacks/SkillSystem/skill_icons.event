@@ -5,6 +5,12 @@ SkillIcons:
 //Icon graphics are uncompressed
 #define SkillIcon(skillID) "128*skillID+SkillIcons"
 
+ORG SkillIcon(ThunderClapID)
+#incbin "SkillIcons/ThunderClap.dmp"
+
+ORG SkillIcon(BitterColdID)
+#incbin "SkillIcons/BitterCold.dmp"
+
 ORG SkillIcon(HighRollerID)
 #incbin "SkillIcons/HighRoller.dmp"
 
