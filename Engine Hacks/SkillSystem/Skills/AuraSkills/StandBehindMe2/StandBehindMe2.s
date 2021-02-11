@@ -1,5 +1,6 @@
-@Blue Flame: Attack +2. If adjacent to an ally, Attack +4.
-.equ BlueFlameID, AuraSkillCheck+4
+@Stand Behind Me: +2 def to adjacent allies, +2 def to unit if adjacent to an ally.
+.equ AuraSkillCheck, SkillTester+4
+.equ StandBehindMe2ID, AuraSkillCheck+4
 .thumb
 push {r4-r7,lr}
 @goes in the battle loop.
@@ -19,35 +20,32 @@ lsl r2, #0x10 @0x20000 negate def/res
 tst r1, r2
 bne Done
 
-@check for the skill
+CheckSkill:
+@now check for the skill
+ldr r0, SkillTester
+mov lr, r0
+mov r0, r4 @attacker
+ldr r1, StandBehindMe2ID
+.short 0xf800
+cmp r0, #0
+beq Done
+
+@Check if there are allies adjacent
 ldr r0, AuraSkillCheck
 mov lr, r0
 mov r0, r4 @attacker
-ldr r1, BlueFlameID
+mov r1, #0
 mov r2, #0 @can_trade
 mov r3, #1 @range
 .short 0xf800
 cmp r0, #0
 beq Done
 
-@ mov r0, r5
-@ add     r0,#0x5A    @Move to the defender's damage.
-@ ldrh    r3,[r0]     @Load the defender's damage into r3.
-@ sub     r3,#2    @Subtract 2 from the defender's damage.
-@ strh    r3,[r0]     @Store defender avoid.
-
 mov r0, r4
-add     r0,#0x5A    @Move to the attacker's DEF.
+add     r0,#0x6A    @Move to the attacker's DEF.
 ldrh    r3,[r0]     @Load the attacker's DEF into r3.
-sub     r3,#2    @sub 2.
+add     r3,#2    @add 2.
 strh    r3,[r0]     @Store.
-
-@testing
-mov r0, r4
-add r0, #0x5c @attacker defense
-ldrh r3, [r0]
-add r3, #2
-strh r3, [r0]
 
 Done:
 pop {r4-r7}
@@ -55,6 +53,7 @@ pop {r0}
 bx r0
 .align
 .ltorg
-AuraSkillCheck:
+SkillTester:
+@ POIN SkillTester
 @ POIN AuraSkillCheck
-@ WORD BlueFlameID
+@ WORD StandBehindMe2ID

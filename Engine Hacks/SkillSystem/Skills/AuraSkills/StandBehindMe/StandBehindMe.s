@@ -1,5 +1,5 @@
-@Blue Flame: Attack +2. If adjacent to an ally, Attack +4.
-.equ BlueFlameID, AuraSkillCheck+4
+@Stand Behind Me: +2 def to adjacent allies, +2 def to unit if adjacent to an ally.
+.equ StandBehindMeID, AuraSkillCheck+4
 .thumb
 push {r4-r7,lr}
 @goes in the battle loop.
@@ -19,11 +19,12 @@ lsl r2, #0x10 @0x20000 negate def/res
 tst r1, r2
 bne Done
 
-@check for the skill
+CheckSkill:
+@now check for the skill
 ldr r0, AuraSkillCheck
 mov lr, r0
 mov r0, r4 @attacker
-ldr r1, BlueFlameID
+ldr r1, StandBehindMeID
 mov r2, #0 @can_trade
 mov r3, #1 @range
 .short 0xf800
@@ -57,4 +58,4 @@ bx r0
 .ltorg
 AuraSkillCheck:
 @ POIN AuraSkillCheck
-@ WORD BlueFlameID
+@ WORD StandBehindMeID

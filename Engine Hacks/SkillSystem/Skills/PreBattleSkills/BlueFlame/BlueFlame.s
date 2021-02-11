@@ -17,7 +17,7 @@ beq End
 
 @in this part, only add 2.
 
-mov r0,#0x5A
+mov r0,#0x5C
 add r0,r4
 ldrb r1,[r0]
 add r1,#2

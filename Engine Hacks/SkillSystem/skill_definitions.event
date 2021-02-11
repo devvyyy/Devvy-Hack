@@ -745,7 +745,7 @@
 
 //Quick Draw: +4 Damage when initiating battle.
 //Author Unknown (Initial Commit)
-#define QuickDrawID 110
+#define QuickDrawID 255
 
 // Arcane Blade: When initiating battle at 1 range: Add 3+(Mag/2) to Hit and Crit.
 //By Zeta
@@ -753,7 +753,11 @@
 
 //Blue Flame: Attack +2. When adjacent to an ally, Attack +4.
 //By Sme
-#define BlueFlameID 255
+#define BlueFlameID 110
+
+//Stand Behind Me: When adjacent to an ally, Def +2. Def +2 to adjacent allies.
+//Kelik Zenair
+#define StandBehindMeID 255
 
 //Double Lion: All weapons are treated as brave.
 //By Sme

@@ -29,7 +29,7 @@ AREA 0x65 WeAreDead [16,11] [16,12]
 	END_MAIN
 
 LocationBasedEvents:
-
+Chest(Illuminate,16,4)
 	END_MAIN
 
 Dunno1:
@@ -89,7 +89,7 @@ UNIT BadGuy Fighter 0x1 Level(7, Enemy, 1)     [10,9] DropItem 0x0 0x0 0x0 [Stee
 	UNIT
 
 TankyHealerWTF:
-UNIT Brulee Priest 0x1 Level(4, Ally, 0)     [15,10] 0x0 0x0 0x0 0x0 [Heal,TorchStaff] AttackInRangeAI
+UNIT Brulee Priest 0x1 Level(4, Ally, 0)     [15,10] 0x0 0x0 0x0 0x0 [Heal,Haze] AttackInRangeAI
 UNIT Mocha PegasusRider 0x1 Level(5, Ally, 0)     [4,14] 0x0 0x0 0x0 0x0 [IronLance,Horseslayer] AttackInRangeAI
 UNIT
 
