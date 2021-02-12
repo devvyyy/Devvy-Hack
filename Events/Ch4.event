@@ -38,6 +38,8 @@ AREA 0x65 WeAreDead [16,11] [16,12]
 	END_MAIN
 
 LocationBasedEvents:
+Door(8,1)
+Door(4,2)
 Chest(Illuminate,16,4)
 Chest(MagnumLance,2,3)
 Chest(AnimaTome3,1,4)
@@ -83,28 +85,28 @@ LoadUnit(10,12)
 
 EnemyUnits:
 UNIT Hartmann Druid 0x1 Level(5, Enemy, 1)     [1,1] DropItem 0x0 0x0 0x0 [DarkTome5,GoddessIcon] BossAI
-UNIT Cultist Shaman 0x1 Level(7, Enemy, 1)     [2,2] 0b 0x0 0x0 0x0 [DarkTome2,] AttackInRangeAI
-UNIT Cultist Shaman 0x1 Level(7, Enemy, 1)     [6,1] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
-UNIT Cultist Shaman 0x1 Level(7, Enemy, 1)     [6,3] 0b 0x0 0x0 0x0 [DarkTome2,] AttackInRangeAI
-UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [7,2] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
-UNIT BadGuy LArmor 0x1 Level(7, Enemy, 1)     [9,2] 0b 0x0 0x0 0x0 [IronGlaive,ShortSpear,] BossAI
-UNIT Cultist Shaman 0x1 Level(7, Enemy, 1)     [13,2] 0b 0x0 0x0 0x0 [DarkTome2,] AttackInRangeAI
-UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [11,3] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
-UNIT BadGuy SCav 0x1 Level(7, Enemy, 1)     [12,5] 0b 0x0 0x0 0x0 [IronBlade,] DefendAI
+UNIT Hiems Shaman 0x1 Level(7, Enemy, 1)     [2,2] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT Hiems Shaman 0x1 Level(7, Enemy, 1)     [5,2] DropItem 0x0 0x0 0x0 [DarkTome2,DoorKey] BossAI
+UNIT Hiems Shaman 0x1 Level(7, Enemy, 1)     [6,3] 0b 0x0 0x0 0x0 [DarkTome2,] AttackInRangeAI
+UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [7,1] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT BadGuy LArmor 0x1 Level(7, Enemy, 1)     [9,2] DropItem 0x0 0x0 0x0 [ShortSpear,DoorKey] BossAI
+UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [11,3] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT BadGuy SCav 0x1 Level(7, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [IronBlade,] DefendAI
 UNIT BadGuy ACav 0x1 Level(6, Enemy, 1)     [12,8] 0b 0x0 0x0 0x0 [Halberd,] StallOneTurnAI
-UNIT Cultist Occultist 0x1 Level(6, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [Flux] ChargeAI
-UNIT Cultist Occultist 0x1 Level(7, Enemy, 1)     [9,5] 0b 0x0 0x0 0x0 [Flux,Talisman] StallOneTurnAI
-UNIT Cultist Occultist 0x1 Level(7, Enemy, 1)     [15,2] 0b 0x0 0x0 0x0 [DarkTome2,] AttackInRangeAI
+UNIT FlyingMag Occultist 0x1 Level(6, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [Flux] ChargeAI
+UNIT FlyingMag Occultist 0x1 Level(7, Enemy, 1)     [9,5] 0b 0x0 0x0 0x0 [Flux,Talisman] StallOneTurnAI
+UNIT FlyingMag Occultist 0x1 Level(7, Enemy, 1)     [15,2] 0b 0x0 0x0 0x0 [Flux,] StallOneTurnAI
 UNIT BadGuy Deserter 0x1 Level(7, Enemy, 1)     [8,9] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
 UNIT UPirate Pirate 0x1 Level(6, Enemy, 1)     [15,0] 0b 0x0 0x0 0x0 [SteelAxe] StallOneTurnAI
 UNIT BadGuy Deserter 0x1 Level(6, Enemy, 1)     [14,8] 0b 0x0 0x0 0x0 [IronLance] DefendAI
-UNIT BadGuy Mercenary 0x1 Level(7, Enemy, 1)     [15,7] 0b 0x0 0x0 0x0 [IronSword,] StallOneTurnAI
+UNIT BadGuy Mercenary 0x1 Level(7, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [IronSword,] StallOneTurnAI
 UNIT BadGuy Mercenary 0x1 Level(7, Enemy, 1)     [5,9] 0b 0x0 0x0 0x0 [Zanbato,] DefendAI
 UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [3,10] 0b 0x0 0x0 0x0 [IronAxe,] DefendAI
-UNIT Cultist Shaman 0x1 Level(7, Enemy, 1)     [5,12] 0b 0x0 0x0 0x0 [DarkTome2,] DefendAI
-UNIT Cultist Shaman 0x1 Level(7, Enemy, 1)     [2,2] 0b 0x0 0x0 0x0 [DarkTome2,] DefendAI
-UNIT BadGuy Fighter 0x1 Level(7, Enemy, 1)     [10,9] DropItem 0x0 0x0 0x0 [SteelAxe,Torch] DefendAI
-UNIT Cultist Mage 0x1 Level(6, Enemy, 1)     [12,10] 0 0 1 REDA9R1 [AnimaTome2] DefendAI
+UNIT Hiems Shaman 0x1 Level(7, Enemy, 1)     [5,12] 0b 0x0 0x0 0x0 [DarkTome2,] DefendAI
+UNIT Hiems Mage 0x1 Level(5, Enemy, 0)     [6,5] 0b 0x0 0x0 0x0 [AnimaTome1,] WallAI
+UNIT Hiems Shaman 0x1 Level(7, Enemy, 1)     [2,2] 0b 0x0 0x0 0x0 [Flux,] DefendAI
+UNIT BadGuy Fighter 0x1 Level(7, Enemy, 1)     [12,5] 0x0 0x0 0x0 0x0 [SteelAxe,] DefendAI
+UNIT Hiems Mage 0x1 Level(6, Enemy, 1)     [11,10] DropItem 0x0 0x0 0x0 [AnimaTome2, 0x70] DefendAI
 	UNIT
 
 NPCEPIC:
@@ -116,20 +118,19 @@ UNIT
 
 TankyHealerWTF:
 UNIT Brulee Priest 0x1 Level(4, Ally, 0)     [15,10] 0x0 0x0 0x0 0x0 [Heal,Haze] AttackInRangeAI
-UNIT Mocha PegasusRider 0x1 Level(5, Ally, 0)     [4,14] 0x0 0x0 0x0 0x0 [IronLance,Horseslayer] AttackInRangeAI
-UNIT Zopf Myrmidon 0x1 Level(5, Ally, 0)     [4,15] 0x0 0x0 0x0 0x0 [SteelSword,PureWater] AttackInRangeAI
-UNIT Irene Myrmidon_F 0x1 Level(5, Ally, 0)     [4,16] 0x0 0x0 0x0 0x0 [KillingEdge,Vulnerary] AttackInRangeAI
+UNIT Atheya WyvernRider_F 0x1 Level(5, Ally, 0)     [4,14] 0x0 0x0 0x0 0x0 [IronAxe,Halberd] AttackInRangeAI
 UNIT
 
 ArenaRein:
-UNIT Cultist Shaman 0x1 Level(7, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [DarkTome2,] DefendAI
-UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [DarkTome1,RedGem] DefendAI
+UNIT Hiems Shaman 0x1 Level(7, Enemy, 1)     [6,0] 0b 0x0 0x0 0x0 [DarkTome2,] WallAI
+UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [DarkTome1,RedGem] DefendAI
+UNIT Hiems Mage 0x1 Level(7, Enemy, 1)     [9,0] 0 0 1 REDA9R1 [Fire] StallOneTurnAI
 UNIT
 
 ArenaRein2:
-UNIT Cultist Occultist 0x1 Level(7, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [Flux,] DefendAI
-UNIT Cultist Brigand 0x1 Level(7, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [SteelAxe,] DefendAI
-UNIT Cultist Mage 0x1 Level(7, Enemy, 1)     [9,0] 0 0 1 REDA9R1 [AnimaTome2] DefendAI
+UNIT FlyingMag Occultist 0x1 Level(7, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
+UNIT Hiems Brigand 0x1 Level(7, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [SteelAxe,] DefendAI
+UNIT Hiems Mage 0x1 Level(7, Enemy, 1)     [9,0] 0 0 1 REDA9R1 [AnimaTome2] DefendAI
 UNIT
 
 WaterRein:
@@ -139,16 +140,20 @@ UNIT UPirate Pirate 0x1 Level(7, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [SteelAxe] 
 UNIT
 
 WaterRein2:
+UNIT FlyingMag Occultist 0x1 Level(7, Enemy, 1)     [15,0] 0b 0x0 0x0 0x0[Flux] ChargeAI
 UNIT UPirate Pirate 0x1 Level(7, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [SteelAxe] DefendAI
 UNIT 0x64 Thief 0x1 Level(4, Enemy, 1)     [16,3] 0b 0x0 0x0 0x0 [IronSword,Lockpick] ThiefAI
 UNIT
 
 MountRein:
-UNIT Cultist Occultist 0x1 Level(7, Enemy, 1)     [0,7] 0 0 1 REDA2R7 [Flux] ChargeAI
+UNIT FlyingMag Occultist 0x1 Level(7, Enemy, 1)     [0,7] 0 0 1 REDA2R7 [Flux] ChargeAI
+UNIT FlyingMag Occultist 0x1 Level(6, Enemy, 1)     [0,6] 0 0 1 REDA2R6 [DarkTome2] ChargeAI
+UNIT FlyingPhys PegRider 0x1 Level(6, Enemy, 1)     [0,7] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
 UNIT
 
 MountRein2:
-UNIT BadGuy PegRider 0x1 Level(6, Enemy, 1)     [16,8] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
+UNIT FlyingPhys PegRider 0x1 Level(6, Enemy, 1)     [16,8] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
+UNIT FlyingPhys PegRider 0x1 Level(5, Enemy, 1)     [16,7] 0b 0x0 0x0 0x0 [IronLance,Javelin] ChargeAI
 UNIT
 
 ThiefRein:
@@ -156,20 +161,36 @@ UNIT 0x64 Thief 0x1 Level(5, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [KillingEdge,Loc
 UNIT
 
 StairRein:
-UNIT BadGuy PegRider 0x1 Level(6, Enemy, 1)     [5,0] 0b 0x0 0x0 0x0 [IronLance] WallAI
-UNIT BadGuy Archer 0x1 Level(5, Enemy, 1)     [6,0] 0b 0x0 0x0 0x0 [IronBow] WallAI
-UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [7,0] 0b 0x0 0x0 0x0 [Flux] WallAI
+UNIT FlyingPhys PegRider 0x1 Level(6, Enemy, 1)     [5,0] 0b 0x0 0x0 0x0 [IronLance] WallAI
+UNIT BadGuy Archer 0x1 Level(5, Enemy, 1)     [6,0] 0b 0x0 0x0 0x0 [IronBow] DefendAI
+UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [7,0] 0b 0x0 0x0 0x0 [Flux] DefendAI
 UNIT
 
 StairRein2:
 UNIT BadGuy Archer 0x1 Level(5, Enemy, 1)     [5,0] 0b 0x0 0x0 0x0 [SteelBow] WallAI
-UNIT Cultist Mage 0x1 Level(7, Enemy, 1)     [6,0] 0b 0x0 0x0 0x0 [AnimaTome1] DefendAI
-UNIT BadGuy Mercenary 0x1 Level(6, Enemy, 1)     [7,0] 0b 0x0 0x0 0x0 [SteelSword,] WallAI
+UNIT Hiems Mage 0x1 Level(7, Enemy, 1)     [6,0] 0b 0x0 0x0 0x0 [AnimaTome1] DefendAI
+UNIT BadGuy Mercenary 0x1 Level(6, Enemy, 1)     [7,0] 0b 0x0 0x0 0x0 [SteelSword,] DefendAI
 UNIT
 
 ArenaRein3:
-UNIT Cultist Mage 0x1 Level(6, Enemy, 1)     [16,3] 0b 0x0 0x0 0x0 [AnimaTome2] DefendAI
-UNIT Cultist Occultist 0x1 Level(7, Enemy, 1)     [0,7] 0 0 1 REDA1R8 [AnimaTome1] ChargeAI
+UNIT Hiems Mage 0x1 Level(6, Enemy, 1)     [16,3] 0b 0x0 0x0 0x0 [AnimaTome2] DefendAI
+UNIT FlyingMag Occultist 0x1 Level(7, Enemy, 1)     [0,7] 0 0 1 REDA1R8 [AnimaTome1] ChargeAI
+UNIT
+
+InsideRein:
+UNIT BadGuy Myrmidon 0x1 Level(5, Enemy, 1)     [0,2] DropItem 0x0 0x0 0x0 [IronSword,Vulnerary] DefendAI
+UNIT BadGuy ACav 0x1 Level(6, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [IronAxe,] DefendAI
+UNIT FlyingMag Occultist 0x1 Level(7, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [DarkTome1,] WallAI
+UNIT
+
+InsideRein2:
+UNIT FlyingMag Occultist 0x1 Level(6, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [DarkTome1,] WallAI
+UNIT FlyingMag Occultist 0x1 Level(7, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [DarkTome1,] WallAI
+UNIT
+
+FlierRein:
+UNIT FlyingPhys PegRider 0x1 Level(6, Enemy, 1)     [13,0] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
+UNIT FlyingPhys PegRider 0x1 Level(7, Enemy, 1)     [14,0] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
 UNIT
 
 Traps1:
@@ -219,11 +240,15 @@ ENDA
 
 Turn3Rein:
 LoadReinforcements(WaterRein)
+STAL 20
+LoadReinforcements(InsideRein)
 VCWF 3
 NoFade
 ENDA
 
 Turn4Rein:
+LoadReinforcements(FlierRein)
+STAL 20
 LoadReinforcements(ThiefRein)
 NoFade
 ENDA
@@ -233,6 +258,7 @@ LoadReinforcements(MountRein)
 STAL 20
 LoadReinforcements(MountRein2)
 VCWF 2
+Text(HartBackup)
 NoFade
 ENDA
 
@@ -251,6 +277,8 @@ ENDA
 
 Turn8Rein:
 LoadReinforcements(StairRein2)
+STAL 20
+LoadReinforcements(InsideRein2)
 NoFade
 ENDA
 
@@ -263,7 +291,7 @@ WeAreDead:
 CHECK_ACTIVE
 SVAL 1 BadGuy
 BEQ 0x1 0xC 0x1
-SVAL 1 Cultist
+SVAL 1 Hiems
 BEQ 0x1 0xC 0x1
 SVAL 1 UPirate
 BEQ 0x1 0xC 0x1

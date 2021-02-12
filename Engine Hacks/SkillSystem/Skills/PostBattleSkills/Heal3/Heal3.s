@@ -8,10 +8,6 @@
 .equ heal7hp, 7
 .thumb
 push	{lr}
-@check if dead
-ldrb	r0, [r4,#0x13]
-cmp	r0, #0x00
-beq	End
 
 @check if attacked this turn
 ldrb 	r0, [r6,#0x11]	@action taken this turn

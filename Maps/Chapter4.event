@@ -10,9 +10,14 @@ Map:
 MapChanges:
 TileMap(4,6,6,1,2,BigCrack)
 TileMap(0,2,5,1,1,MountCrack)
-TileMap(1,4,1,1,2,DoorCrack)
+TileMap(1,4,0,1,2,DoorCrack)
 TileMap(2,8,4,1,2,CliffCrack)
-TileMap(3,12,5,1,1,ChokeCrack)
+TileMap(3,13,5,1,1,ChokeCrack)
+TileMap(5,1,4,1,1,LeftChest1)
+TileMap(6,2,3,1,1,LeftChest2)
+TileMap(7,16,4,1,1,RightChest)
+TileMap(8,4,2,1,2,LeftDoor)
+TileMap(9,8,0,1,3,RightDoor)
 TileMapEnd
 
 BigCrack:
@@ -33,5 +38,25 @@ ALIGN 4
 
 ChokeCrack:
 SHORT 0x14 
+ALIGN 4
+
+LeftChest1:
+SHORT 0x100 
+ALIGN 4
+
+LeftChest2:
+SHORT 0x100 
+ALIGN 4
+
+RightChest:
+SHORT 0x100 
+ALIGN 4
+
+LeftDoor:
+SHORT 0x8b4 0xbb8 
+ALIGN 4
+
+RightDoor:
+SHORT 0xab8 0x840 0xbb8 
 ALIGN 4
 

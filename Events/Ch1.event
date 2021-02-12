@@ -13,7 +13,7 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TURN 0x0 RosenEvent [2,0] 0x0
+TURN 0x0 IreneEvent [2,0] 0x0
 TURN 0x0 LiliEvent [3,0] 0x0
 TURN 0x0 ShamanReinforcementsLeft [3,0] 0x0
 TURN 0x0 DisplayLingerText [4,0] 0x0
@@ -85,16 +85,16 @@ UNIT
 Units1:
 UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [6,10] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
 UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [7,10] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
-UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [8,10] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
+UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [10,10] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
 UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [9,10] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
 UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [6,11] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
 UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [7,11] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
-UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [8,11] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
+UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [10,11] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
 UNIT Latte Archer_F 0x1 Level(2, Ally, 0)   [9,11] 0b 0x0 0x0 0x0 [IronBow, Longbow] [0x0,0x0,0x0,0x0]
 UNIT
 
 EnemyUnits:
-UNIT Biscotti PegasusKnight 0x1 Level(5, Enemy, 0)     [17,1]  DropItem 0 1 REDA17R0 [IronLance, Elixir,] [0,3,4,32]
+UNIT Biscotti PegasusKnight 0x1 Level(5, Enemy, 0)     [17,1]  DropItem 0 1 REDA17R0 [IronLance, Vulnerary,] [0,3,4,32]
 UNIT Wreyvine Soldier 0x1 Level(2, Enemy, 1)     [13,3] 0 0 1 REDA10R3 [IronLance,] AttackInRangeAI
 UNIT Wreyvine Soldier 0x1 Level(2, Enemy, 1)     [17,5] 0 0 1 REDA16R5 [IronLance,] AttackInRangeAI
 UNIT Wreyvine Soldier 0x1 Level(2, Enemy, 1)     [17,5] 0 0 1 REDA17R3 [IronLance,] AttackInRangeAI
@@ -115,7 +115,7 @@ UNIT BadGuy Brigand 0x1 Level(3, Enemy, 1)     [0,10] 0 0 1 REDA4R9 [SteelAxe,] 
 UNIT BadGuy LArmor 0x1 Level(3, Enemy, 1)     [1,1] 0 0 1 REDA1R6 [IronGlaive, Javelin] [0,3,4,32]
 UNIT BadGuy Hunter 0x1 Level(3, Enemy, 1)     [2,0] 0b 0x0 0x0 0x0 [Longbow,] [0,3,4,32]
 UNIT BadGuy Hunter 0x1 Level(3, Enemy, 1)     [18,13] DropItem 0x0 0x0 REDA18R12 [SteelBow,] [0,0,4,0]
-UNIT BadGuy SCav 0x1 Level(3, Enemy, 1)     [15,13] 0b 0x0 0x0 REDA13R11 [IronSword,] [0,0,4,0]
+UNIT BadGuy ACav 0x1 Level(3, Enemy, 1)     [15,13] 0b 0x0 0x0 REDA13R11 [IronAxe,] [0,0,4,0]
 UNIT
 
 SReinforcements1:
@@ -138,22 +138,22 @@ UNIT BadGuy Deserter 0x1 Level(3, Enemy, 1)     [4,12] 0 0 1 REDA5R12 [SteelLanc
 UNIT BadGuy Hunter 0x1 Level(3, Enemy, 1)     [4,12] 0 0 1 REDA3R12 [Longbow,] [0,0,4,0]
 UNIT
 
-RosenRein:
-UNIT Rosen Fighter 0x1 Level(4, Ally, 0)   [16,13] 0 0 1 REDA15R12 [IronAxe,] [0x0,0x0,0x0,0x0]
+IreneRein:
+UNIT Irene Myrmidon_F 0x1 Level(4, Ally, 0)   [16,13] 0 0 1 REDA15R11 [KillingEdge,Vulnerary] [0x0,0x0,0x0,0x0]
 UNIT
 
 LiliRein:
 UNIT Lili Monk 0x1 Level(2, Ally, 0)   [0,10] 0 0 1 REDA2R10 [Divine, Lightning,] [0x0,0x0,0x0,0x0]
 UNIT
 
-RosenEvent:
-	LOAD1 0x1 RosenRein
+IreneEvent:
+	LOAD1 0x1 IreneRein
 	ENUN
-	CAM1 Rosenfeld
+	CAM1 Irene
 	STAL 20
-	CUMO Rosenfeld
+	CUMO Irene
 	TEXTSTART
-	Text(RosenAppearing)
+	Text(IreneAppearing)
 	TEXTEND
 	NoFade
 	ENDA
