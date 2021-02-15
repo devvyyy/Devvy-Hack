@@ -38,9 +38,9 @@ CharacterEventBothWays(0xC, DoppioRecruit3, Eiskaffee, Doppio)
 MiscBasedEvents:
 	CauseGameOverIfLordDies
 	AREA 0xE FountainFunny [7,3] [7,3]
-	AREA 0xE DropThePlank [8,15] [8,15]
-	AREA 0xF BarrelRoll [0,0] [3,1]
-	AREA 0xF LolWhy [6,13] [10,13]
+	AREA 0xF DropThePlank [8,15] [8,15]
+	AREA 0x10 BarrelRoll [0,0] [3,1]
+	AREA 0x11 LolWhy [6,13] [10,13]
 	END_MAIN
 
 LocationBasedEvents:
@@ -87,7 +87,7 @@ UNIT Cultist Shaman 0x1 Level(5, Enemy, 1)     [16,2] 0b 0x0 0x0 0x0 [Flux,] Att
 UNIT Cultist SCav 0x1 Level(5, Enemy, 1)     [11,2] 0b 0x0 0x0 0x0 [SteelSword,] AttackInRangeAI
 UNIT BadGuy LArmor 0x1 Level(6, Enemy, 1)     [6,8] 0b 0x0 0x0 0x0 [SteelLance,Javelin,] BossAI
 UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [13,16] 0b 0x0 0x0 0x0 [DarkTome2,] AttackInRangeAI
-UNIT BadGuy Raider 0x1 Level(5, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [SteelSword,] AttackInRangeAI
+UNIT BadGuy Raider 0x1 Level(5, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [SteelSword,BlueGem] AttackInRangeAI
 UNIT BadGuy Deserter 0x1 Level(5, Enemy, 1)     [1,13] 0b 0x0 0x0 0x0 [SteelLance,Javelin] AttackInRangeAI
 UNIT BadGuy Deserter 0x1 Level(6, Enemy, 1)     [13,3] DropItem 0x0 0x0 0x0 [IronLabrys,Javelin] ChargeAI
 UNIT BadGuy Brigand 0x1 Level(5, Enemy, 1)     [0,11] 0b 0x0 0x0 0x0 [Halberd,Elixir] AttackInRangeAI
@@ -104,7 +104,7 @@ UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [2,12] 0b 0x0 0x0 0x0 [DarkTome2]
 UNIT Cultist Hunter 0x1 Level(6, Enemy, 1)     [4,11] 0b 0x0 0x0 0x0 [Longbow,Vulnerary] BossAI
 UNIT Cultist Hunter 0x1 Level(6, Enemy, 1)     [14,9] 0b 0x0 0x0 0x0 [SteelBow,] BossAI
 UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [7,16] 0b 0x0 0x0 0x0 [IronBow,] AttackInRangeAI
-UNIT Cultist Mage 0x1 Level(5, Enemy, 1)     [6,17] 0b 0x0 0x0 0x0 [Fire,Vulnerary] ChargeAI
+UNIT Cultist Mage 0x1 Level(5, Enemy, 1)     [6,17] DropItem 0x0 0x0 0x0 [Fire,Vulnerary] ChargeAI
 UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
 UNIT BadGuy Archer 0x1 Level(5, Enemy, 1)     [9,11] 0b 0x0 0x0 0x0 [IronBow] AttackInRangeAI
 	UNIT
@@ -155,7 +155,7 @@ UNIT Doppio Soldier 0x1 Level(5, NPC, 0)     [12,8] 0b 0x0 0x0 0x0 [KillerLance,
 
 Traps1:
 GreenSigil(8,15)
-BLST [4,10] KillerBallista
+BLST [4,10] IronBallista
 	ENDTRAP
 	ALIGN 4
 
