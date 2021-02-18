@@ -47,6 +47,7 @@ ALIGN 4
 	ALIGN 4
 	EventPointerTable(0x2E, FE6SnowFieldsTilesetImage)
     EventPointerTable(0x2F, FE6SnowFieldsTilesetPalette)
+	EventPointerTable(0x54, FE6SnowFieldsAnims)
 	EventPointerTable(0x34, FE6SnowFieldsTilesetSunsetPalette)
 	EventPointerTable(0x60, FE6SnowFieldsTilesetNightPalette)
 	EventPointerTable(0x30, FE6SnowFieldsTilesetMapConfig)
@@ -169,6 +170,60 @@ tilesetAnimation(0x1C,0x1000,SVillageAnim12)
 tilesetAnimation(0x1C,0x1000,SVillageAnim13)
 tilesetAnimation(0x1C,0x1000,SVillageAnim14)
 tilesetAnimation(0x1C,0x1000,SVillageAnim15)
+WORD 0 0
+ALIGN 4
+
+	ALIGN 4
+FE6Fields0:
+#incext png2dmp "FE6SnowFields/Anims/anim.mapanime 1_000.png"
+FE6Fields1:
+#incext png2dmp "FE6SnowFields/Anims/anim.mapanime 1_001.png"
+FE6Fields2:
+#incext png2dmp "FE6SnowFields/Anims/anim.mapanime 1_002.png"
+FE6Fields3:
+#incext png2dmp "FE6SnowFields/Anims/anim.mapanime 1_003.png"
+FE6Fields4:
+#incext png2dmp "FE6SnowFields/Anims/anim.mapanime 1_004.png"
+FE6Fields5:
+#incext png2dmp "FE6SnowFields/Anims/anim.mapanime 1_005.png"
+FE6Fields6:
+#incext png2dmp "FE6SnowFields/Anims/anim.mapanime 1_006.png"
+FE6Fields7:
+#incext png2dmp "FE6SnowFields/Anims/anim.mapanime 1_007.png"
+FE6Fields8:
+#incext png2dmp "FE6SnowFields/Anims/anim.mapanime 1_008.png"
+FE6Fields9:
+#incext png2dmp "FE6SnowFields/Anims/anim.mapanime 1_009.png"
+FE6Fields10:
+#incext png2dmp "FE6SnowFields/Anims/anim.mapanime 1_010.png"
+FE6Fields11:
+#incext png2dmp "FE6SnowFields/Anims/anim.mapanime 1_011.png"
+FE6Fields12:
+#incext png2dmp "FE6SnowFields/Anims/anim.mapanime 1_012.png"
+FE6Fields13:
+#incext png2dmp "FE6SnowFields/Anims/anim.mapanime 1_013.png"
+FE6Fields14:
+#incext png2dmp "FE6SnowFields/Anims/anim.mapanime 1_014.png"
+FE6Fields15:
+#incext png2dmp "FE6SnowFields/Anims/anim.mapanime 1_015.png"
+
+FE6SnowFieldsAnims:
+tilesetAnimation(0x1C,0x1000,FE6Fields0)
+tilesetAnimation(0x1C,0x1000,FE6Fields1)
+tilesetAnimation(0x1C,0x1000,FE6Fields2)
+tilesetAnimation(0x1C,0x1000,FE6Fields3)
+tilesetAnimation(0x1C,0x1000,FE6Fields4)
+tilesetAnimation(0x1C,0x1000,FE6Fields5)
+tilesetAnimation(0x1C,0x1000,FE6Fields6)
+tilesetAnimation(0x1C,0x1000,FE6Fields7)
+tilesetAnimation(0x1C,0x1000,FE6Fields8)
+tilesetAnimation(0x1C,0x1000,FE6Fields9)
+tilesetAnimation(0x1C,0x1000,FE6Fields10)
+tilesetAnimation(0x1C,0x1000,FE6Fields11)
+tilesetAnimation(0x1C,0x1000,FE6Fields12)
+tilesetAnimation(0x1C,0x1000,FE6Fields13)
+tilesetAnimation(0x1C,0x1000,FE6Fields14)
+tilesetAnimation(0x1C,0x1000,FE6Fields15)
 WORD 0 0
 ALIGN 4
 

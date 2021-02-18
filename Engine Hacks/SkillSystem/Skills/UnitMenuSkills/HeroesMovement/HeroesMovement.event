@@ -109,9 +109,18 @@ prSwarp_TargetLegality:
 
 prShove_TargetLegality:
 prSmite_TargetLegality:
-    rGetWrapper // Defaults to 0
-        rIfUnitHasNotGuardAI
-            rConstant(True)
+{
+    rGetWrapper // defaults to False
+        rCallSequence(check_blue check_no_guard_ai)
+
+check_blue:
+    rIfUnitHasAllegience(UA_BLUE)
+        rConstant(True)
+
+check_no_guard_ai:
+    rIfUnitHasNotGuardAI
+        rConstant(True)
+}
 		
 // class lists, if enabled
 #ifndef HEROES_MOVEMENT_SKILL_REQUIRED

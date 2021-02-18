@@ -108,6 +108,7 @@ UNIT Hiems Mage 0x1 Level(5, Enemy, 0)     [6,5] 0b 0x0 0x0 0x0 [AnimaTome1,] Wa
 UNIT Hiems Shaman 0x1 Level(7, Enemy, 1)     [2,2] 0b 0x0 0x0 0x0 [Flux,] DefendAI
 UNIT BadGuy Fighter 0x1 Level(7, Enemy, 1)     [12,5] 0x0 0x0 0x0 0x0 [SteelAxe,] DefendAI
 UNIT Hiems Mage 0x1 Level(6, Enemy, 1)     [11,10] DropItem 0x0 0x0 0x0 [AnimaTome2, 0x70] DefendAI
+UNIT BadGuy Raider 0x1 Level(6, Enemy, 1)     [6,0] 0x0 0x0 0x0 0x0 [SteelSword,Sagitar] WallAI
 	UNIT
 
 NPCEPIC:
@@ -118,8 +119,8 @@ UNIT HolyGuard Archer 0x1 Level(5, NPC, 1)     [12,12] 0b 0x0 0x0 0x0 [Longbow, 
 UNIT
 
 NPCREIN:
-UNIT HolyGuard Priest 0x1 Level(5, NPC, 1)     [9,15] 0b 0x0 0x0 0x0 [Fear, Physic] HealAI
-UNIT HolyGuard Cleric 0x1 Level(5, NPC, 1)     [10,15] 0b 0x0 0x0 0x0 [Slow, Physic] HealAI
+UNIT HolyGuard Priest 0x1 Level(5, NPC, 1)     [9,15] 0 0 1 REDA9R13 [Fear, Physic] HealAI
+UNIT HolyGuard Cleric 0x1 Level(5, NPC, 1)     [10,15] 0 0 1 REDA10R13 [Slow, Physic] HealAI
 UNIT
 
 TankyHealerWTF:
@@ -184,9 +185,14 @@ UNIT Hiems Mage 0x1 Level(6, Enemy, 1)     [16,3] 0b 0x0 0x0 0x0 [AnimaTome2] De
 UNIT FlyingPhys Brigand 0x1 Level(7, Enemy, 1)     [0,7] 0 0 1 REDA1R8 [IronAxe] ChargeAI
 UNIT
 
+ArenaRein4:
+UNIT BadGuy Raider 0x1 Level(6, Enemy, 1)     [10,0] DropItem 0x0 0x0 0x0 [SteelSword] DefendAI
+UNIT BadGuy Raider 0x1 Level(7, Enemy, 1)     [11,0] DropItem 0x0 0x0 0x0 [IronSword] DefendAI
+UNIT
+
 InsideRein:
 UNIT BadGuy Myrmidon 0x1 Level(5, Enemy, 1)     [0,2] DropItem 0x0 0x0 0x0 [IronSword,Vulnerary] WallAI
-UNIT BadGuy ACav 0x1 Level(6, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [IronAxe,] WallAI
+UNIT BadGuy ACav 0x1 Level(6, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [IronAxe,HandAxe] WallAI
 UNIT FlyingMag Occultist 0x1 Level(7, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [DarkTome1,] WallAI
 UNIT
 
@@ -243,7 +249,9 @@ ENDA
 
 Turn2Rein:
 LoadReinforcements(ArenaRein)
-VCWF 5
+STAL 20
+LoadReinforcements(ArenaRein4)
+VCWF 6
 NoFade
 ENDA
 
@@ -255,7 +263,7 @@ STAL 20
 CAM1 [9,13]
 LOAD1 0x1 NPCREIN
 Text(Placeholder1)
-VCWF 4
+VCWF 5
 NoFade
 ENDA
 
@@ -263,7 +271,7 @@ Turn4Rein:
 LoadReinforcements(FlierRein)
 STAL 20
 LoadReinforcements(ThiefRein)
-VCWF 3
+VCWF 4
 NoFade
 ENDA
 
@@ -271,14 +279,14 @@ Turn5Rein:
 LoadReinforcements(MountRein)
 STAL 20
 LoadReinforcements(MountRein2)
-VCWF 2
+VCWF 3
 Text(HartBackup)
 NoFade
 ENDA
 
 Turn6Rein:
 LoadReinforcements(ArenaRein3)
-VCWF 1
+VCWF 2
 NoFade
 ENDA
 
@@ -286,6 +294,7 @@ Turn7Rein:
 LoadReinforcements(StairRein)
 STAL 20
 LoadReinforcements(WaterRein2)
+VCWF 1
 NoFade
 ENDA
 
