@@ -19,6 +19,7 @@ TURN 0x0 ShamanReinforcementsLeft [3,0] 0x0
 TURN 0x0 DisplayLingerText [4,0] 0x0
 TURN 0x0 GetOutOfSpawnPls [5,0] 0x0
 TURN 0x0 LeftFortRein[6,0] 0x0
+TURN 0x0 EastRein[7,0] 0x0
 TURN 0x0 RightFortRein[8,0] 0x0
 TURN 0x0 BiscottiChargeWarn[8,0] 0x80
 TURN 0x0 BiscottiCharge[9,0] 0x0
@@ -95,7 +96,7 @@ UNIT
 
 EnemyUnits:
 UNIT Biscotti PegasusKnight 0x1 Level(5, Enemy, 0)     [17,1]  DropItem 0 1 REDA17R0 [IronLance, Vulnerary,] [0,3,4,32]
-UNIT Wreyvine Soldier 0x1 Level(2, Enemy, 1)     [13,3] 0 0 1 REDA10R3 [IronLance,] AttackInRangeAI
+UNIT Wreyvine Soldier 0x1 Level(2, Enemy, 1)     [13,3] 0 0 1 REDA10R3 [SteelLance,Javelin] BossAI
 UNIT Wreyvine Soldier 0x1 Level(2, Enemy, 1)     [17,5] 0 0 1 REDA16R5 [IronLance,] AttackInRangeAI
 UNIT Wreyvine Soldier 0x1 Level(2, Enemy, 1)     [17,5] 0 0 1 REDA17R3 [IronLance,] AttackInRangeAI
 UNIT Wreyvine LCav 0x1 Level(2, Enemy, 1)     [13,3] 0 0 1 REDA15R2 [Horseslayer,] [0,0,4,0]
@@ -135,8 +136,13 @@ UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [0,10] 0 0 1 REDA1R9 [Flux,] [0,0
 UNIT
 
 BReinforcements2:
-UNIT BadGuy Deserter 0x1 Level(3, Enemy, 1)     [4,12] 0 0 1 REDA5R12 [SteelLance,] [0,0,4,0]
-UNIT BadGuy Hunter 0x1 Level(3, Enemy, 1)     [4,12] 0 0 1 REDA3R12 [Longbow,] [0,0,4,0]
+UNIT BadGuy Deserter 0x1 Level(4, Enemy, 1)     [4,12] 0 0 1 REDA5R12 [SteelLance,] [0,0,4,0]
+UNIT BadGuy Hunter 0x1 Level(3, Enemy, 1)     [4,12] 0 0 1 REDA3R12 [SteelBow,] [0,0,4,0]
+UNIT
+
+EReinforcements1:
+UNIT BadGuy SCav 0x1 Level(3, Enemy, 1)     [16,13] 0 0 1 REDA15R13 [SteelSword,] [0,0,4,0]
+UNIT BadGuy LCav 0x1 Level(4, Enemy, 1)     [15,13] 0 0 1 REDA15R12 [IronLance,] [0,0,4,0]
 UNIT
 
 IreneRein:
@@ -220,6 +226,10 @@ CAM1 [8,10]
 	NoFade
 	ENDA
 
+EastRein:
+SpawnReinforcements(EReinforcements1)
+	NoFade
+	ENDA
 
 Traps1:
 BLST [14,4] Ballista

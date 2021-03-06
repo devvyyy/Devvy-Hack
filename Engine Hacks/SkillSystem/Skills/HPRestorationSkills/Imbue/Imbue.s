@@ -24,7 +24,7 @@ beq GoBack
 @unit is in r4
 @get mag stat
 mov r0,r4
-add r0,#0x3A
+add r0,#0x18
 ldrb r0,[r0] @r0 = mag
 
 @multiply it by 100

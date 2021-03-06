@@ -13,6 +13,7 @@ TileMap(2,1,8,3,2,Secret)
 TileMap(3,1,11,1,1,Chest_1)
 TileMap(4,0,12,1,1,Chest_2)
 TileMap(5,11,8,1,1,Chest_3)
+TileMap(6,9,16,1,1,Door2)
 TileMapEnd
 
 Door:
@@ -33,5 +34,9 @@ ALIGN 4
 
 Chest_3:
 SHORT 0x4 
+ALIGN 4
+
+Door2:
+SHORT 0xebc 
 ALIGN 4
 

@@ -49,6 +49,7 @@ Chest(HandAxe,0,12)
 Chest(0xC9,1,11)
 Door(1,14)
 Door(2,14)
+Door(9,16)
 Seize(2,5)
 END_MAIN
 
@@ -56,6 +57,7 @@ MiscBasedEvents:
 CauseGameOverIfLordDies
 AREA 0xF TalismanThing [1,10] [3,10]
 AREA 0xE WallSus [1,15] [2,15]
+AREA 0x12 WhyTho [9,16] [9,16]
 END_MAIN
 
 Dunno1:
@@ -261,6 +263,11 @@ CURE
 TEXTSHOW Placeholder1
 TEXTEND
 REMA
+NoFade
+ENDA
+
+WhyTho:
+GiveItem(0x5D,0xFFFF)
 NoFade
 ENDA
 
