@@ -44,6 +44,11 @@ SongTable(0xBB,songBB,0)
 #include "HeroesOfMana.event"
 
 ALIGN 4
+//Drumbeat of Doom
+SongTable(0x18E,Drumbeat,0)
+#include "DrumbeatOfDoom.event"
+
+ALIGN 4
 //Break the Sword of Justice by Kyo
 SongTable(0x92,song03B4,0)
 #include "BreakSword.event"
@@ -386,6 +391,8 @@ SongTable(0x43,TaleToldByWind,0)
 
 ALIGN 4
 //Blameless Thoughts
+SongTable(0x1B5,song01B5,0)
+#include "BlamelessThoughts.event"
 
 ALIGN 4
 //A Pronouncement from Hell
@@ -399,6 +406,11 @@ ALIGN 4
 //Mighty Blow
 SongTable(0x105,song0105,0)
 #include "MightyBlow.event"
+
+ALIGN 4
+//Last Battle
+SongTable(0x1B4,CaveStory,0)
+#include "LastBattle.event"
 
 ALIGN 4
 //Hard Chain Reaction
