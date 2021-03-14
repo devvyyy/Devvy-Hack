@@ -160,8 +160,13 @@ SongTable(0xE8,song11,0)
 
 ALIGN 4
 //First Step Towards War
-SongTable(0xC2,song17,1)
+SongTable(0xC2,songC2,1)
 #include "FirstStep.event"
+
+ALIGN 4
+//Ice Ridge of Noltia
+SongTable(0x148,Noltia,1)
+#include "Noltia.event"
 
 ALIGN 4
 //Eden Under Siege by Thomash Lee

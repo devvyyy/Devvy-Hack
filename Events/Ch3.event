@@ -85,12 +85,13 @@ EnemyUnits:
 UNIT Alicot SArmor 0x1 Level(2, Enemy, 0)     [13,1] 0b 0x0 0x0 0x0 [SteelBlade,Flamberge,Dracoshield] BossAI
 UNIT Cultist Shaman 0x1 Level(5, Enemy, 1)     [16,2] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
 UNIT Cultist SCav 0x1 Level(5, Enemy, 1)     [11,2] 0b 0x0 0x0 0x0 [SteelSword,] AttackInRangeAI
+UNIT Cultist ACav 0x1 Level(5, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [IronAxe,] TwoActionAI
 UNIT BadGuy LArmor 0x1 Level(6, Enemy, 1)     [6,8] 0b 0x0 0x0 0x0 [SteelLance,Javelin,] BossAI
 UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [13,16] 0b 0x0 0x0 0x0 [DarkTome2,] AttackInRangeAI
 UNIT BadGuy Raider 0x1 Level(5, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [SteelSword,BlueGem] AttackInRangeAI
 UNIT BadGuy Deserter 0x1 Level(5, Enemy, 1)     [1,13] 0b 0x0 0x0 0x0 [SteelLance,Javelin] AttackInRangeAI
 UNIT BadGuy Deserter 0x1 Level(6, Enemy, 1)     [13,3] DropItem 0x0 0x0 0x0 [IronLabrys,Javelin] ChargeAI
-UNIT BadGuy Brigand 0x1 Level(5, Enemy, 1)     [0,11] 0b 0x0 0x0 0x0 [Halberd,Elixir] AttackInRangeAI
+UNIT BadGuy Brigand 0x1 Level(5, Enemy, 1)     [0,10] 0b 0x0 0x0 0x0 [Halberd,Elixir] AttackInRangeAI
 UNIT UPirate Pirate 0x1 Level(5, Enemy, 1)     [16,15] 0b 0x0 0x0 0x0 [IronAxe] StallOneTurnAI
 UNIT UPirate Pirate 0x1 Level(6, Enemy, 1)     [14,14] 0b 0x0 0x0 0x0 [IronLabrys] AttackInRangeAI
 UNIT UPirate Pirate 0x1 Level(6, Enemy, 1)     [15,17] 0b 0x0 0x0 0x0 [SteelAxe,HandAxe] StallOneTurnAI
@@ -98,15 +99,15 @@ UNIT BadGuy SCav 0x1 Level(5, Enemy, 1)     [16,11] 0b 0x0 0x0 0x0 [IronSword,] 
 UNIT BadGuy SCav 0x1 Level(6, Enemy, 1)     [1,8] 0b 0x0 0x0 0x0 [SteelSword,SecretBook] ChargeAI
 UNIT BadGuy Raider 0x1 Level(6, Enemy, 1)     [4,7] 0b 0x0 0x0 0x0 [SteelSword,] AttackInRangeAI
 UNIT Cultist Occultist 0x1 Level(6, Enemy, 1)     [16,2] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
-UNIT Cultist Occultist 0x1 Level(5, Enemy, 1)     [11,17] 0b 0x0 0x0 0x0 [Flux,] StallOneTurnAI
+UNIT Cultist Occultist 0x1 Level(5, Enemy, 1)     [11,17] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
 UNIT Cultist Shaman 0x1 Level(7, Enemy, 1)     [0,6] 0b 0x0 0x0 0x0 [DarkTome2,Talisman] BossAI
 UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [2,12] 0b 0x0 0x0 0x0 [DarkTome2] AttackInRangeAI
 UNIT Cultist Hunter 0x1 Level(6, Enemy, 1)     [4,11] 0b 0x0 0x0 0x0 [Longbow,Vulnerary] BossAI
 UNIT Cultist Hunter 0x1 Level(6, Enemy, 1)     [14,9] 0b 0x0 0x0 0x0 [SteelBow,] BossAI
 UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [7,16] 0b 0x0 0x0 0x0 [IronBow,] AttackInRangeAI
 UNIT Cultist Mage 0x1 Level(5, Enemy, 1)     [6,17] DropItem 0x0 0x0 0x0 [Fire,Vulnerary] ChargeAI
-UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
-UNIT BadGuy Archer 0x1 Level(5, Enemy, 1)     [9,11] 0b 0x0 0x0 0x0 [IronBow] AttackInRangeAI
+UNIT Cultist Shaman 0x1 Level(6, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
+UNIT BadGuy Archer 0x1 Level(5, Enemy, 1)     [9,11] 0b 0x0 0x0 0x0 [IronBow] BossAI
 	UNIT
 	
 	
@@ -137,8 +138,8 @@ UNIT BadGuy SCav 0x1 Level(5, Enemy, 1)     [2,17] 0b 0x0 0x0 0x0 [SteelSword,] 
 	UNIT
 
 Rein6:
-UNIT BadGuy LCav 0x1 Level(6, Enemy, 1)     [16,4] 0b 0x0 0x0 0x0 [HeavySpear,Javelin] ChargeAI
-UNIT BadGuy ACav 0x1 Level(5, Enemy, 1)     [16,5] 0b 0x0 0x0 0x0 [IronLabrys,] ChargeAI
+UNIT BadGuy LCav 0x1 Level(6, Enemy, 1)     [15,17] 0b 0x0 0x0 0x0 [HeavySpear,Javelin] ChargeAI
+UNIT BadGuy ACav 0x1 Level(5, Enemy, 1)     [16,17] 0b 0x0 0x0 0x0 [IronLabrys,] ChargeAI
 	UNIT
 
 Rein7:
@@ -148,9 +149,9 @@ UNIT BadGuy LArmor 0x1 Level(6, Enemy, 1)     [0,9] 0b 0x0 0x0 0x0 [SteelGlaive,
 	UNIT
 
 YoItThem:
-UNIT Stroganoff AArmor 0x1 Level(6, NPC, 0)     [10,8] 0b 0x0 0x0 0x0 [SteelLabrys,Dracoshield] AttackInRangeAI
-UNIT Eiskaffee Hunter 0x1 Level(4, NPC, 0)     [11,9] 0b 0x0 0x0 0x0 [IronRifle,Elixir] AttackInRangeAI
-UNIT Doppio Soldier 0x1 Level(5, NPC, 0)     [12,8] 0b 0x0 0x0 0x0 [KillerLance, Elixir] AttackInRangeAI
+UNIT Stroganoff AArmor 0x1 Level(6, NPC, 0)     [10,8] 0b 0x0 0x0 0x0 [SteelLabrys,Dracoshield] BossAI
+UNIT Eiskaffee Hunter 0x1 Level(4, NPC, 0)     [11,9] 0b 0x0 0x0 0x0 [IronRifle,Elixir] BossAI
+UNIT Doppio Soldier 0x1 Level(5, NPC, 0)     [12,8] 0b 0x0 0x0 0x0 [KillerLance, Elixir] BossAI
 	UNIT
 
 Traps1:

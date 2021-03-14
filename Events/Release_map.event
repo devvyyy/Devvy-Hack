@@ -31,7 +31,8 @@ TURN 0x0 OMGMyHero [3,0] 0x0
 TURN 0x0 Thieves1 [4,0] 0x0
 TURN 0x0 BaseWarning [5,0] 0x0
 TURN 0x0 ShamanRein1 [6,0] 0x0
-TURN 0x0 ShamanRein2 [9,0] 0x0
+TURN 0x0 ShamanRein2 [8,0] 0x0
+TURN 0x0 ShamanRein3 [10,0] 0x0
 END_MAIN
 
 CharacterBasedEvents:
@@ -103,8 +104,11 @@ UNIT
 
 EnemyUnits2:
 UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [10,4] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
-UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [4,16] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
+UNIT BadGuy Raider 0x1 Level(1, Enemy, 1)     [10,7] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
+UNIT BadGuy Raider 0x1 Level(1, Enemy, 1)     [2,18] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
+UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [4,16] 0b 0x0 0x0 0x0 [IronAxe,] TwoActionAI
 UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [2,16] 0b 0x0 0x0 0x0 [SteelLance,] AttackInRangeAI
+UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [0,7] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
 UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [6,5] 0b 0x0 0x0 0x0 [IronLance,] [0,0,4,0]
 UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [11,9] DropItem 0x0 0x0 0x0 [Javelin,] AttackInRangeAI
 UNIT BadGuy 0x54 0x1 Level(3, Enemy, 1)     [12,5] 0b 0x0 0x0 0x0 [SteelLance,] [0,3,4,32]
@@ -134,6 +138,11 @@ UNIT
 Reinforcements2:
 UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [14,8] 0 0 1 REDA13R8 [DarkTome2,] [0,0,4,0]
 UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [14,8] 0 0 1 REDA14R9 [DarkTome2,] [0,0,4,0]
+UNIT
+
+Reinforcements3:
+UNIT Cultist Occultist 0x1 Level(1, Enemy, 1)     [0,5] 0 0 1 REDA0R7 [DarkTome1,] [0,0,4,0]
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [0,5] 0 0 1 REDA0R6 [DarkTome2,] [0,0,4,0]
 UNIT
 
 Traps1:
@@ -247,6 +256,11 @@ ENDA
 
 ShamanRein2:
 SpawnReinforcements(Reinforcements2)
+NoFade
+ENDA
+
+ShamanRein3:
+SpawnReinforcements(Reinforcements3)
 NoFade
 ENDA
 
