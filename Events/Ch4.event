@@ -94,9 +94,9 @@ UNIT BadGuy LArmor 0x1 Level(7, Enemy, 1)     [9,2] DropItem 0x0 0x0 0x0 [ShortS
 UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [11,3] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
 UNIT BadGuy SCav 0x1 Level(7, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [IronBlade,] DefendAI
 UNIT BadGuy ACav 0x1 Level(6, Enemy, 1)     [12,8] 0b 0x0 0x0 0x0 [Halberd,] StallOneTurnAI
-UNIT FlyingMag Occultist 0x1 Level(6, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [Flux] ChargeAI
+UNIT FlyingMag Occultist 0x1 Level(6, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [Flux] TwoActionAI
 UNIT FlyingMag Occultist 0x1 Level(7, Enemy, 1)     [9,5] 0b 0x0 0x0 0x0 [Flux,Talisman] StallOneTurnAI
-UNIT FlyingMag Occultist 0x1 Level(7, Enemy, 1)     [15,2] 0b 0x0 0x0 0x0 [Flux,] StallOneTurnAI
+UNIT FlyingMag Occultist 0x1 Level(7, Enemy, 1)     [15,2] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
 UNIT BadGuy Deserter 0x1 Level(7, Enemy, 1)     [8,9] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
 UNIT UPirate Pirate 0x1 Level(6, Enemy, 1)     [15,0] 0b 0x0 0x0 0x0 [SteelAxe] StallOneTurnAI
 UNIT BadGuy Deserter 0x1 Level(6, Enemy, 1)     [14,8] 0b 0x0 0x0 0x0 [IronLance] DefendAI
@@ -114,9 +114,9 @@ UNIT BadGuy Raider 0x1 Level(6, Enemy, 1)     [6,0] 0x0 0x0 0x0 0x0 [SteelSword,
 
 NPCEPIC:
 UNIT HolyGuard Priest 0x1 Level(5, NPC, 1)     [3,14] 0b 0x0 0x0 0x0 [Union, Heal] HealAI
-UNIT HolyGuard Monk 0x1 Level(5, NPC, 1)     [9,14] 0b 0x0 0x0 0x0 [Light2, Vulnerary] AttackInRangeAI
-UNIT HolyGuard Monk 0x1 Level(6, NPC, 1)     [10,14] 0b 0x0 0x0 0x0 [Light1, Elixir] AttackInRangeAI
-UNIT HolyGuard Archer 0x1 Level(5, NPC, 1)     [12,12] 0b 0x0 0x0 0x0 [Longbow, Vulnerary] AttackInRangeAI
+UNIT HolyGuard Monk 0x1 Level(5, NPC, 1)     [9,14] 0b 0x0 0x0 0x0 [Light2, Vulnerary] HalfMoveAI
+UNIT HolyGuard Monk 0x1 Level(6, NPC, 1)     [10,14] 0b 0x0 0x0 0x0 [Light1, Elixir] HalfMoveAI
+UNIT HolyGuard Archer 0x1 Level(5, NPC, 1)     [12,12] 0b 0x0 0x0 0x0 [Longbow, Vulnerary] HalfMoveAI
 UNIT
 
 NPCREIN:
@@ -154,8 +154,8 @@ UNIT 0x64 Thief 0x1 Level(4, Enemy, 1)     [16,3] 0b 0x0 0x0 0x0 [IronSword,Lock
 UNIT
 
 MountRein:
-UNIT FlyingMag Occultist 0x1 Level(7, Enemy, 1)     [0,7] 0 0 1 REDA2R7 [Flux] ChargeAI
-UNIT FlyingMag Occultist 0x1 Level(6, Enemy, 1)     [0,6] 0 0 1 REDA2R6 [DarkTome2] ChargeAI
+UNIT FlyingMag Occultist 0x1 Level(7, Enemy, 1)     [0,7] 0 0 1 REDA2R7 [Flux] TwoActionAI
+UNIT FlyingMag Occultist 0x1 Level(6, Enemy, 1)     [0,6] 0 0 1 REDA2R6 [DarkTome2] TwoActionAI
 UNIT FlyingPhys PegRider 0x1 Level(6, Enemy, 1)     [0,7] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
 UNIT
 
@@ -187,8 +187,8 @@ UNIT FlyingPhys Brigand 0x1 Level(7, Enemy, 1)     [0,7] 0 0 1 REDA1R8 [IronAxe]
 UNIT
 
 ArenaRein4:
-UNIT BadGuy Raider 0x1 Level(6, Enemy, 1)     [10,0] DropItem 0x0 0x0 0x0 [SteelSword] DefendAI
-UNIT BadGuy Raider 0x1 Level(7, Enemy, 1)     [11,0] DropItem 0x0 0x0 0x0 [IronSword] DefendAI
+UNIT BadGuy Raider 0x1 Level(6, Enemy, 1)     [16,4] DropItem 0x0 0x0 0x0 [SteelSword] DefendAI
+UNIT BadGuy Raider 0x1 Level(7, Enemy, 1)     [16,6] 0x0 0x0 0x0 0x0 [IronSword] DefendAI
 UNIT
 
 InsideRein:
@@ -286,7 +286,6 @@ ENDA
 
 Turn6Rein:
 LoadReinforcements(ArenaRein3)
-VCWF 2
 NoFade
 ENDA
 
@@ -294,7 +293,7 @@ Turn7Rein:
 LoadReinforcements(StairRein)
 STAL 20
 LoadReinforcements(WaterRein2)
-VCWF 1
+VCWF 2
 NoFade
 ENDA
 
@@ -307,6 +306,7 @@ ENDA
 
 Turn9Rein:
 LoadReinforcements(ArenaRein2)
+VCWF 1
 NoFade
 ENDA
 

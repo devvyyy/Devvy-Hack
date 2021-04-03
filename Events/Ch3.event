@@ -331,9 +331,7 @@ ENDA
 House1:
 STORETOSOMETHING 0x0 // lowers music volume
 MUSI // lowers music volume
-SVAL 0x2 0x1 // decides background 
-SVAL 0x3 Placeholder1 // decides text id
-CALL 0x9EE310 // runs the text
+HouseExp(0x12,Placeholder1)
 MUNO // increases music volume
 NoFade
 ENDA
@@ -345,7 +343,7 @@ SVAL 0x2 0x1 // decides background
 SVAL 0x3 SolVillageText // decides text id
 CALL 0x9EE310 // runs the text
 MUNO // increases music volume
-GiveItemWithDurability(0xBC,0xF,0xFFFF)
+GiveItem(0xCF,0xFFFF)
 NoFade
 ENDA
 

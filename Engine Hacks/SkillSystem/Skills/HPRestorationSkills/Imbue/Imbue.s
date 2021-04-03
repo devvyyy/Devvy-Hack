@@ -28,7 +28,7 @@ add r0,#0x18
 ldrb r0,[r0] @r0 = mag
 
 @multiply it by 100
-mov r1,#100
+mov r1,#200
 mul r0,r1
 
 

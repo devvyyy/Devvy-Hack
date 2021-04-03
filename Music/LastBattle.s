@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	CaveStory_grp, voicegroup001
-	.equ	CaveStory_pri, 0
-	.equ	CaveStory_rev, 0
-	.equ	CaveStory_mvl, 127
-	.equ	CaveStory_key, 0
-	.equ	CaveStory_tbs, 1
-	.equ	CaveStory_exg, 0
-	.equ	CaveStory_cmp, 1
+	.equ	song01B4_grp, voicegroup000
+	.equ	song01B4_pri, 0
+	.equ	song01B4_rev, 0
+	.equ	song01B4_mvl, 127
+	.equ	song01B4_key, 0
+	.equ	song01B4_tbs, 1
+	.equ	song01B4_exg, 0
+	.equ	song01B4_cmp, 1
 
 	.section .rodata
-	.global	CaveStory
+	.global	song01B4
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-CaveStory_001:
+song01B4_001:
 @ 000   ----------------------------------------
- .byte   KEYSH , CaveStory_key+0
- .byte   TEMPO , 184*CaveStory_tbs/2
+ .byte   KEYSH , song01B4_key+0
+ .byte   TEMPO , 184*song01B4_tbs/2
  .byte   VOICE , 30
- .byte   VOL , 27*CaveStory_mvl/mxv
+ .byte   VOL , 27*song01B4_mvl/mxv
  .byte   PAN , c_v+3
  .byte   W96
 @ 001   ----------------------------------------
@@ -54,7 +54,7 @@ CaveStory_001:
  .byte   N56
  .byte   W60
 @ 009   ----------------------------------------
-Label_0_01335FAA:
+Label_0_01394E9E:
  .byte   N32 ,Fn1 ,v100
  .byte   W36
  .byte   Fn0
@@ -80,7 +80,7 @@ Label_0_01335FAA:
  .byte   Gn1
  .byte   W48
 @ 014   ----------------------------------------
-Label_0_01335FC3:
+Label_0_01394EB7:
  .byte   MOD 0
  .byte   CnM2
  .byte   W36
@@ -97,7 +97,7 @@ Label_0_01335FC3:
  .byte   Gn8
  .byte   W48
 @ 016   ----------------------------------------
-Label_0_01335FD4:
+Label_0_01394EC8:
  .byte   MOD 0
  .byte   CnM2
  .byte   W36
@@ -106,10 +106,10 @@ Label_0_01335FD4:
  .byte   PEND 
 @ 017   ----------------------------------------
  .byte   PATT
-  .word Label_0_01335FAA
+  .word Label_0_01394E9E
 @ 018   ----------------------------------------
  .byte   PATT
-  .word Label_0_01335FC3
+  .word Label_0_01394EB7
 @ 019   ----------------------------------------
  .byte   W36
  .byte   MOD 0
@@ -121,12 +121,12 @@ Label_0_01335FD4:
  .byte   W48
 @ 020   ----------------------------------------
  .byte   PATT
-  .word Label_0_01335FD4
+  .word Label_0_01394EC8
 @ 021   ----------------------------------------
  .byte   PATT
-  .word Label_0_01335FAA
+  .word Label_0_01394E9E
 @ 022   ----------------------------------------
-Label_0_01335FFA:
+Label_0_01394EEE:
  .byte   W96
 @ 023   ----------------------------------------
  .byte   W96
@@ -255,16 +255,16 @@ Label_0_01335FFA:
  .byte   W92
  .byte   W02
  .byte   GOTO
-  .word Label_0_01335FFA
+  .word Label_0_01394EEE
  .byte   FINE
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-CaveStory_002:
+song01B4_002:
 @ 000   ----------------------------------------
- .byte   KEYSH , CaveStory_key+0
- .byte   VOICE , 40
- .byte   VOL , 29*CaveStory_mvl/mxv
+ .byte   KEYSH , song01B4_key+0
+ .byte   VOICE , 42
+ .byte   VOL , 29*song01B4_mvl/mxv
  .byte   PAN , c_v+7
  .byte   TIE ,Cn5 ,v040
  .byte   TIE ,Dn5 ,v012
@@ -395,7 +395,7 @@ CaveStory_002:
  .byte   N22 ,Ds4
  .byte   W24
 @ 022   ----------------------------------------
-Label_1_013994F4:
+Label_1_0139497C:
  .byte   N05 ,Cn4 ,v080
  .byte   N05 ,Gn4
  .byte   N05 ,Cn5
@@ -420,9 +420,11 @@ Label_1_013994F4:
  .byte   N44 ,Cn4 ,v080
  .byte   W24
  .byte   N22 ,Fn4 ,v092
- .byte   W24
+ .byte   W23
+ .byte   VOICE , 40
+ .byte   W01
 @ 030   ----------------------------------------
-Label_1_01399512:
+Label_1_0139499D:
  .byte   N10 ,Gs3 ,v100
  .byte   N10 ,As3
  .byte   N10 ,Ds4
@@ -507,7 +509,7 @@ Label_1_01399512:
  .byte   W12
 @ 032   ----------------------------------------
  .byte   PATT
-  .word Label_1_01399512
+  .word Label_1_0139499D
 @ 033   ----------------------------------------
  .byte   N10 ,Gn3 ,v100
  .byte   N10 ,Cn4
@@ -732,7 +734,7 @@ Label_1_01399512:
  .byte   N92 ,As4
  .byte   W96
 @ 054   ----------------------------------------
-Label_1_013996A2:
+Label_1_01394B2D:
  .byte   N44 ,Ds4 ,v076
  .byte   N92 ,Gn4
  .byte   W48
@@ -763,7 +765,7 @@ Label_1_013996A2:
  .byte   W96
 @ 058   ----------------------------------------
  .byte   PATT
-  .word Label_1_013996A2
+  .word Label_1_01394B2D
 @ 059   ----------------------------------------
  .byte   N68 ,An3 ,v076
  .byte   N68 ,Fn4
@@ -773,22 +775,22 @@ Label_1_013996A2:
  .byte   EOT
  .byte   Cn5
  .byte   GOTO
-  .word Label_1_013994F4
+  .word Label_1_0139497C
  .byte   FINE
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-CaveStory_003:
+song01B4_003:
 @ 000   ----------------------------------------
- .byte   KEYSH , CaveStory_key+0
+ .byte   KEYSH , song01B4_key+0
  .byte   VOICE , 49
- .byte   VOL , 34*CaveStory_mvl/mxv
+ .byte   VOL , 34*song01B4_mvl/mxv
  .byte   PAN , c_v-8
  .byte   W96
 @ 001   ----------------------------------------
  .byte   W96
 @ 002   ----------------------------------------
-Label_2_013990CA:
+Label_2_0139529E:
  .byte   N04 ,Cn4 ,v068
  .byte   W06
  .byte   Cn4 ,v052
@@ -824,13 +826,13 @@ Label_2_013990CA:
  .byte   PEND 
 @ 003   ----------------------------------------
  .byte   PATT
-  .word Label_2_013990CA
+  .word Label_2_0139529E
 @ 004   ----------------------------------------
  .byte   PATT
-  .word Label_2_013990CA
+  .word Label_2_0139529E
 @ 005   ----------------------------------------
  .byte   PATT
-  .word Label_2_013990CA
+  .word Label_2_0139529E
 @ 006   ----------------------------------------
  .byte   N10 ,Gn3 ,v100
  .byte   N10 ,As3
@@ -1025,7 +1027,7 @@ Label_2_013990CA:
  .byte   N02 ,Cn5
  .byte   W06
 @ 014   ----------------------------------------
-Label_2_01399221:
+Label_2_013953F5:
  .byte   N04 ,Cn3 ,v100
  .byte   N04 ,Ds3
  .byte   N04 ,Gn3
@@ -1038,7 +1040,7 @@ Label_2_01399221:
  .byte   W60
  .byte   PEND 
 @ 015   ----------------------------------------
-Label_2_01399235:
+Label_2_01395409:
  .byte   N04 ,Dn3 ,v100
  .byte   N04 ,Fn3
  .byte   N04 ,As3
@@ -1051,7 +1053,7 @@ Label_2_01399235:
  .byte   W60
  .byte   PEND 
 @ 016   ----------------------------------------
-Label_2_01399249:
+Label_2_0139541D:
  .byte   N04 ,Ds3 ,v100
  .byte   N04 ,Gn3
  .byte   N04 ,As3
@@ -1064,7 +1066,7 @@ Label_2_01399249:
  .byte   W60
  .byte   PEND 
 @ 017   ----------------------------------------
-Label_2_0139925D:
+Label_2_01395431:
  .byte   N04 ,Fn3 ,v100
  .byte   N04 ,An3
  .byte   N04 ,As3
@@ -1078,18 +1080,18 @@ Label_2_0139925D:
  .byte   PEND 
 @ 018   ----------------------------------------
  .byte   PATT
-  .word Label_2_01399221
+  .word Label_2_013953F5
 @ 019   ----------------------------------------
  .byte   PATT
-  .word Label_2_01399235
+  .word Label_2_01395409
 @ 020   ----------------------------------------
  .byte   PATT
-  .word Label_2_01399249
+  .word Label_2_0139541D
 @ 021   ----------------------------------------
  .byte   PATT
-  .word Label_2_0139925D
+  .word Label_2_01395431
 @ 022   ----------------------------------------
-Label_2_01399285:
+Label_2_01395459:
  .byte   W96
 @ 023   ----------------------------------------
  .byte   W96
@@ -1358,7 +1360,7 @@ Label_2_01399285:
  .byte   Ds4
  .byte   W12
 @ 052   ----------------------------------------
-Label_2_013993B1:
+Label_2_01395585:
  .byte   N32 ,Cn3 ,v100
  .byte   W36
  .byte   N10 ,Gn3
@@ -1371,7 +1373,7 @@ Label_2_013993B1:
  .byte   W12
  .byte   PEND 
 @ 053   ----------------------------------------
-Label_2_013993BF:
+Label_2_01395593:
  .byte   N10 ,Dn3 ,v100
  .byte   W12
  .byte   N10
@@ -1386,7 +1388,7 @@ Label_2_013993BF:
  .byte   W12
  .byte   PEND 
 @ 054   ----------------------------------------
-Label_2_013993CE:
+Label_2_013955A2:
  .byte   N10 ,Ds4 ,v100
  .byte   W12
  .byte   N10
@@ -1414,13 +1416,13 @@ Label_2_013993CE:
  .byte   W24
 @ 056   ----------------------------------------
  .byte   PATT
-  .word Label_2_013993B1
+  .word Label_2_01395585
 @ 057   ----------------------------------------
  .byte   PATT
-  .word Label_2_013993BF
+  .word Label_2_01395593
 @ 058   ----------------------------------------
  .byte   PATT
-  .word Label_2_013993CE
+  .word Label_2_013955A2
 @ 059   ----------------------------------------
  .byte   W12
  .byte   N10 ,Fn4 ,v100
@@ -1432,15 +1434,15 @@ Label_2_013993CE:
  .byte   N22
  .byte   W22
  .byte   GOTO
-  .word Label_2_01399285
+  .word Label_2_01395459
  .byte   FINE
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-CaveStory_004:
+song01B4_004:
 @ 000   ----------------------------------------
- .byte   VOL , 35*CaveStory_mvl/mxv
- .byte   KEYSH , CaveStory_key+0
+ .byte   VOL , 35*song01B4_mvl/mxv
+ .byte   KEYSH , song01B4_key+0
  .byte   VOICE , 47
  .byte   PAN , c_v-4
  .byte   W96
@@ -1511,7 +1513,7 @@ CaveStory_004:
  .byte   Gn1 ,v100
  .byte   W12
 @ 006   ----------------------------------------
-Label_3_013363C0:
+Label_3_01395150:
  .byte   N10 ,Cn2 ,v072
  .byte   W36
  .byte   N44 ,Cn1
@@ -1524,7 +1526,7 @@ Label_3_013363C0:
  .byte   W04
  .byte   PEND 
 @ 007   ----------------------------------------
-Label_3_013363D2:
+Label_3_01395162:
  .byte   N10 ,Cn2 ,v072
  .byte   W36
  .byte   N44 ,Cn1
@@ -1533,7 +1535,7 @@ Label_3_013363D2:
  .byte   W12
  .byte   PEND 
 @ 008   ----------------------------------------
-Label_3_013363DD:
+Label_3_0139516D:
  .byte   N10 ,Cn2 ,v072
  .byte   W36
  .byte   N32 ,Cn1
@@ -1566,13 +1568,13 @@ Label_3_013363DD:
  .byte   W04
 @ 010   ----------------------------------------
  .byte   PATT
-  .word Label_3_013363C0
+  .word Label_3_01395150
 @ 011   ----------------------------------------
  .byte   PATT
-  .word Label_3_013363D2
+  .word Label_3_01395162
 @ 012   ----------------------------------------
  .byte   PATT
-  .word Label_3_013363DD
+  .word Label_3_0139516D
 @ 013   ----------------------------------------
  .byte   N10 ,Fn1 ,v048
  .byte   W12
@@ -1613,7 +1615,7 @@ Label_3_013363DD:
 @ 021   ----------------------------------------
  .byte   W96
 @ 022   ----------------------------------------
-Label_3_01336443:
+Label_3_013951D3:
  .byte   W96
 @ 023   ----------------------------------------
  .byte   W96
@@ -1754,16 +1756,16 @@ Label_3_01336443:
  .byte   W92
  .byte   W02
  .byte   GOTO
-  .word Label_3_01336443
+  .word Label_3_013951D3
  .byte   FINE
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-CaveStory_005:
+song01B4_005:
 @ 000   ----------------------------------------
- .byte   KEYSH , CaveStory_key+0
+ .byte   KEYSH , song01B4_key+0
  .byte   VOICE , 52
- .byte   VOL , 29*CaveStory_mvl/mxv
+ .byte   VOL , 29*song01B4_mvl/mxv
  .byte   PAN , c_v+19
  .byte   W96
 @ 001   ----------------------------------------
@@ -1809,7 +1811,7 @@ CaveStory_005:
 @ 021   ----------------------------------------
  .byte   W96
 @ 022   ----------------------------------------
-Label_4_0133669A:
+Label_4_0139454E:
  .byte   N80 ,Cn3 ,v100
  .byte   TIE ,Gn3 ,v080
  .byte   TIE ,Cn4 ,v072
@@ -1837,7 +1839,7 @@ Label_4_0133669A:
  .byte   W02
 @ 026   ----------------------------------------
  .byte   PATT
-  .word Label_4_0133669A
+  .word Label_4_0139454E
 @ 027   ----------------------------------------
  .byte   W80
  .byte   W02
@@ -1961,16 +1963,16 @@ Label_4_0133669A:
  .byte   EOT
  .byte   Cn0 ,v036
  .byte   GOTO
-  .word Label_4_0133669A
+  .word Label_4_0139454E
  .byte   FINE
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-CaveStory_006:
+song01B4_006:
 @ 000   ----------------------------------------
- .byte   KEYSH , CaveStory_key+0
+ .byte   KEYSH , song01B4_key+0
  .byte   VOICE , 41
- .byte   VOL , 30*CaveStory_mvl/mxv
+ .byte   VOL , 30*song01B4_mvl/mxv
  .byte   PAN , c_v-20
  .byte   W96
 @ 001   ----------------------------------------
@@ -2014,7 +2016,7 @@ CaveStory_006:
  .byte   N44 ,Cn4 ,v072
  .byte   W12
 @ 015   ----------------------------------------
-Label_5_01335CA2:
+Label_5_01394642:
  .byte   W36
  .byte   N22 ,Gn3 ,v100
  .byte   N22 ,Ds4 ,v052
@@ -2030,7 +2032,7 @@ Label_5_01335CA2:
  .byte   W12
  .byte   PEND 
 @ 016   ----------------------------------------
-Label_5_01335CBE:
+Label_5_0139465E:
  .byte   N11 ,Ds3 ,v052
  .byte   N11 ,Ds4 ,v032
  .byte   W36
@@ -2086,10 +2088,10 @@ Label_5_01335CBE:
  .byte   W12
 @ 019   ----------------------------------------
  .byte   PATT
-  .word Label_5_01335CA2
+  .word Label_5_01394642
 @ 020   ----------------------------------------
  .byte   PATT
-  .word Label_5_01335CBE
+  .word Label_5_0139465E
 @ 021   ----------------------------------------
  .byte   N22 ,Fn3 ,v100
  .byte   N22 ,Fn4 ,v072
@@ -2108,7 +2110,7 @@ Label_5_01335CBE:
  .byte   N10 ,Gn4 ,v072
  .byte   W12
 @ 022   ----------------------------------------
-Label_5_01335D4D:
+Label_5_013946ED:
  .byte   W96
 @ 023   ----------------------------------------
  .byte   W48
@@ -2263,16 +2265,16 @@ Label_5_01335D4D:
  .byte   W92
  .byte   W02
  .byte   GOTO
-  .word Label_5_01335D4D
+  .word Label_5_013946ED
  .byte   FINE
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-CaveStory_007:
+song01B4_007:
 @ 000   ----------------------------------------
- .byte   KEYSH , CaveStory_key+0
+ .byte   KEYSH , song01B4_key+0
  .byte   VOICE , 63
- .byte   VOL , 31*CaveStory_mvl/mxv
+ .byte   VOL , 31*song01B4_mvl/mxv
  .byte   W96
 @ 001   ----------------------------------------
  .byte   W96
@@ -2285,7 +2287,7 @@ CaveStory_007:
 @ 005   ----------------------------------------
  .byte   W96
 @ 006   ----------------------------------------
-Label_6_013361F0:
+Label_6_013955E8:
  .byte   N10 ,Cn4 ,v100
  .byte   W36
  .byte   Cn4 ,v040
@@ -2293,27 +2295,27 @@ Label_6_013361F0:
  .byte   PEND 
 @ 007   ----------------------------------------
  .byte   PATT
-  .word Label_6_013361F0
+  .word Label_6_013955E8
 @ 008   ----------------------------------------
  .byte   PATT
-  .word Label_6_013361F0
+  .word Label_6_013955E8
 @ 009   ----------------------------------------
  .byte   PATT
-  .word Label_6_013361F0
+  .word Label_6_013955E8
 @ 010   ----------------------------------------
  .byte   PATT
-  .word Label_6_013361F0
+  .word Label_6_013955E8
 @ 011   ----------------------------------------
  .byte   PATT
-  .word Label_6_013361F0
+  .word Label_6_013955E8
 @ 012   ----------------------------------------
  .byte   PATT
-  .word Label_6_013361F0
+  .word Label_6_013955E8
 @ 013   ----------------------------------------
  .byte   PATT
-  .word Label_6_013361F0
+  .word Label_6_013955E8
 @ 014   ----------------------------------------
-Label_6_0133621B:
+Label_6_01395613:
  .byte   N04 ,Gn3 ,v100
  .byte   N04 ,Gn4
  .byte   N04 ,Cn5
@@ -2324,10 +2326,10 @@ Label_6_0133621B:
  .byte   PEND 
 @ 015   ----------------------------------------
  .byte   PATT
-  .word Label_6_0133621B
+  .word Label_6_01395613
 @ 016   ----------------------------------------
  .byte   PATT
-  .word Label_6_0133621B
+  .word Label_6_01395613
 @ 017   ----------------------------------------
  .byte   N22 ,Fn3 ,v100
  .byte   N22 ,An3
@@ -2375,13 +2377,13 @@ Label_6_0133621B:
  .byte   W06
 @ 018   ----------------------------------------
  .byte   PATT
-  .word Label_6_0133621B
+  .word Label_6_01395613
 @ 019   ----------------------------------------
  .byte   PATT
-  .word Label_6_0133621B
+  .word Label_6_01395613
 @ 020   ----------------------------------------
  .byte   PATT
-  .word Label_6_0133621B
+  .word Label_6_01395613
 @ 021   ----------------------------------------
  .byte   N22 ,Fn3 ,v100
  .byte   N22 ,An3
@@ -2396,7 +2398,7 @@ Label_6_0133621B:
  .byte   N22 ,Ds4
  .byte   W24
 @ 022   ----------------------------------------
-Label_6_013362A3:
+Label_6_0139569B:
  .byte   N05 ,Cn4 ,v100
  .byte   N05 ,Fn4
  .byte   N05 ,Gn4
@@ -2479,16 +2481,16 @@ Label_6_013362A3:
  .byte   W92
  .byte   W02
  .byte   GOTO
-  .word Label_6_013362A3
+  .word Label_6_0139569B
  .byte   FINE
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-CaveStory_008:
+song01B4_008:
 @ 000   ----------------------------------------
- .byte   KEYSH , CaveStory_key+0
+ .byte   KEYSH , song01B4_key+0
  .byte   VOICE , 57
- .byte   VOL , 27*CaveStory_mvl/mxv
+ .byte   VOL , 27*song01B4_mvl/mxv
  .byte   PAN , c_v+13
  .byte   W96
 @ 001   ----------------------------------------
@@ -2534,7 +2536,7 @@ CaveStory_008:
 @ 021   ----------------------------------------
  .byte   W96
 @ 022   ----------------------------------------
-Label_7_0133699A:
+Label_7_0139579E:
  .byte   N10 ,Gn3 ,v116
  .byte   W12
  .byte   Cn4
@@ -2916,14 +2918,14 @@ Label_7_0133699A:
  .byte   W92
  .byte   W02
  .byte   GOTO
-  .word Label_7_0133699A
+  .word Label_7_0139579E
  .byte   FINE
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-CaveStory_009:
+song01B4_009:
 @ 000   ----------------------------------------
- .byte   KEYSH , CaveStory_key+0
+ .byte   KEYSH , song01B4_key+0
  .byte   VOICE , 46
  .byte   PAN , c_v-14
  .byte   W96
@@ -2970,8 +2972,8 @@ CaveStory_009:
 @ 021   ----------------------------------------
  .byte   W96
 @ 022   ----------------------------------------
-Label_8_01399794:
- .byte   VOL , 24*CaveStory_mvl/mxv
+Label_8_0139E1D8:
+ .byte   VOL , 24*song01B4_mvl/mxv
  .byte   N10 ,Cn2 ,v100
  .byte   W12
  .byte   N04 ,Gn2
@@ -3810,16 +3812,16 @@ Label_8_01399794:
  .byte   N10
  .byte   W10
  .byte   GOTO
-  .word Label_8_01399794
+  .word Label_8_0139E1D8
  .byte   FINE
 
 @**************** Track 10 (Midi-Chn.9) ****************@
 
-CaveStory_010:
+song01B4_010:
 @ 000   ----------------------------------------
- .byte   KEYSH , CaveStory_key+0
+ .byte   KEYSH , song01B4_key+0
  .byte   VOICE , 124
- .byte   VOL , 28*CaveStory_mvl/mxv
+ .byte   VOL , 28*song01B4_mvl/mxv
  .byte   W96
 @ 001   ----------------------------------------
  .byte   W96
@@ -3867,7 +3869,7 @@ CaveStory_010:
  .byte   N04
  .byte   W06
 @ 006   ----------------------------------------
-Label_9_0139A2F2:
+Label_9_0139ED36:
  .byte   N10 ,En1 ,v116
  .byte   N22 ,Cs2 ,v100
  .byte   W12
@@ -3899,10 +3901,10 @@ Label_9_0139A2F2:
  .byte   PEND 
 @ 007   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A2F2
+  .word Label_9_0139ED36
 @ 008   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A2F2
+  .word Label_9_0139ED36
 @ 009   ----------------------------------------
  .byte   N10 ,Cn2 ,v112
  .byte   N22 ,Cs2 ,v100
@@ -3933,10 +3935,10 @@ Label_9_0139A2F2:
  .byte   W06
 @ 010   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A2F2
+  .word Label_9_0139ED36
 @ 011   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A2F2
+  .word Label_9_0139ED36
 @ 012   ----------------------------------------
  .byte   N10 ,En1 ,v116
  .byte   N22 ,Cs2 ,v100
@@ -4009,7 +4011,7 @@ Label_9_0139A2F2:
  .byte   N04 ,En1 ,v092
  .byte   W06
 @ 014   ----------------------------------------
-Label_9_0139A3FC:
+Label_9_0139EE40:
  .byte   N10 ,En1 ,v116
  .byte   N10 ,Cs2 ,v100
  .byte   W12
@@ -4036,15 +4038,15 @@ Label_9_0139A3FC:
  .byte   PEND 
 @ 015   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A3FC
+  .word Label_9_0139EE40
 @ 016   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A3FC
+  .word Label_9_0139EE40
 @ 017   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A3FC
+  .word Label_9_0139EE40
 @ 018   ----------------------------------------
-Label_9_0139A437:
+Label_9_0139EE7B:
  .byte   N10 ,En1 ,v116
  .byte   N10 ,Cs2 ,v100
  .byte   W12
@@ -4070,10 +4072,10 @@ Label_9_0139A437:
  .byte   PEND 
 @ 019   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A437
+  .word Label_9_0139EE7B
 @ 020   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A437
+  .word Label_9_0139EE7B
 @ 021   ----------------------------------------
  .byte   N04 ,Dn1 ,v100
  .byte   N10 ,En1 ,v116
@@ -4115,7 +4117,7 @@ Label_9_0139A437:
  .byte   N04 ,Cn2 ,v112
  .byte   W06
 @ 022   ----------------------------------------
-Label_9_0139A4B5:
+Label_9_0139EEF9:
  .byte   N32 ,En1 ,v116
  .byte   N22 ,Cs2 ,v100
  .byte   W24
@@ -4136,7 +4138,7 @@ Label_9_0139A4B5:
  .byte   W06
  .byte   PEND 
 @ 023   ----------------------------------------
-Label_9_0139A4D8:
+Label_9_0139EF1C:
  .byte   N22 ,En1 ,v116
  .byte   N32 ,Cs2 ,v100
  .byte   W24
@@ -4158,16 +4160,16 @@ Label_9_0139A4D8:
  .byte   PEND 
 @ 024   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A4B5
+  .word Label_9_0139EEF9
 @ 025   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A4D8
+  .word Label_9_0139EF1C
 @ 026   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A4B5
+  .word Label_9_0139EEF9
 @ 027   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A4D8
+  .word Label_9_0139EF1C
 @ 028   ----------------------------------------
  .byte   N32 ,En1 ,v116
  .byte   N22 ,Cs2 ,v100
@@ -4213,7 +4215,7 @@ Label_9_0139A4D8:
  .byte   N04 ,En1 ,v104
  .byte   W06
 @ 030   ----------------------------------------
-Label_9_0139A561:
+Label_9_0139EFA5:
  .byte   N10 ,Cs1 ,v100
  .byte   W12
  .byte   Cs1 ,v040
@@ -4251,7 +4253,7 @@ Label_9_0139A561:
  .byte   W12
 @ 032   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A561
+  .word Label_9_0139EFA5
 @ 033   ----------------------------------------
  .byte   N10 ,Cs1 ,v100
  .byte   W12
@@ -4413,7 +4415,7 @@ Label_9_0139A561:
  .byte   N04 ,Fn2 ,v064
  .byte   W06
 @ 038   ----------------------------------------
-Label_9_0139A6B7:
+Label_9_0139F0FB:
  .byte   N92 ,An1 ,v100
  .byte   N92 ,Cn2
  .byte   N92 ,Cs2
@@ -4428,7 +4430,7 @@ Label_9_0139A6B7:
  .byte   W12
 @ 040   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A6B7
+  .word Label_9_0139F0FB
 @ 041   ----------------------------------------
  .byte   N80 ,An1 ,v100
  .byte   N80 ,Cn2
@@ -4437,7 +4439,7 @@ Label_9_0139A6B7:
  .byte   N10
  .byte   W12
 @ 042   ----------------------------------------
-Label_9_0139A6D9:
+Label_9_0139F11D:
  .byte   N22 ,Cs2 ,v100
  .byte   W24
  .byte   N22
@@ -4449,7 +4451,7 @@ Label_9_0139A6D9:
  .byte   PEND 
 @ 043   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A6D9
+  .word Label_9_0139F11D
 @ 044   ----------------------------------------
  .byte   N10 ,En1 ,v116
  .byte   N22 ,Cs2 ,v100
@@ -4503,7 +4505,7 @@ Label_9_0139A6D9:
  .byte   N04 ,Dn1 ,v100
  .byte   W06
 @ 046   ----------------------------------------
-Label_9_0139A750:
+Label_9_0139F194:
  .byte   N10 ,Cn2 ,v112
  .byte   N22 ,Cs2 ,v100
  .byte   W12
@@ -4558,7 +4560,7 @@ Label_9_0139A750:
  .byte   W12
 @ 048   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A750
+  .word Label_9_0139F194
 @ 049   ----------------------------------------
  .byte   N10 ,En1 ,v116
  .byte   N22 ,Cs2 ,v100
@@ -4601,7 +4603,7 @@ Label_9_0139A750:
  .byte   An1
  .byte   W06
 @ 052   ----------------------------------------
-Label_9_0139A80E:
+Label_9_0139F252:
  .byte   N10 ,Cn2 ,v112
  .byte   W12
  .byte   En1 ,v116
@@ -4630,7 +4632,7 @@ Label_9_0139A80E:
  .byte   W06
  .byte   PEND 
 @ 053   ----------------------------------------
-Label_9_0139A845:
+Label_9_0139F289:
  .byte   N10 ,Cn2 ,v112
  .byte   W12
  .byte   En1 ,v116
@@ -4664,7 +4666,7 @@ Label_9_0139A845:
  .byte   PEND 
 @ 054   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A80E
+  .word Label_9_0139F252
 @ 055   ----------------------------------------
  .byte   N10 ,Cn2 ,v112
  .byte   W12
@@ -4704,13 +4706,13 @@ Label_9_0139A845:
  .byte   W06
 @ 056   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A80E
+  .word Label_9_0139F252
 @ 057   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A845
+  .word Label_9_0139F289
 @ 058   ----------------------------------------
  .byte   PATT
-  .word Label_9_0139A80E
+  .word Label_9_0139F252
 @ 059   ----------------------------------------
  .byte   N22 ,An1 ,v100
  .byte   W12
@@ -4746,29 +4748,29 @@ Label_9_0139A845:
  .byte   N04 ,An1
  .byte   W04
  .byte   GOTO
-  .word Label_9_0139A4B5
+  .word Label_9_0139EEF9
  .byte   FINE
 
 @******************************************************@
 	.align	2
 
-CaveStory:
+song01B4:
 	.byte	10	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	CaveStory_pri	@ Priority
-	.byte	CaveStory_rev	@ Reverb.
+	.byte	song01B4_pri	@ Priority
+	.byte	song01B4_rev	@ Reverb.
     
-	.word	CaveStory_grp
+	.word	song01B4_grp
     
-	.word	CaveStory_001
-	.word	CaveStory_002
-	.word	CaveStory_003
-	.word	CaveStory_004
-	.word	CaveStory_005
-	.word	CaveStory_006
-	.word	CaveStory_007
-	.word	CaveStory_008
-	.word	CaveStory_009
-	.word	CaveStory_010
+	.word	song01B4_001
+	.word	song01B4_002
+	.word	song01B4_003
+	.word	song01B4_004
+	.word	song01B4_005
+	.word	song01B4_006
+	.word	song01B4_007
+	.word	song01B4_008
+	.word	song01B4_009
+	.word	song01B4_010
 
 	.end

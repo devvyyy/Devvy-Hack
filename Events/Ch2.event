@@ -263,6 +263,12 @@ SVAL 0x3 OgrimAffoHouse
 CALL 0x9EE310
 REMA
 LABEL 0x1
+CHECK_EVENTID 0xB
+BNE 0x776 0xC 0x0
+GiveExperience(0xFFFF,20)
+ENUT 0xB
+LABEL 0x776
+EVBIT_T 0x7
 MUNO // increases music volume
 NoFade
 ENDA
