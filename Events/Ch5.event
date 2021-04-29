@@ -46,12 +46,69 @@ Tutorial:
 	END_MAIN
 
 Units1:
-
+LoadUnit(0,1)
+LoadUnit(1,1)
+LoadUnit(2,1)
+LoadUnit(2,1)
+LoadUnit(0,2)
+LoadUnit(1,2)
+LoadUnit(13,1)
+LoadUnit(14,1)
+LoadUnit(13,2)
+LoadUnit(14,2)
+LoadUnit(12,1)
+LoadUnit(12,2)
 	UNIT
 
 EnemyUnits:
-
+UNIT Hiems Shaman 0x1 Level(8, Enemy, 1)     [6,2] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT BadGuy Mercenary 0x1 Level(7, Enemy, 1)     [5,4] 0b 0x0 0x0 0x0 [SteelSword,] AttackInRangeAI
 	UNIT
+
+NagitoKomaeda:
+UNIT Yory LCav 0x1 Level(4, Ally, 0)     [13,6] 0x0 0x0 0x0 0x0 [IronLance,Javelin] AttackInRangeAI
+	UNIT
+	
+RedSus:
+
+UNIT
+
+BlueSus:
+
+UNIT
+
+GreenSus:
+
+UNIT
+
+YellowSus:
+
+UNIT
+
+OrangeSus:
+
+UNIT
+
+CyanSus:
+
+UNIT
+
+PurpleSus:
+
+UNIT
+
+LimeSus:
+
+UNIT
+
+WhiteSus:
+
+UNIT
+
+BlackSus:
+
+UNIT
+
 
 Traps1:
 	ENDTRAP

@@ -343,7 +343,7 @@ SVAL 0x2 0x1 // decides background
 SVAL 0x3 SolVillageText // decides text id
 CALL 0x9EE310 // runs the text
 MUNO // increases music volume
-GiveItem(0xCF,0xFFFF)
+GiveItemWithDurability(0xBC,0xF,0xFFFF)
 NoFade
 ENDA
 
