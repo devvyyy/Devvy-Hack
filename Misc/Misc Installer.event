@@ -1,4 +1,4 @@
-//Stat screen
+//Stat Screen
 StatScreen:
 #incext Png2Dmp "StatScreen.png" --lz77
 StatScreenPal:
@@ -32,6 +32,44 @@ POIN ArrowPng
 
 ORG $32EA0
 POIN ArrowPalette
+POP
+
+//Map Sprite Palette
+PUSH
+ORG 0x59EE20
+#incbin "PlayerPal.bin"
+
+ORG 0x59EE40
+#incbin "EnemyPal.bin"
+
+ORG 0x59EE60
+#incbin "NPCPal.bin"
+POP
+
+//Phase Screen
+
+PUSH
+ORG 0x59FA2C
+#incbin "PlayerPhaseScreen.bin"
+POP
+
+PUSH
+ORG 0x5A0068
+#incbin "EnemyPhaseScreen.bin"
+POP
+
+PUSH
+ORG 0x5A0698
+#incbin "NPCPhaseScreen.bin"
+POP
+
+//Phase Frame
+PhaseFrame:
+#incbin "PhaseFrame.dmp"
+
+PUSH
+ORG 0x1F310
+POIN PhaseFrame
 POP
 
 //Menu Banner
