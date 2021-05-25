@@ -211,7 +211,7 @@
 
 //Blossom: 2x growth rates, but 1/2 exp gain.
 //By Sme
-#define BlossomID 216
+#define BlossomID 255
 
 //Aptitude: +20% to all growth rates.
 //By Sme
@@ -307,7 +307,7 @@
 
 //Despoil: Obtain a Red Gem after attacking and defeating an enemy. (Luck % activation)
 //Author Unknown (Initial Commit)
-#define DespoilID 255
+#define DespoilID 216
 
 //Fury: +2 Atk/Spd/Def/Res. Unit takes 6 damage after combat.
 //By circleseverywhere
@@ -618,7 +618,15 @@
 
 //Falcon: When foe's below 75% health, +3 AS.
 //Kelik Zenair
-#define FalconID 67
+#define FalconID 255
+
+//Hasty: Lower doubling threshold to 1.
+//Kelik Zenair
+#define HastyID 67
+
+//Parity: Neutralizes terrain.
+//By MintX
+#define ParityID 158
 
 //Whirlwind: When above 75% health, +15% crit.
 //Kelik Zenair
@@ -695,7 +703,7 @@
 #define BracingStanceID 255
 #define DartingStanceID 255
 #define FierceStanceID 255
-#define KestrelStanceID 158
+#define KestrelStanceID 255
 #define MirrorStanceID 159
 #define ReadyStanceID 160
 #define SteadyStanceID 161
@@ -715,13 +723,17 @@
 //Kelik Zenair
 #define ShrewdID 254
 
+//Grarrgh! I'm gonna go wild!: Grants crit = missing hp
+//Kelik Zenair
+#define GonnaGoWildID 238
+
 //Thunderstorm: If weapon weight > enemy W. Weight, +2 dmg, +15% hit, +5% crit.
 //By Datagne
 #define ThunderstormID 196
 
 //Tower Shield: Gain 6 defense against attacks recieved at range.
 //By Sme
-#define TowerShieldID 238
+#define TowerShieldID 255
 
 //Tower Shield+: Take no damage against attacks recieved at range.
 //By Sme
