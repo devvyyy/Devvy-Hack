@@ -50,7 +50,7 @@ SongTable(0x18E,Drumbeat,0)
 
 ALIGN 4
 //Break the Sword of Justice by Kyo
-SongTable(0x92,song03B4,0)
+SongTable(0x92,song92,0)
 #include "BreakSword.event"
 
 ALIGN 4
@@ -140,7 +140,7 @@ SongTable(0xE0,song08,1)
 
 ALIGN 4
 //Venus Lighthouse by Ruby
-SongTable(0x5E,song0D,1)
+SongTable(0x5E,song5E,1)
 #include "VenusLighthouse.event"
 
 ALIGN 4
@@ -155,7 +155,7 @@ SongTable(0xC4,songC4, 1)
 
 ALIGN 4 
 //Vs. Ernst by Ruby
-SongTable(0xE8,song11,0)
+SongTable(0xE8,songE8,0)
 #include "VsErnst.event"
 
 ALIGN 4
@@ -206,8 +206,13 @@ SongTable(0xC5,song03D7,1)
 
 ALIGN 4
 //Last Battle Decision from midishrine
-SongTable(0x63,song03AA,1)
-#include "LastBattleDecision.event"
+//SongTable(0x63,song03AA,1)
+//#include "LastBattleDecision.event"
+
+ALIGN 4
+//A Knight's Vow
+SongTable(0x63,AfterBattle,1)
+#include "FE12AfterBattle.event"
 
 ALIGN 4
 //Runa Song by Runa

@@ -233,6 +233,11 @@ Yory_Mug: //Alas, poor Yory-ck
 #incext PortraitFormatter "Yory.png"
 setMugEntry(0x2E, Yory_Mug, 3, 5, 3, 3)
 
+ALIGN 16
+Bard_Mug:
+#incext PortraitFormatter "Bard.png"
+setMugEntryExtend(0x2F, Bard_Mug, 3, 4, 2, 2, 0, 4, 0, 1)
+
 // Bad Guys
 ALIGN 16 //Sai by hypergammaspaces
 Sai_Mug:
