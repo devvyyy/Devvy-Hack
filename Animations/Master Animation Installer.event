@@ -12,7 +12,7 @@
 #define SwordAnim(Animation) "BYTE Swords 0x01 ; SHORT Animation"
 #define SpearAnim(Animation) "BYTE Lances 0x01 ; SHORT Animation"
 #define AxeAnim(Animation) "BYTE Axes 0x01 ; SHORT Animation"
-#define HandAxeAnim(Animation) "BYTE HandAxe 0x00 ; SHORT Animation ; BYTE Tomahawk 0x00 ; SHORT Animation ; BYTE Hatchet 0x00 ; SHORT Animation"
+#define HandAxeAnim(Animation) "BYTE HandAxe 0x00 ; SHORT Animation ; BYTE Tomahawk 0x00 ; SHORT Animation ; BYTE ShortAxe 0x00 ; SHORT Animation"
 #define BowAnim(Animation) "BYTE Bows 0x01 ; SHORT Animation"
 #define StaffAnim(Animation) "BYTE Staves 0x01 ; SHORT Animation"
 #define AnimaAnim(Animation) "BYTE Anima 0x01 ; SHORT Animation"
@@ -341,6 +341,10 @@ ALIGN 4
 {
 #include "Magician/Unarmed/Installer.event"
 }
+ALIGN 4 //Thaumaturge by Pikmin1211, DerTheVaporeon
+{
+#include "Thaumaturge/Magic/Installer.event"
+}
 ALIGN 4 //Shaman 2
 {
 #include "Shaman/Magic/Installer.event"
@@ -482,6 +486,10 @@ WORD 0x0    // Seperator
 MagicianAnim:
 AnimaAnim(0x6A)
 UnarmedAnim(0x6B)
+WORD 0x0    // Seperator
+
+ThaumaAnim:
+AnimaAnim(0xB4)
 WORD 0x0    // Seperator
 
 SeerAnim:

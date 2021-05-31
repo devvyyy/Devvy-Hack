@@ -1,6 +1,36 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+//Nerfed EXP
+
+//Defeat EXP
+PUSH
+ORG 0x02C462
+BYTE 10
+ORG 0x02C480
+BYTE 10
+
+//Base Value EXP
+ORG 0x002c37c
+BYTE 31
+
+//Thief Bonus EXP
+ORG 0x2C3EE
+BYTE 10
+
+//Boss Bonus EXP
+ORG 0x2C3FA
+BYTE 30
+
+//Revenant Bonus EXP
+ORG 0x2C402
+BYTE 20
+
+//Promoted Bonus EXP
+ORG 0x002C35E
+BYTE 10
+POP
+
 //Faster Steal Animation
 PUSH
 ORG 0x9A32D8
