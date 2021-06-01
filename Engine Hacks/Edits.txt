@@ -1,6 +1,17 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+// sets windy sound to fade maybe?
+PUSH
+  ORG $2246AC
+    BYTE 0x01 0x00 0x01 0x00
+POP
+
+PUSH
+  ORG $5A8C0C
+    WORD 0
+POP
+
 //Nerfed EXP
 
 //Defeat EXP

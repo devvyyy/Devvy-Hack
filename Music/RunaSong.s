@@ -1,33 +1,31 @@
 	.include "MPlayDef.s"
 
-	.equ	song33_grp, voicegroup000
-	.equ	song33_pri, 0
-	.equ	song33_rev, 0
-	.equ	song33_mvl, 127
-	.equ	song33_key, 0
-	.equ	song33_tbs, 1
-	.equ	song33_exg, 0
-	.equ	song33_cmp, 1
+	.equ	songEE_grp, voicegroup000
+	.equ	songEE_pri, 0
+	.equ	songEE_rev, 0
+	.equ	songEE_mvl, 127
+	.equ	songEE_key, 0
+	.equ	songEE_tbs, 1
+	.equ	songEE_exg, 0
+	.equ	songEE_cmp, 1
 
 	.section .rodata
-	.global	song33
+	.global	songEE
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song33_001:
+songEE_001:
 @ 000   ----------------------------------------
- .byte   KEYSH , song33_key+0
- .byte   TEMPO , 184*song33_tbs/2
+ .byte   KEYSH , songEE_key+0
+ .byte   TEMPO , 184*songEE_tbs/2
  .byte   VOICE , 57
- .byte   VOL , 64*song33_mvl/mxv
- .byte   PAN , c_v+0
- .byte   En3 ,v064
- .byte   En3
+ .byte   PAN , c_v+6
+ .byte   VOL , 32*songEE_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W48
-Label_0_013A51B0:
+Label_0_013C4FC1:
  .byte   N11 ,Gs3 ,v100
  .byte   W12
  .byte   N05 ,Ds3
@@ -167,25 +165,20 @@ Label_0_013A51B0:
 @ 009   ----------------------------------------
  .byte   W48
  .byte   GOTO
-  .word Label_0_013A51B0
-@ 010   ----------------------------------------
- .byte   VOICE , 57
- .byte   PAN , c_v+0
- .byte   En3 ,v064
- .byte   BEND , c_v+0
+  .word Label_0_013C4FC1
  .byte   FINE
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song33_002:
+songEE_002:
 @ 000   ----------------------------------------
- .byte   KEYSH , song33_key+0
+ .byte   KEYSH , songEE_key+0
  .byte   VOICE , 50
- .byte   VOL , 50*song33_mvl/mxv
- .byte   PAN , c_v-14
+ .byte   PAN , c_v-17
+ .byte   VOL , 25*songEE_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W48
-Label_1_013A525B:
+Label_1_013C4ED7:
  .byte   W12
  .byte   N05 ,Gs2 ,v100
  .byte   N05 ,Gs3
@@ -307,23 +300,20 @@ Label_1_013A525B:
 @ 009   ----------------------------------------
  .byte   W48
  .byte   GOTO
-  .word Label_1_013A525B
-@ 010   ----------------------------------------
- .byte   VOICE , 50
- .byte   BEND , c_v+0
+  .word Label_1_013C4ED7
  .byte   FINE
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song33_003:
+songEE_003:
 @ 000   ----------------------------------------
- .byte   KEYSH , song33_key+0
+ .byte   KEYSH , songEE_key+0
  .byte   VOICE , 47
- .byte   VOL , 63*song33_mvl/mxv
- .byte   PAN , c_v+14
+ .byte   PAN , c_v-4
+ .byte   VOL , 32*songEE_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W48
-Label_2_013A46DB:
+Label_2_013C4E33:
  .byte   W12
  .byte   N05 ,Gs1 ,v100
  .byte   N05 ,Gs2
@@ -442,31 +432,26 @@ Label_2_013A46DB:
 @ 009   ----------------------------------------
  .byte   W48
  .byte   GOTO
-  .word Label_2_013A46DB
-@ 010   ----------------------------------------
- .byte   VOICE , 47
- .byte   BEND , c_v+0
+  .word Label_2_013C4E33
  .byte   FINE
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song33_004:
+songEE_004:
 @ 000   ----------------------------------------
- .byte   KEYSH , song33_key+0
+ .byte   KEYSH , songEE_key+0
  .byte   VOICE , 124
- .byte   VOL , 64*song33_mvl/mxv
+ .byte   VOL , 32*songEE_mvl/mxv
  .byte   PAN , c_v+0
- .byte   En3 ,v064
- .byte   En3
  .byte   BEND , c_v+0
  .byte   W48
-Label_3_013A619A:
+Label_3_013C4D97:
  .byte   N05 ,Cn1 ,v100
  .byte   W24
  .byte   N05
  .byte   W24
 @ 001   ----------------------------------------
-Label_3_013A61A0:
+Label_3_013C4D9D:
  .byte   N05 ,Cn1 ,v100
  .byte   W24
  .byte   N05
@@ -491,7 +476,7 @@ Label_3_013A61A0:
  .byte   W24
 @ 003   ----------------------------------------
  .byte   PATT
-  .word Label_3_013A61A0
+  .word Label_3_013C4D9D
 @ 004   ----------------------------------------
  .byte   N05 ,Cn1 ,v100
  .byte   W24
@@ -523,7 +508,7 @@ Label_3_013A61A0:
  .byte   W24
 @ 007   ----------------------------------------
  .byte   PATT
-  .word Label_3_013A61A0
+  .word Label_3_013C4D9D
 @ 008   ----------------------------------------
  .byte   N05 ,Cn1 ,v100
  .byte   W24
@@ -538,24 +523,17 @@ Label_3_013A61A0:
 @ 009   ----------------------------------------
  .byte   W48
  .byte   GOTO
-  .word Label_3_013A619A
-@ 010   ----------------------------------------
- .byte   VOICE , 124
- .byte   PAN , c_v+0
- .byte   En3 ,v064
- .byte   BEND , c_v+0
+  .word Label_3_013C4D97
  .byte   FINE
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song33_005:
+songEE_005:
 @ 000   ----------------------------------------
- .byte   KEYSH , song33_key+0
+ .byte   KEYSH , songEE_key+0
  .byte   VOICE , 127
- .byte   VOL , 64*song33_mvl/mxv
+ .byte   VOL , 32*songEE_mvl/mxv
  .byte   PAN , c_v+0
- .byte   En3 ,v064
- .byte   En3
  .byte   BEND , c_v+0
  .byte   N05 ,Dn1 ,v100
  .byte   N05 ,Dn2
@@ -575,7 +553,7 @@ song33_005:
  .byte   Dn1
  .byte   N05 ,Fn1
  .byte   W06
-Label_4_013A4BF7:
+Label_4_013C5318:
  .byte   N05 ,Gs1 ,v100
  .byte   W12
  .byte   Dn1
@@ -583,7 +561,7 @@ Label_4_013A4BF7:
  .byte   W06
  .byte   Dn1
  .byte   W06
- .byte   N11 ,En1
+ .byte   N11
  .byte   N05 ,Gs1
  .byte   W12
  .byte   N05
@@ -593,7 +571,7 @@ Label_4_013A4BF7:
 @ 001   ----------------------------------------
  .byte   N05 ,Gs1
  .byte   W12
- .byte   N11 ,En1
+ .byte   N11 ,Dn1
  .byte   N05 ,Gs1
  .byte   W12
  .byte   Dn1
@@ -649,7 +627,7 @@ Label_4_013A4BF7:
  .byte   Dn1
  .byte   N05 ,Gs1
  .byte   W12
- .byte   En1
+ .byte   Dn1
  .byte   N05 ,Gs1
  .byte   W12
  .byte   Dn1
@@ -678,7 +656,7 @@ Label_4_013A4BF7:
  .byte   N05 ,Dn1
  .byte   N05 ,Gs1
  .byte   W12
- .byte   En1
+ .byte   Dn1
  .byte   N05 ,Gs1
  .byte   W06
  .byte   Dn1
@@ -754,9 +732,9 @@ Label_4_013A4BF7:
  .byte   Dn1
  .byte   N05 ,Gs1
  .byte   W06
- .byte   En1
- .byte   W06
  .byte   Dn1
+ .byte   W06
+ .byte   N05
  .byte   N05 ,Gs1
  .byte   W06
  .byte   Fn1
@@ -855,26 +833,20 @@ Label_4_013A4BF7:
  .byte   N05 ,Fn1
  .byte   W06
  .byte   GOTO
-  .word Label_4_013A4BF7
-@ 010   ----------------------------------------
- .byte   PAN , c_v+0
- .byte   En3 ,v064
- .byte   BEND , c_v+0
+  .word Label_4_013C5318
  .byte   FINE
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song33_006:
+songEE_006:
 @ 000   ----------------------------------------
- .byte   KEYSH , song33_key+0
+ .byte   KEYSH , songEE_key+0
  .byte   VOICE , 36
- .byte   VOL , 70*song33_mvl/mxv
- .byte   PAN , c_v+0
- .byte   En3 ,v064
- .byte   En3
+ .byte   PAN , c_v-10
+ .byte   VOL , 35*songEE_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W48
-Label_5_013A4786:
+Label_5_013C5543:
  .byte   N05 ,Gs2 ,v100
  .byte   W24
  .byte   Ds2
@@ -1041,30 +1013,151 @@ Label_5_013A4786:
  .byte   N05
  .byte   W06
  .byte   GOTO
-  .word Label_5_013A4786
-@ 010   ----------------------------------------
- .byte   VOICE , 36
- .byte   PAN , c_v+0
- .byte   En3 ,v064
+  .word Label_5_013C5543
+ .byte   FINE
+
+@**************** Track 7 (Midi-Chn.6) ****************@
+
+songEE_007:
+@ 000   ----------------------------------------
+ .byte   KEYSH , songEE_key+0
+ .byte   VOICE , 48
+ .byte   VOL , 20*songEE_mvl/mxv
+ .byte   PAN , c_v-8
  .byte   BEND , c_v+0
+ .byte   W48
+Label_6_013C506B:
+ .byte   TIE ,Gs3 ,v100
+ .byte   W48
+@ 001   ----------------------------------------
+ .byte   W96
+@ 002   ----------------------------------------
+ .byte   W48
+ .byte   EOT
+ .byte   N48 ,Gs3 ,v044
+ .byte   TIE ,Bn3 ,v100
+ .byte   W48
+@ 003   ----------------------------------------
+ .byte   W96
+@ 004   ----------------------------------------
+ .byte   W48
+ .byte   EOT
+ .byte   W48
+@ 005   ----------------------------------------
+ .byte   W96
+@ 006   ----------------------------------------
+ .byte   W96
+@ 007   ----------------------------------------
+ .byte   W96
+@ 008   ----------------------------------------
+ .byte   W96
+@ 009   ----------------------------------------
+ .byte   W48
+ .byte   GOTO
+  .word Label_6_013C506B
+ .byte   FINE
+
+@**************** Track 8 (Midi-Chn.7) ****************@
+
+songEE_008:
+@ 000   ----------------------------------------
+ .byte   KEYSH , songEE_key+0
+ .byte   VOICE , 100
+ .byte   VOL , 14*songEE_mvl/mxv
+ .byte   PAN , c_v-64
+ .byte   BEND , c_v+0
+ .byte   W48
+Label_7_013C56EB:
+ .byte   TIE ,Gs3 ,v044
+ .byte   TIE ,Gs4 ,v112
+ .byte   W48
+@ 001   ----------------------------------------
+ .byte   W66
+ .byte   EOT
+ .byte   W06
+ .byte   EOT
+ .byte   Gs3
+ .byte   W24
+@ 002   ----------------------------------------
+ .byte   W96
+@ 003   ----------------------------------------
+ .byte   W96
+@ 004   ----------------------------------------
+ .byte   W96
+@ 005   ----------------------------------------
+ .byte   W96
+@ 006   ----------------------------------------
+ .byte   W96
+@ 007   ----------------------------------------
+ .byte   W96
+@ 008   ----------------------------------------
+ .byte   W96
+@ 009   ----------------------------------------
+ .byte   W48
+ .byte   GOTO
+  .word Label_7_013C56EB
+ .byte   FINE
+
+@**************** Track 9 (Midi-Chn.8) ****************@
+
+songEE_009:
+@ 000   ----------------------------------------
+ .byte   KEYSH , songEE_key+0
+ .byte   VOICE , 100
+ .byte   VOL , 14*songEE_mvl/mxv
+ .byte   PAN , c_v+63
+ .byte   BEND , c_v+0
+ .byte   W48
+Label_8_0138C907:
+ .byte   TIE ,Gs3 ,v112
+ .byte   TIE ,Gs4 ,v044
+ .byte   W48
+@ 001   ----------------------------------------
+ .byte   W66
+ .byte   EOT
+ .byte   W06
+ .byte   EOT
+ .byte   Gs3
+ .byte   W24
+@ 002   ----------------------------------------
+ .byte   W96
+@ 003   ----------------------------------------
+ .byte   W96
+@ 004   ----------------------------------------
+ .byte   W96
+@ 005   ----------------------------------------
+ .byte   W96
+@ 006   ----------------------------------------
+ .byte   W96
+@ 007   ----------------------------------------
+ .byte   W96
+@ 008   ----------------------------------------
+ .byte   W96
+@ 009   ----------------------------------------
+ .byte   W48
+ .byte   GOTO
+  .word Label_8_0138C907
  .byte   FINE
 
 @******************************************************@
 	.align	2
 
-song33:
-	.byte	6	@ NumTrks
+songEE:
+	.byte	9	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song33_pri	@ Priority
-	.byte	song33_rev	@ Reverb.
+	.byte	songEE_pri	@ Priority
+	.byte	songEE_rev	@ Reverb.
     
-	.word	song33_grp
+	.word	songEE_grp
     
-	.word	song33_001
-	.word	song33_002
-	.word	song33_003
-	.word	song33_004
-	.word	song33_005
-	.word	song33_006
+	.word	songEE_001
+	.word	songEE_002
+	.word	songEE_003
+	.word	songEE_004
+	.word	songEE_005
+	.word	songEE_006
+	.word	songEE_007
+	.word	songEE_008
+	.word	songEE_009
 
 	.end

@@ -22,13 +22,11 @@ song33_001:
  BYTE   KEYSH   song33_key+0
  BYTE   TEMPO   184*song33_tbs/2
  BYTE   VOICE   57
- BYTE   VOL   64*song33_mvl/mxv
- BYTE   PAN   c_v+0
- BYTE   En3  v064
- BYTE   En3
+ BYTE   PAN   c_v+6
+ BYTE   VOL   32*song33_mvl/mxv
  BYTE   BEND   c_v+0
  BYTE   W48
-Label_0_013A51B0:
+Label_0_013C4FC1:
  BYTE   N11  Gs3  v100
  BYTE   W12
  BYTE   N05  Ds3
@@ -168,12 +166,7 @@ Label_0_013A51B0:
 // 009   ----------------------------------------
  BYTE   W48
  BYTE   GoTo
-  POIN2 Label_0_013A51B0
-// 010   ----------------------------------------
- BYTE   VOICE   57
- BYTE   PAN   c_v+0
- BYTE   En3  v064
- BYTE   BEND   c_v+0
+  POIN2 Label_0_013C4FC1
  BYTE   FINE
 
 //**************** Track 2 (Midi-Chn.1) ****************//
@@ -182,11 +175,11 @@ song33_002:
 // 000   ----------------------------------------
  BYTE   KEYSH   song33_key+0
  BYTE   VOICE   50
- BYTE   VOL   50*song33_mvl/mxv
- BYTE   PAN   c_v-14
+ BYTE   PAN   c_v-17
+ BYTE   VOL   25*song33_mvl/mxv
  BYTE   BEND   c_v+0
  BYTE   W48
-Label_1_013A525B:
+Label_1_013C4ED7:
  BYTE   W12
  BYTE   N05  Gs2  v100
  BYTE   N05  Gs3
@@ -308,10 +301,7 @@ Label_1_013A525B:
 // 009   ----------------------------------------
  BYTE   W48
  BYTE   GoTo
-  POIN2 Label_1_013A525B
-// 010   ----------------------------------------
- BYTE   VOICE   50
- BYTE   BEND   c_v+0
+  POIN2 Label_1_013C4ED7
  BYTE   FINE
 
 //**************** Track 3 (Midi-Chn.2) ****************//
@@ -320,11 +310,11 @@ song33_003:
 // 000   ----------------------------------------
  BYTE   KEYSH   song33_key+0
  BYTE   VOICE   47
- BYTE   VOL   63*song33_mvl/mxv
- BYTE   PAN   c_v+14
+ BYTE   PAN   c_v-4
+ BYTE   VOL   32*song33_mvl/mxv
  BYTE   BEND   c_v+0
  BYTE   W48
-Label_2_013A46DB:
+Label_2_013C4E33:
  BYTE   W12
  BYTE   N05  Gs1  v100
  BYTE   N05  Gs2
@@ -443,10 +433,7 @@ Label_2_013A46DB:
 // 009   ----------------------------------------
  BYTE   W48
  BYTE   GoTo
-  POIN2 Label_2_013A46DB
-// 010   ----------------------------------------
- BYTE   VOICE   47
- BYTE   BEND   c_v+0
+  POIN2 Label_2_013C4E33
  BYTE   FINE
 
 //**************** Track 4 (Midi-Chn.3) ****************//
@@ -455,19 +442,17 @@ song33_004:
 // 000   ----------------------------------------
  BYTE   KEYSH   song33_key+0
  BYTE   VOICE   124
- BYTE   VOL   64*song33_mvl/mxv
+ BYTE   VOL   32*song33_mvl/mxv
  BYTE   PAN   c_v+0
- BYTE   En3  v064
- BYTE   En3
  BYTE   BEND   c_v+0
  BYTE   W48
-Label_3_013A619A:
+Label_3_013C4D97:
  BYTE   N05  Cn1  v100
  BYTE   W24
  BYTE   N05
  BYTE   W24
 // 001   ----------------------------------------
-Label_3_013A61A0:
+Label_3_013C4D9D:
  BYTE   N05  Cn1  v100
  BYTE   W24
  BYTE   N05
@@ -492,7 +477,7 @@ Label_3_013A61A0:
  BYTE   W24
 // 003   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_3_013A61A0
+  POIN2 Label_3_013C4D9D
 // 004   ----------------------------------------
  BYTE   N05  Cn1  v100
  BYTE   W24
@@ -524,7 +509,7 @@ Label_3_013A61A0:
  BYTE   W24
 // 007   ----------------------------------------
  BYTE   PATT
-  POIN2 Label_3_013A61A0
+  POIN2 Label_3_013C4D9D
 // 008   ----------------------------------------
  BYTE   N05  Cn1  v100
  BYTE   W24
@@ -539,12 +524,7 @@ Label_3_013A61A0:
 // 009   ----------------------------------------
  BYTE   W48
  BYTE   GoTo
-  POIN2 Label_3_013A619A
-// 010   ----------------------------------------
- BYTE   VOICE   124
- BYTE   PAN   c_v+0
- BYTE   En3  v064
- BYTE   BEND   c_v+0
+  POIN2 Label_3_013C4D97
  BYTE   FINE
 
 //**************** Track 5 (Midi-Chn.4) ****************//
@@ -553,10 +533,8 @@ song33_005:
 // 000   ----------------------------------------
  BYTE   KEYSH   song33_key+0
  BYTE   VOICE   127
- BYTE   VOL   64*song33_mvl/mxv
+ BYTE   VOL   32*song33_mvl/mxv
  BYTE   PAN   c_v+0
- BYTE   En3  v064
- BYTE   En3
  BYTE   BEND   c_v+0
  BYTE   N05  Dn1  v100
  BYTE   N05  Dn2
@@ -576,7 +554,7 @@ song33_005:
  BYTE   Dn1
  BYTE   N05  Fn1
  BYTE   W06
-Label_4_013A4BF7:
+Label_4_013C5318:
  BYTE   N05  Gs1  v100
  BYTE   W12
  BYTE   Dn1
@@ -584,7 +562,7 @@ Label_4_013A4BF7:
  BYTE   W06
  BYTE   Dn1
  BYTE   W06
- BYTE   N11  En1
+ BYTE   N11
  BYTE   N05  Gs1
  BYTE   W12
  BYTE   N05
@@ -594,7 +572,7 @@ Label_4_013A4BF7:
 // 001   ----------------------------------------
  BYTE   N05  Gs1
  BYTE   W12
- BYTE   N11  En1
+ BYTE   N11  Dn1
  BYTE   N05  Gs1
  BYTE   W12
  BYTE   Dn1
@@ -650,7 +628,7 @@ Label_4_013A4BF7:
  BYTE   Dn1
  BYTE   N05  Gs1
  BYTE   W12
- BYTE   En1
+ BYTE   Dn1
  BYTE   N05  Gs1
  BYTE   W12
  BYTE   Dn1
@@ -679,7 +657,7 @@ Label_4_013A4BF7:
  BYTE   N05  Dn1
  BYTE   N05  Gs1
  BYTE   W12
- BYTE   En1
+ BYTE   Dn1
  BYTE   N05  Gs1
  BYTE   W06
  BYTE   Dn1
@@ -755,9 +733,9 @@ Label_4_013A4BF7:
  BYTE   Dn1
  BYTE   N05  Gs1
  BYTE   W06
- BYTE   En1
- BYTE   W06
  BYTE   Dn1
+ BYTE   W06
+ BYTE   N05
  BYTE   N05  Gs1
  BYTE   W06
  BYTE   Fn1
@@ -856,11 +834,7 @@ Label_4_013A4BF7:
  BYTE   N05  Fn1
  BYTE   W06
  BYTE   GoTo
-  POIN2 Label_4_013A4BF7
-// 010   ----------------------------------------
- BYTE   PAN   c_v+0
- BYTE   En3  v064
- BYTE   BEND   c_v+0
+  POIN2 Label_4_013C5318
  BYTE   FINE
 
 //**************** Track 6 (Midi-Chn.5) ****************//
@@ -869,13 +843,11 @@ song33_006:
 // 000   ----------------------------------------
  BYTE   KEYSH   song33_key+0
  BYTE   VOICE   36
- BYTE   VOL   70*song33_mvl/mxv
- BYTE   PAN   c_v+0
- BYTE   En3  v064
- BYTE   En3
+ BYTE   PAN   c_v-10
+ BYTE   VOL   35*song33_mvl/mxv
  BYTE   BEND   c_v+0
  BYTE   W48
-Label_5_013A4786:
+Label_5_013C5543:
  BYTE   N05  Gs2  v100
  BYTE   W24
  BYTE   Ds2
@@ -1042,19 +1014,137 @@ Label_5_013A4786:
  BYTE   N05
  BYTE   W06
  BYTE   GoTo
-  POIN2 Label_5_013A4786
-// 010   ----------------------------------------
- BYTE   VOICE   36
- BYTE   PAN   c_v+0
- BYTE   En3  v064
+  POIN2 Label_5_013C5543
+ BYTE   FINE
+
+//**************** Track 7 (Midi-Chn.6) ****************//
+
+song33_007:
+// 000   ----------------------------------------
+ BYTE   KEYSH   song33_key+0
+ BYTE   VOICE   48
+ BYTE   VOL   20*song33_mvl/mxv
+ BYTE   PAN   c_v-8
  BYTE   BEND   c_v+0
+ BYTE   W48
+Label_6_013C506B:
+ BYTE   TIE  Gs3  v100
+ BYTE   W48
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W48
+ BYTE   EOT
+ BYTE   N48  Gs3  v044
+ BYTE   TIE  Bn3  v100
+ BYTE   W48
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W48
+ BYTE   EOT
+ BYTE   W48
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W48
+ BYTE   GoTo
+  POIN2 Label_6_013C506B
+ BYTE   FINE
+
+//**************** Track 8 (Midi-Chn.7) ****************//
+
+song33_008:
+// 000   ----------------------------------------
+ BYTE   KEYSH   song33_key+0
+ BYTE   VOICE   100
+ BYTE   VOL   14*song33_mvl/mxv
+ BYTE   PAN   c_v-64
+ BYTE   BEND   c_v+0
+ BYTE   W48
+Label_7_013C56EB:
+ BYTE   TIE  Gs3  v044
+ BYTE   TIE  Gs4  v112
+ BYTE   W48
+// 001   ----------------------------------------
+ BYTE   W66
+ BYTE   EOT
+ BYTE   W06
+ BYTE   EOT
+ BYTE   Gs3
+ BYTE   W24
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W48
+ BYTE   GoTo
+  POIN2 Label_7_013C56EB
+ BYTE   FINE
+
+//**************** Track 9 (Midi-Chn.8) ****************//
+
+song33_009:
+// 000   ----------------------------------------
+ BYTE   KEYSH   song33_key+0
+ BYTE   VOICE   100
+ BYTE   VOL   14*song33_mvl/mxv
+ BYTE   PAN   c_v+63
+ BYTE   BEND   c_v+0
+ BYTE   W48
+Label_8_0138C907:
+ BYTE   TIE  Gs3  v112
+ BYTE   TIE  Gs4  v044
+ BYTE   W48
+// 001   ----------------------------------------
+ BYTE   W66
+ BYTE   EOT
+ BYTE   W06
+ BYTE   EOT
+ BYTE   Gs3
+ BYTE   W24
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W48
+ BYTE   GoTo
+  POIN2 Label_8_0138C907
  BYTE   FINE
 
 //******************************************************//
 	ALIGN 4
 
 song33:
-	BYTE	6	// NumTrks
+	BYTE	9	// NumTrks
 	BYTE	0	// NumBlks
 	BYTE	song33_pri	// Priority
 	BYTE	song33_rev	// Reverb.
@@ -1067,5 +1157,8 @@ song33:
 	POIN2	song33_004
 	POIN2	song33_005
 	POIN2	song33_006
+	POIN2	song33_007
+	POIN2	song33_008
+	POIN2	song33_009
 
 	

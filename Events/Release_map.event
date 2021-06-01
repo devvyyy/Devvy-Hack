@@ -36,11 +36,40 @@ TURN 0x0 ShamanRein3 [10,0] 0x0
 END_MAIN
 
 CharacterBasedEvents:
-CharacterEventBothWays(0x10,TalkingTextTest, Zane, Wustenhoff)
+CharacterEventBothWays(0x10,AffoBreveConvo, Affo, Breve)
+CharacterEventBothWays(0xA,SeqEvelConvo, Sequin, Evelyn)
+CharacterEventBothWays(0xB,HildrUlrichConvo, Hildr, Ulrich)
+CharacterEventBothWays(0xC,AnsgarAffoConvo, Ansgar, Affo)
 END_MAIN
 
-TalkingTextTest:
-	Text(Placeholder1)
+AffoBreveConvo:
+	MUSI
+	Text(AffoBreveTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+SeqEvelConvo:
+	MUSI
+	Text(SeqEvelTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+HildrUlrichConvo:
+	MUSI
+	Text(HildrUlrichTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+AnsgarAffoConvo:
+	MUSI
+	Text(AnsgarAffoTalk)
+	MUNO
 	MURE 2
 	NoFade
 	ENDA
@@ -158,28 +187,52 @@ ENUN
 MUSC 0xBB
 TEXTSTART
 SVAL 0x2 0x3D
-SVAL 0x3 Prologue1
+SVAL 0x3 SirItsBad
 CALL 0x9EE310
 REMA
 FADI 16
 CLEAN
-MUSC 0xE4
+MUSC 0x4D
 LOAD1 0x0 Units1
 TEXTSTART
 SVAL 0x2 0x3C
-SVAL 0x3 Prologue2
-CALL 0x9EE310
+FADU 20
+CALL 0x9EE2E8
+TEXTSHOW BardGaming
+TEXTEND
+MUSC 0xE4
+TEXTCONT
+TEXTEND
 REMA
 _0x2629 0x7
+FADI 20
+CLEAN
 STAL 20
+FADU 20
+STAL 60
+CAM1 [7,12]
+CameraCursor(Affogato)
+Text(CanWeStartYet)
 FADI 16
 GotoPrepScreen
 ENDA
 
 EndingScene:
-Music(VictorySadBGM)
-Text(0x3D,PrologueEnding1)
-STAL 120
+Music(0x31)
+SetBackground(0x3C)
+IfAliveDialog(Breve,EndingSceneBrevePrologue)
+CHECK_ALIVE Evelyn
+BEQ 2 0x0 0xC
+CHECK_ALIVE Ansgar
+BEQ 2 0x0 0xC
+Music(0x115)
+Text(EndingSceneEvelAnsgarPrologue)
+GOTO 3
+LABEL 2
+Music(0x4D)
+Text(HowDoYouEvenGetThisEnding)
+STAL 20
+LABEL 3
 EVBIT_F 0x2
 FADI 16
 MNC2 0x1

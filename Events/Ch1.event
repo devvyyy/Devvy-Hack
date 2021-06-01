@@ -14,7 +14,6 @@ PointerList:
 
 TurnBasedEvents:
 TURN 0x0 IreneEvent [2,0] 0x0
-TURN 0x0 LiliEvent [3,0] 0x0
 TURN 0x0 ShamanReinforcementsLeft [3,0] 0x0
 TURN 0x0 DisplayLingerText [4,0] 0x0
 TURN 0x0 GetOutOfSpawnPls [5,0] 0x0
@@ -91,7 +90,24 @@ UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [9,10] 0b 0x0 0x0 0x0 [IronBow, 0xC3,
 UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [6,11] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
 UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [7,11] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
 UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [10,11] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
-UNIT Latte Archer_F 0x1 Level(2, Ally, 0)   [9,11] 0b 0x0 0x0 0x0 [IronBow, Longbow] [0x0,0x0,0x0,0x0]
+UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [9,11] 0b 0x0 0x0 0x0 [IronBow, 0xC3,] [0x0,0x0,0x0,0x0]
+UNIT
+
+CutsceneUnits:
+UNIT Affogato 0x55 0x1 Level(1, Ally, 0)   [7,13] 0 0 1 REDA7R10 [SteelBlade, SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Ansgar LArmor 0x1 Level(1, Ally, 0)   [6,13] 0 0 1 REDA6R10 [SteelBlade, SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Sequin Mage 0x1 Level(1, Ally, 0)   [5,13] 0 0 1 REDA5R10 [SteelBlade, SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Evelyn Troubadour 0x1 Level(1, Ally, 0)   [6,13] 0 0 1 REDA6R11 [SteelBlade, SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Breve SCav 0x1 Level(1, Ally, 0)   [7,13] 0 0 1 REDA7R11 [SteelBlade, SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Hildr ACav 0x1 Level(1, Ally, 0)   [5,13] 0 0 1 REDA5R11 [SteelBlade, SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT
+
+LatteIfTheyAreDead:
+UNIT Latte Archer_F 0x1 Level(2, Ally, 1)   [7,13] 0 0 1 REDA9R12 [SteelBow, Longbow,] [0x0,0x0,0x0,0x0]
+UNIT
+
+LatteRecruitUnit:
+UNIT Latte Archer_F 0x1 Level(2, Ally, 0)   [0,10] 0 0 1 REDA2R10 [IronBow, Longbow] [0x0,0x0,0x0,0x0]
 UNIT
 
 EnemyUnits:
@@ -150,10 +166,6 @@ IreneRein:
 UNIT Irene Myrmidon_F 0x1 Level(4, Ally, 0)   [16,13] 0 0 1 REDA15R11 [KillingEdge,Vulnerary] [0x0,0x0,0x0,0x0]
 UNIT
 
-LiliRein:
-UNIT Lili Monk 0x1 Level(2, Ally, 0)   [0,10] 0 0 1 REDA2R10 [Divine, Lightning,] [0x0,0x0,0x0,0x0]
-UNIT
-
 IreneEvent:
 	LOAD1 0x1 IreneRein
 	ENUN
@@ -165,18 +177,7 @@ IreneEvent:
 	TEXTEND
 	NoFade
 	ENDA
-	
-LiliEvent:
-	LOAD1 0x1 LiliRein
-	ENUN
-	CAM1 Lili
-	STAL 20
-	CUMO Lili
-	TEXTSTART
-	Text(LiliAppearing)
-	TEXTEND
-	NoFade
-	ENDA
+
 	
 BiscottiChargeWarn:
 	ChargeWarning(Biscotti,BisWarnText)
@@ -195,9 +196,16 @@ CAM1 [3,6]
 	LOAD1 0x1 BReinforcements1
 	ENUN
 	STAL 20
-	TEXTSTART
-	Text(LiliDivineLightning)
+CHECK_EVENTID 11
+BEQ 0x0 0xC 0x0
+	LOAD1 0x1 LatteRecruitUnit
+	ENUN
+	CAM1 Latte
+	STAL 20
+	CUMO Latte
+	Text(LatteRecruit)
 	TEXTEND
+LABEL 0x0
 	NoFade
 	ENDA
 	
@@ -243,11 +251,30 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-MusicChange(Tension)
+MusicChange(0x92)
+CAM1 [18,0]
 Text(SnowMountainBG, Ch1Opening1)
-	LOAD1 0x1 Units1
+MusicChange(SolveTheRiddle)
+CAM1 [0,0]
+Text(SnowMountainBG, Ch1Opening2)
 	LOAD1 0x1 EnemyUnits
 	ENUN
+	STAL 20
+LOAD2 0x1 CutsceneUnits
+ENUN
+CameraCursor(Affogato)
+	ENUN
+CHECK_ALIVE Breve
+BEQ 1 0x0 0xC
+CHECK_ALIVE Ulrich
+BEQ 1 0x0 0xC
+Text(Ch1OpeningAffoBreveUlrich)
+GOTO 2
+LABEL 1
+	LOAD1 0x1 LatteIfTheyAreDead
+Text(Ch1OpeningIfTheyDed)
+	ENUT 0x17
+LABEL 2
 	GotoPrepScreen
 	ENDA
 
