@@ -6,6 +6,8 @@
 #define Free_Space FreeSpace
 #define DefaultAP 0x81CAA20
 #define ItemTable NewItemTable
+#define BossQuoteTable NewBossQuoteTable
+#define DeathQuoteTable NewDeathQuoteTable
 #define SpellAssociationTable NewSpellAssociationTable
 
 #define ChapterTileset(chapter, object, palette, config) "PUSH; ORG 0x8b0890 + (148* chapter) + 4; SHORT object; BYTE palette config; POP"
