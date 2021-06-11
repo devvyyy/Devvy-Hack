@@ -203,6 +203,11 @@ Eis_Mug:
 #incext PortraitFormatter "Eiskaffee.png"
 setMugEntry(0x2A, Eis_Mug, 3, 5, 3, 3)
 
+ALIGN 16 //Edited by L95
+Gorlois_Mug:
+#incext PortraitFormatter "Gorlois.png"
+setMugEntryExtend(0x39, Gorlois_Mug, 3, 5, 3, 3, 10, 4, 0, 0)
+
 ALIGN 16
 Latte_Mug: //Latte by Laurent Lacroix
 #incext PortraitFormatter "Latte.png"
