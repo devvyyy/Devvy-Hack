@@ -1,0 +1,411 @@
+EventPointerTable(Ch5Event, PointerList)
+
+PointerList:
+	POIN TurnBasedEvents
+	POIN CharacterBasedEvents
+	POIN LocationBasedEvents
+	POIN MiscBasedEvents
+	POIN Dunno1 Dunno2 Dunno3 Tutorial
+	POIN Traps1 Traps2
+	POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+	POIN $0 $0 $0
+	POIN $0 $0 $0
+	POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TURN 0x0 LMoatEvent1 [2,0] 0x0
+TURN 0x0 TMoatEvent1 [3,0] 0x0
+TURN 0x0 LRFortEvent1 [4,0] 0x0
+TURN 0x0 MFortEvent2 [4,0] 0x0
+TURN 0x0 TMoatEvent2 [5,0] 0x0
+TURN 0x0 LFortEvent1 [6,0] 0x0
+TURN 0x0 RFortEvent3 [6,0] 0x0
+TURN 0x0 LMoatEvent2 [4,0] 0x0
+TURN 0x0 TMoatEvent3 [7,0] 0x0
+TURN 0x0 RFortEvent2 [9,0] 0x0
+TURN 0x0 LMoatEvent3 [10,0] 0x0
+TURN 0x0 MFortEvent1 [11,0] 0x0
+TURN 0x0 GoodbyeDespair [13,0] 0x0
+	END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+
+	END_MAIN
+
+ALIGN 32
+MiscBasedEvents:
+AREA 0xD KillTopMoat [17,0] [18,0]
+AREA 0xA FortniteLeft [5,18] [5,18]
+AREA 0xB FortniteMid [13,11] [13,11]
+AREA 0xC FortniteLeft [18,16] [18,16]
+AFEV 0x0 DidWeWin1 0xA
+AFEV 0x0 DidWeWin2 0xB
+AFEV 0x0 DidWeWin3 0xC
+	CauseGameOverIfLordDies
+	END_MAIN
+	
+ALIGN 32
+DidWeWin1:
+CHECK_EVENTID 0xB
+BEQ 0x0 0xC 0x0
+CHECK_EVENTID 0xC
+BEQ 0x0 0xC 0x0
+ENUT 0x3
+CALL (EndingScene)
+LABEL 0x0
+EVBIT_T 0x7
+ENDA
+
+ALIGN 32
+DidWeWin2:
+CHECK_EVENTID 0xA
+BEQ 0x0 0xC 0x0
+CHECK_EVENTID 0xC
+BEQ 0x0 0xC 0x0
+ENUT 0x3
+CALL (EndingScene)
+LABEL 0x0
+EVBIT_T 0x7
+ENDA
+
+ALIGN 32
+DidWeWin3:
+CHECK_EVENTID 0xA
+BEQ 0x0 0xC 0x0
+CHECK_EVENTID 0xB
+BEQ 0x0 0xC 0x0
+ENUT 0x3
+CALL (EndingScene)
+LABEL 0x0
+EVBIT_T 0x7
+ENDA
+
+LocationBasedEvents:
+Chest(0x88,21,0)
+Chest(0x74,12,6)
+Chest(0x5F,14,7)
+Door(10,9)
+Door(21,3)
+Door(15,8)
+Door(17,8)
+	END_MAIN
+
+Dunno1:
+
+	END_MAIN
+
+Dunno2:
+
+	END_MAIN
+
+Dunno3:
+
+	END_MAIN
+
+Tutorial:
+
+	END_MAIN
+
+Units1:
+LoadUnit(5,4)
+LoadUnit(6,4)
+LoadUnit(7,4)
+LoadUnit(5,5)
+LoadUnit(6,5)
+LoadUnit(7,5)
+LoadUnit(8,4)
+LoadUnit(8,5)
+LoadUnit(20,8)
+LoadUnit(21,8)
+LoadUnit(22,8)
+LoadUnit(20,7)
+LoadUnit(21,7)
+LoadUnit(22,7)
+	UNIT
+
+EnemyUnits:
+UNIT Hiems Occultist 0x1 Level(7, Enemy, 1)     [0,9] DropItem 0x0 0x0 0x0 [Flux,Elixir] ChargeAI
+UNIT BadGuy WyvernRider 0x1 Level(6, Enemy, 1)     [1,9] 0b 0x0 0x0 0x0 [IronLabrys] ChargeAI
+UNIT Hiems WyvernRider 0x1 Level(6, Enemy, 1)     [17,18] 0b 0x0 0x0 0x0 [IronAxe] ChargeAI
+UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [18,17] 0b 0x0 0x0 0x0 [Flux] AttackInRangeAI
+UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [21,13] 0b 0x0 0x0 0x0 [DarkTome2] ChargeAI
+UNIT BadGuy AxeArmor 0x1 Level(7, Enemy, 1)     [9,9] 0b 0x0 0x0 0x0 [SteelLabrys,ShortAxe] BossAI
+UNIT BadGuy SwordCav 0x1 Level(6, Enemy, 1)     [1,16] 0b 0x0 0x0 0x0 [Armorslayer] TwoActionAI
+UNIT BadGuy LanceCav 0x1 Level(6, Enemy, 1)     [0,18] 0b 0x0 0x0 0x0 [Horseslayer] ChargeAI
+UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [1,13] 0b 0x0 0x0 0x0 [DarkTome2] AttackInRangeAI
+UNIT Hiems Deserter 0x1 Level(6, Enemy, 1)     [2,17] DropItem 0x0 0x0 0x0 [IronLance,Vulnerary] AttackInRangeAI
+UNIT Hiems Thaumaturge 0x1 Level(6, Enemy, 1)     [6,11] 0b 0x0 0x0 0x0 [Thunder] StallOneTurnAI
+UNIT BadGuy Mercenary 0x1 Level(6, Enemy, 1)     [20,16] 0b 0x0 0x0 0x0 [IronBlade] AttackInRangeAI
+UNIT Hiems Thaumaturge 0x1 Level(7, Enemy, 1)     [21,18] 0b 0x0 0x0 0x0 [Wind,Vulnerary] StallOneTurnAI
+UNIT Hiems Thaumaturge 0x1 Level(6, Enemy, 1)     [21,18] 0b 0x0 0x0 0x0 [Wind] StallOneTurnAI
+UNIT BadGuy Myrmidon 0x1 Level(6, Enemy, 1)     [20,11] 0b 0x0 0x0 0x0 [KillingEdge] TwoActionAI
+UNIT Hiems Occultist 0x1 Level(6, Enemy, 1)     [22,10] 0b 0x0 0x0 0x0 [Flux] ChargeAI
+UNIT BadGuy Thief 0x1 Level(5, Enemy, 1)     [21,4] DropItem 0x0 0x0 0x0 [KillingEdge,Lockpick] BossAI
+UNIT BadGuy LanceArmor 0x1 Level(7, Enemy, 1)     [17,7] 0b 0x0 0x0 0x0 [Spear] BossAI
+UNIT Hiems Occultist 0x1 Level(6, Enemy, 1)     [0,5] 0b 0x0 0x0 0x0 [DarkTome2] StallOneTurnAI
+UNIT BadGuy Deserter 0x1 Level(6, Enemy, 1)     [5,7] 0b 0x0 0x0 0x0 [IronGlaive] ChargeAI
+UNIT BadGuy Raider 0x1 Level(6, Enemy, 1)     [3,12] 0b 0x0 0x0 0x0 [IronSword,Zanbato] AttackInRangeAI
+UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [13,2] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
+UNIT BadGuy Mage 0x1 Level(6, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [Fire] AttackInRangeAI
+UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [10,5] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
+UNIT BadGuy SCav 0x1 Level(6, Enemy, 1)     [9,3] 0b 0x0 0x0 0x0 [IronSword,Vulnerary] AttackInRangeAI
+UNIT BadGuy PegRider 0x1 Level(6, Enemy, 1)     [8,13] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
+UNIT BadGuy PegRider 0x1 Level(6, Enemy, 1)     [17,1] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
+UNIT BadGuy Monk 0x1 Level(6, Enemy, 1)     [12,10] 0b 0x0 0x0 0x0 [Light1] AttackInRangeAI
+UNIT BadGuy Pirate 0x1 Level(6, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [ShortAxe,EnergyRing] BossAI
+UNIT BadGuy Hunter 0x1 Level(6, Enemy, 1)     [15,12] 0b 0x0 0x0 0x0 [SteelBow] AttackInRangeAI
+	UNIT
+	
+LeftMoatRein1:
+UNIT BadGuy Pirate 0x1 Level(6, Enemy, 1)     [0,9] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
+	UNIT
+	
+LeftMoatRein2:
+UNIT Hiems Occultist 0x1 Level(6, Enemy, 1)     [0,9] 0b 0x0 0x0 0x0 [Flux] ChargeAI
+UNIT Hiems Occultist 0x1 Level(6, Enemy, 1)     [0,9] 0 0 1 REDA1R9 [DarkTome2] ChargeAI
+	UNIT
+	
+LeftMoatRein3:
+UNIT Hiems Occultist 0x1 Level(7, Enemy, 1)     [0,9] 0b 0x0 0x0 0x0 [DarkTome2] ChargeAI
+UNIT BadGuy PegRider 0x1 Level(6, Enemy, 1)     [0,9] 0 0 1 REDA1R9 [IronLance] ChargeAI
+	UNIT
+	
+ThiefRein1:
+UNIT 0x64 Thief 0x1 Level(5, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [KillingEdge,YourCut] ThiefAI
+	UNIT
+	
+ThiefRein2:
+UNIT 0x64 Thief 0x1 Level(6, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [Lancereaver,YourCut] ThiefAI
+	UNIT
+	
+TopMoat1:
+UNIT Hiems Occultist 0x1 Level(6, Enemy, 1)     [17,0] 0b 0x0 0x0 0x0 [DarkTome2] ChargeAI
+UNIT BadGuy WyvernRider 0x1 Level(7, Enemy, 1)     [18,0] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
+	UNIT
+	
+TopMoat2:
+UNIT Hiems Occultist 0x1 Level(7, Enemy, 1)     [18,0] 0b 0x0 0x0 0x0 [DarkTome1] ChargeAI
+UNIT BadGuy Pirate 0x1 Level(7, Enemy, 1)     [17,0] 0b 0x0 0x0 0x0 [Swordreaver,SteelAxe] ChargeAI
+	UNIT
+	
+TopMoat3:
+UNIT BadGuy PegRider 0x1 Level(7, Enemy, 1)     [18,0] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
+UNIT BadGuy WyvernRider 0x1 Level(7, Enemy, 1)     [17,0] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
+	UNIT
+	
+InnerFortRein1:
+UNIT Hiems Shaman 0x1 Level(7, Enemy, 1)     [13,11] 0b 0x0 0x0 0x0 [DarkTome2] [0,0xF,4,0]
+UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [13,11] 0 0 1 REDA14R11 [IronLabrys] [0,0xF,4,0]
+	UNIT
+	
+InnerFortRein2:
+UNIT BadGuy Hunter 0x1 Level(6, Enemy, 1)     [13,11] 0b 0x0 0x0 0x0 [SteelBow] [0,0xF,4,0]
+UNIT BadGuy LCav 0x1 Level(7, Enemy, 1)     [13,11] 0 0 1 REDA14R11 [Horseslayer] [0,0xF,4,0]
+	UNIT
+	
+LeftFortRein1:
+UNIT BadGuy Raider 0x1 Level(6, Enemy, 1)     [5,18] 0b 0x0 0x0 0x0 [IronSword] [0,0xF,4,0]
+	UNIT
+	
+LeftFortRein2:
+UNIT BadGuy Brigand 0x1 Level(7, Enemy, 1)     [5,18] 0b 0x0 0x0 0x0 [SteelLabrys,Swordreaver] [0,0xF,4,0]
+UNIT BadGuy Hunter 0x1 Level(7, Enemy, 1)     [5,18] 0 0 1 REDA3R18 [Longbow,SteelBow] [0,0xF,4,0]
+	UNIT
+	
+RightFortRein1:
+UNIT BadGuy Hunter 0x1 Level(7, Enemy, 1)     [18,16] 0b 0x0 0x0 0x0 [SteelBow] [0,0xF,4,0]
+UNIT BadGuy LCav 0x1 Level(6, Enemy, 1)     [18,16] 0 0 1 REDA19R16 [IronLance] [0,0xF,4,0]
+	UNIT
+	
+RightFortRein2:
+UNIT Hiems Mage 0x1 Level(7, Enemy, 1)     [18,16] 0b 0x0 0x0 0x0 [Thunder] [0,0xF,4,0]
+UNIT Hiems Thaumaturge 0x1 Level(6, Enemy, 1)     [18,16] 0 0 1 REDA18R16 [Fire] [0,0xF,4,0]
+	UNIT
+	
+RightFortRein3:
+UNIT Hiems Thaumaturge 0x1 Level(7, Enemy, 1)     [18,16] 0b 0x0 0x0 0x0 [Wind] [0,0xF,4,0]
+	UNIT
+
+RedSussy:
+UNIT King KingClass 0x1 Level(15, NPC, 0)     [6,1] 0b 0x0 0x0 0x0 [] BossAI
+UNIT Gorlois Parson 0x1 Level(7, NPC, 0)     [6,3] 0b 0x0 0x0 0x0 [0x40, Elixir] BossAI
+	UNIT
+
+Traps1:
+GreenSigil(17,2)
+GreenSigil(18,2)
+BlueSigil(13,11)
+BlueSigil(5,18)
+BlueSigil(18,16)
+	ENDTRAP
+	ALIGN 4
+
+Traps2:
+	ENDTRAP
+	ALIGN 4
+	
+FortniteLeft:
+SVAL 0x2 0x0
+CALL 0x9EE1B8
+STAL 10
+SOUN 0x60
+RemoveTrapAtCoords(5,18)
+CameraCursor(King)
+STAL 60
+CURE
+TEXTSHOW Placeholder1
+TEXTEND
+REMA
+NoFade
+ENDA
+
+FortniteMid:
+SVAL 0x2 0x0
+CALL 0x9EE1B8
+STAL 10
+SOUN 0x60
+RemoveTrapAtCoords(13,11)
+CameraCursor(King)
+STAL 60
+CURE
+TEXTSHOW Placeholder1
+TEXTEND
+REMA
+NoFade
+ENDA
+
+FortniteRight:
+SVAL 0x2 0x0
+CALL 0x9EE1B8
+STAL 10
+SOUN 0x60
+RemoveTrapAtCoords(18,16)
+CameraCursor(King)
+STAL 60
+CURE
+TEXTSHOW Placeholder1
+TEXTEND
+REMA
+NoFade
+ENDA
+
+KillTopMoat:
+SVAL 0x2 0x0
+CALL 0x9EE1B8
+SOUN 0x2D2
+TILECHANGE 0x1
+RemoveTrapAtCoords(17,0)
+RemoveTrapAtCoords(18,0)
+CHECK_ALIVE Gorlois
+BEQ 1 0x0 0xC
+CUMO Affogato
+STAL 60
+CURE
+TEXTSHOW Placeholder1
+TEXTEND
+REMA
+GOTO 2
+LABEL 1
+STAL 60
+CURE
+TEXTSHOW Placeholder2
+TEXTEND
+LABEL 2
+NoFade
+ENDA
+
+LMoatEvent1:
+SpawnReinforcements(LeftMoatRein1)
+ENDA
+
+LMoatEvent2:
+SpawnReinforcements(LeftMoatRein2)
+ENDA
+
+LMoatEvent3:
+SpawnReinforcements(LeftMoatRein3)
+ENDA
+
+TMoatEvent1:
+CHECK_EVENTID 0xD
+BEQ 0x0 0xC 0x0
+SpawnReinforcements(TopMoat1)
+LABEL 0x0
+ENDA
+
+TMoatEvent2:
+CHECK_EVENTID 0xD
+BEQ 0x0 0xC 0x0
+SpawnReinforcements(TopMoat2)
+LABEL 0x0
+ENDA
+
+TMoatEvent3:
+CHECK_EVENTID 0xD
+BEQ 0x0 0xC 0x0
+SpawnReinforcements(TopMoat3)
+LABEL 0x0
+ENDA
+
+LRFortEvent1:
+CHECK_EVENTID 0xA
+BEQ 0x0 0xC 0x0
+SpawnReinforcements(LeftFortRein1)
+LABEL 0x0
+CHECK_EVENTID 0xC
+BEQ 0x1 0xC 0x0
+SpawnReinforcements(RightFortRein1)
+LABEL 0x1
+ENDA
+
+LFortEvent1:
+CHECK_EVENTID 0xA
+BEQ 0x0 0xC 0x0
+SpawnReinforcements(LeftFortRein2)
+LABEL 0x0
+ENDA
+
+RFortEvent2:
+CHECK_EVENTID 0xC
+BEQ 0x0 0xC 0x0
+SpawnReinforcements(RightFortRein2)
+LABEL 0x0
+ENDA
+
+RFortEvent3:
+CHECK_EVENTID 0xC
+BEQ 0x0 0xC 0x0
+SpawnReinforcements(RightFortRein3)
+LABEL 0x0
+ENDA
+
+MFortEvent1:
+CHECK_EVENTID 0xB
+BEQ 0x0 0xC 0x0
+SpawnReinforcements(InnerFortRein1)
+LABEL 0x0
+ENDA
+
+MFortEvent2:
+CHECK_EVENTID 0xB
+BEQ 0x0 0xC 0x0
+SpawnReinforcements(InnerFortRein2)
+LABEL 0x0
+ENDA
+
+GoodbyeDespair:
+GameOver
+ENDA
+
+BeginningScene:
+	LOAD1 0x1 EnemyUnits
+	LOAD1 0x1 RedSussy
+	ENUN
+	GotoPrepScreen
+	ENDA
+
+EndingScene:
+	MNC2 0x7
+	NoFade
+	ENDA

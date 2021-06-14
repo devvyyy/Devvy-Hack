@@ -71,72 +71,76 @@ LoadUnit(12,2)
 	UNIT
 
 EnemyUnits:
-UNIT Hiems Shaman 0x1 Level(8, Enemy, 1)     [6,2] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
-UNIT Hiems LArmor 0x1 Level(8, Enemy, 1)     [11,5] 0b 0x0 0x0 0x0 [IronGlaive,ShortSpear] BossAI
-UNIT Hiems Shaman 0x1 Level(8, Enemy, 1)     [7,6] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
-UNIT BadGuy Mercenary 0x1 Level(7, Enemy, 1)     [5,4] 0b 0x0 0x0 0x0 [IronBlade,] AttackInRangeAI
-UNIT BadGuy Myrmidon 0x1 Level(7, Enemy, 1)     [4,8] 0b 0x0 0x0 0x0 [Zanbato,Vulnerary] ChargeAI
-UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [2,8] 0b 0x0 0x0 0x0 [SteelAxe] BrigandAI
-UNIT BadGuy Freelancer 0x1 Level(8, Enemy, 1)     [6,10] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
-UNIT BadGuy AxeCav 0x1 Level(7, Enemy, 1)     [2,11] 0b 0x0 0x0 0x0 [Hammer] TwoActionAI
-UNIT BadGuy LanceCav 0x1 Level(7, Enemy, 1)     [3,15] 0b 0x0 0x0 0x0 [HeavySpear] TwoActionAI
-UNIT BadGuy Seer 0x1 Level(7, Enemy, 1)     [0,16] DropItem 0x0 0x0 0x0 [Flux,Light,RedGem] AttackInRangeAI
-UNIT BadGuy Hunter 0x1 Level(7, Enemy, 1)     [0,19] 0b 0x0 0x0 0x0 [Longbow] AttackInRangeAI
-UNIT BadGuy Hunter 0x1 Level(8, Enemy, 1)     [3,18] 0b 0x0 0x0 0x0 [SteelBow] TwoActionAI
-UNIT BadGuy Hunter 0x1 Level(7, Enemy, 1)     [4,12] 0b 0x0 0x0 0x0 [Longbow] BossAI
-UNIT BadGuy AxeArmor 0x1 Level(7, Enemy, 1)     [9,12] 0b 0x0 0x0 0x0 [IronLabrys,HandAxe] BossAI
-UNIT BadGuy Myrm 0x1 Level(7, Enemy, 1)     [8,15] 0b 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
-UNIT BadGuy Shaman 0x1 Level(7, Enemy, 1)     [6,18] 0b 0x0 0x0 0x0 [DarkTome2] AttackInRangeAI
-UNIT BadGuy LanceCav 0x1 Level(7, Enemy, 1)     [2,19] 0b 0x0 0x0 0x0 [IronLance,Javelin] TwoActionAI
-UNIT BadGuy SwordCav 0x1 Level(7, Enemy, 1)     [3,19] 0b 0x0 0x0 0x0 [IronSword,Elixir] ChargeAI
-UNIT BadGuy Mage 0x1 Level(7, Enemy, 1)     [9,4] 0b 0x0 0x0 0x0 [Fire] TwoActionAI
-UNIT BadGuy Hunter 0x1 Level(7, Enemy, 1)     [0,19] 0b 0x0 0x0 0x0 [IronBow] AttackInRangeAI
-UNIT BadGuy Brigand 0x1 Level(7, Enemy, 1)     [0,19] 0b 0x0 0x0 0x0 [IronAxe,HandAxe] BossAI
-UNIT BadGuy Hunter 0x1 Level(8, Enemy, 1)     [13,8] 0b 0x0 0x0 0x0 [Longbow,Dragonshield] BossAI
-UNIT BadGuy Freelancer 0x1 Level(8, Enemy, 1)     [11,10] 0b 0x0 0x0 0x0 [SteelLabrys,Javelin] BossAI
-UNIT BadGuy Shaman 0x1 Level(6, Enemy, 1)     [11,13] 0b 0x0 0x0 0x0 [DarkTome2] AttackInRangeAI
+UNIT Hiems Shaman 0x1 Level(5, Enemy, 1)     [6,2] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT BadGuy LArmor 0x1 Level(6, Enemy, 1)     [11,5] 0b 0x0 0x0 0x0 [IronGlaive,ShortSpear] BossAI
+UNIT Hiems Shaman 0x1 Level(5, Enemy, 1)     [7,6] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
+UNIT BadGuy Mercenary 0x1 Level(5, Enemy, 1)     [5,4] 0b 0x0 0x0 0x0 [IronBlade,] AttackInRangeAI
+UNIT BadGuy Myrmidon 0x1 Level(6, Enemy, 1)     [4,8] 0b 0x0 0x0 0x0 [Zanbato,] ChargeAI
+UNIT BadGuy Brigand 0x1 Level(5, Enemy, 1)     [2,8] 0b 0x0 0x0 0x0 [SteelAxe] BrigandAI
+UNIT BadGuy Freelancer 0x1 Level(6, Enemy, 1)     [6,10] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
+UNIT BadGuy AxeCav 0x1 Level(6, Enemy, 1)     [2,11] 0b 0x0 0x0 0x0 [Hammer] TwoActionAI
+UNIT BadGuy LanceCav 0x1 Level(5, Enemy, 1)     [3,15] 0b 0x0 0x0 0x0 [HeavySpear] TwoActionAI
+UNIT Hiems Seer 0x1 Level(6, Enemy, 1)     [0,16] DropItem 0x0 0x0 0x0 [Flux,0x3F,RedGem] AttackInRangeAI
+UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [0,19] 0b 0x0 0x0 0x0 [Longbow] AttackInRangeAI
+UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [3,18] 0b 0x0 0x0 0x0 [SteelBow] TwoActionAI
+UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [4,12] 0b 0x0 0x0 0x0 [Longbow] BossAI
+UNIT BadGuy AxeArmor 0x1 Level(5, Enemy, 1)     [9,12] 0b 0x0 0x0 0x0 [IronLabrys,HandAxe] BossAI
+UNIT BadGuy Myrm 0x1 Level(5, Enemy, 1)     [8,15] 0b 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [6,18] 0b 0x0 0x0 0x0 [DarkTome2] AttackInRangeAI
+UNIT BadGuy LanceCav 0x1 Level(5, Enemy, 1)     [2,19] 0b 0x0 0x0 0x0 [IronLance,Javelin] TwoActionAI
+UNIT BadGuy SwordCav 0x1 Level(6, Enemy, 1)     [3,19] 0b 0x0 0x0 0x0 [IronSword,Elixir] ChargeAI
+UNIT Hiems Mage 0x1 Level(5, Enemy, 1)     [9,4] 0b 0x0 0x0 0x0 [Fire] TwoActionAI
+UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [0,19] 0b 0x0 0x0 0x0 [IronBow] AttackInRangeAI
+UNIT BadGuy Brigand 0x1 Level(5, Enemy, 1)     [0,19] 0b 0x0 0x0 0x0 [IronAxe,HandAxe] BossAI
+UNIT BadGuy Hunter 0x1 Level(6, Enemy, 1)     [13,8] 0b 0x0 0x0 0x0 [Longbow,Dragonshield] BossAI
+UNIT BadGuy Freelancer 0x1 Level(5, Enemy, 1)     [11,10] 0b 0x0 0x0 0x0 [SteelLabrys,Javelin] BossAI
+UNIT Hiems Shaman 0x1 Level(5, Enemy, 1)     [11,13] 0b 0x0 0x0 0x0 [DarkTome2] AttackInRangeAI
 UNIT Hiems Thaumaturge 0x1 Level(6, Enemy, 1)     [12,17] 0b 0x0 0x0 0x0 [Fire] StallOneTurnAI
-UNIT BadGuy Mage 0x1 Level(8, Enemy, 1)     [14,15] 0b 0x0 0x0 0x0 [Thunder] AttackInRangeAI
-UNIT BadGuy Shaman 0x1 Level(8, Enemy, 1)     [14,10] 0b 0x0 0x0 0x0 [Flux,GoddessIcon] BossAI
-UNIT BadGuy Brigand 0x1 Level(7, Enemy, 1)     [10,7] 0b 0x0 0x0 0x0 [SteelAxe,] TwoActionAI
-UNIT BadGuy AxeCav 0x1 Level(8, Enemy, 1)     [13,11] 0b 0x0 0x0 0x0 [IronAxe,] TwoActionAI
-UNIT BadGuy Hunter 0x1 Level(7, Enemy, 1)     [9,8] 0b 0x0 0x0 0x0 [Longbow,] TwoActionAI
-UNIT BadGuy Thaumaturge 0x1 Level(7, Enemy, 1)     [14,13] 0b 0x0 0x0 0x0 [Fire] TwoActionAI
-UNIT BadGuy Thaumaturge 0x1 Level(7, Enemy, 1)     [6,14] DropItem 0x0 0x0 0x0 [Fire] TwoActionAI
+UNIT Hiems Mage 0x1 Level(5, Enemy, 1)     [14,15] 0b 0x0 0x0 0x0 [Thunder] AttackInRangeAI
+UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [14,10] 0b 0x0 0x0 0x0 [Flux,GoddessIcon] BossAI
+UNIT BadGuy Brigand 0x1 Level(5, Enemy, 1)     [10,7] 0b 0x0 0x0 0x0 [SteelAxe,] TwoActionAI
+UNIT BadGuy AxeCav 0x1 Level(5, Enemy, 1)     [13,11] 0b 0x0 0x0 0x0 [IronAxe,] TwoActionAI
+UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [9,8] 0b 0x0 0x0 0x0 [Longbow,] TwoActionAI
+UNIT Hiems Thaumaturge 0x1 Level(5, Enemy, 1)     [14,13] 0b 0x0 0x0 0x0 [Fire] TwoActionAI
+UNIT Hiems Thaumaturge 0x1 Level(5, Enemy, 1)     [6,14] 0x0 0x0 0x0 0x0 [Thunder] TwoActionAI
 	UNIT
 
 NagitoKomaeda:
-UNIT Murray Deserter 0x1 Level(10, Enemy, 0)     [13,15] 0b 0x0 0x0 0x0 [SteelGlaive,Javelin] BossAI
+UNIT Murray Deserter 0x1 Level(7, Enemy, 0)     [13,15] 0b 0x0 0x0 0x0 [SteelGlaive,Javelin] BossAI
 	UNIT
 	
 SpookyBrigand:
-UNIT BadGuy Brigand 0x1 Level(8, Enemy, 1)     [10,3] 0b 0x0 0x0 0x0 [SteelLabrys,BlueGem] BrigandAI
+UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [10,3] 0b 0x0 0x0 0x0 [SteelLabrys,BlueGem] BrigandAI
 	UNIT
 	
 TopRightFort:
-UNIT BadGuy Shaman 0x1 Level(8, Enemy, 1)     [10,3] 0b 0x0 0x0 0x0 [DarkTome2,] ChargeAI
-UNIT BadGuy Mercenary 0x1 Level(7, Enemy, 1)     [10,3] 0 0 1 REDA11R3 [SteelBlade,] ChargeAI
+UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [10,3] 0b 0x0 0x0 0x0 [DarkTome2,] ChargeAI
+UNIT BadGuy Mercenary 0x1 Level(5, Enemy, 1)     [10,3] 0 0 1 REDA11R3 [SteelBlade,] ChargeAI
 	UNIT
 	
+TopRightFort2:
+UNIT BadGuy Deserter 0x1 Level(5, Enemy, 1)     [2,1] 0b 0x0 0x0 0x0 [Axereaver,] StallOneTurnAI
+	UNIT
+
 LeftRocks:
-UNIT BadGuy Shaman 0x1 Level(8, Enemy, 1)     [5,19] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
-UNIT BadGuy Hunter 0x1 Level(8, Enemy, 1)     [4,19] 0b 0x0 0x0 0x0 [IronBow,] StallOneTurnAI
+UNIT Hiems Shaman 0x1 Level(5, Enemy, 1)     [5,19] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
+UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [4,19] 0b 0x0 0x0 0x0 [IronBow,] StallOneTurnAI
 	UNIT
 	
 TopRightForest:
-UNIT BadGuy PegRider 0x1 Level(8, Enemy, 1)     [13,0] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
-UNIT BadGuy SCav 0x1 Level(8, Enemy, 1)     [14,0] 0b 0x0 0x0 0x0 [Sagitar,SteelSword] ChargeAI
+UNIT BadGuy PegRider 0x1 Level(5, Enemy, 1)     [13,0] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
+UNIT BadGuy SCav 0x1 Level(5, Enemy, 1)     [14,0] 0b 0x0 0x0 0x0 [Sagitar,SteelSword] ChargeAI
 	UNIT
 
 BottomRightForest:
-UNIT Hiems Thaumaturge 0x1 Level(8, Enemy, 1)     [13,19] 0b 0x0 0x0 0x0 [Fire] StallOneTurnAI
-UNIT Hiems Thaumaturge 0x1 Level(8, Enemy, 1)     [14,19] 0b 0x0 0x0 0x0 [Thunder] StallOneTurnAI
+UNIT Hiems Thaumaturge 0x1 Level(5, Enemy, 1)     [13,19] 0b 0x0 0x0 0x0 [Fire] StallOneTurnAI
+UNIT Hiems Thaumaturge 0x1 Level(6, Enemy, 1)     [14,19] 0b 0x0 0x0 0x0 [Thunder] StallOneTurnAI
 	UNIT
 	
 TopLeftFort:
-UNIT BadGuy PegRider 0x1 Level(8, Enemy, 1)     [0,0] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
-UNIT BadGuy PegRider 0x1 Level(8, Enemy, 1)     [0,1] 0b 0x0 0x0 0x0 [Horseslayer] ChargeAI
-UNIT BadGuy PegRider 0x1 Level(7, Enemy, 1)     [0,2] 0b 0x0 0x0 0x0 [Axereaver,Javelin] ChargeAI
+UNIT BadGuy PegRider 0x1 Level(6, Enemy, 1)     [0,0] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
+UNIT BadGuy PegRider 0x1 Level(5, Enemy, 1)     [0,1] 0b 0x0 0x0 0x0 [Horseslayer] ChargeAI
+UNIT BadGuy PegRider 0x1 Level(5, Enemy, 1)     [0,2] 0b 0x0 0x0 0x0 [Axereaver,Javelin] ChargeAI
 	UNIT
 
 Traps1:
@@ -166,40 +170,37 @@ NoFade
 ENDA
 
 KillVillageBrigand:
-LoadReinforcements(SpookyBrigand)
-VCWF 6
+SpawnReinforcements(SpookyBrigand)
 NoFade
 ENDA
 
 LeftRocksRein:
-LoadReinforcements(LeftRocks)
-VCWF 6
+SpawnReinforcements(LeftRocks)
 NoFade
 ENDA
 
 BottomRightRein:
-LoadReinforcements(BottomRightForest)
-VCWF 6
+SpawnReinforcements(BottomRightForest)
 NoFade
 ENDA
 
 DoubleDeath:
-LoadReinforcements(TopRightFort)
+CamOn
+SpawnReinforcements(TopRightFort)
 STAL 20
-LoadReinforcements(BottomRightForest)
-VCWF 6
+SpawnReinforcements(BottomRightForest)
 NoFade
 ENDA
 
 TopLeftPegasi:
-LoadReinforcements(TopLeftFort)
-VCWF 6
+SpawnReinforcements(TopLeftFort)
+STAL 20
+SpawnReinforcements(TopRightFort2)
 NoFade
 ENDA
 
 TopRightRein:
-LoadReinforcements(TopRightForest)
-VCWF 6
+SpawnReinforcements(TopRightForest)
 NoFade
 ENDA
 
@@ -228,5 +229,5 @@ NoFade
 ENDA
 
 ShopAwesome:
-SHLI SteelSword SteelLance SteelAxe SteelBow Fire Light1 DarkTome1
+SHLI SteelSword SteelLance SteelAxe SteelBow Fire Light1 DarkTome1 Elixir PureWater
 ALIGN 4

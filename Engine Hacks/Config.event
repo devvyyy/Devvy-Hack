@@ -161,7 +161,7 @@
 // =================================
 
 // if uncommented units will be select automatically after galeforce (pressing b won't end their turn)
-// #define ENABLE_GALEFORCE_AUTOSELECT
+#define ENABLE_GALEFORCE_AUTOSELECT
 
 // if uncommented lethality will work like it originally did in gba
 // #define ENABLE_GBA_LETHALITY
@@ -173,7 +173,7 @@
 #define ENABLE_AI_STEAL_PLUS
 
 // if commented, Steal will no longer be a skill, but a character ability, and Steal+ will require having regular steal
-#define ENABLE_STEAL_SKILL
+//#define ENABLE_STEAL_SKILL
 
 // If commented, debuffs are allowed to take stats below zero
 #define DEBUFFS_MIN_ZERO

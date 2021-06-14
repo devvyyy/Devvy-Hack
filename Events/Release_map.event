@@ -153,7 +153,7 @@ UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [4,11] 0b 0x0 0x0 0x0 [SteelSw
 UNIT
 
 Reinforcements1:
-UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [7,9] 0 0 1 REDA7R10 [DarkTome2,] [0,0,4,0]
+UNIT Cultist Shaman 0x1 Level(2, Enemy, 1)     [7,9] 0 0 1 REDA7R10 [DarkTome1,] [0,0,4,0]
 UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [7,9] 0 0 1 REDA8R9 [DarkTome2,] [0,0,4,0]
 UNIT
 
@@ -280,6 +280,7 @@ CAM1 [7,11]
 	ENDA
 
 RunawayThieves:
+CamOn
 SpawnReinforcements(ThievesGoBrr)
 NoFade
 ENDA
@@ -296,16 +297,19 @@ NoFade
 ENDA
 
 ShamanRein1:
+CamOn
 SpawnReinforcements(Reinforcements1)
 NoFade
 ENDA
 
 ShamanRein2:
+CamOn
 SpawnReinforcements(Reinforcements2)
 NoFade
 ENDA
 
 ShamanRein3:
+CamOn
 SpawnReinforcements(Reinforcements3)
 NoFade
 ENDA

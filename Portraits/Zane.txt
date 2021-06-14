@@ -179,9 +179,9 @@ Breve_Mug: //Breve edited by Tsushi
 setMugEntryExtend(0x28, Breve_Mug, 3, 5, 3, 3, 10, 2, 10, 4)
 
 ALIGN 16
-Ansgar_Mug:
-#incext PortraitFormatter "Ansgar.png"
-setMugEntryExtend(0x23, Ansgar_Mug, 3, 5, 2, 3, 10, 4, 0, 2)
+Ansgar_Mug: //Ansgar edited by L95
+#incext PortraitFormatter "AnsgarV2HelmetOff.png"
+setMugEntryExtend(0x23, Ansgar_Mug, 2, 4, 2, 2, 0, 2, 0, 0)
 
 ALIGN 16
 Zopf_Mug:
@@ -207,6 +207,11 @@ ALIGN 16 //Edited by L95
 Gorlois_Mug:
 #incext PortraitFormatter "Gorlois.png"
 setMugEntryExtend(0x39, Gorlois_Mug, 3, 5, 3, 3, 10, 4, 0, 0)
+
+ALIGN 16 //
+Spooky_Mug:
+#incext PortraitFormatter "Edge.png"
+setMugEntryExtend(0x4E, Spooky_Mug, 3, 5, 3, 3, 10, 4, 0, 0)
 
 ALIGN 16
 Latte_Mug: //Latte by Laurent Lacroix
