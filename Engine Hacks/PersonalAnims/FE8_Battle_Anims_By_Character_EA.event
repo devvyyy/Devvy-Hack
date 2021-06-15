@@ -18,6 +18,12 @@ ORG $573C6
 BL(0x57CAC)
 ORG $573F0
 BL(0x57CAC)
+ORG $57344
+BL(0x57CAC)
+ORG $5735C
+BL(0x57CAC)
+ORG $CD0FC
+BL(0x57CAC)
 
 ORG $57D04
 SHORT 0x4800 0x4700; POIN Battle_Anims_By_Character|1 
@@ -31,10 +37,10 @@ POIN BattleAnimListByCharTable
 
 ALIGN 4
 BattleAnimListByCharTable:
-BYTE 0x07 0x55 0 0; POIN AffoHunterAnimList
+BYTE Affogato Hunter 0 0; POIN AffoHunterAnimList
 WORD 0 //Terminator
 
 AffoHunterAnimList:
-BYTE 3 1; SHORT 0xAE //swords
+BYTE 3 1; SHORT 0xAE //bows
 BYTE 9 1; SHORT 0xAF //unarmed
 WORD 0 //terminator

@@ -1,0 +1,50 @@
+#ifdef _FE8_
+#ifndef CHAR_BASED_PROMOS
+#define CHAR_BASED_PROMOS
+
+PUSH
+ORG $CC5F6
+SHORT 0x46C0 //nop
+jumpToHack(CharBasedPromos)
+ORG $CC5DE
+SHORT 0x46C0 //nop
+jumpToHack(CharBasedPromosPrep)
+POP
+
+#include "CharBasedPromos.lyn.event"
+#include "CharBasedPromosPrepScreen.lyn.event"
+
+MESSAGE CharBasedPromos
+
+#define CharBasedPromoEntry(charID,startingClass,promotedClass) "BYTE charID startingClass promotedClass 0"
+#define CharBasedPromoEnd "WORD 0"
+
+ALIGN 4
+CharBasedPromoList:
+CharBasedPromoEntry(Affogato,Hunter,Sniper)
+CharBasedPromoEntry(Akatsuki,Drifter,Swordmaster)
+CharBasedPromoEntry(Ansgar,LArmor,General)
+CharBasedPromoEntry(Breve,SCav,SPaladin)
+CharBasedPromoEntry(Hildr,ACav,APaladin)
+CharBasedPromoEntry(Sequin,Mage,Sage)
+CharBasedPromoEntry(Evelyn,Troubadour,Valkyrie)
+CharBasedPromoEntry(Irene,Myrmidon_F,Swordmaster_F)
+CharBasedPromoEntry(Latte,Archer_F,Sniper_F)
+CharBasedPromoEntry(Tammy,Cleric,Bishop_F)
+CharBasedPromoEntry(Mocha,PegRider,FalconKnight)
+CharBasedPromoEntry(Pandoro,Pirate,Berserker)
+CharBasedPromoEntry(Stroganoff,AArmor,General)
+CharBasedPromoEntry(Eiskaffee,Hunter,Sniper)
+CharBasedPromoEntry(Doppio,Soldier,Halberdier)
+CharBasedPromoEntry(Floris,Priest,Bishop)
+CharBasedPromoEntry(Atheya,WyvRider,WyvKnight)
+
+CharBasedPromoEnd
+
+
+#endif // CHAR_BASED_PROMOS
+#else
+ERROR Char Based Promos is only for FE8!
+#endif // _FE8_
+
+

@@ -36,7 +36,7 @@ HunterCard: //by Spud
 HunterCardPalette:
 #incbin "HunterCardPalette.dmp"
 HunterClassCard:
-setCardEntry(0x9D, HunterCard,HunterCardPalette)
+setCardEntry(0xA3, HunterCard,HunterCardPalette)
 
 ALIGN 4
 WyvernRiderCard: //by flasuban
@@ -45,6 +45,14 @@ WyvernRiderCardPalette:
 #incbin "WyvernRiderCardPalette.dmp"
 WyvernRiderClassCard:
 setCardEntry(0x88, WyvernRiderCard,WyvernRiderCardPalette)
+
+ALIGN 4
+WyvernLordCard: //by flasuban
+#incbin "WyvernLordCard.dmp"
+WyvernLordCardPalette:
+#incbin "WyvernLordCardPalette.dmp"
+WyvernLordClassCard:
+setCardEntry(0x89, WyvernLordCard,WyvernLordCardPalette)
 
 ALIGN 4
 OccultistCard: //by Jj09

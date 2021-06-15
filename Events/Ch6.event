@@ -25,7 +25,7 @@ TURN 0x0 TMoatEvent3 [7,0] 0x0
 TURN 0x0 RFortEvent2 [9,0] 0x0
 TURN 0x0 LMoatEvent3 [10,0] 0x0
 TURN 0x0 MFortEvent1 [11,0] 0x0
-TURN 0x0 GoodbyeDespair [13,0] 0x0
+TURN 0x0 TriggerHappyHavoc [13,0] 0x0
 	END_MAIN
 
 ALIGN 32
@@ -250,6 +250,7 @@ SVAL 0x2 0x0
 CALL 0x9EE1B8
 STAL 10
 SOUN 0x60
+GiveExperience(0xFFFF,15)
 RemoveTrapAtCoords(5,18)
 CameraCursor(King)
 STAL 60
@@ -265,6 +266,7 @@ SVAL 0x2 0x0
 CALL 0x9EE1B8
 STAL 10
 SOUN 0x60
+GiveExperience(0xFFFF,15)
 RemoveTrapAtCoords(13,11)
 CameraCursor(King)
 STAL 60
@@ -280,6 +282,7 @@ SVAL 0x2 0x0
 CALL 0x9EE1B8
 STAL 10
 SOUN 0x60
+GiveExperience(0xFFFF,15)
 RemoveTrapAtCoords(18,16)
 CameraCursor(King)
 STAL 60
@@ -394,8 +397,9 @@ SpawnReinforcements(InnerFortRein2)
 LABEL 0x0
 ENDA
 
-GoodbyeDespair:
-GameOver
+TriggerHappyHavoc:
+ENUT 0x3
+CALL (EndingScene)
 ENDA
 
 BeginningScene:
