@@ -26,21 +26,21 @@ lsr r0,r0,#6
 cmp r0,#0 @only Canto+ if player unit
 bne End
 
-//@check if moved all the squares
-//ldr	r0,=#0x8019224	@mov getter
-//mov	lr, r0
-//mov	r0, r4		@attacker
-//.short	0xF800
-//ldrb 	r1, [r6,#0x10]	@squares moved this turn
-//cmp	r0,r1
-//beq	End
+@check if moved all the squares
+ldr	r0,=#0x8019224	@mov getter
+mov	lr, r0
+mov	r0, r4		@attacker
+.short	0xF800
+ldrb 	r1, [r6,#0x10]	@squares moved this turn
+cmp	r0,r1
+beq	End
 
-//ldr	r1,=#0x8018BD8	@check if can move again
-//mov	lr, r1
-//.short	0xF800
-//lsl	r0, #0x18
-//cmp	r0, #0x00
-//beq	End
+ldr	r1,=#0x8018BD8	@check if can move again
+mov	lr, r1
+.short	0xF800
+lsl	r0, #0x18
+cmp	r0, #0x00
+beq	End
 
 @check if already Cantoing
 ldr	r0, [r4,#0x0C]	@status bitfield
@@ -57,14 +57,6 @@ mov	lr, r3
 .short	0xf800
 cmp	r0,#0x00
 beq	End
-
-@ move 5 squares after canto
-ldr	r0,=#0x8019224	@mov getter
-mov	lr, r0
-mov	r0, r4		@attacker
-.short	0xF800
-sub r0, #5
-strb 	r0, [r6, #0x10]	@squares moved this turn
 
 @if canto, unset 0x2 and set 0x40
 ldr	r0, [r4,#0x0C]	@status bitfield

@@ -55,6 +55,14 @@ ALIGN 4
 {
 #include "Affogato/Unarmed/Installer.event"
 }
+ALIGN 4 //Affogato Promotion
+{
+#include "AffogatoPromo/Bow/Installer.event"
+}
+ALIGN 4
+{
+#include "AffogatoPromo/Unarmed/Installer.event"
+}
 ALIGN 4 //Mercenary by TEAM SALVAGED
 {
 #include "Mercenary/Sword/Installer.event"
@@ -191,6 +199,22 @@ ALIGN 4
 {
 #include "Archer F/Unarmed/Installer.event"
 }
+ALIGN 4 //Sniper (M) by Nuramon
+{
+#include "Sniper M/Bow/Installer.event"
+}
+ALIGN 4
+{
+#include "Sniper M/Unarmed/Installer.event"
+}
+ALIGN 4 //Sniper (F) by Nuramon
+{
+#include "Sniper F/Bow/Installer.event"
+}
+ALIGN 4
+{
+#include "Sniper F/Unarmed/Installer.event"
+}
 ALIGN 4 //Hunter (M) by Leo_link, Spud, MeatOfJustice
 {
 #include "Hunter M/Bow/Installer.event"
@@ -198,6 +222,14 @@ ALIGN 4 //Hunter (M) by Leo_link, Spud, MeatOfJustice
 ALIGN 4
 {
 #include "Hunter M/Unarmed/Installer.event"
+}
+ALIGN 4 //Adventurer by Leo_link
+{
+#include "Adventurer/Bow/Installer.event"
+}
+ALIGN 4
+{
+#include "Adventurer/Unarmed/Installer.event"
 }
 ALIGN 4 //Cavalier (F) by TEAM SALVAGED
 {
@@ -403,6 +435,20 @@ ALIGN 4 //Parson
 {
 #include "Parson/Unarmed/Unarmed Installer.event"
 }
+ALIGN 4 //Bishop (M) by Mikey Seregon, EltritchAbomination
+{
+#include "Bishop M/Magic/Installer.event"
+}
+{
+#include "Bishop M/Magic/Installer.event"
+}
+ALIGN 4 //Bishop (F) by Mikey Seregon, EltritchAbomination
+{
+#include "Bishop F/Magic/Installer.event"
+}
+{
+#include "Bishop F/Magic/Installer.event"
+}
 
 AkatAnim:
 SwordAnim(0x03)
@@ -424,6 +470,11 @@ WORD 0x0    // Seperator
 AffoAnim:
 BowAnim(0xAE)
 UnarmedAnim(0xAF)
+WORD 0x0    // Seperator
+
+AffoPromoAnim:
+BowAnim(0x05)
+UnarmedAnim(0x07)
 WORD 0x0    // Seperator
 
 MercAnim:
@@ -468,6 +519,11 @@ WORD 0x0    // Seperator
 HunterMAnim:
 BowAnim(0xA6)
 UnarmedAnim(0xA7)
+WORD 0x0    // Seperator
+
+AdventurerAnim:
+BowAnim(0xB9)
+UnarmedAnim(0xBA)
 WORD 0x0    // Seperator
 
 CavalierMAnim:

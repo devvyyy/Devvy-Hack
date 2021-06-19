@@ -39,11 +39,11 @@ MiscBasedEvents:
 
 LocationBasedEvents:
 Chest(Thunder,0,15)
-Chest(HeavySpear,1,13)
+Chest(AngelicRobe,1,13)
 Arrive(14,1)
 Arrive(14,2)
 Village(0x8,LightningMcQueen,11,11)
-Village(0x9,SallyCars,4,3)
+Village(0x9,SallyCars,4,3)	
 House(0x0,OgrimHouseEpic,7,8)
 	END_MAIN
 
@@ -94,8 +94,8 @@ UNIT Ogrim Parson 0x1 Level(1, Enemy, 0)   [7,8] DropItem 0 1 REDA7R9 [Light2,Bo
 	UNIT
 
 EnemyUnits:
-UNIT HolyGuard Brigand 0x1 Level(3, Enemy, 1)     [12,7] 0x0 0x0 0x0 0x0 [SteelAxe,Vulnerary] AttackInRangeAI
-UNIT HolyGuard AArmor 0x1 Level(3, Enemy, 1)     [4,7] 0x0 0x0 0x0 0x0 [HandAxe,IronLabrys] BossAI
+UNIT HolyGuard Brigand 0x1 Level(2, Enemy, 1)     [12,7] 0x0 0x0 0x0 0x0 [SteelAxe,Vulnerary] AttackInRangeAI
+UNIT HolyGuard AArmor 0x1 Level(2, Enemy, 1)     [4,7] 0x0 0x0 0x0 0x0 [HandAxe,IronLabrys] BossAI
 UNIT HolyGuard SArmor 0x1 Level(3, Enemy, 1)     [5,7] DropItem 0x0 0x0 0x0 [Sagitar,SteelSword] BossAI
 UNIT HolyGuard Brigand 0x1 Level(2, Enemy, 1)     [7,5] 0b 0x0 0x0 0x0 [IronAxe,] StallOneTurnAI
 UNIT HolyGuard Soldier 0x1 Level(2, Enemy, 1)     [5,11] DropItem 0x0 0x0 0x0 [Horseslayer,] BossAI
@@ -107,34 +107,32 @@ UNIT UPirate Shaman 0x1 Level(2, Enemy, 1)     [13,11] 0b 0x0 0x0 0x0 [DarkTome1
 UNIT UPirate Shaman 0x1 Level(2, Enemy, 1)     [8,10] 0b 0x0 0x0 0x0 [DarkTome1,] AttackInRangeAI
 UNIT HolyGuard Archer 0x1 Level(2, Enemy, 1)     [6,13] 0b 0x0 0x0 0x0 [IronBow] ChargeAI
 UNIT HolyGuard Soldier 0x1 Level(2, Enemy, 1)     [9,14] 0b 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
-UNIT HolyGuard ACav 0x1 Level(2, Enemy, 1)     [7,0] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
+UNIT HolyGuard ACav 0x1 Level(2, Enemy, 1)     [2,2] 0b 0x0 0x0 0x0 [IronAxe,] [0xC,0x3,0x0,0x0]
 UNIT HolyGuard Monk 0x1 Level(2, Enemy, 1)     [6,0] 0b 0x0 0x0 0x0 [Light1,] TwoActionAI
-UNIT HolyGuard LCav 0x1 Level(2, Enemy, 1)     [14,2] 0b 0x0 0x0 0x0 [SteelLance,] StallOneTurnAI
-UNIT HolyGuard SCav 0x1 Level(2, Enemy, 1)     [14,1] 0b 0x0 0x0 0x0 [SteelSword,] StallOneTurnAI
 UNIT UPirate Pirate 0x1 Level(2, Enemy, 1)     [1,11] 0b 0x0 0x0 0x0 [IronLabrys,] ChargeAI
 UNIT HolyGuard Soldier 0x1 Level(3, Enemy, 1)     [0,5] 0b 0x0 0x0 0x0 [IronLance,Javelin] BossAI
 UNIT HolyGuard Mercenary 0x1 Level(2, Enemy, 1)     [14,9] 0b 0x0 0x0 0x0 [SteelSword] BossAI
 UNIT HolyGuard Mercenary 0x1 Level(3, Enemy, 1)     [9,18] 0b 0x0 0x0 0x0 [IronSword,RedGem] ChargeAI
 UNIT Cultist Shaman 0x1 Level(2, Enemy, 1)     [5,16] 0b 0x0 0x0 0x0 [DarkII,] AttackInRangeAI
-UNIT HolyGuard Mercenary 0x1 Level(2, Enemy, 1)     [7,2] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
+UNIT HolyGuard Myrmidon 0x1 Level(2, Enemy, 1)     [7,2] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
 UNIT Cultist Occultist 0x1 Level(2, Enemy, 1)     [14,5] 0b 0x0 0x0 0x0 [DarkTome1,] TwoActionAI
-UNIT Cultist Shaman 0x1 Level(2, Enemy, 1)     [9,1] 0b 0x0 0x0 0x0 [DarkTome1,EnergyRing] AttackInRangeAI
+UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [DarkTome1,EnergyRing] StallOneTurnAI
 UNIT HolyGuard Soldier 0x1 Level(2, Enemy, 1)     [11,1] 0b 0x0 0x0 0x0 [ShortSpear,] BossAI
 	UNIT
 	
 BridgeEnemies:
-UNIT HolyGuard ACav 0x1 Level(3, Enemy, 1)     [14,2] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
-UNIT HolyGuard SCav 0x1 Level(3, Enemy, 1)     [14,1] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
+UNIT HolyGuard ACav 0x1 Level(2, Enemy, 1)     [14,2] 0b 0x0 0x0 0x0 [SteelAxe,] StallOneTurnAI
+UNIT HolyGuard SCav 0x1 Level(3, Enemy, 1)     [14,1] 0b 0x0 0x0 0x0 [IronSword,] StallOneTurnAI
 UNIT
 
 
 BoatEnemies:
 UNIT UPirate Pirate 0x1 Level(3, Enemy, 1)     [1,16] 0 0 1 REDA1R15 [IronAxe,] StallOneTurnAI
-UNIT UPirate Pirate 0x1 Level(3, Enemy, 1)     [1,16] 0b 0x0 0x0 0x0 [IronAxe,HandAxe] StallOneTurnAI
+UNIT UPirate Pirate 0x1 Level(2, Enemy, 1)     [1,16] 0b 0x0 0x0 0x0 [HandAxe] TwoActionAI
 UNIT
 
 MountainEnemies:
-UNIT HolyGuard PegRider 0x1 Level(3, Enemy, 1)     [13,20] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
+UNIT HolyGuard PegRider 0x1 Level(3, Enemy, 1)     [13,20] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
 UNIT HolyGuard PegRider 0x1 Level(3, Enemy, 1)     [14,20] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
 UNIT
 
@@ -146,14 +144,13 @@ UNIT UPirate Pirate 0x1 Level(3, Enemy, 1)     [14,18] 0b 0x0 0x0 0x0 [IronAxe,]
 UNIT
 
 SouthEnemies:
-UNIT HolyGuard PegRider 0x1 Level(3, Enemy, 1)     [5,20] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
+UNIT HolyGuard PegRider 0x1 Level(3, Enemy, 1)     [5,20] 0b 0x0 0x0 0x0 [Horseslayer] ChargeAI
 UNIT HolyGuard PegRider 0x1 Level(3, Enemy, 1)     [4,20] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
 UNIT
 
 NorthEnemies:
-UNIT Cultist Shaman 0x1 Level(4, Enemy, 1)     [9,0] 0 0 1 REDA6R1 [DarkTome1] ChargeAI
+UNIT Cultist Shaman 0x1 Level(4, Enemy, 1)     [9,0] 0 0 1 REDA6R1 [DarkTome2] TwoActionAI
 UNIT Cultist Occultist 0x1 Level(3, Enemy, 1)     [7,0] 0 0 1 REDA7R1 [DarkTome1] ChargeAI
-UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [9,0] 0 0 1 REDA9R1 [Flux] ChargeAI
 UNIT
 
 Traps1:
@@ -251,7 +248,7 @@ OgrimHouseEpic:
 MUSI // lowers music volume
 TEXTSTART
 CHECK_ACTIVEID Affogato
-BEQ 0x0 0xC 0x0
+BNE 0x0 0xC 0x0
 	SVAL 0x2 0x1
 	SVAL 0x3 OgrimHouse
 	CALL 0x9EE310
@@ -265,7 +262,7 @@ REMA
 LABEL 0x1
 CHECK_EVENTID 0xB
 BNE 0x776 0xC 0x0
-GiveExperience(0xFFFF,20)
+GiveExperience(0xFFFF,15)
 ENUT 0xB
 LABEL 0x776
 EVBIT_T 0x7

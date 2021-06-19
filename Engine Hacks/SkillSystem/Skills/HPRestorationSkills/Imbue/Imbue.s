@@ -31,7 +31,6 @@ ldrb r0,[r0] @r0 = mag
 mov r1,#200
 mul r0,r1
 
-
 @divide it by MHP
 mov r1,r5
 ldrb r1,[r1,#0x12] @r1 = mhp

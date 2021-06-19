@@ -36,9 +36,9 @@ Ethereal: During the first turn,[N]
 unit dodges all enemy attacks.[X]
 
 ## SD_KingMark
-King's Mark: Inflicts penalty on[N]
-foe's Atk equal to 25% of foe's[N]
-current HP.[X]
+King's Mark: Foes within 4 spaces[N]
+cannot land critical hits or avoid[N]
+attacks if their HP is less than 75%.[X]
 
 ## SD_ThunderClap
 Thunderclap: If foe's terrain has any[N]
@@ -98,7 +98,7 @@ Parity: Neutralizes terrain bonuses[N]
 from both sides.[X]
 
 ## SD_BuiltDifferent
-Swindle: If foe's HP is less than 50%,[NL]
+Swindle: If foe's HP is less than half,[NL]
 Str/Spd +2.[X]
 
 ## SD_SteelSoul
@@ -118,7 +118,7 @@ Forlorn: If unit is not adjacent to[N]
 an ally, foe cannot make a follow-up.[X]
 
 ## SD_FracturedHeart
-Fractured Heart: All foes with 50%[N]
+Fractured Heart: All foes with half[N]
 or less HP take 2 more damage.[X]
 
 ## SD_Edgelord
@@ -239,7 +239,7 @@ unit strikes twice.[X]
 
 ## SD_Inspire
 Inspire: Grants Str +2 to all allies[N]
-with 50% HP or higher.[X]
+with half HP or higher.[X]
 
 ## SD_BitterCold
 Bitter Cold: All foes not at full HP[N]
@@ -382,15 +382,15 @@ Armored Blow: +7 Def[N]
 when initiating battle.[X]
 
 ## SD_Vantage
-Vantage: If HP < 50%,[N]
+Vantage: If HP is less than half,[N]
 strike first when attacked.[X]
 
 ## SD_Desperation
-Desperation: If HP < 50%,[N]
+Desperation: If less than half,[N]
 double attacks occur immediately.[X]
 
 ## SD_Wrath
-Wrath: If HP < 50%,[N]
+Wrath: If HP less than half,[N]
 +20 critical rate.[X]
 
 ## SD_Counter
@@ -403,7 +403,7 @@ when attacked at 1-2 range.[X]
 
 ## SD_Miracle
 Miracle: Survive a lethal[N]
-attack if HP > 50%.[X]
+attack if HP is above half.[X]
 
 ## SD_Swordfaire
 Swordfaire: +4 damage[N]
@@ -640,8 +640,8 @@ Lily's Poise: Adjacent allies gain[N]
 +1/-3 damage dealt/received.[X]
 
 ## SD_Expertise
-Expertise: Reduce bonus damage[N]
-from critical hits by 50%.[X]
+Expertise: Halves bonus damage[N]
+taken from critical hits.[X]
 
 ## SD_Celerity
 Celerity: Movement +2.[X]
@@ -1100,7 +1100,7 @@ captured or stolen from.[X]
 
 ## SD_Hero
 Hero: +30% skill activation[N]
-rate when HP is below 50%.[X]
+rate when HP is below half.[X]
 
 ## SD_Boon
 Boon: Cure bad status effects[N]
@@ -1152,11 +1152,11 @@ all growth rates.[X]
 
 ## SD_QuickRiposte
 Quick Riposte: If defending and[N]
-HP is 50% or higher, unit doubles[N]
+HP is half or higher, unit doubles[N]
 and attacker does not double.[X]
 
 ## SD_Resolve
-Resolve: When HP < 50%,[N]
+Resolve: When HP is less than half,[N]
 gain 1.5x Str, Skl, & Spd.[X]
 
 ## SD_Insight

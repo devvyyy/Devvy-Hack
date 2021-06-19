@@ -22,6 +22,7 @@ TURN 0x0 LFortEvent1 [6,0] 0x0
 TURN 0x0 RFortEvent3 [6,0] 0x0
 TURN 0x0 LMoatEvent2 [4,0] 0x0
 TURN 0x0 TMoatEvent3 [7,0] 0x0
+TURN 0x0 MidOneEvent1 [8,0] 0x0
 TURN 0x0 RFortEvent2 [9,0] 0x0
 TURN 0x0 LMoatEvent3 [10,0] 0x0
 TURN 0x0 MFortEvent1 [11,0] 0x0
@@ -35,7 +36,7 @@ CharacterBasedEvents:
 
 ALIGN 32
 MiscBasedEvents:
-AREA 0xD KillTopMoat [17,0] [18,0]
+AREA 0xD KillTopMoat [17,2] [18,2]
 AREA 0xA FortniteLeft [5,18] [5,18]
 AREA 0xB FortniteMid [13,11] [13,11]
 AREA 0xC FortniteLeft [18,16] [18,16]
@@ -89,6 +90,7 @@ Door(10,9)
 Door(21,3)
 Door(15,8)
 Door(17,8)
+Door(18,8)
 	END_MAIN
 
 Dunno1:
@@ -131,7 +133,7 @@ UNIT Hiems WyvernRider 0x1 Level(6, Enemy, 1)     [17,18] 0b 0x0 0x0 0x0 [IronAx
 UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [18,17] 0b 0x0 0x0 0x0 [Flux] AttackInRangeAI
 UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [21,13] 0b 0x0 0x0 0x0 [DarkTome2] ChargeAI
 UNIT BadGuy AxeArmor 0x1 Level(7, Enemy, 1)     [9,9] 0b 0x0 0x0 0x0 [SteelLabrys,ShortAxe] BossAI
-UNIT BadGuy SwordCav 0x1 Level(6, Enemy, 1)     [1,16] 0b 0x0 0x0 0x0 [Armorslayer] TwoActionAI
+UNIT BadGuy SwordCav 0x1 Level(6, Enemy, 1)     [1,16] 0b 0x0 0x0 0x0 [IronSword] TwoActionAI
 UNIT BadGuy LanceCav 0x1 Level(6, Enemy, 1)     [0,18] 0b 0x0 0x0 0x0 [Horseslayer] ChargeAI
 UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [1,13] 0b 0x0 0x0 0x0 [DarkTome2] AttackInRangeAI
 UNIT Hiems Deserter 0x1 Level(6, Enemy, 1)     [2,17] DropItem 0x0 0x0 0x0 [IronLance,Vulnerary] AttackInRangeAI
@@ -149,12 +151,32 @@ UNIT BadGuy Raider 0x1 Level(6, Enemy, 1)     [3,12] 0b 0x0 0x0 0x0 [IronSword,Z
 UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [13,2] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
 UNIT BadGuy Mage 0x1 Level(6, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [Fire] AttackInRangeAI
 UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [10,5] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
-UNIT BadGuy SCav 0x1 Level(6, Enemy, 1)     [9,3] 0b 0x0 0x0 0x0 [IronSword,Vulnerary] AttackInRangeAI
+UNIT BadGuy SCav 0x1 Level(6, Enemy, 1)     [9,3] 0b 0x0 0x0 0x0 [Armorslayer,Vulnerary] AttackInRangeAI
 UNIT BadGuy PegRider 0x1 Level(6, Enemy, 1)     [8,13] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
 UNIT BadGuy PegRider 0x1 Level(6, Enemy, 1)     [17,1] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
 UNIT BadGuy Monk 0x1 Level(6, Enemy, 1)     [12,10] 0b 0x0 0x0 0x0 [Light1] AttackInRangeAI
 UNIT BadGuy Pirate 0x1 Level(6, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [ShortAxe,EnergyRing] BossAI
 UNIT BadGuy Hunter 0x1 Level(6, Enemy, 1)     [15,12] 0b 0x0 0x0 0x0 [SteelBow] AttackInRangeAI
+UNIT BadGuy Hunter 0x1 Level(6, Enemy, 1)     [4,3] 0b 0x0 0x0 0x0 [KillerBow] ChargeAI
+	UNIT
+	
+WyvernAndPeg:
+UNIT BadGuy WyvRider 0x1 Level(6, Enemy, 1)     [8,18] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
+UNIT BadGuy PegRider 0x1 Level(6, Enemy, 1)     [17,8] 0b 0x0 0x0 0x0 [Axereaver,IronLance] TwoActionAI
+	UNIT	
+
+LeftStairsRein1:
+UNIT Hiems Occultist 0x1 Level(6, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [Flux] ChargeAI
+UNIT Hiems Occultist 0x1 Level(6, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [DarkTome2] ChargeAI
+	UNIT
+	
+MidReinWith1Unit:
+UNIT Hiems Myrmidon 0x1 Level(7, Enemy, 1)     [13,11] 0b 0x0 0x0 0x0 [IronSword,Lancereaver] [0,0xF,4,0]
+	UNIT
+	
+LeftStairsRein1:
+UNIT Hiems Archer 0x1 Level(7, Enemy, 1)     [0,12] 0b 0x0 0x0 0x0 [SteelBow] ChargeAI
+UNIT Hiems Mercenary 0x1 Level(6, Enemy, 1)     [0,12] 0 0 1 REDA1R12 [IronSword,Zanbato] ChargeAI
 	UNIT
 	
 LeftMoatRein1:
@@ -172,11 +194,12 @@ UNIT BadGuy PegRider 0x1 Level(6, Enemy, 1)     [0,9] 0 0 1 REDA1R9 [IronLance] 
 	UNIT
 	
 ThiefRein1:
-UNIT 0x64 Thief 0x1 Level(5, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [KillingEdge,YourCut] ThiefAI
+UNIT 0x64 Thief 0x1 Level(5, Enemy, 1)     [15,6] 0b 0x0 0x0 0x0 [Lancereaver,SilverSword,ChestKey,ChestKey] ThiefAI
 	UNIT
 	
-ThiefRein2:
-UNIT 0x64 Thief 0x1 Level(6, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [Lancereaver,YourCut] ThiefAI
+LeftStairsRein2:
+UNIT BadGuy Brigand 0x1 Level(7, Enemy, 1)     [0,12] 0 0 1 REDA1R12 [Swordreaver] ChargeAI
+UNIT BadGuy Deserter 0x1 Level(6, Enemy, 1)     [0,12] 0b 0x0 0x0 0x0 [Axereaver,SteelLance] ChargeAI
 	UNIT
 	
 TopMoat1:
@@ -186,12 +209,12 @@ UNIT BadGuy WyvernRider 0x1 Level(7, Enemy, 1)     [18,0] 0b 0x0 0x0 0x0 [SteelA
 	
 TopMoat2:
 UNIT Hiems Occultist 0x1 Level(7, Enemy, 1)     [18,0] 0b 0x0 0x0 0x0 [DarkTome1] ChargeAI
-UNIT BadGuy Pirate 0x1 Level(7, Enemy, 1)     [17,0] 0b 0x0 0x0 0x0 [Swordreaver,SteelAxe] ChargeAI
+UNIT BadGuy Pirate 0x1 Level(7, Enemy, 1)     [17,0] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
 	UNIT
 	
 TopMoat3:
-UNIT BadGuy PegRider 0x1 Level(7, Enemy, 1)     [18,0] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
-UNIT BadGuy WyvernRider 0x1 Level(7, Enemy, 1)     [17,0] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
+UNIT BadGuy PegRider 0x1 Level(7, Enemy, 1)     [18,0] 0b 0x0 0x0 0x0 [HeavySpear] ChargeAI
+UNIT BadGuy WyvernRider 0x1 Level(7, Enemy, 1)     [17,0] 0b 0x0 0x0 0x0 [SteelAxe,Hammer] ChargeAI
 	UNIT
 	
 InnerFortRein1:
@@ -220,7 +243,8 @@ UNIT BadGuy LCav 0x1 Level(6, Enemy, 1)     [18,16] 0 0 1 REDA19R16 [IronLance] 
 	
 RightFortRein2:
 UNIT Hiems Mage 0x1 Level(7, Enemy, 1)     [18,16] 0b 0x0 0x0 0x0 [Thunder] [0,0xF,4,0]
-UNIT Hiems Thaumaturge 0x1 Level(6, Enemy, 1)     [18,16] 0 0 1 REDA18R16 [Fire] [0,0xF,4,0]
+UNIT Hiems Thaumaturge 0x1 Level(6, Enemy, 1)     [18,16] 0 0 1 REDA19R16 [Fire] [0,0xF,4,0]
+UNIT Hiems Thaumaturge 0x1 Level(6, Enemy, 1)     [18,17] 0 0 1 REDA19R16 [Iceberg] [0,0xF,4,0]
 	UNIT
 	
 RightFortRein3:
@@ -298,8 +322,8 @@ SVAL 0x2 0x0
 CALL 0x9EE1B8
 SOUN 0x2D2
 TILECHANGE 0x1
-RemoveTrapAtCoords(17,0)
-RemoveTrapAtCoords(18,0)
+RemoveTrapAtCoords(17,2)
+RemoveTrapAtCoords(18,2)
 CHECK_ALIVE Gorlois
 BEQ 1 0x0 0xC
 CUMO Affogato
@@ -320,81 +344,111 @@ ENDA
 
 LMoatEvent1:
 SpawnReinforcements(LeftMoatRein1)
+NoFade
 ENDA
 
 LMoatEvent2:
 SpawnReinforcements(LeftMoatRein2)
+NoFade
 ENDA
 
 LMoatEvent3:
 SpawnReinforcements(LeftMoatRein3)
+NoFade
 ENDA
 
 TMoatEvent1:
 CHECK_EVENTID 0xD
-BEQ 0x0 0xC 0x0
+BNE 0x0 0xC 0x0
 SpawnReinforcements(TopMoat1)
+STAL 60
+SpawnReinforcements(LeftStairsRein1)
 LABEL 0x0
+NoFade
+ENDA
+
+MidOneEvent1:
+CHECK_EVENTID 0xB
+BNE 0x0 0xC 0x0
+SpawnReinforcements(MidReinWith1Unit)
+STAL 60
+SpawnReinforcements(LeftStairsRein1)
+LABEL 0x0
+NoFade
 ENDA
 
 TMoatEvent2:
 CHECK_EVENTID 0xD
-BEQ 0x0 0xC 0x0
+BNE 0x0 0xC 0x0
 SpawnReinforcements(TopMoat2)
+STAL 60
 LABEL 0x0
+SpawnReinforcements(ThiefRein1)
+NoFade
 ENDA
 
 TMoatEvent3:
 CHECK_EVENTID 0xD
-BEQ 0x0 0xC 0x0
+BNE 0x0 0xC 0x0
 SpawnReinforcements(TopMoat3)
+STAL 60
 LABEL 0x0
+SpawnReinforcements(LeftStairsRein2)
+NoFade
 ENDA
 
 LRFortEvent1:
 CHECK_EVENTID 0xA
-BEQ 0x0 0xC 0x0
+BNE 0x0 0xC 0x0
 SpawnReinforcements(LeftFortRein1)
 LABEL 0x0
 CHECK_EVENTID 0xC
-BEQ 0x1 0xC 0x0
+BNE 0x1 0xC 0x0
 SpawnReinforcements(RightFortRein1)
 LABEL 0x1
+NoFade
 ENDA
 
 LFortEvent1:
 CHECK_EVENTID 0xA
-BEQ 0x0 0xC 0x0
+BNE 0x0 0xC 0x0
 SpawnReinforcements(LeftFortRein2)
 LABEL 0x0
+NoFade
 ENDA
 
 RFortEvent2:
 CHECK_EVENTID 0xC
-BEQ 0x0 0xC 0x0
+BNE 0x0 0xC 0x0
 SpawnReinforcements(RightFortRein2)
+STAL 60
 LABEL 0x0
+SpawnReinforcements(WyvernAndPeg)
+NoFade
 ENDA
 
 RFortEvent3:
 CHECK_EVENTID 0xC
-BEQ 0x0 0xC 0x0
+BNE 0x0 0xC 0x0
 SpawnReinforcements(RightFortRein3)
 LABEL 0x0
+NoFade
 ENDA
 
 MFortEvent1:
 CHECK_EVENTID 0xB
-BEQ 0x0 0xC 0x0
+BNE 0x0 0xC 0x0
 SpawnReinforcements(InnerFortRein1)
 LABEL 0x0
+NoFade
 ENDA
 
 MFortEvent2:
 CHECK_EVENTID 0xB
-BEQ 0x0 0xC 0x0
+BNE 0x0 0xC 0x0
 SpawnReinforcements(InnerFortRein2)
 LABEL 0x0
+NoFade
 ENDA
 
 TriggerHappyHavoc:
@@ -405,6 +459,7 @@ ENDA
 BeginningScene:
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 RedSussy
+	CenterTextbox(Ch6ObjectiveWarning)
 	ENUN
 	GotoPrepScreen
 	ENDA

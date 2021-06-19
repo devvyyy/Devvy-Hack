@@ -15,6 +15,12 @@ SHORT $4718 $46C0
 #include "SpurSkills/SpurSkills.event"
 
 ALIGN 4
+KingMark:
+#incbin "KingMark/KingMark.dmp"
+POIN AuraSkillCheck
+WORD KingMarkID
+
+ALIGN 4
 StandBehindMe:
 #incbin "StandBehindMe/StandBehindMe.dmp"
 POIN AuraSkillCheck

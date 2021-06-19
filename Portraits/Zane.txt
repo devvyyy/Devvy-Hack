@@ -180,8 +180,18 @@ setMugEntryExtend(0x28, Breve_Mug, 3, 5, 3, 3, 10, 2, 10, 4)
 
 ALIGN 16
 Ansgar_Mug: //Ansgar edited by L95
-#incext PortraitFormatter "AnsgarV2HelmetOff.png"
+#incext PortraitFormatter "AnsgarV2StatScreen.png"
 setMugEntryExtend(0x23, Ansgar_Mug, 2, 4, 2, 2, 0, 2, 0, 0)
+
+ALIGN 16
+AnsgarLeft_Mug:
+#incext PortraitFormatter "AnsgarLeft.png"
+setMugEntryExtend(0x4E, AnsgarLeft_Mug, 3, 4, 3, 2, 10, 4, 0, 0)
+
+ALIGN 16
+AnsgarRight_Mug:
+#incext PortraitFormatter "AnsgarRight.png"
+setMugEntryExtend(0x4F, AnsgarRight_Mug, 0, 0, 0, 0, 0, 0, 0, 0)
 
 ALIGN 16
 Zopf_Mug:
@@ -208,10 +218,15 @@ Gorlois_Mug:
 #incext PortraitFormatter "Gorlois.png"
 setMugEntryExtend(0x39, Gorlois_Mug, 3, 5, 3, 3, 10, 4, 0, 0)
 
-ALIGN 16 //
-Spooky_Mug:
-#incext PortraitFormatter "Edge.png"
-setMugEntryExtend(0x4E, Spooky_Mug, 3, 5, 3, 3, 10, 4, 0, 0)
+ALIGN 16 //Edited by L95
+GorloisBird_Mug:
+#incext PortraitFormatter "literalbirdframes.png"
+setMugEntryExtend(0x47, GorloisBird_Mug, 8, 3, 3, 3, 10, 4, 0, 0)
+
+//ALIGN 16
+//Spooky_Mug:
+//#incext PortraitFormatter "Edge.png"
+//setMugEntryExtend(0x4E, Spooky_Mug, 3, 5, 3, 3, 10, 4, 0, 0)
 
 ALIGN 16
 Latte_Mug: //Latte by Laurent Lacroix

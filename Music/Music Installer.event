@@ -275,10 +275,15 @@ ALIGN 4
 SongTable(0x10B,song010B,0)
 #include "ComingFury.event"
 
-ALIGN 4
+//ALIGN 4
 //The Dragon Emperor
+//SongTable(0x146,song0146,1)
+//#include "DragonEmperor.event"
+
+ALIGN 4
+//The Dreadful Battle
 SongTable(0x146,song0146,1)
-#include "DragonEmperor.event"
+#include "DreadfulFight.event"
 
 ALIGN 4
 //With Courage and Prayer
@@ -371,7 +376,7 @@ SongTable(0xDB,Dreaming,1)
 
 ALIGN 4
 //And Thus Fate Becomes Cruel
-SongTable(0xA8,song03A3,1)
+SongTable(0xA8,songA8,1)
 #include "FateBecomesCruel.event"
 
 ALIGN 4
@@ -403,6 +408,11 @@ ALIGN 4
 //The Tale Told By The Wind
 SongTable(0x43,TaleToldByWind,0)
 #include "TaleToldByWind.event"
+
+ALIGN 4
+//FE5 Theme
+SongTable(0x43,song43,0)
+#include "FE5Theme.event"
 
 ALIGN 4
 //Blameless Thoughts

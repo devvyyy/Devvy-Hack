@@ -17,7 +17,7 @@ ldrb	r2,[r2,#4]			@ class id
 TableLoop:
 ldrb	r3,[r0]
 cmp		r3,#0
-beq		EndFunc2			@ char_id=0 is the terminator, which means no animation entry was found, so return 0xFFFF
+beq		EndFunc1			@ char_id=0 is the terminator, which means no animation entry was found, so use class battle animation list
 cmp		r3,r1
 bne		NextEntry			@ if char_id doesn't match, next entry
 ldrb	r3,[r0,#1]
@@ -33,10 +33,6 @@ b		TableLoop
 EndFunc1:
 mov		r3,r7
 ldr		r0,=#0x8057D27
-bx		r0
-
-EndFunc2:
-ldr		r0,=#0x8057CE3
 bx		r0
 
 .ltorg
