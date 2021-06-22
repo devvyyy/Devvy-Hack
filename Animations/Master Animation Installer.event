@@ -435,6 +435,10 @@ ALIGN 4 //Parson
 {
 #include "Parson/Unarmed/Unarmed Installer.event"
 }
+ALIGN 4 //Parson
+{
+#include "Gorlois/Magic/Installer.event"
+}
 ALIGN 4 //Bishop (M) by Mikey Seregon, EltritchAbomination
 {
 #include "Bishop M/Magic/Installer.event"
@@ -603,6 +607,12 @@ ParsonAnim:
 LightAnim(0xB1)
 StaffAnim(0xB2)
 UnarmedAnim(0xB3)
+WORD 0x0    // Seperator
+
+GorloisAnim:
+LightAnim(0xBB)
+StaffAnim(0xBB)
+UnarmedAnim(0xBB)
 WORD 0x0    // Seperator
 
 ALIGN 4

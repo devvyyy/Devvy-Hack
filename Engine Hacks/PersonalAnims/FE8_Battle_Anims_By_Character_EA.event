@@ -38,9 +38,16 @@ POIN BattleAnimListByCharTable
 ALIGN 4
 BattleAnimListByCharTable:
 BYTE Affogato Hunter 0 0; POIN AffoHunterAnimList
+BYTE Gorlois Parson 0 0; POIN GorloisParsonAnimList
 WORD 0 //Terminator
 
 AffoHunterAnimList:
 BYTE 3 1; SHORT 0xAE //bows
 BYTE 9 1; SHORT 0xAF //unarmed
+WORD 0 //terminator
+
+GorloisParsonAnimList:
+BYTE 6 1; SHORT 0xBB //light
+BYTE 4 1; SHORT 0xBB //staves
+BYTE 9 1; SHORT 0xBB //unarmed
 WORD 0 //terminator
