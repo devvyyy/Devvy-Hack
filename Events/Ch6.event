@@ -175,7 +175,7 @@ MidReinWith1Unit:
 UNIT Hiems Myrmidon 0x1 Level(7, Enemy, 1)     [13,11] 0b 0x0 0x0 0x0 [IronSword,Lancereaver] [0,0xF,4,0]
 	UNIT
 	
-LeftStairsRein1:
+LeftStairsRein3:
 UNIT Hiems Archer 0x1 Level(7, Enemy, 1)     [0,12] 0b 0x0 0x0 0x0 [SteelBow] ChargeAI
 UNIT Hiems Mercenary 0x1 Level(6, Enemy, 1)     [0,12] 0 0 1 REDA1R12 [IronSword,Zanbato] ChargeAI
 	UNIT
@@ -382,7 +382,7 @@ CHECK_EVENTID 0xB
 BNE 0x0 0xC 0x0
 SpawnReinforcements(MidReinWith1Unit)
 STAL 60
-SpawnReinforcements(LeftStairsRein1)
+SpawnReinforcements(LeftStairsRein3)
 LABEL 0x0
 NoFade
 ENDA
