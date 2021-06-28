@@ -169,8 +169,13 @@ SongTable(0xC2,songC2,1)
 #include "FirstStep.event"
 
 ALIGN 4
+//Ice Ridge of Noltia (Intro on Turn 1 before using Map BGM Change)
+SongTable(0x149,song0149,1)
+#include "NoltiaIntro.event"
+
+ALIGN 4
 //Ice Ridge of Noltia
-SongTable(0x148,Noltia,1)
+SongTable(0x148,song0148,1)
 #include "Noltia.event"
 
 ALIGN 4
@@ -374,10 +379,15 @@ ALIGN 4
 SongTable(0xDB,Dreaming,1)
 #include "Dreaming.event"
 
-ALIGN 4
+//ALIGN 4
 //And Thus Fate Becomes Cruel
+//SongTable(0xA8,songA8,1)
+//#include "FateBecomesCruel.event"
+
+ALIGN 4
+//Corridors of Time
 SongTable(0xA8,songA8,1)
-#include "FateBecomesCruel.event"
+#include "Zeal.event"
 
 ALIGN 4
 //Ring of Revolving Fate

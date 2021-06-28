@@ -1,9 +1,11 @@
 ALIGN 4
 SkillIcons:
 
-
 //Icon graphics are uncompressed
 #define SkillIcon(skillID) "128*skillID+SkillIcons"
+
+ORG SkillIcon(SearingSwordID)
+#incbin "SkillIcons/SearingSword.dmp"
 
 ORG SkillIcon(CantoTwoID)
 #incbin "SkillIcons/Hymn.dmp"

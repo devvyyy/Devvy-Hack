@@ -131,7 +131,6 @@ ALIGN 4
     CastlePalette:
     #incbin "Castle/SnowCastlePal.bin"
 
-
     ALIGN 4
 	EventPointerTable(0x18, CastleImage)
     EventPointerTable(0x19, CastlePalette)
@@ -354,14 +353,14 @@ CastleAnim7:
 
 ALIGN 4
 CastleAnims:
-tilesetAnimation(0x1C,0x1000,CastleAnim0)
-tilesetAnimation(0x1C,0x1000,CastleAnim1)
-tilesetAnimation(0x1C,0x1000,CastleAnim2)
-tilesetAnimation(0x1C,0x1000,CastleAnim3)
-tilesetAnimation(0x1C,0x1000,CastleAnim4)
-tilesetAnimation(0x1C,0x1000,CastleAnim5)
-tilesetAnimation(0x1C,0x1000,CastleAnim6)
-tilesetAnimation(0x1C,0x1000,CastleAnim7)
+tilesetAnimation(0x1C,0x400,CastleAnim0)
+tilesetAnimation(0x1C,0x400,CastleAnim1)
+tilesetAnimation(0x1C,0x400,CastleAnim2)
+tilesetAnimation(0x1C,0x400,CastleAnim3)
+tilesetAnimation(0x1C,0x400,CastleAnim4)
+tilesetAnimation(0x1C,0x400,CastleAnim5)
+tilesetAnimation(0x1C,0x400,CastleAnim6)
+tilesetAnimation(0x1C,0x400,CastleAnim7)
 WORD 0 0
 ALIGN 4
 
