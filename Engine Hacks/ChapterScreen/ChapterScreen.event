@@ -10,18 +10,31 @@
 	#define FreeSpace 0x1000000
 	ORG FreeSpace
 #endif
+
+// Uncomment to turn "Guide" into chapter win button.
+/*
+#ifndef Debug
+  #define Debug
+#endif
+*/
+
 {
-  // Variables
-  // IDs which will be used for the Intro songs
+  // Defs
+  // IDs which will be used for the Intro songs. 
+  // If you change these, you need to re-assemble Procs/ChIntro/PlaySfx.asm
   #define IntroSfx0 0x318
-  #define IntroSfx1 0x318 //319
-  #define IntroSfx2 0x318 //31A
-  #define IntroSfx3 0x318 //31B
-  #define IntroSfx4 0x318 //31C
-  #define IntroSfx5 0x318 //31D
-  #define IntroSfx6 0x318 //31E
+  #define IntroSfx1 0x319
+  #define IntroSfx2 0x31A
+  #define IntroSfx3 0x31B
+  #define IntroSfx4 0x31C
+  #define IntroSfx5 0x31D
+  #define IntroSfx6 0x31E
+  
+  // Variables
   // Amount of time it takes for the next map sprite to be drawn after the previous
-  #define TimePerUnit 0x8
+  ALIGN 4
+  TimePerUnit:
+  BYTE 0x8
   
   
 	PUSH
@@ -33,9 +46,13 @@
     
 	POP
   
+  
   #include "Defs/ProcDefinitions.event"
   #include "Procs/Procs.event"
   #include "Graphics/Graphics.event"
   #include "Tables/Tables.event"
 //  #include "Music/music installer.event"
+  #ifdef Debug
+    #include "Debug/Debug.event"            // Turn Chapter "Guide" option into win button.
+  #endif
 }

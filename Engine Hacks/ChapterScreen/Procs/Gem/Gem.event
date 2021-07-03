@@ -1,6 +1,4 @@
 // GEM SEGMENT 1, affine sprites, spiral, line
-PROC_CALL_ROUTINE(Init_Move+0x1)
-
 PROC_CALL_ROUTINE(Init_Spiral+0x1)
 PROC_LABEL(0x1)
   PROC_CALL_ROUTINE(Loop_Move+0x1)
@@ -30,7 +28,6 @@ PROC_LABEL(0x2)
 LineEnd:
 // GEM SEGMENT 2, regular sprites, animated
 PROC_END_ALL(Proc_ScrollPalMist)
-PROC_CALL_ROUTINE(Init_Anim+0x1)
 
 PROC_CALL_ROUTINE(Init_Shine+0x1)
 PROC_LABEL(0x3)

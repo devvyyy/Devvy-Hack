@@ -3,7 +3,7 @@
 push  {r4-r7, r14}
 mov   r4, r0
 
-mov   r1, #0x2C
+mov   r1, #0x2B
 ldrb  r0, [r4, r1]
 cmp   r0, #0x0
 ble   FadeOut

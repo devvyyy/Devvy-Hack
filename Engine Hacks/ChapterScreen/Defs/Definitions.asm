@@ -5,6 +5,10 @@
 .type   PushToSecondaryOAM, function
 .set    PushToSecondaryOAM, 0x08002BB9
 
+.global RegisterObject
+.type   RegisterObject, function
+.set    RegisterObject, 0x08005429
+
 .global SetBackgroundTileDataOffset
 .type   SetBackgroundTileDataOffset, function
 .set    SetBackgroundTileDataOffset, 0x08000FDD
@@ -24,6 +28,10 @@
 .global EnableBackgroundSyncById
 .type   EnableBackgroundSyncById, function
 .set    EnableBackgroundSyncById, 0x08001FBD
+
+.global EnableBackgroundSyncByMask
+.type   EnableBackgroundSyncByMask, function
+.set    EnableBackgroundSyncByMask, 0x08001FAD
 
 .global CopyToPaletteBuffer
 .type   CopyToPaletteBuffer, function
@@ -45,14 +53,6 @@
 .type   GetGameClock, function
 .set    GetGameClock, 0x08000D29
 
-.global _umodsi3
-.type   _umodsi3, function
-.set    _umodsi3, 0x080D1B4D
-
-.global CpuFastSet
-.type   CpuFastSet, function
-.set    CpuFastSet, 0x080D1675
-
 .global EnablePaletteSync
 .type   EnablePaletteSync, function
 .set    EnablePaletteSync, 0x08001F95
@@ -73,10 +73,6 @@
 .type   BgAffineSet, function
 .set    BgAffineSet, 0x080D1671
 
-.global ObjAffineSet
-.type   ObjAffineSet, function
-.set    ObjAffineSet, 0x080D16A1
-
 .global WriteOAMRotScaleData
 .type   WriteOAMRotScaleData, function
 .set    WriteOAMRotScaleData, 0x080021B1
@@ -96,6 +92,10 @@
 .global MMS_GetGfx
 .type   MMS_GetGfx, function
 .set    MMS_GetGfx, 0x080BAC1D
+
+.global FillTileRect
+.type   FillTileRect, function
+.set    FillTileRect, 0x080D74A1
 
 
 @ RAM locations
@@ -123,9 +123,6 @@
 .global ChapterData
 .set    ChapterData, 0x0202BCF0
 
-.global VRAMaddress
-.set    VRAMaddress, 0x06010000
-
 .global gGenericBuffer
 .set    gGenericBuffer, 0x02020188
 
@@ -140,3 +137,19 @@
 
 .global gUnitArray
 .set    gUnitArray, 0x0202BE4C
+
+.global gSMSGfxBuffer1
+.set    gSMSGfxBuffer1, 0x02034010
+
+.global gSMSGfxBuffer3
+.set    gSMSGfxBuffer3, 0x02038010
+
+@ ROM locations
+.global OAM_32x32
+.set    OAM_32x32, 0x08590F54
+
+.global OAM_32x64
+.set    OAM_32x64, 0x08590F74
+
+.global OAM_64x64
+.set    OAM_64x64, 0x08590F5C

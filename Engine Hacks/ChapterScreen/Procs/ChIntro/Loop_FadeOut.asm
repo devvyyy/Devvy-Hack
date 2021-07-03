@@ -44,9 +44,7 @@ lsl   r2, #0x18
 mov   r3, #0x10
 lsl   r3, #0x4
 orr   r2, r3
-ldr   r5, =CpuFastSet
-bl    GOTO_R5
-
+swi   #0xC                    @ CpuFastSet
 mov   r1, #0x1
 
 UpdateFade:

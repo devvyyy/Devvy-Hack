@@ -1,0 +1,8 @@
+PUSH
+  ORG 0x59CEC8
+  POIN WinFunctionality+0x1
+POP
+
+ALIGN 4
+WinFunctionality:
+#include "WinFunctionality.lyn.event"

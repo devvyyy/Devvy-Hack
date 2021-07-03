@@ -1,6 +1,6 @@
 .thumb
 
-mov   r2, #0x2A       @ HOFFS
+mov   r2, #0x2A       @ HOFS
 mov   r1, #0x0        @ starts at 0.
 strh  r1, [r0, r2]
 mov   r2, #0x29       @ Palette index

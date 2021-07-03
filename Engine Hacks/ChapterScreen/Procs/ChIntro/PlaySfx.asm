@@ -5,7 +5,7 @@ push  {r4, r14}
 ldr   r0, =ChapterData
 add   r0, #0x41
 ldrb  r0, [r0]
-lsl   r0, #0x1E
+lsl   r0, #0x1F
 cmp   r0, #0x0
 blt   Return
 

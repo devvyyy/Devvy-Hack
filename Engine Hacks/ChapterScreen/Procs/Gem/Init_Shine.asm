@@ -1,7 +1,16 @@
+@ Prepares the shine animation
+@   +0x29: byte, Gem index indicating which vars to use.
+@   +0x30: 6 gemstructs:
+@     +0x0, short, OAM0
+@     +0x2, short, OAM1
+@     +0x4, byte, gem VRAM index.
+@     +0x7, byte, Colour, don't draw if unset.
+
 .thumb
 
 push  {r4-r7, r14}
 mov   r7, r0
+
 
 mov   r1, #0x29
 mov   r2, #0x5
@@ -9,10 +18,8 @@ strb  r2, [r7, r1]                        @ Index indicating which vars to use
 
 
 @ Attribute 0 & attribute 1
-mov   r0, #0x80
-lsl   r0, #0x8
-mov   r1, #0xC0
-lsl   r1, #0x8
+ldr   r0, =0x8000
+ldr   r1, =0xC000
 mov   r2, #0x23                           @ Vertical correction
 mov   r3, #0xF                            @ Horizontal correction
 
@@ -79,26 +86,26 @@ LoopVars:
   lsr   r0, r2, #0x10
   strh  r0, [r7, r1]                      @ Attribute 0
   add   r1, #0x2
+  
   lsl   r0, r2, #0x10
   lsr   r0, #0x10
   strh  r0, [r7, r1]                      @ Attribute 1
   add   r1, #0x2
-  strb  r6, [r7, r1]                      @ Time until next animation cell
-  add   r6, #0x0                          @ Increase immediate to delay effect between the gems' shines
-  add   r1, #0x1
+  
   mov   r0, #0x0
-  strb  r0, [r7, r1]                      @ gem VRAM cell
-  add   r1, #0x1
-  strb  r3, [r7, r1]                      @ gem VRAM index
-  add   r1, #0x1
+  strb  r0, [r7, r1]                      @ gem VRAM index
+  add   r1, #0x3
+  
   mov   r2, r5
   and   r2, r4
   strb  r2, [r7, r1]                      @ Colour, don't draw if unset.
-  lsl   r5, #0x1
   add   r1, #0x1
+  
+  lsl   r5, #0x1
   add   r3, #0x1
   cmp   r3, #0x5
   ble   LoopVars
+
 
 pop   {r4-r7}
 pop   {r0}

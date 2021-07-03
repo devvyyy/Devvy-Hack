@@ -1,7 +1,6 @@
 QUICK NOTES
   This hack is made with vanilla FE8U in mind. I'd be very surprised if it works on FE7 FE6 or any of the 
-  other versions of FE8. It should be compatible with the SkillSystem (as of 24/10/2020 (day-month-year)) 
-  as well.
+  other versions of FE8. It might be compatible with the SkillSystem as well.
 
   ChapterScreen assumes that ClassID fits in one byte, which should be the case in vanilla FE8U.
   IDK if people ever want to have over 255 classes but if they do, the moving map sprites in the chapter
@@ -31,14 +30,14 @@ IMPLEMENTATION DETAILS
     returns the gems that should be drawn for that chapter's intro (so make sure you don't have more than
     256 chapters).
 
-    The default table, Example1, has all its entries set to 0x3F = (0011 1111)b, meaning all six gems
-    should be drawn for every chapter. I encourage you to experiment with other values, no greater than
+    The default table, Example1, has most of its entries set to 0x3F = (0011 1111)b, meaning all six gems
+    should be drawn for most chapters. I encourage you to experiment with other values, no greater than
     0x3F though, because there's only six gems. This can be done by opening Example1.dmp in a hex editor
     like HxD for example. Alternatively, create your own table and change ActiveGemsTable's path in
     Tables/Tables.event to refer to your table.
     
-    If having active gems be determined by ROM data is too rigid for you, I created a GetGemMask function.
-    Feel free to change how it determines the gem mask. It can be found in ChapterScreen/Procs/ChIntro/.
+    If having active gems be determined by ROM data is too rigid for you, you can change how
+    ChapterScreen/Procs/ChIntro/GetGemMask.asm operates.
     
     I've made it so that the palette of the background relief changes depending on which combination of
     gems are active (there's 64 different palettes to match each of the 2^6 possible combinations). Each
@@ -54,7 +53,7 @@ IMPLEMENTATION DETAILS
     +00       SHORT   X-coordinate
     +02       SHORT   Y-coordinate
     +04       SHORT   Rotation angle (MSByte is integer part LSByte is fractional part)
-    +06       SHORT   Scaling factor (or 1 divided by, Ig. Values 0x0-0xff enlarge, >=0x100 reduce)
+    +06       SHORT   Scaling factor (or 1 divided by, I guess. Values 0x0-0xff enlarge, >=0x100 reduce.)
                       Used for both horizontal and vertical scaling.
 
     The spiral velocity is determined by the number of entries in the spiral table. By default 
@@ -72,8 +71,9 @@ IMPLEMENTATION DETAILS
   keep them that way.
 
   BG2 is disabled during Intro Segment 3 if there are no active gems. This means no fancy pokémon VS style 
-  bar behind the chapter title. To enable this even when no gems are active, modify Init_BGSeg3.asm and 
-  Init_TitleBG. Both alter behaviour if no gems are active.
+  bar behind the chapter title. To enable this even when no gems are active, modify
+  ChapterScreen/Procs/ChIntro/Init_Seg3.asm and ChapterScreen/Procs/ChIntro/Init_TitleBG.
+  Both alter behaviour if no gems are active.
 
   Loop_WhiteIn and Loop_WhiteOut also don't do anything when no gems are around. Figured it'd be nicer if 
   there's no white-in/out when there're no gems to bring it about, and BG1's (the relief) palette remains 
@@ -82,10 +82,10 @@ IMPLEMENTATION DETAILS
   The mapsprites that are shown are taken from living units loaded in the UnitStruct (over at 
   0x0202BE4C). The more living units are loaded in here, the more mapsprites will appear during the 
   chapter intro, and the longer it will take for the intro to finish. I made it this way in order to show 
-  off all the units. Up to 52 units will be displayed. Of course the chapter intro can be skipped at any 
+  off all the units. Up to 32 units will be displayed. Of course the chapter intro can be skipped at any 
   time by the same means as the vanilla chapter intro screen can. If you wish to change what 
   part of unit struct determines whether a unit should or should not be displayed you only need to 
-  change Procs/MapSprites/DrawUnitCheck.asm accordingly.
+  change Procs/ChIntro/DrawUnitCheck.asm accordingly.
 
 
   MUSIC
@@ -103,6 +103,11 @@ IMPLEMENTATION DETAILS
   I've put curly brackets around ChapterScreen.event to avoid definitions clashing. This also means that 
   debugging in No$GBA can become harder as labels won't be generated into a .sym file. Just remove the 
   brackets to get the labels back.
+  
+  There's also a functionality that changes the effect of the "Guide" button. This button is part of the menu 
+  that you can open by pressing A on an empty square on a map. If you "#define Debug", the "Guide" button will
+  make you win the current chapter. Doesn't seem to work on Ephraim chapter 10, Turning Traitor. Maybe to do 
+  with it being a survive chapter.
 
 
 CREDITS
@@ -132,3 +137,11 @@ be quite a headache to me, as it all seemed very alien. Knowing what each instru
 figuring out why these instructions are used the way they are was something else entirely. However, 
 despite still having a long way to go, I feel a lot more comfortable with assembly now. Hopefully I'll get 
 to work on plenty more ASM projects!
+
+EDIT: Apparently the above paragraph was written on the 8th of November 2020. I've decided to start keeping 
+track of dates now. This paragraph was written February 22nd 2021. I've made a bunch of changes (a number of 
+which small and probably needless). Most importantly, I've buffered the moving map sprites. It turned out that 
+decompressing a bunch of assets every few frames puts a big strain on the GBA (or something at least), leading 
+to a very laggy screen. Now that I'm pre-preparing the sprites, I've had to reduce the amount of moving map 
+sprites from 52 to 32. Technically there's room for more if multiple units use the same moving map sprites, but 
+I didn't (yet) take advantage of that.

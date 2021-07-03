@@ -4,14 +4,26 @@ ALIGN 4
 Proc_ChIntro:
 #include "ChIntro/ChIntro.event"
   ALIGN 4
-  Init_BGSeg1:
-  #include "ChIntro/Init_BGSeg1.lyn.event"
+  Init_Seg1:
+  #include "ChIntro/Init_Seg1.lyn.event"
     ALIGN 4
     GetGemMask:
     #include "ChIntro/GetGemMask.lyn.event"
   ALIGN 4
-  Init_Relief:
-  #include "ChIntro/Init_Relief.lyn.event"
+  Init_BGOBJ:
+  #include "ChIntro/Init_BGOBJ.lyn.event"
+    ALIGN 4
+    Init_Relief:
+    #include "ChIntro/Init_Relief.lyn.event"
+    ALIGN 4
+    Init_Gem:
+    #include "ChIntro/Init_Gem.lyn.event"
+    ALIGN 4
+    Load_MapSprites:
+    #include "ChIntro/Load_MapSprites.lyn.event"
+      ALIGN 4
+      DrawUnitCheck:
+      #include "ChIntro/DrawUnitCheck.lyn.event"
   ALIGN 4
   PlaySfx:
   #include "ChIntro/PlaySfx.lyn.event"
@@ -19,8 +31,8 @@ Proc_ChIntro:
   End_Seg1:
   #include "ChIntro/End_Seg1.lyn.event"
   ALIGN 4
-  Init_BGSeg2:
-  #include "ChIntro/Init_BGSeg2.lyn.event"
+  Init_Seg2:
+  #include "ChIntro/Init_Seg2.lyn.event"
   ALIGN 4
   Loop_WhiteIn:
   #include "ChIntro/Loop_WhiteIn.lyn.event"
@@ -31,8 +43,8 @@ Proc_ChIntro:
   Loop_WhiteOut:
   #include "ChIntro/Loop_WhiteOut.lyn.event"
   ALIGN 4
-  Init_BGSeg3:
-  #include "ChIntro/Init_BGSeg3.lyn.event"
+  Init_Seg3:
+  #include "ChIntro/Init_Seg3.lyn.event"
   ALIGN 4
   Loop_Title:
   #include "ChIntro/Loop_Title.lyn.event"
@@ -57,9 +69,6 @@ ALIGN 4
 Proc_ScrollPalMist:
 #include "Mist/ScrollPalMist.event"
   ALIGN 4
-  Init_Mist:
-  #include "Mist/Init_Mist.lyn.event"
-  ALIGN 4
   Init_ScrollPalMist:
   #include "Mist/Init_ScrollPalMist.lyn.event"
   ALIGN 4
@@ -70,9 +79,6 @@ Proc_ScrollPalMist:
 ALIGN 4
 Proc_Gem:
 #include "Gem/Gem.event"
-  ALIGN 4
-  Init_Move:
-  #include "Gem/Init_Move.lyn.event"
   ALIGN 4
   Init_Spiral:
   #include "Gem/Init_Spiral.lyn.event"
@@ -91,9 +97,6 @@ Proc_Gem:
   ALIGN 4
   Loop_FadeOutMist:
   #include "Gem/Loop_FadeOutMist.lyn.event"
-  ALIGN 4
-  Init_Anim:
-  #include "Gem/Init_Anim.lyn.event"
   ALIGN 4
   Init_Shine:
   #include "Gem/Init_Shine.lyn.event"
@@ -120,20 +123,14 @@ ALIGN 4
 Proc_MapSprites:
 #include "MapSprites/MapSprites.event"
   ALIGN 4
-  Proc_Dummy:
-  #include "MapSprites/Dummy/Dummy.event"
-  ALIGN 4
   Init_MapSprites:
   #include "MapSprites/Init_MapSprites.lyn.event"
   ALIGN 4
   Loop_MapSprites:
   #include "MapSprites/Loop_MapSprites.lyn.event"
     ALIGN 4
-    VRAMupdate:
-    #include "MapSprites/VRAMupdate.lyn.event"
-    ALIGN 4
-    DrawUnitCheck:
-    #include "MapSprites/DrawUnitCheck.lyn.event"
+    VRAMUpdate:
+    #include "MapSprites/VRAMUpdate.lyn.event"
     ALIGN 4
     CalcMov:
     #include "MapSprites/CalculateMovement.lyn.event"

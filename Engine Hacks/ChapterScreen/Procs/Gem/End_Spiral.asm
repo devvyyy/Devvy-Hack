@@ -19,13 +19,13 @@ Loop:
   ble   Loop
   
 mov   r1, #0x2A
-ldrh  r2, [r4, r1]
+ldrb  r2, [r4, r1]
 cmp   r2, #0x0
 ble   BreakSpiralLoop
 
 @ Decrement timer
 sub   r2, #0x1
-strh  r2, [r4, r1]
+strb  r2, [r4, r1]
 b     Return
 
 BreakSpiralLoop:

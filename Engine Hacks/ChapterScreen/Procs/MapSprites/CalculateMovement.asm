@@ -1,9 +1,11 @@
-@ Calculates unit's movement based on multiple factors
-@ Returns: movement
+@ Calculates unit's movement based on multiple factors.
+@ args:
+@   r0: Unitstruct index
+@ Returns:
+@   r0: movement
 .thumb
 
 @ Calculate movement
-mov   r0, r11
 lsl   r1, r0, #0x6
 lsl   r2, r0, #0x3
 add   r1, r2                    @ Multiply index by #0x48
