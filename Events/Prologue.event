@@ -1,0 +1,265 @@
+
+////////////////////////////////////////////////////
+//                                                //
+// Disassembled with Nintenlord's Event Assembler //
+// Version: 11.0.0.0                              //
+// Game: FE8                                      //
+// File: FE8_clean.gba                            //
+// Offset: $9EC66C                                //
+//                                                //
+////////////////////////////////////////////////////
+
+EventPointerTable(0x7, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+POIN $0 $0 $0
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TURN 0x0 RunawayThieves [2,0] 0x0
+TURN 0x0 OMGMyHero [3,0] 0x0
+TURN 0x0 Thieves1 [4,0] 0x0
+TURN 0x0 ShamanRein1 [5,0] 0x0
+TURN 0x0 ShamanRein2 [6,0] 0x0
+TURN 0x0 ShamanRein3 [8,0] 0x0
+END_MAIN
+
+CharacterBasedEvents:
+CharacterEventBothWays(0x10,AffoBreveConvo, Affo, Breve)
+CharacterEventBothWays(0xA,SeqEvelConvo, Sequin, Evelyn)
+CharacterEventBothWays(0xB,HildrUlrichConvo, Hildr, Ulrich)
+CharacterEventBothWays(0xC,AnsgarAffoConvo, Ansgar, Affo)
+END_MAIN
+
+AffoBreveConvo:
+	MUSI
+	Text(AffoBreveTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+SeqEvelConvo:
+	MUSI
+	Text(SeqEvelTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+HildrUlrichConvo:
+	MUSI
+	Text(HildrUlrichTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+AnsgarAffoConvo:
+	MUSI
+	Text(AnsgarAffoTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+LocationBasedEvents:
+Chest(SteelBow,13,6)
+Door(11,7)
+Door(12,7)
+Seize(2,2)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno1:
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+Units1:
+UNIT Affogato Hunter 0x1 Level(1, Ally, 0)   [7,9] 0b 0x0 0x0 0x0 [IronBow, IronRifle,Lockpick,] [0x0,0x0,0x0,0x0]
+UNIT Breve SCav 0x1 Level(3, Ally, 0)    [6,8] 0b 0x0 0x0 0x0 [IronSword,Sagitar,Vulnerary] [0x0,0x0,0x0,0x0]
+UNIT Ansgar LArmor 0x1 Level(4, Ally, 0)   [7,8] 0b 0x0 0x0 0x0 [IronLance,Javelin,Vulnerary] [0x0,0x0,0x0,0x0]
+UNIT Hildr 0x6 0x1 Level(2, Ally, 0)    [8,8] 0b 0x0 0x0 0x0 [IronAxe,HandAxe,Vulnerary] [0x0,0x0,0x0,0x0]
+UNIT Ulrich APaladin 0x1 Level(5, Ally, 0)   [7,7] 0b 0x0 0x0 0x0 [IronAxe, 0xBF,Elixir] [0x0,0x0,0x0,0x0]
+UNIT
+
+EnemyUnits:
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [8,11] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [4,5] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [1,10] 0b 0x0 0x0 0x0 [Flux,] StallOneTurnAI
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)      [12,9] 0b 0x0 0x0 0x0 [Flux] AttackInRangeAI
+UNIT Cultist 0x58 0x1 Level(1, Enemy, 1)      [5,1] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
+UNIT Cultist 0x58 0x1 Level(1, Enemy, 1)      [14,2] 0b 0x0 0x0 0x0 [Flux,Speedwing] AttackInRangeAI
+UNIT Marcellus 0x58 0x1 Level(5, Enemy, 0)      [2,2] 0b 0x0 0x0 0x0 [DarkTome2,] [0,3,4,32]
+UNIT
+
+EnemyUnits2:
+UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [5,10] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
+UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [6,3] 0b 0x0 0x0 0x0 [IronAxe,] StallOneTurnAI
+UNIT BadGuy Raider 0x1 Level(1, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
+UNIT BadGuy Raider 0x1 Level(1, Enemy, 1)     [11,1] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
+UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [12,5] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
+UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [2,7] 0b 0x0 0x0 0x0 [IronLance,] BossAI
+UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [8,0] 0b 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
+UNIT
+
+ThievesGoBrr:
+UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [7,6] DropItem 0x0 0x0 0x0 [IronSword, DevilAxe,] [6,12,4,0]
+UNIT
+
+AkatsukiPrologue:
+UNIT Akatsuki Trickster 0x1 Level(5, Enemy, 0)     [0,3]  0 0 1 REDA2R3 [SteelBlade,SteelBlade,SteelBlade,SteelBlade,] [0,3,4,32]
+UNIT
+
+ThiefRein1:
+UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [14,5] 0b 0x0 0x0 0x0 [SteelSword, ChestKey,] LootingThiefAI
+UNIT
+
+Reinforcements1:
+UNIT Cultist Shaman 0x1 Level(2, Enemy, 1)     [7,6] 0 0 1 REDA7R7 [DarkTome1,] [0,0,4,0]
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [7,6] 0 0 1 REDA8R6 [DarkTome2,] [0,0,4,0]
+UNIT
+
+Reinforcements2:
+UNIT Cultist Shaman 0x1 Level(2, Enemy, 1)     [14,5] 0 0 1 REDA13R5 [DarkTome2,] [0,0,4,0]
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [14,5] 0 0 1 REDA14R6 [DarkTome2,] [0,0,4,0]
+UNIT
+
+Reinforcements3:
+UNIT Cultist Occultist 0x1 Level(1, Enemy, 1)     [0,2] 0 0 1 REDA1R2 [DarkTome1,] [0,0,4,0]
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [0,2] 0 0 1 REDA0R3 [DarkTome2,] [0,0,4,0]
+UNIT
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+BeginningScene:
+LOAD1 0x1 EnemyUnits
+ENUN
+LOAD1 0x1 EnemyUnits2
+ENUN
+MUSC 0xBB
+TEXTSTART
+SVAL 0x2 0x3D
+SVAL 0x3 SirItsBad
+CALL 0x9EE310
+REMA
+FADI 16
+CLEAN
+MUSC 0x4D
+LOAD1 0x0 Units1
+TEXTSTART
+SVAL 0x2 0x3C
+FADU 20
+CALL 0x9EE2E8
+TEXTSHOW BardGaming
+TEXTEND
+MUSC 0xE4
+TEXTCONT
+TEXTEND
+REMA
+_0x2629 0x7
+FADI 20
+CLEAN
+STAL 20
+FADU 20
+STAL 60
+CAM1 [7,12]
+CameraCursor(Affogato)
+Text(CanWeStartYet)
+FADI 16
+GotoPrepScreen
+ENDA
+
+EndingScene:
+Music(0x31)
+SetBackground(0x3C)
+IfAliveDialog(Breve,EndingSceneBrevePrologue)
+CHECK_ALIVE Evelyn
+BEQ 2 0x0 0xC
+CHECK_ALIVE Ansgar
+BEQ 2 0x0 0xC
+Music(0x115)
+Text(EndingSceneEvelAnsgarPrologue)
+GOTO 3
+LABEL 2
+Music(0x4D)
+Text(HowDoYouEvenGetThisEnding)
+STAL 20
+LABEL 3
+EVBIT_F 0x2
+FADI 16
+MNC2 0x1
+ENDA
+
+RunawayThieves:
+CamOn
+SpawnReinforcements(ThievesGoBrr)
+NoFade
+ENDA
+
+OMGMyHero:
+CAM1 [2,5]
+LOAD1 0x1 AkatsukiPrologue
+MUSC 0x107
+Text(Placeholder1)
+MOVE 0x0 Akatsuki [0,6]
+ENUN
+DISA_IF 0x1
+NoFade
+ENDA
+
+ShamanRein1:
+CamOn
+SpawnReinforcements(Reinforcements1)
+NoFade
+ENDA
+
+ShamanRein2:
+CamOn
+SpawnReinforcements(Reinforcements2)
+NoFade
+ENDA
+
+ShamanRein3:
+CamOn
+SpawnReinforcements(Reinforcements3)
+NoFade
+ENDA
+
+Thieves1:
+SpawnReinforcements(ThiefRein1)
+NoFade
+ENDA
+
+ShopItems:
+SHLI Thunder Elfire Nosferatu Divine Mend Physic PureWater Elixir
+ALIGN 4
+
+ArmoryItems:
+SHLI SteelAxe SteelLance SteelBow SteelSword HandAxe Javelin
+ALIGN 4

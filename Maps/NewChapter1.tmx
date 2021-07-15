@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="15" height="11" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="1">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="16" height="11" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="1">
  <tileset firstgid="1" name="01000203" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
   <image source="01000203.png" trans="ffffff" width="512" height="512"/>
  </tileset>
- <layer id="1" name="Tile Layer 1" width="15" height="11">
+ <layer id="1" name="Tile Layer 1" width="16" height="11">
   <properties>
    <property name="Anims1" value="0x05"/>
    <property name="ChapterID" value="1"/>
@@ -30,6 +30,7 @@
    <tile gid="65"/>
    <tile gid="137"/>
    <tile gid="951"/>
+   <tile gid="952"/>
    <tile gid="245"/>
    <tile gid="245"/>
    <tile gid="313"/>
@@ -45,6 +46,7 @@
    <tile gid="135"/>
    <tile gid="7"/>
    <tile gid="983"/>
+   <tile gid="984"/>
    <tile gid="159"/>
    <tile gid="245"/>
    <tile gid="215"/>
@@ -60,6 +62,7 @@
    <tile gid="167"/>
    <tile gid="7"/>
    <tile gid="7"/>
+   <tile gid="104"/>
    <tile gid="191"/>
    <tile gid="245"/>
    <tile gid="247"/>
@@ -75,6 +78,7 @@
    <tile gid="721"/>
    <tile gid="169"/>
    <tile gid="721"/>
+   <tile gid="209"/>
    <tile gid="25"/>
    <tile gid="26"/>
    <tile gid="309"/>
@@ -90,6 +94,7 @@
    <tile gid="80"/>
    <tile gid="785"/>
    <tile gid="816"/>
+   <tile gid="721"/>
    <tile gid="881"/>
    <tile gid="784"/>
    <tile gid="664"/>
@@ -104,7 +109,8 @@
    <tile gid="103"/>
    <tile gid="112"/>
    <tile gid="721"/>
-   <tile gid="678"/>
+   <tile gid="741"/>
+   <tile gid="742"/>
    <tile gid="947"/>
    <tile gid="675"/>
    <tile gid="774"/>
@@ -120,6 +126,7 @@
    <tile gid="199"/>
    <tile gid="676"/>
    <tile gid="632"/>
+   <tile gid="572"/>
    <tile gid="402"/>
    <tile gid="210"/>
    <tile gid="721"/>
@@ -135,6 +142,7 @@
    <tile gid="870"/>
    <tile gid="786"/>
    <tile gid="633"/>
+   <tile gid="721"/>
    <tile gid="234"/>
    <tile gid="67"/>
    <tile gid="71"/>
@@ -150,6 +158,7 @@
    <tile gid="231"/>
    <tile gid="296"/>
    <tile gid="3"/>
+   <tile gid="210"/>
    <tile gid="801"/>
    <tile gid="784"/>
    <tile gid="167"/>
@@ -165,6 +174,7 @@
    <tile gid="572"/>
    <tile gid="571"/>
    <tile gid="565"/>
+   <tile gid="881"/>
    <tile gid="722"/>
    <tile gid="772"/>
    <tile gid="774"/>
@@ -180,9 +190,10 @@
    <tile gid="773"/>
    <tile gid="774"/>
    <tile gid="601"/>
+   <tile gid="816"/>
   </data>
  </layer>
- <layer id="2" name="Chest" width="15" height="11" visible="0">
+ <layer id="2" name="Chest" width="16" height="11">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="2"/>
@@ -209,7 +220,18 @@
    <tile/>
    <tile/>
    <tile/>
+   <tile/>
    <tile gid="2"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>

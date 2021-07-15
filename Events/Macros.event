@@ -57,3 +57,4 @@
 #define HalfMoveAI [0xC,0x0,0x0,0x0]
 #define HouseExp(flag,background,text) "Text(background,text); CHECK_EVENTID flag; BNE 0x776 0xC 0x0; GiveExperience(0xFFFF,10); ENUT flag;LABEL 0x776; EVBIT_T 0x7"
 #define QuickRemu(unitID,labelID) "CHECK_EXISTS unitID; BEQ labelID 0xC 0x0; CHECK_ALIVE unitID; BEQ labelID 0xC 0x0; REMU unitID; LABEL labelID"
+#define QuickCheckFlag(flagID,labelID) "CHECK_EVENTID flagID; BEQ labelID 0xC 0x0; LABEL labelID"

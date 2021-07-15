@@ -25,7 +25,10 @@
 
 
 ConvoyPartitionTable:
-ConvoyPartition(0, 100, 0)
+ConvoyPartition(0, 30, 0) // partition 0
+ConvoyPartition(30, 30, 0) // partition 1
+ConvoyPartition(60, 30, 0) // partition 2
+ConvoyPartition(0, 100, 0) // partition 3
 WORD 0 //terminator
 
 

@@ -86,7 +86,7 @@ UNIT Mocha PegasusRider 0x1 Level(3, Ally, 0)     [5,0] 0 0 1 REDA0R0 [IronLance
 	UNIT
 	
 LunaPirate:
-UNIT Pandoro Pirate 0x1 Level(4, Enemy, 0)   [0,14] 0b 0x0 0x0 0x0 [IronLabrys,PureWater] BossAI
+UNIT Pandoro Pirate 0x1 Level(4, Ally, 0)   [0,14] 0b 0x0 0x0 0x0 [IronLabrys,PureWater] BossAI
 	UNIT
 
 OhGodOhFuck:
@@ -171,8 +171,11 @@ BeginningScene:
 Music(Advance)
 	LOAD1 0x1 Units1
 	LOAD1 0x1 EnemyUnits
+	ENUN
+	FADI 20
 	LOAD1 0x1 LunaPirate
 	ENUN
+	CUSE Pandoro
 	Text(ForestNightBG,Ch2Opening1)
 	GotoPrepScreen
 	ENDA
