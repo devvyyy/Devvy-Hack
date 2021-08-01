@@ -1,15 +1,22 @@
 //Stat Screen
-StatScreen:
-#incext Png2Dmp "StatScreen.png" --lz77
-StatScreenPal:
-#incext Png2Dmp "StatScreen.png" --palette-only
-
 PUSH
+ALIGN 4
 ORG $88638
 POIN StatScreen
-ORG $88640
-POIN StatScreenPal
+ALIGN 4
+ORG 0xA06460
+#incbin "StatScreen_pal.dmp"
+ORG $88644
+POIN StatScreenTSA
 POP
+
+ALIGN 4
+StatScreen:
+#incbin "StatScreen.dmp"
+
+ALIGN 4
+StatScreenTSA:
+#incbin "StatScreenTSA.dmp"
 
 //Clean Title Screen
 PUSH
@@ -47,7 +54,6 @@ ORG 0x59EE60
 POP
 
 //Phase Screen
-
 PUSH
 ORG 0x59FA2C
 #incbin "PlayerPhaseScreen.bin"

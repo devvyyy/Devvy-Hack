@@ -46,6 +46,8 @@ swi 0x6 @div [r0/r1]
 @add it to r5
 add r5,r0
 
+add r5,#10
+
 GoBack:
 mov r0,r5
 pop {r4-r5}

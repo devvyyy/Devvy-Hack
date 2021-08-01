@@ -242,7 +242,7 @@
 
 //Forager: Recover 20% HP each turn if on a Plain, Forest or Mountain.
 //By Leonarth
-#define ForagerID 132
+#define ForagerID 255
 
 //Imbue: Recover HP equal to Magic at the start of each turn.
 //By Sme
@@ -528,6 +528,10 @@
 //Kelik Zenair
 #define ColdFlareID 237
 
+//Maestro: Rifles have -5 Mt, +2 Wt, +10 Hit, and do execute damage
+//Kelik Zenair
+#define MaestroID 132
+
 //Intrepid: If HP = 100%, weapons are brave.
 //Kelik Zenair
 #define IntrepidID 120
@@ -712,7 +716,7 @@
 
 //Short Shield: Gain 6 defense against attacks recieved in melee.
 //By Sme
-#define ShortShieldID 255
+#define ShortShieldID 244
 
 //Silent Pride: Gain 2 damage and take -2 damage per 25% below max HP.
 //By Datagne
@@ -732,7 +736,7 @@
 #define WardingStanceID 255
 #define SpectrumStanceID 255
 //By Sme
-#define AlertStanceID 244
+#define AlertStanceID 255
 #define AlertStancePlusID 245
 
 //Bold Fighter: Auto-double on player phase.
@@ -965,7 +969,7 @@
 
 //Point Blank: Minimum range of equipped bows is set to 1.
 //By Teraspark
-#define PointBlankID 189
+#define PointBlankID 255
 
 //Staff Savant: Maximum range of staves is increased by 1.
 //By Teraspark
@@ -993,6 +997,10 @@
 //Assassinate: When initiating battle at 1 range: +2 Damage, double attacks occur before counter.
 //By Zeta
 #define AssassinateID 255
+
+//Sonic Rifle: When initiating battle at 4 range: +30 hit
+//Kelik Zenair
+#define RifleSkillID 189
 
 //Moonlight: Cannot double but opponent cannot counterattack.
 //By Sme
