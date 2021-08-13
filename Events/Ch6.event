@@ -137,14 +137,13 @@ UNIT BadGuy AxeArmor 0x1 Level(7, Enemy, 1)     [9,9] DropItem 0x0 0x0 0x0 [Stee
 UNIT BadGuy SwordCav 0x1 Level(6, Enemy, 1)     [1,16] 0b 0x0 0x0 0x0 [IronSword] TwoActionAI
 UNIT BadGuy LanceCav 0x1 Level(6, Enemy, 1)     [0,18] 0b 0x0 0x0 0x0 [Horseslayer] ChargeAI
 UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [1,13] 0b 0x0 0x0 0x0 [DarkTome2] AttackInRangeAI
-UNIT Hiems Deserter 0x1 Level(6, Enemy, 1)     [2,17] DropItem 0x0 0x0 0x0 [IronLance,Vulnerary] AttackInRangeAI
+UNIT Hiems Deserter 0x1 Level(6, Enemy, 1)     [2,17] DropItem 0x0 0x0 0x0 [SteelGlaive,] AttackInRangeAI
 UNIT Hiems Thaumaturge 0x1 Level(6, Enemy, 1)     [6,11] 0b 0x0 0x0 0x0 [Thunder] StallOneTurnAI
 UNIT BadGuy Mercenary 0x1 Level(6, Enemy, 1)     [20,16] 0b 0x0 0x0 0x0 [IronBlade] AttackInRangeAI
-UNIT Hiems Thaumaturge 0x1 Level(7, Enemy, 1)     [21,18] 0b 0x0 0x0 0x0 [Wind,Vulnerary] StallOneTurnAI
 UNIT Hiems Thaumaturge 0x1 Level(6, Enemy, 1)     [21,18] 0b 0x0 0x0 0x0 [Wind] StallOneTurnAI
 UNIT BadGuy Myrmidon 0x1 Level(6, Enemy, 1)     [20,11] 0b 0x0 0x0 0x0 [KillingEdge] TwoActionAI
-UNIT Hiems Occultist 0x1 Level(6, Enemy, 1)     [22,10] 0b 0x0 0x0 0x0 [Flux] ChargeAI
-UNIT BadGuy Thief 0x1 Level(5, Enemy, 1)     [21,4] DropItem 0x0 0x0 0x0 [KillingEdge,Lockpick] BossAI
+UNIT Hiems Occultist 0x1 Level(6, Enemy, 1)     [22,10] DropItem 0x0 0x0 0x0 [Flux,Mine] ChargeAI
+UNIT BadGuy Thief 0x1 Level(5, Enemy, 1)     [21,4] 0b 0x0 0x0 0x0 [KillingEdge,] BossAI
 UNIT BadGuy LanceArmor 0x1 Level(7, Enemy, 1)     [17,7] 0b 0x0 0x0 0x0 [Spear] BossAI
 UNIT Hiems Occultist 0x1 Level(6, Enemy, 1)     [0,5] 0b 0x0 0x0 0x0 [DarkTome2] StallOneTurnAI
 UNIT BadGuy Deserter 0x1 Level(6, Enemy, 1)     [5,7] 0b 0x0 0x0 0x0 [IronGlaive] ChargeAI
@@ -196,7 +195,7 @@ UNIT BadGuy PegRider 0x1 Level(6, Enemy, 1)     [0,9] 0 0 1 REDA1R9 [IronLance] 
 	UNIT
 	
 ThiefRein1:
-UNIT 0x64 Thief 0x1 Level(5, Enemy, 1)     [15,6] 0b 0x0 0x0 0x0 [Lancereaver,SilverSword,ChestKey,ChestKey] ThiefAI
+UNIT 0x64 Thief 0x1 Level(5, Enemy, 1)     [15,6] 0b 0x0 0x0 0x0 [Lancereaver,SteelDagger,ChestKey,ChestKey] ThiefAI
 	UNIT
 	
 LeftStairsRein2:

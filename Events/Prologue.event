@@ -24,7 +24,8 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TURN 0x0 RunawayThieves [2,0] 0x0
+TURN 0x0 BeegAIChange [2,0] 0x0
+TURN 0x0 RunawayThieves [2,0] 0x80
 TURN 0x0 OMGMyHero [3,0] 0x0
 TURN 0x0 Thieves1 [4,0] 0x0
 TURN 0x0 ShamanRein1 [5,0] 0x0
@@ -95,25 +96,25 @@ Tutorial:
 END_MAIN
 
 Units1:
-UNIT Affogato Hunter 0x1 Level(1, Ally, 0)   [7,9] 0b 0x0 0x0 0x0 [IronBow, IronRifle,Lockpick,] [0x0,0x0,0x0,0x0]
-UNIT Breve SCav 0x1 Level(3, Ally, 0)    [6,8] 0b 0x0 0x0 0x0 [IronSword,Sagitar,Vulnerary] [0x0,0x0,0x0,0x0]
-UNIT Ansgar LArmor 0x1 Level(4, Ally, 0)   [7,8] 0b 0x0 0x0 0x0 [IronLance,Javelin,Vulnerary] [0x0,0x0,0x0,0x0]
-UNIT Hildr 0x6 0x1 Level(2, Ally, 0)    [8,8] 0b 0x0 0x0 0x0 [IronAxe,HandAxe,Vulnerary] [0x0,0x0,0x0,0x0]
-UNIT Ulrich APaladin 0x1 Level(5, Ally, 0)   [7,7] 0b 0x0 0x0 0x0 [IronAxe, 0xBF,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Affogato Hunter 0x1 Level(1, Ally, 0)     [7,6]  0b 0 1 REDA7R9 [IronBow, IronRifle,Lockpick,] [0x0,0x0,0x0,0x0]
+UNIT Breve SCav 0x1 Level(3, Ally, 0)    [7,6] 0b 0 1 REDA6R8 [IronSword,Sagitar,Vulnerary] [0x0,0x0,0x0,0x0]
+UNIT Ansgar LArmor 0x1 Level(4, Ally, 0)   [7,6] 0b 0 1 REDA7R8 [IronLance,Javelin,Vulnerary] [0x0,0x0,0x0,0x0]
+UNIT Hildr 0x6 0x1 Level(2, Ally, 0)    [7,6] 0b 0 1 REDA8R8 [IronAxe,HandAxe,Vulnerary] [0x0,0x0,0x0,0x0]
+UNIT Ulrich APaladin 0x1 Level(5, Ally, 0)   [7,6] 0b 0 1 REDA7R7 [IronAxe, 0xBF,Elixir] [0x0,0x0,0x0,0x0]
 UNIT
 
 EnemyUnits:
-UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [8,11] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
-UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [4,5] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
-UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [1,10] 0b 0x0 0x0 0x0 [Flux,] StallOneTurnAI
-UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)      [12,9] 0b 0x0 0x0 0x0 [Flux] AttackInRangeAI
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [8,11] 0b 0x0 0x0 0x0 [Flux,] [0x6,0x3,0x4,0x20]
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [4,5] 0b 0x0 0x0 0x0 [Flux,] [0x6,0x3,0x4,0x20]
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [1,10] 0b 0x0 0x0 0x0 [Flux,] [0x6,0x3,0x4,0x20]
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)      [12,9] 0b 0x0 0x0 0x0 [Flux] [0x6,0x3,0x4,0x20]
 UNIT Cultist 0x58 0x1 Level(1, Enemy, 1)      [5,1] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
 UNIT Cultist 0x58 0x1 Level(1, Enemy, 1)      [14,2] 0b 0x0 0x0 0x0 [Flux,Speedwing] AttackInRangeAI
 UNIT Marcellus 0x58 0x1 Level(5, Enemy, 0)      [2,2] 0b 0x0 0x0 0x0 [DarkTome2,] [0,3,4,32]
 UNIT
 
 EnemyUnits2:
-UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [5,10] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
+UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [5,10] 0b 0x0 0x0 0x0 [IronAxe,] [0x6,0x3,0x4,0x20]
 UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [6,3] 0b 0x0 0x0 0x0 [IronAxe,] StallOneTurnAI
 UNIT BadGuy Raider 0x1 Level(1, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
 UNIT BadGuy Raider 0x1 Level(1, Enemy, 1)     [11,1] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
@@ -123,7 +124,7 @@ UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [8,0] 0b 0x0 0x0 0x0 [IronLance,] At
 UNIT
 
 ThievesGoBrr:
-UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [7,6] DropItem 0x0 0x0 0x0 [IronSword, DevilAxe,] [6,12,4,0]
+UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [7,6] DropItem 0x0 0x0 0x0 [IronDagger, DevilAxe,] [6,12,4,0]
 UNIT
 
 AkatsukiPrologue:
@@ -131,7 +132,7 @@ UNIT Akatsuki Trickster 0x1 Level(5, Enemy, 0)     [0,3]  0 0 1 REDA2R3 [SteelBl
 UNIT
 
 ThiefRein1:
-UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [14,5] 0b 0x0 0x0 0x0 [SteelSword, ChestKey,] LootingThiefAI
+UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [14,5] 0b 0x0 0x0 0x0 [IronDagger, ChestKey,] LootingThiefAI
 UNIT
 
 Reinforcements1:
@@ -158,39 +159,44 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+MUSC 0x48
 LOAD1 0x1 EnemyUnits
 ENUN
 LOAD1 0x1 EnemyUnits2
 ENUN
-MUSC 0xBB
+SetBackground(0x25)
+STAL 10
+BROWNBOXTEXT BarracksText [8,8]
+STAL 15
 TEXTSTART
-SVAL 0x2 0x3D
-SVAL 0x3 SirItsBad
-CALL 0x9EE310
+TEXTSHOW Prologue1
+TEXTEND
+MUSC 0xBB
+TEXTCONT
+TEXTEND
 REMA
 FADI 16
 CLEAN
 MUSC 0x4D
+FADU 30
 LOAD1 0x0 Units1
+ENUN
+STAL 40
+SetBackground(0x3C)
+MUSC 0x4E
 TEXTSTART
-SVAL 0x2 0x3C
-FADU 20
-CALL 0x9EE2E8
-TEXTSHOW BardGaming
+TEXTSHOW Prologue2
 TEXTEND
-MUSC 0xE4
+MUSC 0x24
 TEXTCONT
 TEXTEND
 REMA
-_0x2629 0x7
 FADI 20
 CLEAN
-STAL 20
 FADU 20
-STAL 60
-CAM1 [7,12]
+STAL 10
 CameraCursor(Affogato)
-Text(CanWeStartYet)
+STAL 5
 FADI 16
 GotoPrepScreen
 ENDA
@@ -199,12 +205,12 @@ EndingScene:
 Music(0x31)
 SetBackground(0x3C)
 IfAliveDialog(Breve,EndingSceneBrevePrologue)
-CHECK_ALIVE Evelyn
+CHECK_ALIVE Hildr
 BEQ 2 0x0 0xC
 CHECK_ALIVE Ansgar
 BEQ 2 0x0 0xC
 Music(0x115)
-Text(EndingSceneEvelAnsgarPrologue)
+Text(EndingSceneHildrAnsgarPrologue)
 GOTO 3
 LABEL 2
 Music(0x4D)
@@ -256,10 +262,21 @@ SpawnReinforcements(ThiefRein1)
 NoFade
 ENDA
 
-ShopItems:
-SHLI Thunder Elfire Nosferatu Divine Mend Physic PureWater Elixir
-ALIGN 4
-
-ArmoryItems:
-SHLI SteelAxe SteelLance SteelBow SteelSword HandAxe Javelin
-ALIGN 4
+BeegAIChange:
+CAM1 Marcellus
+CUMO Marcellus
+STAL 60
+CURE
+Text(OhNoHeNotices)
+SVAL 0x1 0x03030000 // sets ai to [0x3,0x3,0x0,0x0]
+CHAI [8,11] // changes the ai of this coordinate
+SVAL 0x1 0x00120400 // sets ai to [0x0,0x12,0x4,0x0]
+CHAI [1,10] // changes the ai of this coordinate
+SVAL 0x1 0x0003000 // sets ai to [0x0,0x3,0x0,0x0]
+CHAI [5,10] // changes the ai of this coordinate
+SVAL 0x1 0x00030000 // sets ai to [0x0,0x3,0x0,0x0]
+CHAI [12,9] // changes the ai of this coordinate
+SVAL 0x1 0x00060400 // sets ai to [0x0,0x6,0x4,0x0]
+CHAI [4,5] // changes the ai of this coordinate
+NoFade
+ENDA

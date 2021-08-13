@@ -1,0 +1,26 @@
+#include "Extensions/Hack Installation.txt"
+
+PUSH 
+ORG $2AE54
+jumpToHack(NegateDefHack)
+POP 
+
+ALIGN 4 
+NegateDefHack:
+#include "NegateDefHack.lyn.event"
+//POIN NegateDefAmountTable
+
+#define FF16 "0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF"
+ALIGN 4 
+NegateDefAmountTable:
+BYTE FF16 FF16 FF16 FF16 FF16 FF16 FF16 FF16 FF16 FF16 FF16 FF16 FF16 FF16 FF16 FF16
+WORD 0 
+//ORG CurrentOffset+256 
+#undef FF16 
+
+#define NegateDefEntry(ItemID, PercentDefToIgnore) "PUSH; ORG NegateDefAmountTable + (ItemID); BYTE PercentDefToIgnore; POP" 
+NegateDefEntry(IronDagger, 30)
+NegateDefEntry(SteelDagger, 40)
+NegateDefEntry(SilverDagger, 50)
+
+ 

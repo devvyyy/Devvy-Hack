@@ -1,9 +1,7 @@
 //Stat Screen
 PUSH
-ALIGN 4
 ORG $88638
 POIN StatScreen
-ALIGN 4
 ORG 0xA06460
 #incbin "StatScreen_pal.dmp"
 ORG $88644
@@ -27,9 +25,11 @@ ORG $AACEDC
 POP
 
 //Movement Arrow
+ALIGN 4
 ArrowPng:
 #incbin "VanillaArrow.dmp"
 
+ALIGN 4
 ArrowPalette:
 #incbin "VanillaArrowPal.bin"
 
@@ -70,6 +70,7 @@ ORG 0x5A0698
 POP
 
 //Phase Frame
+ALIGN 4
 PhaseFrame:
 #incbin "PhaseFrame.dmp"
 
