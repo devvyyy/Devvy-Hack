@@ -1,0 +1,14 @@
+
+#include "Slow.lyn.event"
+
+#define SlowStatusID 0x12
+
+SetStatusName(SlowStatusID,SlowStatusName)
+SetStatusDesc(SlowStatusID,SlowStatusDesc)
+SetStatusBlinkyIconFunc(SlowStatusID,BlinkyIconFuncNoIcon)
+
+SlowStatusIDLink:
+BYTE SlowStatusID
+
+//define text IDs, and add SlowStatusEffect to (near the end of) pre-battle calc loop
+

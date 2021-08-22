@@ -1,0 +1,14 @@
+#define EnfeebleStatusID 0x1F //last valid status ID
+
+SetStatusName(EnfeebleStatusID,EnfeebleName)
+SetStatusDesc(EnfeebleStatusID,EnfeebleDesc)
+SetStatusBlinkyIconFunc(EnfeebleStatusID,BlinkyIconFuncNoIcon)
+
+#include "Enfeeble.lyn.event"
+
+ALIGN 4
+EnfeebleStatusIDLink:
+BYTE EnfeebleStatusID
+
+// Add `` to stat getters for stats you want enfeeble to debuff
+// Define EnfeebleName and EnfeebleDesc (only used on stat screen)

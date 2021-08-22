@@ -1,0 +1,12 @@
+#define HexingRodStatusID 0xE //first fully unused status ID
+
+SetStatusName(HexingRodStatusID,HexingRodStatusName)
+SetStatusDesc(HexingRodStatusID,HexingRodStatusDesc)
+SetStatusBlinkyIconFunc(HexingRodStatusID,BlinkyIconFuncNoIcon)
+
+//add this to the max HP getter file
+// prHexingRodStatus:
+//    rIfUnitHasStatus(HexingRodStatusID); rHalved
+//and a ptr to prHexingRodStatus to the getter loop itself
+//define text IDs for name and desc (only used on stat screen)
+

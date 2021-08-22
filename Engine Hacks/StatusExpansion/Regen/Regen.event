@@ -1,0 +1,12 @@
+
+#define RegenStatusID 0x10
+
+SetStatusName(RegenStatusID,RegenStatusName)
+SetStatusDesc(RegenStatusID,RegenStatusDesc)
+SetStatusBlinkyIconFunc(RegenStatusID,BlinkyIconFuncDancerRingIcon)
+
+ALIGN 4
+RegenStatusIDLink:
+BYTE RegenStatusID
+
+//meat of this is in hp restoration skills func

@@ -132,7 +132,7 @@ UNIT Hiems Occultist 0x1 Level(7, Enemy, 1)     [0,9] DropItem 0x0 0x0 0x0 [Flux
 UNIT BadGuy WyvernRider 0x1 Level(6, Enemy, 1)     [1,9] 0b 0x0 0x0 0x0 [IronLabrys] ChargeAI
 UNIT Hiems WyvernRider 0x1 Level(6, Enemy, 1)     [17,18] 0b 0x0 0x0 0x0 [IronAxe] ChargeAI
 UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [18,17] 0b 0x0 0x0 0x0 [Flux] AttackInRangeAI
-UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [21,13] 0b 0x0 0x0 0x0 [DarkTome2] StallOneTurnAI
+UNIT HiemsStealable Shaman 0x1 Level(6, Enemy, 1)     [21,13] 0b 0x0 0x0 0x0 [DarkTome2,RedGem] StallOneTurnAI
 UNIT BadGuy AxeArmor 0x1 Level(7, Enemy, 1)     [9,9] DropItem 0x0 0x0 0x0 [SteelLabrys,ShortAxe,DoorKey] BossAI
 UNIT BadGuy SwordCav 0x1 Level(6, Enemy, 1)     [1,16] 0b 0x0 0x0 0x0 [IronSword] TwoActionAI
 UNIT BadGuy LanceCav 0x1 Level(6, Enemy, 1)     [0,18] 0b 0x0 0x0 0x0 [Horseslayer] ChargeAI
@@ -140,7 +140,7 @@ UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [1,13] 0b 0x0 0x0 0x0 [DarkTome2] A
 UNIT Hiems Deserter 0x1 Level(6, Enemy, 1)     [2,17] DropItem 0x0 0x0 0x0 [SteelGlaive,] AttackInRangeAI
 UNIT Hiems Thaumaturge 0x1 Level(6, Enemy, 1)     [6,11] 0b 0x0 0x0 0x0 [Thunder] StallOneTurnAI
 UNIT BadGuy Mercenary 0x1 Level(6, Enemy, 1)     [20,16] 0b 0x0 0x0 0x0 [IronBlade] AttackInRangeAI
-UNIT Hiems Thaumaturge 0x1 Level(6, Enemy, 1)     [21,18] 0b 0x0 0x0 0x0 [Wind] StallOneTurnAI
+UNIT HiemsStealable Thaumaturge 0x1 Level(6, Enemy, 1)     [21,18] 0b 0x0 0x0 0x0 [Wind,PureWater] StallOneTurnAI
 UNIT BadGuy Myrmidon 0x1 Level(6, Enemy, 1)     [20,11] 0b 0x0 0x0 0x0 [KillingEdge] TwoActionAI
 UNIT Hiems Occultist 0x1 Level(6, Enemy, 1)     [22,10] DropItem 0x0 0x0 0x0 [Flux,Mine] ChargeAI
 UNIT BadGuy Thief 0x1 Level(5, Enemy, 1)     [21,4] 0b 0x0 0x0 0x0 [KillingEdge,] BossAI
@@ -154,8 +154,8 @@ UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [10,5] 0b 0x0 0x0 0x0 [IronAxe] A
 UNIT BadGuy SCav 0x1 Level(6, Enemy, 1)     [9,3] 0b 0x0 0x0 0x0 [Armorslayer,Vulnerary] AttackInRangeAI
 UNIT BadGuy PegRider 0x1 Level(6, Enemy, 1)     [8,13] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
 UNIT BadGuy PegRider 0x1 Level(6, Enemy, 1)     [17,1] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
-UNIT BadGuy Monk 0x1 Level(6, Enemy, 1)     [12,10] 0b 0x0 0x0 0x0 [Light1] AttackInRangeAI
-UNIT BadGuy Pirate 0x1 Level(6, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [ShortAxe,EnergyRing] BossAI
+UNIT HiemsStealable Monk 0x1 Level(6, Enemy, 1)     [12,10] 0b 0x0 0x0 0x0 [Light1,EnergyRing] AttackInRangeAI
+UNIT BadGuy Pirate 0x1 Level(6, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [ShortAxe,] BossAI
 UNIT BadGuy Hunter 0x1 Level(6, Enemy, 1)     [16,12] 0b 0x0 0x0 0x0 [SteelBow] AttackInRangeAI
 UNIT BadGuy Hunter 0x1 Level(6, Enemy, 1)     [4,3] 0b 0x0 0x0 0x0 [KillerBow] ChargeAI
 UNIT BadGuy Shaman 0x1 Level(7, Enemy, 1)     [4,10] 0b 0x0 0x0 0x0 [Flux] AttackInRangeAI

@@ -1,0 +1,227 @@
+
+#ifndef STATUS_EXPANSION_INSTALLED
+#define STATUS_EXPANSION_INSTALLED
+
+PUSH
+
+//ORG $16604 //CanUnitWieldWeapon
+//SHORT 0x201F //change 0xF bitmask to 0x1F bitmask
+
+ORG $178EA //SetUnitNewStatus
+SHORT 0x21A0 //change 0x50 duration to 0xA0 duration
+
+ORG $178F6 //SetUnitStatus
+SHORT 0x231F //change 0xF bitmask to 0x1F bitmask
+SHORT 0x0152 //change left shift amount to 1 more bit
+
+ORG $1941C //draw status ID
+SHORT 0x06C0 //change left shift amount to 1 less bit (0x1B from 0x1C)
+SHORT 0x0E40 //change right shift amount to 1 less bit (0x19 from 0x1A)
+
+ORG $1D58E
+SHORT 0x211F //change 0xF bitmask to 0x1F bitmask
+
+ORG $24D18
+SHORT 0x201F //change 0xF bitmask to 0x1F bitmask
+
+ORG $25AA6
+SHORT 0x201F //change 0xF bitmask to 0x1F bitmask
+
+ORG $27200
+SHORT 0x211F //change 0xF bitmask to 0x1F bitmask
+
+ORG $27A8C
+SHORT 0x211F //change 0xF bitmask to 0x1F bitmask
+
+ORG $27B42
+SHORT 0x211F //change 0xF bitmask to 0x1F bitmask
+
+ORG $88A38 //cond desc getter
+SHORT 0x06C0 //change left shift amount to 1 less bit (0x1B from 0x1C)
+SHORT 0x0EC0 //change right shift amount to 1 less bit (0x1B from 0x1C)
+
+ORG $8C470
+SHORT 0x201F //change 0xF bitmask to 0x1F bitmask
+
+
+ORG $A5F34
+SHORT 0x06D1 //change left shift amount to 1 less bit (0x1B from 0x1C)
+SHORT 0x0EC9 //change right shift amount to 1 less bit (0x1B from 0x1C)
+
+ORG $A60A2
+SHORT 0x06C9 //change left shift amount to 1 less bit (0x1B from 0x1C)
+SHORT 0x0EC9 //change right shift amount to 1 less bit (0x1B from 0x1C)
+
+ORG $8C536
+SHORT 0x201F //change 0xF bitmask to 0x1F bitmask
+
+ORG $8C440 //minimug box status duration
+SHORT 0x0940 //change right shift amount to 1 more bit (5 from 4)
+
+ORG $8C396 //minimug box status ID
+SHORT 0x06C0 //change left shift amount to 1 less bit (0x1B from 0x1C)
+SHORT 0x0EC0 //change right shift amount to 1 less bit (0x1B from 0x1C)
+
+ORG $1D732
+SHORT 0x211F //change 0xF bitmask to 0x1F bitmask
+
+ORG $178E6
+SHORT 0x211F //change 0xF bitmask to 0x1F bitmask
+
+ORG $178EA
+SHORT 0x21A0 //updated 5-turn duration on applied statuses
+
+ORG $88A3C
+jumpToHack(NewStatusDescIndexer)
+
+ORG $8C39C
+jumpToHack(NewMinimugBoxGraphicIndexer)
+
+ORG $19410
+POIN StatusNameTextIDTable
+ORG $1942C
+POIN StatusNameTextIDTable
+
+ORG $276C0
+jumpToHack(NewBlinkyStatusIcons)
+
+ORG $25FC4 //restore staff targeting
+SHORT 0x201F
+
+ORG $25A22 //poison damage
+SHORT 0x201F
+
+POP
+
+
+#include "StatusExpansion.lyn.event"
+
+
+ALIGN 4
+NewMinimugBoxLabelNames:
+#incext Png2Dmp "MinimugBoxNames.png"
+
+ALIGN 4
+StatusNameTextIDTable:
+FILL 256
+
+ALIGN 4
+StatusDescTextIDTable:
+FILL 128
+
+ALIGN 4
+BlinkyStatusIconJumpTable:
+FILL 256
+
+
+#define SetStatusName(statusID,textID) "PUSH; ORG (StatusNameTextIDTable+(statusID*4)); WORD textID; POP"
+
+#define SetStatusDesc(statusID,textID) "PUSH; ORG (StatusDescTextIDTable+(2*statusID)); SHORT textID; POP"
+
+#define SetStatusBlinkyIconFunc(statusID,funcPtr) "PUSH; ORG (BlinkyStatusIconJumpTable+(statusID*4)); POIN funcPtr; POP"
+
+
+#define NoStatusID 0
+#define PoisonStatusID 1
+#define SleepStatusID 2
+#define SilenceStatusID 3
+#define BerserkStatusID 4
+#define AtkRingStatusID 5
+#define DefRingStatusID 6
+#define CritRingStatusID 7
+#define AvoRingStatusID 8
+#define SickStatusID 9
+#define PetrifyStatusID 13
+
+SetStatusName(NoStatusID,0x536)
+SetStatusName(PoisonStatusID,0x514)
+SetStatusName(SleepStatusID,0x515)
+SetStatusName(SilenceStatusID,0x516)
+SetStatusName(BerserkStatusID,0x517)
+SetStatusName(AtkRingStatusID,0x51B)
+SetStatusName(DefRingStatusID,0x51C)
+SetStatusName(CritRingStatusID,0x51D)
+SetStatusName(AvoRingStatusID,0x51E)
+SetStatusName(SickStatusID,0x518)
+SetStatusName(PetrifyStatusID,0x51A)
+
+SetStatusDesc(NoStatusID,0x552)
+SetStatusDesc(PoisonStatusID,0x553)
+SetStatusDesc(SleepStatusID,0x554)
+SetStatusDesc(SilenceStatusID,0x556)
+SetStatusDesc(BerserkStatusID,0x555)
+SetStatusDesc(AtkRingStatusID,0x558)
+SetStatusDesc(DefRingStatusID,0x559)
+SetStatusDesc(CritRingStatusID,0x55A)
+SetStatusDesc(AvoRingStatusID,0x55B)
+SetStatusDesc(SickStatusID,0x553)
+SetStatusDesc(PetrifyStatusID,0x557)
+
+#define BlinkyIconFuncNoIcon $278A6
+#define BlinkyIconFuncPoisonIcon $27700
+#define BlinkyIconFuncSleepIcon $277A8
+#define BlinkyIconFuncSilenceIcon $27754
+#define BlinkyIconFuncBerserkIcon $277F8
+#define BlinkyIconFuncDancerRingIcon $27858
+
+SetStatusBlinkyIconFunc(NoStatusID,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(PoisonStatusID,BlinkyIconFuncPoisonIcon)
+SetStatusBlinkyIconFunc(SleepStatusID,BlinkyIconFuncSleepIcon)
+SetStatusBlinkyIconFunc(SilenceStatusID,BlinkyIconFuncSilenceIcon)
+SetStatusBlinkyIconFunc(BerserkStatusID,BlinkyIconFuncBerserkIcon)
+SetStatusBlinkyIconFunc(AtkRingStatusID,BlinkyIconFuncDancerRingIcon)
+SetStatusBlinkyIconFunc(DefRingStatusID,BlinkyIconFuncDancerRingIcon)
+SetStatusBlinkyIconFunc(CritRingStatusID,BlinkyIconFuncDancerRingIcon)
+SetStatusBlinkyIconFunc(AvoRingStatusID,BlinkyIconFuncDancerRingIcon)
+SetStatusBlinkyIconFunc(SickStatusID,BlinkyIconFuncNoIcon)
+//fill the rest with no icon by default to avoid issues
+SetStatusBlinkyIconFunc(10,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(11,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(12,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(13,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(14,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(15,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(16,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(17,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(18,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(19,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(20,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(21,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(22,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(23,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(24,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(25,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(26,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(27,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(28,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(29,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(30,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(31,BlinkyIconFuncNoIcon)
+
+
+/*
+fix all proc skills that apply statuses
+
+things changed:
+- HP Bars
+- MSG InstallHelpers
+- Freeze decrease funcs
+- MSS defs
+
+Compatibility folder contains updated funcs for various things listed above,
+This is the updated MSG InstallHelpers bit
+a
+prCheckUnitStatus:
+	SHORT 0x6B08 0x231F 0x4018 0x4290 0xD101 0x202A 0xE000 0x2000 0x4770 0x46C0
+
+*/
+
+#include "Enfeeble/Enfeeble.event"
+#include "HexingRod/HexingRod.event"
+#include "Freeze/Freeze.event"
+#include "Freeze/EventFreeze.event"
+#include "Regen/Regen.event"
+#include "Haste/Haste.event"
+#include "Slow/Slow.event"
+
+#endif // STATUS_EXPANSION_INSTALLED
