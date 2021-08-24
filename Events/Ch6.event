@@ -473,6 +473,7 @@ ENDA
 BeginningScene:
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 RedSussy
+	CenterTextbox(InfoCh6)
 	CenterTextbox(Ch6ObjectiveWarning)
 	ENUN
 	GotoPrepScreen
@@ -480,7 +481,7 @@ BeginningScene:
 	
 AffoGorloisConvo:
 	MUSI
-	Text(AffoGorloisTalk)
+	Text(Placeholder2)
 	MUNO
 	MURE 2
 	NoFade
@@ -488,7 +489,7 @@ AffoGorloisConvo:
 	
 IronRuneConvo:
 	MUSI
-	Text(StroganGorloisTalk)
+	Text(Placeholder1)
 	MUNO
 	MURE 2
 GiveItem(Lightrune, Stroganoff)

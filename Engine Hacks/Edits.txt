@@ -370,10 +370,12 @@ POP
 //By Zane
 PUSH
 ORG 0x030366
-BYTE 0xE0
+//BYTE 0xE0
+BYTE 0xC0
 //Epic Blizzard Behind GUI
 ORG 0x03066D
-BYTE 0x1C
+//BYTE 0x1C
+BYTE 0x18
 POP
 
 //Light Snow But Less
@@ -382,6 +384,18 @@ PUSH
     ORG $030332
         BYTE $0F // 16 particles ($0F+1) instead of 32
 POP
+
+// Prep Shop
+PUSH
+  ORG 0x99E64
+    POIN PrepScreenShop
+POP
+
+ALIGN 4
+PrepScreenShop:
+SHLI IronSword IronBlade IronLance IronGlaive IronAxe IronLabrys IronBow IronRifle Fire Light Dark Heal Vulnerary
+WORD 0x0
+ALIGN 4
 
 ALIGN 16
 //By Runa, requires Stan's AI Fix

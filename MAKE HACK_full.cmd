@@ -67,6 +67,6 @@ if /I not [%1]==[quick] (
 )
 
 echo:
-echo Done!
+echo Epic!
 
 pause

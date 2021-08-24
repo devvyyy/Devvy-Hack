@@ -224,6 +224,11 @@ GorloisBird_Mug:
 setMugEntryExtend(0x47, GorloisBird_Mug, 8, 3, 3, 3, 10, 4, 0, 0)
 
 ALIGN 16
+LetterBird_Mug:
+#incext PortraitFormatter "BirdLetter.png"
+setMugEntryExtend(0x4A, LetterBird_Mug, 0, 0, 0, 0, 0, 0, 0, 0)
+
+ALIGN 16
 Spooky_Mug:
 #incext PortraitFormatter "Edge.png"
 setMugEntryExtend(0x48, Spooky_Mug, 3, 5, 3, 3, 10, 4, 0, 0)

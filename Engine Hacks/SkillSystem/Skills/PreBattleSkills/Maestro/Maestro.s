@@ -21,7 +21,7 @@ cmp r3, #4
 beq End
 
 @check if its a rifle
-mov     r0, #0x48      @Move to attacker's weapon (before battle)
+mov     r0, #0x4A      @Move to attacker's weapon (before battle)
 ldrb    r0, [r4, r0]   @Load attackers weap (before battle)
 cmp     r0, #0xC3         @Iron Rifle ID
 beq YesThereIsSkill

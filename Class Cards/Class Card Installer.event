@@ -23,6 +23,14 @@ PirateClassCard:
 setCardEntry(0x8C, PirateCard,PirateCardPalette)
 
 ALIGN 4
+WarriorCard: //by Rasdel
+#incbin "WarriorCard.dmp"
+WarriorCardPalette:
+#incbin "WarriorCardPalette.dmp"
+WarriorClassCard:
+setCardEntry(0x75, WarriorCard,WarriorCardPalette)
+
+ALIGN 4
 ThaumaCard: //by DerTheVaporeon
 #incbin "ThaumaCard.dmp"
 ThaumaCardPalette:

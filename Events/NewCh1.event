@@ -20,8 +20,16 @@ TURN 0x0 LeftRein [7,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-
+CharacterEventBothWays(0xA,SeqEvelConvo, Sequin, Evelyn)
 	END_MAIN
+
+SeqEvelConvo:
+	MUSI
+	Text(SeqEvelTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
 
 MiscBasedEvents:
 	CauseGameOverIfLordDies
@@ -66,21 +74,18 @@ UNIT Sequin Mage 0x1 Level(1, Ally, 0)   [12,0] 0b 0x0 0x0 0x0 [Fire,Lockpick] [
 
 EnemyUnits:
 UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [7,2] 0 0 1 REDA6R3 [Flux] ChargeAI
-UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [7,2] 0 0 1 REDA4R4 [Flux] TwoActionAI
 UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [7,2] 0 0 1 REDA7R5 [IronAxe] ChargeAI
-UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [12,7] 0 0 1 REDA12R5 [Flux] TwoActionAI
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [12,7] 0 0 1 REDA12R6 [Flux] TwoActionAI
 UNIT BadGuy Raider 0x1 Level(1, Enemy, 1)     [12,7] 0 0 1 REDA11R3 [IronSword] ChargeAI
 UNIT BadGuyStealable SCav 0x1 Level(1, Enemy, 1)     [12,7] 0 0 1 REDA14R8 [IronSword,RedGem] TwoActionAI
-UNIT BadGuy AArmor 0x1 Level(2, Enemy, 1)     [12,7] 0 0 1 REDA9R7 [SteelAxe] BossAI
+UNIT BadGuy AArmor 0x1 Level(2, Enemy, 1)     [12,7] 0 0 1 REDA9R8 [SteelAxe] BossAI
 UNIT BadGuy Deserter 0x1 Level(2, Enemy, 1)     [0,7] 0b 0x0 0x0 0x0 [IronLance,] TwoActionAI
-UNIT BadGuy Hunter 0x1 Level(1, Enemy, 1)     [0,8] 0b 0x0 0x0 0x0 [IronBow] StallOneTurnAI
-UNIT BadGuy Archer 0x1 Level(2, Enemy, 1)     [0,7] 0 0 1 REDA3R6 [Longbow] BossAI
-UNIT BadGuy Shaman 0x1 Level(2, Enemy, 1)     [15,1] DropItem 0 1 REDA15R2 [Flux,Cultist] ChargeAI
+UNIT BadGuy Archer 0x1 Level(2, Enemy, 1)     [0,7] 0 0 1 REDA3R5 [Longbow] BossAI
+UNIT BadGuy Shaman 0x1 Level(2, Enemy, 1)     [15,1] DropItem 0 1 REDA15R2 [Flux,PureWater] ChargeAI
 UNIT Cultist Occultist 0x1 Level(1, Enemy, 1)     [15,1] 0 0 1 REDA15R6 [Flux] TwoActionAI
-UNIT Cultist Mage 0x1 Level(1, Enemy, 1)     [0,8] 0 0 1 REDA2R8 [Thunder] AttackInRangeAI
-UNIT BadGuy Deserter 0x1 Level(1, Enemy, 1)     [3,9] 0 0 1 REDA6R9 [IronGlaive] AttackInRangeAI
-UNIT BadGuy Myrmidon 0x1 Level(1, Enemy, 1)     [6,10] 0 0 1 REDA7R9 [IronSword] TwoActionAI
-UNIT Kisra Brigand 0x1 Level(3, Enemy, 1)     [9,10] 0 0 1 REDA9R9 [KillerAxe,HandAxe] BossAI
+UNIT Cultist Mage 0x1 Level(1, Enemy, 1)     [0,8] 0 0 1 REDA3R8 [Fire] AttackInRangeAI
+UNIT BadGuy Deserter 0x1 Level(1, Enemy, 1)     [5,10] 0 0 1 REDA5R9 [IronGlaive] AttackInRangeAI
+UNIT Kisra Priest 0x1 Level(3, Enemy, 1)     [9,10] 0 0 1 REDA9R9 [Mend] [0x0E,0x0,0x0,0x20]
 UNIT BadGuyStealable LArmor 0x1 Level(2, Enemy, 1)     [7,2] 0 0 1 REDA5R2 [Javelin,Vulnerary] BossAI
 UNIT BadGuy Pirate 0x1 Level(1, Enemy, 1)     [0,1] 0 0 1 REDA0R3 [IronAxe] StallOneTurnAI
 UNIT BadGuy Pirate 0x1 Level(1, Enemy, 1)     [0,4] 0 0 1 REDA1R4 [SteelAxe] StallOneTurnAI
@@ -88,8 +93,8 @@ UNIT BadGuy PegRider 0x1 Level(1, Enemy, 1)     [14,10] 0 0 1 REDA13R10 [HeavySp
 	UNIT
 	
 Rein1:
-UNIT Cultist Occultist 0x1 Level(2, Enemy, 1)     [0,1] 0 0 1 REDA2R1 [Flux] ChargeAI
-UNIT BadGuy Pirate 0x1 Level(2, Enemy, 1)     [0,2] 0 0 1 REDA2R2 [SteelAxe] ChargeAI
+UNIT Cultist Occultist 0x1 Level(2, Enemy, 1)     [15,9] 0x0 0x0 0x0 0x0	 [Flux] ChargeAI
+UNIT BadGuy Pirate 0x1 Level(2, Enemy, 1)     [15,10] 0x0 0x0 0x0 0x0 [SteelAxe] ChargeAI
 	UNIT
 	
 Rein2:
@@ -128,6 +133,7 @@ Traps2:
 BeginningScene:
 	LOAD1 0x1 EvelynUnit
 	LOAD1 0x1 EnemyUnits
+	CenterTextbox(InfoCh1)
 	ENUN
 	GotoPrepScreen
 	ENDA
@@ -135,5 +141,8 @@ BeginningScene:
 EndingScene:
 Music(VictoryBGM)
 	MNC2 0x2
+GiveItem(SnaringRifle,Affogato)
+GiveGold(1000)
+STAL 10
 	NoFade
 	ENDA

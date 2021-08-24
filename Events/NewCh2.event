@@ -26,22 +26,23 @@ TURN 0x0 GoodbyeDespair [9,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x8, PandoroRecruit, Affogato, Pandoro)
-CharacterEventBothWays(0x8, PandoroRecruit, Ulrich, Pandoro)
-CharacterEventBothWays(0x8, BreneRecruit, Ulrich, Irene)
-CharacterEventBothWays(0x8, BreneRecruit, Breve, Irene)
+CharacterEventBothWays(0x21, PandoroRecruit, Affogato, Pandoro)
+CharacterEventBothWays(0x21, PandoroRecruit, Ulrich, Pandoro)
+CharacterEventBothWays(0x21, BreneRecruit, Ulrich, Irene)
+CharacterEventBothWays(0x21, BreneRecruit, Breve, Irene)
 	END_MAIN
 
 MiscBasedEvents:
 	CauseGameOverIfLordDies
 AFEV 0x0 RunRunRunRun 0x18
+AFEV 0x0 EndingScene 0x3
 	END_MAIN
 
 LocationBasedEvents:
 Chest(Slow,0,12)
 Arrive(0,1)
 Arrive(0,2)
-Village(0x9,SallyCars,13,3)	
+Village(0x20,SallyCars,13,3)	
 House(0x0,OgrimHouseEpic,9,8)
 	END_MAIN
 
@@ -81,7 +82,7 @@ UNIT Mocha PegasusRider 0x1 Level(3, Ally, 0)     [5,18] 0 0 1 REDA5R15 [IronLan
 	UNIT
 	
 LunaPirate:
-UNIT Pandoro Pirate 0x1 Level(4, Ally, 0)   [0,12] 0b 0x0 0x0 0x0 [IronLabrys,PureWater] BossAI
+UNIT Pandoro Pirate 0x1 Level(4, Ally, 0)   [0,11] 0b 0x0 0x0 0x0 [IronLabrys,PureWater] BossAI
 UNIT Irene Myrmidon_F 0x1 Level(3, Ally, 0)   [1,10] 0b 0x0 0x0 0x0 [KillingEdge,Vulnerary] BossAI
 	UNIT
 
@@ -144,9 +145,10 @@ UNIT
 Traps1:
 BlueSigil(0,1)
 BlueSigil(0,2)
-TelliusTorchOn(0,9,3)
-TelliusTorchOn(9,14,3)
-TelliusTorchOn(7,0,3)
+TelliusTorchOn(8,9,2)
+TelliusTorchOn(0,9,2)
+TelliusTorchOn(9,14,2)
+TelliusTorchOn(7,0,2)
 	ENDTRAP
 	ALIGN 4
 
@@ -164,13 +166,13 @@ Music(Advance)
 	ENUN
 	CUSE Pandoro
 	CUSE Irene
-	Text(ForestNightBG,Ch2Opening1)
+	FADU 10
+	CenterTextbox(InfoCh2)
 	GotoPrepScreen
 	ENDA
 
 EndingScene:
 MusicChange(VictorySadBGM)
-	Text(NightSVillageBG,Ch2Ending1)
 	MNC2 0x3
 	NoFade
 	ENDA
@@ -205,6 +207,7 @@ STAL 33
 Text(Placeholder1)
 MURE 0x2
 CUSA Pandoro
+CUSA Irene
 NoFade
 ENDA
 
@@ -213,6 +216,7 @@ MUSS 0x30
 STAL 33
 Text(Placeholder2)
 MURE 0x2
+CUSA Pandoro
 CUSA Irene
 NoFade
 ENDA
@@ -292,30 +296,19 @@ ENDA
 
 RunRunRunRun:
 CHECK_EVENTID 0x19
-BNE 0x0 0x0 0xC
-QuickCheckFlag(0x10,0x1)
-QuickCheckFlag(0x11,0x2)
-QuickCheckFlag(0x13,0x3)
-QuickCheckFlag(0x14,0x5)
-QuickCheckFlag(0x15,0x6)
-QuickCheckFlag(0x16,0x7)
-QuickCheckFlag(0x17,0x8)
-QuickCheckFlag(0xA,0x9)
-QuickCheckFlag(0xB,0x10)
-QuickCheckFlag(0xC,0x11)
-QuickCheckFlag(0xD,0x12)
-QuickCheckFlag(0xE,0x13)
-QuickCheckFlag(0xF,0x14)
+BNE 0x776 0x0 0xC
+CHECK_EVENTID 0x10
+BEQ 0x776 0xC 0x0 //If Flag 0x10 is on, continue. Otherwise, skip to 0x776
 	SVAL 0x1 0x00040000
 	CHAI 0x69
 CHECK_ALIVE 0x69
-BEQ 0x0 0x0 0xC
+BEQ 0x776 0x0 0xC
 CAM1 0x69
 STAL 20
 FlashCursor(0x69,60)
 Text(OgrimChargeText)
 ENUT 0x19
-LABEL 0x0
+LABEL 0x776
 NoFade
 ENDA
 

@@ -29,13 +29,12 @@ TURN 0x0 RunawayThieves [2,0] 0x80
 TURN 0x0 OMGMyHero [3,0] 0x0
 TURN 0x0 Thieves1 [4,0] 0x0
 TURN 0x0 ShamanRein1 [5,0] 0x0
-TURN 0x0 ShamanRein2 [6,0] 0x0
-TURN 0x0 ShamanRein3 [8,0] 0x0
+TURN 0x0 ShamanRein2 [7,0] 0x0
+TURN 0x0 ShamanRein3 [9,0] 0x0
 END_MAIN
 
 CharacterBasedEvents:
 CharacterEventBothWays(0x10,AffoBreveConvo, Affo, Breve)
-CharacterEventBothWays(0xA,SeqEvelConvo, Sequin, Evelyn)
 CharacterEventBothWays(0xB,HildrUlrichConvo, Hildr, Ulrich)
 CharacterEventBothWays(0xC,AnsgarAffoConvo, Ansgar, Affo)
 END_MAIN
@@ -43,14 +42,6 @@ END_MAIN
 AffoBreveConvo:
 	MUSI
 	Text(AffoBreveTalk)
-	MUNO
-	MURE 2
-	NoFade
-	ENDA
-	
-SeqEvelConvo:
-	MUSI
-	Text(SeqEvelTalk)
 	MUNO
 	MURE 2
 	NoFade
@@ -105,22 +96,21 @@ UNIT
 
 EnemyUnits:
 UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [8,11] 0b 0x0 0x0 0x0 [Flux,] [0x6,0x3,0x4,0x20]
-UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [4,5] 0b 0x0 0x0 0x0 [Flux,] [0x6,0x3,0x4,0x20]
+UNIT CultistStealable Shaman 0x1 Level(1, Enemy, 1)     [5,1] 0b 0x0 0x0 0x0 [Flux,RedGem] AttackInRangeAI
 UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [1,10] 0b 0x0 0x0 0x0 [Flux,] [0x6,0x3,0x4,0x20]
 UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)      [12,9] 0b 0x0 0x0 0x0 [Flux] [0x6,0x3,0x4,0x20]
-UNIT Cultist 0x58 0x1 Level(1, Enemy, 1)      [5,1] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
-UNIT CultistStealable 0x58 0x1 Level(1, Enemy, 1)      [14,2] 0b 0x0 0x0 0x0 [Flux,Speedwing] AttackInRangeAI
+UNIT Cultist 0x58 0x1 Level(1, Enemy, 1)      [4,5] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
+UNIT CultistStealable 0x58 0x1 Level(1, Enemy, 0)      [14,2] 0b 0x0 0x0 0x0 [Flux,Speedwing] BossAI
 UNIT Marcellus 0x58 0x1 Level(5, Enemy, 0)      [2,2] 0b 0x0 0x0 0x0 [DarkTome2,] [0,3,4,32]
 UNIT
 
 EnemyUnits2:
 UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [5,10] 0b 0x0 0x0 0x0 [IronAxe,] [0x6,0x3,0x4,0x20]
-UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [6,3] 0b 0x0 0x0 0x0 [IronAxe,] StallOneTurnAI
 UNIT BadGuy Raider 0x1 Level(1, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
-UNIT BadGuy Raider 0x1 Level(1, Enemy, 1)     [11,1] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
+UNIT BadGuy Raider 0x1 Level(1, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
 UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [12,5] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
 UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [2,7] DropItem 0x0 0x0 0x0 [IronLance,Vulnerary] BossAI
-UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [8,0] 0b 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
+UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [8,2] 0b 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
 UNIT
 
 ThievesGoBrr:
@@ -217,9 +207,8 @@ Music(0x4D)
 Text(HowDoYouEvenGetThisEnding)
 STAL 20
 LABEL 3
-EVBIT_F 0x2
-FADI 16
 MNC2 0x1
+NoFade
 ENDA
 
 RunawayThieves:
