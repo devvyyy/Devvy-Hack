@@ -31,8 +31,8 @@ TURN 0x0 TriggerHappyHavoc [13,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x10,AffoGorloisConvo, Affo, Gorlois)
-CharacterEventBothWays(0x11,IronRuneConvo, Gorlois, Stroganoff)
+//CharacterEventBothWays(0x10,AffoGorloisConvo, Affo, Gorlois)
+//CharacterEventBothWays(0x11,IronRuneConvo, Gorlois, Stroganoff)
 	END_MAIN
 
 ALIGN 32
@@ -497,6 +497,7 @@ GiveItem(Lightrune, Stroganoff)
 	ENDA
 
 EndingScene:
+Music(VictoryBGM)
 QuickRemu(Affogato,1)
 QuickRemu(Ulrich,2)
 QuickRemu(Evelyn,3)

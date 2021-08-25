@@ -28,15 +28,14 @@ TURN 0x0 BeegAIChange [2,0] 0x0
 TURN 0x0 RunawayThieves [2,0] 0x80
 TURN 0x0 OMGMyHero [3,0] 0x0
 TURN 0x0 Thieves1 [4,0] 0x0
-TURN 0x0 ShamanRein1 [5,0] 0x0
-TURN 0x0 ShamanRein2 [7,0] 0x0
+TURN 0x0 ShamanRein1 [6,0] 0x0
 TURN 0x0 ShamanRein3 [9,0] 0x0
 END_MAIN
 
 CharacterBasedEvents:
-CharacterEventBothWays(0x10,AffoBreveConvo, Affo, Breve)
-CharacterEventBothWays(0xB,HildrUlrichConvo, Hildr, Ulrich)
-CharacterEventBothWays(0xC,AnsgarAffoConvo, Ansgar, Affo)
+//CharacterEventBothWays(0x10,AffoBreveConvo, Affo, Breve)
+//CharacterEventBothWays(0xB,HildrUlrichConvo, Hildr, Ulrich)
+//CharacterEventBothWays(0xC,AnsgarAffoConvo, Ansgar, Affo)
 END_MAIN
 
 AffoBreveConvo:
@@ -130,11 +129,6 @@ UNIT Cultist Shaman 0x1 Level(2, Enemy, 1)     [7,6] 0 0 1 REDA7R7 [DarkTome1,] 
 UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [7,6] 0 0 1 REDA8R6 [DarkTome2,] [0,0,4,0]
 UNIT
 
-Reinforcements2:
-UNIT Cultist Shaman 0x1 Level(2, Enemy, 1)     [14,5] 0 0 1 REDA13R5 [DarkTome2,] [0,0,4,0]
-UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [14,5] 0 0 1 REDA14R6 [DarkTome2,] [0,0,4,0]
-UNIT
-
 Reinforcements3:
 UNIT Cultist Occultist 0x1 Level(1, Enemy, 1)     [0,2] 0 0 1 REDA1R2 [DarkTome1,] [0,0,4,0]
 UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [0,2] 0 0 1 REDA0R3 [DarkTome2,] [0,0,4,0]
@@ -149,6 +143,28 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+LOAD1 0x1 EnemyUnits
+LOAD1 0x1 EnemyUnits2
+LOAD1 0x0 Units1
+ENUN
+FADU 20
+CenterTextbox(InfoCh1)
+ENUN
+STAL 10
+CameraCursor(Affogato)
+STAL 5
+FADI 16
+GotoPrepScreen
+ENDA
+
+EndingScene:
+Music(VictoryBGM)
+MNC2 0x1
+STAL 10
+NoFade
+ENDA
+
+BeginningScene2:
 MUSC 0x48
 LOAD1 0x1 EnemyUnits
 ENUN
@@ -191,7 +207,7 @@ FADI 16
 GotoPrepScreen
 ENDA
 
-EndingScene:
+EndingScene2:
 Music(0x31)
 SetBackground(0x3C)
 IfAliveDialog(Breve,EndingSceneBrevePrologue)
@@ -205,8 +221,8 @@ GOTO 3
 LABEL 2
 Music(0x4D)
 Text(HowDoYouEvenGetThisEnding)
-STAL 20
 LABEL 3
+STAL 20
 MNC2 0x1
 NoFade
 ENDA
@@ -231,12 +247,6 @@ ENDA
 ShamanRein1:
 CamOn
 SpawnReinforcements(Reinforcements1)
-NoFade
-ENDA
-
-ShamanRein2:
-CamOn
-SpawnReinforcements(Reinforcements2)
 NoFade
 ENDA
 

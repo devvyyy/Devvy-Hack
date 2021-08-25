@@ -42,6 +42,21 @@ they be going?[AN]
 [OpenRight]Keep your head down.[.6] The[N]
 capital is within reach.[A][X]
 
+## Ch2OpeningAlt2
+[OpenMidRight][LoadUlrich][OpenMidLeft][LoadAffogato]
+[OpenMidRight]Everything should be set.[A]
+Are we all ready?[AN]
+[OpenMidLeft]Sir,[.4] pegasus riders are[N]
+soaring over us.[AN]
+They don't bear the flag of[N]
+Wreyvine[Beat][AN]
+[OpenMidRight]If we can't confirm if they're[N]
+hostiles,[AN]
+we should lay low towards[N]
+the capital.[AN]
+Move swiftly,[.4] and keep[N]
+your head low[Beat][A][X]
+
 ## Ch2Opening3
 [OpenFarFarRight][LoadIrene][OpenMidRight][LoadPandoro]
 [OpenFarFarRight][MoveMidLeft][OpenMidLeft]Brrrr[Beat][MoveMidLeft] Is it always this[N]
@@ -67,7 +82,7 @@ so sooner?[AN][OpenMidRight][ClearFace]
 [OpenMidLeft]Damn this fog![.6] Are those[Beat][N]
 pegasus riders?[AN]
 [MoveFarRight]Yeah,[.4] absolutely.[.6][N]
-[MoveFarRight]Be careful,[.4] everyone![A][X]
+Be careful,[.4] everyone![A][X]
 
 ## Ch2Ending1
 # verified
@@ -88,30 +103,103 @@ why don't you let us with ya[N]
 [OpenFarRight]You're entirely sure?[.6] We'd appreciate[N]
 having you two with us,[.4] then.[AN][X]
 
+## Ch2MochaAppear1
+# verified
+[OpenMidRight][LoadMocha]What were those pegasus[N]
+riders doing?[AN]
+I've looked for him everywhere,[.4][N]
+yet he's nowhere to be found[Beat][AN]
+Well,[.4] heck.[.6] I just gotta[N]
+keep looking,[.4] then.[A][X]
+
+## Ch2MochaAppear2
+# verified
+[OpenMidLeft][LoadMocha][OpenMidRight][LoadUlrich]
+[OpenMidLeft]Sir Ulrich![.6] I've been looking[N]
+for you![AN]
+The King sent me on a mission to[N]
+see if the patrol was alright.[AN]
+[OpenMidRight]That's good to hear.[AN]
+[OpenMidLeft]His Highness also said[N]
+to fight with you,[.4] too.[AN]
+[OpenMidRight][ToggleSmile]Glad to have you with[N]
+us,[.4] Mocha.[AN]
+[OpenMidLeft][ToggleSmile]I'll do my best,[.4] sir![A][X]
+
+## Ch2OgrimAppear1
+# verified
+[OpenMidLeft][LoadOgrim][ToggleSmile]I'll [MoveMidLeft]Hic[Beat] take my leave,[.4][N]
+t-[.4]thanks for having me[Beat]![A][X]
+
+## Ch2OgrimAppear2
+# verified
+[OpenMidRight][LoadOgrim]Errgh?[.6] Who are those-[N]
+Hic[Beat] people there?[AN]
+If they're lookin' for a[N]
+tussle,[AN]
+[ToggleSmile]I'll be glad to provide![.6][N]
+Gwehahahaha![A][X]
+
+## Ch2OgrimAppear3
+# verified
+[OpenMidRight][LoadOgrim]
+
 ## IreneAffoRecruit
 # verified
 [OpenMidLeft][LoadIrene][OpenMidRight][LoadAffo][A]
 [OpenRight]Hey,[.4] you there![.6] Are you part[N]
 of these raiders?[AN]
-[OpenMidLeft][X]
+[OpenMidLeft]Hey[.4] keep your bow[N]
+down![AN]
+I don't wish to fight.[.6]
+[OpenMidRight][Beat][AN][ClearFace]
+[OpenMidLeft][MoveMidLeft]Wait![.6] If you're part of[N]
+the knights,[AN]
+I can help you fight the[N]
+rest of these brutes.[AN]
+[OpenMidRight][LoadAffo]Mm.[.6] Alright[Beat][A][X]
 
 ## IreneBreveRecruit
 # verified
-[OpenMidLeft][LoadAffo][A][X]
+[OpenMidRight][LoadBreve]Huh?[.6] Is that really[N]
+you,[.4] Irene?[AN]
+[OpenMidLeft][LoadIrene]Breve?[.6] Why are you[N]
+here?[AN]
+[OpenMidRight]It's rare to see you[N]
+without your brother.[AN]
+Follow me.[.6] We're heading[N]
+for Athium.[AN]
+[OpenMidLeft]Got it![A][X]
 
 ## PanAffoRecruit
 # verified
-[OpenMidLeft][LoadAffo][A][X]
+[OpenMidRight][LoadAffo]You[Beat] Uh,[.4] can you stop[N]
+staring at me[Beat]?[AN]
+[OpenMidLeft][LoadPan][Pause]Oh,[.4] Affogato.[.6] I thought you[N]
+looked familiar.[AN]
+[OpenMidRight]You aren't part of these[N]
+brigands,[.4] are you?[AN]
+[OpenMidLeft]It's,[.4] er,[.4] complicated.[.6][N]
+B-[.4]But I'll fight with you![AN]
+Just point at the enemy,[.4][N]
+and watch as they disappear![A]
+[OpenMidRight]I'm very glad you're with[N]
+us,[.4] Pandoro.[A][X]
 
 ## PanUlrichRecruit
 # verified
-[OpenMidLeft][LoadAffo][A][X]
-
-## OhGoshOhHeck
-# verified
-[OpenMidLeft][LoadOgrim]death (Placeholder)[AN]
-[OpenFarRight][LoadAffo][OpenFarRight]oh gosh oh heck nonononono[N]
-runnnnn (Placeholder)[A][X]
+[OpenMidLeft][LoadPan][OpenMidRight][LoadUlrich][A]
+[OpenMidLeft]And to think you almost[N]
+cut me in half![AN]
+Pandoro,[.4] what are[N]
+you doing?[AN]
+[OpenMidLeft]What?[.6] Sir Ulrich?[AN]
+[OpenMidRight]The one and only.[AN]
+Let's go,[.4] Pandoro[AN]
+We shouldn't stay here[N]
+for long.[AN]
+[OpenMidLeft]Got it,[.4] boss.[.6] Just say[N]
+the word.[A][X]
 
 ## SlowHouseText
 # verified
@@ -136,40 +224,19 @@ and prove him wrong![A][X]
 ## OgrimHouse
 # verified
 [MidRight][LoadFace][0xFF][0xFF]
-[MidLeft][LoadOldMan]No,[.4] I have not seen[N]
-a green-haired hunter![AN]
-Huh?[.6] Oh,[.4] are you here[N]
-for something else?[AN]
-A man came by clad in glimmering[N]
-armor.[AN]
-He looked pretty angry,[.4] so I would[N]
-not mess with him if I were you.[A][X]
+[MidLeft][LoadOldMan][MidLeft][ClearFace][0x80][0x2D][0x8A][0x8E][0x80][0x80][.6]
+[MidRight][Beat][A][X]
 
 ## OgrimAffoHouse
 # verified
 [MidRight][LoadFace][0xFF][0xFF]
-[MidLeft][LoadOldMan]No,[.4] I have not seen[N]
-a green-haired hunter![AN]
-Huh?![.6] Hey![.6] You must be the[N]
-man he was looking for![AN]
-This man came by earlier[N]
-in white heavy armor.[AN]
-Uhm[Beat] He looked pretty angry.[.6][N]
-If I were you,[AN]
-I'd run far,[.4] far[N]
-away!![A][X]
-
-## OgrimChargeWarning
-# verified
-[MidRight][LoadOgrim]If these louts don't[N]
-finish them off soon,[AN]
-I'll [ToggleRed]have to take them[N]
-all down myself[ToggleRed].[A][X]
+[MidLeft][LoadOldMan][MidLeft][ClearFace][0x80][0x2D][0x8A][0x8E][0x80][0x80][.6]
+[MidRight][Pause]Wow[Beat][A][X]
 
 ## OgrimChargeText
 # verified
-[MidRight][LoadOgrim][CloseEyes]They have decided to challenge[N]
-me?[.6][OpenEyes] Prepare yourself![A][X]
+[MidRight][LoadOgrim][ToggleSmile]Oho![.6] They have decided to challenge[N]
+me?[.6][MoveMidRight] Geeeet ready![A][X]
 
 ## OgrimAffoBossQ
 # verified

@@ -16,6 +16,25 @@ who just arrived[.4] eh?[AN]
 [OpenMidLeft]Hurry,[.4] we have no time[N]
 to waste![AN][X]
 
+## Ch4OpeningAlt1
+[OpenMidLeft][LoadAffogato][OpenMidLeft][LoadAtheya]
+[OpenMidLeft]Is this the edge of[N]
+the city?[AN]
+[OpenMidRight]Yes.[.6] An abandoned fort[N]
+lies here.[AN]
+[OpenMidLeft][MoveMidLeft][OpenMidLeft]What the-[.4] Are those[Beat][N]
+pegasi[Beat]?!
+[OpenLeft][Pause]Those pegasus riders from[N]
+earlier[Beat][AN]
+It wasn't that they didn't[N]
+notice us,[AN]
+they were headed for[N]
+the capital borders.[AN]
+[OpenMidRight]We can't let them[N]
+through.[AN]
+Rally the others and[N]
+follow my lead![A][X]
+
 ## Ch4Opening2
 [OpenFarLeft][LoadShaman][OpenLeft][LoadShaman][OpenMidRight][LoadHartmann]
 [OpenFarLeft]Hostiles engage from the[N]
@@ -33,9 +52,10 @@ they left us in the dark[Beat][A][X]
 [OpenMidLeft][LoadFloris]
 Away with you,[.4] Keeper![.6][N]
 They're everywhere[Beat][AN]
-Father Floris,[.4] The rest of[N]
+[OpenMidRight][LoadAtheya]
+[OpenMidRight]Father Floris,[.4] The rest of[N]
 the knights are here.[AN]
-Captain Atheya?[.6] Took you[N]
+[OpenMidLeft]Captain Atheya?[.6] Took you[N]
 long enough.[AN]
 Hold the border![.6][N]
 Protect Athium![A][X]
@@ -67,7 +87,27 @@ to Sir Ulrich.[AN]
 [Pause]Really,[.4] now?[.6][N]
 Let's see here[Beat][A][X]
 
-## Ch4Opening4
+## Ch4EndingAlt3
+[OpenFarLeft][LoadAffogato][OpenFarLeft][MoveLeft]
+[OpenLeft]It's[Pause] [.4]a crow?
+[OpenFarFarRight][LoadBirb][OpenFarFarRight][MoveRight]
+[OpenMidRight][LoadUlrich]
+[OpenMidRight]Are you okay?[.6] What happened[N]
+here?[AN]
+[MoveLeft]Nothing.[.6] It's just[N]
+a crow.[AN]
+[OpenMidRight]Ah,[.4] this must be the[N]
+new advisor's crow.[AN]
+[OpenLeft]The King has a new advisor?[.6][N]
+And he has a crow?[AN]
+The letter must be[N]
+important,[.4] then.[AN]
+It's directed to you,[.4][N]
+Ulrich.[AN]
+[OpenMidRight][Pause]Really,[.4] now?[.6][N]
+Let's see here[Beat][A][X]
+
+## Ch4Ending4
 [OpenLeft][LoadEis][OpenRight][LoadFloris][OpenFarRight][LoadBreve]
 [OpenLeft]And you're sure they're[N]
 the same Keepers?[AN]
@@ -86,6 +126,27 @@ the King summons us to[AN]
 the palace.[.6] The letter didn't[N]
 seem urgent,[.4] but we should[N]
 march tomorrow nonetheless.[A][X]
+
+## Ch4EndingAlt4
+[OpenMidLeft][LoadUlrich][OpenMidRight][LoadFloris]
+[OpenMidLeft]We march tomorrow at noon.[.6] The[N]
+King summons us to the palace.[AN]
+The letter didn't seem very[N]
+urgent.[.6] I'm not concerned.[AN]
+[OpenMidRight]The Keepers should be[N]
+driven back for now.[AN]
+[OpenMidLeft]Keepers?[.6] You don't[N]
+mean-[AN]
+[OpenMidRight]It is indeed the same[N]
+Keepers.[AN]
+[OpenMidLeft]The same order that[N]
+aimed to put Wreyvine into stasis?[AN]
+To appease the Holy King?[.6][N]
+They disappeared years ago[Beat][AN]
+[OpenMidRight]The only.[.6] I don't know[N]
+what caused their resurgence,[AN]
+but I'm not looking forward[N]
+to finding out.[A][X]
 
 ## Ch4Warning
 # verified
@@ -109,10 +170,19 @@ It is all you have.[A][X]
 
 ## HartAffoBossQ
 # verified
- [X]
+[OpenMidLeft][LoadHartmann]You're[Beat] familiar.[AN]
+Why are you here?[AN]
+[Clear]
+[OpenMidRight][LoadAffogato]
+That's an odd remark to[N]
+someone about to shoot you.[AN][Clear]
+[OpenMidLeft][LoadHartmann]Hmph.[.6] Wouldn't you like[N]
+to know about your past?[AN][Clear]
+[OpenMidRight][LoadAffogato]
+[Beat][A][X]
  
  ## HartDeathCh5
-[OpenMidLeft][LoadHartmann]<death quote>[A][X]
+[OpenMidLeft][LoadHartmann][ToggleSmile]Impressive[Beat][A][X]
 
 ## HartDarker
 # verified
