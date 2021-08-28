@@ -8,13 +8,13 @@ Map:
 #incbin "NewChapter2_data.dmp"
 
 MapChanges:
-TileMap(1,0,12,1,1,Chest)
+TileMap(1,0,12,1,1,ChestOpen)
 TileMap(3,12,2,3,2,DestroyNooo)
 TileMap(2,13,3,1,1,DoorGaming)
 TileMapEnd
 
-Chest:
-SHORT 0x2c4 0x100 0x240 
+ChestOpen:
+SHORT 0x100 
 ALIGN 4
 
 DestroyNooo:

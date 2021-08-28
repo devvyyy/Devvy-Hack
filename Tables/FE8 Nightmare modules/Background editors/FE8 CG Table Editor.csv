@@ -50,8 +50,8 @@ Shrine_3 0x2F,0x89430ec,0x8947398,0x894784c
 Desert 0x30,0x894794c,0x8949f70,0x894a424
 Forest_Dense 0x31,0x894a524,0x894eef8,0x894f3ac
 Volcano 0x32,0x894f4ac,0x8953538,0x89539ec
-Temple_Gate 0x33,0x8953aec,0x89584a4,0x8958958
-Temple_Ruins_Inside 0x34,0x8958a58,0x895d1a8,0x895d65c
+Temple_Gate 0x33,Forest2Image|IsPointer,Forest2TSA|IsPointer,Forest2Palette|IsPointer
+Temple_Ruins_Inside 0x34,SnowMeltingImage|IsPointer,SnowMeltingTSA|IsPointer,SnowMeltingPalette|IsPointer
 Black 0x35,BlackImage|IsPointer,BlackTSA|IsPointer,BlackPalette|IsPointer
 SnowPlain,ForestOutskirtsWinterDayImage|IsPointer,ForestOutskirtsWinterDayTSA|IsPointer,ForestOutskirtsWinterDayPalette|IsPointer
 BORK,0x0,0x0,0x0
@@ -62,8 +62,8 @@ Kitabei (P),SnowMountainImage|IsPointer,SnowMountainTSA|IsPointer,SnowMountainPa
 Magharb (P),SnowCastleImage|IsPointer,SnowCastleTSA|IsPointer,SnowCastlePalette|IsPointer
 Tagshin (P),SnowVillageImage|IsPointer,SnowVillageTSA|IsPointer,SnowVillagePalette|IsPointer
 Barzax (P),SnowHouseImage|IsPointer,SnowHouseTSA|IsPointer,SnowHousePalette|IsPointer
-PrologueStart,0x0,0x0,0x0
-0x40,0x0,0x0,0x0
+PrologueStart,WinterDawnImage|IsPointer,WinterDawnTSA|IsPointer,WinterDawnPalette|IsPointer
+0x40,WinterVillageDawnImage|IsPointer,WinterVillageDawnTSA|IsPointer,WinterVillageDawnPalette|IsPointer
 0x41,0x4340,0x272b272b,0x60a0000
 0x42,0x2449,0x2a4c4c2c,0x0
 0x43,0x0,0x0,0x53

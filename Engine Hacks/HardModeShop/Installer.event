@@ -1,0 +1,8 @@
+PUSH
+ORG $B5238
+jumpToHack(HardModeShop)
+POP
+
+ALIGN 4
+HardModeShop:
+#incbin "HardModeShop.dmp"

@@ -26,7 +26,7 @@
 #define CenterTextbox(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND"
 #define SetHP(number,x,y) "SVAL 0x1 number; SVAL 0xB Coords(x,y); SET_HP 0xFFFE"
 #define CharacterConditionalDialog(character,alivetext,deadtext) "CHECK_ALIVE character; BEQ 1 0x0 0xC; Text(alivetext); GOTO 2; LABEL 1; Text(deadtext); LABEL 2"
-#define DoubleConditionalDialog(character,character2,alivetext,deadtext,label1,label2) "CHECK_ALIVE character; BEQ label 0x0 0xC; CHECK_ALIVE character2; BEQ label 0x0 0xC; Text(alivetext); GOTO label2; LABEL label; Text(deadtext); LABEL label2"
+#define DoubleConditionalDialog(character,character2,alivetext,deadtext,label,label2) "CHECK_ALIVE character; BEQ label 0x0 0xC; CHECK_ALIVE character2; BEQ label 0x0 0xC; Text(alivetext); GOTO label2; LABEL label; Text(deadtext); LABEL label2"
 #define IfAliveDialog(character,alivetext) "CHECK_ALIVE character; BEQ 1 0x0 0xC; Text(alivetext); LABEL 1"
 #define IfAliveDialog2(character,alivetext) "CHECK_ALIVE character; BEQ 2 0x0 0xC; Text(alivetext); LABEL 2"
 #define IfAliveDialog3(character,alivetext) "CHECK_ALIVE character; BEQ 3 0x0 0xC; Text(alivetext); LABEL 3"
@@ -61,3 +61,4 @@
 #define HouseExp(flag,background,text) "Text(background,text); CHECK_EVENTID flag; BNE 0x776 0xC 0x0; GiveExperience(0xFFFF,10); ENUT flag;LABEL 0x776; EVBIT_T 0x7"
 #define QuickRemu(unitID,labelID) "CHECK_EXISTS unitID; BEQ labelID 0xC 0x0; CHECK_ALIVE unitID; BEQ labelID 0xC 0x0; REMU unitID; LABEL labelID"
 #define QuickCheckFlag(flagID,labelID) "CHECK_EVENTID flagID; BEQ labelID 0xC 0x0;"
+#define DoAllThree "CLEA 0; CLEN 0; CLEE 0"

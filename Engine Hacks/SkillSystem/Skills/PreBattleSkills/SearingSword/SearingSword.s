@@ -14,6 +14,16 @@ ldr r1, SearingSwordID
 cmp r0, #0
 beq End
 
+@check if its a flamberge
+mov     r0, #0x4A      @Move to attacker's weapon (before battle)
+ldrb    r0, [r4, r0]   @Load attackers weap (before battle)
+cmp     r0, #0xC6         @Flamberge ID
+beq End
+cmp     r0, #0x10         @LightBrand ID
+beq End
+cmp     r0, #0x11         @RuneSword ID
+beq End
+
 @Unit has skill, check to see if unit has an sword equipped
 mov     r0, #0x50      @Move to the attacking unit weapon type.
 ldrb    r0, [r4, r0]   @Load the attacking unit weapon type.

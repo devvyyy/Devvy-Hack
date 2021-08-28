@@ -13,6 +13,7 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TURN 0x0 ReinWarning [1,0] 0x80
 TURN 0x0 TopLeftRein [2,0] 0x0
 TURN 0x0 WaterfallRein [3,0] 0x0
 TURN 0x0 BottomLeftRein [4,0] 0x0
@@ -24,15 +25,9 @@ TURN 0x0 WestRein [9,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0xA, StroganRecruit, Affogato, Stroganoff)
-CharacterEventBothWays(0xB, EisRecruit, Affogato, Eiskaffee)
-CharacterEventBothWays(0xC, DoppioRecruit, Affogato, Doppio)
-CharacterEventBothWays(0xA, StroganRecruit2, Eiskaffee, Stroganoff)
-CharacterEventBothWays(0xB, EisRecruit2, Stroganoff, Eiskaffee)
-CharacterEventBothWays(0xC, DoppioRecruit2, Stroganoff, Doppio)
-CharacterEventBothWays(0xA, StroganRecruit3, Doppio, Stroganoff)
-CharacterEventBothWays(0xB, EisRecruit3, Doppio, Eiskaffee)
-CharacterEventBothWays(0xC, DoppioRecruit3, Eiskaffee, Doppio)
+CharacterEventBothWays(0xA, StroganRecruit, 0x0, Stroganoff)
+CharacterEventBothWays(0xA, EisRecruit, 0x0, Eiskaffee)
+CharacterEventBothWays(0xA, DoppioRecruit, 0x0, Doppio)
 	END_MAIN
 
 MiscBasedEvents:
@@ -92,7 +87,7 @@ UNIT BadGuy Raider 0x1 Level(3, Enemy, 1)     [15,4] DropItem 0x0 0x0 0x0 [Steel
 UNIT BadGuy Deserter 0x1 Level(3, Enemy, 1)     [1,13] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
 UNIT BadGuy Deserter 0x1 Level(4, Enemy, 1)     [13,3] 0b 0x0 0x0 0x0 [IronGlaive] ChargeAI
 UNIT BadGuyStealable Brigand 0x1 Level(3, Enemy, 1)     [0,10] 0b 0x0 0x0 0x0 [Halberd,Elixir] AttackInRangeAI
-UNIT UPirate Pirate 0x1 Level(3, Enemy, 1)     [16,16] 0b 0x0 0x0 0x0 [IronAxe] StallOneTurnAI
+UNIT UPirate Pirate 0x1 Level(3, Enemy, 1)     [16,16] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
 UNIT UPirate Pirate 0x1 Level(3, Enemy, 1)     [14,14] 0b 0x0 0x0 0x0 [IronLabrys] AttackInRangeAI
 UNIT BadGuy Deserter 0x1 Level(3, Enemy, 1)     [4,7] 0b 0x0 0x0 0x0 [0x95] AttackInRangeAI
 UNIT BadGuy SCav 0x1 Level(3, Enemy, 1)     [16,11] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
@@ -113,18 +108,16 @@ UNIT BadGuy ACav 0x1 Level(3, Enemy, 1)     [0,2] 0b 0x0 0x0 0x0 [DevilAxe] TwoA
 	
 	
 Rein1:
-UNIT BadGuy Raider 0x1 Level(3, Enemy, 1)     [15,0] 0b 0x0 0x0 0x0 [Armorslayer,] ChargeAI
+UNIT BadGuy Raider 0x1 Level(3, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [Armorslayer,] ChargeAI
 UNIT BadGuy LCav 0x1 Level(3, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
 	UNIT
 	
 Rein2:
 UNIT Cultist Mage 0x1 Level(3, Enemy, 1)     [0,0] 0b 0x0 0x0 0x0 [Thunder,] ChargeAI
-UNIT Cultist Occultist 0x1 Level(3, Enemy, 1)     [1,0] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
 	UNIT
 
 Rein3:
 UNIT UPirate Pirate 0x1 Level(3, Enemy, 1)     [9,17] 0b 0x0 0x0 0x0 [Hammer,RedGem] StallOneTurnAI
-UNIT UPirate Pirate 0x1 Level(4, Enemy, 1)     [10,17] 0b 0x0 0x0 0x0 [SteelAxe,] StallOneTurnAI
 	UNIT
 	
 Rein4:
@@ -143,7 +136,6 @@ UNIT BadGuy ACav 0x1 Level(4, Enemy, 1)     [16,17] 0b 0x0 0x0 0x0 [IronAxe,] Ch
 	UNIT
 
 Rein7:
-UNIT BadGuy SArmor 0x1 Level(5, Enemy, 1)     [0,7] 0b 0x0 0x0 0x0 [SteelBlade] ChargeAI
 UNIT BadGuy ACav 0x1 Level(4, Enemy, 1)     [0,8] 0b 0x0 0x0 0x0 [IronAxe,] ChargeAI
 UNIT BadGuy LArmor 0x1 Level(4, Enemy, 1)     [0,9] 0b 0x0 0x0 0x0 [SteelGlaive,] ChargeAI
 	UNIT
@@ -164,20 +156,62 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-Music(IndignationBGM)
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 YoItThem
 	CUSN Stroganoff
 	CUSN Doppio
 	CUSN Eiskaffee
 	FADU 10
-	CenterTextbox(InfoCh3)
 	ENUN
+FADU 60
+Music(0xE4)
+SetBackground(0x26)
+Text(Ch3Opening1)
+Music(0x48)
+FADI 60
+CLEAN
+SetBackground(0x3D)
+Music(0x24)
+FADU 45
+CharacterConditionalDialog(Hildr,Ch3Opening2,Ch3OpeningAlt2)
 	GotoPrepScreen
 	ENDA
 
 EndingScene:
-Music(VictorySadBGM)
+MUSC 0x116
+SetBackground(0x3D)
+TEXTSTART
+TEXTSHOW Ch3Ending1
+TEXTEND
+MUSC 0x1A
+TEXTCONT
+TEXTEND
+SOUN 0xA6
+STAL 3
+SOUN 0xA7
+STAL 5
+SOUN 0xA6
+STAL 3
+SOUN 0xA7
+STAL 5
+SOUN 0xA6
+STAL 3
+SOUN 0xA7
+STAL 10
+FADI 60
+CLEAN
+MUSCSLOW VictorySadBGM
+SetBackground(0x3E)
+FADU 45
+CharacterConditionalDialog(Stroganoff,Ch3Ending2,Ch3EndingAlt2)
+Music(0x115)
+CHECK_ALIVE Stroganoff
+BEQ 3 0x0 0xC
+Text(Ch3Ending3)
+GOTO 4
+LABEL 3
+Text(Ch3EndingAlt3)
+LABEL 4
 	MNC2 0x4
 	NoFade
 	ENDA
@@ -195,80 +229,32 @@ ENDA
 StroganRecruit:
 MUSS 0x30
 STAL 33
-Text(Placeholder1)
+Text(StroganTalk)
 MURE 0x2
 CUSA Stroganoff
-NoFade
-ENDA
-
-StroganRecruit2:
-MUSS 0x30
-STAL 33
-Text(Placeholder2)
-MURE 0x2
-CUSA Stroganoff
-NoFade
-ENDA
-
-StroganRecruit3:
-MUSS 0x30
-STAL 33
-Text(Placeholder2)
-MURE 0x2
-CUSA Stroganoff
+CUSA Eiskaffee
+CUSA Doppio
 NoFade
 ENDA
 
 EisRecruit:
 MUSS 0x30
 STAL 33
-Text(Placeholder1)
+Text(EisTalk)
 MURE 0x2
+CUSA Stroganoff
 CUSA Eiskaffee
-NoFade
-ENDA
-
-EisRecruit2:
-MUSS 0x30
-STAL 33
-Text(Placeholder2)
-MURE 0x2
-CUSA Eiskaffee
-NoFade
-ENDA
-
-EisRecruit3:
-MUSS 0x30
-STAL 33
-Text(Placeholder2)
-MURE 0x2
-CUSA Eiskaffee
+CUSA Doppio
 NoFade
 ENDA
 
 DoppioRecruit:
 MUSS 0x30
 STAL 33
-Text(Placeholder1)
+Text(DoppioTalk)
 MURE 0x2
-CUSA Doppio
-NoFade
-ENDA
-
-DoppioRecruit2:
-MUSS 0x30
-STAL 33
-Text(Placeholder2)
-MURE 0x2
-CUSA Doppio
-NoFade
-ENDA
-
-DoppioRecruit3:
-MUSS 0x30
-STAL 33
-Text(Placeholder2)
-MURE 0x2
+CUSA Stroganoff
+CUSA Eiskaffee
 CUSA Doppio
 NoFade
 ENDA
@@ -289,6 +275,10 @@ ENDA
 TopLeftRein:
 SpawnReinforcements(Rein2)
 NoFade
+ENDA
+
+ReinWarning:
+ChargeWarning(Alicot,Ch3ReinWarning)
 ENDA
 
 WaterfallRein:
@@ -335,7 +325,7 @@ ENDA
 House1:
 STORETOSOMETHING 0x0 // lowers music volume
 MUSI // lowers music volume
-HouseExp(0x12,HouseBG2,Placeholder1)
+HouseExp(0x12,HouseBG2,FountainHouseText)
 MUNO // increases music volume
 NoFade
 ENDA

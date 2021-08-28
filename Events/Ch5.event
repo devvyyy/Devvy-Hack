@@ -74,35 +74,27 @@ LoadUnit(12,2)
 EnemyUnits:
 UNIT Hiems Shaman 0x1 Level(5, Enemy, 1)     [6,2] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
 UNIT BadGuy LArmor 0x1 Level(6, Enemy, 1)     [11,5] 0b 0x0 0x0 0x0 [IronGlaive,ShortSpear] BossAI
-UNIT Hiems Shaman 0x1 Level(5, Enemy, 1)     [7,6] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
+UNIT Hiems Shaman 0x1 Level(5, Enemy, 1)     [7,7] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
 UNIT BadGuy Mercenary 0x1 Level(5, Enemy, 1)     [5,4] 0b 0x0 0x0 0x0 [IronBlade,] AttackInRangeAI
-UNIT BadGuy Myrmidon 0x1 Level(6, Enemy, 1)     [4,8] 0b 0x0 0x0 0x0 [Zanbato,] ChargeAI
 UNIT BadGuy Brigand 0x1 Level(5, Enemy, 1)     [2,8] 0b 0x0 0x0 0x0 [SteelAxe] BrigandAI
 UNIT BadGuy Freelancer 0x1 Level(6, Enemy, 1)     [6,10] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
-UNIT BadGuy AxeCav 0x1 Level(5, Enemy, 1)     [2,11] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
+UNIT BadGuy AxeCav 0x1 Level(5, Enemy, 1)     [0,11] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
 UNIT BadGuy LanceCav 0x1 Level(5, Enemy, 1)     [3,15] 0b 0x0 0x0 0x0 [HeavySpear] StallOneTurnAI
-UNIT Hiems Seer 0x1 Level(6, Enemy, 1)     [0,16] DropItem 0x0 0x0 0x0 [Flux,0x3F,RedGem] AttackInRangeAI
-UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [0,19] 0b 0x0 0x0 0x0 [Longbow] AttackInRangeAI
-UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [3,18] 0b 0x0 0x0 0x0 [SteelBow] TwoActionAI
+UNIT BadGuyStealable SArmor 0x1 Level(5, Enemy, 1)     [3,18] 0b 0x0 0x0 0x0 [SteelBlade,Elixir] TwoActionAI
 UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [4,12] 0b 0x0 0x0 0x0 [Longbow] BossAI
 UNIT BadGuy AxeArmor 0x1 Level(5, Enemy, 1)     [9,12] 0b 0x0 0x0 0x0 [IronLabrys,HandAxe] BossAI
-UNIT BadGuy Myrm 0x1 Level(5, Enemy, 1)     [8,15] 0b 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT BadGuy Myrm 0x1 Level(5, Enemy, 1)     [8,15] 0b 0x0 0x0 0x0 [Zanbato] AttackInRangeAI
 UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [6,18] 0b 0x0 0x0 0x0 [DarkTome2] AttackInRangeAI
-UNIT BadGuy LanceCav 0x1 Level(5, Enemy, 1)     [2,19] 0b 0x0 0x0 0x0 [IronLance,Javelin] TwoActionAI
-UNIT BadGuyStealable SwordCav 0x1 Level(6, Enemy, 1)     [3,19] 0b 0x0 0x0 0x0 [IronSword,Vulnerary] ChargeAI
+UNIT BadGuyStealable SwordCav 0x1 Level(6, Enemy, 1)     [14,19] 0b 0x0 0x0 0x0 [IronSword,Vulnerary] ChargeAI
 UNIT Hiems Mage 0x1 Level(5, Enemy, 1)     [9,4] 0b 0x0 0x0 0x0 [Fire] TwoActionAI
+UNIT BadGuy Mercenary 0x1 Level(5, Enemy, 1)     [10,9] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
 UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [0,19] 0b 0x0 0x0 0x0 [IronBow] AttackInRangeAI
-UNIT BadGuy Brigand 0x1 Level(5, Enemy, 1)     [0,19] 0b 0x0 0x0 0x0 [IronAxe,HandAxe] BossAI
 UNIT BadGuyStealable Hunter 0x1 Level(6, Enemy, 1)     [13,8] 0b 0x0 0x0 0x0 [Longbow,Dragonshield] BossAI
 UNIT BadGuy Freelancer 0x1 Level(5, Enemy, 1)     [11,10] 0b 0x0 0x0 0x0 [SteelLabrys,Javelin] BossAI
-UNIT Hiems Shaman 0x1 Level(5, Enemy, 1)     [11,13] 0b 0x0 0x0 0x0 [DarkTome2] AttackInRangeAI
-UNIT Hiems Thaumaturge 0x1 Level(6, Enemy, 1)     [12,17] 0b 0x0 0x0 0x0 [Fire] StallOneTurnAI
-UNIT Hiems Mage 0x1 Level(5, Enemy, 1)     [14,15] 0b 0x0 0x0 0x0 [Thunder] AttackInRangeAI
+UNIT Hiems Shaman 0x1 Level(5, Enemy, 1)     [11,15] 0b 0x0 0x0 0x0 [Flux] AttackInRangeAI
+UNIT Hiems Thaumaturge 0x1 Level(6, Enemy, 1)     [12,18] 0b 0x0 0x0 0x0 [Fire] StallOneTurnAI
 UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [14,10] 0b 0x0 0x0 0x0 [Flux,] BossAI
-UNIT BadGuy Brigand 0x1 Level(5, Enemy, 1)     [10,7] 0b 0x0 0x0 0x0 [SteelAxe,] TwoActionAI
-UNIT BadGuyStealable AxeCav 0x1 Level(5, Enemy, 1)     [13,11] 0b 0x0 0x0 0x0 [IronAxe,GoddessIcon] TwoActionAI
-UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [9,8] 0b 0x0 0x0 0x0 [Longbow,] TwoActionAI
-UNIT Hiems Thaumaturge 0x1 Level(5, Enemy, 1)     [14,13] 0b 0x0 0x0 0x0 [Fire] TwoActionAI
+UNIT BadGuyStealable AxeCav 0x1 Level(5, Enemy, 1)     [14,12] 0b 0x0 0x0 0x0 [IronAxe,GoddessIcon] TwoActionAI
 UNIT Hiems Thaumaturge 0x1 Level(5, Enemy, 1)     [6,14] 0x0 0x0 0x0 0x0 [Thunder] TwoActionAI
 	UNIT
 
@@ -110,8 +102,12 @@ NagitoKomaeda:
 UNIT Murray Deserter 0x1 Level(7, Enemy, 0)     [13,15] 0b 0x0 0x0 0x0 [SteelGlaive,Javelin] BossAI
 	UNIT
 	
+Recruits:
+UNIT Noel Thief 0x1 Level(3, Enemy, 0)     [13,15] 0b 0x0 0x0 0x0 [IronDagger,Lockpick] [0x0,0x0,0x0,0x0]
+	UNIT
+	
 SpookyBrigand:
-UNIT BadGuyStealable Brigand 0x1 Level(6, Enemy, 1)     [10,3] 0b 0x0 0x0 0x0 [SteelLabrys,BlueGem] BrigandAI
+UNIT BadGuyStealable Brigand 0x1 Level(6, Enemy, 1)     [14,14] 0b 0x0 0x0 0x0 [SteelLabrys,GreenGem] BrigandAI
 	UNIT
 	
 TopRightFort:
@@ -135,7 +131,6 @@ UNIT BadGuy SCav 0x1 Level(5, Enemy, 1)     [14,0] 0b 0x0 0x0 0x0 [Sagitar,Steel
 
 BottomRightForest:
 UNIT Hiems Thaumaturge 0x1 Level(5, Enemy, 1)     [13,19] 0b 0x0 0x0 0x0 [Fire] StallOneTurnAI
-UNIT Hiems Thaumaturge 0x1 Level(6, Enemy, 1)     [14,19] 0b 0x0 0x0 0x0 [Thunder] StallOneTurnAI
 	UNIT
 	
 TopLeftFort:
@@ -153,11 +148,40 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+CHECK_ALIVE Irene
+BEQ 1 0x0 0xC
+Music(0x4C)
+SetBackground(0x38)
+Text(Ch5Opening1)
+LABEL 1
+FADI 60
+CLEAN
+FADU 60
+CHECK_ALIVE Atheya
+BEQ 2 0x0 0xC
+CHECK_ALIVE Mocha
+BEQ 2 0x0 0xC
+Music(0x48)
+SetBackground(0x33)
+TEXTSTART
+TEXTSHOW Ch5Opening2
+TEXTEND
+MUSC 0x92
+TEXTCONT
+TEXTEND
+FADI 60
+CLEAN
+LABEL 2
+Music(0x24)
+SetBackground(0x39)
+FADU 40
+STAL 5
+DoubleConditionalDialog(Atheya,Mocha,Ch5Opening3,Ch5OpeningAlt3,4,5)
+FADI 60
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 NagitoKomaeda
-	FADU 10
-	CenterTextbox(InfoCh5)
 	ENUN
+	FADU 45
 	GotoPrepScreen
 	ENDA
 

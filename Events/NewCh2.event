@@ -13,11 +13,10 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TURN 0x0 CutsceneMocha [1,0] 0x80
-TURN 0x0 MochaRecruit [2,0] 0x0
+TURN 0x0 CutsceneMocha [1,0] 0x0
 TURN 0x0 OhHeckItHim [2,0] 0x80
 TURN 0x0 BridgeRein [3,0] 0x0
-TURN 0x0 BoatRein [4,0] 0x0
+TURN 0x0 BoatRein [5,0] 0x0
 TURN 0x0 MountainRein [6,0] 0x0
 TURN 0x0 EastRein [7,0] 0x0
 TURN 0x0 NorthRein [8,0] 0x0
@@ -26,10 +25,10 @@ TURN 0x0 GoodbyeDespair [9,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x21, PandoroRecruit, Affogato, Pandoro)
 CharacterEventBothWays(0x21, PandoroRecruit, Ulrich, Pandoro)
-CharacterEventBothWays(0x21, BreneRecruit, Ulrich, Irene)
-CharacterEventBothWays(0x21, BreneRecruit, Breve, Irene)
+CharacterEventBothWays(0x21, PandoroAffoRecruit, Affogato, Pandoro)
+CharacterEventBothWays(0x21, BreneRecruit, Affogato, Irene)
+CharacterEventBothWays(0x21, BreneBreveRecruit, Breve, Irene)
 	END_MAIN
 
 MiscBasedEvents:
@@ -94,20 +93,19 @@ EnemyUnits:
 UNIT BadGuyStealable Brigand 0x1 Level(2, Enemy, 1)     [10,11] 0x0 0x0 0x0 0x0 [IronAxe,Vulnerary] TwoActionAI
 UNIT BadGuyStealable AArmor 0x1 Level(2, Enemy, 1)     [9,4] 0x0 0x0 0x0 0x0 [SteelAxe,EnergyRing] BossAI
 UNIT BadGuy Deserter 0x1 Level(3, Enemy, 1)     [3,10] 0x0 0x0 0x0 0x0 [IronLance] BossAI
-UNIT BadGuy Myrmidon 0x1 Level(2, Enemy, 1)     [7,10] 0x0 0x0 0x0 0x0 [IronSword] AttackInRangeAI
-UNIT Cultist Occultist 0x1 Level(2, Enemy, 1)     [8,6] 0x0 0x0 0x0 0x0 [Flux] AttackInRangeAI
+UNIT BadGuy Myrmidon 0x1 Level(2, Enemy, 1)     [7,9] 0x0 0x0 0x0 0x0 [IronSword] AttackInRangeAI
 UNIT BadGuy Brigand 0x1 Level(2, Enemy, 1)     [6,15] 0x0 0x0 0x0 0x0 [IronAxe,] ChargeAI
 UNIT Cultist Mage 0x1 Level(2, Enemy, 1)     [11,14] 0x0 0x0 0x0 0x0 [Fire,] ChargeAI
 UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [5,11] 0x0 0x0 0x0 0x0 [Flux,] AttackInRangeAI
 UNIT Cultist Myrmidon 0x1 Level(3, Enemy, 1)     [13,5] 0x0 0x0 0x0 0x0 [Sagitar,] AttackInRangeAI
 UNIT BadGuy PegRider 0x1 Level(2, Enemy, 1)     [9,0] 0x0 0x0 0x0 0x0 [IronLance,] StallOneTurnAI
-UNIT BadGuy PegRider 0x1 Level(2, Enemy, 1)     [13,1] 0x0 0x0 0x0 0x0 [SteelLance,] StallOneTurnAI
+UNIT BadGuy PegRider 0x1 Level(2, Enemy, 1)     [13,1] 0x0 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
 UNIT Cultist Shaman 0x1 Level(2, Enemy, 1)     [11,8] 0x0 0x0 0x0 0x0 [DarkTome2,] BossAI
 UNIT BadGuy Deserter 0x1 Level(2, Enemy, 1)     [13,10] 0x0 0x0 0x0 0x0 [SteelLance,] AttackInRangeAI
-UNIT BadGuy Raider 0x1 Level(2, Enemy, 1)     [6,7] 0x0 0x0 0x0 0x0 [IronSword,] TwoActionAI
+UNIT BadGuy Raider 0x1 Level(2, Enemy, 1)     [7,0] 0x0 0x0 0x0 0x0 [IronSword,] TwoActionAI
 UNIT BadGuy ACav 0x1 Level(2, Enemy, 1)     [5,3] 0x0 0x0 0x0 0x0 [IronAxe,] TwoActionAI
 UNIT BadGuy LCav 0x1 Level(3, Enemy, 1)     [0,1] 0x0 0x0 0x0 0x0 [IronLance,] StallOneTurnAI
-UNIT Cultist Thaumaturge 0x1 Level(2, Enemy, 1)     [14,8] DropItem 0x0 0x0 0x0 [Thunder,] StallOneTurnAI
+UNIT Cultist Thaumaturge 0x1 Level(2, Enemy, 0)     [14,8] DropItem 0x0 0x0 0x0 [Fire,RedGem] StallOneTurnAI
 UNIT BadGuy Pirate 0x1 Level(2, Enemy, 1)     [2,13] 0x0 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
 UNIT BadGuy SCav 0x1 Level(2, Enemy, 1)     [0,2] 0x0 0x0 0x0 0x0 [SteelSword,] StallOneTurnAI
 	UNIT
@@ -118,13 +116,12 @@ UNIT HolyGuard SCav 0x1 Level(3, Enemy, 1)     [0,1] 0b 0x0 0x0 0x0 [IronSword,]
 UNIT
 
 BoatEnemies:
-UNIT UPirate Pirate 0x1 Level(3, Enemy, 1)     [1,14] 0 0 1 REDA1R13 [IronAxe,] StallOneTurnAI
-UNIT UPirate Pirate 0x1 Level(2, Enemy, 1)     [1,14] 0b 0x0 0x0 0x0 [HandAxe] TwoActionAI
+UNIT UPirate Pirate 0x1 Level(3, Enemy, 1)     [1,14] 0 0 1 REDA1R13 [IronAxe,] TwoActionAI
 UNIT
 
 MountainEnemies:
-UNIT HolyGuard PegRider 0x1 Level(3, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
-UNIT HolyGuard PegRider 0x1 Level(3, Enemy, 1)     [12,0] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
+UNIT HolyGuard PegRider 0x1 Level(2, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
+UNIT HolyGuard PegRider 0x1 Level(3, Enemy, 1)     [12,0] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
 UNIT
 
 EastEnemies:
@@ -138,8 +135,8 @@ UNIT HolyGuard PegRider 0x1 Level(3, Enemy, 1)     [14,12] 0b 0x0 0x0 0x0 [Steel
 UNIT
 
 NorthEnemies:
-UNIT Cultist Shaman 0x1 Level(4, Enemy, 1)     [6,0] 0 0 1 REDA6R1 [DarkTome2] TwoActionAI
-UNIT Cultist Occultist 0x1 Level(3, Enemy, 1)     [7,0] 0 0 1 REDA7R1 [DarkTome1] ChargeAI
+UNIT Cultist Shaman 0x1 Level(4, Enemy, 1)     [7,18] 0 0 1 REDA7R17 [DarkTome2] TwoActionAI
+UNIT Cultist Occultist 0x1 Level(3, Enemy, 1)     [8,18] 0 0 1 REDA8R17 [DarkTome1] ChargeAI
 UNIT
 
 Traps1:
@@ -157,22 +154,55 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-Music(Advance)
-	LOAD1 0x1 Units1
+SetBackground(0x35)
+Music(0xA9)
+FADU 15
+Text(Ch2Opening1)
+SetBackground(0x2B)
+SOUN 0xA6
+STAL 3
+SOUN 0xA7
+STAL 5
+SOUN 0xA6
+STAL 3
+SOUN 0xA7
+STAL 5
+SOUN 0xA6
+STAL 3
+SOUN 0xA7
+STAL 5
+MUSCSLOW 0x24
+CharacterConditionalDialog(Evelyn,Ch2Opening2,Ch2OpeningAlt2)
+FADI 60
 	LOAD1 0x1 EnemyUnits
-	ENUN
-	FADI 20
 	LOAD1 0x1 LunaPirate
 	ENUN
 	CUSE Pandoro
 	CUSE Irene
-	FADU 10
-	CenterTextbox(InfoCh2)
-	GotoPrepScreen
+CLEAN
+FADU 60
+STAL 10
+CameraCursor(Irene)
+STAL 3
+CameraCursor(Pandoro)
+STAL 15
+MUSC 0x4B
+Text(Ch2Opening3)
+STAL 10
+FADI 60
+SetBackground(0x3F)
+Text(Ch2Opening4)
+GotoPrepScreen
 	ENDA
 
 EndingScene:
-MusicChange(VictorySadBGM)
+MUSI
+Text(Ch2Ending1)
+MUNO
+MusicChange(VictoryBGM)
+STAL 15
+SetBackground(0x3B)
+DoubleIfAliveDialog(Irene,Pandoro,Ch2Ending2,1)
 	MNC2 0x3
 	NoFade
 	ENDA
@@ -184,27 +214,36 @@ CamOn
 ENUN
 CUMO[9,2]
 STAL 60
-Text(Placeholder1)
+CURE
+Text(Ch2MochaAppear1)
 STAL 30
 MOVE 0x3C Mocha [14,0]
 ENUN
 DISA Mocha
-CamOff
-	NoFade
-ENDA
-
-MochaRecruit:
+STAL 5
 CAM1 [2,1]
 	LOAD1 0x1 WoohooPeg
 CameraCursor(Mocha)
-Text(Placeholder2)
+MUSS 0x30
+Text(Ch2MochaAppear2)
+CamOff
 	NoFade
 ENDA
 
 PandoroRecruit:
 MUSS 0x30
 STAL 33
-Text(Placeholder1)
+Text(PanUlrichRecruit)
+MURE 0x2
+CUSA Pandoro
+CUSA Irene
+NoFade
+ENDA
+
+PandoroAffoRecruit:
+MUSS 0x30
+STAL 33
+Text(PanAffoRecruit)
 MURE 0x2
 CUSA Pandoro
 CUSA Irene
@@ -214,7 +253,17 @@ ENDA
 BreneRecruit:
 MUSS 0x30
 STAL 33
-Text(Placeholder2)
+Text(IreneAffoRecruit)
+MURE 0x2
+CUSA Pandoro
+CUSA Irene
+NoFade
+ENDA
+
+BreneBreveRecruit:
+MUSS 0x30
+STAL 33
+Text(IreneBreveRecruit)
 MURE 0x2
 CUSA Pandoro
 CUSA Irene
@@ -280,16 +329,12 @@ ENDA
 
 OhHeckItHim:
 CAM1[7,8]
-Text(HouseBG2, Placeholder1)
+Text(HouseBG2, Ch2OgrimAppear1)
 LOAD1 0x1 OhGodOhFuck
 CameraCursor(0x69)
 	TEXTSTART
-	Text(Placeholder2)
+	Text(Ch2OgrimAppear2)
 	TEXTEND
-CameraCursor(Affogato)
-TEXTSTART
-Text(Placeholder2)
-TEXTEND
 ENUT 0x18
 NoFade
 ENDA

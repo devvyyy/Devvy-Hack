@@ -2,6 +2,11 @@
 
 //fetches the appropriate palette based on unit allegiance and returns to 80885a4
 
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq End
+
 ldr r2,=0x202bcc4
 ldrh r0,[r2] @xcoord
 ldrh r1,[r2,#2] @ycoord

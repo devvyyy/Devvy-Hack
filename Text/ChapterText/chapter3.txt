@@ -3,17 +3,17 @@
 Eis,[.4] Captain! Hostiles are approaching[N]
 the city![AN]
 [OpenFarLeft][LoadEis][OpenLeft][LoadStroganoff]
-[OpenFarLeft][Pause]{CloseEyes]Shamans,[.4] huh?[.6] [OpenEyes]I really don't get[N]
+[OpenFarLeft][Pause][CloseEyes]Shamans,[.4] huh?[.6] [OpenEyes]I really don't get[N]
 paid enough for this.[AN]
 [OpenLeft]Stand behind me.[.6] I'm sure[N]
 aid is comin'.[AN]
-Got it?[.6] We fight until[N]
-our last breaths![A][X]
+Got it?[.6] Defend the[N]
+city at all costs![A][X]
 
 ## Ch3Opening2
-[OpenMidLeft][LoadUlrich][OpenRight][LoadAffogato]
+[OpenMidLeft][LoadUlrich][OpenMidRight][LoadAffogato]
 [OpenMidRight]I've scouted ahead,[.4] sir.[.6][N]
-There seems to be a skirmish.[AN]
+There seems to be a skirmish.[AN][MoveRight]
 [OpenFarRight][LoadHildr]
 Captain Stroganoff and his men[N]
 are up ahead![AN]
@@ -49,11 +49,14 @@ occultist the leader?[AN]
 [OpenLeft][Beat] [Beat][N]
 You can't even say?[AN]
 [OpenFarLeft][LoadUlrich]
-[Beat][AN]
+[Beat][AN][Event]
 [OpenFarRight]This isn't over.[.6][ToggleSmile] Everything[N]
 is falling into place.[AN]
 Remember that,[.4] accursed[N]
-knights![A][CloseEyes][0x80][0x2D][0x8A][0x8E][0x80][0x80][.4][0x80][0x2D][0x86][0x8D][0x80][0x80][X]
+knights![A][CloseEyes][0x80][0x2D][0x8A][0x8E][0x80][0x80][.4][0x80][0x2D][0x86][0x8D][0x80][0x80]
+[OpenLeft]He[Beat] He's[Beat][AN]
+[MoveFarLeft]A coward.[.6] Come.[.6] There's[N]
+nothing left to obtain from this.[A][X]
 
 ## Ch3Ending2
 [OpenMidLeft][LoadStroganoff][OpenRight][LoadAffogato][OpenFarRight][LoadUlrich]
@@ -122,6 +125,27 @@ once,[.4] then.[AN]
 [OpenMidLeft]Indeed.[.6] We must prevent anything[N]
 like this from happening again.[A][X]
 
+## Ch3ReinWarning
+[OpenLeft][LoadAlicot]We're in control of[N]
+Athium.[AN]
+We surround the rest of[N]
+them with reinforcements![A][X]
+
+## StroganTalk
+[OpenMidLeft][LoadStroganoff][MidRight][LoadFace][0xFF][0xFF]
+[OpenMidLeft]So help did arrive[Beat][N]
+Very well![A][X]
+
+## EisTalk
+[OpenMidLeft][LoadEis][MidRight][LoadFace][0xFF][0xFF]
+[OpenMidLeft][ToggleSmile]Sheesh,[ToggleSmile][.4] took you long[N]
+enough.[A][X]
+
+## DoppioTalk
+[OpenMidLeft][LoadDoppio][MidRight][LoadFace][0xFF][0xFF]
+[OpenMidLeft]If you're here to help,[.4][N]
+thank you so much![A][X]
+
 ## LifeRingVillageText
 # verified
 [MidRight][LoadFace][0xFF][0xFF]
@@ -154,6 +178,18 @@ But still,[.4] what a cool-looking[N]
 sword,[.4] right?[AN]
 Take it as thanks for defending[N]
 the city![A][X]
+
+## FountainHouseText
+# verified
+[MidRight][LoadFace][0xFF][0xFF]
+[MidLeft][LoadMoneyman]The fountain was built[N]
+at the city's founding.[AN]
+It's been a beacon of hope[N]
+for the city every since.[AN]
+Apparently the waters are[N]
+holy,[.4] or something.[AN]
+But I've never stepped in[N]
+them,[.4] so who knows?[A][X]
 
 ## AlicotBossQ
 # verified

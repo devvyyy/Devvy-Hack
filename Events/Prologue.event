@@ -33,9 +33,9 @@ TURN 0x0 ShamanRein3 [9,0] 0x0
 END_MAIN
 
 CharacterBasedEvents:
-//CharacterEventBothWays(0x10,AffoBreveConvo, Affo, Breve)
-//CharacterEventBothWays(0xB,HildrUlrichConvo, Hildr, Ulrich)
-//CharacterEventBothWays(0xC,AnsgarAffoConvo, Ansgar, Affo)
+CharacterEventBothWays(0x10,AffoBreveConvo, Affo, Breve)
+CharacterEventBothWays(0xB,HildrUlrichConvo, Hildr, Ulrich)
+CharacterEventBothWays(0xC,AnsgarAffoConvo, Ansgar, Affo)
 END_MAIN
 
 AffoBreveConvo:
@@ -70,6 +70,7 @@ Seize(2,2)
 END_MAIN
 
 MiscBasedEvents:
+AREA 0xE WallSus [10,5] [14,8]
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -143,28 +144,6 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
-LOAD1 0x1 EnemyUnits
-LOAD1 0x1 EnemyUnits2
-LOAD1 0x0 Units1
-ENUN
-FADU 20
-CenterTextbox(InfoCh1)
-ENUN
-STAL 10
-CameraCursor(Affogato)
-STAL 5
-FADI 16
-GotoPrepScreen
-ENDA
-
-EndingScene:
-Music(VictoryBGM)
-MNC2 0x1
-STAL 10
-NoFade
-ENDA
-
-BeginningScene2:
 MUSC 0x48
 LOAD1 0x1 EnemyUnits
 ENUN
@@ -193,7 +172,7 @@ MUSC 0x4E
 TEXTSTART
 TEXTSHOW Prologue2
 TEXTEND
-MUSC 0x24
+MUSC 0x92
 TEXTCONT
 TEXTEND
 REMA
@@ -207,8 +186,8 @@ FADI 16
 GotoPrepScreen
 ENDA
 
-EndingScene2:
-Music(0x31)
+EndingScene:
+Music(0x32)
 SetBackground(0x3C)
 IfAliveDialog(Breve,EndingSceneBrevePrologue)
 CHECK_ALIVE Hildr
@@ -271,11 +250,18 @@ SVAL 0x1 0x03030000 // sets ai to [0x3,0x3,0x0,0x0]
 CHAI [8,11] // changes the ai of this coordinate
 SVAL 0x1 0x00120400 // sets ai to [0x0,0x12,0x4,0x0]
 CHAI [1,10] // changes the ai of this coordinate
-SVAL 0x1 0x0003000 // sets ai to [0x0,0x3,0x0,0x0]
+SVAL 0x1 0x00030000 // sets ai to [0x0,0x3,0x0,0x0]
 CHAI [5,10] // changes the ai of this coordinate
 SVAL 0x1 0x00030000 // sets ai to [0x0,0x3,0x0,0x0]
 CHAI [12,9] // changes the ai of this coordinate
 SVAL 0x1 0x00060400 // sets ai to [0x0,0x6,0x4,0x0]
 CHAI [4,5] // changes the ai of this coordinate
+NoFade
+ENDA
+
+WallSus:
+CameraCursor(Affogato)
+CAM1 [12,3]
+Text(WhenTheWallIsSus)
 NoFade
 ENDA

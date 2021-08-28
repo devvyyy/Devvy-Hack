@@ -20,12 +20,21 @@ TURN 0x0 LeftRein [7,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-//CharacterEventBothWays(0xA,SeqEvelConvo, Sequin, Evelyn)
+CharacterEventBothWays(0xA,SeqEvelConvo, Sequin, Evelyn)
+CharacterEventBothWays(0xB,AffoUlrichConvo, Affogato, Ulrich)
 	END_MAIN
 
 SeqEvelConvo:
 	MUSI
 	Text(SeqEvelTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+AffoUlrichConvo:
+	MUSI
+	Text(AffoUlrichCh1Talk)
 	MUNO
 	MURE 2
 	NoFade
@@ -86,25 +95,40 @@ UNIT Cultist Occultist 0x1 Level(1, Enemy, 1)     [15,1] 0 0 1 REDA15R6 [Flux] T
 UNIT Cultist Mage 0x1 Level(1, Enemy, 1)     [0,8] 0 0 1 REDA3R8 [Fire] AttackInRangeAI
 UNIT BadGuy Deserter 0x1 Level(1, Enemy, 1)     [5,10] 0 0 1 REDA5R9 [IronGlaive] AttackInRangeAI
 UNIT Kisra Priest 0x1 Level(3, Enemy, 1)     [9,10] 0 0 1 REDA9R9 [Mend] [0x0E,0x0,0x0,0x20]
-UNIT BadGuyStealable LArmor 0x1 Level(2, Enemy, 1)     [7,2] 0 0 1 REDA5R2 [Javelin,Vulnerary] BossAI
+UNIT BadGuyStealable LArmor 0x1 Level(2, Enemy, 1)     [7,2] 0 0 1 REDA5R2 [Javelin,Vulnerary] [0x0,0x3,0x0,0x20]
 UNIT BadGuy Pirate 0x1 Level(1, Enemy, 1)     [0,1] 0 0 1 REDA0R3 [IronAxe] StallOneTurnAI
 UNIT BadGuy Pirate 0x1 Level(1, Enemy, 1)     [0,4] 0 0 1 REDA1R4 [SteelAxe] StallOneTurnAI
 UNIT BadGuy PegRider 0x1 Level(1, Enemy, 1)     [14,10] 0 0 1 REDA13R10 [HeavySpear,IronLance] AttackInRangeAI
 	UNIT
 	
 Rein1:
-UNIT Cultist Occultist 0x1 Level(2, Enemy, 1)     [15,9] 0x0 0x0 0x0 0x0	 [Flux] ChargeAI
+UNIT Cultist Occultist 0x1 Level(2, Enemy, 1)     [15,9] 0x0 0x0 0x0 0x0 [Flux] ChargeAI
 UNIT BadGuy Pirate 0x1 Level(2, Enemy, 1)     [15,10] 0x0 0x0 0x0 0x0 [SteelAxe] ChargeAI
 	UNIT
 	
 Rein2:
-UNIT BadGuy Shaman 0x1 Level(2, Enemy, 1)     [6,10] 0x0 0x0 0x0 0x0 [DarkTome2] ChargeAI
+UNIT BadGuy Shaman 0x1 Level(2, Enemy, 1)     [6,10] 0x0 0x0 0x0 0x0 [DarkTome2] StallOneTurnAI
 UNIT BadGuy SCav 0x1 Level(2, Enemy, 1)     [5,10] 0x0 0x0 0x0 0x0 [SteelSword] ChargeAI
 	UNIT
 	
 Rein3:
 UNIT BadGuy Deserter 0x1 Level(2, Enemy, 1)     [0,7] 0x0 0x0 0x0 0x0 [Horseslayer] ChargeAI
 UNIT BadGuy Hunter 0x1 Level(2, Enemy, 1)     [0,8] 0x0 0x0 0x0 0x0 [SteelBow] ChargeAI
+	UNIT
+	
+CutsceneUnits:
+UNIT Affogato Hunter 0x1 Level(1, Ally, 1)     [8,0] 0 0 1 REDA8R1 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Ulrich APaladin 0x1 Level(1, Ally, 1)     [9,0] 0 0 1 REDA9R1 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+	UNIT
+	
+EndCutsceneUnits:
+UNIT Affogato Hunter 0x1 Level(1, Ally, 1)     [3,2] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Ulrich APaladin 0x1 Level(1, Ally, 1)     [1,2] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Evel Troubadour 0x1 Level(1, Ally, 1)     [2,3] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Breve SCav 0x1 Level(1, Ally, 1)     [4,6] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Hildr ACav 0x1 Level(1, Ally, 1)     [2,8] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Ansgar LArmor 0x1 Level(1, Ally, 1)     [3,7] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Sequin ACav 0x1 Level(1, Ally, 1)     [3,1] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
 	UNIT
 
 WaterRein:
@@ -133,16 +157,109 @@ Traps2:
 BeginningScene:
 	LOAD1 0x1 EvelynUnit
 	LOAD1 0x1 EnemyUnits
-	CenterTextbox(InfoCh1)
+Music(0x47)
+SetBackground(0x3C)
+Text(Ch1Opening1)
+FADI 20
+CLEAN
+CameraCursor(0x47)
+Text(Ch1Opening2)
+	LOAD2 0x1 CutsceneUnits
 	ENUN
+STAL 10
+Text(Ch1Opening3)
 	GotoPrepScreen
 	ENDA
 
 EndingScene:
+FADI 30
+DoAllThree
+LOMA 0x48
+LOAD2 0x1 EndCutsceneUnits
 Music(VictoryBGM)
-	MNC2 0x2
+SetBackground(0x36)
+CHECK_ALIVE Sequin
+BEQ 1 0x0 0xC
+CHECK_ALIVE Breve
+BEQ 1 0x0 0xC
+CHECK_ALIVE Hildr
+BEQ 1 0x0 0xC
+Text(Ch1Ending1)
+FADI 20
+CLEAN
+FADU 20
+GOTO 2
+LABEL 1
+Text(Ch1EndingAlt1)
+FADI 20
+CLEAN
+FADU 20
+LABEL 2
+STAL 10
+CamOn
+STAL 30
+CHECK_ALIVE Sequin
+BEQ 776 0x0 0xC
+MOVE 0xD Affogato [15,3]
+MOVE 0xD Sequin [15,4]
+ENUN
+REMU Affogato
+REMU Sequin
+GOTO 777
+LABEL 776
+MOVE 0xD Affogato [15,3]
+ENUN
+REMU Affogato
+LABEL 777
+FADI 60
+CamOff
+CLEAN
+REVEAL Affogato
+REVEAL Sequin
+SetBackground(0x3F)
+Music(0x53) //River sounds
+STAL 5
+TripleIfAliveDialog(Breve,Hildr,Ansgar,Ch1Ending2,3)
+FADI 60
+CLEAN
+SetBackground(0x3A)
+MUSCSLOW 0x4A
+CHECK_ALIVE Ansgar
+BEQ 5 0x0 0xC
+CHECK_ALIVE Breve
+BEQ 4 0x0 0xC
+CHECK_ALIVE Hildr
+BEQ 4 0x0 0xC
+GOTO 5
+Text(Ch1Ending3Alt2)
+STAL 10
 GiveItem(SnaringRifle,Affogato)
 GiveGold(1000)
+Text(Ch1Ending3Alt2Point5)
+GOTO 6
+LABEL 4
+Text(Ch1Ending3Alt1)
 STAL 10
-	NoFade
-	ENDA
+GiveItem(SnaringRifle,Affogato)
+GiveGold(1000)
+Text(Ch1Ending3Point5)
+GOTO 6
+LABEL 5
+Text(Ch1Ending3)
+STAL 10
+GiveItem(SnaringRifle,Affogato)
+GiveGold(1000)
+Music(0x4A) //Night Ambience
+Text(Ch1Ending3Point5)
+LABEL 6
+CHECK_ALIVE Evelyn
+BEQ 7 0x0 0xC
+Text(Ch1Ending4)
+GOTO 8
+LABEL 7
+Text(Ch1EndingAlt4)
+LABEL 8
+STAL 10
+MNC2 0x2
+NoFade
+ENDA

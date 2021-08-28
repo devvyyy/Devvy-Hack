@@ -8,11 +8,12 @@ Map:
 #incbin "Chapter5_data.dmp"
 
 MapChanges:
-TileMap(0,1,14,1,1,WestDoor)
 TileMap(1,0,12,3,3,WestDestroy)
-TileMap(2,13,6,1,1,EastDoor)
+TileMap(0,1,14,1,1,WestDoor)
 TileMap(3,12,4,3,3,EastDestroy)
+TileMap(2,13,6,1,1,EastDoor)
 TileMap(4,7,4,3,1,Ch4Snag)
+TileMap(4,7,4,3,1,Ch4Snag2)
 TileMapEnd
 
 WestDoor:
@@ -28,10 +29,14 @@ SHORT 0x80
 ALIGN 4
 
 EastDestroy:
-SHORT 0xc1c 0xc20 0xc24 0xc9c 0xca0 0xca4 0xd1c 0xd20 0xd24 0xd0 0xf0 
+SHORT 0xc1c 0xc20 0xc24 0xc9c 0xca0 0xca4 0xd1c 0xd20 0xd24 
 ALIGN 4
 
 Ch4Snag:
 SHORT 0xc 0x94 0xa0 
+ALIGN 4
+
+Ch4Snag2:
+SHORT 0xc 0x94 0x94 0xa0 
 ALIGN 4
 
