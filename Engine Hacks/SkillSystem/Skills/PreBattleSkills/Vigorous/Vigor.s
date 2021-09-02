@@ -14,10 +14,17 @@ ldr r1, VigorID
 cmp r0, #0
 beq End
 
+@make sure we're in combat (or combat prep)
+ldrb r3, =gBattleData
+ldrb r3, [r3]
+cmp r3, #4
+beq End
+
+
 @add hp/4 attack
 mov  r1, #0x5A
 ldrh r0, [r4, r1] @attack
-ldrb r2, [r4, #0x13] @current hp
+ldrb r2, [r4, #0x14] @current hp
 lsr  r2, #2
 add  r0, r2
 strh r0, [r4,r1]

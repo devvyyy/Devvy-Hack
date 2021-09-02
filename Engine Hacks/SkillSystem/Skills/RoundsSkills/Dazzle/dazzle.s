@@ -16,6 +16,11 @@ and r0, r1
 cmp r0, #0
 bne Uncounterable
 
+ldrb r0, [r4, #0x14] @attacker str
+ldrb r1, [r5, #0x14] @defender str
+cmp r0, r1
+ble Normal @skip if str is less or equal
+
 @otherwise check skill ONLY on the attacker
 ldr r0, SkillTester
 mov lr, r0
@@ -33,7 +38,6 @@ ldr r1, MoonlightID
 .short 0xf800
 cmp r0, #0
 beq Normal @if not, we can counter
-
 
 Uncounterable:
 mov r3, r5

@@ -1,6 +1,75 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+//Fix Large Level up screens
+//by Tequila
+PUSH
+ORG 0x73758
+BYTE 0x00 0x3C 0x00 0x06
+ORG 0x73D2C
+BYTE 0x1C 0x22 0x12 0x02
+ORG 0x73722
+BYTE 0xF0 0x22
+POP
+
+//Faster Movement when holding A
+PUSH
+ORG 0x079514
+BYTE 0x80
+POP
+
+//Faster Map Animations
+//by 7743
+PUSH
+ORG 0x9A47B6
+BYTE 0x01
+ORG 0x9A47C6
+BYTE 0x01
+ORG 0x9A480E
+BYTE 0x01
+
+//Removes delay at start
+ORG 0x9A352A
+BYTE 0x01
+ORG 0x9A3542
+BYTE 0x01
+ORG 0x9A356A
+BYTE 0x01
+ORG 0x9A360A
+BYTE 0x01
+ORG 0x9A362A
+BYTE 0x01
+POP
+
+//Faster Animations (removes background delay)
+//by 7743
+PUSH
+ORG 0x59DAEE
+BYTE 0x01
+POP
+
+//Faster EXP Bars
+//by 7743
+PUSH
+ORG 0x9A3722
+BYTE 0x02
+ORG 0x9A3732
+BYTE 0x00
+ORG 0x9A3742
+BYTE 0x01
+ORG 0x9A3752
+BYTE 0x01
+POP
+
+//Map-Wide Support Range
+//by Venno
+PUSH
+ORG $284E4
+	BYTE 0x00 0x00 0x04 0xE0
+ORG $28442
+	BYTE 0x6D 0xD1
+POP
+
 //Allows MNC2 To jump to any chapter ID
 //by Kirb
 PUSH
@@ -396,6 +465,12 @@ PrepScreenShop:
 SHLI IronSword IronBlade IronLance IronGlaive IronAxe IronLabrys IronBow IronRifle Fire 0x3F 0x45 Heal Vulnerary
 WORD 0x0
 ALIGN 4
+
+// New Support Table
+PUSH
+  ORG 0x803D90
+    POIN NewSupportTable
+POP
 
 ALIGN 16
 //By Runa, requires Stan's AI Fix

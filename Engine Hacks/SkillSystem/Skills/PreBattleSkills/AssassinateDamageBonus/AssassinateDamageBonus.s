@@ -27,11 +27,11 @@ ldr r1, AssassinateID
 cmp r0, #0
 beq End
 
-@add 2 damage
-mov r1, #0x5a
-ldrh r0, [r4, r1] @atk
-add r0, #2
-strh r0, [r4,r1]
+//@add 2 damage
+//mov r1, #0x5a
+//ldrh r0, [r4, r1] @atk
+//add r0, #0
+//strh r0, [r4,r1]
 
 End:
 pop {r4-r7}

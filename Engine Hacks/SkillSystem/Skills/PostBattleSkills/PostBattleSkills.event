@@ -10,6 +10,14 @@ CheckGaleforce: //decides if the unit should be cantoing or not
 #incbin "Galeforce/checkgaleforce.dmp"
 
 ALIGN 4
+LionheartDamage:
+#incbin "Lionheart/Lionheart.dmp"
+POIN SkillTester
+WORD LionheartID
+POIN FuryEvent
+#include "Fury/FuryEvent.event"
+
+ALIGN 4
 Lifetaker:
 #incbin "Lifetaker/lifetaker.dmp"
 POIN SkillTester

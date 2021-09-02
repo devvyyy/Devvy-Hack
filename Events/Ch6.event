@@ -31,8 +31,8 @@ TURN 0x0 TriggerHappyHavoc [13,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-//CharacterEventBothWays(0x10,AffoGorloisConvo, Affo, Gorlois)
-//CharacterEventBothWays(0x11,IronRuneConvo, Gorlois, Stroganoff)
+CharacterEventBothWays(0x10,AffoGorloisConvo, Affo, Gorlois)
+CharacterEventBothWays(0x11,IronRuneConvo, Gorlois, Stroganoff)
 	END_MAIN
 
 ALIGN 32
@@ -159,6 +159,11 @@ UNIT BadGuy Pirate 0x1 Level(6, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [ShortAxe,] 
 UNIT BadGuy Hunter 0x1 Level(6, Enemy, 1)     [16,12] 0b 0x0 0x0 0x0 [SteelBow] AttackInRangeAI
 UNIT BadGuy Hunter 0x1 Level(6, Enemy, 1)     [4,3] 0b 0x0 0x0 0x0 [KillerBow] ChargeAI
 UNIT BadGuy Shaman 0x1 Level(7, Enemy, 1)     [4,10] 0b 0x0 0x0 0x0 [Flux] AttackInRangeAI
+	UNIT
+	
+RecruitsAgain:
+UNIT Lennard Deserter 0x1 Level(6, Ally, 0)     [7,4] 0b 0x0 0x0 0x0 [IronGlaive,Javelin] [0x0,0x0,0x0,0x0]
+UNIT Therese SArmor 0x1 Level(7, Ally, 0)     [5,4] 0b 0x0 0x0 0x0 [SteelBlade,Mine] [0x0,0x0,0x0,0x0]
 	UNIT
 	
 WyvernAndPeg:
@@ -473,6 +478,7 @@ ENDA
 BeginningScene:
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 RedSussy
+	LOAD1 0x1 RecruitsAgain
 	CenterTextbox(InfoCh6)
 	CenterTextbox(Ch6ObjectiveWarning)
 	ENUN
@@ -481,7 +487,7 @@ BeginningScene:
 	
 AffoGorloisConvo:
 	MUSI
-	Text(Placeholder2)
+	Text(AffoGorloisTalk)
 	MUNO
 	MURE 2
 	NoFade
@@ -489,7 +495,7 @@ AffoGorloisConvo:
 	
 IronRuneConvo:
 	MUSI
-	Text(Placeholder1)
+	Text(Ch6IntroTextGorlois)
 	MUNO
 	MURE 2
 GiveItem(Lightrune, Stroganoff)

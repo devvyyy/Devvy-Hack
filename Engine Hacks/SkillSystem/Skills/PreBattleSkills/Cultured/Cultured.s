@@ -24,11 +24,11 @@ ldr r1, NiceThighsID
 cmp r0, #1
 bne GoBack
 
-mov r0,r4
-add r0,#0x60
-ldrh r1,[r0]
-sub r1,#50
-strh r1,[r0]
+//mov r0,r4
+//add r0,#0x60
+//ldrh r1,[r0]
+//sub r1,#50
+//strh r1,[r0]
 
 GoBack:
 pop {r4-r7, r15}

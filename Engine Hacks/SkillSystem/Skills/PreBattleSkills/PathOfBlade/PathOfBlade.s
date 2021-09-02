@@ -6,8 +6,8 @@ mov r4, r0 @atkr
 mov r5, r1 @dfdr
 
 @Only has 1 item
-mov r1, #0x24
-ldrb r0, [r2, r1] @second item in inventory
+mov r1, #0x20
+ldrb r0, [r4, r1] @second item in inventory
 cmp r0, #0x0 		 @This item is empty
 bne End @skip if holding 2 items
 

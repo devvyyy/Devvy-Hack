@@ -4,6 +4,27 @@ SkillIcons:
 //Icon graphics are uncompressed
 #define SkillIcon(skillID) "128*skillID+SkillIcons"
 
+ORG SkillIcon(ChainReactionID)
+#incbin "SkillIcons/ChainReaction.dmp"
+
+ORG SkillIcon(BorrowedTimeID)
+#incbin "SkillIcons/BorrowedTime.dmp"
+
+ORG SkillIcon(ShowStopperID)
+#incbin "SkillIcons/ShowStopper.dmp"
+
+ORG SkillIcon(MaestroID)
+#incbin "SkillIcons/Maestro.dmp"
+
+ORG SkillIcon(StarseerID)
+#incbin "SkillIcons/GiftoftheFallen.dmp"
+
+ORG SkillIcon(PathOfBladeID)
+#incbin "SkillIcons/OneBladeArmy.dmp"
+
+ORG SkillIcon(LionheartID)
+#incbin "SkillIcons/Fury.dmp"
+
 ORG SkillIcon(SearingSwordID)
 #incbin "SkillIcons/SearingSword.dmp"
 

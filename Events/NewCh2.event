@@ -38,7 +38,7 @@ AFEV 0x0 EndingScene 0x3
 	END_MAIN
 
 LocationBasedEvents:
-Chest(Slow,0,12)
+Chest(Slow,1,9)
 Arrive(0,1)
 Arrive(0,2)
 Village(0x20,SallyCars,13,3)	
@@ -111,8 +111,8 @@ UNIT BadGuy SCav 0x1 Level(2, Enemy, 1)     [0,2] 0x0 0x0 0x0 0x0 [SteelSword,] 
 	UNIT
 	
 BridgeEnemies:
-UNIT HolyGuard ACav 0x1 Level(2, Enemy, 1)     [0,2] 0b 0x0 0x0 0x0 [SteelAxe,] StallOneTurnAI
-UNIT HolyGuard SCav 0x1 Level(3, Enemy, 1)     [0,1] 0b 0x0 0x0 0x0 [IronSword,] StallOneTurnAI
+UNIT BadGuy ACav 0x1 Level(2, Enemy, 1)     [0,2] 0b 0x0 0x0 0x0 [SteelAxe,] StallOneTurnAI
+UNIT BadGuy SCav 0x1 Level(3, Enemy, 1)     [0,1] 0b 0x0 0x0 0x0 [IronSword,] StallOneTurnAI
 UNIT
 
 BoatEnemies:
@@ -120,8 +120,8 @@ UNIT UPirate Pirate 0x1 Level(3, Enemy, 1)     [1,14] 0 0 1 REDA1R13 [IronAxe,] 
 UNIT
 
 MountainEnemies:
-UNIT HolyGuard PegRider 0x1 Level(2, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
-UNIT HolyGuard PegRider 0x1 Level(3, Enemy, 1)     [12,0] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
+UNIT BadGuy PegRider 0x1 Level(2, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
+UNIT BadGuy PegRider 0x1 Level(3, Enemy, 1)     [12,0] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
 UNIT
 
 EastEnemies:
@@ -130,13 +130,13 @@ UNIT Cultist Occultist 0x1 Level(3, Enemy, 1)     [0,5] 0b 0x0 0x0 0x0 [DarkTome
 UNIT
 
 SouthEnemies:
-UNIT HolyGuard PegRider 0x1 Level(3, Enemy, 1)     [14,11] 0b 0x0 0x0 0x0 [Horseslayer] ChargeAI
-UNIT HolyGuard PegRider 0x1 Level(3, Enemy, 1)     [14,12] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
+UNIT BadGuy PegRider 0x1 Level(3, Enemy, 1)     [14,11] 0b 0x0 0x0 0x0 [Horseslayer] ChargeAI
+UNIT BadGuy PegRider 0x1 Level(3, Enemy, 1)     [14,12] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
 UNIT
 
 NorthEnemies:
-UNIT Cultist Shaman 0x1 Level(4, Enemy, 1)     [7,18] 0 0 1 REDA7R17 [DarkTome2] TwoActionAI
-UNIT Cultist Occultist 0x1 Level(3, Enemy, 1)     [8,18] 0 0 1 REDA8R17 [DarkTome1] ChargeAI
+UNIT Cultist Shaman 0x1 Level(4, Enemy, 1)     [14,0] 0 0 1 REDA14R13 [DarkTome2] TwoActionAI
+UNIT Cultist Occultist 0x1 Level(3, Enemy, 1)     [14,4] 0b 0x0 0x0 0x0 [DarkTome1] ChargeAI
 UNIT
 
 Traps1:

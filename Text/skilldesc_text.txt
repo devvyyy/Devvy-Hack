@@ -1,3 +1,17 @@
+## SD_SoulSplitter
+Soul Splitter: Grants AS = Foe's Res/2.[N]
+Foe loses AS = Unit's Res/2.[X]
+
+## SD_RagingStorm
+Raging Storm: If unit initiates and is[N]
+not adjacent to an ally, grants unit[N]
+another action (once per turn).[X]
+
+## SD_Lionheart
+Lionheart: Reduces damage taken by[N]
+3 during combat, but take 1 damage[N]
+after combat.[X]
+
 ## SD_BladeFan
 Heavy Weapons Fan: If unit is using[N]
 a Blade, Glaive, Labrys, or Rifle,[N]
@@ -10,8 +24,8 @@ grants Atk +3/Hit +10.[X]
 
 ## SD_DesolateBlade
 Desolate Blade: Attacks mark target for[N]
-1 turn/combat. Marked targets take 25% max HP[N]
-damage and heal unit the same amount.[X]
+1 turn/combat. Marked foes take 25% max HP[N]
+bonus damage and heal unit the same amount.[X]
 
 ## SD_AssassinBossSkill
 Spirit Cleave: Deals bonus damage equal[N]
@@ -151,10 +165,6 @@ unit strikes twice on initiation.[X]
 Third Eye: Grants bonus Hit equal[N]
 to foe's missing HP.[X]
 
-## SD_HeavyImpact
-Heavy Impact: If unit initiates,[N]
-foe cannot make a follow-up.[X]
-
 ## SD_Forlorn
 Forlorn: If unit is not adjacent to[N]
 an ally, foe cannot make a follow-up.[X]
@@ -177,7 +187,7 @@ allies Str/Spd +2.[X]
 
 ## SD_Conniving
 Conniving: Unit can steal items, pick[N]
-locks, and gets +2 tiles of vision in[N]
+locks, and gets +2 spaces of vision in[N]
 fog/darkness.[X]
 
 ## SD_Respite
@@ -227,8 +237,8 @@ Sidestep: Unit can move 2 spaces[N]
 after action.[X]
 
 ## SD_Vigor
-Vigor: Boosts unit's Atk by 25%[N]
-of unit's current HP.[X]
+Requiem: Multiplies Ether[N]
+by 1.25x during combat.[X]
 
 ## SD_Defeatist
 Defeatist: If unit's HP is below[NL]
@@ -334,7 +344,7 @@ after certain actions.[X]
 
 ## SD_Cunning
 Cunning: Unit can steal items, pick[N]
-locks, and gets +2 tiles of vision in[N]
+locks, and gets +2 spaces of vision in[N]
 fog/darkness.[X]
 
 ## SD_Lethality
@@ -501,30 +511,30 @@ Just thought I'd point them out.[X]
 
 ## SD_Demoiselle
 Demoiselle: Male allies within[N]
-2 tiles receive -2 damage.[X]
+2 spaces receive -2 damage.[X]
 
 ## SD_Gentilhomme
 Gentilhomme: Female allies within[N]
-2 tiles receive -2 damage.[X]
+2 spaces receive -2 damage.[X]
 
 ## SD_MaleficAura
 Malefic Aura: Enemies within 2[N]
-tiles receive +2 magic damage.[X]
+spaces receive +2 magic damage.[X]
 
 ## SD_Inspiration
-Inspiration: Allies within 2 tiles[N]
+Inspiration: Allies within 2 spaces[N]
 deal +2 damage and receive -2 damage.[X]
 
 ## SD_Charm
 Charm: Allies within 2[N]
-tiles deal +2 damage.[X]
+spaces deal +2 damage.[X]
 
 ## SD_VoiceOfPeace
 Voice of Peace: Enemies within[N]
-2 tiles deal -2 damage.[X]
+2 spaces deal -2 damage.[X]
 
 ## SD_Amaterasu
-Amaterasu: Allies within 2 tiles[N]
+Amaterasu: Allies within 2 spaces[N]
 recover 20% HP each turn.[X]
 
 ## SD_SpurStr
@@ -569,39 +579,39 @@ Colossus: Triples Strength.[N]
 
 ## SD_RallyStr
 Rally Strength: +4 Str[N]
-to allies within 2 tiles.[X]
+to allies within 2 spaces.[X]
 
 ## SD_RallyMag
 Rally Magic: +4 Mag to[N]
-allies within 2 tiles.[X]
+allies within 2 spaces.[X]
 
 ## SD_RallySkl
 Rally Skill: +4 Skill[N]
-to allies within 2 tiles.[X]
+to allies within 2 spaces.[X]
 
 ## SD_RallySpd
 Rally Speed: +4 Spd to[N]
-allies within 2 tiles.[X]
+allies within 2 spaces.[X]
 
 ## SD_RallyLuk
 Rally Luck: +4 Luck to[N]
-allies within 2 tiles.[X]
+allies within 2 spaces.[X]
 
 ## SD_RallyDef
 Rally Defense: +4 Def to[N]
-allies within 2 tiles.[X]
+allies within 2 spaces.[X]
 
 ## SD_RallyRes
 Rally Resistance: +4 Res[N]
-to allies within 2 tiles.[X]
+to allies within 2 spaces.[X]
 
 ## SD_RallyMov
 Rally Movement: +1 Move[N]
-to allies within 2 tiles.[X]
+to allies within 2 spaces.[X]
 
 ## SD_RallySpectrum
 Rally Spectrum: +2 all stats[N]
-to allies within 2 tiles.[X]
+to allies within 2 spaces.[X]
 
 ## SD_BowRangeUp
 Bow Range +1: Maximum range[N]
@@ -612,8 +622,8 @@ Staff Savant: Maximum range[N]
 of staves is increased by 1.[X]
 
 ## SD_LiveToServe
-Live to Serve: When healing[N]
-an ally, also heals self.[X]
+Live to Serve: Restores HP to unit[N]
+equal to HP restored with a staff.[X]
 
 ## SD_Ignis
 Ignis: Add Def/2 and Res/2[N]
@@ -635,7 +645,7 @@ opponent after combat.[N]
 
 ## SD_Intimidate
 Intimidate: -10 Avoid to[N]
-all enemies within 2 tiles.[X]
+all enemies within 2 spaces.[X]
 
 ## SD_Opportunist
 Opportunist: +4 damage[N]
@@ -647,7 +657,7 @@ unmounted units.[X]
 
 ## SD_Camaraderie
 Camaraderie: Recover 10% HP each turn[N]
-if there are allies within 2 tiles.[X]
+if there are allies within 2 spaces.[X]
 
 ## SD_ForeignPrincess
 Foreign Princess: Foreign army units[N]
@@ -655,27 +665,27 @@ take -2/+2 damage dealt/taken.[X]
 
 ## SD_SavageBlow
 Savage Blow: After attacking, enemies[N]
-within 2 tiles take 20% damage.[X]
+within 2 spaces take 20% damage.[X]
 
 ## SD_Relief
 Relief: Recover 20% HP each turn if[N]
-there are no allies within 2 tiles.[X]
+there are no allies within 2 spaces.[X]
 
 ## SD_Tantivy
 Tantivy: +10 Hit/Avoid if there are[N]
-no allies within 3 tiles.[X]
+no allies within 3 spaces.[X]
 
 ## SD_Focus
 Focus: +10 Critical if there are[N]
-no allies within 3 tiles.[X]
+no allies within 3 spaces.[X]
 
 ## SD_Bond
-Bond: All allies within 3 tiles[N]
+Bond: All allies within 3 spaces[N]
 recover 10% HP each turn.[X]
 
 ## SD_Anathema
 Anathema: -10 Avoid/Dodge to all[N]
-enemies within 3 tiles.[X]
+enemies within 3 spaces.[X]
 
 ## SD_LilysPoise
 Lily's Poise: Adjacent allies gain[N]
@@ -791,11 +801,11 @@ reduced by 25%. Charge: 2[X]
 
 ## SD_Shove
 Shove: Allows unit to push[N]
-other units one tile away.[X]
+other units one space away.[X]
 
 ## SD_Smite
 Smite: Allows unit to push[N]
-other units two tiles away.[X]
+other units two spaces away.[X]
 
 ## SD_DownWithArch
 Down with Arch: If the hit lands,[N]
@@ -858,15 +868,15 @@ with an adjacent ally.[X]
 
 ## SD_BreathOfLife
 Breath of Life: After attacking,[N]
-allies in 2 tiles heal of 20% max HP.[X]
+allies in 2 spaces heal of 20% max HP.[X]
 
 ## SD_Fury
 Fury: +2 Atk/Spd/Def/Res. Unit[N]
 takes 6 damage after combat.[X]
 
 ## SD_Dazzle
-Dazzle: Opponents cannot[N]
-counterattack this unit.[X]
+Blunt Force: If unit's Str is higher[N]
+than foe's Str, foe cannot counter.[X]
 
 ## SD_TriAdept
 Triangle Adept: Doubles weapon[N]
@@ -895,7 +905,7 @@ decide on a name or face.[X]
 
 ## SD_Charisma
 Charisma: Grants +10 Hit/Avoid[N]
-to all allies within three tiles.[X]
+to all allies within three spaces.[X]
 
 ## SD_HeroesDeathBlow
 Death Blow: +6 Attack[N]
@@ -1209,7 +1219,7 @@ Vigilance: Avoid +20.[X]
 
 ## SD_Daunt
 Daunt: -5 Hit and Crit to all[N]
-enemy units in a 3-tile radius.[X]
+enemy units in a 3-space radius.[X]
 
 ## SD_BloodTide
 Blood Tide: Atk and Hit +5[N]
@@ -1337,9 +1347,8 @@ Fortune: This unit[N]
 cannot be crit.[X]
 
 ## SD_Assassinate
-Assassinate: When initiating battle[N]
-at 1 range: +2 Damage, double[N]
-attacks occur before counter.[X]
+Duelist: When initiating at 1 range,[N]
+follow-up attacks occur immediately.[X]
 
 ## SD_ArcaneBlade
 Arcane Blade: When initiating battle[N]
@@ -1401,9 +1410,9 @@ Resourceful: Double bonus[N]
 effectiveness multipliers.[X]
 
 ## SD_Cultured
-Cultured: If attacking next to a unit[N]
-with Nice Thighs, move again.[N]
--50 hit against units with Nice Thighs.[X]
+Stand United: If unit initiates adjacent[N]
+to a physical Armored ally, grants[N]
+another action to unit (once per turn).[X]
 
 ## SD_LullStr
 Lull Str: Negates the effects of[N]
@@ -1451,7 +1460,7 @@ at the start of each turn.[X]
 
 ## SD_Thighdeology
 Thighdeology: If a unit within[N]
-3 tiles has Nice Thighs, gain[N]
+3 spaces has Nice Thighs, gain[N]
 +2 Attack and +20 Hit.[X]
 
 ## SD_Thotslayer

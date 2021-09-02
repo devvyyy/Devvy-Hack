@@ -166,7 +166,7 @@
 #define SealStrID 101
 #define SealSklID 102
 #define SealSpdID 103
-#define SealLukID 104
+#define SealLukID 255
 #define SealDefID 105
 #define SealResID 106
 //By Snakey1
@@ -387,7 +387,7 @@
 
 //Grisly Wound: Deals damage equal to 20% of the enemy's max HP after every battle.
 //By Snakey1
-#define GrislyWoundID 178
+#define GrislyWoundID 255
 
 //Powerstaff: Get another action after using a staff.
 //By Sme
@@ -403,7 +403,7 @@
 
 //Cultured: If unit attacks next to a unit with Nice Thighs, move again. -50 hit against units with Nice Thighs.
 //By Sme
-#define CulturedID 255
+#define CulturedID 178
 
 //Gridmaster: Movement skills do not end your action.
 //By Sme
@@ -514,7 +514,7 @@
 
 //Faire Skills: +4 damage when equipping a weapon of the specified type.
 //Author Unknown (Initial Commit)
-#define SwordfaireID 38
+#define SwordfaireID 255
 #define LancefaireID 39
 #define AxefaireID 255
 #define BowfaireID 255
@@ -608,9 +608,21 @@
 //Kelik Zenair
 #define StormBloodID 153
 
+//Sett oMG: crit if foe hp not 25% lesfjwegngw
+//Kelik Zenair
+#define ShowStopperID 38
+
 //Foreign Princess: Foreign army units take -2/+2 damage dealt/taken.
 //By Sme
 #define ForeignPrincessID 255
+
+//edgelord: if holding 1 item get stats
+//Kelik Zenair
+#define PathOfBladeID 24
+
+//Soul Splitter: +AS = foe's res/2. foe loses as = units res/2.
+//Kelik Zenair
+#define SoulSplitterID 104
 
 //Fortune: This unit cannot be crit.
 //By Sme
@@ -722,6 +734,10 @@
 //By Datagne
 #define SilentPrideID 194
 
+//Borrowed Time: Get 25 avoid per 25% below max HP.
+//Kelik Zenair
+#define BorrowedTimeID 245
+
 //Stance Skills: Bonus to stats when defending.
 //By Snakey1
 #define BracingStanceID 255
@@ -737,7 +753,7 @@
 #define SpectrumStanceID 255
 //By Sme
 #define AlertStanceID 255
-#define AlertStancePlusID 245
+#define AlertStancePlusID 255
 
 //Bold Fighter: Auto-double on player phase.
 //By Rossendale
@@ -799,6 +815,10 @@
 //By Sme
 #define BlueFlameID 110
 
+//Lionheart: take less damage but take damage after combat
+//Kelik Zenair
+#define LionheartID 125
+
 //Stand Behind Me: When adjacent to an ally, Def +2. Def +2 to adjacent allies.
 //Kelik Zenair
 #define StandBehindMeID 255
@@ -824,7 +844,7 @@
 
 //Aegis: Nullify a magic attack. (Skill % activation)
 //Author Unknown (Initial Commit)
-#define AegisID 24
+#define AegisID 255
 
 //Aether: First strike absorbs HP, second strike negates defenses. (Skill/2 % activation)
 //Author Unknown (Initial Commit)
@@ -883,7 +903,7 @@
 #define DevilsWhimID 183
 
 //Down With Arch: If the hit lands, instantly kill the enemy unit. (Only if name starts with "Arch")
-#define DownWithArchID 125
+#define DownWithArchID 255
 
 //Dragon Fang: 1.5x damage. (Skill% activation)
 //By Sme
@@ -996,7 +1016,7 @@
 
 //Assassinate: When initiating battle at 1 range: +2 Damage, double attacks occur before counter.
 //By Zeta
-#define AssassinateID 255
+#define AssassinateID 229
 
 //Sonic Rifle: When initiating battle at 4 range: +30 hit
 //Kelik Zenair
@@ -1012,7 +1032,7 @@
 
 //Defiant Skills: When HP is 25% or lower, gain +4 to the given stat.
 //By Sme
-#define DefiantStrID 229
+#define DefiantStrID 255
 #define DefiantMagID 230
 #define DefiantSklID 231
 #define DefiantSpdID 232
