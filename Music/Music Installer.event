@@ -80,7 +80,7 @@ SongTable(0x36,song36,0)
 
 ALIGN 4
 //Confidence In The Domination
-SongTable(0x19,Confidence,0)
+SongTable(0x19,song19,0)
 #include "Confidence.event"
 
 ALIGN 4
@@ -135,13 +135,23 @@ SongTable(0x30,L_FE11_Together_We_Ride,1)
 
 ALIGN 4
 //Earth Bound by Pikmin1211
-SongTable(0xC0,song04,1)
+SongTable(0xC0,songC0,1)
 #include "Earthbound.event"
 
-ALIGN 4
+//ALIGN 4
 //Forest of Celceta from khinsider
-SongTable(0x144,Celceta,1)
-#include "Celceta.event"
+//SongTable(0x144,Celceta,1)
+//#include "Celceta.event"
+
+ALIGN 4
+//Tears of Sylph
+SongTable(0x144,song0144,1)
+#include "Sylph.event"
+
+ALIGN 4
+//Training Grounds
+SongTable(0xED,songED,1)
+#include "TrainingGrounds.event"
 
 ALIGN 4
 //Wall of Defense by Alusq
@@ -208,7 +218,7 @@ SongTable(0xB2,song039F,1)
 
 ALIGN 4
 //Land of Sylvarant from midishrine
-SongTable(0xC1,song03DB,1)
+SongTable(0xC1,songC1,1)
 #include "LandOfSylvarant.event"
 
 ALIGN 4
@@ -325,7 +335,7 @@ SongTable(0x5D,song03A9,1)
 
 ALIGN 4
 //Master of Water by Bill_307
-SongTable(0x5F,song03CB,1)
+SongTable(0x5F,song5F,1)
 #include "MasterOfWater.event"
 
 ALIGN 4
@@ -350,7 +360,7 @@ SongTable(0xDA,songDA,1)
 
 ALIGN 4
 //Dawn of Ys
-SongTable(0xD9,DawnYs,1)
+SongTable(0xD9,songD9,1)
 #include "DawnYs.event"
 
 ALIGN 4
@@ -386,7 +396,7 @@ ALIGN 4
 
 ALIGN 4
 //Dreaming
-SongTable(0xDB,Dreaming,1)
+SongTable(0xDB,songDB,1)
 #include "Dreaming.event"
 
 //ALIGN 4
@@ -436,7 +446,7 @@ SongTable(0x43,song43,0)
 
 ALIGN 4
 //Blameless Thoughts
-SongTable(0x1B5,song01B5,0)
+SongTable(0x1B5,Blameless_V2,0)
 #include "BlamelessThoughts.event"
 
 ALIGN 4

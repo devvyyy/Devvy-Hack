@@ -19,10 +19,10 @@
 songC3_001:
 @ 000   ----------------------------------------
  .byte   KEYSH , songC3_key+0
-Label_0_0130E502:
+Label_0_0147A68E:
  .byte   TEMPO , 150*songC3_tbs/2
  .byte   VOICE , 36
- .byte   VOL , 27*songC3_mvl/mxv
+ .byte   VOL , 26*songC3_mvl/mxv
  .byte   PAN , c_v-17
  .byte   N84 ,AnM1 ,v100
  .byte   N84 ,An0
@@ -31,7 +31,7 @@ Label_0_0130E502:
  .byte   N96 ,Gn0
  .byte   W12
 @ 001   ----------------------------------------
-Label_0_0130E515:
+Label_0_0147A6A1:
  .byte   W84
  .byte   TIE ,FnM1 ,v100
  .byte   TIE ,Fn0
@@ -48,14 +48,14 @@ Label_0_0130E515:
  .byte   Gn0
  .byte   W36
 @ 004   ----------------------------------------
-Label_0_0130E528:
+Label_0_0147A6B4:
  .byte   N48 ,Fn0 ,v112
  .byte   W48
  .byte   En0
  .byte   W48
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_0_0130E52F:
+Label_0_0147A6BB:
  .byte   N12 ,An0 ,v100
  .byte   W12
  .byte   N06
@@ -82,7 +82,7 @@ Label_0_0130E52F:
  .byte   W06
  .byte   PEND 
 @ 006   ----------------------------------------
-Label_0_0130E54A:
+Label_0_0147A6D6:
  .byte   N12 ,En1 ,v100
  .byte   W12
  .byte   N06
@@ -109,7 +109,7 @@ Label_0_0130E54A:
  .byte   W06
  .byte   PEND 
 @ 007   ----------------------------------------
-Label_0_0130E565:
+Label_0_0147A6F1:
  .byte   N12 ,Fn1 ,v100
  .byte   W12
  .byte   N06
@@ -136,7 +136,7 @@ Label_0_0130E565:
  .byte   W06
  .byte   PEND 
 @ 008   ----------------------------------------
-Label_0_0130E581:
+Label_0_0147A70D:
  .byte   N12 ,Cn1 ,v100
  .byte   W12
  .byte   N06
@@ -163,7 +163,7 @@ Label_0_0130E581:
  .byte   W06
  .byte   PEND 
 @ 009   ----------------------------------------
-Label_0_0130E59C:
+Label_0_0147A728:
  .byte   N12 ,Fn1 ,v100
  .byte   W12
  .byte   N06
@@ -190,7 +190,7 @@ Label_0_0130E59C:
  .byte   W06
  .byte   PEND 
 @ 010   ----------------------------------------
-Label_0_0130E5B7:
+Label_0_0147A743:
  .byte   N12 ,Bn1 ,v100
  .byte   W12
  .byte   N06
@@ -217,7 +217,7 @@ Label_0_0130E5B7:
  .byte   W06
  .byte   PEND 
 @ 011   ----------------------------------------
-Label_0_0130E5D2:
+Label_0_0147A75E:
  .byte   N12 ,En1 ,v100
  .byte   W12
  .byte   N06
@@ -244,7 +244,7 @@ Label_0_0130E5D2:
  .byte   W06
  .byte   PEND 
 @ 012   ----------------------------------------
-Label_0_0130E5EE:
+Label_0_0147A77A:
  .byte   N12 ,En1 ,v100
  .byte   W12
  .byte   N06
@@ -272,18 +272,18 @@ Label_0_0130E5EE:
  .byte   PEND 
 @ 013   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E52F
+  .word Label_0_0147A6BB
 @ 014   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E54A
+  .word Label_0_0147A6D6
 @ 015   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E565
+  .word Label_0_0147A6F1
 @ 016   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E581
+  .word Label_0_0147A70D
 @ 017   ----------------------------------------
-Label_0_0130E61F:
+Label_0_0147A7AB:
  .byte   N12 ,As1 ,v100
  .byte   W12
  .byte   N06
@@ -310,7 +310,7 @@ Label_0_0130E61F:
  .byte   W06
  .byte   PEND 
 @ 018   ----------------------------------------
-Label_0_0130E63A:
+Label_0_0147A7C6:
  .byte   N12 ,An1 ,v100
  .byte   W12
  .byte   N06
@@ -337,7 +337,7 @@ Label_0_0130E63A:
  .byte   W06
  .byte   PEND 
 @ 019   ----------------------------------------
-Label_0_0130E655:
+Label_0_0147A7E1:
  .byte   N12 ,Dn1 ,v100
  .byte   W12
  .byte   N06
@@ -364,7 +364,7 @@ Label_0_0130E655:
  .byte   W06
  .byte   PEND 
 @ 020   ----------------------------------------
-Label_0_0130E673:
+Label_0_0147A7FF:
  .byte   N12 ,An0 ,v100
  .byte   W12
  .byte   N06
@@ -387,7 +387,7 @@ Label_0_0130E673:
  .byte   W18
  .byte   PEND 
 @ 021   ----------------------------------------
-Label_0_0130E68C:
+Label_0_0147A818:
  .byte   N12 ,Fn1 ,v100
  .byte   W12
  .byte   N06 ,Cn2
@@ -414,7 +414,7 @@ Label_0_0130E68C:
  .byte   W06
  .byte   PEND 
 @ 022   ----------------------------------------
-Label_0_0130E6AE:
+Label_0_0147A83A:
  .byte   N12 ,Gn1 ,v100
  .byte   W12
  .byte   N06 ,Dn2
@@ -441,7 +441,7 @@ Label_0_0130E6AE:
  .byte   W06
  .byte   PEND 
 @ 023   ----------------------------------------
-Label_0_0130E6D0:
+Label_0_0147A85C:
  .byte   N12 ,En1 ,v100
  .byte   W12
  .byte   N06 ,Bn1
@@ -468,7 +468,7 @@ Label_0_0130E6D0:
  .byte   W06
  .byte   PEND 
 @ 024   ----------------------------------------
-Label_0_0130E6F2:
+Label_0_0147A87E:
  .byte   N12 ,An1 ,v100
  .byte   W12
  .byte   N06 ,En2
@@ -496,21 +496,21 @@ Label_0_0130E6F2:
  .byte   PEND 
 @ 025   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E68C
+  .word Label_0_0147A818
 @ 026   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E6AE
+  .word Label_0_0147A83A
 @ 027   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E6D0
+  .word Label_0_0147A85C
 @ 028   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E6F2
+  .word Label_0_0147A87E
 @ 029   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E59C
+  .word Label_0_0147A728
 @ 030   ----------------------------------------
-Label_0_0130E72D:
+Label_0_0147A8B9:
  .byte   N12 ,Gn1 ,v100
  .byte   W12
  .byte   N06
@@ -538,9 +538,9 @@ Label_0_0130E72D:
  .byte   PEND 
 @ 031   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E59C
+  .word Label_0_0147A728
 @ 032   ----------------------------------------
-Label_0_0130E74E:
+Label_0_0147A8DA:
  .byte   N12 ,Gn1 ,v100
  .byte   W12
  .byte   N06
@@ -575,7 +575,7 @@ Label_0_0130E74E:
  .byte   W12
 @ 034   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E515
+  .word Label_0_0147A6A1
 @ 035   ----------------------------------------
  .byte   W96
 @ 036   ----------------------------------------
@@ -588,98 +588,98 @@ Label_0_0130E74E:
  .byte   W36
 @ 037   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E528
+  .word Label_0_0147A6B4
 @ 038   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E52F
+  .word Label_0_0147A6BB
 @ 039   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E54A
+  .word Label_0_0147A6D6
 @ 040   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E565
+  .word Label_0_0147A6F1
 @ 041   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E581
+  .word Label_0_0147A70D
 @ 042   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E59C
+  .word Label_0_0147A728
 @ 043   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E5B7
+  .word Label_0_0147A743
 @ 044   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E5D2
+  .word Label_0_0147A75E
 @ 045   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E5EE
+  .word Label_0_0147A77A
 @ 046   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E52F
+  .word Label_0_0147A6BB
 @ 047   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E54A
+  .word Label_0_0147A6D6
 @ 048   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E565
+  .word Label_0_0147A6F1
 @ 049   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E581
+  .word Label_0_0147A70D
 @ 050   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E61F
+  .word Label_0_0147A7AB
 @ 051   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E63A
+  .word Label_0_0147A7C6
 @ 052   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E655
+  .word Label_0_0147A7E1
 @ 053   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E673
+  .word Label_0_0147A7FF
 @ 054   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E68C
+  .word Label_0_0147A818
 @ 055   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E6AE
+  .word Label_0_0147A83A
 @ 056   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E6D0
+  .word Label_0_0147A85C
 @ 057   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E6F2
+  .word Label_0_0147A87E
 @ 058   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E68C
+  .word Label_0_0147A818
 @ 059   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E6AE
+  .word Label_0_0147A83A
 @ 060   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E6D0
+  .word Label_0_0147A85C
 @ 061   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E6F2
+  .word Label_0_0147A87E
 @ 062   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E59C
+  .word Label_0_0147A728
 @ 063   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E72D
+  .word Label_0_0147A8B9
 @ 064   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E59C
+  .word Label_0_0147A728
 @ 065   ----------------------------------------
  .byte   PATT
-  .word Label_0_0130E74E
+  .word Label_0_0147A8DA
 @ 066   ----------------------------------------
  .byte   GOTO
-  .word Label_0_0130E502
+  .word Label_0_0147A68E
 @ 067   ----------------------------------------
  .byte   TEMPO , 150*songC3_tbs/2
  .byte   VOICE , 36
- .byte   VOL , 27*songC3_mvl/mxv
+ .byte   VOL , 26*songC3_mvl/mxv
  .byte   PAN , c_v-17
  .byte   FINE
 
@@ -688,9 +688,9 @@ Label_0_0130E74E:
 songC3_002:
 @ 000   ----------------------------------------
  .byte   KEYSH , songC3_key+0
-Label_1_0130EDD2:
+Label_1_0147A9B0:
  .byte   VOICE , 95
- .byte   VOL , 27*songC3_mvl/mxv
+ .byte   VOL , 26*songC3_mvl/mxv
  .byte   PAN , c_v-16
  .byte   N84 ,En3 ,v064
  .byte   N84 ,An3
@@ -701,7 +701,7 @@ Label_1_0130EDD2:
  .byte   N96 ,Bn3
  .byte   W12
 @ 001   ----------------------------------------
-Label_1_0130EDE7:
+Label_1_0147A9C5:
  .byte   W84
  .byte   TIE ,Cn3 ,v064
  .byte   TIE ,Fn3
@@ -724,7 +724,7 @@ Label_1_0130EDE7:
  .byte   N36 ,Bn3
  .byte   W36
 @ 004   ----------------------------------------
-Label_1_0130EE04:
+Label_1_0147A9E2:
  .byte   N48 ,Cn3 ,v064
  .byte   N48 ,En3
  .byte   N48 ,An3
@@ -744,7 +744,7 @@ Label_1_0130EE04:
  .byte   N96 ,Dn3
  .byte   W96
 @ 007   ----------------------------------------
-Label_1_0130EE1E:
+Label_1_0147A9FC:
  .byte   N48 ,An2 ,v064
  .byte   N48 ,Cn3
  .byte   W48
@@ -765,7 +765,7 @@ Label_1_0130EE1E:
  .byte   N96 ,Fs3
  .byte   W96
 @ 011   ----------------------------------------
-Label_1_0130EE36:
+Label_1_0147AA14:
  .byte   N48 ,En3 ,v064
  .byte   N48 ,Gs3
  .byte   W48
@@ -787,7 +787,7 @@ Label_1_0130EE36:
  .byte   W96
 @ 015   ----------------------------------------
  .byte   PATT
-  .word Label_1_0130EE1E
+  .word Label_1_0147A9FC
 @ 016   ----------------------------------------
  .byte   N96 ,Cn3 ,v064
  .byte   N96 ,En3
@@ -801,7 +801,7 @@ Label_1_0130EE36:
  .byte   N96 ,En3
  .byte   W96
 @ 019   ----------------------------------------
-Label_1_0130EE61:
+Label_1_0147AA3F:
  .byte   N48 ,Bn2 ,v064
  .byte   N48 ,Dn3
  .byte   W48
@@ -876,7 +876,7 @@ Label_1_0130EE61:
  .byte   W12
 @ 034   ----------------------------------------
  .byte   PATT
-  .word Label_1_0130EDE7
+  .word Label_1_0147A9C5
 @ 035   ----------------------------------------
  .byte   W96
 @ 036   ----------------------------------------
@@ -894,7 +894,7 @@ Label_1_0130EE61:
  .byte   W36
 @ 037   ----------------------------------------
  .byte   PATT
-  .word Label_1_0130EE04
+  .word Label_1_0147A9E2
 @ 038   ----------------------------------------
  .byte   VOICE , 49
  .byte   N96 ,Cn3 ,v064
@@ -906,7 +906,7 @@ Label_1_0130EE61:
  .byte   W96
 @ 040   ----------------------------------------
  .byte   PATT
-  .word Label_1_0130EE1E
+  .word Label_1_0147A9FC
 @ 041   ----------------------------------------
  .byte   N96 ,Cn3 ,v064
  .byte   N96 ,En3
@@ -921,7 +921,7 @@ Label_1_0130EE61:
  .byte   W96
 @ 044   ----------------------------------------
  .byte   PATT
-  .word Label_1_0130EE36
+  .word Label_1_0147AA14
 @ 045   ----------------------------------------
  .byte   N96 ,En3 ,v064
  .byte   N96 ,Gs3
@@ -936,7 +936,7 @@ Label_1_0130EE61:
  .byte   W96
 @ 048   ----------------------------------------
  .byte   PATT
-  .word Label_1_0130EE1E
+  .word Label_1_0147A9FC
 @ 049   ----------------------------------------
  .byte   N96 ,Cn3 ,v064
  .byte   N96 ,En3
@@ -951,20 +951,20 @@ Label_1_0130EE61:
  .byte   W96
 @ 052   ----------------------------------------
  .byte   PATT
-  .word Label_1_0130EE61
+  .word Label_1_0147AA3F
 @ 053   ----------------------------------------
  .byte   N96 ,Cn3 ,v064
  .byte   N96 ,En3
  .byte   W96
 @ 054   ----------------------------------------
-Label_1_0130EF25:
+Label_1_0147AB03:
  .byte   N96 ,Cn3 ,v064
  .byte   N96 ,Fn3
  .byte   N96 ,An3
  .byte   W96
  .byte   PEND 
 @ 055   ----------------------------------------
-Label_1_0130EF2E:
+Label_1_0147AB0C:
  .byte   N96 ,Dn3 ,v064
  .byte   N96 ,Gn3
  .byte   N96 ,Bn3
@@ -982,10 +982,10 @@ Label_1_0130EF2E:
  .byte   W96
 @ 058   ----------------------------------------
  .byte   PATT
-  .word Label_1_0130EF25
+  .word Label_1_0147AB03
 @ 059   ----------------------------------------
  .byte   PATT
-  .word Label_1_0130EF2E
+  .word Label_1_0147AB0C
 @ 060   ----------------------------------------
  .byte   N96 ,Bn2 ,v064
  .byte   N96 ,En3
@@ -998,7 +998,7 @@ Label_1_0130EF2E:
  .byte   W96
 @ 062   ----------------------------------------
  .byte   PATT
-  .word Label_1_0130EF25
+  .word Label_1_0147AB03
 @ 063   ----------------------------------------
  .byte   N48 ,Dn3 ,v064
  .byte   N48 ,Gn3
@@ -1010,16 +1010,16 @@ Label_1_0130EF2E:
  .byte   W48
 @ 064   ----------------------------------------
  .byte   PATT
-  .word Label_1_0130EF25
+  .word Label_1_0147AB03
 @ 065   ----------------------------------------
  .byte   PATT
-  .word Label_1_0130EF2E
+  .word Label_1_0147AB0C
 @ 066   ----------------------------------------
  .byte   GOTO
-  .word Label_1_0130EDD2
+  .word Label_1_0147A9B0
 @ 067   ----------------------------------------
  .byte   VOICE , 95
- .byte   VOL , 27*songC3_mvl/mxv
+ .byte   VOL , 26*songC3_mvl/mxv
  .byte   PAN , c_v-16
  .byte   FINE
 
@@ -1028,9 +1028,9 @@ Label_1_0130EF2E:
 songC3_003:
 @ 000   ----------------------------------------
  .byte   KEYSH , songC3_key+0
-Label_2_01336F2E:
+Label_2_0147AB64:
  .byte   VOICE , 2
- .byte   VOL , 33*songC3_mvl/mxv
+ .byte   VOL , 32*songC3_mvl/mxv
  .byte   PAN , c_v+15
  .byte   N48 ,En3 ,v100
  .byte   N48 ,An3
@@ -1047,7 +1047,7 @@ Label_2_01336F2E:
  .byte   N60 ,Bn3
  .byte   W12
 @ 001   ----------------------------------------
-Label_2_01336F4A:
+Label_2_0147AB80:
  .byte   W48
  .byte   N12 ,Dn3 ,v100
  .byte   W12
@@ -1061,7 +1061,7 @@ Label_2_01336F4A:
  .byte   W12
  .byte   PEND 
 @ 002   ----------------------------------------
-Label_2_01336F5B:
+Label_2_0147AB91:
  .byte   W48
  .byte   N06 ,Cn3 ,v100
  .byte   W06
@@ -1081,7 +1081,7 @@ Label_2_01336F5B:
  .byte   W06
  .byte   PEND 
 @ 003   ----------------------------------------
-Label_2_01336F6F:
+Label_2_0147ABA5:
  .byte   N12 ,Fn3 ,v108
  .byte   N12 ,An3
  .byte   W12
@@ -1108,7 +1108,7 @@ Label_2_01336F6F:
  .byte   W12
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_2_01336F92:
+Label_2_0147ABC8:
  .byte   N12 ,Fn3 ,v108
  .byte   N12 ,An3
  .byte   W48
@@ -1130,7 +1130,7 @@ Label_2_01336F92:
  .byte   W06
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_2_01336FAB:
+Label_2_0147ABE1:
  .byte   N96 ,Cn3 ,v100
  .byte   N96 ,En3
  .byte   N96 ,An3
@@ -1142,7 +1142,7 @@ Label_2_01336FAB:
  .byte   N96 ,Bn3
  .byte   W96
 @ 007   ----------------------------------------
-Label_2_01336FBA:
+Label_2_0147ABF0:
  .byte   N12 ,An3 ,v100
  .byte   N12 ,Cn4
  .byte   W12
@@ -1163,7 +1163,7 @@ Label_2_01336FBA:
  .byte   W12
  .byte   PEND 
 @ 008   ----------------------------------------
-Label_2_01336FD6:
+Label_2_0147AC0C:
  .byte   W12
  .byte   N12 ,Cn4 ,v100
  .byte   W12
@@ -1189,7 +1189,7 @@ Label_2_01336FD6:
  .byte   W06
  .byte   PEND 
 @ 009   ----------------------------------------
-Label_2_01336FF1:
+Label_2_0147AC27:
  .byte   N60 ,Fn3 ,v100
  .byte   N60 ,An3
  .byte   N60 ,Cn4
@@ -1205,7 +1205,7 @@ Label_2_01336FF1:
  .byte   W12
  .byte   PEND 
 @ 010   ----------------------------------------
-Label_2_01337007:
+Label_2_0147AC3D:
  .byte   N12 ,Bn3 ,v100
  .byte   N12 ,Ds4
  .byte   W12
@@ -1229,7 +1229,7 @@ Label_2_01337007:
  .byte   W12
  .byte   PEND 
 @ 011   ----------------------------------------
-Label_2_01337024:
+Label_2_0147AC5A:
  .byte   N06 ,En3 ,v100
  .byte   W06
  .byte   Fs3
@@ -1252,7 +1252,7 @@ Label_2_01337024:
  .byte   W06
  .byte   PEND 
 @ 012   ----------------------------------------
-Label_2_0133703E:
+Label_2_0147AC74:
  .byte   N06 ,En3 ,v100
  .byte   W06
  .byte   Bn2
@@ -1288,7 +1288,7 @@ Label_2_0133703E:
  .byte   PEND 
 @ 013   ----------------------------------------
  .byte   PATT
-  .word Label_2_01336FAB
+  .word Label_2_0147ABE1
 @ 014   ----------------------------------------
  .byte   N96 ,En3 ,v100
  .byte   N96 ,Gn3
@@ -1296,12 +1296,12 @@ Label_2_0133703E:
  .byte   W96
 @ 015   ----------------------------------------
  .byte   PATT
-  .word Label_2_01336FBA
+  .word Label_2_0147ABF0
 @ 016   ----------------------------------------
  .byte   PATT
-  .word Label_2_01336FD6
+  .word Label_2_0147AC0C
 @ 017   ----------------------------------------
-Label_2_01337078:
+Label_2_0147ACAE:
  .byte   N12 ,Dn4 ,v100
  .byte   W12
  .byte   As3
@@ -1318,7 +1318,7 @@ Label_2_01337078:
  .byte   W12
  .byte   PEND 
 @ 018   ----------------------------------------
-Label_2_0133708B:
+Label_2_0147ACC1:
  .byte   N12 ,Cn4 ,v100
  .byte   W12
  .byte   An3
@@ -1335,7 +1335,7 @@ Label_2_0133708B:
  .byte   W12
  .byte   PEND 
 @ 019   ----------------------------------------
-Label_2_0133709E:
+Label_2_0147ACD4:
  .byte   N36 ,Bn3 ,v100
  .byte   N36 ,Dn4
  .byte   W36
@@ -1353,7 +1353,7 @@ Label_2_0133709E:
  .byte   W12
  .byte   PEND 
 @ 020   ----------------------------------------
-Label_2_013370B7:
+Label_2_0147ACED:
  .byte   N06 ,An3 ,v100
  .byte   W06
  .byte   En3
@@ -1388,7 +1388,7 @@ Label_2_013370B7:
  .byte   W06
  .byte   PEND 
 @ 021   ----------------------------------------
-Label_2_013370DA:
+Label_2_0147AD10:
  .byte   N36 ,Fn3 ,v100
  .byte   N36 ,An3
  .byte   N36 ,Cn4
@@ -1403,7 +1403,7 @@ Label_2_013370DA:
  .byte   W12
  .byte   PEND 
 @ 022   ----------------------------------------
-Label_2_013370ED:
+Label_2_0147AD23:
  .byte   N12 ,Bn3 ,v100
  .byte   W12
  .byte   Gn3
@@ -1422,7 +1422,7 @@ Label_2_013370ED:
  .byte   W12
  .byte   PEND 
 @ 023   ----------------------------------------
-Label_2_01337100:
+Label_2_0147AD36:
  .byte   N12 ,Dn3 ,v100
  .byte   N12 ,Gn3
  .byte   N12 ,Bn3
@@ -1441,7 +1441,7 @@ Label_2_01337100:
  .byte   W12
  .byte   PEND 
 @ 024   ----------------------------------------
-Label_2_01337117:
+Label_2_0147AD4D:
  .byte   N06 ,Cn4 ,v100
  .byte   W06
  .byte   An3
@@ -1477,15 +1477,15 @@ Label_2_01337117:
  .byte   PEND 
 @ 025   ----------------------------------------
  .byte   PATT
-  .word Label_2_013370DA
+  .word Label_2_0147AD10
 @ 026   ----------------------------------------
  .byte   PATT
-  .word Label_2_013370ED
+  .word Label_2_0147AD23
 @ 027   ----------------------------------------
  .byte   PATT
-  .word Label_2_01337100
+  .word Label_2_0147AD36
 @ 028   ----------------------------------------
-Label_2_01337149:
+Label_2_0147AD7F:
  .byte   N06 ,Cn5 ,v100
  .byte   W06
  .byte   An4
@@ -1520,7 +1520,7 @@ Label_2_01337149:
  .byte   W06
  .byte   PEND 
 @ 029   ----------------------------------------
-Label_2_0133716C:
+Label_2_0147ADA2:
  .byte   N36 ,An3 ,v100
  .byte   N36 ,Cn4
  .byte   W36
@@ -1538,7 +1538,7 @@ Label_2_0133716C:
  .byte   W12
  .byte   PEND 
 @ 030   ----------------------------------------
-Label_2_01337185:
+Label_2_0147ADBB:
  .byte   N18 ,Dn3 ,v100
  .byte   N18 ,Gn3
  .byte   W18
@@ -1559,7 +1559,7 @@ Label_2_01337185:
  .byte   W12
  .byte   PEND 
 @ 031   ----------------------------------------
-Label_2_013371A1:
+Label_2_0147ADD7:
  .byte   N06 ,Fn2 ,v100
  .byte   W06
  .byte   An2
@@ -1594,7 +1594,7 @@ Label_2_013371A1:
  .byte   W06
  .byte   PEND 
 @ 032   ----------------------------------------
-Label_2_013371C4:
+Label_2_0147ADFA:
  .byte   N06 ,Gn2 ,v100
  .byte   W06
  .byte   Bn2
@@ -1645,19 +1645,19 @@ Label_2_013371C4:
  .byte   W12
 @ 034   ----------------------------------------
  .byte   PATT
-  .word Label_2_01336F4A
+  .word Label_2_0147AB80
 @ 035   ----------------------------------------
  .byte   PATT
-  .word Label_2_01336F5B
+  .word Label_2_0147AB91
 @ 036   ----------------------------------------
  .byte   PATT
-  .word Label_2_01336F6F
+  .word Label_2_0147ABA5
 @ 037   ----------------------------------------
  .byte   PATT
-  .word Label_2_01336F92
+  .word Label_2_0147ABC8
 @ 038   ----------------------------------------
  .byte   PATT
-  .word Label_2_01336FAB
+  .word Label_2_0147ABE1
 @ 039   ----------------------------------------
  .byte   N96 ,En3 ,v100
  .byte   N96 ,Gn3
@@ -1665,25 +1665,25 @@ Label_2_013371C4:
  .byte   W96
 @ 040   ----------------------------------------
  .byte   PATT
-  .word Label_2_01336FBA
+  .word Label_2_0147ABF0
 @ 041   ----------------------------------------
  .byte   PATT
-  .word Label_2_01336FD6
+  .word Label_2_0147AC0C
 @ 042   ----------------------------------------
  .byte   PATT
-  .word Label_2_01336FF1
+  .word Label_2_0147AC27
 @ 043   ----------------------------------------
  .byte   PATT
-  .word Label_2_01337007
+  .word Label_2_0147AC3D
 @ 044   ----------------------------------------
  .byte   PATT
-  .word Label_2_01337024
+  .word Label_2_0147AC5A
 @ 045   ----------------------------------------
  .byte   PATT
-  .word Label_2_0133703E
+  .word Label_2_0147AC74
 @ 046   ----------------------------------------
  .byte   PATT
-  .word Label_2_01336FAB
+  .word Label_2_0147ABE1
 @ 047   ----------------------------------------
  .byte   N96 ,En3 ,v100
  .byte   N96 ,Gn3
@@ -1691,40 +1691,40 @@ Label_2_013371C4:
  .byte   W96
 @ 048   ----------------------------------------
  .byte   PATT
-  .word Label_2_01336FBA
+  .word Label_2_0147ABF0
 @ 049   ----------------------------------------
  .byte   PATT
-  .word Label_2_01336FD6
+  .word Label_2_0147AC0C
 @ 050   ----------------------------------------
  .byte   PATT
-  .word Label_2_01337078
+  .word Label_2_0147ACAE
 @ 051   ----------------------------------------
  .byte   PATT
-  .word Label_2_0133708B
+  .word Label_2_0147ACC1
 @ 052   ----------------------------------------
  .byte   PATT
-  .word Label_2_0133709E
+  .word Label_2_0147ACD4
 @ 053   ----------------------------------------
  .byte   PATT
-  .word Label_2_013370B7
+  .word Label_2_0147ACED
 @ 054   ----------------------------------------
  .byte   PATT
-  .word Label_2_013370DA
+  .word Label_2_0147AD10
 @ 055   ----------------------------------------
  .byte   PATT
-  .word Label_2_013370ED
+  .word Label_2_0147AD23
 @ 056   ----------------------------------------
  .byte   PATT
-  .word Label_2_01337100
+  .word Label_2_0147AD36
 @ 057   ----------------------------------------
  .byte   PATT
-  .word Label_2_01337117
+  .word Label_2_0147AD4D
 @ 058   ----------------------------------------
  .byte   PATT
-  .word Label_2_013370DA
+  .word Label_2_0147AD10
 @ 059   ----------------------------------------
  .byte   PATT
-  .word Label_2_013370ED
+  .word Label_2_0147AD23
 @ 060   ----------------------------------------
  .byte   N12 ,Dn3 ,v100
  .byte   N12 ,Gs3
@@ -1744,25 +1744,25 @@ Label_2_013371C4:
  .byte   W12
 @ 061   ----------------------------------------
  .byte   PATT
-  .word Label_2_01337149
+  .word Label_2_0147AD7F
 @ 062   ----------------------------------------
  .byte   PATT
-  .word Label_2_0133716C
+  .word Label_2_0147ADA2
 @ 063   ----------------------------------------
  .byte   PATT
-  .word Label_2_01337185
+  .word Label_2_0147ADBB
 @ 064   ----------------------------------------
  .byte   PATT
-  .word Label_2_013371A1
+  .word Label_2_0147ADD7
 @ 065   ----------------------------------------
  .byte   PATT
-  .word Label_2_013371C4
+  .word Label_2_0147ADFA
 @ 066   ----------------------------------------
  .byte   GOTO
-  .word Label_2_01336F2E
+  .word Label_2_0147AB64
 @ 067   ----------------------------------------
  .byte   VOICE , 2
- .byte   VOL , 33*songC3_mvl/mxv
+ .byte   VOL , 32*songC3_mvl/mxv
  .byte   PAN , c_v+15
  .byte   FINE
 
@@ -1771,9 +1771,9 @@ Label_2_013371C4:
 songC3_004:
 @ 000   ----------------------------------------
  .byte   KEYSH , songC3_key+0
-Label_3_0130F342:
+Label_3_0147AEF7:
  .byte   VOICE , 7
- .byte   VOL , 28*songC3_mvl/mxv
+ .byte   VOL , 27*songC3_mvl/mxv
  .byte   PAN , c_v-19
  .byte   N96 ,En3 ,v064
  .byte   W96
@@ -1790,7 +1790,7 @@ Label_3_0130F342:
  .byte   W96
 @ 003   ----------------------------------------
  .byte   EOT
-Label_3_0130F359:
+Label_3_0147AF0E:
  .byte   VOICE , 18
  .byte   N12 ,Fn3 ,v080
  .byte   N12 ,An3
@@ -1834,7 +1834,7 @@ Label_3_0130F359:
  .byte   W12
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_3_0130F3A2:
+Label_3_0147AF57:
  .byte   N12 ,Fn3 ,v092
  .byte   N12 ,An3
  .byte   N12 ,Fn4
@@ -1865,7 +1865,7 @@ Label_3_0130F3A2:
  .byte   W48
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_3_0130F3D5:
+Label_3_0147AF8A:
  .byte   N48 ,Cn4 ,v080
  .byte   W48
  .byte   N12 ,An3
@@ -1878,7 +1878,7 @@ Label_3_0130F3D5:
  .byte   W12
  .byte   PEND 
 @ 006   ----------------------------------------
-Label_3_0130F3E4:
+Label_3_0147AF99:
  .byte   W24
  .byte   N12 ,Bn3 ,v080
  .byte   W12
@@ -1890,7 +1890,7 @@ Label_3_0130F3E4:
  .byte   W12
  .byte   PEND 
 @ 007   ----------------------------------------
-Label_3_0130F3F1:
+Label_3_0147AFA6:
  .byte   W36
  .byte   N06 ,Gn3 ,v080
  .byte   W06
@@ -1909,7 +1909,7 @@ Label_3_0130F3F1:
  .byte   W96
 @ 009   ----------------------------------------
  .byte   EOT
-Label_3_0130F405:
+Label_3_0147AFBA:
  .byte   N60 ,Fn4 ,v080
  .byte   W60
  .byte   N12 ,Dn4
@@ -1920,7 +1920,7 @@ Label_3_0130F405:
  .byte   W12
  .byte   PEND 
 @ 010   ----------------------------------------
-Label_3_0130F411:
+Label_3_0147AFC6:
  .byte   N24 ,Fs4 ,v080
  .byte   W24
  .byte   N12 ,Ds4
@@ -1933,7 +1933,7 @@ Label_3_0130F411:
  .byte   W12
  .byte   PEND 
 @ 011   ----------------------------------------
-Label_3_0130F420:
+Label_3_0147AFD5:
  .byte   N48 ,En4 ,v080
  .byte   N48 ,Gs4
  .byte   W48
@@ -1947,12 +1947,12 @@ Label_3_0130F420:
  .byte   W96
 @ 013   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F3D5
+  .word Label_3_0147AF8A
 @ 014   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F3E4
+  .word Label_3_0147AF99
 @ 015   ----------------------------------------
-Label_3_0130F43A:
+Label_3_0147AFEF:
  .byte   W36
  .byte   N06 ,Gn3 ,v080
  .byte   W06
@@ -1968,7 +1968,7 @@ Label_3_0130F43A:
  .byte   W12
  .byte   PEND 
 @ 016   ----------------------------------------
-Label_3_0130F44C:
+Label_3_0147B001:
  .byte   W72
  .byte   N12 ,Cn5 ,v064
  .byte   W12
@@ -1976,7 +1976,7 @@ Label_3_0130F44C:
  .byte   W12
  .byte   PEND 
 @ 017   ----------------------------------------
-Label_3_0130F454:
+Label_3_0147B009:
  .byte   N24 ,As4 ,v064
  .byte   W24
  .byte   N12 ,Cn5
@@ -1993,7 +1993,7 @@ Label_3_0130F454:
  .byte   W06
  .byte   PEND 
 @ 018   ----------------------------------------
-Label_3_0130F468:
+Label_3_0147B01D:
  .byte   N24 ,An4 ,v064
  .byte   W24
  .byte   N12 ,Bn4
@@ -2008,7 +2008,7 @@ Label_3_0130F468:
  .byte   W12
  .byte   PEND 
 @ 019   ----------------------------------------
-Label_3_0130F47A:
+Label_3_0147B02F:
  .byte   N06 ,Gn4 ,v064
  .byte   W12
  .byte   N06
@@ -2027,14 +2027,14 @@ Label_3_0130F47A:
  .byte   W12
  .byte   PEND 
 @ 020   ----------------------------------------
-Label_3_0130F48F:
+Label_3_0147B044:
  .byte   N18 ,Dn5 ,v064
  .byte   W18
  .byte   N78 ,Cn5
  .byte   W78
  .byte   PEND 
 @ 021   ----------------------------------------
-Label_3_0130F497:
+Label_3_0147B04C:
  .byte   N24 ,Cn5 ,v064
  .byte   W24
  .byte   An4
@@ -2047,7 +2047,7 @@ Label_3_0130F497:
  .byte   W12
  .byte   PEND 
 @ 022   ----------------------------------------
-Label_3_0130F4A6:
+Label_3_0147B05B:
  .byte   N24 ,Bn4 ,v064
  .byte   W24
  .byte   Gn4
@@ -2060,7 +2060,7 @@ Label_3_0130F4A6:
  .byte   W12
  .byte   PEND 
 @ 023   ----------------------------------------
-Label_3_0130F4B5:
+Label_3_0147B06A:
  .byte   N24 ,Bn4 ,v064
  .byte   W24
  .byte   Gn4
@@ -2073,7 +2073,7 @@ Label_3_0130F4B5:
  .byte   W12
  .byte   PEND 
 @ 024   ----------------------------------------
-Label_3_0130F4C4:
+Label_3_0147B079:
  .byte   N24 ,An4 ,v064
  .byte   W24
  .byte   En4
@@ -2087,10 +2087,10 @@ Label_3_0130F4C4:
  .byte   PEND 
 @ 025   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F497
+  .word Label_3_0147B04C
 @ 026   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F4A6
+  .word Label_3_0147B05B
 @ 027   ----------------------------------------
  .byte   N24 ,Bn4 ,v064
  .byte   W24
@@ -2103,7 +2103,7 @@ Label_3_0130F4C4:
  .byte   N12 ,Bn4
  .byte   W12
 @ 028   ----------------------------------------
-Label_3_0130F4EB:
+Label_3_0147B0A0:
  .byte   N12 ,Cn5 ,v064
  .byte   W12
  .byte   An4
@@ -2118,7 +2118,7 @@ Label_3_0130F4EB:
  .byte   W12
  .byte   PEND 
 @ 029   ----------------------------------------
-Label_3_0130F4FD:
+Label_3_0147B0B2:
  .byte   N48 ,Cn5 ,v064
  .byte   W48
  .byte   N18 ,An4
@@ -2129,7 +2129,7 @@ Label_3_0130F4FD:
  .byte   W12
  .byte   PEND 
 @ 030   ----------------------------------------
-Label_3_0130F50A:
+Label_3_0147B0BF:
  .byte   N18 ,Gn4 ,v064
  .byte   W18
  .byte   Dn4
@@ -2159,19 +2159,19 @@ Label_3_0130F50A:
  .byte   W96
 @ 036   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F359
+  .word Label_3_0147AF0E
 @ 037   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F3A2
+  .word Label_3_0147AF57
 @ 038   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F3D5
+  .word Label_3_0147AF8A
 @ 039   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F3E4
+  .word Label_3_0147AF99
 @ 040   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F3F1
+  .word Label_3_0147AFA6
 @ 041   ----------------------------------------
  .byte   W96
 @ 042   ----------------------------------------
@@ -2179,59 +2179,59 @@ Label_3_0130F50A:
  .byte   Cn4
 @ 043   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F405
+  .word Label_3_0147AFBA
 @ 044   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F411
+  .word Label_3_0147AFC6
 @ 045   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F420
+  .word Label_3_0147AFD5
 @ 046   ----------------------------------------
  .byte   N96 ,Gs4 ,v080
  .byte   N96 ,Bn4
  .byte   W96
 @ 047   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F3D5
+  .word Label_3_0147AF8A
 @ 048   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F3E4
+  .word Label_3_0147AF99
 @ 049   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F43A
+  .word Label_3_0147AFEF
 @ 050   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F44C
+  .word Label_3_0147B001
 @ 051   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F454
+  .word Label_3_0147B009
 @ 052   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F468
+  .word Label_3_0147B01D
 @ 053   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F47A
+  .word Label_3_0147B02F
 @ 054   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F48F
+  .word Label_3_0147B044
 @ 055   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F497
+  .word Label_3_0147B04C
 @ 056   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F4A6
+  .word Label_3_0147B05B
 @ 057   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F4B5
+  .word Label_3_0147B06A
 @ 058   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F4C4
+  .word Label_3_0147B079
 @ 059   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F497
+  .word Label_3_0147B04C
 @ 060   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F4A6
+  .word Label_3_0147B05B
 @ 061   ----------------------------------------
  .byte   N24 ,Bn4 ,v064
  .byte   W24
@@ -2245,13 +2245,13 @@ Label_3_0130F50A:
  .byte   W12
 @ 062   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F4EB
+  .word Label_3_0147B0A0
 @ 063   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F4FD
+  .word Label_3_0147B0B2
 @ 064   ----------------------------------------
  .byte   PATT
-  .word Label_3_0130F50A
+  .word Label_3_0147B0BF
 @ 065   ----------------------------------------
  .byte   N96 ,Cn4 ,v064
  .byte   N96 ,Fn4
@@ -2262,10 +2262,10 @@ Label_3_0130F50A:
  .byte   W96
 @ 067   ----------------------------------------
  .byte   GOTO
-  .word Label_3_0130F342
+  .word Label_3_0147AEF7
 @ 068   ----------------------------------------
  .byte   VOICE , 7
- .byte   VOL , 28*songC3_mvl/mxv
+ .byte   VOL , 27*songC3_mvl/mxv
  .byte   PAN , c_v-19
  .byte   FINE
 
@@ -2274,9 +2274,9 @@ Label_3_0130F50A:
 songC3_005:
 @ 000   ----------------------------------------
  .byte   KEYSH , songC3_key+0
-Label_4_0130F8CE:
+Label_4_0147B189:
  .byte   VOICE , 61
- .byte   VOL , 42*songC3_mvl/mxv
+ .byte   VOL , 41*songC3_mvl/mxv
  .byte   PAN , c_v+21
  .byte   W96
 @ 001   ----------------------------------------
@@ -2284,7 +2284,7 @@ Label_4_0130F8CE:
 @ 002   ----------------------------------------
  .byte   W96
 @ 003   ----------------------------------------
-Label_4_0130F8D7:
+Label_4_0147B192:
  .byte   W24
  .byte   N36 ,An3 ,v064
  .byte   N36 ,Cn4
@@ -2294,7 +2294,7 @@ Label_4_0130F8D7:
  .byte   W36
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_4_0130F8E3:
+Label_4_0147B19E:
  .byte   N36 ,Fn3 ,v064
  .byte   N36 ,An3
  .byte   W44
@@ -2308,7 +2308,7 @@ Label_4_0130F8E3:
  .byte   W03
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_4_0130F8F3:
+Label_4_0147B1AE:
  .byte   N48 ,En3 ,v080
  .byte   W48
  .byte   N12 ,Cn3
@@ -2321,7 +2321,7 @@ Label_4_0130F8F3:
  .byte   W12
  .byte   PEND 
 @ 006   ----------------------------------------
-Label_4_0130F902:
+Label_4_0147B1BD:
  .byte   W24
  .byte   N12 ,Dn3 ,v080
  .byte   W12
@@ -2333,7 +2333,7 @@ Label_4_0130F902:
  .byte   W12
  .byte   PEND 
 @ 007   ----------------------------------------
-Label_4_0130F90F:
+Label_4_0147B1CA:
  .byte   W36
  .byte   N06 ,Bn2 ,v080
  .byte   W06
@@ -2350,7 +2350,7 @@ Label_4_0130F90F:
  .byte   W96
 @ 009   ----------------------------------------
  .byte   EOT
-Label_4_0130F922:
+Label_4_0147B1DD:
  .byte   N60 ,An3 ,v080
  .byte   W60
  .byte   N12 ,Fn3
@@ -2361,7 +2361,7 @@ Label_4_0130F922:
  .byte   W12
  .byte   PEND 
 @ 010   ----------------------------------------
-Label_4_0130F92E:
+Label_4_0147B1E9:
  .byte   N24 ,Bn3 ,v080
  .byte   W24
  .byte   N12 ,Fs3
@@ -2374,7 +2374,7 @@ Label_4_0130F92E:
  .byte   W12
  .byte   PEND 
 @ 011   ----------------------------------------
-Label_4_0130F93D:
+Label_4_0147B1F8:
  .byte   W36
  .byte   N06 ,Gs3 ,v080
  .byte   W06
@@ -2392,12 +2392,12 @@ Label_4_0130F93D:
  .byte   W96
 @ 013   ----------------------------------------
  .byte   PATT
-  .word Label_4_0130F8F3
+  .word Label_4_0147B1AE
 @ 014   ----------------------------------------
  .byte   PATT
-  .word Label_4_0130F902
+  .word Label_4_0147B1BD
 @ 015   ----------------------------------------
-Label_4_0130F95A:
+Label_4_0147B215:
  .byte   W36
  .byte   N06 ,Bn2 ,v080
  .byte   W06
@@ -2467,7 +2467,7 @@ Label_4_0130F95A:
  .byte   N78 ,An3
  .byte   W78
 @ 021   ----------------------------------------
-Label_4_0130F9AC:
+Label_4_0147B267:
  .byte   N24 ,En3 ,v080
  .byte   W24
  .byte   Cn3
@@ -2480,7 +2480,7 @@ Label_4_0130F9AC:
  .byte   W12
  .byte   PEND 
 @ 022   ----------------------------------------
-Label_4_0130F9BB:
+Label_4_0147B276:
  .byte   N60 ,Dn3 ,v080
  .byte   W60
  .byte   N12 ,Cn3
@@ -2512,10 +2512,10 @@ Label_4_0130F9BB:
  .byte   W12
 @ 025   ----------------------------------------
  .byte   PATT
-  .word Label_4_0130F9AC
+  .word Label_4_0147B267
 @ 026   ----------------------------------------
  .byte   PATT
-  .word Label_4_0130F9BB
+  .word Label_4_0147B276
 @ 027   ----------------------------------------
  .byte   N24 ,Dn3 ,v080
  .byte   W24
@@ -2588,19 +2588,19 @@ Label_4_0130F9BB:
  .byte   An2 ,v060
 @ 037   ----------------------------------------
  .byte   PATT
-  .word Label_4_0130F8D7
+  .word Label_4_0147B192
 @ 038   ----------------------------------------
  .byte   PATT
-  .word Label_4_0130F8E3
+  .word Label_4_0147B19E
 @ 039   ----------------------------------------
  .byte   PATT
-  .word Label_4_0130F8F3
+  .word Label_4_0147B1AE
 @ 040   ----------------------------------------
  .byte   PATT
-  .word Label_4_0130F902
+  .word Label_4_0147B1BD
 @ 041   ----------------------------------------
  .byte   PATT
-  .word Label_4_0130F90F
+  .word Label_4_0147B1CA
 @ 042   ----------------------------------------
  .byte   W96
 @ 043   ----------------------------------------
@@ -2608,25 +2608,25 @@ Label_4_0130F9BB:
  .byte   En3
 @ 044   ----------------------------------------
  .byte   PATT
-  .word Label_4_0130F922
+  .word Label_4_0147B1DD
 @ 045   ----------------------------------------
  .byte   PATT
-  .word Label_4_0130F92E
+  .word Label_4_0147B1E9
 @ 046   ----------------------------------------
  .byte   PATT
-  .word Label_4_0130F93D
+  .word Label_4_0147B1F8
 @ 047   ----------------------------------------
  .byte   N96 ,En4 ,v080
  .byte   W96
 @ 048   ----------------------------------------
  .byte   PATT
-  .word Label_4_0130F8F3
+  .word Label_4_0147B1AE
 @ 049   ----------------------------------------
  .byte   PATT
-  .word Label_4_0130F902
+  .word Label_4_0147B1BD
 @ 050   ----------------------------------------
  .byte   PATT
-  .word Label_4_0130F95A
+  .word Label_4_0147B215
 @ 051   ----------------------------------------
  .byte   W72
  .byte   N12 ,En4 ,v080
@@ -2684,7 +2684,7 @@ Label_4_0130F9BB:
  .byte   N78 ,An3
  .byte   W78
 @ 056   ----------------------------------------
-Label_4_0130FABB:
+Label_4_0147B376:
  .byte   N24 ,En4 ,v080
  .byte   W24
  .byte   Cn4
@@ -2697,7 +2697,7 @@ Label_4_0130FABB:
  .byte   W12
  .byte   PEND 
 @ 057   ----------------------------------------
-Label_4_0130FACA:
+Label_4_0147B385:
  .byte   N60 ,Dn4 ,v080
  .byte   W60
  .byte   N12 ,Cn4
@@ -2729,10 +2729,10 @@ Label_4_0130FACA:
  .byte   W12
 @ 060   ----------------------------------------
  .byte   PATT
-  .word Label_4_0130FABB
+  .word Label_4_0147B376
 @ 061   ----------------------------------------
  .byte   PATT
-  .word Label_4_0130FACA
+  .word Label_4_0147B385
 @ 062   ----------------------------------------
  .byte   N24 ,Dn4 ,v080
  .byte   W24
@@ -2783,10 +2783,10 @@ Label_4_0130FACA:
  .byte   W96
 @ 068   ----------------------------------------
  .byte   GOTO
-  .word Label_4_0130F8CE
+  .word Label_4_0147B189
 @ 069   ----------------------------------------
  .byte   VOICE , 61
- .byte   VOL , 42*songC3_mvl/mxv
+ .byte   VOL , 41*songC3_mvl/mxv
  .byte   PAN , c_v+21
  .byte   FINE
 
@@ -2795,9 +2795,9 @@ Label_4_0130FACA:
 songC3_006:
 @ 000   ----------------------------------------
  .byte   KEYSH , songC3_key+0
-Label_5_0130FB3E:
+Label_5_0147B3F7:
  .byte   VOICE , 14
- .byte   VOL , 33*songC3_mvl/mxv
+ .byte   VOL , 32*songC3_mvl/mxv
  .byte   W96
 @ 001   ----------------------------------------
  .byte   W96
@@ -2934,7 +2934,7 @@ Label_5_0130FB3E:
 @ 053   ----------------------------------------
  .byte   W96
 @ 054   ----------------------------------------
-Label_5_0130FBA6:
+Label_5_0147B45F:
  .byte   N06 ,Fn3 ,v072
  .byte   W06
  .byte   An3
@@ -2969,7 +2969,7 @@ Label_5_0130FBA6:
  .byte   W06
  .byte   PEND 
 @ 055   ----------------------------------------
-Label_5_0130FBC9:
+Label_5_0147B482:
  .byte   N06 ,Gn3 ,v072
  .byte   W06
  .byte   Bn3
@@ -3071,10 +3071,10 @@ Label_5_0130FBC9:
  .byte   W06
 @ 058   ----------------------------------------
  .byte   PATT
-  .word Label_5_0130FBA6
+  .word Label_5_0147B45F
 @ 059   ----------------------------------------
  .byte   PATT
-  .word Label_5_0130FBC9
+  .word Label_5_0147B482
 @ 060   ----------------------------------------
  .byte   N06 ,En3 ,v072
  .byte   W06
@@ -3142,7 +3142,7 @@ Label_5_0130FBC9:
  .byte   Cn3
  .byte   W06
 @ 062   ----------------------------------------
-Label_5_0130FC78:
+Label_5_0147B531:
  .byte   N06 ,An2 ,v072
  .byte   W06
  .byte   Cn3
@@ -3211,7 +3211,7 @@ Label_5_0130FC78:
  .byte   W06
 @ 064   ----------------------------------------
  .byte   PATT
-  .word Label_5_0130FC78
+  .word Label_5_0147B531
 @ 065   ----------------------------------------
  .byte   N06 ,Dn3 ,v072
  .byte   W06
@@ -3247,10 +3247,10 @@ Label_5_0130FC78:
  .byte   W06
 @ 066   ----------------------------------------
  .byte   GOTO
-  .word Label_5_0130FB3E
+  .word Label_5_0147B3F7
 @ 067   ----------------------------------------
  .byte   VOICE , 14
- .byte   VOL , 33*songC3_mvl/mxv
+ .byte   VOL , 32*songC3_mvl/mxv
  .byte   FINE
 
 @**************** Track 7 (Midi-Chn.6) ****************@
@@ -3258,9 +3258,9 @@ Label_5_0130FC78:
 songC3_007:
 @ 000   ----------------------------------------
  .byte   KEYSH , songC3_key+0
-Label_6_0130E83E:
+Label_6_0147B5A7:
  .byte   VOICE , 48
- .byte   VOL , 26*songC3_mvl/mxv
+ .byte   VOL , 25*songC3_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N48 ,En3 ,v100
  .byte   N48 ,An3
@@ -3277,7 +3277,7 @@ Label_6_0130E83E:
  .byte   N60 ,Bn3
  .byte   W12
 @ 001   ----------------------------------------
-Label_6_0130E85A:
+Label_6_0147B5C3:
  .byte   W48
  .byte   N12 ,Dn3 ,v100
  .byte   W12
@@ -3291,7 +3291,7 @@ Label_6_0130E85A:
  .byte   W12
  .byte   PEND 
 @ 002   ----------------------------------------
-Label_6_0130E86B:
+Label_6_0147B5D4:
  .byte   W48
  .byte   N06 ,Cn3 ,v100
  .byte   W06
@@ -3311,7 +3311,7 @@ Label_6_0130E86B:
  .byte   W06
  .byte   PEND 
 @ 003   ----------------------------------------
-Label_6_0130E87F:
+Label_6_0147B5E8:
  .byte   N12 ,Fn3 ,v108
  .byte   N12 ,An3
  .byte   W12
@@ -3338,7 +3338,7 @@ Label_6_0130E87F:
  .byte   W12
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_6_0130E8A2:
+Label_6_0147B60B:
  .byte   N12 ,Fn3 ,v108
  .byte   N12 ,An3
  .byte   W48
@@ -3360,7 +3360,7 @@ Label_6_0130E8A2:
  .byte   W06
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_6_0130E8BB:
+Label_6_0147B624:
  .byte   N96 ,Cn3 ,v100
  .byte   N96 ,En3
  .byte   N96 ,An3
@@ -3372,7 +3372,7 @@ Label_6_0130E8BB:
  .byte   N96 ,Bn3
  .byte   W96
 @ 007   ----------------------------------------
-Label_6_0130E8CA:
+Label_6_0147B633:
  .byte   N12 ,An3 ,v100
  .byte   N12 ,Cn4
  .byte   W12
@@ -3393,7 +3393,7 @@ Label_6_0130E8CA:
  .byte   W12
  .byte   PEND 
 @ 008   ----------------------------------------
-Label_6_0130E8E6:
+Label_6_0147B64F:
  .byte   W12
  .byte   N12 ,Cn4 ,v100
  .byte   W12
@@ -3419,7 +3419,7 @@ Label_6_0130E8E6:
  .byte   W06
  .byte   PEND 
 @ 009   ----------------------------------------
-Label_6_0130E901:
+Label_6_0147B66A:
  .byte   N60 ,Fn3 ,v100
  .byte   N60 ,An3
  .byte   N60 ,Cn4
@@ -3435,7 +3435,7 @@ Label_6_0130E901:
  .byte   W12
  .byte   PEND 
 @ 010   ----------------------------------------
-Label_6_0130E917:
+Label_6_0147B680:
  .byte   N12 ,Bn3 ,v100
  .byte   N12 ,Ds4
  .byte   W12
@@ -3459,7 +3459,7 @@ Label_6_0130E917:
  .byte   W12
  .byte   PEND 
 @ 011   ----------------------------------------
-Label_6_0130E934:
+Label_6_0147B69D:
  .byte   N06 ,En3 ,v100
  .byte   W06
  .byte   Fs3
@@ -3482,7 +3482,7 @@ Label_6_0130E934:
  .byte   W06
  .byte   PEND 
 @ 012   ----------------------------------------
-Label_6_0130E94E:
+Label_6_0147B6B7:
  .byte   N06 ,En3 ,v100
  .byte   W06
  .byte   Bn2
@@ -3518,7 +3518,7 @@ Label_6_0130E94E:
  .byte   PEND 
 @ 013   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E8BB
+  .word Label_6_0147B624
 @ 014   ----------------------------------------
  .byte   N96 ,En3 ,v100
  .byte   N96 ,Gn3
@@ -3526,12 +3526,12 @@ Label_6_0130E94E:
  .byte   W96
 @ 015   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E8CA
+  .word Label_6_0147B633
 @ 016   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E8E6
+  .word Label_6_0147B64F
 @ 017   ----------------------------------------
-Label_6_0130E988:
+Label_6_0147B6F1:
  .byte   N12 ,Dn4 ,v100
  .byte   W12
  .byte   As3
@@ -3548,7 +3548,7 @@ Label_6_0130E988:
  .byte   W12
  .byte   PEND 
 @ 018   ----------------------------------------
-Label_6_0130E99B:
+Label_6_0147B704:
  .byte   N12 ,Cn4 ,v100
  .byte   W12
  .byte   An3
@@ -3565,7 +3565,7 @@ Label_6_0130E99B:
  .byte   W12
  .byte   PEND 
 @ 019   ----------------------------------------
-Label_6_0130E9AE:
+Label_6_0147B717:
  .byte   N36 ,Bn3 ,v100
  .byte   N36 ,Dn4
  .byte   W36
@@ -3583,7 +3583,7 @@ Label_6_0130E9AE:
  .byte   W12
  .byte   PEND 
 @ 020   ----------------------------------------
-Label_6_0130E9C7:
+Label_6_0147B730:
  .byte   N06 ,An3 ,v100
  .byte   W06
  .byte   En3
@@ -3618,7 +3618,7 @@ Label_6_0130E9C7:
  .byte   W06
  .byte   PEND 
 @ 021   ----------------------------------------
-Label_6_0130E9EA:
+Label_6_0147B753:
  .byte   N36 ,Fn3 ,v100
  .byte   N36 ,An3
  .byte   N36 ,Cn4
@@ -3633,7 +3633,7 @@ Label_6_0130E9EA:
  .byte   W12
  .byte   PEND 
 @ 022   ----------------------------------------
-Label_6_0130E9FD:
+Label_6_0147B766:
  .byte   N12 ,Bn3 ,v100
  .byte   W12
  .byte   Gn3
@@ -3652,7 +3652,7 @@ Label_6_0130E9FD:
  .byte   W12
  .byte   PEND 
 @ 023   ----------------------------------------
-Label_6_0130EA10:
+Label_6_0147B779:
  .byte   N12 ,Dn3 ,v100
  .byte   N12 ,Gn3
  .byte   N12 ,Bn3
@@ -3671,7 +3671,7 @@ Label_6_0130EA10:
  .byte   W12
  .byte   PEND 
 @ 024   ----------------------------------------
-Label_6_0130EA27:
+Label_6_0147B790:
  .byte   N06 ,Cn4 ,v100
  .byte   W06
  .byte   An3
@@ -3707,15 +3707,15 @@ Label_6_0130EA27:
  .byte   PEND 
 @ 025   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E9EA
+  .word Label_6_0147B753
 @ 026   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E9FD
+  .word Label_6_0147B766
 @ 027   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130EA10
+  .word Label_6_0147B779
 @ 028   ----------------------------------------
-Label_6_0130EA59:
+Label_6_0147B7C2:
  .byte   N06 ,Cn5 ,v100
  .byte   W06
  .byte   An4
@@ -3750,7 +3750,7 @@ Label_6_0130EA59:
  .byte   W06
  .byte   PEND 
 @ 029   ----------------------------------------
-Label_6_0130EA7C:
+Label_6_0147B7E5:
  .byte   N36 ,An3 ,v100
  .byte   N36 ,Cn4
  .byte   W36
@@ -3768,7 +3768,7 @@ Label_6_0130EA7C:
  .byte   W12
  .byte   PEND 
 @ 030   ----------------------------------------
-Label_6_0130EA95:
+Label_6_0147B7FE:
  .byte   N18 ,Dn3 ,v100
  .byte   N18 ,Gn3
  .byte   W18
@@ -3789,7 +3789,7 @@ Label_6_0130EA95:
  .byte   W12
  .byte   PEND 
 @ 031   ----------------------------------------
-Label_6_0130EAB1:
+Label_6_0147B81A:
  .byte   N06 ,Fn2 ,v100
  .byte   W06
  .byte   An2
@@ -3824,7 +3824,7 @@ Label_6_0130EAB1:
  .byte   W06
  .byte   PEND 
 @ 032   ----------------------------------------
-Label_6_0130EAD4:
+Label_6_0147B83D:
  .byte   N06 ,Gn2 ,v100
  .byte   W06
  .byte   Bn2
@@ -3875,19 +3875,19 @@ Label_6_0130EAD4:
  .byte   W12
 @ 034   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E85A
+  .word Label_6_0147B5C3
 @ 035   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E86B
+  .word Label_6_0147B5D4
 @ 036   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E87F
+  .word Label_6_0147B5E8
 @ 037   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E8A2
+  .word Label_6_0147B60B
 @ 038   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E8BB
+  .word Label_6_0147B624
 @ 039   ----------------------------------------
  .byte   N96 ,En3 ,v100
  .byte   N96 ,Gn3
@@ -3895,25 +3895,25 @@ Label_6_0130EAD4:
  .byte   W96
 @ 040   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E8CA
+  .word Label_6_0147B633
 @ 041   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E8E6
+  .word Label_6_0147B64F
 @ 042   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E901
+  .word Label_6_0147B66A
 @ 043   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E917
+  .word Label_6_0147B680
 @ 044   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E934
+  .word Label_6_0147B69D
 @ 045   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E94E
+  .word Label_6_0147B6B7
 @ 046   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E8BB
+  .word Label_6_0147B624
 @ 047   ----------------------------------------
  .byte   N96 ,En3 ,v100
  .byte   N96 ,Gn3
@@ -3921,40 +3921,40 @@ Label_6_0130EAD4:
  .byte   W96
 @ 048   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E8CA
+  .word Label_6_0147B633
 @ 049   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E8E6
+  .word Label_6_0147B64F
 @ 050   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E988
+  .word Label_6_0147B6F1
 @ 051   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E99B
+  .word Label_6_0147B704
 @ 052   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E9AE
+  .word Label_6_0147B717
 @ 053   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E9C7
+  .word Label_6_0147B730
 @ 054   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E9EA
+  .word Label_6_0147B753
 @ 055   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E9FD
+  .word Label_6_0147B766
 @ 056   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130EA10
+  .word Label_6_0147B779
 @ 057   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130EA27
+  .word Label_6_0147B790
 @ 058   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E9EA
+  .word Label_6_0147B753
 @ 059   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130E9FD
+  .word Label_6_0147B766
 @ 060   ----------------------------------------
  .byte   N12 ,Dn3 ,v100
  .byte   N12 ,Gs3
@@ -3974,25 +3974,25 @@ Label_6_0130EAD4:
  .byte   W12
 @ 061   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130EA59
+  .word Label_6_0147B7C2
 @ 062   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130EA7C
+  .word Label_6_0147B7E5
 @ 063   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130EA95
+  .word Label_6_0147B7FE
 @ 064   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130EAB1
+  .word Label_6_0147B81A
 @ 065   ----------------------------------------
  .byte   PATT
-  .word Label_6_0130EAD4
+  .word Label_6_0147B83D
 @ 066   ----------------------------------------
  .byte   GOTO
-  .word Label_6_0130E83E
+  .word Label_6_0147B5A7
 @ 067   ----------------------------------------
  .byte   VOICE , 48
- .byte   VOL , 26*songC3_mvl/mxv
+ .byte   VOL , 25*songC3_mvl/mxv
  .byte   PAN , c_v+0
  .byte   FINE
 
@@ -4001,9 +4001,9 @@ Label_6_0130EAD4:
 songC3_008:
 @ 000   ----------------------------------------
  .byte   KEYSH , songC3_key+0
-Label_7_013372C2:
+Label_7_0147B93A:
  .byte   VOICE , 124
- .byte   VOL , 41*songC3_mvl/mxv
+ .byte   VOL , 40*songC3_mvl/mxv
  .byte   N12 ,Cn1 ,v064
  .byte   N12 ,Fs1
  .byte   N12 ,Cs2
@@ -4038,7 +4038,7 @@ Label_7_013372C2:
  .byte   N04
  .byte   W04
 @ 001   ----------------------------------------
-Label_7_013372F7:
+Label_7_0147B96F:
  .byte   N12 ,Cn1 ,v064
  .byte   N12 ,Fs1
  .byte   W12
@@ -4069,7 +4069,7 @@ Label_7_013372F7:
  .byte   W12
  .byte   PEND 
 @ 002   ----------------------------------------
-Label_7_01337322:
+Label_7_0147B99A:
  .byte   N12 ,Cn1 ,v064
  .byte   N12 ,Fs1
  .byte   W12
@@ -4108,7 +4108,7 @@ Label_7_01337322:
  .byte   W06
  .byte   PEND 
 @ 003   ----------------------------------------
-Label_7_01337358:
+Label_7_0147B9D0:
  .byte   N12 ,Dn1 ,v064
  .byte   N06 ,Fs1
  .byte   W06
@@ -4145,7 +4145,7 @@ Label_7_01337358:
  .byte   W12
  .byte   PEND 
 @ 004   ----------------------------------------
-Label_7_0133738C:
+Label_7_0147BA04:
  .byte   N12 ,Dn1 ,v064
  .byte   N12 ,Fs1
  .byte   N12 ,En2
@@ -4190,7 +4190,7 @@ Label_7_0133738C:
  .byte   W06
  .byte   PEND 
 @ 005   ----------------------------------------
-Label_7_013373CB:
+Label_7_0147BA43:
  .byte   N12 ,Cn1 ,v064
  .byte   N12 ,Fs1
  .byte   N12 ,Cs2
@@ -4222,7 +4222,7 @@ Label_7_013373CB:
  .byte   W06
  .byte   PEND 
 @ 006   ----------------------------------------
-Label_7_013373F7:
+Label_7_0147BA6F:
  .byte   N12 ,Cn1 ,v064
  .byte   N12 ,Fs1
  .byte   W12
@@ -4254,9 +4254,9 @@ Label_7_013373F7:
  .byte   PEND 
 @ 007   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373F7
+  .word Label_7_0147BA6F
 @ 008   ----------------------------------------
-Label_7_01337426:
+Label_7_0147BA9E:
  .byte   N12 ,Cn1 ,v064
  .byte   N12 ,Fs1
  .byte   W12
@@ -4286,12 +4286,12 @@ Label_7_01337426:
  .byte   PEND 
 @ 009   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373F7
+  .word Label_7_0147BA6F
 @ 010   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373F7
+  .word Label_7_0147BA6F
 @ 011   ----------------------------------------
-Label_7_01337457:
+Label_7_0147BACF:
  .byte   N12 ,Cn1 ,v064
  .byte   N06 ,Fs1
  .byte   N12 ,An2
@@ -4335,7 +4335,7 @@ Label_7_01337457:
  .byte   W06
  .byte   PEND 
 @ 012   ----------------------------------------
-Label_7_01337496:
+Label_7_0147BB0E:
  .byte   N12 ,Cn1 ,v064
  .byte   N12 ,As1 ,v052
  .byte   N12 ,Cs2 ,v064
@@ -4375,24 +4375,24 @@ Label_7_01337496:
  .byte   PEND 
 @ 013   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373CB
+  .word Label_7_0147BA43
 @ 014   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373F7
+  .word Label_7_0147BA6F
 @ 015   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373F7
+  .word Label_7_0147BA6F
 @ 016   ----------------------------------------
  .byte   PATT
-  .word Label_7_01337426
+  .word Label_7_0147BA9E
 @ 017   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373F7
+  .word Label_7_0147BA6F
 @ 018   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373F7
+  .word Label_7_0147BA6F
 @ 019   ----------------------------------------
-Label_7_013374EC:
+Label_7_0147BB64:
  .byte   N12 ,Cn1 ,v064
  .byte   N06 ,Fs1
  .byte   N12 ,An2
@@ -4435,7 +4435,7 @@ Label_7_013374EC:
  .byte   W06
  .byte   PEND 
 @ 020   ----------------------------------------
-Label_7_0133752A:
+Label_7_0147BBA2:
  .byte   N12 ,Cn1 ,v064
  .byte   N12 ,As1 ,v052
  .byte   N12 ,Cs2 ,v064
@@ -4471,7 +4471,7 @@ Label_7_0133752A:
  .byte   W12
  .byte   PEND 
 @ 021   ----------------------------------------
-Label_7_0133755E:
+Label_7_0147BBD6:
  .byte   N12 ,En1 ,v064
  .byte   N12 ,Fs1
  .byte   N12 ,Cs2
@@ -4503,7 +4503,7 @@ Label_7_0133755E:
  .byte   W06
  .byte   PEND 
 @ 022   ----------------------------------------
-Label_7_0133758A:
+Label_7_0147BC02:
  .byte   N12 ,En1 ,v064
  .byte   N12 ,Fs1
  .byte   W12
@@ -4535,9 +4535,9 @@ Label_7_0133758A:
  .byte   PEND 
 @ 023   ----------------------------------------
  .byte   PATT
-  .word Label_7_0133758A
+  .word Label_7_0147BC02
 @ 024   ----------------------------------------
-Label_7_013375B9:
+Label_7_0147BC31:
  .byte   N12 ,En1 ,v064
  .byte   N12 ,Fs1
  .byte   W12
@@ -4570,7 +4570,7 @@ Label_7_013375B9:
  .byte   W06
  .byte   PEND 
 @ 025   ----------------------------------------
-Label_7_013375E7:
+Label_7_0147BC5F:
  .byte   N12 ,En1 ,v064
  .byte   N12 ,Fs1
  .byte   N12 ,An2
@@ -4603,12 +4603,12 @@ Label_7_013375E7:
  .byte   PEND 
 @ 026   ----------------------------------------
  .byte   PATT
-  .word Label_7_0133758A
+  .word Label_7_0147BC02
 @ 027   ----------------------------------------
  .byte   PATT
-  .word Label_7_0133758A
+  .word Label_7_0147BC02
 @ 028   ----------------------------------------
-Label_7_0133761D:
+Label_7_0147BC95:
  .byte   N12 ,En1 ,v064
  .byte   N12 ,Fs1
  .byte   W12
@@ -4641,7 +4641,7 @@ Label_7_0133761D:
  .byte   W12
  .byte   PEND 
 @ 029   ----------------------------------------
-Label_7_01337649:
+Label_7_0147BCC1:
  .byte   N12 ,En1 ,v064
  .byte   N12 ,Fs1
  .byte   N12 ,An2
@@ -4674,7 +4674,7 @@ Label_7_01337649:
  .byte   W06
  .byte   PEND 
 @ 030   ----------------------------------------
-Label_7_01337676:
+Label_7_0147BCEE:
  .byte   N12 ,En1 ,v064
  .byte   N12 ,Fs1
  .byte   W12
@@ -4707,9 +4707,9 @@ Label_7_01337676:
  .byte   PEND 
 @ 031   ----------------------------------------
  .byte   PATT
-  .word Label_7_01337649
+  .word Label_7_0147BCC1
 @ 032   ----------------------------------------
-Label_7_013376A6:
+Label_7_0147BD1E:
  .byte   N12 ,En1 ,v064
  .byte   N12 ,Fs1
  .byte   W12
@@ -4783,106 +4783,106 @@ Label_7_013376A6:
  .byte   W04
 @ 034   ----------------------------------------
  .byte   PATT
-  .word Label_7_013372F7
+  .word Label_7_0147B96F
 @ 035   ----------------------------------------
  .byte   PATT
-  .word Label_7_01337322
+  .word Label_7_0147B99A
 @ 036   ----------------------------------------
  .byte   PATT
-  .word Label_7_01337358
+  .word Label_7_0147B9D0
 @ 037   ----------------------------------------
  .byte   PATT
-  .word Label_7_0133738C
+  .word Label_7_0147BA04
 @ 038   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373CB
+  .word Label_7_0147BA43
 @ 039   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373F7
+  .word Label_7_0147BA6F
 @ 040   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373F7
+  .word Label_7_0147BA6F
 @ 041   ----------------------------------------
  .byte   PATT
-  .word Label_7_01337426
+  .word Label_7_0147BA9E
 @ 042   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373F7
+  .word Label_7_0147BA6F
 @ 043   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373F7
+  .word Label_7_0147BA6F
 @ 044   ----------------------------------------
  .byte   PATT
-  .word Label_7_01337457
+  .word Label_7_0147BACF
 @ 045   ----------------------------------------
  .byte   PATT
-  .word Label_7_01337496
+  .word Label_7_0147BB0E
 @ 046   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373CB
+  .word Label_7_0147BA43
 @ 047   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373F7
+  .word Label_7_0147BA6F
 @ 048   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373F7
+  .word Label_7_0147BA6F
 @ 049   ----------------------------------------
  .byte   PATT
-  .word Label_7_01337426
+  .word Label_7_0147BA9E
 @ 050   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373F7
+  .word Label_7_0147BA6F
 @ 051   ----------------------------------------
  .byte   PATT
-  .word Label_7_013373F7
+  .word Label_7_0147BA6F
 @ 052   ----------------------------------------
  .byte   PATT
-  .word Label_7_013374EC
+  .word Label_7_0147BB64
 @ 053   ----------------------------------------
  .byte   PATT
-  .word Label_7_0133752A
+  .word Label_7_0147BBA2
 @ 054   ----------------------------------------
  .byte   PATT
-  .word Label_7_0133755E
+  .word Label_7_0147BBD6
 @ 055   ----------------------------------------
  .byte   PATT
-  .word Label_7_0133758A
+  .word Label_7_0147BC02
 @ 056   ----------------------------------------
  .byte   PATT
-  .word Label_7_0133758A
+  .word Label_7_0147BC02
 @ 057   ----------------------------------------
  .byte   PATT
-  .word Label_7_013375B9
+  .word Label_7_0147BC31
 @ 058   ----------------------------------------
  .byte   PATT
-  .word Label_7_013375E7
+  .word Label_7_0147BC5F
 @ 059   ----------------------------------------
  .byte   PATT
-  .word Label_7_0133758A
+  .word Label_7_0147BC02
 @ 060   ----------------------------------------
  .byte   PATT
-  .word Label_7_0133758A
+  .word Label_7_0147BC02
 @ 061   ----------------------------------------
  .byte   PATT
-  .word Label_7_0133761D
+  .word Label_7_0147BC95
 @ 062   ----------------------------------------
  .byte   PATT
-  .word Label_7_01337649
+  .word Label_7_0147BCC1
 @ 063   ----------------------------------------
  .byte   PATT
-  .word Label_7_01337676
+  .word Label_7_0147BCEE
 @ 064   ----------------------------------------
  .byte   PATT
-  .word Label_7_01337649
+  .word Label_7_0147BCC1
 @ 065   ----------------------------------------
  .byte   PATT
-  .word Label_7_013376A6
+  .word Label_7_0147BD1E
 @ 066   ----------------------------------------
  .byte   GOTO
-  .word Label_7_013372C2
+  .word Label_7_0147B93A
 @ 067   ----------------------------------------
  .byte   VOICE , 124
- .byte   VOL , 41*songC3_mvl/mxv
+ .byte   VOL , 40*songC3_mvl/mxv
  .byte   FINE
 
 @******************************************************@

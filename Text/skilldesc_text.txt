@@ -1,3 +1,11 @@
+## SD_Chronoshift
+Borrowed Time: After combat, heals[N]
+unit 5 HP and deals 5 damage to foe.[X]
+
+## SD_RidersAxiom
+Rider's Axiom: On turns 1-3, unit makes[N]
+a follow-up and foe cannot.[X]
+
 ## SD_SoulSplitter
 Soul Splitter: Grants AS = Foe's Res/2.[N]
 Foe loses AS = Unit's Res/2.[X]
@@ -125,8 +133,8 @@ Promenade: If within 2 spaces of a[N]
 cavalry ally, unit takes 2 less damage.[X]
 
 ## SD_Bulwark
-Bulwark: If within 2 spaces of an[N]
-armored ally, grants Hit +30.[X]
+Bulwark: If unit cannot counter,[N]
+foe cannot make a follow-up.[X]
 
 ## SD_Galestorm
 Fusillade: Unit makes a guaranteed[N]
@@ -668,8 +676,9 @@ Savage Blow: After attacking, enemies[N]
 within 2 spaces take 20% damage.[X]
 
 ## SD_Relief
-Relief: Recover 20% HP each turn if[N]
-there are no allies within 2 spaces.[X]
+Relief: Restores 20% of max HP at the[N]
+start of each turn if unit is adjacent[N]
+to an ally.[X]
 
 ## SD_Tantivy
 Tantivy: +10 Hit/Avoid if there are[N]
@@ -1008,7 +1017,7 @@ Fortress Resistance:[N]
 ## SD_Foresight
 Foresight: Avoid the damage[N]
 from enemy Critical Hits and[N]
-Skill Activations.[X]
+Combat Arts.[X]
 
 ## SD_Axefaith
 Axefaith: Axes can't lose durability, and[N]
@@ -1029,7 +1038,8 @@ if on a Plain, Forest or Mountain.[X]
 
 ## SD_FullMetalBody
 Determination: Unit ignores[N]
-stat penalties.[X]
+stat penalties from staves[N]
+and Seal-type effects.[X]
 
 ## SD_LiquidOoze
 Liquid Ooze: Attackers trying to gain HP[N]

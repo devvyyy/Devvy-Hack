@@ -18,6 +18,14 @@ POIN FuryEvent
 #include "Fury/FuryEvent.event"
 
 ALIGN 4
+Chronoshift:
+#incbin "Chronoshift/Chronoshift.dmp"
+POIN SkillTester
+WORD ChronoshiftID
+POIN ChronoshiftEvent
+#include "Chronoshift/ChronoshiftEvent.event"
+
+ALIGN 4
 Lifetaker:
 #incbin "Lifetaker/lifetaker.dmp"
 POIN SkillTester

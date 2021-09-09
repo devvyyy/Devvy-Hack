@@ -58,6 +58,11 @@ ldrh r0, [r4, r1] @hit
 add r0, #10
 strh r0, [r4,r1]
 
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq End
+
 @add 50% of foes missing hp as damage
 ldrb  r0,[r5,#0x12] @defender max hp
 ldrb  r1,[r5,#0x13] @defender current hp

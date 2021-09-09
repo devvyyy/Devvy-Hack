@@ -20,11 +20,10 @@ ldrb r3, [r3]
 cmp r3, #4
 beq End
 
-mov r2, #0x3A @attacker mag
-ldrb r0, [r4, r2] 
-ldrb r1, [r5, #0x14] @defender str
-cmp r0, r1
-ble End @skip if mag is less or equal
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq End
 
 @add enemy's max hp/4 damage
 mov  r1, #0x5A

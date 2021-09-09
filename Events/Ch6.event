@@ -137,7 +137,7 @@ UNIT BadGuy AxeArmor 0x1 Level(7, Enemy, 1)     [9,9] DropItem 0x0 0x0 0x0 [Stee
 UNIT BadGuy SwordCav 0x1 Level(6, Enemy, 1)     [1,16] 0b 0x0 0x0 0x0 [IronSword] TwoActionAI
 UNIT BadGuy LanceCav 0x1 Level(6, Enemy, 1)     [0,18] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
 UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [1,13] 0b 0x0 0x0 0x0 [DarkTome2] AttackInRangeAI
-UNIT Hiems Deserter 0x1 Level(6, Enemy, 1)     [2,17] DropItem 0x0 0x0 0x0 [Horseslayer,] AttackInRangeAI
+UNIT BadGuy Deserter 0x1 Level(6, Enemy, 1)     [2,17] DropItem 0x0 0x0 0x0 [Horseslayer,] AttackInRangeAI
 UNIT Hiems Thaumaturge 0x1 Level(6, Enemy, 1)     [6,11] 0b 0x0 0x0 0x0 [Thunder] StallOneTurnAI
 UNIT BadGuy Mercenary 0x1 Level(6, Enemy, 1)     [20,16] 0b 0x0 0x0 0x0 [IronBlade] AttackInRangeAI
 UNIT HiemsStealable Thaumaturge 0x1 Level(6, Enemy, 1)     [21,18] 0b 0x0 0x0 0x0 [Fire,PureWater] StallOneTurnAI
@@ -149,7 +149,7 @@ UNIT Hiems Occultist 0x1 Level(6, Enemy, 1)     [0,5] 0b 0x0 0x0 0x0 [DarkTome2]
 UNIT BadGuy Deserter 0x1 Level(6, Enemy, 1)     [5,7] 0b 0x0 0x0 0x0 [IronGlaive] ChargeAI
 UNIT BadGuy Raider 0x1 Level(6, Enemy, 1)     [3,12] 0b 0x0 0x0 0x0 [IronSword,Zanbato] AttackInRangeAI
 UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [13,2] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
-UNIT BadGuy Mage 0x1 Level(6, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [Thunder] AttackInRangeAI
+UNIT Hiems Mage 0x1 Level(6, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [Thunder] AttackInRangeAI
 UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [10,5] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
 UNIT BadGuy SCav 0x1 Level(6, Enemy, 1)     [9,3] 0b 0x0 0x0 0x0 [Armorslayer,Vulnerary] AttackInRangeAI
 UNIT BadGuy PegRider 0x1 Level(6, Enemy, 1)     [8,13] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
@@ -158,7 +158,7 @@ UNIT HiemsStealable Monk 0x1 Level(6, Enemy, 1)     [12,10] 0b 0x0 0x0 0x0 [Ligh
 UNIT BadGuy Pirate 0x1 Level(6, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [ShortAxe,] BossAI
 UNIT BadGuy Hunter 0x1 Level(6, Enemy, 1)     [16,12] 0b 0x0 0x0 0x0 [SteelBow] AttackInRangeAI
 UNIT BadGuy Hunter 0x1 Level(6, Enemy, 1)     [4,3] 0b 0x0 0x0 0x0 [KillerBow] ChargeAI
-UNIT BadGuy Shaman 0x1 Level(7, Enemy, 1)     [4,10] 0b 0x0 0x0 0x0 [Flux] AttackInRangeAI
+UNIT Hiems Shaman 0x1 Level(7, Enemy, 1)     [4,10] 0b 0x0 0x0 0x0 [Flux] AttackInRangeAI
 	UNIT
 	
 RecruitsAgain:
@@ -177,12 +177,12 @@ UNIT Hiems Occultist 0x1 Level(6, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [DarkTome2]
 	UNIT
 	
 MidReinWith1Unit:
-UNIT Hiems Myrmidon 0x1 Level(7, Enemy, 1)     [13,11] 0b 0x0 0x0 0x0 [IronSword,Lancereaver] [0,0xF,4,0]
+UNIT BadGuy Myrmidon 0x1 Level(7, Enemy, 1)     [13,11] 0b 0x0 0x0 0x0 [IronSword,Lancereaver] [0,0xF,4,0]
 	UNIT
 	
 LeftStairsRein3:
-UNIT Hiems Archer 0x1 Level(7, Enemy, 1)     [0,12] 0b 0x0 0x0 0x0 [SteelBow] ChargeAI
-UNIT Hiems Mercenary 0x1 Level(6, Enemy, 1)     [0,12] 0 0 1 REDA1R12 [IronSword,Zanbato] ChargeAI
+UNIT BadGuy Archer 0x1 Level(7, Enemy, 1)     [0,12] 0b 0x0 0x0 0x0 [SteelBow] ChargeAI
+UNIT BadGuy Mercenary 0x1 Level(6, Enemy, 1)     [0,12] 0 0 1 REDA1R12 [IronSword,Zanbato] ChargeAI
 	UNIT
 	
 LeftMoatRein1:
@@ -521,6 +521,9 @@ QuickRemu(Eiskaffee,14)
 QuickRemu(Doppio,15)
 QuickRemu(Floris,16)
 QuickRemu(Atheya,17)
+QuickRemu(Noel,18)
+QuickRemu(Therese,19)
+QuickRemu(Lennard,20)
 	MNC2 0x7
 	NoFade
 	ENDA

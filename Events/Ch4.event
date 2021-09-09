@@ -269,12 +269,19 @@ STAL 20
 EndingScene:
 FADI 60
 DoAllThree
-Music(0x26)
+Music(VictoryBGM)
 LOAD2 0x1 EndCutsceneUnits
 FADU 12
 CameraCursor(Affogato)
 STAL 5
+SetBackground(0x3F)
 Text(Ch4Ending1)
+FADI 60
+CLEAN
+Music(0x26)
+FADU 16
+BROWNBOXTEXT LaterThatNight [8,8] // box in the top right that's pretty cool for small text
+STAL 10
 MOVE 0xD Affogato [8,14]
 ENUN
 STAL 10
