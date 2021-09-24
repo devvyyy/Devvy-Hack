@@ -87,7 +87,7 @@ Tutorial:
 END_MAIN
 
 Units1:
-UNIT Affogato Hunter 0x1 Level(1, Ally, 0)     [7,6]  0b 0 1 REDA7R9 [IronBow, IronRifle,Lockpick,] [0x0,0x0,0x0,0x0]
+UNIT Affogato Hunter 0x1 Level(1, Ally, 0)     [7,6]  0b 0 1 REDA7R9 [IronBow, IronRifle,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Breve SCav 0x1 Level(3, Ally, 0)    [7,6] 0b 0 1 REDA6R8 [IronSword,Sagitar,Vulnerary] [0x0,0x0,0x0,0x0]
 UNIT Ansgar LArmor 0x1 Level(4, Ally, 0)   [7,6] 0b 0 1 REDA7R8 [IronLance,Javelin,Vulnerary] [0x0,0x0,0x0,0x0]
 UNIT Hildr 0x6 0x1 Level(2, Ally, 0)    [7,6] 0b 0 1 REDA8R8 [IronAxe,HandAxe,Vulnerary] [0x0,0x0,0x0,0x0]
@@ -189,7 +189,7 @@ ENDA
 EndingScene:
 Music(0x32)
 SetBackground(0x3C)
-IfAliveDialog(Breve,EndingSceneBrevePrologue)
+IfAliveDialog(Breve,EndingSceneBrevePrologue,1)
 CHECK_ALIVE Hildr
 BEQ 2 0x0 0xC
 CHECK_ALIVE Ansgar

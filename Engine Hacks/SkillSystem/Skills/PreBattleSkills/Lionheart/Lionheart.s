@@ -21,10 +21,14 @@ cmp r3, #4
 beq End
 
 @reduce damage by the thingy
-mov r1, #0x5C
-ldrh r0, [r4, r1] @Defense
-add r0, #3
-strh r0, [r4,r1]
+@add 50% of foes missing hp as damage
+ldrb  r0,[r4,#0x12] @defender max hp
+ldrb  r1,[r4,#0x13] @defender current hp
+sub   r0,r1
+mov   r2,#0x62
+ldrh  r1,[r4,r2]
+add   r1,r0,r1
+strh  r1,[r4,r2]
 
 End:
 pop {r4-r7, r15}

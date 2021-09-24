@@ -5,7 +5,7 @@ voicegroup001:
   #define SongTableOffset  0x224470
   #include "drumfix_fe8.event"
   voicegroup000:
-  #incbin "FE8_NI_Map.bin"
+  #incbin "FE8_NI_Map_2.bin"
 #endif
 
 #define SongTable(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT Group Group; POP"
@@ -27,6 +27,11 @@ ALIGN 4
 // Bard Gaming
 SongTable(0x02D6,song02D6,7)
 #include "BardSound.event"
+
+ALIGN 4
+// Drums Before Map
+SongTable(0x03E3,Sussy,1)
+#include "Drums.event"
 
 ALIGN 4
 // Level Up by Runa (From Runa Does A Thing!!!)
@@ -95,7 +100,7 @@ SongTable(0x01F1,song01F1,0)
 
 ALIGN 4
 //Applying Justice ~Boss
-SongTable(0x01F2,ThraciaBoss,0)
+SongTable(0x01F2,song01F2,0)
 #include "ThraciaBoss.event"
 
 ALIGN 4
@@ -195,20 +200,22 @@ SongTable(0x148,song0148,1)
 
 ALIGN 4
 //Eden Under Siege by Thomash Lee
-SongTable(0xE4,song26,0)
+SongTable(0xE4,songE4,0)
 #include "EdenUnderSiege.event"
 
 ALIGN 4
 //Fighting of The Spirit from khinsider
-SongTable(0x118,song2C,0)
+SongTable(0x118,song0118,0)
 #include "FightingOfTheSpirit.event"
 
 ALIGN 4
-//Tearing Shadows
+//Fountain of Love
+SongTable(0x37,song37,1)
+#include "Fountain.event"
 
 ALIGN 4
 //Strange Encounter from khinsider
-SongTable(0xAE,song15,1)
+SongTable(0xAE,songAE,1)
 #include "StrangeEncounter.event"
 
 ALIGN 4
@@ -226,7 +233,7 @@ ALIGN 4
 
 ALIGN 4
 //The Final Showdown by Scott Mtc.
-SongTable(0xC5,song03D7,1)
+SongTable(0xC5,songC5,1)
 #include "FinalShowdown.event"
 
 ALIGN 4
@@ -254,10 +261,15 @@ ALIGN 4
 SongTable(0xE1,song03A8,1)
 #include "Feena.event"
 
-ALIGN 4
+//ALIGN 4
 //Silver Will by Scott Mtc.
-SongTable(0xC6,song0E,1)
-#include "SilverWill.event"
+//SongTable(0xC6,songC6,1)
+//#include "SilverWill.event"
+
+ALIGN 4
+//Silver Will ~Golden Wings edited by Scraiza
+SongTable(0xC6,songC6,1)
+#include "SilverWillGoldenWings.event"
 
 ALIGN 4
 //Dark Caverns by viejiux

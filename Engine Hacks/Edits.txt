@@ -1,6 +1,29 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+//Prevents Archer palette from being overwritten
+//by 7743
+PUSH
+ORG 0x599B6
+BYTE 0x14 0xE0
+POP
+
+//Prevent Healer Mistarget
+//by Magrika is now Canon
+PUSH
+ORG 0x3FC9D
+BYTE 0xD2
+ORG 0x3FE77
+BYTE 0xD2
+POP
+
+//Prevent Freeze from Unit State 0x33
+//by 7743
+PUSH
+	ORG $1027C
+	BYTE 0x00 0x20 0x02 
+POP
+
 //Fix Large Level up screens
 //by Tequila
 PUSH
@@ -83,7 +106,7 @@ ORG 0x897C4
 SHORT 0x200E 0x5620 //mov r0, #0x0E; ldsb r0, [r4, r0]
 POP
 
-//Mine Damage
+//Mine Damage (Changes it to 20, Base 10)
 PUSH
 ORG 0x375A4
 BYTE 0x14
@@ -167,7 +190,7 @@ ORG 0x07A71C
 BYTE 0x5a 0x20 0x55 0xf0 0x6d 0xfd
 POP
 
-//Devil Axe Death Moment
+//Devil Axe Death Moment (Changes it to 30 - Luck, Base 31)
 PUSH
 ORG 0x02B6A4
 BYTE 0x1E
@@ -179,7 +202,7 @@ ORG $178C2
 BYTE 0x02
 POP
 
-//Sound Quality
+//Sound Quality (Unstable)
 //PUSH
 //ORG $D06f4
 //BYTE 0x06
@@ -345,7 +368,6 @@ BYTE 0x00
 BYTE 0x06
 BYTE 0x00
 POP
-
 
 //Epic BLUE TEXT
 //Thanks Warpath

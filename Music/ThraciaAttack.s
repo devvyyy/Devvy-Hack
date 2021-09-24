@@ -19,11 +19,11 @@
 song01F0_001:
 @ 000   ----------------------------------------
  .byte   KEYSH , song01F0_key+0
-Label_0_013CB8DE:
+Label_0_0144F46A:
  .byte   TEMPO , 158*song01F0_tbs/2
  .byte   VOICE , 48
  .byte   PAN , c_v+20
- .byte   VOL , 43*song01F0_mvl/mxv
+ .byte   VOL , 37*song01F0_mvl/mxv
  .byte   N03 ,As3 ,v100
  .byte   N03 ,As4
  .byte   W06
@@ -119,7 +119,7 @@ Label_0_013CB8DE:
  .byte   W72
 @ 007   ----------------------------------------
  .byte   GOTO
-  .word Label_0_013CB8DE
+  .word Label_0_0144F46A
  .byte   FINE
 
 @**************** Track 2 (Midi-Chn.1) ****************@
@@ -127,10 +127,10 @@ Label_0_013CB8DE:
 song01F0_002:
 @ 000   ----------------------------------------
  .byte   KEYSH , song01F0_key+0
-Label_1_01427476:
+Label_1_0144F4F8:
  .byte   VOICE , 48
  .byte   PAN , c_v+6
- .byte   VOL , 43*song01F0_mvl/mxv
+ .byte   VOL , 37*song01F0_mvl/mxv
  .byte   W48
  .byte   N06 ,Gs3 ,v100
  .byte   W06
@@ -143,7 +143,7 @@ Label_1_01427476:
  .byte   N24 ,As2
  .byte   W24
 @ 001   ----------------------------------------
-Label_1_0142748A:
+Label_1_0144F50C:
  .byte   N06 ,Bn1 ,v100
  .byte   N06 ,Bn2
  .byte   W12
@@ -203,7 +203,7 @@ Label_1_0142748A:
  .byte   W06
 @ 004   ----------------------------------------
  .byte   PATT
-  .word Label_1_0142748A
+  .word Label_1_0144F50C
 @ 005   ----------------------------------------
  .byte   W12
  .byte   N12 ,Fn2 ,v100
@@ -230,7 +230,7 @@ Label_1_0142748A:
  .byte   W72
 @ 007   ----------------------------------------
  .byte   GOTO
-  .word Label_1_01427476
+  .word Label_1_0144F4F8
  .byte   FINE
 
 @**************** Track 3 (Midi-Chn.2) ****************@
@@ -238,10 +238,10 @@ Label_1_0142748A:
 song01F0_003:
 @ 000   ----------------------------------------
  .byte   KEYSH , song01F0_key+0
-Label_2_013CB8B6:
+Label_2_0144F58A:
  .byte   VOICE , 58
  .byte   PAN , c_v-1
- .byte   VOL , 52*song01F0_mvl/mxv
+ .byte   VOL , 46*song01F0_mvl/mxv
  .byte   N96 ,As0 ,v100
  .byte   W96
 @ 001   ----------------------------------------
@@ -259,7 +259,7 @@ Label_2_013CB8B6:
  .byte   W96
 @ 007   ----------------------------------------
  .byte   GOTO
-  .word Label_2_013CB8B6
+  .word Label_2_0144F58A
  .byte   FINE
 
 @**************** Track 4 (Midi-Chn.3) ****************@
@@ -267,9 +267,9 @@ Label_2_013CB8B6:
 song01F0_004:
 @ 000   ----------------------------------------
  .byte   KEYSH , song01F0_key+0
-Label_3_013CBA1A:
+Label_3_0144F5A3:
  .byte   VOICE , 57
- .byte   VOL , 45*song01F0_mvl/mxv
+ .byte   VOL , 39*song01F0_mvl/mxv
  .byte   PAN , c_v-33
  .byte   W96
 @ 001   ----------------------------------------
@@ -322,7 +322,7 @@ Label_3_013CBA1A:
  .byte   W24
 @ 007   ----------------------------------------
  .byte   GOTO
-  .word Label_3_013CBA1A
+  .word Label_3_0144F5A3
  .byte   FINE
 
 @**************** Track 5 (Midi-Chn.4) ****************@
@@ -330,9 +330,9 @@ Label_3_013CBA1A:
 song01F0_005:
 @ 000   ----------------------------------------
  .byte   KEYSH , song01F0_key+0
-Label_4_013CB79E:
+Label_4_0144F5E6:
  .byte   VOICE , 47
- .byte   VOL , 38*song01F0_mvl/mxv
+ .byte   VOL , 32*song01F0_mvl/mxv
  .byte   PAN , c_v-44
  .byte   N12 ,As2 ,v100
  .byte   W36
@@ -365,7 +365,7 @@ Label_4_013CB79E:
  .byte   N04 ,Fs2 ,v080
  .byte   W04
 @ 003   ----------------------------------------
-Label_4_013CB7CC:
+Label_4_0144F614:
  .byte   N12 ,As2 ,v100
  .byte   W24
  .byte   N12
@@ -383,7 +383,7 @@ Label_4_013CB7CC:
  .byte   PEND 
 @ 004   ----------------------------------------
  .byte   PATT
-  .word Label_4_013CB7CC
+  .word Label_4_0144F614
 @ 005   ----------------------------------------
  .byte   N12 ,As2 ,v100
  .byte   W12
@@ -399,7 +399,7 @@ Label_4_013CB7CC:
  .byte   W24
 @ 007   ----------------------------------------
  .byte   GOTO
-  .word Label_4_013CB79E
+  .word Label_4_0144F5E6
  .byte   FINE
 
 @**************** Track 6 (Midi-Chn.5) ****************@
@@ -407,9 +407,9 @@ Label_4_013CB7CC:
 song01F0_006:
 @ 000   ----------------------------------------
  .byte   KEYSH , song01F0_key+0
-Label_5_0142750A:
+Label_5_0144F63F:
  .byte   VOICE , 47
- .byte   VOL , 38*song01F0_mvl/mxv
+ .byte   VOL , 32*song01F0_mvl/mxv
  .byte   PAN , c_v+43
  .byte   N12 ,As1 ,v100
  .byte   W36
@@ -442,7 +442,7 @@ Label_5_0142750A:
  .byte   N04 ,Fs1 ,v080
  .byte   W04
 @ 003   ----------------------------------------
-Label_5_01427538:
+Label_5_0144F66D:
  .byte   N12 ,As1 ,v100
  .byte   W24
  .byte   N12
@@ -460,7 +460,7 @@ Label_5_01427538:
  .byte   PEND 
 @ 004   ----------------------------------------
  .byte   PATT
-  .word Label_5_01427538
+  .word Label_5_0144F66D
 @ 005   ----------------------------------------
  .byte   N12 ,As1 ,v100
  .byte   W12
@@ -476,7 +476,7 @@ Label_5_01427538:
  .byte   W24
 @ 007   ----------------------------------------
  .byte   GOTO
-  .word Label_5_0142750A
+  .word Label_5_0144F63F
  .byte   FINE
 
 @**************** Track 7 (Midi-Chn.6) ****************@
@@ -484,9 +484,9 @@ Label_5_01427538:
 song01F0_007:
 @ 000   ----------------------------------------
  .byte   KEYSH , song01F0_key+0
-Label_6_01427566:
+Label_6_0144F698:
  .byte   VOICE , 36
- .byte   VOL , 29*song01F0_mvl/mxv
+ .byte   VOL , 23*song01F0_mvl/mxv
  .byte   PAN , c_v-13
  .byte   N24 ,Bn1 ,v108
  .byte   W36
@@ -541,7 +541,7 @@ Label_6_01427566:
  .byte   W12
 @ 007   ----------------------------------------
  .byte   GOTO
-  .word Label_6_01427566
+  .word Label_6_0144F698
  .byte   FINE
 
 @**************** Track 8 (Midi-Chn.7) ****************@
@@ -549,9 +549,9 @@ Label_6_01427566:
 song01F0_008:
 @ 000   ----------------------------------------
  .byte   KEYSH , song01F0_key+0
-Label_7_014275AE:
+Label_7_0144F6DD:
  .byte   VOICE , 124
- .byte   VOL , 41*song01F0_mvl/mxv
+ .byte   VOL , 35*song01F0_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N06 ,Fs1 ,v060
  .byte   N30 ,Cs2 ,v108
@@ -776,7 +776,7 @@ Label_7_014275AE:
  .byte   W06
 @ 007   ----------------------------------------
  .byte   GOTO
-  .word Label_7_014275AE
+  .word Label_7_0144F6DD
  .byte   FINE
 
 @******************************************************@

@@ -1,7 +1,8 @@
-//modify CHAI to be able to change 3 and 4, not just 1 and 2
 PUSH
-ORG $10644
-jumpToHack(New_CHAI)
+//modify CHAI to be able to change 3 and 4, not just 1 and 2
+
+    ORG $10644
+    replaceWithHack(New_CHAI)
 POP
 
 ALIGN 4

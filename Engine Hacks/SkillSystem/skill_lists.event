@@ -1,3 +1,4 @@
+
 ShoveSkillList:
 BYTE 01|0x20 ShoveID
 BYTE 00 00
@@ -28,12 +29,18 @@ BYTE 01|0x20 PivotID
 BYTE 00 00
 ALIGN 4
 
-AffoSkillList:
-BYTE 01 CunningID
+PThiefSkillList:
+BYTE 01 LocktouchID
 BYTE 00 00
 ALIGN 4
 
 Ch2OSkillList:
 BYTE 01 WatchfulID
+BYTE 00 00
+ALIGN 4
+
+FinalBossSkillList:
+BYTE 01 KingMarkID
+BYTE 01 NullifyID
 BYTE 00 00
 ALIGN 4
