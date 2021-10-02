@@ -189,7 +189,7 @@ Lone Wolf: If unit is not adjacent to[N]
 an ally, grants Crit +15.[X]
 
 ## SD_Megalovania
-Bird's Song: If unit's Res > Foe's Res,[N]
+Bird's Song: If unit's Spd > Foe's Spd,[N]
 unit strikes twice on initiation.[X]
 
 ## SD_RayDark
@@ -229,7 +229,7 @@ physical allies with full HP:[NL]
 
 ## SD_RupturedSky
 Ruptured Sky: Boosts unit's Atk by 25%[N]
-of foe's Strength/Ether.[X]
+of foe's Str/Eth.[X]
 
 ## SD_HeavyDuty
 Heavy Duty: If unit's Wt > foe's Wt,[NL]
@@ -237,7 +237,7 @@ inflicts Atk -3 on foe.[X]
 
 ## SD_Lunatic
 Lunatic: If foe's HP is full, deals bonus[N]
-damage equal to 25% of foe's Defense.[X]
+damage equal to 25% of foe's Def.[X]
 
 ## SD_FinalBoss
 Eye of the King: Deals damage equal to[N]
@@ -248,8 +248,8 @@ Sidestep: Unit can move 2 spaces[N]
 after action.[X]
 
 ## SD_Vigor
-Requiem: Multiplies Ether[N]
-by 1.25x during combat.[X]
+Requiem: Multiplies Eth by[N]
+1.25x during combat.[X]
 
 ## SD_Defeatist
 Defeatist: If unit's HP is below[NL]
@@ -276,7 +276,7 @@ Blackfire: Inflicts Atk/Spd -2 on[N]
 adjacent foes.[X]
 
 ## SD_Steadfast
-Steadfast: Gain +1 Attack Speed for[N]
+Steadfast: Grants +1 Spd for[N]
 every 2 spaces moved.[X]
 
 ## SD_Whirlwind
@@ -454,7 +454,7 @@ follow-up attacks occur immediately.[X]
 
 ## SD_Wrath
 Wrath: If HP is less than half,[N]
-+20 critical rate.[X]
+grants +20 Crit.[X]
 
 ## SD_Counter
 Counter: Reflect physical damage[N]
@@ -465,8 +465,8 @@ Countermagic: Reflect magic damage[N]
 when attacked at 1-2 range.[X]
 
 ## SD_Miracle
-Miracle: Survive a lethal[N]
-attack if HP is above half.[X]
+Miracle: If HP is above half, unit[N]
+survives the next lethal hit.[X]
 
 ## SD_Swordfaire
 Swordfaire: +4 damage[N]
@@ -529,8 +529,8 @@ Gentilhomme: Female allies within[N]
 2 spaces receive -2 damage.[X]
 
 ## SD_MaleficAura
-Malefic Aura: Enemies within 2[N]
-spaces receive +2 magic damage.[X]
+Malefic Aura: Foes within 2 spaces[N]
+take +2 magic damage.[X]
 
 ## SD_Inspiration
 Inspiration: Allies within 2 spaces[N]
@@ -656,8 +656,8 @@ opponent after combat.[N]
 (No effect if Move is --)[X]
 
 ## SD_Intimidate
-Intimidate: -10 Avoid to[N]
-all enemies within 2 spaces.[X]
+Intimidate: Inflicts Avo -10 to[N]
+foes within 2 spaces.[X]
 
 ## SD_Opportunist
 Opportunist: +4 damage[N]
@@ -917,8 +917,8 @@ Identity Problems: This unit can't[N]
 decide on a name or face.[X]
 
 ## SD_Charisma
-Charisma: Grants +10 Hit/Avoid[N]
-to all allies within three spaces.[X]
+Empower: Grants Hit/Avo +10[N]
+to adjacent allies.[X]
 
 ## SD_HeroesDeathBlow
 Death Blow: +6 Attack[N]
@@ -1128,7 +1128,7 @@ Thunderstorm: If weapon weight > enemy[N]
 W. Weight, +2 dmg, +15% hit, +5% crit.[X]
 
 ## SD_Warpath
-Warpath: Gain +3 crit for[N]
+Warpath: Gain +3 Crit for[N]
 every 2 spaces moved.[X]
 
 ## SD_Outrider

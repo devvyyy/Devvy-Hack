@@ -27,7 +27,7 @@ TURN 0x0 EndingScene [11,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-
+CharacterEventBothWays(0x9, NoraFlorisConvo, Nora, Floris)
 	END_MAIN
 
 MiscBasedEvents:
@@ -398,6 +398,15 @@ VCWF 1
 STAL 30
 NoFade
 ENDA
+
+NoraFlorisConvo:
+	MUSI
+	Text(NoraFlorisTalk)
+	MUNO
+	MURE 2
+	ENUT 0x79
+	NoFade
+	ENDA
 
 WeAreDead:
 CHECK_ACTIVE

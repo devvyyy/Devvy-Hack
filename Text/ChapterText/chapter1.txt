@@ -17,18 +17,30 @@ Let's get ready,[.4] then.[.6][N]
 We march on.[A][X]
 
 ## Ch1Opening2
-[OpenMidRight][LoadFace][0x32][0x1]
-[OpenMidLeft][LoadBandit]
-[OpenMidRight]The priest has fallen.[.6] The boss[N]
-won't be too happy about this.[AN]
-[OpenMidLeft]Yeah,[.4] yeah.[OpenMidLeft]I'm just here[N]
-for the gold![AN]
-If y'all wanna appease the boss[N]
-or whatever,[AN]
-[ToggleSmile]killing them capital knights[N]
-should do,[.4] yeah?[AN][ToggleSmile]
-[OpenMidRight]Hm.[.6] You better be[N]
-correct.[A][X]
+[OpenMidRight][LoadFace][0x33][0x1]
+[OpenMidLeft][LoadShaman]
+[OpenMidRight][ToggleSmile]Good day.[N]
+[OpenMidLeft]You're the scout[Beat] Any[N]
+updates on the plan?[AN]
+[OpenMidRight][ToggleSmile]Of course.[.6] The mission[N]
+starts tomorrow.[AN]
+[MoveMidRight]The boss knows a lot about the[N]
+whereabouts of the guards.[AN]
+[OpenMidLeft]And any report on the[N]
+other scouts?[AN]
+[OpenMidRight]They're flying towards the[N]
+city borders.[AN]
+The boss called for reinforcements.[.6][N]
+We meet up later.[AN]
+
+[OpenMidLeft][MoveLeft]
+[OpenFarLeft][LoadBandit]What are you two[N]
+here for?[AN]
+Get in position![.6] The priest has[N]
+fallen.[AN]
+[MoveFarLeft]Now's the only chance we'll[N]
+get to get the knights![AN]
+[MoveMidRight]Right away.[AN][X]
 
 ## Ch1Opening3
 [OpenMidRight][LoadAffo]
@@ -124,13 +136,16 @@ I'll scout ahead.[AN]
 [OpenMidRight]Godspeed,[.4] Affogato.[A][X]
 
 ## Ch1Ending2
+[OpenLeft][LoadHildr]Cultists and brigands,[.4] huh?[.6][N]
+What's next?[.6] Ghosts?[AN]
+[OpenRight][LoadAnsgarLeft][OpenFarRight][LoadAnsgarRight]
+Ergh,[.4] just hopin' that's the[N]
+last of 'em.[.6] [CloseEyes]I'm beat.[AN][CloseEyes]
 [OpenFarLeft][LoadBreve]
 Hildr?[.6] Ansgar?[.6] Mind helping[N]
 me prepare a campfire for tonight?[AN]
-[OpenLeft][LoadHildr][ToggleSmile]Happy to help!
-[OpenRight][LoadAnsgarLeft][OpenFarRight][LoadAnsgarRight]
-[OpenRight][Pause]This is[Beat][CloseEyes] a lot[.4] heavier[Beat][N]
-than it looks[Beat]![A][X]
+[OpenLeft][MoveLeft][ToggleSmile]Sure![.6] Always happy[N]
+to help.[.6][ToggleSmile] Come on,[.4] Ansgar![AN][OpenFarLeft][ClearFace][OpenLeft][ClearFace][X]
 
 ## Ch1Ending3
 [OpenMidLeft][LoadAffogato]I brought back some[N]
@@ -249,22 +264,44 @@ we march tomorrow at dawn.[A][X]
 for your past actions![A][X]
 
 ## KisAffoBossQ
-[OpenMidLeft][LoadFace][0x32][0x1]
-[OpenMidLeft]Your little escapades end[N]
-here![A][X]
+[X]
 
 ## KisDeath
 # verified
 [OpenMidLeft][LoadFace][0x32][0x1]H[Beat] How[Beat]?[A][CloseEyes][X]
 
+## BisChargeWarningText
+[OpenMidRight][LoadFace][0x33][0x1]
+Step up,[.4] knights.[.6] The crow[N]
+feasts today.[AN]
+If you don't hurry,[.4] I'll[N]
+[ToggleRed]take the fight to you[ToggleRed]![AN][X]
+
+## BisChargeText
+[OpenMidRight][LoadFace][0x33][0x1]
+Alright[Beat] [CloseEyes]The moment I've[N]
+been waiting for![AN]
+Prepare yourself![.6] Or don't-[.4][N]
+just makes it easier for me![A][X]
+
 ## BisBossQ
-[X]
+[OpenMidLeft][LoadFace][0x33][0x1]
+[OpenMidLeft]Your little escapades end[N]
+here![A][X]
 
 ## BisDeath
-[X]
+No[Beat] No way[Beat] Help[N]
+me[.4] G-[A][CloseEyes][X]
 
 ## BisAffoBossQ
-[X]
+[OpenMidRight][LoadAffo]
+Didn't they teach you pegasus[N]
+knights not to run into bowmen?[AN][ClearFace]
+[OpenMidLeft][LoadFace][0x33][0x1]Quit your yammering![A][ClearFace]
+[OpenMidRight][LoadAffo]
+I-[AN][ClearFace]
+[OpenMidLeft][LoadFace][0x33][0x1]I told you to[N]
+quit it![A][X]
 
 ## BisLatteBossQ
 [X]

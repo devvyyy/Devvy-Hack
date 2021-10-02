@@ -34,6 +34,7 @@ ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0x10,AffoGorloisConvo, Affo, Gorlois)
 CharacterEventBothWays(0x11,IronRuneConvo, Gorlois, Stroganoff)
+CharacterEventBothWays(0x12,AnsgarThereseConvo, Ansgar, Therese)
 	END_MAIN
 
 ALIGN 32
@@ -157,8 +158,8 @@ UNIT Therese SArmor 0x1 Level(7, Ally, 0)     [5,4] 0b 0x0 0x0 0x0 [SteelBlade,M
 	UNIT
 	
 WyvernAndPeg:
-UNIT BadGuy WyvRider 0x1 Level(6, Enemy, 1)     [8,18] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
-UNIT BadGuy PegRider 0x1 Level(6, Enemy, 1)     [17,18] 0b 0x0 0x0 0x0 [Axereaver,IronLance] TwoActionAI
+UNIT FlierSoul WyvRider 0x1 Level(6, Enemy, 1)     [8,18] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
+UNIT FlierSoul PegRider 0x1 Level(6, Enemy, 1)     [17,18] 0b 0x0 0x0 0x0 [Axereaver,IronLance] TwoActionAI
 	UNIT	
 
 LeftStairsRein1:
@@ -200,12 +201,12 @@ UNIT InfantrySoul Soldier 0x1 Level(6, Enemy, 1)     [0,12] 0b 0x0 0x0 0x0 [Axer
 	
 TopMoat1:
 UNIT Hiems Occultist 0x1 Level(6, Enemy, 1)     [17,0] 0b 0x0 0x0 0x0 [DarkTome2] ChargeAI
-UNIT BadGuy WyvernRider 0x1 Level(7, Enemy, 1)     [18,0] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
+UNIT FlierSoul WyvernRider 0x1 Level(7, Enemy, 1)     [18,0] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
 	UNIT
 	
 TopMoat2:
 UNIT Hiems Occultist 0x1 Level(7, Enemy, 1)     [18,0] 0b 0x0 0x0 0x0 [DarkTome1] ChargeAI
-UNIT BadGuy Pirate 0x1 Level(7, Enemy, 1)     [17,0] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
+UNIT BadGuy Pirate 0x1 Level(7, Enemy, 1)     [17,0] 0b 0x0 0x0 0x0 [IronAxe] ChargeAI
 	UNIT
 	
 TopMoat3:
@@ -217,7 +218,7 @@ InnerFortRein1:
 UNIT Hiems Shaman 0x1 Level(7, Enemy, 1)     [13,11] 0b 0x0 0x0 0x0 [DarkTome2] [0,0xF,4,0]
 UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [13,11] 0 0 1 REDA14R11 [IronLabrys] [0,0xF,4,0]
 	UNIT
-	
+
 InnerFortRein2:
 UNIT InfantrySoul Archer 0x1 Level(6, Enemy, 1)     [13,11] 0b 0x0 0x0 0x0 [SteelBow] [0,0xF,4,0]
 UNIT CavSoul LCav 0x1 Level(7, Enemy, 1)     [13,11] 0 0 1 REDA14R11 [Horseslayer] [0,0xF,4,0]
@@ -257,7 +258,7 @@ UNIT Hiems Mage 0x1 Level(7, Enemy, 1)     [18,16] 0b 0x0 0x0 0x0 [Wind] [0,0xF,
 	UNIT
 	
 RightFortRein4:
-UNIT InfantrySoul Soldier 0x1 Level(7, Enemy, 1)     [18,16] 0b 0x0 0x0 0x0 [PlightLance,Javelin] TwoActionAI
+UNIT InfantrySoul Soldier 0x1 Level(7, Enemy, 1)     [18,16] 0b 0x0 0x0 0x0 [0xDD,Javelin] TwoActionAI
 	UNIT
 	
 HolyFuckWhy1:
@@ -576,10 +577,48 @@ AffoGorloisConvo:
 	
 IronRuneConvo:
 	MUSI
-	Text(Ch6IntroTextGorlois)
+	Text(StroganGorloisTalk)
 	MUNO
 	MURE 2
 GiveItem(Lightrune, Stroganoff)
+	NoFade
+	ENDA
+	
+AffoKingConvo:
+	MUSI
+	CHECK_EVENTID 0x78
+	BEQ 1 0x0 0xC
+	Text(KingAffoTalk)
+	GiveItem(GoddessIcon, Affo)
+	GOTO 2
+	LABEL 1
+	Text(KingAffoTalkAlt)
+	LABEL 2
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+NoraKingConvo:
+	MUSI
+	CHECK_EVENTID 0x79
+	BEQ 1 0x0 0xC
+	Text(NoraKingTalk)
+	GiveItem(Rescue, Nora)
+	GOTO 2
+	LABEL 1
+	Text(NoraKingTalkAlt)
+	LABEL 2
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+AnsgarThereseConvo:
+	MUSI
+CharacterConditionalDialog(Stroganoff,AnsgarThereseTalk,AnsgarThereseTalkAlt)
+	MUNO
+	MURE 2
 	NoFade
 	ENDA
 

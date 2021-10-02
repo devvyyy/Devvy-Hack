@@ -16,6 +16,7 @@ TurnBasedEvents:
 TURN 0x0 KillVillageBrigand [2,0] 0x0
 TURN 0x0 RecruitThief [2,0] 0x80
 TURN 0x0 ReinforcementsWarning [3,0] 0x0
+TURN 0x0 KillVillageBrigand2 [3,0] 0x0
 TURN 0x0 LeftRocksRein [4,0] 0x0
 TURN 0x0 BottomRightRein [5,0] 0x0
 TURN 0x0 TopRightRein [6,0] 0x0
@@ -25,6 +26,7 @@ TURN 0x0 TopLeftPegasi [9,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
+CharacterEventBothWays(0xC, MochaRinaConvo, Mocha, Rina)
 CharacterEventBothWays(0x20, RecruitRecruitThief, 0x0, Noel)
 	END_MAIN
 
@@ -190,10 +192,28 @@ FADI 60
 	ENDA
 
 EndingScene:
+CHECK_EVENTID 0x8
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x9
+BEQ 1 0x0 0xC
 Music(VictoryBGM)
-	MNC2 0x6
-	NoFade
-	ENDA
+SetBackground(0x33)
+Text(Ch5Ending1)
+FADI 60
+CLEAN
+SetBackground(0x0)
+FADU 30
+Music(0x27)
+Text(Ch5Ending2)
+ENUT 0x78
+GOTO 2; LABEL 1
+Music(0x63)
+SetBackground(0x33)
+Text(Ch5Ending1Alt)
+LABEL 2
+MNC2 0x6
+NoFade
+ENDA
 	
 RecruitThief:
 FADI 60
@@ -213,6 +233,13 @@ Text(NoelRecruit)
 CUSA Noel
 NoFade
 ENDA
+
+MochaRinaConvo:
+	MUSI
+CharacterConditionalDialog(Atheya,Ch5MochaRina,Ch5MochaRinaAlt)
+	MUNO
+	MURE 2
+	NoFade
 	
 ReinforcementsWarning:
 Highlight(0x4C)
@@ -222,6 +249,11 @@ ENDA
 
 KillVillageBrigand:
 SpawnReinforcements(SpookyBrigand)
+NoFade
+ENDA
+
+KillVillageBrigand2:
+SpawnReinforcements(SpookyBrigand2)
 NoFade
 ENDA
 

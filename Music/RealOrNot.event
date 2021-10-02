@@ -8,7 +8,7 @@
 
         // .rodata
         // songAD
-        ALIGN  2
+        ALIGN 4
 
 //****************** Track 0 (Midi-Chn.0) ******************//
 
@@ -67,8 +67,15 @@ songAD_0_6:
         BYTE   PATT
          POIN2  songAD_0_5
 // 008   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_0_6
+songAD_0_LOOP:
+        BYTE           N06     Dn1   v092
+        BYTE   W06
+        BYTE                   Dn1   v100
+        BYTE   W06
+        BYTE           N12     Dn1   v120
+        BYTE   W36
+        BYTE           N24     Dn1   v100
+        BYTE   W48
 // 009   ----------------------------------------
         BYTE   PATT
          POIN2  songAD_0_5
@@ -394,6 +401,8 @@ songAD_0_53:
         BYTE   W06
         BYTE                   Dn1   v100
         BYTE   W06
+        BYTE   GoTo
+         POIN2  songAD_0_LOOP
         BYTE   FINE
 
 //****************** Track 1 (Midi-Chn.1) ******************//
@@ -420,6 +429,7 @@ songAD_1:
 // 007   ----------------------------------------
         BYTE   W96
 // 008   ----------------------------------------
+songAD_1_LOOP:
         BYTE   W96
 // 009   ----------------------------------------
         BYTE   W96
@@ -575,6 +585,8 @@ songAD_1_22:
         BYTE   W96
 // 060   ----------------------------------------
         BYTE   W12
+        BYTE   GoTo
+         POIN2  songAD_1_LOOP
         BYTE   FINE
 
 //****************** Track 2 (Midi-Chn.2) ******************//
@@ -601,6 +613,7 @@ songAD_2:
 // 007   ----------------------------------------
         BYTE   W96
 // 008   ----------------------------------------
+songAD_2_LOOP:
         BYTE   W60
         BYTE           N48     An2   v120
         BYTE   W36
@@ -893,6 +906,8 @@ songAD_2_16:
         BYTE   W84
 // 060   ----------------------------------------
         BYTE   W12
+        BYTE   GoTo
+         POIN2  songAD_2_LOOP
         BYTE   FINE
 
 //****************** Track 3 (Midi-Chn.3) ******************//
@@ -919,6 +934,7 @@ songAD_3:
 // 007   ----------------------------------------
         BYTE   W96
 // 008   ----------------------------------------
+songAD_3_LOOP:
         BYTE   W96
 // 009   ----------------------------------------
         BYTE   W96
@@ -1187,6 +1203,8 @@ songAD_3_30:
         BYTE   W96
 // 060   ----------------------------------------
         BYTE   W12
+        BYTE   GoTo
+         POIN2  songAD_3_LOOP
         BYTE   FINE
 
 //****************** Track 4 (Midi-Chn.4) ******************//
@@ -1212,6 +1230,7 @@ songAD_4:
 // 007   ----------------------------------------
         BYTE   W96
 // 008   ----------------------------------------
+songAD_4_LOOP:
         BYTE   W96
 // 009   ----------------------------------------
         BYTE   W96
@@ -1363,6 +1382,8 @@ songAD_4_23:
         BYTE   W96
 // 060   ----------------------------------------
         BYTE   W12
+        BYTE   GoTo
+         POIN2  songAD_4_LOOP
         BYTE   FINE
 
 //****************** Track 5 (Midi-Chn.5) ******************//
@@ -1405,6 +1426,7 @@ songAD_5:
 // 007   ----------------------------------------
         BYTE   W96
 // 008   ----------------------------------------
+songAD_5_LOOP:
         BYTE   W96
 // 009   ----------------------------------------
         BYTE   W96
@@ -1573,6 +1595,8 @@ songAD_5_22:
         BYTE   W96
 // 060   ----------------------------------------
         BYTE   W12
+        BYTE   GoTo
+         POIN2  songAD_5_LOOP
         BYTE   FINE
 
 //****************** Track 6 (Midi-Chn.6) ******************//
@@ -1610,6 +1634,7 @@ songAD_6:
 // 007   ----------------------------------------
         BYTE   W96
 // 008   ----------------------------------------
+songAD_6_LOOP:
         BYTE   W96
 // 009   ----------------------------------------
         BYTE   W96
@@ -1731,6 +1756,8 @@ songAD_6:
         BYTE   W96
 // 060   ----------------------------------------
         BYTE   W12
+        BYTE   GoTo
+         POIN2  songAD_6_LOOP
         BYTE   FINE
 
 //****************** Track 7 (Midi-Chn.7) ******************//
@@ -1805,6 +1832,7 @@ songAD_7:
 // 007   ----------------------------------------
         BYTE   W96
 // 008   ----------------------------------------
+songAD_7_LOOP:
         BYTE   W96
 // 009   ----------------------------------------
         BYTE   W96
@@ -2137,6 +2165,8 @@ songAD_7_29:
         BYTE   W96
 // 060   ----------------------------------------
         BYTE   W12
+        BYTE   GoTo
+         POIN2  songAD_7_LOOP
         BYTE   FINE
 
 //****************** Track 8 (Midi-Chn.8) ******************//
@@ -2174,6 +2204,7 @@ songAD_8:
 // 007   ----------------------------------------
         BYTE   W96
 // 008   ----------------------------------------
+songAD_8_LOOP:
         BYTE   W96
 // 009   ----------------------------------------
         BYTE   W96
@@ -2231,7 +2262,7 @@ songAD_8:
         BYTE   W96
 // 036   ----------------------------------------
         BYTE   W12
-        BYTE                   Dn1   v127
+        BYTE           N96     Dn1   v127
         BYTE           N96     Dn0
         BYTE   W84
 // 037   ----------------------------------------
@@ -2297,482 +2328,13 @@ songAD_8:
         BYTE   W96
 // 060   ----------------------------------------
         BYTE   W12
+        BYTE   GoTo
+         POIN2  songAD_8_LOOP
         BYTE   FINE
 
-//****************** Track 9 (Midi-Chn.9) ******************//
+//***************** Track 9 (Midi-Chn.10) ******************//
 
 songAD_9:
-        BYTE   KEYSH   songAD_key+0
-// 000   ----------------------------------------
-        BYTE           VOICE   127
-        BYTE           VOL     25
-        BYTE   W12
-        BYTE           N24     An2   v112
-        BYTE           N96     Cs2
-        BYTE   W84
-// 001   ----------------------------------------
-        BYTE   W96
-// 002   ----------------------------------------
-        BYTE   W96
-// 003   ----------------------------------------
-        BYTE   W96
-// 004   ----------------------------------------
-        BYTE   W12
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE                   Dn1   v092
-        BYTE   W06
-        BYTE                   Dn1   v072
-        BYTE   W06
-// 005   ----------------------------------------
-songAD_9_5:
-        BYTE           N12     Dn1   v080
-        BYTE   W12
-        BYTE                   Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE                   Dn1   v092
-        BYTE   W06
-        BYTE           N03     Dn1   v072
-        BYTE   W03
-        BYTE                   Dn1   v060
-        BYTE   W03
-        BYTE   PEND
-// 006   ----------------------------------------
-songAD_9_6:
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE                   Dn1   v092
-        BYTE   W06
-        BYTE                   Dn1   v072
-        BYTE   W06
-        BYTE   PEND
-// 007   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 008   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_6
-// 009   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 010   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_6
-// 011   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 012   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_6
-// 013   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 014   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_6
-// 015   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 016   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_6
-// 017   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 018   ----------------------------------------
-songAD_9_18:
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N96     Ds2   v120
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE                   Dn1   v092
-        BYTE   W06
-        BYTE                   Dn1   v072
-        BYTE   W06
-        BYTE   PEND
-// 019   ----------------------------------------
-songAD_9_19:
-        BYTE           N12     Dn1   v080
-        BYTE   W12
-        BYTE           N01     Dn1   v112
-        BYTE   W01
-        BYTE           TIE     Ds2   v120
-        BYTE           N10     Dn1   v092
-        BYTE   W11
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v060
-        BYTE   W06
-        BYTE           N12     Dn1   v080
-        BYTE   W12
-        BYTE                   Dn1   v100
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v060
-        BYTE   W06
-        BYTE           N12     Dn1   v080
-        BYTE   W12
-        BYTE           N01     Dn1   v100
-        BYTE   W01
-        BYTE           N05     Dn1   v080
-        BYTE   W05
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE   PEND
-// 020   ----------------------------------------
-        BYTE           N12     Dn1   v080
-        BYTE   W12
-        BYTE           N72     Cs2   v112
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W05
-        BYTE           EOT     Ds2
-        BYTE   W01
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE                   Dn1   v092
-        BYTE   W06
-        BYTE                   Dn1   v072
-        BYTE   W06
-// 021   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 022   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_6
-// 023   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 024   ----------------------------------------
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N72     Cs2   v112
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE                   Dn1   v092
-        BYTE   W06
-        BYTE                   Dn1   v072
-        BYTE   W06
-// 025   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 026   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_6
-// 027   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 028   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_6
-// 029   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 030   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_6
-// 031   ----------------------------------------
-        BYTE           N12     Dn1   v080
-        BYTE   W12
-        BYTE           N01     Dn1   v112
-        BYTE   W01
-        BYTE           N10     Dn1   v092
-        BYTE   W11
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v060
-        BYTE   W06
-        BYTE           N12     Dn1   v080
-        BYTE   W12
-        BYTE                   Dn1   v100
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v060
-        BYTE   W06
-        BYTE           N12     Dn1   v080
-        BYTE   W12
-        BYTE           N01     Dn1   v100
-        BYTE   W01
-        BYTE           N05     Dn1   v080
-        BYTE   W05
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-// 032   ----------------------------------------
-songAD_9_32:
-        BYTE           N12     Dn1   v080
-        BYTE   W12
-        BYTE                   Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE                   Dn1   v092
-        BYTE   W06
-        BYTE                   Dn1   v072
-        BYTE   W06
-        BYTE   PEND
-// 033   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 034   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_18
-// 035   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_19
-// 036   ----------------------------------------
-        BYTE           N12     Dn1   v080
-        BYTE   W12
-        BYTE           N24     An2   v112
-        BYTE           N96     Cs2
-        BYTE   W44
-        BYTE   W03
-        BYTE           EOT     Ds2
-        BYTE   W36
-        BYTE   W01
-// 037   ----------------------------------------
-        BYTE   W96
-// 038   ----------------------------------------
-        BYTE   W96
-// 039   ----------------------------------------
-        BYTE   W96
-// 040   ----------------------------------------
-        BYTE   W12
-        BYTE           TIE     Ds2   v120
-        BYTE   W84
-// 041   ----------------------------------------
-        BYTE   W96
-// 042   ----------------------------------------
-        BYTE   W12
-        BYTE           N24     An2   v092
-        BYTE           N96     Cs2
-        BYTE           N12     Dn1
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           EOT     Ds2
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE                   Dn1   v092
-        BYTE   W06
-        BYTE                   Dn1   v072
-        BYTE   W06
-// 043   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 044   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_6
-// 045   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 046   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_6
-// 047   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 048   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_6
-// 049   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 050   ----------------------------------------
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE           N12     Dn1   v092
-        BYTE   W12
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE                   Dn1   v092
-        BYTE   W06
-        BYTE           N03     Dn1   v072
-        BYTE   W03
-        BYTE                   Dn1   v060
-        BYTE   W03
-// 051   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_6
-// 052   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 053   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_6
-// 054   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 055   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_6
-// 056   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_32
-// 057   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 058   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_6
-// 059   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_9_5
-// 060   ----------------------------------------
-        BYTE           N06     Dn1   v072
-        BYTE   W06
-        BYTE                   Dn1   v080
-        BYTE   W06
-        BYTE   FINE
-
-//***************** Track 10 (Midi-Chn.10) *****************//
-
-songAD_10:
         BYTE   KEYSH   songAD_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   48
@@ -2800,7 +2362,7 @@ songAD_10:
         BYTE           N12     Dn1
         BYTE   W24
 // 005   ----------------------------------------
-songAD_10_5:
+songAD_9_5:
         BYTE           N12     Dn2   v116
         BYTE           N12     Dn1
         BYTE   W12
@@ -2819,39 +2381,53 @@ songAD_10_5:
         BYTE   PEND
 // 006   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_5
+         POIN2  songAD_9_5
 // 007   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_5
+         POIN2  songAD_9_5
 // 008   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_10_5
+songAD_9_LOOP:
+        BYTE           N12     Dn2   v116
+        BYTE           N12     Dn1
+        BYTE   W12
+        BYTE                   Dn2   v112
+        BYTE           N12     Dn1
+        BYTE   W12
+        BYTE                   Dn2   v120
+        BYTE           N12     Dn1
+        BYTE   W24
+        BYTE                   Dn2   v112
+        BYTE           N12     Dn1
+        BYTE   W24
+        BYTE                   Dn2
+        BYTE           N12     Dn1
+        BYTE   W24
 // 009   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_5
+         POIN2  songAD_9_5
 // 010   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_5
+         POIN2  songAD_9_5
 // 011   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_5
+         POIN2  songAD_9_5
 // 012   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_5
+         POIN2  songAD_9_5
 // 013   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_5
+         POIN2  songAD_9_5
 // 014   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_5
+         POIN2  songAD_9_5
 // 015   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_5
+         POIN2  songAD_9_5
 // 016   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_5
+         POIN2  songAD_9_5
 // 017   ----------------------------------------
-songAD_10_17:
+songAD_9_17:
         BYTE           N12     Dn2   v116
         BYTE           N12     Dn1
         BYTE   W12
@@ -2869,7 +2445,7 @@ songAD_10_17:
         BYTE   W24
         BYTE   PEND
 // 018   ----------------------------------------
-songAD_10_18:
+songAD_9_18:
         BYTE           N12     Gn2   v116
         BYTE           N12     Gn1
         BYTE   W12
@@ -2888,9 +2464,9 @@ songAD_10_18:
         BYTE   PEND
 // 019   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_17
+         POIN2  songAD_9_17
 // 020   ----------------------------------------
-songAD_10_20:
+songAD_9_20:
         BYTE           N12     Gn2   v116
         BYTE           N12     Gn1
         BYTE   W12
@@ -2908,7 +2484,7 @@ songAD_10_20:
         BYTE   W24
         BYTE   PEND
 // 021   ----------------------------------------
-songAD_10_21:
+songAD_9_21:
         BYTE           N12     Gs2   v116
         BYTE           N12     Gs1
         BYTE   W12
@@ -2926,7 +2502,7 @@ songAD_10_21:
         BYTE   W24
         BYTE   PEND
 // 022   ----------------------------------------
-songAD_10_22:
+songAD_9_22:
         BYTE           N12     Gs2   v116
         BYTE           N12     Gs1
         BYTE   W12
@@ -2944,7 +2520,7 @@ songAD_10_22:
         BYTE   W24
         BYTE   PEND
 // 023   ----------------------------------------
-songAD_10_23:
+songAD_9_23:
         BYTE           N12     Gn2   v116
         BYTE           N12     Gn1
         BYTE   W12
@@ -2963,40 +2539,40 @@ songAD_10_23:
         BYTE   PEND
 // 024   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_20
+         POIN2  songAD_9_20
 // 025   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_21
+         POIN2  songAD_9_21
 // 026   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_22
+         POIN2  songAD_9_22
 // 027   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_23
+         POIN2  songAD_9_23
 // 028   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_18
+         POIN2  songAD_9_18
 // 029   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_17
+         POIN2  songAD_9_17
 // 030   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_18
+         POIN2  songAD_9_18
 // 031   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_17
+         POIN2  songAD_9_17
 // 032   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_18
+         POIN2  songAD_9_18
 // 033   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_17
+         POIN2  songAD_9_17
 // 034   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_18
+         POIN2  songAD_9_18
 // 035   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_17
+         POIN2  songAD_9_17
 // 036   ----------------------------------------
         BYTE           N12     Gn2   v116
         BYTE           N12     Gn1
@@ -3026,7 +2602,7 @@ songAD_10_23:
         BYTE           N12     Fs1
         BYTE   W24
 // 043   ----------------------------------------
-songAD_10_43:
+songAD_9_43:
         BYTE           N12     Fs2   v116
         BYTE           N12     Fs1
         BYTE   W12
@@ -3045,22 +2621,22 @@ songAD_10_43:
         BYTE   PEND
 // 044   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_43
+         POIN2  songAD_9_43
 // 045   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_43
+         POIN2  songAD_9_43
 // 046   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_43
+         POIN2  songAD_9_43
 // 047   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_43
+         POIN2  songAD_9_43
 // 048   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_43
+         POIN2  songAD_9_43
 // 049   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_43
+         POIN2  songAD_9_43
 // 050   ----------------------------------------
         BYTE           N12     Fs2   v116
         BYTE           N12     Fs1
@@ -3110,7 +2686,7 @@ songAD_10_43:
         BYTE           N12     Ds1
         BYTE   W24
 // 053   ----------------------------------------
-songAD_10_53:
+songAD_9_53:
         BYTE           N12     Ds2   v116
         BYTE           N12     Ds1
         BYTE   W12
@@ -3129,10 +2705,10 @@ songAD_10_53:
         BYTE   PEND
 // 054   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_53
+         POIN2  songAD_9_53
 // 055   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_53
+         POIN2  songAD_9_53
 // 056   ----------------------------------------
         BYTE           N12     Ds2   v116
         BYTE           N12     Ds1
@@ -3151,22 +2727,24 @@ songAD_10_53:
         BYTE   W24
 // 057   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_5
+         POIN2  songAD_9_5
 // 058   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_5
+         POIN2  songAD_9_5
 // 059   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_10_5
+         POIN2  songAD_9_5
 // 060   ----------------------------------------
         BYTE           N12     Dn2   v116
         BYTE           N12     Dn1
         BYTE   W12
+        BYTE   GoTo
+         POIN2  songAD_9_LOOP
         BYTE   FINE
 
-//***************** Track 11 (Midi-Chn.11) *****************//
+//***************** Track 10 (Midi-Chn.11) *****************//
 
-songAD_11:
+songAD_10:
         BYTE   KEYSH   songAD_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   19
@@ -3180,7 +2758,7 @@ songAD_11:
 // 003   ----------------------------------------
         BYTE   W96
 // 004   ----------------------------------------
-songAD_11_4:
+songAD_10_4:
         BYTE   W12
         BYTE           N08     Dn3   v120
         BYTE           N08     An2   v112
@@ -3205,7 +2783,7 @@ songAD_11_4:
         BYTE   W12
         BYTE   PEND
 // 005   ----------------------------------------
-songAD_11_5:
+songAD_10_5:
         BYTE           N08     An3   v120
         BYTE           N08     Dn3   v112
         BYTE   W12
@@ -3233,18 +2811,41 @@ songAD_11_5:
         BYTE   PEND
 // 006   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_5
+         POIN2  songAD_10_5
 // 007   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_5
+         POIN2  songAD_10_5
 // 008   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_11_5
+songAD_10_LOOP:
+        BYTE           N08     An3   v120
+        BYTE           N08     Dn3   v112
+        BYTE   W12
+        BYTE                   Dn3   v120
+        BYTE           N08     An2   v112
+        BYTE   W12
+        BYTE                   An3   v120
+        BYTE           N08     Dn3   v112
+        BYTE   W12
+        BYTE                   Dn4   v120
+        BYTE           N08     An3   v112
+        BYTE   W12
+        BYTE                   An3   v120
+        BYTE           N08     Dn3   v112
+        BYTE   W12
+        BYTE                   Dn4   v120
+        BYTE           N08     An3   v112
+        BYTE   W12
+        BYTE                   An3   v120
+        BYTE           N08     Dn3   v112
+        BYTE   W12
+        BYTE                   Dn3   v120
+        BYTE           N08     An2   v112
+        BYTE   W12
 // 009   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_5
+         POIN2  songAD_10_5
 // 010   ----------------------------------------
-songAD_11_10:
+songAD_10_10:
         BYTE           N08     An3   v120
         BYTE           N08     Dn3   v112
         BYTE   W12
@@ -3271,7 +2872,7 @@ songAD_11_10:
         BYTE   W12
         BYTE   PEND
 // 011   ----------------------------------------
-songAD_11_11:
+songAD_10_11:
         BYTE           N08     An3   v120
         BYTE           N08     Ds3   v112
         BYTE   W12
@@ -3298,7 +2899,7 @@ songAD_11_11:
         BYTE   W12
         BYTE   PEND
 // 012   ----------------------------------------
-songAD_11_12:
+songAD_10_12:
         BYTE           N08     An3   v120
         BYTE           N08     Ds3   v112
         BYTE   W12
@@ -3326,18 +2927,18 @@ songAD_11_12:
         BYTE   PEND
 // 013   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_5
+         POIN2  songAD_10_5
 // 014   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_10
+         POIN2  songAD_10_10
 // 015   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_11
+         POIN2  songAD_10_11
 // 016   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_12
+         POIN2  songAD_10_12
 // 017   ----------------------------------------
-songAD_11_17:
+songAD_10_17:
         BYTE           N08     An3   v120
         BYTE           N08     Dn3   v112
         BYTE   W12
@@ -3364,7 +2965,7 @@ songAD_11_17:
         BYTE   W12
         BYTE   PEND
 // 018   ----------------------------------------
-songAD_11_18:
+songAD_10_18:
         BYTE           N08     Gn3   v120
         BYTE           N08     Dn3   v112
         BYTE   W12
@@ -3392,7 +2993,7 @@ songAD_11_18:
         BYTE   PEND
 // 019   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_17
+         POIN2  songAD_10_17
 // 020   ----------------------------------------
         BYTE           N08     Gn3   v120
         BYTE           N08     Dn3   v112
@@ -3413,28 +3014,28 @@ songAD_11_18:
         BYTE   W96
 // 028   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_4
+         POIN2  songAD_10_4
 // 029   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_17
+         POIN2  songAD_10_17
 // 030   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_18
+         POIN2  songAD_10_18
 // 031   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_17
+         POIN2  songAD_10_17
 // 032   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_18
+         POIN2  songAD_10_18
 // 033   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_17
+         POIN2  songAD_10_17
 // 034   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_18
+         POIN2  songAD_10_18
 // 035   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_17
+         POIN2  songAD_10_17
 // 036   ----------------------------------------
         BYTE           N08     Gn3   v120
         BYTE           N08     Dn3   v112
@@ -3503,7 +3104,7 @@ songAD_11_18:
         BYTE           N08     As2   v120
         BYTE   W12
 // 043   ----------------------------------------
-songAD_11_43:
+songAD_10_43:
         BYTE           N08     Fs3   v124
         BYTE           N08     Cs3   v120
         BYTE   W12
@@ -3531,22 +3132,22 @@ songAD_11_43:
         BYTE   PEND
 // 044   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_43
+         POIN2  songAD_10_43
 // 045   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_43
+         POIN2  songAD_10_43
 // 046   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_43
+         POIN2  songAD_10_43
 // 047   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_43
+         POIN2  songAD_10_43
 // 048   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_43
+         POIN2  songAD_10_43
 // 049   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_43
+         POIN2  songAD_10_43
 // 050   ----------------------------------------
         BYTE           N08     Fs3   v124
         BYTE           N08     Cs3   v120
@@ -3573,7 +3174,7 @@ songAD_11_43:
         BYTE           N08     An2   v120
         BYTE   W12
 // 051   ----------------------------------------
-songAD_11_51:
+songAD_10_51:
         BYTE           N08     Fn3   v124
         BYTE           N08     Cs3   v120
         BYTE   W12
@@ -3601,16 +3202,16 @@ songAD_11_51:
         BYTE   PEND
 // 052   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_51
+         POIN2  songAD_10_51
 // 053   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_51
+         POIN2  songAD_10_51
 // 054   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_51
+         POIN2  songAD_10_51
 // 055   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_51
+         POIN2  songAD_10_51
 // 056   ----------------------------------------
         BYTE           N08     Fn3   v124
         BYTE           N08     Cs3   v120
@@ -3638,22 +3239,24 @@ songAD_11_51:
         BYTE   W12
 // 057   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_5
+         POIN2  songAD_10_5
 // 058   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_5
+         POIN2  songAD_10_5
 // 059   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_11_5
+         POIN2  songAD_10_5
 // 060   ----------------------------------------
         BYTE           N08     An3   v120
         BYTE           N08     Dn3   v112
         BYTE   W12
+        BYTE   GoTo
+         POIN2  songAD_10_LOOP
         BYTE   FINE
 
-//***************** Track 12 (Midi-Chn.12) *****************//
+//***************** Track 11 (Midi-Chn.12) *****************//
 
-songAD_12:
+songAD_11:
         BYTE   KEYSH   songAD_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   71
@@ -3666,7 +3269,7 @@ songAD_12:
 // 003   ----------------------------------------
         BYTE   W96
 // 004   ----------------------------------------
-songAD_12_4:
+songAD_11_4:
         BYTE   W12
         BYTE           N03     Fn3   v112
         BYTE           N03     Dn3
@@ -3688,7 +3291,7 @@ songAD_12_4:
         BYTE   W12
         BYTE   PEND
 // 005   ----------------------------------------
-songAD_12_5:
+songAD_11_5:
         BYTE           N03     Fn3   v092
         BYTE           N03     Dn3
         BYTE   W12
@@ -3715,7 +3318,7 @@ songAD_12_5:
         BYTE   W12
         BYTE   PEND
 // 006   ----------------------------------------
-songAD_12_6:
+songAD_11_6:
         BYTE           N03     Fn3   v112
         BYTE           N03     Dn3
         BYTE   W12
@@ -3740,15 +3343,35 @@ songAD_12_6:
         BYTE   PEND
 // 007   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_12_5
+         POIN2  songAD_11_5
 // 008   ----------------------------------------
-        BYTE   PATT
-         POIN2  songAD_12_6
+songAD_11_LOOP:
+        BYTE           N03     Fn3   v112
+        BYTE           N03     Dn3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE           N03     Dn3
+        BYTE   W12
+        BYTE                   Fn3   v092
+        BYTE           N03     Dn3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE           N03     Dn3
+        BYTE   W12
+        BYTE           N04     Fn3   v112
+        BYTE           N04     Dn3
+        BYTE   W24
+        BYTE           N03     Fn3   v100
+        BYTE           N03     Dn3
+        BYTE   W12
+        BYTE                   Fn3   v092
+        BYTE           N03     Dn3
+        BYTE   W12
 // 009   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_12_5
+         POIN2  songAD_11_5
 // 010   ----------------------------------------
-songAD_12_10:
+songAD_11_10:
         BYTE           N03     Fn3   v112
         BYTE           N03     Dn3
         BYTE   W12
@@ -3772,7 +3395,7 @@ songAD_12_10:
         BYTE   W12
         BYTE   PEND
 // 011   ----------------------------------------
-songAD_12_11:
+songAD_11_11:
         BYTE           N03     Gn3   v092
         BYTE           N03     Ds3
         BYTE   W12
@@ -3822,13 +3445,13 @@ songAD_12_11:
         BYTE   W12
 // 013   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_12_5
+         POIN2  songAD_11_5
 // 014   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_12_10
+         POIN2  songAD_11_10
 // 015   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_12_11
+         POIN2  songAD_11_11
 // 016   ----------------------------------------
         BYTE           N03     Gn3   v112
         BYTE           N03     Ds3
@@ -3852,7 +3475,7 @@ songAD_12_11:
         BYTE           N03     Fn3
         BYTE   W12
 // 017   ----------------------------------------
-songAD_12_17:
+songAD_11_17:
         BYTE           N03     An3   v092
         BYTE           N03     Fn3
         BYTE   W12
@@ -3879,7 +3502,7 @@ songAD_12_17:
         BYTE   W12
         BYTE   PEND
 // 018   ----------------------------------------
-songAD_12_18:
+songAD_11_18:
         BYTE           N03     As3   v112
         BYTE           N03     Gn3
         BYTE   W12
@@ -3903,7 +3526,7 @@ songAD_12_18:
         BYTE   W12
         BYTE   PEND
 // 019   ----------------------------------------
-songAD_12_19:
+songAD_11_19:
         BYTE           N03     An3   v092
         BYTE           N03     Fn3
         BYTE   W12
@@ -3930,7 +3553,7 @@ songAD_12_19:
         BYTE   W12
         BYTE   PEND
 // 020   ----------------------------------------
-songAD_12_20:
+songAD_11_20:
         BYTE           N03     As3   v112
         BYTE           N03     Gn3
         BYTE   W96
@@ -3971,28 +3594,28 @@ songAD_12_20:
         BYTE   W12
 // 029   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_12_17
+         POIN2  songAD_11_17
 // 030   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_12_18
+         POIN2  songAD_11_18
 // 031   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_12_19
+         POIN2  songAD_11_19
 // 032   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_12_18
+         POIN2  songAD_11_18
 // 033   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_12_17
+         POIN2  songAD_11_17
 // 034   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_12_18
+         POIN2  songAD_11_18
 // 035   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_12_17
+         POIN2  songAD_11_17
 // 036   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_12_20
+         POIN2  songAD_11_20
 // 037   ----------------------------------------
         BYTE   W96
 // 038   ----------------------------------------
@@ -4033,25 +3656,27 @@ songAD_12_20:
         BYTE   W96
 // 056   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_12_4
+         POIN2  songAD_11_4
 // 057   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_12_5
+         POIN2  songAD_11_5
 // 058   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_12_6
+         POIN2  songAD_11_6
 // 059   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_12_5
+         POIN2  songAD_11_5
 // 060   ----------------------------------------
         BYTE           N03     Fn3   v112
         BYTE           N03     Dn3
         BYTE   W12
+        BYTE   GoTo
+         POIN2  songAD_11_LOOP
         BYTE   FINE
 
-//***************** Track 13 (Midi-Chn.13) *****************//
+//***************** Track 12 (Midi-Chn.13) *****************//
 
-songAD_13:
+songAD_12:
         BYTE   KEYSH   songAD_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   14
@@ -4073,6 +3698,7 @@ songAD_13:
 // 007   ----------------------------------------
         BYTE   W96
 // 008   ----------------------------------------
+songAD_12_LOOP:
         BYTE   W96
 // 009   ----------------------------------------
         BYTE   W96
@@ -4203,11 +3829,13 @@ songAD_13:
         BYTE   W96
 // 060   ----------------------------------------
         BYTE   W12
+        BYTE   GoTo
+         POIN2  songAD_12_LOOP
         BYTE   FINE
 
-//***************** Track 14 (Midi-Chn.14) *****************//
+//***************** Track 13 (Midi-Chn.14) *****************//
 
-songAD_14:
+songAD_13:
         BYTE   KEYSH   songAD_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   46
@@ -4229,6 +3857,7 @@ songAD_14:
 // 007   ----------------------------------------
         BYTE   W96
 // 008   ----------------------------------------
+songAD_13_LOOP:
         BYTE   W96
 // 009   ----------------------------------------
         BYTE   W96
@@ -4251,7 +3880,7 @@ songAD_14:
 // 018   ----------------------------------------
         BYTE   W96
 // 019   ----------------------------------------
-songAD_14_19:
+songAD_13_19:
         BYTE   W84
         BYTE           N04     Gn1   v116
         BYTE   W04
@@ -4261,7 +3890,7 @@ songAD_14_19:
         BYTE   W04
         BYTE   PEND
 // 020   ----------------------------------------
-songAD_14_20:
+songAD_13_20:
         BYTE           N04     An2   v112
         BYTE   W04
         BYTE                   As2
@@ -4313,17 +3942,17 @@ songAD_14_20:
         BYTE   W96
 // 023   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_14_19
+         POIN2  songAD_13_19
 // 024   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_14_20
+         POIN2  songAD_13_20
 // 025   ----------------------------------------
         BYTE   W96
 // 026   ----------------------------------------
         BYTE   W96
 // 027   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_14_19
+         POIN2  songAD_13_19
 // 028   ----------------------------------------
         BYTE           N04     An2   v112
         BYTE   W04
@@ -4372,7 +4001,7 @@ songAD_14_20:
 // 029   ----------------------------------------
         BYTE   W96
 // 030   ----------------------------------------
-songAD_14_30:
+songAD_13_30:
         BYTE   W12
         BYTE           N04     Dn1   v116
         BYTE   W04
@@ -4417,12 +4046,12 @@ songAD_14_30:
         BYTE   W96
 // 032   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_14_30
+         POIN2  songAD_13_30
 // 033   ----------------------------------------
         BYTE   W96
 // 034   ----------------------------------------
         BYTE   PATT
-         POIN2  songAD_14_30
+         POIN2  songAD_13_30
 // 035   ----------------------------------------
         BYTE   W96
 // 036   ----------------------------------------
@@ -4475,12 +4104,512 @@ songAD_14_30:
         BYTE   W96
 // 060   ----------------------------------------
         BYTE   W12
+        BYTE   GoTo
+         POIN2  songAD_13_LOOP
+        BYTE   FINE
+
+//***************** Track 14 (Midi-Chn.15) *****************//
+
+songAD_14:
+        BYTE   KEYSH   songAD_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   127
+        BYTE           VOL     25
+        BYTE   W12
+        BYTE           N24     An2   v112
+        BYTE           N96     Cs2
+        BYTE   W84
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W12
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE                   Dn1   v092
+        BYTE   W06
+        BYTE                   Dn1   v072
+        BYTE   W06
+// 005   ----------------------------------------
+songAD_14_5:
+        BYTE           N12     Dn1   v080
+        BYTE   W12
+        BYTE                   Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE                   Dn1   v092
+        BYTE   W06
+        BYTE           N03     Dn1   v072
+        BYTE   W03
+        BYTE                   Dn1   v060
+        BYTE   W03
+        BYTE   PEND
+// 006   ----------------------------------------
+songAD_14_6:
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE                   Dn1   v092
+        BYTE   W06
+        BYTE                   Dn1   v072
+        BYTE   W06
+        BYTE   PEND
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 008   ----------------------------------------
+songAD_14_LOOP:
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE                   Dn1   v092
+        BYTE   W06
+        BYTE                   Dn1   v072
+        BYTE   W06
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_6
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_6
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_6
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_6
+// 017   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 018   ----------------------------------------
+songAD_14_18:
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N96     Ds2   v120
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE                   Dn1   v092
+        BYTE   W06
+        BYTE                   Dn1   v072
+        BYTE   W06
+        BYTE   PEND
+// 019   ----------------------------------------
+songAD_14_19:
+        BYTE           N12     Dn1   v080
+        BYTE   W12
+        BYTE           N01     Dn1   v112
+        BYTE   W01
+        BYTE           TIE     Ds2   v120
+        BYTE           N10     Dn1   v092
+        BYTE   W11
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v060
+        BYTE   W06
+        BYTE           N12     Dn1   v080
+        BYTE   W12
+        BYTE                   Dn1   v100
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v060
+        BYTE   W06
+        BYTE           N12     Dn1   v080
+        BYTE   W12
+        BYTE           N01     Dn1   v100
+        BYTE   W01
+        BYTE           N05     Dn1   v080
+        BYTE   W05
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE   PEND
+// 020   ----------------------------------------
+        BYTE           N12     Dn1   v080
+        BYTE   W12
+        BYTE           N72     Cs2   v112
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W05
+        BYTE           EOT     Ds2
+        BYTE   W01
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE                   Dn1   v092
+        BYTE   W06
+        BYTE                   Dn1   v072
+        BYTE   W06
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_6
+// 023   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 024   ----------------------------------------
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N72     Cs2   v112
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE                   Dn1   v092
+        BYTE   W06
+        BYTE                   Dn1   v072
+        BYTE   W06
+// 025   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_6
+// 027   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_6
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_6
+// 031   ----------------------------------------
+        BYTE           N12     Dn1   v080
+        BYTE   W12
+        BYTE           N01     Dn1   v112
+        BYTE   W01
+        BYTE           N10     Dn1   v092
+        BYTE   W11
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v060
+        BYTE   W06
+        BYTE           N12     Dn1   v080
+        BYTE   W12
+        BYTE                   Dn1   v100
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v060
+        BYTE   W06
+        BYTE           N12     Dn1   v080
+        BYTE   W12
+        BYTE           N01     Dn1   v100
+        BYTE   W01
+        BYTE           N05     Dn1   v080
+        BYTE   W05
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+// 032   ----------------------------------------
+songAD_14_32:
+        BYTE           N12     Dn1   v080
+        BYTE   W12
+        BYTE                   Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE                   Dn1   v092
+        BYTE   W06
+        BYTE                   Dn1   v072
+        BYTE   W06
+        BYTE   PEND
+// 033   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_18
+// 035   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_19
+// 036   ----------------------------------------
+        BYTE           N12     Dn1   v080
+        BYTE   W12
+        BYTE           N24     An2   v112
+        BYTE           N96     Cs2
+        BYTE   W44
+        BYTE   W03
+        BYTE           EOT     Ds2
+        BYTE   W36
+        BYTE   W01
+// 037   ----------------------------------------
+        BYTE   W96
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE   W12
+        BYTE           TIE     Ds2   v120
+        BYTE   W84
+// 041   ----------------------------------------
+        BYTE   W96
+// 042   ----------------------------------------
+        BYTE   W12
+        BYTE           N24     An2   v092
+        BYTE           N96     Cs2
+        BYTE           N12     Dn1
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           EOT     Ds2
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE                   Dn1   v092
+        BYTE   W06
+        BYTE                   Dn1   v072
+        BYTE   W06
+// 043   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 044   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_6
+// 045   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 046   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_6
+// 047   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 048   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_6
+// 049   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 050   ----------------------------------------
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE           N12     Dn1   v092
+        BYTE   W12
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE                   Dn1   v092
+        BYTE   W06
+        BYTE           N03     Dn1   v072
+        BYTE   W03
+        BYTE                   Dn1   v060
+        BYTE   W03
+// 051   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_6
+// 052   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 053   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_6
+// 054   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 055   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_6
+// 056   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_32
+// 057   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 058   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_6
+// 059   ----------------------------------------
+        BYTE   PATT
+         POIN2  songAD_14_5
+// 060   ----------------------------------------
+        BYTE           N06     Dn1   v072
+        BYTE   W06
+        BYTE                   Dn1   v080
+        BYTE   W06
+        BYTE   GoTo
+         POIN2  songAD_14_LOOP
         BYTE   FINE
 
 
 //********************** End of Song ***********************//
 
-        ALIGN  2
+        ALIGN 4
 songAD:
         BYTE   15                      // Num Tracks
         BYTE   0                       // Unknown

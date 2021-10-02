@@ -11,8 +11,8 @@ ldrb r3, [r3]
 cmp r3, #4
 beq End
 
-ldrb r0, [r4, #0x18] @attacker res
-ldrb r1, [r5, #0x18] @defender res
+ldrb r0, [r4, #0x16] @attacker res
+ldrb r1, [r5, #0x16] @defender res
 cmp r0, r1
 ble End @skip if res is less or equal
 

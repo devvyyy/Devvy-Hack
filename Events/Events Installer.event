@@ -41,6 +41,49 @@ ALIGN 4
 ALIGN 4
 #include "REDAs.event"
 
+P1FinalKingBossEvent:
+Music(0x7FF)
+Text(KingBossQP1Final)
+STAL 5
+SOUN 0x2EB
+FAWI 10
+STAL 100
+FAWU 25
+STAL 5
+ENDA
+
+P1FinalKingDEvent:
+STAL 30
+Music(0x144)
+StAL 5
+Text(KingDeathP1Final)
+STAL 3
+ENDA
+
+AffoDEvent:
+STAL 30
+Music(0x144)
+StAL 5
+Text(AffoDeath)
+STAL 3
+ENDA
+
+AkatDEvent:
+STAL 30
+Music(0x144)
+StAL 5
+Text(ZaneDeath)
+STAL 3
+ENDA
+
+OgrimDEvent:
+STAL 30
+Music(0x144)
+StAL 5
+Text(OgrimDeath)
+STAL 3
+ENDA
+
 // People who stay in the party when they die
 PUSH
 ORG $84864

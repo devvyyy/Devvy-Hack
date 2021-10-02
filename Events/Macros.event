@@ -26,6 +26,7 @@
 #define CenterTextbox(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND"
 #define SetHP(number,x,y) "SVAL 0x1 number; SVAL 0xB Coords(x,y); SET_HP 0xFFFE"
 #define CharacterConditionalDialog(character,alivetext,deadtext) "CHECK_ALIVE character; BEQ 1 0x0 0xC; Text(alivetext); GOTO 2; LABEL 1; Text(deadtext); LABEL 2"
+#define FlagConditionalDialog(flag,alivetext,deadtext) "CHECK_EVENTID flag; BEQ 1 0x0 0xC; Text(alivetext); GOTO 2; LABEL 1; Text(deadtext); LABEL 2"
 #define DoubleConditionalDialog(character,character2,alivetext,deadtext,label,label2) "CHECK_ALIVE character; BEQ label 0x0 0xC; CHECK_ALIVE character2; BEQ label 0x0 0xC; Text(alivetext); GOTO label2; LABEL label; Text(deadtext); LABEL label2"
 #define IfAliveDialog(character,alivetext,label) "CHECK_ALIVE character; BEQ label 0x0 0xC; Text(alivetext); LABEL label"
 #define DoubleIfAliveDialog(character,character2,alivetext,label) "CHECK_ALIVE character; BEQ label 0x0 0xC; CHECK_ALIVE character2; BEQ label 0x0 0xC; Text(alivetext); LABEL label"
@@ -49,6 +50,7 @@
 #define EscapeAI [0x0,0xC,0x4,0x0]
 #define EscapeOnlyAI [0x6,0xC,0x4,0x00]
 #define HealAI [0xE,0x3,0x4,0x0]
+#define BossHealAI [0x0E,0x0,0x0,0x20]
 #define NoMoveAI [0x3,0x3,0x4,0x0]
 #define DoNothingAI [0x6,0x3,0x4,0x0]
 #define WallAI [0x0,0xE,0x4,0x0]
