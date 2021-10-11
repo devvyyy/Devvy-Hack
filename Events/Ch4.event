@@ -191,6 +191,9 @@ UNIT
 
 EndCutsceneUnits:
 UNIT Affogato Hunter 0x1 Level(1, Ally, 1)     [9,13] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT
+
+EndCutsceneUnits2:
 UNIT Ulrich APaladin 0x1 Level(1, Ally, 1)     [10,14] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
 UNIT
 
@@ -295,6 +298,8 @@ SOUN 0xAF
 MOVE 0xD Affogato [9,12]
 ENUN
 SOUN 0xCC
+STAL 15
+LOAD2 0x1 EndCutsceneUnits2
 STAL 20
 Music(0x48)
 SetBackground(0x0C)

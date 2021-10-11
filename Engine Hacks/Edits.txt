@@ -1,6 +1,13 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+// Remove Kill Bonus for WEXP
+PUSH
+//by Alusq
+ORG $2c142
+BYTE 0x01 0x29 0x0 0xDC 
+POP
+
 //Prevents Archer palette from being overwritten
 //by 7743
 PUSH

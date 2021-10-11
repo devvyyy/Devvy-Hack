@@ -35,6 +35,8 @@ CharacterBasedEvents:
 CharacterEventBothWays(0x10,AffoGorloisConvo, Affo, Gorlois)
 CharacterEventBothWays(0x11,IronRuneConvo, Gorlois, Stroganoff)
 CharacterEventBothWays(0x12,AnsgarThereseConvo, Ansgar, Therese)
+CharacterEventBothWays(0x13,AffoKingConvo, Affo, King)
+CharacterEventBothWays(0x14,NoraKingConvo, Nora, King)
 	END_MAIN
 
 ALIGN 32
@@ -623,7 +625,7 @@ CharacterConditionalDialog(Stroganoff,AnsgarThereseTalk,AnsgarThereseTalkAlt)
 	ENDA
 
 EndingScene:
-Music(VictoryBGM)
+DoAllThree
 QuickRemu(Affogato,1)
 QuickRemu(Ulrich,2)
 QuickRemu(Evelyn,3)
@@ -644,6 +646,45 @@ QuickRemu(Atheya,17)
 QuickRemu(Noel,18)
 QuickRemu(Therese,19)
 QuickRemu(Lennard,20)
-	MNC2 0x7
+Music(VictoryBGM)
+SetBackground(0x29)
+STAL 5
+BROWNBOXTEXT ThroneRoomText [8,8]
+STAL 10
+CHECK_ALIVE Atheya
+BEQ 0x776 0x0 0xC
+TEXTSTART
+TEXTSHOW Ch6Ending1
+TEXTEND
+MUSC 0x93
+TEXTCONT
+TEXTEND
+GOTO 0x420
+LABEL 0x776
+TEXTSTART
+TEXTSHOW Ch6EndingAlt1
+TEXTEND
+MUSC 0x93
+TEXTCONT
+TEXTEND
+LABEL 0x420
+STAL 10
+MUSCMID 0x7FFF
+STAL 35
+SetBackground(0x35)
+STAL 5
+BROWNBOXTEXT EvilCultName [8,8]
+STAL 15
+Music(0xA9)
+STAL 100
+Text(Ch6Ending2)
+STAL 15
+MUSCMID 0x7FFF
+STAL 35
+// Send to title screen instead of next chapter
+//	MNC2 0x7 
+STAL 85
+EVBIT_F 0x2
+MNTS 0x1 //return to title screen
 	NoFade
 	ENDA

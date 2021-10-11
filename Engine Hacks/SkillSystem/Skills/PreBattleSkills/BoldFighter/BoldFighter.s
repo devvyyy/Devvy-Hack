@@ -26,10 +26,10 @@ beq GoBack
 ldrb r0, [r5,#0x12] @max hp
 ldrb r1, [r5,#0x13] @current hp
 cmp r1, #1 @1hp left?
-ble End
+ble GoBack
 lsr r0, #1 @max/2
 cmp r1, r0
-ble End
+ble GoBack
 
 @add a fuck ton of AS
 mov r1, #0x5E

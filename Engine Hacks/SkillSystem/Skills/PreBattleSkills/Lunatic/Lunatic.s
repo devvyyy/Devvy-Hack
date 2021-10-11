@@ -27,7 +27,7 @@ cmp r0, r1
 bne End @skip if not max hp
 
 @add def/4 attack
-mov  r0, #0x5A
+mov  r1, #0x5A
 ldrh r0, [r4, r1] @attack
 ldrb r2, [r5, #0x17] @def
 lsr  r2, #2

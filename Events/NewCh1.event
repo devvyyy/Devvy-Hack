@@ -96,7 +96,7 @@ UNIT BadGuy Shaman 0x1 Level(2, Enemy, 1)     [15,1] DropItem 0 1 REDA15R2 [Flux
 UNIT Cultist Occultist 0x1 Level(1, Enemy, 1)     [15,1] 0 0 1 REDA15R6 [Flux] TwoActionAI
 UNIT Cultist Mage 0x1 Level(1, Enemy, 1)     [0,8] 0 0 1 REDA3R8 [Fire] AttackInRangeAI
 UNIT BadGuy Deserter 0x1 Level(1, Enemy, 1)     [5,10] 0 0 1 REDA5R9 [IronGlaive] AttackInRangeAI
-UNIT Biscotti PegRider 0x1 Level(3, Enemy, 1)     [15,10] DropItem 0 1 REDA10R10 [HeavySpear,Barrier] BossAI
+UNIT Biscotti PegRider 0x1 Level(3, Enemy, 1)     [15,10] DropItem 0 1 REDA10R10 [HeavySpear,IronLance] BossAI
 UNIT BadGuyStealable LArmor 0x1 Level(2, Enemy, 1)     [7,2] 0 0 1 REDA5R2 [Javelin,Vulnerary] [0x0,0x3,0x0,0x20]
 UNIT BadGuy Pirate 0x1 Level(1, Enemy, 1)     [0,1] 0 0 1 REDA0R3 [IronAxe] StallOneTurnAI
 UNIT BadGuy Pirate 0x1 Level(1, Enemy, 1)     [0,4] 0 0 1 REDA1R4 [SteelAxe] StallOneTurnAI
@@ -174,8 +174,12 @@ SetBackground(0x3C)
 Text(Ch1Opening1)
 FADI 20
 CLEAN
-CameraCursor(0x47)
+CameraCursor(0x46)
+Music(0x53)
+SetBackground(0x34)
 Text(Ch1Opening2)
+ClearBackground
+STAL 5
 	LOAD2 0x1 CutsceneUnits
 	ENUN
 STAL 10
