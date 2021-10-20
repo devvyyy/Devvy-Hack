@@ -28,6 +28,9 @@ CharacterBasedEvents:
 CharacterEventBothWays(0xA, StroganRecruit, 0x0, Stroganoff)
 CharacterEventBothWays(0xA, EisRecruit, 0x0, Eiskaffee)
 CharacterEventBothWays(0xA, DoppioRecruit, 0x0, Doppio)
+CharacterEventBothWays(0xB, EisSeqConvo, Sequin, Eiskaffee)
+CharacterEventBothWays(0xC, PanMochaConvo, Mocha, Pandoro)
+CharacterEventBothWays(0xD, UlrichDoppioConvo, Ulrich, Doppio)
 	END_MAIN
 
 MiscBasedEvents:
@@ -79,8 +82,8 @@ LoadUnit(4,17)
 EnemyUnits:
 UNIT Alicot SArmor 0x1 Level(5, Enemy, 0)     [13,1] DropItem 0x0 0x0 0x0 [SteelBlade,Flamberge,Dracoshield] BossAI
 UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [16,2] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
-UNIT Cultist SCav 0x1 Level(3, Enemy, 1)     [11,2] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
-UNIT Cultist ACav 0x1 Level(3, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [IronAxe,] TwoActionAI
+UNIT BadGuy SCav 0x1 Level(3, Enemy, 1)     [11,2] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
+UNIT BadGuy ACav 0x1 Level(3, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [IronAxe,] TwoActionAI
 UNIT BadGuy LArmor 0x1 Level(3, Enemy, 1)     [6,8] 0b 0x0 0x0 0x0 [SteelLance,Javelin,] BossAI
 UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [13,16] 0b 0x0 0x0 0x0 [DarkTome2,] AttackInRangeAI
 UNIT BadGuy Raider 0x1 Level(3, Enemy, 1)     [15,4] DropItem 0x0 0x0 0x0 [SteelSword,BlueGem] AttackInRangeAI
@@ -174,6 +177,10 @@ SetBackground(0x3D)
 Music(0xED)
 FADU 45
 CharacterConditionalDialog(Hildr,Ch3Opening2,Ch3OpeningAlt2)
+STAL 10
+SetFlag(0xB)
+SetFlag(0xD)
+	CenterTextbox(Ch3BridgeWarning)
 	GotoPrepScreen
 	ENDA
 
@@ -234,6 +241,8 @@ MURE 0x2
 CUSA Stroganoff
 CUSA Eiskaffee
 CUSA Doppio
+UnsetFlag(0xB)
+UnsetFlag(0xD)
 NoFade
 ENDA
 
@@ -245,6 +254,8 @@ MURE 0x2
 CUSA Stroganoff
 CUSA Eiskaffee
 CUSA Doppio
+UnsetFlag(0xB)
+UnsetFlag(0xD)
 NoFade
 ENDA
 
@@ -256,8 +267,34 @@ MURE 0x2
 CUSA Stroganoff
 CUSA Eiskaffee
 CUSA Doppio
+UnsetFlag(0xB)
+UnsetFlag(0xD)
 NoFade
 ENDA
+
+EisSeqConvo:
+	MUSI
+	Text(SeqEisTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+PanMochaConvo:
+	MUSI
+	Text(PandoroMochaTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+
+UlrichDoppioConvo:
+	MUSI
+	Text(UlrichDoppioTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
 
 BarrelRoll:
 SVAL 0x2 0x0

@@ -27,6 +27,8 @@ TURN 0x0 TopLeftPegasi [9,0] 0x0
 ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0xC, MochaRinaConvo, Mocha, Rina)
+CharacterEventBothWays(0xD, AffoUlrichCh5Convo, Affogato, Ulrich)
+CharacterEventBothWays(0xE, EisDoppioConvo, Doppio, Eiskaffee)
 CharacterEventBothWays(0x20, RecruitRecruitThief, 0x0, Noel)
 	END_MAIN
 
@@ -163,6 +165,12 @@ LABEL 1
 FADI 60
 CLEAN
 FADU 60
+STAL 5
+Music(0x2E)
+SetBackground(0x34)
+Text(Ch5OpeningEnemyMoment)
+ClearBackground
+STAL 10
 CHECK_ALIVE Atheya
 BEQ 2 0x0 0xC
 CHECK_ALIVE Mocha
@@ -239,6 +247,21 @@ CharacterConditionalDialog(Atheya,Ch5MochaRina,Ch5MochaRinaAlt)
 	MUNO
 	MURE 2
 	NoFade
+	ENDA
+	
+AffoUlrichCh5Convo:
+MUSI
+Text(AffoUlrichCh5Talk)
+MUNO
+NoFade
+ENDA
+
+EisDoppioConvo:
+MUSI
+Text(EisDoppioTalk)
+MUNO
+NoFade
+ENDA
 	
 ReinforcementsWarning:
 Highlight(0x4C)

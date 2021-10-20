@@ -29,6 +29,9 @@ CharacterEventBothWays(0x21, PandoroRecruit, Ulrich, Pandoro)
 CharacterEventBothWays(0x21, PandoroAffoRecruit, Affogato, Pandoro)
 CharacterEventBothWays(0x21, BreneRecruit, Affogato, Irene)
 CharacterEventBothWays(0x21, BreneBreveRecruit, Breve, Irene)
+CharacterEventBothWays(0x22, MochaNoraConvo, Nora, Mocha)
+CharacterEventBothWays(0x23, HildrBreveConvo, Breve, Hildr)
+CharacterEventBothWays(0x24, AffoSeqConvo, Affogato, Sequin)
 	END_MAIN
 
 MiscBasedEvents:
@@ -269,6 +272,30 @@ CUSA Pandoro
 CUSA Irene
 NoFade
 ENDA
+
+MochaNoraConvo:
+	MUSI
+	Text(MochaEvelTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+HildrBreveConvo:
+	MUSI
+	Text(HildrBreveTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+AffoSeqConvo:
+	MUSI
+	Text(AffoSeqTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
 
 BridgeRein:
 SpawnReinforcements(BridgeEnemies)

@@ -24,6 +24,7 @@ ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0xA,SeqEvelConvo, Sequin, Evelyn)
 CharacterEventBothWays(0xB,AffoUlrichConvo, Affogato, Ulrich)
+CharacterEventBothWays(0xC,AnsgarBreveConvo, Ansgar, Breve)
 	END_MAIN
 
 SeqEvelConvo:
@@ -37,6 +38,14 @@ SeqEvelConvo:
 AffoUlrichConvo:
 	MUSI
 	Text(AffoUlrichCh1Talk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+AnsgarBreveConvo:
+	MUSI
+	Text(AnsgarBreveTalk)
 	MUNO
 	MURE 2
 	NoFade
@@ -91,12 +100,13 @@ UNIT BadGuy Raider 0x1 Level(1, Enemy, 1)     [12,7] 0 0 1 REDA11R3 [IronSword] 
 UNIT BadGuyStealable SCav 0x1 Level(1, Enemy, 1)     [12,7] 0 0 1 REDA14R8 [IronSword,RedGem] TwoActionAI
 UNIT BadGuy AArmor 0x1 Level(2, Enemy, 1)     [12,7] 0 0 1 REDA9R8 [SteelAxe] BossAI
 UNIT BadGuy Deserter 0x1 Level(2, Enemy, 1)     [0,7] 0b 0x0 0x0 0x0 [IronLance,] TwoActionAI
-UNIT BadGuy Archer 0x1 Level(2, Enemy, 1)     [0,7] 0 0 1 REDA3R5 [Longbow] BossAI
+UNIT BadGuy Archer 0x1 Level(2, Enemy, 1)     [0,7] 0 0 1 REDA3R4 [Longbow] BossAI
 UNIT BadGuy Shaman 0x1 Level(2, Enemy, 1)     [15,1] DropItem 0 1 REDA15R2 [Flux,PureWater] ChargeAI
 UNIT Cultist Occultist 0x1 Level(1, Enemy, 1)     [15,1] 0 0 1 REDA15R6 [Flux] TwoActionAI
-UNIT Cultist Mage 0x1 Level(1, Enemy, 1)     [0,8] 0 0 1 REDA3R8 [Fire] AttackInRangeAI
-UNIT BadGuy Deserter 0x1 Level(1, Enemy, 1)     [5,10] 0 0 1 REDA5R9 [IronGlaive] AttackInRangeAI
-UNIT Biscotti PegRider 0x1 Level(3, Enemy, 1)     [15,10] DropItem 0 1 REDA10R10 [HeavySpear,IronLance] BossAI
+UNIT Cultist Mage 0x1 Level(1, Enemy, 1)     [0,8] 0 0 1 REDA4R7 [Fire] AttackInRangeAI
+UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [0,8] 0 0 1 REDA2R9 [Flux] StallOneTurnAI
+UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [5,10] 0 0 1 REDA5R9 [IronLabrys] AttackInRangeAI
+UNIT Biscotti PegRider 0x1 Level(3, Enemy, 1)     [15,10] DropItem 0 1 REDA3R10 [HeavySpear,SteelLance] BossAI
 UNIT BadGuyStealable LArmor 0x1 Level(2, Enemy, 1)     [7,2] 0 0 1 REDA5R2 [Javelin,Vulnerary] [0x0,0x3,0x0,0x20]
 UNIT BadGuy Pirate 0x1 Level(1, Enemy, 1)     [0,1] 0 0 1 REDA0R3 [IronAxe] StallOneTurnAI
 UNIT BadGuy Pirate 0x1 Level(1, Enemy, 1)     [0,4] 0 0 1 REDA1R4 [SteelAxe] StallOneTurnAI
@@ -174,7 +184,10 @@ SetBackground(0x3C)
 Text(Ch1Opening1)
 FADI 20
 CLEAN
+FADU 60
+STAL 5
 CameraCursor(0x46)
+STAL 10
 Music(0x53)
 SetBackground(0x34)
 Text(Ch1Opening2)

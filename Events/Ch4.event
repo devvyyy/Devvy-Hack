@@ -28,6 +28,8 @@ TURN 0x0 EndingScene [11,0] 0x0
 ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0x9, NoraFlorisConvo, Nora, Floris)
+CharacterEventBothWays(0x10, StroganAtheyConvo, Atheya, Stroganoff)
+CharacterEventBothWays(0x11, FlorisUlrichConvo, Floris, Ulrich)
 	END_MAIN
 
 MiscBasedEvents:
@@ -263,7 +265,7 @@ Text(Ch4Opening3)
 FADI 60
 CLEAN
 FADU 45
-MUSC 0x7FFF
+MUSCMID 0x7FFF
 STAL 20
 	CenterTextbox(Ch4Warning)
 	GotoPrepScreen
@@ -383,6 +385,7 @@ LoadReinforcements(WaterRein2)
 STAL 20
 LoadReinforcements(ThiefRein2)
 VCWF 2
+CharacterConditionalDialog(Pandoro,AffoReinText,AffoReinTextAlt)
 STAL 30
 NoFade
 ENDA
@@ -410,6 +413,22 @@ NoraFlorisConvo:
 	MUNO
 	MURE 2
 	ENUT 0x79
+	NoFade
+	ENDA
+
+StroganAtheyConvo:
+	MUSI
+	Text(StroganAtheyaTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+FlorisUlrichConvo:
+	MUSI
+	Text(UlrichFlorisTalk)
+	MUNO
+	MURE 2
 	NoFade
 	ENDA
 

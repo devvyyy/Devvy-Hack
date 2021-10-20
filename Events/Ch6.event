@@ -37,6 +37,13 @@ CharacterEventBothWays(0x11,IronRuneConvo, Gorlois, Stroganoff)
 CharacterEventBothWays(0x12,AnsgarThereseConvo, Ansgar, Therese)
 CharacterEventBothWays(0x13,AffoKingConvo, Affo, King)
 CharacterEventBothWays(0x14,NoraKingConvo, Nora, King)
+CharacterEventBothWays(0x15,StroganSeqConvo, Stroganoff, Sequin)
+CharacterEventBothWays(0x16,BrudetMochaConvo, Brudet, Mocha)
+CharacterEventBothWays(0x17,BreveFlorisConvo, Breve, Floris)
+CharacterEventBothWays(0x18,RinaHildrConvo, Rina, Hildr)
+CharacterEventBothWays(0x19,LennardPandoroConvo, Lennard, Pandoro)
+CharacterEventBothWays(0x20,EisNoelConvo, Eiskaffee, Noel)
+CharacterEventBothWays(0x21,DoppioBrudetConvo, Doppio, Brudet)
 	END_MAIN
 
 ALIGN 32
@@ -528,6 +535,7 @@ BeginningScene:
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 RedSussy
 	LOAD1 0x1 RecruitsAgain
+	ENUN
 Music(0x48)
 SetBackground(0x34)
 FADU 25
@@ -563,15 +571,72 @@ LABEL 2
 FADI 60
 CLEAN
 FADU 40
-STAL 15		
+STAL 15
+MUSI
 	CenterTextbox(Ch6ObjectiveWarning)
-	ENUN
+	MUNO
 	GotoPrepScreen
 	ENDA
 	
 AffoGorloisConvo:
 	MUSI
 	Text(AffoGorloisTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+StroganSeqConvo:
+	MUSI
+	Text(SeqStroganTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+BrudetMochaConvo:
+	MUSI
+	Text(BrudetMochaTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+RinaHildrConvo:
+	MUSI
+	Text(RinaHildrTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+BreveFlorisConvo:
+	MUSI
+	Text(BreveFlorisTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+EisNoelConvo:
+	MUSI
+	Text(EisNoelTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+LennardPandoroConvo:
+	MUSI
+	Text(LennardPandoroTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+DoppioBrudetConvo:
+	MUSI
+	Text(DoppioBrudetTalk)
 	MUNO
 	MURE 2
 	NoFade
@@ -598,6 +663,7 @@ AffoKingConvo:
 	LABEL 2
 	MUNO
 	MURE 2
+	UnsetFlag(0x78)
 	NoFade
 	ENDA
 	
@@ -613,6 +679,7 @@ NoraKingConvo:
 	LABEL 2
 	MUNO
 	MURE 2
+	UnsetFlag(0x79)
 	NoFade
 	ENDA
 	

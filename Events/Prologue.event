@@ -36,6 +36,8 @@ CharacterBasedEvents:
 CharacterEventBothWays(0x10,AffoBreveConvo, Affo, Breve)
 CharacterEventBothWays(0xB,HildrUlrichConvo, Hildr, Ulrich)
 CharacterEventBothWays(0xC,AnsgarAffoConvo, Ansgar, Affo)
+CharacterEventBothWays(0xD,HildrAffoConvo, Hildr, Affo)
+CharacterEventBothWays(0xE,UlrichAffoConvo, Ulrich, Affo)
 END_MAIN
 
 AffoBreveConvo:
@@ -57,6 +59,22 @@ HildrUlrichConvo:
 AnsgarAffoConvo:
 	MUSI
 	Text(AnsgarAffoTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+UlrichAffoConvo:
+	MUSI
+	Text(AffoUlrichTalkPrologue)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+HildrAffoConvo:
+	MUSI
+	Text(AffoHildrTalk)
 	MUNO
 	MURE 2
 	NoFade
@@ -216,7 +234,7 @@ OMGMyHero:
 CAM1 [2,5]
 LOAD1 0x1 AkatsukiPrologue
 MUSC 0x107
-Text(Placeholder1)
+Text(DoorTrick)
 MOVE 0x0 Akatsuki [0,6]
 ENUN
 DISA_IF 0x1
