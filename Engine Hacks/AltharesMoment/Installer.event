@@ -1,0 +1,84 @@
+// Ports over the "thief appears" animations from FE7 (Matthew does it in Ch11 Hector mode, and I believe Jaffar does it as well)
+
+/*
+How to use:
+
+SETVAL 1 Pointer_To_Animation_Stuff
+SETVAL 2 0x00YY00XX
+ASMC Fancy_Thief_Animation|1
+
+Example:
+
+SETVAL 1 Thief_Anim|0x8000000
+SETVAL 2 0x00100012
+ASMC Fancy_Thief_Animation|1
+would play the thief animation at [0x12, 0x10]
+
+Pointer_To_Animation_Stuff points to data in the following form:
+
+POIN 	animation_palette 	(usually 0, since it uses the normal map sprite palette)
+POIN 	animation_graphics
+POIN 	AP_data
+SHORT 	y_coord 			(gets added to the y coordinate; usually 0)
+SHORT 	tile_number 		(in vram)
+BYTE 	(palette_bank-2)	usually 0xA, so it can use the map sprite palette
+BYTE	number_of_palettes	usually 1
+SHORT	0					(padding)
+
+Available options are Thief_Anim, Thief_Anim_Reversed, Assassin_Anim, Assassin_Anim_Reversed, Rogue_Anim, Rogue_Anim_Reversed. All of these will be for player units; if you want an enemy to do it, for example, change the palette bank to 0xB.
+
+NOTE: You'll want to add a STAL after calling the ASMC, since the event engine doesn't pause while executing the animation. The animation is 27 frames, so a stall of 30 should be sufficient.
+*/
+
+#ifndef _FE8_
+	ERROR "Wrong ROM. Use FE8U."
+#endif
+
+#ifndef FreeSpace
+	#define FreeSpace 0xB2B000
+	ORG FreeSpace
+#endif
+
+#define FancyAnimStuff(anim_palette, anim_graphics, anim_AP_data, y_coord, tile_number, palette_bank, num_of_palettes) "POIN anim_palette anim_graphics anim_AP_data; SHORT y_coord tile_number; BYTE palette_bank num_of_palettes 0 0"
+
+ALIGN 4
+Fancy_Thief_Animation:
+#incbin "Fancy_Thief_Animation.dmp"
+
+Thief_Anim:
+FancyAnimStuff(0, Thief_Anim_Graphics, Normal_AP, 0, 0x200, 0xA, 1)
+
+Thief_Anim_Reversed:
+FancyAnimStuff(0, Thief_Anim_Graphics, Reversed_AP, 0, 0x200, 0xA, 1)
+
+Assassin_Anim:
+FancyAnimStuff(0, Assassin_Anim_Graphics, Normal_AP, 0, 0x200, 0xA, 1)
+
+Assassin_Anim_Reversed:
+FancyAnimStuff(0, Assassin_Anim_Graphics, Reversed_AP, 0, 0x200, 0xA, 1)
+
+Rogue_Anim:
+FancyAnimStuff(0, Rogue_Anim_Graphics, Normal_AP, 0, 0x200, 0xA, 1)
+
+Rogue_Anim_Reversed:
+FancyAnimStuff(0, Rogue_Anim_Graphics, Reversed_AP, 0, 0x200, 0xA, 1)
+
+ALIGN 4
+Thief_Anim_Graphics:
+#incbin "ThiefAnimGraphics.bin"
+
+ALIGN 4
+Assassin_Anim_Graphics:
+#incbin "AssassinAnimGraphics.bin"
+
+ALIGN 4
+Rogue_Anim_Graphics:
+#incbin "RogueAnimGraphics.bin"
+
+ALIGN 4
+Normal_AP:
+#incbin "NormalAP.bin"
+
+ALIGN 4
+Reversed_AP:
+#incbin "ReversedAP.bin"

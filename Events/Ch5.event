@@ -223,14 +223,16 @@ NoFade
 ENDA
 	
 RecruitThief:
-FADI 60
 LOAD1 0x1 Recruits
-SOUN 0x6F
-CUSE Noel
-FADU 60
-STAL 5
+ENUN
+SETVAL 1 Thief_Anim|0x8000000
+SETVAL 2 0x00090014
+ASMC Fancy_Thief_Animation|1
+// would play the thief animation at [0x14, 0x9]
+STAL 30
 CameraCursor(Noel)
 Text(NoelIntro)
+CUSE Noel
 NoFade
 ENDA
 

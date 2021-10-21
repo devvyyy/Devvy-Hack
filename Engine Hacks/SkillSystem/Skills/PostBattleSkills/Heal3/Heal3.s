@@ -23,6 +23,11 @@ mov	lr, r3
 cmp	r0,#0x00
 beq	CheckDefender
 
+@check if dead
+ldrb	r0, [r4,#0x13]
+cmp	r0, #0x00
+beq	End
+
 @take 7 damage
 ldrb	r1, [r4,#0x12]	@r1=maxhp
 mov r0, #heal7hp
@@ -61,6 +66,11 @@ mov lr, r3
 .short  0xf800
 cmp r0,#0x00
 beq End
+
+@check if dead
+ldrb	r0, [r5,#0x13]
+cmp	r0, #0x00
+beq	End
 
 @take 7 damage
 ldrb  r1, [r5,#0x12]  @r1=maxhp

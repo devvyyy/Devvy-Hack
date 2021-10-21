@@ -5,6 +5,10 @@ push {r4-r7, lr}
 mov r4, r0 @atkr
 mov r5, r1 @dfdr
 
+ldr r0,=#0x203A4EC @attacker struct
+cmp r0,r4
+bne End @skip if enemy phase
+
 @hp not at full
 ldrb r0, [r4, #0x12] @max hp
 ldrb r1, [r4, #0x13] @curr hp

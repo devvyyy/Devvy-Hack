@@ -11,6 +11,10 @@ ldrb r3, [r3]
 cmp r3, #4
 beq End
 
+ldr r0,=#0x203A4EC @attacker struct
+cmp r0,r4
+bne End @skip if enemy phase
+
 ldrb r0, [r4, #0x17] @attacker def
 ldrb r1, [r5, #0x14] @defender atk
 cmp r0, r1
@@ -25,8 +29,7 @@ ldr r1, SteelSoulID
 cmp r0, #0
 beq End
 
-@Steel Soul: yes
-
+@ set brave flag
 mov r0,r4
 add r0,#0x4C @item ability word
 ldr r1,[r0]
