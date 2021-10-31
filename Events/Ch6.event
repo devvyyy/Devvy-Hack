@@ -52,47 +52,8 @@ AREA 0xD KillTopMoat [17,2] [18,2]
 AREA 0xA FortniteLeft [5,18] [5,18]
 AREA 0xB FortniteMid [13,11] [13,11]
 AREA 0xC FortniteRight [18,16] [18,16]
-AFEV 0x0 DidWeWin1 0xA
-AFEV 0x0 DidWeWin2 0xB
-AFEV 0x0 DidWeWin3 0xC
 	CauseGameOverIfLordDies
 	END_MAIN
-	
-ALIGN 32
-DidWeWin1:
-CHECK_EVENTID 0xB
-BEQ 0x0 0xC 0x0
-CHECK_EVENTID 0xC
-BEQ 0x0 0xC 0x0
-ENUT 0x3
-CALL (EndingScene)
-LABEL 0x0
-EVBIT_T 0x7
-ENDA
-
-ALIGN 32
-DidWeWin2:
-CHECK_EVENTID 0xA
-BEQ 0x0 0xC 0x0
-CHECK_EVENTID 0xC
-BEQ 0x0 0xC 0x0
-ENUT 0x3
-CALL (EndingScene)
-LABEL 0x0
-EVBIT_T 0x7
-ENDA
-
-ALIGN 32
-DidWeWin3:
-CHECK_EVENTID 0xA
-BEQ 0x0 0xC 0x0
-CHECK_EVENTID 0xB
-BEQ 0x0 0xC 0x0
-ENUT 0x3
-CALL (EndingScene)
-LABEL 0x0
-EVBIT_T 0x7
-ENDA
 
 LocationBasedEvents:
 Chest(0x88,21,0)
@@ -318,9 +279,17 @@ RemoveTrapAtCoords(5,18)
 CameraCursor(King)
 STAL 60
 CURE
-TEXTSHOW Placeholder1
+TEXTSHOW KingLeftFort
 TEXTEND
 REMA
+CHECK_EVENTID 0xB
+BEQ 0x0 0xC 0x0
+CHECK_EVENTID 0xC
+BEQ 0x0 0xC 0x0
+ENUT 0x3
+CALL (EndingScene)
+LABEL 0x0
+EVBIT_T 0x7
 NoFade
 ENDA
 
@@ -334,9 +303,17 @@ RemoveTrapAtCoords(13,11)
 CameraCursor(King)
 STAL 60
 CURE
-TEXTSHOW Placeholder1
+TEXTSHOW KingMidFort
 TEXTEND
 REMA
+CHECK_EVENTID 0xA
+BEQ 0x0 0xC 0x0
+CHECK_EVENTID 0xC
+BEQ 0x0 0xC 0x0
+ENUT 0x3
+CALL (EndingScene)
+LABEL 0x0
+EVBIT_T 0x7
 NoFade
 ENDA
 
@@ -350,9 +327,17 @@ RemoveTrapAtCoords(18,16)
 CameraCursor(King)
 STAL 60
 CURE
-TEXTSHOW Placeholder1
+TEXTSHOW KingRightFort
 TEXTEND
 REMA
+CHECK_EVENTID 0xA
+BEQ 0x0 0xC 0x0
+CHECK_EVENTID 0xB
+BEQ 0x0 0xC 0x0
+ENUT 0x3
+CALL (EndingScene)
+LABEL 0x0
+EVBIT_T 0x7
 NoFade
 ENDA
 
@@ -368,14 +353,14 @@ BEQ 1 0x0 0xC
 CUMO Affogato
 STAL 60
 CURE
-TEXTSHOW Placeholder1
+TEXTSHOW GorloisWaterwaysDialogue
 TEXTEND
 REMA
 GOTO 2
 LABEL 1
 STAL 60
 CURE
-TEXTSHOW Placeholder2
+TEXTSHOW AffoWaterwaysDialogue
 TEXTEND
 LABEL 2
 NoFade

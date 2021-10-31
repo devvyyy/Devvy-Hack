@@ -39,6 +39,18 @@ ALIGN 4
 {
 #include "AkatsukiPromo/Unarmed/Installer.event"
 }
+ALIGN 4 //Tellius F!Fighter by MK404, Pikmin1211, Maiser6
+{
+#include "Chiffon/Axe/Installer.event"
+}
+ALIGN 4
+{
+#include "Chiffon/Handaxe/Installer.event"
+}
+ALIGN 4
+{
+#include "Chiffon/Unarmed/Installer.event"
+}
 ALIGN 4 //Wustenhoff
 {
 #include "Wustenhoff/Staff/Staff Installer.event"
@@ -462,6 +474,12 @@ WORD 0x0    // Seperator
 AkatPromoAnim:
 SwordAnim(0x06)
 UnarmedAnim(0x09)
+WORD 0x0    // Seperator
+
+ChiffonAnim:
+AxeAnim(0xBC)
+HandAxeAnim(0xBD)
+UnarmedAnim(0xBE)
 WORD 0x0    // Seperator
 
 WustenAnim:

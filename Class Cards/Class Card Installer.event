@@ -47,6 +47,14 @@ HunterClassCard:
 setCardEntry(0xA3, HunterCard,HunterCardPalette)
 
 ALIGN 4
+MercCard: //by Atey, Nuramon
+#incbin "MercCard.dmp"
+MercCardPalette:
+#incbin "MercCardPalette.dmp"
+MercClassCard:
+setCardEntry(0x90, MercCard,MercCardPalette)
+
+ALIGN 4
 WyvernRiderCard: //by flasuban
 #incbin "WyvernRiderCard.dmp"
 WyvernRiderCardPalette:

@@ -134,7 +134,7 @@
 
 //Up With Arch: Adjacent ally units gain might equal to half this unit's might. (Only if name starts with "Arch")
 //Author Unknown (Initial Commit)
-#define UpWithArchID 126
+#define UpWithArchID 255
 
 //Voice of Peace: Enemies within 2 tiles deal -2 damage.
 //Author Unknown (Initial Commit)
@@ -143,6 +143,14 @@
 //Touch of Frost: botrk but aura
 //Kelik Zenair
 #define FrostbiteID 224
+
+//Curtain Call: die
+//Kelik Zenair
+#define CurtainCallID 126
+
+//Eulogy of Ideon: die (mages)
+//Kelik Zenair
+#define EulogyID 20
 
 //White Pool: Atk and AS +5 to adjacent allies.
 //By Sme
@@ -321,6 +329,10 @@
 //By circleseverywhere
 #define FuryID 140
 
+//Parry: en garde!
+//Kelik Zenair
+#define ParryID 19
+
 //Heal 1: restores 3 hp after combat.
 //Kelik Zenair
 #define Heal1ID 184
@@ -438,8 +450,8 @@
 
 //Breaker Skills:  +50 Hit/Avo when enemy has the specified weapon type equipped.
 //By Rossendale
-#define SwordbreakerID 19
-#define LancebreakerID 20
+#define SwordbreakerID 255
+#define LancebreakerID 255
 #define AxebreakerID 21
 #define BowbreakerID 22
 #define TomebreakerID 23

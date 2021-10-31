@@ -162,14 +162,18 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+STAL 20
+Music(0x93)
+STAL 5
+SetBackground(0x32)
+STAL 250
+CenterTextbox(AmongUsEdgyIntro)
+STAL 100
+ClearBackground
 MUSC 0x48
-LOAD1 0x1 EnemyUnits
-ENUN
-LOAD1 0x1 EnemyUnits2
-ENUN
 SetBackground(0x25)
 STAL 10
-BROWNBOXTEXT BarracksText [8,8]
+BROWNBOXTEXT WreyvineText [8,8]
 STAL 15
 TEXTSTART
 TEXTSHOW Prologue1
@@ -185,12 +189,23 @@ FADU 30
 LOAD1 0x0 Units1
 ENUN
 STAL 40
-SetBackground(0x3C)
+SetBackground(0x3B)
 MUSC 0x4E
 TEXTSTART
 TEXTSHOW Prologue2
 TEXTEND
-MUSC 0x92
+ClearBackground
+Music(0x92)
+LOAD1 0x1 EnemyUnits
+ENUN
+LOAD1 0x1 EnemyUnits2
+STAL 5
+ENUN
+SetBackground(0x3C)
+TEXTSTART
+TEXTSHOW Prologue3
+TEXTEND
+MUSC 0x4D
 TEXTCONT
 TEXTEND
 REMA
@@ -199,9 +214,10 @@ CLEAN
 FADU 20
 STAL 10
 CameraCursor(Affogato)
+CameraCursor(Ulrich)
+Text(Prologue4)
 STAL 5
-FADI 16
-GotoPrepScreen
+NoFade
 ENDA
 
 EndingScene:
@@ -220,6 +236,14 @@ Music(0x4D)
 Text(HowDoYouEvenGetThisEnding)
 LABEL 3
 STAL 20
+FADI 30
+Music(0xA9)
+SetBackground(0x2D)
+FADU 15
+STAL 5
+Text(PrologueAeteriaEnding)
+ClearBackground
+STAL 10
 MNC2 0x1
 NoFade
 ENDA
@@ -237,7 +261,7 @@ MUSC 0x107
 Text(DoorTrick)
 MOVE 0x0 Akatsuki [0,6]
 ENUN
-DISA_IF 0x1
+DISA_IF Akatsuki
 NoFade
 ENDA
 
@@ -278,8 +302,7 @@ NoFade
 ENDA
 
 WallSus:
-CameraCursor(Affogato)
 CAM1 [12,3]
-Text(WhenTheWallIsSus)
+CharacterConditionalDialog(Ansgar,WhenTheWallIsSus2,WhenTheWallIsSus)
 NoFade
 ENDA

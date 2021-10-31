@@ -1,6 +1,35 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+// Used for not drawing Gaiden spells if the hack isn't installed.
+ALIGN 4
+GaidenStatScreen:
+WORD 0
+
+//Maximum Support Limit
+//by Brendor
+PUSH
+ORG 0x02833E
+BYTE 0x9
+ORG 0x02834E
+BYTE 0x9
+POP
+
+// StanH magic sword wexp
+ALIGN 4
+CheckWexpWeaponTypeHook:
+    WORD 0x19ED2550 0x24287828 0x5C2619E4 0xD0012E00 0x47184B01 0x47184B01 0x802C133 0x802C113
+
+PUSH
+    // remove check for magic sword bit
+    ORG 0x02C108
+        BYTE 0x80
+
+    // instead check for weapon exp in weapon type
+    ORG 0x02C124
+        WORD 0x47184B00; POIN CheckWexpWeaponTypeHook|1
+POP
+
 // Remove Kill Bonus for WEXP
 PUSH
 //by Alusq
@@ -158,7 +187,7 @@ BYTE 10
 
 //Base Value EXP
 ORG 0x002c37c
-BYTE 31
+BYTE 30
 
 //Thief Bonus EXP
 ORG 0x2C3EE
@@ -222,12 +251,14 @@ ORG 0xE836
 BYTE 0x04 0xE0
 POP
 
+/*
 //Remove arrow wiggling advancing RN
 //by Colorz
 PUSH
 ORG 0x1A774
     SHORT 0x2000 0
 POP
+*/
 
 //Remove Link Arena
 //by Aera

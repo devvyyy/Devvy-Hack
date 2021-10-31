@@ -38,8 +38,8 @@ prNullifyIfFreeze:
 		rConstant(0)
 
 prRallyMov:
-	#incbin "_asm/RallyMov.bin"
-	WORD DebuffTable
+	#include "_asm/RallyMov.lyn.event"
+	POIN GetDebuffs|1
 
 ALIGN 4
 prAddEquipMov:
@@ -48,6 +48,6 @@ prAddEquipMov:
 
 ALIGN 4
 prItemPassiveMov:
-	rPassiveStatBoosts(STAT_MOV)
+	rPassiveStatBoostsStacking(STAT_MOV)
 
 #endif // MODULAR_GETTER_MOVEMENT_EVENT

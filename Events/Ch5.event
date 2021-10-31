@@ -225,11 +225,6 @@ ENDA
 RecruitThief:
 LOAD1 0x1 Recruits
 ENUN
-SETVAL 1 Thief_Anim|0x8000000
-SETVAL 2 0x00090014
-ASMC Fancy_Thief_Animation|1
-// would play the thief animation at [0x14, 0x9]
-STAL 30
 CameraCursor(Noel)
 Text(NoelIntro)
 CUSE Noel
@@ -322,7 +317,7 @@ ENDA
 House1:
 STORETOSOMETHING 0x0 // lowers music volume
 MUSI // lowers music volume
-HouseExp(0xA,HouseBG1,Placeholder1)
+HouseExp(0xA,HouseBG1,Ch5HouseLeft)
 MUNO // increases music volume
 NoFade
 ENDA
@@ -330,7 +325,7 @@ ENDA
 House2:
 STORETOSOMETHING 0x0 // lowers music volume
 MUSI // lowers music volume
-HouseExp(0xB,HouseBG2,Placeholder2)
+HouseExp(0xB,HouseBG2,Ch5HouseRight)
 MUNO // increases music volume
 NoFade
 ENDA
