@@ -1,6 +1,16 @@
 PUSH
-//Efficiency fix for FillAIDangerMap
+
+    //Efficiency fix for FillAIDangerMap
 	ORG $3E320
-	#incbin "FillAIDangerMap.dmp"
+	//#incbin "FillAIDangerMap.dmp"
+    #include "FillAIDangerMap-stan.lyn.event" //thanks Stan for optimization
+    
+    ASSERT $03E448 - CURRENTOFFSET
+    
+    ASSERT NuAiFillDangerMap - $03E321
+    ASSERT $03E321 - NuAiFillDangerMap
+    
+    //3E41C - 3E448 is now free.
+    
 POP
 

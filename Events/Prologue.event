@@ -113,22 +113,19 @@ UNIT Ulrich APaladin 0x1 Level(5, Ally, 0)   [7,6] 0b 0 1 REDA7R7 [IronAxe, 0xBF
 UNIT
 
 EnemyUnits:
-UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [8,11] 0b 0x0 0x0 0x0 [Flux,] [0x6,0x3,0x4,0x20]
-UNIT CultistStealable Shaman 0x1 Level(1, Enemy, 1)     [5,1] 0b 0x0 0x0 0x0 [Flux,RedGem] AttackInRangeAI
-UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [1,10] 0b 0x0 0x0 0x0 [Flux,] [0x6,0x3,0x4,0x20]
-UNIT CultistStealable Shaman 0x1 Level(1, Enemy, 1)      [12,9] 0b 0x0 0x0 0x0 [Flux,Mine] [0x6,0x3,0x4,0x20]
-UNIT Cultist 0x58 0x1 Level(1, Enemy, 1)      [4,5] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
-UNIT CultistStealable 0x58 0x1 Level(1, Enemy, 0)      [14,2] 0b 0x0 0x0 0x0 [Flux,Speedwing] BossAI
+UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [8,11] 0b 0x0 0x0 0x0 [Flux,] [0x6,0x3,0x4,0x20]
+UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [5,1] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [1,10] 0b 0x0 0x0 0x0 [Flux,] [0x6,0x3,0x4,0x20]
+UNIT AeteriaStealable Shaman 0x1 Level(1, Enemy, 1)      [12,9] 0b 0x0 0x0 0x0 [Flux,Mine] [0x6,0x3,0x4,0x20]
+UNIT Aeteria 0x58 0x1 Level(1, Enemy, 1)      [4,5] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
+UNIT AeteriaStealable Shaman 0x1 Level(1, Enemy, 0)      [13,2] 0b 0x0 0x0 0x0 [Flux,Speedwing] BossAI
 UNIT Marcellus 0x58 0x1 Level(5, Enemy, 0)      [2,2] 0b 0x0 0x0 0x0 [DarkTome2,] [0,3,4,32]
-UNIT
-
-EnemyUnits2:
-UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [5,10] 0b 0x0 0x0 0x0 [IronAxe,] [0x6,0x3,0x4,0x20]
-UNIT BadGuy Raider 0x1 Level(1, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
-UNIT BadGuy Raider 0x1 Level(1, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
-UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [12,5] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
-UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [2,7] DropItem 0x0 0x0 0x0 [IronLance,Vulnerary] BossAI
-UNIT BadGuy 0x54 0x1 Level(1, Enemy, 1)     [8,2] 0b 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
+UNIT Aeteria Fighter 0x1 Level(1, Enemy, 1)     [5,10] 0b 0x0 0x0 0x0 [IronAxe,] [0x6,0x3,0x4,0x20]
+UNIT Aeteria Mercenary 0x1 Level(1, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
+UNIT Aeteria Mercenary 0x1 Level(1, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
+UNIT Aeteria Soldier 0x1 Level(1, Enemy, 1)     [12,5] 0b 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
+UNIT Aeteria Soldier 0x1 Level(1, Enemy, 1)     [2,7] DropItem 0x0 0x0 0x0 [IronLance,Vulnerary] BossAI
+UNIT AeteriaStealable Fighter 0x1 Level(1, Enemy, 1)     [6,3] 0b 0x0 0x0 0x0 [IronAxe,RedGem] AttackInRangeAI
 UNIT
 
 ThievesGoBrr:
@@ -144,13 +141,13 @@ UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [14,5] 0b 0x0 0x0 0x0 [IronDag
 UNIT
 
 Reinforcements1:
-UNIT Cultist Shaman 0x1 Level(2, Enemy, 1)     [7,6] 0 0 1 REDA7R7 [DarkTome1,] [0,0,4,0]
-UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [7,6] 0 0 1 REDA8R6 [DarkTome2,] [0,0,4,0]
+UNIT Aeteria Shaman 0x1 Level(2, Enemy, 1)     [7,6] 0 0 1 REDA7R7 [DarkTome1,] [0,0,4,0]
+UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [7,6] 0 0 1 REDA8R6 [DarkTome2,] [0,0,4,0]
 UNIT
 
 Reinforcements3:
-UNIT Cultist Occultist 0x1 Level(1, Enemy, 1)     [0,2] 0 0 1 REDA1R2 [DarkTome1,] [0,0,4,0]
-UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [0,2] 0 0 1 REDA0R3 [DarkTome2,] [0,0,4,0]
+UNIT Aeteria Occultist 0x1 Level(1, Enemy, 1)     [0,2] 0 0 1 REDA1R2 [DarkTome1,] [0,0,4,0]
+UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [0,2] 0 0 1 REDA0R3 [DarkTome2,] [0,0,4,0]
 UNIT
 
 Traps1:
@@ -198,9 +195,7 @@ ClearBackground
 Music(0x92)
 LOAD1 0x1 EnemyUnits
 ENUN
-LOAD1 0x1 EnemyUnits2
 STAL 5
-ENUN
 SetBackground(0x3C)
 TEXTSTART
 TEXTSHOW Prologue3
@@ -223,24 +218,83 @@ ENDA
 EndingScene:
 Music(0x32)
 SetBackground(0x3C)
-IfAliveDialog(Breve,EndingSceneBrevePrologue,1)
+CHECK_ALIVE Breve //if alive continue, if dead go to LABEL 0x1
+BEQ 1 0xC 0x0
 CHECK_ALIVE Hildr
 BEQ 2 0x0 0xC
 CHECK_ALIVE Ansgar
-BEQ 2 0x0 0xC
-Music(0x115)
-Text(EndingSceneHildrAnsgarPrologue)
-GOTO 3
-LABEL 2
+BEQ 3 0x0 0xC
+Text(EndingSceneHildrAnsgarPrologue) //everyone's alive
+GOTO 0x420 //end
+
+LABEL 1 //breve dead
+CHECK_ALIVE Ansgar //if alive continue, if dead go to LABEL 0x5
+BEQ 5 0x0 0xC
+CHECK_ALIVE Hildr //if alive plays hildr dialogue, if dead everyone is dead
+BEQ 6 0x0 0xC //everyone is dead
+Text(EndingSceneAnsgarHildrPrologue)
+GOTO 0x420
+
+LABEL 5 //breve dead/ansgar dead
+CHECK_ALIVE Hildr //if alive plays hildr dialogue, if dead everyone is dead
+BEQ 0x776 0x0 0xC //everyone is dead
+Text(EndingSceneHildrPrologue)
+GOTO 0x420
+
+LABEL 6 //breve dead/ansgar alive/hildr dead
+Text(EndingSceneAnsgarPrologue)
+GOTO 0x420
+
+LABEL 2 //hildr dead
+CHECK_ALIVE Breve
+BEQ 7 0x0 0xC
+CHECK_ALIVE Ansgar
+BEQ 8 0x0 0xC //everyone is dead
+Text(EndingSceneBreveAnsgarPrologue)
+GOTO 0x420
+
+LABEL 7 //hildr dead/breve dead
+CHECK_ALIVE Ansgar //if alive plays ansgar dialogue, if dead everyone is dead
+BEQ 0x776 0x0 0xC //everyone is dead
+Text(EndingSceneAnsgarPrologue)
+GOTO 0x420
+
+LABEL 8 //hildr dead/ansgar dead/breve alive
+Text(EndingSceneBrevePrologue)
+GOTO 0x420
+
+LABEL 3 //ansgar dead
+CHECK_ALIVE Breve
+BEQ 9 0x0 0xC
+CHECK_ALIVE Hildr
+BEQ 10 0x0 0xC //everyone is dead
+Text(EndingSceneBreveHildrPrologue)
+GOTO 0x420
+
+LABEL 9 //ansgar dead/breve dead
+CHECK_ALIVE Hildr //if alive plays hildr dialogue, if dead everyone is dead
+BEQ 0x776 0x0 0xC //everyone is dead
+Text(EndingSceneHildrPrologue)
+GOTO 0x420
+
+LABEL 10 //ansgar dead/hildr dead/breve alive
+Text(EndingSceneBrevePrologue)
+GOTO 0x420
+
+LABEL 0x776 //bruh moment
 Music(0x4D)
-Text(HowDoYouEvenGetThisEnding)
-LABEL 3
+Text(HowDoYouEvenGetThisEnding) //everyone's dead
+STAL 30
+GiveItem(0xEE,Affogato)
+
+LABEL 0x420 //moves to next cutscene
 STAL 20
-FADI 30
 Music(0xA9)
 SetBackground(0x2D)
 FADU 15
 STAL 5
+BROWNBOXTEXT AeteriaCapitalText [8,8]
+STAL 15
 Text(PrologueAeteriaEnding)
 ClearBackground
 STAL 10
