@@ -6,13 +6,42 @@ ALIGN 4
 GaidenStatScreen:
 WORD 0
 
-//Maximum Support Limit
-//by Brendor
+// Fix the Game Over freeze
+GameOverStart:
+ASMC 0x800D391
+NoFade
+ENDB
+#define CauseGameOverIfLordDies "AFEV 0 GameOverStart 0x65"
+
+// Support menu
+//by Gamma
 PUSH
-ORG 0x02833E
-BYTE 0x9
-ORG 0x02834E
-BYTE 0x9
+ORG $A208C //Always display remaining max no. of convos on support screen
+SHORT $2500 $E008
+
+ORG $A36C4
+BYTE 0x03 0x20 //Always say that there are three conversations.
+POP
+
+// Green glowy if maxed support count
+//by Gamma
+PUSH
+    ORG $876AC
+    BL($281C8) //Get total support count
+    SHORT $4682 //mov r10, r0
+    SHORT $0041 //lsl r1, r0, #0x1
+    SHORT $180B //add r3, r1, r0
+    SHORT $68E0 //ldr r0, [r4, #0xC]
+    BL($28264) //Get unlocked support count
+    SHORT $2100 //mov r1, #0x0
+    SHORT $4689 //mov r9, r1
+    SHORT $4298 //cmp r0, r3
+    SHORT $DB00 //blt $876C6
+    SHORT $2104 //mov r1, #0x4
+    SHORT $9103 //str r1, [sp, #0xC]
+    SHORT $2000 //mov r0, #0x0
+    SHORT $4550 //cmp r0, r10
+    SHORT $DA50 //bge $87770
 POP
 
 // StanH magic sword wexp

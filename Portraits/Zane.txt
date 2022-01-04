@@ -169,6 +169,11 @@ Affogato_Mug: //Affogato edited by BuskHusker and Lenh
 setMugEntryExtend(0x21, Affogato_Mug, 3, 5, 3, 3, 10, 4, 10, 2)
 
 ALIGN 16
+AffoHato_Mug:
+#incext PortraitFormatter "AffoHato.png"
+setMugEntryExtend(0x50, AffoHato_Mug, 3, 5, 3, 3, 10, 2, 10, 4)
+
+ALIGN 16
 AffoSadBoi_Mug: //I hate school :sob:
 #incext PortraitFormatter "meonmonday.png"
 setMugEntry(0x57, AffoSadBoi_Mug, 3, 5, 3, 0)
@@ -236,7 +241,7 @@ setMugEntryExtend(0x39, Gorlois_Mug, 3, 5, 3, 3, 10, 4, 0, 0)
 ALIGN 16 //Edited by L95
 GorloisBird_Mug:
 #incext PortraitFormatter "literalbirdframes.png"
-setMugEntry(0x47, GorloisBird_Mug, 8, 3, 3, 3)
+setMugEntryExtend(0x47, GorloisBird_Mug, 8, 3, 3, 3, 10, 4, 0, 0)
 
 ALIGN 16
 LetterBird_Mug:
@@ -283,12 +288,18 @@ Bard_Mug:
 #incext PortraitFormatter "Bard.png"
 setMugEntryExtend(0x2F, Bard_Mug, 3, 4, 2, 2, 0, 4, 0, 1)
 
-// Bad Guys
-ALIGN 16 //Sai by hypergammaspaces
-Sai_Mug:
-#incext PortraitFormatter "Sai.png"
-setMugEntry(0x30, Sai_Mug, 3, 5, 3, 3)
+ALIGN 16
+Xavier_Mug:
+#incext PortraitFormatter "Xidorn.png"
+setMugEntry(0x30, Xavier_Mug, 3, 4, 3, 3)
 
+ALIGN 16
+Quarrel_Mug:
+#incext PortraitFormatter "Quarrel.png"
+setMugEntry(0x3C, Quarrel_Mug, 3, 5, 3, 3)
+
+
+// Bad Guys
 ALIGN 16 //Marcellus by Laurent Lacroix
 Marcellus_Mug:
 #incext PortraitFormatter "Marcellus.png"
@@ -337,10 +348,6 @@ setMugEntry(0x6A, SoldierGeneric, 3, 6, 3, 4)
 SoldierGeneric2: //Soldier Generic 2 by hypergammaspaces
 #incext PortraitFormatter "Soldier2.png"
 setMugEntry(0x6B, SoldierGeneric2, 2, 6, 3, 4)
-
-AffoSoldier: //Helmet by hypergammaspaces
-#incext PortraitFormatter "AffoSoldier.png"
-setMugEntry(0x49, AffoSoldier, 3, 5, 3, 3)
 
 
 

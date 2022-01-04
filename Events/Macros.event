@@ -1,5 +1,6 @@
 #define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
 #define SpawnReinforcements(UnitGroup) "CamOn; LOAD1 0x1 UnitGroup; ENUN; CamOff; STAL 30"
+#define BossRein(bossy,sussy) "CHECK_ALIVE bossy; BEQ 1 0x0 0xC; CamOn; LOAD1 0x1 sussy; ENUN; CamOff; STAL 30; LABEL 1"
 #define MaxTurns(TurnNum) "256 - TurnNum"
 #define InfiniteTurnEventPlayer(flag,event,turn) "TurnEventPlayer(flag,event,turn,MaxTurns(turn))"
 #define CamOn "EVBIT_T 0x9"

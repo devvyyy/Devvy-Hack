@@ -93,53 +93,53 @@ UNIT 0x69 Parson 0x1 Level(1, Enemy, 0)   [9,8] DropItem 0 1 REDA9R9 [Light2,Boo
 	UNIT
 
 EnemyUnits:
-UNIT BadGuyStealable Brigand 0x1 Level(2, Enemy, 1)     [10,11] 0x0 0x0 0x0 0x0 [IronAxe,Vulnerary] TwoActionAI
-UNIT BadGuyStealable AArmor 0x1 Level(2, Enemy, 1)     [9,4] 0x0 0x0 0x0 0x0 [SteelAxe,EnergyRing] BossAI
-UNIT BadGuy Deserter 0x1 Level(3, Enemy, 1)     [3,10] 0x0 0x0 0x0 0x0 [IronLance] BossAI
-UNIT BadGuy Myrmidon 0x1 Level(2, Enemy, 1)     [7,9] 0x0 0x0 0x0 0x0 [IronSword] AttackInRangeAI
-UNIT BadGuy Brigand 0x1 Level(2, Enemy, 1)     [6,15] 0x0 0x0 0x0 0x0 [IronAxe,] ChargeAI
-UNIT Cultist Mage 0x1 Level(2, Enemy, 1)     [11,14] 0x0 0x0 0x0 0x0 [Fire,] ChargeAI
-UNIT Cultist Shaman 0x1 Level(3, Enemy, 1)     [5,11] 0x0 0x0 0x0 0x0 [Flux,] AttackInRangeAI
-UNIT Cultist Myrmidon 0x1 Level(3, Enemy, 1)     [13,5] 0x0 0x0 0x0 0x0 [Sagitar,] AttackInRangeAI
-UNIT BadGuy PegRider 0x1 Level(2, Enemy, 1)     [9,0] 0x0 0x0 0x0 0x0 [IronLance,] StallOneTurnAI
-UNIT BadGuy PegRider 0x1 Level(2, Enemy, 1)     [13,1] 0x0 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
-UNIT Cultist Shaman 0x1 Level(2, Enemy, 1)     [11,8] 0x0 0x0 0x0 0x0 [DarkTome2,] BossAI
-UNIT BadGuy Deserter 0x1 Level(2, Enemy, 1)     [13,10] 0x0 0x0 0x0 0x0 [SteelLance,] AttackInRangeAI
-UNIT BadGuy Raider 0x1 Level(2, Enemy, 1)     [6,0] 0x0 0x0 0x0 0x0 [IronSword,] TwoActionAI
-UNIT BadGuy ACav 0x1 Level(2, Enemy, 1)     [5,3] 0x0 0x0 0x0 0x0 [IronAxe,] TwoActionAI
-UNIT BadGuy LCav 0x1 Level(3, Enemy, 1)     [0,1] 0x0 0x0 0x0 0x0 [IronLance,] StallOneTurnAI
-UNIT Cultist Thaumaturge 0x1 Level(2, Enemy, 0)     [14,8] DropItem 0x0 0x0 0x0 [Fire,RedGem] StallOneTurnAI
-UNIT BadGuy Pirate 0x1 Level(2, Enemy, 1)     [2,13] 0x0 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
-UNIT BadGuy SCav 0x1 Level(2, Enemy, 1)     [0,2] 0x0 0x0 0x0 0x0 [SteelSword,] StallOneTurnAI
+UNIT AeteriaStealable Fighter 0x1 Level(2, Enemy, 1)     [10,11] 0x0 0x0 0x0 0x0 [IronAxe,Vulnerary] TwoActionAI
+UNIT AeteriaStealable AArmor 0x1 Level(2, Enemy, 1)     [9,4] 0x0 0x0 0x0 0x0 [IronLabrys,EnergyRing] BossAI
+UNIT Aeteria Soldier 0x1 Level(3, Enemy, 1)     [3,10] 0x0 0x0 0x0 0x0 [IronLance] BossAI
+UNIT Aeteria Myrmidon 0x1 Level(2, Enemy, 1)     [7,9] 0x0 0x0 0x0 0x0 [IronSword] AttackInRangeAI
+UNIT Aeteria Fighter 0x1 Level(2, Enemy, 1)     [6,15] 0x0 0x0 0x0 0x0 [IronAxe,] ChargeAI
+UNIT Aeteria Mage 0x1 Level(2, Enemy, 1)     [11,14] 0x0 0x0 0x0 0x0 [Fire,] ChargeAI
+UNIT Aeteria Shaman 0x1 Level(3, Enemy, 1)     [5,11] 0x0 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT Aeteria Myrmidon 0x1 Level(3, Enemy, 1)     [13,5] 0x0 0x0 0x0 0x0 [Sagitar,] AttackInRangeAI
+UNIT Aeteria PegRider 0x1 Level(2, Enemy, 1)     [9,0] 0x0 0x0 0x0 0x0 [IronLance,] StallOneTurnAI
+UNIT Aeteria PegRider 0x1 Level(2, Enemy, 1)     [13,1] 0x0 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
+UNIT Aeteria Shaman 0x1 Level(2, Enemy, 1)     [11,8] 0x0 0x0 0x0 0x0 [DarkTome2,] BossAI
+UNIT Aeteria Soldier 0x1 Level(2, Enemy, 1)     [13,10] 0x0 0x0 0x0 0x0 [SteelLance,] AttackInRangeAI
+UNIT BadGuy Raider 0x1 Level(2, Enemy, 1)     [0,1] 0x0 0x0 0x0 0x0 [IronSword,] BrigandAI
+UNIT Aeteria ACav 0x1 Level(2, Enemy, 1)     [5,3] 0x0 0x0 0x0 0x0 [IronAxe,] TwoActionAI
+UNIT Aeteria LCav 0x1 Level(3, Enemy, 1)     [5,0] 0x0 0x0 0x0 0x0 [IronLance,] StallOneTurnAI
+UNIT Aeteria Thaumaturge 0x1 Level(2, Enemy, 0)     [14,8] DropItem 0x0 0x0 0x0 [Fire,RedGem] StallOneTurnAI
+UNIT Aeteria SCav 0x1 Level(2, Enemy, 1)     [0,2] 0x0 0x0 0x0 0x0 [SteelSword,] StallOneTurnAI
 	UNIT
 	
 BridgeEnemies:
-UNIT BadGuy ACav 0x1 Level(2, Enemy, 1)     [0,2] 0b 0x0 0x0 0x0 [SteelAxe,] StallOneTurnAI
-UNIT BadGuy SCav 0x1 Level(3, Enemy, 1)     [0,1] 0b 0x0 0x0 0x0 [IronSword,] StallOneTurnAI
+UNIT Aeteria ACav 0x1 Level(2, Enemy, 1)     [0,2] 0b 0x0 0x0 0x0 [SteelAxe,] StallOneTurnAI
+UNIT Aeteria SCav 0x1 Level(3, Enemy, 1)     [0,1] 0b 0x0 0x0 0x0 [IronSword,] StallOneTurnAI
 UNIT
 
 BoatEnemies:
-UNIT UPirate Pirate 0x1 Level(3, Enemy, 1)     [1,14] 0 0 1 REDA1R13 [IronAxe,] TwoActionAI
+UNIT UPirate Pirate 0x1 Level(3, Enemy, 1)     [1,14] 0b 0x0 0x0 0x0 [IronAxe,] TwoActionAI
+UNIT UPirate Pirate 0x1 Level(3, Enemy, 1)     [3,18] 0b 0x0 0x0 0x0 [IronAxe,] TwoActionAI
 UNIT
 
 MountainEnemies:
-UNIT BadGuy PegRider 0x1 Level(2, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
-UNIT BadGuy PegRider 0x1 Level(3, Enemy, 1)     [12,0] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
+UNIT Aeteria PegRider 0x1 Level(2, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
+UNIT Aeteria PegRider 0x1 Level(3, Enemy, 1)     [12,0] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
 UNIT
 
 EastEnemies:
 UNIT UPirate Pirate 0x1 Level(4, Enemy, 1)     [0,6] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
-UNIT Cultist Occultist 0x1 Level(3, Enemy, 1)     [0,5] 0b 0x0 0x0 0x0 [DarkTome2] StallOneTurnAI
+UNIT Aeteria Occultist 0x1 Level(3, Enemy, 1)     [0,5] 0b 0x0 0x0 0x0 [DarkTome2] StallOneTurnAI
 UNIT
 
 SouthEnemies:
-UNIT BadGuy PegRider 0x1 Level(3, Enemy, 1)     [14,11] 0b 0x0 0x0 0x0 [Horseslayer] ChargeAI
-UNIT BadGuy PegRider 0x1 Level(3, Enemy, 1)     [14,12] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
+UNIT Aeteria PegRider 0x1 Level(3, Enemy, 1)     [14,11] 0b 0x0 0x0 0x0 [Horseslayer] ChargeAI
+UNIT Aeteria PegRider 0x1 Level(3, Enemy, 1)     [14,12] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
 UNIT
 
 NorthEnemies:
-UNIT Cultist Shaman 0x1 Level(4, Enemy, 1)     [14,5] 0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
-UNIT Cultist Occultist 0x1 Level(3, Enemy, 1)     [14,4] 0b 0x0 0x0 0x0 [DarkTome1] ChargeAI
+UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [14,5] 0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
+UNIT Aeteria Occultist 0x1 Level(3, Enemy, 1)     [14,4] 0b 0x0 0x0 0x0 [DarkTome1] ChargeAI
 UNIT
 
 Traps1:

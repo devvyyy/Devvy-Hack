@@ -22,6 +22,11 @@
   #define DebuffTableSize 0x00000900
 #endif
 
+#ifndef ChapterDataTable
+  #define ChapterDataTable 0x8B0890
+  #define ChapterDataTableEntSize 148
+#endif
+
 #define LunarBrace MoonBracelet
 #define SolarBrace SunBracelet
 

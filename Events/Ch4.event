@@ -81,25 +81,25 @@ LoadUnit(10,12)
 
 EnemyUnits:
 UNIT Hartmann Druid 0x1 Level(6, Enemy, 0)     [1,1] DropItem 0x0 0x0 0x0 [DarkTome5,AngelicRobe] BossAI
-UNIT Hiems Thaumaturge 0x1 Level(4, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [Fire,] DefendAI
-UNIT Hiems Shaman 0x1 Level(5, Enemy, 1)     [5,2] DropItem 0x0 0x0 0x0 [DarkTome2,DoorKey] BossAI
-UNIT BadGuy LArmor 0x1 Level(4, Enemy, 1)     [9,1] DropItem 0x0 0x0 0x0 [ShortSpear,DoorKey] BossAI
-UNIT Hiems Shaman 0x1 Level(4, Enemy, 1)     [11,2] 0b 0x0 0x0 0x0 [Flux,] DefendAI	
+UNIT Aeteria Thaumaturge 0x1 Level(4, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [Fire,] DefendAI
+UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [5,2] DropItem 0x0 0x0 0x0 [DarkTome2,DoorKey] BossAI
+UNIT Aeteria LArmor 0x1 Level(4, Enemy, 1)     [9,1] DropItem 0x0 0x0 0x0 [IronGlaive,ShortSpear,DoorKey] BossAI
+UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [11,2] 0b 0x0 0x0 0x0 [Flux,] DefendAI	
 UNIT FlyingMag Occultist 0x1 Level(4, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [Flux] TwoActionAI
 UNIT FlyingMagStealable Occultist 0x1 Level(5, Enemy, 1)     [9,5] 0b 0x0 0x0 0x0 [Flux,Talisman] StallOneTurnAI
 UNIT UPirate Pirate 0x1 Level(4, Enemy, 1)     [15,0] 0b 0x0 0x0 0x0 [SteelAxe] StallOneTurnAI
-UNIT BadGuy Deserter 0x1 Level(4, Enemy, 1)     [14,8] 0b 0x0 0x0 0x0 [IronLance] DefendAI
-UNIT BadGuy Mercenary 0x1 Level(4, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [IronSword,] StallOneTurnAI
-UNIT BadGuy Mercenary 0x1 Level(4, Enemy, 1)     [6,9] 0b 0x0 0x0 0x0 [Zanbato,] DefendAI
-UNIT BadGuy Brigand 0x1 Level(4, Enemy, 1)     [3,10] 0b 0x0 0x0 0x0 [IronAxe,] DefendAI
-UNIT Hiems Shaman 0x1 Level(4, Enemy, 1)     [5,12] 0b 0x0 0x0 0x0 [DarkTome2,] DefendAI
-UNIT Hiems Mage 0x1 Level(5, Enemy, 0)     [6,5] 0b 0x0 0x0 0x0 [AnimaTome1,] WallAI
-UNIT Hiems Mage 0x1 Level(4, Enemy, 0)     [12,0] 0b 0x0 0x0 0x0 [AnimaTome1,] TwoActionAI
-UNIT Hiems Shaman 0x1 Level(4, Enemy, 1)     [3,4] 0b 0x0 0x0 0x0 [Flux,] DefendAI
-UNIT BadGuy Archer 0x1 Level(4, Enemy, 1)     [7,2] 0x0 0x0 0x0 0x0 [IronBow,] DefendAI
-UNIT BadGuy Fighter 0x1 Level(4, Enemy, 1)     [12,5] 0x0 0x0 0x0 0x0 [IronAxe,] WallAI
-UNIT Hiems Mage 0x1 Level(5, Enemy, 1)     [11,10] DropItem 0x0 0x0 0x0 [Fire, 0x70] DefendAI
-UNIT BadGuy Raider 0x1 Level(5, Enemy, 1)     [6,0] 0x0 0x0 0x0 0x0 [IronSword,] WallAI
+UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [14,8] 0b 0x0 0x0 0x0 [IronLance] DefendAI
+UNIT Aeteria Mercenary 0x1 Level(4, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [IronSword,] StallOneTurnAI
+UNIT Aeteria Mercenary 0x1 Level(4, Enemy, 1)     [6,9] 0b 0x0 0x0 0x0 [Zanbato,] DefendAI
+UNIT Aeteria Fighter 0x1 Level(4, Enemy, 1)     [3,10] 0b 0x0 0x0 0x0 [IronAxe,] DefendAI
+UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [5,12] 0b 0x0 0x0 0x0 [DarkTome2,] DefendAI
+UNIT Aeteria Mage 0x1 Level(5, Enemy, 0)     [6,5] 0b 0x0 0x0 0x0 [AnimaTome1,] WallAI
+UNIT Aeteria Mage 0x1 Level(4, Enemy, 0)     [12,0] 0b 0x0 0x0 0x0 [AnimaTome1,] TwoActionAI
+UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [3,4] 0b 0x0 0x0 0x0 [Flux,] DefendAI
+UNIT Aeteria Archer 0x1 Level(4, Enemy, 1)     [16,6] 0x0 0x0 0x0 0x0 [IronBow,] DefendAI
+UNIT Aeteria Fighter 0x1 Level(4, Enemy, 1)     [12,5] 0x0 0x0 0x0 0x0 [IronAxe,] WallAI
+UNIT Aeteria Mage 0x1 Level(5, Enemy, 1)     [11,10] DropItem 0x0 0x0 0x0 [Fire, 0x70] DefendAI
+UNIT Aeteria Mercenary 0x1 Level(5, Enemy, 1)     [6,0] 0x0 0x0 0x0 0x0 [IronSword,] WallAI
 	UNIT
 
 NPCEPIC:
@@ -120,13 +120,13 @@ UNIT Atheya WyvernRider_F 0x1 Level(5, Ally, 0)     [6,13] 0x0 0x0 0x0 0x0 [Iron
 UNIT
 
 ArenaRein:
-UNIT Hiems Shaman 0x1 Level(4, Enemy, 1)     [10,0] 0b 0x0 0x0 0x0 [DarkTome2,] DefendAI
+UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [10,0] 0b 0x0 0x0 0x0 [DarkTome2,] DefendAI
 UNIT FlyingMagStealable Thaumaturge 0x1 Level(5, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [Fire,RedGem] StallOneTurnAI
 UNIT
 
 ArenaRein2:
-UNIT BadGuy Deserter 0x1 Level(4, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [IronLance,] DefendAI
-UNIT Hiems Brigand 0x1 Level(5, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [SteelAxe,] DefendAI
+UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [IronLance,] DefendAI
+UNIT Aeteria Fighter 0x1 Level(5, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [SteelAxe,] DefendAI
 UNIT
 
 WaterRein:
@@ -158,26 +158,26 @@ UNIT 0x64 Thief 0x1 Level(5, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [KillingEdge,Che
 UNIT
 
 StairRein:
-UNIT Hiems Shaman 0x1 Level(6, Enemy, 1)     [9,0] DropItem 0x0 0x0 0x0 [Flux, PureWater] DefendAI
-UNIT BadGuy Deserter 0x1 Level(5, Enemy, 1)     [12,0] 0b 0x0 0x0 0x0 [Javelin] DefendAI
+UNIT Aeteria Shaman 0x1 Level(6, Enemy, 1)     [9,0] DropItem 0x0 0x0 0x0 [Flux, PureWater] DefendAI
+UNIT Aeteria Deserter 0x1 Level(5, Enemy, 1)     [12,0] 0b 0x0 0x0 0x0 [Javelin] DefendAI
 UNIT
 
 StairRein2:
-UNIT BadGuy Archer 0x1 Level(5, Enemy, 1)     [5,0] 0b 0x0 0x0 0x0 [IronBow] WallAI
-UNIT Hiems Mage 0x1 Level(5, Enemy, 1)     [6,0] 0b 0x0 0x0 0x0 [AnimaTome1] DefendAI
+UNIT Aeteria Archer 0x1 Level(5, Enemy, 1)     [5,0] 0b 0x0 0x0 0x0 [IronBow] WallAI
+UNIT Aeteria Mage 0x1 Level(5, Enemy, 1)     [6,0] 0b 0x0 0x0 0x0 [AnimaTome1] DefendAI
 UNIT
 
 ArenaRein3:
-UNIT Hiems Mage 0x1 Level(5, Enemy, 1)     [16,3] 0b 0x0 0x0 0x0 [AnimaTome2] DefendAI
+UNIT Aeteria Mage 0x1 Level(5, Enemy, 1)     [16,3] 0b 0x0 0x0 0x0 [AnimaTome2] DefendAI
 UNIT FlyingPhys Brigand 0x1 Level(6, Enemy, 1)     [0,7] 0 0 1 REDA1R8 [IronAxe] ChargeAI
 UNIT
 
 ArenaRein4:
-UNIT BadGuy Raider 0x1 Level(4, Enemy, 1)     [16,6] 0x0 0x0 0x0 0x0 [IronSword] DefendAI
+UNIT Aeteria Myrmidon 0x1 Level(4, Enemy, 1)     [16,6] 0x0 0x0 0x0 0x0 [IronSword] DefendAI
 UNIT
 
 InsideRein:
-UNIT BadGuy ACav 0x1 Level(5, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [IronAxe,HandAxe] DefendAI
+UNIT Aeteria ACav 0x1 Level(5, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [IronAxe,HandAxe] DefendAI
 UNIT FlyingMag Occultist 0x1 Level(5, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [DarkTome1,] WallAI
 UNIT
 
@@ -313,7 +313,7 @@ Music(0x63)
 STAL 3
 SetBackground(0x0E)
 FADU 60
-DoubleConditionalDialog(Breve,Floris,Ch4Ending4,Ch4EndingAlt4,3,4)
+Text(Ch4Ending4)
 STAL 5
 	MNC2 0x5
 	NoFade

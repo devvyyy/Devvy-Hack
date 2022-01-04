@@ -1,13 +1,36 @@
+## SD_LethalTempo
+Perfect Pulse: Unit cannot follow-up.[N]
+Converts Spd into bonus Atk and if unit's[N]
+Spd is higher foe's Spd, +5 damage.[X]
+
+## SD_Tresillo
+F-D[0x23]-F//C[0x23]-G[0x23]-F: Unit cannot attack.[N]
+Converts Eth into bonus Avoid, and[N]
+Skill to bonus Crit Avoid.[X]
+
+## SD_HeavyDuty
+Grit: If unit's HP is not full,[N]
+reduces damage taken by 25%.[X]
+
+## SD_TrueGrit
+True Grit: If unit's HP is below 25%,[N]
+deals damage equal to unit's missing HP.[N]
+(HP Checked at start of combat.)[X]
+
+## SD_ArmWrestler
+Bar Fighter: Grants +10 Hit/Avoid against[N]
+enemies with Shove/Smite.[X]
+
 ## SD_SolLance
 Solar Thrust: Deals (10 - Foe's Res) bonus damage[N]
-on hit, and unit heal the same amount.[A][X]
+on hit, and unit heal the same amount.[X]
 
 ## SD_Parry
 [_P][_a][_r][_r][_y]: [_I]f [_u][_n]it'[_s] [_H][_P] i[_s] f[_u]ll [_a][_n][_d] [_a] w[_e][_a][_p][_o][_n] i[_s][N]
 [_e][_q][_u]i[_p][_p][_e][_d], [_n][_e][_g][_a]t[_e][_s] [_p][_h][_y][_s]i[_c][_a]l [_a]tt[_a][_c][_k][_s] [_a]t [_1] [_r][_a][_n][_g][_e],[N]
 [_b][_u]t [_u][_n]it t[_a][_k][_e][_s] [_1] [_d][_a][_m][_a][_g][_e] [_a]ft[_e][_r] [_c][_o][_m][_b][_a]t.[X]
 
-## SD_AoifePersonal
+## SD_ResolutePyre
 Resolute Pyre: Grants Eth and Crit rate[N]
 during combat equal to 50% of unit and[N]
 foe's missing HP.[X]
@@ -17,7 +40,7 @@ Fractured Mask: If unit's HP is above 50%,[N]
 grants Atk +3/Hit +20. If below 50%,[N]
 grants Def/Res +3 and Avoid +20.[X]
 
-## SD_MaynardPersonal
+## SD_Eulogy
 Eulogy of Aeteria: If magic foe initiates,[N]
 neutralizes foe's Eth/Spd/Res/W. Mt[N]
 during combat, setting those stats to 0.[X]
@@ -256,10 +279,6 @@ physical allies with full HP:[NL]
 Ruptured Sky: Boosts unit's Atk by 25%[N]
 of foe's Str/Eth.[X]
 
-## SD_HeavyDuty
-Heavy Duty: If unit's Wt > foe's Wt,[NL]
-inflicts Atk -3 on foe.[X]
-
 ## SD_Lunatic
 Lunatic: If foe's HP is full, deals bonus[N]
 damage equal to 25% of foe's Def.[X]
@@ -270,8 +289,7 @@ foe's Max HP/4.[X]
 
 ## SD_CloseCall
 Sidestep: Unit can move 2 spaces[N]
-after action. (Effect does not[N]
-trigger in ballistae.)[X]
+after action.[X]
 
 ## SD_Vigor
 Requiem: Multiplies Eth by[N]
@@ -727,7 +745,7 @@ Bond: All allies within 3 spaces[N]
 recover 10% HP each turn.[X]
 
 ## SD_Anathema
-Anathema: -10 Avoid/Dodge to all[N]
+Anathema: -10 Avoid/Crit Avoid to all[N]
 enemies within 3 spaces.[X]
 
 ## SD_LilysPoise
@@ -971,7 +989,7 @@ Hawkeye: User will[N]
 always hit the enemy.[X]
 
 ## SD_Solidarity
-Solidarity: Grants Crit/Crit Avo +10[N]
+Solidarity: Grants Crit/Crit Avoid +10[N]
 to adjacent allies.[X]
 
 ## SD_Bracing_Stance

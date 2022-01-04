@@ -58,6 +58,7 @@ MiscBasedEvents:
 
 LocationBasedEvents:
 Chest(Warp,3,1)
+House(0x0,House1,5,8)
 	END_MAIN
 
 Dunno1:
@@ -93,39 +94,39 @@ UNIT Sequin Mage 0x1 Level(1, Ally, 0)   [12,0] 0b 0x0 0x0 0x0 [Fire,Vulnerary] 
 	UNIT
 
 EnemyUnits:
-UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [7,2] 0 0 1 REDA6R3 [Flux] ChargeAI
-UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [7,2] 0 0 1 REDA7R5 [IronAxe] ChargeAI
-UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [12,7] 0 0 1 REDA12R6 [Flux] TwoActionAI
-UNIT BadGuy Raider 0x1 Level(1, Enemy, 1)     [12,7] 0 0 1 REDA11R3 [IronSword] ChargeAI
-UNIT BadGuyStealable SCav 0x1 Level(1, Enemy, 1)     [12,7] 0 0 1 REDA14R8 [IronSword,RedGem] TwoActionAI
-UNIT BadGuy AArmor 0x1 Level(2, Enemy, 1)     [12,7] 0 0 1 REDA9R8 [SteelAxe] BossAI
-UNIT BadGuy Deserter 0x1 Level(2, Enemy, 1)     [0,7] 0b 0x0 0x0 0x0 [IronLance,] TwoActionAI
-UNIT BadGuy Archer 0x1 Level(2, Enemy, 1)     [0,7] 0 0 1 REDA3R4 [Longbow] BossAI
-UNIT BadGuy Shaman 0x1 Level(2, Enemy, 1)     [15,1] DropItem 0 1 REDA15R2 [Flux,PureWater] ChargeAI
-UNIT Cultist Occultist 0x1 Level(1, Enemy, 1)     [15,1] 0 0 1 REDA15R6 [Flux] TwoActionAI
-UNIT Cultist Mage 0x1 Level(1, Enemy, 1)     [0,8] 0 0 1 REDA4R7 [Fire] AttackInRangeAI
-UNIT Cultist Shaman 0x1 Level(1, Enemy, 1)     [0,8] 0 0 1 REDA2R9 [Flux] StallOneTurnAI
-UNIT BadGuy Brigand 0x1 Level(1, Enemy, 1)     [5,10] 0 0 1 REDA5R9 [IronLabrys] AttackInRangeAI
+UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [7,2] 0 0 1 REDA6R3 [Flux] ChargeAI
+UNIT Aeteria Fighter 0x1 Level(1, Enemy, 1)     [7,2] 0 0 1 REDA7R5 [IronAxe] ChargeAI
+UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [12,7] 0 0 1 REDA12R6 [Flux] TwoActionAI
+UNIT Aeteria Mercenary 0x1 Level(1, Enemy, 1)     [12,7] 0 0 1 REDA11R3 [IronSword] ChargeAI
+UNIT AeteriaStealable SCav 0x1 Level(1, Enemy, 1)     [12,7] 0 0 1 REDA14R8 [IronSword,RedGem] TwoActionAI
+UNIT Aeteria AArmor 0x1 Level(2, Enemy, 1)     [12,7] 0 0 1 REDA9R8 [SteelAxe] BossAI
+UNIT Aeteria Soldier 0x1 Level(2, Enemy, 1)     [0,7] 0b 0x0 0x0 0x0 [IronLance,] TwoActionAI
+UNIT Aeteria Archer 0x1 Level(2, Enemy, 1)     [0,7] 0 0 1 REDA3R4 [Longbow] BossAI
+UNIT Aeteria Shaman 0x1 Level(2, Enemy, 1)     [15,1] DropItem 0 1 REDA15R2 [Flux,PureWater] ChargeAI
+UNIT Aeteria Occultist 0x1 Level(1, Enemy, 1)     [15,1] 0 0 1 REDA15R6 [Flux] TwoActionAI
+UNIT Aeteria Mage 0x1 Level(1, Enemy, 1)     [0,8] 0 0 1 REDA4R7 [Fire] AttackInRangeAI
+UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [0,8] 0 0 1 REDA2R9 [Flux] StallOneTurnAI
+UNIT Aeteria Fighter 0x1 Level(1, Enemy, 1)     [5,10] 0 0 1 REDA5R9 [IronLabrys] AttackInRangeAI
 UNIT Biscotti PegRider 0x1 Level(3, Enemy, 1)     [15,10] DropItem 0 1 REDA3R10 [HeavySpear,SteelLance] BossAI
-UNIT BadGuyStealable LArmor 0x1 Level(2, Enemy, 1)     [7,2] 0 0 1 REDA5R2 [Javelin,Vulnerary] [0x0,0x3,0x0,0x20]
-UNIT BadGuy Pirate 0x1 Level(1, Enemy, 1)     [0,1] 0 0 1 REDA0R3 [IronAxe] StallOneTurnAI
-UNIT BadGuy Pirate 0x1 Level(1, Enemy, 1)     [0,4] 0 0 1 REDA1R4 [SteelAxe] StallOneTurnAI
-UNIT BadGuy PegRider 0x1 Level(1, Enemy, 1)     [14,10] 0 0 1 REDA13R10 [IronLance] AttackInRangeAI
+UNIT AeteriaStealable LArmor 0x1 Level(2, Enemy, 1)     [7,2] 0 0 1 REDA5R2 [Javelin,Vulnerary] [0x0,0x3,0x0,0x20]
+UNIT Aeteria Pirate 0x1 Level(1, Enemy, 1)     [0,1] 0 0 1 REDA0R3 [IronAxe] StallOneTurnAI
+UNIT Aeteria Pirate 0x1 Level(1, Enemy, 1)     [0,4] 0 0 1 REDA1R4 [SteelAxe] StallOneTurnAI
+UNIT Aeteria PegRider 0x1 Level(1, Enemy, 1)     [14,10] 0 0 1 REDA13R10 [IronLance] AttackInRangeAI
 	UNIT
 	
 Rein1:
-UNIT Cultist Occultist 0x1 Level(2, Enemy, 1)     [15,9] 0x0 0x0 0x0 0x0 [Flux] ChargeAI
-UNIT BadGuy Pirate 0x1 Level(2, Enemy, 1)     [15,10] 0x0 0x0 0x0 0x0 [SteelAxe] ChargeAI
+UNIT Aeteria Occultist 0x1 Level(2, Enemy, 1)     [15,9] 0x0 0x0 0x0 0x0 [Flux] ChargeAI
+UNIT Aeteria Pirate 0x1 Level(2, Enemy, 1)     [15,10] 0x0 0x0 0x0 0x0 [SteelAxe] ChargeAI
 	UNIT
 	
 Rein2:
-UNIT BadGuy Shaman 0x1 Level(2, Enemy, 1)     [6,10] 0x0 0x0 0x0 0x0 [DarkTome2] StallOneTurnAI
-UNIT BadGuy SCav 0x1 Level(2, Enemy, 1)     [5,10] 0x0 0x0 0x0 0x0 [SteelSword] ChargeAI
+UNIT Aeteria Shaman 0x1 Level(2, Enemy, 1)     [6,10] 0x0 0x0 0x0 0x0 [DarkTome2] StallOneTurnAI
+UNIT Aeteria SCav 0x1 Level(2, Enemy, 1)     [5,10] 0x0 0x0 0x0 0x0 [SteelSword] ChargeAI
 	UNIT
 	
 Rein3:
-UNIT BadGuy Deserter 0x1 Level(2, Enemy, 1)     [0,7] 0x0 0x0 0x0 0x0 [Horseslayer] ChargeAI
-UNIT BadGuy Hunter 0x1 Level(2, Enemy, 1)     [0,8] 0x0 0x0 0x0 0x0 [SteelBow] ChargeAI
+UNIT Aeteria Deserter 0x1 Level(2, Enemy, 1)     [0,7] 0x0 0x0 0x0 0x0 [Horseslayer] ChargeAI
+UNIT Aeteria Hunter 0x1 Level(2, Enemy, 1)     [0,8] 0x0 0x0 0x0 0x0 [SteelBow] ChargeAI
 	UNIT
 	
 CutsceneUnits:
@@ -290,5 +291,13 @@ Text(Ch1EndingAlt4)
 LABEL 8
 STAL 10
 MNC2 0x2
+NoFade
+ENDA
+
+House1:
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+HouseExp(0x12,HouseBG1,Ch1HouseText)
+MUNO // increases music volume
 NoFade
 ENDA
