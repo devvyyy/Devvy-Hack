@@ -39,6 +39,7 @@ MiscBasedEvents:
 	AREA 0xF DropThePlank [8,15] [8,15]
 	AREA 0x10 BarrelRoll [0,0] [3,1]
 	AREA 0x11 LolWhy [6,13] [10,13]
+	AREA 0x17 FirstMove [0,14] [7,17]
 	END_MAIN
 
 LocationBasedEvents:
@@ -147,8 +148,8 @@ YoItThem:
 UNIT Stroganoff AArmor 0x1 Level(6, Ally, 0)     [10,8] 0b 0x0 0x0 0x0 [SteelLabrys,EmeraldAxe,Dracoshield] [0x0,0x3,0x0,0x20]
 UNIT Eiskaffee Hunter 0x1 Level(4, Ally, 0)     [11,9] 0b 0x0 0x0 0x0 [IronRifle,Elixir] [0x0,0x3,0x0,0x20]
 UNIT Doppio Soldier 0x1 Level(5, Ally, 0)     [12,8] 0b 0x0 0x0 0x0 [KillerLance, Elixir] [0x0,0x3,0x0,0x20]
-UNIT Wreyvine Archer 0x1 Level(3, Ally, 0)     [9,9] 0b 0x0 0x0 0x0 [IronBow] StallOneTurnAI
-UNIT Wreyvine Soldier 0x1 Level(3, Ally, 0)     [13,9] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
+UNIT Wreyvine Mercenary 0x1 Level(3, NPC, 0)     [9,9] 0b 0x0 0x0 0x0 [IronSword] StallOneTurnAI
+UNIT Wreyvine Soldier 0x1 Level(3, NPC, 0)     [13,9] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
 	UNIT
 
 AtheyaCutscene:
@@ -170,7 +171,6 @@ BeginningScene:
 	CUSN Stroganoff
 	CUSN Doppio
 	CUSN Eiskaffee
-	FADU 10
 	ENUN
 FADU 60
 Music(0xE4)
@@ -181,41 +181,21 @@ FADI 60
 CLEAN
 SetBackground(0x3D)
 Music(0xED)
-FADU 45
 CharacterConditionalDialog(Hildr,Ch3Opening2,Ch3OpeningAlt2)
 STAL 10
 SetFlag(0xB)
 SetFlag(0xD)
-	CenterTextbox(Ch3BridgeWarning)
 	GotoPrepScreen
 	ENDA
 
 EndingScene:
 MUSC 0x116
 SetBackground(0x3D)
-TEXTSTART
-TEXTSHOW Ch3Ending1
-TEXTEND
-MUSC 0x1A
-TEXTCONT
-TEXTEND
-SOUN 0xA6
-STAL 3
-SOUN 0xA7
-STAL 5
-SOUN 0xA6
-STAL 3
-SOUN 0xA7
-STAL 5
-SOUN 0xA6
-STAL 3
-SOUN 0xA7
-STAL 10
+Text(Ch3Ending1)
 FADI 60
 CLEAN
 MUSCSLOW VictorySadBGM
 SetBackground(0x3E)
-FADU 45
 CharacterConditionalDialog(Stroganoff,Ch3Ending2,Ch3EndingAlt2)
 Music(0x115)
 CHECK_ALIVE Stroganoff
@@ -229,6 +209,15 @@ LABEL 4
 	NoFade
 	ENDA
 	
+FirstMove:
+CHECK_EVENTID 0xF
+BNE 1 0x0 0xC
+	CAM1[8,15]
+	Text(Ch3BridgeWarning)
+LABEL 1
+	NoFade
+	ENDA
+
 DropThePlank:
 SVAL 0x2 0x0
 CALL 0x9EE1B8
@@ -392,7 +381,7 @@ NoFade
 ENDA
 
 ShopBruh:
-SHLI Fire Heal Vulnerary
+SHLI Fire Thunder Heal Mend Vulnerary PureWater
 ALIGN 4
 
 ArmoryBruh:

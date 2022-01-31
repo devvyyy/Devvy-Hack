@@ -105,7 +105,7 @@ UNIT Aeteria PegRider 0x1 Level(2, Enemy, 1)     [9,0] 0x0 0x0 0x0 0x0 [IronLanc
 UNIT Aeteria PegRider 0x1 Level(2, Enemy, 1)     [13,1] 0x0 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
 UNIT Aeteria Shaman 0x1 Level(2, Enemy, 1)     [11,8] 0x0 0x0 0x0 0x0 [DarkTome2,] BossAI
 UNIT Aeteria Soldier 0x1 Level(2, Enemy, 1)     [13,10] 0x0 0x0 0x0 0x0 [SteelLance,] AttackInRangeAI
-UNIT BadGuy Raider 0x1 Level(2, Enemy, 1)     [0,1] 0x0 0x0 0x0 0x0 [IronSword,] BrigandAI
+UNIT Aeteria Raider 0x1 Level(2, Enemy, 1)     [0,1] 0x0 0x0 0x0 0x0 [IronSword,] BrigandAI
 UNIT Aeteria ACav 0x1 Level(2, Enemy, 1)     [5,3] 0x0 0x0 0x0 0x0 [IronAxe,] TwoActionAI
 UNIT Aeteria LCav 0x1 Level(3, Enemy, 1)     [5,0] 0x0 0x0 0x0 0x0 [IronLance,] StallOneTurnAI
 UNIT Aeteria Thaumaturge 0x1 Level(2, Enemy, 0)     [14,8] DropItem 0x0 0x0 0x0 [Fire,RedGem] StallOneTurnAI
@@ -330,6 +330,11 @@ ENDA
 
 OgrimHouseEpic:
 MUSI // lowers music volume
+CHECK_ALIVE 0x69
+BEQ 1 0x0 0xC
+CameraCursor(0x69)
+Text(OgrimHouseEnter)
+
 TEXTSTART
 CHECK_ACTIVEID Affogato
 BNE 0x0 0xC 0x0
@@ -351,6 +356,8 @@ ENUT 0xB
 LABEL 0x776
 EVBIT_T 0x7
 MUNO // increases music volume
+
+LABEL 1
 NoFade
 ENDA
 

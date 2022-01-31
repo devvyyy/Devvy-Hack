@@ -5,7 +5,7 @@
 .endm
 .equ Lionheart, SkillTester+4
 .equ FuryEvent, Lionheart+4
-.equ furydamage, 3
+.equ furydamage, 4
 .thumb
 push	{lr}
 @check if dead

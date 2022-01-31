@@ -171,6 +171,11 @@
 // An example for stat screen display is in MSS page 4.
 // #define GAIDEN_MAGIC
 
+// If uncommented, passive stat boosts will not stack and only the 
+// first item in the inventory with passive stat boosts will apply them.
+// Setting the 0x00800000 bit in the item ability bitfield will enable passive boosts.
+ #define DONT_STACK_BOOSTS
+
 // =================================
 // = SKILL BEHAVIOUR CONFIGURATION =
 // =================================

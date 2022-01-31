@@ -123,7 +123,7 @@ UNIT Aeteria Archer 0x1 Level(6, Enemy, 1)     [4,3] 0b 0x0 0x0 0x0 [KillerBow] 
 	UNIT
 	
 RecruitsAgain:
-UNIT Lennard Soldier 0x1 Level(6, Ally, 0)     [7,4] 0b 0x0 0x0 0x0 [SapphireLance,ShortSpear] [0x0,0x0,0x0,0x0]
+UNIT Lennard Deserter 0x1 Level(6, Ally, 0)     [7,4] 0b 0x0 0x0 0x0 [SapphireLance,ShortSpear] [0x0,0x0,0x0,0x0]
 UNIT Therese SArmor 0x1 Level(7, Ally, 0)     [5,4] 0b 0x0 0x0 0x0 [SteelBlade,Mine] [0x0,0x0,0x0,0x0]
 	UNIT
 	
@@ -252,8 +252,17 @@ UNIT InfantrySoul Archer 0x1 Level(6, Enemy, 1)     [13,11] 0 0 1 REDA16R12 [Ste
 	UNIT
 
 RedSussy:
-UNIT King KingClass 0x1 Level(15, NPC, 0)     [6,1] 0b 0x0 0x0 0x0 [] BossAI
+UNIT King KingClass 0x1 Level(15, NPC, 0)     [6,1] 0b 0x0 0x0 0x0 [SteelBlade,SteelGlaive,SteelLabrys,0xD2] BossAI
 UNIT Gorlois Parson 0x1 Level(7, NPC, 0)     [6,3] 0b 0x0 0x0 0x0 [0x40, Elixir] BossAI
+	UNIT
+	
+CutsceneUnits:
+UNIT Affogato Hunter 0x1 Level(1, Ally, 1)     [1,18] 0 0 1 REDA1R17 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Ulrich APaladin 0x1 Level(1, Ally, 1)     [2,18] 0 0 1 REDA2R17 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+	UNIT
+	
+LeCutscene:
+UNIT Aoife Sage_F 0x1 Level(12, Enemy, 0)     [12,18] 0b 0x0 0x0 0x0 [] BossAI
 	UNIT
 
 Traps1:
@@ -282,6 +291,7 @@ CURE
 TEXTSHOW KingLeftFort
 TEXTEND
 REMA
+STAL 45
 CHECK_EVENTID 0xB
 BEQ 0x0 0xC 0x0
 CHECK_EVENTID 0xC
@@ -306,6 +316,7 @@ CURE
 TEXTSHOW KingMidFort
 TEXTEND
 REMA
+STAL 45
 CHECK_EVENTID 0xA
 BEQ 0x0 0xC 0x0
 CHECK_EVENTID 0xC
@@ -330,6 +341,7 @@ CURE
 TEXTSHOW KingRightFort
 TEXTEND
 REMA
+STAL 45
 CHECK_EVENTID 0xA
 BEQ 0x0 0xC 0x0
 CHECK_EVENTID 0xB
@@ -384,11 +396,28 @@ ENDA
 
 LMoatEvent1:
 MUSS 0x107
+WORD 0x22820
+CHECK_EVENTID 0xC
+BNE 0x1 0xC 0x0
 SpawnReinforcements(HolyFuckWhy1)
+LABEL 0x1
+
 STAL 10
+
+CHECK_EVENTID 0xC
+BNE 0x2 0xC 0x0
 SpawnReinforcements(HolyFuckWhy2)
+LABEL 0x2
+
 STAL 10
+
+CHECK_EVENTID 0xB
+BNE 0x3 0xC 0x0
 SpawnReinforcements(HolyFuckWhy3)
+LABEL 0x3
+
+NoFade
+ENDA
 STAL 15
 CameraCursor(Affogato)
 Text(Ch6WTFMoment)
@@ -420,6 +449,7 @@ NoFade
 ENDA
 
 MidOneEvent1:
+WORD 0x12820
 CHECK_EVENTID 0xB
 BNE 0x0 0xC 0x0
 SpawnReinforcements(MidReinWith1Unit)
@@ -490,6 +520,7 @@ NoFade
 ENDA
 
 MFortEvent1:
+WORD 0x02820
 CHECK_EVENTID 0xB
 BNE 0x0 0xC 0x0
 SpawnReinforcements(InnerFortRein1)
@@ -517,13 +548,10 @@ CALL (EndingScene)
 ENDA
 
 BeginningScene:
-	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 RedSussy
-	LOAD1 0x1 RecruitsAgain
 	ENUN
 Music(0x48)
-SetBackground(0x34)
-FADU 25
+SetBackground(0x2B)
 STAL 7
 BROWNBOXTEXT PalaceOutskirtsText [8,8]
 Text(Ch6Opening1)
@@ -532,32 +560,45 @@ CLEAN
 FADU 60
 STAL 5
 BROWNBOXTEXT PalaceText [8,8]
-STAL 2
+STAL 15
 Music(0x92)
-SetBackground(0x3C)
+STAL 15
+LOAD2 0x1 CutsceneUnits
+CameraCursor(Affogato)
+STAL 15
+SetBackground(0x40)
 DoubleConditionalDialog(Breve,Hildr,Ch6Opening2,Ch6OpeningAlt2,3,4)
+STAL 30
+Music(0x24)
+Text(Introducethedarnedunitspls)
+STAL 5
 FADI 60
 CLEAN
 FADU 60
 STAL 5
 Music(0xED)
 SetBackground(0x29)
+STAL 5
+BROWNBOXTEXT ThroneRoomText [8,8]
+STAL 15
 DoubleConditionalDialog(Brudet,Stroganoff,Ch6Opening3,Ch6OpeningAlt3,5,6)
 STAL 5
-Music(0x93)
-TripleIfAliveDialog(Ansgar,Hildr,Breve,Ch6Opening4,7)
 FADI 60
 CLEAN
-FADU 60
-CLEAN
+	LOAD1 0x1 EnemyUnits
+	LOAD1 0x1 RecruitsAgain
+FADU 30
+STAL 10
+Music(0x93)
+SetBackground(0x25)
+TripleIfAliveDialog(Ansgar,Hildr,Breve,Ch6Opening4,7)
+STAL 15
+FADI 15
+Music(0x28)
 STAL 5
-Music(0x48)
-SetBackground(0x3C)
 FADU 40
 Text(Ch6Opening5)
 STAL 5
-Music(0x27)
-Text(Ch6Opening6)
 FADI 60
 CLEAN
 FADU 40
@@ -682,7 +723,102 @@ CharacterConditionalDialog(Stroganoff,AnsgarThereseTalk,AnsgarThereseTalkAlt)
 	ENDA
 
 EndingScene:
+STAL 30
+LOAD1 0x1 LeCutscene
+STAL 5
+CameraCursor(Aoife)
+SOUN 0xF2
+WORD 0x52820
+STAL 5
+MUSI
+Text(Ch6Ending0)
+MUNO
+Music(0x26)
+MOVE 0xA Aoife [14,18]
+ENUN
+DISA_IF 0x34
+STAL 10
+CAM1 [6,3]
+LOAD2 0x1 LeCutscene
+ENUN
+SVAL 0x2 Aoife
+_WARP 0xFFFF 0xFFFD [5,2]
+CALL 0x9EE4F8
+_WARP 0x0 Aoife [5,2]
+STAL 15
+Text(Ch6Ending0Again)
+STAL 5
+SVAL 0x2 Aoife
+CALL 0x9EE51C
+DISA Aoife
+EVBIT_T 0x7
+
+FADI 60
+STAL 50
 DoAllThree
+Music(0x3E4)
+SetBackground(0x29)
+STAL 5
+BROWNBOXTEXT ThroneRoomText [8,8]
+STAL 15
+CHECK_ALIVE Lennard
+BEQ 776 0x0 0xC
+CHECK_ALIVE Breve
+BEQ 776 0x0 0xC
+CHECK_ALIVE Hildr
+BEQ 776 0x0 0xC
+CHECK_ALIVE Nora
+BEQ 776 0x0 0xC
+CHECK_ALIVE Brudet
+BEQ 776 0x0 0xC
+CHECK_ALIVE Stroganoff
+BEQ 776 0x0 0xC
+CHECK_ALIVE Therese
+BEQ 776 0x0 0xC
+Text(Ch6Ending1)
+GOTO 420
+LABEL 776
+Text(Ch6EndingAlt1)
+LABEL 420
+STAL 20
+Music(0x115)
+FADI 45
+CLEAN
+SetBackground(0x35)
+SetBackground(0x15)
+STAL 5
+BROWNBOXTEXT FewHoursLaterText [8,8]
+STAL 15
+Text(Ch6Ending2)
+STAL 10
+Music(0xa9)
+FADI 45
+CLEAN
+SetBackground(0x35)
+SetBackground(0x2d)
+STAL 5
+BROWNBOXTEXT AeteriaCapitalText [8,8]
+STAL 15
+Text(Ch6Ending0AgainAgain)
+STAL 35
+FADI 45
+CLEAN
+SetBackground(0x35)
+SetBackground(0x0B)
+Music(0x4A)
+STAL 5
+BROWNBOXTEXT HallText [8,8]
+STAL 15
+TEXTSTART
+TEXTSHOW Ch6Ending4
+TEXTEND
+MUSC 0x107
+TEXTCONT
+TEXTEND
+STAL 15
+FADI 60
+
+// reset the party for part 2
 QuickRemu(Affogato,1)
 QuickRemu(Ulrich,2)
 QuickRemu(Evelyn,3)
@@ -703,45 +839,11 @@ QuickRemu(Atheya,17)
 QuickRemu(Noel,18)
 QuickRemu(Therese,19)
 QuickRemu(Lennard,20)
-Music(VictoryBGM)
-SetBackground(0x29)
-STAL 5
-BROWNBOXTEXT ThroneRoomText [8,8]
-STAL 10
-CHECK_ALIVE Atheya
-BEQ 0x776 0x0 0xC
-TEXTSTART
-TEXTSHOW Ch6Ending1
-TEXTEND
-MUSC 0x93
-TEXTCONT
-TEXTEND
-GOTO 0x420
-LABEL 0x776
-TEXTSTART
-TEXTSHOW Ch6EndingAlt1
-TEXTEND
-MUSC 0x93
-TEXTCONT
-TEXTEND
-LABEL 0x420
-STAL 10
 MUSCMID 0x7FFF
-STAL 35
-SetBackground(0x35)
-STAL 5
-BROWNBOXTEXT AeteriaCapitalText [8,8]
-STAL 15
-Music(0xA9)
-STAL 100
-Text(Ch6Ending2)
-STAL 15
-MUSCMID 0x7FFF
-STAL 35
-// Send to title screen instead of next chapter
-//	MNC2 0x7 
-STAL 85
+STAL 120
 EVBIT_F 0x2
+CLEAN
+SetBackground(0x35)
 MNTS 0x1 //return to title screen
 	NoFade
 	ENDA

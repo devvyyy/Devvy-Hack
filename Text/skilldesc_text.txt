@@ -1,7 +1,22 @@
+## SD_Phase
+[_P][_h][_a][_s][_e]:[_Space][_U][_n]it'[_s][_Space][_e][_q][_u]i[_p][_p][_e][_d][_Space][_B][_o]w[_Slash][_R]i[_f]l[_e][_Space]i[_s][_Space][_g][_r][_a][_n]t[_e][_d][_Space][_2][_5]%[_Space]Mt[N]
+[_a][_n][_d][_Space]l[_e][_s][_s][_e][_r][_Space][_s][_e][_c][_o][_n][_d][_a][_r][_y][_Space][_e][_f][_f][_e][_c]t[_s][_Space][_f][_r][_o]m[_Space]t[_h][_e][_Space][_o][_f][_f]-[_h][_a][_n][_d][N]
+[_R]i[_f]l[_e][_Space]i[_n][_Space][_u][_n]it'[_s][_Space][_2][_n][_d] i[_n][_v][_e][_n]t[_o][_r][_y][_Space][_s]l[_o]t[_Space]([_e][_x][_c]l[_u][_d][_e][_s][_Space][_E][_f][_f][_Dot])[_Dot][X]
+
+## SD_Hijack
+Hijack: If foe is ranged, negates foe's[N]
+base weapon Mt and adds it to unit's[N]
+weapon Mt.[X]
+
+## SD_Restraint
+Hold Back: When equipped with a[N]
+Labrys, unit cannot follow-up[N]
+against unpromoted foes.[X]
+
 ## SD_LethalTempo
 Perfect Pulse: Unit cannot follow-up.[N]
-Converts Spd into bonus Atk and if unit's[N]
-Spd is higher foe's Spd, +5 damage.[X]
+Converts Spd into bonus Atk and Crit and[N]
+if Spd is higher than foe's Spd, +5 damage.[X]
 
 ## SD_Tresillo
 F-D[0x23]-F//C[0x23]-G[0x23]-F: Unit cannot attack.[N]
@@ -13,9 +28,13 @@ Grit: If unit's HP is not full,[N]
 reduces damage taken by 25%.[X]
 
 ## SD_TrueGrit
-True Grit: If unit's HP is below 25%,[N]
-deals damage equal to unit's missing HP.[N]
-(HP Checked at start of combat.)[X]
+Gathering Thunder: If unit's HP is below 50%,[N]
+grants Crit +20. If below 25%, deals bonus[N]
+damage equal to unit's missing HP.[X]
+
+## SD_ArmWrestler2
+Catch These Hands: Grants +3 Atk/AS against[N]
+bosses, doubled if they have Shove/Smite.[X]
 
 ## SD_ArmWrestler
 Bar Fighter: Grants +10 Hit/Avoid against[N]
@@ -68,8 +87,8 @@ not adjacent to an ally, grants unit[N]
 another action (once per turn).[X]
 
 ## SD_Lionheart
-Lionheart: Grants Avoid equal to missing[N]
-HP, but take 3 damage after combat.[X]
+Lionheart: Grants +2 Avoid per missing[N]
+HP, but take 4 damage after combat.[X]
 
 ## SD_BladeFan
 Heavy Weapons Fan: If unit is using[N]
@@ -369,7 +388,7 @@ Acrobat: All traversable[N]
 terrain costs 1 movement.[X]
 
 ## SD_Pass
-Pass: Unit can move through[N]
+Slipstream: Unit can move through[N]
 enemy unit's spaces.[X]
 
 ## SD_CantoPlus

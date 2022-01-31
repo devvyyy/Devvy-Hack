@@ -49,6 +49,12 @@ ldrb r1, [r5, #0x16] @defender spd
 cmp r0, r1
 ble End @skip if spd is less or equal
 
+@add 5 damage
+mov r1, #0x5A @atk
+ldrh r0, [r4, r1]
+add r0, #5
+strh r0, [r4,r1]
+
 @set attacker spd to 0
 mov r0, r4
 add r0,#0x5E

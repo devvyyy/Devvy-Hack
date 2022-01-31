@@ -37,6 +37,12 @@ cmp     r0, #0xE1         @Sonic Rifle ID
 beq YesThereIsSkill
 cmp     r0, #0xE2         @Backshield Rifle ID
 beq YesThereIsSkill
+cmp     r0, #0xA9         @Hunting Rifle ID
+beq YesThereIsSkill
+cmp     r0, #0xAD         @Bodkin Rifle ID
+beq YesThereIsSkill
+cmp     r0, #0x8A         @Shining Rifle ID
+beq YesThereIsSkill
 b End        @If not a Rifle, end skill
 
 YesThereIsSkill:

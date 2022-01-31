@@ -166,7 +166,9 @@ SetBackground(0x32)
 STAL 250
 CenterTextbox(AmongUsEdgyIntro)
 STAL 100
-ClearBackground
+FADI 60
+CLEAN
+SetBackground(0x35)
 MUSC 0x48
 SetBackground(0x25)
 STAL 10
@@ -291,7 +293,6 @@ LABEL 0x420 //moves to next cutscene
 STAL 20
 Music(0xA9)
 SetBackground(0x2D)
-FADU 15
 STAL 5
 BROWNBOXTEXT AeteriaCapitalText [8,8]
 STAL 15
