@@ -10,6 +10,15 @@ CheckGaleforce: //decides if the unit should be cantoing or not
 #incbin "Galeforce/checkgaleforce.dmp"
 
 ALIGN 4
+BurstFireDamage:
+#incbin "BurstFire/BurstFire.dmp"
+POIN SkillTester
+WORD BurstFireID
+POIN BurstFireEvent
+POIN AuraSkillCheck
+#include "BurstFire/BurstFireEvent.event"
+
+ALIGN 4
 ParryDamage:
 #incbin "ParryPost/ParryPost.dmp"
 POIN SkillTester

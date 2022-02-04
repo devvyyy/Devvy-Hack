@@ -17,7 +17,7 @@ bne End
 add r1, #1
 ldrb r0, [r5,r1] @terrain res
 cmp r0, #0
-bne End
+beq End
 
 CheckSkill:
 ldr r0, SkillTester

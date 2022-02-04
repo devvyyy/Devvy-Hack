@@ -8,11 +8,11 @@ push {r4-r7,lr}
 mov r4, r0
 mov r5, r1
 
-@hp not at full
-ldrb r0, [r4, #0x12] @max hp
-ldrb r1, [r4, #0x13] @curr hp
+@ cancel your double if faster
+ldrb r0, [r4, #0x16] @attacker spd
+ldrb r1, [r5, #0x16] @defender spd
 cmp r1, r0
-blt Done
+ble Done @skip if foe's spd is less or equal
 
 mov r0, r4       @Move attacker data into r1.
 mov r1, #0x4c    @Move to the attacker's weapon ability
@@ -28,7 +28,7 @@ mov lr, r0
 mov r0, r4 @attacker
 ldr r1, ChainReactionID
 mov r2, #0 @can_trade
-mov r3, #2 @range
+mov r3, #1 @range
 .short 0xf800
 cmp r0, #0
 beq Done

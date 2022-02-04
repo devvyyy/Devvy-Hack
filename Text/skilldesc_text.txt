@@ -1,7 +1,27 @@
+## SD_BurstFire
+[_B][_u][_r][_s]t [_F]i[_r][_e]: [_B][_o][_w][_s] [_g][_a]i[_n] [_Plus][_3] [_r][_a][_n][_g][_e], [_d][_e][_a]l [_b][_o][_n][_u][_s] [_d][_m][_g][N]
+= [_2][_5]% [_f][_o][_e]'[_s] [_R][_e][_s], l[_o][_s][_e] [_1]0 [_H]it[_Slash][_s][_p][_a][_c][_e] [_a][_f]t[_e][_r][N]
+[_2], [_a][_n][_d] [_d][_e][_a]l [_2]0% [_m][_a][_x] [_H][_P] [_s][_p]l[_a][_s][_h] i[_n] [_a] [_3][_x][_3] [_A][_o][_E].[X]
+
 ## SD_Phase
 [_P][_h][_a][_s][_e]:[_Space][_U][_n]it'[_s][_Space][_e][_q][_u]i[_p][_p][_e][_d][_Space][_B][_o]w[_Slash][_R]i[_f]l[_e][_Space]i[_s][_Space][_g][_r][_a][_n]t[_e][_d][_Space][_2][_5]%[_Space]Mt[N]
 [_a][_n][_d][_Space]l[_e][_s][_s][_e][_r][_Space][_s][_e][_c][_o][_n][_d][_a][_r][_y][_Space][_e][_f][_f][_e][_c]t[_s][_Space][_f][_r][_o]m[_Space]t[_h][_e][_Space][_o][_f][_f]-[_h][_a][_n][_d][N]
 [_R]i[_f]l[_e][_Space]i[_n][_Space][_u][_n]it'[_s][_Space][_2][_n][_d] i[_n][_v][_e][_n]t[_o][_r][_y][_Space][_s]l[_o]t[_Space]([_e][_x][_c]l[_u][_d][_e][_s][_Space][_E][_f][_f][_Dot])[_Dot][X]
+
+## SD_BloodHunt
+Blood Hunt: If foe's HP is below 50%,[N]
+grants Atk/AS +5. Below 25%, grants[N]
+Hit/Crit equal to foe's missing HP.[X]
+
+## SD_ViolentTendencies
+Violent Tendencies: During even-numbered[N]
+turns, grants Atk +2, Crit +20, and unit[N]
+attacks twice.[X]
+
+## SD_KirGetsOneRoundedByASilverBow
+Frail Armor: If bow is using a Silver[N]
+Bow/Rifle, inflicts Def -10 on unit,[N]
+and foe follow-ups and unit cannot.[X]
 
 ## SD_Hijack
 Hijack: If foe is ranged, negates foe's[N]
@@ -28,9 +48,13 @@ Grit: If unit's HP is not full,[N]
 reduces damage taken by 25%.[X]
 
 ## SD_TrueGrit
-Gathering Thunder: If unit's HP is below 50%,[N]
-grants Crit +20. If below 25%, deals bonus[N]
-damage equal to unit's missing HP.[X]
+Infinite Gambit: If HP is below 25%, deals[N]
+bonus damage equal to unit's missing HP.[X]
+
+## SD_StaticPanic
+Static Panic: Grants +15 Crit for[N]
+each condition: adjacent to an ally,[N]
+adjacent to an enemy.[X]
 
 ## SD_ArmWrestler2
 Catch These Hands: Grants +3 Atk/AS against[N]
@@ -45,7 +69,7 @@ Solar Thrust: Deals (10 - Foe's Res) bonus damage[N]
 on hit, and unit heal the same amount.[X]
 
 ## SD_Parry
-[_P][_a][_r][_r][_y]: [_I]f [_u][_n]it'[_s] [_H][_P] i[_s] f[_u]ll [_a][_n][_d] [_a] w[_e][_a][_p][_o][_n] i[_s][N]
+[_P][_a][_r][_r][_y]: if [_u][_n]it'[_s] [_H][_P] i[_s] f[_u]ll [_a][_n][_d] [_a] w[_e][_a][_p][_o][_n] i[_s][N]
 [_e][_q][_u]i[_p][_p][_e][_d], [_n][_e][_g][_a]t[_e][_s] [_p][_h][_y][_s]i[_c][_a]l [_a]tt[_a][_c][_k][_s] [_a]t [_1] [_r][_a][_n][_g][_e],[N]
 [_b][_u]t [_u][_n]it t[_a][_k][_e][_s] [_1] [_d][_a][_m][_a][_g][_e] [_a]ft[_e][_r] [_c][_o][_m][_b][_a]t.[X]
 
@@ -65,9 +89,9 @@ neutralizes foe's Eth/Spd/Res/W. Mt[N]
 during combat, setting those stats to 0.[X]
 
 ## SD_TouchOfFrost
-Frostbite: If foe's terrain has no[N]
-effects, deals bonus damage equal to[N]
-25% of foe's current HP.[X]
+Frostbite: If foe's terrain has effects,[N]
+deals bonus damage equal to 25% of foe's[N]
+current HP.[X]
 
 ## SD_Chronoshift
 Borrowed Time: After combat, heals[N]
@@ -232,8 +256,8 @@ Parity: Neutralizes terrain bonuses[N]
 from both sides.[X]
 
 ## SD_BuiltDifferent
-Swindle: If foe's HP is less than half,[NL]
-Str/Spd +2.[X]
+Cheap Shot: If foe's HP is less than[N]
+half, Str/Spd +2.[X]
 
 ## SD_SteelSoul
 Steel Soul: If unit's Def > Foe's Str/Eth,[N]
@@ -290,17 +314,17 @@ and unit's Spd < foe's Spd,[NL]
 unit strikes twice at 1 range.[X]
 
 ## SD_ChainReaction
-Chain Reaction: Grants adjacent[NL]
-physical allies with full HP:[NL]
-"Unit strikes twice."[X]
+Chain Reaction: Grants adjacent physical[N]
+allies: "If Spd is less than foe's Spd,[N]
+unit attacks twice."[X]
 
 ## SD_RupturedSky
 Ruptured Sky: Boosts unit's Atk by 25%[N]
 of foe's Str/Eth.[X]
 
 ## SD_Lunatic
-Lunatic: If foe's HP is full, deals bonus[N]
-damage equal to 25% of foe's Def.[X]
+Lunatic: If foe's HP is full, negates[N]
+50% of foe's Def.[X]
 
 ## SD_FinalBoss
 Eye of the King: Deals damage equal to[N]
@@ -1443,8 +1467,8 @@ weapon triangle advantage.[X]
 
 ## SD_BlueFlame
 Guardian: Grants Def +2 to adjacent[N]
-allies. If unit is adjacent to an[N]
-ally, grants Def +2 to unit.[X]
+allies. If unit is adjacent to an ally,[N]
+grants Def +2 to unit.[X]
 
 ## SD_DoubleLion
 Double Lion: All weapons[N]

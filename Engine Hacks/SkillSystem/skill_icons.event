@@ -4,6 +4,9 @@ SkillIcons:
 //Icon graphics are uncompressed
 #define SkillIcon(skillID) "128*skillID+SkillIcons"
 
+ORG SkillIcon(StaticPanicID)
+#incbin "SkillIcons/StaticPanic.dmp"
+
 ORG SkillIcon(PhaseID)
 #incbin "SkillIcons/Phase.dmp"
 
@@ -35,7 +38,7 @@ ORG SkillIcon(ChronoshiftID)
 #incbin "SkillIcons/BorrowedTime.dmp"
 
 ORG SkillIcon(ChainReactionID)
-#incbin "SkillIcons/ChainReaction.dmp"
+#incbin "SkillIcons/StaticPanic.dmp"
 
 ORG SkillIcon(ShowStopperID)
 #incbin "SkillIcons/ShowStopper.dmp"
@@ -773,7 +776,7 @@ ORG SkillIcon(WatchfulID)
 #incbin "SkillIcons/Watchful.dmp"
 
 ORG SkillIcon(HeroID)
-#incbin "SkillIcons/Hero.dmp"
+#incbin "SkillIcons/ChainReaction.dmp"
 
 ORG SkillIcon(BoonID)
 #incbin "SkillIcons/Boon.dmp"

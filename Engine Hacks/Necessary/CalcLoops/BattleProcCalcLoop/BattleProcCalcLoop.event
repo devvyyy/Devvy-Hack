@@ -76,12 +76,18 @@ POIN Proc_BlackMagic Proc_Petrify Proc_Enrage Proc_Deadeye //skills that apply a
 
 POIN Proc_Corrosion //skills that don't affect damage
 
+
+#ifdef GAIDEN_MAGIC
+	POIN Proc_GaidenMagicHPCost // Very similar to a counter.
+#endif // GAIDEN_MAGIC
+
 #ifdef MODULAR_PRE_BATTLE_SKILLS
 	POIN Proc_CmbArtHpCost
 #endif //ModularPreBattleSkills
 
+
 POIN Proc_Counter Proc_CounterMagic	//counters are last
-//POIN Proc_FlashyMode
+POIN Proc_FlashyMode
 POIN Proc_Finish 0	//end
 
 //POIN Chargeups, chargeup not working? so I just removed them for now
@@ -110,6 +116,12 @@ Proc_FlashyMode:
 ALIGN 4
 Chargeups:
 #incbin "Chargeups/Chargeups.dmp"
+
+ALIGN 4
+Proc_StealHP:
+#incbin "LifeSteal/proc_stealhp.dmp"
+POIN SkillTester
+WORD LiquidOozeID
 
 PUSH
 ORG $2b3ec

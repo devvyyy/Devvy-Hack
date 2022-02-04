@@ -17,7 +17,7 @@ TURN 0x0 WaterRein [3,0] 0x0
 TURN 0x0 BisChargeWarning [4,0] 0x0
 TURN 0x0 BotRein [5,0] 0x0
 TURN 0x0 BisCharge [6,0] 0x0
-TURN 0x0 LeftRein [7,0] 0x0
+//TURN 0x0 LeftRein [7,0] 0x0
 	END_MAIN
 
 ALIGN 32
@@ -81,10 +81,9 @@ Units1:
 LoadUnit(8,0)
 LoadUnit(9,0)
 LoadUnit(8,1)
-LoadUnit(9,1)
+LoadUnit(10,1)
 LoadUnit(12,0)
 LoadUnit(13,0)
-LoadUnit(12,1)
 LoadUnit(13,1)
 	UNIT
 
@@ -124,10 +123,10 @@ UNIT Aeteria Shaman 0x1 Level(2, Enemy, 1)     [6,10] 0x0 0x0 0x0 0x0 [DarkTome2
 UNIT Aeteria SCav 0x1 Level(2, Enemy, 1)     [5,10] 0x0 0x0 0x0 0x0 [SteelSword] ChargeAI
 	UNIT
 	
-Rein3:
-UNIT Aeteria Deserter 0x1 Level(2, Enemy, 1)     [0,7] 0x0 0x0 0x0 0x0 [Horseslayer] ChargeAI
-UNIT Aeteria Hunter 0x1 Level(2, Enemy, 1)     [0,8] 0x0 0x0 0x0 0x0 [SteelBow] ChargeAI
-	UNIT
+//Rein3:
+//UNIT Aeteria Deserter 0x1 Level(2, Enemy, 1)     [0,7] 0x0 0x0 0x0 0x0 [Horseslayer] ChargeAI
+//UNIT Aeteria Hunter 0x1 Level(2, Enemy, 1)     [0,8] 0x0 0x0 0x0 0x0 [SteelBow] ChargeAI
+//	UNIT
 	
 CutsceneUnits:
 UNIT Affogato Hunter 0x1 Level(1, Ally, 1)     [8,0] 0 0 1 REDA8R1 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
@@ -166,10 +165,10 @@ SpawnReinforcements(Rein2)
 NoFade
 ENDA
 
-LeftRein:
-SpawnReinforcements(Rein3)
-NoFade
-ENDA
+//LeftRein:
+//SpawnReinforcements(Rein3)
+//NoFade
+//ENDA
 
 Traps1:
 	ENDTRAP

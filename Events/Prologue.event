@@ -29,7 +29,7 @@ TURN 0x0 RunawayThieves [2,0] 0x80
 TURN 0x0 OMGMyHero [3,0] 0x0
 TURN 0x0 Thieves1 [4,0] 0x0
 TURN 0x0 ShamanRein1 [6,0] 0x0
-TURN 0x0 ShamanRein3 [9,0] 0x0
+//TURN 0x0 ShamanRein3 [9,0] 0x0
 END_MAIN
 
 CharacterBasedEvents:
@@ -145,10 +145,10 @@ UNIT Aeteria Shaman 0x1 Level(2, Enemy, 1)     [7,6] 0 0 1 REDA7R7 [DarkTome1,] 
 UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [7,6] 0 0 1 REDA8R6 [DarkTome2,] [0,0,4,0]
 UNIT
 
-Reinforcements3:
-UNIT Aeteria Occultist 0x1 Level(1, Enemy, 1)     [0,2] 0 0 1 REDA1R2 [DarkTome1,] [0,0,4,0]
-UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [0,2] 0 0 1 REDA0R3 [DarkTome2,] [0,0,4,0]
-UNIT
+//Reinforcements3:
+//UNIT Aeteria Occultist 0x1 Level(1, Enemy, 1)     [0,2] 0 0 1 REDA1R2 [DarkTome1,] [0,0,4,0]
+//UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [0,2] 0 0 1 REDA0R3 [DarkTome2,] [0,0,4,0]
+//UNIT
 
 Traps1:
 ENDTRAP
@@ -297,7 +297,7 @@ STAL 5
 BROWNBOXTEXT AeteriaCapitalText [8,8]
 STAL 15
 Text(PrologueAeteriaEnding)
-ClearBackground
+FADI 60
 STAL 10
 MNC2 0x1
 NoFade
@@ -326,11 +326,11 @@ SpawnReinforcements(Reinforcements1)
 NoFade
 ENDA
 
-ShamanRein3:
-CamOn
-SpawnReinforcements(Reinforcements3)
-NoFade
-ENDA
+//ShamanRein3:
+//CamOn
+//SpawnReinforcements(Reinforcements3)
+//NoFade
+//ENDA
 
 Thieves1:
 SpawnReinforcements(ThiefRein1)

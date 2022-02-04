@@ -65,14 +65,13 @@ Tutorial:
 	END_MAIN
 
 Units1:
+LoadUnit(7,16)
+LoadUnit(8,16)
+LoadUnit(10,16)
+LoadUnit(11,16)
+LoadUnit(9,16)
 LoadUnit(8,17)
-LoadUnit(9,17)
 LoadUnit(10,17)
-LoadUnit(11,17)
-LoadUnit(8,18)
-LoadUnit(9,18)
-LoadUnit(10,18)
-LoadUnit(11,18)
 	UNIT
 	
 CutscenePeg:
@@ -84,8 +83,8 @@ UNIT Mocha PegasusRider 0x1 Level(3, Ally, 0)     [5,18] 0 0 1 REDA5R15 [IronLan
 	UNIT
 	
 LunaPirate:
-UNIT Pandoro Pirate 0x1 Level(4, Ally, 0)   [0,11] 0b 0x0 0x0 0x0 [IronLabrys,PureWater] BossAI
-UNIT Irene Myrmidon_F 0x1 Level(3, Ally, 0)   [1,10] 0b 0x0 0x0 0x0 [KillingEdge,Vulnerary] BossAI
+UNIT Pandoro Pirate 0x1 Level(4, Ally, 0)   [1,11] 0b 0x0 0x0 0x0 [IronLabrys,PureWater] BossAI
+UNIT Irene Myrmidon_F 0x1 Level(3, Ally, 0)   [0,10] 0b 0x0 0x0 0x0 [KillingEdge,Vulnerary] BossAI
 	UNIT
 
 OhGodOhFuck:
@@ -105,11 +104,14 @@ UNIT Aeteria PegRider 0x1 Level(2, Enemy, 1)     [9,0] 0x0 0x0 0x0 0x0 [IronLanc
 UNIT Aeteria PegRider 0x1 Level(2, Enemy, 1)     [13,1] 0x0 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
 UNIT Aeteria Shaman 0x1 Level(2, Enemy, 1)     [11,8] 0x0 0x0 0x0 0x0 [DarkTome2,] BossAI
 UNIT Aeteria Soldier 0x1 Level(2, Enemy, 1)     [13,10] 0x0 0x0 0x0 0x0 [SteelLance,] AttackInRangeAI
-UNIT Aeteria Raider 0x1 Level(2, Enemy, 1)     [0,1] 0x0 0x0 0x0 0x0 [IronSword,] BrigandAI
 UNIT Aeteria ACav 0x1 Level(2, Enemy, 1)     [5,3] 0x0 0x0 0x0 0x0 [IronAxe,] TwoActionAI
 UNIT Aeteria LCav 0x1 Level(3, Enemy, 1)     [5,0] 0x0 0x0 0x0 0x0 [IronLance,] StallOneTurnAI
 UNIT Aeteria Thaumaturge 0x1 Level(2, Enemy, 0)     [14,8] DropItem 0x0 0x0 0x0 [Fire,RedGem] StallOneTurnAI
 UNIT Aeteria SCav 0x1 Level(2, Enemy, 1)     [0,2] 0x0 0x0 0x0 0x0 [SteelSword,] StallOneTurnAI
+	UNIT
+	
+TurnOnelalala:
+UNIT Aeteria Raider 0x1 Level(2, Enemy, 1)     [0,1] 0x0 0x0 0x0 0x0 [IronSword,] BrigandAI
 	UNIT
 	
 BridgeEnemies:
@@ -362,6 +364,8 @@ NoFade
 ENDA
 
 OhHeckItHim:
+LOAD1 0x1 TurnOnelalala
+STAL 5
 CAM1[7,8]
 Text(HouseBG2, Ch2OgrimAppear1)
 LOAD1 0x1 OhGodOhFuck
