@@ -18,8 +18,8 @@ Violent Tendencies: During even-numbered[N]
 turns, grants Atk +2, Crit +20, and unit[N]
 attacks twice.[X]
 
-## SD_KirGetsOneRoundedByASilverBow
-Frail Armor: If bow is using a Silver[N]
+## SD_KirGetsTwoRoundedByASilverBow
+Frail Armor: If foe is using a Silver[N]
 Bow/Rifle, inflicts Def -10 on unit,[N]
 and foe follow-ups and unit cannot.[X]
 
@@ -48,7 +48,7 @@ Grit: If unit's HP is not full,[N]
 reduces damage taken by 25%.[X]
 
 ## SD_TrueGrit
-Infinite Gambit: If HP is below 25%, deals[N]
+Last-Ditch Gambit: If HP is below 25%, deals[N]
 bonus damage equal to unit's missing HP.[X]
 
 ## SD_StaticPanic
@@ -69,7 +69,7 @@ Solar Thrust: Deals (10 - Foe's Res) bonus damage[N]
 on hit, and unit heal the same amount.[X]
 
 ## SD_Parry
-[_P][_a][_r][_r][_y]: if [_u][_n]it'[_s] [_H][_P] i[_s] f[_u]ll [_a][_n][_d] [_a] w[_e][_a][_p][_o][_n] i[_s][N]
+[_P][_a][_r][_r][_y]: If [_u][_n]it'[_s] [_H][_P] i[_s] f[_u]ll [_a][_n][_d] [_a] w[_e][_a][_p][_o][_n] i[_s][N]
 [_e][_q][_u]i[_p][_p][_e][_d], [_n][_e][_g][_a]t[_e][_s] [_p][_h][_y][_s]i[_c][_a]l [_a]tt[_a][_c][_k][_s] [_a]t [_1] [_r][_a][_n][_g][_e],[N]
 [_b][_u]t [_u][_n]it t[_a][_k][_e][_s] [_1] [_d][_a][_m][_a][_g][_e] [_a]ft[_e][_r] [_c][_o][_m][_b][_a]t.[X]
 
@@ -134,7 +134,7 @@ Spirit Cleave: Deals bonus damage equal[N]
 to 25% of foe's Def and Res.[X]
 
 ## SD_Maestro
-[_M][_a][_e][_s]t[_r][_o][_Colon] [_U][_n]it'[_s] [_r]ifl[_e][_s] [_h][_a][_v][_e] [_u][_n]i[_q][_u][_e] [_p][_r][_o][_p][_e][_r]ti[_e][_s][_Colon][N]
+[_M][_a][_e][_s]t[_r][_o][_Colon] [_U][_n]it'[_s] [_R]ifl[_e][_s] [_h][_a][_v][_e] [_u][_n]i[_q][_u][_e] [_p][_r][_o][_p][_e][_r]ti[_e][_s][_Colon][N]
 [_M]t -[_5], [_W]t +[_2], [_H]it [_Plus][_1]0[_Dot] T[_h][_e][_y] [_a]l[_s][_o] [_d][_o] [_b][_o][_n][_u][_s][N]
 [_d][_a]m[_a][_g][_e] [_e][_q][_u][_a]l t[_o] [_h][_a]lf [_o]f f[_o][_e]'[_s] mi[_s][_s]i[_n][_g] [_H][_P][_Dot][X]
 
@@ -587,8 +587,8 @@ Slayer: Deal effective damage[N]
 to monster units.[X]
 
 ## SD_Summon
-Summon: Can conjure a phantom[N]
-soldier to fight alongside you.[X]
+Impostor: Can conjure a clone[N]
+that provokes enemies.[X]
 
 ## SD_Dance
 Dance: Refresh an ally unit[N]
@@ -1516,9 +1516,9 @@ Killer Instinct: Double bonus[N]
 effectiveness multipliers.[X]
 
 ## SD_Cultured
-Stand United: If unit initiates adjacent[N]
-to a physical Armored ally, grants[N]
-another action to unit (once per turn).[X]
+Stand United: If unit ends action[N]
+adjacent to a physical Armored ally,[N]
+grants another action (once per turn).[X]
 
 ## SD_LullStr
 Lull Str: Negates the effects of[N]

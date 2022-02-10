@@ -80,7 +80,7 @@ LoadUnit(10,12)
 	UNIT
 
 EnemyUnits:
-UNIT Hartmann Druid 0x1 Level(6, Enemy, 0)     [1,1] DropItem 0x0 0x0 0x0 [DarkTome5,AngelicRobe] BossAI
+UNIT Hartmann Druid 0x1 Level(6, Enemy, 0)     [1,1] DropItem 0x0 0x0 0x0 [DarkTome3,AngelicRobe] BossAI
 UNIT Aeteria Thaumaturge 0x1 Level(4, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [Fire,] DefendAI
 UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [5,2] DropItem 0x0 0x0 0x0 [DarkTome2,DoorKey] BossAI
 UNIT Aeteria LArmor 0x1 Level(4, Enemy, 1)     [9,1] DropItem 0x0 0x0 0x0 [IronGlaive,ShortSpear,DoorKey] BossAI
@@ -120,8 +120,8 @@ UNIT Atheya WyvernRider_F 0x1 Level(5, Ally, 0)     [6,13] 0x0 0x0 0x0 0x0 [Iron
 UNIT
 
 ArenaRein:
-UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [10,0] 0b 0x0 0x0 0x0 [DarkTome2,] DefendAI
-UNIT FlyingMagStealable Thaumaturge 0x1 Level(5, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [Fire,RedGem] StallOneTurnAI
+UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [10,0] 0b 0x0 0x0 0x0 [DarkTome1,] DefendAI
+UNIT FlyingMagStealable Thaumaturge 0x1 Level(4, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [Fire,RedGem] StallOneTurnAI
 UNIT
 
 ArenaRein2:
@@ -154,7 +154,7 @@ UNIT 0x64 Thief 0x1 Level(4, Enemy, 1)     [16,3] 0b 0x0 0x0 0x0 [IronDagger,Che
 UNIT
 
 ThiefRein2:
-UNIT 0x64 Thief 0x1 Level(5, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [SteelDagger,ChestKey,ChestKey] ThiefAI
+UNIT 0x64 Thief 0x1 Level(5, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [SteelSword,ChestKey,ChestKey] ThiefAI
 UNIT
 
 StairRein:
@@ -169,7 +169,7 @@ UNIT
 
 ArenaRein3:
 UNIT Aeteria Mage 0x1 Level(5, Enemy, 1)     [16,3] 0b 0x0 0x0 0x0 [AnimaTome2] DefendAI
-UNIT FlyingPhys Brigand 0x1 Level(6, Enemy, 1)     [0,7] 0 0 1 REDA1R8 [IronAxe] ChargeAI
+UNIT FlyingPhys PegRider 0x1 Level(6, Enemy, 1)     [0,7] 0 0 1 REDA1R8 [IronLance] StallOneTurnAI
 UNIT
 
 ArenaRein4:
@@ -182,8 +182,7 @@ UNIT FlyingMag Occultist 0x1 Level(5, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [DarkTo
 UNIT
 
 InsideRein2:
-UNIT FlyingMagStealable Occultist 0x1 Level(6, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [DarkTome1,Vulnerary] WallAI
-UNIT FlyingMag Occultist 0x1 Level(4, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [DarkTome2,] WallAI
+UNIT FlyingMagStealable Occultist 0x1 Level(6, Enemy, 1)     [14,0] 0b 0x0 0x0 0x0 [DarkTome1,Vulnerary] WallAI
 UNIT
 
 FlierRein:
@@ -248,7 +247,7 @@ CLEAN
 FADU 45
 STAL 15
 CameraCursor(Floris)
-MUSC 0x118
+MUSC 0x26
 SetBackground(0x3F)
 Text(Ch4Opening2)
 STAL 10
@@ -412,6 +411,7 @@ NoraFlorisConvo:
 	Text(NoraFlorisTalk)
 	MUNO
 	MURE 2
+	GiveItem(Barrier,Floris)
 	ENUT 0x79
 	NoFade
 	ENDA
@@ -434,9 +434,7 @@ FlorisUlrichConvo:
 
 WeAreDead:
 CHECK_ACTIVE
-SVAL 1 BadGuy
-BEQ 0x1 0xC 0x1
-SVAL 1 Hiems
+SVAL 1 Aeteria
 BEQ 0x1 0xC 0x1
 SVAL 1 UPirate
 BEQ 0x1 0xC 0x1

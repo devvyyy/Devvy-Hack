@@ -31,6 +31,9 @@ PUSH
 ORG FreeSpaceBLRange //defined in custom definitions
 #define inBLRange
 
+  //Display damage numbers in battle animations.
+  #include "ExternalHacks/AnimNumbers/AnimNumbers.event"
+
   //Talk and Support don't end your turn
   #include "QualityOfLife/ContemporaryTalkSupport/ContemporaryTalkSupport.event"
 

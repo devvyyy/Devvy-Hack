@@ -233,14 +233,20 @@ Lennard_Mug:
 #incext PortraitFormatter "Lennard.png"
 setMugEntry(0x3B, Lennard_Mug, 3, 5, 3, 2)
 
-ALIGN 16 //Edited by L95
+ALIGN 16 //Edited by L95, needs a fixed palette so the eye gimmick works except it doesnt work aaaaargh!!!!1
 Gorlois_Mug:
-#incext PortraitFormatter "Gorlois.png"
+#incbin "Gorlois_mug.dmp"
+#incbin "Gorlois_frames.dmp"
+#incbin "Gorlois_palette.dmp"
+#incbin "Gorlois_minimug.dmp"
 setMugEntryExtend(0x39, Gorlois_Mug, 3, 5, 3, 3, 10, 4, 0, 0)
 
 ALIGN 16 //Edited by L95
 GorloisBird_Mug:
-#incext PortraitFormatter "literalbirdframes.png"
+#incbin "literalbirdframes_mug.dmp"
+#incbin "literalbirdframes_frames.dmp"
+#incbin "literalbirdframes_palette.dmp"
+#incbin "literalbirdframes_minimug.dmp"
 setMugEntryExtend(0x47, GorloisBird_Mug, 8, 3, 3, 3, 10, 4, 0, 0)
 
 ALIGN 16

@@ -28,35 +28,35 @@ BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 UlrichSupport:
-SupportCompatibility(Affogato,Breve,Hildr,Quarrel,Atheya,0,0)
+SupportCompatibility(Affogato,Breve,Hildr,Quarrel,Luitgard,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x20,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
   
 AtheyaSupport:
-SupportCompatibility(Stroganoff,Floris,Ulrich,Wegman,Mocha,0,0)
+SupportCompatibility(Klavdia,Stroganoff,Floris,Mocha,Wegman,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
   
 KristaSupport:
-SupportCompatibility(Breve,Frye,Jaye,Pandoro,Wulfric,0,0)
+SupportCompatibility(Doppio,Frye,Breve,Pandoro,Wulfric,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 JayeSupport:
-SupportCompatibility(Sequin,Krista,Perival,Verna,Noel,0,0)
+SupportCompatibility(Doppio,Edith,Perival,Verna,Sequin,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 FlorisSupport:
-SupportCompatibility(Pandoro,Atheya,Tammy,Lennard,Wustenhoff,0,0)
+SupportCompatibility(Nora,Wustenhoff,Tammy,Radcliff,Atheya,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
@@ -112,7 +112,7 @@ BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 KlavSupport:
-SupportCompatibility(Luitgard,Zopf,Therese,Cyrielle,Radcliff,0,0)
+SupportCompatibility(Atheya,Stroganoff,Therese,Cyrielle,Radcliff,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
@@ -126,7 +126,7 @@ BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 ZopfSupport:
-SupportCompatibility(Irene,Lili,Latte,Sofie,Klavdia,0,0)
+SupportCompatibility(Irene,Lili,Latte,Sofie,Noel,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
@@ -140,14 +140,14 @@ BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 NoraSupport:
-SupportCompatibility(Wustenhoff,Sequin,Radcliff,Latte,Luitgard,0,0)
+SupportCompatibility(Wustenhoff,Floris,Sequin,Latte,Luitgard,0,0)
 SupportInitialValues(0x35,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 PandoroSupport:
-SupportCompatibility(Irene,Krista,Floris,Tammy,Frye,0,0)
+SupportCompatibility(Irene,Lennard,Krista,Tammy,Frye,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
@@ -175,7 +175,7 @@ BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 StroganSupport:
-SupportCompatibility(Eiskaffee,Atheya,Doppio,Wustenhoff,Wegman,0,0)
+SupportCompatibility(Eiskaffee,Atheya,Klavdia,Wustenhoff,Wegman,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
@@ -189,7 +189,7 @@ BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 DoppioSupport:
-SupportCompatibility(Eiskaffee,Stroganoff,Lennard,Mocha,Edith,0,0)
+SupportCompatibility(Krista,Jaye,Lennard,Mocha,Eiskaffee,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
@@ -231,42 +231,42 @@ BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 LuitgardSupport:
-SupportCompatibility(Perival,BardUnit,Nora,Mocha,Klavdia,0,0)
+SupportCompatibility(Perival,BardUnit,Nora,Ulrich,Mocha,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 NoelSupport:
-SupportCompatibility(Jaye,Sequin,Verna,Gerolf,Latte,0,0)
+SupportCompatibility(Sequin,Zopf,Verna,Gerolf,Latte,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 LennardSupport:
-SupportCompatibility(Hildr,Floris,Eiskaffee,Doppio,Gerolf,0,0)
+SupportCompatibility(Pandoro,Hildr,Eiskaffee,Doppio,Gerolf,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 ThereseSupport:
-SupportCompatibility(Hildr,Tammy,Edith,Velius,Klavdia,0,0)
+SupportCompatibility(Hildr,Tammy,Edith,Wulfric,Klavdia,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 VeliusSupport:
-SupportCompatibility(Iris,Tammy,Irene,Therese,Wegman,0,0)
+SupportCompatibility(Iris,Tammy,Irene,Sren,Wegman,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 EdithSupport:
-SupportCompatibility(Doppio,Sequin,Therese,Perival,Radcliff,0,0)
+SupportCompatibility(Jaye,Sequin,Therese,Perival,Radcliff,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
@@ -315,7 +315,7 @@ BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 SrenSupport:
-SupportCompatibility(Quarrel,Eiskaffee,Radcliff,Wulfric,Cyrielle,0,0)
+SupportCompatibility(Quarrel,Eiskaffee,Radcliff,Velius,Cyrielle,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
@@ -329,14 +329,14 @@ BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 RadcliffSupport:
-SupportCompatibility(Edith,Sren,Rosenfeld,Nora,Klavdia,0,0)
+SupportCompatibility(Edith,Sren,Rosenfeld,Floris,Klavdia,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 WulfricSupport:
-SupportCompatibility(Yory,Krista,Sren,Cyrielle,Rosenfeld,0,0)
+SupportCompatibility(Yory,Krista,Therese,Cyrielle,Rosenfeld,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners

@@ -78,10 +78,10 @@ Tutorial:
 	END_MAIN
 
 Units1:
-LoadUnit(8,0)
 LoadUnit(9,0)
-LoadUnit(8,1)
-LoadUnit(10,1)
+LoadUnit(10,0)
+LoadUnit(9,1)
+LoadUnit(11,1)
 LoadUnit(12,0)
 LoadUnit(13,0)
 LoadUnit(13,1)
@@ -95,20 +95,19 @@ UNIT Sequin Mage 0x1 Level(1, Ally, 0)   [12,0] 0b 0x0 0x0 0x0 [Fire,Vulnerary] 
 EnemyUnits:
 UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [7,2] 0 0 1 REDA6R3 [Flux] ChargeAI
 UNIT Aeteria Fighter 0x1 Level(1, Enemy, 1)     [7,2] 0 0 1 REDA7R5 [IronAxe] ChargeAI
-UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [12,7] 0 0 1 REDA12R6 [Flux] TwoActionAI
-UNIT Aeteria Mercenary 0x1 Level(1, Enemy, 1)     [12,7] 0 0 1 REDA11R3 [IronSword] ChargeAI
-UNIT AeteriaStealable SCav 0x1 Level(1, Enemy, 1)     [15,10] 0b 0x0 0x0 0x0 [IronSword,RedGem] TwoActionAI
-UNIT Aeteria AArmor 0x1 Level(2, Enemy, 1)     [12,7] 0 0 1 REDA9R8 [SteelAxe] BossAI
+UNIT Aeteria Mercenary 0x1 Level(1, Enemy, 1)     [12,7] 0 0 1 REDA11R5 [IronSword] TwoActionAI
+UNIT AeteriaStealable SCav 0x1 Level(1, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [IronSword,RedGem] TwoActionAI
+UNIT Aeteria AArmor 0x1 Level(2, Enemy, 1)     [12,7] 0 0 1 REDA9R8 [IronLabrys] BossAI
 UNIT Aeteria Soldier 0x1 Level(2, Enemy, 1)     [0,7] 0b 0x0 0x0 0x0 [IronLance,] TwoActionAI
 UNIT Aeteria Archer 0x1 Level(2, Enemy, 1)     [0,7] 0 0 1 REDA3R4 [Longbow] BossAI
 UNIT Aeteria Shaman 0x1 Level(2, Enemy, 1)     [15,1] DropItem 0 1 REDA15R2 [Flux,PureWater] ChargeAI
 UNIT Aeteria Occultist 0x1 Level(1, Enemy, 1)     [15,1] 0 0 1 REDA15R6 [Flux] TwoActionAI
 UNIT Aeteria Mage 0x1 Level(1, Enemy, 1)     [0,8] 0 0 1 REDA4R7 [Fire] AttackInRangeAI
 UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [0,8] 0 0 1 REDA2R9 [Flux] StallOneTurnAI
-UNIT Aeteria Fighter 0x1 Level(1, Enemy, 1)     [5,10] 0 0 1 REDA5R9 [IronLabrys] AttackInRangeAI
+UNIT Aeteria Fighter 0x1 Level(1, Enemy, 1)     [5,10] 0 0 1 REDA6R9 [IronAxe] AttackInRangeAI
 UNIT Biscotti PegRider 0x1 Level(3, Enemy, 1)     [15,10] DropItem 0 1 REDA3R10 [HeavySpear,SteelLance] BossAI
-UNIT AeteriaStealable LArmor 0x1 Level(2, Enemy, 1)     [7,2] 0 0 1 REDA5R2 [Javelin,Vulnerary] [0x0,0x3,0x0,0x20]
-UNIT Aeteria Pirate 0x1 Level(1, Enemy, 1)     [0,1] 0 0 1 REDA0R3 [IronAxe] StallOneTurnAI
+UNIT AeteriaStealable Soldier 0x1 Level(2, Enemy, 1)     [7,2] 0 0 1 REDA5R2 [Javelin,Vulnerary] [0x0,0x3,0x0,0x20]
+UNIT Aeteria Pirate 0x1 Level(1, Enemy, 1)     [0,1] 0 0 1 REDA0R3 [IronAxe] AttackInRangeAI
 UNIT Aeteria Pirate 0x1 Level(1, Enemy, 1)     [0,4] 0 0 1 REDA1R4 [SteelAxe] StallOneTurnAI
 UNIT Aeteria PegRider 0x1 Level(1, Enemy, 1)     [14,10] 0 0 1 REDA13R10 [IronLance] AttackInRangeAI
 	UNIT

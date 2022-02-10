@@ -18,6 +18,11 @@ ldr r1, HighRollerID
 cmp r0, #0
 beq NoSkill
 
+mov     r0, #0x4A      @Move to defenders's weapon (before battle)
+ldrb    r0, [r5, r0]   @Load defenders weap (before battle)
+cmp     r0, #0x2A         @Swordreaver ID
+beq NoSkill
+
 @add crit
 mov r1, #0x66
 ldrh r0, [r4, r1] @crit

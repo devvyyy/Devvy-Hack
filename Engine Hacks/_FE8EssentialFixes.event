@@ -44,6 +44,13 @@ POP
   ORG $2A5FE  
   SHORT 0x2000 //mov r0,#0xFF -> mov r0,#0
   POP
+  
+ //Make attacks at 2-15 range not use long-range anims by default (by Sme)
+//use the Uncounterable flag for long-range anims instead
+PUSH
+  ORG $57314
+  BYTE 0xF
+POP
 
 //Break HP Cap for Players/NPCs (credit Solum)
   // ORG $181ee

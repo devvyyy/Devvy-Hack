@@ -28,11 +28,13 @@ mov r3, #5 @range
 cmp r0, #0
 beq Done
 
-mov r1, #0x66
-ldrh r0, [ r4, r1 ]
-sub r0, r0, #100
-strh r0, [ r4, r1 ]
+@ crit
+mov r0, r4
+add r0,#0x66
+mov r3,#0
+strh r3,[r0]
 
+@ avoid
 mov r1, #0x62
 ldrh r0, [ r4, r1 ]
 sub r0, r0, #100
