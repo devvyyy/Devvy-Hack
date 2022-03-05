@@ -35,6 +35,7 @@ CharacterEventBothWays(0xD, UlrichDoppioConvo, Ulrich, Doppio)
 
 MiscBasedEvents:
 	CauseGameOverIfLordDies
+	AREA 0x14 DisclaimerEvent [2,6] [2,6]
 	AREA 0xE FountainFunny [7,3] [7,3]
 	AREA 0xF DropThePlank [8,15] [8,15]
 	AREA 0x10 BarrelRoll [0,0] [3,1]
@@ -214,6 +215,8 @@ CHECK_EVENTID 0xF
 BNE 1 0x0 0xC
 	CAM1[8,15]
 	Text(Ch3BridgeWarning)
+	STAL 5
+	CenterTextbox(GreenTileDisclaimer)
 LABEL 1
 	NoFade
 	ENDA
@@ -365,6 +368,7 @@ ENDA
 
 SolVillage:
 VillageEventItem(LifeRingVillageText, 0x1, 0xCF)
+NoFade
 ENDA
 
 FlambergeVillage:
@@ -377,6 +381,16 @@ MUNO // increases music volume
 	CALL 0x591F40
 	SVAL 0x3 0xC6
   GIVEITEMTO 0xFFFF
+NoFade
+ENDA
+
+DisclaimerEvent:
+STAL 20
+	CHECK_EVENTID 0x12C
+	BNE 0x1 0x0 0xC
+	CenterTextbox(RingDisclaimer)
+	SetFlag(0x12C)
+	LABEL 0x1
 NoFade
 ENDA
 

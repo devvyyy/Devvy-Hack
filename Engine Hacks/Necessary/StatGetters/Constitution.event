@@ -31,7 +31,7 @@ prItemPassiveCon:
 #ifndef DONT_STACK_BOOSTS
 	rPassiveStatBoostsStacking(STAT_CON)
 #else // DONT_STACK_BOOSTS
-rPassiveStatBoostsNonStacking(STAT_CON)
+	rPassiveStatBoostsNonStacking(STAT_CON)
 #endif // DONT_STACK_BOOSTS
 
 #endif // MODULAR_GETTER_CONSITUTION_EVENT

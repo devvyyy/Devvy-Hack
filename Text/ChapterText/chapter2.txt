@@ -79,8 +79,8 @@ pegasus riders?[AN]
 back.[AN]
 And for myself,[.4] I'm also[N]
 looking for someone else.[AN]
-I can't say this situation with[N]
-these shamans is helping,[.4] either.[AN]
+We don't know what's happening[N]
+in Aeteria.[AN]
 [OpenFarRight]If y'all are headin' for the[N]
 capital,[.4] then[AN]
 why don't you let us with ya[N]
@@ -99,13 +99,15 @@ keep looking,[.4] then.[A][X]
 ## Ch2MochaAppear2
 # verified
 [OpenMidLeft][LoadMocha][OpenMidRight][LoadAffogato]
-[OpenMidLeft]Hey,[.4] you![.6] I've been looking[N]
-for you knights.[AN]
+[OpenMidLeft]Hey,[.4] you![.6] I've got orders for[N]
+you knights from the capital.[AN]
 I need you to relay a message[N]
 to Sir Ulrich.[AN]
-[OpenMidRight]Huh?[.6] Mocha?[AN]
+[OpenMidRight]Huh?[.6] Who the heck[N]
+are you?[AN][CloseSpeechSlow]
 [OpenMidRight][MoveFarRight][OpenRight][LoadUlrich]
-[OpenRight][Pause]I'm right here.[AN]
+[OpenRight][Pause]I'm right here,[.4][N]
+Mocha.[AN]
 [OpenMidLeft]Ah![.6] Sir Ulrich.[.6] Captain Stroganoff[N]
 needs you at the capital.[AN]
 [OpenRight]Tell him to buzz off.[.6] Do we have[N]
@@ -167,24 +169,37 @@ won't stand a chance.[A][X]
 
 ## PanAffoRecruit
 # verified
-[OpenMidRight][LoadAffo]You[Beat] Uh,[.4] can you stop[N]
-staring at me[Beat]?[AN]
-[OpenMidLeft][LoadPan][Pause]Oh,[.4] Affogato.[.6] I thought you[N]
-looked familiar.[AN]
-[OpenMidRight]You aren't part of these[N]
-brigands,[.4] are you?[AN]
-[OpenMidLeft]It's,[.4] er,[.4] complicated.[.6][N]
-B-[.4]But I'll fight with you![AN]
-Just point at the enemy,[.4][N]
-and watch as they disappear![A]
-[OpenMidRight]I'm very glad you're with[N]
-us,[.4] Pandoro.[A][X]
+[OpenMidLeft][LoadPan][OpenMidRight][LoadAffo]
+[OpenMidRight]Wow,[.4] that's a neat[N]
+hat you got there.[AN]
+Where'd you[N]
+get it?[AN]
+[OpenMidLeft]Hm?[.6] Oh,[.4] I sewed[N]
+it myse[Beat] You a Wreyvian?[AN]
+
+[OpenMidRight]Yeah,[.4] sorry.[.6][N]
+Bye.[AN][ClearFace]
+
+[OpenMidLeft][MoveMidLeft]Oi,[.4] wait![.6] You're with[N]
+Ulrich,[.4] right?[AN]
+
+[OpenMidRight][LoadAffo]Mm-hmm.[.6] How do you[N]
+know?[AN]
+
+[OpenMidLeft]I still have an eye,[.4][N]
+you know.[AN]
+Anywho,[.4] my captain's gone,[.4] and I[N]
+don't care about Aeteria's war stuff.[AN]
+And I've got a lot to say[N]
+to the sir.[AN]
+So why don't I join with[N]
+the lot of you?[AN]
+
+[OpenMidRight][Pause]Sure,[.4] why not.[AN][X]
 
 ## PanUlrichRecruit
 # verified
 [OpenMidLeft][LoadPan][OpenMidRight][LoadUlrich]
-[OpenMidLeft][MoveMidRight]Look where you're swingin'[N]
-that axe,[.4] old man![AN]
 [OpenMidRight]Pandoro,[.4] what are[N]
 you doing here?[AN]
 Last I saw you,[.4] you left Wreyvine[N]
@@ -217,7 +232,10 @@ I'm sure it could come in handy.[A][X]
 [MidRight][LoadFace][0xFF][0xFF]
 [MidLeft][LoadOldMan]When I worked for the capital city guard,[N]
 one of my colleagues didn't believe in the[AN]
-weapon triangle.[.6] Here,[.4] take this,[.4][N]
+weapon triangle.[AN]
+What a cantankerous oaf that[N]
+Captain was![AN]
+Here,[.4] take this,[.4][N]
 and prove him wrong![A][X]
 
 ## HildrBreveTalk
@@ -350,3 +368,27 @@ me?[.6][MoveMidRight] Hic[Beat][.6] Geeeet ready![A][X]
 # verified
 [MidLeft][LoadOgrim]Huh[Beat] Wasn't ready to[N]
 Hic[Beat] lose like that[Beat][A][X]
+
+## Ch2GoToBridge
+[OpenMidRight][LoadAffogato]Hm,[.4] that bridge leads[N]
+to the capital.[AN]
+Looks like we can advance if [ToggleRed]anyone[ToggleRed][N]
+among us can [ToggleRed]reach it[ToggleRed].[A][X]
+
+## BlueTileDisclaimer
+Blue-lined tiles indicate the spaces[N]
+of the player's objective.[AN][2NL]
+Ending an action on these spaces[N]
+advance or end the map.[A][X]
+
+## GreenTileDisclaimer
+Ending an action on green-lined[N]
+tiles triggers a tile change.[AN][2NL]
+Later on, they may also indicate[N]
+the spaces of an NPC's objective.[A][X]
+
+## RedTileDisclaimer
+Red-lined tiles indicate the spaces[N]
+of the enemy's objective.[AN][2NL]
+Enemies ending an action on these[N]
+spaces may trigger a Game Over.[A][X]

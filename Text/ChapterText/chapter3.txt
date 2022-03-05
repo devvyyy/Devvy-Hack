@@ -3,8 +3,15 @@
 Eis,[.4] Captain! Aeterian soldiers are[N]
 surrounding the city![AN]
 [OpenFarLeft][LoadEis][OpenLeft][LoadStroganoff]
-[OpenFarLeft][Pause][CloseEyes]Shamans,[.4] huh?[.6] [OpenEyes]I really don't get[N]
-paid enough for this.[AN]
+[OpenFarLeft][Pause][CloseEyes]Did you say Aeterians?[.6] [OpenEyes]I really[N]
+don't get paid enough for this.[AN]
+[OpenLeft]That's bloody awful.[.6] Welp,[.4] was[N]
+nice knowing you blokes.[AN]
+[OpenMidRight][MidBlink]Captain Stroganoff[Beat][AN][OpenEyes]
+[OpenLeft]Okay,[.4] bad time for[N]
+jests.[.6] I get it.[AN]
+[OpenFarLeft]That's rare for you to[N]
+say,[.4] Cap.[AN]
 [OpenLeft]Stand behind me.[.6] I'm sure[N]
 aid is coming.[AN]
 Got it?[.6] Defend the[N]
@@ -13,11 +20,11 @@ city at all costs![A][X]
 ## Ch3Opening2
 [OpenMidLeft][LoadUlrich][OpenMidRight][LoadAffogato]
 [OpenMidRight]I've scouted ahead,[.4] sir.[.6][N]
-There seems to be a skirmish.[AN][MoveRight]
+There seems to be a skirmish.[AN][CloseSpeechSlow][MoveRight]
 [OpenFarRight][LoadHildr]
-Captain Stroganoff and his men[N]
-are up ahead![AN]
-I'm not sure they can last[N]
+The city guard looks to be[N]
+up ahead![AN]
+I'm not sure the lot can last[N]
 much longer[Beat][AN]
 [OpenMidLeft]You weren't kidding about Aeterians[N]
 being everywhere,[.4] Affogato.[AN]
@@ -111,7 +118,7 @@ This is dire,[.4] Captain.[.6][N]
 We need reinforcements.[AN]
 
 [OpenFarRight]The border?[.6] Like[Beat] the[N]
-outpost?[AN]
+southern border outpost?[AN]
 
 [OpenMidLeft]Correct.[.6] They breached the[N]
 outpost,[.4] and are[AN]
@@ -126,8 +133,11 @@ Let's go,[.4] everyone.[A][X]
 ## Ch3EndingAlt3
 [OpenFarFarLeft][LoadAtheya][OpenRight][LoadAffo][OpenFarRight][LoadUlrich]
 [OpenFarFarLeft][MoveMidLeft]
-[OpenMidLeft]Where is the captain?[AN]
-[OpenRight]He didn't make it,[.4] but[Beat][N]
+[OpenFarRight]Ah,[.4] Captain Brudet.[.6][N]
+Is everything alright?[AN]
+[OpenMidLeft]Where is Stroganoff?[AN]
+[OpenRight]The Captain didn't make[N]
+it,[.4] but[Beat][N]
 [OpenMidLeft]He[.4] what?![.6] Damn it[Beat][N]
 [CloseEyes]If only if I was here sooner[Beat][AN]
 [OpenFarRight]We have to continue,[.4][N]
@@ -164,13 +174,13 @@ perhaps one of us can[N]
 too late.[AN]
 We're already in control of[N]
 the capital of Northelm.[AN]
-Let's move,[.4] surround the[N]
-knights with reinforcements![A][X]
+Let's move,[.4] surround the Wreyvians[N]
+with a storm of riders![A][X]
 
 ## StroganTalk
 [OpenMidLeft][LoadStroganoff][MidRight][LoadFace][0xFF][0xFF]
-[OpenMidLeft]So help did arrive[Beat][N]
-Very well![A][X]
+[OpenMidLeft]So help did arrive[Beat] Very well,[.4][N]
+mate.[.6] Come on![A][X]
 
 ## EisTalk
 [OpenMidLeft][LoadEis][MidRight][LoadFace][0xFF][0xFF]
@@ -184,11 +194,12 @@ we were a goner![A][X]
 
 ## Amongsttttttt
 # verified
-[MidLeft][LoadFace][0xFF][0xFF]What is that?[A][X]
+[MidLeft][LoadFace][0xFF][0xFF]What is that in[N]
+the waters[Beat]?[A][X]
 
 ## AmongstWhom
 # verified
-[MidLeft][LoadFace][0xFF][0xFF]What's this?[A][X]
+[MidLeft][LoadFace][0xFF][0xFF]Hm,[.4] what's this?[A][X]
 
 ## LifeRingVillageText
 # verified
@@ -247,13 +258,13 @@ razed to the ground![A][X]
 ## AffoAlicotBossQ
 # verified
 [OpenMidLeft][LoadAlicot]Fourteen long years,[.4] I've[N]
-trained for this moment.[AN]
+waited for this moment.[AN]
 Surrender,[.4] Wreyvians![.6] We will[N]
 not lose![AN]
 [ClearFace]
 [OpenMidRight][LoadAffogato]
-[HalfCloseEyes]Uh,[.4] okay[Beat]?[AN]
-[X]
+[HalfCloseEyes]Uh,[.4] okay[Beat]?[OpenEyes] Am I[N]
+supposed to care?[A][X]
 
 ## SeqEisTalk
 # unset flag after recruitment
@@ -296,7 +307,7 @@ pick 'em up.[A][X]
 [OpenMidLeft]Hey![.6] Sir Ulrich![AN]
 [OpenMidRight]And you are?[AN]
 [OpenMidLeft]Ah,[.4] my apologies![.6][N]
-I'm Doppio.[AN]
+I'm Doppio of the city guard.[AN]
 [OpenMidRight]Well met.[.6] Did you[N]
 need something,[.4] Doppio?[AN]
 [OpenMidLeft]These reinforcements seem[N]

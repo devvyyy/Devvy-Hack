@@ -31,13 +31,19 @@ ldrb r3, [r3]
 cmp r3, #4
 beq End
 
-@add enemy res/4 attack
+@add enemy res/2 attack
 mov  r1, #0x5A
 ldrh r0, [r4, r1] @attack
 ldrb r2, [r5, #0x18] @res
-lsr  r2, #2 @divide this by 4
+lsr  r2, #1 @divide this by 2
 add  r0, r2
 strh r0, [r4,r1]
+
+@ 2 range? (default)
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#2
+beq End
 
 @ 3 range?
 ldr r0,=#0x203A4D4 @battle stats
@@ -57,7 +63,7 @@ FourMaybe:
 ldr r0,=#0x203A4D4 @battle stats
 ldrb r0,[r0,#2] @range
 cmp r0,#4
-bne FiveMaybe @ max range
+bne FiveMaybe
 
 @lose 20 hit
 mov r1, #0x60
@@ -66,11 +72,39 @@ sub r0, #20
 strh r0, [r4,r1]
 b End
 
-FiveMaybe: @this is the max probably
+@ lets try this again again
+FiveMaybe:
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#5
+bne SixMaybe
+
 @lose 30 hit
 mov r1, #0x60
 ldrh r0, [r4, r1] @hit
 sub r0, #30
+strh r0, [r4,r1]
+b End
+
+@ lets try this again again
+SixMaybe:
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#6
+bne SevenMaybe @ max range
+
+@lose 40 hit
+mov r1, #0x60
+ldrh r0, [r4, r1] @hit
+sub r0, #40
+strh r0, [r4,r1]
+b End
+
+SevenMaybe: @this is the max probably
+@lose 50 hit
+mov r1, #0x60
+ldrh r0, [r4, r1] @hit
+sub r0, #50
 strh r0, [r4,r1]
 
 End:

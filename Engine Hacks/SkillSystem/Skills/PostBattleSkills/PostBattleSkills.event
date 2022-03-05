@@ -156,6 +156,14 @@ POIN SkillTester
 WORD CloseCallID
 
 ALIGN 4
+Sidestep:
+#incbin "Sidestep/Sidestep.dmp"
+POIN SkillTester
+WORD CloseCallID
+POIN SidestepEvent
+#include "Sidestep/SidestepEvent.event"
+
+ALIGN 4
 CantoTwo:
 #incbin "CantoTwo/CantoTwo.dmp"
 POIN SkillTester

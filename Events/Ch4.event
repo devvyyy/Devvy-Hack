@@ -33,6 +33,7 @@ CharacterEventBothWays(0x11, FlorisUlrichConvo, Floris, Ulrich)
 	END_MAIN
 
 MiscBasedEvents:
+	AREA 0x17 GamerTime [0,8] [16,15]
 	CauseGameOverIfLordDies
 DefeatBoss(EndingScene)
 AREA 0x65 WeAreDead [0,11] [0,13]
@@ -80,7 +81,7 @@ LoadUnit(10,12)
 	UNIT
 
 EnemyUnits:
-UNIT Hartmann Druid 0x1 Level(6, Enemy, 0)     [1,1] DropItem 0x0 0x0 0x0 [DarkTome3,AngelicRobe] BossAI
+UNIT Hartmann Druid 0x1 Level(6, Enemy, 0)     [1,1] 0b 0x0 0x0 0x0 [DarkTome5,AngelicRobe] BossAI
 UNIT Aeteria Thaumaturge 0x1 Level(4, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [Fire,] DefendAI
 UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [5,2] DropItem 0x0 0x0 0x0 [DarkTome2,DoorKey] BossAI
 UNIT Aeteria LArmor 0x1 Level(4, Enemy, 1)     [9,1] DropItem 0x0 0x0 0x0 [IronGlaive,ShortSpear,DoorKey] BossAI
@@ -195,7 +196,7 @@ UNIT Affogato Hunter 0x1 Level(1, Ally, 1)     [9,13] 0b 0x0 0x0 0x0 [SteelBlade
 UNIT
 
 EndCutsceneUnits2:
-UNIT Ulrich APaladin 0x1 Level(1, Ally, 1)     [10,14] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [10,14] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
 UNIT
 
 Traps1:
@@ -271,8 +272,10 @@ STAL 20
 	ENDA
 
 EndingScene:
-FADI 60
+FADI 20
 DoAllThree
+SOUN 0x50
+STAL 40
 Music(VictoryBGM)
 LOAD2 0x1 EndCutsceneUnits
 FADU 12
@@ -431,6 +434,18 @@ FlorisUlrichConvo:
 	MURE 2
 	NoFade
 	ENDA
+	
+GamerTime:
+STAL 3
+CAM1 [0,12]
+STAL 20
+CAM1 [16,12]
+STAL 3
+	Text(OhNoBadGuysss)
+	STAL 5
+	CenterTextbox(RedTileDisclaimer)
+NoFade
+ENDA
 
 WeAreDead:
 CHECK_ACTIVE

@@ -44,14 +44,6 @@ beq ShiningAwesome
 b End
 
 IronAwesome:
-@add 2 damage
-mov r1, #0x5a
-ldrh r0, [r4, r1] @atk
-add r0, #2
-strh r0, [r4,r1]
-b End
-
-SteelAwesome:
 @add 3 damage
 mov r1, #0x5a
 ldrh r0, [r4, r1] @atk
@@ -59,11 +51,19 @@ add r0, #3
 strh r0, [r4,r1]
 b End
 
-SilverAwesome:
+SteelAwesome:
 @add 4 damage
 mov r1, #0x5a
 ldrh r0, [r4, r1] @atk
 add r0, #4
+strh r0, [r4,r1]
+b End
+
+SilverAwesome:
+@add 5 damage
+mov r1, #0x5a
+ldrh r0, [r4, r1] @atk
+add r0, #5
 strh r0, [r4,r1]
 b End
 
@@ -85,10 +85,10 @@ strh r0, [r4,r1]
 b End
 
 BloodyAwesome: @australia
-@add 1 damage
+@add 2 damage
 mov r1, #0x5a
 ldrh r0, [r4, r1] @atk
-add r0, #1
+add r0, #2
 strh r0, [r4,r1]
 
 @add 20 crit
@@ -99,10 +99,10 @@ strh r0, [r4,r1]
 b End
 
 LockInAwesome:
-@add 3 damage
+@add 4 damage
 mov r1, #0x5a
 ldrh r0, [r4, r1] @atk
-add r0, #3
+add r0, #4
 strh r0, [r4,r1]
 
 @add 20 hit
@@ -113,10 +113,10 @@ strh r0, [r4,r1]
 b End
 
 SonicAwesome:
-@add 2 damage
+@add 3 damage
 mov r1, #0x5a
 ldrh r0, [r4, r1] @atk
-add r0, #2
+add r0, #3
 strh r0, [r4,r1]
 
 @ max range?
@@ -168,10 +168,10 @@ strh r3,[r0]
 b End
 
 ShiningAwesome:
-@add 2 damage
+@add 3 damage
 mov r1, #0x5a
 ldrh r0, [r4, r1] @atk
-add r0, #2
+add r0, #3
 strh r0, [r4,r1]
 
 @add 25% of foe's res as bonus attack

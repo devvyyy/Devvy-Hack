@@ -11,10 +11,10 @@ ldrb r3, [r3]
 cmp r3, #4
 beq End
 
-ldrb r0, [r4, #0x16] @attacker res
-ldrb r1, [r5, #0x16] @defender res
+ldrb r0, [r4, #0x13] @attacker current hp
+ldrb r1, [r5, #0x13] @defender current hp
 cmp r0, r1
-ble End @skip if res is less or equal
+ble End @skip if current hp is less or equal
 
 @has Bird's Song hahahahah DDDAbGFDFG help me (if res > foes res, on player phase brave effect like a boss)
 ldr r0, SkillTester

@@ -6,6 +6,12 @@ ALIGN 4
 GaidenStatScreen:
 WORD 0
 
+//Lyon Status Staff Avoid
+PUSH
+ORG 0x02CD44
+BYTE 0x35 //Maynard
+POP
+
 // Fix the Game Over freeze
 GameOverStart:
 ASMC 0x800D391

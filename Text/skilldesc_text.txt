@@ -1,22 +1,60 @@
+## SD_BladeWhirl
+Blade Whirl: If unit initiates against a[N]
+ranged foe at 1 range, dodge all attacks.[X]
+
+## SD_GraspOfLife
+Cling to Life: If unit's HP isn't full,[N]
+restores 4 HP after combat. (+4 restored[N]
+for every quarter below max HP).[X]
+
+## SD_AnakinSkill
+Motivating Presence: Grants allies[N]
+within 3 spaces Hit/Avoid/Crit +10,[N]
+tripled if that unit is above half HP.[N]
+
+## SD_KelikSkill
+Etherium: If unit initiates or if foe[N]
+uses magic, grants Atk +6. If magic foe[N]
+initiates, unit dodges all attacks.[X]
+
+## SD_ShonSkill
+Gallant: If foe's HP is full, grants[N]
+Atk/AS/Def/Res +3 during combat.[X]
+
+## SD_SiegSkill
+Tearing Skies: If unit initiates, unit[N]
+makes a follow-up and foe cannot.[X]
+
+## SD_AmongUs
+Quadratic Strike: Grants Atk +X during combat.[N]
+(X = solve with Quadratic formula, where[N]
+a = unit's base Atk, b = Spd, and c = Skl.)[X]
+
+## SD_HallowedMist
+Hallowed Heart: Adjacent units are[N]
+unhittable and immune to attacks,[N]
+excluding Light magic.[X]
+
 ## SD_BurstFire
-[_B][_u][_r][_s]t [_F]i[_r][_e]: [_B][_o][_w][_s] [_g][_a]i[_n] [_Plus][_3] [_r][_a][_n][_g][_e], [_d][_e][_a]l [_b][_o][_n][_u][_s] [_d][_m][_g][N]
-= [_2][_5]% [_f][_o][_e]'[_s] [_R][_e][_s], l[_o][_s][_e] [_1]0 [_H]it[_Slash][_s][_p][_a][_c][_e] [_a][_f]t[_e][_r][N]
-[_2], [_a][_n][_d] [_d][_e][_a]l [_2]0% [_m][_a][_x] [_H][_P] [_s][_p]l[_a][_s][_h] i[_n] [_a] [_3][_x][_3] [_A][_o][_E].[X]
+# [_S][_a]l[_v][_o][_Space][_Q][_u]i[_v][_e][_r]
+[_B][_u][_r][_s]t[_Space][_F]i[_r][_e]:[_Space][_B][_o][_w][_s][_Space][_g][_a]i[_n][_Space][_Plus][_3][_Space][_r][_a][_n][_g][_e][_Comma][_Space][_d][_e][_a]l[_Space][_b][_o][_n][_u][_s][_Space][_d][_a][_m][_a][_g][_e][N]
+[_e][_q][_u][_a]l[_Space]t[_o][_Space][_h][_a]l[_f][_Space][_o][_f][_Space][_f][_o][_e]'[_s][_Space][_R][_e][_s][_Comma][_Space]l[_o][_s][_e][_Space][_1]0[_Space][_H]it[_Slash][_s][_p][_a][_c][_e][_Space][_a][_f]t[_e][_r][_Space][_2][_Comma][N]
+[_a][_n][_d][_Space][_d][_e][_a]l[_Space][_a][_Space][_f]i[_f]t[_h][_Space][_o][_f][_Space][_m][_a][_x][_Space][_H][_P][_Space][_s][_p]l[_a][_s][_h][_Space]i[_n][_Space][_a][_Space][_3][_x][_3][_Space][_A][_o][_E][_Space][_o][_n][_Space]i[_n]it[_Dot][X]
 
 ## SD_Phase
-[_P][_h][_a][_s][_e]:[_Space][_U][_n]it'[_s][_Space][_e][_q][_u]i[_p][_p][_e][_d][_Space][_B][_o]w[_Slash][_R]i[_f]l[_e][_Space]i[_s][_Space][_g][_r][_a][_n]t[_e][_d][_Space][_2][_5]%[_Space]Mt[N]
-[_a][_n][_d][_Space]l[_e][_s][_s][_e][_r][_Space][_s][_e][_c][_o][_n][_d][_a][_r][_y][_Space][_e][_f][_f][_e][_c]t[_s][_Space][_f][_r][_o]m[_Space]t[_h][_e][_Space][_o][_f][_f]-[_h][_a][_n][_d][N]
+[_P][_h][_a][_s]i[_n][_g]:[_Space][_U][_n]it'[_s][_Space][_e][_q][_u]i[_p][_p][_e][_d][_Space][_B][_o]w[_Slash][_R]i[_f]l[_e][_Space]i[_s][_Space][_g][_r][_a][_n]t[_e][_d][_Space][_3]0%[N]
+Mt[_Space][_a][_n][_d][_Space]l[_e][_s][_s][_e][_r][_Space][_s][_e][_c][_o][_n][_d][_a][_r][_y][_Space][_e][_f][_f][_e][_c]t[_s][_Space][_f][_r][_o]m[_Space]t[_h][_e][_Space][_o][_f][_f]-[_h][_a][_n][_d][N]
 [_R]i[_f]l[_e][_Space]i[_n][_Space][_u][_n]it'[_s][_Space][_2][_n][_d] i[_n][_v][_e][_n]t[_o][_r][_y][_Space][_s]l[_o]t[_Space]([_e][_x][_c]l[_u][_d][_e][_s][_Space][_E][_f][_f][_Dot])[_Dot][X]
 
 ## SD_BloodHunt
-Blood Hunt: If foe's HP is below 50%,[N]
-grants Atk/AS +5. Below 25%, grants[N]
-Hit/Crit equal to foe's missing HP.[X]
+Blood Hunt: If foe's HP is equal/below half,[N]
+grants Atk/AS +5. Below a quarter, also[N]
+grants Hit/Crit equal to foe's missing HP.[X]
 
 ## SD_ViolentTendencies
 Violent Tendencies: During even-numbered[N]
 turns, grants Atk +2, Crit +20, and unit[N]
-attacks twice.[X]
+strikes twice consecutively.[X]
 
 ## SD_KirGetsTwoRoundedByASilverBow
 Frail Armor: If foe is using a Silver[N]
@@ -24,9 +62,9 @@ Bow/Rifle, inflicts Def -10 on unit,[N]
 and foe follow-ups and unit cannot.[X]
 
 ## SD_Hijack
-Hijack: If foe is ranged, negates foe's[N]
-base weapon Mt and adds it to unit's[N]
-weapon Mt.[X]
+Hijack: If foe uses a ranged weapon,[N]
+negates foe's base weapon Mt and[N]
+adds it to unit's weapon Mt.[X]
 
 ## SD_Restraint
 Hold Back: When equipped with a[N]
@@ -36,7 +74,7 @@ against unpromoted foes.[X]
 ## SD_LethalTempo
 Perfect Pulse: Unit cannot follow-up.[N]
 Converts Spd into bonus Atk and Crit and[N]
-if Spd is higher than foe's Spd, +5 damage.[X]
+if Spd is higher than foe's Spd, +5 Atk.[X]
 
 ## SD_Tresillo
 F-D[0x23]-F//C[0x23]-G[0x23]-F: Unit cannot attack.[N]
@@ -45,11 +83,12 @@ Skill to bonus Crit Avoid.[X]
 
 ## SD_HeavyDuty
 Grit: If unit's HP is not full,[N]
-reduces damage taken by 25%.[X]
+reduces damage taken by a quarter.[X]
 
 ## SD_TrueGrit
-Last-Ditch Gambit: If HP is below 25%, deals[N]
-bonus damage equal to unit's missing HP.[X]
+Last-Ditch Gambit: If HP is below a[N]
+quarter, deals bonus damage equal to[N]
+unit's missing HP x 2.[X]
 
 ## SD_StaticPanic
 Static Panic: Grants +15 Crit for[N]
@@ -61,11 +100,11 @@ Catch These Hands: Grants +3 Atk/AS against[N]
 bosses, doubled if they have Shove/Smite.[X]
 
 ## SD_ArmWrestler
-Bar Fighter: Grants +10 Hit/Avoid against[N]
+Moxie: Grants +10 Hit/Avoid against[N]
 enemies with Shove/Smite.[X]
 
 ## SD_SolLance
-Solar Thrust: Deals (10 - Foe's Res) bonus damage[N]
+Solar Thrust: Deals (10 - foe's Res) bonus damage[N]
 on hit, and unit heal the same amount.[X]
 
 ## SD_Parry
@@ -75,12 +114,12 @@ on hit, and unit heal the same amount.[X]
 
 ## SD_ResolutePyre
 Resolute Pyre: Grants Eth and Crit rate[N]
-during combat equal to 50% of unit and[N]
+during combat equal to half of unit and[N]
 foe's missing HP.[X]
 
 ## SD_EustacePersonal
-Fractured Mask: If unit's HP is above 50%,[N]
-grants Atk +3/Hit +20. If below 50%,[N]
+Fractured Mask: If unit's HP is above half,[N]
+grants Atk +3/Hit +20. If below half,[N]
 grants Def/Res +3 and Avoid +20.[X]
 
 ## SD_Eulogy
@@ -90,8 +129,8 @@ during combat, setting those stats to 0.[X]
 
 ## SD_TouchOfFrost
 Frostbite: If foe's terrain has effects,[N]
-deals bonus damage equal to 25% of foe's[N]
-current HP.[X]
+deals bonus damage equal to a quarter[N]
+of foe's current HP.[X]
 
 ## SD_Chronoshift
 Borrowed Time: After combat, heals[N]
@@ -102,7 +141,7 @@ Rider's Axiom: On turns 1-3, unit makes[N]
 a follow-up and foe cannot.[X]
 
 ## SD_SoulSplitter
-Soul Splitter: Grants AS = Foe's Res/2.[N]
+Soul Splitter: Grants AS = foe's Res/2.[N]
 Foe loses AS = Unit's Res/2.[X]
 
 ## SD_RagingStorm
@@ -126,12 +165,12 @@ grants Atk +3/Hit +10.[X]
 
 ## SD_DesolateBlade
 Desolate Blade: Attacks mark target for[N]
-1 turn/combat. Marked foes take 25% max HP[N]
-bonus damage and heal unit the same amount.[X]
+1 turn/combat. Marked foes take a quarter[N]
+max HP bonus damage and heal unit the bonus.[X]
 
 ## SD_AssassinBossSkill
 Spirit Cleave: Deals bonus damage equal[N]
-to 25% of foe's Def and Res.[X]
+to half of foe's Def and Res.[X]
 
 ## SD_Maestro
 [_M][_a][_e][_s]t[_r][_o][_Colon] [_U][_n]it'[_s] [_R]ifl[_e][_s] [_h][_a][_v][_e] [_u][_n]i[_q][_u][_e] [_p][_r][_o][_p][_e][_r]ti[_e][_s][_Colon][N]
@@ -140,17 +179,17 @@ to 25% of foe's Def and Res.[X]
 
 ## SD_Lifeline
 Lifeline: After combat, if unit's HP[N]
-is below 25%, grants Def/Res +10 for[N]
-1 turn.[X]
+is below a quarter, grants Def/Res +10[N]
+for 1 turn.[X]
 
 ## SD_OldManSkill
 Borrowed Time: Grants Avoid +25 for[N]
-every 25% missing HP.[X]
+every quarter of missing HP.[X]
 
 ## SD_CritDie
 Show Stopper: Always land a Critical[N]
 Hit against enemies with less than[N]
-25% HP.[X]
+a quarter HP.[X]
 
 ## SD_SearingSword
 Searing Sword: Physical Sword attacks[N]
@@ -161,9 +200,9 @@ Canter: Unit can move 1 space[N]
 after action.[X]
 
 ## SD_CurtainCall
-Curtain Call: If foe's HP is below 25%,[N]
-deals execute damage equal to foe's[N]
-missing HP.[X]
+Curtain Call: If foe's HP is below a,[N]
+quarter, deals execute damage equal[N]
+to foe's missing HP.[X]
 
 ## SD_Nevermore
 Nevermore: Unit takes 1 less damage[N]
@@ -185,18 +224,18 @@ Stalwart: If unit cannot counter,[N]
 foe cannot make a follow-up.[A]
 
 ## SD_PykeMoment
-Rampage: At start of combat, if foe's[N]
-HP is less than 25% and unit defeats[N]
-the enemy, grants another action.[X]
+Rampage: At start of combat, if foe's HP[N]
+is less than  a quarter and foe dies[N]
+after combat, grants another action.[X]
 
 ## SD_Starseer
 Gift of the Fallen: During the first[N]
 turn, unit dodges all enemy attacks.[X]
 
 ## SD_KingMark
-King's Mark: Foes within 4 spaces[N]
-cannot land critical hits or avoid[N]
-attacks if their HP is less than 75%.[X]
+King's Mark: If foes within 4 spaces[N]
+have less than/equal to three quarters[N]
+HP, sets their Crit/Avoid to 0.[X]
 
 ## SD_ThunderClap
 Thunderclap: If foe's terrain has any[N]
@@ -256,12 +295,13 @@ Parity: Neutralizes terrain bonuses[N]
 from both sides.[X]
 
 ## SD_BuiltDifferent
-Cheap Shot: If foe's HP is less than[N]
-half, Str/Spd +2.[X]
+Cheap Shot: If foe's HP is equal/less[N]
+than half, grants unit Str/AS +2.[X]
 
 ## SD_SteelSoul
-Steel Soul: If unit's Def > Foe's Str/Eth,[N]
-unit strikes twice on initiation.[X]
+Steel Soul: If unit's Def is higher than[N]
+foe's Str/Eth and unit initiates, unit[N]
+strikes twice consecutively.[X]
 
 ## SD_Shrewd
 Third Eye: Grants bonus Hit equal[N]
@@ -272,20 +312,21 @@ Forlorn: If unit is not adjacent to[N]
 an ally, foe cannot make a follow-up.[X]
 
 ## SD_FracturedHeart
-Fractured Heart: All foes with half[N]
-or less HP take 2 more damage.[X]
+Fractured Heart: All foes equal/less[N]
+than half HP take 2 more damage.[X]
 
 ## SD_Edgelord
 Lone Wolf: If unit is not adjacent to[N]
 an ally, grants Crit +15.[X]
 
 ## SD_Megalovania
-Bird's Song: If unit's Spd > Foe's Spd,[N]
-unit strikes twice on initiation.[X]
+Brave Bird: If unit's current HP is higher[N]
+than foe's current HP and unit initiates,[N]
+unit strikes twice consecutively.[X]
 
 ## SD_RayDark
 Augmentation: Grants adjacent[N]
-allies Str/Spd +2.[X]
+allies Atk/AS +2.[X]
 
 ## SD_Conniving
 Conniving: Unit can steal items, pick[N]
@@ -302,48 +343,50 @@ spaces, grants Crit +30.[X]
 
 ## SD_Moonstruck
 Moonstruck: Grants Atk to both sides[NL]
-equal to 25% of other side's Def.[X]
+equal to a quarter of other side's Def.[X]
 
 ## SD_PiercingSkies
-Piercing Skies: Grants Crit equal[NL]
-to unit's Spd/2.[X]
+Lightning Strikes Twice: Grants Crit[N]
+equal to unit's Spd/2. If Crit is above[N]
+50%, unit attacks twice consecutively.[X]
 
 ## SD_DivineLightning
 Divine Lightning: If unit initiates[NL]
-and unit's Spd < foe's Spd,[NL]
-unit strikes twice at 1 range.[X]
+and unit's Spd is less than foe's Spd,[N]
+strike twice consecutively at 1 range.[X]
 
 ## SD_ChainReaction
 Chain Reaction: Grants adjacent physical[N]
 allies: "If Spd is less than foe's Spd,[N]
-unit attacks twice."[X]
+unit strikes twice consecutively."[X]
 
 ## SD_RupturedSky
-Ruptured Sky: Boosts unit's Atk by 25%[N]
-of foe's Str/Eth.[X]
+Subjugate: Boosts unit's Atk by a[N]
+quarter of foe's Str/Eth.[X]
 
 ## SD_Lunatic
 Lunatic: If foe's HP is full, negates[N]
-50% of foe's Def.[X]
+half of foe's Def.[X]
 
 ## SD_FinalBoss
 Eye of the King: Deals damage equal to[N]
 foe's Max HP/4.[X]
 
 ## SD_CloseCall
-Sidestep: Unit can move 2 spaces[N]
-after action.[X]
+Sidestep: Unit can move 2 spaces after[N]
+any action, and gets another action[N]
+after picking/stealing (once per turn).[X]
 
 ## SD_Vigor
 Requiem: Multiplies Eth by[N]
 1.25x during combat.[X]
 
 ## SD_Defeatist
-Defeatist: If unit's HP is below[NL]
+Defeatist: If unit's HP is equal/below[N]
 half, inflicts Atk -5 on unit.[X]
 
 ## SD_LastResort
-Last Resort: If unit's HP is below[NL]
+Last Resort: If unit's HP is equal/below[NL]
 half, both sides deal +5 damage.[X]
 
 ## SD_ClearSoul
@@ -359,16 +402,16 @@ Warlock: Adjacent allies target[N]
 foe's Res.[X]
 
 ## SD_Blackfire
-Blackfire: Inflicts Atk/Spd -2 on[N]
+Blackfire: Inflicts Atk/AS -2 on[N]
 adjacent foes.[X]
 
 ## SD_Steadfast
-Steadfast: Grants +1 Spd for[N]
+Steadfast: Grants +1 AS for[N]
 every 2 spaces moved.[X]
 
 ## SD_Whirlwind
-Thunderhead: If unit's HP > 75%,[N]
-grants Crit +15.[X]
+Thunderhead: If unit's HP is greater[N]
+than/equal to three quarters, Crit +15.[X]
 
 ## SD_Sergeant
 Warden: If unit's HP is full,[N]
@@ -376,11 +419,11 @@ unit takes 7 less damage.[X]
 
 ## SD_ColdFlare
 Cold Flare: If unit's HP isn't full, grants[N]
-bonus to Atk/Spd equal to 25% of Res.[X]
+bonus Atk/AS equal to a quarter of Res.[X]
 
 ## SD_ColdFlare2
 Cold Flare: If foe is physical, grants Atk +3.[N]
-If foe is magical, grants Spd +3.[X]
+If foe is magical, grants AS +3.[X]
 
 ## SD_FairFight
 Fair Fight: If foe is not mounted,[N]
@@ -389,7 +432,7 @@ grants Attack Speed +2.[X]
 ## SD_Intrepid
 Dive-Bomb: If both unit and foe's[N]
 HP is full, and unit initiates,[N]
-unit strikes twice.[X]
+unit strikes twice consecutively.[X]
 
 ## SD_Inspire
 Inspire: Grants Str +2 to all allies[N]
@@ -536,15 +579,16 @@ Armored Blow: +7 Def[N]
 when initiating battle.[X]
 
 ## SD_Vantage
-Vantage: If unit's HP is less than[N]
-half, strike first when attacked.[X]
+Vantage: If unit's HP is equal/below[N]
+half, unit counters before foe's attack.[X]
 
 ## SD_Desperation
-Desperation: If less than half HP,[N]
-follow-up attacks occur immediately.[X]
+Desperation: If unit's HP is equal/below[N]
+half, follow-up attacks occur before[N]
+foe can counter.[X]
 
 ## SD_Wrath
-Wrath: If unit's HP is less than[N]
+Wrath: If unit's HP is equal/below[N]
 half, grants +20 Crit.[X]
 
 ## SD_Counter
@@ -595,13 +639,13 @@ Dance: Refresh an ally unit[N]
 to let them act again.[X]
 
 ## SD_Lifetaker
-Lifetaker: Restore up to 25% HP after[N]
-attacking and defeating an enemy.[X]
+Lifetaker: Restore up to a quarter HP[N]
+after attacking and defeating an enemy.[X]
 
 ## SD_Galeforce
 Galeforce: Grants another action[N]
-to unit if unit initiates and[N]
-defeats an enemy. (Once per turn.)[X]
+if unit initiates and defeats[N]
+an enemy (cnce per turn).[X]
 
 ## SD_Renewal
 Renewal: Restore 30% of max HP[N]
@@ -637,7 +681,7 @@ Voice of Peace: Enemies within[N]
 
 ## SD_Amaterasu
 Amaterasu: Allies within 2 spaces[N]
-recover 20% HP each turn.[X]
+recover a fifth of max HP each turn.[X]
 
 ## SD_SpurStr
 Spur Strength: Adjacent allies[N]
@@ -759,8 +803,9 @@ Trample: +5 damage to[N]
 unmounted units.[X]
 
 ## SD_Camaraderie
-Camaraderie: Recover 10% HP each turn[N]
-if there are allies within 2 spaces.[X]
+Camaraderie: If unit is within 2 spaces[N]
+of an ally, restores a tenth of max HP[N]
+at the start of each turn..[X]
 
 ## SD_ForeignPrincess
 Foreign Princess: Foreign army units[N]
@@ -768,12 +813,13 @@ take -2/+2 damage dealt/taken.[X]
 
 ## SD_SavageBlow
 Savage Blow: After attacking, enemies[N]
-within 2 spaces take 20% damage.[X]
+within 2 spaces take a fifth of max[N]
+HP damage.[X]
 
 ## SD_Relief
-Relief: Restores 20% of max HP at the[N]
-start of each turn if unit is adjacent[N]
-to an ally.[X]
+Relief: If unit is adjacent to an ally,[N]
+restores a tenth of max HP at the start[N]
+of each turn.[X]
 
 ## SD_Tantivy
 Tantivy: +10 Hit/Avoid if there are[N]
@@ -785,7 +831,7 @@ no allies within 3 spaces.[X]
 
 ## SD_Bond
 Bond: All allies within 3 spaces[N]
-recover 10% HP each turn.[X]
+recover a tenth of max HP each turn.[X]
 
 ## SD_Anathema
 Anathema: -10 Avoid/Crit Avoid to all[N]
@@ -971,8 +1017,8 @@ Swap: Allows unit to swap positions[N]
 with an adjacent ally.[X]
 
 ## SD_BreathOfLife
-Breath of Life: After attacking,[N]
-allies in 2 spaces heal of 20% max HP.[X]
+Breath of Life: After attacking, allies[N]
+in 2 spaces heal a fifth of max HP.[X]
 
 ## SD_Fury
 Fury: +2 Atk/Spd/Def/Res. Unit[N]
@@ -1008,7 +1054,7 @@ Identity Problems: This unit can't[N]
 decide on a name or face.[X]
 
 ## SD_Charisma
-Empower: Grants Hit/Avo +10[N]
+Empower: Grants Hit/Avo +15[N]
 to adjacent allies.[X]
 
 ## SD_HeroesDeathBlow
@@ -1128,7 +1174,7 @@ Inspiring Tune: Refreshing a unit grants[N]
 them +2 Pow/Def until the next turn.[X]
 
 ## SD_Forager
-Forager: Recover 20% HP each turn[N]
+Forager: Recover a fifth of HP each turn[N]
 if on a Plain, Forest or Mountain.[X]
 
 ## SD_FullMetalBody
@@ -1165,12 +1211,12 @@ the curse spreads to the enemy as well.[N]
 
 ## SD_Poison_Strike
 Poison Strike: Deals damage equal to[N]
-20% of the enemy's max HP after[N]
+a fifth of the enemy's max HP after[N]
 battle this unit initiates.[X]
 
 ## SD_Grisly_Wound
 Grisly Wound: Deals damage equal[N]
-to 20% of the enemy's max[N]
+to a fifth of the enemy's max[N]
 HP after every battle.[X]
 
 ## SD_Hex
@@ -1208,7 +1254,7 @@ Holy Aura: Gain +1 damage, +5% hit,[N]
 
 ## SD_SilentPride
 Silent Pride: Gain 2 damage and take[N]
--2 damage per 25% below max HP.[X]
+-2 damage per quarter below max HP.[X]
 
 ## SD_Loyalty
 Loyalty: When within 2 spaces of[N]
@@ -1244,12 +1290,12 @@ Vanity: Gain +2 Damage and +10 Hit[N]
 when fighting enemy at 2 range.[X]
 
 ## SD_MageSlayer
-Mage Slayer: Gain +2 damage and +10%[N]
-crit when facing magical enemies.[X]
+Mage Slayer: If foe uses magic,[N]
+grants Atk +2/Crit +10.[X]
 
 ## SD_KnightAspirant
-Knight Aspirant: When above 75%[N]
-health, +2 damage, +15% avoid.[X]
+Knight Aspirant: When above three[N]
+quarters HP, grants +2 Atk/+15 Avoid.[X]
 
 ## SD_Watchful
 Watchful: This unit cannot be[N]
@@ -1340,10 +1386,10 @@ to adjacent allies.[X]
 
 ## SD_Prescience
 Prescience: When initiating[N]
-battle, Hit and Avo +15.[X]
+battle, Hit/Avo +15.[X]
 
 ## SD_DefiantAvo
-Deviant Avoid: When HP is 25%[N]
+Defiant Avoid: When HP is 25%[N]
 or lower, gain +30 Avoid.[X]
 
 ## SD_DefiantCrit

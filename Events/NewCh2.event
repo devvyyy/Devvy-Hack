@@ -36,6 +36,7 @@ CharacterEventBothWays(0x24, AffoSeqConvo, Affogato, Sequin)
 
 MiscBasedEvents:
 	CauseGameOverIfLordDies
+AREA 0x17 FirstMoveTime [5,18] [12,13]
 AFEV 0x0 RunRunRunRun 0x18
 AFEV 0x0 EndingScene 0x3
 	END_MAIN
@@ -333,10 +334,12 @@ ENDA
 OgrimHouseEpic:
 MUSI // lowers music volume
 CHECK_ALIVE 0x69
-BEQ 1 0x0 0xC
+BEQ 9 0x0 0xC
 CameraCursor(0x69)
 Text(OgrimHouseEnter)
+GOTO 0x776
 
+LABEL 9
 TEXTSTART
 CHECK_ACTIVEID Affogato
 BNE 0x0 0xC 0x0
@@ -359,7 +362,6 @@ LABEL 0x776
 EVBIT_T 0x7
 MUNO // increases music volume
 
-LABEL 1
 NoFade
 ENDA
 
@@ -395,6 +397,14 @@ LABEL 0x776
 NoFade
 ENDA
 
+FirstMoveTime:
+	CAM1[0,1]
+	Text(Ch2GoToBridge)
+	STAL 5
+	CenterTextbox(BlueTileDisclaimer)
+NoFade
+ENDA
+	
 GoodbyeDespair:
 GameOver
 ENDA

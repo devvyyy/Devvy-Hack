@@ -27,7 +27,7 @@ TURN 0x0 TopLeftPegasi [9,0] 0x0
 ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0xC, MochaRinaConvo, Mocha, Rina)
-CharacterEventBothWays(0xD, AffoUlrichCh5Convo, Affogato, Ulrich)
+CharacterEventBothWays(0xD, SeqUlrichConvo, Sequin, Ulrich)
 CharacterEventBothWays(0xE, EisDoppioConvo, Doppio, Eiskaffee)
 CharacterEventBothWays(0x20, RecruitRecruitThief, 0x0, Noel)
 	END_MAIN
@@ -35,6 +35,8 @@ CharacterEventBothWays(0x20, RecruitRecruitThief, 0x0, Noel)
 MiscBasedEvents:
 	DefeatBoss(EndingScene)
 	CauseGameOverIfLordDies
+	AREA 0x10 VillageCheck1 [13,6] [13,6]
+	AREA 0x11 VillageCheck2 [1,14] [1,14]
 	END_MAIN
 
 LocationBasedEvents:
@@ -200,10 +202,10 @@ FADI 45
 	ENDA
 
 EndingScene:
-CHECK_EVENTID 0x8
-BEQ 1 0x0 0xC
-CHECK_EVENTID 0x9
-BEQ 1 0x0 0xC
+CHECK_EVENTID 0x10
+BNE 1 0x0 0xC
+CHECK_EVENTID 0x11
+BNE 1 0x0 0xC
 Music(VictoryBGM)
 SetBackground(0x33)
 Text(Ch5Ending1)
@@ -242,6 +244,14 @@ MUSC(0x30)
 Text(NoelRecruit)
 MURE 0x2
 CUSA Noel
+
+STAL 20
+	CHECK_EVENTID 0x12C
+	BNE 0x1 0x0 0xC
+	CenterTextbox(RingDisclaimer)
+	LABEL 0x1
+
+UnsetFlag(0x12C)
 NoFade
 ENDA
 
@@ -253,9 +263,9 @@ CharacterConditionalDialog(Atheya,Ch5MochaRina,Ch5MochaRinaAlt)
 	NoFade
 	ENDA
 	
-AffoUlrichCh5Convo:
+SeqUlrichConvo:
 MUSI
-Text(AffoUlrichCh5Talk)
+Text(SequinUlrichConvo)
 MUNO
 NoFade
 ENDA
@@ -338,5 +348,24 @@ NoFade
 ENDA
 
 ShopAwesome:
-SHLI SteelSword SteelLance SteelAxe SteelBow Thunder Elixir PureWater
+SHLI SteelSword SteelLance SteelAxe SteelBow Thunder Mend Elixir PureWater
 ALIGN 4
+
+VillageCheck1:
+CHECK_ACTIVE
+SVAL 1 0x88
+BEQ 0x1 0xC 0x1
+ENUF 0x10
+LABEL 0x1
+NoFade
+ENDA
+
+VillageCheck2:
+CHECK_ACTIVE
+SVAL 1 0x88
+BEQ 0x1 0xC 0x1
+ENUF 0x11
+LABEL 0x1
+NoFade
+ENDA
+
