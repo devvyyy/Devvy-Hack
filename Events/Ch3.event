@@ -211,6 +211,7 @@ LABEL 4
 	ENDA
 	
 FirstMove:
+PlayerRangeCheck
 CHECK_EVENTID 0xF
 BNE 1 0x0 0xC
 	CAM1[8,15]
@@ -385,6 +386,7 @@ NoFade
 ENDA
 
 DisclaimerEvent:
+PlayerRangeCheck
 STAL 20
 	CHECK_EVENTID 0x12C
 	BNE 0x1 0x0 0xC

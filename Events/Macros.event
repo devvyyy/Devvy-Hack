@@ -63,3 +63,4 @@
 #define QuickRemu(unitID,labelID) "CHECK_EXISTS unitID; BEQ labelID 0xC 0x0; CHECK_ALIVE unitID; BEQ labelID 0xC 0x0; REMU unitID; LABEL labelID"
 #define QuickCheckFlag(flagID,labelID) "CHECK_EVENTID flagID; BEQ labelID 0xC 0x0;"
 #define DoAllThree "CLEA 0; CLEN 0; CLEE 0"
+#define PlayerRangeCheck "SVAL 0x2 0x0; CALL 0x9EE1B8"

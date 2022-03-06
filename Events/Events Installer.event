@@ -92,6 +92,15 @@ Text(OgrimDeath)
 STAL 3
 ENDA
 
+AffoClassCheck: //this is used for making his mug change when loaded in dialogue dialogue (AffoSwitch, 0xAB, 0xAB)
+CHECK_CLASS Affogato //if class is Adventurer, turn flag on; otherwise, branch to turn flag off
+SVAL 0x7 0x5E //check class Adventurer (0x5E)
+BEQ 0x776 0xC 0x7 //compare, branch to 0x776 if equal
+ENUT 0xEF //flag on
+LABEL 0x776
+NoFade
+ENDA
+
 // People who stay in the party when they die
 PUSH
 ORG $84864
