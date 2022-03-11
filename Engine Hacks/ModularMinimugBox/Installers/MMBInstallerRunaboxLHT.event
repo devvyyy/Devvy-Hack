@@ -600,8 +600,8 @@ After each set of module options are definitions that you can use to adjust the 
 	#define MMBATKNumber
 	//#define MMBAVONumber
 	//#define MMBCHRNumber // Useless without skill system
-	#define MMBCRTNumber
-	//#define MMBDEFNumber
+	//#define MMBCRTNumber
+	#define MMBDEFNumber
 	//#define MMBDODNumber
 	#define MMBEXPNumber
 	#define MMBHITNumber
@@ -622,7 +622,7 @@ After each set of module options are definitions that you can use to adjust the 
 
 	// AS Number
 	#define MMBASX 112
-	#define MMBASY 48
+	#define MMBASY 40
 
 	// ATK Number
 	#define MMBATKX 112
@@ -638,11 +638,11 @@ After each set of module options are definitions that you can use to adjust the 
 
 	// CRT Number
 	#define MMBCRTX 112
-	#define MMBCRTY 40
+	#define MMBCRTY 16
 
 	// DEF Number
 	#define MMBDEFX 112
-	#define MMBDEFY 16
+	#define MMBDEFY 32
 
 	// DOD Number
 	#define MMBDODX 128
@@ -654,7 +654,7 @@ After each set of module options are definitions that you can use to adjust the 
 
 	// HIT Number
 	#define MMBHITX 112
-	#define MMBHITY 32
+	#define MMBHITY 48
 
 	// Level number
 	#define MMBLevelX 32
@@ -682,8 +682,8 @@ After each set of module options are definitions that you can use to adjust the 
 	#define MMBATKLabel
 	//#define MMBAVOLabel
 	//#define MMBCHRLabel
-	#define MMBCRTLabel
-	//#define MMBDEFLabel
+	//#define MMBCRTLabel
+	#define MMBDEFLabel
 	//#define MMBDODLabel
 	#define MMBEXPLabel
 	#define MMBHITLabel
@@ -703,7 +703,7 @@ After each set of module options are definitions that you can use to adjust the 
 
 	// AS label
 	#define MMBASLabelX 11
-	#define MMBASLabelY 6
+	#define MMBASLabelY 5
 	#define MMBASLabelVRAMTile 0x100
 	#define MMBASLabelPaletteIndex 2
 	#define MMBASLabelTileCount 2
@@ -731,14 +731,14 @@ After each set of module options are definitions that you can use to adjust the 
 
 	// CRT label
 	#define MMBCRTLabelX 11
-	#define MMBCRTLabelY 5
+	#define MMBCRTLabelY 2
 	#define MMBCRTLabelVRAMTile 0x108
 	#define MMBCRTLabelPaletteIndex 2
 	#define MMBCRTLabelTileCount 2
 
 	// DEF label
 	#define MMBDEFLabelX 11
-	#define MMBDEFLabelY 2
+	#define MMBDEFLabelY 4
 	#define MMBDEFLabelVRAMTile 0x10A
 	#define MMBDEFLabelPaletteIndex 2
 	#define MMBDEFLabelTileCount 2
@@ -759,7 +759,7 @@ After each set of module options are definitions that you can use to adjust the 
 
 	// HIT label
 	#define MMBHITLabelX 11
-	#define MMBHITLabelY 4
+	#define MMBHITLabelY 6
 	#define MMBHITLabelVRAMTile 0x10E
 	#define MMBHITLabelPaletteIndex 2
 	#define MMBHITLabelTileCount 2

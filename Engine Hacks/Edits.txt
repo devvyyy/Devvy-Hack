@@ -55,16 +55,6 @@ ALIGN 4
 CheckWexpWeaponTypeHook:
     WORD 0x19ED2550 0x24287828 0x5C2619E4 0xD0012E00 0x47184B01 0x47184B01 0x802C133 0x802C113
 
-PUSH
-    // remove check for magic sword bit
-    ORG 0x02C108
-        BYTE 0x80
-
-    // instead check for weapon exp in weapon type
-    ORG 0x02C124
-        WORD 0x47184B00; POIN CheckWexpWeaponTypeHook|1
-POP
-
 // Remove Kill Bonus for WEXP
 PUSH
 //by Alusq
