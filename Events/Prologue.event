@@ -89,6 +89,7 @@ END_MAIN
 
 MiscBasedEvents:
 AREA 0xF WallSus [10,5] [14,8]
+AREA 0x0 GaidenPrologue [7,6] [7,6]
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -176,12 +177,14 @@ SetBackground(0x25)
 STAL 10
 BROWNBOXTEXT WreyvineText [8,8]
 STAL 15
+
 TEXTSTART
 TEXTSHOW Prologue1
 TEXTEND
 MUSC 0xBB
 TEXTCONT
 TEXTEND
+
 REMA
 FADI 16
 CLEAN
@@ -192,11 +195,15 @@ ENUN
 STAL 40
 SetBackground(0x3B)
 MUSC 0x4E
+
 TEXTSTART
 TEXTSHOW Prologue2
 TEXTEND
+MUSC 0x92
+TEXTCONT
+TEXTEND
+
 ClearBackground
-Music(0x92)
 ENUN
 STAL 5
 SetBackground(0x3C)
@@ -363,5 +370,34 @@ WallSus:
 PlayerRangeCheck
 CAM1 [12,3]
 CharacterConditionalDialog(Ansgar,WhenTheWallIsSus2,WhenTheWallIsSus)
+NoFade
+ENDA
+
+GaidenPrologue:
+CHECK_EVENTID 0xA1
+BNE 0x1 0xC 0x0
+
+CHECK_EVENTID 0x3
+BNE 0x1 0xC 0x0
+
+CHECK_ACTIVEID Affogato
+BEQ 0x1 0xC 0x0
+
+CHECK_ALIVE Ansgar
+BEQ 1 0x0 0xC
+CHECK_ALIVE Breve
+BEQ 1 0x0 0xC
+CHECK_ALIVE Hildr
+BEQ 1 0x0 0xC
+
+CAM1 Affogato
+CUMO Affogato
+STAL 60
+CURE
+Text(PrologueGaidenThrone)
+STAL 5
+SOUN 0x77
+ENUT 0xA1
+LABEL 0x1
 NoFade
 ENDA

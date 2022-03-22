@@ -101,7 +101,6 @@ GrislyWoundIDLink:
 BYTE GrislyWoundID
 #include "PoisonStrikeGrislyWound/PSGWEvent.event"
 
-
 ALIGN 4
 Despoil:
 #incbin "Despoil/despoil.dmp"
@@ -127,6 +126,23 @@ WORD BreathOfLifeID
 POIN BreathOfLifeEvent
 POIN AuraSkillCheck
 #include "BreathOfLife/BreathOfLifeEvent.event"
+
+ALIGN 4
+HappyHour:
+#incbin "HappyHour/HappyHour.dmp"
+POIN SkillTester
+WORD HappyHourID
+POIN HappyHourEvent
+POIN AuraSkillCheck
+#include "HappyHour/HappyHourEvent.event"
+
+ALIGN 4
+PykeUlt:
+#incbin "PykeUlt/PykeUlt.dmp"
+POIN SkillTester
+WORD PykeUltID
+POIN PykeUltEvent
+#include "PykeUlt/PykeUltEvent.event"
 
 ALIGN 4
 Galeforce:

@@ -53,6 +53,7 @@ AnsgarBreveConvo:
 
 MiscBasedEvents:
 	AREA 0x14 DisclaimerEvent [12,12] [12,12]
+	AREA 0x0 GaidenCh1 [15,1] [15,1]
 	CauseGameOverIfLordDies
 	AFEV 0 EndingScene 0x2
 	END_MAIN
@@ -288,15 +289,46 @@ GiveGold(1000)
 Music(0x4A) //Night Ambience
 Text(Ch1Ending3Point5)
 LABEL 6
+
+CHECK_EVENTID 0xA2
+BEQ 0x42 0x0 0xC
+EVBIT_MODIFY 0x1
+LABEL 0x42
+
 CHECK_ALIVE Evelyn
 BEQ 7 0x0 0xC
-Text(Ch1Ending4)
-GOTO 8
+
+TEXTSTART
+TEXTSHOW Ch1Ending4
+TEXTEND
+
+CHECK_EVENTID 0xA2
+BEQ 8 0x0 0xC
+CHECK_ALIVE Sequin
+BEQ 8 0x0 0xC
+CHECK_ALIVE Nora
+BEQ 8 0x0 0xC
+CHECK_ALIVE Ansgar
+BEQ 8 0x0 0xC
+CHECK_ALIVE Breve
+BEQ 8 0x0 0xC
+CHECK_ALIVE Hildr
+BEQ 8 0x0 0xC
+
+MUSC 0xA9
+TEXTSHOW Ch1EndingGaiden
+TEXTCONT
+TEXTEND
+STAL 10
+MNC2 0x8
+
+GOTO 9
 LABEL 7
 Text(Ch1EndingAlt4)
 LABEL 8
 STAL 10
 MNC2 0x2
+LABEL 9
 NoFade
 ENDA
 
@@ -314,8 +346,44 @@ ENDA
 
 DisclaimerEvent:
 PlayerRangeCheck
+CHECK_EVENTID 0x20
+BEQ 0x1 0xC 0x0
 STAL 20
 	CenterTextbox(RingDisclaimer)
 SetFlag(0x12C)
+LABEL 0x1
+NoFade
+ENDA
+
+GaidenCh1:
+
+CHECK_EVENTID 0xA1
+BEQ 0x1 0xC 0x0
+
+CHECK_ACTIVEID Affogato
+BEQ 0x1 0xC 0x0
+
+CHECK_ALIVE Sequin
+BEQ 1 0x0 0xC
+CHECK_ALIVE Nora
+BEQ 1 0x0 0xC
+CHECK_ALIVE Ansgar
+BEQ 1 0x0 0xC
+CHECK_ALIVE Breve
+BEQ 1 0x0 0xC
+CHECK_ALIVE Hildr
+BEQ 1 0x0 0xC
+
+CAM1 Affogato
+CUMO Affogato
+STAL 60
+CURE
+Text(Ch1GaidenRuins)
+STAL 5
+SOUN 0x77
+UnsetFlag(0xA1)
+SetFlag(0xA2)
+
+LABEL 0x1
 NoFade
 ENDA

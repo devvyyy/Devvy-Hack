@@ -8,10 +8,6 @@
 .equ AuraSkillCheck, BreathOfLifeEvent+4
 .thumb
 push	{r4-r7,lr}
-@check if dead
-ldrb	r0, [r4,#0x13]
-cmp	r0, #0x00
-beq	End
 
 @check if attacked this turn
 ldrb 	r0, [r6,#0x11]	@action taken this turn
@@ -30,6 +26,11 @@ mov	lr, r3
 .short	0xf800
 cmp	r0,#0x00
 beq	CheckDefender
+
+@check if dead
+ldrb	r0, [r4,#0x13]
+cmp	r0, #0x00
+beq	End
 
 @Check if there are allies in 2 spaces
 ldr	r0, AuraSkillCheck
@@ -104,6 +105,11 @@ mov	lr, r3
 .short	0xf800
 cmp	r0,#0x00
 beq End
+
+@check if dead
+ldrb	r0, [r5,#0x13]
+cmp	r0, #0x00
+beq	End
 
 @Check if there are allies in 2 spaces
 ldr	r0, AuraSkillCheck

@@ -53,11 +53,11 @@ critical hit rate.[X]
 
 # 0x549
 Speed. Affects avoid, and if unit's[NL]
-Spd > Foe's Spd +4, unit can follow-up.[X]
+Spd is higher by 4, unit can follow-up.[X]
 
 # 0x54A
 Luck. Affects hit rate, avoid,[NL]
-and dodge.[X]
+and crit avoid.[X]
 
 # 0x54B
 Defense. Lowers damage taken[NL]
@@ -117,6 +117,13 @@ Essence[X]
 # 0x363
 Rune Sword[X]
 
+# 0x2E3
+Auspex[X]
+
+# 0x32E
+Seers gifted with light and shadow,[N]
+binding past and future. Equip: [LightIcon][DarkIcon][X]
+
 # 0x3a4
 [_M][_a][_g][_n][_u]m [_S]w[_o][_r][_d][X]
 
@@ -145,10 +152,17 @@ A powerful magnum bow.[X]
 Effective against armor.[X]
 
 # 0x431
- [X]
+Focal Rifle[X]
 
 # 0x428
- [X]
+# note: has 0 crit unlike other rifles, when off-hand it converts 25% crit
+Converts Crit into bonus Atk.[X]
+ 
+# 0x412
+Suffused with light magic. Ignores Str.[X]
+
+# 0x413
+Imbued with dark magic. Ignores Str.[X]
 
 # 0x483
 Increases HP by a max of[N]
@@ -471,8 +485,11 @@ Prologue: No Way Out[X]
 # 0x166 Ch6Name
 1-F: Our Last Stand[X]
 
-## Ch8Name
+# 0x167 Ch8Name
 2-1: Pale Glow[X]
+
+# 0x168 Gaiden1Name
+1-1x: Gold Rush[X]
 
 ## Ch9Name
 2-2: Maelstrom[X]
@@ -605,40 +622,6 @@ Capital Outskirts[X]
 
 ## PalaceName
 T[_h][_e] [_c][_a][_p]it[_a]l [_p][_a]l[_a][_c][_e][X]
-
-## BaseConvoTextID1
-[X]
-## BaseConvoTextID2
-[X]
-## BaseConvoTextID3
-[X]
-## BaseConvoTextID4
-[X]
-## BaseConvoTextID5
-[X]
-## BaseConvoTextID6
-[X]
-## BaseConvoTextID7
-[X]
-## BaseConvoTextID8
-[X]
-
-## BaseSupportTextID1
-[X]
-## BaseSupportTextID2
-[X]
-## BaseSupportTextID3
-[X]
-## BaseSupportTextID4
-[X]
-## BaseSupportTextID5
-[X]
-## BaseSupportTextID6
-[X]
-## BaseSupportTextID7
-[X]
-## BaseSupportTextID8
-[X]
 
 #include "Names.txt"
 

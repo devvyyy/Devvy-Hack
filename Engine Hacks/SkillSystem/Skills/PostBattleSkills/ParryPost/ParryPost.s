@@ -10,21 +10,25 @@
 .thumb
 push	{lr}
 
-@check if dead
-ldrb	r0, [r4,#0x13]
-cmp	r0, #0x00
-beq	End
-
 @check if attacked this turn
 ldrb 	r0, [r6,#0x11]	@action taken this turn
 cmp	r0, #0x2 @attack
 bne	End @if not attack, skip
 
-@hp not at full
-ldrb r0, [r4, #0x12] @max hp
-ldrb r1, [r4, #0x13] @curr hp
-cmp r0, r1
-bne End @skip if not max hp
+@check for skill
+IsWeapon:
+mov	r0, r4
+ldr	r1, ParryID
+ldr	r3, SkillTester
+mov	lr, r3
+.short	0xf800
+cmp	r0,#0x00
+beq	CheckDefender
+
+@check if dead
+ldrb	r0, [r4,#0x13]
+cmp	r0, #0x00
+beq	End
 
 @check range
 ldr r0,=#0x203A4D4 @battle stats
@@ -50,16 +54,6 @@ ldrb	r0, [r4, r1]
 cmp		r0, #0x2
 ble		IsWeapon
 b		End
-
-@check for skill
-IsWeapon:
-mov	r0, r4
-ldr	r1, ParryID
-ldr	r3, SkillTester
-mov	lr, r3
-.short	0xf800
-cmp	r0,#0x00
-beq	CheckDefender	
 
 @take 7 damage
 ldrb	r1, [r4,#0x12]	@r1=maxhp
@@ -99,6 +93,36 @@ mov lr, r3
 .short  0xf800
 cmp r0,#0x00
 beq End
+
+@check if dead
+ldrb	r0, [r5,#0x13]
+cmp	r0, #0x00
+beq	End
+
+@check range
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#1
+bgt End
+
+@are we in a battle
+ldrb r3, =gBattleData
+ldrb r3, [r3]
+cmp r3, #4
+beq End
+
+@check if foes are physical
+mov		r1, #0x50
+ldrb	r0, [r4, r1]
+cmp		r0, #0x03 @ 0, 1, 2, and 3 are physical weapons.
+ble		IsWeapon
+b		End
+
+mov		r1, #0x50
+ldrb	r0, [r5, r1]
+cmp		r0, #0x2
+ble		IsWeapon
+b		End
 
 @take 7 damage
 ldrb  r1, [r5,#0x12]  @r1=maxhp

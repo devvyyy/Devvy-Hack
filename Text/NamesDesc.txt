@@ -67,8 +67,8 @@ A wandering magician. A thief that[N]
 always has tricks up his sleeve.[X]
 
 ## KaneDesc
-A wise seer. He's searching for[NL]
-something or someone.[X]
+A wise, cool-headed tavernkeep willing[N]
+to do anything for the cause.[X]
 
 ## WegDesc
 A hearty Wreyvian general. A spry[N]
@@ -95,16 +95,16 @@ A blacksmith and family man. His spear[NL]
 and armor are always gleaming.[X]
 
 ## FlanDesc
-A troubadour following in her father's[NL]
-footsteps. Sweet and aloof.[X]
+A troubadour ready to fight on the[NL]
+front line. Sweet and confident.[X]
 
 ## IreneDesc
 A fierce swordswoman who wants to[NL]
 be the best blade of Wreyvine.[X]
 
 ## FryeDesc
-A relaxed mercenary and firebrand[N]
-with a quiet, vengeful spirit.[X]
+A relaxed firebrand with a[N]
+quiet, vengeful spirit.[X]
 
 ## VeliusDesc
 A quiet and jaded swordsman.[NL]
@@ -127,15 +127,15 @@ A Wreyvian scout looking for[N]
 his big break.[X]
 
 ## QuarrelDesc
-A trainee archer. Takes things[N]
+An archer trainee. Takes things[N]
 one step at a time.[X]
 
 ## EdithDesc
 An obstinate knight of the[N]
 royal guard. Determined.[X]
 
-## PerivalDesc
-A curious thaumaturge. He's[N]
+## PollyDesc
+A curious thaumaturge. She's[N]
 rather absent-minded.[X]
 
 ## VernaDesc
@@ -143,8 +143,8 @@ A spy working for the capital.[N]
 Has a chip on her shoulder.[X]
 
 ## CyrielleDesc
-A historian and falcon knight.[N]
-She's old and wise.[X]
+A historian using her pegasus to[N]
+uncover the secrets of Ideon.[X]
 
 ## IrisDesc
 A bishop of the holy guard.[N]
@@ -294,7 +294,7 @@ The Holy King of Wreyvine.[X]
 The Dark Rider of Aeteria.[X]
 
 ## FlamDesc
-Casts flames astride.[X]
+Casts flames astride. Ignores Str.[X]
 
 ## AtlasDesc
 Boosts damage = Unit's Atk/4.[X]
@@ -438,8 +438,8 @@ impassable for[N]
 
 ## MineDesc
 Traps a tile, making the tile end the[N]
-turn and damage the first unit that[N]
-steps on it (excluding thieves.)[X]
+turn and deal 20 damage to the first[N]
+unit that steps on it (excluding thieves.)[X]
 
 ## MineDesc2
 Makes a tile end turn[N]
@@ -466,11 +466,6 @@ A sturdy shield that halves[N]
 damage taken from follow-up[N]
 attacks.[X]
 
-## AMarchDesc
-Armored boots that grant the[N]
-armored user and adjacent[N]
-armored allies +2 movement.[X]
-
 ## InspFlagDesc
 A leader's banner that grants[N]
 allies within 2 spaces +2 Atk.[X]
@@ -480,7 +475,7 @@ A charm that increases its[N]
 holder's growth rates by 20%.[X]
 
 ## ReMoveItemDesc
-A robe that gives the wearer[N]
+A lucky ring that gives the wearer[N]
 a (Luck%) chance to get another[N]
 turn at the end of their turn.[X]
 
@@ -494,18 +489,8 @@ A red cape that increases its[N]
 wearer's priority so that enemies[N]
 attack them more often.[X]
 
-## GaleforceItemDesc
-A swift quiver that grants[N]
-another action to its holder[N]
-upon defeating an enemy.[X]
-
-## LungeItemDesc
-A robe that lets its wearer[N]
-swap places with an enemy[N]
-after combat using Lunge.[X]
-
 ## ShadeItemDesc
-A dark cloak that lowers its[N]
+A suspicious ring that lowers its[N]
 wearer's priority so that[N]
 enemies attack them less often.[X]
 
@@ -532,7 +517,7 @@ Here is your[N]
 share.[X]
 
 ## EffMageDesc
-Effective against magic users.[X]
+Effective against magic.[X]
 
 ## PlayD
 A motivating tune that[N]
@@ -680,4 +665,20 @@ Converts Crit/foe's missing HP to Atk.[X]
 
 ## ShiningDesc
 Deals bonus damage equal to foe's Res.[X]
+
+## BrevePrfDesc
+Doubles attacks when using all movement.[X]
+
+## HildrPrfDesc
++10 Def on initiation. Eff: [ArmorIcon][X]
+
+## AnsgarPrfDesc
+If HP = or > 50%, ignores enemy's weapon Mt.[X]
+
+## SequinPrfDesc
+Ignores 75% of foe's Res. Eff: [HorseIcon][X]
+
+## NoraPrfDesc
+Grants all allies: "Unit deals 10 bonus[N]
+damage, reduced by foe's Res."[X]
 

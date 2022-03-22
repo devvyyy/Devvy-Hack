@@ -419,7 +419,14 @@ LABEL 0x3
 
 STAL 15
 CameraCursor(Affogato)
+
+CHECK_EVENTID 0xA1
+BEQ 0x776 0xC 0x0
 Text(Ch6WTFMoment)
+GOTO 0x420
+LABEL 0x776
+Text(Ch6WTFAltMoment)
+LABEL 0x420
 STAL 3
 ENUT 0x4
 NoFade

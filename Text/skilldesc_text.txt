@@ -1,7 +1,34 @@
+## SD_CatchTheseHands
+Catch These Hands: At 1 range, ignores[N]
+unit's weapon Mt, targets Def, and unit[N]
+strikes twice consecutively.[X]
+
+## SD_SoulBlade
+Soul Blade: Ignores unit's weapon Mt,[N]
+but unit deals split damage.[X]
+
+## SD_HawkDive
+Hawk Dive: If unit initiates, deals bonus[N]
+damage scaling off of unit's Spd[N]
+(half Spd at 1 range, quarter at 2+).[X]
+
+## SD_Disarm
+Disarm: At 1 range, ignores enemy[N]
+weapon Mt.[X]
+
+## SD_HappyHour
+Happy Hour: Using an item restores HP to[N]
+allies within 3 spaces equal to ally's Luck.[X]
+
+## SD_CorneredWolf
+Cornered Wolf: When within 3 spaces of[N]
+2 or more enemies, or when below half HP,[N]
+grants Atk +4/Hit +40, and negates WTD.[X]
+
 ## SD_BirdWoohoo
-Blessings of Ascension: Unit's Eye of[N]
-Creation cannot lose durability. If[N]
-foe's HP is full, grants Atk +5.[X]
+Fallen Angel: Unit's Eye of Creation[N]
+cannot lose durability, and gets effect:[N]
+"If foe's HP is full, grants Mt +5."[X]
 
 ## SD_BladeWhirl
 Blade Whirl: If unit initiates against a[N]
@@ -53,8 +80,8 @@ Mt[_Space][_a][_n][_d][_Space]l[_e][_s][_s][_e][_r][_Space][_s][_e][_c][_o][_n][
 [_R]i[_f]l[_e][_Space]i[_n][_Space][_u][_n]it'[_s][_Space][_2][_n][_d] i[_n][_v][_e][_n]t[_o][_r][_y][_Space][_s]l[_o]t[_Space]([_e][_x][_c]l[_u][_d][_e][_s][_Space][_E][_f][_f][_Dot])[_Dot][X]
 
 ## SD_BloodHunt
-Blood Hunt: If foe's HP is equal/below half,[N]
-grants Atk/AS +5. Below a quarter, also[N]
+Blood Hunt: If foe's HP is half or less,[N]
+grants Atk/AS +5. At a quarter or less, also[N]
 grants Hit/Crit equal to foe's missing HP.[X]
 
 ## SD_ViolentTendencies
@@ -97,31 +124,31 @@ quarter, deals bonus damage equal to[N]
 unit's missing HP x 2.[X]
 
 ## SD_StaticPanic
-Static Panic: Grants +15 Crit for[N]
-each condition: adjacent to an ally,[N]
-adjacent to an enemy.[X]
+Daunt: Inflicts foes within 3 spaces:[N]
+"If unit initiates, unit cannot make a[N]
+follow-up attack."[X]
 
 ## SD_ArmWrestler2
-Catch These Hands: Grants +3 Atk/AS against[N]
+Arm Wrestler: Grants +3 Atk/AS against[N]
 bosses, doubled if they have Shove/Smite.[X]
 
-## SD_ArmWrestler
-Moxie: Grants +10 Hit/Avoid against[N]
-enemies with Shove/Smite.[X]
+## SD_Moxie
+Moxie: If a physical foe initiates,[N]
+ignores foe's weapon Mt.[X]
 
 ## SD_SolLance
 Solar Thrust: Deals (10 - foe's Res) bonus damage[N]
 on hit, and unit heal the same amount.[X]
 
 ## SD_Parry
-[_P][_a][_r][_r][_y]: If [_u][_n]it'[_s] [_H][_P] i[_s] f[_u]ll [_a][_n][_d] [_a] w[_e][_a][_p][_o][_n] i[_s][N]
-[_e][_q][_u]i[_p][_p][_e][_d], [_n][_e][_g][_a]t[_e][_s] [_p][_h][_y][_s]i[_c][_a]l [_a]tt[_a][_c][_k][_s] [_a]t [_1] [_r][_a][_n][_g][_e],[N]
-[_b][_u]t [_u][_n]it t[_a][_k][_e][_s] [_1] [_d][_a][_m][_a][_g][_e] [_a]ft[_e][_r] [_c][_o][_m][_b][_a]t.[X]
+Parry: If unit has a weapon equipped,[N]
+negates physical attacks at 1 range,[N]
+but unit takes 1 damage after combat.[X]
 
 ## SD_ResolutePyre
-Resolute Pyre: Grants Eth and Crit rate[N]
-during combat equal to half of unit and[N]
-foe's missing HP.[X]
+Resolute Pyre: Grants Eth/Cri during[N]
+combat equal to half of unit and foe's[N]
+missing HP.[X]
 
 ## SD_EustacePersonal
 Fractured Mask: If unit's HP is above half,[N]
@@ -227,21 +254,21 @@ Def + Res > foe's Def/Res.[X]
 
 ## SD_Stalwart
 Stalwart: If unit cannot counter,[N]
-foe cannot make a follow-up.[A]
+foe cannot make a follow-up.[X]
 
 ## SD_PykeMoment
-Rampage: At start of combat, if foe's HP[N]
-is less than  a quarter and foe dies[N]
-after combat, grants another action.[X]
+Like Dominoes: If unit initiates at 1[N]
+range, executes foes below a quarter HP,[N]
+and grants unit another action per kill.[X]
 
 ## SD_Starseer
 Gift of the Fallen: During the first[N]
 turn, unit dodges all enemy attacks.[X]
 
 ## SD_KingMark
-King's Mark: If foes within 4 spaces[N]
-have less than/equal to three quarters[N]
-HP, sets their Crit/Avoid to 0.[X]
+King's Mark: If HP of foes within 4[N]
+spaces is three quarters or less,[N]
+sets their Crit/Avoid to 0.[X]
 
 ## SD_ThunderClap
 Thunderclap: If foe's terrain has any[N]
@@ -302,8 +329,8 @@ Parity: Neutralizes terrain bonuses[N]
 from both sides.[X]
 
 ## SD_BuiltDifferent
-Cheap Shot: If foe's HP is equal/less[N]
-than half, grants unit Str/AS +2.[X]
+Cheap Shot: If foe's HP is half or[N]
+less, grants unit Str/AS +2.[X]
 
 ## SD_SteelSoul
 Steel Soul: If unit's Def is higher than[N]
@@ -319,8 +346,8 @@ Forlorn: If unit is not adjacent to[N]
 an ally, foe cannot make a follow-up.[X]
 
 ## SD_FracturedHeart
-Fractured Heart: All foes equal/less[N]
-than half HP take 2 more damage.[X]
+Fractured Heart: All foes with half[N]
+or less HP take 2 more damage.[X]
 
 ## SD_Edgelord
 Lone Wolf: If unit is not adjacent to[N]
@@ -389,12 +416,12 @@ Requiem: Multiplies Eth by[N]
 1.25x during combat.[X]
 
 ## SD_Defeatist
-Defeatist: If unit's HP is equal/below[N]
-half, inflicts Atk -5 on unit.[X]
+Defeatist: If unit's HP is half or[N]
+less, inflicts Atk -5 on unit.[X]
 
 ## SD_LastResort
-Last Resort: If unit's HP is equal/below[NL]
-half, both sides deal +5 damage.[X]
+Last Resort: If unit's HP is half or[NL]
+less, both sides deal +5 damage.[X]
 
 ## SD_ClearSoul
 Pure Heart: Adjacent allies take[N]
@@ -417,8 +444,8 @@ Steadfast: Grants +1 AS for[N]
 every 2 spaces moved.[X]
 
 ## SD_Whirlwind
-Thunderhead: If unit's HP is greater[N]
-than/equal to three quarters, Crit +15.[X]
+Thunderhead: If unit's HP is three[N]
+quarters or more, Crit +15.[X]
 
 ## SD_Sergeant
 Warden: If unit's HP is full,[N]
@@ -442,8 +469,8 @@ HP is full, and unit initiates, unit[N]
 strikes twice consecutively.[X]
 
 ## SD_Inspire
-Inspire: Grants Str +2 to all allies[N]
-with half HP or higher.[X]
+Inspire: All physical allies with half[N]
+HP or higher deal +2 damage.[X]
 
 ## SD_BitterCold
 Bitter Cold: All foes not at full HP[N]
@@ -586,17 +613,17 @@ Armored Blow: +7 Def[N]
 when initiating battle.[X]
 
 ## SD_Vantage
-Vantage: If unit's HP is equal/below[N]
-half, unit counters before foe's attack.[X]
+Vantage: If unit's HP is half or[N]
+less, unit counters before foe's attack.[X]
 
 ## SD_Desperation
-Desperation: If unit's HP is equal/below[N]
-half, follow-up attacks occur before[N]
+Desperation: If unit's HP is half or[N]
+less, follow-up attacks occur before[N]
 foe can counter.[X]
 
 ## SD_Wrath
-Wrath: If unit's HP is equal/below[N]
-half, grants +20 Crit.[X]
+Wrath: If unit's HP is half or[N]
+less, grants +20 Crit.[X]
 
 ## SD_Counter
 Counter: Reflect physical damage[N]
@@ -1272,7 +1299,7 @@ Thunderstorm: If weapon weight > enemy[N]
 W. Weight, +2 dmg, +15% hit, +5% crit.[X]
 
 ## SD_Warpath
-Warpath: Gain +3 Crit for[N]
+Warpath: Grants +3 Crit for[N]
 every space moved.[X]
 
 ## SD_Outrider
@@ -1284,8 +1311,8 @@ Heavy Strikes: Add weapon[N]
 weight to critical chance.[X]
 
 ## SD_Charge
-Charge: Gain +1 damage for[N]
-every 2 spaces moved.[X]
+Charge: Deal +1 damage for[N]
+every space moved.[X]
 
 ## SD_Infiltrator
 Infiltrator: If within 2 spaces[N]
@@ -1349,8 +1376,8 @@ Drive Defense: Allies within[N]
 2 spaces receive +4 defense.[X]
 
 ## SD_DriveRes
-Encourage: Grants +2 Res to[N]
-allies within 2 spaces.[X]
+Encourage: Allies within 2 spaces[N]
+take 2 less magical damage.[X]
 
 ## SD_Blossom
 Blossom: 2x growth rates,[N]
@@ -1519,9 +1546,9 @@ Negates enemy hit bonus from[N]
 weapon triangle advantage.[X]
 
 ## SD_BlueFlame
-Guardian: Grants Def +2 to adjacent[N]
-allies. If unit is adjacent to an ally,[N]
-grants Def +2 to unit.[X]
+Guardian: Adjacent allies take 2 less[N]
+physical damage. If unit is adjacent to[N]
+an ally, unit takes 2 less physical damage.[X]
 
 ## SD_DoubleLion
 Double Lion: All weapons[N]
@@ -1569,9 +1596,9 @@ Killer Instinct: Double bonus[N]
 effectiveness multipliers.[X]
 
 ## SD_Cultured
-Stand United: If unit ends action[N]
-adjacent to a physical Armored ally,[N]
-grants another action (once per turn).[X]
+Stand United: If unit initiates adjacent[N]
+to a physical Armored ally, grants another[N]
+action (once per turn).[X]
 
 ## SD_LullStr
 Lull Str: Negates the effects of[N]
@@ -1676,8 +1703,8 @@ Triangle Adept+: Doubles[N]
 weapon triangle effects.[X]
 
 ## SD_ChargePlus
-Charge+: If unit has used up[N]
-all movement, gain brave effect.[X]
+Charge: If unit uses all movement,[N]
+unit strikes twice consecutively.[X]
 
 ## SD_GreatShield
 Great Shield: Negate all damage.[N]

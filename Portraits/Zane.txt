@@ -68,7 +68,7 @@ Wegman_Mug:
 #incext PortraitFormatter "Wegman.png"
 setMugEntry(0x0D, Wegman_Mug, 3, 5, 3, 3)
 
-ALIGN 16 //Flan by Laurent Lacroix, Levin
+ALIGN 16 //Flan by ZessDynamite
 Flan_Mug:
 #incext PortraitFormatter "Flan.png"
 setMugEntry(0x0E, Flan_Mug, 2, 5, 3, 3)
@@ -150,8 +150,8 @@ setMugEntry(0x1D, Brulee_Mug, 3, 4, 3, 2)
 
 ALIGN 16
 Kane_Mug:
-#incext PortraitFormatter "monoclefunny.png"
-setMugEntryExtend(0x1E, Kane_Mug, 3, 4, 3, 2, 0, 4, 0, 0)
+#incext PortraitFormatter "Kane.png"
+setMugEntry(0x1E, Kane_Mug, 3, 5, 3, 3)
 
 ALIGN 16
 Sequin_Mug:
@@ -233,20 +233,14 @@ Lennard_Mug:
 #incext PortraitFormatter "Lennard.png"
 setMugEntry(0x3B, Lennard_Mug, 3, 5, 3, 2)
 
-ALIGN 16 //Edited by L95, needs a fixed palette so the eye gimmick works except it doesnt work aaaaargh!!!!1
+ALIGN 16 //Edited by L95, needs a fixed palette so the eye gimmick works
 Gorlois_Mug:
-#incbin "Gorlois_mug.dmp"
-#incbin "Gorlois_frames.dmp"
-#incbin "Gorlois_palette.dmp"
-#incbin "Gorlois_minimug.dmp"
+#incext PortraitFormatter "Gorlois.png"
 setMugEntryExtend(0x39, Gorlois_Mug, 3, 5, 3, 3, 10, 4, 0, 0)
 
 ALIGN 16 //Edited by L95
 GorloisBird_Mug:
-#incbin "literalbirdframes_mug.dmp"
-#incbin "literalbirdframes_frames.dmp"
-#incbin "literalbirdframes_palette.dmp"
-#incbin "literalbirdframes_minimug.dmp"
+#incext PortraitFormatter "literalbirdframes.png"
 setMugEntryExtend(0x47, GorloisBird_Mug, 8, 3, 3, 3, 10, 4, 0, 0)
 
 ALIGN 16
@@ -340,6 +334,46 @@ ALIGN 16 //King
 King_Mug:
 #incext PortraitFormatter "King.png"
 setMugEntryExtend(0x38, King_Mug, 4, 4, 4, 1, 0, 4, 10, 4)
+
+ALIGN 16
+Verna_Mug:
+#incext PortraitFormatter "Verna.png"
+setMugEntry(0x3D, Verna_Mug, 3, 5, 3, 3)
+
+ALIGN 16
+Auvrey_Mug: //Auvrey by Raymond
+#incext PortraitFormatter "Auvrey.png"
+setMugEntryExtend(0x3E, Auvrey_Mug, 3, 5, 3, 3, 0, 4, 0, 0)
+
+ALIGN 16
+Edith_Mug: //Edith by BuskHusker
+#incext PortraitFormatter "Edith.png"
+setMugEntry(0x3F, Edith_Mug, 3, 5, 3, 3)
+
+ALIGN 16
+Sofie_Mug: //Sofie by ZessDynamite
+#incext PortraitFormatter "Sofie.png"
+setMugEntry(0x40, Sofie_Mug, 3, 6, 3, 4)
+
+ALIGN 16
+Sren_Mug: //Sren by Raymond
+#incext PortraitFormatter "Sren.png"
+setMugEntry(0x41, Sren_Mug, 3, 5, 3, 3)
+
+ALIGN 16
+Klav_Mug:
+#incext PortraitFormatter "Klavdia.png"
+setMugEntry(0x42, Klav_Mug, 3, 5, 3, 3)
+
+ALIGN 16
+Perival_Mug:
+#incext PortraitFormatter "Perival.png"
+setMugEntry(0x43, Perival_Mug, 3, 5, 3, 3)
+
+ALIGN 16
+Iris_Mug: //Iris by Raymond
+#incext PortraitFormatter "Iris.png"
+setMugEntry(0x44, Iris_Mug, 3, 5, 3, 3)
 
 ALIGN 16 //Shon by autonima
 Shon_Mug:

@@ -28,10 +28,10 @@ cmp     r0, #2         @Is it Axe?
 bne     End        @If not, goto end
 
 @hp not at full
-ldrb r0, [r4, #0x12] @max hp
-ldrb r1, [r4, #0x13] @curr hp
-cmp r0, r1
-bne End @skip if not max hp
+@ldrb r0, [r4, #0x12] @max hp
+@ldrb r1, [r4, #0x13] @curr hp
+@cmp r0, r1
+@bne End @skip if not max hp
 
 @check range
 ldr r0,=#0x203A4D4 @battle stats

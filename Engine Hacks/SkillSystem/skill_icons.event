@@ -4,6 +4,15 @@ SkillIcons:
 //Icon graphics are uncompressed
 #define SkillIcon(skillID) "128*skillID+SkillIcons"
 
+ORG SkillIcon(PykeUltID)
+#incbin "SkillIcons/DeathFromBelow.dmp"
+
+ORG SkillIcon(MoxieID)
+#incbin "SkillIcons/Daunt.dmp"
+
+ORG SkillIcon(HappyHourID)
+#incbin "SkillIcons/HappyHour.dmp"
+
 ORG SkillIcon(BurstFireID)
 #incbin "SkillIcons/BurstFire.dmp"
 
@@ -1058,7 +1067,7 @@ ORG SkillIcon(MoonlightID)
 #incbin "SkillIcons/Moonlight.dmp"
 
 ORG SkillIcon(ChargePlusID)
-#incbin "SkillIcons/ChargePlus.dmp"
+#incbin "SkillIcons/Charge.dmp"
 
 ORG SkillIcon(SkyguardID)
 #incbin "SkillIcons/Skyguard.dmp"

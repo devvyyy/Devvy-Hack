@@ -203,7 +203,7 @@
 
 //Static Panic: aaaaa zeri
 //Kelik Zenair
-#define StaticPanicID 255
+#define StaticPanicID 87
 
 //Debuff Skills
 
@@ -276,11 +276,11 @@
 
 //Camaraderie: Recover 10% HP each turn if there are allies within 2 tiles.
 //Author Unknown (Initial Commit)
-#define CamaraderieID 87
+#define CamaraderieID 255
 
 //Relief: Recover 20% HP each turn if there are no allies within 2 tiles.
 //Author Unknown (Initial Commit)
-#define ReliefID 90
+#define ReliefID 255
 
 //Bond: All allies within 3 tiles recover 10% HP each turn.
 //Author Unknown (Initial Commit)
@@ -498,9 +498,17 @@
 //By Datagne
 #define ChargeID 199
 
+//Like Dominoes: ok so you know how happy compared them to bowling pins 
+//Kelik Zenair
+#define PykeUltID 104
+
 //Warpath: like charge but crit
 //Kelik Zenair
 #define WarpathID 113
+
+//Moxie: i hate weapon mt!!!
+//Kelik Zenair
+#define MoxieID 90
 
 //Keepsake Ring: gives charge/steadfast/warden
 //Kelik Zenair
@@ -518,9 +526,17 @@
 //Kelik Zenair
 #define NoGuardID 255
 
+//Magic Sword skill: fixes the display lol
+//Kelik Zenair
+#define MagicSwordID 228
+
+//Happy Hour: idk alcohol
+//Kelik Zenair
+#define HappyHourID 39
+
 //Charge+: Charge+: If unit has used up all movement, gain brave effect.
 //By Sme
-#define ChargePlusID 255
+#define ChargePlusID 43
 
 //Critical Force: Base critical is Skl * 1.5.
 //Author Unknown (Initial Commit)
@@ -532,7 +548,7 @@
 
 //Crit Boost: +15 critical rate.
 //Author Unknown (Initial Commit)
-#define CritUpID 43
+#define CritUpID 255
 #define CritBoostID CritUpID //Alias
 
 //Strong Riposte: When under attack, damage +3.
@@ -558,7 +574,7 @@
 //Defiant Avoid/Crit: When HP is 25% or lower, gain +30 Avoid or Crit.
 //By Sme
 #define DefiantAvoID 255
-#define DefiantCritID 228
+#define DefiantCritID 255
 
 //Indoor/Outdoor Fighter: +10 Hit and Avo when fighting indoors/outdoors.
 //By Sme
@@ -577,7 +593,7 @@
 //Faire Skills: +4 damage when equipping a weapon of the specified type.
 //Author Unknown (Initial Commit)
 #define SwordfaireID 255
-#define LancefaireID 39
+#define LancefaireID 255
 #define AxefaireID 255
 #define BowfaireID 255
 #define TomefaireID 255
@@ -684,7 +700,7 @@
 
 //Soul Splitter: +AS = foe's res/2. foe loses as = units res/2.
 //Kelik Zenair
-#define SoulSplitterID 104
+#define SoulSplitterID 255
 
 //Fortune: This unit cannot be crit.
 //By Sme

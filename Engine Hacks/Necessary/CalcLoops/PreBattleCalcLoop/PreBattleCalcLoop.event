@@ -27,7 +27,7 @@ POIN DefendingCheck
 #ifdef BIORHYTHM
   POIN BiorhythmFunc
 #endif //BIORHYTHM
-POIN Wrath SpurStr SpurMag SpurSpd SpurDef SpurRes Anima1 Anima2 Anima3 Anima4 Dark1 Dark2 Dark3 Dark4 Dark5
+POIN Moxie Wrath SpurStr SpurMag SpurSpd SpurDef SpurRes Anima1 Anima2 Anima3 Anima4 Dark1 Dark2 Dark3 Dark4 Dark5
 POIN DriveStr DriveMag DriveSpd DriveDef DriveRes
 POIN LuckySeven OddRhythm EvenRhythm QuickBurn SlowBurn
 POIN Warlock Demoiselle DevilAxeSkill Shrewd Inspire BitterCold Galestorm ChainReaction Gentilhomme MaleficAura RayDark Blackfire Intimidate Tantivy Daredevil Focus Inspiration Charm Solidarity VoiceOfPeace Anathema LilysPoise Charisma Hex Loyalty Infiltrator
@@ -37,7 +37,9 @@ POIN BlueFlame BlueFlameAura StaticPanic Frostbite DoubleLion Cultured Thighdeol
 POIN Frenzy Nevermore Maestro ResolutePyre // This was moved here because Str/Mag Split conflict, and... I'm not sure why it wouldn't be here in the first place.
 POIN UpWithArch
 POIN AxefaithHit
-POIN Eulogy
+POIN MagicSwordSkill //deletes atk
+POIN PykeUltPre //deletes atk
+POIN Eulogy //deletes atk
 POIN StancesASM
 #ifdef ENABLE_GBA_LETHALITY
 POIN LethalitySkill Bane
