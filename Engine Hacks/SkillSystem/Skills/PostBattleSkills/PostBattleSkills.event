@@ -10,6 +10,24 @@ CheckGaleforce: //decides if the unit should be cantoing or not
 #incbin "Galeforce/checkgaleforce.dmp"
 
 ALIGN 4
+ElbowGrease:
+#incbin "ElbowGrease/ElbowGrease.dmp"
+POIN SkillTester
+WORD ElbowGreaseID
+POIN ElbowGreaseEvent
+#include "ElbowGrease/ElbowGrease.event"
+
+ALIGN 4
+ShootTwice:
+#incbin "ShootTwice/ShootTwice.dmp"
+POIN SkillTester
+WORD ShootTwiceID
+POIN ShootTwiceEvent
+#include "ShootTwice/ShootTwice.event"
+POIN ShootTwiceEvent2
+#include "ShootTwice/ShootTwice2.event"
+
+ALIGN 4
 BurstFireDamage:
 #incbin "BurstFire/BurstFire.dmp"
 POIN SkillTester

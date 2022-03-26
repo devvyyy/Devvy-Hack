@@ -4,6 +4,15 @@ SkillIcons:
 //Icon graphics are uncompressed
 #define SkillIcon(skillID) "128*skillID+SkillIcons"
 
+ORG SkillIcon(UpgradeID)
+#incbin "SkillIcons/SentryPlus.dmp"
+
+ORG SkillIcon(ElbowGreaseID)
+#incbin "SkillIcons/ElbowGrease.dmp"
+
+ORG SkillIcon(AlacrityID)
+#incbin "SkillIcons/Alacrity.dmp"
+
 ORG SkillIcon(PykeUltID)
 #incbin "SkillIcons/DeathFromBelow.dmp"
 

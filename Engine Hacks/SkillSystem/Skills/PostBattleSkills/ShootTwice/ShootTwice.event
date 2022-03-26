@@ -1,0 +1,11 @@
+ShootTwiceEvent:
+CHECK_ALIVE 0x1D
+CAM1 0xFFFF
+BEQ 0x776 0x0 0xC
+SVAL 0x2 0x1D
+SVAL 0x3 10
+ASMC GiveExperienceASMC|1
+ASMC 0x790A5 //forces the running event to end
+LABEL 0x776
+NoFade
+ENDA

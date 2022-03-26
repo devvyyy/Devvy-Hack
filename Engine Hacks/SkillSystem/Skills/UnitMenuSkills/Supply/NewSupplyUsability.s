@@ -8,8 +8,8 @@
 .thumb
 .align
 
-.equ SupplyID,SkillTester+4
-.equ AlsoUseVanillaCheck,SupplyID+4
+.equ ParryID,SkillTester+4
+.equ AlsoUseVanillaCheck,ParryID+4
 .equ gActiveUnit,0x3004E50
 
 .macro blh to, reg=r3
@@ -31,7 +31,7 @@ ldr r0, SkillTester
 mov lr, r0
 ldr r1, =gActiveUnit
 ldr r0, [r1]
-ldr r1, SupplyID
+ldr r1, ParryID
 .short  0xf800
 cmp r0, #1
 beq ReturnTrue
@@ -141,7 +141,7 @@ bne IsAdjacent_Next
 
 	ldr r3, SkillTester
 	mov lr, r3
-	ldr r1, SupplyID
+	ldr r1, ParryID
 	.short  0xf800
 	cmp r0, #1
 	beq IsAdjacent_Return_True
@@ -169,5 +169,5 @@ bx r1
 
 SkillTester:
 @POIN SkillTester
-@WORD SupplyID
+@WORD ParryID
 @WORD AlsoUseVanillaCheck

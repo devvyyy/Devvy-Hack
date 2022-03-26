@@ -1,6 +1,23 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+//Fix coordinate loading in WARP codes when not loading from slot B
+PUSH
+ORG $10C18
+SHORT $7891 $78D2 $0608
+POP
+
+//Green Summons
+//by Pikmin1211
+
+PUSH
+ORG 0x7ADE6
+SHORT 0x2540
+
+ORG 0x244AA
+SHORT 0x2CFF
+POP
+
 // Used for not drawing Gaiden spells if the hack isn't installed.
 ALIGN 4
 GaidenStatScreen:

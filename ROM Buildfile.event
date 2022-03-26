@@ -1,4 +1,5 @@
     PROTECT 0xC00000
+	//PROTECT 0x95F5A4 //summon table
 
 
 #ifdef _FE8_
@@ -45,7 +46,7 @@ ALIGN 4
 	#include "Engine Hacks/BattleBGM/Installer.event" //by Aera
 	#include "Engine Hacks/ChapterScreen/ChapterScreen.event" //by Huichelarr
 //	#include "Engine Hacks/PrepBGM/Installer.event" //by Aera
-	#include "Engine Hacks/ArmsScroll/ArmsScroll.event" //By Pikmin1211
+//	#include "Engine Hacks/ArmsScroll/ArmsScroll.event" //By Pikmin1211
 	#include "Engine Hacks/SendItems/Installer.event" //By Pikmin1211
 	#include "Engine Hacks/HardModeShop/Installer.event" //By Pikmin1211
 	#include "Engine Hacks/NarrowFontExtension/SerifExtension.txt" //By MinN
@@ -70,6 +71,9 @@ ALIGN 4
 	#include "Engine Hacks/CritCap/CritCap.event" //by Contro
 	#include "Engine Hacks/SupportLimit/Installer.event" //By Aera
 	#include "Engine Hacks/ChangePortrait/Installer.event" //by 7743
+	#include "Engine Hacks/DenyStatScreen/Installer.event" //by Sme
+	#include "Engine Hacks/AlphabeticalSort/Installer.event" //by Sme
+	#include "Engine Hacks/MultiSummonItems/Installer.event" //by 7743
     #include "Engine Hacks/Edits.txt"
 	
     MESSAGE Used hax space ends at currentOffset

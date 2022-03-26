@@ -14,6 +14,18 @@ mov r14,r6
 cmp r0,#0
 beq End
 
+@check range
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#1
+bne End
+
+ldrb r0,[r5,#0x12] @max hp
+ldrb r1,[r5,#0x13] @cur hp
+lsl r1,r1,#2 @cur hp x4
+cmp r1,r0
+bgt End @if cur hp x4 is less than or equal to max HP, we are at 25% or less
+
 @ does attacker have wtd
 mov r0,#0x53
 ldsb r1,[r5,r0]

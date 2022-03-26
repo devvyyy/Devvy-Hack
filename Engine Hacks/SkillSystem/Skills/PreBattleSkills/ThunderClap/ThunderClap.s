@@ -6,17 +6,10 @@ mov r4, r0 @atkr
 mov r5, r1 @dfdr
 
 @enemy tile has no bonuses
-mov r1, #0x56
-ldrb r0, [r5,r1] @terrain def
-cmp r0, #0
-bne CheckSkill
-add r1, #1
+mov r1, #0x57
 ldrb r0, [r5,r1] @terrain avo
 cmp r0, #0
 bne CheckSkill
-add r1, #1
-ldrb r0, [r5,r1] @terrain res
-cmp r0, #0
 beq End
 
 CheckSkill:
@@ -28,6 +21,12 @@ ldr r1, ThunderClapID
 .short 0xf800
 cmp r0, #0
 beq End
+
+@obliterate terrain avoid
+mov r0, r5
+add r0,#0x57
+mov r3,#0
+strh r3,[r0]
 
 @add 15 crit
 mov r1, #0x66
