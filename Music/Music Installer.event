@@ -8,6 +8,11 @@ voicegroup001:
   #incbin "FE8_NI_Map_2.bin"
 #endif
 
+//PUSH //hmm this annihilates everything
+//ORG 0x1001860
+//#incbin "custom_piano.bin"
+//POP
+
 #define SongTable(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT Group Group; POP"
 #define BattleMusicGroup 0
 #define MapMusicGroup 1
@@ -28,6 +33,62 @@ ALIGN 4
 SongTable(0x02D6,song02D6,7)
 #include "BardSound.event"
 
+//LHT Music by Runa
+ALIGN 4
+// Corbenic Pride
+SongTable(0x03D7,song03D7,1)
+#include "CorbenicPride.event"
+
+ALIGN 4
+// A Savage Approach
+SongTable(0x03D8,song03D8,1)
+#include "ASavageApproach.event"
+
+ALIGN 4
+// Ritual Song of Dhara
+SongTable(0x3D9,song03D9,1)
+#include "RitualSongOfDhara.event"
+
+ALIGN 4
+// Quiet Palace Courtyard
+SongTable(0x43,song43,0)
+#include "LHTTitle.event"
+
+ALIGN 4
+// Faded Green
+SongTable(0x34,song34,0)
+#include "FadedGreen.event"
+
+ALIGN 4
+// Premordial Reminders
+SongTable(0x3DD,song03DD,1)
+#include "PrimordialReminders.event"
+
+ALIGN 4
+// Greatmother
+SongTable(0x3DE,song03DE,0)
+#include "Greatmother.event"
+
+ALIGN 4
+// Hollow Battle's Call
+SongTable(0x3DF,song03DF,1)
+#include "HollowBattlesCall.event"
+
+ALIGN 4
+// Fly, My Bird
+SongTable(0x3E0,song03E0,0)
+#include "FlyMyBird.event"
+
+ALIGN 4
+// Flames of Conflict
+SongTable(0x3E1,song03E1,0)
+#include "FlamesOfConflict.event"
+
+ALIGN 4
+// The Many Suns
+SongTable(0x3CE,song03CE,0)
+#include "TheManySuns.event"
+
 ALIGN 4
 // Drums Before Map
 SongTable(0x03E3,Sussy,1)
@@ -45,12 +106,12 @@ SongTable(0x1,song01,0)
 
 ALIGN 4
 // Escape by Runa
-SongTable(0x3E2,EscapeSong,0)
+SongTable(0x3E2,song03E2,0)
 #include "Escape.event"
 
 ALIGN 4
 //Before Battle
-SongTable(0x34,song34,0)
+SongTable(0x3DC,song03DC,0)
 #include "Preps.event"
 
 //Why Are We Without Hope...
@@ -65,7 +126,7 @@ SongTable(0xBB,songBB,0)
 
 ALIGN 4
 //Drumbeat of Doom
-SongTable(0x18E,Drumbeat,0)
+SongTable(0x18E,song018E,0)
 #include "DrumbeatOfDoom.event"
 
 ALIGN 4
@@ -122,6 +183,16 @@ ALIGN 4
 //Knights of the Wind
 SongTable(0x012D,song012D,1)
 #include "KnightsOfWind.event"
+
+ALIGN 4
+//Combat ~Resistance
+SongTable(0x3CB,song03CB,1)
+#include "BattleV.event"
+
+ALIGN 4
+//Combat ~First Campaign
+SongTable(0x3CD,song03CD,1)
+#include "FirstCampaign.event"
 
 ALIGN 4
 //Chase of Shadow
@@ -263,7 +334,7 @@ SongTable(0x152,song0152,1)
 
 ALIGN 4
 //Feena from RPGGamer
-SongTable(0xE1,song03A8,1)
+SongTable(0xE1,songE1,1)
 #include "Feena.event"
 
 //ALIGN 4
@@ -453,12 +524,12 @@ SongTable(0x13A,OldKing,1)
 
 ALIGN 4
 //The Tale Told By The Wind
-SongTable(0x43,TaleToldByWind,0)
+SongTable(0x3DA,TaleToldByWind,0)
 #include "TaleToldByWind.event"
 
 ALIGN 4
 //FE5 Theme
-SongTable(0x43,song43,0)
+SongTable(0x3DB,song03DB,0)
 #include "FE5Theme.event"
 
 ALIGN 4

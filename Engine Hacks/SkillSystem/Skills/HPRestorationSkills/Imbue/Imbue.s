@@ -22,18 +22,18 @@ cmp r0,#0
 beq GoBack
 
 @unit is in r4
-@get mag stat
+@get res stat
 mov r0,r4
 add r0,#0x18
-ldrb r0,[r0] @r0 = mag
+ldrb r0,[r0] @r0 = res
 
-@multiply it by 100
+@multiply it by 200
 mov r1,#200
 mul r0,r1
 
+
 @divide it by MHP
-mov r1,r5
-ldrb r1,[r1,#0x12] @r1 = mhp
+ldrb r1,[r4,#0x12] @r1 = mhp
 
 @add MHP to dividend to make it round up
 add r0,r1

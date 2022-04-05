@@ -5,7 +5,6 @@
 .endm
 .equ ShootTwiceID, SkillTester+4
 .equ ShootTwiceEvent, ShootTwiceID+4
-.equ ShootTwiceEvent2, ShootTwiceID+4
 .thumb
 
 push	{r14}
@@ -24,23 +23,22 @@ mov	lr, r3
 cmp		r0,#0
 beq		End
 
+@check if last action was attacking
+ldr r0,=#0x203A958
+ldrb r0,[r0,#0x11]
+mov r1,#0x2
+cmp r0,r1
+bne End
+
 @check if enemy is dead
 ldrb	r0, [r5,#0x13]
 cmp	r0, #0x00
-beq	EpicEvent
+beq	TheCheck
 
 Event:
 ldr	r0,=#0x800D07C		@event engine thingy
 mov	lr, r0
 ldr	r0, ShootTwiceEvent		@this event is just "play some sound effects"
-mov	r1, #0x01			@0x01 = wait for events
-.short	0xF800
-b TheCheck
-
-EpicEvent:
-ldr	r0,=#0x800D07C		@event engine thingy
-mov	lr, r0
-ldr	r0, ShootTwiceEvent2		@this event is just "play some sound effects"
 mov	r1, #0x01			@0x01 = wait for events
 .short	0xF800
 
@@ -52,13 +50,6 @@ lsl	r1, #0x08
 and	r0, r1
 cmp	r0, #0x00
 bne	End
-
-@check if last action was attacking
-ldr r0,=#0x203A958
-ldrb r0,[r0,#0x11]
-mov r1,#0x2
-cmp r0,r1
-bne End
 
 @unset 0x2 and 0x40, set 0x400, write to status
 ldr	r0, [r4,#0x0C]	@status bitfield

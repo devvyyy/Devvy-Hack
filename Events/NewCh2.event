@@ -80,7 +80,7 @@ UNIT Mocha PegasusRider 0x1 Level(3, Ally, 0)     [14,0] 0 0 1 REDA9R2 [SteelBla
 	UNIT
 	
 WoohooPeg:
-UNIT Mocha PegasusRider 0x1 Level(3, Ally, 0)     [5,18] 0 0 1 REDA5R15 [IronLance,Torch] AttackInRangeAI
+UNIT Mocha PegasusRider 0x1 Level(3, Ally, 0)     [5,18] 0 0 1 REDA4R15 [IronLance,Torch] AttackInRangeAI
 	UNIT
 	
 LunaPirate:
@@ -160,10 +160,6 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-SetBackground(0x35)
-Music(0xA9)
-FADU 15
-Text(Ch2Opening1)
 SetBackground(0x2B)
 SOUN 0xA6
 STAL 3
@@ -177,7 +173,7 @@ SOUN 0xA6
 STAL 3
 SOUN 0xA7
 STAL 5
-MUSCSLOW 0x24
+MUSCSLOW 0x3E2
 CharacterConditionalDialog(Evelyn,Ch2Opening2,Ch2OpeningAlt2)
 FADI 60
 	LOAD1 0x1 EnemyUnits

@@ -2,6 +2,7 @@
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
 //Fix coordinate loading in WARP codes when not loading from slot B
+//by hypergammaspaces
 PUSH
 ORG $10C18
 SHORT $7891 $78D2 $0608
@@ -26,6 +27,8 @@ WORD 0
 //Lyon Status Staff Avoid
 PUSH
 ORG 0x02CD44
+BYTE 0x3F //Sentry
+ORG 0x02CD48
 BYTE 0x35 //Maynard
 POP
 

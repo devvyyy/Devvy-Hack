@@ -141,3 +141,19 @@ LanceCavCardPalette:
 #incbin "LanceCavCardPalette.dmp"
 LanceCavClassCard:
 setCardEntry(0x80, LanceCavCard,LanceCavCardPalette)
+
+ALIGN 4
+GriffonCard: //by EldritchAbomination, N426, Jj09
+#incbin "GriffonCard.dmp"
+GriffonCardPalette:
+#incbin "GriffonCardPalette.dmp"
+GriffonClassCard:
+setCardEntry(0x98, GriffonCard,GriffonCardPalette)
+
+ALIGN 4
+ArbalestCard: //by EldritchAbomination, N426, Jj09
+#incbin "ArbalestCard.dmp"
+ArbalestCardPalette:
+#incbin "ArbalestCardPalette.dmp"
+ArbalestClassCard:
+setCardEntry(0xA4, ArbalestCard,ArbalestCardPalette)

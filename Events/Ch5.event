@@ -103,6 +103,10 @@ UNIT BadGuy Shaman 0x1 Level(6, Enemy, 1)     [14,10] 0b 0x0 0x0 0x0 [Flux,] Bos
 UNIT BadGuyStealable AxeCav 0x1 Level(5, Enemy, 1)     [14,12] 0b 0x0 0x0 0x0 [IronAxe,Vulnerary] TwoActionAI
 UNIT BadGuy Thaumaturge 0x1 Level(5, Enemy, 1)     [6,14] 0x0 0x0 0x0 0x0 [Thunder] TwoActionAI
 	UNIT
+	
+NewNew:
+UNIT Atheya WyvernRider_F 0x1 Level(5, Ally, 0)     [6,13] 0x0 0x0 0x0 0x0 [IronLabrys,KillerAxe,Elixir,] AttackInRangeAI
+UNIT
 
 NagitoKomaeda:
 UNIT Murray Deserter 0x1 Level(7, Enemy, 0)     [13,15] 0b 0x0 0x0 0x0 [SapphireLance,ShortSpear,GoddessIcon] BossAI
@@ -174,29 +178,39 @@ SetBackground(0x34)
 Text(Ch5OpeningEnemyMoment)
 ClearBackground
 STAL 10
-CHECK_ALIVE Atheya
-BEQ 2 0x0 0xC
-CHECK_ALIVE Mocha
-BEQ 2 0x0 0xC
 Music(0x48)
 SetBackground(0x33)
+CHECK_ALIVE Mocha
+BEQ 2 0x0 0xC
 TEXTSTART
 TEXTSHOW Ch5Opening2
 TEXTEND
+GOTO 3
+LABEL 2
+TEXTSTART
+TEXTSHOW Ch5OpeningAlt2
+TEXTEND
+LABEL 3
 MUSC 0x92
 TEXTCONT
 TEXTEND
 FADI 60
 CLEAN
-LABEL 2
 Music(0x24)
 SetBackground(0x39)
 FADU 40
 STAL 5
-DoubleConditionalDialog(Atheya,Mocha,Ch5Opening3,Ch5OpeningAlt3,4,5)
+CHECK_ALIVE Mocha
+BEQ 4 0x0 0xC
+Text(Ch5Opening3)
+GOTO 5
+LABEL 4
+Text(Ch5OpeningAlt3)
+LABEL 5
 FADI 45
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 NagitoKomaeda
+	LOAD1 0x1 NewNew
 	ENUN
 	GotoPrepScreen
 	ENDA

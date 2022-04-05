@@ -28,7 +28,7 @@ TURN 0x0 EndingScene [11,0] 0x0
 ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0x9, NoraFlorisConvo, Nora, Floris)
-CharacterEventBothWays(0x10, StroganAtheyConvo, Atheya, Stroganoff)
+CharacterEventBothWays(0x10, YoryKaneConvo, Yory, Kane)
 CharacterEventBothWays(0x11, FlorisUlrichConvo, Floris, Ulrich)
 	END_MAIN
 
@@ -104,21 +104,18 @@ UNIT Aeteria Mercenary 0x1 Level(5, Enemy, 1)     [6,0] 0x0 0x0 0x0 0x0 [IronSwo
 	UNIT
 
 NPCEPIC:
-UNIT HolyGuard Priest 0x1 Level(3, NPC, 1)     [3,14] 0b 0x0 0x0 0x0 [Union, Heal] HealAI
-UNIT HolyGuard Monk 0x1 Level(4, NPC, 1)     [9,14] 0b 0x0 0x0 0x0 [Light2, Vulnerary] AttackInRangeAI
-UNIT HolyGuard Monk 0x1 Level(3, NPC, 1)     [10,14] 0b 0x0 0x0 0x0 [Light1, Elixir] AttackInRangeAI
-UNIT HolyGuard Archer 0x1 Level(3, NPC, 1)     [12,12] 0b 0x0 0x0 0x0 [Longbow, Vulnerary] BossAI
+UNIT HolyGuard Monk 0x1 Level(3, NPC, 1)     [3,14] 0b 0x0 0x0 0x0 [Light1, Vulnerary] ChargeAI
+UNIT HolyGuard Archer 0x1 Level(3, NPC, 1)     [12,12] 0b 0x0 0x0 0x0 [Elixir] BossAI
 UNIT
 
 NPCREIN:
-UNIT HolyGuard Priest 0x1 Level(5, NPC, 1)     [9,15] 0 0 1 REDA9R13 [Fear, Physic] HealAI
-UNIT HolyGuard Cleric 0x1 Level(5, NPC, 1)     [10,15] 0 0 1 REDA10R13 [Slow, Physic] HealAI
+UNIT HolyGuard Priest 0x1 Level(5, NPC, 1)     [9,15] 0 0 1 REDA9R13 [Fear, Vulnerary] ChargeAI
+UNIT HolyGuard Cleric 0x1 Level(5, NPC, 1)     [10,15] 0 0 1 REDA10R13 [Slow, Vulnerary] ChargeAI
 UNIT
 
 TankyHealerWTF:
 UNIT Brulee Priest 0x1 Level(4, Ally, 0)     [6,12] 0x0 0x0 0x0 0x0 [Mend,Haze] AttackInRangeAI
 UNIT Yory 0x61 0x1 Level(3, Ally, 0)     [5,13] 0x0 0x0 0x0 0x0 [Mine,LightRune,Torch] AttackInRangeAI
-UNIT Atheya WyvernRider_F 0x1 Level(5, Ally, 0)     [6,13] 0x0 0x0 0x0 0x0 [IronLabrys,Elixir,] AttackInRangeAI
 UNIT
 
 ArenaRein:
@@ -298,7 +295,7 @@ LOAD2 0x1 EndCutsceneUnits
 FADU 12
 CameraCursor(Affogato)
 STAL 5
-SetBackground(0x3F)
+SetBackground(0x2B)
 Text(Ch4Ending1)
 FADI 60
 CLEAN
@@ -362,7 +359,7 @@ LoadReinforcements(InsideRein)
 STAL 20
 CAM1 [9,13]
 LOAD1 0x1 NPCREIN
-Text(AtheyaReinText)
+Text(AffoReinText2)
 VCWF 5
 STAL 30
 NoFade
@@ -436,9 +433,9 @@ NoraFlorisConvo:
 	NoFade
 	ENDA
 
-StroganAtheyConvo:
+YoryKaneConvo:
 	MUSI
-	Text(StroganAtheyaTalk)
+	Text(YoryKaneTalk)
 	MUNO
 	MURE 2
 	NoFade

@@ -14,13 +14,13 @@ PointerList:
 
 TurnBasedEvents:
 TURN 0x0 ReinWarning [1,0] 0x80
-TURN 0x0 TopLeftRein [2,0] 0x0
 TURN 0x0 WaterfallRein [3,0] 0x0
-TURN 0x0 BottomLeftRein [4,0] 0x0
-TURN 0x0 TopRightRein [6,0] 0x0
-TURN 0x0 TopRight2Rein [7,0] 0x0
-TURN 0x0 BottomRightRein [8,0] 0x0
-TURN 0x0 WestRein [9,0] 0x0
+TURN 0x0 TopLeftRein [4,0] 0x0
+TURN 0x0 BottomLeftRein [5,0] 0x0
+TURN 0x0 BottomRightRein [7,0] 0x0
+TURN 0x0 TopRight2Rein [8,0] 0x0
+TURN 0x0 TopRightRein [9,0] 0x0
+TURN 0x0 WestRein [10,0] 0x0
 	END_MAIN
 
 ALIGN 32
@@ -121,7 +121,7 @@ UNIT Aeteria Mage 0x1 Level(3, Enemy, 1)     [0,0] 0b 0x0 0x0 0x0 [Thunder,] Cha
 	UNIT
 
 Rein3:
-UNIT AeteriaStealable Thief 0x1 Level(3, Enemy, 1)     [7,17] 0b 0x0 0x0 0x0 [IronDagger,RedGem] StallOneTurnAI
+UNIT AeteriaStealable Thief 0x1 Level(3, Enemy, 1)     [16,18] 0b 0x0 0x0 0x0 [IronDagger,RedGem] [0x6,0xC,0x4,0x0]
 	UNIT
 	
 Rein4:
@@ -130,13 +130,12 @@ UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [DarkTome2]
 	UNIT
 
 Rein5:
-UNIT Aeteria ACav 0x1 Level(4, Enemy, 1)     [1,17] 0b 0x0 0x0 0x0 [Halberd,] ChargeAI
-UNIT Aeteria SCav 0x1 Level(4, Enemy, 1)     [2,17] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
+UNIT Aeteria ACav 0x1 Level(4, Enemy, 1)     [0,18] 0b 0x0 0x0 0x0 [Halberd,] ChargeAI
+UNIT Aeteria SCav 0x1 Level(4, Enemy, 1)     [2,18] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
 	UNIT
 
 Rein6:
-UNIT Aeteria LCav 0x1 Level(4, Enemy, 1)     [15,17] 0b 0x0 0x0 0x0 [HeavySpear,Javelin] ChargeAI
-UNIT Aeteria ACav 0x1 Level(4, Enemy, 1)     [16,17] 0b 0x0 0x0 0x0 [IronAxe,] ChargeAI
+UNIT Aeteria LCav 0x1 Level(4, Enemy, 1)     [15,18] 0b 0x0 0x0 0x0 [HeavySpear,Javelin] ChargeAI
 	UNIT
 
 Rein7:
@@ -146,7 +145,7 @@ UNIT Aeteria LArmor 0x1 Level(4, Enemy, 1)     [0,9] 0b 0x0 0x0 0x0 [SteelGlaive
 
 YoItThem:
 UNIT Stroganoff AArmor 0x1 Level(6, Ally, 0)     [10,8] 0b 0x0 0x0 0x0 [SteelLabrys,EmeraldAxe,Dracoshield] [0x0,0x3,0x0,0x20]
-UNIT Eiskaffee Hunter 0x1 Level(4, Ally, 0)     [11,9] 0b 0x0 0x0 0x0 [IronRifle,Elixir] [0x0,0x3,0x0,0x20]
+UNIT Eiskaffee GriffonRider 0x1 Level(4, Ally, 0)     [11,9] 0b 0x0 0x0 0x0 [IronRifle,Elixir] [0x0,0x3,0x0,0x20]
 UNIT Doppio Soldier 0x1 Level(5, Ally, 0)     [12,8] 0b 0x0 0x0 0x0 [KillerLance, Elixir] [0x0,0x3,0x0,0x20]
 UNIT Wreyvine Mercenary 0x1 Level(3, NPC, 1)     [9,9] 0b 0x0 0x0 0x0 [KillingEdge,Armorslayer] StallOneTurnAI
 UNIT Wreyvine Soldier 0x1 Level(3, NPC, 1)     [13,9] 0b 0x0 0x0 0x0 [SapphireLance,Javelin] StallOneTurnAI
@@ -166,13 +165,6 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-	LOAD1 0x1 EnemyUnits
-	LOAD1 0x1 YoItThem
-	CUSN Stroganoff
-	CUSN Doppio
-	CUSN Eiskaffee
-	ENUN
-FADU 60
 Music(0xE4)
 SetBackground(0x26)
 Text(Ch3Opening1)
@@ -180,11 +172,18 @@ Music(0x48)
 FADI 60
 CLEAN
 SetBackground(0x3D)
-Music(0x3E3)
+Music(0x3E4)
 CharacterConditionalDialog(Hildr,Ch3Opening2,Ch3OpeningAlt2)
 STAL 10
+FADI 60
 SetFlag(0xB)
 SetFlag(0xD)
+	LOAD1 0x1 EnemyUnits
+	LOAD1 0x1 YoItThem
+	CUSN Stroganoff
+	CUSN Doppio
+	CUSN Eiskaffee
+	ENUN
 	GotoPrepScreen
 	ENDA
 

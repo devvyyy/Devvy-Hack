@@ -24,6 +24,12 @@ POIN SkillTester
 WORD ShootTwiceID
 POIN ShootTwiceEvent
 #include "ShootTwice/ShootTwice.event"
+
+ALIGN 4
+ShootTwiceEXP:
+#incbin "ShootTwice/ShootTwiceEXP.dmp"
+POIN SkillTester
+WORD ShootTwiceID
 POIN ShootTwiceEvent2
 #include "ShootTwice/ShootTwice2.event"
 
@@ -36,13 +42,13 @@ POIN BurstFireEvent
 POIN AuraSkillCheck
 #include "BurstFire/BurstFireEvent.event"
 
-ALIGN 4
-ParryDamage:
-#incbin "ParryPost/ParryPost.dmp"
-POIN SkillTester
-WORD ParryID
-POIN ParryEvent
-#include "ParryPost/ParryEvent.event"
+//ALIGN 4
+//ParryDamage:
+//#incbin "ParryPost/ParryPost.dmp"
+//POIN SkillTester
+//WORD ParryID
+//POIN ParryEvent
+//#include "ParryPost/ParryEvent.event"
 
 ALIGN 4
 LionheartDamage:

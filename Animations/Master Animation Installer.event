@@ -313,6 +313,22 @@ ALIGN 4
 {
 #include "WyvernLord/Unarmed/Installer.event"
 }
+ALIGN 4 //Griffon Rider by Maiser6
+{
+#include "GriffonRider/Bow/Installer.event"
+}
+ALIGN 4
+{
+#include "GriffonRider/Unarmed/Installer.event"
+}
+ALIGN 4 //Arbalest by Eldritch Abomination
+{
+#include "Arbalest/Bow/Installer.event"
+}
+ALIGN 4
+{
+#include "Arbalest/Unarmed/Installer.event"
+}
 ALIGN 4 //Knight by TEAM SALVAGED
 {
 #include "Knight/Sword/Sword Installer.event"
@@ -578,6 +594,16 @@ WORD 0x0    // Seperator
 AdventurerAnim:
 BowAnim(0xB9)
 UnarmedAnim(0xBA)
+WORD 0x0    // Seperator
+
+ArbalestAnim:
+BowAnim(0x5E)
+UnarmedAnim(0x5F)
+WORD 0x0    // Seperator
+
+GriffonAnim:
+BowAnim(0x60)
+UnarmedAnim(0x61)
 WORD 0x0    // Seperator
 
 CavalierMAnim:

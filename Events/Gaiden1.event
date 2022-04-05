@@ -27,7 +27,11 @@ MiscBasedEvents:
 	END_MAIN
 
 LocationBasedEvents:
-
+House(0x0,House1,4,6)
+House(0x0,House2,7,5)
+House(0x0,House3,9,7)
+House(0x0,House4,6,8)
+House(0x0,TheInn,6,4)
 	END_MAIN
 
 Dunno1:
@@ -66,19 +70,19 @@ UNIT MageSoul Shaman 0x1 Level(1, Enemy, 1)     [6,3] 0b 0x0 0x0 0x0 [Flux] Atta
 UNIT InfantrySoul Fighter 0x1 Level(1, Enemy, 1)     [12,4] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
 UNIT MageSoul Mage 0x1 Level(1, Enemy, 1)     [14,2] 0b 0x0 0x0 0x0 [Fire] AttackInRangeAI
 UNIT MageSoul Shaman 0x1 Level(1, Enemy, 1)     [11,6] 0b 0x0 0x0 0x0 [Flux] StallOneTurnAI
-UNIT InfantrySoul Soldier 0x1 Level(1, Enemy, 1)     [6,9] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
-UNIT StealSoul Archer 0x1 Level(1, Enemy, 1)     [7,13] 0b 0x0 0x0 0x0 [IronBow,Elixir] StallOneTurnAI
+UNIT InfantrySoul Soldier 0x1 Level(1, Enemy, 1)     [4,8] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
+UNIT StealSoul SCav 0x1 Level(1, Enemy, 1)     [7,13] 0b 0x0 0x0 0x0 [IronSword,Elixir] StallOneTurnAI
 UNIT InfantrySoul Fighter 0x1 Level(1, Enemy, 1)     [7,6] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
 	UNIT
 	
 LesThieves:
-UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [8,9] DropItem 0x0 0x0 0x0 [IronDagger, 0xB9,] [6,12,4,0]
+UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [10,12] DropItem 0x0 0x0 0x0 [IronDagger, 0xB9,] [6,12,4,0]
 UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [14,9] DropItem 0x0 0x0 0x0 [IronDagger, 0xB9,] [6,12,4,0]
 UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [12,8] DropItem 0x0 0x0 0x0 [IronDagger, 0xB9,] [6,12,4,0]
 UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [7,11] DropItem 0x0 0x0 0x0 [IronDagger, 0xB9,] [6,12,4,0]
 UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [3,12] DropItem 0x0 0x0 0x0 [IronDagger, 0xB9,] [6,12,4,0]
 UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [1,13] DropItem 0x0 0x0 0x0 [IronDagger, 0xB9,] [6,12,4,0]
-UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [4,8] DropItem 0x0 0x0 0x0 [IronDagger, 0xB9,] [6,12,4,0]
+UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [6,9] DropItem 0x0 0x0 0x0 [IronDagger, 0xB9,] [6,12,4,0]
 	UNIT
 	
 SussyImpostor:
@@ -111,3 +115,42 @@ EndingScene:
 	MNC2 0x2
 	NoFade
 	ENDA
+
+House1:
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+HouseExp(0x8,HouseBG1,Placeholder1)
+MUNO // increases music volume
+NoFade
+ENDA
+
+House2:
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+HouseExp(0x9,HouseBG2,Placeholder1)
+MUNO // increases music volume
+NoFade
+ENDA
+
+House3:
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+HouseExp(0xA,HouseBG1,Placeholder1)
+MUNO // increases music volume
+NoFade
+ENDA
+
+House4:
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+HouseExp(0xB,HouseBG1,Placeholder1)
+MUNO // increases music volume
+NoFade
+ENDA
+
+TheInn:
+MUSI // lowers music volume
+HouseExp(0xC,0x9,Placeholder1)
+MUNO // increases music volume
+NoFade
+ENDA
