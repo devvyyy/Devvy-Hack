@@ -10,6 +10,7 @@
   ldrb r0, [r0, #0x4] @unit id byte
   cmp  r0, #0x3F @phantom unit ID
 .endm
+
 SendPhantomItemsToConvoy:
     mov r4, r0
     mov r5, r1
