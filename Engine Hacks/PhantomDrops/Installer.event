@@ -1,0 +1,12 @@
+//Allow NPCs to drop
+PUSH
+    ORG $32942
+    BYTE $80
+//1e098 - r0 is unit ptr, r1 is item short, r2 is proc
+    //hook at 1e09c
+    ORG $1E09C
+    jumpToHack(SendPhantomItemsToConvoy)
+POP
+
+SendPhantomItemsToConvoy:
+#include "PhantomDrops.lyn.event"

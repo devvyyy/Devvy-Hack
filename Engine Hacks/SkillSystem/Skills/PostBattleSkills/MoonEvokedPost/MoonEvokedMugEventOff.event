@@ -1,0 +1,9 @@
+MoonEvokedMugEventOff: //leaving sicko mode
+CHECK_EVENTID 0xED
+BEQ 0x1 0xC 0x0
+CAM1 0xFFFF
+SOUN 0x84 //silence hit
+ENUF 0xED
+LABEL 0x1
+NoFade
+ENDA

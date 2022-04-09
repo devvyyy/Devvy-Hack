@@ -6,6 +6,8 @@
 .equ EntrySize, ArmorMarchBit+4
 .equ SkillTester, EntrySize+4
 .equ ArmorMarchList, SkillTester+4
+.equ MoonEvokedID, ForagerList+4
+.equ IndoorMarchID, MoonEvokedID+4
 .equ IndoorTerrainList, ArmorMarchList+4
 .equ ForagerList, IndoorTerrainList+4
 .equ KeepUpID, ForagerList+4
@@ -23,8 +25,27 @@ push {r4-r7,r14}
 mov r4,r0 @attacker
 mov r5,r1 @defender
 
-@first, test for Keep Up on this unit
+@ first check mine LMAO
+ldr r0,SkillTester
+mov r14,r0
+mov r0,r4
+ldr r1,MoonEvokedID
+.short 0xF800
+cmp r0,#0
+beq CheckKeepUp
 
+@if skill, check for units HP
+
+@if cur hp x4 is less than or equal to max HP, we are at 25% or less
+ldrb r0,[r4,#0x12] @max hp
+ldrb r1,[r4,#0x13] @cur hp
+lsl r1,r1,#2 @cur hp x4
+cmp r1,r0
+bgt GoBack
+b Set
+
+@second, test for Keep Up on this unit
+CheckKeepUp:
 ldr r0,SkillTester
 mov r14,r0
 mov r0,r4

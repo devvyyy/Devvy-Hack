@@ -14,9 +14,8 @@ PointerList:
 
 TurnBasedEvents:
 TURN 0x0 KillVillageBrigand [2,0] 0x0
-TURN 0x0 RecruitThief [2,0] 0x80
+TURN 0x0 RecruitThief [3,0] 0x80
 TURN 0x0 ReinforcementsWarning [3,0] 0x0
-TURN 0x0 KillVillageBrigand2 [3,0] 0x0
 TURN 0x0 LeftRocksRein [4,0] 0x0
 TURN 0x0 BottomRightRein [5,0] 0x0
 TURN 0x0 TopRightRein [6,0] 0x0
@@ -105,7 +104,7 @@ UNIT BadGuy Thaumaturge 0x1 Level(5, Enemy, 1)     [6,14] 0x0 0x0 0x0 0x0 [Thund
 	UNIT
 	
 NewNew:
-UNIT Atheya WyvernRider_F 0x1 Level(5, Ally, 0)     [6,13] 0x0 0x0 0x0 0x0 [IronLabrys,KillerAxe,Elixir,] AttackInRangeAI
+UNIT Atheya WyvernRider_F 0x1 Level(5, Ally, 0)     [6,13] 0x0 0x0 0x0 0x0 [IronLabrys,Halberd,Elixir,] AttackInRangeAI
 UNIT
 
 NagitoKomaeda:
@@ -227,7 +226,6 @@ FADI 60
 CLEAN
 SetBackground(0x0)
 STAL 5
-FADU 30
 Music(0x27)
 Text(Ch5Ending2)
 STAL 10
@@ -299,10 +297,7 @@ ENDA
 
 KillVillageBrigand:
 SpawnReinforcements(SpookyBrigand)
-NoFade
-ENDA
-
-KillVillageBrigand2:
+STAL 10
 SpawnReinforcements(SpookyBrigand2)
 NoFade
 ENDA

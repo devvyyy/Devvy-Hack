@@ -4,6 +4,9 @@ SkillIcons:
 //Icon graphics are uncompressed
 #define SkillIcon(skillID) "128*skillID+SkillIcons"
 
+ORG SkillIcon(MoonEvokedID)
+#incbin "SkillIcons/MoonEvoked.dmp"
+
 ORG SkillIcon(AeterianFealtyID)
 #incbin "SkillIcons/AeterianFealty.dmp"
 

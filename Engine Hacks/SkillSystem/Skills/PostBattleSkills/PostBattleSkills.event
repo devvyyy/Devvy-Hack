@@ -143,6 +143,15 @@ POIN AuraSkillCheck
 #include "SavageBlow/SavageBlowEvent.event"
 
 ALIGN 4
+Bazooka:
+#incbin "Bazooka/Bazooka.dmp"
+POIN SkillTester
+WORD BazookaID
+POIN BazookaEvent
+POIN AuraSkillCheck
+#include "Bazooka/BazookaEvent.event"
+
+ALIGN 4
 BreathOfLife:
 #incbin "BreathOfLife/BreathOfLife.dmp"
 POIN SkillTester
@@ -161,12 +170,44 @@ POIN AuraSkillCheck
 #include "HappyHour/HappyHourEvent.event"
 
 ALIGN 4
+MoonEvokedPost:
+#incbin "MoonEvokedPost/MoonEvokedPost.dmp"
+POIN SkillTester
+WORD MoonEvokedID
+POIN MoonEvokedEvent
+#include "MoonEvokedPost/MoonEvokedEvent.event"
+
+ALIGN 4
+MoonEvokedPostMug:
+#incbin "MoonEvokedPost/MoonEvokedMug.dmp"
+POIN SkillTester
+WORD MoonEvokedID
+POIN MoonEvokedMugEvent
+#include "MoonEvokedPost/MoonEvokedMugEvent.event"
+
+ALIGN 4
+MoonEvokedPostMugOff:
+#incbin "MoonEvokedPost/MoonEvokedMugOff.dmp"
+POIN SkillTester
+WORD MoonEvokedID
+POIN MoonEvokedMugEventOff
+#include "MoonEvokedPost/MoonEvokedMugEventOff.event"
+
+ALIGN 4
 PykeUlt:
 #incbin "PykeUlt/PykeUlt.dmp"
 POIN SkillTester
 WORD PykeUltID
 POIN PykeUltEvent
 #include "PykeUlt/PykeUltEvent.event"
+
+ALIGN 4
+PykeUltEXP:
+#incbin "PykeUlt/PykeUltEXPShare.dmp"
+POIN SkillTester
+WORD PykeUltID
+POIN PykeUltEvent2
+#include "PykeUlt/PykeUltEvent2.event"
 
 ALIGN 4
 Galeforce:

@@ -14,12 +14,6 @@ mov r14,r6
 cmp r0,#0
 beq End
 
-@check range
-ldr r0,=#0x203A4D4 @battle stats
-ldrb r0,[r0,#2] @range
-cmp r0,#1
-bne End
-
 ldrb r0,[r5,#0x12] @max hp
 ldrb r1,[r5,#0x13] @cur hp
 lsl r1,r1,#2 @cur hp x4

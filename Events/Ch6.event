@@ -99,6 +99,8 @@ LoadUnit(20,5)
 LoadUnit(18,6)
 LoadUnit(19,6)
 LoadUnit(20,6)
+LoadUnit(21,5)
+LoadUnit(21,6)
 	UNIT
 
 EnemyUnits:
@@ -183,7 +185,14 @@ UNIT Aeteria Pirate 0x1 Level(7, Enemy, 1)     [17,0] 0b 0x0 0x0 0x0 [IronAxe] C
 	
 TopMoat3:
 UNIT FlierSoul PegRider 0x1 Level(7, Enemy, 1)     [18,0] 0b 0x0 0x0 0x0 [HeavySpear] ChargeAI
+	UNIT
+	
+BottomLeftStairs:
 UNIT FlierSoul WyvernRider 0x1 Level(7, Enemy, 1)     [17,0] 0b 0x0 0x0 0x0 [SteelAxe,Hammer] ChargeAI
+	UNIT
+	
+ANOTHERWYVERN:
+UNIT FlierSoul WyvernRider 0x1 Level(6, Enemy, 1)     [5,18] 0 0 1 REDA5R17 [SteelAxe] ChargeAI
 	UNIT
 	
 InnerFortRein1:
@@ -233,8 +242,8 @@ UNIT InfantrySoul Soldier 0x1 Level(7, Enemy, 1)     [18,16] 0b 0x0 0x0 0x0 [0xD
 HolyFuckWhy1:
 UNIT InfantrySoul Soldier 0x1 Level(6, Enemy, 1)     [18,16] 0 0 1 REDA21R16 [IronLance] AttackInRangeAI
 UNIT AeteriaStealable Thaumaturge 0x1 Level(6, Enemy, 1)     [18,16] 0 0 1 REDA21R18 [Fire,PureWater] StallOneTurnAI
-UNIT Aeteria Shaman 0x1 Level(6, Enemy, 1)     [18,16] 0 0 1 REDA16R17 [Flux] AttackInRangeAI
-UNIT FlierSoul WyvernRider 0x1 Level(6, Enemy, 1)     [18,16] 0 0 1 REDA17R18 [SteelAxe] TwoActionAI
+UNIT Aeteria Shaman 0x1 Level(6, Enemy, 1)     [18,16] DropItem 0 1 REDA16R17 [Flux, 0xCE] BossAI
+UNIT InfantrySoul Mercenary 0x1 Level(7, Enemy, 1)     [18,16] 0 0 1 REDA18R18 [SteelSword,] AttackInRangeAI
 	UNIT
 
 HolyFuckWhy2:
@@ -242,6 +251,7 @@ UNIT InfantrySoul Soldier 0x1 Level(6, Enemy, 1)     [5,18] DropItem 0 1 REDA3R1
 UNIT CavSoul SwordCav 0x1 Level(6, Enemy, 1)     [5,18] 0 0 1 REDA1R16 [SteelSword] TwoActionAI
 UNIT CavSoul LanceCav 0x1 Level(6, Enemy, 1)     [5,18] 0 0 1 REDA0R18 [IronLance] ChargeAI
 UNIT CavSoul PegRider 0x1 Level(6, Enemy, 1)     [5,18] 0 0 1 REDA7R17 [IronLance] TwoActionAI
+UNIT InfantrySoul Archer 0x1 Level(7, Enemy, 1)     [5,18] DropItem 0 1 REDA2R18 [BodkinRifle,] AttackInRangeAI
 	UNIT
 
 HolyFuckWhy3:
@@ -451,6 +461,10 @@ SpawnReinforcements(TopMoat1)
 STAL 60
 SpawnReinforcements(LeftStairsRein1)
 LABEL 0x0
+CHECK_EVENTID 0xA
+BNE 0x1 0xC 0x0
+SpawnReinforcements(ANOTHERWYVERN)
+LABEL 0x1
 NoFade
 ENDA
 
@@ -471,6 +485,10 @@ BNE 0x0 0xC 0x0
 SpawnReinforcements(TopMoat2)
 STAL 60
 LABEL 0x0
+CHECK_EVENTID 0xA
+BNE 0x1 0xC 0x0
+SpawnReinforcements(BottomLeftStairs)
+LABEL 0x1
 SpawnReinforcements(ThiefRein1)
 NoFade
 ENDA
@@ -861,8 +879,8 @@ STAL 120
 EVBIT_F 0x2
 CLEAN
 SetBackground(0x35)
-MNC2 0x7 //next chapter
-//MNTS 0x1 //return to title screen
+//MNC2 0x7 //next chapter
+MNTS 0x1 //return to title screen
 	NoFade
 	ENDA
 

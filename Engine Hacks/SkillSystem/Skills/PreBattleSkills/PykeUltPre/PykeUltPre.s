@@ -28,12 +28,6 @@ ldr r0,=#0x203A4EC @attacker struct
 cmp r0,r4
 bne GoBack @skip if enemy phase
 
-@check range
-ldr r0,=#0x203A4D4 @battle stats
-ldrb r0,[r0,#2] @range
-cmp r0,#1
-bne GoBack
-
 ldrb r0,[r5,#0x12] @max hp
 ldrb r1,[r5,#0x13] @cur hp
 lsl r1,r1,#2 @cur hp x4
@@ -49,15 +43,15 @@ strh r3,[r0]
 
 @ add back attack = enemys current hp
 mov  r1, #0x5A
-ldrh r0, [r4, r1] @str
+ldrh r0, [r4, r1]
 ldrb r2, [r5, #0x13] @enemy hp
 add  r0, r2
 strh r0, [r4,r1]
 
-@ add back attack = enemys def (ignores their def)
+@ add back attack = enemys res (ignores their res)
 mov  r1, #0x5A
-ldrh r0, [r4, r1] @str
-ldrb r2, [r5, #0x17] @enemy hp
+ldrh r0, [r4, r1]
+ldrb r2, [r5, #0x18] @enemy res
 add  r0, r2
 strh r0, [r4,r1]
 

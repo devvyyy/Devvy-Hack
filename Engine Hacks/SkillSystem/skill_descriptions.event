@@ -5,6 +5,7 @@ ORG 2*0xFF+SkillDescTable
 
 #define SkillDescription(skillID,description) "PUSH; ORG 2*skillID+SkillDescTable; SHORT description; POP"
 
+SkillDescription(MoonEvokedID,SD_ApheliosHowMANYYEARS)
 SkillDescription(AeterianFealtyID,SD_AeterianFealty)
 SkillDescription(UpgradeID,SD_Upgrade)
 SkillDescription(ElbowGreaseID,SD_ElbowGrease)

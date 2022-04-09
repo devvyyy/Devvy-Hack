@@ -34,12 +34,6 @@ mov	lr, r3
 cmp	r0,#0x00
 beq	End
 
-@check range
-ldr r0,=#0x203A4D4 @battle stats
-ldrb r0,[r0,#2] @range
-cmp r0,#1
-bne End
-
 @if killed enemy, unset 0x2 and 0x40, set 0x400, write to status
 ldr	r0, [r4,#0x0C]	@status bitfield
 mov	r1, #0x42

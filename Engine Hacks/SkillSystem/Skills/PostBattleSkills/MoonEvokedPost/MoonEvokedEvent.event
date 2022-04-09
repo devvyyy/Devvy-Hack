@@ -1,0 +1,10 @@
+MoonEvokedEvent: //this is the galeforce proc
+CHECK_EVENTID 0xED
+BEQ 0x1 0xC 0x0
+CAM1 0xFFFF
+STAL 0x3
+SOUN 0x119 //bolting sparks
+STAL 0x10
+LABEL 0x1
+NoFade
+ENDA
