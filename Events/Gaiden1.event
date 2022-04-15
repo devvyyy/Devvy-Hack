@@ -119,7 +119,7 @@ EndingScene:
 House1:
 STORETOSOMETHING 0x0 // lowers music volume
 MUSI // lowers music volume
-HouseExp(0x8,HouseBG1,Placeholder1)
+CHECK_EVENTID 0x8; BNE 0x776 0xC 0x0; GiveExperience(0xFFFF,10); ENUT 0x8;LABEL 0x776; EVBIT_T 0x7
 MUNO // increases music volume
 NoFade
 ENDA
@@ -127,7 +127,7 @@ ENDA
 House2:
 STORETOSOMETHING 0x0 // lowers music volume
 MUSI // lowers music volume
-HouseExp(0x9,HouseBG2,Placeholder1)
+CHECK_EVENTID 0x9; BNE 0x776 0xC 0x0; GiveExperience(0xFFFF,10); ENUT 0x9;LABEL 0x776; EVBIT_T 0x7
 MUNO // increases music volume
 NoFade
 ENDA
@@ -135,7 +135,7 @@ ENDA
 House3:
 STORETOSOMETHING 0x0 // lowers music volume
 MUSI // lowers music volume
-HouseExp(0xA,HouseBG1,Placeholder1)
+CHECK_EVENTID 0xA; BNE 0x776 0xC 0x0; GiveExperience(0xFFFF,10); ENUT 0xA;LABEL 0x776; EVBIT_T 0x7
 MUNO // increases music volume
 NoFade
 ENDA
@@ -143,14 +143,14 @@ ENDA
 House4:
 STORETOSOMETHING 0x0 // lowers music volume
 MUSI // lowers music volume
-HouseExp(0xB,HouseBG1,Placeholder1)
+CHECK_EVENTID 0xB; BNE 0x776 0xC 0x0; GiveExperience(0xFFFF,10); ENUT 0xB;LABEL 0x776; EVBIT_T 0x7
 MUNO // increases music volume
 NoFade
 ENDA
 
 TheInn:
 MUSI // lowers music volume
-HouseExp(0xC,0x9,Placeholder1)
+CHECK_EVENTID 0xC; BNE 0x776 0xC 0x0; GiveExperience(0xFFFF,10); ENUT 0xC;LABEL 0x776; EVBIT_T 0x7
 MUNO // increases music volume
 NoFade
 ENDA

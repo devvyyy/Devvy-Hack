@@ -7,6 +7,185 @@ HP Bars[.][X]
 # 0x00B2
 Set health bar display[X]
 
+# 0x5cd
+Mechanics[X]
+
+# 0x5e7
+Weapons[X]
+
+# 0x61F
+The Weapon Triangle is[N]
++/-2 Mt, +/-20 Hit.[N]
+Weapon Hit has increased[N]
+overall, with Crit removed[N]
+from certain weapons.[N]
+Anima magic grants Atk bonuses[N]
+to nearby allies, with the[N]
+amount matching with the[N]
+tome tier (I, II, III, etc.).[N]
+Light magic restores a set[N]
+amount of HP to its user,[N]
+usually after combat.[N]
+Dark magic inflicts Atk penalties[N]
+to nearby enemies, with the[N]
+amount matching with[N]
+the tome tier.[N]
+Blades, Glaives, Labrys, and[N]
+Rifles are heavy versions[N]
+of physical weapons.[N]
+Magical weapons such as the[N]
+Flamberge deal a fixed amount[N]
+of damage, ignoring the[N]
+user's Str.[N]
+Offensives staves and the[N]
+Big Iron cannot be countered,[N]
+or counterattack.[X]
+
+# 0x5e8
+Skills[X]
+
+# 0x620
+Every playable unit comes with a[N]
+personal skill and a movement[N]
+skill depending on their[N]
+movement type.[N]
+Infantry units get Shove,[N]
+Armored units get Swap,[N]
+Cavalry units get Reposition,[N]
+and Flying units get Pivot.[N]
+Some exceptions:[N]
+Thieves get Pivot,[N]
+Parsons get Rotate,[N]
+and Technicians get Smite.[N]
+Every mounted unit also gets[N]
+Canto, and every Thief[N]
+gets Locktouch.[N]
+Main characters may get[N]
+additional skills through[N]
+story or secret events.[X]
+
+# 0x5e9
+Items[X]
+
+# 0x621
+Bag icons on enemies indicate[N]
+a droppable item,[N]
+and Diamond icons on enemies[N]
+indicate a stealable item.[N]
+Items of dead player units and[N]
+turret drops are automatically[N]
+sent to the convoy.[N]
+Trading items, talking, supports,[N]
+giving, and taking are all[N]
+free actions.[N]
+Houses give experience the first[N]
+time you visit them.[N]
+Only the first Ring passive[N]
+effect is applied.[N]
+Master seals can be used at[N]
+any level.[X]
+
+# 0x5ea
+Supports[X]
+
+# 0x622
+Every unit has 5 supports with[N]
+3 ranks with eachother.[N]
+Supports are built a fixed[N]
+amount per map.[N]
+Each affinity grants a different[N]
+stat boost to both partners.[N]
+ [N]
+Support bonuses are as follows:[N]
+Fire: Attack, Hit[N]
+Thunder: Hit, Crit[N]
+Wind: Avoid, Crit[N]
+Ice: Defense, Crit Avoid[N]
+Dark: Attack, Avoid[N]
+Light: Hit, Crit Avoid[N]
+Anima: Attack, Defense[N]
+Sun: Crit, Crit Avoid[N]
+Moon: Avoid, Crit Avoid[N]
+Earth: Defense, Crit[N]
+Heaven: Hit, Avoid[N]
+Void: None[N][X]
+
+# 0x5eb
+Off-Hand[X]
+
+# 0x623
+Starting in part 3, Affogato[N]
+can equip an Off-Hand Rifle[N]
+weapon with the skill Phasing.[N]
+The 2nd slot in his inventory is[N]
+automatically equipped as the[N]
+Off-Hand Rifle weapon.[N]
+The 'Reorg' command will[N]
+reorganise the chosen item[N]
+and shift it to the[N]
+unit's 2nd slot.[N]
+The Off-Hand weapon will add[N]
+30% of its Mt and secondary[N]
+effects, though reduced in[N]
+power, to the equipped weapon.[N]
+Effectiveness effects will[N]
+not get added to the[N]
+equipped weapon.[N]
+ [N]
+Off-Hand bonuses are as follows:[N]
+Iron Rifle: +3 Mt[N]
+Steel Rifle: +4 Mt[N]
+Silver Rifle: +5 Mt[N]
+Snaring Rifle: +2 Mt, +2 AS on[N]
+initation[N]
+Bloody Rifle: +2 Mt, +20 Crit[N]
+Lock-In Rifle: +4 Mt, +20 Hit[N]
+Sonic Rifle: +3 Mt, +5 Crit at[N]
+2 range, +15 Crit at 3 range[N]
+Backshield Rifle: +2 Mt, +3 Def[N]
+at 1 range[N]
+Shining Rifle: +3 Mt, deals bonus[N]
+damage equal to a quarter[N]
+of foe's Res[N]
+Bodkin Rifle: +5 Mt[N]
+Hunting Rifle: +4 Mt[N]
+Last Hour: +3 Mt[X]
+
+# 0x5d1
+Scouting[X]
+
+# 0x601
+Recruits[X]
+
+# 0x639
+Prologue: Hunter, Lance Paladin,[N]
+Sword Rider, Lance Armor[N]
+Axe Rider[N]
+1-1: Mage, Troubadour[N]
+1-1x: Seer[N]
+1-2: Swordsman, Pirate[N]
+1-3: Axe Armor, Soldier,[N]
+Griffon Rider[N]
+1-4: Technician, Priest[N]
+1-5: Wyvern Rider, Thief[N]
+1-F: Sword Armor, Deserter[N][X]
+
+# 0x602
+Objectives[X]
+
+# 0x63A
+Prologue: Seize, Chest[N]
+1-1: Defeat boss, Chest, Village[N]
+1-1x: Rout, Thieves[N]
+1-2: Arrive, Chest, Village,[N]
+Optional boss[N]
+1-3: Seize, Houses, Water[N]
+1-4: Defeat boss/Defend points,[N]
+Chests[N]
+1-5: Defeat boss, Villages[N]
+1-F: Defend unit/Secure[N]
+fortresses, Chests[N][X]
+
 # 0x39b
 Hunting Rifle[X]
 
@@ -24,8 +203,8 @@ Falcon Knight[X]
 
 # 0x5B6
 Put items in storage. In parts 1 and 2,[N]
-the limit is 100 each, and the convoy[N]
-merges to 200 in part 3.[X]
+the limit is 50 each, and the convoy[N]
+merges to 100 in part 3.[X]
 
 # 0x4FF
 Eth[X]
@@ -509,7 +688,7 @@ Well-rounded infantry.[X]
 Wreyvine[X]
 
 # 0x6C4
-If unit's Spd > foe's Spd,[N]
+If Spd is higher than foe's Spd,[N]
 unit can steal foe's items.[X]
 
 # 0x160 PrologueChName

@@ -23,12 +23,10 @@ SendPhantomItemsToConvoy:
     blh 0x0803161c //HasConvoyAccess
     cmp r0, #0x0
     beq SendToConvoyEnd
-    blh GetConvoyItemCount
     mov r3, r0
     
     ldr r0, =#0x3004e50 @active unit
     str r4, [r0]
-    bl GetConvoyPartitionSize
     cmp r3, r0
     bge SendToConvoyEnd
     

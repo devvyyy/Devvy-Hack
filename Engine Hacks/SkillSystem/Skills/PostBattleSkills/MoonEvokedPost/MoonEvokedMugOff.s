@@ -22,13 +22,11 @@ ldrb	r0, [r4,#0x13]
 cmp	r0, #0x00
 beq	End
 
-@Above 75% hp
-ldrb r0, [r4, #0x12]
-lsr r0, #4 @max hp/4
-mov r1,#0x3
-mul r0, r1
-ldrb r1, [r4, #0x13] @currhp
-cmp r1, r0
+@Above 25% hp
+ldrb r0,[r4,#0x12] @max hp
+ldrb r1,[r4,#0x13] @cur hp
+lsl r1,r1,#2 @cur hp x4
+cmp r1,r0
 blt End
 
 Event:
@@ -49,12 +47,10 @@ cmp r0,#0x00
 beq End
 
 @Above 25% hp
-ldrb r0, [r5, #0x12]
-lsr r0, #4 @max hp/4
-mov r1,#0x3
-mul r0, r1
-ldrb r1, [r5, #0x13] @currhp
-cmp r1, r0
+ldrb r0,[r5,#0x12] @max hp
+ldrb r1,[r5,#0x13] @cur hp
+lsl r1,r1,#2 @cur hp x4
+cmp r1,r0
 blt End
 
 Event2:
