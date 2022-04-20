@@ -42,12 +42,26 @@ ALIGN 4
 GaidenStatScreen:
 WORD 0
 
+//Demon King Staff Avoid
+PUSH
+ORG 0x002CD3C
+BYTE 0x51 //Sentry
+ORG 0x02CD22
+BYTE 0x51 //Sentry
+POP
+
 //Lyon Status Staff Avoid
 PUSH
 ORG 0x02CD44
-BYTE 0x3F //Sentry
+BYTE 0x35 //Maynard
 ORG 0x02CD48
 BYTE 0x35 //Maynard
+POP
+
+//Staff Base Hit Rate (default 30)
+PUSH
+ORG 0x002cd30
+BYTE 0x32
 POP
 
 // Fix the Game Over freeze

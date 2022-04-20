@@ -32,6 +32,7 @@ TURN 0x0 TriggerHappyHavoc [13,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
+CharacterEvent(0x0,YoryTurretCheck,Yory,0x3F)
 CharacterEventBothWays(0x10,AffoGorloisConvo, Affo, Gorlois)
 CharacterEventBothWays(0x11,IronRuneConvo, Gorlois, Stroganoff)
 CharacterEventBothWays(0x12,AnsgarThereseConvo, Ansgar, Therese)
@@ -45,6 +46,7 @@ CharacterEventBothWays(0x19,LennardPandoroConvo, Lennard, Pandoro)
 CharacterEventBothWays(0x20,EisNoelConvo, Eiskaffee, Noel)
 CharacterEventBothWays(0x21,DoppioBrudetConvo, Doppio, Brudet)
 CharacterEventBothWays(0x22,StroganBrudetConvo, Stroganoff, Brudet)
+CharacterEventBothWays(0x23,YoryLiliConvo, Yory, Lili)
 	END_MAIN
 
 ALIGN 32
@@ -114,10 +116,10 @@ UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [22,10] DropItem 0x0 0x0 0x0 [
 UNIT Aeteria Thief 0x1 Level(5, Enemy, 1)     [21,4] 0b 0x0 0x0 0x0 [KillingEdge,] BossAI
 UNIT Aeteria LanceArmor 0x1 Level(7, Enemy, 1)     [17,7] 0b 0x0 0x0 0x0 [Spear] BossAI
 UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [0,5] 0b 0x0 0x0 0x0 [DarkTome2] StallOneTurnAI
-UNIT Aeteria Soldier 0x1 Level(6, Enemy, 1)     [5,7] 0b 0x0 0x0 0x0 [IronGlaive] ChargeAI
+UNIT AeteriaStealable Soldier 0x1 Level(6, Enemy, 1)     [5,7] 0b 0x0 0x0 0x0 [IronGlaive,Elixir] ChargeAI
 UNIT Aeteria Mercenary 0x1 Level(6, Enemy, 1)     [3,12] 0b 0x0 0x0 0x0 [IronSword,Zanbato] AttackInRangeAI
 UNIT Aeteria Archer 0x1 Level(6, Enemy, 1)     [13,2] 0b 0x0 0x0 0x0 [IronBow] TwoActionAI
-UNIT Aeteria Mage 0x1 Level(6, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [Thunder] AttackInRangeAI
+UNIT AeteriaStealable Mage 0x1 Level(6, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [Thunder,PureWater] AttackInRangeAI
 UNIT Aeteria Fighter 0x1 Level(6, Enemy, 1)     [10,5] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
 UNIT Aeteria SCav 0x1 Level(6, Enemy, 1)     [9,3] 0b 0x0 0x0 0x0 [Armorslayer,Vulnerary] AttackInRangeAI
 UNIT Aeteria PegRider 0x1 Level(6, Enemy, 1)     [8,13] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
@@ -232,7 +234,7 @@ UNIT CavSoul ACav 0x1 Level(7, Enemy, 1)     [9,13] 0b 0x0 0x0 0x0 [Halberd] Cha
 	UNIT
 	
 RightFortRein3:
-UNIT Aeteria Mage 0x1 Level(7, Enemy, 1)     [18,16] 0b 0x0 0x0 0x0 [Wind] [0,0xF,4,0]
+UNIT AeteriaStealable Mage 0x1 Level(7, Enemy, 1)     [18,16] 0b 0x0 0x0 0x0 [Wind,Talisman] [0,0xF,4,0]
 	UNIT
 	
 RightFortRein4:
@@ -242,26 +244,27 @@ UNIT InfantrySoul Soldier 0x1 Level(7, Enemy, 1)     [18,16] 0b 0x0 0x0 0x0 [0xD
 HolyFuckWhy1:
 UNIT InfantrySoul Soldier 0x1 Level(6, Enemy, 1)     [18,16] 0 0 1 REDA21R16 [IronLance] AttackInRangeAI
 UNIT AeteriaStealable Thaumaturge 0x1 Level(6, Enemy, 1)     [18,16] 0 0 1 REDA21R18 [Fire,PureWater] StallOneTurnAI
-UNIT Aeteria Shaman 0x1 Level(6, Enemy, 1)     [18,16] DropItem 0 1 REDA16R17 [Flux, 0xCE] BossAI
-UNIT InfantrySoul Mercenary 0x1 Level(7, Enemy, 1)     [18,16] 0 0 1 REDA18R18 [SteelSword,] AttackInRangeAI
+UNIT MagSoul Druid 0x1 Level(1, Enemy, 1)     [18,16] DropItem 0 1 REDA19R17 [Flux, 0xCE] BossAI
+UNIT InfantrySoul Mercenary 0x1 Level(7, Enemy, 1)     [18,16] 0 0 1 REDA16R17 [SteelSword,] AttackInRangeAI
 	UNIT
 
 HolyFuckWhy2:
-UNIT InfantrySoul Soldier 0x1 Level(6, Enemy, 1)     [5,18] DropItem 0 1 REDA3R17 [Horseslayer,] AttackInRangeAI
+UNIT MagSoul Sage 0x1 Level(1, Enemy, 1)     [5,18] DropItem 0 1 REDA4R17 [Fire,MasterSeal] BossAI
 UNIT CavSoul SwordCav 0x1 Level(6, Enemy, 1)     [5,18] 0 0 1 REDA1R16 [SteelSword] TwoActionAI
 UNIT CavSoul LanceCav 0x1 Level(6, Enemy, 1)     [5,18] 0 0 1 REDA0R18 [IronLance] ChargeAI
-UNIT CavSoul PegRider 0x1 Level(6, Enemy, 1)     [5,18] 0 0 1 REDA7R17 [IronLance] TwoActionAI
-UNIT InfantrySoul Archer 0x1 Level(7, Enemy, 1)     [5,18] DropItem 0 1 REDA2R18 [BodkinRifle,] AttackInRangeAI
+UNIT CavSoul PegRider 0x1 Level(6, Enemy, 1)     [5,18] 0 0 1 REDA7R18 [IronLance] TwoActionAI
+UNIT InfantrySoul Archer 0x1 Level(7, Enemy, 1)     [5,18] 0 0 1 REDA2R18 [BodkinRifle,] AttackInRangeAI
 	UNIT
 
 HolyFuckWhy3:
-UNIT AeteriaStealable Monk 0x1 Level(6, Enemy, 1)     [13,11] 0 0 1 REDA12R10 [Light1,EnergyRing] AttackInRangeAI
+UNIT MagSoul Bishop 0x1 Level(1, Enemy, 1)     [13,11] DropItem 0 1 REDA12R10 [Light1,EnergyRing] BossAI
 UNIT InfantrySoul Archer 0x1 Level(6, Enemy, 1)     [13,11] 0 0 1 REDA16R12 [SteelBow] AttackInRangeAI
 	UNIT
 
 RedSussy:
 UNIT King KingClass 0x1 Level(15, NPC, 0)     [6,1] 0b 0x0 0x0 0x0 [SteelBlade,SteelGlaive,SteelLabrys,0xD2] BossAI
 UNIT Gorlois Parson 0x1 Level(7, NPC, 0)     [6,3] 0b 0x0 0x0 0x0 [0x40, Elixir] BossAI
+UNIT Lili Monk 0x1 Level(5, Ally, 0)     [7,2] 0b 0x0 0x0 0x0 [Light1,Vulnerary] [0x0,0x0,0x0,0x0]
 	UNIT
 	
 CutsceneUnits:
@@ -291,7 +294,6 @@ SVAL 0x2 0x0
 CALL 0x9EE1B8
 STAL 10
 SOUN 0x60
-GiveExperience(0xFFFF,15)
 RemoveTrapAtCoords(5,18)
 CameraCursor(King)
 STAL 60
@@ -316,7 +318,6 @@ SVAL 0x2 0x0
 CALL 0x9EE1B8
 STAL 10
 SOUN 0x60
-GiveExperience(0xFFFF,15)
 RemoveTrapAtCoords(13,11)
 CameraCursor(King)
 STAL 60
@@ -341,7 +342,6 @@ SVAL 0x2 0x0
 CALL 0x9EE1B8
 STAL 10
 SOUN 0x60
-GiveExperience(0xFFFF,15)
 RemoveTrapAtCoords(18,16)
 CameraCursor(King)
 STAL 60
@@ -485,7 +485,7 @@ BNE 0x0 0xC 0x0
 SpawnReinforcements(TopMoat2)
 STAL 60
 LABEL 0x0
-CHECK_EVENTID 0xA
+CHECK_EVENTID 0xD
 BNE 0x1 0xC 0x0
 SpawnReinforcements(BottomLeftStairs)
 LABEL 0x1
@@ -626,6 +626,10 @@ STAL 5
 FADI 60
 CLEAN
 FADU 40
+STAL 20
+
+CameraCursor(Gorlois)
+Text(Ch6Opening6)
 STAL 15
 MUSI
 	CenterTextbox(Ch6ObjectiveWarning)
@@ -636,6 +640,14 @@ MUSI
 AffoGorloisConvo:
 	MUSI
 	Text(AffoGorloisTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+YoryLiliConvo:
+	MUSI
+	Text(YoryIrisTalk)
 	MUNO
 	MURE 2
 	NoFade
@@ -756,14 +768,19 @@ CharacterConditionalDialog(Stroganoff,AnsgarThereseTalk,AnsgarThereseTalkAlt)
 
 EndingScene:
 SetFlag(0x84) //hides boss icons
-STAL 30
+CAM1 [12,16]
+WORD 0x12820 //snow weather
+STAL 45
 LOAD1 0x1 LeCutscene
-STAL 5
-CameraCursor(Aoife)
+WORD 0x2820 //sunny weather
+STAL 45
+CUMO 0x34
+STAL 60
+CURE
 SOUN 0xF2
-WORD 0x52820
-STAL 5
+WORD 0x52820 //fire weather
 MUSI
+STAL 30
 Text(Ch6Ending0)
 MUNO
 Music(0x26)
@@ -874,6 +891,7 @@ QuickRemu(Noel,18)
 QuickRemu(Therese,19)
 QuickRemu(Lennard,20)
 QuickRemu(Yory,21)
+QuickRemu(Lili,22)
 MUSCMID 0x7FFF
 STAL 120
 EVBIT_F 0x2

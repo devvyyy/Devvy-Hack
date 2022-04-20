@@ -3,7 +3,7 @@
 
 prHalveIfRescuing:
 	rIfUnitHasState(US_RESCUING)
-		rIfUnitHasNotSkill(SaviorID)
+		rIfUnitHasNotSkill(SanctuaryID)
 			rHalved
 
 prHalveIfCapturing:

@@ -198,13 +198,27 @@ GotoPrepScreen
 	ENDA
 
 EndingScene:
+SVAL 0x2 Irene
+CALL 0x9EE4A0
+SVAL 0x2 Pandoro
+CALL 0x9EE4A0
 MUSI
 Text(Ch2Ending1)
 MUNO
-MusicChange(VictoryBGM)
 STAL 15
+CHECK_ALIVE Irene
+BEQ 1 0x0 0xC
+CHECK_ALIVE Pandoro
+BEQ 1 0x0 0xC
+MusicChange(VictoryBGM)
 SetBackground(0x3B)
-DoubleIfAliveDialog(Irene,Pandoro,Ch2Ending2,1)
+TEXTSTART
+TEXTSHOW Ch2Ending2
+TEXTEND
+MUSC 0x115
+TEXTCONT
+TEXTEND
+LABEL 1
 	MNC2 0x3
 	NoFade
 	ENDA

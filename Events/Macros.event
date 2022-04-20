@@ -64,3 +64,4 @@
 #define QuickCheckFlag(flagID,labelID) "CHECK_EVENTID flagID; BEQ labelID 0xC 0x0;"
 #define DoAllThree "CLEA 0; CLEN 0; CLEE 0"
 #define PlayerRangeCheck "SVAL 0x2 0x0; CALL 0x9EE1B8"
+#define SilentlyGiveItem(item, unit) "BYTE 0x40 0x0D unit item; POIN SilentGiveItem+1"

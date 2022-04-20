@@ -39,8 +39,8 @@ A hasty, wayward axe rider. She[NL]
 aims to be a great warrior.[X]
 
 ## PanDesc
-A northern corsair. He's distant,[NL]
-but a maniac on the battlefield.[X]
+An Aeterian corsair with faith only[N]
+rivaled with his thirst for battle.[X]
 
 ## AffoDesc
 A hunter by trade seeking answers. He's[N]
@@ -55,8 +55,8 @@ A caring troubadour. She strives[NL]
 to do the right thing.[X]
 
 ## LiliDesc
-A monk of the holy guard. She can't bear[NL]
-to watch others come to harm.[X]
+A watchful monk of the holy guard[N]
+with a silence sowed in faith.[X]
 
 ## TammyDesc
 An outspoken cleric. Always happy[N]
@@ -99,8 +99,8 @@ A troubadour ready to fight on the[NL]
 front line. Sweet and confident.[X]
 
 ## IreneDesc
-A fierce swordswoman who wants to[NL]
-be the best blade of Wreyvine.[X]
+A fierce swordswoman of Aeteria that[N]
+aims to be the best blade of Ideon.[X]
 
 ## FryeDesc
 A relaxed firebrand with a[N]
@@ -385,13 +385,19 @@ After combat, deals[N]
 within 2 spaces.[X]
 
 ## GlowRingDesc
+# ashen ring when??
 A hallowed ring that reverses damage[N]
-penalties inflicted by tier I-V dark[N]
-magic during combat with its user.[X]
+penalties inflicted by tier I-V Dark[N]
+Magic during combat with its user.[X]
+
+## WreyvineRingDesc
+A sunlit ring that reduces magic[N]
+damage taken by 5.[X]
 
 ## GrimRingDesc
-A grim ring that deals bonus damage[N]
-equal to 25% of foe's missing HP.[X]
+A headsman's ring that deals bonus[N]
+damage equal to 25% of foe's[N]
+missing HP.[X]
 
 ## GreenGemDesc
 A rare gemstone[N]
@@ -533,24 +539,24 @@ A motivating tune that[N]
 refreshes an ally.[X]
 
 ## AtkSongDesc
-A song that grants[N]
+A song that grants the[N]
 target Atk +10[N]
 for 1 turn.[X]
 
 ## DRSongDesc
-A song that grants[N]
+A song that grants the[N]
 target Def/Res +10[N]
 for 1 turn.[X]
 
 ## CritSongDesc
-A song that grants[N]
+A song that grants the[N]
 target Crit +10[N]
-for 1 turn.[X]
+for 2 turns.[X]
 
 ## AvoidSongDesc
-A song that grants[N]
+A song that grants the[N]
 target Avoid +10[N]
-for 1 turn.[X]
+for 2 turns.[X]
 
 ## KingPrfDesc
 A cleaver of snow and ash.[X]
@@ -580,27 +586,42 @@ Ignores 50% of foe's Def. [_Lock]: Thieves[X]
 [_I][_g][_Dot][_Space][_4]0%[_Space][_D]f[_Dot][_Space][_E][_x][_e][_c][_u]t[_e][_s][_Space]f[_o][_e][_s][_Space]<[_Space][_2][_5]%[_Space][_H][_P][_Dot][_Space][_Lock][_Colon][_Space][_T][_h]i[_e][_v][_e][_s][X]
 
 ## BerserkDesc
-Inflicts Berserk on enemies[N]
-for 2 turns, allowing them[N]
-to attack allies.[X]
+Inflicts Berserk on enemies for 2[N]
+turns, forcing them to attack nearby.[X]
 
 ## BerserkDesc2
 Inflicts Berserk[N]
 for 2 turns.[X]
 
 ## SleepDesc
-Inflicts Sleep on enemies[N]
-for 2 turns, preventing[N]
-them from moving.[X]
+Inflicts Sleep on enemies for 2[N]
+turns, preventing actions.[X]
+
+## LullabyDesc
+Low chance to inflict Sleep on a[N]
+foe within 3 spaces for 1 turn,[N]
+preventing actions. [_Lock]: Yory[X]
+
+## RopeDesc
+Moves an ally within 3 spaces[N]
+to an adjacent space. [_Lock]: Yory[X]
+
+## RopeDesc2
+Warps allies to a[N]
+space adjacent to[N]
+the user.[X]
+
+## LullabyDesc2
+Inflicts Sleep[N]
+for 1 turn.[X]
 
 ## SleepDesc2
 Inflicts Sleep[N]
 for 2 turns.[X]
 
 ## SilenceDesc
-Inflicts Silence on enemies[N]
-for 2 turns, neutralizing[N]
-magic use and talking.[X]
+Inflicts Silence on enemies for 2[N]
+turns, silencing magic/talks.[X]
 
 ## SilenceDesc2
 Inflicts Silence[N]

@@ -3,8 +3,8 @@
 .equ SealSkillList, SkillTester+4
 .equ ExtraUnitData, SealSkillList+4
 .equ ItemTableLocation, ExtraUnitData+4 @dont forget to add this to the master skill installer
-.equ FullMetalBodyID, ItemTableLocation+4
-.equ DebuffTableLocation, FullMetalBodyID+4
+.equ SanctuaryID, ItemTableLocation+4
+.equ DebuffTableLocation, SanctuaryID+4
 .equ DebuffAmount, 3
 
 mov r1,r5
@@ -58,8 +58,8 @@ bl ApplyWeaponDebuffs
 ldr r4, SealSkillList
 mov r5, #0
 SealLoop:
-	@check for FullMetalBody
-	ldr	r1,FullMetalBodyID
+	@check for Sanctuary
+	ldr	r1,SanctuaryID
 	mov	r0,r7
 	ldr	r2,SkillTester
 	mov	lr,r2
@@ -79,8 +79,8 @@ SealLoop:
     mov r2, r5 @nth seal
     bl ApplyDebuff
   OtherSide:
-	@check for FullMetalBody
-	ldr	r1,FullMetalBodyID
+	@check for Sanctuary
+	ldr	r1,SanctuaryID
 	mov	r0,r6
 	ldr	r2,SkillTester
 	mov	lr,r2
@@ -347,5 +347,5 @@ SkillTester:
 @POIN SealSkillList (str/skl/spd/def/res/luk)
 @POIN ExtraUnitData
 @POIN ItemTableLocation
-@WORD FullMetalBodyID
+@WORD SanctuaryID
 @POIN DebuffTableLocation

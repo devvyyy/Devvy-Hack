@@ -27,6 +27,7 @@ TURN 0x0 EndingScene [11,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
+CharacterEvent(0x0,YoryTurretCheck,Yory,0x3F)
 CharacterEventBothWays(0x9, NoraFlorisConvo, Nora, Floris)
 CharacterEventBothWays(0x10, YoryKaneConvo, Yory, Kane)
 CharacterEventBothWays(0x11, FlorisUlrichConvo, Floris, Ulrich)
@@ -115,7 +116,7 @@ UNIT
 
 TankyHealerWTF:
 UNIT Brulee Priest 0x1 Level(4, Ally, 0)     [6,12] 0x0 0x0 0x0 0x0 [Mend,Haze] AttackInRangeAI
-UNIT Yory 0x61 0x1 Level(3, Ally, 0)     [5,13] 0x0 0x0 0x0 0x0 [Dragonstone,Mine,LightRune,Torch] AttackInRangeAI
+UNIT Yory 0x61 0x1 Level(3, Ally, 0)     [5,13] 0x0 0x0 0x0 0x0 [Dragonstone,0xF2,0xF3,Mine,] AttackInRangeAI
 UNIT
 
 ArenaRein:
@@ -257,6 +258,7 @@ FADI 60
 CLEAN
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 TankyHealerWTF
+SilentlyGiveItem(0xD6, Yory)
 	LOAD1 0x1 NPCEPIC
 	ENUN
 FADU 45

@@ -22,7 +22,7 @@ ALIGN 4
 #ifndef ItemEffectRevamp
 	#define ItemEffectRevamp
 
-	#define IER_setItemEffect(effectid,usability,prepscreen_usability,targeting,effect) "PUSH; ORG IERevampTable + (effectid * 0x10); POIN usability prepscreen_usability targeting effect; POP"
+	#define IER_setItemEffect(effectid,usability,prepscreen_usability,targeting,effect) "PUSH; ORG IERevampTable + (effectid * 0x14); POIN usability prepscreen_usability targeting effect; POP"
 
 	#ifdef _FE8_
 		#include "IERevamp_Core/_UseIDSetup.event" 	//still need to find and fix all mini jump tables
