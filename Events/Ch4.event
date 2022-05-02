@@ -13,7 +13,8 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TURN 0x0 HartWarns [1,0] 0x80
+TURN 0x0 GamerTime [1,0] 0x0
+TurnEventEnemy(0,HartWarns,1)
 TURN 0x0 Turn2Rein [2,0] 0x0
 TURN 0x0 Turn3Rein [3,0] 0x0
 TURN 0x0 Turn4Rein [4,0] 0x0
@@ -22,7 +23,7 @@ TURN 0x0 Turn6Rein [6,0] 0x0
 TURN 0x0 Turn7Rein [7,0] 0x0
 TURN 0x0 Turn8Rein [8,0] 0x0
 TURN 0x0 Turn9Rein [9,0] 0x0
-TURN 0x0 EndingScene [11,0] 0x0
+TURN 0x3 EndingScene [11,0] 0x0
 	END_MAIN
 
 ALIGN 32
@@ -34,7 +35,6 @@ CharacterEventBothWays(0x11, FlorisUlrichConvo, Floris, Ulrich)
 	END_MAIN
 
 MiscBasedEvents:
-	AREA 0x17 GamerTime [0,8] [16,15]
 	CauseGameOverIfLordDies
 DefeatBoss(EndingScene)
 AREA 0x65 WeAreDead [0,11] [0,13]
@@ -221,6 +221,10 @@ Traps2:
 BeginningScene:
 SetBackground(0x3F)
 Music(0x4E)
+STAL 5
+BROWNBOXTEXT NorthelmBorderText [8,8] // box in the top right that's pretty cool for small text
+STAL 15
+
 CHECK_ALIVE Stroganoff
 BEQ 1 0x0 0xC
 
@@ -303,8 +307,9 @@ FADI 60
 CLEAN
 Music(0x26)
 FADU 16
+STAL 5
 BROWNBOXTEXT LaterThatNight [8,8] // box in the top right that's pretty cool for small text
-STAL 10
+STAL 15
 MOVE 0xD Affogato [8,14]
 ENUN
 STAL 10
@@ -329,8 +334,11 @@ STAL 7
 CLEAN
 Music(0x63)
 STAL 3
-SetBackground(0x0E)
+SetBackground(0x43)
 FADU 60
+STAL 5
+BROWNBOXTEXT PalaceText [8,8] // box in the top right that's pretty cool for small text
+STAL 15
 Text(Ch4Ending4)
 STAL 5
 	MNC2 0x5
@@ -452,8 +460,6 @@ FlorisUlrichConvo:
 	ENDA
 	
 GamerTime:
-PlayerRangeCheck
-STAL 3
 CAM1 [0,12]
 STAL 20
 CAM1 [16,12]

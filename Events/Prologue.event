@@ -25,8 +25,8 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TURN 0x0 BeegAIChange [2,0] 0x0
-TURN 0x0 RunawayThieves [2,0] 0x80
-TURN 0x0 OMGMyHero [3,0] 0x0
+TURN 0x0 RunawayThieves [2,0] 0x0
+TurnEventEnemy(0,OMGMyHero,3)
 TURN 0x0 Thieves1 [4,0] 0x0
 TURN 0x0 ShamanRein1 [6,0] 0x0
 //TURN 0x0 ShamanRein3 [9,0] 0x0
@@ -88,6 +88,7 @@ Seize(2,2)
 END_MAIN
 
 MiscBasedEvents:
+AREA 0x8 FirstMoveTime [0,9] [7,11]
 AREA 0xF WallSus [10,5] [14,8]
 AREA 0x0 GaidenPrologue [7,6] [7,6]
 CauseGameOverIfLordDies
@@ -151,6 +152,7 @@ UNIT 0x64 Thief 0x0 Level(1, Enemy, 1)            [14,0] DropItem 0x0 0x0 0x0 [I
 UNIT
 
 Traps1:
+BlueSigil(2,2)
 ENDTRAP
 ALIGN 4
 
@@ -233,6 +235,14 @@ NoFade
 ENDA
 
 EndingScene: //why did i do this to myself
+
+CHECK_TURNS //gaiden turn requirement (clear prologue/ch1 within 7 turns each to unlock)
+SVAL 0x7 0x7 //within 7 turns
+BGT 0x9000 0xC 0x7
+ENUT 0xA1
+REMA
+LABEL 0x9000
+
 Music(0x32)
 SetBackground(0x3C)
 CHECK_ALIVE Breve //if alive continue, if dead go to LABEL 0x1
@@ -377,6 +387,15 @@ WallSus:
 PlayerRangeCheck
 CAM1 [12,3]
 CharacterConditionalDialog(Ansgar,WhenTheWallIsSus2,WhenTheWallIsSus)
+NoFade
+ENDA
+
+FirstMoveTime:
+PlayerRangeCheck
+CAM1 [2,2]
+	Text(PrologueSus)
+	STAL 5
+	CenterTextbox(BlueTileDisclaimer)
 NoFade
 ENDA
 

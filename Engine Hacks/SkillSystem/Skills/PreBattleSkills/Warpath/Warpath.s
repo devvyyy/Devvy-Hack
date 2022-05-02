@@ -13,12 +13,6 @@ ldr r1, [r5,#4] @class data ptr
 cmp r1, #0 @if 0, this is stat screen
 beq End
 
-@not broken movement map
-ldr r0,=0x203a968
-ldrb r0,[r0]
-cmp r0,#0xFF
-beq End
-
 @has Warpath
 ldr r0, SkillTester
 mov lr, r0
@@ -28,15 +22,43 @@ ldr r1, WarpathID
 cmp r0, #0
 beq End
 
-@Add crit
+@make sure we're in combat (or combat prep)
+ldrb r3, =gBattleData
+ldrb r3, [r3]
+cmp r3, #4
+beq End
 
-ldr r3,=0x203a968 @Spaces Moved
-mov r1, #0x66 @crit
-ldrh r0, [r4, r1]
-mov r3,#0x3
-mul r3,r2
-add r0, r3
+ldr		r0,[r5]
+ldr		r0,[r0,#0x28]
+ldr		r1,[r5,#0x4]
+ldr		r1,[r1,#0x28]
+orr		r0,r1
+mov		r1,#0x1			@is defender mounted
+tst		r0,r1
+bne		End
+
+@add str/4 attack
+mov  r1, #0x5A
+ldrh r0, [r4, r1] @attack
+ldrb r2, [r4, #0x14] @str
+lsr  r2, #2
+add  r0, r2
 strh r0, [r4,r1]
+
+mov r0, r5       @Move defender data into r1.
+mov r1, #0x4c    @Move to the attacker's weapon ability
+ldr r1, [r0,r1]
+mov r2, #0x42
+tst r1, r2
+bne     End @do nothing if magic bit set
+
+@debuff str/4 attack to enemy
+mov  r1, #0x5A
+ldrh r0, [r5, r1] @attack
+ldrb r2, [r5, #0x14] @str
+lsr  r2, #2
+add  r0, r2
+strh r0, [r5,r1]
 
 End:
 pop {r4-r7, r15}

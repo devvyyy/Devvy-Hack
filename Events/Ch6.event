@@ -113,7 +113,6 @@ UNIT Aeteria Shaman 0x1 Level(6, Enemy, 1)     [1,13] 0b 0x0 0x0 0x0 [DarkTome2]
 UNIT Aeteria Thaumaturge 0x1 Level(6, Enemy, 1)     [6,11] 0b 0x0 0x0 0x0 [Thunder] StallOneTurnAI
 UNIT Aeteria Myrmidon 0x1 Level(6, Enemy, 1)     [20,11] 0b 0x0 0x0 0x0 [KillingEdge] TwoActionAI
 UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [22,10] DropItem 0x0 0x0 0x0 [Flux,Mine] ChargeAI
-UNIT Aeteria Thief 0x1 Level(5, Enemy, 1)     [21,4] 0b 0x0 0x0 0x0 [KillingEdge,] BossAI
 UNIT Aeteria LanceArmor 0x1 Level(7, Enemy, 1)     [17,7] 0b 0x0 0x0 0x0 [Spear] BossAI
 UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [0,5] 0b 0x0 0x0 0x0 [DarkTome2] StallOneTurnAI
 UNIT AeteriaStealable Soldier 0x1 Level(6, Enemy, 1)     [5,7] 0b 0x0 0x0 0x0 [IronGlaive,Elixir] ChargeAI
@@ -574,6 +573,9 @@ ENDA
 BeginningScene:
 	LOAD1 0x1 RedSussy
 	ENUN
+SetBackground(0x35) //black
+Text(Ch6Opening0)
+STAL 20
 Music(0x48)
 SetBackground(0x2B)
 STAL 7
@@ -614,7 +616,7 @@ CLEAN
 FADU 30
 STAL 10
 Music(0x93)
-SetBackground(0x25)
+SetBackground(0x42)
 TripleIfAliveDialog(Ansgar,Hildr,Breve,Ch6Opening4,7)
 STAL 15
 FADI 15
@@ -811,31 +813,117 @@ SetBackground(0x29)
 STAL 5
 BROWNBOXTEXT ThroneRoomText [8,8]
 STAL 15
-CHECK_ALIVE Lennard
-BEQ 776 0x0 0xC
+TEXTSTART
+TEXTSHOW Ch6Ending1
+TEXTEND
+TEXTSHOW AffoInterrupt
+TEXTEND
+
 CHECK_ALIVE Breve
-BEQ 776 0x0 0xC
+BEQ 0x9B 0xC 0x0
+	TEXTSHOW2 BreveInterrupt
+	TEXTEND
+LABEL 0x9B
 CHECK_ALIVE Hildr
-BEQ 776 0x0 0xC
+BEQ 0x9C 0xC 0x0
+	TEXTSHOW2 HildrInterrupt
+	TEXTEND
+LABEL 0x9C
+CHECK_ALIVE Ansgar
+BEQ 0x9D 0xC 0x0
+	TEXTSHOW2 AnsgarInterrupt
+	TEXTEND
+LABEL 0x9D
 CHECK_ALIVE Nora
-BEQ 776 0x0 0xC
+BEQ 0x9E 0xC 0x0
+	TEXTSHOW2 NoraInterrupt
+	TEXTEND
+LABEL 0x9E
+CHECK_ALIVE Sequin
+BEQ 0x9F 0xC 0x0
+	TEXTSHOW2 SequinInterrupt
+	TEXTEND
+LABEL 0x9F
 CHECK_ALIVE Brudet
-BEQ 776 0x0 0xC
+BEQ 0x17 0xC 0x0
+	TEXTSHOW2 BrudetInterrupt
+	TEXTEND
+LABEL 0x17
 CHECK_ALIVE Stroganoff
-BEQ 776 0x0 0xC
+BEQ 0x18 0xC 0x0
+	TEXTSHOW2 StrogyInterrupt
+	TEXTEND
+LABEL 0x18
+CHECK_ALIVE Doppio
+BEQ 0x19 0xC 0x0
+	TEXTSHOW2 DoppioInterrupt
+	TEXTEND
+LABEL 0x19
+CHECK_ALIVE Eiskaffee
+BEQ 0x1A 0xC 0x0
+	TEXTSHOW2 EisInterrupt
+	TEXTEND
+LABEL 0x1A
+CHECK_ALIVE Mocha
+BEQ 0x1B 0xC 0x0
+	TEXTSHOW2 MochaInterrupt
+	TEXTEND
+LABEL 0x1B
+CHECK_ALIVE Pandoro
+BEQ 0x1C 0xC 0x0
+	TEXTSHOW2 PandoroInterrupt
+	TEXTEND
+LABEL 0x1C
+CHECK_ALIVE Rina
+BEQ 0x1D 0xC 0x0
+	TEXTSHOW2 RinaInterrupt
+	TEXTEND
+LABEL 0x1D
+CHECK_ALIVE Noel
+BEQ 0x1E 0xC 0x0
+	TEXTSHOW2 NoelInterrupt
+	TEXTEND
+LABEL 0x1E
+CHECK_ALIVE Floris
+BEQ 0x1F 0xC 0x0
+	TEXTSHOW2 FlorisInterrupt
+	TEXTEND
+LABEL 0x1F
+CHECK_ALIVE Yory
+BEQ 0x20 0xC 0x0
+	TEXTSHOW2 YoryInterrupt
+	TEXTEND
+LABEL 0x20
 CHECK_ALIVE Therese
-BEQ 776 0x0 0xC
-Text(Ch6Ending1)
-GOTO 420
-LABEL 776
-Text(Ch6EndingAlt1)
-LABEL 420
+BEQ 0x21 0xC 0x0
+	TEXTSHOW2 ThereseInterrupt
+	TEXTEND
+LABEL 0x21
+CHECK_ALIVE Lennard
+BEQ 0x22 0xC 0x0
+	TEXTSHOW2 LennardInterrupt
+	TEXTEND
+LABEL 0x22
+CHECK_ALIVE Iris
+BEQ 0x23 0xC 0x0
+	TEXTSHOW2 IrisInterrupt
+	TEXTEND
+LABEL 0x23
+CHECK_ALIVE Kane
+BEQ 0x24 0xC 0x0
+	TEXTSHOW2 KaneInterrupt
+	TEXTEND
+LABEL 0x24
+
+TEXTSHOW GorloisContinue
+TEXTEND
+
 STAL 20
 Music(0x115)
 FADI 45
 CLEAN
 SetBackground(0x35)
-SetBackground(0x15)
+SetBackground(0x30)
 STAL 5
 BROWNBOXTEXT FewHoursLaterText [8,8]
 STAL 15
@@ -854,7 +942,7 @@ STAL 35
 FADI 45
 CLEAN
 SetBackground(0x35)
-SetBackground(0x0B)
+SetBackground(0x45)
 Music(0x4A)
 STAL 5
 BROWNBOXTEXT HallText [8,8]

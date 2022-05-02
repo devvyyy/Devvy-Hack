@@ -1,3 +1,9 @@
+## WreyvianOutskirtsText
+Wreyvian Outskirts[X]
+
+## AeterianOutskirtsText
+Aeterian Outskirts[X]
+
 ## PalaceOutskirtsText
 Palace Outskirts[X]
 
@@ -8,6 +14,7 @@ Pale Palace[X]
 Hall of Shadows[X]
 
 ## ThroneRoomText
+# use for both kingdoms?
 Throne Room[X]
 
 ## FewHoursLaterText
@@ -29,7 +36,7 @@ Wreyvine's Pale Palace,[.4] of course![.6][N]
 Make it snappy,[.4] Eustace![AN]
 
 [OpenMidRight]
-O-Of course,[.4] Your Majesty.[.6][N]
+O-[.4]Of course,[.4] Your Majesty.[.6][N]
 The Trinity does not bring failure.[A][X]
 
 ## Ch6Opening1
@@ -269,7 +276,7 @@ back to Aeteria.[AN]
 [OpenMidRight]
 I am their target:[.4] my very presence[N]
 is enough for them to charge.[AN]
-Just as the Hallowed King did before us,[.4][N]
+Just as the Hallowed One did before us,[.4][N]
 we'll sear the shadows away in dawn.[AN]
 Stay on your guard,[.4][N]
 everyone![A][X]
@@ -299,7 +306,10 @@ but we'll get through[N]
 this,[.4] no problem.[A][X]
 
 ## Ch6Ending0
-[OpenFarFarRight][LoadAoife][MoveMidLeft]
+[OpenFarFarRight][LoadAoife][MoveLeft]
+[OpenLeft]
+Looks like I have to[N]
+take care of things.[AN][CloseSpeechSlow][MoveMidLeft]
 [OpenMidLeft]
 [Pause]What in the world am I[N]
 watching?[AN]
@@ -380,44 +390,113 @@ to Her Majesty.[A][X]
 [OpenFarLeft]Their forces are retreating[Beat][.6][N]
 But that general took the Eye[Beat][AN]
 Is everyone unharmed?[.6] Did we lose[N]
-soldiers too?[AN]
+soldiers,[.4] too?[AN][X]
 
-[OpenRight][LoadLennard]
-It doesn't look like we suffered[N]
-many casualties[Beat][AN][ClearFace]
-
+## AffoInterrupt
 [OpenLeft][LoadAffoSwitch]
 [MidBlink]Shadow.[.6] Warriors.[.6] [OpenEyes]That's it,[.4][N]
 I'm[Beat] I'm done.[AN][ClearFace]
 
-[OpenRight][LoadBreve]
-A successful attack on the palace[Beat][N]
-This is a call for war.[AN][ClearFace]
-
-[OpenLeft][LoadUlrich]
+[OpenRight][LoadUlrich]
 This has escalated far beyond[N]
-what I could have imagined[Beat][AN][ClearFace]
+what I could have imagined[Beat][AN][ClearFace][X]
 
+## BreveInterrupt
+[OpenLeft][LoadBreve]
+A successful attack on the palace[Beat][N]
+This is a call for war.[AN][ClearFace][X]
+
+## HildrInterrupt
 [OpenRight][LoadHildr]
 Shadow warriors[Beat][.6] The Aeterian that[N]
-came up with that must be nuts![AN][ClearFace]
+came up with that must be nuts![AN][ClearFace][X]
 
-[OpenLeft][LoadNora]
+## AnsgarInterrupt
+[OpenLeft][LoadAnsgar]
+[Pause]See what I mean?[.6] Magic,[.4] the[N]
+root of our problems[Beat][AN][ClearFace][X]
+
+## NoraInterrupt
+[OpenRight][LoadNora]
 I can't believe they got away with the[N]
-tome[Beat][.6] Where do we go from here?[AN][ClearFace]
+tome[Beat][.6] Where do we go from here?[AN][ClearFace][X]
 
+## SequinInterrupt
+[OpenLeft][LoadSequin]
+Jeez,[.4] I wish I could snatch[N]
+stuff as easily as she did[Beat][AN][X]
+
+## BrudetInterrupt
 [OpenRight][LoadBrudet]
 The one the Aeterians followed[Beat][N]
-She's of Aeteria's Trinity.[AN][ClearFace]
+She's of Aeteria's Trinity.[AN][ClearFace][X]
 
+## StrogyInterrupt
 [OpenLeft][LoadStroganoff]
 Attacked the King,[.4] snatched the Eye.[.6][N]
-They basically declared war![AN][ClearFace]
+They basically declared war![AN][ClearFace][X]
 
+## DoppioInterrupt
+[OpenRight][LoadDoppio]
+I can't believe my eyes[Beat] Are we[N]
+truly this incompetent?[AN][ClearFace][X]
+
+## EisInterrupt
+[OpenLeft][LoadEis]
+Those dastards are about to get[N]
+what's coming to them.[AN][ClearFace][X]
+
+## MochaInterrupt
+[OpenRight][LoadMocha]
+Oh,[.4] gosh[Beat] This is terrible[Beat] We[N]
+must try and catch them at once![AN][ClearFace][X]
+
+## PandoroInterrupt
+[OpenLeft][LoadPandoro]
+Must Ideon's two deities continue[N]
+to fight?[AN][ClearFace][X]
+
+## RinaInterrupt
+[OpenRight][LoadRina]
+[Pause]It seems that I can't escape,[.4][N]
+no matter where I go[Beat][AN][ClearFace][X]
+
+## NoelInterrupt
+[OpenLeft][LoadNoel]
+Stop complaining,[.4] and chase[N]
+them already![AN][ClearFace][X]
+
+## FlorisInterrupt
+[OpenRight][LoadFloris]
+We've been blind this entire time[Beat][N]
+Come on,[.4] let us take it back![AN][ClearFace][X]
+
+## YoryInterrupt
+[OpenLeft][LoadYory]
+I h-[.4]have an idea[Beat] Why don't[N]
+we just let them have it[Beat]?[AN][ClearFace][X]
+
+## ThereseInterrupt
 [OpenRight][LoadTherese]
 Gah![.6] At least no one is harmed,[.4][N]
-right[Beat]?[AN][ClearFace]
+right[Beat]?[AN][ClearFace][X]
 
+## LennardInterrupt
+[OpenRight][LoadLennard]
+It doesn't look like we suffered[N]
+many casualties[Beat][AN][ClearFace][X]
+
+## IrisInterrupt
+[OpenLeft][LoadIris]
+They cannot hide or run for long.[.6][N]
+It is only a matter of time.[AN][ClearFace][X]
+
+## KaneInterrupt
+[OpenRight][LoadKane]
+[Pause]Huh.[.6] Ain't that a[N]
+bummer?[.6] Too bad.[AN][ClearFace][X]
+
+## GorloisContinue
 [OpenFarLeft]
 All these questions and none[N]
 of the answers[Beat][AN][MoveMidLeft]
@@ -425,35 +504,6 @@ Your Majesty[Beat]?[.6][N]
 We need to act quickly.[AN]
 
 [OpenFarRight][MoveMidRight]
-[Beat][AN]
-I will think of our next course of[N]
-action.[.6] Keep your guard up.[AN][X]
-
-## Ch6EndingAlt1
-[OpenFarLeft][LoadGorlois][OpenMidRight][LoadUlrich]
-[OpenFarLeft]I-[.4] [CloseEyes]No,[.4] this can't be[N]
-happening[Beat][AN][OpenEyes]
-
-[OpenMidRight][Pause]Our numbers are dwindling.[.6][N]
-Looks like some of us didn't make it.[AN]
-
-[OpenLeft][LoadAffoSwitch]
-[OpenLeft][MidBlink]Shadow.[.6] Warriors.[.6] [OpenEyes]That's it,[.4][N]
-I'm[Beat] I'm done.[AN]
-Which Aeterian came up with[N]
-something so ludicrous?[AN]
-
-[OpenMidRight]
-By attacking the King,[.4] Aeteria has[N]
-basically declared war on Wreyvine.[AN]
-
-[OpenLeft]They even got away with[N]
-the Eye of Creation[Beat][AN]
-
-[OpenFarLeft]
-Your Majesty[Beat]?[AN]
-
-[OpenMidRight][MoveFarRight][OpenRight][LoadKing]
 [Beat][AN]
 I will think of our next course of[N]
 action.[.6] Keep your guard up.[AN][X]
@@ -692,7 +742,7 @@ I swear![AN]
 [OpenMidLeft]
 I believe that it will work,[.4][N]
 especially in times like these.[AN]
-May the Hallowed King[N]
+May the Hallowed One[N]
 bless you.[AN]
 
 [OpenMidRight]
@@ -765,7 +815,31 @@ fun.[.6] Toodles![AN]
 [OpenMidLeft][LoadDoppio][OpenMidRight][LoadBrudet]
 [OpenMidLeft]Heya,[.4] Captain Brudet![AN]
 [OpenMidRight]Did you need something?[AN]
-[OpenMidLeft]Wanna get lunch later with[N]
+[OpenMidLeft]Isn't it so scary,[.4] having to[N]
+protect the King like this?[AN]
+[OpenMidRight]
+It's nothing we haven't[N]
+done before.[AN]
+[OpenMidLeft]
+It's nothing you've[N]
+done before.[AN]
+I'm a city guard![.6] I didn't realize[N]
+we'd do something this grand.[AN]
+[OpenMidRight]
+Life is full of surprises;[.4][N]
+I'd know.[AN]
+I'm not even from Ideon and I[N]
+get promoted to a royal captain.[AN]
+All because of my axe[N]
+technique[Beat][AN]
+[OpenMidLeft]
+That's incredible,[.4][N]
+Captain![AN]
+[OpenMidRight]
+Is that all you wanted[N]
+to ask?[AN]
+[OpenMidLeft]
+Wanna get lunch later with[N]
 the other knights?[AN]
 We could go to a diner,[.4] get[N]
 stuffed,[AN]
@@ -1000,14 +1074,15 @@ me with that![AN]
 [OpenMidLeft]
 It's a better title than half of[N]
 the Wreyvian army.[AN]
+If it helps,[.4] I think it's[N]
+perfect for a former headsman.[AN]
 
 [OpenMidRight]
-It brings stuff up that I'd[N]
+Brudet![.6] It brings stuff up that I'd[N]
 like to forget.[AN]
 If you don't have anything important[N]
 to say,[.4] I suggest you bugger off.[AN][ClearFace]
 
 [OpenMidLeft]
-Sheesh.[.6] What could possibly[Beat][N]
-Oh.[.6] Yeah.[AN][X]
+Wait,[.4] Stroganoff[Beat][AN][X]
 

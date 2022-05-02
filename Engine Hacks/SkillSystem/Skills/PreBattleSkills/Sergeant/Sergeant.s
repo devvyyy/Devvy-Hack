@@ -20,12 +20,24 @@ ldr r1, SergeantID
 cmp r0, #0
 beq End
 
-@apply def +7
+@apply def +3
 mov r0, r4
 add r0,#0x5C
 ldrh r3,[r0]
-add r3,#7
+add r3,#3
 strh r3,[r0]
+
+ldr r0,=#0x203A4EC @attacker struct
+cmp r0,r4
+beq End @skip if player phase
+
+@ set brave flag
+mov r0,r4
+add r0,#0x4C @item ability word
+ldr r1,[r0]
+mov r2,#0x20 @brave flag
+orr r1,r2
+str r1,[r0]
 
 End:
 pop {r4-r7, r15}

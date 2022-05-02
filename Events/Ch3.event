@@ -13,7 +13,8 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TURN 0x0 ReinWarning [1,0] 0x80
+TURN 0x0 FirstMove [1,0] 0x0
+TurnEventEnemy(0,ReinWarning,1)
 TURN 0x0 WaterfallRein [3,0] 0x0
 TURN 0x0 TopLeftRein [4,0] 0x0
 TURN 0x0 BottomLeftRein [5,0] 0x0
@@ -40,7 +41,6 @@ MiscBasedEvents:
 	AREA 0xF DropThePlank [8,15] [8,15]
 	AREA 0x10 BarrelRoll [0,0] [3,1]
 	AREA 0x11 LolWhy [6,13] [10,13]
-	AREA 0x17 FirstMove [0,14] [7,17]
 	END_MAIN
 
 LocationBasedEvents:
@@ -121,7 +121,7 @@ UNIT Aeteria Mage 0x1 Level(3, Enemy, 1)     [0,0] 0b 0x0 0x0 0x0 [Thunder,] Cha
 	UNIT
 
 Rein3:
-UNIT AeteriaStealable Thief 0x1 Level(3, Enemy, 1)     [16,18] 0b 0x0 0x0 0x0 [IronDagger,RedGem] [0x6,0xC,0x4,0x0]
+UNIT Aeteria Thief 0x1 Level(3, Enemy, 1)     [16,18] DropItem 0x0 0x0 0x0 [IronDagger,RedGem] [0x6,0xC,0x4,0x0]
 	UNIT
 	
 Rein4:
@@ -156,6 +156,7 @@ UNIT Atheya WyvernRider_F 0x1 Level(5, NPC, 0)     [6,13] 0x0 0x0 0x0 0x0 [Steel
 	UNIT
 
 Traps1:
+BlueSigil(13,1)
 GreenSigil(8,15)
 	ENDTRAP
 	ALIGN 4
@@ -165,14 +166,20 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-Music(0xE4)
 SetBackground(0x26)
+Music(0xE4)
+STAL 5
+BROWNBOXTEXT WreyvineCapitalText [8,8]
+STAL 15
 Text(Ch3Opening1)
 Music(0x48)
 FADI 60
 CLEAN
 SetBackground(0x3D)
 Music(0x3E4)
+STAL 5
+BROWNBOXTEXT NorthelmOutskirtsText [8,8]
+STAL 15
 CharacterConditionalDialog(Hildr,Ch3Opening2,Ch3OpeningAlt2)
 STAL 10
 FADI 60
@@ -184,7 +191,7 @@ SetFlag(0xD)
 	CUSN Doppio
 	CUSN Eiskaffee
 	ENUN
-	GotoPrepScreen
+	CALL $591FD8 //prep screen
 	ENDA
 
 EndingScene:
@@ -230,14 +237,10 @@ LABEL 4
 	ENDA
 	
 FirstMove:
-PlayerRangeCheck
-CHECK_EVENTID 0xF
-BNE 1 0x0 0xC
 	CAM1[8,15]
 	Text(Ch3BridgeWarning)
 	STAL 5
 	CenterTextbox(GreenTileDisclaimer)
-LABEL 1
 	NoFade
 	ENDA
 

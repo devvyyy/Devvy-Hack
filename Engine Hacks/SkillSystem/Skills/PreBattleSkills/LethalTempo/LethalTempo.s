@@ -67,6 +67,18 @@ add r0,#0x5E
 mov r3,#0
 strh r3,[r0]
 
+@ brave if initiating
+ldr r0,=#0x203A4EC @attacker struct
+cmp r0,r4
+bne End @skip if enemy phase
+
+mov r0,r4
+add r0,#0x4C @item ability word
+ldr r1,[r0]
+mov r2,#0x20 @brave flag
+orr r1,r2
+str r1,[r0]
+
 End:
 pop {r4-r7, r15}
 .align

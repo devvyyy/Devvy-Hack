@@ -2,6 +2,12 @@
 #include "AeterianFealty/AeterianFealty.event"
 
 ALIGN 4
+Executors:
+#incbin "Executors/Executors.dmp"
+POIN SkillTester
+WORD ExecutorsID
+
+ALIGN 4
 GrimRing:
 #incbin "GrimRing/GrimRing.dmp"
 POIN SkillTester
@@ -49,6 +55,12 @@ GlowRing:
 #incbin "GlowRing/GlowRing.dmp"
 POIN SkillTester
 WORD GlowRingID
+
+ALIGN 4
+AshenRing:
+#incbin "AshenRing/AshenRing.dmp"
+POIN SkillTester
+WORD AshenRingID
 
 ALIGN 4
 BurstFireStats:

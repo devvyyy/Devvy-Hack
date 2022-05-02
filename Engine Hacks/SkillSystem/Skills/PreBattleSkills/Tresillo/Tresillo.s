@@ -38,6 +38,17 @@ ldrb r2, [r4, #0x15] @skill
 add  r0, r2
 strh r0, [r4,r1]
 
+@check range
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#2
+ble GoBack
+
+mov r1, #0x62
+ldrh r0, [r4, r1] @Avoid
+add r0, #255
+strh r0, [r4,r1]
+
 GoBack:
 pop {r4-r7, r15}
 .align

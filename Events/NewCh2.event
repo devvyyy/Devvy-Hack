@@ -14,7 +14,7 @@ PointerList:
 
 TurnBasedEvents:
 TURN 0x0 CutsceneMocha [1,0] 0x0
-TURN 0x0 OhHeckItHim [2,0] 0x80
+TurnEventEnemy(0,OhHeckItHim,2)
 TURN 0x0 BridgeRein [3,0] 0x0
 TURN 0x0 BoatRein [5,0] 0x0
 TURN 0x0 MountainRein [6,0] 0x0
@@ -36,15 +36,14 @@ CharacterEventBothWays(0x24, AffoSeqConvo, Affogato, Sequin)
 
 MiscBasedEvents:
 	CauseGameOverIfLordDies
-AREA 0x17 FirstMoveTime [5,18] [12,13]
 AFEV 0x0 RunRunRunRun 0x18
 AFEV 0x0 EndingScene 0x3
 	END_MAIN
 
 LocationBasedEvents:
 Chest(Slow,1,9)
-Arrive(0,1)
-Arrive(0,2)
+Seize(0,1)
+Seize(0,2)
 Village(0x20,SallyCars,13,3)	
 House(0x0,OgrimHouseEpic,9,8)
 	END_MAIN
@@ -107,6 +106,7 @@ UNIT Aeteria Shaman 0x1 Level(2, Enemy, 1)     [11,8] 0x0 0x0 0x0 0x0 [DarkTome2
 UNIT Aeteria Soldier 0x1 Level(2, Enemy, 1)     [13,10] 0x0 0x0 0x0 0x0 [SteelLance,] AttackInRangeAI
 UNIT Aeteria ACav 0x1 Level(2, Enemy, 1)     [5,3] 0x0 0x0 0x0 0x0 [IronAxe,] TwoActionAI
 UNIT Aeteria LCav 0x1 Level(3, Enemy, 1)     [5,0] 0x0 0x0 0x0 0x0 [IronLance,] StallOneTurnAI
+UNIT Aeteria Archer 0x1 Level(3, Enemy, 1)     [6,6] 0x0 0x0 0x0 0x0 [IronBow,] BossAI
 UNIT Aeteria Mage 0x1 Level(2, Enemy, 0)     [14,8] DropItem 0x0 0x0 0x0 [Fire,RedGem] TwoActionAI
 UNIT Aeteria SCav 0x1 Level(2, Enemy, 1)     [0,2] 0x0 0x0 0x0 0x0 [SteelSword,] StallOneTurnAI
 	UNIT
@@ -405,15 +405,6 @@ FlashCursor(0x69,60)
 Text(OgrimChargeText)
 ENUT 0x19
 LABEL 0x776
-NoFade
-ENDA
-
-FirstMoveTime:
-PlayerRangeCheck
-	CAM1[0,1]
-	Text(Ch2GoToBridge)
-	STAL 5
-	CenterTextbox(BlueTileDisclaimer)
 NoFade
 ENDA
 	

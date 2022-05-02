@@ -208,6 +208,17 @@ Text(Ch1Opening3)
 	ENDA
 
 EndingScene:
+CHECK_TURNS //gaiden turn requirement (clear prologue/ch1 within 7 turns each to unlock)
+SVAL 0x7 0x7 //within 7 turns
+BGT 0x9000 0xC 0x7
+CHECK_EVENTID 0xA1
+BEQ 0x9000 0xC 0x0
+
+UnsetFlag(0xA1)
+SetFlag(0xA2)
+REMA
+LABEL 0x9000
+
 FADI 30
 DoAllThree
 LOMA 0x48

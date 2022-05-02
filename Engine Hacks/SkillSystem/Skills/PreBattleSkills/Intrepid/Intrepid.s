@@ -30,15 +30,18 @@ ldr r1, IntrepidID
 cmp r0, #0
 beq End
 
-@Intrepid: Brave weapons at full HP.
+@apply atk/as +2
+mov r0, r4
+add r0,#0x5A
+ldrh r3,[r0]
+add r3,#2
+strh r3,[r0]
 
-mov r0,r4
-add r0,#0x4C @item ability word
-ldr r1,[r0]
-mov r2,#0x20 @brave flag
-orr r1,r2
-str r1,[r0]
-
+mov r0, r4
+add r0,#0x5E
+ldrh r3,[r0]
+add r3,#2
+strh r3,[r0]
 
 End:
 pop {r4-r7, r15}

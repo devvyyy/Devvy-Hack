@@ -85,6 +85,10 @@ ALIGN 4
 	ALIGN 4
 	SnowVillageSunsetPalette:
 	#incbin "SnowVillage/SnowVillageSunsetPal.bin"
+	
+	ALIGN 4
+	DuskwavePalette: //this is by pandan
+	#incbin "SnowVillage/DuskwavePal.bin"
 	 
 	ALIGN 4
     SnowVillageMapConfig:
@@ -94,6 +98,7 @@ ALIGN 4
 	EventPointerTable(0xE, SnowVillageTilesetImage)
 	EventPointerTable(0x38, SnowVillageSunsetPalette)
     EventPointerTable(0xF, SnowVillageTilesetPalette)
+    EventPointerTable(0xEA, DuskwavePalette)
 	EventPointerTable(0x10, SnowVillageMapConfig)
 	EventPointerTable(0x12, SnowVillageAnims)
 	

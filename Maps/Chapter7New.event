@@ -12,6 +12,7 @@ TileMap(0,14,3,1,1,Chest1)
 TileMap(1,8,9,1,1,Chest2)
 TileMap(2,9,10,1,1,Chest3)
 TileMap(3,7,12,2,2,Door)
+TileMap(4,14,8,2,2,Broken_Wall_1)
 TileMapEnd
 
 Chest1:
@@ -28,5 +29,9 @@ ALIGN 4
 
 Door:
 SHORT 0x780 0x788 0x780 0x784 
+ALIGN 4
+
+Broken_Wall_1:
+SHORT 0x69c 0x508 0x69c 0x6a0 0x780 0x788 0x780 0x784 
 ALIGN 4
 

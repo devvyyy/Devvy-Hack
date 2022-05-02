@@ -25,22 +25,20 @@ mov lr, r0
 mov r0, r4 @attacker
 mov r1, #0x0
 mov r2, #3 @Enemy
-mov r3, #2 @range
+mov r3, #4 @range
 .short 0xf800
 cmp r0, #2
 blt Done
 
-Next:
-mov r0, #0x5A
+mov r0, #0x62
 ldrh r3, [r4,r0]
-add r3, #3
+add r3, #30
 strh r3, [r4,r0]
 
-mov r0, #0x60
+mov r0, #0x66
 ldrh r3, [r4,r0]
-add r3, #15
+add r3, #30
 strh r3, [r4,r0]
-
 
 Done:
 pop {r4-r7, r15}

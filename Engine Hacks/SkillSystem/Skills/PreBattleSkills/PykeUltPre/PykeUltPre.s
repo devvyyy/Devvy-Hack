@@ -67,6 +67,24 @@ ldrh	r0,[r4]
 add		r0,#255
 strh	r0,[r4]
 
+@ cancel your double if faster (dude just call the cant double loop)
+ldrb r0, [r4, #0x16] @attacker spd
+ldrb r1, [r5, #0x16] @defender spd
+cmp r0, r1
+ble GoBack @skip if spd is less or equal
+
+@set attacker spd to 0
+mov r0, r4
+add r0,#0x5E
+mov r3,#0
+strh r3,[r0]
+
+@set defender spd to 0
+mov r0, r5
+add r0,#0x5E
+mov r3,#0
+strh r3,[r0]
+
 GoBack:
 pop {r4-r7}
 pop {r0}

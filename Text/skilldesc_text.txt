@@ -1,3 +1,23 @@
+## SD_P2Ch1ArmorBossSkill
+Strong and Tough: If unit's Mov or Spd[N]
+is less than foe's Mov or Spd, x2 hits,[N]
+and unit follow-ups and foe cannot.[X]
+
+## SD_Executors
+Obliterate: Deals bonus damage equal to[N]
+500% of foe's missing HP.[X]
+
+## SD_StandTogether
+Stand Together: If adjacent to 2 or more[N]
+allies, grants Def +10.[X]
+
+## SD_PerfectPitch
+dummy[X]
+
+## SD_FirstBlood
+First Blood: Kills on turn 1 grant[N]
+another action.[X]
+
 ## SD_ApheliosHowMANYYEARS
 [_M][_o][_o][_n][_SP][_E][_v][_o][_k][_e][_d]:[_SP][_I][_f][_SP][_H][_P][_SP][_i][_s][_SP][_h][_a][_l][_f][_SP][_o][_r][_SP][_l][_e][_s][_s][_Comma][_SP][_g][_r][_a][_n][_t][_s][_SP][_A][_S][_Slash][_A][_v][_o][_i][_d][N]
 [_e][_q][_u][_a][_l][_SP][_t][_o][_SP][_m][_i][_s][_s][_i][_n][_g][_SP][_H][_P][_Comma][_SP][_a][_n][_d][_SP][_a][_t][_SP][_a][_SP][_q][_u][_a][_r][_t][_e][_r][_SP][_o][_r][_SP][_l][_e][_s][_s][_Comma][_SP][_a]l[_s][_o][N]
@@ -90,14 +110,14 @@ initiates, unit dodges all attacks.[X]
 
 ## SD_ShonSkill
 Gallant: If foe's HP is full, grants[N]
-Atk/AS/Def/Res +3 during combat.[X]
+Atk/AS/Def/Res +3.[X]
 
 ## SD_SiegSkill
 Tearing Skies: If unit initiates, unit[N]
 makes a follow-up and foe cannot.[X]
 
 ## SD_AmongUs
-Quadratic Strike: Grants Atk +X during combat.[N]
+Quadratic Strike: Grants Atk +X.[N]
 (X = solve with Quadratic formula, where[N]
 a = unit's base Atk, b = Spd, and c = Skl.)[X]
 
@@ -113,10 +133,10 @@ excluding Light magic.[X]
 [_a][_n][_d][_Space][_d][_e][_a]l[_Space][_a][_Space][_h][_a]l[_f][_Space][_o][_f][_Space][_f][_o][_e]'[_s][_Space][_R][_e][_s][_Space]t[_o][_Space][_a][_d]j[_a][_c][_e][_n]t[_Space][_f][_o][_e][_s][_Space][_o][_n][_Space]i[_n]it[_Dot][X]
 
 ## SD_Phase
-# Affogato will get Sidestep, Locktouch, Shove, Phase (story event), Sable-Tipped (secret event that promotes to Maverick), Reposition (Maverick); Chiffon will get Parry? (Moonlit Crown?), Locktouch, Shove, Last-Ditch Gambit (story event), Pivot (promotion to flier lord), Cleaving Whirl (secret event)
+# Affogato will get Sidestep, Locktouch, Shove, Phase (story event), Sable-Tipped (secret event that promotes to Maverick), Reposition (Maverick); Chiffon will get Moon Evoked, Locktouch, Shove, Last-Ditch Gambit (story event), Pivot (promotion to flier lord), Cleaving Whirl (secret event)
 [_P][_h][_a][_s]i[_n][_g]:[_Space][_U][_n]it'[_s][_Space][_e][_q][_u]i[_p][_p][_e][_d][_Space][_B][_o]w[_Slash][_R]i[_f]l[_e][_Space]i[_s][_Space][_g][_r][_a][_n]t[_e][_d][_Space][_3]0%[N]
 Mt[_Space][_a][_n][_d][_Space]l[_e][_s][_s][_e][_r][_Space][_s][_e][_c][_o][_n][_d][_a][_r][_y][_Space][_e][_f][_f][_e][_c]t[_s][_Space][_f][_r][_o]m[_Space]t[_h][_e][_Space][_o][_f][_f]-[_h][_a][_n][_d][N]
-[_R]i[_f]l[_e][_Space]i[_n][_Space][_u][_n]it'[_s][_Space][_2][_n][_d] i[_n][_v][_e][_n]t[_o][_r][_y][_Space][_s]l[_o]t[_Space]([_e][_x][_c]l[_u][_d][_e][_s][_Space][_E][_f][_f][_Dot])[_Dot][X]
+[_R]i[_f]l[_e][_Space]i[_n][_Space][_u][_n]it'[_s][_Space][_2][_n][_d][_Space]i[_n][_v][_e][_n]t[_o][_r][_y][_Space][_s]l[_o]t[_Space]([_e][_x][_c]l[_u][_d][_e][_s][_Space][_E][_f][_f][_Dot])[_Dot][X]
 
 ## SD_BloodHunt
 Blood Hunt: If foe's HP is half or less,[N]
@@ -150,7 +170,8 @@ i[_s][_SP][_h]i[_g][_h][_e][_r][_Comma][_SP][_s]t[_r]i[_k][_e][_s][_SP][_x][_2][
 
 ## SD_Tresillo
 F-D[0x23]-F//C[0x23]-G[0x23]-F: Converts Eth into[N]
-bonus Avoid, and Skill to bonus Crit Avoid.[X]
+bonus Avoid, and Skill to bonus Crit Avoid.[N]
+Dodge all attacks from 3+ spaces away.[X]
 
 ## SD_HeavyDuty
 Grit: If unit's HP is not full,[N]
@@ -184,9 +205,8 @@ Parry: If unit has a weapon equipped,[N]
 negates physical attacks at 1 range.[X]
 
 ## SD_ResolutePyre
-Resolute Pyre: Grants Eth/Crit during[N]
-combat equal to half of unit and foe's[N]
-missing HP.[X]
+Resolute Pyre: Grants Eth/Crit equal[N]
+to half of unit and foe's missing HP.[X]
 
 ## SD_EustacePersonal
 Fractured Mask: If unit's HP is above half,[N]
@@ -195,13 +215,13 @@ grants Def/Res +3 and Avoid +20.[X]
 
 ## SD_Eulogy
 Eulogy of Aeteria: If magic foe initiates,[N]
-neutralizes foe's Eth/Spd/Res/W. Mt[N]
-during combat, setting those stats to 0.[X]
+neutralizes foe's Eth/Spd/Res/W. Mt,[N]
+setting those stats to 0.[X]
 
 ## SD_TouchOfFrost
-Frostbite: If foe's terrain has effects,[N]
-deals bonus damage equal to a quarter[N]
-of foe's current HP.[X]
+Absolute Zero: If unit's Res is higher[N]
+than foe's Res, reduces damage taken[N]
+equal to difference between Res stats.[X]
 
 ## SD_Chronoshift
 Borrowed Time: After combat, heals[N]
@@ -280,11 +300,8 @@ Nevermore: Unit takes -1 damage for[N]
 every 4 damage taken by foe.[X]
 
 ## SD_TrueGuard
-True Guard: uhhhh[X]
-
-## SD_PerfectPitch
-Whimsical: Unit dodges all attacks from[N]
-3 or more spaces away.[X]
+True Guard: Negates effects of skills[N]
+that "Deal bonus damage equal to X".[X]
 
 ## SD_Adaptive
 Adaptive: Grants Def/Res +4 if unit's[N]
@@ -295,9 +312,9 @@ Stalwart: If unit cannot counter,[N]
 foe cannot make a follow-up.[X]
 
 ## SD_PykeMoment
-Like Dominoes: If unit initiates at 1[N]
-range, executes foes below a quarter HP,[N]
-and grants unit another action per kill.[X]
+Like Dominoes: Executes foes below a[N]
+quarter HP, grants unit another action[N]
+per kill, and shares EXP with Chiffon.[X]
 
 ## SD_Starseer
 Gift of the Fallen: During the first[N]
@@ -325,7 +342,7 @@ High Roller: Crit +30 when at[N]
 Weapon Triangle Disadvantage.[X]
 
 ## SD_IDK
-IDK: Neutralizes foe's terrain[N]
+Behemoth: Neutralizes foe's terrain[N]
 bonuses.[X]
 
 ## SD_OneBladeArmy
@@ -451,8 +468,10 @@ any action, and grants another action[N]
 after picking/stealing (once per turn).[X]
 
 ## SD_Vigor
-Requiem: Multiplies Eth by[N]
-1.25x during combat.[X]
+# Requiem: When using offensive staves, multiplies Eth by 1.25x and deals bonus damage equal to a quarter of foe's current HP.
+[_R][_e][_q][_u][_i][_e][_m]:[_SP][_W][_h][_e][_n][_SP][_u][_s][_i][_n][_g][_SP][_o][_f][_f][_e][_n][_s][_i][_v][_e][_SP][_s][_t][_a][_v][_e][_s][_Comma][N]
+[_m][_u][_l][_t][_i][_p][_l][_i][_e][_s][_SP][_E][_t][_h][_SP][_b][_y][_SP][_1][_Dot][_2][_5][_x][_SP][_a][_n][_d][_SP][_d][_e][_a][_l][_s][_SP][_b][_o][_n][_u][_s][N]
+[_d][_a][_m][_a][_g][_e][_SP][_e][_q][_u][_a][_l][_SP][_t][_o][_SP][_a][_SP][_q][_u][_a][_r][_t][_e][_r][_SP][_o][_f][_SP][_f][_o][_e]'[_s][_SP][_c][_u][_r][_r][_e][_n][_t][_SP][_H][_P][_Dot][X]
 
 ## SD_Defeatist
 Defeatist: If unit's HP is half or[N]
@@ -487,8 +506,9 @@ Thunderhead: If unit's HP is three[N]
 quarters or more, Crit +15.[X]
 
 ## SD_Sergeant
-Warden: If unit's HP is full,[N]
-unit takes 7 less damage.[X]
+Warden: If unit's HP is full, take 3 less[N]
+damage, and if foe initiates, unit strikes[N]
+twice consecutively.[X]
 
 ## SD_ColdFlare
 Cold Flare: If unit's HP isn't full, grants[N]
@@ -503,9 +523,9 @@ Fair Fight: If foe is not mounted,[N]
 grants Attack Speed +2.[X]
 
 ## SD_Intrepid
-Dive-Bomb: If both unit and foe's[N]
-HP is full, and unit initiates, unit[N]
-strikes twice consecutively.[X]
+[_D][_i][_v][_e]-[_B][_o][_m][_b]:[_SP][_I][_f][_SP][_u][_n][_i][_t][_SP][_a][_n][_d][_SP][_f][_o][_e]'[_s][_SP][_H][_P][_SP][_i][_s][_SP][_f][_u][_l][_l][_Comma][_SP][_a][_n][_d][_SP][_u][_n][_i][_t][N]
+[_i][_n][_i][_t][_i][_a][_t][_e][_s],[_SP][_g][_r][_a][_n][_t][_s][_SP][_A][_t][_k][_Slash][_A][_S][_SP][_Plus][_2][_Comma][_SP][_a][_n][_d][_SP][_a][_t][_SP][_1][_SP][_r][_a][_n][_g][_e][_Comma][N]
+[_f][_o][_l][_l][_o][_w]-[_u][_p][_SP][_a][_t][_t][_a][_c][_k][_s][_SP][_o][_c][_c][_u][_r][_SP][_i][_m][_m][_e][_d][_i][_a][_t][_e][_l][_y][_Dot][X]
 
 ## SD_Inspire
 Inspire: All physical allies on the map[N]
@@ -826,8 +846,8 @@ Rally Resistance: +4 Res[N]
 to allies within 2 spaces.[X]
 
 ## SD_RallyMov
-Rally Movement: +1 Move[N]
-to allies within 2 spaces.[X]
+Merry Melody: Rally to grant +1[N]
+Mov to adjacent allies.[X]
 
 ## SD_RallySpectrum
 Rally Spectrum: +2 all stats[N]
@@ -1245,7 +1265,7 @@ adjacent Armored allies gain +2 Mov.[X]
 
 ## SD_VigorDance
 Inspiring Tune: Refreshing a unit grants[N]
-them +2 Pow/Def until the next turn.[X]
+them +2 Str/Eth/Def for 1 turn.[X]
 
 ## SD_Forager
 Forager: Recover a fifth of HP each turn[N]
@@ -1302,9 +1322,8 @@ Barricade: Damage taken is halved[N]
 after first being struck.[X]
 
 ## SD_BarricadePlus
-Barricade+: In combat, damage[N]
-recieved equals half of the[N]
-damage when struck last.[X]
+Barricade+: Damage taken is halved[N]
+each time unit is struck.[X]
 
 ## SD_PointBlank
 Point Blank: Minimum range of[N]
@@ -1339,8 +1358,9 @@ Thunderstorm: If weapon weight > enemy[N]
 W. Weight, +2 dmg, +15% hit, +5% crit.[X]
 
 ## SD_Warpath
-Warpath: Grants +3 Crit for[N]
-every space moved.[X]
+Warpath: If foe is unmounted, grants[N]
++25% Str to unit and inflicts -25% Str[N]
+on foe.[X]
 
 ## SD_Outrider
 Outrider: Take -1 damage for[N]
@@ -1355,9 +1375,8 @@ Charge: Deal +1 damage for[N]
 every space moved.[X]
 
 ## SD_Infiltrator
-Infiltrator: If within 2 spaces[N]
-of 2 or more enemies, gain +3[N]
-damage and +15% hit.[X]
+Ghost Factory: If unit is within 4 spaces[N]
+of 2+ enemies, grants Crit/Avoid +30.[X]
 
 ## SD_Vanity
 Vanity: Gain +2 Damage and +10 Hit[N]

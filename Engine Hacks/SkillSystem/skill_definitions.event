@@ -94,7 +94,7 @@
 
 //Infiltrator: If within 2 spaces of two or more enemies, gain +3 damage and +15% hit.
 //By Datagne
-#define InfiltratorID 255
+#define InfiltratorID 169
 
 //Inspiration: Allies within 2 tiles deal +2 damage and receive -2 damage.
 //Author Unknown (Initial Commit)
@@ -443,6 +443,10 @@
 //Kelik Zenair
 #define GlowRingID 22
 
+//Ashen Ring: double dark magic lul
+//Kelik Zenair
+#define AshenRingID 149
+
 //Powerstaff: Get another action after using a staff.
 //By Sme
 #define PowerstaffID 209
@@ -484,7 +488,7 @@
 #define CertainBlowID 30
 #define ArmoredBlowID 31
 //By Darrman
-#define HeroesDeathBlowID 149
+#define HeroesDeathBlowID 255
 
 //Breaker Skills:  +50 Hit/Avo when enemy has the specified weapon type equipped.
 //By Rossendale
@@ -881,9 +885,9 @@
 //By Sme
 #define TowerShieldPlusID 255
 
-//Perfect Pitch: Dodge all attacks from attacks received at range 3+.
+//Perfect Pitch: Dodge all attacks from attacks received at range 3+. (unused for now, merged into tresillo)
 //Kelik Zenair
-#define PerfectPitchID 169
+#define PerfectPitchID 255
 
 //Trample: +5 damage to unmounted units.
 //By Tequila
@@ -1126,19 +1130,21 @@
 
 //Moonlight: Cannot double but opponent cannot counterattack.
 //By Sme
-#define MoonlightID 255
+#define MoonlightID 231
 
-
+//Execute Damage: 500% execute damage
+//Kelik Zenair
+#define ExecutorsID 230
 
 //Stat Modifier Skills
 
 //Defiant Skills: When HP is 25% or lower, gain +4 to the given stat.
 //By Sme
-#define DefiantStrID 255
-#define DefiantMagID 230
-#define DefiantSklID 231
+#define DefiantStrID 233
+#define DefiantMagID 255
+#define DefiantSklID 255
 #define DefiantSpdID 232
-#define DefiantLckID 233
+#define DefiantLckID 255
 #define DefiantDefID 234
 #define DefiantResID 235
 
@@ -1334,7 +1340,7 @@
 
 //Triangle Adept: Doubles weapon triangle effects for this unit.
 //By Tequila
-#define TriAdeptID 142
+#define TriAdeptID 255
 #define TriangleAdeptID TriAdeptID //Alias
 
 //Triangle Adept+: Doubles weapon triangle effects.
@@ -1344,8 +1350,8 @@
 
 //Inspiring Tune: Refreshing a unit grants them +2 Pow/Def until the next turn.
 //By Leonarth
-#define VigorDanceID 255
-#define InspiringTuneID 255 //Alias
+#define VigorDanceID 142
+#define InspiringTuneID 142 //Alias
 
 //Liquid Ooze: Attackers trying to gain HP from attacking this unit lose it instead.
 //By Leonarth

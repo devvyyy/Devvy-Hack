@@ -10,14 +10,39 @@
 .endm
 .equ DesperationID, SkillTester+4
 .equ AssassinateID, DesperationID+4
+.equ IntrepidID, AssassinateID+4
 
 @check range
 ldr r0,=#0x203A4D4 @battle stats
 ldrb r0,[r0,#2] @range
 cmp r0,#1
-bne CheckDesperation
+bne CheckDesperation @if youre not at 1 range you dont get assassinate anyways
 
-@now check if attacker has assassinate
+@ is hp full?
+ldr r3, [sp]
+ldrb r0, [r3, #0x12] @max hp
+ldrb r1, [r3, #0x13] @curr hp
+cmp r0, r1
+bne CheckAssasinate
+
+@ is enemy hp full?
+ldr r3, [sp]
+ldrb r0, [r2, #0x12] @max hp
+ldrb r1, [r2, #0x13] @curr hp
+cmp r0, r1
+bne CheckAssasinate
+
+@ check if you have dive-bomb
+ldr r0, SkillTester
+mov lr, r0
+mov r0, r5 @defender data
+ldr r1, IntrepidID
+.short 0xf800
+cmp r0, #0
+beq CheckAssasinate
+b HasSkill
+
+CheckAssasinate: @now check if attacker has assassinate
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r5 @defender data

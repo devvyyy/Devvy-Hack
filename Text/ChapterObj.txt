@@ -40,9 +40,12 @@ Arrive[X]
 ## SeizeCh3
 Seize inn[X]
 
-## ArriveCh2LongObj
-Arrive within[N]
-9 turns.[X]
+## SeizeCh2
+Seize bridge[X]
+
+## SeizeCh2LongObj
+Seize the bridge[N]
+within 9 turns.[X]
 
 ## SeizeCh3LongObj
 Seize the inn[X]
@@ -72,9 +75,16 @@ Seize throne[X]
 ## RoutRescueObj
 [_R][_o][_u]t+[_R][_e][_s][_c][_u][_e][X]
 
+## EscapeRescueObj
+[_E][_s][_c][_a][_p][_e]+[_R][_e][_s][_c][_u][_e][X]
+
 ## Ch7LongObj
+Decimate enemy and[N]
+rescue in 9 turns.[X]
+
+## Ch7LongObj2
 Rescue prisoners and[N]
-decimate the enemy.[X]
+escape the prison.[X]
 
 #include "ChapterText/Prologue.txt"
 
@@ -91,3 +101,5 @@ decimate the enemy.[X]
 #include "ChapterText/Chapter5.txt"
 
 #include "ChapterText/Chapter6.txt"
+
+#include "ChapterText/Chapter7.txt"

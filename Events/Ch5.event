@@ -14,7 +14,7 @@ PointerList:
 
 TurnBasedEvents:
 TURN 0x0 KillVillageBrigand [2,0] 0x0
-TURN 0x0 RecruitThief [3,0] 0x80
+TurnEventEnemy(0,RecruitThief,3)
 TURN 0x0 ReinforcementsWarning [3,0] 0x0
 TURN 0x0 LeftRocksRein [4,0] 0x0
 TURN 0x0 BottomRightRein [5,0] 0x0
@@ -175,6 +175,9 @@ FADU 60
 STAL 5
 Music(0x2E)
 SetBackground(0x34)
+STAL 5
+BROWNBOXTEXT WreyvianOutskirtsText [8,8] // box in the top right that's pretty cool for small text
+STAL 15
 Text(Ch5OpeningEnemyMoment)
 ClearBackground
 STAL 10

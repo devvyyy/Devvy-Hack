@@ -4,7 +4,7 @@
 	@ build using lyn
 	@ requires MapAuraFx functions to be visible
 
-	RALLY_EFFECT_RANGE = 2
+	RALLY_EFFECT_RANGE = 1
 
 	GetUnit = 0x08019430|1
 	StartProc = 0x08002C7C|1
