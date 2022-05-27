@@ -5,7 +5,7 @@
 .equ ItemTableLocation, ExtraUnitData+4 @dont forget to add this to the master skill installer
 .equ SanctuaryID, ItemTableLocation+4
 .equ DebuffTableLocation, SanctuaryID+4
-.equ DebuffAmount, 3
+.equ DebuffAmount, 5
 
 mov r1,r5
 ldr r3, =0x802c1ec @UpdateUnitFromBattleUnit

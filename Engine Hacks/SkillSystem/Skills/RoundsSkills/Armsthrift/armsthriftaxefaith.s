@@ -1,6 +1,6 @@
 .thumb
 
-WTYPE_AXE         = 0x02
+WTYPE_AXE         = 0x06 @this is light
 GetItemAfterUse   = 0x08016AEC+1
 RollBattleRN      = 0x0802A52C+1
 GetEquippedWeapon = 0x08016B28+1
@@ -43,6 +43,7 @@ NonMiss:
 	@ Getting Armsthrift proc chance (=luck)
 	ldrb r0, [r5, #0x19] @ BattleUnit.luck
 @	lsl  r0, #1          @ multiply by 2
+	mov r1, r5 @ get attacker for future checks
 
 	@ ROLL
 	ldr r3, =RollBattleRN
@@ -73,7 +74,7 @@ NonArmsthrift:
 	ldr r3, =GetWeaponType
 	bl BXR3
 
-	cmp r0, #WTYPE_AXE @ #0x02 
+	cmp r0, #WTYPE_AXE @ #0x06 aka light
 	beq End            @ goto End if true (AxeFaith triggers)
 
 NonAxeFaith:

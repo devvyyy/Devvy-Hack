@@ -41,7 +41,7 @@ bgt GoBack @if not, no bonus
 @otherwise, grants avoid +40
 mov r1, #0x62
 ldrh r0, [r4, r1] @avoid
-add r0, #40
+add r0, #255
 strh r0, [r4,r1]
 
 

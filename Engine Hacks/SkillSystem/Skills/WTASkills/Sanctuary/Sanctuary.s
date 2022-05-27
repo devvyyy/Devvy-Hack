@@ -15,19 +15,19 @@ cmp r0,#0
 beq WhenTheImpostorIsSus
 
 @ does defender have wtd
-mov r0,#0x53
+mov r0,#0x53 @weapon triangle hit effect
 ldsb r1,[r4,r0]
 cmp r1,#0
 ble WhenTheImpostorIsSus
 
-@ Delete everything epically
+@ Reverse everything epically
 mov        r0,#0x53 @wt hit
 ldsb    r1,[r5,r0]
-mov r1,#0
+mov r1,#20 @instead of 0ing it out boost it by 20???
 strb    r1,[r5,r0]
 mov        r0,#0x54 @wt damage
 ldsb    r1,[r5,r0]
-mov r1,#0
+mov r1,#2
 strb    r1,[r5,r0]
 
 @does attacker have it
@@ -46,14 +46,14 @@ ldsb r1,[r5,r0]
 cmp r1,#0
 ble End
 
-@ Delete everything epically (again)
+@ Reverse everything epically (again)
 mov        r0,#0x53
 ldsb    r1,[r4,r0]
-mov r1,#0
+mov r1,#20
 strb    r1,[r4,r0]
 mov        r0,#0x54
 ldsb    r1,[r4,r0]
-mov r1,#0
+mov r1,#2
 strb    r1,[r4,r0]
 
 End:

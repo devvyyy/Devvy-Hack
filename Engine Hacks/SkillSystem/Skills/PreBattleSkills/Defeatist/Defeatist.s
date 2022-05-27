@@ -21,10 +21,19 @@ ldrb r1, [r4, #0x13] @currhp
 cmp r1, r0
 bgt End
 
-@sub 5 damage
-mov r1, #0x5a
-ldrh r0, [r4, r1] @atk
-sub r0, #5
+@halve str and as
+mov  r1, #0x5A
+ldrh r0, [r4, r1] @attack
+ldrb r2, [r4, #0x14] @str
+lsr  r2, #1 @50%
+sub  r0, r2
+strh r0, [r4,r1]
+
+mov  r1, #0x5E
+ldrh r0, [r4, r1] @spd
+ldrb r2, [r4, #0x16] @spd
+lsr  r2, #1 @50%
+sub  r0, r2
 strh r0, [r4,r1]
 
 End:

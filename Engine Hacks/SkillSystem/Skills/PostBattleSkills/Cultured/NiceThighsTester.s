@@ -1,7 +1,7 @@
 .thumb
 .align 4
 
-.equ SwapID, SkillTester+4
+.equ RepositionID, SkillTester+4
 .equ GetUnit, 0x8019431
 .equ UnitMap, 0x202E4D8
 
@@ -20,7 +20,7 @@ mov r1,r6
 bl GetUnitAtCoords
 ldr r1,SkillTester
 mov r14,r1
-ldr r1,SwapID
+ldr r1,RepositionID
 .short 0xF800
 cmp r0,#1
 beq RetTrue
@@ -31,7 +31,7 @@ mov r1,r6
 bl GetUnitAtCoords
 ldr r1,SkillTester
 mov r14,r1
-ldr r1,SwapID
+ldr r1,RepositionID
 .short 0xF800
 cmp r0,#1
 beq RetTrue
@@ -42,7 +42,7 @@ sub r1,#1
 bl GetUnitAtCoords
 ldr r1,SkillTester
 mov r14,r1
-ldr r1,SwapID
+ldr r1,RepositionID
 .short 0xF800
 cmp r0,#1
 beq RetTrue
@@ -53,7 +53,7 @@ add r1,#1
 bl GetUnitAtCoords
 ldr r1,SkillTester
 mov r14,r1
-ldr r1,SwapID
+ldr r1,RepositionID
 .short 0xF800
 cmp r0,#1
 beq RetTrue
@@ -93,4 +93,4 @@ bx r1
 
 SkillTester:
 @POIN SkillTester
-@WORD SwapID
+@WORD RepositionID

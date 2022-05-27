@@ -231,10 +231,17 @@ POIN SkillTester
 WORD CantoPlusID
 
 ALIGN 4
+Duelist:
+#incbin "Duelist/Duelist.dmp"
+POIN SkillTester
+WORD AssassinateID
+
+ALIGN 4
 CloseCall:
 #incbin "CloseCall/CloseCall.dmp"
 POIN SkillTester
 WORD CloseCallID
+POIN prMovGetter
 
 ALIGN 4
 Sidestep:

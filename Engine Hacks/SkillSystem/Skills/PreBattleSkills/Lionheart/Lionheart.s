@@ -32,6 +32,12 @@ add   r1,r0,r1 @wow this is an awful way to do this
 add   r1,r0,r1
 strh  r1,[r4,r2]
 
+mov   r2,#0x66 @crit
+ldrh  r1,[r4,r2]
+add   r1,r0,r1 @wow this is an awful way to do this
+add   r1,r0,r1
+strh  r1,[r4,r2]
+
 End:
 pop {r4-r7, r15}
 .align

@@ -8,6 +8,16 @@ voicegroup001:
   #incbin "FE8_NI_Map_2.bin"
 #endif
 
+/*
+CustomKickSample:
+#incbin "clean_kick.bin"
+ALIGN 4
+PUSH
+ORG $222AA4
+POIN CustomKickSample
+POP
+*/
+
 //PUSH //hmm this annihilates everything
 //ORG 0x1001860
 //#incbin "custom_piano.bin"

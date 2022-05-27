@@ -12,19 +12,19 @@ ldr 	r1, AxeFaithID
 cmp 	r0, #0
 beq 	NoSkill
 
-@Unit has skill, check to see if unit has an axe equipped
+@Unit has skill, check to see if unit has light equipped
 mov     r0, #0x50      @Move to the attacking unit weapon type.
 ldrb    r0, [r4, r0]   @Load the attacking unit weapon type.
-cmp     r0, #2         @Is it Axe?
+cmp     r0, #6         @Is it Light?
 bne     NoSkill        @If not, goto end
 
 @Add to Hit
 mov     r0, #0x19
-ldrh    r0, [r4,r0]    @load luck
+ldrh    r0, [r5,r0]    @load foes luck
 lsr     r1, r0, #1     @put half luck in r1
 add     r0, r0, r1     @add back together.
 mov     r3, #0x60
-ldrh    r1, [r4,r3]    @load hit
+ldrh    r1, [r4,r3]    @load unit hit
 add     r1, r0         @Increase hit by 1.5x Luck.
 strh    r1, [r4,r3]    @store.
 

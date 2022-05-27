@@ -46,20 +46,18 @@ ldrb r7,[r2,r3]
 cmp r6, r7
 ble End
 
-@Add stuff
-mov r1, #0x5A
-ldrh r0, [r4, r1]
-add r0, #0x2
-strh r0, [r4,r1]
+@recalc enemy damage by atk setting to 0 first
+@set defender attack to 0
+mov r0, r5
+add r0,#0x5A
+mov r3,#0
+strh r3,[r0]
 
-mov r1, #0x60
-ldrh r0, [r4, r1]
-add r0, #15
-strh r0, [r4,r1]
-
-mov r1, #0x66
-ldrh r0, [r4, r1]
-add r0, #0x5
+@ add back attack = str
+mov  r1, #0x5A
+ldrh r0, [r5, r1] @str
+ldrb r2, [r5, #0x14] @strength
+add  r0, r2
 strh r0, [r4,r1]
 
 End:

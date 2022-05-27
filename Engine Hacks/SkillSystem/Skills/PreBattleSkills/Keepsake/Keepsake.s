@@ -27,8 +27,8 @@ beq End
 @not broken movement map
 ldr r0,=0x203a968
 ldrb r0,[r0]
-cmp r0,#0xFF
-beq End
+cmp r0,#0x80
+bge End
 
 @Add damage and AS
 
@@ -56,7 +56,7 @@ bne End @skip if not max hp
 mov r0, r4
 add r0,#0x5C
 ldrh r3,[r0]
-add r3,#7
+add r3,#3
 strh r3,[r0]
 
 End:

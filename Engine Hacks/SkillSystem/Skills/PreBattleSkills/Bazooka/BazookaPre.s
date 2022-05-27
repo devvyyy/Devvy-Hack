@@ -25,9 +25,9 @@ add r0,#0x5A
 mov r3,#10
 strh r3,[r0]
 
-@set attacker hit to 0
+@set attacker battle hit to 0
 mov r0, r4
-add r0,#0x60
+add r0,#0x64
 mov r3,#80
 strh r3,[r0]
 

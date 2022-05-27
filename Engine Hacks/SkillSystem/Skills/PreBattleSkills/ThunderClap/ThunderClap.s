@@ -28,10 +28,11 @@ add r0,#0x57
 mov r3,#0
 strh r3,[r0]
 
-@add 15 crit
-mov r1, #0x66
-ldrh r0, [r4, r1] @crit
-add r0, #15
+@add spd attack
+mov  r1, #0x5A
+ldrh r0, [r4, r1] @attack
+ldrb r2, [r5, #0x16] @spd
+add  r0, r2
 strh r0, [r4,r1]
 
 End:

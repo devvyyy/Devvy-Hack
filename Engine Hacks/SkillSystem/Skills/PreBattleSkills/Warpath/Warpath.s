@@ -28,14 +28,14 @@ ldrb r3, [r3]
 cmp r3, #4
 beq End
 
-ldr		r0,[r5]
-ldr		r0,[r0,#0x28]
-ldr		r1,[r5,#0x4]
-ldr		r1,[r1,#0x28]
-orr		r0,r1
-mov		r1,#0x1			@is defender mounted
-tst		r0,r1
-bne		End
+@Above 75% hp
+ldrb r0, [r4, #0x12]
+lsr r0, #2 @max hp/2
+mov r1,#0x3
+mul r0, r1
+ldrb r1, [r4, #0x13] @currhp
+cmp r1, r0
+blt End
 
 @add str/4 attack
 mov  r1, #0x5A

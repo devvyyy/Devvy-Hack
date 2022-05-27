@@ -10,8 +10,8 @@ BYTE 10|0x20 UpgradeID
 BYTE 00 00
 ALIGN 4
 
-SwapSkillList:
-BYTE 01|0x20 SwapID
+SwapSkillList: //this is repo but i'm too lazy to switch cavs and armors
+BYTE 01|0x20 RepositionID
 BYTE 00 00
 ALIGN 4
 
@@ -20,8 +20,8 @@ BYTE 01|0x20 SwarpID
 BYTE 00 00
 ALIGN 4
 
-RepositionSkillList:
-BYTE 01|0x20 RepositionID
+RepositionSkillList: //this is swap but i'm too lazy to switch armors and cavs
+BYTE 01|0x20 SwapID
 BYTE 00 00
 ALIGN 4
 
@@ -36,7 +36,7 @@ BYTE 00 00
 ALIGN 4
 
 Ch2OSkillList:
-BYTE 01 WatchfulID
+BYTE 21 WatchfulID
 BYTE 00 00
 ALIGN 4
 

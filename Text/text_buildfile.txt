@@ -50,8 +50,8 @@ personal skill and a movement[N]
 skill depending on their[N]
 movement type.[N]
 Infantry units get Shove,[N]
-Armored units get Swap,[N]
-Cavalry units get Reposition,[N]
+Armored units get Reposition,[N]
+Cavalry units get Swap,[N]
 and Flying units get Pivot.[N]
 Some exceptions:[N]
 Thieves get Pivot,[N]
@@ -177,7 +177,8 @@ Objectives[X]
 # 0x63A
 Prologue: Seize, Chest[N]
 1-1: Defeat boss, Chest, Village[N]
-1-1x: Rout, Thieves[N]
+1-1x (Clear Prologue/1-1 within[N]
+7 turns each): Rout, Thieves[N]
 1-2: Arrive, Chest, Village,[N]
 Optional boss[N]
 1-3: Seize, Houses, Water[N]
@@ -238,32 +239,39 @@ Strength or ether power.[N]
 This affects attack ability.[X]
 
 # 0x546
-Strength. Calculates damage[NL]
-dealt with physical weapons.[X]
+Strength ([_A][_t][_k]). Calculates damage dealt[N]
+with physical weapons.[N]
+[_A][_t][_k][_SP]=[_SP]([_S][_t][_r][_SP]+[_SP][_W][_Dot][_SP][_M][_t][_Dot])[X]
 
 # 0x547
-Ether. Calculates damage[NL]
-dealt with magical weapons.[X]
+Ether ([_A][_t][_k]). Calculates damage dealt[N]
+with magical weapons and staff healing.[N]
+[_A][_t][_k][_SP]=[_SP]([_E][_t][_h][_SP]+[_SP][_SP][_W][_Dot][_SP][_SP][_M][_t][_Dot])[X]
 
 # 0x548
-Skill. Affects hit rate and[NL]
-critical hit rate.[X]
+Skill. Affects hit rate and critical rate.[N]
+[_H][_i][_t][_SP][_r][_a][_t][_e][_SP]=[_SP]([_S][_k][_i][_l][_l][_SP][_x][_SP]2[_SP][_Plus][_SP][_L][_u][_c][_k][_Slash]2[_SP][_Plus][_SP][_W][_Dot][_SP][_H][_i][_t][_Dot])[N]
+[_C][_r][_i][_t][_i][_c][_a][_l][_SP][_H][_i][_t][_SP][_r][_a][_t][_e][_SP]=[_SP]([_S][_k][_i][_l][_l][_Slash]2[_SP][_Plus][_SP][_W][_Dot][_SP][_C][_r][_i][_t][_Dot])[X]
 
 # 0x549
-Speed. Affects avoid, and if unit's[NL]
-Spd is higher by 4, unit can follow-up.[X]
+Speed ([_A][_S]). Affects avoid, and if unit's[NL]
+Spd is higher by 4, unit can follow-up.[N]
+[_A][_v][_o][_i][_d][_SP]=[_SP]([_S][_p][_d][_SP][_Plus][_SP][_L][_u][_c][_k][_Dot])[_SP][_A][_S][_SP]=[_SP]([_S][_p][_d][_SP][_Minus][_SP][_W][_Dot][_SP][_W][_t][_SP][_p][_e][_n][_a][_l][_t][_y][_Dot])[X]
 
 # 0x54A
 Luck. Affects hit rate, avoid,[NL]
-and crit avoid.[X]
+and critical hit avoid.[N]
+[_C][_r][_i][_t][_SP][_A][_v][_o][_i][_d][_SP]=[_SP]([_SP][_L][_u][_c][_k][_Dot])[X]
 
 # 0x54B
-Defense. Lowers damage taken[NL]
-from physical weapons.[X]
+Defense ([_P][_r][_t]). Reduces damage taken[NL]
+from physical weapons.[N]
+[_P][_r][_t][_SP]=[_SP]([_D][_e][_f][_SP][_Plus][_SP][_t][_e][_r][_r][_a][_i][_n][_SP][_b][_o][_n][_u][_s][_e][_s][_Dot])[X]
 
 # 0x54C
-Resistance. Lowers damage taken[NL]
-from magical weapons.[X]
+Resistance ([_R][_s][_l]). Reduces damage taken[NL]
+from magical weapons.[N]
+[_R][_s][_l][_SP]=[_SP]([_R][_e][_s][_SP][_Plus][_SP][_t][_e][_r][_r][_a][_i][_n][_SP][_b][_o][_n][_u][_s][_e][_s][_Dot])[_Dot][X]
 
 # 0x54E
 Constitution, or physical size.[NL]
@@ -461,7 +469,7 @@ grants another turn,[N]
 and shares EXP.[X]
 
 # 0x448
-[_F]i[_x][_e][_d][_Space][_D]m[_g][_Slash][_H]it[_Dot][_Space][_D][_e][_a]l[_s][_Space][_1]0%[_Space][_c][_u][_r][_Dot][_Space][_H][_P][_Space][_D][_m][_g][_Space]t[_o][_Space][_a][_d]j[_Dot][_Space][_f][_o][_e][_s][_Dot][X]
+[_F]i[_x][_e][_d][_Space][_D]m[_g][_Slash][_H]it[_Dot][_Space][_D][_e][_a]l[_s][_Space][_1][_0]%[_Space][_c][_u][_r][_Dot][_Space][_H][_P][_Space][_D][_m][_g][_Space]t[_o][_Space][_a][_d]j[_Dot][_Space][_f][_o][_e][_s][_Dot][X]
 
 # 0x47F
 Increases Resistance of an ally[N]
@@ -497,6 +505,10 @@ A staff with burning pitch[N]
 that lights 8 tiles through[N]
 fog, decaying by 1/turn.[X]
 
+# 0x5b5
+Place all items in storage,[N]
+or merge them.[X]
+
 # 0x382
 Void Cleaver[X]
 
@@ -531,10 +543,10 @@ Aura V[X]
 Fear[X]
 
 # 0x477
-Inflicts Atk -3 on foe after combat.[X]
+Inflicts Atk -5 on foe after combat.[X]
 
 # 0x4b5
-Inflicts Atk -3 on foe[N]
+Inflicts Atk -5 on foe[N]
 after combat[N]
 (recovers 1 per turn).[X]
 
@@ -542,10 +554,10 @@ after combat[N]
 Slow[X]
 
 # 0x478
-Inflicts Spd -3 on foe after combat.[X]
+Inflicts Spd -5 on foe after combat.[X]
 
 # 0x4b6
-Inflicts Spd -3 on foe[N]
+Inflicts Spd -5 on foe[N]
 after combat[N]
 (recovers 1 per turn).[X]
 
@@ -561,6 +573,7 @@ of foe's max HP[N]
 after combat.[X]
 
 # 0x522
+# [_Slash] and [_3] doesn't display right
 [_E]t[_h]/3[X]
 
 # 0x1D3
@@ -586,7 +599,7 @@ Dracospear[X]
 Illuminate[X]
 
 # 0x40D
-Unit strikes twice consecutively.[X]
+Strikes x2 consecutively.[X]
 
 # 0x467
 Restores HP = damage dealt.[X]
@@ -699,7 +712,7 @@ Well-rounded infantry.[X]
 Wreyvine[X]
 
 # 0x6C4
-If Spd is higher than target's,[N]
+If Spd > target's Spd,[N]
 unit can steal items.[X]
 
 # 0x160 PrologueChName
@@ -730,20 +743,19 @@ Prologue: Pale Glow[X]
 1-1x: Gold Rush[X]
 
 ## Ch9Name
-# yo what if these were named after the phases (like aphelios?!!1)
-2-1: Maelstrom[X]
+2-1: New Moon Rises[X]
 
 ## Ch10Name
-2-2: Reign[X]
+2-2: Crescent of Faith[X]
 
 ## Ch11Name
-2-3: Skies Wither[X]
+2-3: Quarter Illuminated[X]
 
 ## Ch12Name
-2-4: Moonlight[X]
+2-4: Light Fills The Night[X]
 
 ## Ch13Name
-2-6: The Maw of Ice[X]
+2-5: Moon Fully Revealed[X]
 
 ## Ch14Name
 2-F: Absolution[X]
@@ -753,6 +765,9 @@ Prologue: Pale Glow[X]
 
 ## ChIDKName2
 3-2: Eternal Hunt[X]
+
+## ChIDKName3
+3-3: The Maw of Ice[X]
 
 #0x3A LearnedSkillText
 Learned  [X]
@@ -847,7 +862,7 @@ Skill learned[X]
 ->[X]
 
 ## SkillScrollDesc
-A scroll that teaches[N]
+A rare scroll that teaches[N]
 a skill when used.[X]
 
 #include "Names.txt"

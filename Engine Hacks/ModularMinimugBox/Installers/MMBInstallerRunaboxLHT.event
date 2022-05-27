@@ -504,7 +504,7 @@ After each set of module options are definitions that you can use to adjust the 
 
 // Affinity modules
 
-	#define MMBAffinity
+	//#define MMBAffinity
 		/*
 		 * Draws the unit's affinity, if they
 		 * have one, to [MMBAffinityX, MMBAffinityY].
@@ -514,9 +514,9 @@ After each set of module options are definitions that you can use to adjust the 
 
 	// Coordinates are in pixels
 
-	#define MMBAffinityX 68
-	#define MMBAffinityY 39
-	#define MMBAffinityTile 0x30A
+	//#define MMBAffinityX 68
+	//#define MMBAffinityY 39
+	//#define MMBAffinityTile 0x30A
 
 // Skills modules (requires skill system)
 
@@ -528,7 +528,7 @@ After each set of module options are definitions that you can use to adjust the 
 		 * Overrides the MMBSkill# modules.
 		 */
 
-	//#define MMBSkill1
+	#define MMBSkill1
 	//#define MMBSkill2
 	//#define MMBSkill3
 	//#define MMBSkill4
@@ -563,13 +563,13 @@ After each set of module options are definitions that you can use to adjust the 
 	// Coordinates are in pixels
 
 	#define MMBSkillObjectPaletteIndex 4
-	#define MMBSkillTile 0x30C
+	#define MMBSkillTile 0x30A
 
 	#define MMBSkillsX 120
 	#define MMBSkillsY 8
 
-	#define MMBSkill1X 120
-	#define MMBSkill1Y 8
+	#define MMBSkill1X 68
+	#define MMBSkill1Y 39
 
 	#define MMBSkill2X 136
 	#define MMBSkill2Y 8

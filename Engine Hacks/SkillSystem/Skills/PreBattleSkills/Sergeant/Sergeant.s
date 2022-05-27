@@ -1,35 +1,56 @@
+.equ AuraSkillCheck, SkillTester+4
+.equ SergeantID, AuraSkillCheck+4
 .thumb
-.equ SergeantID, SkillTester+4
+push {r4-r7,lr}
+@goes in the battle loop.
+@r0 is the attacker
+@r1 is the defender
+mov r4, r0
+mov r5, r1
 
-push {r4-r7, lr}
-mov r4, r0 @atkr
-mov r5, r1 @dfdr
-
-@hp not at full
-ldrb r0, [r4, #0x12] @max hp
-ldrb r1, [r4, #0x13] @curr hp
-cmp r0, r1
-bne End @skip if not max hp
-
-@has Sergeant
+CheckSkill:
+@now check for the skill
 ldr r0, SkillTester
 mov lr, r0
-mov r0, r4 @attacker data
+mov r0, r4 @attacker
 ldr r1, SergeantID
 .short 0xf800
 cmp r0, #0
-beq End
+beq Done
 
-@apply def +3
+@Check if there are allies in 2 spaces
+ldr r0, AuraSkillCheck
+mov lr, r0
+mov r0, r4 @attacker
+mov r1, #0
+mov r2, #0 @can_trade
+mov r3, #2 @range
+.short 0xf800
+cmp r0, #0
+beq Done
+
+@check if enemy is a mage
+mov r0, r5       @Move defender data into r1.
+mov r1, #0x4c    @Move to the defender's weapon ability
+ldr r1, [r0,r1]
+mov r2, #0x42
+tst r1, r2
+bne     Done @do nothing if magic bit set
+mov r2, #0x2
+lsl r2, #0x10 @0x20000 negate def/res
+tst r1, r2
+bne Done
+
+@apply def +4
 mov r0, r4
 add r0,#0x5C
 ldrh r3,[r0]
-add r3,#3
+add r3,#4
 strh r3,[r0]
 
 ldr r0,=#0x203A4EC @attacker struct
 cmp r0,r4
-beq End @skip if player phase
+beq Done @skip if player phase
 
 @ set brave flag
 mov r0,r4
@@ -39,10 +60,13 @@ mov r2,#0x20 @brave flag
 orr r1,r2
 str r1,[r0]
 
-End:
-pop {r4-r7, r15}
+Done:
+pop {r4-r7}
+pop {r0}
+bx r0
 .align
 .ltorg
 SkillTester:
-@Poin SkillTester
-@WORD SergeantID
+@ POIN SkillTester
+@ POIN AuraSkillCheck
+@ WORD SergeantID

@@ -71,7 +71,7 @@ setMugEntry(0x0D, Wegman_Mug, 3, 5, 3, 3)
 ALIGN 16 //Flan by ZessDynamite
 Flan_Mug:
 #incext PortraitFormatter "Flan.png"
-setMugEntry(0x0E, Flan_Mug, 2, 5, 3, 3)
+setMugEntry(0x0E, Flan_Mug, 4, 6, 4, 4)
 
 ALIGN 16
 Jaye_Mug:
@@ -204,9 +204,9 @@ AnsgarRight_Mug:
 setMugEntryExtend(0x4F, AnsgarRight_Mug, 0, 0, 0, 0, 0, 0, 0, 0)
 
 ALIGN 16
-Zopf_Mug:
-#incext PortraitFormatter "Zopf.png"
-setMugEntry(0x24, Zopf_Mug, 3, 5, 3, 3)
+Zopf_Mug: //Zopf by Laurent, Levin
+#incext PortraitFormatter "Zopf2.png"
+setMugEntry(0x24, Zopf_Mug, 3, 5, 2, 3)
 
 ALIGN 16
 Velius_Mug:
@@ -264,9 +264,9 @@ Stroganoff_Mug:
 setMugEntryExtend(0x29, Stroganoff_Mug, 2, 5, 2, 3, 0, 4, 10, 4)
 
 ALIGN 16
-Cortado_Mug:
-#incext PortraitFormatter "Cortado.png"
-setMugEntry(0x2B, Cortado_Mug, 3, 5, 3, 3)
+Cortado_Mug: //by Laurent Lacroix
+#incext PortraitFormatter "Cortado2.png"
+setMugEntry(0x2B, Cortado_Mug, 3, 5, 3, 4)
 
 ALIGN 16
 Mocha_Mug:
@@ -389,6 +389,11 @@ ALIGN 16
 Malcolm_Mug: //Graham edited by BuskerHuskerkaShushker
 #incext PortraitFormatter "Malcolm.png"
 setMugEntry(0x44, Malcolm_Mug, 3, 6, 3, 4)
+
+ALIGN 16
+Derval_Mug: //Derval by Laurent Lacroix
+#incext PortraitFormatter "Derval.png"
+setMugEntry(0x56, Derval_Mug, 3, 5, 3, 3)
 
 ALIGN 16 //Shon by autonima
 Shon_Mug:

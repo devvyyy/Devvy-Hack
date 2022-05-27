@@ -16,9 +16,9 @@ BtlLoopParent:
 #incbin "FE8_battle_calc_loop.dmp"
 BtlLoopTable:
 POIN BC_DefRes BC_Power BC_ASpd BC_Hit BC_Avo BC_Crit CritUpSkill BC_Dodge BC_Support BC_WRank BC_Status //these are the existing battle calculation routines
-POIN Lull //This is effectively a stat modifier routine, so it has to go first
-POIN FaireCheck HolyAura
-POIN BreakerCheck MageSlayer
+//POIN Lull //This is effectively a stat modifier routine, so it has to go first
+//POIN FaireCheck HolyAura
+//POIN BreakerCheck MageSlayer
 POIN BlowCheck
 POIN DefendingCheck
 #ifdef LEADERSHIP_STARS
@@ -27,19 +27,27 @@ POIN DefendingCheck
 #ifdef BIORHYTHM
   POIN BiorhythmFunc
 #endif //BIORHYTHM
-POIN Moxie Wrath SpurStr SpurMag SpurSpd SpurDef SpurRes Anima1 Anima2 Anima3 Anima4 Dark1 Dark2 Dark3 Dark4 Dark5
-POIN DriveStr DriveMag DriveSpd DriveDef DriveRes
-POIN LuckySeven OddRhythm EvenRhythm QuickBurn SlowBurn
-POIN Warlock Demoiselle DevilAxeSkill Shrewd AeterianFealtyAura Inspire BitterCold Galestorm ChainReaction Gentilhomme MaleficAura RayDark Blackfire Intimidate Tantivy Daredevil Focus Inspiration Charm Solidarity VoiceOfPeace Anathema LilysPoise Charisma Hex Loyalty Infiltrator
-POIN Parry AeterianFealty Phase Lionheart BurstFireStats MoonEvoked ColdFlare Steadfast ShowStopper GlowRing AshenRing Starseer Whirlwind Hasty ShiningRifleSkill Parity HighRoller Axiom CurtainCallSkill SoulSplitter PathOfBlade PerfectPitch GonnaGoWild Falcon FinalBoss SearingSword Lunatic RupturedSky ThunderClap Bulwark HeavyDuty Intrepid Alacrity SteelSoul Megalovania FairFight Atlas Vigor Defeatist LastResort Sergeant ElbowRoom NaturalCover Gamble StormBlood FieryBlood LifeAndDeath WindDisciple Perfectionist Puissance Hawkeye LightWeight Trample Opportunist BattleVeteran SilentPride Thunderstorm Outrider HeavyStrikes Charge Warpath Keepsake Vanity KnightAspirant RifleSkill AssassinateDamageBonus ArcaneBlade LethalTempo Tresillo ElbowGreasePre Restraint Hijack
-POIN Daunt BloodTide WhitePool NightTide Insight Prescience Vigilance DefiantAvo DefiantCrit TowerShield ShortShield IndoorFighter OutdoorFighter KingMark Deadeye Fortune
-POIN BlueFlame BlueFlameAura StaticPanic Frostbite DoubleLion Cultured Thighdeology Thotslayer KeepUp Armorboost Horseguard Skyguard ForeignPrincess ChargePlus
+//POIN SpurStr SpurMag SpurSpd SpurDef SpurRes
+POIN Moxie Wrath Anima1 Anima2 Anima3 Anima4 Dark1 Dark2 Dark3 Dark4 Dark5
+//POIN DriveStr DriveMag DriveDef
+POIN DriveSpd DriveRes
+//POIN LuckySeven OddRhythm EvenRhythm QuickBurn SlowBurn
+//POIN Demoiselle Gentilhomme MaleficAura Tantivy Focus Inspiration Solidarity VoiceOfPeace Anathema LilysPoise Charisma Hex Loyalty
+POIN Charm Warlock DevilAxeSkill Shrewd AeterianFealtyAura Inspire BitterCold Galestorm ChainReaction RayDark Blackfire Intimidate Daredevil Infiltrator
+//POIN HeavyDuty ElbowRoom NaturalCover Gamble WindDisciple Perfectionist Puissance Hawkeye LightWeight Trample Opportunist BattleVeteran SilentPride Vanity Restraint AssassinateDamageBonus KnightAspirant LifeAndDeath
+POIN Parry AeterianFealty Phase Lionheart BurstFireStats MoonEvoked ColdFlare Steadfast ShowStopper SanctuaryPre GlowRing AshenRing Starseer Whirlwind Hasty ShiningRifleSkill Parity HighRoller Axiom CurtainCallSkill SoulSplitter PathOfBlade GonnaGoWild Falcon FinalBoss SearingSword Lunatic RupturedSky ThunderClap Bulwark Intrepid Alacrity SteelSoul Megalovania FairFight Atlas Vigor Defeatist LastResort StormBlood FieryBlood Outrider HeavyStrikes Charge Warpath Keepsake RifleSkill ArcaneBlade LethalTempo Tresillo ElbowGreasePre Hijack
+//POIN BloodTide WhitePool NightTide Insight Prescience Vigilance DefiantAvo DefiantCrit TowerShield ShortShield IndoorFighter OutdoorFighter Fortune
+POIN Daunt KingMark Deadeye DoubleLion
+//POIN StaticPanic Cultured Thotslayer Armorboost Horseguard Skyguard ForeignPrincess ChargePlus
+POIN BlueFlame BlueFlameAura Frostbite Thighdeology KeepUp
 POIN Frenzy Nevermore GrimRing Maestro Executors ResolutePyre // This was moved here because Str/Mag Split conflict, and... I'm not sure why it wouldn't be here in the first place.
-POIN UpWithArch
+//POIN UpWithArch
 POIN AxefaithHit
 POIN MagicSwordSkill //deletes atk
+POIN Sergeant //deletes atk
 POIN PykeUltPre //deletes atk
 POIN Eulogy //deletes atk
+//POIN Thunderstorm //deletes atk
 POIN BazookaPre //deletes atk/hit
 POIN StancesASM
 #ifdef ENABLE_GBA_LETHALITY
@@ -57,8 +65,8 @@ POIN LethalitySkill NonGBALethalitySkill Bane
 //quick riposte goes after everything that might touch AS
 POIN QuickRiposte
 
-//tower shield plus needs to go after every other skill that may affect defender's attack
-POIN TowerShieldPlus
+//tower shield plus/perfect pitch needs to go after every other skill that may affect defender's attack/hit respectively
+POIN TowerShieldPlus PerfectPitch
 // Because of how killing machine works, critical check should always be done last
 POIN CriticalCheck
 #ifdef CANNOT_CRIT

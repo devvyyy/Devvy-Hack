@@ -2,6 +2,12 @@
 #include "AeterianFealty/AeterianFealty.event"
 
 ALIGN 4
+SanctuaryPre:
+#incbin "SanctuaryPre/SanctuaryPre.dmp"
+POIN SkillTester
+WORD SanctuaryID
+
+ALIGN 4
 Executors:
 #incbin "Executors/Executors.dmp"
 POIN SkillTester
@@ -342,6 +348,7 @@ ALIGN 4
 Sergeant:
 #incbin "Sergeant/Sergeant.dmp"
 POIN SkillTester
+POIN AuraSkillCheck
 WORD SergeantID
 
 ALIGN 4
@@ -696,7 +703,7 @@ ALIGN 4
 DoubleLion:
 #incbin "DoubleLion/DoubleLion.dmp"
 POIN SkillTester
-WORD DoubleLionID
+WORD PassID
 
 #include "Cultured/Cultured.event"
 

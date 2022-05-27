@@ -5,7 +5,6 @@
   .short 0xf800
 .endm
 .equ AegisID, SkillTester+4
-.equ d100Result, 0x802a52c
 @ r0 is attacker, r1 is defender, r2 is current buffer, r3 is battle data
 push {r4-r7,lr}
 mov r4, r0 @attacker
@@ -47,12 +46,6 @@ ldr r1, AegisID
 cmp r0, #0
 beq End
 @if skill found, check proc
-
-ldrb r0, [r5, #0x15] @skill stat as activation rate
-mov r1, r5 @skill user
-blh d100Result
-cmp r0, #1
-bne End
 
 @if we proc, set the defensive skill flag
 ldr     r2,[r6]    

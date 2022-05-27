@@ -47,10 +47,10 @@ ALIGN 4
 	ALIGN 4
 	EventPointerTable(0x2E, FE6SnowFieldsTilesetImage)
     EventPointerTable(0x2F, FE6SnowFieldsTilesetPalette)
+	EventPointerTable(0x30, FE6SnowFieldsTilesetMapConfig)
 	EventPointerTable(0x54, FE6SnowFieldsAnims)
 	EventPointerTable(0x34, FE6SnowFieldsTilesetSunsetPalette)
-	EventPointerTable(0x60, FE6SnowFieldsTilesetNightPalette)
-	EventPointerTable(0x30, FE6SnowFieldsTilesetMapConfig)
+	EventPointerTable(0x60, FE6SnowFieldsTilesetNightPalette) //replaces darkling woods palette
 	
 	//Snow Stronghold by N426
 	
@@ -69,8 +69,8 @@ ALIGN 4
 	ALIGN 4
 	EventPointerTable(0x3C, StrongholdTilesetImage)
     EventPointerTable(0x3D, StrongholdTilesetPalette)
-	EventPointerTable(0x68, StrongholdAnims)
 	EventPointerTable(0x3E, StrongholdTilesetMapConfig)
+	EventPointerTable(0x68, StrongholdAnims)
 	
 	//Snow Village by N426
 	
@@ -101,7 +101,6 @@ ALIGN 4
     EventPointerTable(0xEA, DuskwavePalette)
 	EventPointerTable(0x10, SnowVillageMapConfig)
 	EventPointerTable(0x12, SnowVillageAnims)
-	
 
 	//Snow Bern by Venno and ZoramineFae
 	
@@ -141,6 +140,25 @@ ALIGN 4
     EventPointerTable(0x19, CastlePalette)
     EventPointerTable(0x1A, CastleConfig)
 	EventPointerTable(0x1C, CastleAnims)
+	
+	//Snow Castle but AWESOME by hypergammaspaces
+	
+	ALIGN 4
+    GammaCastleImage:
+    #incbin "GammaCastle/SnowCastle.img.bin"
+	
+	ALIGN 4
+    GammaCastlePalette:
+    #incbin "GammaCastle/SnowCastle.pal.bin"
+	
+	ALIGN 4
+    GammaCastleMapConfig:
+    #incext compress "GammaCastle/SnowCastle.mapchip_config"
+
+	ALIGN 4
+	EventPointerTable(0x6c, GammaCastleImage)
+    EventPointerTable(0x6d, GammaCastlePalette)
+	EventPointerTable(0x6e, GammaCastleMapConfig)
 	
 	ALIGN 4
 SVillageAnim0:

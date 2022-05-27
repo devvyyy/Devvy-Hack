@@ -43,13 +43,22 @@ cmp r1,#0
 ble DoInverseCheck
 @instead of returning from here, we will store whether it's true or false in r6
 
-cmp r1,#3
+@cmp r1,#3
+push {r2}
+ldr r2,=DoublingThresholdLink
+ldrb r2,[r2]
+cmp r1,r2
+pop {r2}
 ble SetASFalse
 b SetASTrue
 
 DoInverseCheck:
 sub r1,r2,r3
-cmp r1,#3
+push {r2}
+ldr r2,=DoublingThresholdLink
+ldrb r2,[r2]
+cmp r1,r2
+pop {r2}
 ble SetASFalse
 
 SetASTrue: 
@@ -199,7 +208,7 @@ mov r0,#2
 b IsAttackerEclipsing_GoBack
 
 IsAttackerEclipsing_RetFalse:
-mov r0,#0
+mov r0,#2
 
 IsAttackerEclipsing_GoBack:
 pop {r4-r5}
@@ -267,7 +276,7 @@ mov r0,#2
 b IsAttackerWeaponUnableToDouble_GoBack
 
 IsAttackerWeaponUnableToDouble_RetFalse:
-mov r0,#0
+mov r0,#2
 
 IsAttackerWeaponUnableToDouble_GoBack:
 pop {r4-r5}
