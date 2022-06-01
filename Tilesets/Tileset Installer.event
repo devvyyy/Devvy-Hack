@@ -52,6 +52,23 @@ ALIGN 4
 	EventPointerTable(0x34, FE6SnowFieldsTilesetSunsetPalette)
 	EventPointerTable(0x60, FE6SnowFieldsTilesetNightPalette) //replaces darkling woods palette
 	
+	//Snow Village by Flasuban
+	ALIGN 4
+	FlasubanVillageObjects: 
+    #incbin "FlasubanVillage/FlasubanVillageObject.dmp"
+    ALIGN 4
+    FlasubanVillagePalette:
+    #incbin "FlasubanVillage/FlasubanSnowVIllagePalette.dmp"
+	ALIGN 4
+	FlasubanVillageMapConfig:
+    #incbin "FlasubanVillage/newfe8village_comp.dmp"
+	
+	ALIGN 4
+	EventPointerTable(0x42, FlasubanVillageObjects)
+    EventPointerTable(0x43, FlasubanVillagePalette)
+	EventPointerTable(0x44, FlasubanVillageMapConfig)
+	
+	
 	//Snow Stronghold by N426
 	
 	ALIGN 4

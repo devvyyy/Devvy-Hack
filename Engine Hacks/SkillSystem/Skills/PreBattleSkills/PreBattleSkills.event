@@ -2,6 +2,18 @@
 #include "AeterianFealty/AeterianFealty.event"
 
 ALIGN 4
+DuckPre:
+#incbin "Thunderhead/Thunderhead.dmp"
+POIN SkillTester
+WORD DuckandCoverID
+
+ALIGN 4
+BulletPre:
+#incbin "Bullet/Bullet.dmp"
+POIN SkillTester
+WORD BulletID
+
+ALIGN 4
 SanctuaryPre:
 #incbin "SanctuaryPre/SanctuaryPre.dmp"
 POIN SkillTester

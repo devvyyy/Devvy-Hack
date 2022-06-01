@@ -78,7 +78,7 @@
       RMenu(ST_Res,ST_Con,ST_Exp,ST_Skill1,0x66,0x78,0x54d)
 
     ST_Con:
-      RMenu(ST_Mov,0,ST_HP,ST_Skill4,0x66,0x88,0x54e)
+      RMenu(ST_Mov,0,ST_HP,ST_Skill5,0x66,0x88,0x54e)
   POP
   
   //the rest of these are here because space
@@ -106,23 +106,28 @@
   ST_Talk:
     RMenu(ST_Cond,ST_Skills,ST_Def,0,0xA6,0x58,SS_TalkRText)
 
-  ST_Skills:
+  ST_Skills: //this is the text that says skills
     RMenu(ST_Talk,ST_Skill1,ST_Res,0,0xA6,0x68,SS_SkillsRText)
 
+// RMenu(up,down,left,right,xcoord,ycoord,SlotID,Looper,Getter)
   ST_Skill1:
-    RMenu(ST_Skills,ST_Skill4,ST_Mov,ST_Skill2,0xa6,0x78,0,RTextLoop,SkillDescGetter)
+    RMenu(ST_Skills,ST_Skill5,ST_Mov,ST_Skill2,0xa6,0x78,0,RTextLoop,SkillDescGetter)
 
   ST_Skill2:
-    RMenu(ST_Skills,ST_Skill5,ST_Skill1,ST_Skill3,0xbe,0x78,1,RTextLoop,SkillDescGetter+4)
+    RMenu(ST_Skills,ST_Skill5,ST_Skill1,ST_Skill3,0xb6,0x78,1,RTextLoop,SkillDescGetter+4)
 
   ST_Skill3:
-    RMenu(ST_Skills,ST_Skill6,ST_Skill2,0,0xd6,0x78,2,RTextLoop,SkillDescGetter+8)
+    RMenu(ST_Skills,ST_Skill5,ST_Skill2,ST_Skill4,0xc7,0x78,2,RTextLoop,SkillDescGetter+8)
 
   ST_Skill4:
-    RMenu(ST_Skill1,0,ST_Con,ST_Skill5,0xa6,0x88,3,RTextLoop,SkillDescGetter+12)
+    RMenu(ST_Skills,ST_Skill5,ST_Skill3,0,0xd7,0x78,3,RTextLoop,SkillDescGetter+12)
+
+//5th skill is at the bottom (so affo's off-hand stuff is centered)
 
   ST_Skill5:
-    RMenu(ST_Skill2,0,ST_Skill4,ST_Skill6,0xbe,0x88,4,RTextLoop,SkillDescGetter+16)
+    RMenu(ST_Skill1,0,ST_Con,0,0xbe,0x88,4,RTextLoop,SkillDescGetter+16)
+	
+//prob not using anything after this? final boss has nevermore/fractured heart (add nullify)/fallen angel/king's mark
 
   ST_Skill6:
     RMenu(ST_Skill3,0,ST_Skill5,0,0xd6,0x88,5,RTextLoop,SkillDescGetter+20)
@@ -185,7 +190,7 @@ ST_Affin:
     RMenu(ST_Cond,ST_Talk,ST_Spd,0,0xa6,0x48,0x551)
   #endif
 //ST_Cond:
-  //RMenu(ST_Affin,ST_Talk,ST_Spd,0,0xA6,0x48,0x552,ConditionGetter)
+  // RMenu(ST_Affin,ST_Talk,ST_Spd,0,0xA6,0x48,0x552,ConditionGetter)
 ST_Talk:
   RMenu(ST_Affin,ST_Skills,ST_Luck,0,0xA6,0x58,SS_TalkRText)
 ST_Skills:
@@ -193,11 +198,11 @@ ST_Skills:
 ST_Skill1:
   RMenu(ST_Skills,ST_Skill4,ST_Res,ST_Skill2,0xa6,0x78,0,RTextLoop,SkillDescGetter)
 ST_Skill2:
-  RMenu(ST_Skills,ST_Skill5,ST_Skill1,ST_Skill3,0xbe,0x78,1,RTextLoop,SkillDescGetter+4)
+  RMenu(ST_Skills,ST_Skill5,ST_Skill1,ST_Skill3,0xbf,0x78,1,RTextLoop,SkillDescGetter+4)
 ST_Skill3:
-  RMenu(ST_Skills,ST_Skill6,ST_Skill2,0,0xd6,0x78,2,RTextLoop,SkillDescGetter+8)
+  RMenu(ST_Skills,ST_Skill6,ST_Skill2,0,0xd7,0x78,2,RTextLoop,SkillDescGetter+8)
 ST_Skill4:
-  RMenu(ST_Skill1,0,ST_Mov,ST_Skill5,0xa6,0x88,3,RTextLoop,SkillDescGetter+12)
+  RMenu(ST_Skill1,0,ST_Mov,ST_Skill5,0xa8,0x88,3,RTextLoop,SkillDescGetter+12)
 ST_Skill5:
   RMenu(ST_Skill2,0,ST_Skill4,ST_Skill6,0xbe,0x88,4,RTextLoop,SkillDescGetter+16)
 ST_Skill6:

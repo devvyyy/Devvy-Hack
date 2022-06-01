@@ -12,7 +12,7 @@ INLINE ClassLevelUpSkillTable,Skill Pointer
 0x0A Armour Knight (F),SwapSkillList|IsPointer
 0x0B General,SwapSkillList|IsPointer
 0x0C General (F),SwapSkillList|IsPointer
-0x0D Thief,PivotSkillList|IsPointer
+0x0D Thief,PivotSkillList2|IsPointer
 0x0E Manakete,0x0
 0x0F Mercenary,ShoveSkillList|IsPointer
 0x10 Mercenary (F),ShoveSkillList|IsPointer
@@ -80,23 +80,23 @@ INLINE ClassLevelUpSkillTable,Skill Pointer
 0x4E Soldier,ShoveSkillList|IsPointer
 0x4F Necromancer,0x0
 0x50 Fleet,0x0
-0x51 Phantom,0x0
-0x52 Revenant,RepositionSkillList|IsPointer
-0x53 Entombed,RepositionSkillList|IsPointer
-0x54 Bonewalker,ShoveSkillList|IsPointer
-0x55 Bonewalker (Bow),ShoveSkillList|IsPointer
-0x56 Wight,SwapSkillList|IsPointer
-0x57 Wight (Bow),ShoveSkillList|IsPointer
-0x58 Bael,PivotSkillList|IsPointer
-0x59 Elder Bael,ShoveSkillList|IsPointer
-0x5A Cyclops,SwarpSkillList|IsPointer
+0x51 Sentry,0x0
+0x52 Lance Rider,RepositionSkillList|IsPointer
+0x53 Axe Rider,RepositionSkillList|IsPointer
+0x54 Freelancer,ShoveSkillList|IsPointer
+0x55 Hunter,ShoveSkillList|IsPointer
+0x56 Axe Armor,SwapSkillList|IsPointer
+0x57 Raider,ShoveSkillList|IsPointer
+0x58 Occultist,PivotSkillList|IsPointer
+0x59 Seer,ShoveSkillList|IsPointer
+0x5A Parson,SwarpSkillList|IsPointer
 0x5B Mauthe Doog,ShoveSkillList|IsPointer
 0x5C Gwyllgi,RepositionSkillList|IsPointer
 0x5D Tarvos,RepositionSkillList|IsPointer
-0x5E Maelduin,0x0
-0x5F Mogall,0x0
-0x60 Arch Mogall,0x0
-0x61 Gorgon,SmiteSkillList|IsPointer
+0x5E Maelduin,ShoveSkillList|IsPointer
+0x5F Mogall,RepositionSkillList|IsPointer
+0x60 ,RepositionSkillList|IsPointer
+0x61 Technician,SmiteSkillList|IsPointer
 0x62 Gorgon Egg,0x0
 0x63 Gargoyle,0x0
 0x64 Deathgoyle,0x0

@@ -4,7 +4,6 @@
   .short 0xf800
 .endm
 .equ CloseCallID, SkillTester+4
-.equ MovGetter, CloseCallID+4
 .thumb
 push	{lr}
 
@@ -45,29 +44,32 @@ mov	lr, r3
 cmp	r0,#0x00
 beq	End
 
-@get units move
-ldr r0,MovGetter
-mov r14,r0
-mov r0,r4
-mov r1,#0
-.short 0xF800
-@r0= units move *2 for some reason
-lsr r0,r0,#1 @r0 = unit's move
-
-@get units used up movement from action struct
-ldr r1,=0x203A958 @action struct
-add r1,#0x10 @squares moved this turn
-ldrb r1,[r1] @r1 = squares moved
-
-@get remaining move
-sub r0,r1
-cmp r0,#0 @see if we've moved as far as possible
-bgt CantoProc @if not, check how many spaces
+@check if moved all the squares
+ldr	r0,=#0x8019224	@mov getter
+mov	lr, r0
+mov	r0, r4		@attacker
+.short	0xF800
+ldrb 	r1, [r6,#0x10]	@squares moved this turn
+cmp	r0, r1
+bne	CantoProc @if didnt move all spaces, proc Canto; otherwise; check for free actions
 
 @if moved all spaces, check if last action was backing out of an action; if so, do not proc canto
 ldr r0,=#0x203A958
 ldrb r0,[r0,#0x11]
 mov r1,#0x1F @backing out of an action
+cmp r0,r1
+beq End
+
+@if moved all spaces, check if last action was give/take; if so, do not proc canto
+ldr r0,=#0x203A958
+ldrb r0,[r0,#0x11]
+mov r1,#0xB @give
+cmp r0,r1
+beq End
+
+ldr r0,=#0x203A958
+ldrb r0,[r0,#0x11]
+mov r1,#0xA @take
 cmp r0,r1
 beq End
 

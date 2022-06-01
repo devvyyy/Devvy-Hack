@@ -33,11 +33,11 @@ TURN 0x0 ShamanRein1 [6,0] 0x0
 END_MAIN
 
 CharacterBasedEvents:
+CharacterEventBothWays(0xE,UlrichAffoConvo, Ulrich, Affo) //put this first so it displays first
 CharacterEventBothWays(0x10,AffoBreveConvo, Affo, Breve)
 CharacterEventBothWays(0xB,HildrUlrichConvo, Hildr, Ulrich)
 CharacterEventBothWays(0xC,AnsgarAffoConvo, Ansgar, Affo)
 CharacterEventBothWays(0xD,HildrAffoConvo, Hildr, Affo)
-CharacterEventBothWays(0xE,UlrichAffoConvo, Ulrich, Affo)
 END_MAIN
 
 AffoBreveConvo:
@@ -235,7 +235,6 @@ NoFade
 ENDA
 
 EndingScene: //why did i do this to myself
-
 CHECK_TURNS //gaiden turn requirement (clear prologue/ch1 within 7 turns each to unlock)
 SVAL 0x7 0x7 //within 7 turns
 BGT 0x9000 0xC 0x7

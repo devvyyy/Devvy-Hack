@@ -35,16 +35,25 @@ ldr r1, [r5,#4] @class data ptr
 cmp r1, #0 @if 0, this is stat screen
 beq End
 
-@make sure we're in combat (or combat prep)
+@make sure we are in combat (or combat prep)
 ldrb r3, =gBattleData
 ldrb r3, [r3]
 cmp r3, #4
 beq End
 
-@add enemy atk/4 attack
+@add enemy def/2 attack
 mov  r1, #0x5A
 ldrh r0, [r4, r1] @attack
-ldrb r2, [r5, #0x18] @atk
+ldrb r2, [r5, #0x17] @def
+lsr  r2, #1 @divide this by 2
+add  r0, r2
+strh r0, [r4,r1]
+
+@add enemy res/2 defense to enemy
+mov  r1, #0x5C
+ldrh r0, [r5, r1] @attack
+ldrb r2, [r5, #0x18] @res
+lsr  r2, #1 @divide this by 2
 add  r0, r2
 strh r0, [r4,r1]
 

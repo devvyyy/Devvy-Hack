@@ -1,36 +1,55 @@
 
-ShoveSkillList:
+ShoveSkillList: //inf
 BYTE 01|0x20 ShoveID
 BYTE 00 00
 ALIGN 4
 
-SmiteSkillList:
+SmiteSkillList: //technicians
 BYTE 01|0x20 SmiteID
 BYTE 10|0x20 UpgradeID
 BYTE 00 00
 ALIGN 4
 
-SwapSkillList: //this is repo but i'm too lazy to switch cavs and armors
+SwapSkillList: //armors, this is repo but i'm too lazy to switch cavs and armors
 BYTE 01|0x20 RepositionID
 BYTE 00 00
 ALIGN 4
 
-SwarpSkillList:
+SwarpSkillList: //parsons
 BYTE 01|0x20 SwarpID
 BYTE 00 00
 ALIGN 4
 
-RepositionSkillList: //this is swap but i'm too lazy to switch armors and cavs
+RepositionSkillList: //cavs, this is swap but i'm too lazy to switch armors and cavs
+BYTE 01|0x20 CantoPlusID
 BYTE 01|0x20 SwapID
 BYTE 00 00
 ALIGN 4
 
-PivotSkillList:
+PivotSkillList: //fliers
+BYTE 01|0x20 CantoPlusID
 BYTE 01|0x20 PivotID
 BYTE 00 00
 ALIGN 4
 
-PThiefSkillList:
+PivotSkillList2: //thieves
+BYTE 01|0x20 PivotID
+BYTE 00 00
+ALIGN 4
+
+PThiefSkillList: //thieves, in char levelup table
+BYTE 01 LocktouchID
+BYTE 00 00
+ALIGN 4
+
+AffogatoSkillList:
+BYTE 01 BulletID
+BYTE 01 LocktouchID
+BYTE 00 00
+ALIGN 4
+
+ChiffonSkillList:
+BYTE 01 RallyStrID
 BYTE 01 LocktouchID
 BYTE 00 00
 ALIGN 4
@@ -42,13 +61,20 @@ ALIGN 4
 
 BardSkillList:
 BYTE 01|0x20 ShoveID
-BYTE 5 VigorDanceID
-BYTE 10 RallyMovID
+BYTE 5 RallyMovID
+BYTE 10 VigorDanceID
+BYTE 00 00
+ALIGN 4
+
+GorloisSkillList:
+BYTE 21 NihilID
 BYTE 00 00
 ALIGN 4
 
 FinalBossSkillList:
-BYTE 01 KingMarkID
-BYTE 01 NullifyID
+BYTE 21 NihilID
+BYTE 21 NullifyID
+BYTE 21 KingMarkID
+BYTE 21 AxefaithID //fallen angel, this one is centered at the bottom
 BYTE 00 00
 ALIGN 4

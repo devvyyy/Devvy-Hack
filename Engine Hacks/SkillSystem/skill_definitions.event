@@ -220,7 +220,7 @@
 
 //Full Metal Body: This unit is immune to all the Seal skills.
 //By Leonarth
-#define FullMetalBodyID 177
+#define FullMetalBodyID 255
 #define FullmetalBodyID FullMetalBodyID //Alias
 
 
@@ -496,11 +496,15 @@
 #define LancebreakerID 255
 #define AxebreakerID 255
 #define BowbreakerID 255
-#define TomebreakerID 23
+#define TomebreakerID 255
 
 //Charge: Gain +1 damage for every two squares moved.
 //By Datagne
 #define ChargeID 199
+
+//Bullet: yasuo flow
+//Kelik Zenair
+#define BulletID 23
 
 //Like Dominoes: ok so you know how happy compared them to bowling pins 
 //Kelik Zenair
@@ -1194,7 +1198,7 @@
 //Author Unknown (Initial Commit)
 #define RallyStrID 68
 #define RallyMagID 255 //Requires Str/Mag Split
-#define RallySklID 70
+#define RallySklID 255
 #define RallySpdID 71
 #define RallyLukID 72
 #define RallyDefID 73
@@ -1205,6 +1209,10 @@
 //Capture: Capture an enemy after defeating it with reduced stats.
 //By Tequila
 #define CaptureID 168
+
+//Duck and Cover: thanks rw (canto 5 if not moving)
+//Kelik Zenair
+#define DuckandCoverID 70
 
 //Dance: Refresh an ally unit to let them act again.
 //By Sme
@@ -1299,7 +1307,7 @@
 
 //Nihil: Cancels the opponent's skills in combat.
 //Author Unknown (Initial Commit)
-#define NihilID 255
+#define NihilID 177
 
 //Live to Serve: When healing an ally, also heals self.
 ////Author Unknown (Initial Commit) & Leonarth

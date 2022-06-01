@@ -1,5 +1,6 @@
 //this file defines the macro:
 //setMugEntry(number, data, mouth_x, mouth_y, eye_x, eye_y)
+#define setMugEntryExtend(mugEntry, portraitData, minimugData, paletteData, mouthData, mouthX, mouthY, eyeX, eyeY, extend1X, extend1Y, extend2X, extend2Y) "PUSH; ORG PortraitTable+mugEntry*0x1C; POIN portraitData; POIN minimugData; POIN paletteData; POIN mouthData; BYTE extend1X extend1Y extend2X extend2Y; BYTE mouthX mouthY eyeX eyeY; BYTE 1 0 1 0; POP"
 #define setMugEntryExtend(mugEntry, mugLocation, mouthX, mouthY, eyeX, eyeY, extend1X, extend1Y, extend2X, extend2Y)"PUSH; ORG PortraitTable+mugEntry*0x1C; POIN mugLocation; POIN mugLocation+0x1624; POIN mugLocation+0x1604; POIN mugLocation+0x1004; BYTE extend1X extend1Y extend2X extend2Y; BYTE mouthX mouthY eyeX eyeY; BYTE 1 0 1 0; POP"
 
 // Player Characters
@@ -163,15 +164,81 @@ Rosenfeld_Mug:
 #incext PortraitFormatter "Rosenfeld.png"
 setMugEntry(0x20, Rosenfeld_Mug, 3, 5, 2, 2)
 
-ALIGN 16
+ALIGN 4
 Affogato_Mug: //Affogato edited by BuskHusker and Lenh
-#incext PortraitFormatter "mmmcoffee.png"
-setMugEntryExtend(0x21, Affogato_Mug, 3, 5, 3, 3, 10, 4, 10, 2)
+#incbin "mmmcoffee_mug.dmp"
+
+ALIGN 4
+Affogato_Mini:
+#incbin "mmmcoffee_minimug.dmp"
+
+ALIGN 4
+Affogato_Frames:
+#incbin "mmmcoffee_frames.dmp"
+
+ALIGN 4
+Affogato_Palette:
+#incbin "mmmcoffee_palette.dmp"
+
+setMugEntryExtend(0x21, Affogato_Mug, Affogato_Mini, Affogato_Palette, Affogato_Frames, 3, 5, 3, 3, 10, 4, 10, 2)
+
+ALIGN 4
+OneBullet:
+#incbin "1bullet_minimug.dmp"
+setMugEntryExtend(0xAD, Affogato_Mug, OneBullet, Affogato_Palette, Affogato_Frames, 3, 5, 3, 3, 10, 4, 10, 2)
 
 ALIGN 16
+TwoBullet:
+#incbin "2bullets_minimug.dmp"
+setMugEntryExtend(0xAE, Affogato_Mug, TwoBullet, Affogato_Palette, Affogato_Frames, 3, 5, 3, 3, 10, 4, 10, 2)
+
+ALIGN 16
+ThreeBullet:
+#incbin "3bullets_minimug.dmp"
+setMugEntryExtend(0xAF, Affogato_Mug, ThreeBullet, Affogato_Palette, Affogato_Frames, 3, 5, 3, 3, 10, 4, 10, 2)
+
+ALIGN 16
+FourBullet:
+#incbin "4bullets_minimug.dmp"
+setMugEntryExtend(0xB0, Affogato_Mug, FourBullet, Affogato_Palette, Affogato_Frames, 3, 5, 3, 3, 10, 4, 10, 2)
+
+ALIGN 4
 AffoHato_Mug:
-#incext PortraitFormatter "AffoHato.png"
-setMugEntryExtend(0x50, AffoHato_Mug, 3, 5, 3, 3, 10, 2, 10, 4)
+#incbin "AffoHato_mug.dmp"
+
+ALIGN 4
+AffoHato_Mini:
+#incbin "AffoHato_minimug.dmp"
+
+ALIGN 4
+AffoHato_Frames:
+#incbin "AffoHato_frames.dmp"
+
+ALIGN 4
+AffoHato_Palette:
+#incbin "AffoHato_palette.dmp"
+
+setMugEntryExtend(0x50, AffoHato_Mug, AffoHato_Mini, AffoHato_Palette, AffoHato_Frames, 3, 5, 3, 3, 10, 2, 10, 4)
+
+ALIGN 4
+OneBulletHat:
+#incbin "1bullethat_minimug.dmp"
+setMugEntryExtend(0xB1, AffoHato_Mug, OneBulletHat, AffoHato_Palette, AffoHato_Frames, 3, 5, 3, 3, 10, 2, 10, 4)
+
+ALIGN 4
+TwoBulletHat:
+#incbin "2bullethat_minimug.dmp"
+setMugEntryExtend(0xB2, AffoHato_Mug, TwoBulletHat, AffoHato_Palette, AffoHato_Frames, 3, 5, 3, 3, 10, 2, 10, 4)
+
+ALIGN 4
+ThreeBulletHat:
+#incbin "3bullethat_minimug.dmp"
+setMugEntryExtend(0xB3, AffoHato_Mug, ThreeBulletHat, AffoHato_Palette, AffoHato_Frames, 3, 5, 3, 3, 10, 2, 10, 4)
+
+ALIGN 4
+FourBulletHat:
+#incbin "4bullethat_minimug.dmp"
+setMugEntryExtend(0xB4, AffoHato_Mug, FourBulletHat, AffoHato_Palette, AffoHato_Frames, 3, 5, 3, 3, 10, 2, 10, 4)
 
 ALIGN 16
 AffoSadBoi_Mug: //I hate school :sob:
@@ -384,6 +451,11 @@ ALIGN 16
 ChiffonEpic_Mug:
 #incext PortraitFormatter "ChiffonSickoMode.png"
 setMugEntry(0x46, ChiffonEpic_Mug, 3, 5, 3, 3)
+
+ALIGN 16
+ChiffonGaming:
+#incext PortraitFormatter "ChiffonHalf.png"
+setMugEntry(0xB5, ChiffonGaming, 3, 5, 3, 3)
 
 ALIGN 16
 Malcolm_Mug: //Graham edited by BuskerHuskerkaShushker

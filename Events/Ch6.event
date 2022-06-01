@@ -729,7 +729,7 @@ GiveItem(Lightrune, Stroganoff)
 	
 AffoKingConvo:
 	MUSI
-	CHECK_EVENTID 0x78
+	CHECK_EVENTID 0x12C
 	BEQ 1 0x0 0xC
 	Text(KingAffoTalk)
 	GiveItem(GoddessIcon, Affo)
@@ -739,7 +739,7 @@ AffoKingConvo:
 	LABEL 2
 	MUNO
 	MURE 2
-	UnsetFlag(0x78)
+	UnsetFlag(0x12C)
 	NoFade
 	ENDA
 	

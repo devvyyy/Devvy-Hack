@@ -1,0 +1,8 @@
+AboveHalfEvent: //when you go sicko mode
+CHECK_EVENTID 0xEC
+BEQ 0x1 0xC 0x0
+CAM1 0xFFFF
+ENUF 0xEC
+LABEL 0x1
+NoFade
+ENDA

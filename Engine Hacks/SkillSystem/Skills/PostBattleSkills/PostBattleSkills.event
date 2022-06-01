@@ -10,6 +10,20 @@ CheckGaleforce: //decides if the unit should be cantoing or not
 #incbin "Galeforce/checkgaleforce.dmp"
 
 ALIGN 4
+BulletThing:
+#incbin "BulletThing/BulletThing.dmp"
+POIN SkillTester
+WORD BulletID
+POIN BulletEvent
+#include "BulletThing/BulletThing.event"
+
+ALIGN 4
+DuckandCover:
+#incbin "DuckandCover/DuckandCover.dmp"
+POIN SkillTester
+WORD DuckandCoverID
+
+ALIGN 4
 ElbowGrease:
 #incbin "ElbowGrease/ElbowGrease.dmp"
 POIN SkillTester
@@ -194,6 +208,22 @@ POIN MoonEvokedMugEventOff
 #include "MoonEvokedPost/MoonEvokedMugEventOff.event"
 
 ALIGN 4
+MoonEvokedAboveHalf:
+#incbin "MoonEvokedPost/AboveHalf.dmp"
+POIN SkillTester
+WORD MoonEvokedID
+POIN AboveHalfEvent
+#include "MoonEvokedPost/AboveHalfEvent.event"
+
+ALIGN 4
+MoonEvokedBelowHalf:
+#incbin "MoonEvokedPost/BelowHalf.dmp"
+POIN SkillTester
+WORD MoonEvokedID
+POIN BelowHalfEvent
+#include "MoonEvokedPost/BelowHalfEvent.event"
+
+ALIGN 4
 PykeUlt:
 #incbin "PykeUlt/PykeUlt.dmp"
 POIN SkillTester
@@ -241,7 +271,6 @@ CloseCall:
 #incbin "CloseCall/CloseCall.dmp"
 POIN SkillTester
 WORD CloseCallID
-POIN prMovGetter
 
 ALIGN 4
 Sidestep:

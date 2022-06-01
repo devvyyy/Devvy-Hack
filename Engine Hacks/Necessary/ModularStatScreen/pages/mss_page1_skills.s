@@ -133,7 +133,7 @@ draw_aid_icon_at 26, 3
 
 draw_trv_text_at 21, 5
 
-draw_textID_at 21, 7, textID=0x4f1 @affin
+draw_textID_at 21, 7, textID=0x78B @The Valiant
 draw_affinity_icon_at 24, 7
 
 draw_status_text_at 21, 9
@@ -177,17 +177,17 @@ draw_skill_icon_at 21, 15
 ldrb r0,[r6,#1]
 cmp r0,#0
 beq SkillsEnd
-draw_skill_icon_at 24, 15
+draw_skill_icon_at 23, 15
 
 ldrb r0,[r6,#2]
 cmp r0,#0
 beq SkillsEnd
-draw_skill_icon_at 27, 15
+draw_skill_icon_at 25, 15
 
 ldrb r0,[r6,#3]
 cmp r0,#0
 beq SkillsEnd
-draw_skill_icon_at 21, 17
+draw_skill_icon_at 27, 15
 
 ldrb r0,[r6,#4]
 cmp r0,#0
