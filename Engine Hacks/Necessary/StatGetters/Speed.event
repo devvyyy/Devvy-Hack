@@ -8,6 +8,7 @@ pSpeedModifiers: // Speed
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
+	POIN prEmpowerSpdCheck
 WORD 0
 
 prAddUnitSpeed:
@@ -23,6 +24,11 @@ prDebuffSpd:
 prRallySpd:
 	#include "_asm/RallySpd.lyn.event"
 	POIN GetDebuffs|1
+	
+prEmpowerSpdCheck: //thief rush
+	rIfUnitHasState(0x400)
+		rIfUnitHasSkill(CharismaID)
+			rAddConst(4)
 
 prItemPassiveSpeed:
 #ifndef DONT_STACK_BOOSTS

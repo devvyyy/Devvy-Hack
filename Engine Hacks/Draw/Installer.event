@@ -1,0 +1,108 @@
+
+#define INSTALL_BONUS_ANIMATIONS // Uncomment for additional animations 
+#define VRAM_Address 0x6013300 // Where in VRAM (see No$Gba Obj window) to draw animation 
+#define MinimumFrames 0 // delay after hit, Vanilla does 28 frames 
+
+#ifndef COORD 
+	#define Coord(XX,YY) "YY<<16|XX" 
+#endif 
+#define ShowAnimation(AnimationID, Coordinate) "SVAL r1 AnimationID; SVAL r2 0; SVAL rB Coordinate; ASMC ASMC_Draw" 
+
+/*
+// Usage: 
+SVAL r1 AnimationID 
+SVAL r2 0 // (-1) shows the animation at all coordinates in the move map, so we SVAL r2 0. 
+SCOORDS rB [0,0] // Coordinates 
+ASMC ASMC_Draw 
+*/
+
+PUSH // Only vanilla address that we take over. 
+ORG $81274 // Poin to the vanilla proc	//{U}
+//ORG $835B4 // Poin to the vanilla proc	//{J}
+POIN gProc_MapAnimRound_Animation
+POP 
+
+
+#include "Internals.event"
+
+#define Empty_AnimID 0 
+#define ThinSlashAnimID 1
+#define Hit1AnimID 2
+#define Shards2AnimID 3 
+#define Break1AnimID 4
+#define Splash2AnimID 5
+#define FlashAnimID 6
+#define Impact1AnimID 7
+#define Shards1AnimID 8
+// Bonus animations below 
+#define Break2AnimID 9
+#define CircleAnimID 10
+#define Impact2AnimID 11
+#define Splash1AnimID 12
+#define ThickSlashAnimID 13
+#define FreezeAnimID 14
+#define FeatherAnimID 15
+#define CauterizeAnimID 16
+#define NumberOfAnimIDs 16
+
+ALIGN 4
+WeaponTypeAnimations:
+BYTE 0 Break2AnimID // Sword 
+BYTE 1 Shards1AnimID // Lance 
+BYTE 2 Hit1AnimID // Axe 
+BYTE 3 Break1AnimID // Bow  
+BYTE 5 Splash2AnimID // Anima 
+BYTE 6 FlashAnimID // Light 
+BYTE 7 Impact1AnimID // Dark 
+BYTE $B Shards1AnimID // Monster 
+BYTE $11 Shards1AnimID // Dragonstone 
+SHORT 0xFFFF // Terminator 
+
+
+
+
+ALIGN 4
+SpecificWeaponAnimations:
+BYTE Sagitar Break1AnimID
+BYTE 0xCC Break1AnimID
+BYTE Skypiercer Break1AnimID
+
+BYTE 0x44 Break1AnimID //shooter 1
+BYTE 0x8B Shards2AnimID //shooter 2
+BYTE 0xAA CauterizeAnimID // Bazooka, explosion anim
+BYTE 0xD2 FreezeAnimID // holy weap, ice anim
+BYTE 0xCB FreezeAnimID // holy weap, ice anim
+SHORT 0xFFFF // Terminator 
+
+
+
+
+
+// Animation IDs are defined above 
+// Animations and Palettes are included in "MapAnimations/Installer.event"
+
+AnimTable_Entry(ThinSlashAnimID,Slashing_A_Anim)
+AnimTable_Entry(Hit1AnimID,Hit1_Small_Anim)
+AnimTable_Entry(Shards2AnimID,Shards2_Small_Anim)
+AnimTable_Entry(Break1AnimID,Break1_Small_Anim)
+AnimTable_Entry(Splash2AnimID,Splash2_Small_Anim)
+AnimTable_Entry(FlashAnimID,Flash_Anim)
+AnimTable_Entry(Impact1AnimID,Impact1_Small_Anim)
+AnimTable_Entry(Shards1AnimID,Shards1_Small_Anim)
+#ifdef INSTALL_BONUS_ANIMATIONS 
+AnimTable_Entry(Break2AnimID,Break2_Small_Anim)
+AnimTable_Entry(CircleAnimID,Circle_Small_Anim)
+AnimTable_Entry(CauterizeAnimID,Cauterize_Anim) // small hit 2 was here 
+AnimTable_Entry(Impact2AnimID,Impact2_Small_Anim)
+AnimTable_Entry(Splash1AnimID,Splash1_Small_Anim)
+AnimTable_Entry(ThickSlashAnimID,Slashing_B_Anim) // same palete as Slashing_A
+AnimTable_Entry(FreezeAnimID,Freeze_Anim)
+AnimTable_Entry(FeatherAnimID,Feather_Anim)
+#endif 
+
+
+
+
+
+
+

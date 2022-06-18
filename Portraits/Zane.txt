@@ -331,6 +331,11 @@ Stroganoff_Mug:
 setMugEntryExtend(0x29, Stroganoff_Mug, 2, 5, 2, 3, 0, 4, 10, 4)
 
 ALIGN 16
+Strogy_Mug:
+#incext PortraitFormatter "imabarber.png"
+setMugEntryExtend(0xB6, Strogy_Mug, 2, 5, 2, 3, 0, 4, 10, 4)
+
+ALIGN 16
 Cortado_Mug: //by Laurent Lacroix
 #incext PortraitFormatter "Cortado2.png"
 setMugEntry(0x2B, Cortado_Mug, 3, 5, 3, 4)

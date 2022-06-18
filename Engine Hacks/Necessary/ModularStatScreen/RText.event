@@ -125,12 +125,13 @@
 //5th skill is at the bottom (so affo's off-hand stuff is centered)
 
   ST_Skill5:
-    RMenu(ST_Skill1,0,ST_Con,0,0xbe,0x88,4,RTextLoop,SkillDescGetter+16)
+    RMenu(ST_Skill2,0,ST_Con,ST_Skill6,0xbf,0x88,4,RTextLoop,SkillDescGetter+16)
 	
 //prob not using anything after this? final boss has nevermore/fractured heart (add nullify)/fallen angel/king's mark
 
+//i forgot about skill manuals :sneezing_face:
   ST_Skill6:
-    RMenu(ST_Skill3,0,ST_Skill5,0,0xd6,0x88,5,RTextLoop,SkillDescGetter+20)
+    RMenu(ST_Skill3,0,ST_Skill5,0,0xc7,0x88,5,RTextLoop,SkillDescGetter+20)
 
   #ifdef PRESS_SELECT_TO_VIEW_GROWTHS
     PersonalDataRText:

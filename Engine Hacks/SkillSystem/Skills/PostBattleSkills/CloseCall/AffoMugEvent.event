@@ -1,0 +1,8 @@
+AffoMugEvent:
+CHECK_CLASS 0x7 //if class is Adventurer, turn flag on; otherwise, branch to turn flag off
+SVAL 0x7 0x5E //check class Adventurer (0x5E)
+BNE 0x776 0xC 0x7 //compare, branch to 0x776 if not equal (Adventurer)
+ENUT 0xEF //flag on
+LABEL 0x776
+NoFade
+ENDA

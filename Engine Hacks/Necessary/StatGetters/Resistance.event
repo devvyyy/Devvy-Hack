@@ -7,6 +7,7 @@ pResistanceModifiers: // Resistance
 	POIN prAddUnitResistance prHalveIfCapturing prDebuffRes prAddEquipResistance prItemPassiveResistance prRallyRes prAddPureWaterBarrierMod prLifeAndDeathMinus prSkillFury prFortressResistanceRes prDefiantRes prPushRes
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
+	POIN prSleepHalfRes
 	#endif
 WORD 0
 
@@ -26,6 +27,10 @@ prDebuffRes:
 prRallyRes:
 	#include "_asm/RallyRes.lyn.event"
 	POIN GetDebuffs|1
+	
+prSleepHalfRes:
+rIfUnitHasStatus(0x2)
+	rHalved
 
 prLifeAndDeathMinus:
 _testSkill(HeroesLifeAndDeathID,0,5)

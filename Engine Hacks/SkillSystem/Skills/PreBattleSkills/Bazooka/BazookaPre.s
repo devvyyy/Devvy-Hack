@@ -22,7 +22,7 @@ beq GoBack
 @set attacker attack to 0
 mov r0, r4
 add r0,#0x5A
-mov r3,#10
+mov r3,#12
 strh r3,[r0]
 
 @set attacker battle hit to 0

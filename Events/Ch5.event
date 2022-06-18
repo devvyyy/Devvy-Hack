@@ -117,11 +117,11 @@ UNIT Noel Thief 0x1 Level(3, Ally, 0)     [14,9] 0b 0x0 0x0 0x0 [IronDagger,0xED
 	UNIT
 	
 SpookyBrigand:
-UNIT BadGuyStealable Brigand 0x1 Level(6, Enemy, 1)     [14,14] 0b 0x0 0x0 0x0 [SteelLabrys,GreenGem] BrigandAI
+UNIT TorchBrigand Brigand 0x1 Level(6, Enemy, 1)     [14,14] 0b 0x0 0x0 0x0 [SteelLabrys,GreenGem] BrigandAI
 	UNIT
 	
 SpookyBrigand2:
-UNIT BadGuyStealable Raider 0x1 Level(5, Enemy, 1)     [0,8] 0 0 1 REDA1R8 [SteelSword,RedGem] BrigandAI
+UNIT TorchBrigand Raider 0x1 Level(5, Enemy, 1)     [0,8] 0 0 1 REDA1R8 [SteelSword,RedGem] BrigandAI
 	UNIT
 	
 TopRightFort:
@@ -201,7 +201,6 @@ FADI 60
 CLEAN
 Music(0x24)
 SetBackground(0x39)
-FADU 40
 STAL 5
 CHECK_ALIVE Mocha
 BEQ 4 0x0 0xC

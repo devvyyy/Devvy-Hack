@@ -189,15 +189,18 @@ cmp r0,#0
 beq SkillsEnd
 draw_skill_icon_at 27, 15
 
+//bottom row
 ldrb r0,[r6,#4]
 cmp r0,#0
 beq SkillsEnd
 draw_skill_icon_at 24, 17
 
+//probably not using the 6th skill slot (no one has a class skill except the technician lmao)
+//this makes it awkwardly move to the right i think uhhh but whatever its never viewable in game?
 ldrb r0,[r6,#5]
 cmp r0,#0
 beq SkillsEnd
-draw_skill_icon_at 27, 17
+draw_skill_icon_at 26, 17
 b SkillsEnd
 
 .ltorg

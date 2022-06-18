@@ -12,6 +12,10 @@ pMovModifiers: // Movement
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
+//	POIN prSidestepCheck
+	POIN prGaleforceCheck
+	POIN prPassCheck
+	POIN prEmpowerCheck
 WORD 0
 
 prAddUnitBaseMov: // byte 0x12 in ROM class data is base class movement
@@ -36,6 +40,26 @@ prNullifyIfGuardAI:
 prNullifyIfFreeze:
 	rIfUnitHasStatus(0x9)
 		rConstant(0)
+		
+prGaleforceCheck:
+	rIfUnitHasState(0x400)
+		rIfUnitHasSkill(GaleforceID)
+			rHalved
+			
+prPassCheck:
+	rIfUnitHasState(0x400)
+		rIfUnitHasSkill(PassID)
+			rConstant(0)
+			
+prEmpowerCheck:
+	rIfUnitHasState(0x400)
+		rIfUnitHasSkill(CharismaID)
+			rConstant(0)
+			
+prSidestepCheck:
+	rIfUnitHasState(0x400)
+		rIfUnitHasSkill(CloseCallID)
+			rConstant(2)
 
 prRallyMov:
 	#include "_asm/RallyMov.lyn.event"

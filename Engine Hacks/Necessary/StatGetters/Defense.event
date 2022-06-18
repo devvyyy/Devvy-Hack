@@ -8,6 +8,7 @@ pDefenseModifiers: // Defense
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
+	POIN prSleepHalfDef
 WORD 0
 
 prAddUnitDefense:
@@ -26,6 +27,10 @@ prRallyDef:
 	
 prFortressDefenseDef:
 	_testSkill(FortressDefenseID,5,0)
+	
+prSleepHalfDef:
+rIfUnitHasStatus(0x2)
+	rHalved
 
 prItemPassiveDefense:
 #ifndef DONT_STACK_BOOSTS

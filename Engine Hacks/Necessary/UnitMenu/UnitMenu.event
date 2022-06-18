@@ -66,11 +66,11 @@ UnitMenuTable:
   //MenuCommand(DualAtkTxtID,DualAtkDescId,0,DualAtkCheck,DualAtkSelected) 
   
   //dunno wtf this is but it's probably seize
-  MenuCommand(0x67A, 0x6CC, GrayText, $22FDC, $23020)
+  MenuCommand(0x67A, 0x6CC, GreenText, $22FDC, $23020)
   // UM_Seize
   #ifdef ESCAPE_ARRIVE
-    MenuCommand(ArriveName, ArriveDesc, GrayText, ArriveCommandUsability, ArriveCommandEffect)
-    MenuCommand(EscapeName, EscapeDesc, GrayText, EscapeCommandUsability, EscapeCommandEffect)
+    MenuCommand(ArriveName, ArriveDesc, GreenText, ArriveCommandUsability, ArriveCommandEffect)
+    MenuCommand(EscapeName, EscapeDesc, GreenText, EscapeCommandUsability, EscapeCommandEffect)
   #endif // ESCAPE_ARIVE
   
   #ifdef DRAGON_VEINS
@@ -106,13 +106,16 @@ UnitMenuTable:
   //UM_Dance
   MenuCommand(0x67E,0x6C2,NormalText,NewDanceUsability,0x231D0)
 
-  UM_Steal
+  //UM_Steal
+  MenuCommand(0x67F, 0x6C4, BlueText, $2418C, $241DC)
   
   //UM_Summon
   MenuCommand(0x693,0x6DD,NormalText,NewSummonUsability,0x244B8)
   
   UM_Summon_DK
-  UM_Pick
+
+  //UM_Pick
+  MenuCommand(0x694, 0x6DE, BlueText, $23E7C, $23EB4)
 
 // OrangeText seems to grab stuff from the stat screen text palette?
 // BlackText doesn't have an outline and is ugly af don't use it
@@ -148,8 +151,8 @@ UnitMenuTable:
   
    // Rally preview conflicts with window semitransparency changes
    // So we only add that in if it is disabled
-//  MenuCommand(UM_Rally, UM_RallyDesc, NormalText, RallyCommandUsability, RallyCommandEffect)
-  MenuCommand(UM_Rally, UM_RallyDesc, NormalText, RallyCommandUsability, RallyCommandEffect, RallyCommandSwitchIn, RallyCommandSwitchOut) 
+   MenuCommand(UM_Rally, UM_RallyDesc, NormalText, RallyCommandUsability, RallyCommandEffect) //this doesn't have the cool effects im so sad!!!
+//  MenuCommand(UM_Rally, UM_RallyDesc, NormalText, RallyCommandUsability, RallyCommandEffect, RallyCommandSwitchIn, RallyCommandSwitchOut) 
   
   UM_Rescue
   UM_Give

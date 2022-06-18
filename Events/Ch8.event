@@ -13,7 +13,9 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TURN 0x0 GoodbyeDespair [10,0] 0x0
+TurnEventEnemy(0,SussyAppear,3)
+TurnEventEnemy(0,HelloChat,5)
+TURN 0x0 GoodbyeDespair [20,0] 0x0
 	END_MAIN
 
 ALIGN 32
@@ -26,7 +28,7 @@ MiscBasedEvents:
 	END_MAIN
 
 LocationBasedEvents:
-Village(0x8,AbsorbVillage,1,2)
+Village(0x8,HeavySpearVillage,1,2)
 Village(0x9,AbsorbVillage,10,8)
 Door(13,5)
 Door(14,5)
@@ -78,7 +80,7 @@ UNIT Aeteria Archer 0x1 Level(4, Enemy, 1)     [1,9] 0b 0x0 0x0 0x0 [IronBow] At
 UNIT Aeteria Mage 0x1 Level(4, Enemy, 1)     [14,7] 0b 0x0 0x0 0x0 [Fire] AttackInRangeAI
 UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [5,13] 0b 0x0 0x0 0x0 [IronLance,Javelin] BossAI
 UNIT Aeteria Mercenary 0x1 Level(4, Enemy, 1)     [6,16] 0b 0x0 0x0 0x0 [IronSword] ChargeAI
-UNIT Aeteria Mercenary 0x1 Level(4, Enemy, 1)     [3,11] 0b 0x0 0x0 0x0 [IronSword] AttackInRangeAI
+UNIT Aeteria Mercenary 0x1 Level(4, Enemy, 1)     [3,11] DropItem 0x0 0x0 0x0 [IronSword,ChestKey] AttackInRangeAI
 UNIT Edith LArmor 0x1 Level(4, Enemy, 1)     [3,5] 0b 0x0 0x0 0x0 [SteelLance] BossAI
 UNIT Aeteria SCav 0x1 Level(5, Enemy, 1)     [7,20] 0b 0x0 0x0 0x0 [SteelSword] ChargeAI
 UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [13,3] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
@@ -92,7 +94,7 @@ UNIT Aeteria LArmor 0x1 Level(5, Enemy, 1)     [12,6] DropItem 0x0 0x0 0x0 [Sapp
 	UNIT
 	
 YoHereToInstaKill: //make her warp in
-UNIT Aoife Sage_F 0x1 Level(12, Enemy, 0)     [4,1] 0b 0x0 0x0 0x0 [0xEA] BossAI
+UNIT Aoife Sage_F 0x1 Level(12, Enemy, 0)     [4,1] 0b 0x0 0x0 0x0 [0xEA] StallOneTurnAI
 	UNIT
 
 Traps1:
@@ -125,6 +127,21 @@ GameOver
 ENDA
 
 AbsorbVillage:
-VillageEventItem(AbsorbVillageText, 0x1, Absorb)
+MUSI; SMOV 0x2 0x1; SMOV 0x3 Ch8ZopfRecruit; CALL $9EE310; MUNO; LOAD1 0x1 NewUnits; EVBIT_T 0x7; ENDA
+
+HeavySpearVillage:
+VillageEventItem(HeavySpearVillageText, 0x1, HeavySpear)
 ENDA
 
+SussyAppear:
+SetBackground(0x15)
+Text(Ch8AoifeGaming)
+ENDA
+
+HelloChat:
+SetBackground(0x40)
+Text(Ch8AoifeAppear)
+ClearBackground
+STAL 15
+	LOAD1 0x1 YoHereToInstaKill
+ENDA

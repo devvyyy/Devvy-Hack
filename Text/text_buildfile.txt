@@ -88,11 +88,18 @@ Items[X]
 Trade/Supply/Rescue are free[N]
 actions that can be repeated[N]
 (Green menu text).[N]
+Steal/Pick are free actions[N]
+that can't be repeated[N]
+(once per turn, Blue menu text).[N]
  [N]
-Bag icons on enemies indicate[N]
-a droppable item,[N]
-and Diamond icons on enemies[N]
-indicate a stealable item.[N]
+Green bag icons on enemies[N]
+indicate a droppable item,[N]
+and blue bag icons indicate[N]
+a stealable item.[N]
+Torch iconsindicate that the[N]
+unit will target villages,[N]
+and key icons indicate that the[N]
+unit will pick locks and/or run.[N]
  [N]
 Items of dead player units and[N]
 turret drops are automatically[N]
@@ -230,6 +237,11 @@ Chests[N]
 1-F: Defend unit/Secure[N]
 fortresses, Chests[N][X]
 
+# 0x554
+Zzzz... Zzzzz...[N]
+Sleeping now... Can't move,[N]
+defenses halved...[X]
+
 # 0x326
 Devilish thieves with high movement,[N]
 speed, and utility. Equip: [SwordIcon][X]
@@ -253,6 +265,13 @@ Falcon Knight[X]
 Put items in storage. In parts 1 and 2,[N]
 the limit is 50 each, and the convoy[N]
 merges to 100 in part 3.[X]
+
+# 0x250
+Looter[X]
+
+# 0x2AC
+One of the treasure hunters who[N]
+have laid claim to Ideon.[X]
 
 # 0x4FF
 Eth[X]
@@ -285,6 +304,12 @@ with immense reach. Equip: Bow[X]
 # 0x4EB
 S/E[X]
 
+# 0x4EC
+Dex[X]
+
+# 0x15
+Dexterity increased.[X]
+
 # 0x6EA
 Strength or ether power.[N]
 This affects attack ability.[X]
@@ -300,13 +325,13 @@ with magical weapons and staff healing.[N]
 [_A][_t][_k][_SP]=[_SP]([_E][_t][_h][_SP]+[_SP][_SP][_W][_Dot][_SP][_SP][_M][_t][_Dot])[X]
 
 # 0x548
-Skill. Affects hit rate and critical rate.[N]
+Dexterity. Affects hit and critical rate.[N]
 [_H][_i][_t][_SP][_r][_a][_t][_e][_SP]=[_SP]([_S][_k][_i][_l][_l][_SP][_x][_SP]2[_SP][_Plus][_SP][_L][_u][_c][_k][_Slash]2[_SP][_Plus][_SP][_W][_Dot][_SP][_H][_i][_t][_Dot])[N]
 [_C][_r][_i][_t][_i][_c][_a][_l][_SP][_H][_i][_t][_SP][_r][_a][_t][_e][_SP]=[_SP]([_S][_k][_i][_l][_l][_Slash]2[_SP][_Plus][_SP][_W][_Dot][_SP][_C][_r][_i][_t][_Dot])[X]
 
 # 0x549
 Speed ([_A][_S]). Affects avoid, and if unit's[NL]
-Spd is higher by 4, unit can follow-up.[N]
+AS > foe's AS + 4, unit can follow-up.[N]
 [_A][_v][_o][_i][_d][_SP]=[_SP]([_S][_p][_d][_SP][_Plus][_SP][_L][_u][_c][_k][_Dot])[_SP][_A][_S][_SP]=[_SP]([_S][_p][_d][_SP][_Minus][_SP][_W][_Dot][_SP][_W][_t][_SP][_p][_e][_n][_a][_l][_t][_y][_Dot])[X]
 
 # 0x54A
@@ -459,12 +484,15 @@ Increases Strength or Ether by[N]
 Raises either[N]
 strength or ether.[X]
 
+# 0x14
+Ether increased.[X]
+
 # 0x485
-Increases Skill by[N]
+Increases Dexterity by[N]
 2 points.[X]
 
 # 0x4C3
-Raises skill.[X]
+Raises dexterity.[X]
 
 # 0x486
 Increases Speed by[N]
@@ -512,15 +540,15 @@ Item[X]
 [OpenQuote]Diplomacy"[X]
 
 # 0x422
-[_K]ill[_s][_SP]<[_SP][_2][_5]%[_SP][_H][_P][_Comma][_SP][_Plus][_1][_SP][_a][_c]t[_Slash][_k]ill[_Comma][_SP][_s][_h][_a][_r][_e][_s][_SP][_E][_X][_P][_SP][_w][_Slash][_SP][_C][_h]iff[_o][_n][_Dot][X]
+[_E][_x][_e][_c][_u][_t][_e][_s][_SP]<[_SP][_2][_5]%[_SP][_H][_P][_Comma][_SP][_Plus][_1][_SP][_a][_c]t[_Slash][_k]ill[_Comma][_SP][_g][_i][_v][_e][_s][_SP][_C][_h]iff[_o][_n][_SP][_E][_X][_P][_Dot][X]
 
 # 0x429
 Executes low HP foes,[N]
 grants another turn,[N]
-and shares EXP.[X]
+and gives Chiffon EXP.[X]
 
 # 0x448
-[_F]i[_x][_e][_d][_Space][_D]m[_g][_Slash][_H]it[_Dot][_Space][_D][_e][_a]l[_s][_Space][_1][_0]%[_Space][_c][_u][_r][_Dot][_Space][_H][_P][_Space][_D][_m][_g][_Space]t[_o][_Space][_a][_d]j[_Dot][_Space][_f][_o][_e][_s][_Dot][X]
+[_1][_0]%[_Space][_c][_u][_r][_r][_e][_n][_t][_Space][_H][_P][_Space][_d][_m][_g][_Space]i[_n][_Space][_a][_Space][_3][_Space][_s][_p][_a][_c][_e][_Space][_A][_o][_E][_Space][_Dot][_Space][_Lock][_Y][_o][_r][_y][X]
 
 # 0x47F
 Increases Resistance of an ally[N]
@@ -568,6 +596,12 @@ Rapid Ballista[X]
 
 # 0x445
  [X]
+ 
+# 0x35B
+Poison Dagger[X]
+
+# 0x40B
+[_I][_g][_n][_o][_r][_e][_s][_Space][_7][_0]%[_Space][_D][_e]f[_Dot][_Space][_P][_o]i[_s][_o][_n][_Colon][_Space][_1][_0][_Dot][_Space][_Lock][_Colon][_Space][_T][_h]i[_e][_v][_e][_s][X]
 
 # 0x3a9
 Fire I[X]
@@ -913,8 +947,15 @@ Skill learned[X]
 ->[X]
 
 ## SkillScrollDesc
-A rare scroll that teaches[N]
-a skill when used.[X]
+A rare scroll that[N]
+teaches a skill[N]
+when used.[X]
+
+## PromotesToText
+Promote to:[X]
+
+## NoUseText
+Cannot Use[X]
 
 #include "Names.txt"
 

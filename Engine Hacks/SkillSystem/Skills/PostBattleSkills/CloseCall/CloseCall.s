@@ -4,6 +4,7 @@
   .short 0xf800
 .endm
 .equ CloseCallID, SkillTester+4
+.equ AffoMugEvent, CloseCallID+4
 .thumb
 push	{lr}
 
@@ -21,11 +22,12 @@ ldrb  r1, [r4,#0x0B]  @allegiance byte of the character we are checking
 cmp r0, r1    @check if same character
 bne End
 
-@check if enemy or not
-ldrb r0, [r4,#0x0B]
-lsr r0,r0,#6
-cmp r0,#0 @only Canto+ if player unit
-bne End
+@event gaming
+ldr	r0,=#0x800D07C		@event engine thingy
+mov	lr, r0
+ldr	r0, AffoMugEvent		@this event is just "play some sound effects"
+mov	r1, #0x01			@0x01 = wait for events
+.short	0xF800
 
 @check if already cantoing, and is not in a ballista
 ldr	r0, [r4,#0x0C]	@status bitfield

@@ -26,7 +26,13 @@ beq NoSkill
 @add crit
 mov r1, #0x66
 ldrh r0, [r4, r1] @crit
-add r0, #30
+add r0, #200
+strh r0, [r4,r1]
+
+@add hit
+mov r1, #0x60
+ldrh r0, [r4, r1] @hit
+add r0, #200
 strh r0, [r4,r1]
 
 NoSkill:

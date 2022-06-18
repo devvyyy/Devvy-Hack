@@ -47,7 +47,7 @@ ldr	r0, [r4,#0x0C]	@status bitfield
 mov	r1, #0x42
 mvn	r1, r1
 and	r0, r1		@unset bits 0x42
-mov	r1, #0x04
+mov	r1, #0x04 @next 3 lines set 0x400??
 lsl	r1, #0x08
 orr	r0, r1
 str	r0, [r4,#0x0C]

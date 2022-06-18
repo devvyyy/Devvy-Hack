@@ -37,7 +37,7 @@ mov	lr, r0
 mov	r0, r5		@defender
 mov	r1, #0x00
 mov	r2, #0x00	@can trade
-mov	r3, #0x01	@range
+mov	r3, #0x03	@range
 .short	0xf800
 
 BazookaDamage:
@@ -110,7 +110,7 @@ mov	lr, r0
 mov	r0, r5		@defender
 mov	r1, #0x00
 mov	r2, #0x00	@can trade
-mov	r3, #0x01	@range
+mov	r3, #0x03	@range
 .short	0xf800
 
 BazookaDamage2:

@@ -35,11 +35,11 @@ mov r1, #0x4c    @Move to the defender's weapon ability
 ldr r1, [r0,r1]
 mov r2, #0x42
 tst r1, r2
-bne     Done @do nothing if magic bit set
+bne     BraveCheck @do nothing if magic bit set
 mov r2, #0x2
 lsl r2, #0x10 @0x20000 negate def/res
 tst r1, r2
-bne Done
+bne BraveCheck
 
 @apply def +4
 mov r0, r4
@@ -48,6 +48,7 @@ ldrh r3,[r0]
 add r3,#4
 strh r3,[r0]
 
+BraveCheck:
 ldr r0,=#0x203A4EC @attacker struct
 cmp r0,r4
 beq Done @skip if player phase

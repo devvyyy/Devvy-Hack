@@ -1,8 +1,32 @@
+## SD_Constance
+Circadian Beat: If indoors, grants Atk +6[N]
+and unit makes a follow-up and foe cannot.[N]
+If outdoors, reverses effect.[X]
+
+## SD_Vex
+Personal Space!: If within 3 spaces of 2[N]
+or more enemies, unit is invulnerable.[X]
+
+## SD_Renata
+Fight or Die: Unit persists for 1 turn[N]
+upon death at 1 HP: If unit defeats foe,[N]
+restores HP to full.[X]
+
+## SD_Zeri
+Rev'd Up!: Converts Str to Hit. Damage[N]
+scales with Dex and is based off 50% of[N]
+foe's Def and 50% of foe's Res.[X]
+
+## SD_Anchor
+Anchor: If unit attacks without moving,[N]
+grants another action at 0 Move (once[N]
+per turn).[X]
+
 ## SD_Gaming
 # temp flags 0x25-0x28
-Flow: Grants 1 stack per combat (4 max).[N]
-At max stacks, consumes all stacks on[N]
-initiation to deal bonus damage = Res.[X]
+[_F][_l][_o][_w][_Colon][_SP][_G][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP][_p][_e][_r][_SP][_c][_o][_m][_b][_a][_t][_Slash][_s][_t][_e][_a][_l][_Slash][_p][_i][_c][_k][N]
+([_m][_a][_x];[_SP]4)[_Dot][_SP][_A][_t][_SP][_m][_a][_x][_SP][_s][_t][_a][_c][_k][_s][_Comma][_SP][_c][_o][_n][_s][_u][_m][_e][_s][_SP][_a][_l][_l][_SP][_s][_t][_a][_c][_k][_s][N]
+[_o][_n][_SP][_i][_n][_i][_t][_i][_a][_t][_i][_o][_n][_SP][_t][_o][_SP][_d][_e][_a][_l][_SP][_b][_o][_n][_u][_s][_SP][_d][_a][_m][_a][_g][_e][_SP]=[_SP][_R][_e][_s][_Dot][X]
 
 ## WTIdea
 IDK: If weapon triangle matchup is neutral,[N]
@@ -19,8 +43,8 @@ than foe's Spd, unit makes a follow-up[N]
 attack and foe cannot.[X]
 
 ## SD_P2Ch1ArmorBossSkill
-Strong and Tough: If unit's Mov or Spd[N]
-is less than foe's Mov or Spd, x2 hits,[N]
+Strong and Tough: If unit's Move or Spd[N]
+is less than foe's Move or Spd, x2 hits,[N]
 and unit follow-ups and foe cannot.[X]
 
 ## SD_Executors
@@ -66,7 +90,7 @@ critically hit with base 10% chance.[X]
 
 ## SD_ElbowGrease
 Elbow Grease: Converts Yory's Str to Def,[N]
-and Skill to Res. Grants another action[N]
+and Dex to Res. Grants another action[N]
 when deploying a sentry (once per turn).[X]
 
 ## SD_SpellThief
@@ -185,9 +209,10 @@ against unpromoted foes.[X]
 i[_s][_SP][_h]i[_g][_h][_e][_r][_Comma][_SP][_s]t[_r]i[_k][_e][_s][_SP][_x][_2][_SP][_c][_o][_n][_s][_e][_c][_u]ti[_v][_e]l[_y][_SP][_o][_n][_SP]i[_n]iti[_a]ti[_o][_n][_Dot][X]
 
 ## SD_Tresillo
-F-D[0x23]-F//C[0x23]-G[0x23]-F: Converts Staniel's Str to[N]
-bonus Avoid, and Skill to bonus Crit Avoid.[N]
-Dodge all attacks from 3+ spaces away.[X]
+# LHT?!
+[_F]-[_D][0x23]-[_F][_Slash][_Slash][_C][0x23]-[_G][0x23]-[_F][_Colon][_SP][_C][_o][_n][_v][_e][_r][_t][_s][_SP][_S][_t][_a][_n][_i][_e][_l]'[_s][_SP][_S][_t][_r][_SP][_t][_o][N]
+[_b][_o][_n][_u][_s][_SP][_A][_v][_o][_i][_d][_Comma][_SP][_a][_n][_d][_SP][_D][_e][_x][_SP][_t][_o][_SP][_b][_o][_n][_u][_s][_SP][_C][_r][_i][_t][_SP][_A][_v][_o][_i][_d][_Dot][_SP][_I][_f][_SP][_f][_o][_e]'[_s][N]
+[_r][_a][_n][_g][_e][_SP]>[_SP][_2][_Comma][_SP][_d][_o][_d][_g][_e][_SP][_a][_l][_l][_SP][_a][_t][_t][_a][_c][_k][_s][_Dot][_SP][_E][_n][_a][_b][_l][_e][_s][_SP][_P][_l][_a][_y][_Dot][X]
 
 ## SD_HeavyDuty
 Grit: If unit's HP is not full,[N]
@@ -357,8 +382,8 @@ Hasty: Lowers threshold for unit to[N]
 make a follow-up to 1 AS.[X]
 
 ## SD_HighRoller
-High Roller: If unit is at WT[N]
-disadvantage, grants Crit +30.[X]
+High Roller: If Kevron is at WT[N]
+disadvantage, guaranteed Hit/Crit.[X]
 
 ## SD_IDK
 Behemoth: Neutralizes foe's terrain[N]
@@ -373,7 +398,7 @@ Promenade: If within 2 spaces of a[N]
 cavalry ally, unit takes -2 damage.[X]
 
 ## SD_Bulwark
-Bulwark: If unit cannot counter,[N]
+Bulwark: If Edith cannot counter,[N]
 foe cannot make a follow-up.[X]
 
 ## SD_Galestorm
@@ -464,8 +489,8 @@ and unit's Spd < Spd, strikes x2[N]
 consecutively at 1 range.[X]
 
 ## SD_ChainReaction
-Chain Reaction: Grants physical allies[N]
-adjacent to Jaye: "If Spd < foe's Spd,[N]
+Chain Reaction: Jaye grants adjacent[N]
+physical allies: "If Spd < foe's Spd,[N]
 strikes x2 consecutively."[X]
 
 ## SD_RupturedSky
@@ -484,8 +509,8 @@ foe's Max HP/4.[X]
 ## SD_CloseCall
 # Sidestep
 [_S][_i][_d][_e][_s][_t][_e][_p][_Colon][_SP][_I][_f][_SP][_A][_f][_f][_o][_g][_a][_t][_o][_SP][_d][_o][_e][_s][_n]'[_t][_SP][_m][_o][_v][_e][_Comma][_SP][_e][_n][_a][_b][_l][_e][_s][_SP][_C][_a][_n][_t][_o][_SP][_2][N]
-([_C][_a][_n][_t][_o][_SP][_1][_SP][_o][_t][_h][_e][_r][_w][_i][_s][_e][_Comma][_SP][_g][_r][_e][_e][_n][_SP][_a][_c][_t][_i][_o][_n][_s][_SP][_c][_a][_p][_SP][_M][_o][_v])[_Dot][_SP][_G][_r][_a][_n][_t][_s][N]
-[_a][_n][_o][_t][_h][_e][_r][_SP][_a][_c][_t][_i][_o][_n][_SP][_i][_f][_SP][_p][_i][_c][_k][_i][_n][_g][_Slash][_s][_t][_e][_a][_l][_i][_n][_g][_SP]([_o][_n][_c][_e][_SP][_p][_e][_r][_SP][_t][_u][_r][_n])[_Dot][X]
+([_C][_a][_n][_t][_o][_SP][_1][_SP][_o][_t][_h][_e][_r][_w][_i][_s][_e][_Comma][_SP][_g][_r][_e][_e][_n][_SP][_a][_c][_t][_i][_o][_n][_s][_SP][_c][_a][_p][_SP][_M][_o][_v][_e])[_Dot][_SP][_C][_a][_n][N]
+[_m][_o][_v][_e][_SP][_a][_f][_t][_e][_r][_SP][_p][_i][_c][_k][_i][_n][_g][_Slash][_s][_t][_e][_a][_l][_i][_n][_g][_SP]([_o][_n][_c][_e][_SP][_p][_e][_r][_SP][_t][_u][_r][_n])[_Dot][X]
 
 ## SD_Vigor
 # Requiem: When using offensive staves, multiplies Eth by 1.25x and deals bonus damage equal to a quarter of foe's current HP.
@@ -553,8 +578,8 @@ Inspire: Wustenhoff grants +2 Atk to physical[N]
 allies on the map with 50% HP or more.[X]
 
 ## SD_BitterCold
-Bitter Cold: Hartmann inflicts Res -2 to all[N]
-foes on the map with less than 100% HP.[X]
+Bitter Cold: Hartmann inflicts Res -2 to[N]
+all foes on the map with < 100% HP.[X]
 
 ## SD_Savior
 Savior: Nullifies penalties[N]
@@ -603,9 +628,8 @@ Canto: Can move again[N]
 after certain actions.[X]
 
 ## SD_Cunning
-Locktouch: Unit can open doors and[N]
-chests, steal items, and gets +2[N]
-spaces of vision in fog/darkness.[X]
+Play: Unit can refresh adjacent allies,[N]
+and grant bonuses to allies.[X]
 
 ## SD_Lethality
 Lethality: Instantly kill opponent.[N]
@@ -747,7 +771,7 @@ to monster units.[X]
 ## SD_Summon
 Sentry: Deploy an immobile turret with 5[N]
 range that ignores 20% of foe's Def,[N]
-shoots x2 and acts twice per turn.[X]
+shoots x2, and acts twice per turn.[X]
 
 ## SD_Dance
 Dance: Refresh an ally unit[N]
@@ -760,7 +784,7 @@ after attacking and defeating a foe.[X]
 ## SD_Galeforce
 Galeforce: If Espresso initiates and[N]
 defeats a foe, grants another action[N]
-(once per turn).[X]
+with -50% Move (once per turn).[X]
 
 ## SD_Renewal
 Renewal: Restore 30% of max HP[N]
@@ -872,7 +896,7 @@ to allies within 2 spaces.[X]
 
 ## SD_RallyMov
 Merry Melody: Rally to grant +2[N]
-Mov to adjacent allies (1 turn).[X]
+Move to adjacent allies (1 turn).[X]
 
 ## SD_RallySpectrum
 Rally Spectrum: +2 all stats[N]
@@ -1173,8 +1197,9 @@ Identity Problems: This unit can't[N]
 decide on a name or face.[X]
 
 ## SD_Charisma
-Empower: Sequin grants Hit/Avoid +15[N]
-to adjacent allies.[X]
+Wild Card: Sequin grants Hit/Avoid +15[N]
+to adjacent allies. Grants Eth/Spd +4[N]
+for 1 turn after picking/stealing.[X]
 
 ## SD_HeroesDeathBlow
 Death Blow: +6 Attack[N]
@@ -1460,8 +1485,9 @@ Drive Defense: Allies within[N]
 2 spaces receive +4 defense.[X]
 
 ## SD_DriveRes
-Encourage: Nora grants +2 Rsl to[N]
-allies within 2 spaces.[X]
+Encourage: Nora grants +2 Rsl to allies[N]
+within 2 spaces, and +4 magic damage[N]
+to physical allies within 2 spaces.[X]
 
 ## SD_Blossom
 Blossom: 2x growth rates,[N]
@@ -1633,7 +1659,7 @@ weapon triangle advantage.[X]
 ## SD_BlueFlame
 Guardian: Floris grants +2 Prt to[N]
 adjacent allies. If adjacent to an[N]
-ally, grants +2 Prt.[X]
+ally, grants +4 Prt.[X]
 
 ## SD_DoubleLion
 Double Lion: All weapons[N]
@@ -1681,9 +1707,10 @@ Killer Instinct: Double bonus[N]
 effectiveness multipliers.[X]
 
 ## SD_Cultured
-Stand United: If Therese initiates[N]
-adjacent to a physical armored ally,[N]
-grants another action (once per turn).[X]
+# Stand United
+[_S][_t][_a][_n][_d][_SP][_U][_n][_i][_t][_e][_d][_Colon][_SP][_I][_f][_SP][_T][_h][_e][_r][_e][_s][_e][_SP][_i][_n][_i][_t][_i][_a][_t][_e][_s][_SP][_w][_i][_t][_h][_i][_n][_SP][_2][_SP][_s][_p][_a][_c][_e][_s][N]
+[_o][_f][_SP][_a][_SP][_p][_h][_y][_s][_i][_c][_a][_l][_SP][_a][_r][_m][_o][_r][_e][_d][_SP][_a][_l][_l][_y][_Comma][_SP][_g][_r][_a][_n][_t][_s][_SP][_A][_t][_k][_SP][_Plus][_3][_Comma][_SP][_a][_n][_d][_SP][_i][_f][N]
+[_a][_d]j[_a][_c][_e][_n][_t][_Comma][_SP][_g][_r][_a][_n][_t][_s][_SP][_a][_n][_o][_t][_h][_e][_r][_SP][_a][_c][_t][_i][_o][_n][_SP]([_o][_n][_c][_e][_SP][_p][_e][_r][_SP][_t][_u][_r][_n])[_Dot][X]
 
 ## SD_LullStr
 Lull Str: Negates the effects of[N]

@@ -82,8 +82,11 @@ continue:
 	beq end
 
 	cmp r1, #0x3A @ ':'
+	beq terminate @if a colon, end; otherwise, check for narrowfont colon
+	cmp r1, #0xCC @ 'narrow :'
 	bne continue
 
+	terminate:
 	mov  r1, #0
 	strb r1, [r2]
 

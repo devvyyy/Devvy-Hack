@@ -44,7 +44,7 @@ bne End
 mov r0,#0x5C
 add r0,r4
 ldrb r1,[r0]
-add r1,#2
+add r1,#4
 strb r1,[r0]
 
 End:

@@ -10,6 +10,14 @@ CheckGaleforce: //decides if the unit should be cantoing or not
 #incbin "Galeforce/checkgaleforce.dmp"
 
 ALIGN 4
+LastHour:
+#incbin "LastHour/LastHour.dmp"
+POIN SkillTester
+WORD LastHourID
+POIN LastHourEvent
+#include "LastHour/LastHour.event"
+
+ALIGN 4
 BulletThing:
 #incbin "BulletThing/BulletThing.dmp"
 POIN SkillTester
@@ -271,6 +279,16 @@ CloseCall:
 #incbin "CloseCall/CloseCall.dmp"
 POIN SkillTester
 WORD CloseCallID
+POIN AffoMugEvent
+#include "CloseCall/AffoMugEvent.event"
+
+ALIGN 4
+ThiefThing: //universal steal galeforce (make it restrict move?)
+#incbin "ThiefThing/ThiefThing.dmp"
+POIN SkillTester
+WORD CloseCallID
+//POIN ThiefEvent
+//#include "ThiefThing/ThiefEvent.event"
 
 ALIGN 4
 Sidestep:

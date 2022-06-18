@@ -1,0 +1,74 @@
+#include "eastdlib.event"
+
+PUSH
+
+ORG $279B0 
+jumpToHack(UnitDisplay)
+
+ORG $279E8 
+callHack_r3(IconDisplay)
+// ldr r2 =OAMSize 
+ORG $279F6 
+SHORT 0x46C0 // Nop - normally ldr r3, =0x811 
+
+POP 
+
+
+
+
+ALIGN 4 
+PUSH; ORG CurrentOffset+1
+UnitDisplay:
+POP; #incbin "UnitDisplay.dmp"
+POIN IconDisplayList
+
+
+ALIGN 4 
+PUSH; ORG CurrentOffset+1
+IconDisplay:
+POP; #incbin "IconDisplay.dmp"
+POIN IconDisplayList
+
+
+
+ALIGN 4
+IconDisplayList:
+//BYTE 0 // Any Unit ID 
+//BYTE 0 // Any Class 
+//SHORT 0 // Any flag 
+//BYTE 0xFF // Any chapter 
+//BYTE 0xFF // Default ObjTileID 
+//BYTE 0 // padding 
+//BYTE 0 // Padding
+
+//random stuff from looking in nos: 0x11 is the defend icon, 0x10 is boss shield, 0x8 is the weather snow icon
+//0x41 is the steal icon (part of poison), 0x60 is the key (part of poison), 0x61 is the torch (part of poison), 0x69 is the droppable bag
+//0x40 is the flow icon, 0x64 is the moon icon
+
+//defend icons
+
+BYTE AeteriaStealable 0; SHORT 0; 		BYTE 0xFF 0x41 0 0 //0xFF seems to be the defend icon? (default)
+BYTE FlyingMagStealable 0; SHORT 0; 		BYTE 0xFF 0x41 0 0
+BYTE BadGuyStealable 0; SHORT 0; 		BYTE 0xFF 0x41 0 0
+BYTE WreyvineStealable 0; SHORT 0; 		BYTE 0xFF 0x41 0 0
+BYTE StealableSoul 0; SHORT 0; 		BYTE 0xFF 0x41 0 0
+
+//brigand and thief icons
+BYTE 0x6E 0; SHORT 0; 		BYTE 0xFF 0x61 0 0 //gives brigands with brigand ai a torch icon
+BYTE 0x64 0; SHORT 0; 		BYTE 0xFF 0x60 0 0 //gives the 'hunters' a key icon
+
+//lord icons
+BYTE Affogato 0; SHORT 0x28; 		BYTE 0xFF 0x40 0 0
+BYTE Chiffon 0; SHORT 0xED; 		BYTE 0xFF 0x64 0 0 
+/*
+BYTE 2 0; SHORT 0; 		BYTE 0xFF 0x76 0 0 //0x76 is the ! icon
+BYTE 3 0; SHORT 0; 		BYTE 0xFF 0x77 0 0 //0x77 is the ! icon but orange???
+BYTE 4 0; SHORT 0; 		BYTE 0xFF 0x4  0 0 //0x4 is a down arrow (not the WTD one tho)
+BYTE 5 0; SHORT 0; 		BYTE 0xFF 0x51 0 0 //0x51 is the thief escape marker
+BYTE 6 0; SHORT 0; 	BYTE 0xFF 3 0 0  // Any unit ID, class, any flag
+*/
+WORD 0xFFFFFFFF 0xFFFFFFFF // terminator 
+
+
+
+

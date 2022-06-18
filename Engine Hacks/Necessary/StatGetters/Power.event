@@ -8,6 +8,7 @@ pPowerModifiers: // Power
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
+	POIN prEmpowerEthCheck
 WORD 0
 
 prAddUnitPower:
@@ -30,6 +31,11 @@ prLifeAndDeathBonus:
 prSkillFury:
   rIfUnitHasSkill(FuryID)
     rAddConst(2)
+	
+prEmpowerEthCheck: //thief rush
+	rIfUnitHasState(0x400)
+		rIfUnitHasSkill(CharismaID)
+			rAddConst(4)
 
 prFortressDefensePow:
 	_testSkill(FortressDefenseID,0,3)

@@ -8,7 +8,30 @@
 .thumb
 push	{lr}
 
-@check if attacked this turn
+@check if last action was using a thief thing
+ldr r0,=#0x203A958
+ldrb r0,[r0,#0x11]
+mov r1,#0x6 @steal
+cmp r0,r1
+beq CheckFlag @if steal, branch to TheSkill
+
+@is it pick?
+ldr r0,=#0x203A958
+ldrb r0,[r0,#0x11]
+mov r1,#0x15 @pick
+cmp r0,r1
+bne CheckAttack @if not pick, branch to End
+
+CheckFlag:
+@check if flag 0x28 set; if set, end
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0x28
+.short 0xF800
+cmp r0,#1
+bne EventCheck @if flag is not on, add to counter
+
+CheckAttack: @check if attacked this turn
 ldrb 	r0, [r6,#0x11]	@action taken this turn
 cmp	r0, #0x2 @attack
 bne	End

@@ -8,17 +8,6 @@ push {r4-r7,lr}
 mov r4, r0
 mov r5, r1
 
-mov r0, r5       @Move defender data into r1.
-mov r1, #0x4c    @Move to the defender's weapon ability
-ldr r1, [r0,r1]
-mov r2, #0x42
-tst r1, r2
-beq     Done @do nothing if magic bit not set
-mov r2, #0x2
-lsl r2, #0x10 @0x20000 negate def/res
-tst r1, r2
-bne Done
-
 @ CheckSkill:
 @now check for the skill
 ldr r0, AuraSkillCheck
@@ -31,11 +20,51 @@ mov r3, #2 @range
 cmp r0, #0
 beq Done
 
-@ mov r0, r5
-@ add     r0,#0x5A    @Move to the defender's damage.
-@ ldrh    r3,[r0]     @Load the defender's damage into r3.
-@ sub     r3,#2    @Subtract 2 from the defender's damage.
-@ strh    r3,[r0]     @Store defender avoid.
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq Done
+
+@ blade of the ruined king
+mov r0, r4       @Move attacker data into r1.
+mov r1, #0x4c    @Move to the attacker's weapon ability
+ldr r1, [r0,r1]
+mov r2, #0x42
+tst r1, r2
+bne     Done @do nothing if magic bit not set
+
+@ check enemy res
+mov r0, #4
+ldrb r1, [r5, #0x18] @defender res
+cmp r0, r1
+ble Done @skip if foes res is greater than or equal to 4
+
+@ add 4 damage
+mov r0, r4
+add r0, #0x5a @attack
+ldrh r3, [r0]
+add r3, #4
+strh r3, [r0]
+
+@grants defense to enemy equal to enemy res
+mov  r1, #0x5a
+ldrh r0, [r4, r1] @in battle defense
+ldrb r2, [r5, #0x18] @res
+sub  r0, r2
+strh r0, [r4,r1]
+
+@ res buff
+Next:
+mov r0, r5       @Move defender data into r1.
+mov r1, #0x4c    @Move to the defender's weapon ability
+ldr r1, [r0,r1]
+mov r2, #0x42
+tst r1, r2
+beq     Done @do nothing if magic bit not set
+mov r2, #0x2
+lsl r2, #0x10 @0x20000 negate def/res
+tst r1, r2
+bne Done
 
 @testing
 mov r0, r4
