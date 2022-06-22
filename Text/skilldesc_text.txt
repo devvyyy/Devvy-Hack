@@ -1,3 +1,14 @@
+## SD_Lmao
+# so basically basic attacks cant double etc
+Rev'd Up!: Unit's attacks are Combat Arts.[N]
+Normal attacks cost 3 Durability and deal[N]
+25% of foe's max HP magic damage.[X]
+
+## SD_Lmao2
+Burst Fire: Attack dealing split damage[N]
+scaling with Dex. Converts Str to Hit.[N]
+Cost: 1 Durability.[X]
+
 ## SD_Constance
 Circadian Beat: If indoors, grants Atk +6[N]
 and unit makes a follow-up and foe cannot.[N]
@@ -11,11 +22,6 @@ or more enemies, unit is invulnerable.[X]
 Fight or Die: Unit persists for 1 turn[N]
 upon death at 1 HP: If unit defeats foe,[N]
 restores HP to full.[X]
-
-## SD_Zeri
-Rev'd Up!: Converts Str to Hit. Damage[N]
-scales with Dex and is based off 50% of[N]
-foe's Def and 50% of foe's Res.[X]
 
 ## SD_Anchor
 Anchor: If unit attacks without moving,[N]
@@ -371,7 +377,7 @@ sets their Crit/Avoid to 0.[X]
 ## SD_ThunderClap
 Grounding: If foe's terrain boosts Avoid,[N]
 Doppio ignores the bonuses and deals[N]
-bonus damage = foe's Spd.[X]
+bonus magic damage = foe's Spd x 2.[X]
 
 ## SD_Falcon
 Falcon: During turns 1-5, grants[N]
@@ -433,8 +439,9 @@ Cheap Shot: If foe's HP is 50% or[N]
 less, grants unit Str/AS +2.[X]
 
 ## SD_SteelSoul
-Steel Soul: If Ogrim's Def > foe's Str/Eth[N]
-and initiates, strikes x2 consecutively.[X]
+Steel Soul: If Ogrim initiates and[N]
+Def > foe's Str/Eth, strikes x2[N]
+consecutively.[X]
 
 ## SD_Shrewd
 Third Eye: Grants bonus Hit equal[N]
@@ -453,9 +460,9 @@ Lone Wolf: If unit is not adjacent to[N]
 an ally, grants Crit +15.[X]
 
 ## SD_Megalovania
-Brave Bird: If Biscotti initiates and[N]
-current HP > foe's current HP, strikes[N]
-x2 consecutively.[X]
+Brave Bird: If Biscotti's current HP[N]
+> foe's current HP, strikes x2[N]
+consecutively.[X]
 
 ## SD_RayDark
 Augmentation: Grants adjacent[N]
@@ -578,7 +585,7 @@ Inspire: Wustenhoff grants +2 Atk to physical[N]
 allies on the map with 50% HP or more.[X]
 
 ## SD_BitterCold
-Bitter Cold: Hartmann inflicts Res -2 to[N]
+Bitter Cold: Hartmann inflicts Rsl -2 to[N]
 all foes on the map with < 100% HP.[X]
 
 ## SD_Savior

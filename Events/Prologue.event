@@ -84,8 +84,19 @@ LocationBasedEvents:
 Chest(SteelBow,13,6)
 Door(11,7)
 Door(12,7)
-Seize(2,2)
+LOCA 0x0 GamingPrologue [2,2] 0x11
 END_MAIN
+
+GamingPrologue:
+CHECK_ALIVE 0x68
+BEQ 1 0x0 0xC
+Text(DudeSeriously)
+GOTO 0x2
+LABEL 1
+SetFlag(0x3)
+LABEL 2
+NoFade
+ENDA
 
 MiscBasedEvents:
 AREA 0x8 FirstMoveTime [0,9] [7,11]
@@ -109,7 +120,7 @@ END_MAIN
 Units1:
 UNIT Affogato Hunter 0x1 Level(1, Ally, 0)     [7,6]  0b 0 1 REDA7R9 [IronBow, IronRifle,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Breve SCav 0x1 Level(3, Ally, 0)    [7,6] 0b 0 1 REDA6R8 [IronSword,Sagitar,Vulnerary] [0x0,0x0,0x0,0x0]
-UNIT Ansgar LArmor 0x1 Level(4, Ally, 0)   [7,6] 0b 0 1 REDA7R8 [IronLance,Javelin,Vulnerary] [0x0,0x0,0x0,0x0]
+UNIT Ansgar LArmor 0x1 Level(4, Ally, 0)   [7,6] 0b 0 1 REDA7R8 [IronLance,Javelin,0x64,Vulnerary] [0x0,0x0,0x0,0x0]
 UNIT Hildr 0x6 0x1 Level(2, Ally, 0)    [7,6] 0b 0 1 REDA8R8 [IronAxe,HandAxe,Vulnerary] [0x0,0x0,0x0,0x0]
 UNIT Ulrich LPaladin 0x1 Level(5, Ally, 0)   [7,6] 0b 0 1 REDA7R7 [IronLance,IronGlaive,Elixir] [0x0,0x0,0x0,0x0]
 UNIT
@@ -165,7 +176,8 @@ ENUT 0xC6
 ENUT 0xC7
 ENUT 0xC8
 ENUT 0xC9
-//ENUT 0xCA //save this for when affo gets phasing
+//ENUT 0xCA //keywords
+//ENUT 0xCB //save this for when affo gets phasing
 ENUT 0xE0
 ENUT 0xE1
 LOAD1 0x1 EnemyUnits

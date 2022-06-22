@@ -105,13 +105,13 @@ UNIT Aeteria Mercenary 0x1 Level(5, Enemy, 1)     [6,0] 0x0 0x0 0x0 0x0 [IronSwo
 	UNIT
 
 NPCEPIC:
-UNIT HolyGuard Monk 0x1 Level(3, NPC, 1)     [3,14] 0b 0x0 0x0 0x0 [Light1, Vulnerary] ChargeAI
-UNIT HolyGuard Archer 0x1 Level(3, NPC, 1)     [12,12] 0b 0x0 0x0 0x0 [Elixir] BossAI
+UNIT HolyGuard Monk 0x1 Level(3, NPC, 1)     [3,14] 0b 0x0 0x0 0x0 [Light1, Vulnerary] [0,0,2,0]
+UNIT HolyGuard Archer 0x1 Level(3, NPC, 1)     [12,12] 0b 0x0 0x0 0x0 [Elixir] [0,3,0,32]
 UNIT
 
 NPCREIN:
-UNIT HolyGuard Priest 0x1 Level(5, NPC, 1)     [9,15] 0 0 1 REDA9R13 [Fear, Vulnerary] ChargeAI
-UNIT HolyGuard Cleric 0x1 Level(5, NPC, 1)     [10,15] 0 0 1 REDA10R13 [Slow, Vulnerary] ChargeAI
+UNIT HolyGuard Priest 0x1 Level(5, NPC, 1)     [9,15] 0 0 1 REDA9R13 [Fear, Vulnerary] [0,0,2,0]
+UNIT HolyGuard Cleric 0x1 Level(5, NPC, 1)     [10,15] 0 0 1 REDA10R13 [Slow, Vulnerary] [0,0,2,0]
 UNIT
 
 TankyHealerWTF:
@@ -468,6 +468,7 @@ STAL 3
 	STAL 5
 	CenterTextbox(RedTileDisclaimer)
 NoFade
+VCWF 7
 ENDA
 
 WeAreDead:

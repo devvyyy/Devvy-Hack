@@ -43,10 +43,10 @@ IconDisplayList:
 
 //random stuff from looking in nos: 0x11 is the defend icon, 0x10 is boss shield, 0x8 is the weather snow icon
 //0x41 is the steal icon (part of poison), 0x60 is the key (part of poison), 0x61 is the torch (part of poison), 0x69 is the droppable bag
-//0x40 is the flow icon, 0x64 is the moon icon
+//0x40 is the flow icon, 0x63 is the moon icon (part of berserk)
+//0x64 seems to be used for sleep despite being empty wtf???
 
 //defend icons
-
 BYTE AeteriaStealable 0; SHORT 0; 		BYTE 0xFF 0x41 0 0 //0xFF seems to be the defend icon? (default)
 BYTE FlyingMagStealable 0; SHORT 0; 		BYTE 0xFF 0x41 0 0
 BYTE BadGuyStealable 0; SHORT 0; 		BYTE 0xFF 0x41 0 0
@@ -59,7 +59,7 @@ BYTE 0x64 0; SHORT 0; 		BYTE 0xFF 0x60 0 0 //gives the 'hunters' a key icon
 
 //lord icons
 BYTE Affogato 0; SHORT 0x28; 		BYTE 0xFF 0x40 0 0
-BYTE Chiffon 0; SHORT 0xED; 		BYTE 0xFF 0x64 0 0 
+BYTE Chiffon 0; SHORT 0xED; 		BYTE 0xFF 0x63 0 0 
 /*
 BYTE 2 0; SHORT 0; 		BYTE 0xFF 0x76 0 0 //0x76 is the ! icon
 BYTE 3 0; SHORT 0; 		BYTE 0xFF 0x77 0 0 //0x77 is the ! icon but orange???

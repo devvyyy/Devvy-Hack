@@ -12,7 +12,7 @@ pMovModifiers: // Movement
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
-//	POIN prSidestepCheck
+	POIN prMoonCheck
 	POIN prGaleforceCheck
 	POIN prPassCheck
 	POIN prEmpowerCheck
@@ -56,10 +56,10 @@ prEmpowerCheck:
 		rIfUnitHasSkill(CharismaID)
 			rConstant(0)
 			
-prSidestepCheck:
+prMoonCheck:
 	rIfUnitHasState(0x400)
-		rIfUnitHasSkill(CloseCallID)
-			rConstant(2)
+		rIfUnitHasSkill(MoonEvokedID)
+			rConstant(0)
 
 prRallyMov:
 	#include "_asm/RallyMov.lyn.event"

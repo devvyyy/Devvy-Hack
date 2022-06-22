@@ -272,33 +272,32 @@ CLEAN
 SetBackground(0x3A)
 MUSCSLOW 0x4A
 CHECK_ALIVE Ansgar
-BEQ 5 0x0 0xC
+BEQ 7 0x0 0xC
 CHECK_ALIVE Breve
 BEQ 4 0x0 0xC
 CHECK_ALIVE Hildr
 BEQ 4 0x0 0xC
 GOTO 5
+LABEL 7
 Text(Ch1Ending3Alt2)
 STAL 10
 GiveItem(SnaringRifle,Affogato)
-GiveGold(1000)
 Text(Ch1Ending3Alt2Point5)
 GOTO 6
 LABEL 4
 Text(Ch1Ending3Alt1)
 STAL 10
 GiveItem(SnaringRifle,Affogato)
-GiveGold(1000)
 Text(Ch1Ending3Point5)
 GOTO 6
 LABEL 5
 Text(Ch1Ending3)
 STAL 10
 GiveItem(SnaringRifle,Affogato)
-GiveGold(1000)
 Music(0x4A) //Night Ambience
 Text(Ch1Ending3Point5)
-LABEL 6
+
+LABEL 6 //end
 
 CHECK_EVENTID 0xA2
 BEQ 0x42 0x0 0xC

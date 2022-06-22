@@ -488,7 +488,7 @@ missing HP.[X]
 ## LiveRingDesc
 A holy ring that lets the wearer[N]
 survive an attack with 1 HP[N]
-if HP is higher than half.[X]
+if HP > 50%.[X]
 
 ## BShieldDesc
 A sturdy shield that halves[N]
@@ -619,7 +619,8 @@ actions and halving Def/Res. [_Lock]: Yory[X]
 
 ## RopeDesc
 Moves an ally within 3 spaces[N]
-to an adjacent space. [_Lock]: Yory[X]
+to an adjacent space. [_Lock]: Yory[N]
+(Priority: Up/Left/Right/Down.)[X]
 
 ## RopeDesc2
 Warps allies to a[N]

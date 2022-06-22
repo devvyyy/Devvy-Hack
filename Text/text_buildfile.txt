@@ -25,6 +25,10 @@ Rifles are heavy versions of[N]
 physical weapons with less Hit.[N]
 Daggers each ignore a % of[N]
 foe's Def.[N]
+Shields all reposition the[N]
+user or foe. Note that[N]
+this cannot cross or leave[N]
+any terrain.[N]
  [N]
 Anima magic grants Atk bonuses[N]
 to nearby allies, with the[N]
@@ -41,9 +45,10 @@ Magical weapons such as the[N]
 Flamberge deal a fixed amount[N]
 of damage, ignoring the[N]
 user's Str.[N]
-Siege tomes, staves, and the[N]
-Big Iron cannot be countered,[N]
-or counterattack.[X]
+Long-range weapons cannot counter[N]
+or be countered.[N]
+For example, siege tomes, staves,[N]
+and the Big Iron.[X]
 
 # 0x5e8
 Skills[X]
@@ -79,7 +84,11 @@ white border.[N]
 Combat arts have a[N]
 purple border.[N]
 Mastery skills have a[N]
-green border.[X]
+green border.
+ [N]
+Physical bonus damage targets Def[N]
+and magical targets Res.[N]
+[X]
 
 # 0x5e9
 Items[X]
@@ -91,12 +100,14 @@ actions that can be repeated[N]
 Steal/Pick are free actions[N]
 that can't be repeated[N]
 (once per turn, Blue menu text).[N]
+Note that you can steal[N]
+from green units.[N]
  [N]
 Green bag icons on enemies[N]
 indicate a droppable item,[N]
 and blue bag icons indicate[N]
 a stealable item.[N]
-Torch iconsindicate that the[N]
+Torch icons indicate that the[N]
 unit will target villages,[N]
 and key icons indicate that the[N]
 unit will pick locks and/or run.[N]
@@ -133,6 +144,7 @@ are as follows:[N]
 1-5 villages were saved)[N]
 1-F: Nora/King (only if[N]
 Nora talked with Floris)[N]
+1-F: Stroganoff/Gorlois[N]
  [N]
 Every unit has 5 supports with[N]
 3 ranks with eachother.[N]
@@ -155,10 +167,47 @@ Earth: Defense, Crit[N]
 Heaven: Hit, Avoid[N]
 Void: None[X]
 
-# 0x5eb
+# 0x5ec
 Off-Hand[X]
 
 # 0x623
+Canto (X): Unit can move X[N]
+spaces after any action.[N]
+If there's no number, X =[N]
+unit's remaining movement.[N]
+ [N]
+Knockback (X): Pushes foe back[N]
+X spaces (not through terrain).[N]
+ [N]
+Negate (X): Ignores (X)% of foe's[N]
+Def/Res.[N]
+ [N]
+Brave: Unit strikes twice[N]
+consectively.[N]
+ [N]
+Consecutive: Unit's follow-ups[N]
+occur before foe can counter.[N]
+ [N]
+Vantage: Unit can counter[N]
+before foe's first attack.[N]
+ [N]
+Reaver: Reverses weapon triangle[N]
+and doubles bonus/penalties.[N]
+ [N]
+Sweep: Cannot counter.[N]
+ [N]
+Blind: Cannot hit.[N]
+ [N]
+Guard: Cannot critically hit.[N]
+ [N]
+Execute: Instantly defeats foe[N]
+regardless of HP or defenses.[N]
+[X]
+
+# 0x5eb
+Keywords[X]
+
+# 0x624
 Starting in part 3, Affogato[N]
 can equip an Off-Hand Rifle[N]
 weapon with his skill Phasing.[N]
@@ -353,6 +402,16 @@ from magical weapons.[N]
 Constitution, or physical size.[NL]
 Affects rescues and weapon weight.[X]
 
+# 0x47A
+Moves allies in adjacent[N]
+spaces to another space[N]
+within Eth/3 spaces.[X]
+
+# 0x47B
+Moves allies within Eth/3[N]
+spaces to adjacent spaces.[N]
+(Priority: Up/Left/Right/Down.)[X]
+
 # 0x558
 This'll leave a mark![N]
 Grants Atk +10.[X]
@@ -459,9 +518,42 @@ Effective against armor.[X]
 # 0x431
 Focal Rifle[X]
 
+# 0x533
+[0xBD][X]
+
 # 0x428
 # note: has 0 crit unlike other rifles, when off-hand it converts 25% crit
 Converts Crit into bonus Atk.[X]
+
+# 0x3d9
+Dragoncrest[X]
+
+# 0x3dd
+[_B][_u][_c][_k][_l][_e][_r][_SP][_S][_h][_i][_e][_l][_d][X]
+
+# 0x48c
+[_M][_t][_SP]=[_SP][_D][_e][_f][_Dot][_SP][_N][_o][_SP][_c][_o][_u][_n][_t][_e][_r][_Slash][_f][_o][_l][_l][_o][_w]-[_u][_p][_Dot][_SP][_P][_i][_v][_o][_t][_Dot][X]
+
+# 0x3de
+[_K][_i][_t][_e][_SP][_S][_h][_i][_e][_l][_d][X]
+
+# 0x48d
+[_M][_t][_SP]=[_SP][_D][_e][_f][_Dot][_SP][_N][_o][_SP][_c][_o][_u][_n][_t][_e][_r][_Slash][_f][_o][_l][_l][_o][_w]-[_u][_p][_Dot][_SP][_S][_h][_o][_v][_e][_Dot][X]
+
+# 0x3df
+[_H][_e][_a][_t][_e][_r][_SP][_S][_h][_i][_e][_l][_d][X]
+
+# 0x48e
+[_M][_t][_SP]=[_SP][_D][_e][_f][_Dot][_SP][_N][_o][_SP][_c][_o][_u][_n][_t][_e][_r][_Slash][_f][_o][_l][_l][_o][_w]-[_u][_p][_Dot][_SP][_D][_r][_a][_g][_SP][_b][_a][_c][_k][_Dot][X]
+
+# 0x3e0
+[_A][_d][_a][_r][_g][_a][_SP][_S][_h][_i][_e][_l][_d][X]
+
+# 0x48f
+[_M][_t][_SP]=[_SP][_D][_e][_f][_Dot][_SP][_N][_o][_SP][_c][_o][_u][_n][_t][_e][_r][_Slash][_f][_o][_l][_l][_o][_w]-[_u][_p][_Dot][_SP][_M][_o][_v][_e][_SP][_b][_a][_c][_k][_Dot][X]
+
+# 0x4ca
+ [X]
  
 # 0x412
 Suffused with light magic. Ignores Str.[X]
@@ -548,7 +640,7 @@ grants another turn,[N]
 and gives Chiffon EXP.[X]
 
 # 0x448
-[_1][_0]%[_Space][_c][_u][_r][_r][_e][_n][_t][_Space][_H][_P][_Space][_d][_m][_g][_Space]i[_n][_Space][_a][_Space][_3][_Space][_s][_p][_a][_c][_e][_Space][_A][_o][_E][_Space][_Dot][_Space][_Lock][_Y][_o][_r][_y][X]
+[_1][_0]%[_Space][_c][_u][_r][_Dot][_Space][_H][_P][_Space][_d][_m][_g][_Space]i[_n][_Space][_a][_Space][_3][_Space][_s][_p][_a][_c][_e][_Space][_A][_o][_E][_Dot][_Space][_K][_n][_o][_c][_k][_SP][_b][_a][_c][_k][_Dot][_Space][_Lock][_Y][_o][_r][_y][X]
 
 # 0x47F
 Increases Resistance of an ally[N]

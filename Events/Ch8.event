@@ -13,14 +13,38 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TurnEventEnemy(0,SussyAppear,3)
-TurnEventEnemy(0,HelloChat,5)
+TURN 0x0 HelloZopf [1,0] 0x0
+TURN 0x0 TopLeftRein [4,0] 0x0
+TurnEventEnemy(0,SussyAppear,5)
+TURN 0x0 TopRightRein [6,0] 0x0
+TURN 0x0 SunnyEvent [7,0] 0x0
+TurnEventEnemy(0,HelloChat,8)
 TURN 0x0 GoodbyeDespair [20,0] 0x0
 	END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
+CharacterEventBothWays(0xA, RecruitEdithChiff, Chiffon, Edith)
+CharacterEventBothWays(0xB, RecruitEdithJaye, Chiffon, Jaye)
 	END_MAIN
+	
+RecruitEdithChiff:
+MUSS 0x30
+STAL 33
+Text(ChiffonEdithTalk)
+MURE 0x2
+CUSA Edith
+NoFade
+ENDA
+
+RecruitEdithJaye:
+MUSS 0x30
+STAL 33
+Text(JayeEdithTalk)
+MURE 0x2
+CUSA Edith
+NoFade
+ENDA
 
 MiscBasedEvents:
 	CauseGameOverIfLordDies
@@ -30,11 +54,57 @@ MiscBasedEvents:
 LocationBasedEvents:
 Village(0x8,HeavySpearVillage,1,2)
 Village(0x9,AbsorbVillage,10,8)
+House(0x0,BottomRight,10,11)
+House(0x0,BottomLeft,0,11)
+House(0x0,TopLeft,0,8)
 Door(13,5)
 Door(14,5)
 Door(13,13)
 Door(14,13)
+Escape(8,21)
+Escape(9,21)
+Escape(10,21)
 	END_MAIN
+	
+TopLeftRein:
+SpawnReinforcements(Rein1)
+NoFade
+ENDA
+
+SunnyEvent:
+WORD 0x2820 //sunny weather
+NoFade
+ENDA
+
+TopRightRein:
+SpawnReinforcements(Rein2)
+WORD 0x12820 //snow weather
+NoFade
+ENDA
+	
+BottomRight:
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+HouseExp(0xA,HouseBG1,Placeholder1)
+MUNO // increases music volume
+NoFade
+ENDA
+
+BottomLeft:
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+HouseExp(0xA,HouseBG1,Placeholder1)
+MUNO // increases music volume
+NoFade
+ENDA
+
+TopLeft:
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+HouseExp(0xA,HouseBG1,Placeholder1)
+MUNO // increases music volume
+NoFade
+ENDA
 
 Dunno1:
 
@@ -68,33 +138,46 @@ UNIT Zopf Hunter 0x1 Level(3, Ally, 0)   [10,8] 0b 0x0 0x0 0x0 [IronBow,0xDB,] [
 	UNIT
 
 EnemyUnits: //InfantrySoul, CavSoul, FlierSoul, ArmorSoul, MagSoul, PromoSoul, StealSoul
-UNIT 0x40 SCav 0x1 Level(1, Enemy, 0)     [0,4] 0b 0x0 0x0 0x0 [BraveSword,Vulnerary] BossAI
-UNIT 0x41 SPaladin 0x1 Level(1, Enemy, 0)     [16,16] 0b 0x0 0x0 0x0 [0xDC,Elixir] BossAI
+//UNIT 0x40 SCav 0x1 Level(1, Enemy, 0)     [0,4] 0b 0x0 0x0 0x0 [BraveSword,Vulnerary] BossAI
+//UNIT 0x41 SPaladin 0x1 Level(1, Enemy, 0)     [16,16] 0b 0x0 0x0 0x0 [0xDC,Elixir] BossAI
 
 UNIT Aeteria Fighter 0x1 Level(4, Enemy, 1)     [7,1] 0b 0x0 0x0 0x0 [IronAxe] ChargeAI
 UNIT Aeteria Fighter 0x1 Level(4, Enemy, 1)     [4,0] 0b 0x0 0x0 0x0 [IronAxe] BossAI
-UNIT Aeteria Mage 0x1 Level(5, Enemy, 1)     [14,0] 0b 0x0 0x0 0x0 [Fire] AttackInRangeAI
+UNIT Aeteria Mage 0x1 Level(5, Enemy, 1)     [12,18] 0b 0x0 0x0 0x0 [Fire] AttackInRangeAI
 UNIT Aeteria Mage 0x1 Level(4, Enemy, 1)     [4,2] 0b 0x0 0x0 0x0 [Fire] TwoActionAI
 UNIT Aeteria Archer 0x1 Level(4, Enemy, 1)     [6,10] 0b 0x0 0x0 0x0 [Vulnerary] TwoActionAI
-UNIT Aeteria Archer 0x1 Level(4, Enemy, 1)     [1,9] 0b 0x0 0x0 0x0 [IronBow] AttackInRangeAI
+UNIT AeteriaStealable Archer 0x1 Level(4, Enemy, 1)     [1,9] 0b 0x0 0x0 0x0 [0xDF,Talisman] AttackInRangeAI
 UNIT Aeteria Mage 0x1 Level(4, Enemy, 1)     [14,7] 0b 0x0 0x0 0x0 [Fire] AttackInRangeAI
-UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [5,13] 0b 0x0 0x0 0x0 [IronLance,Javelin] BossAI
-UNIT Aeteria Mercenary 0x1 Level(4, Enemy, 1)     [6,16] 0b 0x0 0x0 0x0 [IronSword] ChargeAI
+UNIT Aeteria LArmor 0x1 Level(4, Enemy, 1)     [5,13] 0b 0x0 0x0 0x0 [IronLance,Javelin] BossAI
+UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT Aeteria Mercenary 0x1 Level(4, Enemy, 1)     [7,7] 0b 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT AeteriaStealable Mercenary 0x1 Level(4, Enemy, 1)     [6,16] 0b 0x0 0x0 0x0 [IronSword,Elixir] ChargeAI
 UNIT Aeteria Mercenary 0x1 Level(4, Enemy, 1)     [3,11] DropItem 0x0 0x0 0x0 [IronSword,ChestKey] AttackInRangeAI
-UNIT Edith LArmor 0x1 Level(4, Enemy, 1)     [3,5] 0b 0x0 0x0 0x0 [SteelLance] BossAI
+UNIT Edith LArmor 0x1 Level(4, Ally, 1)     [3,5] 0b 0x0 0x0 0x0 [SteelLance,0x67,Elixir] BossAI
 UNIT Aeteria SCav 0x1 Level(5, Enemy, 1)     [7,20] 0b 0x0 0x0 0x0 [SteelSword] ChargeAI
 UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [13,3] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
 UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [14,17] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
 UNIT Aeteria Fighter 0x1 Level(4, Enemy, 1)     [13,9] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
-UNIT Aeteria Mage 0x1 Level(4, Enemy, 1)     [13,12] 0b 0x0 0x0 0x0 [Fire] AttackInRangeAI
+UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [13,12] DropItem 0x0 0x0 0x0 [Flux,DoorKey] BossAI
 UNIT Aeteria LCav 0x1 Level(4, Enemy, 1)     [12,20] 0b 0x0 0x0 0x0 [Javelin] TwoActionAI
 UNIT Aeteria ACav 0x1 Level(4, Enemy, 1)     [4,19] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
-UNIT Aeteria LArmor 0x1 Level(5, Enemy, 1)     [13,12] DropItem 0x0 0x0 0x0 [Javelin,DoorKey] BossAI
-UNIT Aeteria LArmor 0x1 Level(5, Enemy, 1)     [12,6] DropItem 0x0 0x0 0x0 [SapphireLance,Elixir] BossAI
+UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [13,12] DropItem 0x0 0x0 0x0 [DarkTome2,DoorKey] BossAI
+UNIT Aeteria LArmor 0x1 Level(5, Enemy, 1)     [9,20] DropItem 0x0 0x0 0x0 [SapphireLance,Elixir] BossAI
+	UNIT
+	
+Rein1:
+UNIT Aeteria SCav 0x1 Level(5, Enemy, 1)     [3,0] 0 0 1 REDA3R1  [Sagitar] ChargeAI
+UNIT Aeteria Thaumaturge 0x1 Level(5, Enemy, 1)     [4,0] 0 0 1 REDA4R1  [Thunder] ChargeAI
+	UNIT
+	
+Rein2:
+UNIT Aeteria Soldier 0x1 Level(5, Enemy, 1)     [0,6] 0x0 0x0 0x0  [IronLance] ChargeAI
+UNIT Aeteria Soldier 0x1 Level(5, Enemy, 1)     [0,4] 0 0 1 REDA1R4 [SteelLance] ChargeAI
+UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [14,9] 0x0 0x0 0x0  [Flux] ChargeAI
 	UNIT
 	
 YoHereToInstaKill: //make her warp in
-UNIT Aoife Sage_F 0x1 Level(12, Enemy, 0)     [4,1] 0b 0x0 0x0 0x0 [0xEA] StallOneTurnAI
+UNIT Aoife Sage_F 0x1 Level(12, Enemy, 0)     [4,1] DropItem 0x0 0x0 0x0 [0xEA,WhiteGem] StallOneTurnAI
 	UNIT
 
 Traps1:
@@ -113,35 +196,65 @@ Traps2:
 BeginningScene:
 	LOAD1 0x1 Units1
 	LOAD1 0x1 EnemyUnits
+	TurnEnemy(Edith)
 	ENUN
+	GotoPrepScreen
 	ENDA
 
 EndingScene:
-//	MNC2 0x9
-MNTS 0x1 //return to title screen
+	MNC2 0xA
+//MNTS 0x1 //return to title screen
 	NoFade
 	ENDA
-	
+
 GoodbyeDespair:
 GameOver
 ENDA
 
 AbsorbVillage:
-MUSI; SMOV 0x2 0x1; SMOV 0x3 Ch8ZopfRecruit; CALL $9EE310; MUNO; LOAD1 0x1 NewUnits; EVBIT_T 0x7; ENDA
+Music(0x30)
+SetBackground(0x1)
+Text(Ch8ZopfRecruit)
+ClearBackground
+LOAD1 0x1 NewUnits
+MURE 0x2
+NoFade
+ENDA
 
 HeavySpearVillage:
 VillageEventItem(HeavySpearVillageText, 0x1, HeavySpear)
 ENDA
 
+HelloZopf:
+CAM1 [10,8]
+FlashCursor(10,8,60)
+STAL 10
+SetBackground(0x1)
+Text(Ch8ZopfIntro)
+ClearBackground
+NoFade
+ENDA
+
 SussyAppear:
+CAM1 [0,0]
 SetBackground(0x15)
 Text(Ch8AoifeGaming)
+ClearBackground
+NoFade
 ENDA
 
 HelloChat:
 SetBackground(0x40)
 Text(Ch8AoifeAppear)
 ClearBackground
+SOUN 0xF2
+WORD 0x52820 //fire weather
 STAL 15
 	LOAD1 0x1 YoHereToInstaKill
+ENUN
+SVAL 0x2 Aoife
+_WARP 0xFFFF 0xFFFD [4,4]
+CALL 0x9EE4F8
+_WARP 0x0 Aoife [4,4]
+NoFade
 ENDA

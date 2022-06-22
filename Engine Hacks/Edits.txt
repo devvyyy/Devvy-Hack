@@ -29,17 +29,14 @@ ORG 0x025A36
 BYTE 0x0 //0 blur
 POP
 
-/*
 //Steal from Green units
 //by Shuusuke
+
 PUSH
-ORG 0x25BAA
-BYTE 0x09
-BYTE 0x40
-BYTE 0x80
-BYTE 0x42
+ORG 0x25BAC
+SHORT 0x2800 0xD023
+
 POP
-*/
 
 //Fix R text crash on the save screen (by removing the button press check)
 //by Snek
@@ -101,7 +98,7 @@ POP
 //Staff Base Hit Rate (default 30)
 PUSH
 ORG 0x002cd30
-BYTE 0x32
+BYTE 0x32 //50
 POP
 
 // Fix the Game Over freeze
@@ -198,31 +195,31 @@ POP
 //by 7743
 PUSH
 ORG 0x9A47B6
-BYTE 0x01
+BYTE 0x00
 ORG 0x9A47C6
-BYTE 0x01
+BYTE 0x00
 ORG 0x9A480E
-BYTE 0x01
+BYTE 0x00
 
 //Removes delay at start of battle
 //by 7743
 ORG 0x9A352A
-BYTE 0x01
+BYTE 0x00
 ORG 0x9A3542
-BYTE 0x01
+BYTE 0x00
 ORG 0x9A356A
-BYTE 0x01
+BYTE 0x00
 ORG 0x9A360A
-BYTE 0x01
+BYTE 0x00
 ORG 0x9A362A
-BYTE 0x01
+BYTE 0x00
 POP
 
 //Faster Animations (removes background delay)
 //by 7743
 PUSH
 ORG 0x59DAEE
-BYTE 0x01
+BYTE 0x00
 POP
 
 //Faster EXP Bars
@@ -233,9 +230,9 @@ BYTE 0x02
 ORG 0x9A3732
 BYTE 0x00
 ORG 0x9A3742
-BYTE 0x01
+BYTE 0x00
 ORG 0x9A3752
-BYTE 0x01
+BYTE 0x00
 POP
 
 //Map-Wide Support Range
@@ -313,7 +310,7 @@ BYTE 10
 
 //Boss Bonus EXP
 ORG 0x2C3FA
-BYTE 30
+BYTE 25
 
 //Revenant Bonus EXP
 ORG 0x2C402
@@ -458,7 +455,7 @@ POP
 //Vulnerary Heal Amount
 PUSH
 ORG 0x2FEC6
-BYTE 0x0F
+BYTE 0x0F //15
 POP
 
 //Thracia rescue trading
@@ -597,7 +594,7 @@ POP
 //by Tequila
 PUSH
 ORG 0x07F464
-BYTE 0x0A
+BYTE 0x0A //10 frames per ding
 POP
 
 //Skip very beginning world map

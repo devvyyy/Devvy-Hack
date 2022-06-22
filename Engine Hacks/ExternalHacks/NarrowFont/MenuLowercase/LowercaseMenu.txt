@@ -178,6 +178,15 @@ BYTE 0x00 //always zero
 BYTE 0x00
 #incbin "shortspace.img.bin"
 
+ALIGN 4
+Mglyph_star:
+WORD 0x00000000 //empty pointer (no Shift-JIS)
+BYTE 0x00 //empty code-page # (no Shift-JIS)
+BYTE 0x8 //character width
+BYTE 0x00 //always zero
+BYTE 0x00
+#incbin "aa-star.img.bin"
+
 mGlyphEntry(0x81, Mglyph_a)
 mGlyphEntry(0x82, Mglyph_b)
 mGlyphEntry(0x83, Mglyph_c)
@@ -200,3 +209,4 @@ mGlyphEntry(0x98, Mglyph_x)
 mGlyphEntry(0x99, Mglyph_y)
 mGlyphEntry(0x9A, Mglyph_z)
 mGlyphEntry(0xBC, Mglyph_shortspace)
+mGlyphEntry(0xBD, Mglyph_star)
