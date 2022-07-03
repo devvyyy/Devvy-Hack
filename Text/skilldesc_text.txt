@@ -1,13 +1,29 @@
 ## SD_Lmao
-# so basically basic attacks cant double etc
-Rev'd Up!: Unit's attacks are Combat Arts.[N]
-Normal attacks cost 3 Durability and deal[N]
-25% of foe's max HP magic damage.[X]
+# so basically basic attacks cant double, have more range, while zap attacks have less range but deal chip etc
+Rev'd Up!: Unit attacks with Burst Fire.[N]
+Normal attacks cost 3 Durability, ignore Atk,[N]
+and deal 50% of foe's max HP magic damage.[X]
 
 ## SD_Lmao2
+# note this has extra range
 Burst Fire: Attack dealing split damage[N]
 scaling with Dex. Converts Str to Hit.[N]
 Cost: 1 Durability.[X]
+
+## SD_Radiance
+Motivate: Floris' staves mark allies.[N]
+Restores (Def + 5) HP to all marked[N]
+allies on the map after combat.[X]
+
+## SD_Overdrive
+Overdrive: Combat grants 1 stack (max; 15).[N]
+Stacks grant +1 Spd/Move, and resets after[N]
+not attacking. At 3+ stacks, attacks refresh.[X]
+
+## SD_GetExcited
+Get Excited!!: If foe is defeated, grants[N]
+another action, doubles Spd/Move, and unit[N]
+strikes twice consecutively for 1 turn.[X]
 
 ## SD_Constance
 Circadian Beat: If indoors, grants Atk +6[N]
@@ -29,10 +45,10 @@ grants another action at 0 Move (once[N]
 per turn).[X]
 
 ## SD_Gaming
-# temp flags 0x25-0x28
-[_F][_l][_o][_w][_Colon][_SP][_G][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP][_p][_e][_r][_SP][_c][_o][_m][_b][_a][_t][_Slash][_s][_t][_e][_a][_l][_Slash][_p][_i][_c][_k][N]
-([_m][_a][_x];[_SP]4)[_Dot][_SP][_A][_t][_SP][_m][_a][_x][_SP][_s][_t][_a][_c][_k][_s][_Comma][_SP][_c][_o][_n][_s][_u][_m][_e][_s][_SP][_a][_l][_l][_SP][_s][_t][_a][_c][_k][_s][N]
-[_o][_n][_SP][_i][_n][_i][_t][_i][_a][_t][_i][_o][_n][_SP][_t][_o][_SP][_d][_e][_a][_l][_SP][_b][_o][_n][_u][_s][_SP][_d][_a][_m][_a][_g][_e][_SP]=[_SP][_R][_e][_s][_Dot][X]
+# Flow, temp flags 0x25-0x28
+[_F]l[_o]w[_Colon][_SP][_C][_o]m[_b][_a][_t][_Slash][_s][_t][_e][_a]l[_Slash][_p]i[_c][_k][_SP][_g][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP](m[_a][_x];[_SP]4)[_Dot][N]
+[_A][_t][_SP][_m][_a][_x][_SP][_s][_t][_a][_c][_k][_s][_Comma][_SP][_c][_o][_n][_s][_u][_m][_e][_s][_SP][_a][_l][_l][_SP][_s][_t][_a][_c][_k][_s][_SP][_o][_n][_SP][_i][_n][_i][_t][_i][_a][_t][_i][_o][_n][_SP][_t][_o][N]
+[_x][_2][_SP][_C][_a][_n][_t][_o][_SP][_m][_o][_v][_e][_m][_e][_n][_t][_SP][_a][_n][_d][_SP][_d][_e][_a][_l][_SP][_b][_o][_n][_u][_s][_SP][_d][_a][_m][_a][_g][_e][_SP]=[_SP][_R][_e][_s][_Dot][X]
 
 ## WTIdea
 IDK: If weapon triangle matchup is neutral,[N]
@@ -41,7 +57,7 @@ unit has Weapon Triangle advantage.[X]
 ## SD_DuckandCover
 # zopf personal?
 Duck and Cover: If Zopf does not move,[N]
-grants Hit +30 and enables Canto 5.[X]
+grants Hit +30 and Canto 5 spaces.[X]
 
 ## SD_FunnyTime
 I Make The Rules: If unit's Spd is less[N]
@@ -71,8 +87,8 @@ another action.[X]
 ## SD_ApheliosHowMANYYEARS
 # Moon Evoked, global flags 0xEC-ED
 [_M][_o][_o][_n][_SP][_E][_v][_o][_k][_e][_d][_Colon][_SP][_I][_f][_SP][_C][_h][_i][_f][_f][_o][_n]'[_s][_SP][_H][_P][_SP][_i][_s][_SP][_5][_0]%[_SP][_o][_r][_SP][_l][_e][_s][_s][_Comma][_SP][_g][_r][_a][_n][_t][_s][N]
-[_A][_S][_Slash][_A][_v][_o][_i][_d][_SP]=[_SP][_m][_i][_s][_s][_i][_n][_g][_SP][_H][_P][_Comma][_SP][_a][_n][_d][_SP][_a][_t][_SP][_2][_5]%[_SP][_o][_r][_SP][_l][_e][_s][_s][_Comma][_SP][_a]l[_s][_o][N]
-[_M][_o][_v][_e][_SP][_Plus][_1][_SP][_a][_n][_d][_SP][_a][_n][_SP][_a][_c][_t][_i][_o][_n][_SP][_a][_f][_t][_e][_r][_SP][_c][_o][_m][_b][_a][_t][_SP]([_o][_n][_c][_e][_Slash][_t][_u][_r][_n])[_Dot][X]
+[_A][_S][_Slash][_A][_v][_o][_i][_d][_SP]=[_SP][_m][_i][_s][_s][_i][_n][_g][_SP][_H][_P][_Comma][_SP][_a][_n][_d][_SP][_a][_t][_SP][_2][_5]%[_SP][_H][_P][_SP][_o][_r][_SP][_l][_e][_s][_s][_Comma][_SP][_a]l[_s][_o][N]
+[_g][_r][_a][_n][_t][_s][_SP][_M][_o][_v][_e][_SP][_Plus][_1][_SP][_a][_n][_d][_SP][_a][_t][_t][_a][_c][_k][_i][_n][_g][_SP][_i][_s][_SP][_a][_SP][_f][_r][_e][_e][_SP][_a][_c][_t][_i][_o][_n][_Dot][X]
 
 ## SD_AeterianFealty
 Vigil in Fealty: If Graham is adjacent to[N]
@@ -90,7 +106,7 @@ grants another action after attacking,[N]
 but take 1 damage after combat.[X]
 
 ## SD_Upgrade
-Upgrade!!: Yory's turret deals +3[N]
+Upgrade!!: Mov +1. Yory's turret deals +3[N]
 damage, ignores 40% Def instead, and can[N]
 critically hit with base 10% chance.[X]
 
@@ -186,8 +202,8 @@ excluding Light magic.[X]
 
 ## SD_BloodHunt
 Blood Hunt: If foe's HP is 50% or less,[N]
-grants Atk/AS +5. At 25% or less, also[N]
-grants Hit/Crit = foe's missing HP.[X]
+grants Atk/AS +5, and at 25% or less,[N]
+also grants Hit/Crit = foe's missing HP.[X]
 
 ## SD_ViolentTendencies
 Violent Tendencies: During even-numbered[N]
@@ -218,7 +234,7 @@ i[_s][_SP][_h]i[_g][_h][_e][_r][_Comma][_SP][_s]t[_r]i[_k][_e][_s][_SP][_x][_2][
 # LHT?!
 [_F]-[_D][0x23]-[_F][_Slash][_Slash][_C][0x23]-[_G][0x23]-[_F][_Colon][_SP][_C][_o][_n][_v][_e][_r][_t][_s][_SP][_S][_t][_a][_n][_i][_e][_l]'[_s][_SP][_S][_t][_r][_SP][_t][_o][N]
 [_b][_o][_n][_u][_s][_SP][_A][_v][_o][_i][_d][_Comma][_SP][_a][_n][_d][_SP][_D][_e][_x][_SP][_t][_o][_SP][_b][_o][_n][_u][_s][_SP][_C][_r][_i][_t][_SP][_A][_v][_o][_i][_d][_Dot][_SP][_I][_f][_SP][_f][_o][_e]'[_s][N]
-[_r][_a][_n][_g][_e][_SP]>[_SP][_2][_Comma][_SP][_d][_o][_d][_g][_e][_SP][_a][_l][_l][_SP][_a][_t][_t][_a][_c][_k][_s][_Dot][_SP][_E][_n][_a][_b][_l][_e][_s][_SP][_P][_l][_a][_y][_Dot][X]
+[_r][_a][_n][_g][_e][_SP]>[_SP][_2][_Comma][_SP][_d][_o][_d][_g][_e][_SP][_a][_l][_l][_SP][_a][_t][_t][_a][_c][_k][_s][_Dot][_SP][_C][_a][_n][_SP][_P][_l][_a][_y][_Dot][X]
 
 ## SD_HeavyDuty
 Grit: If unit's HP is not full,[N]
@@ -515,9 +531,9 @@ foe's Max HP/4.[X]
 
 ## SD_CloseCall
 # Sidestep
-[_S][_i][_d][_e][_s][_t][_e][_p][_Colon][_SP][_I][_f][_SP][_A][_f][_f][_o][_g][_a][_t][_o][_SP][_d][_o][_e][_s][_n]'[_t][_SP][_m][_o][_v][_e][_Comma][_SP][_e][_n][_a][_b][_l][_e][_s][_SP][_C][_a][_n][_t][_o][_SP][_2][N]
-([_C][_a][_n][_t][_o][_SP][_1][_SP][_o][_t][_h][_e][_r][_w][_i][_s][_e][_Comma][_SP][_g][_r][_e][_e][_n][_SP][_a][_c][_t][_i][_o][_n][_s][_SP][_c][_a][_p][_SP][_M][_o][_v][_e])[_Dot][_SP][_C][_a][_n][N]
-[_m][_o][_v][_e][_SP][_a][_f][_t][_e][_r][_SP][_p][_i][_c][_k][_i][_n][_g][_Slash][_s][_t][_e][_a][_l][_i][_n][_g][_SP]([_o][_n][_c][_e][_SP][_p][_e][_r][_SP][_t][_u][_r][_n])[_Dot][X]
+[_S][_i][_d][_e][_s][_t][_e][_p][_Colon][_SP][_I][_f][_SP][_A][_f][_f][_o][_g][_a][_t][_o][_SP][_d][_o][_e][_s][_n]'[_t][_SP][_m][_o][_v][_e][_Comma][_SP][_C][_a][_n][_t][_o][_SP][_2][_SP][_s][_p][_a][_c][_e][_s][N]
+([_C][_a][_n][_t][_o][_SP][_1][_SP][_s][_p][_a][_c][_e][_SP][_o][_t][_h][_e][_r][_w][_i][_s][_e])[_Dot][_SP][_G][_r][_a][_n][_t][_s][_SP][_a][_n][_o][_t][_h][_e][_r][_SP][_a][_c][_t][_i][_o][_n][N]
+[_a][_f][_t][_e][_r][_SP][_p][_i][_c][_k][_i][_n][_g][_Slash][_s][_t][_e][_a][_l][_i][_n][_g][_SP]([_o][_n][_c][_e][_SP][_p][_e][_r][_SP][_t][_u][_r][_n])[_Dot][X]
 
 ## SD_Vigor
 # Requiem: When using offensive staves, multiplies Eth by 1.25x and deals bonus damage equal to a quarter of foe's current HP.
@@ -558,13 +574,13 @@ Thunderhead: If unit's HP is 75%[N]
 or more, Crit +15.[X]
 
 ## SD_Sergeant
-Warden: If Ansgar is within 2 spaces[N]
-of an ally, grants Prt +4, and if foe[N]
+Warden: If Ansgar is within 2 spaces of[N]
+an ally, grants Prt +4, and if foe also[N]
 initiates, strikes x2 consecutively.[X]
 
 ## SD_ColdFlare
 Cold Flare: If Akatsuki's HP isn't full,[N]
-grants bonus Atk/AS = 25% of Res.[X]
+grants bonus Atk/AS = 25% of unit's Res.[X]
 
 ## SD_ColdFlare2
 Cold Flare: If foe is physical, grants Atk +3.[N]
@@ -576,8 +592,8 @@ grants Attack Speed +2.[X]
 
 ## SD_Intrepid
 # Dive-Bomb
-[_D][_i][_v][_e]-[_B][_o][_m][_b][_Colon][_SP][_I][_f][_SP][_B][_r][_u][_d][_e][_t][_SP][_i][_n][_i][_t][_i][_a][_t][_e][_s][_Comma][_SP][_a][_n][_d][_SP][_b][_o][_t][_h][_SP][_s][_i][_d][_e][_s]'[N]
-[_H][_P][_SP][_i][_s][_SP][_f][_u][_l][_l][_Comma][_SP][_g][_r][_a][_n][_t][_s][_SP][_A][_t][_k][_Slash][_A][_S][_SP][_Plus][_2][_Comma][_SP][_a][_n][_d][_SP][_a][_t][_SP][_1][_SP][_r][_a][_n][_g][_e][_Comma][N]
+[_D][_i][_v][_e]-[_B][_o][_m][_b][_Colon][_SP][_I][_f][_SP][_B][_r][_u][_d][_e][_t][_SP][_i][_n][_i][_t][_i][_a][_t][_e][_s][_Comma][_SP][_a][_n][_d][_SP][_b][_o][_t][_h][_SP][_s][_i][_d][_e][_s]'[_SP][_H][_P][N]
+[_i][_s][_SP][_f][_u][_l][_l][_Comma][_SP][_g][_r][_a][_n][_t][_s][_SP][_A][_t][_k][_Slash][_A][_S][_SP][_Plus][_2][_Comma][_SP][_a][_n][_d][_SP][_i][_f][_SP][_a][_l][_s][_o][_SP][_a][_t][_SP][_1][_SP][_r][_a][_n][_g][_e][_Comma][N]
 [_f][_o][_l][_l][_o][_w]-[_u][_p][_SP][_a][_t][_t][_a][_c][_k][_s][_SP][_o][_c][_c][_u][_r][_SP][_i][_m][_m][_e][_d][_i][_a][_t][_e][_l][_y][_Dot][X]
 
 ## SD_Inspire
@@ -746,6 +762,7 @@ when attacked at 1-2 range.[X]
 
 ## SD_Miracle
 Miracle: If Iris' HP is 50% or more,[N]
+neutralizes Mt of tier I magic and[N]
 survive the next lethal attack.[X]
 
 ## SD_Swordfaire
@@ -931,9 +948,9 @@ Life and Death: +10 to[N]
 damage dealt and taken.[X]
 
 ## SD_LockTouch
-Locktouch: Unit can open doors and[N]
-chests, steal items, and gets +2[N]
-spaces of vision in fog/darkness.[X]
+Cunning: Unit can pick locks, steal[N]
+items, and gets +2 spaces of vision[N]
+in fog and darkness.[X]
 
 ## SD_Lunge
 Lunge: Swap places with the[N]
@@ -1650,8 +1667,8 @@ cannot be crit.[X]
 
 ## SD_Assassinate
 Duelist: If Rina initiates at 1 range,[N]
-follow-up attacks occur immediately,[N]
-and enables Canto 1 if foe is defeated.[X]
+follow-up attacks occur immediately, and[N]
+if foe is also defeated, Canto 1 space.[X]
 
 ## SD_ArcaneBlade
 Arcane Blade: When initiating battle[N]

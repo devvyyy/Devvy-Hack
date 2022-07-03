@@ -1,0 +1,25 @@
+#include "EAstdlib.event"
+#include "Extensions/Hack Installation.txt"
+
+#ifndef FreeSpace
+	#define FreeSpace $B2A610
+	ORG FreeSpace
+#endif	
+
+
+
+
+#ifndef BKSEL_WEAPON_SELECTION
+#define BKSEL_WEAPON_SELECTION
+
+
+// New Target Slect Routine:
+// Up & Down: Change Target
+// Left & Right: Change Weapon
+// By Mokha
+
+#include "Src/NewTargetSelect.lyn.event"
+
+
+
+#endif // BKSEL_WEAPON_SELECTION

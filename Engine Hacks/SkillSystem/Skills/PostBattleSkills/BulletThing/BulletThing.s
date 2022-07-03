@@ -8,6 +8,20 @@
 .thumb
 push	{lr}
 
+@check for skill
+mov	r0, r4
+ldr	r1, BulletID
+ldr	r3, SkillTester
+mov	lr, r3
+.short	0xf800
+cmp	r0,#0x00
+beq	CheckDefender
+
+@check if dead
+ldrb	r0, [r4,#0x13]
+cmp	r0, #0x00
+beq	End
+
 @check if last action was using a thief thing
 ldr r0,=#0x203A958
 ldrb r0,[r0,#0x11]
@@ -35,20 +49,6 @@ CheckAttack: @check if attacked this turn
 ldrb 	r0, [r6,#0x11]	@action taken this turn
 cmp	r0, #0x2 @attack
 bne	End
-
-@check for skill
-mov	r0, r4
-ldr	r1, BulletID
-ldr	r3, SkillTester
-mov	lr, r3
-.short	0xf800
-cmp	r0,#0x00
-beq	CheckDefender
-
-@check if dead
-ldrb	r0, [r4,#0x13]
-cmp	r0, #0x00
-beq	End
 
 @ play event
 mov	r3, #0x00

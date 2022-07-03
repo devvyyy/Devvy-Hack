@@ -17,6 +17,11 @@ Weapons[X]
 The weapon triangle is[N]
 +/-2 Mt, +/-20 Hit.[N]
  [N]
+Press Up/Down to change[N]
+target and Left/Right[N]
+to change equipped weapon[N]
+in the battle forecast.[N]
+ [N]
 Weapon Hit has increased[N]
 overall, with Crit removed[N]
 from certain weapons.[N]
@@ -25,10 +30,11 @@ Rifles are heavy versions of[N]
 physical weapons with less Hit.[N]
 Daggers each ignore a % of[N]
 foe's Def.[N]
-Shields all reposition the[N]
-user or foe. Note that[N]
-this cannot cross or leave[N]
-any terrain.[N]
+Shields all reposition the user[N]
+or foe. Note that this cannot[N]
+cross or leave any terrain,[N]
+and cannot reposition foes[N]
+with -- Move.[N]
  [N]
 Anima magic grants Atk bonuses[N]
 to nearby allies, with the[N]
@@ -45,10 +51,11 @@ Magical weapons such as the[N]
 Flamberge deal a fixed amount[N]
 of damage, ignoring the[N]
 user's Str.[N]
-Long-range weapons cannot counter[N]
-or be countered.[N]
-For example, siege tomes, staves,[N]
-and the Big Iron.[X]
+[N]
+Long-range weapons cannot[N]
+counter or be countered.[N]
+For example, siege tomes,[N]
+staves, and the Big Iron.[X]
 
 # 0x5e8
 Skills[X]
@@ -86,9 +93,12 @@ purple border.[N]
 Mastery skills have a[N]
 green border.
  [N]
-Physical bonus damage targets Def[N]
-and magical targets Res.[N]
-[X]
+Physical bonus damage targets[N]
+Def and magical targets Res.[N]
+ [N]
+Note that Sidestep doesn't[N]
+trigger on free actions[N]
+after using all movement.[X]
 
 # 0x5e9
 Items[X]
@@ -325,6 +335,9 @@ have laid claim to Ideon.[X]
 # 0x4FF
 Eth[X]
 
+# 0x518
+Marked[X]
+
 # 0x391
 Shortbow[X]
 
@@ -425,7 +438,7 @@ I'm gonna go wild![N]
 Grants Crit +10.[X]
 
 # 0x55B
-An unreachable shadow![N]
+Just try and hit me![N]
 Grants Avoid +10.[X]
 
 # 0x31F
@@ -834,7 +847,7 @@ allies within (Eth/3) range.[X]
 A hero's blade. Eff: [HorseIcon][ArmorIcon][X]
 
 # 0x42E
-Ignores 40% of foe's Def. [_Lock]: Thieves[X]
+Ignores 50% of foe's Def. [_Lock]: Thieves[X]
 
 # 0x403
 Iron Dagger[X]

@@ -79,19 +79,30 @@ CantoProc:
 @ check if moved more than 1: if so, canto 1 instead of 2
 ldr r3,=0x203a968 @Spaces Moved
 ldrb r2,[r3]
-cmp r2, #0x0
+cmp r2, #0x0 @0 spaces
 beq CanTwo
 
-@ move 1 square after canto
+@ CANTO 1: move 1 square after canto
 ldr	r0,=#0x8019224	@mov getter
 mov	lr, r0
 mov	r0, r4		@attacker
 .short	0xF800
 sub r0, #1
 strb 	r0, [r6, #0x10]	@squares moved this turn
-b GoCanto
 
-CanTwo: @ move 2 squares after canto
+@ check if attacked
+ldrb 	r0, [r6,#0x11]	@action taken this turn
+cmp	r0, #0x2 @attack
+bne	GoCanto
+
+@check if flag 0x28 set; if set, doubles to canto 2
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0x28
+.short 0xF800
+cmp r0,#1
+bne GoCanto @if flag is not on, canto normally; otherwise set canto 2
+
 ldr	r0,=#0x8019224	@mov getter
 mov	lr, r0
 mov	r0, r4		@attacker
@@ -99,7 +110,38 @@ mov	r0, r4		@attacker
 sub r0, #2
 strb 	r0, [r6, #0x10]	@squares moved this turn
 
-GoCanto: @if canto, unset 0x2 and set 0x40
+b GoCanto @go canto 2
+
+CanTwo: @ CANTO 2: move 2 squares after canto
+ldr	r0,=#0x8019224	@mov getter
+mov	lr, r0
+mov	r0, r4		@attacker
+.short	0xF800
+sub r0, #2
+strb 	r0, [r6, #0x10]	@squares moved this turn
+
+@ check if attacked
+ldrb 	r0, [r6,#0x11]	@action taken this turn
+cmp	r0, #0x2 @attack
+bne	GoCanto
+
+@check if flag 0x28 set; if set, doubles to canto 4
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0x28
+.short 0xF800
+cmp r0,#1
+bne GoCanto @if flag is not on, Canto 2 as normal
+
+@canto 4
+ldr	r0,=#0x8019224	@mov getter
+mov	lr, r0
+mov	r0, r4		@attacker
+.short	0xF800
+sub r0, #4
+strb 	r0, [r6, #0x10]	@squares moved this turn
+
+GoCanto: @END: if canto, unset 0x2 and set 0x40
 ldr	r0, [r4,#0x0C]	@status bitfield
 mov	r1, #0x02
 mvn	r1, r1

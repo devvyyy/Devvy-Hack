@@ -28,18 +28,19 @@ ldr r0,=#0x203A4EC @attacker struct
 cmp r0,r4
 bne GoBack @skip if enemy phase
 
-ldrb r0,[r5,#0x12] @max hp
-ldrb r1,[r5,#0x13] @cur hp
-lsl r1,r1,#2 @cur hp x4
-cmp r1,r0
-bgt GoBack @if cur hp x4 is less than or equal to max HP, we are at 25% or less
-
 @recalc your damage by atk setting to 0 first
 @set attacker attack to 0
 mov r0, r4
 add r0,#0x5A
 mov r3,#0
 strh r3,[r0]
+
+ldrb r0,[r5,#0x12] @max hp
+ldrb r1,[r5,#0x13] @cur hp
+lsl r1,r1,#2 @cur hp x4
+cmp r1,r0
+bgt GoBack @if cur hp x4 is less than or equal to max HP, we are at 25% or less
+@ keep atk at 0 if not execute
 
 @ add back attack = enemys current hp
 mov  r1, #0x5A
@@ -66,24 +67,6 @@ add		r4,#0x60
 ldrh	r0,[r4]
 add		r0,#255
 strh	r0,[r4]
-
-@ cancel your double if faster (dude just call the cant double loop)
-ldrb r0, [r4, #0x16] @attacker spd
-ldrb r1, [r5, #0x16] @defender spd
-cmp r0, r1
-ble GoBack @skip if spd is less or equal
-
-@set attacker spd to 0
-mov r0, r4
-add r0,#0x5E
-mov r3,#0
-strh r3,[r0]
-
-@set defender spd to 0
-mov r0, r5
-add r0,#0x5E
-mov r3,#0
-strh r3,[r0]
 
 GoBack:
 pop {r4-r7}

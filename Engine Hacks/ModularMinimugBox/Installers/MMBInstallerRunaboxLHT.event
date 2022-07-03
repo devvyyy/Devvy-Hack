@@ -427,7 +427,7 @@ After each set of module options are definitions that you can use to adjust the 
 
 // Combination modules
 
-	#define MMBHPStatus
+	//#define MMBHPStatus
 		/*
 		 * Alternates between drawing HP. ## / ##
 		 * and the unit's current status, if they have one,
@@ -448,7 +448,7 @@ After each set of module options are definitions that you can use to adjust the 
 		 * frames.
 		 */
 
-	//#define MMBHP
+	#define MMBHP
 		/*
 		 * Draws HP ## / ## to [MMBHPX, MMBHPY].
 		 */

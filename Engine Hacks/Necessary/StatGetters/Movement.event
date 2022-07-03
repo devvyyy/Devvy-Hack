@@ -8,7 +8,8 @@ pMovModifiers: // Movement
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff-1
 	#endif
-	POIN prNullifyIfFreeze prNullifyIfGuardAI
+//	POIN prNullifyIfFreeze
+	POIN prNullifyIfGuardAI
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -29,7 +30,7 @@ prSkillCelerity:
 		rAddConst(2)
 		
 prSkillPoise:
-	rIfUnitHasSkill(PoiseID)
+	rIfUnitHasSkill(UpgradeID)
 		rAddConst(1)
 
 prNullifyIfGuardAI:

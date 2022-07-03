@@ -10,6 +10,18 @@ CheckGaleforce: //decides if the unit should be cantoing or not
 #incbin "Galeforce/checkgaleforce.dmp"
 
 ALIGN 4
+RadianceMarking:
+#incbin "Radiance/RadianceMarking.dmp"
+POIN SkillTester
+WORD RadianceID
+
+ALIGN 4
+RadianceDamage:
+#incbin "Radiance/RadianceDamage.dmp"
+POIN SkillTester
+WORD RadianceID
+
+ALIGN 4
 LastHour:
 #incbin "LastHour/LastHour.dmp"
 POIN SkillTester
