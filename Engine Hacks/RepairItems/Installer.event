@@ -1,53 +1,444 @@
+#ifndef RepairItems
+#define RepairItems
 
+// Repair items ASMCs
+// Original by Vesly, rewritten by Zane Avernathy
 
-
-ALIGN 4 
-ComputeRepairCost:
-#incbin "ComputeRepairCost.dmp"
-
-
-ALIGN 4 
-RepairItemsForACost:
-#incbin "RepairItems.dmp"
+#include "CalculateRepairCost_Internal.lyn.event"
+#include "CalculateRepairCost.lyn.event"
+#include "MemorySlotToString.lyn.event"
+#include "RepairItems_Internal.lyn.event"
+#include "RepairItems.lyn.event"
 
 /*
-ALIGN 4 
-ExampleEvent:
-ASMC ComputeRepairCost|1 
-// This returns the cost to repair your weapons in memory slot C 
-SADD r1 rC r0
-MemSlotToString(r1) // See the patch: Convert Memory Slot to String 
-EVBIT_MODIFY 4 // No scene skipping 
-SVAL r7 1 
-EVBIT_F 2 
-TEXTSTART 
-// You'll have to do text yourself. Here's an example, though. 
-//[OpenLeft][LoadFace][0x164][OpenLeft] // Anna 
-//Want your weapons repaired?[A][Clear]
-//That'll be [G] gold.
-//[Yes]
-TEXTSHOW 0x8FE // Do you want to quit? [Yes] 
-//0x8B5 // How does [G] gold sound to you? [Yes] 
-TEXTEND 
-REMA 
-BNE 0x63 rC r7
+USAGE:
 
-// We only got here if they selected yes 
+  ASMC_RepairItems_CalculateRepairCost:
 
-ASMC ComputeRepairCost|1 
-SADD r1 rC r0
-// You could put some arbitrary value here in memory slot 1 
-// if you want to charge them a different price 
-ASMC RepairItemsForACost|1 
-// If they don't have enough money then we don't actually repair anything 
-// This returns 0 in slot C if they were too broke 
+    Inputs:
+      r1: Character ID or
+         0 -> Player army leader
+        -1 -> Active unit
+        -2 -> Unit at coordinates in rB
+        -3 -> First unit found with character ID in r2
+      r2 (optional): See above
 
-LABEL 0x63 
-EVBIT_MODIFY 0
-NoFade 
-ENDA 
+    Outputs:
+      rC: Gold cost to repair all items or
+        -1 -> No unit was found
+
+    Returns the cost to repair a unit's inventory
+    in rC.
+
+    You should call this before calling ASMC_RepairItems.
+
+    See the macros below for more.
+
+  ASMC_RepairItems:
+
+    Inputs:
+      r1: Character ID or
+         0 -> Player army leader
+        -1 -> Active unit
+        -2 -> Unit at coordinates in rB
+        -3 -> First unit found with character ID in r2
+      r2 (optional): See above
+
+    Repairs all valid weapons in a unit's inventory.
+
+    You should set a gold cost in rC, possibly through
+    ASMC_RepairItems_CalculateRepairCost before calling this.
+
+  ASMC_MemorySlotToString:
+
+    Inputs:
+      slot specified in ASMC body: slot containing number
+
+    Outputs:
+      None
+
+    This is a helper ASMC to make displaying
+    repair costs in text easier. Use the macro below
+    and use [G] in text to display.
+
 */
 
+// Macros and helpers
 
+#define RI_Target_Leader 0
+#define RI_Target_Active_Unit (-1)
+#define RI_Target_Coordinates (-2)
+#define RI_Target_Search (-3)
 
+#define macroASMC_MemorySlotToString(slot) "SHORT 0x0D40 slot; POIN (ASMC_MemorySlotToString|1)"
+  /*
+  This turns the number in the specified slot
+  into a string that can be displayed in dialogue
+  using [G].
 
+  USAGE:
+    slot: memory slot
+  */
+
+#define macroASMC_RepairItems(target) "SVAL r1 target; ASMC (ASMC_RepairItems|1)"
+  /*
+  This is the standard way to use this ASMC.
+
+  If you want to target a unit at a specific coordinate,
+  see macroASMC_RepairItems_CalculateRepairCost_Coords.
+
+  If you want to search for the first unit with
+  a given character ID, see
+  macroASMC_RepairItems_CalculateRepairCost_Search.
+
+  USAGE:
+    target:
+      Character ID or
+      RI_Target_Leader or
+      RI_Target_Active_Unit
+  */
+
+#define macroASMC_RepairItems_Coords(x_coord, y_coord) "SVAL r1 RI_Target_Coordinates; SVAL rB ((y_coord << 16) | x_coord); ASMC (ASMC_RepairItems|1)"
+  /*
+  This macro is for targeting a character at
+  a specific coordinate.
+
+  If you want to target a specific unit, the player
+  faction leader, or the active unit, see
+  macroASMC_RepairItems_CalculateRepairCost.
+
+  If you want to search for the first unit with
+  a given character ID, see
+  macroASMC_RepairItems_CalculateRepairCost_Search.
+
+  USAGE:
+    x_coord, y_coord
+      Position of unit
+  */
+
+#define macroASMC_RepairItems_Search(target) "SVAL r1 RI_Target_Search; SVAL r2 target; ASMC (ASMC_RepairItems|1)"
+  /*
+  This macro is for targeting a the first character
+  found with a specific Character ID.
+
+  If you want to target a specific unit, the player
+  faction leader, or the active unit, see
+  macroASMC_RepairItems_CalculateRepairCost.
+
+  If you want to target a unit at a specific coordinate,
+  see macroASMC_RepairItems_CalculateRepairCost_Coords.
+
+  USAGE:
+    target:
+      Character ID
+  */
+
+#define macroASMC_RepairItems_CalculateRepairCost(target, baseCost, costMultiplier) "SVAL r1 target; SVAL r3 baseCost; SVAL r4 costMultiplier; ASMC (ASMC_RepairItems_CalculateRepairCost|1)"
+#define macroASMC_RepairItems_CalculateRepairCost(target) "SVAL r1 target; SVAL r3 0; SVAL r4 100; ASMC (ASMC_RepairItems_CalculateRepairCost|1)"
+  /*
+  This is the standard way to use this ASMC.
+
+  You can specify a base cost to charge per item, regardless
+  of how much it costs to normally repair the item.
+
+  You can specify a multiplier (interpreted as a percent)
+  to multiply the total cost to repair the inventory by.
+
+  If you want to target a unit at a specific coordinate,
+  see macroASMC_RepairItems_CalculateRepairCost_Coords.
+
+  If you want to search for the first unit with
+  a given character ID, see
+  macroASMC_RepairItems_CalculateRepairCost_Search.
+
+  USAGE:
+    target:
+      Character ID or
+      RI_Target_Leader or
+      RI_Target_Active_Unit
+
+    baseCost:
+      Flat gold amount to charge per item
+
+    costMultiplier:
+      Percentage of total cost to charge
+  */
+
+#define macroASMC_RepairItems_CalculateRepairCost_Coords(x_coord, y_coord, baseCost, costMultiplier) "SVAL r1 RI_Target_Coordinates; SVAL r3 baseCost; SVAL r4 costMultiplier; SVAL rB ((y_coord << 16) | x_coord); ASMC (ASMC_RepairItems_CalculateRepairCost|1)"
+#define macroASMC_RepairItems_CalculateRepairCost_Coords(x_coord, y_coord) "SVAL r1 RI_Target_Coordinates; SVAL r3 0; SVAL r4 100; SVAL rB ((y_coord << 16) | x_coord); ASMC (ASMC_RepairItems_CalculateRepairCost|1)"
+  /*
+  This macro is for targeting a character at
+  a specific coordinate.
+
+  You can specify a base cost to charge per item, regardless
+  of how much it costs to normally repair the item.
+
+  You can specify a multiplier (interpreted as a percent)
+  to multiply the total cost to repair the inventory by.
+
+  If you want to target a specific unit, the player
+  faction leader, or the active unit, see
+  macroASMC_RepairItems_CalculateRepairCost.
+
+  If you want to search for the first unit with
+  a given character ID, see
+  macroASMC_RepairItems_CalculateRepairCost_Search.
+
+  USAGE:
+    x_coord, y_coord
+      Position of unit
+
+    baseCost:
+      Flat gold amount to charge per item
+
+    costMultiplier:
+      Percentage of total cost to charge
+  */
+
+#define macroASMC_RepairItems_CalculateRepairCost_Search(target, baseCost, costMultiplier) "SVAL r1 RI_Target_Search; SVAL r2 target; SVAL r3 baseCost; SVAL r4 costMultiplier; ASMC (ASMC_RepairItems_CalculateRepairCost|1)"
+#define macroASMC_RepairItems_CalculateRepairCost_Search(target) "SVAL r1 RI_Target_Search; SVAL r2 target; SVAL r3 0; SVAL r4 100; ASMC (ASMC_RepairItems_CalculateRepairCost|1)"
+  /*
+  This macro is for targeting a the first character
+  found with a specific Character ID.
+
+  You can specify a base cost to charge per item, regardless
+  of how much it costs to normally repair the item.
+
+  You can specify a multiplier (interpreted as a percent)
+  to multiply the total cost to repair the inventory by.
+
+  If you want to target a specific unit, the player
+  faction leader, or the active unit, see
+  macroASMC_RepairItems_CalculateRepairCost.
+
+  If you want to target a unit at a specific coordinate,
+  see macroASMC_RepairItems_CalculateRepairCost_Coords.
+
+  USAGE:
+    target:
+      Character ID
+
+    baseCost:
+      Flat gold amount to charge per item
+
+    costMultiplier:
+      Percentage of total cost to charge
+  */
+
+#define macroASMC_StandardRepair(firstVisitFlag, textFirstVisit, textSubsequentVisit, textPrompt, textYes, textNo, textCannotAfford, textFullDurability) "SVAL r2 firstVisitFlag; SADD slotsParam(r4, rC, r0); SVAL rD 0; SVAL r1 textFirstVisit; SAVETOQUEUE; SVAL r1 textSubsequentVisit; SAVETOQUEUE; SVAL r1 textPrompt; SAVETOQUEUE; SVAL r1 textYes; SAVETOQUEUE; SVAL r1 textNo; SAVETOQUEUE; SVAL r1 textCannotAfford; SAVETOQUEUE; SVAL r1 textFullDurability; SAVETOQUEUE; CALL eventStandardRepair"
+  /*
+  This macro should be used after calculating
+  or setting a cost in rC.
+
+  USAGE:
+    firstVisitFlag:
+      Event Flag
+
+    textFirstVisit:
+      Text ID to show the first time this
+      is triggered
+
+    textSubsequentVisit:
+      Text ID to show any time after
+      the first. You could set this to
+      be identical to textFirstVisit if
+      you do not want there to be a difference
+
+    textPrompt:
+      Text ID for asking yes/no
+
+    textYes:
+      Text ID to show if yes was selected
+
+    textNo:
+      Text ID to show if no was selected or
+      if text was skipped
+
+    textCannotAfford:
+      Text ID to show if the player
+      cannot afford the repairs
+
+    textFullDurability:
+      Text ID to show if there is
+      nothing to repair
+
+  Example usage:
+
+    macroASMC_RepairItems_CalculateRepairCost(RI_Target_Active_Unit)
+    SVAL r1 (-1)
+    BEQ 1 rC r1
+
+      macroASMC_MemorySlotToString(rC)
+      macroASMC_StandardRepair($09, RI_Standard_First, RI_Standard_Subsequent, RI_Standard_Prompt, RI_Standard_Yes, RI_Standard_No, RI_Standard_CannotAfford, RI_Standard_FullDurability)
+
+    LABEL 1
+    NoFade
+    ENDA
+
+  */
+
+// Helper events
+
+eventStandardRepair:
+{
+  // Vanilla event snippets
+  #ifndef eventDesertTreasure
+    #define eventDesertTreasure 0x089EE1D4
+  #endif
+
+  // Give labels names rather than numbers
+  #define RI_SR_SubsequentVisit 0
+  #define RI_SR_Continue        1
+  #define RI_SR_FullDurability  2
+  #define RI_SR_CannotAfford    3
+  #define RI_SR_NoRepair        4
+  #define RI_SR_End             5
+
+  // Give prompt choices names rather than numbers
+  #define RI_SR_Skipped 0
+  #define RI_SR_Yes     1
+  #define RI_SR_No      2
+
+  EVBIT_MODIFY 3 // No scene skipping
+  MUSI // Quiet music
+
+  TEXTSTART
+
+  // Check if this is not the first time
+  CHECK_EVENTID (-1) // from r2
+  BNE RI_SR_SubsequentVisit rC r0
+
+  // First visit
+
+    // Set first visit flag
+    ENUT (-1) // from r2
+
+    // Pop first visit text, show
+    SLOTS_SETFROMQUEUE r2
+    TEXTSHOW (-1); TEXTEND
+
+    // Pop subsequent visit text, trash
+    SLOTS_SETFROMQUEUE r2
+    GOTO RI_SR_Continue
+
+  LABEL RI_SR_SubsequentVisit
+
+  // Subsequent visits
+
+    // Pop first visit text, trash
+    SLOTS_SETFROMQUEUE r2
+
+    // Pop subsequent visit text, show
+    SLOTS_SETFROMQUEUE r2
+    TEXTSHOW (-1); TEXTEND
+
+  LABEL RI_SR_Continue
+
+  // See if nothing needs repairs
+  BEQ RI_SR_FullDurability r4 r0
+
+  // See if player can afford repairs
+  CHECK_MONEY
+  BLT RI_SR_CannotAfford rC r4
+
+  // Can afford
+
+    // Pop prompt text, show
+    SLOTS_SETFROMQUEUE r2
+    TEXTSHOW2 (-1); TEXTEND
+
+    SVAL r7 RI_SR_Yes
+    BNE RI_SR_NoRepair rC r7
+
+    // Yes was selected
+
+      // Pop yes text, show
+      SLOTS_SETFROMQUEUE r2
+      TEXTSHOW2 (-1); TEXTEND
+      REMA
+
+      // This is 'TAKE_MONEY' from Stan's notes,
+      // but default EA raws call this GIVETOSLOT3.
+      SADD slotsParam(r3, r4, r0)
+      SHORT 0x3722 0x0000
+
+      macroASMC_RepairItems(RI_Target_Active_Unit)
+
+      MURE 2
+
+      CALL eventDesertTreasure
+
+      GOTO RI_SR_End
+
+  LABEL RI_SR_FullDurability
+
+  // All items have full durability
+
+    // Pop prompt, yes, no, cannot afford text; trash them
+    SLOTS_SETFROMQUEUE r2
+    SLOTS_SETFROMQUEUE r2
+    SLOTS_SETFROMQUEUE r2
+    SLOTS_SETFROMQUEUE r2
+
+    // Pop full durability text, show
+    SLOTS_SETFROMQUEUE r2
+    TEXTSHOW2 (-1); TEXTEND
+    REMA
+
+    MUNO
+
+    CALL eventDesertTreasure
+
+  LABEL RI_SR_CannotAfford
+
+  // Cannot afford
+
+    // Pop prompt, yes, no text; trash them
+    SLOTS_SETFROMQUEUE r2
+    SLOTS_SETFROMQUEUE r2
+    SLOTS_SETFROMQUEUE r2
+
+    // Pop cannot afford text, show
+    SLOTS_SETFROMQUEUE r2
+    TEXTSHOW2 (-1); TEXTEND
+    REMA
+
+    MUNO
+
+    CALL eventDesertTreasure
+
+  LABEL RI_SR_NoRepair
+
+  // No repair happening
+
+    // Pop yes text; trash
+    SLOTS_SETFROMQUEUE r2
+
+    // Pop no text, show
+    SLOTS_SETFROMQUEUE r2
+    TEXTSHOW2 (-1); TEXTEND
+    REMA
+
+    MUNO
+
+    CALL eventDesertTreasure
+
+  LABEL RI_SR_End
+
+  NoFade
+  ENDA
+
+  // Undefine temp names
+  #undef RI_SR_SubsequentVisit
+  #undef RI_SR_Continue
+  #undef RI_SR_FullDurability
+  #undef RI_SR_CannotAfford
+  #undef RI_SR_NoRepair
+  #undef RI_SR_End
+
+  #undef RI_SR_Skipped
+  #undef RI_SR_Yes
+  #undef RI_SR_No
+}
+
+#endif // RepairItems

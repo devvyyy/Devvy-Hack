@@ -9,6 +9,7 @@ pDefenseModifiers: // Defense
 	POIN prMinZero
 	#endif
 	POIN prSleepHalfDef
+	POIN prAvoidBuffDef
 WORD 0
 
 prAddUnitDefense:
@@ -27,6 +28,10 @@ prRallyDef:
 	
 prFortressDefenseDef:
 	_testSkill(FortressDefenseID,5,0)
+	
+prAvoidBuffDef:
+rIfUnitHasStatus(0x8)
+	rAddConst(3)
 	
 prSleepHalfDef:
 rIfUnitHasStatus(0x2)

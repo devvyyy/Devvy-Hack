@@ -8,7 +8,7 @@ pMovModifiers: // Movement
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff-1
 	#endif
-//	POIN prNullifyIfFreeze
+	POIN prNullifyIfRooted
 	POIN prNullifyIfGuardAI
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
@@ -38,8 +38,8 @@ prNullifyIfGuardAI:
 		rIfUnitHasGuardAI
 			rConstant(0)
 
-prNullifyIfFreeze:
-	rIfUnitHasStatus(0x9)
+prNullifyIfRooted:
+	rIfUnitHasStatus(0x10)
 		rConstant(0)
 		
 prGaleforceCheck:

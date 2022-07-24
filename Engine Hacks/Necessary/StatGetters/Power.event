@@ -9,6 +9,7 @@ pPowerModifiers: // Power
 	POIN prMinZero
 	#endif
 	POIN prEmpowerEthCheck
+	POIN prCritBuffAtk
 WORD 0
 
 prAddUnitPower:
@@ -36,6 +37,10 @@ prEmpowerEthCheck: //thief rush
 	rIfUnitHasState(0x400)
 		rIfUnitHasSkill(CharismaID)
 			rAddConst(4)
+			
+prCritBuffAtk:
+	rIfUnitHasStatus(0x7)
+		rAddConst(3)
 
 prFortressDefensePow:
 	_testSkill(FortressDefenseID,0,3)

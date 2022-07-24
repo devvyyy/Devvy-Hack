@@ -2,7 +2,39 @@
 # so basically basic attacks cant double, have more range, while zap attacks have less range but deal chip etc
 Rev'd Up!: Unit attacks with Burst Fire.[N]
 Normal attacks cost 3 Durability, ignore Atk,[N]
-and deal 50% of foe's max HP magic damage.[X]
+and deal 50% of foe's max HP magical damage.[X]
+
+## SD_HallowedMist
+Hallowed Heart: If unit is adjacent to an ally,[N]
+dodges all attacks. Adjacent allies take 20[N]
+damage after combat.[X]
+
+## SD_StaticPanic2
+Static Panic: Unit deals bonus damage equal[N]
+to 50% of unit's Spd, chaining to foes[N]
+within 2 spaces of target after combat.[X]
+
+## SD_SideHustle
+Side Hustle: After ending an action on[N]
+turn 1, grants a 300 gold Bullion and[N]
+"Take -10 damage" for 1 turn.[X]
+
+## SD_BloodRush
+Blood Rush: If unit defeats a foe, restores[N]
+HP equal to 20% of missing HP and grants[N]
+"Deal +10 damage" for 2 turns.[X]
+
+## SD_ZDrive
+# use new status effect
+Borrowed Time: If unit initiates, steals 4 Move[N]
+from foe for 1 turn and Canto 4 spaces, and if all[N]
+movement is expended, grants another action (once per turn).[X]
+
+## SD_Overheat
+# maybe use flags 0x20-23
+Overheat: If unit attacked, combat grants[N]
+a stack (max; 3). At max stacks, halves[N]
+Str/Skill and sets Spd/Move to 0 for 1 turn.[X]
 
 ## SD_Lmao2
 # note this has extra range
@@ -15,10 +47,14 @@ Motivate: Floris' staves mark allies.[N]
 Restores (Def + 5) HP to all marked[N]
 allies on the map after combat.[X]
 
+## SD_Gamer
+Bereft: If unit is within 2 spaces of an ally,[N]
+strike x2 consecutively, but deals (20% of ally's[N]
+max HP) damage to allies within 2 spaces after combat.[X]
+
 ## SD_Overdrive
-Overdrive: Combat grants 1 stack (max; 15).[N]
-Stacks grant +1 Spd/Move, and resets after[N]
-not attacking. At 3+ stacks, attacks refresh.[X]
+Overdrive: If Steakfries' HP is full after[N]
+initiating, grants another action with 1 Move.[X]
 
 ## SD_GetExcited
 Get Excited!!: If foe is defeated, grants[N]
@@ -85,7 +121,7 @@ First Blood: Kills on turn 1 grant[N]
 another action.[X]
 
 ## SD_ApheliosHowMANYYEARS
-# Moon Evoked, global flags 0xEC-ED
+# Moon Evoked, temp flags 0x23 (half) and 0x24 (full)
 [_M][_o][_o][_n][_SP][_E][_v][_o][_k][_e][_d][_Colon][_SP][_I][_f][_SP][_C][_h][_i][_f][_f][_o][_n]'[_s][_SP][_H][_P][_SP][_i][_s][_SP][_5][_0]%[_SP][_o][_r][_SP][_l][_e][_s][_s][_Comma][_SP][_g][_r][_a][_n][_t][_s][N]
 [_A][_S][_Slash][_A][_v][_o][_i][_d][_SP]=[_SP][_m][_i][_s][_s][_i][_n][_g][_SP][_H][_P][_Comma][_SP][_a][_n][_d][_SP][_a][_t][_SP][_2][_5]%[_SP][_H][_P][_SP][_o][_r][_SP][_l][_e][_s][_s][_Comma][_SP][_a]l[_s][_o][N]
 [_g][_r][_a][_n][_t][_s][_SP][_M][_o][_v][_e][_SP][_Plus][_1][_SP][_a][_n][_d][_SP][_a][_t][_t][_a][_c][_k][_i][_n][_g][_SP][_i][_s][_SP][_a][_SP][_f][_r][_e][_e][_SP][_a][_c][_t][_i][_o][_n][_Dot][X]
@@ -182,11 +218,6 @@ makes a follow-up and foe cannot.[X]
 Quadratic Strike: Grants Atk +X.[N]
 (X = solve with Quadratic formula, where[N]
 a = unit's base Atk, b = Spd, and c = Skl.)[X]
-
-## SD_HallowedMist
-Hallowed Heart: Adjacent units are[N]
-unhittable and immune to attacks,[N]
-excluding Light magic.[X]
 
 ## SD_BurstFire
 # [_S][_a]l[_v][_o][_Space][_Q][_u]i[_v][_e][_r]
@@ -393,7 +424,7 @@ sets their Crit/Avoid to 0.[X]
 ## SD_ThunderClap
 Grounding: If foe's terrain boosts Avoid,[N]
 Doppio ignores the bonuses and deals[N]
-bonus magic damage = foe's Spd x 2.[X]
+bonus magical damage = foe's Spd x 2.[X]
 
 ## SD_Falcon
 Falcon: During turns 1-5, grants[N]
@@ -565,10 +596,6 @@ foe's Res.[X]
 Blackfire: Polly inflicts Atk/AS -2[N]
 on adjacent foes.[X]
 
-## SD_Steadfast
-Steadfast: Grants Hildr +1 AS for[N]
-every 2 spaces moved.[X]
-
 ## SD_Whirlwind
 Thunderhead: If unit's HP is 75%[N]
 or more, Crit +15.[X]
@@ -613,8 +640,8 @@ Adept: Gain a consecutive attack.[N]
 (Speed % activation)[X]
 
 ## SD_Acrobat
-Acrobat: All traversable[N]
-terrain costs 1 movement.[X]
+Shadow Step: Unit can traverse walls[N]
+at a cost of 1 movement.[X]
 
 ## SD_Pass
 Slipstream: Noel has less enemy priority,[N]
@@ -757,7 +784,7 @@ Counter: Reflect physical damage[N]
 when attacked at 1-2 range.[X]
 
 ## SD_CounterMagic
-Countermagic: Reflect magic damage[N]
+Countermagic: Reflect magical damage[N]
 when attacked at 1-2 range.[X]
 
 ## SD_Miracle
@@ -828,7 +855,7 @@ Gentilhomme: Female allies within[N]
 
 ## SD_MaleficAura
 Malefic Aura: Foes within 2 spaces[N]
-take +2 magic damage.[X]
+take +2 magical damage.[X]
 
 ## SD_Inspiration
 Inspiration: Allies within 2 spaces[N]
@@ -1444,8 +1471,12 @@ Heavy Strikes: Add weapon[N]
 weight to critical chance.[X]
 
 ## SD_Charge
-Charge: Grants Breve +1 Atk for[N]
-every space moved.[X]
+Charge: Grants Breve Atk equal[N]
+to movement expended.[X]
+
+## SD_Steadfast
+Steadfast: Grants Hildr AS equal[N]
+to 50% of movement expended.[X]
 
 ## SD_Infiltrator
 Ghost Factory: If Verna is within 4[N]
@@ -1510,7 +1541,7 @@ Drive Defense: Allies within[N]
 
 ## SD_DriveRes
 Encourage: Nora grants +2 Rsl to allies[N]
-within 2 spaces, and +4 magic damage[N]
+within 2 spaces, and +4 magical damage[N]
 to physical allies within 2 spaces.[X]
 
 ## SD_Blossom

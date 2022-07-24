@@ -8,6 +8,7 @@ pResistanceModifiers: // Resistance
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	POIN prSleepHalfRes
+	POIN prAvoidBuffRes
 	#endif
 WORD 0
 
@@ -31,6 +32,10 @@ prRallyRes:
 prSleepHalfRes:
 rIfUnitHasStatus(0x2)
 	rHalved
+	
+prAvoidBuffRes:
+rIfUnitHasStatus(0x8)
+	rAddConst(3)
 
 prLifeAndDeathMinus:
 _testSkill(HeroesLifeAndDeathID,0,5)

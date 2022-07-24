@@ -1,0 +1,91 @@
+EventPointerTable(EventPointer, PointerList)
+
+PointerList:
+	POIN TurnBasedEvents
+	POIN CharacterBasedEvents
+	POIN LocationBasedEvents
+	POIN MiscBasedEvents
+	POIN Dunno1 Dunno2 Dunno3 Tutorial
+	POIN Traps1 Traps2
+	POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+	POIN $0 $0 $0
+	POIN $0 $0 $0
+	POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+
+	END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+
+	END_MAIN
+
+MiscBasedEvents:
+	CauseGameOverIfLordDies
+	END_MAIN
+
+LocationBasedEvents:
+
+	END_MAIN
+
+Dunno1:
+
+	END_MAIN
+
+Dunno2:
+
+	END_MAIN
+
+Dunno3:
+
+	END_MAIN
+
+Tutorial:
+
+	END_MAIN
+
+Units1:
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [8,8] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+	UNIT
+
+EnemyUnits:
+
+	UNIT
+	
+RecruitableChoices:
+UNIT Rosenfeld Fighter 0x1 Level(4, Ally, 0)   [8,8] 0b 0x0 0x0 0x0 [Hammer,] [0x0,0x0,0x0,0x0]
+UNIT Yufka Shaman 0x1 Level(2, Ally, 0)   [8,8] 0b 0x0 0x0 0x0 [Flux,] [0x0,0x0,0x0,0x0]
+UNIT Yvonne Cleric 0x1 Level(1, Ally, 0)   [8,8] 0b 0x0 0x0 0x0 [Pain,] [0x0,0x0,0x0,0x0]
+	UNIT
+
+Traps1:
+	ENDTRAP
+	ALIGN 4
+
+Traps2:
+	ENDTRAP
+	ALIGN 4
+
+BeginningScene:
+	LOAD1 0x1 EnemyUnits
+	ENUN
+	GotoPrepScreen
+	ENDA
+
+EndingScene:
+	MNC2 0xA
+	NoFade
+	ENDA
+	
+RepairEvent:
+    macroASMC_RepairItems_CalculateRepairCost(RI_Target_Active_Unit)
+    SVAL r1 (-1)
+    BEQ 1 rC r1
+
+      macroASMC_MemorySlotToString(rC)
+      macroASMC_StandardRepair($09, RI_Standard_First, RI_Standard_Subsequent, RI_Standard_Prompt, RI_Standard_Yes, RI_Standard_No, RI_Standard_CannotAfford, RI_Standard_FullDurability)
+
+    LABEL 1
+    NoFade
+    ENDA

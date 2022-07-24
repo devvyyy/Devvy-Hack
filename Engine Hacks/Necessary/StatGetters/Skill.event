@@ -8,6 +8,7 @@ pSkillModifiers: // Skill
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
+	POIN prCritBuffSkill
 WORD 0
 
 prAddUnitSkill:
@@ -23,6 +24,10 @@ prDebuffSkl:
 prRallySkl:
 	#include "_asm/RallySkl.lyn.event"
 	POIN GetDebuffs|1
+	
+prCritBuffSkill:
+	rIfUnitHasStatus(0x7)
+		rAddConst(3)
 
 prItemPassiveSkl:
 #ifndef DONT_STACK_BOOSTS

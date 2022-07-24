@@ -11,7 +11,7 @@ ldr   r0,CurrentCharPtr
 ldr   r0,[r0]
 cmp   r0, #0
 bne   NoDZ
-mov   r0, r2 @if the active unit is 0, we're being called from dangerzone
+mov   r0, r2 @if the active unit is 0, we are being called from dangerzone
 NoDZ:
 ldr   r1,AcrobatID
 .short  0xF800
@@ -24,8 +24,8 @@ ldrb  r2,[r2]
 cmp   r0,#0x0
 beq   NoAcrobat
 cmp   r2,#0xFF
-beq   NoAcrobat
-mov   r2,#0x1
+bne   NoAcrobat
+mov   r2,#0x2
 NoAcrobat:
 strb  r2,[r3]
 add   r1,#0x1

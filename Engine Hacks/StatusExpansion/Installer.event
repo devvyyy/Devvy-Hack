@@ -120,7 +120,7 @@ FILL 256
 
 #define SetStatusBlinkyIconFunc(statusID,funcPtr) "PUSH; ORG (BlinkyStatusIconJumpTable+(statusID*4)); POIN funcPtr; POP"
 
-
+/*
 #define NoStatusID 0
 #define PoisonStatusID 1
 #define SleepStatusID 2
@@ -132,6 +132,7 @@ FILL 256
 #define AvoRingStatusID 8
 #define SickStatusID 9
 #define PetrifyStatusID 13
+*/
 
 SetStatusName(NoStatusID,0x536)
 SetStatusName(PoisonStatusID,0x514)
@@ -143,6 +144,7 @@ SetStatusName(DefRingStatusID,0x51C)
 SetStatusName(CritRingStatusID,0x51D)
 SetStatusName(AvoRingStatusID,0x51E)
 SetStatusName(SickStatusID,0x518)
+SetStatusName(0x10,0x519) //rooted
 SetStatusName(PetrifyStatusID,0x51A)
 
 SetStatusDesc(NoStatusID,0x552)
@@ -154,7 +156,8 @@ SetStatusDesc(AtkRingStatusID,0x558)
 SetStatusDesc(DefRingStatusID,0x559)
 SetStatusDesc(CritRingStatusID,0x55A)
 SetStatusDesc(AvoRingStatusID,0x55B)
-SetStatusDesc(SickStatusID,0x553)
+SetStatusDesc(SickStatusID,0x52B)
+SetStatusDesc(0x10,0x52C)
 SetStatusDesc(PetrifyStatusID,0x557)
 
 #define BlinkyIconFuncNoIcon $278A6
@@ -165,10 +168,10 @@ SetStatusDesc(PetrifyStatusID,0x557)
 #define BlinkyIconFuncDancerRingIcon $27858
 
 SetStatusBlinkyIconFunc(NoStatusID,BlinkyIconFuncNoIcon)
-SetStatusBlinkyIconFunc(PoisonStatusID,BlinkyIconFuncPoisonIcon)
+SetStatusBlinkyIconFunc(PoisonStatusID,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(SleepStatusID,BlinkyIconFuncSleepIcon)
-SetStatusBlinkyIconFunc(SilenceStatusID,BlinkyIconFuncSilenceIcon)
-SetStatusBlinkyIconFunc(BerserkStatusID,BlinkyIconFuncBerserkIcon)
+SetStatusBlinkyIconFunc(SilenceStatusID,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(BerserkStatusID,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(AtkRingStatusID,BlinkyIconFuncDancerRingIcon)
 SetStatusBlinkyIconFunc(DefRingStatusID,BlinkyIconFuncDancerRingIcon)
 SetStatusBlinkyIconFunc(CritRingStatusID,BlinkyIconFuncDancerRingIcon)
@@ -215,13 +218,5 @@ prCheckUnitStatus:
 	SHORT 0x6B08 0x231F 0x4018 0x4290 0xD101 0x202A 0xE000 0x2000 0x4770 0x46C0
 
 */
-
-#include "Enfeeble/Enfeeble.event"
-#include "HexingRod/HexingRod.event"
-#include "Freeze/Freeze.event"
-#include "Freeze/EventFreeze.event"
-#include "Regen/Regen.event"
-#include "Haste/Haste.event"
-#include "Slow/Slow.event"
 
 #endif // STATUS_EXPANSION_INSTALLED

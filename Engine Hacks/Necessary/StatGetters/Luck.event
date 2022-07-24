@@ -8,6 +8,7 @@ pLuckModifiers: // Luck
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
+	POIN prAvoidBuffLuck
 WORD 0
 
 prAddUnitLuck:
@@ -23,6 +24,10 @@ prDebuffLck:
 prRallyLck:
 	#include "_asm/RallyLck.lyn.event"
 	POIN GetDebuffs|1
+	
+prAvoidBuffLuck:
+rIfUnitHasStatus(0x8)
+	rAddConst(3)
 
 prItemPassiveLuck:
 #ifndef DONT_STACK_BOOSTS

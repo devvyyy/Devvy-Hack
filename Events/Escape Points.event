@@ -32,8 +32,12 @@ EscapePointEntry(15,6,EscapeInPlace)
 EscapePointTerminator
 
 EnemyEscapeTableCh8:
-EscapePointEntry(0,6,EscapeInPlace)
-EscapePointEntry(14,0,EscapeInPlace)
+EscapePointEntry(0,6,EscapeLeft)
+EscapePointTerminator
+
+EnemyEscapeTableCh9:
+EscapePointEntry(20,10,EscapeInPlace)
+EscapePointEntry(22,4,EscapeInPlace)
 EscapePointTerminator
 
 EnemyEscapeTableGaiden1:
@@ -45,9 +49,11 @@ EscapePointEntry(10,0,EscapeUp)
 EscapePointEntry(11,0,EscapeUp)
 EscapePointTerminator
 
+// escape point by chapter table
 SetEnemyEscapePoint(0,EnemyEscapeTablePrologue)
 SetEnemyEscapePoint(3,EnemyEscapeTableCh3)
 SetEnemyEscapePoint(4,EnemyEscapeTableCh4)
 SetEnemyEscapePoint(6,EnemyEscapeTableCh6)
 SetEnemyEscapePoint(9,EnemyEscapeTableCh8)
+SetEnemyEscapePoint(0xA,EnemyEscapeTableCh9)
 SetEnemyEscapePoint(8,EnemyEscapeTableGaiden1)

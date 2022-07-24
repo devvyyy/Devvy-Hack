@@ -1,129 +1,59 @@
 
-
-.align 4
-.macro blh to, reg=r3
-  ldr \reg, =\to
-  mov lr, \reg
-  .short 0xf800
-.endm
-
 .thumb
 
-	.equ MemorySlot, 0x30004B8 
-	.equ GetUnitByEventParameter, 0x0800BC51
+.include "CommonDefinitions.inc"
 
-.global RepairItems
-.type RepairItems, function 
-RepairItems:
+ASMC_RepairItems:
 
-push {r4-r7, lr} 
-@ Given amount of gold to charge the player in 
-@ memory slot 1, take away that much gold if they have it 
-@ and repair weapons 
-@ returns 0 in r0 / slot C if they didn't have 
-@ the gold to repair their valid weapons
+  .global ASMC_RepairItems
+  .type   ASMC_RepairItems, %function
 
+  @ Inputs:
+  @ r0: Pointer to event proc
+  @ s1: Character ID (standard event unit input)
+  @ s2 (optional): see below
+  @ sB (optional): see below
 
-@ I just use the current unit. 
-@ Could use this instead, though, to take 
-@ slot 3 as unit id to repair items for
-@ldr r3, =MemorySlot
-@ldr r0, [r3, #4*0x03] @Unit
-@blh  GetUnitByEventParameter    
+  @ Outputs:
+  @ None
 
-ldr r3, =0x3004E50 @ Current unit pointer 
-ldr r0, [r3] @ Ram unit pointer now 
-cmp r0, #0 
-beq Term 
-ldr r2, [r0] 
-cmp  r2,#0x00
-beq  Term   
-mov r4, r0 @ Unit ram struct 
+  @ Given a character ID/standard event unit input
+  @ in s1, repair unit's weapons to full durability.
 
-@ Charge gold 
-ldr r3, =0x202BCF0
-ldr r2, [r3, #8] @ gChapterData -> Gold 
-ldr r0, =0x30004B8 @ MemorySlot
-mov r1, #0x00
-str r1, [r0, #4*0x0C] @ Store false to rC
-ldr r1, [r0, #4*0x01] @ r1 as gold to charge
- 
-@ commented out in case someone has an item 
-@ that costs 0 per use but still has durability 
-@ and is not unbreakable/unsellable 
-@ this would be odd, but whatever 
-@cmp r1, #0 
-@beq Broke @ Costs nothing, so don't repair anything 
+  push {r4-r5, lr}
 
+  @ Use the vanilla method for getting
+  @ a unit pointer given normal unit input, so
+  @ s1 should contain one of:
+  @ Character ID -> gets what you expect
+  @  0 -> gets the leader
+  @ -1 -> gets the active unit
+  @ -2 -> gets the unit at coords in sB
+  @ -3 -> first unit found with character ID in s2
 
-cmp r2, r1
-blt Broke @ Not enough gold, so don't repair items 
-sub r2, r1 @ New gold amount 
-str r2, [r3, #8] @ Store it 
+  ldr  r0, =gEventSlot
+  mov  r1, #slot1
+  ldsh r0, [r0, r1]
+  ldr  r1, =GetUnitStructFromEventParameter
+  mov  lr, r1
+  bllr
 
+  @ If there's no unit, fail.
 
-mov r5, #0x1C @ 2 less than first inv slot 
+  cmp  r0, #0
+  beq  End
 
-@ Repair item 
-TryRepairItem:
-add r5, #2 @ 2 bytes per inv slot 
-cmp r5, #0x28 @ wexp offset 
-bge ExitLoop 
+    ldr  r1, =RepairItems_Internal
+    mov  lr, r1
+    bllr
 
-ldrb r0, [r4, r5] @ Unit offset by inventory slot 
-cmp r0, #0 
-beq ExitLoop @ Nothing in this slot so break 
+  End:
 
-blh 0x80177b0 @GetItemDataTable
-mov r7, r0 @ Item table address 
-ldrb r1, [r7, #0x08] @ Ability 1 
+  pop  {r4-r5}
+  pop  {r0}
+  bx   r0
 
+.ltorg
 
-mov r3, r1 
-mov r2, #1
-@ must be equippable 
-and r1, r2 @ Equippable/unbreakable bitflag? 
-cmp r1, #0 
-beq TryRepairItem @ Not equippable, so next item 
-mov r2, #0x18 @ unbreakable or unsellable 
-and r3, r2 @ 
-@ must not be unbreakable or unsellable 
-@mov r11, r11
-cmp r3, #0 
-bne TryRepairItem
-
-ldrb r0, [r7, #0x06] @ Item id 
-
-
-blh  0x08016540           @MakeItemShort RET=ITEMPACK 
-strh r0, [r4, r5] 
-
-ldr r3, =0x30004B8 @ MemorySlot 
-mov r0, #1 @ We definitely repaired stuff 
-str r0, [r3, #4*0x0C] @ Store true to rC
-
-b TryRepairItem
-
-ExitLoop:
-ldr r3, =0x30004B8 @ MemorySlot 
-@ did we repair stuff ?
-ldr r0, [r3, #4*0x0C] @ load true/false from rC
-
-b Term 
-
-
-
-Broke:
-ldr r3, =0x30004B8 @ MemorySlot
-mov r0, #0 
-str r0, [r3, #4*0x0C] @ Store false to rC 
-
-
-Term:
-pop {r4-r7}
-pop {r1}
-bx r1 
-
-
-
-
+EALiterals:
+  @ None
