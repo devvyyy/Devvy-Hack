@@ -1,10 +1,10 @@
-
 #define RangeSkill(SkillID, routine) "WORD SkillID; POIN routine"
 //RangeSkill(0,0) used to terminate list
 ALIGN 4
 RangeSkillsCheck:
 #incbin "RangeLoop/RangeSkillLoop.dmp"
-POIN SkillTester RangeSkillList
+POIN SkillTester
+POIN RangeSkillList
 
 ALIGN 4
 BowRangeBonus:

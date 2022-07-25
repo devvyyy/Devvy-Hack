@@ -31,13 +31,13 @@ mov r1, #0x4c    @Move to the attacker's weapon ability
 ldr r1, [r0,r1]
 mov r2, #0x42
 tst r1, r2
-bne     Done @do nothing if magic bit not set
+bne     Next @do nothing if magic bit not set
 
 @ check enemy res
 mov r0, #4
 ldrb r1, [r5, #0x18] @defender res
 cmp r0, r1
-ble Done @skip if foes res is greater than or equal to 4
+ble Next @skip if foes res is greater than or equal to 4
 
 @ add 4 damage
 mov r0, r4

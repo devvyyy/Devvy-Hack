@@ -1,7 +1,7 @@
 @Infiltrator: If adjacent to 2 or more enemies, gain +3 attack and +15% hit
 .thumb
-.equ AuraSkillCheck, SkillTester+4
-.equ InfiltratorID, AuraSkillCheck+4
+.equ GetUnitsInRange, SkillTester+4
+.equ InfiltratorID, GetUnitsInRange+4
 push {r4-r7,lr}
 @goes in the battle loop.
 @r0 is the attacker
@@ -20,16 +20,28 @@ beq Done
 
 CheckSkill:
 @now check for the skill
-ldr r0, AuraSkillCheck
+ldr r0, GetUnitsInRange
 mov lr, r0
 mov r0, r4 @attacker
-mov r1, #0x0
-mov r2, #3 @Enemy
-mov r3, #4 @range
+mov r1, #3 @Enemy
+mov r2, #2
 .short 0xf800
-cmp r0, #2
+cmp r0, #0
+beq Done
+
+mov r2, #0x0
+Loop:
+ldrb r1, [r0, r2]
+cmp  r1, #0x0
+beq  CheckCount
+add  r2, #0x1
+b Loop
+
+CheckCount:
+cmp r2,#0x2
 blt Done
 
+Next:
 mov r0, #0x62
 ldrh r3, [r4,r0]
 add r3, #30
@@ -40,6 +52,7 @@ ldrh r3, [r4,r0]
 add r3, #30
 strh r3, [r4,r0]
 
+
 Done:
 pop {r4-r7, r15}
 bx r0
@@ -47,5 +60,5 @@ bx r0
 .ltorg
 SkillTester:
 @Poin SkillTester
-@ POIN AuraSkillCheck
+@ POIN GetUnitsInRange
 @ WORD InfiltratorID

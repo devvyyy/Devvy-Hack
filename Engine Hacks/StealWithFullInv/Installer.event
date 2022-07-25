@@ -1,0 +1,27 @@
+#include "Steal.lyn.event" 
+#include "Extensions/6CDefinitions.txt"
+
+PUSH 
+ORG $32506 
+SHORT $46c0 $46c0 // don't give the item early 
+ORG $9a3618 //from "MapAnimSteal" at 0x9A32C8 proc 
+PROC_CALL_ROUTINE(StealInvFull)
+
+ORG $241CA 
+SHORT $2807 // allow steal while full inv 
+POP 
+
+ALIGN 4 
+StealFixProc: 
+PROC_SLEEP(0)
+PROC_SET_NAME(StealProcName)
+PROC_SLEEP(0)
+PROC_WHILE_EXISTS(0x89A32C8) // MapAnimSteal
+PROC_CALL_ROUTINE(Steal3) 
+PROC_END
+
+StealProcName:
+String("Steal stuff") ; BYTE 0
+ALIGN 4
+
+

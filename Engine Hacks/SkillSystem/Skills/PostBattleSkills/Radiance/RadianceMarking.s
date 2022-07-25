@@ -65,7 +65,7 @@ mov r1, #0x30
 ldrb r0, [r5, r1]
 mov r1, #0x0F
 and r0, r1 
-cmp r0, #0x8
+cmp r0, #0x9
 beq Apply
 cmp r0, #0x0
 beq Apply

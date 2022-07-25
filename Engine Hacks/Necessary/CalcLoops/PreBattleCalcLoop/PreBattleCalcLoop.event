@@ -14,11 +14,15 @@ POP
 ALIGN 4
 BtlLoopParent:
 #incbin "FE8_battle_calc_loop.dmp"
-BtlLoopTable:
+POIN BtlLoopList
+
+ALIGN 4
+BtlLoopList:
 POIN BC_DefRes BC_Power BC_ASpd BC_Hit BC_Avo BC_Crit CritUpSkill BC_Dodge BC_Support BC_WRank BC_Status //these are the existing battle calculation routines
-//POIN Lull //This is effectively a stat modifier routine, so it has to go first
-//POIN FaireCheck HolyAura
-//POIN BreakerCheck MageSlayer
+POIN InitializePreBattleLoop
+POIN Lull //This is effectively a stat modifier routine, so it has to go first
+POIN FaireCheck HolyAura
+POIN BreakerCheck MageSlayer
 POIN BlowCheck
 POIN DefendingCheck
 #ifdef LEADERSHIP_STARS
@@ -27,6 +31,7 @@ POIN DefendingCheck
 #ifdef BIORHYTHM
   POIN BiorhythmFunc
 #endif //BIORHYTHM
+
 //POIN SpurStr SpurMag SpurSpd SpurDef SpurRes
 POIN Moxie Wrath Anima1 Anima2 Anima3 Anima4 Dark1 Dark2 Dark3 Dark4 Dark5
 //POIN DriveStr DriveMag DriveDef
@@ -42,6 +47,8 @@ POIN Daunt KingMark Deadeye DoubleLion
 POIN BlueFlame BlueFlameAura Frostbite Cultured KeepUp
 POIN MoonEvoked Lionheart Maestro Frenzy DevilAxeSkill CurtainCallSkill GrimRing Executors Nevermore ResolutePyre // This was moved here because Str/Mag Split conflict, and... I'm not sure why it wouldn't be here in the first place.
 //POIN UpWithArch
+
+//stuff that recalcs via deletion
 POIN AxefaithHit
 POIN MagicSwordSkill //deletes atk
 POIN Sergeant //deletes atk
@@ -50,6 +57,7 @@ POIN Eulogy //deletes atk
 //POIN Thunderstorm //deletes atk
 POIN BazookaPre //deletes atk/hit
 POIN StancesASM
+
 #ifdef ENABLE_GBA_LETHALITY
 POIN LethalitySkill Bane
 #else
@@ -59,7 +67,6 @@ POIN LethalitySkill NonGBALethalitySkill Bane
 #ifdef MODULAR_PRE_BATTLE_SKILLS
 	POIN ModularPreBattleSkill 
 #endif // MODULAR_PRE_BATTLE_SKILLS
-
 //add any new ones before here
 
 //quick riposte goes after everything that might touch AS
@@ -67,12 +74,53 @@ POIN QuickRiposte
 
 //tower shield plus/perfect pitch needs to go after every other skill that may affect defender's attack/hit respectively
 POIN TowerShieldPlus PerfectPitch
+
 // Because of how killing machine works, critical check should always be done last
 POIN CriticalCheck
 #ifdef CANNOT_CRIT
 	POIN NegateCritWeapons //This goes last, so that crit will always be set to 0 if set and never modified from there
 #endif // CANNOT_CRIT
 POIN 0
+
+#define AuraSkillEntry(skillID) "PUSH; ORG AuraSkillTable + skillID; BYTE 0x1; POP"
+
+ALIGN 4
+AuraSkillTable:
+FILL 0xFF
+AuraSkillEntry(MoxieID)
+AuraSkillEntry(Anima1ID)
+AuraSkillEntry(Anima2ID)
+AuraSkillEntry(Anima3ID)
+AuraSkillEntry(Anima4ID)
+AuraSkillEntry(Dark1ID)
+AuraSkillEntry(Dark2ID)
+AuraSkillEntry(Dark3ID)
+AuraSkillEntry(Dark4ID)
+AuraSkillEntry(Dark5ID)
+AuraSkillEntry(CharmID)
+AuraSkillEntry(BitterColdID)
+AuraSkillEntry(KingMarkID)
+//AuraSkillEntry(DemoiselleID)
+//AuraSkillEntry(GentilhommeID)
+//AuraSkillEntry(InspirationID)
+//AuraSkillEntry(LilysPoiseID)
+//AuraSkillEntry(SpurStrID)
+//AuraSkillEntry(SpurMagID)
+//AuraSkillEntry(SpurSpdID)
+//AuraSkillEntry(SpurDefID)
+//AuraSkillEntry(SpurResID)
+AuraSkillEntry(DriveResID)
+AuraSkillEntry(DriveSpdID)
+//AuraSkillEntry(NiceThighsID)
+AuraSkillEntry(DauntID)
+//AuraSkillEntry(MaleficAuraID)
+AuraSkillEntry(IntimidateID)
+//AuraSkillEntry(SolidarityID)
+//AuraSkillEntry(AnathemaID)
+//AuraSkillEntry(VoiceOfPeaceID)
+AuraSkillEntry(CharismaID)
+//AuraSkillEntry(HexID)
+AuraSkillEntry(BlueFlameID)
 
 PUSH
 ORG 0x2a3f8
