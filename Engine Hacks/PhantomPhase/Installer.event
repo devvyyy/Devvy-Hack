@@ -1,0 +1,31 @@
+//Phantom stuff for Echoes phantoms
+PUSH
+	//Replace BerserkPhase with PhantomPhase
+    ORG $155C0
+	POIN PhantomPhase_Proc
+	ORG $59a2ec
+	POIN PhantomPhase_Proc
+	ORG $59a394
+	POIN PhantomPhase_Proc
+	ORG $59a3bc
+	POIN PhantomPhase_Proc
+	ORG $59a424
+	POIN PhantomPhase_Proc
+POP
+
+PhantomPhase_Proc: //based on 5A7F30
+
+	PROC_SET_NAME($080D80A0)
+	PROC_CALL_ROUTINE(PhantomPhase_Init+1) 
+	PROC_YIELD
+	PROC_CALL_ROUTINE($39778+1) //CpPhase_Cleanup
+	PROC_END
+
+PhantomOrder_Proc: //based on 5A7F74
+
+	PROC_SET_NAME($080D80B8)
+	PROC_CALL_ROUTINE(PhantomOrder_Init+1)
+	PROC_LOOP_ROUTINE($39ABC+1)
+	PROC_END
+
+#include "PhantomPhase.lyn.event"  

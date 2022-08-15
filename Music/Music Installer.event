@@ -146,7 +146,7 @@ SongTable(0x92,song92,0)
 
 ALIGN 4
 // A Moment's Rest
-SongTable(0x20,Anakin,0)
+SongTable(0x20,Anakin,1)
 #include "YouCanDoIt.event"
 
 ALIGN 4
@@ -248,6 +248,11 @@ ALIGN 4
 //Wall of Defense by Alusq
 SongTable(0xE0,song08,1)
 #include "WallofDefense.event"
+
+ALIGN 4
+//Wall of Defense by Sme
+SongTable(0x3C8,WallDefense,1)
+#include "WallDefense2.event"
 
 ALIGN 4
 //Venus Lighthouse by Ruby

@@ -21,6 +21,12 @@ Snaring:
 POIN SkillTester
 
 ALIGN 4
+ShadowEyeMark:
+#incbin "FallenStar/FallenStar.dmp"
+POIN SkillTester
+WORD ShadowEyeID
+
+ALIGN 4
 RadianceMarking:
 #incbin "Radiance/RadianceMarking.dmp"
 POIN SkillTester
@@ -184,7 +190,7 @@ SavageBlow:
 POIN SkillTester
 WORD SavageBlowID
 POIN SavageBlowEvent
-POIN AuraSkillCheck
+POIN GetUnitsInRange
 #include "SavageBlow/SavageBlowEvent.event"
 
 ALIGN 4
@@ -202,7 +208,7 @@ BreathOfLife:
 POIN SkillTester
 WORD BreathOfLifeID
 POIN BreathOfLifeEvent
-POIN AuraSkillCheck
+POIN GetUnitsInRange
 #include "BreathOfLife/BreathOfLifeEvent.event"
 
 ALIGN 4

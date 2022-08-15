@@ -1,5 +1,6 @@
 .thumb
 .equ SearingSwordID, SkillTester+4
+.equ gBattleData, 0x203A4D4
 
 push {r4-r7, lr}
 mov r4, r0 @atkr
@@ -28,7 +29,7 @@ beq End
 mov     r0, #0x50      @Move to the attacking unit weapon type.
 ldrb    r0, [r4, r0]   @Load the attacking unit weapon type.
 cmp     r0, #0         @Is it Sword?
-bne     NoSkill        @If not, goto end
+bne     End        @If not, goto end
 
 @not at stat screen
 ldr r1, [r5,#4] @class data ptr

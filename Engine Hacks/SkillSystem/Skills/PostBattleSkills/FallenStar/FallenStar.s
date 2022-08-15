@@ -3,9 +3,18 @@
   mov lr, \reg
   .short 0xf800
 .endm
-.equ AlacrityID, SkillTester+4
+.equ ShadowEyeID, SkillTester+4
 .thumb
 push	{r4-r7,lr}
+
+@ check for skill
+mov	r0, r4
+ldr	r1, ShadowEyeID
+ldr	r3, SkillTester
+mov	lr, r3
+.short	0xf800
+cmp	r0,#0x00
+beq	End
 
 @ if target is self, somehow, end
 cmp	r4, r5
@@ -21,7 +30,7 @@ cmp r0, #0
 
 @ check if combat
 ldrb 	r0, [r6,#0x11]	@action taken this turn
-cmp	r0, #0x2 @staff
+cmp	r0, #0x2 @combat
 bne	End
 
 @ allegiance check
@@ -30,29 +39,20 @@ ldrb	r1, [r4,#0x0B]	@allegiance byte of the character we are checking
 cmp	r0, r1		@check if same character
 bne	End
 
-@ check for skill
-mov	r0, r4
-ldr	r1, AlacrityID
-ldr	r3, SkillTester
-mov	lr, r3
-.short	0xf800
-cmp	r0,#0x00
-beq	End
-
 @ check status, does not clear anything else
 mov r1, #0x30
 ldrb r0, [r5, r1]
 mov r1, #0x0F
 and r0, r1 
-cmp r0, #0x8
+cmp r0, #0x14
 beq Apply
 cmp r0, #0x0
 beq Apply
 b End
 
 Apply:
-@ apply Freeze (0x9)
-mov r0, #0x09 @first number is duration, second number is status effect
+@ apply Shadow Eye status (0x14)
+mov r0, #0x14 @first number is duration, second number is status effect (status expansion makes it any status with 1 turn i think???)
 mov r1, #0x30 @status
 strb r0, [r5, r1]
 
@@ -64,4 +64,4 @@ bx	r0
 .align
 SkillTester:
 @POIN SkillTester
-@WORD AlacrityID
+@WORD ShadowEyeID

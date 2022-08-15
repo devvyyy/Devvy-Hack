@@ -1,5 +1,6 @@
 .thumb
 .equ WarpathID, SkillTester+4
+.equ gBattleData, 0x203A4D4
 
 push {r4-r7, lr}
 ldr     r5,=0x203a4ec @attacker

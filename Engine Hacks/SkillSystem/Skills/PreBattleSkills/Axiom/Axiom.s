@@ -1,5 +1,6 @@
 .thumb
 .equ AxiomID, SkillTester+4
+.equ gBattleData, 0x203A4D4
 
 push {r4, lr}
 mov	r4, r0 @attacker

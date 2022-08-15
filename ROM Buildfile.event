@@ -1,4 +1,4 @@
-    PROTECT 0xC00000
+    PROTECT 0xC00000 //start of anim table?
 	//PROTECT 0x95F5A4 //summon table
 
 
@@ -89,6 +89,7 @@ ALIGN 4
 	#include "Engine Hacks/ChangeWeaponDuringTargetSelect/ChangeWeaponDuringTargetSelect.event" //by Mokha
 //	#include "Engine Hacks/Tonic/Installer.event" //by Pikmin1211
 	#include "Engine Hacks/PhantomDrops/Installer.event" //by hypergammaspaces
+//	#include "Engine Hacks/PhantomPhase/Installer.event" //by hypergammaspaces
     #include "Engine Hacks/Edits.txt"
 	
     MESSAGE Used hax space ends at currentOffset

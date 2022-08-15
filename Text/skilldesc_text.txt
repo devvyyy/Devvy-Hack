@@ -9,9 +9,24 @@ Hallowed Heart: If unit is adjacent to an ally,[N]
 dodges all attacks. Adjacent allies take 20[N]
 damage after combat.[X]
 
+## SD_ShadowEye
+Shadow Eye: Levain inflicts Rooted for 1[N]
+turn, setting foe's Move to 0. If foe has a[N]
+status effect, hit and dodge all attacks.[X]
+
+## SD_KingShield
+Switcheroo: Unit toggles between 2 stances:[N]
+Attack Stance after initiating, and[N]
+Defend Stance after waiting.[X]
+
+## SD_KingShield2
+Attack Stance: Str +3, deals 25% of foe's[N]
+current HP bonus damage.
+Defend Stance: Def/Res +3, foe cannot follow-up.[X]
+
 ## SD_StaticPanic2
-Static Panic: Unit deals bonus damage equal[N]
-to 50% of unit's Spd, chaining to foes[N]
+Static Panic: Unit deals bonus damage =[N]
+50% of unit's Spd, chaining to foes[N]
 within 2 spaces of target after combat.[X]
 
 ## SD_SideHustle
@@ -20,8 +35,8 @@ turn 1, grants a 300 gold Bullion and[N]
 "Take -10 damage" for 1 turn.[X]
 
 ## SD_BloodRush
-Blood Rush: If unit defeats a foe, restores[N]
-HP equal to 20% of missing HP and grants[N]
+Victory Cry: If unit defeats a foe, restores[N]
+HP = 20% of missing HP and grants[N]
 "Deal +10 damage" for 2 turns.[X]
 
 ## SD_ZDrive
@@ -63,7 +78,7 @@ strikes twice consecutively for 1 turn.[X]
 
 ## SD_Constance
 Circadian Beat: If indoors, grants Atk +6[N]
-and unit makes a follow-up and foe cannot.[N]
+and unit follow-ups and foe cannot.[N]
 If outdoors, reverses effect.[X]
 
 ## SD_Vex
@@ -97,8 +112,8 @@ grants Hit +30 and Canto 5 spaces.[X]
 
 ## SD_FunnyTime
 I Make The Rules: If unit's Spd is less[N]
-than foe's Spd, unit makes a follow-up[N]
-attack and foe cannot.[X]
+than foe's Spd, unit follow-ups and[N]
+foe cannot.[X]
 
 ## SD_P2Ch1ArmorBossSkill
 Strong and Tough: If unit's Move or Spd[N]
@@ -212,7 +227,7 @@ Atk/AS/Def/Res +3.[X]
 
 ## SD_SiegSkill
 Tearing Skies: If unit initiates, unit[N]
-makes a follow-up and foe cannot.[X]
+follow-ups and foe cannot.[X]
 
 ## SD_AmongUs
 Quadratic Strike: Grants Atk +X.[N]
@@ -277,8 +292,7 @@ deals bonus damage = unit's missing HP x 2.[X]
 
 ## SD_StaticPanic
 Daunt: Inflicts foes within 3 spaces:[N]
-"If unit initiates, unit cannot make a[N]
-follow-up attack."[X]
+"If unit initiates, unit cannot follow-up".[X]
 
 ## SD_ArmWrestler2
 Arm Wrestler: Grants +3 Atk/AS against[N]
@@ -298,8 +312,8 @@ Parry: If unit has a weapon equipped,[N]
 negates physical attacks at 1 range.[X]
 
 ## SD_ResolutePyre
-Resolute Pyre: Grants Eth/Crit equal[N]
-to 50% of Aoife and foe's missing HP.[X]
+Resolute Pyre: Grants Eth/Crit =[N]
+50% of Aoife and foe's missing HP.[X]
 
 ## SD_EustacePersonal
 Fractured Mask: If Eustace's HP is above 50%,[N]
@@ -321,8 +335,8 @@ Borrowed Time: After combat, Xidorn restores[N]
 5 HP and deals 5 damage to foe.[X]
 
 ## SD_RidersAxiom
-Rider's Axiom: On turns 1-3, Gerolf makes[N]
-a follow-up and foe cannot.[X]
+Rider's Axiom: On turns 1-3, Gerolf[N]
+follow-ups and foe cannot.[X]
 
 ## SD_SoulSplitter
 Soul Splitter: Grants AS = foe's Res/2.[N]
@@ -354,8 +368,8 @@ Desolate Blade: Attacks mark target for[N]
 max HP bonus damage and heal unit the bonus.[X]
 
 ## SD_AssassinBossSkill
-Spirit Cleave: Deals bonus damage equal[N]
-to 50% of foe's Def and Res.[X]
+Spirit Cleave: Deals bonus damage =[N]
+50% of foe's Def and Res.[X]
 
 ## SD_Maestro
 [_M][_a][_e][_s]t[_r][_o][_Colon] [_I]l[_s][_e]'[_s] [_R]ifl[_e][_s] [_h][_a][_v][_e] [_u][_n]i[_q][_u][_e] [_p][_r][_o][_p][_e][_r]ti[_e][_s][_Colon][N]
@@ -372,9 +386,9 @@ Borrowed Time: Grants Avoid +25 for[N]
 every 25% of missing HP.[X]
 
 ## SD_CritDie
-Show Stopper: Always land a Critical[N]
-Hit against enemies with less than[N]
-25% HP.[X]
+Show Stopper: Radcliff always lands a[N]
+Critical Hit against foes with 25% or[N]
+less HP.[X]
 
 ## SD_SearingSword
 # luna 50%, then reduce frye's damage by 50% enemy res
@@ -388,8 +402,8 @@ after action.[X]
 
 ## SD_CurtainCall
 Curtain Call: If foe's HP is below a[N]
-25, deals execute damage equal[N]
-to foe's missing HP.[X]
+25, deals execute damage = foe's[N]
+missing HP.[X]
 
 ## SD_Nevermore
 Fractured Soul: Gorlois takes -1 damage[N]
@@ -405,7 +419,7 @@ Def + Res > foe's Def/Res.[X]
 
 ## SD_Stalwart
 Stalwart: If Edith cannot counter,[N]
-foe cannot make a follow-up.[X]
+foe cannot follow-up.[X]
 
 ## SD_PykeMoment
 Like Dominoes: Executes foes below[N]
@@ -432,7 +446,7 @@ Attack Speed +3.[X]
 
 ## SD_Hasty
 Hasty: Lowers threshold for unit to[N]
-make a follow-up to 1 AS.[X]
+follow-up to 1 AS.[X]
 
 ## SD_HighRoller
 High Roller: If Kevron is at WT[N]
@@ -452,16 +466,17 @@ cavalry ally, unit takes -2 damage.[X]
 
 ## SD_Bulwark
 Bulwark: If Edith cannot counter,[N]
-foe cannot make a follow-up.[X]
+foe cannot follow-up.[X]
 
 ## SD_Galestorm
 # Pursuer
-Fusillade: Quarrel makes a follow-up[N]
-if foe can't counter.[X]
+Fusillade: If Quarrel initiates, follow-up[N]
+and foe cannot, and if foe also can't[N]
+counter, strike x2 consecutively.[X]
 
 ## SD_Graaaagh
-Gonna Go Wild: Grants Crit equal[N]
-to missing HP.[X]
+Gonna Go Wild: Grants Crit =[N]
+unit's missing HP.[X]
 
 ## SD_Sanctuary
 [_S][_a][_n][_c][_t][_u][_a][_r][_y][_Colon][_SP][_S][_t][_r][_o][_g][_a][_n][_o][_f][_f][_SP][_r][_e][_v][_e][_r][_s][_e][_s][_SP][_w][_e][_a][_p][_o][_n][_SP][_c][_o][_m][_b][_a][_t][N]
@@ -491,12 +506,12 @@ Def > foe's Str/Eth, strikes x2[N]
 consecutively.[X]
 
 ## SD_Shrewd
-Third Eye: Grants bonus Hit equal[N]
-to foe's missing HP.[X]
+Third Eye: Grants bonus Hit =[N]
+foe's missing HP.[X]
 
 ## SD_Forlorn
 Forlorn: If unit is not adjacent to[N]
-an ally, foe cannot make a follow-up.[X]
+an ally, foe cannot follow-up.[X]
 
 ## SD_FracturedHeart
 Ruptured Heart: All foes on the map with[N]
@@ -568,9 +583,9 @@ foe's Max HP/4.[X]
 
 ## SD_Vigor
 # Requiem: When using offensive staves, multiplies Eth by 1.25x and deals bonus damage equal to a quarter of foe's current HP.
-[_R][_e][_q][_u][_i][_e][_m][_Colon][_SP][_W][_h][_e][_n][_SP][_u][_s][_i][_n][_g][_SP][_o][_f][_f][_e][_n][_s][_i][_v][_e][_SP][_s][_t][_a][_v][_e][_s][_Comma][N]
-[_m][_u][_l][_t][_i][_p][_l][_i][_e][_s][_SP][_E][_t][_h][_SP][_b][_y][_SP][_1][_Dot][_2][_5][_x][_SP][_a][_n][_d][_SP][_d][_e][_a][_l][_s][_SP][_b][_o][_n][_u][_s][N]
-[_d][_a][_m][_a][_g][_e][_SP]=[_SP][_2][_5]%[_SP][_o][_f][_SP][_f][_o][_e]'[_s][_SP][_c][_u][_r][_r][_e][_n][_t][_SP][_H][_P][_Dot][X]
+Requiem: Yvonne's offensive staves use[N]
+1.25x Eth and deal bonus damage = 25% of[N]
+foe's current HP.[X]
 
 ## SD_Defeatist
 Defeatist: If Ulrich's HP is 50% or[N]
@@ -607,7 +622,8 @@ initiates, strikes x2 consecutively.[X]
 
 ## SD_ColdFlare
 Cold Flare: If Akatsuki's HP isn't full,[N]
-grants bonus Atk/AS = 25% of unit's Res.[X]
+grants bonus Atk/AS = 25% of unit's Res[N]
+and deal +10 bonus magical damage.[X]
 
 ## SD_ColdFlare2
 Cold Flare: If foe is physical, grants Atk +3.[N]
@@ -621,7 +637,7 @@ grants Attack Speed +2.[X]
 # Dive-Bomb
 [_D][_i][_v][_e]-[_B][_o][_m][_b][_Colon][_SP][_I][_f][_SP][_B][_r][_u][_d][_e][_t][_SP][_i][_n][_i][_t][_i][_a][_t][_e][_s][_Comma][_SP][_a][_n][_d][_SP][_b][_o][_t][_h][_SP][_s][_i][_d][_e][_s]'[_SP][_H][_P][N]
 [_i][_s][_SP][_f][_u][_l][_l][_Comma][_SP][_g][_r][_a][_n][_t][_s][_SP][_A][_t][_k][_Slash][_A][_S][_SP][_Plus][_2][_Comma][_SP][_a][_n][_d][_SP][_i][_f][_SP][_a][_l][_s][_o][_SP][_a][_t][_SP][_1][_SP][_r][_a][_n][_g][_e][_Comma][N]
-[_f][_o][_l][_l][_o][_w]-[_u][_p][_SP][_a][_t][_t][_a][_c][_k][_s][_SP][_o][_c][_c][_u][_r][_SP][_i][_m][_m][_e][_d][_i][_a][_t][_e][_l][_y][_Dot][X]
+[_f][_o][_l][_l][_o][_w]-[_u][_p][_SP][_a][_t][_t][_a][_c][_k][_s][_SP][_o][_c][_c][_u][_r][_SP][_b][_e][_f][_o][_r][_e][_SP][_c][_o][_u][_n][_t][_e][_r][_Dot][X]
 
 ## SD_Inspire
 Inspire: Wustenhoff grants +2 Atk to physical[N]
@@ -773,7 +789,7 @@ unit counters before foe's attack.[X]
 
 ## SD_Desperation
 Desperation: If unit's HP is 50% or less,[N]
-follow-up attacks occur before counter.[X]
+follow-ups occur before counter.[X]
 
 ## SD_Wrath
 Wrath: If unit's HP is 50% or less,[N]
@@ -788,7 +804,7 @@ Countermagic: Reflect magical damage[N]
 when attacked at 1-2 range.[X]
 
 ## SD_Miracle
-Miracle: If Iris' HP is 50% or more,[N]
+Hallowed Soul: If Iris' HP is 50% or more,[N]
 neutralizes Mt of tier I magic and[N]
 survive the next lethal attack.[X]
 
@@ -1471,12 +1487,12 @@ Heavy Strikes: Add weapon[N]
 weight to critical chance.[X]
 
 ## SD_Charge
-Charge: Grants Breve Atk equal[N]
-to movement expended.[X]
+Charge: Grants Breve Atk =[N]
+movement expended.[X]
 
 ## SD_Steadfast
-Steadfast: Grants Hildr AS equal[N]
-to 50% of movement expended.[X]
+Steadfast: Grants Hildr AS =[N]
+50% of movement expended.[X]
 
 ## SD_Infiltrator
 Ghost Factory: If Verna is within 4[N]
@@ -1541,8 +1557,8 @@ Drive Defense: Allies within[N]
 
 ## SD_DriveRes
 Encourage: Nora grants +2 Rsl to allies[N]
-within 2 spaces, and +4 magical damage[N]
-to physical allies within 2 spaces.[X]
+within 2 spaces, and +4 bonus magical[N]
+damage to physical allies within 2 spaces.[X]
 
 ## SD_Blossom
 Blossom: 2x growth rates,[N]
@@ -1698,8 +1714,8 @@ cannot be crit.[X]
 
 ## SD_Assassinate
 Duelist: If Rina initiates at 1 range,[N]
-follow-up attacks occur immediately, and[N]
-if foe is also defeated, Canto 1 space.[X]
+follow-ups occur before counter, and if[N]
+foe is also defeated, Canto 1 space.[X]
 
 ## SD_ArcaneBlade
 Arcane Blade: When initiating battle[N]
@@ -1712,7 +1728,7 @@ Negates enemy hit bonus from[N]
 weapon triangle advantage.[X]
 
 ## SD_BlueFlame
-Guardian: Floris grants +2 Prt to[N]
+Guardian: Yufka grants +2 Prt to[N]
 adjacent allies. If adjacent to an[N]
 ally, grants +4 Prt.[X]
 

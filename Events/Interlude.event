@@ -1,4 +1,6 @@
-EventPointerTable(EventPointer, PointerList)
+EventPointerTable(0xD1, PointerList)
+#define PreventSkipping "EVBIT_MODIFY 1"
+#define AllowSkipping "EVBIT_MODIFY 0"
 
 PointerList:
 	POIN TurnBasedEvents
@@ -18,12 +20,14 @@ TurnBasedEvents:
 
 ALIGN 32
 CharacterBasedEvents:
-
+CharacterEventBothWays(0x0, RosenfeldRecruit, Chiffon, Rosenfeld)
+CharacterEventBothWays(0x0, YvonneRecruit, Chiffon, Yvonne)
+CharacterEventBothWays(0x0, YufkaRecruit, Chiffon, Yufka)
+CharacterEventBothWays(0x8, SteakTalk, Chiffon, Steakfries)
 	END_MAIN
 
 MiscBasedEvents:
-	CauseGameOverIfLordDies
-	END_MAIN
+END_MAIN
 
 LocationBasedEvents:
 
@@ -48,15 +52,15 @@ Tutorial:
 Units1:
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [8,8] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
 	UNIT
-
-EnemyUnits:
-
-	UNIT
 	
 RecruitableChoices:
-UNIT Rosenfeld Fighter 0x1 Level(4, Ally, 0)   [8,8] 0b 0x0 0x0 0x0 [Hammer,] [0x0,0x0,0x0,0x0]
-UNIT Yufka Shaman 0x1 Level(2, Ally, 0)   [8,8] 0b 0x0 0x0 0x0 [Flux,] [0x0,0x0,0x0,0x0]
-UNIT Yvonne Cleric 0x1 Level(1, Ally, 0)   [8,8] 0b 0x0 0x0 0x0 [Pain,] [0x0,0x0,0x0,0x0]
+UNIT Rosenfeld Fighter 0x1 Level(4, NPC, 0)   [7,2] 0b 0x0 0x0 0x0 [Hammer,] [0x0,0x0,0x0,0x0]
+UNIT Yufka Shaman 0x1 Level(2, NPC, 0)   [8,2] 0b 0x0 0x0 0x0 [Flux,] [0x0,0x0,0x0,0x0]
+UNIT Yvonne Cleric 0x1 Level(1, NPC, 0)   [9,2] 0b 0x0 0x0 0x0 [Pain,Mend] [0x0,0x0,0x0,0x0]
+	UNIT
+	
+TheMan:
+UNIT Steakfries 0x6F 0x1 Level(1, NPC, 0)   [9,9] 0b 0x0 0x0 0x0 [] [0x0,0x0,0x0,0x0]
 	UNIT
 
 Traps1:
@@ -68,9 +72,11 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-	LOAD1 0x1 EnemyUnits
+	LOAD1 0x1 RecruitableChoices
+	LOAD1 0x1 TheMan
 	ENUN
 	GotoPrepScreen
+	CenterTextbox(RecruitText)
 	ENDA
 
 EndingScene:
@@ -78,14 +84,118 @@ EndingScene:
 	NoFade
 	ENDA
 	
-RepairEvent:
-    macroASMC_RepairItems_CalculateRepairCost(RI_Target_Active_Unit)
-    SVAL r1 (-1)
-    BEQ 1 rC r1
+RosenfeldRecruit:
+CHECK_EVENTID 21
+BNE 98 s0 sC
+	ENUT 21
+	Text(Placeholder1) //first talk
+LABEL 98
+PreventSkipping
+Text(PlaceholderPickDialogue) //picked
+AllowSkipping
+SVAL s1 0x1
+BEQ 99 s1 sC
+	Text(Placeholder2) //denied
+	ENUF 18
+	NoFade
+	ENDB
+LABEL 99
+Text(Placeholder1) //accepted
+CUSA Rosenfeld
+CALL EndingScene
+NoFade
+ENDA
 
-      macroASMC_MemorySlotToString(rC)
-      macroASMC_StandardRepair($09, RI_Standard_First, RI_Standard_Subsequent, RI_Standard_Prompt, RI_Standard_Yes, RI_Standard_No, RI_Standard_CannotAfford, RI_Standard_FullDurability)
+SteakTalk:
+Text(Placeholder1)
+ENDA
 
-    LABEL 1
-    NoFade
-    ENDA
+House1: //these are to the left (bg 1)
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+HouseExp(0x9,HouseBG1,Placeholder1)
+MUNO // increases music volume
+NoFade
+ENDA
+
+House2:
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+HouseExp(0xA,HouseBG1,Placeholder2)
+MUNO // increases music volume
+NoFade
+ENDA
+
+House3: //top houses (bg 2)
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+HouseExp(0xB,HouseBG2,Placeholder1)
+MUNO // increases music volume
+NoFade
+ENDA
+
+House4: //top houses (bg 2)
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+HouseExp(0xC,HouseBG2,Placeholder1)
+MUNO // increases music volume
+NoFade
+ENDA
+
+House5: //top houses (bg 2)
+STORETOSOMETHING 0x0 // lowers music volume
+MUSI // lowers music volume
+HouseExp(0xD,HouseBG2,Placeholder2)
+MUNO // increases music volume
+NoFade
+ENDA
+
+TentVillage: //graham says stuff and gives item
+VillageEventItem(Placeholder2, 0xE, 0x76)
+ENDA
+
+YvonneRecruit:
+CHECK_EVENTID 8
+BNE 8 s0 sC
+	ENUT 8
+	Text(Placeholder1) //first talk
+LABEL 8
+PreventSkipping
+Text(PlaceholderPickDialogue) //picked
+AllowSkipping
+SVAL s1 0x1
+BEQ 9 s1 sC
+	Text(Placeholder2) //rejected
+	CALL $9EE2C4
+	ENUF 14
+	NoFade
+	ENDB
+LABEL 9
+Text(Placeholder1) //accepted
+CUSA Yvonne
+CALL EndingScene
+NoFade
+ENDA
+
+YufkaRecruit:
+CHECK_EVENTID 8
+BNE 8 s0 sC
+	ENUT 8
+	Text(Placeholder1) //first talk
+LABEL 8
+PreventSkipping
+Text(PlaceholderPickDialogue) //picked
+AllowSkipping
+SVAL s1 0x1
+BEQ 9 s1 sC
+	Text(Placeholder2) //rejected
+	CALL $9EE2C4
+	ENUF 14
+	NoFade
+	ENDB
+LABEL 9
+Text(Placeholder1) //accepted
+CUSA Yufka
+CALL EndingScene
+NoFade
+ENDA
