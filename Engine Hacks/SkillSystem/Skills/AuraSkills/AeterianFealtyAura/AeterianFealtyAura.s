@@ -6,13 +6,14 @@ push {r4-r7,lr}
 @r1 is the defender
 mov r4, r0
 mov r5, r1
+
 @now check for the skill
 ldr r0, AuraSkillCheck
 mov lr, r0
 mov r0, r4 @attacker
 ldr r1, AeterianFealtyID
 mov r2, #0 @can_trade
-mov r3, #0x7F @range
+mov r3, #0x7f @range
 .short 0xf800
 cmp r0, #0
 beq Done

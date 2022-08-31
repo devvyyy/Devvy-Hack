@@ -1,5 +1,5 @@
 .thumb
-.equ DominateID, SkillTester+4
+.equ OutriderID, SkillTester+4
 
 push {r4-r7, lr}
 ldr     r5,=0x203a4ec @attacker
@@ -19,11 +19,11 @@ ldrb r0,[r0]
 cmp r0,#0x80
 bge End
 
-@has Charge
+@has Outrider
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r4 @Attacker data
-ldr r1, DominateID
+ldr r1, OutriderID
 .short 0xf800
 cmp r0, #0
 beq End
@@ -36,6 +36,7 @@ mov r1, #0x5C @Def
 ldrh r0, [r4, r1]
 mov r3,#0x1
 mul r3,r2
+add r0, r3
 add r0, r3
 strh r0, [r4,r1]
 

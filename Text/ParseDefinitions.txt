@@ -23,13 +23,21 @@
 [OpenQuote] = [0x93]
 
 [FarFarLeft] = [OpenFarFarLeft]
+[FFL] = [OpenFarFarLeft]
 [FarLeft] = [OpenFarLeft]
+[FL] = [OpenFarLeft]
 [MidLeft] = [OpenMidLeft]
+[ML] = [OpenMidLeft]
 [Left] = [OpenLeft]
+[L] = [OpenLeft]
 [Right] = [OpenRight]
+[R] = [OpenRight]
 [MidRight] = [OpenMidRight]
+[MR] = [OpenMidRight]
 [FarRight] = [OpenFarRight]
+[FR] = [OpenFarRight]
 [FarFarRight] = [OpenFarFarRight]
+[FFR] = [OpenFarFarRight]
 
 [<-......] = [FarFarLeft]
 [<-] = [FarFarLeft]
@@ -52,6 +60,7 @@
 [.......v] = [FarFarRight]
 
 [CurrentPortrait] = [0xFF][0xFF]
+[CurrentMug] = [0xFF][0xFF]
 
 [LoadInnes] = [LoadFace][0xf][0x1]
 [LoadCormag] = [LoadFace][0x13][0x1]
@@ -325,3 +334,5 @@
 [MFFR2] = [0x80][0x37]
 [TextSpeed] = [0x80][0x38]
 [DefaultAttrs] = [0x01][0x02][0x01][0x01][0x0D]
+[ResetPitch] = [BoopPitch][0xD]
+[BirdPitch] = [BoopPitch][0xF]

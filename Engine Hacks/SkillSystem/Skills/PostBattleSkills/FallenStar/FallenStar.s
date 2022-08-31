@@ -44,7 +44,7 @@ mov r1, #0x30
 ldrb r0, [r5, r1]
 mov r1, #0x0F
 and r0, r1 
-cmp r0, #0x14
+cmp r0, #0x34
 beq Apply
 cmp r0, #0x0
 beq Apply
@@ -52,7 +52,7 @@ b End
 
 Apply:
 @ apply Shadow Eye status (0x14)
-mov r0, #0x14 @first number is duration, second number is status effect (status expansion makes it any status with 1 turn i think???)
+mov r0, #0x34 @first number is duration, second number is status effect (status expansion makes it any status with 1 turn i think???)
 mov r1, #0x30 @status
 strb r0, [r5, r1]
 

@@ -4,7 +4,7 @@
 #include "_Common.event"
 ALIGN 4
 pMovModifiers: // Movement
-	POIN prAddUnitBaseMov prAddUnitMovBonus (prGetItemMovBonus-1) prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prArmorMarchCheck
+	POIN prAddUnitBaseMov prAddUnitMovBonus (prGetItemMovBonus-1) prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prArmorMarchCheck prStatusZephyrCheck prStatusZephyrEnemyCheck
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff-1
 	#endif
@@ -46,6 +46,16 @@ prGaleforceCheck:
 	rIfUnitHasState(0x400)
 		rIfUnitHasSkill(GaleforceID)
 			rHalved
+			
+prStatusZephyrEnemyCheck:
+	rIfUnitHasStatus(0x19)
+		rIfUnitHasNotSkill(ZephyrID)
+			rSubConst(4)
+			
+prStatusZephyrCheck:
+	rIfUnitHasStatus(0x19)
+		rIfUnitHasSkill(ZephyrID)
+			rAddConst(4)
 			
 prPassCheck:
 	rIfUnitHasState(0x400)

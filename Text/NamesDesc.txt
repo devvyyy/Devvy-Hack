@@ -163,8 +163,9 @@ A master of the bow. She's strict[N]
 and a perfectionist at heart.[X]
 
 ## XidornDesc
-A druid discovering the world[N]
-again. An overthinker.[X]
+An Aeterian outrider. He's an[N]
+unfortunate overthinker.[X]
+
 
 ## RadcliffDesc
 A tailor and warrior of an outpost[N]
@@ -228,10 +229,8 @@ A rider and soldier of Aeteria. She's[N]
 embittered and relentless.[X]
 
 ## ArctiDesc
-[_T]i[_p][_p][_e][_d] wit[_h] [_c][_o]l[_d] [_s]t[_e][_e]l. +7 [_R][_e][_s] [_o][_n] i[_n]iti[_a]ti[_o][_n].[X]
-
-## SavageBlowWeapDesc
-[_H][_u][_r]t[_s] [_e][_n][_e]mi[_e][_s] [_n][_e][_a][_r] t[_a][_r][_g][_e]t [_a]ft[_e][_r] [_c][_o]m[_b][_a]t.[X]
+A cold edge tipped with cold steel. If[N]
+initiating, Res +7. [_Lock]: Akatsuki[X]
 
 ## BadGuyDesc
 A barbarian feared in the kingdoms[NL]
@@ -297,6 +296,10 @@ Straightfoward and giving.[X]
 The princess of Aeteria. She's a rowdy[N]
 dreamer yearning for a new start.[X]
 
+## ChiffonDescPrologue
+The hidden princess of Aeteria. She[N]
+longs to be useful like her comrades.[X]
+
 ## WilkenDesc
 The Holy King of Wreyvine.[X]
 
@@ -310,37 +313,38 @@ Casts flames astride. Ignores Str.[X]
 Boosts damage = Unit's Atk/4.[X]
 
 ## SnaringDesc
-[_R][_o][_o][_t][_s][_SP][_f][_o][_e][_SP][_o][_n][_SP][_i][_n][_i][_t][_i][_a][_t][_i][_o][_n][_Dot][_Space][_E]ff[_Colon][_Space][0x7D][HorseIcon][_Space][_Lock][_Colon][_Space][_A]ff[_o][_g][_a]t[_o][X]
+[_I][_f][_SP][_i][_n][_i][_t][_i][_a][_t][_i][_n][_g][_Comma][_SP][_A][_S][_SP][_Plus][_3][_Comma][_SP][_d][_r][_a][_g][_s][_SP][_b][_a][_c][_k][_SP][_f][_o][_e][_Comma][_SP][_m][_o][_v][_e][_SP][_b][_a][_c][_k][_Comma][N]
+[_a][_n][_d][_SP][_R][_o][_o][_t][_s][_SP][_f][_o][_r][_SP]1[_SP][_t][_u][_r][_n][_Dot][_SP][_E][_f][_f][_Colon][_Space][0x7D][HorseIcon][_Space][_Lock][_Colon][_SP][_A][_f][_f][_o][_g][_a][_t][_o][X]
 
 ## Anima1Desc
-Adjacent allies deal 1 more damage.[X]
+Grants Atk +1 to adjacent allies.[X]
 
 ## Anima2Desc
-Adjacent allies deal 2 more damage.[X]
+Grants Atk +2 to adjacent allies.[X]
 
 ## Anima3Desc
-Adjacent allies deal 3 more damage.[X]
+Grants Atk +3 to adjacent allies.[X]
 
 ## Anima4Desc
-Adjacent allies deal 4 more damage.[X]
+Grants Atk +4 to adjacent allies.[X]
 
 ## Anima5Desc
-Allies in 2 spaces deal 2 more damage.[X]
+Grants Atk +2 to allies within 2 spaces.[X]
 
 ## Dark1Desc
-Adjacent foes deal 1 less damage.[X]
+Inflicts Atk -1 to adjacent foes.[X]
 
 ## Dark2Desc
-Adjacent foes deal 2 less damage.[X]
+Inflicts Atk -2 to adjacent foes.[X]
 
 ## Dark3Desc
-Adjacent foes deal 3 less damage.[X]
+Inflicts Atk -3 to adjacent foes.[X]
 
 ## Dark4Desc
-Adjacent foes deal 4 less damage.[X]
+Inflicts Atk -4 to adjacent foes.[X]
 
 ## Dark5Desc
-Foes in 2 spaces deal 2 less damage.[X]
+Inflicts Atk -2 to foes within 2 spaces.[X]
 
 ## Light1Desc
 Restores 3 HP after combat.[X]
@@ -379,7 +383,8 @@ Adjacent allies deal[N]
 gain 2 Attack Speed.[X]
 
 ## HazeDesc1
-[_H][_e][_a]l[_s][_Space][_3][_3]%[_Space][_H][_P][_Space]t[_o][_Space][_a]lli[_e][_s][_Space]i[_n][_Space][_2][_Space][_s][_p][_a][_c][_e][_s][_Space][_a]ft[_e][_r][_Space][_c][_o]m[_b][_a]t[_Dot][X]
+Restores 33% max HP to allies within 2[N]
+spaces of unit after combat.[X]
 
 ## HazeDesc2
 After combat, heals[N]
@@ -387,7 +392,8 @@ After combat, heals[N]
 within 2 spaces.[X]
 
 ## SmogDesc1
-[_D][_e][_a]l[_s][_Space][_3][_3]%[_Space][_H][_P][_Space]t[_o][_Space][_f][_o][_e][_s][_Space]i[_n][_Space][_2][_Space][_s][_p][_a][_c][_e][_s][_Space][_a]ft[_e][_r][_Space][_c][_o]m[_b][_a]t[_Dot][X]
+Deals 33% max HP to foes within 2[N]
+spaces of foe after combat.[X]
 
 ## SmogDesc2
 After combat, deals[N]
@@ -499,9 +505,8 @@ survive an attack with 1 HP[N]
 if HP > 50%.[X]
 
 ## BShieldDesc
-A sturdy shield that halves[N]
-damage taken from follow-up[N]
-attacks.[X]
+A sturdy ring that halves damage[N]
+taken from follow-up attacks.[X]
 
 ## InspFlagDesc
 A leader's banner that grants[N]
@@ -532,7 +537,8 @@ wearer's priority so that foes[N]
 target them less often.[X]
 
 ## AffoPRF2Desc
-[_O][_b]li[_v]i[_o][_n][_Dot][_Space][_R][_e][_s][_SP][_Plus][_5][_Dot][_Space][_M][_a][_x][_e][_s][_SP][_F][_l][_o][_w][_SP][_a][_f][_t][_e][_r][_SP][_c][_o][_m][_b][_a][_t][_Dot][_Space][_Lock][_Colon][_Space][_V][_o]i[_d][_Dot][X]
+Ashen Rider's oblivion. Res +5. Maxes[N]
+Flow after combat. [_Lock]: Void affinity.[X]
 
 ## ArmsScrollDesc
 A scroll that raises weapon[N]
@@ -543,7 +549,8 @@ Raises all[N]
 weapon ranks.[X]
 
 ## StatScreenTomeDesc
-[_G][_e][_n][_e][_s]i[_s][_Dot][_Space][_D][_e][_f][_SP][_Plus][_5][_Dot][_Space][_M]t[_Space]=[_Space]f[_o][_e]'[_s][_Space][_m][_a][_x][_Space][_H][_P][_Slash][_4][_Dot][_Space][_Lock][_Colon][_Space][_H][_e][_a][_v][_e][_n][_Dot][X]
+Holy King's genesis. Def +5. Mt = 25%[N]
+of foe's max HP. [_Lock]: Heaven affinity.[X]
 
 ## PykeDesc
 A bullion of gold bars worth[N]
@@ -575,13 +582,13 @@ A song that grants an adjacent ally[N]
 
 ## CritSongDesc
 A song that grants an ally within 2[N]
-spaces Str/Eth/Skill +3 and Crit +10[N]
-for 3 turns.[X]
+spaces Str/Eth/Dex +3 and Crit +10[N]
+for 1 turn.[X]
 
 ## AvoidSongDesc
 A song that grants an ally within 2[N]
 spaces Def/Res/Luck +3 and Avoid +10[N]
-for 3 turns.[X]
+for 1 turn.[X]
 
 ## KingPrfDesc
 A cleaver of snow and ash.[X]
@@ -593,7 +600,8 @@ Multiplies total Crit by x2.[X]
 When attacking at 4 range, Crit +30.[X]
 
 ## BackshieldRifleDesc
-Grants +6 Def at 1 range.[X]
+Grants +6 Def at 1 range. If HP is 25%[N]
+or less, take -10 damage for 1 turn.[X]
 
 ## MoonlightDesc
 Negates 50% of foe's Res.[X]
@@ -608,20 +616,20 @@ Ignores 25% of foe's Def. [_Lock]: Thieves[X]
 Ignores 75% of foe's Def. [_Lock]: Thieves[X]
 
 ## CurtainCallDesc
-[_I][_g][_Dot][_Space][_4][_0]%[_Space][_D]f[_Dot][_Space][_E][_x][_e][_c][_u]t[_e][_s][_Space]f[_o][_e][_s][_Space]<[_Space][_2][_5]%[_Space][_H][_P][_Dot][_Space][_Lock][_Colon][_Space][_T][_h]i[_e][_v][_e][_s][X]
+Ignores 40% of foe's Def. Executes foes[N]
+below 25% HP. [_Lock]: Thieves[X]
 
 ## BerserkDesc
-Inflicts Berserk on enemies for 2[N]
-turns, forcing them to attack nearby.[X]
+Inflicts Berserk on enemies for 1[N]
+turn, letting them to target allies.[X]
 
 ## BerserkDesc2
 Inflicts Berserk[N]
-for 2 turns.[X]
+for 1 turn.[X]
 
 ## SleepDesc
-Inflicts Sleep on enemies for 2[N]
-turns, preventing actions and[N]
-halving Def/Res.[X]
+Inflicts Sleep on enemies for 1 turn,[N]
+preventing actions and halving Def/Res.[X]
 
 ## LullabyDesc
 Low chance to inflict Sleep on a foe[N]
@@ -644,21 +652,23 @@ for 1 turn.[X]
 
 ## SleepDesc2
 Inflicts Sleep[N]
-for 2 turns.[X]
+for 1 turn.[X]
 
 ## SilenceDesc
-Inflicts Silence on enemies for 2[N]
-turns, silencing magic/talks.[X]
+Inflicts Silence on enemies for 1[N]
+turn, preventing magic and talks.[X]
 
 ## SilenceDesc2
 Inflicts Silence[N]
-for 2 turns.[X]
+for 1 turn.[X]
 
 ## DirkDesc
-[_I][_g][_n][_o][_r][_e][_s][_Space][_4][_0]%[_Space][_D][_e]f[_Dot][_Space][_C][_a][_n][_t][_o][_Space][_2][_Dot][_Space][_Lock][_Colon][_Space][_T][_h]i[_e][_v][_e][_s][X]
+Ignores 40% of foe's Def. Canto 2[N]
+spaces. [_Lock]: Thieves[X]
 
 ## ChiffonPRFDesc
-[_C][_o][_n][_s][_e][_c][_u][_t][_i][_v][_e][_Dot][_SP][_N][_e][_g][_a][_t][_e][_s][_SP][_5][_0]%[_SP][_D][_e][_f][_Dot][_SP] [_Lock]: [_C][_h][_i][_f][_f][_o][_n][X]
+[_I][_f][_SP][_H][_P][_SP][_i][_s][_SP][_5][_0]%[_SP][_o][_r][_SP][_l][_e][_s][_s][_Comma][_SP][_f][_o][_l][_l][_o][_w]-[_u][_p][_s][_SP][_a][_r][_e][_SP][_c][_o][_n][_s][_e][_c][_u][_t][_i][_v][_e][_Dot][N]
+[_I][_g][_n][_o][_r][_e][_s][_SP][_5][_0]%[_SP][_o][_f][_SP][_f][_o][_e]'[_s][_SP][_D][_e][_f][_Dot][_SP][_E][_f][_f][_Colon][_SP][ArmorIcon][_SP][_Lock][_Colon][_SP][_C][_h][_i][_f][_f][_o][_n][_Dot][X]
 
 ## GemWeaponDesc
 Doubles weapon triangle effects.[X]
@@ -704,13 +714,16 @@ An ethereal soul created from dark arts.[N]
 Cold-hearted and cynical.[X]
 
 ## AgneyaDesc
-[_E][_x][_e][_c][_u]t[_e][_s][_Space]f[_o][_e][_s][_Space][_b][_e]l[_o]w 25%[_Space][_m][_a][_x][_Space][_H][_P][_Dot][_Space][_Lock][_Colon][_Space][_A][_o]if[_e][X]
+Star-searing pyre. Executes foes below[N]
+25% HP. Eff: [0x7D] [_Lock]: Aoife[X]
 
 ## LonginusDesc
-[_S]t[_e][_a]l[_s][_Space][_5][_Space][_H][_P] [_a]ft[_e][_r][_Space][_c][_o][_m][_b][_a]t[_Dot][_Space][_Lock][_Colon][_Space][_M][_a][_y][_n][_a][_r][_d][X]
+World-splitting spear. Steals 5 HP from[N]
+foe after combat. Eff: [ArmorIcon] [_Lock]: Maynard[X]
 
 ## MalchutDesc
-[_Plus][_5][_Space][_S][_p][_d][_Space]t[_o][_Space][_u][_n]it[_Slash][_a]lli[_e][_s][_Space]i[_n][_Space][_2][_Space][_s][_p][_a][_c][_e][_s][_Dot][_Space][_Lock][_Colon][_Space][_E][_u][_s]t[_a][_c][_e][X]
+Last heavenly storm. Spd +5 to unit and[N]
+allies within 5 spaces. Eff: [HorseIcon] [_Lock]: Eustace[X]
 
 ## KeepsakeRingDesc
 [_F][_o][_r] t[_h][_e] f[_a]ll[_e][_n] [_s][_o][_u]l[_s][_Comma][_Space]t[_o][_r][_n] f[_r][_o][_m][_Space]t[_h][_e][_Space][_n]i[_g][_h]t[_Dot][N]
@@ -754,12 +767,19 @@ No escape...[N]
 Can't move.[X]
 
 ## ShadowEyeName
-Gravity[X]
+Soulbreak[X]
 
 ## ShadowEyeDesc
-Nowhere to hide.[N]
-Cannot hit Levain or avoid[N]
-his attacks.[X]
+Soul is splintered.[N]
+Max HP is halved.[X]
+
+## WhirlwindName
+Whirlwind[X]
+
+## WhirlwindDesc
+The storm approaches.[N]
+Grants Xidorn Move +4.[N]
+Inflicts Move -4 otherwise.[X]
 
 ## YoryTool3Name
 Etherguard[X]

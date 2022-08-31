@@ -16,15 +16,31 @@ CheckGaleforce: //decides if the unit should be cantoing or not
 #incbin "Galeforce/checkgaleforce.dmp"
 
 ALIGN 4
+StaticPost:
+#incbin "StaticPost/StaticPost.dmp"
+POIN SkillTester
+WORD StaticPanicID
+POIN StaticEvent
+POIN GetUnitsInRange
+#include "StaticPost/StaticEvent.event"
+
+ALIGN 4
 Snaring:
 #incbin "Snaring/Snaring.dmp"
 POIN SkillTester
+WORD DartingBlowID
 
 ALIGN 4
 ShadowEyeMark:
 #incbin "FallenStar/FallenStar.dmp"
 POIN SkillTester
 WORD ShadowEyeID
+
+ALIGN 4
+ZephyrMark:
+#incbin "Zephyr/Zephyr.dmp"
+POIN SkillTester
+WORD ZephyrID
 
 ALIGN 4
 RadianceMarking:

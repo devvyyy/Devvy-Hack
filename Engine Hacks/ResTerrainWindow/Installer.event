@@ -1,0 +1,48 @@
+#include "Extensions/Hack Installation.txt"
+
+PUSH
+//New RES. GFX
+ORG 0x8D0AC
+POIN FontTiles
+POP
+
+PUSH
+//Text and foreground positioning
+ORG 0x8CA50
+WORD 0x2003F6C
+WORD 0x200446c
+
+//Background TSA
+ORG 0x8CB2C
+WORD 0x20044ac
+
+//Point to new text TSA
+ORG 0x8CA58
+POIN NewTerrainWindowText_TSA
+
+//Point to new background TSA
+ORG 0x8CB30
+POIN NewTerrainWindow_TSA
+POP
+
+//Load Res GFX
+PUSH
+ORG 0x8CA2C
+jumpToHack(TerrainResDisplay)
+POP
+
+ALIGN 4
+TerrainResDisplay:
+#incbin "src/TerrainRes.dmp"
+
+ALIGN 4
+NewTerrainWindow_TSA:
+#incbin "gfx/TerrainWindow.dmp"
+
+ALIGN 4
+NewTerrainWindowText_TSA:
+#incbin "gfx/TerrainWindowText.dmp"
+
+ALIGN 4
+FontTiles:
+#incbin "gfx/FontTiles_LZ77.dmp"

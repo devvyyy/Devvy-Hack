@@ -2,6 +2,18 @@
 #include "AeterianFealty/AeterianFealty.event"
 
 ALIGN 4
+Paranoia:
+#incbin "Paranoia/Paranoia.dmp"
+POIN SkillTester
+WORD ParanoiaID
+
+ALIGN 4
+StaticPanic:
+#incbin "StaticPanic/StaticPanic.dmp"
+POIN SkillTester
+WORD StaticPanicID
+
+ALIGN 4
 ShieldDef:
 #incbin "ShieldDef/ShieldDef.dmp"
 POIN SkillTester

@@ -151,9 +151,9 @@ UNIT Aeteria Fighter 0x1 Level(4, Enemy, 1)     [7,1] 0b 0x0 0x0 0x0 [IronAxe] C
 UNIT Aeteria Fighter 0x1 Level(4, Enemy, 1)     [4,0] 0b 0x0 0x0 0x0 [IronAxe] BossAI
 UNIT Aeteria Mage 0x1 Level(5, Enemy, 1)     [12,18] 0b 0x0 0x0 0x0 [Fire] AttackInRangeAI
 UNIT Aeteria Mage 0x1 Level(4, Enemy, 1)     [5,2] 0b 0x0 0x0 0x0 [Fire] TwoActionAI
-UNIT Aeteria Archer 0x1 Level(4, Enemy, 1)     [6,10] 0b 0x0 0x0 0x0 [Vulnerary] TwoActionAI
-UNIT AeteriaStealable Archer 0x1 Level(4, Enemy, 1)     [1,9] 0b 0x0 0x0 0x0 [0xDF,Talisman] AttackInRangeAI
-UNIT Aeteria Archer 0x1 Level(4, Enemy, 1)     [14,7] 0b 0x0 0x0 0x0 [] AttackInRangeAI
+UNIT Aeteria Archer 0x1 Level(4, Enemy, 1)     [6,10] 0b 0x0 0x0 0x0 [IronBow,Vulnerary] BossAI
+UNIT AeteriaStealable Archer 0x1 Level(4, Enemy, 1)     [1,9] 0b 0x0 0x0 0x0 [0xDF,Talisman] TwoActionAI
+UNIT Aeteria Archer 0x1 Level(4, Enemy, 1)     [5,15] 0b 0x0 0x0 0x0 [IronBow] BossAI
 UNIT Aeteria LArmor 0x1 Level(4, Enemy, 1)     [5,13] 0b 0x0 0x0 0x0 [IronLance,Javelin] BossAI
 UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT Aeteria Mercenary 0x1 Level(4, Enemy, 1)     [7,7] 0b 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
@@ -161,14 +161,14 @@ UNIT AeteriaStealable Mercenary 0x1 Level(4, Enemy, 1)     [6,16] 0b 0x0 0x0 0x0
 UNIT Aeteria Mercenary 0x1 Level(4, Enemy, 1)     [3,11] DropItem 0x0 0x0 0x0 [IronSword,DoorKey] AttackInRangeAI
 UNIT Edith LArmor 0x1 Level(4, Ally, 0)     [3,5] 0b 0x0 0x0 0x0 [SteelLance,0x67,Elixir] BossAI
 UNIT Aeteria SCav 0x1 Level(5, Enemy, 1)     [7,20] 0b 0x0 0x0 0x0 [SteelSword] ChargeAI
-UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [13,3] DropItem 0x0 0x0 0x0 [IronLance,DoorKey] AttackInRangeAI
+UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [14,4] DropItem 0x0 0x0 0x0 [IronLance,DoorKey] AttackInRangeAI
 UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [14,17] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
 UNIT Aeteria Fighter 0x1 Level(4, Enemy, 1)     [13,9] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
 UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [13,12] DropItem 0x0 0x0 0x0 [Flux,DoorKey] BossAI
 UNIT Aeteria LCav 0x1 Level(4, Enemy, 1)     [12,20] 0b 0x0 0x0 0x0 [Javelin] TwoActionAI
 UNIT Aeteria ACav 0x1 Level(4, Enemy, 1)     [4,19] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
 UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [13,12] DropItem 0x0 0x0 0x0 [DarkTome2,DoorKey] BossAI
-UNIT Aeteria LArmor 0x1 Level(5, Enemy, 1)     [9,20] DropItem 0x0 0x0 0x0 [SapphireLance,Elixir] BossAI
+UNIT Aeteria LArmor 0x1 Level(5, Enemy, 1)     [9,20] DropItem 0x0 0x0 0x0 [ShortSpear,Elixir] BossAI
 	UNIT
 	
 Rein1:
@@ -183,16 +183,21 @@ UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [14,9] 0x0 0x0 0x0  [Flux] Charge
 	UNIT
 	
 ThiefReinUnit:
-UNIT NoKeyThief Thief 0x0 Level(1, Enemy, 1)     [0,12] DropItem 0 1 REDA1R12 [SteelDagger, KillerAxe,] [6,12,4,0]
+UNIT NoKeyThief Thief 0x0 Level(1, Enemy, 1)     [0,12] DropItem 0 1 REDA1R12 [SteelDagger, KillingEdge,] [6,12,4,0]
 		UNIT
 	
 YoHereToInstaKill: //make her warp in
 UNIT Aoife Sage_F 0x1 Level(12, Enemy, 0)     [4,1] DropItem 0x0 0x0 0x0 [0xEA,WhiteGem] StallOneTurnAI
 	UNIT
+	
+YoHereToInstaKill2: //spawn at bot with knights
+UNIT Aeteria Soldier 0x1 Level(5, Enemy, 1)     [8,21] 0x0 0x0 0x0  [SteelAxe] AttackInRangeAI
+UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [10,21] 0x0 0x0 0x0  [DarkTome2] AttackInRangeAI
+	UNIT
 
 Traps1:
-BLST [6,10] IronBallista
-BLST [14,7] IronBallista
+BLST [6,10] Ballista
+BLST [5,15] IronBallista
 BlueSigil(8,21)
 BlueSigil(9,21)
 BlueSigil(10,21)
@@ -204,6 +209,7 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+	ENUT AllUnitsMustEscapeFlag
 	LOAD1 0x1 Units1
 	LOAD1 0x1 EnemyUnits
 	TurnEnemy(Edith)
@@ -212,7 +218,7 @@ BeginningScene:
 	ENDA
 
 EndingScene:
-	MNC2 0xA
+	MNC2 0x3D
 //MNTS 0x1 //return to title screen
 	NoFade
 	ENDA
@@ -261,6 +267,8 @@ SOUN 0xF2
 WORD 0x52820 //fire weather
 STAL 15
 	LOAD1 0x1 YoHereToInstaKill
+	STAL 20
+	LOAD1 0x1 YoHereToInstaKill2
 ENUN
 SVAL 0x2 Aoife
 _WARP 0xFFFF 0xFFFD [4,4]

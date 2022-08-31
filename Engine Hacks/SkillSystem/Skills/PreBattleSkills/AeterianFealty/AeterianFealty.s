@@ -24,7 +24,6 @@ mov r0,r4
 cmp r0,#0
 beq End
 
-
 Final:
 mov r1,#0x60 @hit
 ldrh r2, [r4, r1]
@@ -34,8 +33,6 @@ add r1, #0x2 @avoid
 ldrh r2, [r4, r1]
 add r2, #10
 strh r2, [r4,r1]
-
-
 
 End:
 pop {r4-r7, r15}

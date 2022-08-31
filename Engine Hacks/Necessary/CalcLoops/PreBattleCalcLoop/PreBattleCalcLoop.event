@@ -38,12 +38,12 @@ POIN Moxie Wrath Anima1 Anima2 Anima3 Anima4 Dark1 Dark2 Dark3 Dark4 Dark5
 POIN DriveSpd DriveRes
 //POIN LuckySeven OddRhythm EvenRhythm QuickBurn SlowBurn
 //POIN Demoiselle Gentilhomme MaleficAura Tantivy Focus Inspiration Solidarity VoiceOfPeace Anathema LilysPoise Hex Loyalty
-POIN Charisma Charm Shrewd AeterianFealtyAura Inspire BitterCold Galestorm ChainReaction RayDark Blackfire Intimidate Daredevil Infiltrator
+POIN Charisma Charm Shrewd AeterianFealtyAura Inspire BitterCold Galestorm ChainReaction RayDark Blackfire Intimidate Daredevil Infiltrator Paranoia
 //POIN HeavyDuty Warlock ElbowRoom NaturalCover Gamble WindDisciple Perfectionist Puissance Hawkeye LightWeight Trample Opportunist BattleVeteran SilentPride Vanity Restraint AssassinateDamageBonus KnightAspirant LifeAndDeath SoulSplitter GonnaGoWild Falcon ArcaneBlade FairFight Atlas StormBlood FieryBlood
-POIN BulletPre AeterianFealty Phase BurstFireStats MiraclePre ColdFlare Steadfast ShowStopper DuckPre SanctuaryPre GlowRing AshenRing Starseer Whirlwind Hasty ShiningRifleSkill Parity HighRoller Axiom PathOfBlade FinalBoss SearingSword Lunatic ShieldDef RupturedSky ThunderClap Bulwark Intrepid Alacrity SteelSoul Megalovania Vigor Defeatist LastResort Outrider HeavyStrikes Charge Warpath Keepsake RifleSkill LethalTempo Tresillo ElbowGreasePre Hijack
+POIN BulletPre AeterianFealty Phase BurstFireStats MiraclePre ColdFlare StaticPanic Steadfast ShowStopper DuckPre SanctuaryPre GlowRing AshenRing Starseer Whirlwind Hasty ShiningRifleSkill Parity HighRoller Axiom PathOfBlade FinalBoss SearingSword Lunatic ShieldDef RupturedSky ThunderClap Bulwark Intrepid Alacrity SteelSoul Megalovania Vigor Defeatist LastResort Outrider HeavyStrikes Charge Warpath Keepsake RifleSkill LethalTempo Tresillo ElbowGreasePre Hijack
 //POIN Parry BloodTide WhitePool NightTide Insight Prescience Vigilance DefiantAvo DefiantCrit TowerShield ShortShield IndoorFighter OutdoorFighter Fortune
 POIN Daunt KingMark Deadeye DoubleLion ShadowEye
-//POIN StaticPanic Thotslayer Thighdeology Armorboost Horseguard Skyguard ForeignPrincess ChargePlus
+//POIN Thotslayer Thighdeology Armorboost Horseguard Skyguard ForeignPrincess ChargePlus
 POIN BlueFlame BlueFlameAura Frostbite Cultured KeepUp
 POIN MoonEvoked Lionheart Maestro Frenzy DevilAxeSkill CurtainCallSkill GrimRing Executors Nevermore ResolutePyre // This was moved here because Str/Mag Split conflict, and... I'm not sure why it wouldn't be here in the first place.
 //POIN UpWithArch
@@ -101,6 +101,8 @@ AuraSkillEntry(CharmID)
 AuraSkillEntry(BitterColdID)
 AuraSkillEntry(InspireID)
 AuraSkillEntry(KingMarkID)
+AuraSkillEntry(ChainReactionID)
+AuraSkillEntry(AeterianFealtyID)
 //AuraSkillEntry(DemoiselleID)
 //AuraSkillEntry(GentilhommeID)
 //AuraSkillEntry(InspirationID)

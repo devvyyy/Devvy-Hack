@@ -13,6 +13,15 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventEnemy(0,EnemyPhaseEventScream,2)
+TURN 0x0 RealEnemy1 [3,0] 0x0
+TURN 0x0 RealEnemy4 [4,0] 0x0 //boss spawn
+TURN 0x0 BrigandSpawnTime [5,0] 0x0
+TURN 0x0 BossChargeWarning [6,0] 0x0
+TURN 0x0 BossCharge [7,0] 0x0
+TURN 0x0 RealEnemy3 [8,0] 0x0
+TURN 0x0 RealEnemy2 [9,0] 0x0
+TURN 0x0 LastBatch [10,0] 0x0
 	END_MAIN
 
 ALIGN 32
@@ -60,25 +69,28 @@ UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [17,11] 0b 0x0 0x0 0x0 [IronAxe,0xE9,]
 
 EnemyUnits: //tlp ghosts?! :scream:
 //InfantrySoul, CavSoul, FlierSoul, ArmorSoul, MagSoul, PromoSoul, StealSoul
-UNIT KeyThief Mage 0x1 Level(6, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [SilverDagger,BraveSword,ChestKey] ThiefAI
+UNIT KeyThief Thief 0x1 Level(6, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [SilverDagger,BraveSword,ChestKey] ThiefAI
 UNIT MagSoul Mage 0x1 Level(6, Enemy, 1)     [5,12] 0b 0x0 0x0 0x0 [Fire] AttackInRangeAI
+UNIT InfantrySoul Soldier 0x1 Level(6, Enemy, 1)     [6,6] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
 UNIT InfantrySoul Fighter 0x1 Level(6, Enemy, 1)     [6,15] 0b 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
 UNIT InfantrySoul Monk 0x1 Level(6, Enemy, 1)     [1,16] 0b 0x0 0x0 0x0 [Light] WallAI
 UNIT InfantrySoul Mercenary 0x1 Level(6, Enemy, 1)     [2,14] 0b 0x0 0x0 0x0 [IronSword] WallAI
+UNIT MagSoul Mage 0x1 Level(6, Enemy, 1)     [14,15] 0b 0x0 0x0 0x0 [Thunder] BossAI
+UNIT MagSoul SArmor 0x1 Level(6, Enemy, 1)     [13,17] 0b 0x0 0x0 0x0 [SteelGlaive] BossAI
 UNIT InfantrySoul Myrmidon 0x1 Level(6, Enemy, 1)     [3,3] 0b 0x0 0x0 0x0 [IronSword] WallAI
 UNIT InfantrySoul Mercenary 0x1 Level(6, Enemy, 1)     [7,4] 0b 0x0 0x0 0x0 [IronSword] ChargeAI
-UNIT CavSoul LCav 0x1 Level(6, Enemy, 1)     [7,17] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
+UNIT CavSoul LCav 0x1 Level(6, Enemy, 1)     [8,17] DropItem 0x0 0x0 0x0 [IronLance,Torch] AttackInRangeAI
 UNIT InfantrySoul Archer 0x1 Level(6, Enemy, 1)     [1,2] 0b 0x0 0x0 0x0 [Longbow] BossAI
 
 UNIT MagSoul Shaman 0x1 Level(6, Enemy, 1)     [8,1] 0b 0x0 0x0 0x0 [Flux] StallOneTurnAI
 UNIT InfantrySoul Mercenary 0x1 Level(6, Enemy, 1)     [10,3] 0b 0x0 0x0 0x0 [Zanbato] StallOneTurnAI
-UNIT ArmorSoul AArmor 0x1 Level(6, Enemy, 1)     [12,4] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
+UNIT ArmorSoul LArmor 0x1 Level(6, Enemy, 1)     [12,4] 0b 0x0 0x0 0x0 [SteelGlaive,ShortSpear] AttackInRangeAI
 UNIT InfantrySoul Soldier 0x1 Level(6, Enemy, 1)     [16,5] 0b 0x0 0x0 0x0 [SteelLance] WallAI
 UNIT InfantrySoul Mercenary 0x1 Level(6, Enemy, 1)     [16,13] 0b 0x0 0x0 0x0 [Longbow] WallAI
 
 UNIT FlierSoul PegRider 0x1 Level(6, Enemy, 1)     [10,9] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
 UNIT FlierSoul PegRider 0x1 Level(6, Enemy, 1)     [11,12] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
-UNIT FlierSoul WyvernRider 0x1 Level(6, Enemy, 1)     [10,5] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
+UNIT FlierSoul WyvernRider 0x1 Level(6, Enemy, 1)     [10,5] DropItem 0x0 0x0 0x0 [IronLabrys,0x71] AttackInRangeAI
 UNIT MagSoul Occultist 0x1 Level(6, Enemy, 1)     [16,17] 0b 0x0 0x0 0x0 [Flux] AttackInRangeAI
 UNIT MagSoul Occultist 0x1 Level(6, Enemy, 1)     [0,18] 0b 0x0 0x0 0x0 [Flux] StallOneTurnAI
 	UNIT
@@ -90,17 +102,91 @@ UNIT Radcliff Warrior 0x1 Level(3, NPC, 0)     [3,7] 0b 0x0 0x0 0x0 [Halberd,Bod
 UNIT Latte Archer_F 0x1 Level(6, NPC, 0)     [2,8] 0b 0x0 0x0 0x0 [SteelBow,0xD9] [0,3,0,32]
 	UNIT
 	
-BrigandGuy: //dude appears like turn 2 and is like wtfffff :exploding_head: are those ghost thigns
-UNIT TorchBrigand Brigand 0x1 Level(7, Enemy, 1)     [9,11] 0b 0x0 0x0 0x0 [KillerAxe,MasterSeal] BrigandAI
+BrigandGuy: //in caves wtf :scream:
+UNIT TorchBrigand Raider 0x1 Level(7, Enemy, 1)     [9,11] DropItem 0x0 0x0 0x0 [KillingEdge,MasterSeal] BrigandAI
 	UNIT
 
-ActualEnemies1: //these are actual aeterian soldiers, don't appear until turn 4
-UNIT Aeteria Mage 0x1 Level(6, Enemy, 1)     [5,12] 0b 0x0 0x0 0x0 [Fire] AttackInRangeAI
+ActualEnemies1: //these are actual aeterian soldiers, don't appear until turn 2 idk??
+UNIT Aeteria Mage 0x1 Level(6, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [Fire] ChargeAI
+UNIT Aeteria Soldier 0x1 Level(6, Enemy, 1)     [10,0] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
 	UNIT
 	
-ScaryBossMan: //maybe he charges like turn 9 idk?
-UNIT 0x52 Halberdier 0x1 Level(5, Enemy, 0)     [5,12] 0b 0x0 0x0 0x0 [BraveLance,SilverGlaive] BossAI
+ActualEnemies2: 
+UNIT Aeteria Soldier 0x1 Level(7, Enemy, 1)     [0,14] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
+UNIT Aeteria Mercenary 0x1 Level(7, Enemy, 1)     [0,15] 0b 0x0 0x0 0x0 [SteelSword] ChargeAI
+UNIT Aeteria Archer 0x1 Level(7, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [SteelBow] ChargeAI
 	UNIT
+	
+ActualEnemies3: //top
+UNIT Aeteria WyvernRider 0x1 Level(7, Enemy, 1)     [4,0] 0b 0x0 0x0 0x0 [SteelAxe] StallOneTurnAI
+UNIT Aeteria WyvernRider 0x1 Level(6, Enemy, 1)     [0,0] 0b 0x0 0x0 0x0 [Swordreaver] ChargeAI
+	UNIT
+	
+ActualEnemies4: //boss spawn + bot
+UNIT Aeteria Mage 0x1 Level(6, Enemy, 1)     [3,19] 0b 0x0 0x0 0x0 [Thunder] ChargeAI
+UNIT Aeteria SCav 0x1 Level(6, Enemy, 1)     [4,19] 0b 0x0 0x0 0x0 [Zanbato,SteelSword] ChargeAI
+UNIT Aeteria Thaumaturge 0x1 Level(7, Enemy, 1)     [8,19] 0b 0x0 0x0 0x0 [Thunder] ChargeAI
+	UNIT
+	
+ActualEnemies5: //all charge ai
+UNIT Aeteria WyvernRider 0x1 Level(7, Enemy, 1)     [17,19] 0 0 1 REDA16R17 [SteelAxe] ChargeAI
+UNIT Aeteria WyvernRider 0x1 Level(7, Enemy, 1)     [0,19] 0 0 1 REDA0R18 [SteelAxe] ChargeAI
+	UNIT	
+	
+ScaryBossMan: //maybe he charges like turn 9 idk?
+UNIT 0x52 Halberdier 0x1 Level(5, Enemy, 0)     [9,19] 0 0 1 REDA9R18 [BraveLance,SilverGlaive] BossAI
+	UNIT
+	
+BrigandSpawnTime:
+SpawnReinforcements(BrigandGuy)
+NoFade
+ENDA
+	
+EnemyPhaseEventScream:
+Text(Ch10ReinSpawnTime)
+NoFade
+ENDA
+	
+RealEnemy1:
+SpawnReinforcements(ActualEnemies1)
+NoFade
+ENDA
+
+RealEnemy2:
+SpawnReinforcements(ActualEnemies2)
+Text(Ch10ReinSpawnBruh)
+NoFade
+ENDA
+
+RealEnemy3:
+SpawnReinforcements(ActualEnemies3)
+NoFade
+ENDA
+
+RealEnemy4:
+SpawnReinforcements(ActualEnemies4)
+STAL 20
+LoadReinforcements(ScaryBossMan)
+Text(Ch10BossSpawn)
+NoFade
+ENDA
+
+BossChargeWarning: //turn 6
+ChargeWarning(0x52,Placeholder1)
+NoFade
+ENDA
+
+BossCharge: //turn 7
+SVAL 0x1 0x00040000
+CHAI 0x52
+ChargeWarning(0x52,Placeholder1)
+NoFade
+ENDA
+
+LastBatch:
+SpawnReinforcements(ActualEnemies5)
+NoFade
+ENDA
 
 Traps1:
 BLST [2,8] 0x37
@@ -118,11 +204,11 @@ BeginningScene:
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 GreenUnits
 	ENUN
-	GotoPrepScreen
+	CALL $591FD8 //prep screen
 	VCWF 5
 	ENDA
 
 EndingScene:
-	MNC2 0xA
+	MNC2 0xC
 	NoFade
 	ENDA

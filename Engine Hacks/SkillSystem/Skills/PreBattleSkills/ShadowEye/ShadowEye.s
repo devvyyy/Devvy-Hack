@@ -21,7 +21,7 @@ ldrb r3, [r3]
 cmp r3, #4
 beq End
 
-@ applies status if you arent marked already
+@ apply if foe has ANY status effect
 mov r1, #0x30
 ldrb r0, [r5, r1]
 mov r1, #0x0F
@@ -34,13 +34,7 @@ Apply:
 @add 255 hit
 mov r1, #0x60
 ldrh r0, [r4, r1] @hit
-add r0, #255
-strh r0, [r4,r1]
-
-@add 255 avoid
-mov r1, #0x62
-ldrh r0, [r4, r1] @avoid
-add r0, #255
+add r0, #30
 strh r0, [r4,r1]
 
 End:

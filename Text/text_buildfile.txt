@@ -182,39 +182,14 @@ Off-Hand[X]
 
 # 0x623
 The Fire Emblem grants a[N]
-unique passive bonus added[N]
-to any unit's personal skill.[N]
+unique passive bonus based[N]
+on the unit's faction.[N]
 Note that this does not stack[N]
 with other passive items such[N]
 as Rings.[N]
  [N]
-Skill upgrades are as follows:[N]
-Affogato - Sidestep: Grants Atk/AS[N]
-bonus = Flow.[N]
 
-Breve - Charge: If all movement is[N]
-expended, strike x2 consecutively.[N]
 
-Hildr - Steadfast: If initiating,[N]
-grants Atk +5, Prt +10.[N]
-
-Sequin - Wild Card: If foe cannot[N]
-counter, inflicts Spd/Res -5 on foe[N]
-for 1 turn.[N]
-
-Nora - Encourage: Adjacent allies[N]
-follow-up and foe cannot.[N]
-
-Mocha - Alacrity: Effect lingers[N]
-for 1 turn.[N]
-
-Pandoro - Lunatic: Attacks deal[N]
-(25% Str) bonus magical damage.[N]
-
-Rina - Duelist: If countering,[N]
-neutralizes foe's weapon Mt.[N]
-
-Stroganoff - Sanctuary: 
 
 [X]
 
@@ -253,8 +228,7 @@ Sonic Rifle: +3 Mt, +5 Crit at[N]
 Backshield Rifle: +2 Mt, +3 Def[N]
 at 1 range[N]
 Shining Rifle: +3 Mt, deals bonus[N]
-damage equal to a quarter[N]
-of foe's Res[N]
+damage = 25% of foe's Res.[N]
 Bodkin Rifle: +5 Mt[N]
 Hunting Rifle: +4 Mt[N]
 Last Hour: +3 Mt[X]
@@ -277,7 +251,21 @@ Griffon Rider[N]
 1-4: Technician, Priest[N]
 1-5: Wyvern Rider, Thief[N]
 1-F: Sword Armor, Freelancer,[N]
-Monk[X]
+Monk[N]
+ [N]
+Prologue: Renegade, Priest,[N]
+Mage, Shaman Mercenary,[N]
+Lance Rider[N]
+2-1: Lance Armor, Hunter[N]
+Interlude I: Fighter/Cleric/[N]
+Shaman[N]
+2-2: Ranger[N]
+2-3: Swordmaster, Monk,[N]
+Warrior, Archer[N]
+2-4:[N]
+
+
+[X]
 
 # 0x602
 Objectives[X]
@@ -308,6 +296,13 @@ defenses halved...[X]
 # 0x326
 Devilish thieves with high movement,[N]
 speed, and utility. Equip: [SwordIcon][X]
+
+# 0x242
+Locro[X]
+
+# 0x29D
+A lord of Aeteria. He's always ready[N]
+to lend a hand.[X]
 
 # 0x19A
 Interlude I: Moonlight[X]
@@ -568,34 +563,40 @@ Dragoncrest[X]
 [_B][_u][_c][_k][_l][_e][_r][_SP][_S][_h][_i][_e][_l][_d][X]
 
 # 0x48c
-[_M][_t][_SP]=[_SP][_D][_e][_f][_Dot][_SP][_N][_o][_SP][_c][_o][_u][_n][_t][_e][_r][_Slash][_f][_o][_l][_l][_o][_w]-[_u][_p][_Dot][_SP][_P][_i][_v][_o][_t][_Dot][X]
+Mt = Def. Unit can't follow-up. Both sides[N]
+can't counter. Pivot behind foe.[X]
 
 # 0x3de
 [_K][_i][_t][_e][_SP][_S][_h][_i][_e][_l][_d][X]
 
 # 0x48d
-[_M][_t][_SP]=[_SP][_D][_e][_f][_Dot][_SP][_N][_o][_SP][_c][_o][_u][_n][_t][_e][_r][_Slash][_f][_o][_l][_l][_o][_w]-[_u][_p][_Dot][_SP][_S][_h][_o][_v][_e][_Dot][X]
+Mt = Def. Unit can't follow-up. Both sides[N]
+can't counter. Shove foe 1 space.[X]
 
 # 0x3df
 [_H][_e][_a][_t][_e][_r][_SP][_S][_h][_i][_e][_l][_d][X]
 
 # 0x48e
-[_M][_t][_SP]=[_SP][_D][_e][_f][_Dot][_SP][_N][_o][_SP][_c][_o][_u][_n][_t][_e][_r][_Slash][_f][_o][_l][_l][_o][_w]-[_u][_p][_Dot][_SP][_D][_r][_a][_g][_SP][_b][_a][_c][_k][_Dot][X]
+Mt = Def. Unit can't follow-up. Both sides[N]
+can't counter. Drag back foe 1 space.[X]
 
 # 0x3e0
 [_A][_d][_a][_r][_g][_a][_SP][_S][_h][_i][_e][_l][_d][X]
 
 # 0x48f
-[_M][_t][_SP]=[_SP][_D][_e][_f][_Dot][_SP][_N][_o][_SP][_c][_o][_u][_n][_t][_e][_r][_Slash][_f][_o][_l][_l][_o][_w]-[_u][_p][_Dot][_SP][_M][_o][_v][_e][_SP][_b][_a][_c][_k][_Dot][X]
+Mt = Def. Unit can't follow-up. Both sides[N]
+can't counter. Move back unit 1 space.[X]
 
 # 0x4ca
  [X]
  
 # 0x412
-Suffused with light magic. Ignores Str.[X]
+Suffused with light magic. Ignores Str.[N]
+Use to grant Res +7 (decays by 1/turn).[X]
 
 # 0x413
-Imbued with dark magic. Ignores Str.[X]
+Imbued with dark magic. Ignores Str.[N]
+Restores HP = damage dealt.[X]
 
 # 0x483
 Increases max HP by[N]
@@ -668,7 +669,8 @@ Item[X]
 [OpenQuote]Diplomacy"[X]
 
 # 0x422
-[_E][_x][_e][_c][_u][_t][_e][_s][_SP]<[_SP][_2][_5]%[_SP][_H][_P][_Comma][_SP][_Plus][_1][_SP][_a][_c]t[_Slash][_k]ill[_Comma][_SP][_g][_i][_v][_e][_s][_SP][_C][_h]iff[_o][_n][_SP][_E][_X][_P][_Dot][X]
+[_E][_x][_e][_c][_u][_t][_e][_s][_SP][_f][_o][_e][_s][_SP][_b][_e][_l][_o][_w][_SP][_2][_5]%[_SP][_H][_P][_Dot][_SP][_I][_f][_SP][_f][_o][_e][_SP][_i][_s][_SP][_d][_e][_f][_e][_a][_t][_e][_d][_Comma][N]
+[_g][_r][_a][_n][_t][_s][_SP][_a][_n][_o][_t][_h][_e][_r][_SP][_a][_c][_t][_i][_o][_n][_SP][_a][_n][_d][_SP][_g][_i][_v][_e][_s][_SP][_C][_h][_i][_f][_f][_o][_n][_SP][_E][_X][_P][_Dot][X]
 
 # 0x429
 Executes low HP foes,[N]
@@ -676,7 +678,8 @@ grants another turn,[N]
 and gives Chiffon EXP.[X]
 
 # 0x448
-[_1][_0]%[_Space][_c][_u][_r][_Dot][_Space][_H][_P][_Space][_d][_m][_g][_Space]i[_n][_Space][_a][_Space][_3][_Space][_s][_p][_a][_c][_e][_Space][_A][_o][_E][_Dot][_Space][_K][_n][_o][_c][_k][_SP][_b][_a][_c][_k][_Dot][_Space][_Lock][_Y][_o][_r][_y][X]
+[_1][_0]%[_SP][_c][_u][_r][_r][_e][_n][_t][_SP][_H][_P][_SP][_d][_a][_m][_a][_g][_e][_SP][_t][_o][_SP][_f][_o][_e][_s][_SP][_w][_i][_t][_h][_i][_n][_SP][_3][N]
+[_s][_p][_a][_c][_e][_s][_SP][_o][_f][_SP][_t][_a][_r][_g][_e][_t][_Dot][_SP][_S][_h][_o][_v][_e][_SP][_f][_o][_e][_SP][_1][_SP][_s][_p][_a][_c][_e][_Dot][_SP][_Lock][_SP][_Y][_o][_r][_y][X]
 
 # 0x47F
 Increases Resistance of an ally[N]
@@ -708,9 +711,14 @@ A luxurious gemstone[N]
 worth 10,000 gold.[X]
 
 # 0x498
-A staff with burning pitch[N]
-that lights 8 tiles through[N]
-fog (decays by 1/turn).[X]
+A staff with burning pitch that[N]
+lights 8 tiles through fog[N]
+centered on unit (decays by 1/turn).[X]
+
+# 0x47C
+Lights 8 tiles through fog centered[N]
+in an area Eth/3 spaces away[N]
+(decays by 1/turn).[X]
 
 # 0x5b5
 Place all items in storage,[N]
@@ -729,7 +737,8 @@ Rapid Ballista[X]
 Poison Dagger[X]
 
 # 0x40B
-[_I][_g][_n][_o][_r][_e][_s][_Space][_7][_0]%[_Space][_D][_e]f[_Dot][_Space][_P][_o]i[_s][_o][_n][_Colon][_Space][_1][_0][_Dot][_Space][_Lock][_Colon][_Space][_T][_h]i[_e][_v][_e][_s][X]
+Ignores 70% of foe's Def. Poisons for[N]
+1 turn on-hit. [_Lock]: Thieves.[X]
 
 # 0x3a9
 Fire I[X]
@@ -756,7 +765,8 @@ Aura V[X]
 Fear[X]
 
 # 0x477
-Inflicts Atk -5 on foe after combat.[X]
+Inflicts Atk -5 on foe after combat[N]
+(recovers 1 per turn).[X]
 
 # 0x4b5
 Inflicts Atk -5 on foe[N]
@@ -766,8 +776,12 @@ after combat[N]
 # 0x3c9
 Slow[X]
 
+# 0x3ea
+Winguard[X]
+
 # 0x478
-Inflicts Spd -5 on foe after combat.[X]
+Inflicts Spd -5 on foe after combat[N]
+(recovers 1 per turn).[X]
 
 # 0x4b6
 Inflicts Spd -5 on foe[N]
@@ -778,7 +792,7 @@ after combat[N]
 Pain[X]
 
 # 0x479
-Foe loses 20% of max HP after combat.[X]
+Deals 20% max HP to foe after combat.[X]
 
 # 0x4b7
 Deals damage = 20%[N]
@@ -881,8 +895,13 @@ Steel Dagger[X]
 # 0x3DB
 Boots[X]
 
+# 0x476
+Resets the status of an ally[N]
+within 3 spaces.[X]
+
 # 0x432
-[_A][_Space][_d][_e][_a]l[_Space][_g][_o][_n][_e][_Space][_w][_r][_o][_n][_g][_Dot][_Space][_G][_r][_a][_n]t[_s][_Space][_Plus][_Space][_H]it[_Space]=[_Space][_u][_n]it'[_s][_Space][_m]i[_s][_s]i[_n][_g][_Space][_H][_P][_Dot][X]
+"You bleed, so they will." Grants bonus[N]
+Hit = unit's missing HP.[X]
 
 # 0x2AD
 A bandit, well feared across[N]

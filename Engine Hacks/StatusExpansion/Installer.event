@@ -149,6 +149,7 @@ SetStatusName(0x10,0x519) //rooted
 SetStatusName(0x11,0x51A) //counter (??? wtf is this did i write this comment wtf whattt)
 SetStatusName(PetrifyStatusID,0x51A)
 SetStatusName(0x14,ShadowEyeName) //Gravity
+SetStatusName(0x19,WhirlwindName) //Whirlwind
 
 SetStatusDesc(NoStatusID,0x552)
 SetStatusDesc(PoisonStatusID,0x553)
@@ -164,6 +165,7 @@ SetStatusDesc(0x10,RootDesc)
 SetStatusDesc(0x11,0x51A)
 SetStatusDesc(PetrifyStatusID,0x557)
 SetStatusDesc(0x14,ShadowEyeDesc) //Gravity
+SetStatusDesc(0x19,WhirlwindDesc) //Whirlwind
 
 #define BlinkyIconFuncNoIcon $278A6
 #define BlinkyIconFuncPoisonIcon $27700
@@ -192,7 +194,7 @@ SetStatusBlinkyIconFunc(15,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(16,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(17,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(18,BlinkyIconFuncNoIcon)
-SetStatusBlinkyIconFunc(19,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(19,BlinkyIconFuncNoIcon) //Whirlwind
 SetStatusBlinkyIconFunc(20,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(21,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(22,BlinkyIconFuncNoIcon)

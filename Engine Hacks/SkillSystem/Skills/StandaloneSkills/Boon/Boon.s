@@ -21,14 +21,16 @@ b GoBack
 
 DecrementStatusTimer: @the part of the vanilla function that the hook overwrites and we return to after
 pop {r1-r3}
-lsr r0,r3,#4
+mov r2,#0x1F
+and r2,r3
+lsr r0,r3,#5
 sub r0,#1
 cmp r0,#0
 bne KeepStatus
 strb r0,[r1]
 b GoBack
 KeepStatus:
-lsl r0,r0,#4
+lsl r0,r0,#5
 orr r0,r2
 strb r0,[r1]
 b GoBack

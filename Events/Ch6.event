@@ -953,10 +953,17 @@ TEXTEND
 MUSC 0x3CC
 TEXTCONT
 TEXTEND
+
 STAL 15
 FADI 60
 
 UnsetFlag(0x84)
+
+CALL ResetParty
+	NoFade
+	ENDA
+	
+ResetParty:
 // reset the party for part 2
 QuickRemu(Affogato,1)
 QuickRemu(Ulrich,2)
@@ -988,7 +995,6 @@ CLEAN
 SetBackground(0x35)
 //MNC2 0x7 //next chapter
 MNTS 0x1 //return to title screen
-	NoFade
-	ENDA
+ENDA
 
 

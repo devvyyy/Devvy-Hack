@@ -20,7 +20,7 @@ mov lr, r0
 mov r0, r4 @attacker
 ldr r1, DriveSpdID
 mov r2, #0 @can_trade
-mov r3, #2 @range
+mov r3, #5 @range
 .short 0xf800
 cmp r0, #0
 beq Done

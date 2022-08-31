@@ -1,6 +1,6 @@
 @ vantage replace 802af7c
-.equ VantageID, SkillTester+4
-.equ VantagePlusID, VantageID+4
+.equ LastResortID, SkillTester+4
+.equ VantagePlusID, LastResortID+4
 .thumb
 push {r4-r7,r14}
 ldr r4, =0x203a4ec @atr
@@ -19,7 +19,7 @@ bne VantagePlus
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r5 @defender data
-ldr r1, VantageID
+ldr r1, LastResortID
 .short 0xf800
 cmp r0, #0
 beq Normal
@@ -54,7 +54,7 @@ b Normal
 @ orr     r0,r1                @ 0802B438 4308     
 @ str     r0,[r3]                @ 0802B43A 6018  
 
-@ ldrb  r0, VantageID
+@ ldrb  r0, LastResortID
 @ strb  r0, [r3,#4] 
 
 VantagePlus:
@@ -81,5 +81,5 @@ pop {r4-r7,r15}
 .ltorg
 SkillTester:
 @POIN SkillTester
-@WORD VantageID
+@WORD LastResortID
 @WORD VatnagePlusID

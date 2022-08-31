@@ -1,8 +1,19 @@
 ## SD_Lmao
 # so basically basic attacks cant double, have more range, while zap attacks have less range but deal chip etc
-Rev'd Up!: Unit attacks with Burst Fire.[N]
-Normal attacks cost 3 Durability, ignore Atk,[N]
-and deal 50% of foe's max HP magical damage.[X]
+Rev'd Up!: Normal attacks cost 3 Durability,[N]
+ignore Atk, deal 25% of foe's max HP[N]
+magical damage, and execute below 25% HP.[X]
+
+## SD_Lmao2
+# note this has extra range
+Burst Fire: Attack dealing AoE 2x1 damage[N]
+scaling with Dex. Converts Str to Hit.[N]
+Cost: 1 Durability.[X]
+
+## SD_Paranoia
+Paranoia: If foe's range > 3, Locro[N]
+dodges all attacks. Can pass through[N]
+foes. If HP < 100%, Avoid/AS +20.[X]
 
 ## SD_HallowedMist
 Hallowed Heart: If unit is adjacent to an ally,[N]
@@ -10,9 +21,9 @@ dodges all attacks. Adjacent allies take 20[N]
 damage after combat.[X]
 
 ## SD_ShadowEye
-Shadow Eye: Levain inflicts Rooted for 1[N]
-turn, setting foe's Move to 0. If foe has a[N]
-status effect, hit and dodge all attacks.[X]
+Shadow Eye: Levain inflicts Soulbreak[N]
+for 1 turn. If foe has any status[N]
+effects, grants Hit +30.[X]
 
 ## SD_KingShield
 Switcheroo: Unit toggles between 2 stances:[N]
@@ -24,10 +35,10 @@ Attack Stance: Str +3, deals 25% of foe's[N]
 current HP bonus damage.
 Defend Stance: Def/Res +3, foe cannot follow-up.[X]
 
-## SD_StaticPanic2
-Static Panic: Unit deals bonus damage =[N]
-50% of unit's Spd, chaining to foes[N]
-within 2 spaces of target after combat.[X]
+## SD_StaticPanic
+Static Panic: If Jaye initiates, deals[N]
+bonus damage = 50% of Spd, chaining[N]
+to foes within 2 spaces of target.[X]
 
 ## SD_SideHustle
 Side Hustle: After ending an action on[N]
@@ -39,23 +50,16 @@ Victory Cry: If unit defeats a foe, restores[N]
 HP = 20% of missing HP and grants[N]
 "Deal +10 damage" for 2 turns.[X]
 
-## SD_ZDrive
+## SD_Zephyr
 # use new status effect
-Borrowed Time: If unit initiates, steals 4 Move[N]
-from foe for 1 turn and Canto 4 spaces, and if all[N]
-movement is expended, grants another action (once per turn).[X]
+Zephyr: If Xidorn initiates, grants[N]
+Whirlwind to both sides for 1 turn.[X]
 
 ## SD_Overheat
 # maybe use flags 0x20-23
 Overheat: If unit attacked, combat grants[N]
 a stack (max; 3). At max stacks, halves[N]
 Str/Skill and sets Spd/Move to 0 for 1 turn.[X]
-
-## SD_Lmao2
-# note this has extra range
-Burst Fire: Attack dealing split damage[N]
-scaling with Dex. Converts Str to Hit.[N]
-Cost: 1 Durability.[X]
 
 ## SD_Radiance
 Motivate: Floris' staves mark allies.[N]
@@ -157,8 +161,8 @@ grants another action after attacking,[N]
 but take 1 damage after combat.[X]
 
 ## SD_Upgrade
-Upgrade!!: Mov +1. Yory's turret deals +3[N]
-damage, ignores 40% Def instead, and can[N]
+Upgrade!!: Grants Yory Move +1. Tturret deals[N]
++3 damage, ignores 40% Def instead, and can[N]
 critically hit with base 10% chance.[X]
 
 ## SD_ElbowGrease
@@ -223,7 +227,8 @@ initiates, unit dodges all attacks.[X]
 
 ## SD_ShonSkill
 Gallant: If foe's HP is full, grants[N]
-Atk/AS/Def/Res +3.[X]
+Atk/AS/Def/Res +3 and deals 10 bonus[N]
+physical damage.[X]
 
 ## SD_SiegSkill
 Tearing Skies: If unit initiates, unit[N]
@@ -290,7 +295,7 @@ reduces damage taken by 25%.[X]
 Last-Ditch Gambit: If HP is below 25%,[N]
 deals bonus damage = unit's missing HP x 2.[X]
 
-## SD_StaticPanic
+## SD_Daunt2
 Daunt: Inflicts foes within 3 spaces:[N]
 "If unit initiates, unit cannot follow-up".[X]
 
@@ -299,8 +304,9 @@ Arm Wrestler: Grants +3 Atk/AS against[N]
 bosses, doubled if they have Shove/Smite.[X]
 
 ## SD_Moxie
-Moxie: If a physical foe initiates,[N]
-ignores foe's weapon Mt.[X]
+Aeterian Moxie: If a physical foe initiates,[N]
+Chiffon ignores foe's weapon Mt and makes[N]
+a follow-up and foe cannot.[X]
 
 ## SD_SolLance
 Solar Thrust: Deals (10 - foe's Res) bonus damage[N]
@@ -321,9 +327,10 @@ grants Atk +3/Hit +20. If below 50%, grants[N]
 Def/Res +3 and Avoid +20.[X]
 
 ## SD_Eulogy
-Eulogy of Aeteria: If magic foe initiates,[N]
-Maynard neutralizes foe's Eth/Spd/Res/W. Mt,[N]
-setting those stats to 0.[X]
+# Eulogy of Aeteria
+Empty Moment: If magic foe initiates,[N]
+Maynard neutralizes foe's Atk/AS/Rsl,[N]
+setting them to 0.[X]
 
 ## SD_TouchOfFrost
 Absolute Zero: If Wilken's Res > foe's[N]
@@ -464,10 +471,6 @@ item, grants Mt +3, Hit/Crit +20.[X]
 Promenade: If within 2 spaces of a[N]
 cavalry ally, unit takes -2 damage.[X]
 
-## SD_Bulwark
-Bulwark: If Edith cannot counter,[N]
-foe cannot follow-up.[X]
-
 ## SD_Galestorm
 # Pursuer
 Fusillade: If Quarrel initiates, follow-up[N]
@@ -563,8 +566,8 @@ physical allies: "If Spd < foe's Spd,[N]
 strikes x2 consecutively."[X]
 
 ## SD_RupturedSky
-Subjugate: Boosts unit's Atk by[N]
-25% of foe's Str/Eth.[X]
+Ruptured Heaven: Deals bonus damage[N]
+= 25% of foe's Str/Eth.[X]
 
 ## SD_Lunatic
 Lunatic: If foe's HP is full, Pandoro[N]
@@ -593,7 +596,8 @@ less, inflicts Str/Spd -50%.[X]
 
 ## SD_LastResort
 Last Resort: If Latte's HP is 50% or[NL]
-less, both sides deal +5 damage.[X]
+less, counter before foe's attack[N]
+and both sides deal +5 damage.[X]
 
 ## SD_ClearSoul
 Pure Heart: Adjacent allies take[N]
@@ -622,8 +626,8 @@ initiates, strikes x2 consecutively.[X]
 
 ## SD_ColdFlare
 Cold Flare: If Akatsuki's HP isn't full,[N]
-grants bonus Atk/AS = 25% of unit's Res[N]
-and deal +10 bonus magical damage.[X]
+grants bonus Atk/AS = 25% of unit's[N]
+Res and deal +10 bonus magical damage.[X]
 
 ## SD_ColdFlare2
 Cold Flare: If foe is physical, grants Atk +3.[N]
@@ -641,7 +645,7 @@ grants Attack Speed +2.[X]
 
 ## SD_Inspire
 Inspire: Wustenhoff grants +2 Atk to physical[N]
-allies on the map with 50% HP or more.[X]
+allies on the map with HP > 50% or more.[X]
 
 ## SD_BitterCold
 Bitter Cold: Hartmann inflicts Rsl -2 to[N]
@@ -686,8 +690,8 @@ Mercy: Enemies are left[N]
 with at least 1 HP.[X]
 
 ## SD_Frenzy
-Frenzy: For every 4 damage[N]
-taken, +1 to damage dealt.[X]
+Frenzy: Deals bonus damage = 25%[N]
+of missing HP.[X]
 
 ## SD_Canto
 Canto: Can move again[N]
@@ -1474,13 +1478,13 @@ Disarm: If unit's weapon Wt is higher[N]
 than foe's Wt, ignores foe's weapon Mt.[X]
 
 ## SD_Warpath
-Warpath: If Cortado's HP is 75% or more,[N]
+Bulwark: If Edith's HP is 75% or more,[N]
 grants +25% Str and inflicts -25% Str[N]
 to foe.[X]
 
 ## SD_Outrider
-Outrider: Take -1 damage for[N]
-every space moved.[X]
+Outrider: Grants Cortado Def/Res =[N]
+movement expended x 2.[X]
 
 ## SD_HeavyStrikes
 Heavy Strikes: Add weapon[N]
