@@ -1,0 +1,48 @@
+PUSH
+  ORG $B1C74
+  POIN FixedConfigGFX
+
+  ORG $90F84
+  POIN FixedAnimGFX
+  POIN FixedUnitsGFX
+
+  ORG $AF7E0
+  POIN FixedSoundRoomGFX
+
+  ORG $A14E4
+  POIN FixedSupportGFX
+
+  ORG $95E20
+  POIN FixedPrepGFX
+
+  ORG $B1C7C
+  POIN FixedOptionsIcons
+POP
+
+ALIGN 4
+FixedConfigGFX:
+#incbin "Dmp/FixedConfigGFX.dmp"
+
+ALIGN 4
+FixedAnimGFX:
+#incbin "Dmp/FixedAnimGFX.dmp"
+
+ALIGN 4
+FixedUnitsGFX:
+#incbin "Dmp/FixedUnitsGFX.dmp"
+
+ALIGN 4
+FixedSupportGFX:
+#incbin "Dmp/FixedSupportGFX.dmp"
+
+ALIGN 4
+FixedPrepGFX:
+#incbin "Dmp/FixedPrepGFX.dmp"
+
+ALIGN 4
+FixedSoundRoomGFX:
+#incbin "Dmp/SoundRoom.dmp"
+
+ALIGN 4
+FixedOptionsIcons:
+#incbin "Dmp/OptionIcons.dmp"

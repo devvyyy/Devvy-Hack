@@ -1,0 +1,110 @@
+ALIGN 4
+MenuTilesPaletteBlue:
+#incbin "dmp/JpHack_Palette.dmp"
+
+#define MenuTilesPaletteRed MenuTilesPaletteBlue + 0x20
+#define MenuTilesPaletteGreen MenuTilesPaletteBlue + 0x40
+#define MenuTilesPaletteGray MenuTilesPaletteBlue + 0x60
+
+ALIGN 4
+MenuTiles:
+#incbin "dmp/JPHackMenuTiles.dmp"
+
+ALIGN 4
+MenuTilesAnimsOff:
+#incbin "dmp/JPHackMenuTilesAnimsOff.dmp"
+
+ALIGN 4
+PromotionScreenTiles:
+#incbin "dmp/JPHackPromotionScreenTiles.dmp"
+
+ALIGN 4
+LevelUpImage:
+#incbin "dmp/JPHackLevelUp.dmp"
+
+ALIGN 4
+OptionsBG:
+#incbin "dmp/BG.dmp"
+
+ALIGN 4
+OptionsBGPal:
+#incbin "dmp/BG_pal.dmp"
+
+ALIGN 4
+OptionsBGPalDark:
+#incbin "dmp/BG Dark_pal.dmp"
+
+ALIGN 4
+BlankFog:
+#incbin "dmp/BlankFog.dmp"
+
+ALIGN 4
+SaveText:
+#incbin "dmp/SaveText.dmp"
+
+// Palette 0 - active
+// Palette 5 - inactive
+ALIGN 4
+SaveTextPal:
+#incbin "dmp/SaveTextPal.dmp"
+
+ALIGN 4
+SaveBG:
+#incbin "dmp/SaveBG.dmp"
+
+ALIGN 4
+SaveSlot:
+#incbin "dmp/SaveSlot.dmp"
+
+// Green active
+// Green inactive
+// Blue active
+// Blue inactive
+// Special active
+// Special inactive
+// Red active
+// Red inactive
+ALIGN 4
+SaveSlotPalettes:
+#incbin "dmp/SaveSlotPalettes.dmp"
+
+PUSH
+// fix your romhack IS
+ORG 0xA07AD8
+#incbin "dmp/SaveSlotHardPal.dmp"
+ORG 0xA07BD8
+#incbin "dmp/SaveSlotHardPal.dmp"
+POP
+
+ALIGN 4
+DifficultySelect:
+#incbin "dmp/DifficultySelect.dmp"
+
+ALIGN 4
+DifficultySelectPal:
+#incbin "dmp/DifficultySelectPal.dmp"
+
+ALIGN 4
+SoundRoomBanner:
+#incbin "dmp/SoundRoomBanner.dmp"
+
+ALIGN 4
+ShopGoldBanner:
+#incbin "dmp/GoldBanner.dmp"
+
+ALIGN 4
+SupportMenuBanner:
+#incbin "dmp/SupportMenuBanner.dmp"
+
+ALIGN 4
+PrepScreenBanner:
+#incbin "dmp/PrepScreenBanner.dmp"
+
+ALIGN 4
+PrepExtraWindow:
+#incbin "dmp/PrepExtraWindow.dmp"
+
+ALIGN 4
+PopupBanner:
+NewPopupGfx:
+#incbin "dmp/PopupBanner.dmp"

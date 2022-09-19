@@ -1,0 +1,255 @@
+#include "Image/Image.event"
+#include "TSA/TSAs.event"
+#include "Options Text/OptionsText.event"
+
+PUSH
+
+ORG 0x5B6470
+// For each color style
+POIN MenuTiles
+POIN MenuTiles
+POIN MenuTiles
+POIN MenuTiles
+
+ORG 0x5B6450
+POIN MenuTilesPaletteBlue
+POIN MenuTilesPaletteRed
+POIN MenuTilesPaletteGreen
+POIN MenuTilesPaletteGray
+
+// For the stat screen
+POIN MenuTiles
+POIN MenuTiles
+POIN MenuTiles
+POIN MenuTiles
+
+// Battle Preview Anims Off
+ORG 0x7BDF8
+POIN MenuTilesPaletteBlue
+ORG 0x7BE00
+POIN MenuTilesPaletteRed
+ORG 0x7BE08
+POIN MenuTilesPaletteGreen
+ORG 0x7BE10
+POIN MenuTilesPaletteGray
+
+// HP Window
+ORG 0x36D2C
+POIN MenuTilesPaletteBlue
+ORG 0x36D34
+POIN MenuTilesPaletteRed
+ORG 0x36D3C
+POIN MenuTilesPaletteGreen
+ORG 0x36D48
+POIN MenuTilesPaletteGray
+
+// MMB
+ORG 0x8C2EC
+POIN MenuTilesPaletteBlue
+ORG 0x8C2F4
+POIN MenuTilesPaletteRed
+ORG 0x8C2FC
+POIN MenuTilesPaletteGreen
+
+// Battle anims off
+ORG $7BC44
+	POIN MenuTilesAnimsOff
+
+// Options Menu
+ORG 0xB1C84
+	POIN OptionsMenuTSA
+
+// Difficulty Select
+ORG 0xAC19C
+	POIN DifficultySelectTSA
+
+// Status Menu
+ORG 0x8E07C
+	POIN StatusMenuTSA
+
+// Shop Mug Frame
+ORG 0xB4E04
+	POIN ShopFrameTSA
+
+// Level Up Window
+ORG 0x73D88
+	POIN LevelUpImage
+ORG 0x73D90
+	POIN LevelUpTSA
+ORG 0x73DA0
+	POIN MenuTilesPaletteBlue
+ORG 0x7EB84
+	POIN LevelUpImage
+ORG 0x7EB8C
+	POIN LevelUpTSA
+ORG 0x7EB94
+	POIN MenuTilesPaletteBlue
+
+// Promotion Screen
+ORG 0xCCC1C
+	POIN PromotionScreenTiles
+
+// Support Viewer
+ORG 0xA14D8
+	POIN SupportScreenTSA
+//ORG 0xA2420
+//  POIN SupportListTSA
+//ORG 0xA2AA0
+//	POIN SupportListTSA
+
+// Prep Screen
+ORG 0x95EB8 //0x95E3C
+	POIN PrepScreenTSA
+ORG 0x95EAC
+	POIN PrepScreenTSA2 
+ORG 0x95E38
+	POIN MenuTilesPaletteBlue
+
+ORG 0x9A8E0
+	POIN PrepScreenUnitsTSA
+
+ORG 0x98D78
+	POIN PrepScreenItemsTSA
+ORG 0x995C0
+	POIN PrepScreenItemsTSA
+ORG 0x99C40
+	POIN PrepScreenItemsTSA
+
+ORG 0x99C4C
+	POIN PrepScreenItemsTSA2
+
+ORG 0x9C804 // str/mag prep screen
+	POIN PrepScreenItemUseTSA
+
+// Supply
+ORG 0x9DC38
+	POIN SupplyTSA
+ORG 0x9DC44
+	POIN SupplyMugTSA
+
+// List
+ORG 0x9F0C8
+	POIN SupplyTSA
+
+// Save Menu
+// After title screen
+ORG $A8EB0
+POIN OptionsBGPal
+POIN SaveBG
+ORG $A8EBC
+POIN SaveBGTSA
+// Elsewhere
+ORG $AA410
+POIN OptionsBGPal
+POIN SaveBG
+ORG $AA41C
+POIN SaveBGTSA
+// Palette for select difficulty
+ORG $AC178
+POIN OptionsBGPal
+
+// Chapter Title
+ORG $20088
+POIN OptionsBGPal
+POIN OptionsBG
+ORG $C5158
+POIN OptionsBGPalDark
+
+// Units Menu
+ORG $86C40
+POIN OptionsBGPal
+POIN OptionsBG
+
+// Options Menu
+ORG $86DAC
+POIN OptionsBGPal
+POIN OptionsBG
+
+// Chapter Status Menu
+ORG $8E194
+POIN OptionsBGPal
+
+// Shop Menu
+ORG $B4E14
+POIN OptionsBGPal
+POIN OptionsBG
+
+// Save Text
+// After Title Screen
+ORG 0xA8EDC
+POIN SaveText
+ORG 0xA8EE4
+POIN SaveTextPal
+// Elsewhere
+ORG 0xAA43C
+POIN SaveText
+ORG 0xAA444
+POIN SaveTextPal
+
+// Fog Effect
+// After Title Screen
+//ORG 0xA8EC4
+//POIN BlankFog
+// Elsewhere
+//ORG 0xAA424
+//POIN BlankFog
+
+// Save Slot
+ORG 0x895E0
+POIN SaveSlotPalettes
+ORG 0x896A4
+POIN SaveSlot
+
+// Difficulty Select
+ORG 0xAC188
+POIN DifficultySelect
+ORG 0xAC190
+POIN DifficultySelectPal
+
+// Status Menu Banner
+ORG 0x8E088
+POIN SoundRoomBanner
+ORG 0x8E090
+POIN DifficultySelectPal
+
+// Sound Room Banner
+ORG 0xAF7D0
+POIN SoundRoomBanner
+ORG 0xAF7D8
+POIN MenuTilesPaletteBlue
+
+// Shop Gold Amount Banner
+ORG 0xB4E70
+POIN ShopGoldBanner
+ORG 0xB4E80
+POIN MenuTilesPaletteBlue
+
+// Support Menu Banner
+ORG 0xA10F0
+POIN SupportMenuBanner
+ORG 0xA10F8
+POIN MenuTilesPaletteBlue
+
+// Prep Screen Banner
+ORG 0x98468
+POIN PrepScreenBanner
+ORG 0x98470
+POIN MenuTilesPaletteBlue
+ORG 0x98528
+POIN MenuTilesPaletteBlue
+
+// Prep Screen Extra Window
+ORG 0x98CB4
+POIN PrepExtraWindow
+ORG 0x98CBC
+POIN MenuTilesPaletteBlue
+
+// Popup Banner
+/*
+ORG PopR_StartBattlePopups - 0xA1
+POIN PopupBanner
+ORG PopR_StartBattlePopups - 0xB5
+POIN MenuTilesPaletteBlue
+*/
+
+POP

@@ -600,8 +600,8 @@ Multiplies total Crit by x2.[X]
 When attacking at 4 range, Crit +30.[X]
 
 ## BackshieldRifleDesc
-Grants +6 Def at 1 range. If HP is 25%[N]
-or less, take -10 damage for 1 turn.[X]
+Grants +6 Def at 1 range. After combat,[N]
+if HP < 25%, grants Defend for 1 turn.[X]
 
 ## MoonlightDesc
 Negates 50% of foe's Res.[X]
@@ -718,12 +718,12 @@ Star-searing pyre. Executes foes below[N]
 25% HP. Eff: [0x7D] [_Lock]: Aoife[X]
 
 ## LonginusDesc
-World-splitting spear. Steals 5 HP from[N]
+World-splitting spear. Steals 10 HP from[N]
 foe after combat. Eff: [ArmorIcon] [_Lock]: Maynard[X]
 
 ## MalchutDesc
-Last heavenly storm. Spd +5 to unit and[N]
-allies within 5 spaces. Eff: [HorseIcon] [_Lock]: Eustace[X]
+Last heavenly storm. Spd +5. +5 AS to[N]
+allies in 5 spaces. Eff: [HorseIcon] [_Lock]: Eustace[X]
 
 ## KeepsakeRingDesc
 [_F][_o][_r] t[_h][_e] f[_a]ll[_e][_n] [_s][_o][_u]l[_s][_Comma][_Space]t[_o][_r][_n] f[_r][_o][_m][_Space]t[_h][_e][_Space][_n]i[_g][_h]t[_Dot][N]
@@ -737,20 +737,25 @@ Converts Crit/foe's missing HP to Atk.[X]
 Deals bonus damage equal to foe's Res.[X]
 
 ## BrevePrfDesc
-Doubles attacks when using all movement.[X]
+Strikes x2 consecutively if all movement[N]
+is expended. [_Lock]: Breve[X]
 
 ## HildrPrfDesc
-+10 Def on initiation. Eff: [ArmorIcon][X]
++10 Def on initiation. Eff: [ArmorIcon][N]
+[_Lock]: Hildr[X]
 
 ## AnsgarPrfDesc
-If HP = or > 50%, ignores enemy's weapon Mt.[X]
+If HP = or > 50%, ignores enemy's weapon Mt.[N]
+[_Lock]: Ansgar[X]
 
 ## SequinPrfDesc
-Ignores 75% of foe's Res. Eff: [HorseIcon][X]
+Ignores 75% of foe's Res. Eff: [HorseIcon]
+[_Lock]: Sequin[X]
 
 ## NoraPrfDesc
-Grants all allies: "Unit deals 10 bonus[N]
-damage, reduced by foe's Res."[X]
+All allies within 5 spaces deal +(25% Str)[N]
+bonus magical damage.[N]
+[_Lock]: Nora[X]
 
 ## KaynRingDesc
 A void ring that lets the wearer[N]
@@ -778,7 +783,7 @@ Whirlwind[X]
 
 ## WhirlwindDesc
 The storm approaches.[N]
-Grants Xidorn Move +4.[N]
+Grants initiater Move +4.[N]
 Inflicts Move -4 otherwise.[X]
 
 ## YoryTool3Name

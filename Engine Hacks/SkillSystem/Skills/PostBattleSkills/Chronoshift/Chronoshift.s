@@ -5,7 +5,7 @@
 .endm
 .equ ChronoshiftID, SkillTester+4
 .equ ChronoshiftEvent, ChronoshiftID+4
-.equ heal3hp, 5
+.equ heal3hp, 10
 .thumb
 push	{lr}
 

@@ -1,0 +1,71 @@
+0859D1F0 gMenu_UnitMenu
+
+08001C4C BG_GetMapBuffer
+
+0804E884 ClearBG0BG1
+
+0804EF70 Menu_Draw
+// top of window in bg1 buffer + C2 (202356A)
+// second row of window in bg1 buffer + 102 (20235AA)
+// third + 142
+// fourth + 182
+// etc...
+// first bg1 buffer write: 4E2BC
+
+// trade menu
+// 20234CA
+
+202366C
+2023828
+202353E
+
+080003DE ARM_BgMapCopyRect
+0808C083
+08082E6B
+
+0808D200 DrawMapUIWindows
+0808D022 - Transparency?
+- 0808D232 - Objective window
+
+!!08001EA0 SetSpecialColorEffectsParameters!!
+- For all menu transparency
+
+// to find a tsa:
+// break on write to the specific bg
+// follow r14
+
+020234A8 BG1_Map_Buffer
+02023CA8 BG2_Map_Buffer
+
+080B1B88
+
+085B6430 gWindowFrameModelTSA
+
+0804E1BC WriteUIWindowTileMap
+
+0808D13C New6CPPInterfaceConstructor
+
+0801D470 PlayerPhase_ApplyUnitMovement
+
+0804EB98 NewMenu_DefaultAdjusted
+r0 - unit menu struct? (gUnitMenu)
+r1 - active unit x pos (used to determine what side of the screen to draw on)
+r2 - x offset
+
+0804EC98 NewMenu_BG0BG1_Constructs_Menu_6C
+
+0804ECB0 NewMenu_Constructs_Menu_6C_E_Menu_6C_pointer
+r0 - unit menu struct? (gUnitMenu)
+r1 - word - BYTE Height(unused?) Width X Y
+r2 - ?
+
+0804E98C Draws_little_highlight_thing_for_menus
+r0 - bg layer
+r1 - ???
+r2 - x
+r3 - y
+0x4E9FC - Highlight tile 1
+0x4EA00 - Highlight tile 2
+0x4EA04 - Highlight tile 3
+
+0x4EA08 Removes_little_highlight

@@ -67,4 +67,11 @@ HOW TO ADD NEW POPUP COMPONENTS:
 	#define PopRBattlePopupEnd                                     "WORD 0 0 0"
 #endif // PopRDefinitions
 
+PUSH
+ORG PopR_StartBattlePopups - 0xA1
+POIN PopupBanner
+ORG PopR_StartBattlePopups - 0xB5
+POIN MenuTilesPaletteBlue
+POP
+
 #endif // HAX_POPR

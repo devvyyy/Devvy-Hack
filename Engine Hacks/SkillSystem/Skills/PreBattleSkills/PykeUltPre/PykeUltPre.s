@@ -19,6 +19,12 @@ ldr r1, PykeUltID
 cmp r0, #0
 beq GoBack
 
+@set attacker attack to 0
+mov r0, r4
+add r0,#0x5A
+mov r3,#0
+strh r3,[r0]
+
 @not at stat screen
 ldr r1, [r5,#4] @class data ptr
 cmp r1, #0 @if 0, this is stat screen
@@ -29,11 +35,6 @@ cmp r0,r4
 bne GoBack @skip if enemy phase
 
 @recalc your damage by atk setting to 0 first
-@set attacker attack to 0
-mov r0, r4
-add r0,#0x5A
-mov r3,#0
-strh r3,[r0]
 
 ldrb r0,[r5,#0x12] @max hp
 ldrb r1,[r5,#0x13] @cur hp
