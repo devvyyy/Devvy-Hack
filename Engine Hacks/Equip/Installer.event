@@ -1,0 +1,134 @@
+
+ALIGN 4
+
+#include "src/Equip.lyn.event"
+#include "src/Addons/EquipPreview/EquipPreview.lyn.event"
+#include "src/Addons/EquipPreview/EquipPreviewWrapper.lyn.event"
+
+ALIGN 4
+EquipmentList:
+BYTE RoundShield KiteShield Greatshield Sash MagicShield
+BYTE 0x00 //terminator
+
+// Defense equipemnt loses durability on each hit taken
+ALIGN 4
+DefenseEquipmentList:
+BYTE RoundShield KiteShield Greatshield MagicShield
+BYTE 0x00 // terminator
+
+// Offense equipment loses durability on each attack made
+ALIGN 4
+OffenseEquipmentList:
+BYTE Sash
+BYTE 0x00 // terminator
+
+// Equipment in neither list doesn't decrement durability
+
+// add prEquipmentBonus to each stat getter
+// #define rEquipmentBonus(stat) "rAdd; rWithConstant(stat); rCallExternal(GetEquipmentStatBonus^1)"
+
+/*
+add this to draw_stats_box in mss_defs after blh 0x80D74A0
+
+ldr r0, [r6, #0xC]
+blh DrawUnitEquippedItem
+
+add this before .endm
+
+b SkipPool
+.ltorg
+SkipPool:
+*/
+
+/*
+add this to both skillTester and skillTester2
+
+.equ GetEquipmentSkill, SkillGetter + 0xC
+
+add this after mov r4, r1 @skill to test
+
+mov r0, r5
+ldr r3, GetEquipmentSkill
+_blr r3
+cmp r0, r4
+beq True
+mov r0, r5
+nop // for alignment
+
+add POIN GetEquipmentSkill to both skillTesterOriginal lit pools in Internals/SkillSystem.event
+*/
+
+/*
+Add POIN IncrementAttackCount to battle proc loop
+*/
+
+//Shield Preview
+PUSH
+ORG $1E800
+jumpToHack(EquipPreviewWrapper)
+POP
+
+// Battle Struct: Changing STRB on 0x7E to STRH to also clear 0x7F
+PUSH
+ORG 0x1D1E6
+SHORT $8001
+ORG 0x322C4
+SHORT $800A
+POP
+
+/*
+Add to Popups.event
+
+PopRBattlePopup(PopR_InitEquipmentBroke, 0x592420, 96)
+*/
+
+PUSH
+ORG 0x2C1EC
+jumpToHack(New_SaveUnitFromBattle)
+PROTECT 0x2C1EC
+POP
+
+PUSH
+ORG 0x2A584
+jumpToHack(New_InitBattleUnitFromUnit)
+PROTECT 0x2A584
+POP
+
+ALIGN 4
+gSkillTester:
+POIN SkillTester|1
+
+//#include "_UnitMenuDefs.event"
+#include "_ItemUnitMenuDefs.event"
+
+/*
+add these text entries
+
+## EquipEquipmentDescription
+Ready this equipment.[X]
+
+## UnequipName
+Unequip[X]
+
+## UnequipEquipmentDescription
+Remove this equipment.[X]
+
+*/
+
+ALIGN 4
+ItemUnitMenu:
+
+IUM_Use
+IUM_Equip
+MenuCommand($697, EquipEquipmentDescription, GreenText, EquipEquipmentUsability, EquipEquipment)
+MenuCommand(UnequipName, UnequipEquipmentDescription, GreenText, UnequipEquipmentUsability, UnequipEquipment)
+IUM_Trade
+IUM_Discard
+
+
+UM_Separator
+
+PUSH
+ORG $59D120
+POIN ItemUnitMenu
+POP

@@ -20,6 +20,17 @@ mov r1, #0x60
 mov r0, #100
 strh r0, [r4,r1]
 
+@set crit to 0
+mov r1, #0x66
+mov r0, #0
+strh r0, [r4,r1]
+
+@set attacker attack to 0
+mov r0, r4
+add r0,#0x5A
+mov r3,#0
+strh r3,[r0]
+
 @add units def attack to unit
 mov  r1, #0x5A
 ldrh r0, [r4, r1] @attack
@@ -42,7 +53,6 @@ beq End
 mov r1, #0x60
 mov r0, #255
 strh r0, [r4,r1]
-
 
 End:
 pop {r4-r7, r15}
