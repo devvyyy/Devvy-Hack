@@ -171,7 +171,7 @@ UNIT WreyvineEnemy Mercenary 0x1 Level(1, Enemy, 1)     [17,9] 0b 0x0 0x0 0x0 [I
 UNIT WreyvineEnemy Monk 0x1 Level(1, Enemy, 1)     [7,6] 0b 0x0 0x0 0x0 [Light,] AttackInRangeAI
 UNIT WreyvineEnemy Soldier 0x1 Level(1, Enemy, 1)     [19,6] DropItem 0x0 0x0 0x0 [SteelGlaive,] TwoActionAI
 UNIT WreyvineEnemy Archer 0x1 Level(1, Enemy, 1)     [19,13] 0b 0x0 0x0 0x0 [SteelBow,] StallOneTurnAI
-UNIT 0x52 LArmor 0x1 Level(1, Enemy, 1)     [19,9] DropItem 0x0 0x0 0x0 [Spear,] BossAI
+UNIT 0x52 SCav 0x1 Level(4, Enemy, 1)     [19,9] DropItem 0x0 0x0 0x0 [LightBrand,0x89] BossAI
 	UNIT
 	
 LeftHallWayRein: //idk have her be like 'omg theres sussy sounds from the halls' then omg idk gorlois appears :shrug:
@@ -195,8 +195,8 @@ UNIT Frye Mercenary 0x1 Level(6, Ally, 0)   [10,2] 0b 0x0 0x0 0x0 [Flamberge,Ste
 UNIT Wulfric Shaman 0x1 Level(4, Ally, 0)   [14,2] 0b 0x0 0x0 0x0 [Flux,PureWater,0xf4] [0x0,0x0,0x0,0x0]
 UNIT Cortado 0x60 0x1 Level(5, Ally, 0)   [18,2] 0b 0x0 0x0 0x0 [KillerLance,ShortSpear,Vulnerary] [0x0,0x0,0x0,0x0]
 UNIT Graham Priest 0x1 Level(10, Ally, 0)   [0,5] 0 0 1 REDA1R5 [0xf0,Haze,Mend,Elixir] [0x0,0x0,0x0,0x0]
-UNIT 0x38 Brigand 0x1 Level(2, Enemy, 1)     [6,9] 0b 0x0 0x0 0x0 [KillerAxe,] ChargeAI
-UNIT 0x38 Raider 0x1 Level(2, Enemy, 1)     [14,9] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
+UNIT 0x38 Brigand 0x1 Level(2, NPC, 1)     [6,9] 0b 0x0 0x0 0x0 [KillerAxe,] ChargeAI
+UNIT 0x38 Raider 0x1 Level(2, NPC, 1)     [14,9] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
 	UNIT
 
 Traps1:

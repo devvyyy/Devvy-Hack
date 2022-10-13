@@ -1,20 +1,10 @@
 
 #define INSTALL_BONUS_ANIMATIONS // Uncomment for additional animations 
 #define VRAM_Address 0x6013300 // Where in VRAM (see No$Gba Obj window) to draw animation 
-#define MinimumFrames 0 // delay after hit, Vanilla does 28 frames 
-
-#ifndef COORD 
-	#define Coord(XX,YY) "YY<<16|XX" 
+#define MinimumFrames 28 // Vanilla does 28 frames 
+#ifndef BATTLE_MAPANIMATION_NUMBERS_FLAG 
+	#define BATTLE_MAPANIMATION_NUMBERS_FLAG 0xEE
 #endif 
-#define ShowAnimation(AnimationID, Coordinate) "SVAL r1 AnimationID; SVAL r2 0; SVAL rB Coordinate; ASMC ASMC_Draw" 
-
-/*
-// Usage: 
-SVAL r1 AnimationID 
-SVAL r2 0 // (-1) shows the animation at all coordinates in the move map, so we SVAL r2 0. 
-SCOORDS rB [0,0] // Coordinates 
-ASMC ASMC_Draw 
-*/
 
 PUSH // Only vanilla address that we take over. 
 ORG $81274 // Poin to the vanilla proc	//{U}
@@ -25,64 +15,120 @@ POP
 
 #include "Internals.event"
 
+
 #define Empty_AnimID 0 
-#define ThinSlashAnimID 1
-#define Hit1AnimID 2
-#define Shards2AnimID 3 
-#define Break1AnimID 4
-#define Splash2AnimID 5
-#define FlashAnimID 6
-#define Impact1AnimID 7
+#define Break1AnimID 1
+#define Break2AnimID 2
+#define CircleAnimID 3
+#define Hit1AnimID 4
+#define Hit2AnimID 5
+#define Impact1AnimID 6
+#define Impact2AnimID 7
 #define Shards1AnimID 8
-// Bonus animations below 
-#define Break2AnimID 9
-#define CircleAnimID 10
-#define Impact2AnimID 11
-#define Splash1AnimID 12
+#define Shards2AnimID 9
+#define Splash1AnimID 10
+#define Splash2AnimID 11
+#define ThinSlashAnimID 12 
 #define ThickSlashAnimID 13
-#define FreezeAnimID 14
-#define FeatherAnimID 15
-#define CauterizeAnimID 16
-#define NumberOfAnimIDs 16
+#define FlashAnimID 14 
+#define FreezeAnimID 15 
+#define FeatherAnimID 16
+#define CauterizeAnimID 17
+#define HealAnimID 18 
+#define FireAnimID 19 
+#define ThunderAnimID 20 
+#define IceAnimID 21 
+#define WindAnimID 22 
+#define ElfireAnimID 23 
+#define DarkAnimID 24 
+#define MapSword 25 
+#define MapLance 26
+#define MapAxe 27
+#define MapBow 28
+#define MapMagic 29 
+#define MapLight 30
+#define MapDark 31
+#define MapMonster 32
 
-ALIGN 4
-WeaponTypeAnimations:
-BYTE 0 Break2AnimID // Sword 
-BYTE 1 Shards1AnimID // Lance 
-BYTE 2 Hit1AnimID // Axe 
-BYTE 3 Break1AnimID // Bow  
-BYTE 5 Splash2AnimID // Anima 
-BYTE 6 FlashAnimID // Light 
-BYTE 7 Impact1AnimID // Dark 
-BYTE $B Shards1AnimID // Monster 
-BYTE $11 Shards1AnimID // Dragonstone 
-SHORT 0xFFFF // Terminator 
 
 
 
 
+
+#define NumberOfAnimIDs 32
 ALIGN 4
 SpecificWeaponAnimations:
-BYTE Sagitar Break1AnimID
-BYTE 0xCC Break1AnimID
-BYTE Skypiercer Break1AnimID
+//ranged swords
+BYTE Sagitar MapBow
+BYTE 0xCC MapBow
+BYTE Skypiercer MapBow
+BYTE Flamberge CauterizeAnimID
+BYTE LightBrand MapLight
+BYTE Runesword MapDark
 
+//anima tomes
+BYTE Fire CauterizeAnimID
+BYTE Thunder ThinSlashAnimID
+BYTE Wind FlashAnimID
+BYTE Iceberg FreezeAnimID
+BYTE Bolting ThinSlashAnimID
+
+BYTE Agneya CauterizeAnimID
+BYTE Longinus MapLance
+BYTE Malchut Shards2AnimID
+
+//shields
 BYTE 0x64 CircleAnimID //shield bash
+BYTE 0x65 CircleAnimID //shield bash
+BYTE 0x66 CircleAnimID //shield bash
+BYTE 0x67 CircleAnimID //shield bash
+BYTE 0x68 CircleAnimID //shield bash
+BYTE 0x7C CircleAnimID //shield bash
 
+//idk bro
+BYTE DevilAxe MapMonster
 BYTE 0x44 Break1AnimID //shooter 1
 BYTE 0x8B Shards2AnimID //shooter 2
 BYTE 0xAA CauterizeAnimID // Bazooka, explosion anim
-BYTE 0xD2 FreezeAnimID // holy weap, ice anim
+BYTE 0xD2 MapMonster // holy weap, monster anim
 BYTE 0xCB FreezeAnimID // holy weap, ice anim
+SHORT 0xFFFF // Terminator
 SHORT 0xFFFF // Terminator 
 
-
-
-
-
+// These default animations are by Hypergammaspaces. Please credit him! 
+ALIGN 4
+WeaponTypeAnimations:
+BYTE 0 MapSword
+BYTE 1 MapLance 
+BYTE 2 MapAxe 
+BYTE 3 MapBow 
+BYTE 4 MapMonster //staff
+BYTE 5 MapMagic 
+BYTE 6 MapLight 
+BYTE 7 MapDark
+BYTE $B MapMonster 
+BYTE $11 MapMonster // Dragonstone 
+//BYTE 0 ThinSlashAnimID // Sword // old entries 
+//BYTE 1 Hit1AnimID // Lance 
+//BYTE 2 Shards2AnimID // Axe 
+//BYTE 3 Break1AnimID // Bow  
+//BYTE 5 Splash2AnimID // Anima 
+//BYTE 6 FlashAnimID // Light 
+//BYTE 7 Impact1AnimID // Dark 
+//BYTE $B Shards1AnimID // Monster 
+//BYTE $11 Shards1AnimID // Dragonstone 
+SHORT 0xFFFF // Terminator 
 // Animation IDs are defined above 
 // Animations and Palettes are included in "MapAnimations/Installer.event"
 
+AnimTable_Entry(MapSword, Map_Sword_FrameData)
+AnimTable_Entry(MapLance, Map_Lance_FrameData) 
+AnimTable_Entry(MapAxe, Map_Axe_FrameData) 
+AnimTable_Entry(MapBow, Map_Bow_FrameData)
+AnimTable_Entry(MapMagic, Map_Magic_FrameData)
+AnimTable_Entry(MapLight, Map_Light_FrameData)
+AnimTable_Entry(MapDark, Map_Dark_FrameData)
+AnimTable_Entry(MapMonster, Map_Monster_FrameData) 
 AnimTable_Entry(ThinSlashAnimID,Slashing_A_Anim)
 AnimTable_Entry(Hit1AnimID,Hit1_Small_Anim)
 AnimTable_Entry(Shards2AnimID,Shards2_Small_Anim)
@@ -91,7 +137,16 @@ AnimTable_Entry(Splash2AnimID,Splash2_Small_Anim)
 AnimTable_Entry(FlashAnimID,Flash_Anim)
 AnimTable_Entry(Impact1AnimID,Impact1_Small_Anim)
 AnimTable_Entry(Shards1AnimID,Shards1_Small_Anim)
+AnimTable_Entry(HealAnimID,healing_Anim)
+AnimTable_Entry(FireAnimID,fire_Anim)
+AnimTable_Entry(ThunderAnimID,electric_Anim)
+AnimTable_Entry(IceAnimID,ice_Anim)
+AnimTable_Entry(WindAnimID,gust_Anim)
+AnimTable_Entry(ElfireAnimID,fire_plume_Anim)
+AnimTable_Entry(DarkAnimID,ghost_Anim)
+AnimTable_Entry(HealAnimID,healing_Anim)
 #ifdef INSTALL_BONUS_ANIMATIONS 
+AnimTable_Entry(Hit2AnimID,Hit2_Small_Anim)
 AnimTable_Entry(Break2AnimID,Break2_Small_Anim)
 AnimTable_Entry(CircleAnimID,Circle_Small_Anim)
 AnimTable_Entry(CauterizeAnimID,Cauterize_Anim) // small hit 2 was here 
@@ -100,7 +155,7 @@ AnimTable_Entry(Splash1AnimID,Splash1_Small_Anim)
 AnimTable_Entry(ThickSlashAnimID,Slashing_B_Anim) // same palete as Slashing_A
 AnimTable_Entry(FreezeAnimID,Freeze_Anim)
 AnimTable_Entry(FeatherAnimID,Feather_Anim)
-#endif 
+#endif
 
 
 

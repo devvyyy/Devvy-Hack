@@ -34,7 +34,17 @@ MiscBasedEvents:
 
 LocationBasedEvents:
 Chest(0xF5,16,1)
+Village(0x8,Village1,12,2)
+Village(0x9,Village2,8,14)
 	END_MAIN
+	
+Village1:
+VillageEventItem(Placeholder1, 0x1, 0x68) //hexlock shield
+ENDA
+
+Village2:
+VillageEventItem(Placeholder2, 0x1, 0x8A) //arcane rifle
+ENDA
 
 Dunno1:
 

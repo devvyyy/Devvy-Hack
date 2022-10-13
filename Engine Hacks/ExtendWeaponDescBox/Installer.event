@@ -14,10 +14,12 @@
 //#define gProc_ChapterMenuStatus $A73C0C	//{J}
 #define gProc_PrepSomethingUnknown $A1898C 
 #define gProc_PrepSomethingUnknown2 $A18944 // backup 
+
 ALIGN 4 
 ProcExceptionsList:
 POIN gProc_SaveMenu gProc_SaveMenu2 gProc_ChapterMenuUnit gProc_ChapterMenuStatus
 POIN gProc_PrepSomethingUnknown 
+POIN gProc_PrepSomethingUnknown2 
 WORD 0 // Terminator 
 
 
@@ -50,6 +52,11 @@ LoadDialogueBoxGfxHook:
 #incbin "LoadDialogueBoxGfxHook.dmp" 
 
 PUSH 
+
+ORG $9C63C
+//ORG 0x09E8E2    //{J}
+BYTE 1 
+
 ORG $8A126		//{U}
 //ORG $8C436		//{J}
 SHORT $46C0 
@@ -82,9 +89,7 @@ callHackNew(LoadDialogueBoxGfxHook|1)
 PROTECT $8980C $8980C+12	//{U}
 //PROTECT $8BB1C $8BB1C+12	//{J}
 
-//fix use menu
-ORG $9C63C
-BYTE 1
+
 
 ORG $899BC		//{U}
 //ORG $8BCDA		//{J}
@@ -130,26 +135,16 @@ WORD 0x6015800 // 14800 vanilla
 
 ORG $354D8		//{U}
 //ORG $353E0		//{J}
-SHORT 0x42C0 // vanilla 0x4240 
+SHORT 0x42C0 // 4240 vanilla 
 
-// managed to keep this vanilla by hooking LoadDialogueBoxGfx 
-// Shop/Armoury 
-//ORG $B4C74 // mov r0, #0x90 
-//BYTE $E0 // 
-//// lsl r0, #2
-// 
-////ORG $B53A8 // mov r2, #0xC9 
-////BYTE $CE // new locat for spinny arrows on shop 
-//// lsl r2, #6 = 3240 
-//ORG $B4E74 
-//WORD 0x6015000 // vanilla 14C00 
-////r0=0x4260 at B52BC in B52A4 
-//// called by looking for pointer to B52A5 
-//// which is A394C4 in A394C0 proc called from gProc_Shop at 0x8A39210 
-//// poin to A394C0 is at B4A34 (destructor), B4E78, B5AF4, and B5BF8 
-//ORG $B4E7C // shop vram address as #0xAC 
-//SHORT 0x4280 
-//ORG $B53BC 
+ORG $354D4 // from 0x803547C called by 356BC Procs BottomHelpText CallASM
+POIN SomeNewOAMTable
 
 POP 
 
+ALIGN 4 
+SomeNewOAMTable: 
+SHORT 0   4   8    $C  $10 $14 $18 $1C // Use the full row of VRAM 
+SHORT $40 $44 $48 $4C $50 $54 $58 $5C 
+
+#include "vesly-ExtendWeaponDescBox-tradefix/tradefix.event"

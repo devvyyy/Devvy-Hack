@@ -1,4 +1,9 @@
 #include "gbafe.h"
+extern bool SkillTester(Unit* unit, int skillID);
+
+static inline bool IsBattleReal() {
+    return gBattleStats.config & (BATTLE_CONFIG_REAL | BATTLE_CONFIG_SIMULATE | BATTLE_CONFIG_SOLO);
+}
 
 bool IsItemShield(u16 item) {
     switch (GetItemIndex(item)) {
@@ -8,6 +13,7 @@ bool IsItemShield(u16 item) {
    case 0x66:
    case 0x67:
    case 0x68:
+   case 0x7c:
         return TRUE;
 
     default:
@@ -51,4 +57,36 @@ int SetupWeaponHelpText(u16 item) {
     }
 
     return 2;
+}
+
+int GetItemDescId(int item) {
+    if (IsBattleReal() && SkillTester(&gBattleActor.unit, 102)) { //unit with PhaseID
+        switch ((item & 0xFF)) {
+            case 0xC3: //Iron Rifle :)
+                return 0x212;
+            case 0xC4: //Steel Rifle :]
+                return 0x213;
+            case 0xC5: //Silver Rifle :D
+                return 0x214;
+            case 0xC8: //Snaring Rifle >:0
+                return 0x215;
+			case 0xD8: //Bloody Rifle
+                return 0x216;
+			case 0xD9: //Lockin Rifle
+                return 0x217;
+			case 0xDA: //Sonic Rifle
+                return 0x218;				
+			case 0xDB: //Backshield Rifle
+                return 0x219;
+			case 0x8A: //Arcane Rifle
+                return 0x21A;
+			case 0xAD: //Bodkin Rifle
+                return 0x21B;	
+			case 0xA9: //Hunting Rifle
+                return 0x21C;
+			case 0xCB: //Last Hour
+                return 0x21D;				
+        }
+    }
+    return GetItemData(GetItemIndex(item))->descTextId; 
 }
