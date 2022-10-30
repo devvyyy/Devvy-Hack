@@ -15,19 +15,25 @@ Paranoia: If foe's range > 3, Locro[N]
 dodges all attacks. Can pass through[N]
 foes. If HP < 100%, Avoid/AS +20.[X]
 
+## SD_SettW
+Down But Not Out: If unit's HP is 25% or less,[N]
+deals bonus damage = 300% of missing HP and grants[N]
+Defend for 1 turn after combat.[X]
+
 ## SD_FunnyGamer
-Fired Up: If unit's terrain has no effects,[N]
-deals 15 bonus magical damage. Otherwise,[N]
-steals 15 HP after combat.[X]
+Timewinder: Unit can place an Echo in[N]
+an adjacent space. Recast to rewind back[N]
+to the Echo, taking its place and HP.[X]
 
 ## SD_BruhIDK
-Blitzing Reflex: If unit's Spd > foe's Spd,[N]
-grants Avoid +30 and neutralizes foe's[N]
-Weapon Triangle Hit bonus.[X]
+Blitzing Reflex: If unit is not adjacent to[N]
+an ally and Spd > foe's Spd, boosts damage dealt/[N]
+reduces damage taken = difference between Spd stats.[X]
 
 ## SD_BruhIDK2
 Riding Solo: If unit is not adjacent[N]
-to an ally, grants AS +3.[X]
+to an ally, grants AS +3 and ignores[N]
+25% of foe's Str/Mag.[X]
 
 ## SD_HallowedMist
 Lost Heart: If unit is adjacent to an ally,[N]
@@ -181,8 +187,8 @@ critically hit with base 10% chance.[X]
 
 ## SD_ElbowGrease
 Elbow Grease: Converts Yory's Str to Def,[N]
-and Dex to Res. Grants another action[N]
-when deploying a sentry (once per turn).[X]
+and Dex to Res. If deploying a sentry turret,[N]
+grants another action (once per turn).[X]
 
 ## SD_SpellThief
 Spellthief: Steals the Mt of tier I[N]
@@ -867,9 +873,9 @@ Lifetaker: Restore up to 25% max HP[N]
 after attacking and defeating a foe.[X]
 
 ## SD_Galeforce
-Galeforce: If Espresso initiates and[N]
-defeats a foe, grants another action[N]
-with -50% Move (once per turn).[X]
+Galeforce: If Espresso defeats a foe,[N]
+grants another action with -50% Move[N]
+(once per turn, Canto disabled).[X]
 
 ## SD_Renewal
 Renewal: Restore 30% of max HP[N]

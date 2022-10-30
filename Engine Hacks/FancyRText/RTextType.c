@@ -22,6 +22,27 @@ bool IsItemShield(u16 item) {
     } // switch (GetItemIndex(item))
 }
 
+bool IsItemDagger(u16 item) {
+    switch (GetItemIndex(item)) {
+
+   case 0xA: //iron
+   case 0xC: //steel
+   case 0xE1: //silver
+   case 0x8: //poison
+   case 0x9: //stiletto
+   case 0xED: //sidestep
+   case 0xE8: //curtain call
+   case 0x86: //cinquedea
+   case 0xE9: //splitting maul
+   case 0xF7: //misericorde
+        return TRUE;
+
+    default:
+        return FALSE;
+
+    } // switch (GetItemIndex(item))
+}
+
 extern TextHandle gHelpTextHandles[3];
 
 int GetItemHelpTextType(u16 item) {
@@ -50,6 +71,10 @@ int SetupWeaponHelpText(u16 item) {
     if (IsItemShield(item)) {
         Text_InsertString(&gHelpTextHandles[1], 0x2F, 0x8, GetStringFromIndex(0x04EF)); //def
         Text_InsertString(&gHelpTextHandles[1], 0x61, 0x8, GetStringFromIndex(0x04F0)); //res
+    }
+    else if (IsItemDagger(item)) {
+        Text_InsertString(&gHelpTextHandles[1], 0x2F, 0x8, GetStringFromIndex(0x4F4)); //hit
+        Text_InsertString(&gHelpTextHandles[1], 0x61, 0x8, GetStringFromIndex(0x21E)); //lethality
     }
     else {
         Text_InsertString(&gHelpTextHandles[1], 0x2F, 0x8, GetStringFromIndex(0x4F4)); //hit

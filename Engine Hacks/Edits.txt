@@ -1,6 +1,51 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+//Faster popups
+PUSH
+ORG $114FA // frames to show "got item" popup 
+BYTE 45 //96 is vanilla 
+ORG $1166C // frames to show "got gold" popup 
+BYTE 45 //96 is vanilla
+POP
+
+// make vanilla "gold" item slots not automatically convert to gold when obtained
+// by moving this effect to an item you can never obtain anyway (such as Agneya here)
+    PUSH
+        ORG $115AA
+        BYTE 0xEA
+        ORG $115AE
+        BYTE 0xEA
+        ORG $115B6
+        BYTE 0xEA
+        ORG $115B2
+        BYTE 0xEA
+        ORG $324DA
+        BYTE 0xEA
+        ORG $324D2
+        BYTE 0xEA
+        ORG $324CE
+        BYTE 0xEA
+        ORG $324D6
+        BYTE 0xEA
+    POP
+	
+// speed for battle map anim rounds 
+// just from the proc MapAnimBattle 9A49FC
+// vanilla is 30 30 30 10 30
+PUSH
+ORG $9A4A06 
+BYTE 10 
+ORG $9A4A16 
+BYTE 15 
+ORG $9A4A26 
+BYTE 10 
+ORG $9A4A36
+BYTE 5 
+ORG $9A4A46
+BYTE 15  
+POP
+
 //Bard Ring Status Number (Vanilla is 10/0xA)
 //PUSH
 //ORG 0x02ADC4

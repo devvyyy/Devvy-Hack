@@ -43,12 +43,12 @@ mov	lr, r3
 cmp	r0,#0x00
 beq	End
 
-@ move 2 squares after canto
+@ move 3 squares after canto
 ldr	r0,=#0x8019224	@mov getter
 mov	lr, r0
 mov	r0, r4		@attacker
 .short	0xF800
-sub r0, #2
+sub r0, #3
 strb 	r0, [r6, #0x10]	@squares moved this turn
 
 @if canto, unset 0x2 and set 0x40

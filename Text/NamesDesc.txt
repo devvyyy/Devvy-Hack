@@ -362,12 +362,13 @@ Restores 10 HP after combat.[X]
 Restores 30% of max HP every turn.[X]
 
 ## UnionDesc
-Restores HP = HP healed with staff.[X]
+Inflicts Def -5 on foe after combat[N]
+(recovers 1 per turn).[X]
 
 ## UnionDesc2
-Restores HP to unit[N]
-equal to HP healed[N]
-using a staff.[X]
+Inflicts Def -5 on foe[N]
+after combat[N]
+(recovers 1 per turn).[X]
 
 ## AbsorbDesc2
 Restores HP to unit[N]
@@ -609,19 +610,22 @@ Negates 50% of foe's Res.[X]
 ## NosferatuDesc
 Restores HP = damage dealt.[X]
 
+## GhostDaggerDesc
+Unit can traverse impassible terrain[N]
+at 2 cost. [_Lock]: Thieves[X]
+
 ## IronDaggerDesc
-Ignores 25% of foe's Def. [_Lock]: Thieves[X]
+[_Lock]: Thieves[X]
 
 ## SilverDaggerDesc
-Ignores 75% of foe's Def. [_Lock]: Thieves[X]
+[_Lock]: Thieves[X]
 
 ## CurtainCallDesc
-Ignores 40% of foe's Def. Executes foes[N]
-below 25% HP. [_Lock]: Thieves[X]
+Executes foes below 25% HP. [_Lock]: Thieves[X]
 
 ## BerserkDesc
 Inflicts Berserk on enemies for 1[N]
-turn, letting them to target allies.[X]
+turn, letting them target allies.[X]
 
 ## BerserkDesc2
 Inflicts Berserk[N]
@@ -662,13 +666,21 @@ turn, preventing magic and talks.[X]
 Inflicts Silence[N]
 for 1 turn.[X]
 
+## TemperedFateDesc
+Inflicts Stasis on units for 1 turn,[N]
+preventing movement, actions, damage[N]
+taken, and targetability.[X]
+
+## TemperedFateDesc2
+Inflicts Stasis[N]
+for 1 turn.[X]
+
 ## DirkDesc
-Ignores 40% of foe's Def. Canto 2[N]
-spaces. [_Lock]: Thieves[X]
+Canto 3 spaces. [_Lock]: Thieves[X]
 
 ## ChiffonPRFDesc
 [_I][_f][_SP][_H][_P][_SP][_i][_s][_SP][_5][_0]%[_SP][_o][_r][_SP][_l][_e][_s][_s][_Comma][_SP][_f][_o][_l][_l][_o][_w]-[_u][_p][_s][_SP][_a][_r][_e][_SP][_c][_o][_n][_s][_e][_c][_u][_t][_i][_v][_e][_Dot][N]
-[_I][_g][_n][_o][_r][_e][_s][_SP][_5][_0]%[_SP][_o][_f][_SP][_f][_o][_e]'[_s][_SP][_D][_e][_f][_Dot][_SP][_E][_f][_f][_Colon][_SP][ArmorIcon][_SP][_Lock][_Colon][_SP][_C][_h][_i][_f][_f][_o][_n][_Dot][X]
+[_E][_f][_f][_Colon][_SP][ArmorIcon][_SP][_Lock][_Colon][_SP][_C][_h][_i][_f][_f][_o][_n][_Dot][X]
 
 ## GemWeaponDesc
 Doubles weapon triangle effects.[X]
