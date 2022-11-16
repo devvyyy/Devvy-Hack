@@ -1,6 +1,12 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+// Target allies or enemies (IER thing? TODO: figure this out. 90% sure this is berserk routine)
+PUSH
+ORG 0x261B2
+SHORT 0x0
+POP
+
 //Faster popups
 PUSH
 ORG $114FA // frames to show "got item" popup 
@@ -188,7 +194,7 @@ POP
 //Staff Base Hit Rate (default 30)
 PUSH
 ORG 0x002cd30
-BYTE 0x32 //50
+BYTE 0x50 //80
 POP
 
 // Fix the Game Over freeze

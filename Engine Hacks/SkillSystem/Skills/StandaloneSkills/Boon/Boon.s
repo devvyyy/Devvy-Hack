@@ -3,6 +3,40 @@
 
 .equ BoonID,SkillTester+4
 
+@ Issue #374
+@ Boon needs to unset petrify state bits
+
+@ r1 - Address unit.status
+@ r3 - Value unit.status
+@ r4 - unit*
+
+push {r1-r3}
+
+# Are we petrified?
+mov r0, #0xF
+and r0, r3 @ status index low 4 bits
+cmp r0, #0xB @ petrify index
+beq YesPetrify
+cmp r0, #0xD @ also petrify index
+bne NoPetrify
+
+YesPetrify:
+# We are petrified so unset state bits
+mov r2, #2
+mvn r2, r2
+
+ldr r0, [r4, #0xC] @ unit state
+
+and r0, r2
+str r0, [r4, #0xC]
+
+NoPetrify:
+pop {r1-r3}
+mov r0,#0xF @otherwise, status is over
+and r0,r3 @the status nybble must be preserved so the cured status FX can work
+strb r0,[r1]
+b BoonEffect
+
 @check if you have boon
 push {r1-r3} @don't crucify me this is the easiest way to do this since every single register is in use here
 mov r0,r4

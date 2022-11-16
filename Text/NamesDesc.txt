@@ -123,8 +123,8 @@ A veteran rider of Wreyvine's army.[N]
 He dreams of being a baker.[X]
 
 ## YoryDesc
-An unsuccessful Wreyvian engineer.[N]
-He's looking for his big break.[X]
+An unsuccessful, unreliable engineer.[N]
+He's looking for his big moment.[X]
 
 ## QuarrelDesc
 A trainee from a ruined village. He[N]
@@ -217,7 +217,7 @@ The Sage of the Trinity. According to[N]
 her, she's quite [OpenQuote]dapper"...?[X]
 
 ## EustaceDesc
-The Druid of the Trinity. Beneath her[N]
+The Druid of the Trinity. Beneath their[N]
 mask of silence lies a shrouded soul.[X]
 
 ## MaynardDesc
@@ -583,12 +583,12 @@ A song that grants an adjacent ally[N]
 
 ## CritSongDesc
 A song that grants an ally within 2[N]
-spaces Str/Eth/Dex +3 and Crit +10[N]
+spaces Str/Eth/Dex +3 and Crit +15[N]
 for 1 turn.[X]
 
 ## AvoidSongDesc
 A song that grants an ally within 2[N]
-spaces Def/Res/Luck +3 and Avoid +10[N]
+spaces Def/Res/Luck +3 and Avoid +15[N]
 for 1 turn.[X]
 
 ## KingPrfDesc
@@ -800,7 +800,8 @@ Grants initiater Move +4.[N]
 Inflicts Move -4 otherwise.[X]
 
 ## YoryTool3Name
-Etherguard[X]
+# yory gadgets here
+Etherward[X]
 
 ## YoryTool3Desc
 Grants Res +7 to an adjacent[N]
@@ -811,13 +812,25 @@ Lantern[X]
 
 ## YoryTool4Desc
 Lights 8 tiles through fog[N]
-(Decays by 1/turn).[N]
-[_Lock]: Yory[X]
+(Decays by 1/turn). [_Lock]: Yory[X]
 
-## YoryTool5Name
-Door Drone[X]
+## YoryTool6Name
+[_C][_h][_r][_o][_n][_o][_b][_r][_e][_a][_k][_e][_r][X]
 
-## YoryTool5Desc
-Opens a door within 10[N]
-spaces. [_Lock]: Yory[X]
+## YoryTool6Desc
+Inflicts Stasis on a unit within 3 spaces[N]
+for 1 turn, granting invulnerability[N]
+but preventing actions. [_Lock]: Yory[X]
+
+## YoryTool6Desc2
+Inflicts Stasis on a[N]
+unit for 1 turn.[X]
+
+## StopwatchName
+Stopwatch[X]
+
+## StopwatchDesc
+Inflicts Stasis on an adjacent unit[N]
+for 1 turn, granting invulnerability[N]
+but preventing actions.[X]
 

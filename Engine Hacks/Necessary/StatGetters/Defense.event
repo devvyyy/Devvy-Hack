@@ -10,6 +10,7 @@ pDefenseModifiers: // Defense
 	#endif
 	POIN prSleepHalfDef
 	POIN prAvoidBuffDef
+//	POIN prTemperedFateDef
 WORD 0
 
 prAddUnitDefense:
@@ -36,6 +37,10 @@ rIfUnitHasStatus(0x8)
 prSleepHalfDef:
 rIfUnitHasStatus(0x2)
 	rHalved
+	
+prTemperedFateDef:
+rIfUnitHasStatus(0x13)
+	rAddConst(50)
 
 prItemPassiveDefense:
 #ifndef DONT_STACK_BOOSTS

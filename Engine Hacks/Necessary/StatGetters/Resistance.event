@@ -9,6 +9,7 @@ pResistanceModifiers: // Resistance
 	POIN prMinZero
 	POIN prSleepHalfRes
 	POIN prAvoidBuffRes
+//	POIN prTemperedFateRes
 	#endif
 WORD 0
 
@@ -36,6 +37,10 @@ rIfUnitHasStatus(0x2)
 prAvoidBuffRes:
 rIfUnitHasStatus(0x8)
 	rAddConst(3)
+	
+prTemperedFateRes:
+rIfUnitHasStatus(0x13)
+	rAddConst(50)
 
 prLifeAndDeathMinus:
 _testSkill(HeroesLifeAndDeathID,0,5)

@@ -19,6 +19,10 @@ ldr r1, [r5,#4] @class data ptr
 cmp r1, #0 @if 0, this is stat screen
 beq End
 
+ldr r0,=#0x203A4EC @attacker struct
+cmp r0,r4
+bne End @if not attacker, end
+
 @check if flag 0x28 set; if so, proc skill
 ldr r0,=#0x8083da8 @CheckEventId
 mov r14,r0

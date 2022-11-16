@@ -9,6 +9,7 @@ pSpeedModifiers: // Speed
 	POIN prMinZero
 	#endif
 	POIN prEmpowerSpdCheck
+//	POIN prTemperedFateSpd
 WORD 0
 
 prAddUnitSpeed:
@@ -29,6 +30,10 @@ prEmpowerSpdCheck: //thief rush
 	rIfUnitHasState(0x400)
 		rIfUnitHasSkill(CharismaID)
 			rAddConst(4)
+			
+prTemperedFateSpd:
+rIfUnitHasStatus(0x13)
+	rConstant(0)
 
 prItemPassiveSpeed:
 #ifndef DONT_STACK_BOOSTS
