@@ -7,7 +7,7 @@ bne NotFirst
   bl ReduceEnemyFreeze
   pop {r0-r3}
 NotFirst:
-ldr r4, =0x8018881 @return position, r4 is immediately clobbered so it's fine
+ldr r4, =0x8018881 @return position, r4 is immediately clobbered so its fine
 ldr r1, =0x859a5d0
 mov r0, #0xff
 and r0, r6

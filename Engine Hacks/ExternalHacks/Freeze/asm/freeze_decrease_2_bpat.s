@@ -7,7 +7,7 @@ bne NotFirst
   bl ReduceEnemyFreeze
   pop {r0-r3}
 NotFirst:
-ldr r4, =0x8018881 @return position, r4 is immediately clobbered so it's fine
+ldr r4, =0x8018881 @return position, r4 is immediately clobbered so its fine
 ldr r1, =0x859a5d0
 mov r0, #0xff
 and r0, r6
@@ -25,8 +25,9 @@ ldr r6, [r5,r0]
 mov r0, #0x30
 add r0, r6 @status
 ldrb r1, [r0]
-mov r2, #0xF
+mov r2, #0x1F
 and r2, r1 @type of status in r2
+ldr r3,FreezeStatusID
 cmp r2, #0x9
 bne NextEnemy
 @it has freeze, so reduce it
@@ -56,3 +57,9 @@ blt EnemyLoop
 pop {r4-r6}
 pop {r0}
 bx r0
+
+.ltorg
+.align
+
+
+FreezeStatusID:
