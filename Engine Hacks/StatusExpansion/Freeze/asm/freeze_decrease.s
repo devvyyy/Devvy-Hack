@@ -5,12 +5,13 @@
 ldrb r3, [r1] @status
 mov r0, #0x1F
 and r0, r3
-ldr r2,FreezeStatusID
-cmp r0, r2 
+ldr r2,PetrifyStatusID
+cmp r0, r2
 bne Normal
 
 @if freeze, only reduce on player phase
 ldr r2, =0x202bcff @current phase
+ldrb r2, [r2]
 cmp r2, #0x0 @if player phase, reduce as usual
 beq Normal
 @otherwise do nothing.
@@ -27,4 +28,4 @@ bx r2
 .ltorg
 .align
 
-FreezeStatusID:
+PetrifyStatusID:

@@ -53,12 +53,12 @@ SetStatusBlinkyIconFunc(FreezeStatusID,BlinkyIconFuncSleepIcon)
   ALIGN 4
   FreezeDecrease:
     #incbin "asm/freeze_decrease.dmp"
-	WORD FreezeStatusID
+	WORD PetrifyStatusID
 
   ALIGN 4
   FreezeDecrease2:
     #incbin "asm/freeze_decrease_2.dmp"
-	WORD FreezeStatusID
+	WORD PetrifyStatusID
 
   }
 
