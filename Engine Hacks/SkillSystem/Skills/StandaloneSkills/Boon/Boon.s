@@ -13,7 +13,7 @@
 push {r1-r3}
 
 # Are we petrified?
-mov r0, #0xF
+mov r0, #0x1F
 and r0, r3 @ status index low 4 bits
 cmp r0, #0xB @ petrify index
 beq YesPetrify
@@ -32,7 +32,7 @@ str r0, [r4, #0xC]
 
 NoPetrify:
 pop {r1-r3}
-mov r0,#0xF @otherwise, status is over
+mov r0,#0x1F @otherwise, status is over
 and r0,r3 @the status nybble must be preserved so the cured status FX can work
 strb r0,[r1]
 b BoonEffect
