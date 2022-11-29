@@ -49,7 +49,7 @@ if /I not [%1]==[quick] (
 )
 
 echo:
-echo Assembling
+echo Assembling (epically)
 
 cd "%base_dir%Event Assembler"
 ColorzCore A FE8 "-output:%target_rom%" "-input:%main_event%"
@@ -59,7 +59,7 @@ if /I not [%1]==[quick] (
   @rem only do the following if this isn't a make hack quick
 
   echo:
-  echo Generating patch
+  echo Generating patch epic style
 
   cd "%base_dir%"
   "%ups%" diff -b "%source_rom%" -m "%target_rom%" -o "%target_ups%"

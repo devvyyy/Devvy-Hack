@@ -27,9 +27,8 @@ add r0, r6 @status
 ldrb r1, [r0]
 mov r2, #0x1F
 and r2, r1 @type of status in r2
-ldr r3,PetrifyStatusID
-cmp r2, #0x9
-bne NextEnemy
+cmp r2, #0x0
+beq NextEnemy
 @it has freeze, so reduce it
 lsr r3, r1, #5 @turns remaining in r3
 sub r3, #1

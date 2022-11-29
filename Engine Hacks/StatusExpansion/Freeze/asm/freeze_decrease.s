@@ -5,9 +5,8 @@
 ldrb r3, [r1] @status
 mov r0, #0x1F
 and r0, r3
-ldr r2,PetrifyStatusID
-cmp r0, r2
-bne Normal
+cmp r0, #0x0 @none
+beq Normal
 
 @if freeze, only reduce on player phase
 ldr r2, =0x202bcff @current phase
