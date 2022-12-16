@@ -1,6 +1,12 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+//Change the Affin text ID in the weapon stats to say 'Weapon'
+PUSH
+ORG 0x1EA3C
+SHORT 0x78B
+POP
+
 // Target allies or enemies (IER thing? TODO: figure this out. 90% sure this is berserk routine)
 PUSH
 ORG 0x261B2

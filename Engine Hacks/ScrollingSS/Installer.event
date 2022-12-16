@@ -1,0 +1,36 @@
+// Changes the StatScreen BGs to one with a sliding BG.
+// BG1 is repurposed for a portraitbox & pages.
+#ifndef _FE8_
+    ERROR "You're not assembling to an FE8 ROM!"
+#endif
+
+#include "Extensions/Hack Installation.txt"
+#include "EAstdlib.event"
+
+// Config
+
+// Uncomment this #define if page 1 should be the same length as page 2.
+// You'd probably want this if you're displaying skills.
+#define Page1Skills
+
+{
+  // Variables
+  // None
+  
+  PUSH
+  
+    // Let GlowyProc immediately end which frees up BG1
+    ORG 0xA00844
+    WORD 0 0 // PROC_END
+    
+    // Don't disable BG1
+    ORG 0x87C18
+    SHORT 0x46C0
+  
+  POP
+  
+  #include "Defs/ProcDefinitions.event"
+  #include "ASM/asm.event"
+  #include "Graphics/Graphics.event"
+
+   //PROTECT 0x5B6460 0x5B646F

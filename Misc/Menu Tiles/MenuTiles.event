@@ -64,8 +64,8 @@ ORG 0xAC19C
 	POIN DifficultySelectTSA
 
 // Status Menu
-ORG 0x8E07C
-	POIN StatusMenuTSA
+//ORG 0x8E07C
+//	POIN StatusMenuTSA
 
 // Shop Mug Frame
 ORG 0xB4E04
@@ -92,10 +92,14 @@ ORG 0xCCC1C
 // Support Viewer
 ORG 0xA14D8
 	POIN SupportScreenTSA
-//ORG 0xA2420
+ORG 0xA2420
 //  POIN SupportListTSA
-//ORG 0xA2AA0
+	POIN MenuTilesPaletteBlue
+ORG 0xA2AA0
 //	POIN SupportListTSA
+	POIN MenuTilesPaletteBlue
+//ORG 0xA1DD0C
+//	POIN MenuTilesPaletteBlue
 
 // Prep Screen
 ORG 0x95EB8 //0x95E3C

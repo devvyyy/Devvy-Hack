@@ -1,0 +1,122 @@
+// FE7Relief
+ALIGN 4
+Mural:
+#incbin "BG.dmp"
+ALIGN 4
+MuralPalettes:
+#incbin "BG_pal.dmp"
+ALIGN 4
+MuralTSA:
+#incbin "ReliefTSA.dmp"
+
+
+// PortraitBox & StatPages, Page 1 uses the same
+// TSA as Page 2 if skills are displayed on Page 1.
+PUSH
+
+  //Don't overwrite BGPalette 2
+  ORG 0x886C4
+  SHORT 0x46C0 0x46C0
+  ORG 0x886DE
+  SHORT 0x46C0 0x46C0
+
+  // Portraitbox variants
+  /*
+  ORG 0x5B6460
+  POIN SSMainUITiles1 SSMainUITiles2 SSMainUITiles3 SSMainUITiles4
+  */
+
+POP
+
+/*
+ALIGN 4
+SSMainUITiles1:
+#incbin "SSMainUITiles1.dmp"
+ALIGN 4
+SSMainUITiles2:
+#incbin "SSMainUITiles2.dmp"
+ALIGN 4
+SSMainUITiles3:
+#incbin "SSMainUITiles3.dmp"
+ALIGN 4
+SSMainUITiles4:
+#incbin "SSMainUITiles4.dmp"
+*/
+
+ALIGN 4
+SSMainUIPalette:
+#incbin "JpHack_Palette.dmp"
+
+ALIGN 4
+SSPage1TSA:
+SSPage2TSA:
+SSPage3TSA:
+SSPage4TSA:
+SSPage5TSA:
+#incbin "SSPage1TSA.dmp"
+
+ALIGN 4
+SSPortraitBoxTSA:
+#incbin "SSPortraitBoxTSA.dmp"
+
+
+// StatScreen Bottom-left box
+/*
+PUSH
+
+  // Draw plateau + UIbox
+  ORG 0x88368
+  SHORT 0x2000
+  ORG 0x8837C
+  POIN SSMMSBoxOAM
+  
+
+POP
+
+ALIGN 4
+SSMMSBoxPalette:
+#incbin "SSMMSBoxPal.dmp"
+
+ALIGN 4
+SSMMSBoxOAM:
+#incbin "SSMMSBoxOAM.dmp"
+*/
+
+
+// Other StatScreen graphics.
+// Comment out if using MSS, MSS already repoints these.
+PUSH
+
+  // Repoint Gfx
+  //ORG 0x88650
+  //POIN SSOtherGfx
+
+POP
+
+ALIGN 4
+//SSOtherGfx:
+//#incbin "SSOtherGfx.dmp"
+
+
+// Equipment box
+PUSH
+
+  // Repoint TSA
+  //ORG 0x874E4
+  //POIN SSEquipOverlayTSA
+
+  // Repoint Tiles
+ // ORG 0x88658
+ // POIN SSEquipOverlayTiles
+
+POP
+
+//ALIGN 4
+//SSEquipOverlayTiles:
+//#incbin "Equip.dmp"
+
+//ALIGN 4
+//SSEquipOverlayTSA:
+//#incbin "SSEquipOverlayTSA.dmp"
+
+}

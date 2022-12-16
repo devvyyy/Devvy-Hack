@@ -1,0 +1,87 @@
+PUSH
+  
+  // Change palette based on unit's allegiance
+  ORG 0x8856C
+  callHack_r3(PrepSSHook)
+  SHORT 0xE01F
+
+  // Prepare BG1 tiles
+  ORG 0x878DA
+  SHORT 0x1C22
+  callHack_r3(PrepSSPage)
+  SHORT 0xE006
+  
+  // Initialize BG1 tiles
+  ORG 0x8870C
+  callHack_r3(InitBG1Tiles)
+  
+  // Clear BG1 tiles
+  ORG 0x879EC
+  callHack_r3(ClearBG1Tiles)
+  
+  // Update BG1 tiles
+  ORG 0x87A76
+  SHORT 0x1C28 0x1C21 0x1C3A
+  callHack_r3(UpdateBG1Tiles)
+  
+  // Scroll BG1 vertically
+  ORG 0xA009CC
+  POIN ScrollBG1|0x1
+  
+  // Don't disable BG1 when we exit StatScreen
+  ORG 0x8875A
+  SHORT 0x2102 0x4308 0x46C0
+  
+  // Don't call LoadNewUIPal
+  ORG 0x884CE
+  SHORT 0x46C0 0x46C0
+  
+  // Set alphablend parameters for MMSBox
+  //ORG 0x87E5C
+  //callHack_r0(BlendMMSBox)
+  
+  // No need to reset BLDCNT when exiting SS
+  ORG 0x88776
+  SHORT 0x46C0 0x46C0
+  
+POP
+
+ALIGN 4
+PrepSSHook:
+#include "PrepSSHook.lyn.event"
+  ALIGN 4
+  PrepSlidingBG:
+  #include "PrepSlidingBG.lyn.event"
+  ALIGN 4
+  PrepBG1:
+  #include "PrepBG1.lyn.event"
+
+ALIGN 4
+PrepSSPage:
+#include "PrepSSPage.lyn.event"
+
+ALIGN 4
+InitBG1Tiles:
+#include "InitBG1Tiles.lyn.event"
+
+ALIGN 4
+ClearBG1Tiles:
+#include "ClearBG1Tiles.lyn.event"
+
+ALIGN 4
+UpdateBG1Tiles:
+#include "UpdateBG1Tiles.lyn.event"
+
+ALIGN 4
+ScrollBG1:
+#include "ScrollBG1.lyn.event"
+
+/*
+ALIGN 4
+PrepMMSBox:
+#include "PrepMMSBox.lyn.event"
+
+ALIGN 4
+BlendMMSBox:
+#include "BlendMMSBox.lyn.event"
+*/

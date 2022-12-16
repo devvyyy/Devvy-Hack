@@ -1,0 +1,45 @@
+PUSH
+ORG 0x8E07C
+POIN StatusScreenTSA
+
+ALIGN 4
+BobMenuTiles:
+#incbin "BobMenuTiles.dmp"
+
+ALIGN 4
+BobMenuTilesPalette:
+#incbin "BobMenuTiles.png_pal.dmp"
+
+#define BobMenuTilesPaletteBlue  BobMenuTilesPalette
+#define BobMenuTilesPaletteRed   BobMenuTilesPalette + 0x20
+#define BobMenuTilesPaletteGreen BobMenuTilesPalette + 0x40
+#define BobMenuTilesPaletteGray  BobMenuTilesPalette + 0x60
+
+// Dark Palette
+ORG 0xCEF08
+POIN BobMenuTilesPalette
+
+ORG 0x5B6450
+// Palettes
+POIN BobMenuTilesPaletteBlue
+POIN BobMenuTilesPaletteRed
+POIN BobMenuTilesPaletteGreen
+POIN BobMenuTilesPaletteGray
+
+// For the stat screen
+POIN BobMenuTiles
+POIN BobMenuTiles
+POIN BobMenuTiles
+POIN BobMenuTiles
+
+// For each color style
+POIN BobMenuTiles
+POIN BobMenuTiles
+POIN BobMenuTiles
+POIN BobMenuTiles
+
+ALIGN 4
+StatusScreenTSA:
+#incbin "StatusScreen.tmx.dmp"
+
+POP

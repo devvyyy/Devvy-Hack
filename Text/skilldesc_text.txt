@@ -15,23 +15,40 @@ Cost: 1 Durability.[X]
 Phantomania: Unit deals bonus damage and reduces[N]
 damage taken = 50% of foe's max HP.[X]
 
+## SD_NewBrudetPassive
+# ??
+Dragonforce: Brudet deals bonus damage and[N]
+reduces damage taken = 25% of Def.[X]
+
+## FallenStarStatusName
+Alacrity[X]
+
+## FallenStarStatusDesc
+# change skill wording to 'grants [statusname] before combat, lingering for 1 turn'?
+Mocha dodges all attacks.[X]
+
 ## SD_BulletAwesome
 Flow:[X]
 
 ## SD_Overdrive2
 # needs narrowfonting???
-Overdrive: Combat grants a stack (max; 3).[N]
-At max stacks, grants Chiffon AS/Avoid = missing[N]
-HP, Mov +1, and Full Moon until out of stacks.[X]
+Moon Evoked: Combat grants a stack (max; 2).[N]
+At max stacks, doubles Chiffon's Spd, grants[N]
+Mov +1, and Overdrive until out of stacks.[X]
 
 ## FullMoonStatusName
-Full Moon[X]
+Overdrive[X]
 
 ## FullMoonStatusDesc
 # needs narrowfonting???
 Initiating consumes a stack but grants[N]
-another action. If foe is defeated,[N]
-restores the stack consumed.[X]
+Chiffon another action. If foe is[N]
+defeated, restores the stack consumed.[X]
+
+## SD_ToughItOut
+Tough It Out: If unit's HP is 50% or more,[N]
+reduces damage taken by 10, but take 5 damage[N]
+after combat.[X]
 
 ## SD_Paranoia
 Paranoia: If foe's range > 3, Locro[N]
@@ -74,14 +91,19 @@ Soulbreak for 1 turn. If foe has any[N]
 status effects, grants Hit +30.[X]
 
 ## SD_KingShield
-Switcheroo: Unit toggles between 2 stances:[N]
-Attack Stance after initiating, and[N]
-Defend Stance after waiting.[X]
+Comet Stance: Wegman toggles between 2 stances:[N]
+Attack Stance after initiating with a weapon, and[N]
+Defend Stance after initiating with a shield.[X]
 
-## SD_KingShield2
-Attack Stance: Str +3, deals 25% of foe's[N]
-current HP bonus damage.
-Defend Stance: Def/Res +3, foe cannot follow-up.[X]
+## SD_KingShieldAttackStatus
+Str/Spd +4, Def/Res -2.[N]
+Wegman deals bonus damage = 25%[N]
+of Str.[X]
+
+## SD_KingShieldDefendStatus
+Def/Res +4, Str/Spd -2.[N]
+Wegman reduces damage taken = 25%[N]
+of Def.[X]
 
 ## SD_StaticPanic
 Static Panic: If Jaye initiates, deals[N]

@@ -133,7 +133,7 @@ draw_aid_icon_at 26, 3
 
 draw_trv_text_at 21, 5
 
-draw_textID_at 21, 7, textID=0x78B @The Valiant
+draw_textID_at 21, 7, textID=0x4F1 @Affinity
 draw_affinity_icon_at 24, 7
 
 draw_status_text_at 21, 9
