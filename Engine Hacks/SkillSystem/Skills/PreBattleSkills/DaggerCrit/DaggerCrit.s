@@ -17,7 +17,7 @@ cmp     r0, #0x8         @Poison Dagger
 beq Crit75
 cmp     r0, #0xED         @Sidestep Dirk
 beq Crit25
-cmp     r0, #0xED         @Curtain Call
+cmp     r0, #0xE8         @Curtain Call
 beq Crit50
 cmp     r0, #0x9         @Stiletto
 beq Crit25

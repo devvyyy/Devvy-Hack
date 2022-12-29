@@ -15,10 +15,83 @@ Cost: 1 Durability.[X]
 Phantomania: Unit deals bonus damage and reduces[N]
 damage taken = 50% of foe's max HP.[X]
 
-## SD_NewBrudetPassive
-# ??
+## SD_BreveMirrorPassive
+Dual Strike: If Breve uses all movement[N]
+and initiates, strike x2 consecutively.[X]
+
+## SD_HildrMirrorPassive
+Steady Strike: If Hildr uses all movement[N]
+and initiates, grants Def +20.[X]
+
+## SD_UlrichMirrorPassive
+Vanguard Resolve: If Ulrich is within 3[N]
+spaces of an ally, deal 10 bonus physical[N]
+damage and reverses Defeatist's penalties.[X]
+
+## SD_AnsgarMirrorPassive
+Forge Mastery: Ansgar increases weapon tier[N]
+by 1 (if applicable) to adjacent allies.[X]
+
+## SD_NoraMirrorPassive
+Pacifist: If foe initiates, Nora reduces[N]
+foe's Str by 50% and ignores weapon Mt.[N]
+
+## SD_SequinMirrorPassive
+Abscond: Sequin can Canto 3 spaces[N]
+after stealing.[X]
+
+## SD_MochaMirrorPassive
+Golden Feather: If Mocha initiates, inflicts[N]
+penalty on foe's Spd/Def = 50% of Res.[X]
+
+## SD_RinaMirrorPassive
+Blitzing Reflexes: If Rina is not adjacent to[N]
+an ally and Spd > foe's Spd, deals bonus damage/[N]
+reduces damage taken = difference between Spd stats.[X]
+
+## SD_PandoroMirrorPassive
+Moonlit Shackles: Pandoro inflicts Def -5 on[N]
+foe for 1 turn after combat.[X]
+
+## SD_StrogyMirrorPassive
+Equalizer: If Stroganoff's Spd < foe's Spd -4,[N]
+strikes x2 consecutively.[X]
+
+## SD_DoppioMirrorPassive
+Hero's Guard: If foe initiates, Doppio[N]
+makes a follow-up and foe cannot, and[N]
+foe cannot land a critical hit.[X]
+
+## SD_EspressoMirrorPassive
+Second Wind: If Galeforce activates, grants[N]
+Espresso Atk/Skill/Spd +5 for 1 turn.[X]
+
+## SD_BrudetMirrorPassive
 Dragonforce: Brudet deals bonus damage and[N]
 reduces damage taken = 25% of Def.[X]
+
+## SD_YoryMirrorPassive
+Overclock: Canto 1 space. Yory's Big Iron strikes[N]
+x4 consecutively and deals 5 bonus magical damage.[X]
+
+## SD_FlorisMirrorPassive
+Catch These Hands: At 1 range, Floris ignores[N]
+weapon Mt, targets Def, and strikes x2 consecutively.[X]
+
+## SD_LennardMirrorPassive
+Boasting Shout: If Lennard initiates and defeats foe,[N]
+grants Atk/Spd +5 and Provoke for 1 turn, but[N]
+sets Def/Res to 0.[X]
+
+## SD_IrisMirrorPassive
+Hallowed Ascension: If HP of adjacent units[N]
+is 25% or less, Iris grants immunity to[N]
+non-Light attacks (excludes bosses).[X]
+
+## SD_KaneMirrorPassive
+Booze Cruise: Kane inflicts Atk/Spd -3[N]
+on foes within 2 spaces, and grants Atk/Spd +3[N]
+to allies within 2 spaces.[X]
 
 ## FallenStarStatusName
 Alacrity[X]
@@ -32,33 +105,23 @@ Flow:[X]
 
 ## SD_Overdrive2
 # needs narrowfonting???
-Moon Evoked: Combat grants a stack (max; 2).[N]
-At max stacks, doubles Chiffon's Spd, grants[N]
-Mov +1, and Overdrive until out of stacks.[X]
+[_R][_e][_s][_o][_n][_a][_n][_c][_e][_Colon][_SP][_I][_n][_i][_t][_i][_a][_t][_i][_n][_g][_SP][_g][_r][_a][_n][_t][_s][_SP][_a][_SP][_s][_t][_a][_c][_k][_SP]([_m][_a][_x];[_SP]2)[_Dot][N]
+[_I][_n][_i][_t][_i][_a][_t][_i][_n][_g][_SP][_a][_t][_SP][_m][_a][_x][_SP][_s][_t][_a][_c][_k][_s][_SP][_a][_c][_t][_i][_v][_a][_t][_e][_s][_SP][_O][_v][_e][_r][_d][_r][_i][_v][_e][N]
+[_u][_n][_t][_i][_l][_SP][_o][_u][_t][_SP][_o][_f][_SP][_s][_t][_a][_c][_k][_s][_Dot][X]
 
 ## FullMoonStatusName
 Overdrive[X]
 
 ## FullMoonStatusDesc
 # needs narrowfonting???
-Initiating consumes a stack but grants[N]
-Chiffon another action. If foe is[N]
-defeated, restores the stack consumed.[X]
-
-## SD_ToughItOut
-Tough It Out: If unit's HP is 50% or more,[N]
-reduces damage taken by 10, but take 5 damage[N]
-after combat.[X]
+[_S][_p][_d][_SP][_x][_2][_Comma][_SP][_M][_o][_v][_SP][_Plus][_2][_Dot][_SP][_I][_n][_i][_t][_i][_a][_t][_i][_n][_g][_SP][_c][_o][_n][_s][_u][_m][_e][_s][_SP][_a][N]
+[_s][_t][_a][_c][_k][_SP][_b][_u][_t][_SP][_g][_r][_a][_n][_t][_s][_SP][_C][_h][_i][_f][_f][_o][_n][_SP][_a][_n][_o][_t][_h][_e][_r][_SP][_a][_c][_t][_i][_o][_n][_Dot][N]
+[_I][_f][_SP][_f][_o][_e][_SP][_i][_s][_SP][_d][_e][_f][_e][_a][_t][_e][_d][_Comma][_SP][_s][_t][_a][_c][_k][_SP][_i][_s][_SP][_r][_e][_s][_t][_o][_r][_e][_d][_Dot][X]
 
 ## SD_Paranoia
 Paranoia: If foe's range > 3, Locro[N]
 dodges all attacks. Can pass through[N]
 foes. If HP < 100%, Avoid/AS +20.[X]
-
-## SD_WarCry
-War Cry: If unit initiates and defeats foe,[N]
-grants Atk +5, inflicts Def/Res -5, and[N]
-grants Provoke for 1 turn.[X]
 
 ## SD_SettW
 Down But Not Out: If unit's HP is 25% or less,[N]
@@ -69,11 +132,6 @@ Defend for 1 turn after combat.[X]
 Timewinder: Unit can place an Echo in[N]
 an adjacent space. Recast to rewind back[N]
 to the Echo, taking its place and HP.[X]
-
-## SD_BruhIDK
-Blitzing Reflex: If unit is not adjacent to[N]
-an ally and Spd > foe's Spd, boosts damage dealt/[N]
-reduces damage taken = difference between Spd stats.[X]
 
 ## SD_BruhIDK2
 Riding Solo: If unit is not adjacent[N]
@@ -185,9 +243,8 @@ Duck and Cover: If Zopf does not move,[N]
 grants Hit +30 and Canto 5 spaces.[X]
 
 ## SD_FunnyTime
-I Make The Rules: If unit's Spd is less[N]
-than foe's Spd, unit follow-ups and[N]
-foe cannot.[X]
+I Make The Rules: If unit's Spd < foe's Spd,[N]
+unit follow-ups and foe cannot.[X]
 
 ## SD_P2Ch1ArmorBossSkill
 Strong and Tough: If unit's Move or Spd[N]
@@ -247,11 +304,6 @@ magic spells.[X]
 ## SD_Alacrity
 Alacrity: If Mocha uses all movement[N]
 and initiates, dodge all attacks.[X]
-
-## SD_CatchTheseHands
-Catch These Hands: At 1 range, ignores[N]
-unit's weapon Mt, targets Def, and unit[N]
-strikes x2 consecutively.[X]
 
 ## SD_SoulBlade
 Soul Blade: Ignores unit's weapon Mt,[N]
@@ -464,7 +516,7 @@ every 25% of missing HP.[X]
 
 ## SD_CritDie
 Show Stopper: Radcliff always lands a[N]
-Critical Hit against foes with 25% or[N]
+critical hit against foes with 25% or[N]
 less HP.[X]
 
 ## SD_SearingSword

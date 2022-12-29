@@ -31,6 +31,28 @@ POIN SkillTester
 WORD DartingBlowID
 
 ALIGN 4
+OverdriveStatus:
+#incbin "Overdrive/Status.dmp"
+POIN SkillTester
+WORD OverdriveID
+
+ALIGN 4
+Overdrive:
+#incbin "Overdrive/Overdrive.dmp"
+POIN SkillTester
+WORD OverdriveID
+POIN OverdriveEvent
+#include "Overdrive/OverdriveEvent.event"
+
+ALIGN 4
+OverdriveDecay:
+#incbin "Overdrive/Decay.dmp"
+POIN SkillTester
+WORD OverdriveID
+POIN DecayEvent
+#include "Overdrive/DecayEvent.event"
+
+ALIGN 4
 ShadowEyeMark:
 #incbin "FallenStar/FallenStar.dmp"
 POIN SkillTester

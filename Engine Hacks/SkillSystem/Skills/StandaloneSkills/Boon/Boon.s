@@ -12,6 +12,25 @@
 
 push {r1-r3}
 
+# Are we in OVERDRIVE!!!!1?
+mov r0, #0x1F
+and r0, r3 @ status index low 4 bits
+cmp r0, #0x15 @ Overdrive index
+bne CheckPetrify
+ 
+push {r3}
+@check if Overdrive flag is set; if so, dont end status
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0xED @overdrive flag
+.short 0xF800
+pop {r3}
+cmp r0, #0x0
+beq CheckPetrify
+  pop {r1-r3}
+  b GoBack
+
+CheckPetrify:
 # Are we petrified?
 mov r0, #0x1F
 and r0, r3 @ status index low 4 bits

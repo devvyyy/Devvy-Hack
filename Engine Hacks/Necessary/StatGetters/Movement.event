@@ -17,6 +17,7 @@ pMovModifiers: // Movement
 	POIN prGaleforceCheck
 	POIN prPassCheck
 	POIN prEmpowerCheck
+	POIN prStatusOverdriveMovCheck
 WORD 0
 
 prAddUnitBaseMov: // byte 0x12 in ROM class data is base class movement
@@ -71,6 +72,10 @@ prMoonCheck:
 	rIfUnitHasState(0x400)
 		rIfUnitHasSkill(MoonEvokedID)
 			rConstant(0)
+			
+prStatusOverdriveMovCheck:
+	rIfUnitHasStatus(0x15) //Overdrive
+			rAddConst(2)
 
 prRallyMov:
 	#include "_asm/RallyMov.lyn.event"
