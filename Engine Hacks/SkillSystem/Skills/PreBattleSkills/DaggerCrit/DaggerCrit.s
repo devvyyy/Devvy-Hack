@@ -61,7 +61,7 @@ Crit100:
 @reduce 100 crit
 mov r1, #0x66
 ldrh r0, [r4, r1] @crit
-sub r0, #100
+sub r0, #99 @99 because uhhhh 100 doesnt fit ecks dee
 strh r0, [r4,r1]
 
 End:

@@ -10,6 +10,71 @@ Burst Fire: Attack dealing AoE 2x1 damage[N]
 scaling with Dex. Converts Str to Hit.[N]
 Cost: 1 Durability.[X]
 
+## SD_CombatMedic
+Even the Odds: If Hartwick initiates, restores (50% AP) HP[N]
+to allies within 2 spaces of both him and target (overlapping stacks),[N]
+and Dash up to 2 spaces (or cardinally through a wall).[X]
+
+## SD_CombatMedic2
+Heat Rising: Combat is a free action, but[N]
+grants 1 stack (max; 5). At max stacks,[N]
+Overheat and skip Hartwick's next turn.[X]
+
+## SD_CombatMedic3
+# railgun
+Rev' Up: If Hartwick attacked, combat grants 1 stack (max; 5).[N]
+At max stacks, initiating deals (25% of foe's max HP + 150% AP)[N]
+magical damage, cannot follow-up or be countered, and has x2 range.[X]
+
+## SD_BossSkill
+# boss shield icon
+Commander: If unit's HP is full or if foe's range = 3+,[N]
+reduces damage taken = 50% of foe's Str/Eth, and[N]
+foe cannot land critical hits.[X]
+
+## SD_Malzahar
+# maybe its at full hp but you take 1 true damage afterwards idk
+Phantom Shift: Once per map, unit negates[N]
+all enemy attacks for 1 combat.[N]
+If foe is defeated, refreshes barrier.[X]
+
+## SD_AllOut
+# show in MMB/change mug
+Limit Break: Unit can toggle 'All Out' to
+halve max HP/Def/Res, but grants Atk =[N]
+HP lost, and unit follows up and foe cannot.[X]
+
+## SD_Executors
+Obliterate: If unit initiates and foe is[N]
+not adjacent to another foe, deals bonus[N]
+true damage = 500% of foe's missing HP.[X]
+
+## SD_KingShield
+# global flag
+Adapting Poise: Wegman toggles between 2 stances:[N]
+Blade Stance after initiating with a weapon, and[N]
+Shield Stance after initiating with a shield.[X]
+
+## SD_KingShieldAttackStatus
+# maybe make these double/halve stats instead?
+Str/Spd +5, Def/Res -3.[N]
+Wegman deals bonus damage = 25%[N]
+of Str.[X]
+
+## SD_KingShieldDefendStatus
+Def/Res +5, Str/Spd -3.[N]
+Wegman reduces damage taken = 25%[N]
+of Def.[X]
+
+## SD_BlindingFlash
+Blinding Flash: If unit initiates and[N]
+Spd > foe's Spd +6, follow-ups are consecutive,[N]
+and if Spd > foe's Spd +8, foe cannot counter.[X]
+
+## SD_AmonglaSwag
+16-Caliber Net: After combat, unit Roots[N]
+foe for 1 turn.[X]
+
 ## SD_FunnySans
 # boss with 1 str and def
 Phantomania: Unit deals bonus damage and reduces[N]
@@ -100,21 +165,26 @@ Alacrity[X]
 # change skill wording to 'grants [statusname] before combat, lingering for 1 turn'?
 Mocha dodges all attacks.[X]
 
+## SD_Rewind
+Rewind: Once per map, if unit's HP is 25% or[N]
+less after combat, restores 50% missing HP, Canto 5[N]
+spaces, then grants Stasis for 1 turn.[X]
+
 ## SD_BulletAwesome
 Flow:[X]
 
 ## SD_Overdrive2
-# needs narrowfonting???
-[_R][_e][_s][_o][_n][_a][_n][_c][_e][_Colon][_SP][_I][_n][_i][_t][_i][_a][_t][_i][_n][_g][_SP][_g][_r][_a][_n][_t][_s][_SP][_a][_SP][_s][_t][_a][_c][_k][_SP]([_m][_a][_x];[_SP]2)[_Dot][N]
-[_I][_n][_i][_t][_i][_a][_t][_i][_n][_g][_SP][_a][_t][_SP][_m][_a][_x][_SP][_s][_t][_a][_c][_k][_s][_SP][_a][_c][_t][_i][_v][_a][_t][_e][_s][_SP][_O][_v][_e][_r][_d][_r][_i][_v][_e][N]
-[_u][_n][_t][_i][_l][_SP][_o][_u][_t][_SP][_o][_f][_SP][_s][_t][_a][_c][_k][_s][_Dot][X]
+# uses flag 0xED, needs narrowfonting???
+[_A][_s][_h][_e][_n][_SP][_S][_t][_o][_r][_m][_Colon][_SP][_I][_n][_i][_t][_i][_a][_t][_i][_n][_g][_SP][_g][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP]([_m][_a][_x];[_SP]2)[_Dot][N]
+[_A][_t][_SP][_m][_a][_x][_SP][_s][_t][_a][_c][_k][_s][_Comma][_SP][_C][_h][_i][_f][_f][_o][_n][_SP][_a][_c][_t][_i][_v][_a][_t][_e][_s][_SP][_O][_v][_e][_r][_d][_r][_i][_v][_e][N]
+[_o][_n][_SP][_i][_n][_i][_t][_i][_a][_t][_i][_o][_n][_SP][_u][_n][_t][_i][_l][_SP][_o][_u][_t][_SP][_o][_f][_SP][_s][_t][_a][_c][_k][_s][_Dot][X]
 
 ## FullMoonStatusName
 Overdrive[X]
 
 ## FullMoonStatusDesc
 # needs narrowfonting???
-[_S][_p][_d][_SP][_x][_2][_Comma][_SP][_M][_o][_v][_SP][_Plus][_2][_Dot][_SP][_I][_n][_i][_t][_i][_a][_t][_i][_n][_g][_SP][_c][_o][_n][_s][_u][_m][_e][_s][_SP][_a][N]
+[_S][_p][_d][_SP][_x][_2][_Comma][_SP][_M][_o][_v][_e][_SP][_Plus][_2][_Dot][_SP][_I][_n][_i][_t][_i][_a][_t][_i][_n][_g][_SP][_c][_o][_n][_s][_u][_m][_e][_s][_SP][_a][N]
 [_s][_t][_a][_c][_k][_SP][_b][_u][_t][_SP][_g][_r][_a][_n][_t][_s][_SP][_C][_h][_i][_f][_f][_o][_n][_SP][_a][_n][_o][_t][_h][_e][_r][_SP][_a][_c][_t][_i][_o][_n][_Dot][N]
 [_I][_f][_SP][_f][_o][_e][_SP][_i][_s][_SP][_d][_e][_f][_e][_a][_t][_e][_d][_Comma][_SP][_s][_t][_a][_c][_k][_SP][_i][_s][_SP][_r][_e][_s][_t][_o][_r][_e][_d][_Dot][X]
 
@@ -148,21 +218,6 @@ Shadow Eye: After combat, Levain inflicts[N]
 Soulbreak for 1 turn. If foe has any[N]
 status effects, grants Hit +30.[X]
 
-## SD_KingShield
-Comet Stance: Wegman toggles between 2 stances:[N]
-Attack Stance after initiating with a weapon, and[N]
-Defend Stance after initiating with a shield.[X]
-
-## SD_KingShieldAttackStatus
-Str/Spd +4, Def/Res -2.[N]
-Wegman deals bonus damage = 25%[N]
-of Str.[X]
-
-## SD_KingShieldDefendStatus
-Def/Res +4, Str/Spd -2.[N]
-Wegman reduces damage taken = 25%[N]
-of Def.[X]
-
 ## SD_StaticPanic
 Static Panic: If Jaye initiates, deals[N]
 bonus damage = 50% of Spd, chaining[N]
@@ -180,13 +235,13 @@ HP = 20% of missing HP and grants[N]
 
 ## SD_Zephyr
 # use new status effect
-Zephyr: If Xidorn initiates, grants[N]
+Zephyr: If Xavier initiates, grants[N]
 Whirlwind to both sides for 1 turn.[X]
 
 ## SD_Overheat
 # maybe use flags 0x20-23
 Overheat: If unit attacked, combat grants[N]
-a stack (max; 3). At max stacks, halves[N]
+1 stack (max; 3). At max stacks, halves[N]
 Str/Skill and sets Spd/Move to 0 for 1 turn.[X]
 
 ## SD_Radiance
@@ -250,10 +305,6 @@ unit follow-ups and foe cannot.[X]
 Strong and Tough: If unit's Move or Spd[N]
 is less than foe's Move or Spd, x2 hits,[N]
 and unit follow-ups and foe cannot.[X]
-
-## SD_Executors
-Obliterate: Deals bonus damage =[N]
-500% of foe's missing HP.[X]
 
 ## SD_StandTogether
 Stand Together: If adjacent to 2 or more[N]
@@ -596,7 +647,7 @@ cavalry ally, unit takes -2 damage.[X]
 ## SD_Galestorm
 # Pursuer
 Fusillade: If Quarrel initiates, follow-up[N]
-and foe cannot, and if foe also can't[N]
+and foe cannot, and if foe also cannot[N]
 counter, strike x2 consecutively.[X]
 
 ## SD_Graaaagh
@@ -766,8 +817,9 @@ grants Attack Speed +2.[X]
 [_f][_o][_l][_l][_o][_w]-[_u][_p][_SP][_a][_t][_t][_a][_c][_k][_s][_SP][_o][_c][_c][_u][_r][_SP][_b][_e][_f][_o][_r][_e][_SP][_c][_o][_u][_n][_t][_e][_r][_Dot][X]
 
 ## SD_Inspire
-Inspire: Wustenhoff grants +2 Atk to physical[N]
-allies on the map with HP > 50% or more.[X]
+Inspire: Wustenhoff grants +5 Atk and "Unit[N]
+strikes x2 consecutively to all physical[N]
+NPCs on the map with HP > 50% or more.[X]
 
 ## SD_BitterCold
 Bitter Cold: Hartmann inflicts Rsl -2 to[N]

@@ -13,6 +13,16 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TURN 0x0 EarlyRein [3,0] 0x0
+TURN 0x0 LateRuinsRein [5,0] 0x0
+TURN 0x0 BotMidReinSpawn [7,0] 0x0
+TURN 0x0 MidRein [8,0] 0x0
+TURN 0x0 LateRuinsRein2 [9,0] 0x0
+TURN 0x0 MidRein2 [11,0] 0x0
+TURN 0x0 TopReinEvent [13,0] 0x0
+TURN 0x0 TopRein2Event [15,0] 0x0
+TURN 0x0 TopRightEvent [18,0] 0x0
+
 TURN 0x0 GoodbyeDespair [25,0] 0x0
 	END_MAIN
 
@@ -30,10 +40,14 @@ MiscBasedEvents:
 	END_MAIN
 
 LocationBasedEvents:
+LOCA 0xA CheckIfWinLeft [1,7] 0x11
+LOCA 0xB CheckIfWinMid [16,15] 0x11
+LOCA 0xC CheckIfWinRight [22,3] 0x11
+
 Village(0x8,Village1,23,29)
 Village(0x9,Village2,2,18)
-Village(0xA,Village3,9,18)
-Village(0xB,Village4,13,2)
+Village(0x11,Village3,9,18)
+Village(0x12,Village4,13,2)
 House(0x0,House1,18,16) //0xC
 House(0x0,House2,13,7) //0xD
 House(0x0,House3,12,4) //0xE
@@ -41,20 +55,70 @@ House(0x0,House4,9,3) //0xF
 House(0x0,House5,11,1) //0x10
 	END_MAIN
 	
+CheckIfWinLeft:
+
+CHECK_EVENTID 0xA
+BEQ 0x1 0xC 0x0
+CHECK_EVENTID 0xB
+BEQ 0x1 0xC 0x0
+CHECK_EVENTID 0xC
+BEQ 0x1 0xC 0x0
+ENUT 0x3
+LABEL 0x1
+EVBIT_T 0x7
+
+CALL EndingScene
+
+ENDA
+
+	
+CheckIfWinMid:
+
+CHECK_EVENTID 0xA
+BEQ 0x1 0xC 0x0
+CHECK_EVENTID 0xB
+BEQ 0x1 0xC 0x0
+CHECK_EVENTID 0xC
+BEQ 0x1 0xC 0x0
+ENUT 0x3
+LABEL 0x1
+EVBIT_T 0x7
+
+CALL EndingScene
+
+ENDA
+
+CheckIfWinRight:
+
+CHECK_EVENTID 0xA
+BEQ 0x1 0xC 0x0
+CHECK_EVENTID 0xB
+BEQ 0x1 0xC 0x0
+CHECK_EVENTID 0xC
+BEQ 0x1 0xC 0x0
+ENUT 0x3
+LABEL 0x1
+EVBIT_T 0x7
+
+CALL EndingScene
+
+ENDA
+
+	
 Village1:
-VillageEventItem(Placeholder1, 0x1, 0x68) //hexlock shield
+VillageEventItem(Placeholder1, 0x1, 0xA0) //RAY S
 ENDA
 
 Village2:
-VillageEventItem(Placeholder1, 0x1, 0x68) //hexlock shield
+VillageEventItem(Placeholder1, 0x1, KillerLance)
 ENDA
 
 Village3:
-VillageEventItem(Placeholder1, 0x1, 0x68) //hexlock shield
+VillageEventItem(Placeholder1, 0x1, MasterSeal)
 ENDA
 
 Village4:
-VillageEventItem(Placeholder1, 0x1, 0x68) //hexlock shield
+VillageEventItem(Placeholder1, 0x1, 0xB4) //miracle ring
 ENDA
 
 
@@ -132,9 +196,13 @@ UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [14,31] 0b 0x0 0x0 0x0 [IronAxe,0xE9,E
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [14,32] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 	UNIT
 	
-NewRecruits:
-UNIT Xidorn GriffonKnight 0x1 Level(1, Ally, 0)   [14,32] 0b 0x0 0x0 0x0 [ShiningRifle, 0xDA] [0x0,0x0,0x0,0x0]
-
+XavierLesUnit:
+UNIT Xidorn GriffonKnight 0x1 Level(4, Ally, 0)   [14,32] 0b 0x0 0x0 0x0 [ShiningRifle, 0xDA] [0x0,0x0,0x0,0x0]
+	UNIT
+	
+TheArcherGang:
+UNIT 0x2D Sniper 0x1 Level(5, Ally, 0)   [14,32] 0b 0x0 0x0 0x0 [0xD8, Elixir] [0x0,0x0,0x0,0x0]
+UNIT Quarrel Archer 0x1 Level(1, Ally, 0)   [14,32] 0b 0x0 0x0 0x0 [IronBow, Speedwing] [0x0,0x0,0x0,0x0]
 	UNIT
 
 EnemyUnits:
@@ -196,13 +264,13 @@ UNIT Aeteria WyvernKnight 0x1 Level(9, Enemy, 1)     [0,28] 0b 0x0 0x0 0x0 [Stee
 	UNIT
 
 RuinsRein:
-UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [20,14] 0 0 1 REDA21R14 [Flux] AttackInRangeAI
+UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [20,14] 0 0 1 REDA21R14 [Flux] ChargeAI
 UNIT Aeteria Druid 0x1 Level(2, Enemy, 1)     [20,14] 0b 0x0 0x0 0x0 [Flux] AttackInRangeAI
 	UNIT
 	
 RuinsRein2:
 UNIT CavSoul ACav 0x1 Level(10, Enemy, 1)     [20,14] 0 0 1 REDA21R14 [SteelAxe] AttackInRangeAI
-UNIT InfantrySoul Soldier 0x1 Level(2, Enemy, 1)     [20,14] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
+UNIT InfantrySoul Soldier 0x1 Level(2, Enemy, 1)     [20,14] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
 	UNIT
 	
 BotLeftMountainsRein:
@@ -220,9 +288,69 @@ UNIT Aeteria Brigand 0x1 Level(9, Enemy, 1)     [0,29] 0 0 1 REDA0R29 [KillerAxe
 	UNIT
 	
 BotMidRein:
-UNIT Aeteria APal 0x1 Level(9, Enemy, 1)     [11,34] 0b 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
-UNIT Aeteria LPal 0x1 Level(9, Enemy, 1)     [12,34] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
+UNIT Aeteria APal 0x1 Level(9, Enemy, 1)     [11,34] 0b 0x0 0x0 0x0 [SteelAxe] StallOneTurnAI
+UNIT Aeteria LPal 0x1 Level(9, Enemy, 1)     [12,34] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
 	UNIT
+	
+TopRein:
+UNIT Aeteria 0x21 0x1 Level(10, Enemy, 1)     [22,0] 0b 0x0 0x0 0x0 [SteelBow] StallOneTurnAI
+UNIT Aeteria 0x22 0x1 Level(10, Enemy, 1)     [25,4] 0b 0x0 0x0 0x0 [SteelAxe] StallOneTurnAI
+	UNIT
+	
+TopRein2:
+UNIT Aeteria MageKnight 0x1 Level(9, Enemy, 1)     [11,34] 0b 0x0 0x0 0x0 [Wind] StallOneTurnAI
+	UNIT
+	
+TopRightMountainsRein:
+UNIT Aeteria 0x22 0x1 Level(10, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
+UNIT Aeteria 0x21 0x1 Level(10, Enemy, 1)     [18,0] 0b 0x0 0x0 0x0 [SteelBow] StallOneTurnAI
+UNIT Aeteria 0x22 0x1 Level(10, Enemy, 1)     [22,0] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
+	UNIT
+	
+LateRuinsRein:
+SpawnReinforcements(RuinsRein)
+NoFade
+ENDA
+
+LateRuinsRein2:
+SpawnReinforcements(RuinsRein2)
+NoFade
+ENDA
+
+EarlyRein: //earliest
+SpawnReinforcements(BotLeftMountainsRein)
+NoFade
+ENDA
+
+MidRein: //mid
+SpawnReinforcements(BrigandTopLeftRein)
+NoFade
+ENDA
+
+BotMidReinSpawn: //mid
+SpawnReinforcements(BrigandBotLeftRein)
+NoFade
+ENDA
+
+MidRein2: //late
+SpawnReinforcements(BotMidRein)
+NoFade
+ENDA
+
+TopReinEvent:
+SpawnReinforcements(TopRein)
+NoFade
+ENDA
+
+TopRein2Event:
+SpawnReinforcements(TopRein2)
+NoFade
+ENDA
+
+TopRightEvent:
+SpawnReinforcements(TopRightMountainsRein)
+NoFade
+ENDA
 
 Traps1:
 BLST [12,27] 0x37 //rapidballista
