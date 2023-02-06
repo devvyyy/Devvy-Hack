@@ -65,9 +65,20 @@ Abernathy_Mug:
 setMugEntryExtend(0x0C, Abernathy_Mug, 2, 6, 3, 4, 0, 4, 0, 0)
 
 ALIGN 16
-Wegman_Mug:
-#incext PortraitFormatter "Wegman.png"
-setMugEntry(0x0D, Wegman_Mug, 3, 5, 3, 3)
+WegmanMugData: //sword mini
+#incbin "Wegman_mug.dmp"
+#incbin "Wegman_frames.dmp"
+#incbin "Wegman_palette.dmp"
+#incbin "Wegman_minimug.dmp"
+setMugEntry(0xD, WegmanMugData, 3, 5, 3, 3)
+
+ALIGN 16
+WegmanShieldMugData: //shield mini
+#incbin "Wegman_mug.dmp"
+#incbin "Wegman_frames.dmp"
+#incbin "Wegman_palette.dmp"
+#incbin "WegmanShield_minimug.dmp"
+setMugEntry(0xBB, WegmanShieldMugData, 3, 5, 3, 3)
 
 ALIGN 16 //Flan by ZessDynamite
 Flan_Mug:
@@ -155,9 +166,20 @@ Irene_Mug:
 setMugEntry(0x1C, Irene_Mug, 3, 6, 3, 4)
 
 ALIGN 16
-Brulee_Mug:
-#incext PortraitFormatter "Floris.png"
-setMugEntry(0x1D, Brulee_Mug, 3, 4, 3, 2)
+FlorisMugData:
+#incbin "Floris_mug.dmp"
+#incbin "Floris_frames.dmp"
+#incbin "Floris_palette.dmp"
+#incbin "Floris_minimug.dmp"
+setMugEntry(0x1D, FlorisMugData, 3, 4, 3, 2)
+
+ALIGN 16
+FlorisDressMugData:
+#incbin "FlorisDress_mug.dmp"
+#incbin "Floris_frames.dmp"
+#incbin "Floris_palette.dmp"
+#incbin "Floris_minimug.dmp"
+setMugEntry(0xBA, FlorisDressMugData, 3, 4, 3, 2)
 
 ALIGN 16
 Katsu_Mug: //by Busky Husky

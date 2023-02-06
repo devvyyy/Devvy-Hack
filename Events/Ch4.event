@@ -219,6 +219,14 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+
+RANDOMNUMBER 0x64 //floris random shirt LOL
+SVAL 0x7 0x32
+BLT 0x9000 0xC 0x7
+SetFlag(0xB1) //floris shirt flag, 0xB2 is wegman's toggle flag
+REMA
+LABEL 0x9000
+
 SetBackground(0x3F)
 Music(0x4E)
 STAL 5

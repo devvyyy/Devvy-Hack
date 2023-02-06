@@ -1,7 +1,17 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
-//Change the Affin text ID in the weapon stats to say 'Weapon'
+// Widens the song name display in Sound Room
+PUSH
+ORG 0x0B0110
+BYTE 0x20
+ORG 0x0B0134
+BYTE 0x05
+
+POP
+
+
+// Change the Affin text ID in the weapon stats to say 'Weapon'
 PUSH
 ORG 0x1EA3C
 SHORT 0x78B

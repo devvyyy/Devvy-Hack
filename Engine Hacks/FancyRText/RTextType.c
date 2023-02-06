@@ -1,8 +1,40 @@
 #include "gbafe.h"
+
+typedef struct DurabilityDescEntry DurabilityDescEntry;
 extern bool SkillTester(Unit* unit, int skillID);
 
 static inline bool IsBattleReal() {
     return gBattleStats.config & (BATTLE_CONFIG_REAL | BATTLE_CONFIG_SIMULATE | BATTLE_CONFIG_SOLO);
+}
+struct DurabilityDescEntry {
+    u16  descID;
+    bool useColonTerminator;
+    u8   pad;
+    u16* descriptionTable[];
+};
+
+extern DurabilityDescEntry DurabilityBasedItemDescList[];
+
+//Returns true if descID has an entry in DurabilityBasedItemList.
+//Returns false otherwise
+bool IsDescDurabilityBased(u16 descID) {
+    for (int i = 0; DurabilityBasedItemDescList[i].descID; i++) {
+        if (DurabilityBasedItemDescList[i].descID == descID) {
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
+//If descID has an entry in DurabilityBasedITemList, return that entry's description table
+//If no entry is found, return a null pointer
+u16* GetDurabilityBasedItemTable(u16 descID) {
+    for (int i = 0; DurabilityBasedItemDescList[i].descID; i++) {
+        if (DurabilityBasedItemDescList[i].descID == descID) {
+            return *DurabilityBasedItemDescList->descriptionTable;
+        }
+    }
+    return 0;
 }
 
 bool IsItemShield(u16 item) {
@@ -85,33 +117,39 @@ int SetupWeaponHelpText(u16 item) {
 }
 
 int GetItemDescId(int item) {
+    u16 itemDesc = GetItemData(GetItemIndex(item))->descTextId;
+
     if (IsBattleReal() && SkillTester(&gBattleActor.unit, 102)) { //unit with PhaseID
         switch ((item & 0xFF)) {
             case 0xC3: //Iron Rifle :)
-                return 0x212;
+                itemDesc = 0x212;
             case 0xC4: //Steel Rifle :]
-                return 0x213;
+                itemDesc = 0x213;
             case 0xC5: //Silver Rifle :D
-                return 0x214;
+                itemDesc = 0x214;
             case 0xC8: //Snaring Rifle >:0
-                return 0x215;
+                itemDesc = 0x215;
 			case 0xD8: //Bloody Rifle
-                return 0x216;
+                itemDesc = 0x216;
 			case 0xD9: //Lockin Rifle
-                return 0x217;
+                itemDesc = 0x217;
 			case 0xDA: //Sonic Rifle
-                return 0x218;				
+                itemDesc = 0x218;				
 			case 0xDB: //Backshield Rifle
-                return 0x219;
+                itemDesc = 0x219;
 			case 0x8A: //Arcane Rifle
-                return 0x21A;
+                itemDesc = 0x21A;
 			case 0xAD: //Bodkin Rifle
-                return 0x21B;	
+                itemDesc = 0x21B;	
 			case 0xA9: //Hunting Rifle
-                return 0x21C;
+                itemDesc = 0x21C;
 			case 0xCB: //Last Hour
-                return 0x21D;				
+                itemDesc = 0x21D;				
         }
     }
-    return GetItemData(GetItemIndex(item))->descTextId; 
+    else if (IsDescDurabilityBased(itemDesc)) {
+        itemDesc = GetDurabilityBasedItemTable(itemDesc)[(item >> 0x8)];
+    }
+
+    return itemDesc; 
 }
