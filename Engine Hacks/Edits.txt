@@ -1,6 +1,54 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+// Panacea
+PUSH
+ORG 0x290EE
+SHORT 0x2800 0xD001
+POP
+
+//Speed up Poison
+
+// HP bar animation
+PUSH
+ORG 0x9A50AE
+BYTE 0x1E
+
+ORG 0x9A50BE
+BYTE 0x0F
+
+ORG 0x9A50CE
+BYTE 0x5
+POP
+
+// Mist animation
+PUSH
+ORG 0x9A6FA0
+BYTE 0x02
+ORG 0x9A6FA4
+BYTE 0x02
+ORG 0x9A6FA8
+BYTE 0x02
+ORG 0x9A6FAC
+BYTE 0x02
+ORG 0x9A6FB0
+BYTE 0x02
+ORG 0x9A6FB4
+BYTE 0x02
+ORG 0x9A6FB8
+BYTE 0x02
+ORG 0x9A6FBC
+BYTE 0x02
+ORG 0x9A6FC0
+BYTE 0x01
+ORG 0x9A6FC4
+BYTE 0x01
+ORG 0x9A6FC8
+BYTE 0x01
+ORG 0x9A6FCC
+BYTE 0x01
+POP
+
 // Widens the song name display in Sound Room
 PUSH
 ORG 0x0B0110

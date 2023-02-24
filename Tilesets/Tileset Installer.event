@@ -69,6 +69,23 @@ ALIGN 4
 	EventPointerTable(0x44, FlasubanVillageMapConfig)
 	
 	
+	//FF2 Town by WaVe
+	ALIGN 4
+	FF2TownObjects: 
+    #incbin "FF2Town/FF2TownObject.dmp"
+    ALIGN 4
+    FF2TownPalette:
+    #incbin "FF2Town/FF2TownPal.dmp"
+	ALIGN 4
+	FF2TownConfig:
+    #incbin "FF2Town/FF2TownConfig.dmp"
+	
+	ALIGN 4
+	EventPointerTable(0x88, FF2TownObjects)
+    EventPointerTable(0x89, FF2TownPalette)
+	EventPointerTable(0x8A, FF2TownConfig)
+	
+	
 	//Snow Stronghold by N426
 	
 	ALIGN 4

@@ -22,15 +22,15 @@ TurnEventEnemy(0,OMGMyHeroAGAIN,6)
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x8,MelyaRecruit, Chiffon, Melya)
+CharacterEventBothWays(0x8,KatsuRecruit, Chiffon, 0x2)
 	END_MAIN
 
-MelyaRecruit:
+KatsuRecruit:
 MUSS 0x30
 STAL 33
 Text(Placeholder1)
 MURE 0x2
-CUSA Melya
+CUSA 0x2
 NoFade
 ENDA
 
@@ -130,9 +130,9 @@ UNIT Aeteria SPal 0x1 Level(1, Enemy, 1)     [13,6] 0b 0x0 0x0 0x0 [MageSword,] 
 UNIT Aeteria Bishop 0x1 Level(1, Enemy, 1)     [15,6] 0b 0x0 0x0 0x0 [Light2] BossAI
 UNIT Aeteria ACav 0x1 Level(5, Enemy, 1)     [18,0] DropItem 0x0 0x0 0x0 [MageAxe] TwoActionAI
 UNIT AeteriaStealable Shaman 0x1 Level(5, Enemy, 1)     [19,16] 0b 0x0 0x0 0x0 [Flux,RedGem] TwoActionAI
-UNIT Melya Ranger 0x1 Level(2, Enemy, 1)     [4,10] 0b 0x0 0x0 0x0 [0xD9,Elixir] BossAI
+UNIT 0x2 FalcoKnight 0x1 Level(2, Enemy, 1)     [4,10] 0b 0x0 0x0 0x0 [BraveLance,Elixir] BossAI
 	UNIT
-	
+
 Rein1:
 UNIT Aeteria Thaumaturge 0x1 Level(6, Enemy, 1)     [2,0] 0b 0x0 0x0 0x0 [Thunder] ChargeAI
 UNIT Aeteria ACav 0x1 Level(6, Enemy, 1)     [3,0] 0b 0x0 0x0 0x0 [Hammer] ChargeAI

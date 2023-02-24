@@ -64,8 +64,8 @@ ORG 0xAC19C
 	POIN DifficultySelectTSA
 
 // Status Menu
-//ORG 0x8E07C
-//	POIN StatusMenuTSA
+ORG 0x8E07C
+POIN StatusMenuTSA
 
 // Shop Mug Frame
 ORG 0xB4E04
@@ -255,5 +255,9 @@ POIN PopupBanner
 ORG PopR_StartBattlePopups - 0xB5
 POIN MenuTilesPaletteBlue
 */
+
+// Guide Menu
+ORG 0xCEEFC
+POIN OptionsMenuTSA
 
 POP

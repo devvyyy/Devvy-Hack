@@ -26,16 +26,21 @@ Rev' Up: If Hartwick attacked, combat grants 1 stack (max; 5).[N]
 At max stacks, initiating deals (25% of foe's max HP + 150% AP)[N]
 magical damage, cannot follow-up or be countered, and has x2 range.[X]
 
-## SD_BossSkill
-# boss shield icon
-Commander: If unit's HP is full or if foe's range = 3+,[N]
-reduces damage taken = 50% of foe's Str/Eth, and[N]
-foe cannot land critical hits.[X]
+## SD_EyeForAnEye
+Eye For An Eye: Foes always attack first.[N]
+Radcliff's counterattack deals bonus damage =[N]
+50% of damage taken from foe's last attack.[X]
+
+## SD_Daredevil
+# wyvern skill?
+Daredevil: If Moose would take a lethal[N]
+hit, grants both sides Crit +40 and[N]
+both sides strike x2 consecutively.[X]
 
 ## SD_Malzahar
 # maybe its at full hp but you take 1 true damage afterwards idk
-Phantom Shift: Once per map, unit negates[N]
-all enemy attacks for 1 combat.[N]
+Gift of the Fallen: One combat per map, Yufka[N]
+deals 10 bonus damage and negates all enemy attacks.[N]
 If foe is defeated, refreshes barrier.[X]
 
 ## SD_AllOut
@@ -51,25 +56,19 @@ true damage = 500% of foe's missing HP.[X]
 
 ## SD_KingShield
 # global flag
-Adapting Poise: Wegman toggles between 2 stances:[N]
-Blade Stance after initiating with a weapon, and[N]
-Shield Stance after initiating with a shield.[X]
-
-## SD_KingShieldAttackStatus
-# maybe make these double/halve stats instead?
-Str/Spd +5, Def/Res -3.[N]
-Wegman deals bonus damage = 25%[N]
-of Str.[X]
-
-## SD_KingShieldDefendStatus
-Def/Res +5, Str/Spd -3.[N]
-Wegman reduces damage taken = 25%[N]
-of Def.[X]
+Adapting Poise: Wegman toggles between stat-changing[N]
+Stances after initiating with a weapon or shield.[N]
+[SwordIcon]: 1.25x Str, -5 Prt/Rsl. [ArmorIcon]: +10 Prt/Rsl, -5 Atk/AS.[X]
 
 ## SD_BlindingFlash
-Blinding Flash: If unit initiates and[N]
+Blinding Flash: If Katsu initiates and[N]
 Spd > foe's Spd +6, follow-ups are consecutive,[N]
 and if Spd > foe's Spd +8, foe cannot counter.[X]
+
+## SD_BlindingFlash2
+Saving Grace: Grants Katsu another action after[N]
+Rescue/Drop. If initiating and Spd > foe's Spd,[N]
+reduces damage taken = difference between stats.[X]
 
 ## SD_AmonglaSwag
 16-Caliber Net: After combat, unit Roots[N]
@@ -81,6 +80,7 @@ Phantomania: Unit deals bonus damage and reduces[N]
 damage taken = 50% of foe's max HP.[X]
 
 ## SD_BreveMirrorPassive
+# Latent Powers
 Dual Strike: If Breve uses all movement[N]
 and initiates, strike x2 consecutively.[X]
 
@@ -168,16 +168,16 @@ Mocha dodges all attacks.[X]
 ## SD_Rewind
 Rewind: Once per map, if unit's HP is 25% or[N]
 less after combat, restores 50% missing HP, Canto 5[N]
-spaces, then grants Stasis for 1 turn.[X]
+spaces (if initiating), then grants Stasis for 1 turn.[X]
 
 ## SD_BulletAwesome
 Flow:[X]
 
 ## SD_Overdrive2
 # uses flag 0xED, needs narrowfonting???
-[_A][_s][_h][_e][_n][_SP][_S][_t][_o][_r][_m][_Colon][_SP][_I][_n][_i][_t][_i][_a][_t][_i][_n][_g][_SP][_g][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP]([_m][_a][_x];[_SP]2)[_Dot][N]
-[_A][_t][_SP][_m][_a][_x][_SP][_s][_t][_a][_c][_k][_s][_Comma][_SP][_C][_h][_i][_f][_f][_o][_n][_SP][_a][_c][_t][_i][_v][_a][_t][_e][_s][_SP][_O][_v][_e][_r][_d][_r][_i][_v][_e][N]
-[_o][_n][_SP][_i][_n][_i][_t][_i][_a][_t][_i][_o][_n][_SP][_u][_n][_t][_i][_l][_SP][_o][_u][_t][_SP][_o][_f][_SP][_s][_t][_a][_c][_k][_s][_Dot][X]
+[_R][_u][0xe9]e[_SP][_L][_u][_n][_a][_i][_r]e[_Colon][_SP][_I][_n][_i][_t][_i][_a][_t][_i][_n][_g][_SP][_g][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP]([_m][_a][_x];[_SP]2)[_Dot][N]
+[_A][_t][_SP][_m][_a][_x][_SP][_s][_t][_a][_c][_k][_s][_Comma][_SP][_C][_h][_i][_f][_f][_o][_n][_SP][_a][_c][_t][_i][_v][_a][_t][_e][_s][_SP][_O][_v][_e][_r][_d][_r][_i][_v][_e][_SP][_o][_n][N]
+[_i][_n][_i][_t][_i][_a][_t][_i][_o][_n][_Comma][_SP][_l][_a][_s][_t][_i][_n][_g][_SP][_u][_n][_t][_i][_l][_SP][_o][_u][_t][_SP][_o][_f][_SP][_s][_t][_a][_c][_k][_s][_Dot][X]
 
 ## FullMoonStatusName
 Overdrive[X]
@@ -237,6 +237,11 @@ HP = 20% of missing HP and grants[N]
 # use new status effect
 Zephyr: If Xavier initiates, grants[N]
 Whirlwind to both sides for 1 turn.[X]
+
+## SD_Zephyr2
+Zephyr: Once per map, if Xavier initiates, win[N]
+Spd check and dodge all attacks.
+If foe is defeated, effect is refreshed.[X]
 
 ## SD_Overheat
 # maybe use flags 0x20-23
@@ -496,8 +501,8 @@ Resolute Pyre: Grants Eth/Crit =[N]
 
 ## SD_EustacePersonal
 Hollow Front: If Eustace's HP = 50% or more,[N]
-grants Atk +3/Hit +20. If 50% or less, grants[N]
-Def/Res +3 and Avoid +20.[X]
+grants Atk +5/Hit +50. If less than 50%, grants[N]
+Def/Res +5 and Avoid +50.[X]
 
 ## SD_Eulogy
 # Eulogy of Aeteria
@@ -589,6 +594,11 @@ missing HP.[X]
 Fractured Soul: Gorlois takes -1 damage[N]
 for every 4 damage taken by foe.[X]
 
+## SD_SkiesDescend
+The Skies Descend: If foe's HP is full,[N]
+Gorlois' first hit deals bonus magical[N]
+damage = (5 + turn count x 2).[X]
+
 ## SD_TrueGuard
 True Guard: Negates effects of skills[N]
 that "Deal bonus damage = X".[X]
@@ -646,9 +656,9 @@ cavalry ally, unit takes -2 damage.[X]
 
 ## SD_Galestorm
 # Pursuer
-Fusillade: If Quarrel initiates, follow-up[N]
-and foe cannot, and if foe also cannot[N]
-counter, strike x2 consecutively.[X]
+Fusillade: If foe can't counter, Quarrel[N]
+follow-ups and foe cannot, and if Spd >[N]
+foe's Spd, strike x2 consecutively.[X]
 
 ## SD_Graaaagh
 Gonna Go Wild: Grants Crit =[N]
@@ -658,10 +668,6 @@ unit's missing HP.[X]
 [_S][_a][_n][_c][_t][_u][_a][_r][_y][_Colon][_SP][_S][_t][_r][_o][_g][_a][_n][_o][_f][_f][_SP][_r][_e][_v][_e][_r][_s][_e][_s][_SP][_w][_e][_a][_p][_o][_n][_SP][_c][_o][_m][_b][_a][_t][N]
 [_p][_e][_n][_a][_l][_t][_i][_e][_s][_SP]([_W][_T][_SP][_d][_i][_s][_a][_d][_v][_a][_n][_t][_a][_g][_e][_Comma][_SP][_d][_a][_r][_k][_SP][_m][_a][_g][_i][_c][_Comma][_SP][_e][_t][_c][_Dot])[_Comma][_SP][_a][_n][_d][N]
 [_n][_e][_u][_t][_r][_a][_l][_i][_z][_e][_s][_SP][_s][_t][_a][_t][_SP][_p][_e][_n][_a][_l][_t][_i][_e][_s][_SP]([_r][_e][_s][_c][_u][_e][_Comma][_SP][_s][_t][_a][_v][_e][_s][_Comma][_SP][_e][_t][_c][_Dot])[_Dot][X]
-
-## SD_Daredevil
-Daredevil: If an enemy within 2 spaces[N]
-has a Bow equipped, Hit/Crit +20.[X]
 
 ## SD_Ether
 Ethereal Guard: Neutralizes foe's[N]
@@ -812,8 +818,8 @@ grants Attack Speed +2.[X]
 
 ## SD_Intrepid
 # Dive-Bomb
-[_D][_i][_v][_e]-[_B][_o][_m][_b][_Colon][_SP][_I][_f][_SP][_B][_r][_u][_d][_e][_t][_SP][_i][_n][_i][_t][_i][_a][_t][_e][_s][_Comma][_SP][_a][_n][_d][_SP][_b][_o][_t][_h][_SP][_s][_i][_d][_e][_s]'[_SP][_H][_P][N]
-[_i][_s][_SP][_f][_u][_l][_l][_Comma][_SP][_g][_r][_a][_n][_t][_s][_SP][_A][_t][_k][_Slash][_A][_S][_SP][_Plus][_2][_Comma][_SP][_a][_n][_d][_SP][_i][_f][_SP][_a][_l][_s][_o][_SP][_a][_t][_SP][_1][_SP][_r][_a][_n][_g][_e][_Comma][N]
+[_D][_i][_v][_e]-[_B][_o][_m][_b][_Colon][_SP][_I][_f][_SP][_B][_r][_u][_d][_e][_t][_SP][_i][_n][_i][_t][_i][_a][_t][_e][_s][_SP][_a][_n][_d][_SP][_b][_o][_t][_h][_SP][_s][_i][_d][_e][_s]'[_SP][_H][_P][_SP][_i][_s][N]
+[_f][_u][_l][_l][_Comma][_SP][_f][_o][_l][_l][_o][_w]-[_u][_p][_SP][_a][_n][_d][_SP][_f][_o][_e][_SP][_c][_a][_n][_n][_o][_t][_Comma][_SP][_a][_n][_d][_SP][_i][_f][_SP][_a][_l][_s][_o][_SP][_a][_t][_SP][_1][_SP][_r][_a][_n][_g][_e][_Comma][N]
 [_f][_o][_l][_l][_o][_w]-[_u][_p][_SP][_a][_t][_t][_a][_c][_k][_s][_SP][_o][_c][_c][_u][_r][_SP][_b][_e][_f][_o][_r][_e][_SP][_c][_o][_u][_n][_t][_e][_r][_Dot][X]
 
 ## SD_Inspire
@@ -1113,7 +1119,8 @@ Colossus: Triples Strength.[N]
 
 ## SD_RallyStr
 Hoist the Flag: Rally to grant +4[N]
-Str/Eth to adjacent allies (1 turn).[X]
+Str/Eth to adjacent allies for 1 turn.[N]
+Can move after stealing/picking.[X]
 
 ## SD_RallyMag
 Rally Magic: +4 Mag to[N]
@@ -1829,8 +1836,10 @@ Tower Shield: Gain 6 defense[N]
 against attacks recieved at range.[X]
 
 ## SD_TowerShieldPlus
-Obelisk: Neutralizes damage taken
-from 3+ range.[X]
+# boss shield icon; Commander?
+[_O][_b][_e][_l][_i][_s][_k][_Colon][_SP][_I][_f][_SP][_u][_n][_i][_t]'[_s][_SP][_H][_P][_SP][_i][_s][_SP][_f][_u][_l][_l][_SP][_o][_r][_SP][_i][_f][_SP][_f][_o][_e]'[_s][_SP][_r][_a][_n][_g][_e][_SP]=[_SP][_2][_Plus][_Comma][N]
+[_r][_e][_d][_u][_c][_e][_s][_SP][_d][_a][_m][_a][_g][_e][_SP][_t][_a][_k][_e][_n][_SP]=[_SP][_5][_0]%[_SP][_o][_f][_SP][_f][_o][_e]'[_s][_SP][_S][_t][_r][_Slash][_E][_t][_h][_Comma][N]
+[_a][_n][_d][_SP][_f][_o][_e][_SP][_c][_a][_n][_n][_o][_t][_SP][_l][_a][_n][_d][_SP][_c][_r][_i][_t][_i][_c][_a][_l][_SP][_h][_i][_t][_s][_Dot][X]
 
 ## SD_VoidCurse
 Void Curse: This unit gives[N]

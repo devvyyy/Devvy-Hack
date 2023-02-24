@@ -56,6 +56,7 @@ BYTE 00 00
 ALIGN 4
 
 Ch2OSkillList:
+BYTE 21 CommanderID
 BYTE 21 WatchfulID
 BYTE 00 00
 ALIGN 4
@@ -70,6 +71,12 @@ ALIGN 4
 
 GorloisSkillList:
 BYTE 21 NihilID
+BYTE 00 00
+ALIGN 4
+
+BossSkillList:
+BYTE 0x1 CommanderID
+BYTE 21 CommanderID
 BYTE 00 00
 ALIGN 4
 

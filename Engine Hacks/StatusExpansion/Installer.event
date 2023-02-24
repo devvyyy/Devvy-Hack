@@ -145,10 +145,11 @@ SetStatusName(DefRingStatusID,0x51C)
 SetStatusName(CritRingStatusID,0x51D)
 SetStatusName(AvoRingStatusID,0x51E)
 SetStatusName(SickStatusID,0x518) //marked
-SetStatusName(0x10,0x519) //rooted
+SetStatusName(0x10,0x519)
 SetStatusName(0x11,0x51A) //counter (??? wtf is this did i write this comment wtf whattt)
 SetStatusName(PetrifyStatusID,0x51A)
 SetStatusName(0x14,ShadowEyeName) //Gravity
+SetStatusName(0x16,0x519) //rooted
 SetStatusName(0x19,WhirlwindName) //Whirlwind
 SetStatusName(0x15,FullMoonStatusName) //Overdrive
 
@@ -162,10 +163,11 @@ SetStatusDesc(DefRingStatusID,0x559)
 SetStatusDesc(CritRingStatusID,0x55A)
 SetStatusDesc(AvoRingStatusID,0x55B)
 SetStatusDesc(SickStatusID,MarkedDesc) //marked
-SetStatusDesc(0x10,RootDesc)
+
 SetStatusDesc(0x11,0x51A)
-SetStatusDesc(PetrifyStatusID,0x557)
-SetStatusDesc(0x14,ShadowEyeDesc) //Gravity
+SetStatusDesc(PetrifyStatusID,0x557) //Stasis
+SetStatusDesc(0x14,ShadowEyeDesc) //Shadow Eye
+SetStatusDesc(0x16,RootDesc) //Rooted
 SetStatusDesc(0x19,WhirlwindDesc) //Whirlwind
 SetStatusDesc(0x15,FullMoonStatusDesc) //Overdrive
 
@@ -177,27 +179,27 @@ SetStatusDesc(0x15,FullMoonStatusDesc) //Overdrive
 #define BlinkyIconFuncDancerRingIcon $27858
 
 SetStatusBlinkyIconFunc(NoStatusID,BlinkyIconFuncNoIcon)
-SetStatusBlinkyIconFunc(PoisonStatusID,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(PoisonStatusID,BlinkyIconFuncSleepIcon)
 SetStatusBlinkyIconFunc(SleepStatusID,BlinkyIconFuncSleepIcon)
-SetStatusBlinkyIconFunc(SilenceStatusID,BlinkyIconFuncNoIcon)
-SetStatusBlinkyIconFunc(BerserkStatusID,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(SilenceStatusID,BlinkyIconFuncSleepIcon)
+SetStatusBlinkyIconFunc(BerserkStatusID,BlinkyIconFuncSleepIcon)
 SetStatusBlinkyIconFunc(AtkRingStatusID,BlinkyIconFuncDancerRingIcon)
-SetStatusBlinkyIconFunc(DefRingStatusID,BlinkyIconFuncDancerRingIcon)
+SetStatusBlinkyIconFunc(DefRingStatusID,BlinkyIconFuncSleepIcon)
 SetStatusBlinkyIconFunc(CritRingStatusID,BlinkyIconFuncDancerRingIcon)
 SetStatusBlinkyIconFunc(AvoRingStatusID,BlinkyIconFuncDancerRingIcon)
-SetStatusBlinkyIconFunc(SickStatusID,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(SickStatusID,BlinkyIconFuncDancerRingIcon)
 //fill the rest with no icon by default to avoid issues
-SetStatusBlinkyIconFunc(10,BlinkyIconFuncNoIcon) //rooted
+SetStatusBlinkyIconFunc(10,BlinkyIconFuncSleepIcon) //rooted, looks like they need to match??? (like 0x0 and 0x10????) idk
 SetStatusBlinkyIconFunc(11,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(12,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(13,BlinkyIconFuncNoIcon)
-SetStatusBlinkyIconFunc(14,BlinkyIconFuncNoIcon) //Gravity
+SetStatusBlinkyIconFunc(14,BlinkyIconFuncSleepIcon) //Shadow Eye
 SetStatusBlinkyIconFunc(15,BlinkyIconFuncNoIcon)
-SetStatusBlinkyIconFunc(16,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(16,BlinkyIconFuncSleepIcon) //Rooted
 SetStatusBlinkyIconFunc(17,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(18,BlinkyIconFuncNoIcon)
-SetStatusBlinkyIconFunc(19,BlinkyIconFuncNoIcon) //Whirlwind
-SetStatusBlinkyIconFunc(20,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(19,BlinkyIconFuncDancerRingIcon) //Whirlwind
+SetStatusBlinkyIconFunc(20,BlinkyIconFuncSleepIcon)
 SetStatusBlinkyIconFunc(21,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(22,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(23,BlinkyIconFuncNoIcon)

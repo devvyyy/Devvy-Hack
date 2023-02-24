@@ -1,6 +1,7 @@
 .thumb
 .org 0x0
 .equ GalestormID, SkillTester+4
+
 push	{r4,r5,r14}
 mov		r4,r0
 mov		r5,r1
@@ -21,10 +22,30 @@ ldr		r1, GalestormID
 cmp		r0,#0x0
 beq		GoBack
 
-add		r4,#0x5E
-ldrh	r0,[r4]
-add		r0,#255
-strh	r0,[r4]
+@set attacker AS to 99
+mov r0, r4
+add r0,#0x5E
+mov r3,#99
+strh r3,[r0]
+
+@make sure were in combat (or combat prep)
+ldrb r3, =gBattleData
+ldrb r3, [r3]
+cmp r3, #4
+beq GoBack
+
+ldrb r0, [r4, #0x16] @attacker spd
+ldrb r1, [r5, #0x16] @defender spd
+cmp r0, r1
+ble GoBack @skip if spd is less or equal
+
+@ set brave flag
+mov r0,r4
+add r0,#0x4C @item ability word
+ldr r1,[r0]
+mov r2,#0x20 @brave flag
+orr r1,r2
+str r1,[r0]
 
 GoBack:
 pop		{r4-r5}

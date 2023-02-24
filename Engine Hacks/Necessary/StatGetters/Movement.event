@@ -40,8 +40,12 @@ prNullifyIfGuardAI:
 			rConstant(0)
 
 prNullifyIfRooted:
-	rIfUnitHasStatus(0x10)
+	rIfUnitHasStatus(0x16)
 		rConstant(0)
+		
+prFlorisMarked:
+	rIfUnitHasStatus(SickStatusID)
+		rAddConst(1)
 		
 prGaleforceCheck:
 	rIfUnitHasState(0x400)

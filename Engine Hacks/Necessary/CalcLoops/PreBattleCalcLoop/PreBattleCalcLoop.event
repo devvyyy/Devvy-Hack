@@ -38,17 +38,20 @@ POIN Moxie Wrath Anima1 Anima2 Anima3 Anima4 Dark1 Dark2 Dark3 Dark4 Dark5
 POIN DriveSpd DriveRes
 //POIN LuckySeven OddRhythm EvenRhythm QuickBurn SlowBurn
 //POIN Demoiselle Gentilhomme MaleficAura Tantivy Focus Inspiration Solidarity VoiceOfPeace Anathema LilysPoise Hex Loyalty
-POIN Charisma Charm Shrewd AeterianFealtyAura Inspire BitterCold Galestorm ChainReaction RayDark Blackfire Intimidate Daredevil Infiltrator Paranoia
+POIN Charisma Charm Shrewd AeterianFealtyAura Inspire BitterCold ChainReaction RayDark Blackfire Intimidate Infiltrator Paranoia
 //POIN HeavyDuty Warlock ElbowRoom NaturalCover Gamble WindDisciple Perfectionist Puissance Hawkeye LightWeight Trample Opportunist BattleVeteran SilentPride Vanity Restraint AssassinateDamageBonus KnightAspirant LifeAndDeath SoulSplitter GonnaGoWild Falcon ArcaneBlade FairFight Atlas StormBlood FieryBlood
-POIN BulletPre AeterianFealty Phase BurstFireStats MiraclePre ColdFlare StaticPanic ShortShield Steadfast ShowStopper DuckPre SanctuaryPre GlowRing AshenRing Starseer Whirlwind Hasty ShiningRifleSkill Parity HighRoller Axiom PathOfBlade FinalBoss SearingSword Lunatic ShieldDef RupturedSky ThunderClap Bulwark Intrepid Alacrity SteelSoul Megalovania Vigor Defeatist LastResort Outrider HeavyStrikes DaggerCrit Charge Warpath Keepsake RifleSkill LethalTempo Tresillo ElbowGreasePre Hijack SplittingMaulMag
+POIN BulletPre AeterianFealty Phase BurstFireStats MiraclePre ColdFlare StaticPanic ShortShield Steadfast ShowStopper DuckPre SanctuaryPre GlowRing AshenRing Starseer Whirlwind Hasty ShiningRifleSkill Parity HighRoller Axiom PathOfBlade FinalBoss SearingSword Lunatic ShieldDef RupturedSky ThunderClap Bulwark Alacrity SteelSoul Megalovania Vigor Defeatist LastResort Outrider HeavyStrikes DaggerCrit Charge Warpath Keepsake RifleSkill LethalTempo Tresillo ElbowGreasePre Hijack SplittingMaulMag
 //POIN Parry BloodTide WhitePool NightTide Insight Prescience Vigilance DefiantAvo DefiantCrit TowerShield IndoorFighter OutdoorFighter Fortune
-POIN Daunt KingMark Deadeye DoubleLion ShadowEye
+POIN Daunt KingMark Deadeye DoubleLion ShadowEye Daredevil
 //POIN Thotslayer Thighdeology Armorboost Horseguard Skyguard ForeignPrincess ChargePlus
 POIN BlueFlame BlueFlameAura Frostbite Cultured KeepUp
 POIN MoonEvoked Lionheart Maestro Frenzy DevilAxeSkill CurtainCallSkill GrimRing Executors Nevermore ResolutePyre // This was moved here because Str/Mag Split conflict, and... I'm not sure why it wouldn't be here in the first place.
 //POIN UpWithArch
 
-//stuff that recalcs via deletion
+//stuff that recalcs via setting AS to 99 (to prevent it from being anything but 99)
+POIN Intrepid Galestorm
+
+//stuff that recalcs via deletion (to prevent it from being anything but 0)
 POIN AxefaithHit
 POIN MagicSwordSkill //deletes atk
 POIN Sergeant //deletes atk

@@ -7,7 +7,7 @@ pResistanceModifiers: // Resistance
 	POIN prAddUnitResistance prHalveIfCapturing prDebuffRes prAddEquipResistance prItemPassiveResistance prRallyRes prAddPureWaterBarrierMod prLifeAndDeathMinus prSkillFury prFortressResistanceRes prDefiantRes prPushRes
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
-	POIN prSleepHalfRes
+	POIN prSleepHalfRes prPoisonHalfRes
 	POIN prAvoidBuffRes
 //	POIN prTemperedFateRes
 	#endif
@@ -32,6 +32,10 @@ prRallyRes:
 	
 prSleepHalfRes:
 rIfUnitHasStatus(0x2)
+	rHalved
+	
+prPoisonHalfRes:
+rIfUnitHasStatus(0x1)
 	rHalved
 	
 prAvoidBuffRes:

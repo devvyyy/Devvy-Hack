@@ -67,14 +67,15 @@ BYTE LightBrand MapLight
 BYTE Runesword MapDark
 
 //anima tomes
-BYTE Fire CauterizeAnimID
-BYTE Thunder ThinSlashAnimID
-BYTE Wind FlashAnimID
-BYTE Iceberg FreezeAnimID
-BYTE Bolting ThinSlashAnimID
+BYTE Fire FireAnimID
+BYTE Thunder ThunderAnimID
+BYTE Wind WindAnimID
+BYTE Iceberg IceAnimID
+BYTE Bolting ThunderAnimID
+BYTE 0x3E MapMonster
 
-BYTE Agneya CauterizeAnimID
-BYTE Longinus MapLance
+BYTE Agneya ElfireAnimID
+BYTE Longinus FreezeAnimID
 BYTE Malchut Shards2AnimID
 
 //shields
@@ -106,8 +107,8 @@ BYTE 4 MapMonster //staff
 BYTE 5 MapMagic 
 BYTE 6 MapLight 
 BYTE 7 MapDark
-BYTE $B MapMonster 
-BYTE $11 MapMonster // Dragonstone 
+BYTE $B ThinSlashAnimID // Daggers (and Shields if they didnt already have an animation)
+BYTE $11 ThinSlashAnimID //Dragonstones
 //BYTE 0 ThinSlashAnimID // Sword // old entries 
 //BYTE 1 Hit1AnimID // Lance 
 //BYTE 2 Shards2AnimID // Axe 

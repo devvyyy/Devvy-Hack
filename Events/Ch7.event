@@ -16,17 +16,17 @@ TurnBasedEvents:
 TurnEventEnemy(0,AyoTheyAreHere,1,1)
 TurnEventNPC(0,PrisonTalk1,1,1)
 TurnEventNPC(0,PrisonTalk2,2,1)
-TURN 0x0 GoodbyeDespair [13,0] 0x0
+TURN 0x0 GoodbyeDespair [14,0] 0x0
 	END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x9,ChiffonGrahamTalk, Chiffon, Graham)
-CharacterEventBothWays(0xA,ChiffonFryeTalk, Chiffon, Frye)
-CharacterEventBothWays(0xB,ChiffonCortadoTalk, Chiffon, Cortado)
-CharacterEventBothWays(0xC,ChiffonWilkenTalk, Chiffon, Wilken)
-CharacterEventBothWays(0xD,ChiffonJayeTalk, Chiffon, Jaye)
-CharacterEventBothWays(0xE,FryeCortadoTalk, Cortado, Frye)
+//CharacterEventBothWays(0x9,ChiffonGrahamTalk, Chiffon, Graham)
+//CharacterEventBothWays(0xA,ChiffonFryeTalk, Chiffon, Frye)
+//CharacterEventBothWays(0xB,ChiffonCortadoTalk, Chiffon, Cortado)
+//CharacterEventBothWays(0xC,ChiffonWilkenTalk, Chiffon, Wilken)
+//CharacterEventBothWays(0xD,ChiffonJayeTalk, Chiffon, Jaye)
+//CharacterEventBothWays(0xE,FryeCortadoTalk, Cortado, Frye)
 	END_MAIN
 
 MiscBasedEvents:
@@ -150,7 +150,7 @@ UNIT WreyvineEnemy Monk 0x1 Level(2, Enemy, 1)     [6,19] 0b 0x0 0x0 0x0 [Light1
 	UNIT
 	
 LesBardo:
-UNIT BardUnit Bard 0x1 Level(1, Ally, 0)   [7,10] 0b 0x0 0x0 0x0 [0x7D,0x7E,0x7F,0x80] [0x0,0x0,0x0,0x0]
+UNIT BardUnit Bard 0x1 Level(1, Ally, 0)   [7,10] 0b 0x0 0x0 0x0 [LifeRing,PureWater,Antitoxin,PureWater] [0x0,0x0,0x0,0x0]
 UNIT Verna Occultist 0x1 Level(1, Ally, 0)   [8,10] 0b 0x0 0x0 0x0 [Vulnerary] [0x0,0x0,0x0,0x0]
 	UNIT
 
@@ -163,6 +163,7 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+/*
 Music(0x93)
 SetBackground(0x18)
 STAL 5
@@ -185,6 +186,7 @@ STAL 5
 BROWNBOXTEXT PalaceText [8,8]
 STAL 15
 Text(Ch7Opening2)
+*/
 FADI 60
 CLEAN
 	LOAD1 0x1 CutsceneUnits
@@ -200,18 +202,19 @@ LOAD1 0x1 CutsceneUnits2
 ENUN
 CameraCursor(Chiffon)
 STAL 15
-Music(0x118)
-SetBackground(0x40)
-Text(Ch7Opening3)
-ClearBackground
-STAL 5
-Music(0x18e)
-Text(Ch7Opening4)
-STAL 30
+//Music(0x118)
+//SetBackground(0x40)
+//Text(Ch7Opening3)
+//ClearBackground
+//STAL 5
+//Music(0x18e)
+//Text(Ch7Opening4)
+//STAL 30
 NoFade
 	ENDA
 
 EndingScene:
+/*
 FADI 60
 DoAllThree
 	LOAD2 0x1 EndingCutsceneUnits
@@ -269,6 +272,7 @@ TEXTSTART; TEXTSHOW Ch7Ending4; TEXTEND; FadeOutMusic; TEXTCONT; TEXTEND
 Music(0x25) //tension
 SetBackground(0x2B) //dawn
 TextCont(Ch7Ending5,0x104) //hel
+*/
 
 MNC2 0x9 //next ch
 //MNTS 0x1 //return to title screen

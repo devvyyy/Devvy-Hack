@@ -67,6 +67,10 @@ bool IsItemDagger(u16 item) {
    case 0x86: //cinquedea
    case 0xE9: //splitting maul
    case 0xF7: //misericorde
+   case 0xAE: //arcane
+   case 0xAF: //hook line and sinker
+   case 0xB0: //ambush
+   case 0xB1: //goodbye
         return TRUE;
 
     default:

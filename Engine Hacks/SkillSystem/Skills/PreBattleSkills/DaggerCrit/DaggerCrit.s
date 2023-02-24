@@ -25,6 +25,14 @@ cmp     r0, #0x86         @Cinquedea
 beq Crit50
 cmp     r0, #0xE9         @Splitting Maul
 beq Crit50
+cmp     r0, #0xAE         @Arcane Knife
+beq Crit25
+cmp     r0, #0xAF         @Hook, Line...
+beq Crit100
+cmp     r0, #0xB0         @Ambush Knife
+beq Crit75
+cmp     r0, #0xB1         @'Goodbye' Knife
+beq Crit50
 cmp     r0, #0xF7         @Oh the misery
 beq Crit100
 b End
@@ -36,6 +44,12 @@ mov r1, #0x66
 ldrh r0, [r4, r1] @crit
 sub r0, #25
 strh r0, [r4,r1]
+
+mov r1, #0x62
+ldrh r0, [r4, r1] @avoid
+add r0, #10
+strh r0, [r4,r1]
+
 b End
 
 Crit50:
@@ -45,6 +59,12 @@ mov r1, #0x66
 ldrh r0, [r4, r1] @crit
 sub r0, #50
 strh r0, [r4,r1]
+
+mov r1, #0x62
+ldrh r0, [r4, r1] @avoid
+add r0, #10
+strh r0, [r4,r1]
+
 b End
 
 Crit75:
@@ -54,6 +74,12 @@ mov r1, #0x66
 ldrh r0, [r4, r1] @crit
 sub r0, #75
 strh r0, [r4,r1]
+
+mov r1, #0x62
+ldrh r0, [r4, r1] @avoid
+add r0, #10
+strh r0, [r4,r1]
+
 b End
 
 Crit100:
@@ -62,6 +88,11 @@ Crit100:
 mov r1, #0x66
 ldrh r0, [r4, r1] @crit
 sub r0, #99 @99 because uhhhh 100 doesnt fit ecks dee
+strh r0, [r4,r1]
+
+mov r1, #0x62
+ldrh r0, [r4, r1] @avoid
+add r0, #10
 strh r0, [r4,r1]
 
 End:

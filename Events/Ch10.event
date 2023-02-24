@@ -26,7 +26,21 @@ TURN 0x0 LastBatch [10,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
+CharacterEventBothWays(0xA,MelyaRecruit, Chiffon, Melya)
 	END_MAIN
+	
+MelyaRecruit:
+MUSS 0x30
+STAL 33
+Text(Placeholder1)
+MURE 0x2
+CUSA Melya
+CUSA Levain
+CUSA Radcliff
+CUSA Latte
+NoFade
+ENDA
+
 
 MiscBasedEvents:
 	CauseGameOverIfLordDies
@@ -96,7 +110,7 @@ UNIT MagSoul Shaman 0x1 Level(6, Enemy, 1)     [8,1] 0b 0x0 0x0 0x0 [Flux] Stall
 UNIT InfantrySoul Mercenary 0x1 Level(6, Enemy, 1)     [10,3] 0b 0x0 0x0 0x0 [Zanbato] StallOneTurnAI
 UNIT ArmorSoul LArmor 0x1 Level(6, Enemy, 1)     [12,4] 0b 0x0 0x0 0x0 [SteelGlaive,ShortSpear] AttackInRangeAI
 UNIT InfantrySoul Soldier 0x1 Level(6, Enemy, 1)     [16,5] 0b 0x0 0x0 0x0 [SteelLance] WallAI
-UNIT InfantrySoul Mercenary 0x1 Level(6, Enemy, 1)     [16,13] 0b 0x0 0x0 0x0 [Longbow] WallAI
+UNIT InfantrySoul Myrmidon 0x1 Level(6, Enemy, 1)     [16,13] 0b 0x0 0x0 0x0 [KillingEdge] WallAI
 
 UNIT FlierSoul PegRider 0x1 Level(6, Enemy, 1)     [10,9] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
 UNIT FlierSoul PegRider 0x1 Level(6, Enemy, 1)     [11,12] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
@@ -106,10 +120,15 @@ UNIT MagSoul Occultist 0x1 Level(6, Enemy, 1)     [0,18] 0b 0x0 0x0 0x0 [Flux] S
 	UNIT
 	
 GreenUnits:
-UNIT Velius Swordmaster 0x1 Level(4, NPC, 0)     [2,6] 0b 0x0 0x0 0x0 [Runesword] BossAI
-UNIT Tammy Monk 0x1 Level(5, NPC, 0)     [1,7] 0b 0x0 0x0 0x0 [Aura,0x9B,] BossAI
-UNIT Radcliff Warrior 0x1 Level(3, NPC, 0)     [3,7] 0b 0x0 0x0 0x0 [Halberd,BodkinRifle,Elixir] BossAI
+UNIT Melya Ranger 0x1 Level(2, NPC, 1)     [2,6] 0b 0x0 0x0 0x0 [0xD9,0x9,Elixir] BossAI
+UNIT Tammy Monk 0x1 Level(5, NPC, 0)     [1,7] 0b 0x0 0x0 0x0 [0x9B,0xA0] BossAI
+UNIT Radcliff Warrior 0x1 Level(3, NPC, 0)     [3,7] 0b 0x0 0x0 0x0 [Halberd,BodkinRifle,0xFC] BossAI
 UNIT Latte Archer_F 0x1 Level(6, NPC, 0)     [2,8] 0b 0x0 0x0 0x0 [SteelBow,0xD9] [0,3,0,32]
+	UNIT
+	
+	
+HolyCrapItHim: //spawn from village idk?
+UNIT Velius Swordmaster 0x1 Level(4, NPC, 0)     [2,6] 0b 0x0 0x0 0x0 [Runesword] BossAI
 	UNIT
 	
 BrigandGuy: //in caves wtf :scream:

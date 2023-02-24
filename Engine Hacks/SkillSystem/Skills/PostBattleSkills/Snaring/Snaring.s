@@ -41,7 +41,7 @@ cmp	r0, r1		@check if same character
 bne	End
 
 @ check status, does not clear anything else
-mov r1, #0x30
+mov r1, #0x36
 ldrb r0, [r5, r1]
 mov r1, #0x0F
 and r0, r1 
@@ -52,8 +52,8 @@ beq Apply
 b End
 
 Apply:
-@ apply Rooted status (0x10)
-mov r0, #0x30 @first number is duration, second number is status effect (status expansion makes it any status with 1 turn i think???)
+@ apply Rooted status (0x11)
+mov r0, #0x36 @first number is duration, second number is status effect (status expansion makes it any status with 1 turn i think???)
 mov r1, #0x30 @status
 strb r0, [r5, r1]
 

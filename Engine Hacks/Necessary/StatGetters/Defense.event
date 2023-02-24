@@ -8,7 +8,7 @@ pDefenseModifiers: // Defense
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
-	POIN prSleepHalfDef
+	POIN prSleepHalfDef prPoisonHalfDef
 	POIN prAvoidBuffDef
 //	POIN prTemperedFateDef
 WORD 0
@@ -36,6 +36,10 @@ rIfUnitHasStatus(0x8)
 	
 prSleepHalfDef:
 rIfUnitHasStatus(0x2)
+	rHalved
+
+prPoisonHalfDef:
+rIfUnitHasStatus(0x1)
 	rHalved
 	
 prTemperedFateDef:

@@ -24,11 +24,13 @@ PullBackItemList:
 BYTE 0x66 //Roundache Shield
 BYTE 0xC8 //Snaring Rifle
 BYTE 0x68 //Hexlock shield
+BYTE 0xAF //Hook Knife
 BYTE 0 
 
 ALIGN 4 
 HitAndRunItemList:
-BYTE 0x67 //Adarga Shield 
+BYTE 0x67 //Adarga Shield
+BYTE 0xB1 //Goodbye Sword
 BYTE 0 
 
 ALIGN 4 
@@ -39,7 +41,7 @@ BYTE 0
 
 ALIGN 4 
 DigItemList:
-//BYTE Bolting //SevenRangeWep
+BYTE 0xB0
 BYTE 0 // Terminator 
 
 #ifndef callHack_r3

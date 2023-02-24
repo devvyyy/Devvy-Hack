@@ -13,6 +13,7 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TURN 0x0 MusicChangeGaming [2,0] 0x0
 TURN 0x0 EarlyRein [3,0] 0x0
 TURN 0x0 LateRuinsRein [5,0] 0x0
 TURN 0x0 BotMidReinSpawn [7,0] 0x0
@@ -104,6 +105,13 @@ CALL EndingScene
 
 ENDA
 
+MusicChangeGaming:
+CameraCursor(Chiffon)
+Text(Placeholder1)
+STAL 10
+ENUT 0x4
+NoFade
+ENDA
 	
 Village1:
 VillageEventItem(Placeholder1, 0x1, 0xA0) //RAY S
@@ -202,7 +210,6 @@ UNIT Xidorn GriffonKnight 0x1 Level(4, Ally, 0)   [14,32] 0b 0x0 0x0 0x0 [Shinin
 	
 TheArcherGang:
 UNIT 0x2D Sniper 0x1 Level(5, Ally, 0)   [14,32] 0b 0x0 0x0 0x0 [0xD8, Elixir] [0x0,0x0,0x0,0x0]
-UNIT Quarrel Archer 0x1 Level(1, Ally, 0)   [14,32] 0b 0x0 0x0 0x0 [IronBow, Speedwing] [0x0,0x0,0x0,0x0]
 	UNIT
 
 EnemyUnits:
@@ -366,6 +373,8 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+	LOAD1 0x1 XavierLesUnit
+	LOAD1 0x1 TheArcherGang
 	LOAD1 0x1 EnemyUnits
 	ENUN
 	GotoPrepScreen

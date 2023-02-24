@@ -22,6 +22,7 @@ CharacterBasedEvents:
 	END_MAIN
 
 MiscBasedEvents:
+AFEV 0x3 CheckIfWinHugeW 0x0
 	CauseGameOverIfLordDies
 	END_MAIN
 
@@ -29,6 +30,22 @@ LocationBasedEvents:
 Chest(0xE8,2,3)
 Chest(MasterSeal,23,3)
 	END_MAIN
+
+CheckIfWinHugeW:
+
+CHECK_EVENTID 0xA
+BEQ 0x1 0xC 0x0
+CHECK_EVENTID 0xB
+BEQ 0x1 0xC 0x0
+CHECK_EVENTID 0xC
+BEQ 0x1 0xC 0x0
+ENUT 0x3
+LABEL 0x1
+EVBIT_T 0x7
+
+CALL EndingScene
+
+ENDA
 
 Dunno1:
 
@@ -134,6 +151,7 @@ BeginningScene:
 	ENDA
 
 EndingScene:
-	MNC2 0xF
+	//MNC2 0xF
+	MNTS 0x1 //return to title screen
 	NoFade
 	ENDA

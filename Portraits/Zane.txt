@@ -187,6 +187,17 @@ Katsu_Mug: //by Busky Husky
 setMugEntry(0x4b, Katsu_Mug, 3, 5, 3, 3)
 
 ALIGN 16
+Moose_Mug:
+#incext PortraitFormatter "Moose2.png"
+setMugEntry(0xBC, Moose_Mug, 3, 5, 2, 3)
+
+ALIGN 16
+Locro_Mug:
+#incext PortraitFormatter "Locro.png"
+setMugEntry(0xBD, Locro_Mug, 3, 5, 3, 3)
+
+
+ALIGN 16
 Kane_Mug:
 #incext PortraitFormatter "Kane.png"
 setMugEntry(0x1E, Kane_Mug, 3, 5, 3, 3)
@@ -452,7 +463,7 @@ setMugEntry(0x3D, Verna_Mug, 3, 5, 3, 3)
 ALIGN 16
 Auvrey_Mug: //Auvrey by Raymond
 #incext PortraitFormatter "Auvrey.png"
-setMugEntryExtend(0x3E, Auvrey_Mug, 3, 5, 3, 3, 0, 4, 0, 0)
+setMugEntryExtend(0x3E, Auvrey_Mug, 3, 6, 3, 4, 0, 4, 0, 0)
 
 ALIGN 16
 Edith_Mug: //Edith by BuskHusker

@@ -28,6 +28,10 @@ from certain weapons.[N]
 Blades, Glaives, Labrys, and[N]
 Rifles are heavy versions of[N]
 physical weapons with less Hit.[N]
+ [N]
+Daggers and Shields are[N]
+Sidearms; a universal[N]
+weapon type.[N]
 Daggers each ignore a % of[N]
 foe's Def.[N]
 Shields all reposition the user[N]
@@ -51,7 +55,7 @@ Magical weapons such as the[N]
 Flamberge deal a fixed amount[N]
 of damage, ignoring the[N]
 user's Str.[N]
-[N]
+ [N]
 Long-range weapons cannot[N]
 counter or be countered.[N]
 For example, siege tomes,[N]
@@ -594,6 +598,9 @@ King's Idol[X]
 # 0x3f5
 Essence[X]
 
+# 0x362
+Glow Brand[X]
+
 # 0x363
 Rune Sword[X]
 
@@ -605,28 +612,28 @@ Seers gifted with light and shadow,[N]
 binding past and future. Equip: [LightIcon][DarkIcon][X]
 
 # 0x3a4
-[_M][_a][_g][_n][_u]m [_S]w[_o][_r][_d][X]
+[_M][_a][_g][_n][_u]m [_B][_l][_a][_d][_e][X]
 
 # 0x3a5
-[_M][_a][_g][_n][_u]m [_L][_a][_n][_c][_e][X]
+[_M][_a][_g][_n][_u]m [_G][_l][_a][_i][_v][_e][X]
 
 # 0x3a6
-Magnum Axe[X]
+[_M][_a][_g][_n][_u][_m][_SP][_L][_a][_b][_r][_y][_s][X]
 
 # 0x3a7
-Magnum Bow[X]
+[_M][_a][_g][_n][_u][_m][_SP][_L][_a][_b][_r][_y][_s][X]
 
 # 0x454
-A powerful magnum sword.[X]
+A powerful magnum blade.[X]
 
 # 0x455
-A powerful magnum lance.[X]
+A powerful magnum glaive.[X]
 
 # 0x456
-A powerful magnum axe.[X]
+A powerful magnum labrys.[X]
 
 # 0x457
-A powerful magnum bow.[X]
+A powerful magnum rifle.[X]
 
 # 0x410
 Effective against armor.[X]
@@ -642,10 +649,10 @@ Focal Rifle[X]
 Converts Crit into bonus Atk.[X]
 
 # 0x3D5
-Arcane Ring[X]
+Arcane Brace[X]
 
 # 0x3d9
-Pale Brace[X]
+Pale Locket[X]
 
 # 0x3DA
 Queen's Idol[X]
@@ -775,7 +782,7 @@ Increases Constitution by[N]
 Can attack at range.[X]
 
 # 0x26B
-Item[X]
+[_S][_i][_d][_e][_a][_r][_m][X]
 
 # 0x421
 [OpenQuote]Diplomacy"[X]
@@ -790,8 +797,8 @@ grants another turn,[N]
 and gives Chiffon EXP.[X]
 
 # 0x448
-[_1][_0]%[_SP][_c][_u][_r][_r][_e][_n][_t][_SP][_H][_P][_SP][_d][_a][_m][_a][_g][_e][_SP][_t][_o][_SP][_f][_o][_e][_s][_SP][_w][_i][_t][_h][_i][_n][_SP][_3][N]
-[_s][_p][_a][_c][_e][_s][_SP][_o][_f][_SP][_t][_a][_r][_g][_e][_t][_Dot][_SP][_S][_h][_o][_v][_e][_SP][_f][_o][_e][_SP][_1][_SP][_s][_p][_a][_c][_e][_Dot][_SP][_Lock][_SP][_Y][_o][_r][_y][X]
+[_D][_e][_a][_l][_s][_SP][_1][_0]%[_SP][_c][_u][_r][_r][_e][_n][_t][_SP][_H][_P][_SP][_d][_a][_m][_a][_g][_e][_SP][_t][_o][_SP][_f][_o][_e][_s][_SP][_w][_i][_t][_h][_i][_n][_SP][_3][N]
+[_s][_p][_a][_c][_e][_s][_SP][_o][_f][_SP][_t][_a][_r][_g][_e][_t][_Dot][_SP][_S][_h][_o][_v][_e][_SP][_f][_o][_e][_SP][_1][_SP][_s][_p][_a][_c][_e][_Dot][X]
 
 # 0x47F
 Increases Resistance of an ally[N]
@@ -833,8 +840,9 @@ in an area Eth/3 spaces away[N]
 (decays by 1/turn).[X]
 
 # 0x5b5
-Place all items in storage,[N]
-or merge them.[X]
+Place all items in storage.[N]
+Merge item durability by[N]
+pressing both L + A.[X]
 
 # 0x382
 Void Cleaver[X]
@@ -846,10 +854,15 @@ Rapid Ballista[X]
  [X]
  
 # 0x35B
-Poison Dagger[X]
+[_P][_o][_i][_s][_o][_n][_SP][_D][_a][_g][_g][_e][_r][X]
+
+# 0x553
+Ooooog...[N]
+Poison halves Def/Res and deals[N]
+10 damage next turn.[X]
 
 # 0x40B
-Poisons for 1 turn on-hit. [_Lock]: Thieves.[X]
+Avoid +10. Poisons for 1 turn on-damage.[X]
 
 # 0x3a9
 Fire I[X]
@@ -944,7 +957,7 @@ Restores HP = damage dealt.[X]
 
 # 0x494
 A medicinal solution that[N]
-restores 15 HP when used.[X]
+restores 15 HP.[X]
 
 # 0x4D2
 Restores 15 HP.[X]
@@ -1020,13 +1033,13 @@ and resets their status.[X]
 Stiletto[X]
 
 # 0x40C
-Eff: [HorseIcon][ArmorIcon] [_Lock]: Thieves[X]
+Eff: [HorseIcon][ArmorIcon][X]
 
 # 0x388
 Cinquedea[X]
 
 # 0x439
-Targets Res. Eff: [DragonIcon] [_Lock]: Thieves[X]
+Targets Res. Eff: [DragonIcon][X]
 
 # 0x3f9
 Flare B[X]
@@ -1038,7 +1051,7 @@ Spark B[X]
 Moonshine B[X]
 
 # 0x42E
-[_Lock]: Thieves[X]
+Avoid +10.[X]
 
 # 0x3DB
 Swift Boots[X]
@@ -1048,6 +1061,36 @@ Iron Dagger[X]
 
 # 0x35e
 Steel Dagger[X]
+
+# 0x39f
+Arcane Knife[X]
+
+# 0x3A0
+Hook, Line...[X]
+
+# 0x3A1
+Ambush Knife[X]
+
+# 0x451
+Avoid +10. Unit moves adjacent to[N]
+target. Poisons for 1 turn on-damage.[X]
+
+# 0x3a2
+'Goodbye'[X]
+
+# 0x452
+Avoid +10. Move back 1 space. Poisons[N]
+for 1 turn on-damage.[X]
+
+# 0x3E8
+Panacea[X]
+
+# 0x497
+A remedial solution that[N]
+cures all status effects.[X]
+
+# 0x4D5
+Cures status effects.[X]
 
 # 0x3fc
 Pyroclasm R[X]
@@ -1164,7 +1207,7 @@ Prologue I: No Way Out[X]
 1-1x: Gold Rush[X]
 
 ## Ch9Name
-2-2: Pale Glow[X]
+2-2: The Gates of Omios[X]
 
 ## Ch10Name
 2-3: By The Crescent's Edge[X]
@@ -1210,10 +1253,10 @@ Height:[X]
 Age:[X]
 
 ## HouseText
-[MidRight][LoadFace][CurrentPortrait]Nothing to see here.[A][X]
+[MidRight][LoadFace][CurrentPortrait]Placeholder Escape Quote![A][X]
 
 ## VillageText
-[MidRight][LoadFace][0xFF][0xFF]These look useful.[A][X]
+[MidRight][LoadFace][0xFF][0xFF]Placeholder Obtain Quote![A][X]
 
 ## DV1Desc
 Freeze all enemies[N]
