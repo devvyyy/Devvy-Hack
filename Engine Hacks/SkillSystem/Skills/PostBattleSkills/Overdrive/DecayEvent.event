@@ -1,5 +1,5 @@
 DecayEvent:
-CHECK_EVENTID 0xED //glowy mode is ON; decay stacks
+CHECK_EVENTID 0x5 //glowy mode is ON; decay stacks
 BEQ 0x776 0xC 0x0 //if on, end
 
 //2 bullets
@@ -18,7 +18,7 @@ BEQ 0x776 0xC 0x0
 SOUN 0xFC //silence
 ENUF 0x24
 ENUF 0x23
-ENUF 0xED
+ENUF 0x5
 
 LABEL 0x776 //end
 NoFade

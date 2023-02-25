@@ -1,0 +1,21 @@
+#ifdef _FE6_
+    PUSH
+	ORG 0x252F8
+	#include "FE6Promotion.dmp"
+	POP
+#endif
+
+#ifdef _FE7_
+    PUSH
+	ORG 0x298B4
+	#include "FE7Promotion.dmp"
+	POP
+#endif
+
+#ifdef _FE8_
+    PUSH
+	ORG 0x2BE38
+	#include "FE8Promotion.dmp"
+	POP
+#endif
+

@@ -62,21 +62,33 @@ SpecificWeaponAnimations:
 BYTE Sagitar MapBow
 BYTE 0xCC MapBow
 BYTE Skypiercer MapBow
-BYTE Flamberge CauterizeAnimID
+BYTE Flamberge FireAnimID
 BYTE LightBrand MapLight
 BYTE Runesword MapDark
+BYTE 0xAE MapMagic //Arcane Knife
+BYTE 0x8A MapMagic //Arcane Rifle
 
-//anima tomes
+
+//anima tomes 1-5
 BYTE Fire FireAnimID
 BYTE Thunder ThunderAnimID
 BYTE Wind WindAnimID
 BYTE Iceberg IceAnimID
 BYTE Bolting ThunderAnimID
-BYTE 0x3E MapMonster
+BYTE 0x3E MapMagic
 
+//other tomes
+BYTE Flare FireAnimID
+BYTE Pyroclasm ElfireAnimID
+BYTE Condemn MapDark
+BYTE Moonlight MapLight
+
+// boss prfs
 BYTE Agneya ElfireAnimID
 BYTE Longinus FreezeAnimID
 BYTE Malchut Shards2AnimID
+
+BYTE 0xF0 ElfireAnimID //Diplomacy
 
 //shields
 BYTE 0x64 CircleAnimID //shield bash
@@ -91,8 +103,8 @@ BYTE DevilAxe MapMonster
 BYTE 0x44 Break1AnimID //shooter 1
 BYTE 0x8B Shards2AnimID //shooter 2
 BYTE 0xAA CauterizeAnimID // Bazooka, explosion anim
-BYTE 0xD2 MapMonster // holy weap, monster anim
-BYTE 0xCB FreezeAnimID // holy weap, ice anim
+BYTE 0xD2 MapMonster // eye of creation, monster anim
+BYTE 0xCB FreezeAnimID // last hour, ice anim
 SHORT 0xFFFF // Terminator
 SHORT 0xFFFF // Terminator 
 

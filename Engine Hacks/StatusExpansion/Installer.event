@@ -149,7 +149,7 @@ SetStatusName(0x10,0x519)
 SetStatusName(0x11,0x51A) //counter (??? wtf is this did i write this comment wtf whattt)
 SetStatusName(PetrifyStatusID,0x51A)
 SetStatusName(0x14,ShadowEyeName) //Gravity
-SetStatusName(0x16,0x519) //rooted
+SetStatusName(0x17,0x519) //rooted
 SetStatusName(0x19,WhirlwindName) //Whirlwind
 SetStatusName(0x15,FullMoonStatusName) //Overdrive
 
@@ -167,7 +167,7 @@ SetStatusDesc(SickStatusID,MarkedDesc) //marked
 SetStatusDesc(0x11,0x51A)
 SetStatusDesc(PetrifyStatusID,0x557) //Stasis
 SetStatusDesc(0x14,ShadowEyeDesc) //Shadow Eye
-SetStatusDesc(0x16,RootDesc) //Rooted
+SetStatusDesc(0x17,RootDesc) //Rooted
 SetStatusDesc(0x19,WhirlwindDesc) //Whirlwind
 SetStatusDesc(0x15,FullMoonStatusDesc) //Overdrive
 
@@ -185,7 +185,7 @@ SetStatusBlinkyIconFunc(SilenceStatusID,BlinkyIconFuncSleepIcon)
 SetStatusBlinkyIconFunc(BerserkStatusID,BlinkyIconFuncSleepIcon)
 SetStatusBlinkyIconFunc(AtkRingStatusID,BlinkyIconFuncDancerRingIcon)
 SetStatusBlinkyIconFunc(DefRingStatusID,BlinkyIconFuncSleepIcon)
-SetStatusBlinkyIconFunc(CritRingStatusID,BlinkyIconFuncDancerRingIcon)
+SetStatusBlinkyIconFunc(CritRingStatusID,BlinkyIconFuncSleepIcon) //rooted is 0x17!!!
 SetStatusBlinkyIconFunc(AvoRingStatusID,BlinkyIconFuncDancerRingIcon)
 SetStatusBlinkyIconFunc(SickStatusID,BlinkyIconFuncDancerRingIcon)
 //fill the rest with no icon by default to avoid issues
@@ -195,8 +195,8 @@ SetStatusBlinkyIconFunc(12,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(13,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(14,BlinkyIconFuncSleepIcon) //Shadow Eye
 SetStatusBlinkyIconFunc(15,BlinkyIconFuncNoIcon)
-SetStatusBlinkyIconFunc(16,BlinkyIconFuncSleepIcon) //Rooted
-SetStatusBlinkyIconFunc(17,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(16,BlinkyIconFuncDancerRingIcon) //Def Buff is 0x6
+SetStatusBlinkyIconFunc(17,BlinkyIconFuncSleepIcon) //Rooted
 SetStatusBlinkyIconFunc(18,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(19,BlinkyIconFuncDancerRingIcon) //Whirlwind
 SetStatusBlinkyIconFunc(20,BlinkyIconFuncSleepIcon)

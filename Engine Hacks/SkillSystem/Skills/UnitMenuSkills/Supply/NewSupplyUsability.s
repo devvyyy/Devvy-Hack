@@ -8,8 +8,8 @@
 .thumb
 .align
 
-.equ MoonEvokedID,SkillTester+4
-.equ AlsoUseVanillaCheck,MoonEvokedID+4
+.equ OverdriveID,SkillTester+4
+.equ AlsoUseVanillaCheck,OverdriveID+4
 .equ gActiveUnit,0x3004E50
 
 .macro blh to, reg=r3
@@ -31,7 +31,7 @@ ldr r0, SkillTester
 mov lr, r0
 ldr r1, =gActiveUnit
 ldr r0, [r1]
-ldr r1, MoonEvokedID
+ldr r1, OverdriveID
 .short  0xf800
 cmp r0, #1
 beq ReturnTrue
@@ -141,7 +141,7 @@ bne IsAdjacent_Next
 
 	ldr r3, SkillTester
 	mov lr, r3
-	ldr r1, MoonEvokedID
+	ldr r1, OverdriveID
 	.short  0xf800
 	cmp r0, #1
 	beq IsAdjacent_Return_True
@@ -169,5 +169,5 @@ bx r1
 
 SkillTester:
 @POIN SkillTester
-@WORD MoonEvokedID
+@WORD OverdriveID
 @WORD AlsoUseVanillaCheck

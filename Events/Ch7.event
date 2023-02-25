@@ -134,7 +134,7 @@ UNIT WreyvineEnemy Archer 0x1 Level(1, Enemy, 1)     [15,11] DropItem 0x0 0x0 0x
 UNIT WreyvineEnemy Archer 0x1 Level(2, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [Longbow,] BossAI
 UNIT WreyvineEnemy Archer 0x1 Level(1, Enemy, 1)     [7,3] 0b 0x0 0x0 0x0 [Longbow,] ChargeAI
 UNIT WreyvineStealable LArmor 0x1 Level(2, Enemy, 1)     [7,14] 0b 0x0 0x0 0x0 [IronGlaive,ShortSpear,Dracoshield] BossAI
-UNIT WreyvineEnemy AArmor 0x1 Level(1, Enemy, 1)     [12,9] DropItem 0x0 0x0 0x0 [ShortAxe,] BossAI
+UNIT WreyvineEnemy AArmor 0x1 Level(1, Enemy, 1)     [12,9] DropItem 0x0 0x0 0x0 [MageAxe,] BossAI
 UNIT WreyvineEnemy SArmor 0x1 Level(2, Enemy, 1)     [8,14] 0b 0x0 0x0 0x0 [IronBlade,ShortBrand] BossAI
 UNIT WreyvineEnemy LCav 0x1 Level(1, Enemy, 1)     [7,17] 0b 0x0 0x0 0x0 [IronLance,] TwoActionAI
 UNIT WreyvineEnemy Soldier 0x1 Level(2, Enemy, 1)     [14,16] 0b 0x0 0x0 0x0 [IronLance,] TwoActionAI
@@ -150,7 +150,7 @@ UNIT WreyvineEnemy Monk 0x1 Level(2, Enemy, 1)     [6,19] 0b 0x0 0x0 0x0 [Light1
 	UNIT
 	
 LesBardo:
-UNIT BardUnit Bard 0x1 Level(1, Ally, 0)   [7,10] 0b 0x0 0x0 0x0 [LifeRing,PureWater,Antitoxin,PureWater] [0x0,0x0,0x0,0x0]
+UNIT BardUnit Bard 0x1 Level(1, Ally, 0)   [7,10] 0b 0x0 0x0 0x0 [LifeRing,Elixir,Antitoxin,PureWater] [0x0,0x0,0x0,0x0]
 UNIT Verna Occultist 0x1 Level(1, Ally, 0)   [8,10] 0b 0x0 0x0 0x0 [Vulnerary] [0x0,0x0,0x0,0x0]
 	UNIT
 
@@ -210,6 +210,7 @@ STAL 15
 //Music(0x18e)
 //Text(Ch7Opening4)
 //STAL 30
+	GotoPrepScreen
 NoFade
 	ENDA
 

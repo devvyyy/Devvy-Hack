@@ -55,7 +55,7 @@ not adjacent to another foe, deals bonus[N]
 true damage = 500% of foe's missing HP.[X]
 
 ## SD_KingShield
-# global flag
+# global flag 0xBB
 Adapting Poise: Wegman toggles between stat-changing[N]
 Stances after initiating with a weapon or shield.[N]
 [SwordIcon]: 1.25x Str, -5 Prt/Rsl. [ArmorIcon]: +10 Prt/Rsl, -5 Atk/AS.[X]
@@ -65,7 +65,7 @@ Blinding Flash: If Katsu initiates and[N]
 Spd > foe's Spd +6, follow-ups are consecutive,[N]
 and if Spd > foe's Spd +8, foe cannot counter.[X]
 
-## SD_BlindingFlash2
+## SD_SavingGrace
 Saving Grace: Grants Katsu another action after[N]
 Rescue/Drop. If initiating and Spd > foe's Spd,[N]
 reduces damage taken = difference between stats.[X]
@@ -174,7 +174,7 @@ spaces (if initiating), then grants Stasis for 1 turn.[X]
 Flow:[X]
 
 ## SD_Overdrive2
-# uses flag 0xED, needs narrowfonting???
+# uses flag 0x23, 0x24, and also 0x5 (?? in builder)
 [_R][_u][0xe9]e[_SP][_L][_u][_n][_a][_i][_r]e[_Colon][_SP][_I][_n][_i][_t][_i][_a][_t][_i][_n][_g][_SP][_g][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP]([_m][_a][_x];[_SP]2)[_Dot][N]
 [_A][_t][_SP][_m][_a][_x][_SP][_s][_t][_a][_c][_k][_s][_Comma][_SP][_C][_h][_i][_f][_f][_o][_n][_SP][_a][_c][_t][_i][_v][_a][_t][_e][_s][_SP][_O][_v][_e][_r][_d][_r][_i][_v][_e][_SP][_o][_n][N]
 [_i][_n][_i][_t][_i][_a][_t][_i][_o][_n][_Comma][_SP][_l][_a][_s][_t][_i][_n][_g][_SP][_u][_n][_t][_i][_l][_SP][_o][_u][_t][_SP][_o][_f][_SP][_s][_t][_a][_c][_k][_s][_Dot][X]
@@ -250,6 +250,7 @@ Overheat: If unit attacked, combat grants[N]
 Str/Skill and sets Spd/Move to 0 for 1 turn.[X]
 
 ## SD_Radiance
+# shirt uses 0xBA
 Motivate: Floris' staves mark allies.[N]
 Restores (Def + 5) HP to all marked[N]
 allies on the map after combat.[X]
@@ -1256,16 +1257,16 @@ Natural Cover: -3 damage taken[N]
 when on terrain with effects.[X]
 
 ## SD_SealStr
-Seal Strength: Debuff opponent's Str[N]
-by 6 after combat. (Recover 1/turn)[X]
+Snare: Inflicts Str/Eth -5 on foe after[N]
+combat (recovers 1/turn).[X]
 
 ## SD_SealSkl
 Seal Skill: Debuff opponent's Skl[N]
 by 6 after combat. (Recover 1/turn)[X]
 
 ## SD_SealSpd
-Seal Speed: Debuff opponent's Spd[N]
-by 6 after combat. (Recover 1/turn)[X]
+Snare: Inflicts Spd -5 on foe after[N]
+combat (recovers 1/turn).[X]
 
 ## SD_SealLuk
 Seal Luck: Debuff opponent's Luck[N]
@@ -1837,9 +1838,9 @@ against attacks recieved at range.[X]
 
 ## SD_TowerShieldPlus
 # boss shield icon; Commander?
-[_O][_b][_e][_l][_i][_s][_k][_Colon][_SP][_I][_f][_SP][_u][_n][_i][_t]'[_s][_SP][_H][_P][_SP][_i][_s][_SP][_f][_u][_l][_l][_SP][_o][_r][_SP][_i][_f][_SP][_f][_o][_e]'[_s][_SP][_r][_a][_n][_g][_e][_SP]=[_SP][_2][_Plus][_Comma][N]
-[_r][_e][_d][_u][_c][_e][_s][_SP][_d][_a][_m][_a][_g][_e][_SP][_t][_a][_k][_e][_n][_SP]=[_SP][_5][_0]%[_SP][_o][_f][_SP][_f][_o][_e]'[_s][_SP][_S][_t][_r][_Slash][_E][_t][_h][_Comma][N]
-[_a][_n][_d][_SP][_f][_o][_e][_SP][_c][_a][_n][_n][_o][_t][_SP][_l][_a][_n][_d][_SP][_c][_r][_i][_t][_i][_c][_a][_l][_SP][_h][_i][_t][_s][_Dot][X]
+Obelisk: If unit's HP is full or if foe's[N]
+range = 2+, reduces damage taken by[N]
+50% and foe cannot land critical hits.[X]
 
 ## SD_VoidCurse
 Void Curse: This unit gives[N]

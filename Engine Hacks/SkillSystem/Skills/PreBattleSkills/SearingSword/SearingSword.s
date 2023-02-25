@@ -56,7 +56,7 @@ ldrh r0, [r5, r1] @attack
 ldrb r2, [r5, #0x18] @res
 lsr  r2, #1 @divide this by 2
 add  r0, r2
-strh r0, [r4,r1]
+strh r0, [r5,r1]
 
 End:
 pop {r4-r7, r15}

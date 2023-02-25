@@ -42,12 +42,10 @@ cmp r3, #4
 beq GoBack
 
 @add foes atk/2 defense
-mov  r1, #0x5C
-ldrh r0, [r4, r1] @attack
-ldrb r2, [r5, #0x14] @str
-lsr  r2, #1 @divide this by 2
-add  r0, r2
-strh r0, [r4,r1]
+mov r1, #0x5a
+ldrsh r0, [r5, r1] @atk
+lsr r0,r0,#0x1
+strh r0, [r5,r1]
 
 @crit
 mov r0,r5

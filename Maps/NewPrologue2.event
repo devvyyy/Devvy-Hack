@@ -24,8 +24,8 @@ TileMap(12,7,4,1,1,FakeWall)
 TileMap(13,5,4,2,1,FakeWall2)
 TileMap(14,3,4,1,1,FakeWall3)
 TileMap(15,0,4,2,2,FakeWall4)
-TileMap(16,21,10,1,5,EscapePointsBot)
-TileMap(17,21,3,1,4,EscapePointsTop)
+TileMap(16,20,10,2,5,EscapePointsBot)
+TileMap(17,20,3,2,4,EscapePointsTop)
 TileMapEnd
 
 Chest:
@@ -93,10 +93,10 @@ SHORT 0x508 0x780 0x790 0x784
 ALIGN 4
 
 EscapePointsBot:
-SHORT 0x8d4 0x78c 0x720 0x684 0x69c 
+SHORT 0x488 0x8d4 0x950 0x78c 0x9d0 0x720 0x9d0 0x684 0x9d0 0x69c 
 ALIGN 4
 
 EscapePointsTop:
-SHORT 0x8d4 0x71c 0x798 0x69c 
+SHORT 0x488 0x8d4 0x604 0x71c 0x950 0x798 0x9d0 0x69c 
 ALIGN 4
 

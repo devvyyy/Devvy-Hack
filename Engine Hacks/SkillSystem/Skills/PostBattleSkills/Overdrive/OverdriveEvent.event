@@ -1,5 +1,5 @@
 OverdriveEvent:
-CHECK_EVENTID 0xED //glowy mode is ON; don't gain stacks
+CHECK_EVENTID 0x5 //glowy mode is ON; don't gain stacks
 BNE 0x776 0xC 0x0 //if on, end
 
 //1 bullet
@@ -9,7 +9,7 @@ ENUF 0x23
 
 SOUN 0x119 //bolting sparks
 ENUT 0x24
-ENUT 0xED
+ENUT 0x5
 STAL 0x50
 SOUN 0x82 //sleep staff sound
 //STAL 0x35

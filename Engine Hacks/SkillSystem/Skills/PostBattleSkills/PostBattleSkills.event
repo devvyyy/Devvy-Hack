@@ -16,6 +16,14 @@ CheckGaleforce: //decides if the unit should be cantoing or not
 #incbin "Galeforce/checkgaleforce.dmp"
 
 ALIGN 4
+SavingGrace:
+#incbin "SavingGrace/SavingGrace.dmp"
+POIN SkillTester
+WORD SavingGraceID
+POIN SavingGraceEvent
+#include "SavingGrace/SavingGrace.event"
+
+ALIGN 4
 StaticPost:
 #incbin "StaticPost/StaticPost.dmp"
 POIN SkillTester

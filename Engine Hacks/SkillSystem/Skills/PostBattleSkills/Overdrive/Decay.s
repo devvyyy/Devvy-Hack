@@ -35,7 +35,7 @@ bne	End
 @check if Chiffon is at max stacks; if set, decay
 ldr r0,=#0x8083da8 @CheckEventId
 mov r14,r0
-mov r0,#0xED @chiffon cant stack flag
+mov r0,#0x5 @chiffon cant stack flag
 .short 0xF800
 cmp r0,#1
 beq Noverdrive @if sicko mode flag is on, start decay; otherwise, end

@@ -33,10 +33,10 @@ ldrb	r1, [r4,#0x0B]	@allegiance byte of the character we are checking
 cmp	r0, r1		@check if same character
 bne	End
 
-@check if flag 0xED set; if so, add status
+@check if flag 0x5 set; if so, add status
 ldr r0,=#0x8083da8 @CheckEventId
 mov r14,r0
-mov r0,#0xED
+mov r0,#0x5
 .short 0xF800
 cmp r0,#1
 bne End

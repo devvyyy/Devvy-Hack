@@ -49,6 +49,10 @@ EscapePointEntry(10,0,EscapeUp)
 EscapePointEntry(11,0,EscapeUp)
 EscapePointTerminator
 
+EnemyEscapeTablePrologue2:
+EscapePointEntry(0,5,EscapeLeft)
+EscapePointTerminator
+
 // escape point by chapter table
 SetEnemyEscapePoint(0,EnemyEscapeTablePrologue)
 SetEnemyEscapePoint(3,EnemyEscapeTableCh3)
