@@ -147,6 +147,8 @@ int GetItemDescId(int item) {
                 itemDesc = 0x21B;	
 			case 0xA9: //Hunting Rifle
                 itemDesc = 0x21C;
+			case 0x84: //Magnum Rifle
+                itemDesc = 0x21F;
 			case 0xCB: //Last Hour
                 itemDesc = 0x21D;				
         }

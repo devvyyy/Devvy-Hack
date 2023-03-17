@@ -31,13 +31,38 @@ and	r0, r1
 cmp	r0, #0x00
 bne	End
 
-@check if last action was using summoning
+@check if last action was rescue
 ldr r0,=#0x203A958
 ldrb r0,[r0,#0x11]
 mov r1,#0x9
 cmp r0,r1
-bne End
+beq DoTheThingKatsu
 
+@check if last action was drop
+ldr r0,=#0x203A958
+ldrb r0,[r0,#0x11]
+mov r1,#0xA
+cmp r0,r1
+beq DoTheThingKatsu
+
+@check if last action was take
+ldr r0,=#0x203A958
+ldrb r0,[r0,#0x11]
+mov r1,#0xB
+cmp r0,r1
+beq DoTheThingKatsu
+
+
+@check if last action was give
+ldr r0,=#0x203A958
+ldrb r0,[r0,#0x11]
+mov r1,#0xC
+cmp r0,r1
+beq DoTheThingKatsu
+
+b End @not any of the above actions; end
+
+DoTheThingKatsu:
 @unset 0x2 and 0x40, set 0x400, write to status
 ldr	r0, [r4,#0x0C]	@status bitfield
 mov	r1, #0x42

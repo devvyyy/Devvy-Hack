@@ -44,6 +44,8 @@ cmp     r0, #0xAD         @Bodkin Rifle ID
 beq YesThereIsSkill
 cmp     r0, #0x8A         @Shining Rifle ID
 beq YesThereIsSkill
+cmp     r0, #0x84         @Magnum Rifle ID
+beq YesThereIsSkill
 b End        @If not a Rifle, end skill
 
 YesThereIsSkill:

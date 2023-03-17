@@ -31,17 +31,18 @@ MiscBasedEvents:
 	AFEV 0xB AfterDoor1 0xF
 	AFEV 0xC AfterDoor2 0x9
 	AFEV 0xD AfterDoor3 0xA
+	AREA 0xA RecruitDoor3 [5,8] [7,10]
 	CauseGameOverIfLordDies
 	END_MAIN
 
 LocationBasedEvents:
 Chest(EmeraldAxe,11,8)
-Door(6,11)
+Door(18,4)
 Door(10,11)
 Door(14,11)
 LOCA 0xF RecruitDoor1 [10,4] 0x12
 LOCA 0x9 RecruitDoor2 [14,4] 0x12
-LOCA 0xA RecruitDoor3 [18,4] 0x12
+LOCA 0xA RecruitDoor3 [6,11] 0x12
 Escape(21,4)
 Escape(21,5)
 Escape(21,6)
@@ -93,8 +94,9 @@ ClearBackground
 CUSA Frye
 GiveItem(SteelSword,Frye)
 GiveItem(Flamberge,Frye)
-GiveItem(Vulnerary,Frye)
+GiveItem(Elixir,Frye)
 MURE 2
+Music(0xC2)
 NoFade
 ENDA
 
@@ -114,11 +116,12 @@ GiveItem(Flux,Wulfric)
 GiveItem(0x9F,Wulfric)
 GiveItem(PureWater,Wulfric)
 MURE 2
+Music(0xC2)
 NoFade
 ENDA
 
 RecruitDoor3:
-TILECHANGE 0x8
+TILECHANGE 0x9
 NoFade
 ENDA
 
@@ -131,8 +134,8 @@ ClearBackground
 CUSA Cortado
 GiveItem(KillerLance,Cortado)
 GiveItem(ShortSpear,Cortado)
-GiveItem(Elixir,Cortado)
 MURE 2
+Music(0xC2)
 NoFade
 ENDA
 
@@ -196,7 +199,7 @@ UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [2,2] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Eli
 UNIT Jaye Mage_F 0x1 Level(3, Ally, 0)   [6,2] 0b 0x0 0x0 0x0 [Thunder,Bolting,Vulnerary] [0x0,0x0,0x0,0x0]
 UNIT Frye Mercenary 0x1 Level(6, Ally, 0)   [10,2] 0b 0x0 0x0 0x0 [Flamberge,SteelSword,Vulnerary] [0x0,0x0,0x0,0x0]
 UNIT Wulfric Shaman 0x1 Level(4, Ally, 0)   [14,2] 0b 0x0 0x0 0x0 [Flux,PureWater,0xf4] [0x0,0x0,0x0,0x0]
-UNIT Cortado 0x60 0x1 Level(5, Ally, 0)   [18,2] 0b 0x0 0x0 0x0 [KillerLance,ShortSpear,Vulnerary] [0x0,0x0,0x0,0x0]
+UNIT Cortado 0x60 0x1 Level(5, Ally, 0)   [6,9] 0b 0x0 0x0 0x0 [KillerLance,ShortSpear,Vulnerary] [0x0,0x0,0x0,0x0]
 	UNIT
 
 EnemyUnits:
@@ -234,17 +237,18 @@ UNIT WreyvineEnemy SCav 0x1 Level(2, Enemy, 1)     [0,6] 0b 0x0 0x0 0x0 [SteelSw
 	UNIT
 	
 NoFuckingWay: //idk have her be like 'omg theres sussy sounds from the halls' then omg idk gorlois appears :shrug:
-UNIT Gorlois Parson 0x1 Level(7, Enemy, 0)     [0,5] DropItem 0 1 REDA2R5 [0x40, AngelicRobe] StallOneTurnAI
+UNIT Gorlois Parson 0x1 Level(7, Enemy, 0)     [0,5] DropItem 0 1 REDA2R5 [Spark, AngelicRobe] StallOneTurnAI
 	UNIT
 	
 OKREALNEWPARTY: //tile change out
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [2,2] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Polly MageRider 0x1 Level(1, Ally, 0)   [1,5] 0b 0x0 0x0 0x0 [Wind,PoisonSword,MiracleRing] [0x0,0x0,0x0,0x0]
 UNIT Jaye Mage_F 0x1 Level(3, Ally, 0)   [6,2] 0b 0x0 0x0 0x0 [Thunder,Bolting,Vulnerary] [0x0,0x0,0x0,0x0]
 UNIT Frye Mercenary 0x1 Level(6, Ally, 0)   [10,2] 0b 0x0 0x0 0x0 [] [0x0,0x0,0x0,0x0]
 UNIT Wulfric Shaman 0x1 Level(4, Ally, 0)   [14,2] 0b 0x0 0x0 0x0 [] [0x0,0x0,0x0,0x0]
-UNIT Cortado 0x60 0x1 Level(5, Ally, 0)   [18,2] 0b 0x0 0x0 0x0 [] [0x0,0x0,0x0,0x0]
-UNIT Graham Priest 0x1 Level(10, Ally, 0)   [0,5] 0 0 1 REDA1R5 [0xf0,Mend,0xAE,Stopwatch] [0x0,0x0,0x0,0x0]
-UNIT 0x38 Brigand 0x1 Level(2, NPC, 1)     [6,9] 0b 0x0 0x0 0x0 [SteelLabrys,] WallAI
+UNIT Cortado 0x60 0x1 Level(5, Ally, 0)   [6,9] 0b 0x0 0x0 0x0 [ChestKey] [0x0,0x0,0x0,0x0]
+UNIT Graham Priest 0x1 Level(10, Ally, 0)   [0,5] 0 0 1 REDA2R5 [0xf0,Mend,Sleep,0xAE,] [0x0,0x0,0x0,0x0]
+UNIT 0x38 Brigand 0x1 Level(2, NPC, 1)     [10,9] 0b 0x0 0x0 0x0 [SteelLabrys,] WallAI
 UNIT 0x38 Raider 0x1 Level(2, NPC, 1)     [14,9] 0b 0x0 0x0 0x0 [Lancereaver,KillingEdge] ChargeAI
 	UNIT
 
@@ -265,7 +269,6 @@ Traps2:
 
 BeginningScene:
 	LOAD1 0x1 EnemyUnits
-	SetFlag(0x8) //cloak mug
 	ENUT AllUnitsMustEscapeFlag
 	LOAD1 0x1 OKREALNEWPARTY
 	ENUN
@@ -277,8 +280,10 @@ BeginningScene:
 	MOVE 0xF Chiffon [2,6]
 	ENUN
 	TurnNPC(Cortado)
+
 	TurnNPC(Wilken)
 	TurnNPC(Frye)
+	SilentlyGiveItem(Stopwatch, Graham)
 	NoFade
 	ENDA
 	

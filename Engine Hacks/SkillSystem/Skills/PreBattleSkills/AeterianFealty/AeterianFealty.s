@@ -27,11 +27,11 @@ beq End
 Final:
 mov r1,#0x60 @hit
 ldrh r2, [r4, r1]
-add r2, #10
+add r2, #50
 strh r2, [r4,r1]
 add r1, #0x2 @avoid
 ldrh r2, [r4, r1]
-add r2, #10
+add r2, #50
 strh r2, [r4,r1]
 
 End:

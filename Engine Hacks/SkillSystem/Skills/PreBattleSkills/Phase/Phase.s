@@ -41,6 +41,8 @@ cmp r0, #0xCB 		 @Last Hour (wtf?)
 beq IronAwesome
 cmp r0, #0x8A 		 @Shining Rifle
 beq ShiningAwesome
+cmp r0, #0x84 		 @Magnum Rifle
+beq SilverAwesome
 b End
 
 IronAwesome:
@@ -174,12 +176,24 @@ ldrh r0, [r4, r1] @atk
 add r0, #3
 strh r0, [r4,r1]
 
-@add 25% of foe's res as bonus attack
-mov  r1, #0x5A
-ldrh r0, [r4, r1] @attack
+@ bork: check enemy res
+mov r0, #5
+ldrb r1, [r5, #0x18] @defender res
+cmp r0, r1
+ble End @skip if foes res is greater than or equal to 10
+
+@ add 10 damage
+mov r0, r4
+add r0, #0x5a @attack
+ldrh r3, [r0]
+add r3, #5
+strh r3, [r0]
+
+@grants defense to enemy equal to enemy res
+mov  r1, #0x5a
+ldrh r0, [r4, r1] @in battle defense
 ldrb r2, [r5, #0x18] @res
-lsr  r2, #2
-add  r0, r2
+sub  r0, r2
 strh r0, [r4,r1]
 
 End:

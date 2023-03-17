@@ -22,7 +22,7 @@ push {r3}
 @check if Overdrive flag is set; if so, dont end status
 ldr r0,=#0x8083da8 @CheckEventId
 mov r14,r0
-mov r0,#0xED @overdrive flag
+mov r0,#0x5 @overdrive flag
 .short 0xF800
 pop {r3}
 cmp r0, #0x0

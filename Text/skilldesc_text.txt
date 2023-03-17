@@ -10,6 +10,12 @@ Burst Fire: Attack dealing AoE 2x1 damage[N]
 scaling with Dex. Converts Str to Hit.[N]
 Cost: 1 Durability.[X]
 
+## SD_PowerSlide
+# even through walls/go through walls like zeri?
+Power Slide: Unit can Canto 1 space.[N]
+Activate to dash 3 spaces in any direction.[N]
+Effect recharges on kill.[X]
+
 ## SD_CombatMedic
 Even the Odds: If Hartwick initiates, restores (50% AP) HP[N]
 to allies within 2 spaces of both him and target (overlapping stacks),[N]
@@ -26,14 +32,19 @@ Rev' Up: If Hartwick attacked, combat grants 1 stack (max; 5).[N]
 At max stacks, initiating deals (25% of foe's max HP + 150% AP)[N]
 magical damage, cannot follow-up or be countered, and has x2 range.[X]
 
+## SD_CantoStatus
+With Me!: Derval's staves grant allies[N]
+Canto for 1 turn. If initiating, deals[N]
++20 bonus magical damage.[X]
+
 ## SD_EyeForAnEye
-Eye For An Eye: Foes always attack first.[N]
-Radcliff's counterattack deals bonus damage =[N]
-50% of damage taken from foe's last attack.[X]
+Eye For An Eye: Radcliff's counterattacks[N]
+deals bonus damage = 200% of damage[N]
+taken from foe's last attack.[X]
 
 ## SD_Daredevil
 # wyvern skill?
-Daredevil: If Moose would take a lethal[N]
+Daredevil: If [OpenQuote]Moose" would take a lethal[N]
 hit, grants both sides Crit +40 and[N]
 both sides strike x2 consecutively.[X]
 
@@ -66,9 +77,9 @@ Spd > foe's Spd +6, follow-ups are consecutive,[N]
 and if Spd > foe's Spd +8, foe cannot counter.[X]
 
 ## SD_SavingGrace
-Saving Grace: Grants Katsu another action after[N]
-Rescue/Drop. If initiating and Spd > foe's Spd,[N]
-reduces damage taken = difference between stats.[X]
+Saving Grace: Grants Katsu another[N]
+action after Rescue/Drop/Take/Give[N]
+(once per turn, Canto disabled).[X]
 
 ## SD_AmonglaSwag
 16-Caliber Net: After combat, unit Roots[N]
@@ -175,7 +186,7 @@ Flow:[X]
 
 ## SD_Overdrive2
 # uses flag 0x23, 0x24, and also 0x5 (?? in builder)
-[_R][_u][0xe9]e[_SP][_L][_u][_n][_a][_i][_r]e[_Colon][_SP][_I][_n][_i][_t][_i][_a][_t][_i][_n][_g][_SP][_g][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP]([_m][_a][_x];[_SP]2)[_Dot][N]
+[_R][_u][0xe9]e[_SP][_L][_u][_n][_a][_i][_r]e[_Colon][_SP][_I][_n][_i][_t][_i][_a][_t][_i][_n][_g][_SP][_g][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP][_LParen][_m][_a][_x];[_SP][_2][_RParen][_Dot][N]
 [_A][_t][_SP][_m][_a][_x][_SP][_s][_t][_a][_c][_k][_s][_Comma][_SP][_C][_h][_i][_f][_f][_o][_n][_SP][_a][_c][_t][_i][_v][_a][_t][_e][_s][_SP][_O][_v][_e][_r][_d][_r][_i][_v][_e][_SP][_o][_n][N]
 [_i][_n][_i][_t][_i][_a][_t][_i][_o][_n][_Comma][_SP][_l][_a][_s][_t][_i][_n][_g][_SP][_u][_n][_t][_i][_l][_SP][_o][_u][_t][_SP][_o][_f][_SP][_s][_t][_a][_c][_k][_s][_Dot][X]
 
@@ -290,7 +301,7 @@ per turn).[X]
 
 ## SD_Gaming
 # Flow, temp flags 0x25-0x28
-[_F]l[_o]w[_Colon][_SP][_C][_o]m[_b][_a][_t][_Slash][_s][_t][_e][_a]l[_Slash][_p]i[_c][_k][_SP][_g][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP](m[_a][_x];[_SP]4)[_Dot][N]
+[_F]l[_o]w[_Colon][_SP][_C][_o]m[_b][_a][_t][_Slash][_s][_t][_e][_a]l[_Slash][_p]i[_c][_k][_SP][_g][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP][_LParen]m[_a][_x];[_SP][_4][_RParen][_Dot][N]
 [_A][_t][_SP][_m][_a][_x][_SP][_s][_t][_a][_c][_k][_s][_Comma][_SP][_c][_o][_n][_s][_u][_m][_e][_s][_SP][_a][_l][_l][_SP][_s][_t][_a][_c][_k][_s][_SP][_o][_n][_SP][_i][_n][_i][_t][_i][_a][_t][_i][_o][_n][_SP][_t][_o][N]
 [_x][_2][_SP][_C][_a][_n][_t][_o][_SP][_m][_o][_v][_e][_m][_e][_n][_t][_SP][_a][_n][_d][_SP][_d][_e][_a][_l][_SP][_b][_o][_n][_u][_s][_SP][_d][_a][_m][_a][_g][_e][_SP]=[_SP][_R][_e][_s][_Dot][X]
 
@@ -331,7 +342,7 @@ another action.[X]
 
 ## SD_AeterianFealty
 Vigil in Fealty: If Graham is adjacent to[N]
-Chiffon, grants Hit/Avoid +10. Grants[N]
+Chiffon, grants Hit/Avoid +50. Grants[N]
 Hit/Avoid +5 to all allies on the map.[X]
 
 ## SD_BornInDarkness
@@ -420,15 +431,15 @@ a = unit's base Atk, b = Spd, and c = Skl.)[X]
 
 ## SD_BurstFire
 # [_S][_a]l[_v][_o][_Space][_Q][_u]i[_v][_e][_r]
-[_S][_a][_b]l[_e]-[_T]i[_p][_p][_e][_d][_Colon][_Space][_B][_o][_w][_s][_Space][_g][_a]i[_n][_Space][_Plus][_3][_Space][_r][_a][_n][_g][_e][_Comma][_Space][_d][_e][_a]l[_Space][_b][_o][_n][_u][_s][_Space][_d][_a][_m][_a][_g][_e][N]
-[_e][_q][_u][_a]l[_Space]t[_o][_Space][_h][_a]l[_f][_Space][_o][_f][_Space][_f][_o][_e]'[_s][_Space][_R][_e][_s][_Comma][_Space]l[_o][_s][_e][_Space][_1][_0][_Space][_H]it[_Slash][_s][_p][_a][_c][_e][_Space][_a][_f]t[_e][_r][_Space][_2][_Comma][N]
-[_a][_n][_d][_Space][_d][_e][_a]l[_Space][_a][_Space][_h][_a]l[_f][_Space][_o][_f][_Space][_f][_o][_e]'[_s][_Space][_R][_e][_s][_Space]t[_o][_Space][_a][_d]j[_a][_c][_e][_n]t[_Space][_f][_o][_e][_s][_Space][_o][_n][_Space]i[_n]it[_Dot][X]
+[_S][_a][_b]l[_e][_Minus][_T]i[_p][_p][_e][_d][_Colon][_Space][_B][_o][_w][_s][_Space][_g][_a]i[_n][_Space][_Plus][_3][_Space][_r][_a][_n][_g][_e][_Comma][_Space][_d][_e][_a]l[_Space][_b][_o][_n][_u][_s][_Space][_d][_a][_m][_a][_g][_e][N]
+[_e][_q][_u][_a]l[_Space]t[_o][_Space][_h][_a]l[_f][_Space][_o][_f][_Space][_f][_o][_e][_SingleQuote][_s][_Space][_R][_e][_s][_Comma][_Space]l[_o][_s][_e][_Space][_1][_0][_Space][_H]it[_Slash][_s][_p][_a][_c][_e][_Space][_a][_f]t[_e][_r][_Space][_2][_Comma][N]
+[_a][_n][_d][_Space][_d][_e][_a]l[_Space][_a][_Space][_h][_a]l[_f][_Space][_o][_f][_Space][_f][_o][_e][_SingleQuote][_s][_Space][_R][_e][_s][_Space]t[_o][_Space][_a][_d]j[_a][_c][_e][_n]t[_Space][_f][_o][_e][_s][_Space][_o][_n][_Space]i[_n]it[_Dot][X]
 
 ## SD_Phase
 # Affogato: Sidestep, Flow, Locktouch, Shove, Phasing (Ultimate Skill, keep Shove as Maverick); Chiffon: Moon Evoked, Rally Strength, Locktouch, Shove, IDK YET (Ultimate Skill)
 [_P][_h][_a][_s]i[_n][_g][_Colon][_Space][_E][_q][_u]i[_p][_p][_e][_d][_Space][_B][_o]w[_Slash][_R]i[_f]l[_e][_Space]i[_s][_Space][_g][_r][_a][_n]t[_e][_d][_Space][_3][_0]%[_SP][_M]t[N]
 [_a][_n][_d][_Space]l[_e][_s][_s][_e][_r][_Space][_s][_e][_c][_o][_n][_d][_a][_r][_y][_Space][_e][_f][_f][_e][_c]t[_s][_Space][_f][_r][_o]m[_Space]t[_h][_e][_Space][_o][_f][_f]-[_h][_a][_n][_d][N]
-[_R]i[_f]l[_e][_Space]i[_n][_Space][_2][_n][_d][_Space]i[_n][_v][_e][_n]t[_o][_r][_y][_Space][_s]l[_o]t[_Space]([_e][_x][_c]l[_u][_d][_e][_s][_Space][_E][_f][_f][_Dot])[_Dot][X]
+[_R]i[_f]l[_e][_Space]i[_n][_Space][_2][_n][_d][_Space]i[_n][_v][_e][_n]t[_o][_r][_y][_Space][_s]l[_o]t[_Space][_LParen][_e][_x][_c]l[_u][_d][_e][_s][_Space][_E][_f][_f][_Dot][_RParen][_Dot][X]
 
 ## SD_BloodHunt
 Blood Hunt: If foe's HP is 50% or less,[N]
@@ -456,14 +467,14 @@ deals +5 bonus magical damage, and if[N]
 foe is also unpromoted, grants Hit +20.[X]
 
 ## SD_LethalTempo
-[_C]l[_e][_a][_v]i[_n][_g][_SP][_W][_h]i[_r]l[_Colon][_SP][_U][_n]it'[_s][_SP][_L][_a][_b][_r][_y][_s][_SP][_c][_a][_n][_n][_o]t[_SP][_f][_o]ll[_o][_w]-[_u][_p][_Comma][N]
-[_b][_u]t[_SP][_c][_o][_n][_v][_e][_r]t[_s][_SP][_S][_p][_d][_SP]t[_o][_SP][_b][_o][_n][_u][_s][_SP][_A]t[_k]/[_C][_r]it[_SP][_a][_n][_d][_SP]if[_SP][_S][_p][_d][N]
+[_C]l[_e][_a][_v]i[_n][_g][_SP][_W][_h]i[_r]l[_Colon][_SP][_U][_n]it[_SingleQuote][_s][_SP][_L][_a][_b][_r][_y][_s][_SP][_c][_a][_n][_n][_o]t[_SP][_f][_o]ll[_o][_w][_Minus][_u][_p][_Comma][N]
+[_b][_u]t[_SP][_c][_o][_n][_v][_e][_r]t[_s][_SP][_S][_p][_d][_SP]t[_o][_SP][_b][_o][_n][_u][_s][_SP][_A]t[_k][_Slash][_C][_r]it[_SP][_a][_n][_d][_SP]if[_SP][_S][_p][_d][N]
 i[_s][_SP][_h]i[_g][_h][_e][_r][_Comma][_SP][_s]t[_r]i[_k][_e][_s][_SP][_x][_2][_SP][_c][_o][_n][_s][_e][_c][_u]ti[_v][_e]l[_y][_SP][_o][_n][_SP]i[_n]iti[_a]ti[_o][_n][_Dot][X]
 
 ## SD_Tresillo
 # LHT?!
-[_F]-[_D][0x23]-[_F][_Slash][_Slash][_C][0x23]-[_G][0x23]-[_F][_Colon][_SP][_C][_o][_n][_v][_e][_r][_t][_s][_SP][_S][_t][_a][_n][_i][_e][_l]'[_s][_SP][_S][_t][_r][_SP][_t][_o][N]
-[_b][_o][_n][_u][_s][_SP][_A][_v][_o][_i][_d][_Comma][_SP][_a][_n][_d][_SP][_D][_e][_x][_SP][_t][_o][_SP][_b][_o][_n][_u][_s][_SP][_C][_r][_i][_t][_SP][_A][_v][_o][_i][_d][_Dot][_SP][_I][_f][_SP][_f][_o][_e]'[_s][N]
+[_F][_Minus][_D][0x23][_Minus][_F][_Slash][_Slash][_C][0x23][_Minus][_G][0x23][_Minus][_F][_Colon][_SP][_C][_o][_n][_v][_e][_r][_t][_s][_SP][_S][_t][_a][_n][_i][_e][_l][_SingleQuote][_s][_SP][_S][_t][_r][_SP][_t][_o][N]
+[_b][_o][_n][_u][_s][_SP][_A][_v][_o][_i][_d][_Comma][_SP][_a][_n][_d][_SP][_D][_e][_x][_SP][_t][_o][_SP][_b][_o][_n][_u][_s][_SP][_C][_r][_i][_t][_SP][_A][_v][_o][_i][_d][_Dot][_SP][_I][_f][_SP][_f][_o][_e][_SingleQuote][_s][N]
 [_r][_a][_n][_g][_e][_SP]>[_SP][_2][_Comma][_SP][_d][_o][_d][_g][_e][_SP][_a][_l][_l][_SP][_a][_t][_t][_a][_c][_k][_s][_Dot][_SP][_C][_a][_n][_SP][_P][_l][_a][_y][_Dot][X]
 
 ## SD_HeavyDuty
@@ -667,8 +678,8 @@ unit's missing HP.[X]
 
 ## SD_Sanctuary
 [_S][_a][_n][_c][_t][_u][_a][_r][_y][_Colon][_SP][_S][_t][_r][_o][_g][_a][_n][_o][_f][_f][_SP][_r][_e][_v][_e][_r][_s][_e][_s][_SP][_w][_e][_a][_p][_o][_n][_SP][_c][_o][_m][_b][_a][_t][N]
-[_p][_e][_n][_a][_l][_t][_i][_e][_s][_SP]([_W][_T][_SP][_d][_i][_s][_a][_d][_v][_a][_n][_t][_a][_g][_e][_Comma][_SP][_d][_a][_r][_k][_SP][_m][_a][_g][_i][_c][_Comma][_SP][_e][_t][_c][_Dot])[_Comma][_SP][_a][_n][_d][N]
-[_n][_e][_u][_t][_r][_a][_l][_i][_z][_e][_s][_SP][_s][_t][_a][_t][_SP][_p][_e][_n][_a][_l][_t][_i][_e][_s][_SP]([_r][_e][_s][_c][_u][_e][_Comma][_SP][_s][_t][_a][_v][_e][_s][_Comma][_SP][_e][_t][_c][_Dot])[_Dot][X]
+[_p][_e][_n][_a][_l][_t][_i][_e][_s][_SP][_LParen][_W][_T][_SP][_d][_i][_s][_a][_d][_v][_a][_n][_t][_a][_g][_e][_Comma][_SP][_d][_a][_r][_k][_SP][_m][_a][_g][_i][_c][_Comma][_SP][_e][_t][_c][_Dot][_RParen][_Comma][_SP][_a][_n][_d][N]
+[_n][_e][_u][_t][_r][_a][_l][_i][_z][_e][_s][_SP][_s][_t][_a][_t][_SP][_p][_e][_n][_a][_l][_t][_i][_e][_s][_SP][_LParen][_r][_e][_s][_c][_u][_e][_Comma][_SP][_s][_t][_a][_v][_e][_s][_Comma][_SP][_e][_t][_c][_Dot][_RParen][_Dot][X]
 
 ## SD_Ether
 Ethereal Guard: Neutralizes foe's[N]
@@ -760,9 +771,9 @@ foe's Max HP/4.[X]
 
 ## SD_CloseCall
 # Sidestep
-[_S][_i][_d][_e][_s][_t][_e][_p][_Colon][_SP][_I][_f][_SP][_A][_f][_f][_o][_g][_a][_t][_o][_SP][_d][_o][_e][_s][_n]'[_t][_SP][_m][_o][_v][_e][_Comma][_SP][_C][_a][_n][_t][_o][_SP][_2][_SP][_s][_p][_a][_c][_e][_s][N]
-([_C][_a][_n][_t][_o][_SP][_1][_SP][_s][_p][_a][_c][_e][_SP][_o][_t][_h][_e][_r][_w][_i][_s][_e])[_Dot][_SP][_G][_r][_a][_n][_t][_s][_SP][_a][_n][_o][_t][_h][_e][_r][_SP][_a][_c][_t][_i][_o][_n][N]
-[_a][_f][_t][_e][_r][_SP][_p][_i][_c][_k][_i][_n][_g][_Slash][_s][_t][_e][_a][_l][_i][_n][_g][_SP]([_o][_n][_c][_e][_SP][_p][_e][_r][_SP][_t][_u][_r][_n])[_Dot][X]
+[_S][_i][_d][_e][_s][_t][_e][_p][_Colon][_SP][_I][_f][_SP][_A][_f][_f][_o][_g][_a][_t][_o][_SP][_d][_o][_e][_s][_n][_SingleQuote][_t][_SP][_m][_o][_v][_e][_Comma][_SP][_C][_a][_n][_t][_o][_SP][_2][_SP][_s][_p][_a][_c][_e][_s][N]
+[_LParen][_C][_a][_n][_t][_o][_SP][_1][_SP][_s][_p][_a][_c][_e][_SP][_o][_t][_h][_e][_r][_w][_i][_s][_e][_RParen][_Dot][_SP][_G][_r][_a][_n][_t][_s][_SP][_a][_n][_o][_t][_h][_e][_r][_SP][_a][_c][_t][_i][_o][_n][N]
+[_a][_f][_t][_e][_r][_SP][_p][_i][_c][_k][_i][_n][_g][_Slash][_s][_t][_e][_a][_l][_i][_n][_g][_SP][_LParen][_o][_n][_c][_e][_SP][_p][_e][_r][_SP][_t][_u][_r][_n][_RParen][_Dot][X]
 
 ## SD_Vigor
 # Requiem: When using offensive staves, multiplies Eth by 1.25x and deals bonus damage equal to a quarter of foe's current HP.
@@ -792,8 +803,9 @@ Warlock: Adjacent allies target[N]
 foe's Res.[X]
 
 ## SD_Blackfire
-Blackfire: Polly inflicts Atk/AS -2[N]
-on adjacent foes.[X]
+[_R][_a][_v][_e][_n][_o][_u][_s][_SP][_V][_o][_r][_t][_e][_x][_Colon][_SP][_P][_o][_l][_l][_y][_SP][_i][_n][_f][_l][_i][_c][_t][_s][_SP][_A][_t][_k][_Slash][_A][_S][_SP][_Dash][_2][_SP][_o][_n][N]
+[_a][_d][_j][_a][_c][_e][_n][_t][_SP][_f][_o][_e][_s][_Dot][_SP][_I][_f][_SP][_t][_o][_m][_e][_SP][_i][_s][_SP][_e][_q][_u][_i][_p][_p][_e][_d][_Comma][_SP][_g][_r][_a][_n][_t][_s][_SP][_W][_T][N]
+[_a][_d][_v][_a][_n][_t][_a][_g][_e][_SP][_a][_n][_d][_SP][_t][_r][_i][_p][_l][_e][_s][_SP][_W][_T][_SP][_e][_f][_f][_e][_c][_t][_s][_SP][_f][_o][_r][_SP][_b][_o][_t][_h][_SP][_s][_i][_d][_e][_s][_Dot][X]
 
 ## SD_Whirlwind
 Thunderhead: If unit's HP is 75%[N]
@@ -819,13 +831,13 @@ grants Attack Speed +2.[X]
 
 ## SD_Intrepid
 # Dive-Bomb
-[_D][_i][_v][_e]-[_B][_o][_m][_b][_Colon][_SP][_I][_f][_SP][_B][_r][_u][_d][_e][_t][_SP][_i][_n][_i][_t][_i][_a][_t][_e][_s][_SP][_a][_n][_d][_SP][_b][_o][_t][_h][_SP][_s][_i][_d][_e][_s]'[_SP][_H][_P][_SP][_i][_s][N]
-[_f][_u][_l][_l][_Comma][_SP][_f][_o][_l][_l][_o][_w]-[_u][_p][_SP][_a][_n][_d][_SP][_f][_o][_e][_SP][_c][_a][_n][_n][_o][_t][_Comma][_SP][_a][_n][_d][_SP][_i][_f][_SP][_a][_l][_s][_o][_SP][_a][_t][_SP][_1][_SP][_r][_a][_n][_g][_e][_Comma][N]
-[_f][_o][_l][_l][_o][_w]-[_u][_p][_SP][_a][_t][_t][_a][_c][_k][_s][_SP][_o][_c][_c][_u][_r][_SP][_b][_e][_f][_o][_r][_e][_SP][_c][_o][_u][_n][_t][_e][_r][_Dot][X]
+[_D][_i][_v][_e]-[_B][_o][_m][_b][_Colon][_SP][_I][_f][_SP][_B][_r][_u][_d][_e][_t][_SP][_i][_n][_i][_t][_i][_a][_t][_e][_s][_SP][_a][_n][_d][_SP][_b][_o][_t][_h][_SP][_s][_i][_d][_e][_s][_SingleQuote][_SP][_H][_P][_SP][_i][_s][N]
+[_f][_u][_l][_l][_Comma][_SP][_f][_o][_l][_l][_o][_w][_Minus][_u][_p][_SP][_a][_n][_d][_SP][_f][_o][_e][_SP][_c][_a][_n][_n][_o][_t][_Comma][_SP][_a][_n][_d][_SP][_i][_f][_SP][_a][_l][_s][_o][_SP][_a][_t][_SP][_1][_SP][_r][_a][_n][_g][_e][_Comma][N]
+[_f][_o][_l][_l][_o][_w][_Minus][_u][_p][_SP][_a][_t][_t][_a][_c][_k][_s][_SP][_o][_c][_c][_u][_r][_SP][_b][_e][_f][_o][_r][_e][_SP][_c][_o][_u][_n][_t][_e][_r][_Dot][X]
 
 ## SD_Inspire
-Inspire: Wustenhoff grants +5 Atk and "Unit[N]
-strikes x2 consecutively to all physical[N]
+Inspire: Wustenhoff grants +5 Atk and [OpenQuote]Unit[N]
+strikes x2 consecutively" to all physical[N]
 NPCs on the map with HP > 50% or more.[X]
 
 ## SD_BitterCold
@@ -1969,7 +1981,7 @@ effectiveness multipliers.[X]
 # Stand United
 [_S][_t][_a][_n][_d][_SP][_U][_n][_i][_t][_e][_d][_Colon][_SP][_I][_f][_SP][_T][_h][_e][_r][_e][_s][_e][_SP][_i][_n][_i][_t][_i][_a][_t][_e][_s][_SP][_w][_i][_t][_h][_i][_n][_SP][_2][_SP][_s][_p][_a][_c][_e][_s][N]
 [_o][_f][_SP][_a][_SP][_p][_h][_y][_s][_i][_c][_a][_l][_SP][_a][_r][_m][_o][_r][_e][_d][_SP][_a][_l][_l][_y][_Comma][_SP][_g][_r][_a][_n][_t][_s][_SP][_A][_t][_k][_SP][_Plus][_3][_Comma][_SP][_a][_n][_d][_SP][_i][_f][N]
-[_a][_d]j[_a][_c][_e][_n][_t][_Comma][_SP][_g][_r][_a][_n][_t][_s][_SP][_a][_n][_o][_t][_h][_e][_r][_SP][_a][_c][_t][_i][_o][_n][_SP]([_o][_n][_c][_e][_SP][_p][_e][_r][_SP][_t][_u][_r][_n])[_Dot][X]
+[_a][_d]j[_a][_c][_e][_n][_t][_Comma][_SP][_g][_r][_a][_n][_t][_s][_SP][_a][_n][_o][_t][_h][_e][_r][_SP][_a][_c][_t][_i][_o][_n][_SP][_LParen][_o][_n][_c][_e][_SP][_p][_e][_r][_SP][_t][_u][_r][_n][_RParen][_Dot][X]
 
 ## SD_LullStr
 Lull Str: Negates the effects of[N]

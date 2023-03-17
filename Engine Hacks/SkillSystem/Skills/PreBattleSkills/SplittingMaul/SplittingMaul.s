@@ -15,10 +15,10 @@ ldr r1, [r5,#4] @class data ptr
 cmp r1, #0 @if 0, this is stat screen
 beq End
 
-@check if flag 0xED set; if so, check for bonus magic damage
+@check if flag 0x5 set; if so, check for bonus magic damage
 ldr r0,=#0x8083da8 @CheckEventId
 mov r14,r0
-mov r0,#0xED
+mov r0,#0x5
 .short 0xF800
 cmp r0,#1
 bne End

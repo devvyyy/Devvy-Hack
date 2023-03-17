@@ -29,12 +29,6 @@ mov r1, #0x5E
 ldrh r0, [ r4, r1 ]
 sub r0, r0, #2
 strh r0, [ r4, r1 ]
-@testing
-mov r0, r4
-add r0, #0x5c @attacker defense
-ldrh r3, [r0]
-add r3, #2
-strh r3, [r0]
 
 Done:
 pop {r4-r7}
