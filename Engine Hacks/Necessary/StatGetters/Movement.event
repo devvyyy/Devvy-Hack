@@ -4,7 +4,7 @@
 #include "_Common.event"
 ALIGN 4
 pMovModifiers: // Movement
-	POIN prAddUnitBaseMov prAddUnitMovBonus (prGetItemMovBonus-1) prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prArmorMarchCheck prStatusZephyrCheck prStatusZephyrEnemyCheck
+	POIN prAddUnitBaseMov prAddUnitMovBonus (prGetItemMovBonus-1) prItemPassiveMov prRallyMov prSkillCelerity prSkillUpgrade prArmorMarchCheck prStatusZephyrCheck prStatusZephyrEnemyCheck
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff-1
 	#endif
@@ -17,6 +17,7 @@ pMovModifiers: // Movement
 	POIN prGaleforceCheck
 	POIN prPassCheck
 	POIN prEmpowerCheck
+	POIN prCantoRing
 	POIN prStatusOverdriveMovCheck
 WORD 0
 
@@ -30,7 +31,7 @@ prSkillCelerity:
 	rIfUnitHasSkill(CelerityID)
 		rAddConst(2)
 		
-prSkillPoise:
+prSkillUpgrade:
 	rIfUnitHasSkill(UpgradeID)
 		rAddConst(1)
 
@@ -45,6 +46,10 @@ prNullifyIfRooted:
 		
 prFlorisMarked:
 	rIfUnitHasStatus(SickStatusID)
+		rAddConst(1)
+		
+prCantoRing:
+	rIfUnitHasSkill(CantoOneID)
 		rAddConst(1)
 		
 prGaleforceCheck:
@@ -62,7 +67,7 @@ prStatusZephyrCheck:
 		rIfUnitHasSkill(ZephyrID)
 			rAddConst(4)
 			
-prPassCheck:
+prPassCheck: //player thieves
 	rIfUnitHasState(0x400)
 		rIfUnitHasSkill(PassID)
 			rConstant(0)
@@ -74,7 +79,7 @@ prEmpowerCheck:
 			
 prMoonCheck:
 	rIfUnitHasState(0x400)
-		rIfUnitHasSkill(MoonEvokedID)
+		rIfUnitHasSkill(OverdriveID)
 			rConstant(0)
 			
 prStatusOverdriveMovCheck:

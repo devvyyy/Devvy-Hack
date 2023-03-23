@@ -9,7 +9,7 @@ pSpeedModifiers: // Speed
 	POIN prMinZero
 	#endif
 	POIN prEmpowerSpdCheck
-	POIN prStatusOverdriveSpdCheck
+	POIN prStatusOverdriveSpdCheck prBulwarkRingSpd
 //	POIN prTemperedFateSpd
 WORD 0
 
@@ -35,6 +35,11 @@ prEmpowerSpdCheck: //thief rush
 prStatusOverdriveSpdCheck:
 	rIfUnitHasStatus(0x15) //Overdrive
 			rDoubled
+			
+prBulwarkRingSpd:
+rIfUnitHasNotSkill(SanctuaryID)
+  rIfUnitHasSkill(BattleVeteranID)
+    rSubConst(5)
 			
 prTemperedFateSpd:
 rIfUnitHasStatus(0x13)

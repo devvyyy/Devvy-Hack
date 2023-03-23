@@ -1,0 +1,24 @@
+#include "src/PortraitLocation.lyn.event"
+#include "src/PortraitLocation_Hook.lyn.event"
+
+PUSH
+ORG 0x5CE0
+jumpToHack(PortraitTSA_Hook)
+POP
+
+//Example TSA moving portrait one tile to the right
+ALIGN 4
+RightShiftTSA:
+#incbin "gfx/RightShiftTSA.dmp"
+//Ansgar TSA that also shifts 1 tile right but it works with the hackbox expansion blahblahblauhjfiy
+ALIGN 4
+AnsgarRightShiftTSA:
+#incbin "gfx/AnsgarTSA.dmp"
+
+#define PortraitTSAListEntry(portraitID, xMouth, yMouth, TSAPointer) "SHORT portraitID; BYTE xMouth yMouth; POIN TSAPointer"
+
+ALIGN 4
+PortraitTSAList:
+PortraitTSAListEntry(0x29, 2, 5, RightShiftTSA) //Strogy portrait example
+PortraitTSAListEntry(0x23, 2, 4, AnsgarRightShiftTSA) //Ansgar
+SHORT 0 //TERMINATOR

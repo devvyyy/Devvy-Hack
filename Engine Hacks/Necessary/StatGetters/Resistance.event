@@ -5,11 +5,14 @@
 
 pResistanceModifiers: // Resistance
 	POIN prAddUnitResistance prHalveIfCapturing prDebuffRes prAddEquipResistance prItemPassiveResistance prRallyRes prAddPureWaterBarrierMod prLifeAndDeathMinus prSkillFury prFortressResistanceRes prDefiantRes prPushRes
-	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	POIN prSleepHalfRes prPoisonHalfRes
 	POIN prAvoidBuffRes
+	POIN prAcrobatCheckRes
+	POIN prCantoRingRes prBulwarkRingRes
 //	POIN prTemperedFateRes
+	#ifdef DEBUFFS_MIN_ZERO
+	POIN prMinZero
 	#endif
 WORD 0
 
@@ -45,6 +48,20 @@ rIfUnitHasStatus(0x8)
 prTemperedFateRes:
 rIfUnitHasStatus(0x13)
 	rAddConst(50)
+	
+prAcrobatCheckRes:
+rIfUnitHasNotSkill(SanctuaryID)
+		rIfUnitHasSkill(AcrobatID)
+			rSubConst(5)
+			
+prCantoRingRes:
+rIfUnitHasNotSkill(SanctuaryID)
+	rIfUnitHasSkill(CantoOneID)
+		rSubConst(4)
+		
+prBulwarkRingRes:
+rIfUnitHasSkill(BattleVeteranID)
+		rAddConst(7)
 
 prLifeAndDeathMinus:
 _testSkill(HeroesLifeAndDeathID,0,5)

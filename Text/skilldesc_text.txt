@@ -26,9 +26,14 @@ Heat Rising: Combat is a free action, but[N]
 grants 1 stack (max; 5). At max stacks,[N]
 Overheat and skip Hartwick's next turn.[X]
 
+## SD_Tenacity
+Tenacity: If unit has any status effect,[N]
+grants Atk/AS +5 and deal 10 bonus[N]
+physical damage.[X]
+
 ## SD_CombatMedic3
 # railgun
-Rev' Up: If Hartwick attacked, combat grants 1 stack (max; 5).[N]
+Rev'd Up: If Hartwick attacked, combat grants 1 stack (max; 5).[N]
 At max stacks, initiating deals (25% of foe's max HP + 150% AP)[N]
 magical damage, cannot follow-up or be countered, and has x2 range.[X]
 
@@ -38,14 +43,14 @@ Canto for 1 turn. If initiating, deals[N]
 +20 bonus magical damage.[X]
 
 ## SD_EyeForAnEye
-Eye For An Eye: Radcliff's counterattacks[N]
-deals bonus damage = 200% of damage[N]
+Grin and Counter: Radcliff's counterattacks[N]
+deal bonus damage = 200% of damage[N]
 taken from foe's last attack.[X]
 
 ## SD_Daredevil
 # wyvern skill?
 Daredevil: If [OpenQuote]Moose" would take a lethal[N]
-hit, grants both sides Crit +40 and[N]
+attack, grants both sides Crit +40 and[N]
 both sides strike x2 consecutively.[X]
 
 ## SD_Malzahar
@@ -67,9 +72,9 @@ true damage = 500% of foe's missing HP.[X]
 
 ## SD_KingShield
 # global flag 0xBB
-Adapting Poise: Wegman toggles between stat-changing[N]
-Stances after initiating with a weapon or shield.[N]
-[SwordIcon]: 1.25x Str. [ArmorIcon]: Take 50% less damage.[X]
+Adapting Poise: After combat, Wegman toggles[N]
+between Swing/Pierce Stance based on weapon type.[N]
+[SwordIcon][AxeIcon]: +4 Atk, -20 Hit. [LanceIcon][BowIcon]: +6 AS, -4 Prt/Rsl.[X]
 
 ## SD_BlindingFlash
 Blinding Flash: If Katsu initiates and[N]
@@ -101,7 +106,7 @@ and initiates, grants Def +20.[X]
 
 ## SD_UlrichMirrorPassive
 Vanguard Resolve: If Ulrich is within 3[N]
-spaces of an ally, deal 10 bonus physical[N]
+spaces of an ally, deals 10 bonus physical[N]
 damage and reverses Defeatist's penalties.[X]
 
 ## SD_AnsgarMirrorPassive
@@ -118,7 +123,7 @@ after stealing.[X]
 
 ## SD_MochaMirrorPassive
 Golden Feather: If Mocha initiates, inflicts[N]
-penalty on foe's Spd/Def = 50% of Res.[X]
+penalty on foe's AS/Prt = 50% of Res.[X]
 
 ## SD_RinaMirrorPassive
 Blitzing Reflexes: If Rina is not adjacent to[N]
@@ -500,7 +505,7 @@ a follow-up and foe cannot.[X]
 
 ## SD_SolLance
 Solar Thrust: Deals (10 - foe's Res) bonus damage[N]
-on hit, and unit heal the same amount.[X]
+on hit, and unit heals the same amount.[X]
 
 ## SD_Parry
 # maybe if unit's range perfectly matches foe's or something idk
@@ -730,8 +735,8 @@ locks, and gets +2 spaces of vision in[N]
 fog/darkness.[X]
 
 ## SD_Respite
-Respite: If unit is on open
-terrain, grants Hit +30.
+Respite: If unit is on open[N]
+terrain, grants Hit +30.[X]
 
 ## SD_Sharpshooter
 Sharpshooter: If unit moves 2 or less[NL]
@@ -1132,8 +1137,7 @@ Colossus: Triples Strength.[N]
 
 ## SD_RallyStr
 Hoist the Flag: Rally to grant +4[N]
-Str/Eth to adjacent allies for 1 turn.[N]
-Can move after stealing/picking.[X]
+Str/Eth to adjacent allies for 1 turn.[X]
 
 ## SD_RallyMag
 Rally Magic: +4 Mag to[N]
@@ -1269,7 +1273,7 @@ Natural Cover: -3 damage taken[N]
 when on terrain with effects.[X]
 
 ## SD_SealStr
-Snare: Inflicts Str/Eth -5 on foe after[N]
+Disarm: Inflicts Str/Eth -5 on foe after[N]
 combat (recovers 1/turn).[X]
 
 ## SD_SealSkl

@@ -217,8 +217,8 @@
 #define SealSklID 255
 #define SealSpdID 106 //slow staff
 #define SealLukID 255
-#define SealDefID 255
-#define SealResID 210 //corrosion staff?
+#define SealDefID 210 //corrosion staff
+#define SealResID 255
 //By Snakey1
 #define SealMagID 255
 
@@ -345,7 +345,7 @@
 
 //Canto: Can move again after certain actions.
 //By Tequila
-#define CantoID 11
+#define CantoID 255
 
 //Close Call: Can move 2 spaces after attacking.
 //By MinN
@@ -354,6 +354,10 @@
 //Canto Two: Can move 1 space after any action.
 //Kelik Zenair
 #define CantoTwoID 162
+
+//Canto Two: Can move 1 space after any action.
+//Kelik Zenair
+#define CantoOneID 11
 
 //Canto+: Can move again after attacking and other actions.
 //By Tequila
@@ -588,7 +592,7 @@
 
 //Critical Force: Base critical is Skl * 1.5.
 //Author Unknown (Initial Commit)
-#define CriticalForceID 255
+#define CriticalForceID 96
 
 //Killing Machine: Total critical rate is doubled.
 //Author Unknown (Initial Commit)
@@ -1357,7 +1361,7 @@
 
 //Expertise: Reduce bonus damage from critical hits by 50%.
 //Author Unknown (Initial Commit)
-#define ExpertiseID 96
+#define ExpertiseID 255
 
 //Celerity: Movement +2.
 //Author Unknown (Initial Commit)

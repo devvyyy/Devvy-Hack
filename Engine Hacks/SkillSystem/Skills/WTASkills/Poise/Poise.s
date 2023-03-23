@@ -20,9 +20,15 @@ ldsb r1,[r4,r0]
 cmp r1,#0
 ble CheckAttacker
 
-@zero out the hit bonus
+@zero out everything
+mov        r0,#0x53 @wt hit
+ldsb    r1,[r5,r0]
 mov r1,#0
-strb r1,[r4,r0]
+strb    r1,[r5,r0]
+mov        r0,#0x54 @wt damage
+ldsb    r1,[r5,r0]
+mov r1,#0
+strb    r1,[r5,r0]
 
 CheckAttacker:
 ldr r6,SkillTester
@@ -39,9 +45,15 @@ ldsb r1,[r5,r0]
 cmp r1,#0
 ble End
 
-@zero out the hit bonus
+@zero out everything
+mov        r0,#0x53 @wt hit
+ldsb    r1,[r5,r0]
 mov r1,#0
-strb r1,[r5,r0]
+strb    r1,[r5,r0]
+mov        r0,#0x54 @wt damage
+ldsb    r1,[r5,r0]
+mov r1,#0
+strb    r1,[r5,r0]
 
 End:
 pop {r4-r6}

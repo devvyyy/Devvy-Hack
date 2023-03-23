@@ -35,7 +35,7 @@ bne     End @do nothing if magic bit set
 
 @make sure attack is at 1-2 range
 ldrb r0, [r7, #2]
-cmp r0, #3
+cmp r0, #2
 bge End
 
 @make sure damage > 0

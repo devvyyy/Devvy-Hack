@@ -1,0 +1,134 @@
+EventPointerTable(0x47, PointerList)
+
+PointerList:
+	POIN TurnBasedEvents
+	POIN CharacterBasedEvents
+	POIN LocationBasedEvents
+	POIN MiscBasedEvents
+	POIN Dunno1 Dunno2 Dunno3 Tutorial
+	POIN Traps1 Traps2
+	POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+	POIN $0 $0 $0
+	POIN $0 $0 $0
+	POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+
+	END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+
+	END_MAIN
+
+MiscBasedEvents:
+	CauseGameOverIfLordDies
+	END_MAIN
+
+LocationBasedEvents:
+Chest(0xF,26,19)
+Door(15,11)
+Door(7,7)
+Door(7,8)
+Door(23,7)
+Door(23,8)
+Vendor(ShopBruh,22,0)
+Armory(ArmoryBruh,8,3)
+	END_MAIN
+	
+ShopBruh:
+SHLI Thunder Mend Vulnerary PureWater Mine LightRune
+ALIGN 4
+
+ArmoryBruh:
+SHLI BluntBlade
+ALIGN 4
+
+Dunno1:
+
+	END_MAIN
+
+Dunno2:
+
+	END_MAIN
+
+Dunno3:
+
+	END_MAIN
+
+Tutorial:
+
+	END_MAIN
+
+Units1:
+LoadUnit(14,3)
+LoadUnit(15,3)
+LoadUnit(16,3)
+LoadUnit(14,4)
+LoadUnit(15,4)
+LoadUnit(16,4)
+LoadUnit(14,5)
+LoadUnit(15,5)
+LoadUnit(16,5)
+
+LoadUnit(9,8)
+LoadUnit(21,8)
+
+LoadUnit(14,10)
+LoadUnit(15,10)
+LoadUnit(16,10)
+
+LoadUnit(8,2)
+LoadUnit(22,2)
+	UNIT
+	
+NewRecruits:
+UNIT Lennard Deserter 0x1 Level(3, Ally, 0)     [7,4] 0b 0x0 0x0 0x0 [SapphireLance,ShortSpear] [0x0,0x0,0x0,0x0]
+UNIT Therese SArmor 0x1 Level(4, Ally, 0)     [5,4] 0b 0x0 0x0 0x0 [SteelBlade,0x66,Mine] [0x0,0x0,0x0,0x0]
+		UNIT
+	
+NPCUnits:
+UNIT Wegman General 0x1 Level(10, NPC, 0)     [7,4] 0b 0x0 0x0 0x0 [0xF,Spear,SteelLabrys,SilverRifle] [0x0,0x0,0x0,0x0]
+UNIT Gerolf SPal 0x1 Level(10, NPC, 0)     [7,4] 0b 0x0 0x0 0x0 [BraveSword,Flamberge] [0x0,0x0,0x0,0x0]
+UNIT Klavdia WyvernKnight 0x1 Level(10, NPC, 0)     [7,4] 0b 0x0 0x0 0x0 [PoisonAxe,MagnumAxe] [0x0,0x0,0x0,0x0]
+	UNIT
+	
+KlavdiaFlying:
+UNIT Klavdia WyvernKnight 0x1 Level(10, NPC, 0)     [15,0] 0 0 1 REDA25R0 [SteelBlade] [0x0,0x0,0x0,0x0]
+	UNIT
+
+EnemyUnits:
+UNIT BadGuyStealable Druid 0x1 Level(5, Enemy, 1)     [5,19] 0b 0x0 0x0 0x0 [Flux,AngelicRobe] BossAI
+UNIT BadGuyStealable Druid 0x1 Level(5, Enemy, 1)     [15,22] 0b 0x0 0x0 0x0 [Flux,AngelicRobe] BossAI
+UNIT BadGuyStealable Druid 0x1 Level(5, Enemy, 1)     [28,15] 0b 0x0 0x0 0x0 [Flux,AngelicRobe] BossAI
+
+UNIT BadGuy Shaman 0x1 Level(5, Enemy, 1)     [14,18] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+
+UNIT BadGuy Shaman 0x1 Level(5, Enemy, 1)     [0,2] 0b 0x0 0x0 0x0 [Flux,] WallAI
+UNIT BadGuy Shaman 0x1 Level(5, Enemy, 1)     [28,7] 0b 0x0 0x0 0x0 [Flux,] WallAI
+
+UNIT BadGuy LCav 0x1 Level(5, Enemy, 1)     [14,22] 0b 0x0 0x0 0x0 [SteelLance,] WallAI
+UNIT BadGuy Shaman 0x1 Level(5, Enemy, 1)     [13,18] 0b 0x0 0x0 0x0 [Flux,] WallAI
+
+
+
+	UNIT
+
+Traps1:
+	ENDTRAP
+	ALIGN 4
+
+Traps2:
+	ENDTRAP
+	ALIGN 4
+
+BeginningScene:
+	LOAD1 0x1 EnemyUnits
+	ENUN
+	GotoPrepScreen
+	ENDA
+
+EndingScene:
+	MNC2 0x6
+	NoFade
+	ENDA

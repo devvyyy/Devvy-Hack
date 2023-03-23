@@ -45,6 +45,9 @@ LOCA 0xA CheckIfWinLeft [1,7] 0x11
 LOCA 0xB CheckIfWinMid [16,15] 0x11
 LOCA 0xC CheckIfWinRight [22,3] 0x11
 
+Vendor(ShopBruh,10,6)
+Armory(ArmoryBruh,11,7)
+
 Village(0x8,Village1,23,29)
 Village(0x9,Village2,2,18)
 Village(0x11,Village3,9,18)
@@ -129,6 +132,13 @@ Village4:
 VillageEventItem(Placeholder1, 0x1, 0xB4) //miracle ring
 ENDA
 
+ShopBruh:
+SHLI Thunder Mend Vulnerary PureWater Mine LightRune
+ALIGN 4
+
+ArmoryBruh:
+SHLI SteelSword Sagitar SteelLance Javelin SteelAxe HandAxe SteelBow ShortBow
+ALIGN 4
 
 House1:
 STORETOSOMETHING 0x0 // lowers music volume

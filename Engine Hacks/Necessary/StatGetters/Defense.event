@@ -5,12 +5,14 @@
 
 pDefenseModifiers: // Defense
 	POIN prAddUnitDefense prHalveIfCapturing prDebuffDef prAddEquipDefense prItemPassiveDefense prRallyDef prLifeAndDeathMinus VigorDanceCheck prSkillFury prFortressDefenseDef prDefiantDef prPushDef
+	POIN prSleepHalfDef prPoisonHalfDef
+	POIN prAvoidBuffDef
+	POIN prAcrobatCheck
+	POIN prCantoRingDef prCounterDef prBulwarkRing
+//	POIN prTemperedFateDef
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
-	POIN prSleepHalfDef prPoisonHalfDef
-	POIN prAvoidBuffDef
-//	POIN prTemperedFateDef
 WORD 0
 
 prAddUnitDefense:
@@ -33,6 +35,25 @@ prFortressDefenseDef:
 prAvoidBuffDef:
 rIfUnitHasStatus(0x8)
 	rAddConst(3)
+	
+prAcrobatCheck:
+rIfUnitHasNotSkill(SanctuaryID)
+		rIfUnitHasSkill(AcrobatID)
+			rSubConst(5)
+			
+prCounterDef:
+rIfUnitHasNotSkill(SanctuaryID)
+  rIfUnitHasSkill(CounterID)
+    rSubConst(4)
+			
+prCantoRingDef:
+rIfUnitHasNotSkill(SanctuaryID)
+	rIfUnitHasSkill(CantoOneID)
+		rSubConst(4)
+		
+prBulwarkRing:
+rIfUnitHasSkill(BattleVeteranID)
+		rAddConst(7)
 	
 prSleepHalfDef:
 rIfUnitHasStatus(0x2)

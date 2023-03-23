@@ -126,11 +126,6 @@ UNIT Aeteria Pirate 0x1 Level(6, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [ShortAxe,]
 UNIT Aeteria Archer 0x1 Level(6, Enemy, 1)     [4,3] 0b 0x0 0x0 0x0 [KillerBow] ChargeAI
 	UNIT
 	
-RecruitsAgain:
-UNIT Lennard Deserter 0x1 Level(6, Ally, 0)     [7,4] 0b 0x0 0x0 0x0 [SapphireLance,ShortSpear] [0x0,0x0,0x0,0x0]
-UNIT Therese SArmor 0x1 Level(7, Ally, 0)     [5,4] 0b 0x0 0x0 0x0 [SteelBlade,0x66,Mine] [0x0,0x0,0x0,0x0]
-	UNIT
-	
 WyvernAndPeg:
 UNIT FlierSoul WyvRider 0x1 Level(6, Enemy, 1)     [8,18] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
 UNIT FlierSoul PegRider 0x1 Level(6, Enemy, 1)     [17,18] 0b 0x0 0x0 0x0 [Axereaver,IronLance] TwoActionAI
@@ -612,7 +607,6 @@ STAL 5
 FADI 60
 CLEAN
 	LOAD1 0x1 EnemyUnits
-	LOAD1 0x1 RecruitsAgain
 FADU 30
 STAL 10
 Music(0x93)

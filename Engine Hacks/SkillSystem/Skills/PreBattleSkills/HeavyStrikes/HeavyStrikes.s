@@ -30,6 +30,20 @@ ldrh r0, [r4, r1]
 add r0, r2
 strh r0, [r4,r1]
 
+mov r1, #0x62
+ldrh r0, [r4, r1]
+add r0, r2
+strh r0, [r4,r1]
+
+mov r1, #0x60
+ldrh r0, [r4, r1]
+add r0, r2
+strh r0, [r4,r1]
+
+mov r1, #0x68
+ldrh r0, [r4, r1]
+add r0, r2
+strh r0, [r4,r1]
 
 End:
 pop {r4-r7, r15}

@@ -12,7 +12,7 @@ mov r0, r4 @attacker data
 ldr r1, PhaseID
 .short 0xf800
 cmp r0, #0
-beq End
+beq Workaround
 
 @Is the second inventory slot a rifle?
 mov r1, #0x20
@@ -41,8 +41,13 @@ cmp r0, #0xCB 		 @Last Hour (wtf?)
 beq IronAwesome
 cmp r0, #0x8A 		 @Shining Rifle
 beq ShiningAwesome
+cmp r0, #0x30 		 @Dart Rifle
+beq IronAwesome
 cmp r0, #0x84 		 @Magnum Rifle
 beq SilverAwesome
+b End
+
+Workaround: @cause making it end normally is uh too long
 b End
 
 IronAwesome:

@@ -415,30 +415,63 @@ within 2 spaces.[X]
 
 ## GlowRingDesc
 # ashen ring when??
-A hallowed ring that transfers damage[N]
-penalties inflicted by tier I-V dark[N]
-magic during combat to its user.[X]
+A hallowed ring. Wearer transfers[N]
+damage penalties inflicted by tier I-V[N]
+dark magic during combat to its user.[X]
 
 ## OtherRingDesc
 # ashen ring now!!
-An ashen ring that doubles damage[N]
-penalties inflicted by unit using[N]
-tier I-V dark magic during combat.[X]
+An ashen ring. Wearer doubles damage[N]
+penalties inflicted using tier I-V[N]
+dark magic during combat.[X]
 
 ## LoyalRingDesc
 # ashen ring now!!
-A faithful ring that restores HP[N]
-to its user = HP restored with[N]
+A faithful ring. Restores HP to[N]
+wearer equal to HP restored with[N]
 a staff.[X]
 
-## WreyvineRingDesc
-A sunlit ring that reduces magic[N]
-damage taken by 5.[X]
+## BulwarkRingName
+Bulwark Ring[X]
+
+## BulwarkRingDesc
+A ring of ages. Grants wearer 3 Prt/Rsl,[N]
+5 Avoid/Crit Avoid per 10 levels.[N]
+Def/Res +7, Str/Eth/Spd -5.[X]
 
 ## GrimRingDesc
-A headsman's ring that deals bonus[N]
+A headsman's ring. Wearer deals bonus[N]
 damage equal to 25% of foe's[N]
 missing HP.[X]
+
+## CounterRingName
+Grit Ring[X]
+
+## CounterRingDesc
+A pit fighter's ring. Wearer counters[N]
+physical damage upon hit at 1 range[N]
+(can't kill). Str/Eth/Skill/Def -4.[X]
+
+## CountermagicRingName
+Spellthief Ring[X]
+
+## CountermagicRingDesc
+A sorcerer's ring. Wearer counters[N]
+magical damage upon hit (can't kill),[N]
+and grants magic range +1. Luck/Res -20.[X]
+
+## HPRingDesc
+A mending ring. Wearer restores HP[N]
+equal to (10 + Res x 2)% of max HP[N]
+at the start of turn.[X]
+
+## HeavyRingName
+Behemoth Ring[X]
+
+## HeavyRingDesc
+A titan's ring. Grants wearer bonus[N]
+Hit/Avoid/Crit/Crit Avoid equal to[N]
+weapon Wt. Con +2.[X]
 
 ## GreenGemDesc
 A rare gemstone[N]
@@ -499,27 +532,21 @@ unit (ex. thieves).[X]
 
 ## AnyRingDesc
 A ring that applies[N]
-passive bonuses.[N]
+passive effects.[N]
 (Only first is applied.)[X]
 
 ## HPRingDesc
-A mending ring that restores HP equal[N]
-to (10 + Res x 2)% of unit's max HP[N]
-at the start of each turn.[X]
+A mending ring. Wearer restores HP[N]
+equal to (10 + Res x 2)% of max HP[N]
+at the start of turn.[X]
 
 ## DemonRingDesc
-A ring that grants both sides[N]
-Atk equal to the other side's[N]
-missing HP.[X]
+A cursed ring. Grants both sides Atk[N]
+equal to the other side's missing HP.[X]
 
 ## LiveRingDesc
-A holy ring that lets the wearer[N]
-survive an attack with 1 HP[N]
-if HP > 50%.[X]
-
-## BShieldDesc
-A sturdy ring that halves damage[N]
-taken from follow-up attacks.[X]
+A sturdy ring. Wearer takes 50%[N]
+less damage from follow-up attacks.[X]
 
 ## InspFlagDesc
 A leader's banner that grants[N]
@@ -529,15 +556,9 @@ allies within 2 spaces +2 Atk.[X]
 A charm that increases its[N]
 holder's growth rates by 20%.[X]
 
-## ReMoveItemDesc
-A lucky ring that gives the wearer[N]
-a (Luck%) chance to grant another[N]
-action.[X]
-
 ## GridmasterItemDesc
-A firm ring that lets its holder[N]
-use their remaining movement[N]
-after using a movement skill.[X]
+A firm ring. Wearer can use remaining[N]
+movement after using a movement skill.[X]
 
 ## MuletaDesc
 A glowing ring that increases its[N]
@@ -576,38 +597,11 @@ Here is your[N]
 share.[X]
 
 ## EffMageDesc
-Effective against magic.[X]
+Effective against magic. Res +5.[X]
 
 ## PlayD
 A motivating tune that[N]
 refreshes an ally.[X]
-
-## SongDesc2
-A song that grants[N]
-nearby allies[N]
-bonuses.[X]
-
-## AtkSongDesc
-Equipped: Grants Atk +3, and "Deals bonus magical[N]
-damage = 25% of Str/Eth." to allies within 2 spaces.[N]
-2nd Slot: Atk +2 to adjacent allies.[X]
-
-## DRSongDesc
-Equipped: Def/Res +4, and "Inflicts Atk penalty on[N]
-foe = 25% of unit's current HP." to allies within 2 spaces.[N]
-2nd Slot: Def/Res +2 to adjacent allies.[X]
-
-## CritSongDesc
-# make this AS
-Equipped: AS +2, and "Grants Atk bonus = difference[N]
-between Spd." to allies within 2 spaces.[N]
-2nd Slot: AS +2 to adjacent allies.[X]
-
-## AvoidSongDesc
-# make this hit/crit
-Equipped: Hit/Crit/Avoid/Crit Avoid +20
-to allies within 2 spaces.[N]
-2nd Slot: Hit/Crit +10 to adjacent allies.[X]
 
 ## KingPrfDesc
 A cleaver of snow and ash. If initiating, deals[N]
@@ -632,7 +626,7 @@ Restores HP = damage dealt.[X]
 
 ## GhostDaggerDesc
 Unit can traverse impassible terrain[N]
-at 2 cost. Avoid +10.[X]
+at 2 cost. Avoid +10, Def/Res -5.[X]
 
 ## HookDaggerDesc
 ...And sinker. Drags foe to unit and[N]
@@ -701,7 +695,9 @@ Inflicts Stasis[N]
 for 1 turn.[X]
 
 ## DirkDesc
-Avoid +10. Canto 3 spaces.[X]
+Avoid +10. Canto 3 spaces after[N]
+any action.[N]
+(Canto skills take priority.)[X]
 
 ## ChiffonPRFDesc
 When in Overdrive, deals 5 bonus magical[N]
@@ -715,13 +711,37 @@ Doubles weapon triangle effects.[X]
 Grants WTA against bows and sidearms.[N]
 Poisons for 1 turn on-damage.[X]
 
-## AffinityRingDesc
-A nullifying ring that neutralizes all[N]
-weapon triangle effects.[X]
+## AffinityRingName
+Affinity Ring[X]
 
-## PreserveRingDesc
-A nullifying ring that grants the wearer's[N]
-spells an Eth% chance to not cost durability.[X]
+## AffinityRingDesc
+A blacksmith's ring. Wearer neutralizes[N]
+WTD, and weapons have a (Luck)%[N]
+chance to not consume durability.[X]
+
+## WingRingName
+Stride Ring[X]
+
+## WingRingDesc
+A winged ring. Wearer can Canto 1 space[N]
+after any action. Move +1, Def/Res -4.[N]
+(Canto skills take priority.)[X]
+
+## CritRingName
+Critical Ring[X]
+
+## CritRingDesc
+A volatile ring. Grants the wearer base[N]
+Crit x 1.5 and halves bonus damage[N]
+from enemy critical hits. Atk -4, Luck -10.[X]
+
+## DesperationRingName
+Daring Ring[X]
+
+## DesperationRingDesc
+A bold ring. Wearer's follow-ups occur[N]
+before foe can counterattack.[N]
+Str/Eth/Skill/Luck -3.[X]
 
 ## LostSoulMagicDesc
 Ethereal souls created from dark arts,[N]
@@ -812,18 +832,17 @@ bonus magical damage.[N]
 [_Lock]: Nora[X]
 
 ## KaynRingDesc
-A void ring that lets the wearer[N]
-traverse impassible terrain[N]
-at 2 cost.[X]
+An ephemeral ring. Wearer can traverse[N]
+impassible terrain at 2 cost. Def/Res -5.[X]
 
 ## MarchRingDesc
-A sturdy ring that grants Move +1 to[N]
-the wearer and adjacent [ArmorIcon] allies if[N]
+A solid ring. Grants Move +1 to wearer[N]
+and adjacent [ArmorIcon] allies if[N]
 adjacent to an [ArmorIcon] ally at start of turn.[X]
 
 ## TemperedRingDesc
-A tempered ring that restores 5 HP[N]
-to the wearer after combat.[N]
+A tempered ring. Restores 5 HP to[N]
+the wearer after combat.[N]
 (Does not stack with Shine II.)[X]
 
 ## MarkedDesc
@@ -841,7 +860,7 @@ Soulbreak[X]
 ## ShadowEyeDesc
 Soul is splintered in[N]
 the night...[N]
-Max HP is halved.[X]
+Max HP reduced by 50%.[X]
 
 ## WhirlwindName
 Whirlwind[X]

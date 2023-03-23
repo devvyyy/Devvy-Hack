@@ -5,10 +5,15 @@
 ALIGN 4
 pConModifiers: // Consitition
 	POIN prAddUnitBaseCon prAddUnitConBonus prItemPassiveCon (prGetItemConBonus-1)
+	POIN prConRing
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
 WORD 0
+
+prConRing:
+	rIfUnitHasSkill(HeavyStrikesID)
+		rAddConst(2)
 
 prAddUnitBaseCon:
 {

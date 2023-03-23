@@ -40,15 +40,22 @@ b Loop
 
 Eff:
 
-mov r0, #0x5A
-ldrh r2, [r4, r0] @Damage
-mov r3,#0x1
+mov r0, #0x5C
+ldrh r2, [r4, r0] @def
+mov r3,#0x2
 mul r3,r1 @1 Damage per level
 add r2,r3
 strh r2, [r4,r0]
 
-mov r0, #0x60
-ldrh r2, [r4, r0] @Hit
+mov r0, #0x62
+ldrh r2, [r4, r0] @avo
+mov r3,#0x5
+mul r3,r1 @5 hit per level
+add r2,r3
+strh r2, [r4,r0]
+
+mov r0, #0x68
+ldrh r2, [r4, r0] @cravoid
 mov r3,#0x5
 mul r3,r1 @5 hit per level
 add r2,r3

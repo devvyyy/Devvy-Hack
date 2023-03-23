@@ -5,6 +5,7 @@
 
 pLuckModifiers: // Luck
 	POIN prAddUnitLuck prHalveIfCapturing prDebuffLck prAddEquipLuck prItemPassiveLuck prRallyLck prDefiantLck
+	POIN prCriticalForceLuck prDesperationLuck
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -28,6 +29,16 @@ prRallyLck:
 prAvoidBuffLuck:
 rIfUnitHasStatus(0x8)
 	rAddConst(3)
+	
+prCriticalForceLuck:
+rIfUnitHasNotSkill(SanctuaryID)
+  rIfUnitHasSkill(CriticalForceID)
+    rSubConst(10)
+	
+prDesperationLuck:
+rIfUnitHasNotSkill(SanctuaryID)
+  rIfUnitHasSkill(DesperationID)
+    rSubConst(3)
 
 prItemPassiveLuck:
 #ifndef DONT_STACK_BOOSTS
