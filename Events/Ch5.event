@@ -108,12 +108,16 @@ NewNew:
 UNIT Atheya WyvernRider_F 0x1 Level(5, Ally, 0)     [6,13] 0x0 0x0 0x0 0x0 [IronLabrys,Halberd,Elixir,] AttackInRangeAI
 UNIT
 
+LunaticUnits:
+UNIT Atheya WyvernRider_F 0x1 Level(5, Ally, 1)     [6,13] 0x0 0x0 0x0 0x0 [KillerAxe,Halberd,Elixir,Speedwing] AttackInRangeAI
+UNIT
+
 NagitoKomaeda:
 UNIT Murray Deserter 0x1 Level(7, Enemy, 0)     [13,15] 0b 0x0 0x0 0x0 [SapphireLance,ShortSpear,GoddessIcon] BossAI
 	UNIT
 	
 Recruits:
-UNIT Noel Thief 0x1 Level(3, Ally, 0)     [14,9] 0b 0x0 0x0 0x0 [IronDagger,0xED,0xCE,RedGem] BossAI
+UNIT Noel Fighter 0x1 Level(3, Ally, 0)     [14,9] 0b 0x0 0x0 0x0 [0x22,0x2C,RedGem] BossAI
 	UNIT
 	
 SpookyBrigand:
@@ -212,7 +216,7 @@ LABEL 5
 FADI 45
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 NagitoKomaeda
-	LOAD1 0x1 NewNew
+HardUnits(LunaticUnits,NewNew)
 	ENUN
 	GotoPrepScreen
 	ENDA

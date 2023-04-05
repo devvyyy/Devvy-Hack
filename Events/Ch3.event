@@ -150,6 +150,14 @@ UNIT Doppio Soldier 0x1 Level(5, Ally, 0)     [12,8] 0b 0x0 0x0 0x0 [KillerLance
 UNIT Wreyvine Mercenary 0x1 Level(3, NPC, 1)     [9,9] 0b 0x0 0x0 0x0 [KillingEdge,Armorslayer] StallOneTurnAI
 UNIT Wreyvine Soldier 0x1 Level(3, NPC, 1)     [13,9] 0b 0x0 0x0 0x0 [SapphireLance,Javelin] StallOneTurnAI
 	UNIT
+	
+LunaticUnits:
+UNIT Stroganoff AArmor 0x1 Level(6, Ally, 0)     [10,8] 0b 0x0 0x0 0x0 [SteelLabrys,EmeraldAxe,0x65,0xf1] [0x0,0x3,0x0,0x20]
+UNIT Eiskaffee GriffonRider 0x1 Level(4, Ally, 0)     [11,9] 0b 0x0 0x0 0x0 [IronRifle,0xDB,Elixir] [0x0,0x3,0x0,0x20]
+UNIT Doppio Soldier 0x1 Level(5, Ally, 0)     [12,8] 0b 0x0 0x0 0x0 [KillerLance, ShortSpear, Elixir] [0x0,0x3,0x0,0x20]
+UNIT Wreyvine Mercenary 0x1 Level(4, NPC, 1)     [9,9] 0b 0x0 0x0 0x0 [BraveSword,ShortBrand] StallOneTurnAI
+UNIT Wreyvine Soldier 0x1 Level(4, NPC, 1)     [13,9] 0b 0x0 0x0 0x0 [BraveLance,ShortSpear] StallOneTurnAI
+	UNIT
 
 AtheyaCutscene:
 UNIT Atheya WyvernRider_F 0x1 Level(5, NPC, 0)     [6,13] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] AttackInRangeAI
@@ -186,7 +194,7 @@ FADI 60
 SetFlag(0xB)
 SetFlag(0xD)
 	LOAD1 0x1 EnemyUnits
-	LOAD1 0x1 YoItThem
+HardUnits(LunaticUnits,YoItThem)
 	CUSN Stroganoff
 	CUSN Doppio
 	CUSN Eiskaffee

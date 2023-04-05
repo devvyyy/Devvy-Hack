@@ -106,7 +106,7 @@ UNIT Aeteria Mercenary 0x1 Level(5, Enemy, 1)     [6,0] 0x0 0x0 0x0 0x0 [IronSwo
 
 NPCEPIC:
 UNIT HolyGuard Monk 0x1 Level(3, NPC, 1)     [3,14] 0b 0x0 0x0 0x0 [Light1, Vulnerary] [0,0,2,0]
-UNIT HolyGuard Archer 0x1 Level(3, NPC, 1)     [12,12] 0b 0x0 0x0 0x0 [Elixir] [0,3,0,32]
+UNIT HolyGuard Archer 0x1 Level(3, NPC, 1)     [12,12] 0b 0x0 0x0 0x0 [ShortBow,Elixir] [0,3,0,32]
 UNIT
 
 NPCREIN:
@@ -115,8 +115,13 @@ UNIT HolyGuard Cleric 0x1 Level(5, NPC, 1)     [10,15] 0 0 1 REDA10R13 [Slow, Vu
 UNIT
 
 TankyHealerWTF:
-UNIT Brulee Priest 0x1 Level(4, Ally, 0)     [6,12] 0x0 0x0 0x0 0x0 [Mend,Haze] AttackInRangeAI
+UNIT Floris Priest 0x1 Level(4, Ally, 0)     [6,12] 0x0 0x0 0x0 0x0 [Mend,Haze] AttackInRangeAI
 UNIT Yory 0x61 0x1 Level(3, Ally, 0)     [5,13] 0x0 0x0 0x0 0x0 [Dragonstone,0xF2,0xF3,Mine,] AttackInRangeAI
+UNIT
+
+LunaticUnits:
+UNIT Floris Priest 0x1 Level(4, Ally, 1)     [6,12] 0x0 0x0 0x0 0x0 [Mend,Haze,TorchStaff] AttackInRangeAI
+UNIT Yory 0x61 0x1 Level(3, Ally, 1)     [5,13] 0x0 0x0 0x0 0x0 [Dragonstone,0xF2,0xF3,Mine,] AttackInRangeAI
 UNIT
 
 ArenaRein:
@@ -191,7 +196,7 @@ UNIT FlyingPhys PegRider 0x1 Level(6, Enemy, 1)     [14,0] 0 0 1 REDA14R1 [Steel
 UNIT
 
 EndCutsceneUnits:
-UNIT Affogato Hunter 0x1 Level(1, Ally, 1)     [9,13] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [9,13] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
 UNIT
 
 EndCutsceneUnits2:
@@ -269,7 +274,7 @@ LABEL 2
 FADI 60
 CLEAN
 	LOAD1 0x1 EnemyUnits
-	LOAD1 0x1 TankyHealerWTF
+HardUnits(LunaticUnits,TankyHealerWTF)
 SilentlyGiveItem(0xD6, Yory)
 	LOAD1 0x1 NPCEPIC
 	ENUN

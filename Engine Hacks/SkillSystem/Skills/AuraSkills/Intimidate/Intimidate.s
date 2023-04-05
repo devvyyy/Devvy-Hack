@@ -1,5 +1,5 @@
 @Intimidate: enemies in 2 spaces get -10 avoid
-.equ IntimidateID, AuraSkillCheck+4
+.equ DazzleID, AuraSkillCheck+4
 .thumb
 push {r4-r7,lr}
 @goes in the battle loop.
@@ -12,7 +12,7 @@ mov r5, r1
 ldr r0, AuraSkillCheck
 mov lr, r0
 mov r0, r4 @attacker
-ldr r1, IntimidateID
+ldr r1, DazzleID
 mov r2, #3 @are enemies
 mov r3, #2 @range
 .short 0xf800
@@ -22,7 +22,7 @@ beq Done
 mov r0, r4
 add     r0,#0x62    @Move to the defender's avoid.
 ldrh    r3,[r0]     @Load the attacker's avoid into r3.
-sub     r3,#10    @subtract 10 from the defender's avoid
+sub     r3,#20    @subtract 10 from the defender's avoid
 strh    r3,[r0]     @Store defender avoid
 
 Done:
@@ -33,4 +33,4 @@ bx r0
 .ltorg
 AuraSkillCheck:
 @ POIN AuraSkillCheck
-@ WORD IntimidateID
+@ WORD DazzleID

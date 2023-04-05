@@ -1,6 +1,6 @@
 .thumb
 .org 0x0
-.equ PassID, SkillTester+4
+.equ CloseCallID, SkillTester+4
 @Bx'd to from 3003D28
 @This function sets the Z flag if the moving unit can cross the other unit's tile, either because they're either both allied/npcs or enemies, or because the mover has Pass
 push  {r0-r6,r14}   @actually necessary to push the scratch registers in this case
@@ -15,7 +15,7 @@ ldrb  r0,[r3,#0xA]
 .short  0xF800      @returns char data pointer of moving unit
 ldr   r1,SkillTester
 mov   r14,r1
-ldr   r1,PassID
+ldr   r1,CloseCallID
 .short  0xF800
 cmp   r0,#0x1     @set z flag if unit has Pass
 GoBack:

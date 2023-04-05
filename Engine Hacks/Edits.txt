@@ -1,6 +1,18 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+//Change Normal mode penalty into a bonus
+PUSH
+ORG 0x0180FA
+BYTE 0xFF 0xF7 0x63 0xFF
+
+//Hard Mode Bonuses
+
+ORG 0x0F818
+BYTE 0x01
+
+POP
+
 // Panacea
 PUSH
 ORG 0x290EE
@@ -590,6 +602,8 @@ POP
 
 //Skip to Normal (Difficulty Selection Skip)
 //by StanH
+/*
+
 {
 PUSH; ORG 0xA20164
     POIN (prFixedDifficulty+1)
@@ -605,6 +619,8 @@ prFixedDifficulty:
     SHORT 0x4770
     ALIGN 4
 }
+
+*/
 
 //Affinity Icon Palette
 PUSH

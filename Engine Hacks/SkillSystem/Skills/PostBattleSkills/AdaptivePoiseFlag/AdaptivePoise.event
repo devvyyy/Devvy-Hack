@@ -1,0 +1,11 @@
+AdaptivePoise: //this is the lance stance
+
+CHECK_EVENTID 0xB2
+BEQ 0x776 0xC 0x0 //if not on, go to label 0x776
+
+SOUN 0xCA
+ENUT 0xB2
+
+LABEL 0x776 //end
+NoFade
+ENDA

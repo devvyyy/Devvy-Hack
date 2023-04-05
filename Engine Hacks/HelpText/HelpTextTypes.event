@@ -1,0 +1,63 @@
+
+//Different types of helptext has been incorporated by using the same spot the game uses when looking at items/save files. For this reason, ids in HelpTextIdTable start at 0xFF01. Things that require a different method of verification are in HelpTextTypeList.
+
+#define HTITE(helpTextTypeFirstId,helpTextTypeRange,labelWritingRoutine,numberWritingRoutine,addAdditionalSpaceRoutine) "SHORT helpTextTypeFirstId helpTextTypeFirstId+helpTextTypeRange-1; POIN labelWritingRoutine numberWritingRoutine addAdditionalSpaceRoutine"
+
+#define HTTLE(identifyTypeRoutine,labelWritingRoutine,numberWritingRoutine,addAdditionalSpaceRoutine) "POIN identifyTypeRoutine labelWritingRoutine numberWritingRoutine addAdditionalSpaceRoutine"
+
+
+HelpTextIdTable:
+/*
+	SupportHelpTextLink:
+	HTITE(0xFF01,7,SupportHelpTextSpace,SupportHelpTextLabels,SupportHelpTextValues)
+	
+	RankHelpTextLink:
+	HTITE(0xFF08,8,RankHelpTextSpace,RankHelpTextLabels,RankHelpTextValues)
+
+	ClassCapHelpTextLink:
+	HTITE(0xFF10,6,ClassCapHelpTextSpace,ClassCapHelpTextLabels,ClassCapHelpTextValues)
+	
+	UniversalCapHelpTextLink:
+	HTITE(0xFF16,6,OneLineHelpTextSpace,UniversalCapHelpTextLabel,UniversalCapHelpTextValue)
+	
+	CalcHelpTextLink:
+	HTITE(0xFF1C,8,CalcHelpTextSpace,CalcHelpTextLabel,CalcHelpTextValues)
+*/
+	CharacterHelpTextLink:
+	HTITE(0xFF24,1,CharacterHelpTextSpace,CharacterHelpTextLabels,CharacterHelpTextValues)
+/*
+	PromotionHelpTextLink:
+	HTITE(0xFF24,6,PromotionHelpTextSpace,PromotionHelpTextLabels,PromotionHelpTextValues) //id can be shared with CharacterHelpText; range = highest number of promotions + 1
+*/
+	ConditionHelpTextLink:
+	HTITE(0xFF2A,1,ConditionHelpTextSpace,ConditionHelpTextLabels,ConditionHelpTextValues)
+	
+	MultipleConditionsHelpTextLink:
+	HTITE(0xFF2B,1,MultipleConditionsHelpTextSpace,MultipleConditionsHelpTextLabels,MultipleConditionsHelpTextValues)
+/*
+	SaveFileHelpTextLink:
+	HTITE(0xFFFE,1,SaveFileHelpTextSpace,SaveFileHelpTextLabels,SaveFileHelpTextValues)
+*/
+	WORD 0 //end of table
+
+
+HelpTextTypeList:
+
+	//This needs to be the first entry
+	HTTLE(SkillHelpTextCheck,SkillHelpTextSpace,SkillHelpTextExtraInfo,0)
+
+	HTTLE(LearningRingHelpTextCheck,LearningRingHelpTextSpace,LearningRingHelpTextLabels,LearningRingHelpTextValues)
+
+	HTTLE(WeaponMagicHelpTextCheck,WeaponMagicHelpTextSpace,WeaponMagicHelpTextLabels,WeaponMagicHelpTextValues)
+	
+	#ifndef MoreStaffInfoInstall
+		HTTTE(StaffHelpTextCheck,OneLineHelpTextSpace,StaffHelpTextLabels,StaffHelpTextValues)
+	#else
+		HTTLE(StaffHelpTextCheck,MoreStaffHelpTextSpace,MoreStaffHelpTextLabels,MoreStaffHelpTextValues)
+	#endif
+
+	//end of the list
+	WORD 0
+	POIN DefaultHelpTextSpace
+	WORD 0 0
+

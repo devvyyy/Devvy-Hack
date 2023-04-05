@@ -1,0 +1,30 @@
+
+#include "asm/FindSkillExtraInfoEntry.lyn.event"
+ALIGN 4
+
+#include "asm/SkillHelpTextCheck.lyn.event"
+ALIGN 4
+
+#include "asm/SkillHelpTextSpace.lyn.event"
+ALIGN 4
+
+#include "asm/SkillHelpTextExtraInfo.lyn.event"
+ALIGN 4
+
+#include "asm/SkillExtraInfoActive.lyn.event"
+ALIGN 4
+
+#include "asm/SkillExtraInfoUses.lyn.event"
+ALIGN 4
+
+SkillActiveParameterLink:
+SHORT SkillActiveLabel //textId
+SHORT 1 //number of lines needed
+SHORT 0x0843 //"Yes"
+SHORT 0x0844 //"No"
+
+SkillUsesParameterLink:
+SHORT SkillUsesLabel
+SHORT 1
+
+ALIGN 4

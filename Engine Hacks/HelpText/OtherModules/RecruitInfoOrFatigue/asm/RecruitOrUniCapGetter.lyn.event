@@ -1,0 +1,12 @@
+ALIGN 4
+PUSH
+ORG CURRENTOFFSET+$1;RecruitOrUniCapGetter:
+POP
+SHORT $B510 $1C04 $480C $68C0 $490C $468E
+BYTE $0 $F8
+SHORT $2800 $D002 $4B0B $344C $E009 $6AE2 $8A52 $4B09 $8819 $1889 $344C $8061 $4B08 $52 $189B $8819 $8021 $BC10 $BC01 $4700 $46C0
+BYTE $FC $3B $0 $2
+POIN CheckIfRecruitOrFatigue
+POIN RecruitmentInformationHelpTextLink
+POIN UniversalCapHelpTextLink
+POIN HelpTextUniversalStatTextLink

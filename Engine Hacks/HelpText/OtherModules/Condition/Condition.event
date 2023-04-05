@@ -1,0 +1,25 @@
+
+#include "asm/ConditionHelpTextSpace.lyn.event"
+ALIGN 4
+
+#include "asm/ConditionHelpTextLabels.lyn.event"
+ALIGN 4
+
+#include "asm/ConditionHelpTextValues.lyn.event"
+ALIGN 4
+
+ConditionLabelsLink:
+SHORT ConditionNameLabel
+SHORT ConditionDurationLabel
+ALIGN 4
+
+//Multiple Conditions Page
+
+#include "asm/MultipleConditionsHelpTextSpace.lyn.event"
+ALIGN 4
+
+#include "asm/MultipleConditionsHelpTextLabels.lyn.event"
+ALIGN 4
+
+#include "asm/MultipleConditionsHelpTextValues.lyn.event"
+ALIGN 4

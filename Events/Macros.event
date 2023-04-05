@@ -7,7 +7,7 @@
 #define CamOff "EVBIT_F 0x9"
 #define MoveCoords(X1,Y1,X2,Y2) "SVAL 0xB Coords(X1,Y1) ; MOVE 0x0 0xFFFE [X2,Y2]"
 #define MoveCoords(X1,Y1,Speed,X2,Y2) "SVAL 0xB Coords(X1,Y1) ; MOVE Speed 0xFFFE [X2,Y2]"
-#define LoadUnit(x,y) "UNIT Affogato Hunter 0x00 Level(1,Ally,1) [x,y] 0x00 0x00 0x00 0x00 [0x00] NoAI" //for units in player placement with prep menu
+#define LoadUnit(x,y) "UNIT Affogato Scout 0x00 Level(1,Ally,1) [x,y] 0x00 0x00 0x00 0x00 [0x00] NoAI" //for units in player placement with prep menu
 #define LoadUnit(unitid,x,y) "UNIT unitid Cavalier 0x00 Level(1,Ally,1) [x,y] 0x00 0x00 0x00 0x00 [0x00] NoAI"
 #define Unit(x,y) "LoadUnit(x,y)"
 #define Unit(unitid,x,y) "LoadUnit(unitid,x,y)"
@@ -43,6 +43,8 @@
 #define FadeOutMusic "MUSCMID 0x7FFF"
 #define SetFlag(flag) "ENUT flag"
 #define UnsetFlag(flag) "ENUF flag"
+#define HardUnits(normalunits,hardunits) "CHECK_HARD; BEQ 0x724 0xC 0x0; LOAD1 0x1 normalunits; GOTO 0x725; LABEL 0x724; LOAD1 0x1 hardunits; LABEL 0x725"
+#define HardItem(unit,item) "CHECK_HARD; BEQ 0x720 0xC 0x0; BYTE 0x40 0x0D unit item; POIN SilentGiveItem+1; LABEL 0x720"
 #define BossAI [0,3,4,32]
 #define CommanderAI [0xD,3,4,0]
 #define TwoActionAI [0,6,4,0]

@@ -1,0 +1,23 @@
+
+StaffHelpTextLabels:
+SHORT 0xB530 0x1C05 //push {r4-r5, r14}; mov r5, r0
+SHORT 0x4C0C //ldr r4 (0x0203E7AC)
+
+//Ranks 
+SHORT 0x480C 0x8800 //ldr r0 (StaffRankItemLink); ldrh r0, [r0]
+BL(0xA240) //SHORT 0xF780 0xFA71
+SHORT 0x1C03 0x1C20 //mov r3, r0; mov r0, r4
+SHORT 0x2100 0x2208 //mov r1, #0; mov r2, #8
+BL(0x4480) //SHORT 0xF77A 0xFB8B
+
+//Range
+SHORT 0x4808 0x8800 //ldr r0 (StaffRangeItemLink); ldrh r0, [r0]
+BL(0xA240) //SHORT 0xF780 0xFA67
+SHORT 0x1C03 0x1C20 //mov r3, r0; mov r0, r4
+SHORT 0x2134 0x2208 //mov r1, #0x34; mov r2, #8
+BL(0x4480) //SHORT 0xF77A 0xFB81
+SHORT 0x2001 0xBC30  //mov r0, #1; pop {r4,r5}
+SHORT 0xBC02 0x4708 //pop {r1}; bx r1
+WORD 0x0203E7AC
+POIN StaffRankItemLink
+POIN StaffRangeItemLink

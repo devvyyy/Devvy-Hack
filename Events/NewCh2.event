@@ -41,7 +41,7 @@ AFEV 0x0 EndingScene 0x3
 	END_MAIN
 
 LocationBasedEvents:
-Chest(Slow,1,9)
+Chest(TorchStaff,1,9)
 Seize(0,1)
 Seize(0,2)
 Village(0x20,SallyCars,13,3)	
@@ -80,6 +80,10 @@ UNIT Mocha PegasusRider 0x1 Level(3, Ally, 0)     [14,0] 0 0 1 REDA9R2 [SteelBla
 	
 WoohooPeg:
 UNIT Mocha PegasusRider 0x1 Level(3, Ally, 0)     [5,18] 0 0 1 REDA4R15 [IronLance,Torch] AttackInRangeAI
+	UNIT
+	
+LunaticUnits:
+UNIT Mocha PegasusRider 0x1 Level(3, Ally, 1)     [5,18] 0 0 1 REDA4R15 [IronLance,SapphireLance,Torch] AttackInRangeAI
 	UNIT
 	
 LunaPirate:
@@ -242,7 +246,7 @@ ENUN
 DISA Mocha
 STAL 5
 CAM1 [2,1]
-	LOAD1 0x1 WoohooPeg
+HardUnits(LunaticUnits,WoohooPeg)
 CameraCursor(Mocha)
 MUSS 0x30
 Text(Ch2MochaAppear2)

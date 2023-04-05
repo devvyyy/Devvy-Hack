@@ -1,0 +1,61 @@
+
+//Note: In order to change when "A" can be pressed to attempt accessing another page of help text during the Stat Screen, edit StatScreen_HelpBoxIdle (found in _HelpTextEssentials/Misc)
+
+
+/*
+TODO
+
+Other times the player can view item help text
+- Trading
+- Supply
+- Selling an item
+- List
+
+*/
+
+
+PUSH
+
+ORG 0x88E94
+POIN HelpTextGetItemDesc
+
+ORG 0x89278
+SHORT 0x4903 0x468E //ldr r1, =OverwriteHelpTextBoxPosition; mov lr, r1
+SHORT 0x4641 0x1C2A //mov r1, r8; mov r2, r5
+SHORT 0x1C3B 0xF800 //mov r3, r7; bl lr+0
+SHORT 0xE002 0 //b 0x8928C
+POIN OverwriteHelpTextBoxPosition
+
+ORG 0x89178
+jumpToHack(StartHelpTextBubble_Extension)
+
+//shouldn't need this (MSS is already linking to the new routine for each inventory slot), but just in case
+ORG 0x88A00
+jumpToHack(StatScreen_HelpBoxCurrentItem)
+
+POP
+
+
+#include "asm/StartHelpTextBubble_Extension.lyn.event"
+ALIGN 4
+
+#include "asm/StatScreen_WhatCanHaveMultiplePages.lyn.event"
+ALIGN 4
+
+#include "asm/GetMultipleHelpTextEntry.lyn.event"
+ALIGN 4
+
+#include "asm/OverwriteHelpTextBoxPosition.lyn.event"
+ALIGN 4
+
+
+#include "MultiplePagesAllowlist.event"
+
+#include "WithItems/WithItems.event"
+
+#include "WithCharacters/WithCharacters.event"
+
+#include "WithConditions/WithConditions.event"
+
+#include "WithSkills/WithSkills.event"
+

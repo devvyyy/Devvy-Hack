@@ -1,0 +1,11 @@
+
+//For each "thing" that can have multiple pages of help text, we need a routine/method to verify if we're checking that thing (if items can have multiple pages, how can we prove we're currently checking an item and not something else?) and a routine for seeing if said thing does have multiple pages (if items can have multiple pages, does this particular item have multiple pages?) 
+
+StatScreen_MultiplePagesAllowlist:
+POIN StatScreen_HelpBoxCurrentItem StatScreen_DoesItemHaveMultiplePages 
+POIN HelpBoxCurrentCharInfo DoesCharHaveMultiplePages
+POIN HelpBoxCurrentCondition DoesCharHaveMultipleEffects
+POIN SkillDescGetter DoesSkillHaveMultiplePages
+
+//End of the list
+WORD 0

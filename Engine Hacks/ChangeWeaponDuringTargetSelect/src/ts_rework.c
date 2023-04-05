@@ -49,7 +49,7 @@ bool TargetSelectionRework_HandleWeanponChange(struct SelectTargetProc* proc) {
     }
 
     if (DPAD_RIGHT & gKeyStatusPtr->repeatedKeys) {
-        for (i = UNIT_ITEM_COUNT; i > 1; i--)
+        for (i = UNIT_ITEM_COUNT - 1; i >= 1; i--)
             if (CanUnitUseWeapon(gActiveUnit, gActiveUnit->items[i]) &&
                 IsItemCoveringRange_hook(gActiveUnit->items[i], RECT_DISTANCE(gActiveUnit->xPos, gActiveUnit->yPos, current->x, current->y), gActiveUnit))
                     goto got_weapon;
@@ -70,7 +70,7 @@ got_weapon:
 
     /**
      * Here we assume MakeTargetListForWeapon() must result equals to (IsItemCoveringRange() && CanUnitUseWeapon()) 
-     * which may cause BUG if you rewrite weapon-range hack bu yourself.
+     * which may cause BUG if you rewrite weapon-range hack by yourself.
      */
     for (it = GetLinkedTargets(), i = 0; i < GetSelectTargetCount(); i++, it = it->next) {
         if (uid_pre == it->uid) {

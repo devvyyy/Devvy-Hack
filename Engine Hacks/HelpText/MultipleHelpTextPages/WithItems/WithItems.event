@@ -1,0 +1,75 @@
+
+#include "asm/NextPageOfTextForItemDesc.lyn.event"
+ALIGN 4
+
+#include "asm/HelpTextGetItemDesc.lyn.event"
+ALIGN 4
+
+
+//--------------------------------
+//Stat Screen
+//--------------------------------
+
+#include "asm/NextPageOfTextForItemDesc_StatScreen.lyn.event"
+ALIGN 4
+
+#include "asm/StatScreen_HelpBoxCurrentItem.lyn.event"
+ALIGN 4
+
+#include "asm/StatScreen_DoesItemHaveMultiplePages.lyn.event"
+ALIGN 4
+
+
+//--------------------------------
+//Shopping
+//--------------------------------
+
+PUSH
+
+//when unit is visiting shop/prep shop
+ORG 0xB4512
+SHORT 0x1C20 //mov r0, r4
+SHORT 0x1C29 0x1C32 //mov r1, r5; mov r2, r6
+SHORT 0x4B02 0x469E //ldr r3 (ShopCheckWhichItemHelpTextToDisplay); mov lr, r3
+SHORT 0x1C3B 0xF800 // mov r3, r7; bl lr+0
+SHORT 0xE007 0 //b (0xB4532); nothing
+POIN ShopCheckWhichItemHelpTextToDisplay
+
+//when previewing a shop on the map during preps
+ORG 0xB4ABE
+SHORT 0x1C20 //mov r0, r4
+SHORT 0x1C29 0x1C32 //mov r1, r5; mov r2, r6
+SHORT 0x4B02 0x469E //ldr r3 (ShopCheckWhichItemHelpTextToDisplay); mov lr, r3
+SHORT 0x1C3B 0xF800 // mov r3, r7; bl lr+0
+SHORT 0xE007 0 //b (0xB4532); nothing
+POIN ShopCheckWhichItemHelpTextToDisplay
+
+POP
+
+#include "asm/ShopCheckWhichItemHelpTextToDisplay.lyn.event"
+
+#include "asm/Alt_0x88E60.lyn.event"
+ALIGN 4
+
+
+//--------------------------------
+//Item Selection Menu (e.g. "Attack")
+//--------------------------------
+
+PUSH
+
+//ORG 0x245A6
+//BL(Alt_0x88E60)
+
+//ORG 0x245D0
+//BL(Alt_0x88E60)
+
+ORG 0x4F4A0
+#include "asm/Menu_HelpBoxIdle.lyn.event"
+ALIGN 4
+
+POP
+
+#include "asm/CheckIfChangingItemPages.lyn.event"
+ALIGN 4
+

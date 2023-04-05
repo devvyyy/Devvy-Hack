@@ -25,7 +25,6 @@
 
 prPivotCommand_Availability:
 	rGetWrapper // value defaults to 0 (False)
-		rIfUnitHasNotState(US_CANTOING)
 			rWithConstant(PivotID)
 				rCallExternal(SkillTester)
 
@@ -37,7 +36,6 @@ prRepositionCommand_Availability:
 
 prSwapCommand_Availability:
 	rGetWrapper
-		rIfUnitHasNotState(US_CANTOING)
 			rWithConstant(SwapID)
 				rCallExternal(SkillTester)
 
@@ -98,7 +96,6 @@ prSwarpCommand_Availability:
 
 // checking for same allegiance
 prPivot_TargetLegality:
-prReposition_TargetLegality:
 prSwap_TargetLegality:
 prSwarp_TargetLegality:
 	rGetWrapper // value defaults to 0 (False)
@@ -109,6 +106,7 @@ prSwarp_TargetLegality:
 
 prShove_TargetLegality:
 prSmite_TargetLegality:
+prReposition_TargetLegality:
 {
     rGetWrapper // defaults to False
         rCallSequence(check_blue check_no_guard_ai)
