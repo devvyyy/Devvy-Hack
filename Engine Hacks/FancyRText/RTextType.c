@@ -39,7 +39,7 @@ u16* GetDurabilityBasedItemTable(u16 descID) {
 
 bool IsItemShield(u16 item) {
     switch (GetItemIndex(item)) {
-
+//these are all shields
    case 0x64:
    case 0x65:
    case 0x66:
@@ -56,7 +56,7 @@ bool IsItemShield(u16 item) {
 
 bool IsItemDagger(u16 item) {
     switch (GetItemIndex(item)) {
-
+//these are all daggers
    case 0xA: //iron
    case 0xC: //steel
    case 0xE1: //silver
@@ -71,6 +71,7 @@ bool IsItemDagger(u16 item) {
    case 0xAF: //hook line and sinker
    case 0xB0: //ambush
    case 0xB1: //goodbye
+   case 0xFE: //syzygy
         return TRUE;
 
     default:

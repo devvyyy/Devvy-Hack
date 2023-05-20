@@ -204,13 +204,13 @@
 	setPalette(0x49,Therese_General)
 	setCBSP(0x49,0x24,0x3,0x0B)
 
-// Noel_Thief
-	setPalette(0x4A,Noel_Thief)
-	setCBSP(0x4A,0x22,0x1,0xD)
+// Noel_Fighter
+	setPalette(0x4A,Noel_Fighter)
+	setCBSP(0x4A,0x22,0x1,0x3F)
 
-// Noel_Rogue
-	setPalette(0x4B,Noel_Rogue)
-	setCBSP(0x4B,0x22,0x3,0x33)
+// Noel_Warrior
+	setPalette(0x4B,Noel_Warrior)
+	setCBSP(0x4B,0x22,0x3,0x40)
 
 // Hart_Druid
 	setPalette(0x4D,Hart_Druid)
@@ -271,6 +271,10 @@
 // Wegman_General
 	setPalette(0x5B,Wegman_General)
 	setCBSP(0x5B,0x2C,0x3,0x0B)
+
+// Selwyn_Auspex
+	setPalette(0x5C,Selwyn_Auspex)
+	setCBSP(0x5C,0x44,0x3,0x31)
 
 // Lost_Mercenary
 	setPalette(0x4C,Lost_Mercenary)
@@ -579,3 +583,7 @@
 	setGenericPalette(0x1D,Generic_Warrior)
 	setGenericPalette(0x1E,Generic_Warrior)
 	setGenericPalette(0x1F,Generic_Warrior)
+
+// Generic_Mystic
+	setGenericPalette(0x9D,Generic_Mystic)
+	setGenericPalette(0x4A,Generic_Mystic)

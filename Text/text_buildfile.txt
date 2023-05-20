@@ -17,9 +17,9 @@ Weapons[X]
 The weapon triangle is[N]
 +/-2 Mt, +/-20 Hit.[N]
  [N]
-Press Up/Down to change[N]
-target and Left/Right[N]
-to change equipped weapon[N]
+Hold down A and press[N]
+Left/Right to change[N]
+the equipped weapon[N]
 in the battle forecast.[N]
  [N]
 Weapon Hit has increased[N]
@@ -29,10 +29,10 @@ Blades, Glaives, Labrys, and[N]
 Rifles are heavy versions of[N]
 physical weapons with less Hit.[N]
  [N]
-Daggers and Shields are[N]
-Sidearms; a universal[N]
+Sidearms and Shields[N]
+are a universal[N]
 weapon type.[N]
-Daggers each ignore a % of[N]
+Daggers each pierce a % of[N]
 foe's Def.[N]
 Shields all reposition the user[N]
 or foe. Note that this cannot[N]
@@ -78,9 +78,15 @@ Cavalry units get Swap,[N]
 and Flying units get Pivot.[N]
  [N]
 Some exceptions:[N]
-Thieves get Pivot,[N]
+Scouts get Pivot,[N]
 Parsons get Rotate,[N]
 and Technicians get Smite.[N]
+ [N]
+Movement skills on mounted[N]
+units are a free action.[N]
+Movement skills on infantry[N]
+units can target any[N]
+allegiance.[N]
  [N]
 Every mounted unit also gets[N]
 Canto, and every thief unit[N]
@@ -136,13 +142,7 @@ Houses give experience the first[N]
 time you visit them.[N]
  [N]
 Only the first Ring passive[N]
-effect is applied.[N]
- [N]
-Master seals can be used at[N]
-any level.
- [N]
-Second seals can be used at[N]
-level 10 or higher.[X]
+effect is applied.[X]
 
 # 0x5ea
 Talk/Support[X]
@@ -463,7 +463,7 @@ Legend[X]
 Toxin Glaive[X]
 
 # 0x37D
-Venom Labrys[X]
+[_V][_e][_n][_o][_m][_SP][_L][_a][_b][_r][_y][_s][X]
 
 # 0x51A
 Stasis[X]
@@ -568,8 +568,8 @@ Just try and hit me![N]
 Grants Avoid +15.[X]
 
 # 0x31F
-Dauntless riders with high[N]
-magic and movement. Equip: [AnimaIcon][X]
+Dauntless riders with mastery over[N]
+spells and movement. Equip: [AnimaIcon][StaffIcon][X]
 
 # 0x331
 Whimsical musicians whose melodies let[N]
@@ -581,7 +581,7 @@ army, loyal to the King.[X]
 
 # 0x4A5
 A rare seal that promotes any[N]
-unpromoted unit.[X]
+unpromoted unit at Lvl 10+.[X]
 
 # 0x4DE
 Use this on any unit[N]
@@ -612,13 +612,13 @@ This text shouldn't be viewable[N]
 in game?[X]
 
 # 0x3D8
-King's Idol[X]
+Royal Idol[X]
 
 # 0x3f5
 Essence[X]
 
 # 0x362
-Glow Brand[X]
+Prism Brand[X]
 
 # 0x363
 Rune Sword[X]
@@ -668,13 +668,13 @@ Focal Rifle[X]
 Converts Crit into bonus Atk.[X]
 
 # 0x3D5
-Arcane Brace[X]
+[_A][_r][_c][_a][_n][_e][_SP][_B][_r][_a][_c][_e][X]
 
 # 0x3d9
 Pale Locket[X]
 
 # 0x3DA
-Queen's Idol[X]
+Imperial Idol[X]
 
 # 0x3DC
 Hefty Sash[X]
@@ -801,8 +801,11 @@ Increases Constitution by[N]
 # 0x433
 Can attack at range.[X]
 
-# 0x26B
+# 0x50F
 [_S][_i][_d][_e][_a][_r][_m][X]
+
+# 0x26B
+Shield[X]
 
 # 0x421
 [OpenQuote]Diplomacy"[X]
@@ -851,14 +854,14 @@ A luxurious gemstone[N]
 worth 10,000 gold.[X]
 
 # 0x498
-A staff with burning pitch that[N]
-lights 8 tiles through fog[N]
-centered on unit (decays by 1/turn).[X]
+A staff with burning pitch. Lights[N]
+8 spaces through fog centered on unit[N]
+(decays by 1 space/turn).[X]
 
 # 0x47C
-Lights 8 tiles through fog centered[N]
+Lights 8 spaces through fog centered[N]
 in an area Eth/3 spaces away[N]
-(decays by 1/turn).[X]
+(decays by 1 space/turn).[X]
 
 # 0x5b5
 Place all items in storage.[N]
@@ -868,11 +871,20 @@ pressing both L + A.[X]
 # 0x382
 Void Cleaver[X]
 
+# 0x443
+Long-range weapon. No WEXP.[N]
+[_Lock]: [BowIcon], Technician[X]
+
+# 0x444
+Very long-range weapon. No WEXP.[N]
+[_Lock]: [BowIcon], Technician[X]
+
 # 0x395
-Rapid Ballista[X]
+[_R][_a][_p][_i][_d][_SP][_B][_a][_l][_l][_i][_s][_t][_a][X]
 
 # 0x445
- [X]
+Strikes x2 consecutively. No WEXP.[N]
+[_Lock]: [BowIcon], Technician[X]
  
 # 0x35B
 [_P][_o][_i][_s][_o][_n][_SP][_D][_a][_g][_g][_e][_r][X]
@@ -883,7 +895,8 @@ Poison halves Def/Res and deals[N]
 10 damage next turn.[X]
 
 # 0x40B
-Avoid +10. Poisons for 1 turn on-damage.[X]
+Avoid +10. Poisons for 1 turn on-damage,[N]
+halving Def/Res and dealing 10 damage.[X]
 
 # 0x41D
 Poisons for 1 turn on-damage.[X]
@@ -930,6 +943,30 @@ Inflicts Str/Eth -5 on[N]
 foe after combat[N]
 (recovers 1 per turn).[X]
 
+# 0x366
+Nirvana[X]
+
+# 0x416
+The blade of a king, lost in the stars.[N]
+Strikes x2 consecutively. Def +5.[X]
+
+# 0x376
+Meriasyl[X]
+
+# 0x426
+The mighty spear of the lost old land.[N]
+Halves damage taken after first[N]
+being struck. Res +5.[X]
+
+
+# 0x396
+Bring It Down[X]
+
+# 0x446
+Combat grants 1 stack (max; 1).[N]
+Initiating at max stacks deals 10[N]
+bonus magical damage.[X]
+
 # 0x3c9
 Slow[X]
 
@@ -970,8 +1007,8 @@ Tundra[X]
 Gold Knight[X]
 
 # 0x32B
-Shimmering knights on horseback,[N]
-formidably armed. Equip: [SwordIcon][LanceIcon][AxeIcon][X]
+Majestic armored knights with[N]
+shimmering mounts. Equip: [SwordIcon][LanceIcon][AxeIcon][X]
 
 # 0x378
 [_P][_i][_e][_r][_c][_i][_n][_g][_SP][_S][_p][_e][_a][_r][X]
@@ -1141,6 +1178,14 @@ target. Poisons for 1 turn on-damage.[X]
 Avoid +10. Move back 1 space. Poisons[N]
 for 1 turn on-damage.[X]
 
+# 0x3a3
+[_G][_r][_a][_p][_p][_l][_i][_n][_g][_SP][_H][_o][_o][_k][X]
+
+# 0x453
+Move adjacent to foe or breakable wall,[N]
+then Canto remaining spaces. [_Lock]: Scout[N]
+(Priority: Up/Left/Right/Down.)[X]
+
 # 0x3E8
 Panacea[X]
 
@@ -1182,6 +1227,13 @@ Reverses and doubles Weapon Triangle.[X]
 Resets the status of an ally[N]
 within 3 spaces.[X]
 
+# 0x2ef
+Mystic[X]
+
+# 0x33b
+Armored vessels of faith of which infinite[N]
+ether slumbers within. Equip: [AnimaIcon][LightIcon][DarkIcon][StaffIcon][X]
+
 # 0x432
 Grants bonus Hit = unit's missing HP.[N]
 "[_Y][_o][_u][_SP][_b][_l][_e][_e][_d][_Comma][_SP][_s][_o][_SP][_t][_h][_e][_y][_SP][_w][_i][_l][_l][_Dot]"[X]
@@ -1218,13 +1270,33 @@ Do you want to quit?[N]
  better inventories.[N]
  WT is +/-5 Mt/Hit.[X]
  
+# 0x2EB
+Strategist[X]
+ 
 # 0x301
 Scout[X]
 
 # 0x34d
 Wayfarers who recon and lead their[N]
 allies through combat. Equip: [BowIcon][N]
-Promotion: Maverick[X]
+[_P][_r][_o][_m][_o][_t][_i][_o][_n][_Colon] Maverick (+[HorseIcon])[X]
+
+# 0x57A
+Select deployed units.[N]
+The number changes in[N]
+each chapter.[X]
+
+# 0x57C
+Manage units' items.[N]
+Units can use, trade,[N]
+buy items, and merge[N]
+together durability.[X]
+
+# 0x57F
+Read supports.[N]
+Units have 5 partners[N]
+and can support up[N]
+to 15 times.[X]
 
 # 0x8FF
 [CloseSpeechSlow][OpenMidRight]

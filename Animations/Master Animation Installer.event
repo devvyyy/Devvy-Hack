@@ -511,14 +511,22 @@ ALIGN 4 //Bishop (M) by Mikey Seregon, EltritchAbomination
 #include "Bishop M/Magic/Installer.event"
 }
 {
-#include "Bishop M/Magic/Installer.event"
+#include "Bishop M/Unarmed/Installer.event"
 }
 ALIGN 4 //Bishop (F) by Mikey Seregon, EltritchAbomination
 {
 #include "Bishop F/Magic/Installer.event"
 }
 {
-#include "Bishop F/Magic/Installer.event"
+#include "Bishop F/Unarmed/Installer.event"
+}
+
+ALIGN 4 //Mystic by RedBean
+{
+#include "Mystic/Magic/Magic Installer.event"
+}
+{
+#include "Mystic/Staff/Staff Installer.event"
 }
 
 AkatAnim:
@@ -697,6 +705,14 @@ GorloisAnim:
 LightAnim(0xBB)
 StaffAnim(0xBB)
 UnarmedAnim(0xBB)
+WORD 0x0    // Seperator
+
+MysticAnim:
+AnimaAnim(0x9D)
+LightAnim(0x9D)
+DarkAnim(0x9D)
+StaffAnim(0x4A)
+UnarmedAnim(0x9D)
 WORD 0x0    // Seperator
 
 ALIGN 4

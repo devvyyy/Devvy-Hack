@@ -51,14 +51,24 @@ cmp r0,#0x2
 bne End
 
 
-mov r1, #0x5a @Damage
-ldrh r0, [r4, r1]
-add r0, #2
-strh r0, [r4,r1]
-
 mov r1, #0x60 @Hit
 ldrh r0, [r4, r1]
-add r0, #10
+add r0, #50
+strh r0, [r4,r1]
+
+mov r1, #0x62 @avoid
+ldrh r0, [r4, r1]
+add r0, #50
+strh r0, [r4,r1]
+
+mov r1, #0x66 @crit
+ldrh r0, [r4, r1]
+add r0, #25
+strh r0, [r4,r1]
+
+mov r1, #0x68 @crit avoid
+ldrh r0, [r4, r1]
+add r0, #25
 strh r0, [r4,r1]
 
 End:

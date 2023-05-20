@@ -18,7 +18,56 @@ ldr r1, ElbowGreaseID
 cmp r0, #0
 beq GoBack
 
-@make sure we're in combat (or battle forecast)
+@kill str for display
+mov  r1, #0x5A
+ldrh r0, [r4, r1] @attack
+ldrb r2, [r4, #0x14] @str
+sub  r0, r2
+strh r0, [r4,r1]
+
+@kill hit for display
+mov  r1, #0x60
+ldrh r0, [r4, r1] @hit
+ldrb r2, [r4, #0x15] @dex
+sub  r0, r2
+sub  r0, r2
+strh r0, [r4,r1]
+
+@kill crit for display
+mov  r1, #0x66
+ldrh r0, [r4, r1] @crit
+ldrb r2, [r4, #0x15] @dex
+sub  r0, r2
+strh r0, [r4,r1]
+
+@check if its a ballista
+mov     r0, #0x4A      @Move to attacker's weapon (before battle)
+ldrb    r0, [r4, r0]   @Load attackers weap (before battle)
+cmp     r0, #0x35         @Ballista ID
+beq ProcTheThing
+cmp     r0, #0x36         @Iron
+beq ProcTheThing
+cmp     r0, #0x37         @Rapid
+beq ProcTheThing
+b Conversion        @If not a ballista, go to conversion
+
+ProcTheThing:
+
+@add 10 atk
+mov r1, #0x5A
+ldrh r0, [r4, r1] @atk
+add r0, #10
+strh r0, [r4,r1]
+
+@add 30 hit
+mov r1, #0x60
+ldrh r0, [r4, r1] @hit
+add r0, #30
+strh r0, [r4,r1]
+
+Conversion:
+
+@make sure were in combat (or battle forecast)
 ldrb r3, =gBattleData
 ldrb r3, [r3]
 cmp r3, #4

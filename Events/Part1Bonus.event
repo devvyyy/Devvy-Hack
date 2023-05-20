@@ -13,16 +13,74 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventEnemy(0,Ahahahaha,1)
 TURN 0x0 ReinEvent1 [2,0] 0x0
+TURN 0x0 WoundedConvo [2,0] 0x0
 TURN 0x0 ReinEvent2 [3,0] 0x0
 TURN 0x0 ReinEvent3 [4,0] 0x0
+TURN 0x0 KingConvo [4,0] 0x0
 TURN 0x0 ReinEvent4 [5,0] 0x0
+TurnEventEnemy(0,SelwynSickoMode,5)
 TURN 0x0 ReinEvent5 [6,0] 0x0
 TURN 0x0 ReinEvent6 [7,0] 0x0
+TURN 0x0 EscapeConvo [7,0] 0x0
 TURN 0x0 ReinEvent7 [8,0] 0x0
 TURN 0x0 ReinEvent8 [9,0] 0x0
+TURN 0x0 BruhConvo [9,0] 0x0
 TURN 0x0 TriggerHappyHavoc [10,0] 0x0
 	END_MAIN
+	
+Ahahahaha:
+ChargeWarning(Selwyn,SelTurn1)
+NoFade
+ENDA
+
+SelwynSickoMode:
+ChargeWarning(Selwyn,InBattlePlaceholder)
+NoFade
+ENDA
+
+BruhConvo:
+CameraCursor(Affogato)
+Text(WTFMan)
+NoFade
+ENDA
+
+WoundedConvo:
+CAM1 [15,0]
+FlashCursor(15,0,60)
+STAL 30
+MUSI
+SetBackground(0x30)
+Text(InBattle2)
+ClearBackground
+MUNO
+NoFade
+ENDA
+
+KingConvo:
+CAM1 [15,0]
+FlashCursor(15,0,60)
+STAL 30
+MUSI
+SetBackground(0x29)
+Text(InBattle3)
+ClearBackground
+MUNO
+NoFade
+ENDA
+
+EscapeConvo:
+CAM1 [15,0]
+FlashCursor(15,0,60)
+STAL 30
+MUSI
+SetBackground(0x29)
+Text(InBattle4)
+ClearBackground
+MUNO
+NoFade
+ENDA
 
 TriggerHappyHavoc:
 ENUT 0x3
@@ -31,22 +89,23 @@ ENDA
 
 ALIGN 32
 CharacterBasedEvents:
-
+CharacterEvent(0x0,YoryTurretCheck,Yory,0x3F)
 	END_MAIN
 
 MiscBasedEvents:
+AREA 0x0 WeAreDead [13,0] [17,1]
 	CauseGameOverIfLordDies
 	END_MAIN
 
 LocationBasedEvents:
-Chest(0xF,26,19)
+Chest(WhiteGem,26,19)
 Door(15,11)
 Door(7,7)
 Door(7,8)
 Door(23,7)
 Door(23,8)
 Vendor(ShopBruh,22,0)
-Armory(ArmoryBruh,8,3)
+Armory(ArmoryBruh,8,0)
 	END_MAIN
 	
 ShopBruh:
@@ -54,7 +113,7 @@ SHLI Wind Mend Fear Elixir PureWater Antitoxin Mine LightRune
 ALIGN 4
 
 ArmoryBruh:
-SHLI 0x7 0x8D 0x5A ShortBow Longbow SteelDagger 0x64
+SHLI SteelBlade SteelGlaive SteelLabrys ShortBow Longbow SteelDagger 0x64
 ALIGN 4
 
 Dunno1:
@@ -87,23 +146,42 @@ LoadUnit(16,5)
 LoadUnit(9,8)
 LoadUnit(21,8)
 
-LoadUnit(14,10)
+//LoadUnit(14,10)
 LoadUnit(15,10)
-LoadUnit(16,10)
+//LoadUnit(16,10)
 
 LoadUnit(8,2)
 LoadUnit(22,2)
 	UNIT
 	
 NewRecruits:
-UNIT Lennard Deserter 0x1 Level(3, Ally, 0)     [7,4] 0b 0x0 0x0 0x0 [SapphireLance,ShortSpear] [0x0,0x0,0x0,0x0]
-UNIT Therese SArmor 0x1 Level(4, Ally, 0)     [5,4] 0b 0x0 0x0 0x0 [SteelBlade,0x66,Mine] [0x0,0x0,0x0,0x0]
+UNIT Lennard Deserter 0x1 Level(3, Ally, 0)     [14,0] 0b 0x0 0x0 0x0 [SapphireLance,ShortSpear,Mine] [0x0,0x0,0x0,0x0]
+UNIT Therese SArmor 0x1 Level(4, Ally, 0)     [16,0] 0b 0x0 0x0 0x0 [SteelBlade,0x66,0xFD] [0x0,0x0,0x0,0x0]
 		UNIT
 	
 NPCUnits:
-UNIT Wegman General 0x1 Level(10, NPC, 0)     [15,8] 0b 0x0 0x0 0x0 [0xF,Spear,SteelLabrys,SilverRifle] [0x0,0x0,0x0,0x0]
-UNIT Gerolf SPal 0x1 Level(10, NPC, 0)     [16,7] 0b 0x0 0x0 0x0 [BraveSword,Flamberge] [0x0,0x0,0x0,0x0]
-UNIT Klavdia WyvernKnight 0x1 Level(10, NPC, 0)     [14,7] 0b 0x0 0x0 0x0 [PoisonAxe,MagnumAxe] [0x0,0x0,0x0,0x0]
+UNIT Wegman General 0x1 Level(10, Ally, 0)     [15,8] 0b 0x0 0x0 0x0 [0xF,SteelGlaive,SteelLabrys,SilverRifle] [0x0,0x0,0x0,0x0]
+UNIT Gerolf SPal 0x1 Level(8, Ally, 0)     [16,7] 0b 0x0 0x0 0x0 [BraveSword,Flamberge] [0x0,0x0,0x0,0x0]
+UNIT Klavdia WyvernKnight 0x1 Level(9, Ally, 0)     [14,7] 0b 0x0 0x0 0x0 [PoisonAxe,MagnumAxe] [0x0,0x0,0x0,0x0]
+
+UNIT Wreyvine AArmor 0x1 Level(6, NPC, 1)     [15,2] 0b 0x0 0x0 0x0 [ShortAxe,Elixir] BossAI
+
+UNIT Wreyvine Soldier 0x1 Level(5, NPC, 1)     [5,1] 0b 0x0 0x0 0x0 [SteelLance,ShortSpear,Elixir] StallOneTurnAI
+UNIT Wreyvine Fighter 0x1 Level(5, NPC, 1)     [5,2] 0b 0x0 0x0 0x0 [HandAxe,SteelAxe,Elixir] StallOneTurnAI
+
+UNIT Wreyvine GriffonRider 0x1 Level(6, NPC, 1)     [7,2] 0b 0x0 0x0 0x0 [SteelRifle,Vulnerary] StallOneTurnAI
+UNIT Wreyvine Merc 0x1 Level(5, NPC, 1)     [25,1] 0b 0x0 0x0 0x0 [SteelSword,ShortBrand,Elixir] StallOneTurnAI
+UNIT Wreyvine Myrmidon 0x1 Level(5, NPC, 1)     [25,2] 0b 0x0 0x0 0x0 [Flamberge,KillingEdge,Elixir] StallOneTurnAI
+UNIT Wreyvine WyvernRider 0x1 Level(6, NPC, 1)     [23,2] 0b 0x0 0x0 0x0 [SteelLabrys,Vulnerary] StallOneTurnAI
+
+UNIT Wreyvine Archer 0x1 Level(4, NPC, 1)     [11,4] 0b 0x0 0x0 0x0 [ShortBow,Vulnerary] [0,3,0,32]
+UNIT Wreyvine Archer 0x1 Level(4, NPC, 1)     [19,4] 0b 0x0 0x0 0x0 [ShortBow,Vulnerary] [0,3,0,32]
+
+UNIT 0xFA 0x79 0x1 Level(1, NPC, 1)     [9,4] 0b 0x0 0x0 0x0 [EnergyRing] [0,3,0,32] //tents
+UNIT 0xFA 0x79 0x1 Level(1, NPC, 1)     [21,4] 0b 0x0 0x0 0x0 [MageBow] [0,3,0,32]
+UNIT 0xFA 0x79 0x1 Level(1, NPC, 1)     [9,9] 0b 0x0 0x0 0x0 [MasterSeal] [0,3,0,32]
+UNIT 0xFA 0x79 0x1 Level(1, NPC, 1)     [21,9] 0b 0x0 0x0 0x0 [0x7F] [0,3,0,32]
+
 	UNIT
 	
 KlavdiaFlying:
@@ -112,144 +190,177 @@ UNIT Klavdia WyvernKnight 0x1 Level(10, NPC, 0)     [15,0] 0 0 1 REDA25R0 [Steel
 
 EnemyUnits:
 //make these actual bosses
-UNIT BadGuyStealable Druid 0x1 Level(5, Enemy, 1)     [7,18] 0b 0x0 0x0 0x0 [Flux,AngelicRobe] BossAI
-UNIT BadGuyStealable Druid 0x1 Level(5, Enemy, 1)     [15,22] 0b 0x0 0x0 0x0 [Flux,AngelicRobe] BossAI
-UNIT BadGuyStealable Druid 0x1 Level(5, Enemy, 1)     [28,15] 0b 0x0 0x0 0x0 [Flux,AngelicRobe] BossAI
+UNIT Selwyn 0x31 0x1 Level(10, Enemy, 0)     [7,18] DropItem 0x0 0x0 0x0 [0xFE,AngelicRobe] BossAI
+UNIT Sylveria Necromancer 0x1 Level(7, Enemy, 0)     [6,19] DropItem 0x0 0x0 0x0 [0xFF,Silence] BossAI
 
-UNIT BadGuy Shaman 0x1 Level(5, Enemy, 1)     [14,18] 0b 0x0 0x0 0x0 [DarkTome2,] AttackInRangeAI
+//thieves
+UNIT 0x64 Thief 0x1 Level(4, Enemy, 1)     [19,13] DropItem 0x0 0x0 0x0 [IronDagger,0x5E,] ThiefAI
+UNIT 0x64 Thief 0x1 Level(4, Enemy, 1)     [8,14] DropItem 0x0 0x0 0x0 [IronDagger,0x7b,] ThiefAI
 
-UNIT BadGuy Merc 0x1 Level(5, Enemy, 1)     [0,2] 0b 0x0 0x0 0x0 [SteelSword,] WallAI
-UNIT BadGuy Soldier 0x1 Level(5, Enemy, 1)     [28,7] 0b 0x0 0x0 0x0 [SteelLance,] WallAI
+UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [14,16] 0b 0x0 0x0 0x0 [DarkTome2,] WallAI
 
-UNIT BadGuy LCav 0x1 Level(5, Enemy, 1)     [13,23] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
-UNIT BadGuy Soldier 0x1 Level(5, Enemy, 1)     [15,19] 0b 0x0 0x0 0x0 [Horseslayer,] ChargeAI
-UNIT BadGuy Shaman 0x1 Level(5, Enemy, 1)     [16,16] 0b 0x0 0x0 0x0 [Flux,] WallAI
-UNIT BadGuy SCav 0x1 Level(5, Enemy, 1)     [29,17] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
-UNIT BadGuy Shaman 0x1 Level(5, Enemy, 1)     [0,7] 0b 0x0 0x0 0x0 [Flux,] WallAI
-UNIT BadGuy Soldier 0x1 Level(5, Enemy, 1)     [2,3] 0b 0x0 0x0 0x0 [SteelLance,] WallAI
-UNIT BadGuy Fighter 0x1 Level(5, Enemy, 1)     [3,6] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
-UNIT BadGuy PegRider 0x1 Level(5, Enemy, 1)     [0,15] 0b 0x0 0x0 0x0 [IronLance,] WallAI
-UNIT BadGuy Shaman 0x1 Level(5, Enemy, 1)     [9,23] 0b 0x0 0x0 0x0 [Flux,] WallAI
-UNIT BadGuy WyvernRider 0x1 Level(5, Enemy, 1)     [29,12] 0b 0x0 0x0 0x0 [SteelAxe,] WallAI
-UNIT BadGuy ACav 0x1 Level(5, Enemy, 1)     [3,9] 0b 0x0 0x0 0x0 [Hammer,] ChargeAI
-UNIT BadGuy ACav 0x1 Level(5, Enemy, 1)     [1,12] 0b 0x0 0x0 0x0 [IronAxe,] WallAI
-UNIT BadGuy Soldier 0x1 Level(5, Enemy, 1)     [29,21] 0b 0x0 0x0 0x0 [SteelLance,] WallAI
-UNIT BadGuy Occultist 0x1 Level(5, Enemy, 1)     [22,22] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
-UNIT BadGuy Soldier 0x1 Level(5, Enemy, 1)     [24,23] 0b 0x0 0x0 0x0 [SteelLance,] WallAI
-UNIT BadGuy PegRider 0x1 Level(5, Enemy, 1)     [29,21] 0b 0x0 0x0 0x0 [IronLance,] WallAI
-UNIT BadGuy Pirate 0x1 Level(5, Enemy, 1)     [0,18] 0b 0x0 0x0 0x0 [ShortAxe,] WallAI
-UNIT BadGuy Soldier 0x1 Level(5, Enemy, 1)     [25,20] 0b 0x0 0x0 0x0 [SteelLance,] WallAI
+UNIT Aeteria Merc 0x1 Level(5, Enemy, 1)     [0,2] 0b 0x0 0x0 0x0 [SteelSword,] WallAI
+UNIT Aeteria Soldier 0x1 Level(5, Enemy, 1)     [28,7] 0b 0x0 0x0 0x0 [SteelLance,] WallAI
+
+UNIT Aeteria LCav 0x1 Level(5, Enemy, 1)     [13,23] 0b 0x0 0x0 0x0 [SteelLance,] StallOneTurnAI
+UNIT Aeteria Soldier 0x1 Level(5, Enemy, 1)     [15,20] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT Aeteria SCav 0x1 Level(5, Enemy, 1)     [29,17] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
+UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [0,7] 0b 0x0 0x0 0x0 [Flux,] WallAI
+UNIT Aeteria Soldier 0x1 Level(5, Enemy, 1)     [2,3] 0b 0x0 0x0 0x0 [ShortSpear,] WallAI
+UNIT Aeteria Fighter 0x1 Level(5, Enemy, 1)     [3,6] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
+UNIT Aeteria PegRider 0x1 Level(5, Enemy, 1)     [0,15] 0b 0x0 0x0 0x0 [IronLance,] WallAI
+UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [9,23] 0b 0x0 0x0 0x0 [Flux,] WallAI
+UNIT Aeteria WyvernRider 0x1 Level(5, Enemy, 1)     [29,12] 0b 0x0 0x0 0x0 [SteelAxe,] WallAI
+UNIT Aeteria ACav 0x1 Level(5, Enemy, 1)     [4,9] 0b 0x0 0x0 0x0 [IronAxe,] ChargeAI
+UNIT AeteriaStealable ACav 0x1 Level(6, Enemy, 1)     [1,12] 0b 0x0 0x0 0x0 [IronAxe,GreenGem] StallOneTurnAI
+UNIT Aeteria Merc 0x1 Level(5, Enemy, 1)     [3,15] 0b 0x0 0x0 0x0 [IronSword] StallOneTurnAI
+UNIT AeteriaStealable Soldier 0x1 Level(6, Enemy, 1)     [29,21] 0b 0x0 0x0 0x0 [SteelLance,Speedwing] WallAI
+UNIT Aeteria Occultist 0x1 Level(5, Enemy, 1)     [22,22] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
+UNIT Aeteria Soldier 0x1 Level(5, Enemy, 1)     [24,23] 0b 0x0 0x0 0x0 [SteelLance,] WallAI
+UNIT Aeteria PegRider 0x1 Level(5, Enemy, 1)     [29,21] 0b 0x0 0x0 0x0 [IronLance,] WallAI
+UNIT Aeteria LCav 0x1 Level(5, Enemy, 1)     [25,20] 0b 0x0 0x0 0x0 [SteelLance,] WallAI
 
 	UNIT
 	
 ReinRight: //to target right walls
-UNIT BadGuy Shaman 0x1 Level(5, Enemy, 1)     [29,5] 0b 0x0 0x0 0x0 [DarkTome2,] WallAI
-UNIT BadGuy Shaman 0x1 Level(5, Enemy, 1)     [29,6] 0b 0x0 0x0 0x0 [Flux,] WallAI
+UNIT Aeteria Shaman 0x1 Level(6, Enemy, 1)     [29,5] 0b 0x0 0x0 0x0 [DarkTome2,] WallAI
+UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [29,6] 0b 0x0 0x0 0x0 [Flux,] WallAI
 	UNIT
 	
 ReinLeft: //left walls
-UNIT BadGuy WyvernRider 0x1 Level(5, Enemy, 1)     [0,12] 0b 0x0 0x0 0x0 [SteelAxe,] WallAI
-UNIT BadGuy PegRider 0x1 Level(5, Enemy, 1)     [0,14] 0b 0x0 0x0 0x0 [SteelLance,] WallAI
+UNIT Aeteria WyvernRider 0x1 Level(5, Enemy, 1)     [0,12] DropItem 0x0 0x0 0x0 [ShortAxe,] WallAI
+UNIT Aeteria PegRider 0x1 Level(5, Enemy, 1)     [0,14] 0b 0x0 0x0 0x0 [SteelLance,] WallAI
 	UNIT
 	
 ExtraReinRight1: //in between the forts reins
-UNIT BadGuy Pirate 0x1 Level(5, Enemy, 1)     [29,2] 0b 0x0 0x0 0x0 [SteelAxe,] WallAI
+UNIT Aeteria Pirate 0x1 Level(6, Enemy, 1)     [29,2] 0b 0x0 0x0 0x0 [SteelAxe,] WallAI
+UNIT Aeteria Mage 0x1 Level(6, Enemy, 1)     [29,1] 0b 0x0 0x0 0x0 [Thunder,] WallAI
 	UNIT
 	
 ExtraReinRight2: //in between the forts reins
-UNIT BadGuy LCav 0x1 Level(5, Enemy, 1)     [29,16] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
-UNIT BadGuy SCav 0x1 Level(5, Enemy, 1)     [29,17] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
+UNIT Aeteria LCav 0x1 Level(5, Enemy, 1)     [29,16] 0b 0x0 0x0 0x0 [SteelLance,] StallOneTurnAI
+UNIT Aeteria SCav 0x1 Level(5, Enemy, 1)     [29,17] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
 	UNIT
 	
 ExtraReinRight3: //in between the forts reins
-UNIT BadGuy ACav 0x1 Level(5, Enemy, 1)     [23,23] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
-UNIT BadGuy MageRider 0x1 Level(5, Enemy, 1)     [24,23] 0b 0x0 0x0 0x0 [Thunder,] WallAI
+UNIT Aeteria ACav 0x1 Level(5, Enemy, 1)     [23,23] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
+UNIT Aeteria MageRider 0x1 Level(5, Enemy, 1)     [24,23] 0b 0x0 0x0 0x0 [Thunder,] WallAI
 	UNIT
 	
 ExtraReinLeft1: //in between the forts reins
-UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [0,1] 0b 0x0 0x0 0x0 [SteelBow,] WallAI
-UNIT BadGuy SArmor 0x1 Level(5, Enemy, 1)     [0,2] 0b 0x0 0x0 0x0 [SteelBlade,] ChargeAI
+UNIT Aeteria Hunter 0x1 Level(5, Enemy, 1)     [0,1] 0b 0x0 0x0 0x0 [SteelBow,] WallAI
+UNIT Aeteria SArmor 0x1 Level(6, Enemy, 1)     [0,2] 0b 0x0 0x0 0x0 [SteelBlade,] ChargeAI
 	UNIT
 	
 ExtraReinLeft2: //in between the forts reins
-UNIT BadGuy Merc 0x1 Level(5, Enemy, 1)     [9,23] 0b 0x0 0x0 0x0 [IronSword,] WallAI
-UNIT BadGuy ACav 0x1 Level(5, Enemy, 1)     [10,23] 0b 0x0 0x0 0x0 [Halberd,] ChargeAI
+UNIT Aeteria Merc 0x1 Level(5, Enemy, 1)     [9,23] DropItem 0x0 0x0 0x0 [IronBlade,] WallAI
+UNIT Aeteria ACav 0x1 Level(5, Enemy, 1)     [10,23] 0b 0x0 0x0 0x0 [IronAxe,] ChargeAI
 	UNIT
 	
 ExtraReinLeft3: //in between the forts reins
-UNIT BadGuy PegRider 0x1 Level(5, Enemy, 1)     [0,12] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT BadGuy PegRider 0x1 Level(5, Enemy, 1)     [0,9] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
+UNIT Aeteria PegRider 0x1 Level(5, Enemy, 1)     [0,12] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT Aeteria PegRider 0x1 Level(6, Enemy, 1)     [0,9] 0b 0x0 0x0 0x0 [SteelLance,] StallOneTurnAI
 	UNIT
 	
 LeftFortRein1:
-UNIT BadGuy Soldier 0x1 Level(5, Enemy, 1)     [4,20] 0 0 1 REDA6R19 [IronLance,] WallAI
-UNIT BadGuy Fighter 0x1 Level(5, Enemy, 1)     [4,20] 0 0 1 REDA5R20 [IronAxe,] WallAI
+UNIT Aeteria Soldier 0x1 Level(5, Enemy, 1)     [4,20] 0 0 1 REDA6R19 [IronLance,] WallAI
+UNIT Aeteria Fighter 0x1 Level(5, Enemy, 1)     [4,20] 0 0 1 REDA5R20 [IronAxe,] WallAI
 	UNIT
 	
 LeftFortRein2:
-UNIT BadGuy Soldier 0x1 Level(5, Enemy, 1)     [4,20] 0 0 1 REDA6R19 [SteelLance,] ChargeAI
-UNIT BadGuy SCav 0x1 Level(5, Enemy, 1)     [4,20] 0 0 1 REDA5R20 [SteelSword,] WallAI
+UNIT Aeteria Soldier 0x1 Level(5, Enemy, 1)     [4,20] 0 0 1 REDA6R19 [SteelLance,] ChargeAI
+UNIT Aeteria SCav 0x1 Level(5, Enemy, 1)     [4,20] 0 0 1 REDA5R20 [SteelSword,] WallAI
 	UNIT
 	
 LeftFortRein3:
-UNIT BadGuy Occultist 0x1 Level(5, Enemy, 1)     [4,20] 0 0 1 REDA4R19 [Flux,] ChargeAI
-UNIT BadGuy Occultist 0x1 Level(5, Enemy, 1)     [4,20] 0 0 1 REDA5R20 [DarkTome2,] ChargeAI
+UNIT Aeteria Occultist 0x1 Level(5, Enemy, 1)     [4,20] 0 0 1 REDA4R19 [Flux,] ChargeAI
+UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [4,20] 0 0 1 REDA5R20 [DarkTome2,] ChargeAI
 	UNIT
 	
 LeftFortRein4:
-UNIT BadGuy Thaumaturge 0x1 Level(5, Enemy, 1)     [4,20] 0 0 1 REDA4R19 [Wind,] ChargeAI
-UNIT BadGuy ACav 0x1 Level(5, Enemy, 1)     [4,20] 0 0 1 REDA5R20 [SteelAxe,] ChargeAI
+UNIT AeteriaStealable Thaumaturge 0x1 Level(5, Enemy, 1)     [4,20] 0 0 1 REDA4R19 [Thunder,RedGem] StallOneTurnAI
+UNIT Aeteria ACav 0x1 Level(6, Enemy, 1)     [4,20] 0 0 1 REDA5R20 [SteelAxe,] WallAI
 	UNIT
 	
 MidFortRein1:
-UNIT BadGuy Merc 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R19 [Zanbato,] ChargeAI
-UNIT BadGuy Soldier 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R20 [SteelLance,] ChargeAI
-UNIT BadGuy PegRider 0x1 Level(5, Enemy, 1)     [17,19] 0b 0x0 0x0 0x0 [IronLance,] WallAI
+UNIT Aeteria Merc 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R19 [SteelSword,] ChargeAI
+UNIT Aeteria Soldier 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R20 [SteelLance,] StallOneTurnAI
+UNIT Aeteria PegRider 0x1 Level(5, Enemy, 1)     [17,19] 0b 0x0 0x0 0x0 [IronLance,] WallAI
 	UNIT
 
 MidFortRein2:
-UNIT BadGuy Shaman 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R19 [Flux,] ChargeAI
-UNIT BadGuy Shaman 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R20 [DarkTome2,] ChargeAI
-UNIT BadGuy Thaumaturge 0x1 Level(5, Enemy, 1)     [17,19] 0b 0x0 0x0 0x0 [Thunder,] WallAI
+UNIT Aeteria Shaman 0x1 Level(6, Enemy, 1)     [17,19] 0 0 1 REDA16R20 [DarkTome2,] StallOneTurnAI
+UNIT Aeteria Thaumaturge 0x1 Level(5, Enemy, 1)     [17,19] 0b 0x0 0x0 0x0 [Fire,] WallAI
 	UNIT
 	
 MidFortRein3:
-UNIT BadGuy Mage 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R19 [Thunder,] WallAI
-UNIT BadGuy Mage 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R20 [Thunder,] ChargeAI
+UNIT Aeteria Mage 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R20 [Thunder,] WallAI
 	UNIT
 	
 MidFortRein4:
-UNIT BadGuy Occultist 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA17R17 [Flux,] ChargeAI
-UNIT BadGuy Shaman 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R19 [DarkTome2,] ChargeAI
-UNIT BadGuy Merc 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R20 [SteelSword,] ChargeAI
-UNIT BadGuy Archer 0x1 Level(5, Enemy, 1)     [17,19] 0b 0x0 0x0 0x0 [Longbow,] ChargeAI
+UNIT Aeteria Occultist 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA17R17 [Flux,] StallOneTurnAI
+UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R19 [DarkTome2,] ChargeAI
+UNIT Aeteria Merc 0x1 Level(6, Enemy, 1)     [17,19] 0 0 1 REDA16R20 [SteelSword,] ChargeAI
+UNIT Aeteria Archer 0x1 Level(5, Enemy, 1)     [17,19] 0b 0x0 0x0 0x0 [Longbow,] ChargeAI
 	UNIT
 	
 RightFortRein1:
-UNIT BadGuy SCav 0x1 Level(5, Enemy, 1)     [21,15] 0 0 1 REDA21R14 [SteelSword,] WallAI
-UNIT BadGuy Soldier 0x1 Level(5, Enemy, 1)     [21,15] 0 0 1 REDA22R15 [SteelLance,] WallAI
+UNIT Aeteria SCav 0x1 Level(5, Enemy, 1)     [21,15] 0 0 1 REDA21R14 [SteelSword,] WallAI
+UNIT Aeteria Soldier 0x1 Level(5, Enemy, 1)     [21,15] 0 0 1 REDA22R15 [SteelLance,] WallAI
+	UNIT
+
+LeftGuys:
+UNIT Aeteria Archer 0x1 Level(6, Enemy, 1)     [0,8] 0b 0x0 0x0 0x0 [Longbow,] WallAI
+UNIT Aeteria Fighter 0x1 Level(6, Enemy, 1)     [0,7] 0b 0x0 0x0 0x0 [IronAxe,] WallAI
+UNIT Aeteria Soldier 0x1 Level(6, Enemy, 1)     [0,6] 0b 0x0 0x0 0x0 [IronLance,] WallAI
 	UNIT
 	
 RightFortRein2:
-UNIT BadGuy Soldier 0x1 Level(5, Enemy, 1)     [21,15] 0 0 1 REDA20R15 [SteelSword,] ChargeAI
-UNIT BadGuy Archer 0x1 Level(5, Enemy, 1)     [21,15] 0 0 1 REDA21R16 [IronBow,] ChargeAI
-UNIT BadGuy Shaman 0x1 Level(5, Enemy, 1)     [21,15] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
+UNIT Aeteria Soldier 0x1 Level(6, Enemy, 1)     [21,15] 0 0 1 REDA20R15 [IronLance,] ChargeAI
+UNIT Aeteria Archer 0x1 Level(5, Enemy, 1)     [21,15] 0 0 1 REDA21R16 [IronBow,] StallOneTurnAI
+UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [21,15] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
 	UNIT
 	
 RightFortRein3:
-UNIT BadGuy Fighter 0x1 Level(5, Enemy, 1)     [21,15] 0 0 1 REDA21R14 [Hammer,] ChargeAI
-UNIT BadGuy Myrmidon 0x1 Level(5, Enemy, 1)     [21,15] 0 0 1 REDA20R15 [IronSword,] ChargeAI
-UNIT BadGuy LCav 0x1 Level(5, Enemy, 1)     [21,15] 0 0 1 REDA22R15 [HeavySpear,] ChargeAI
-UNIT BadGuy Soldier 0x1 Level(5, Enemy, 1)     [21,15] 0 0 1 REDA21R16 [SteelSword,] ChargeAI
-UNIT BadGuy Shaman 0x1 Level(5, Enemy, 1)     [21,15] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
+UNIT Aeteria Fighter 0x1 Level(5, Enemy, 1)     [21,15] 0 0 1 REDA21R16 [SteelAxe,] StallOneTurnAI
+UNIT Aeteria Soldier 0x1 Level(6, Enemy, 1)     [21,15] 0 0 1 REDA21R15 [IronLance,] ChargeAI
+	UNIT
+
+RighterFortRein:
+UNIT Aeteria Shaman 0x1 Level(6, Enemy, 1)     [28,7] 0 0 1 REDA28R6 [DarkTome2,] WallAI
+UNIT Aeteria AArmor 0x1 Level(6, Enemy, 1)     [28,7] 0 0 1 REDA27R7 [IronLabrys,] WallAI
+	UNIT
+
+RighterFortRein2:
+UNIT Aeteria Merc 0x1 Level(6, Enemy, 1)     [28,7] 0 0 1 REDA27R7 [SteelSword,] WallAI
 	UNIT
 	
 ExtraReinRightBigGroup:
-UNIT BadGuy GriffonRider 0x1 Level(5, Enemy, 1)     [29,16] 0b 0x0 0x0 0x0 [IronBow,] ChargeAI
-UNIT BadGuy WyvernRider 0x1 Level(5, Enemy, 1)     [29,17] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
-UNIT BadGuy WyvernRider 0x1 Level(5, Enemy, 1)     [23,23] 0b 0x0 0x0 0x0 [IronAxe,] ChargeAI
-UNIT BadGuy GriffonRider 0x1 Level(5, Enemy, 1)     [24,23] 0b 0x0 0x0 0x0 [IronBow,] ChargeAI
+UNIT Aeteria GriffonRider 0x1 Level(5, Enemy, 1)     [29,16] 0b 0x0 0x0 0x0 [IronBow,] ChargeAI
+UNIT Aeteria WyvernRider 0x1 Level(6, Enemy, 1)     [29,17] 0b 0x0 0x0 0x0 [SteelAxe,] StallOneTurnAI
+UNIT Aeteria WyvernRider 0x1 Level(5, Enemy, 1)     [23,23] 0b 0x0 0x0 0x0 [IronAxe,] ChargeAI
+UNIT Aeteria GriffonRider 0x1 Level(5, Enemy, 1)     [24,23] 0b 0x0 0x0 0x0 [IronBow,] ChargeAI
 	UNIT
+	
+WeAreDead:
+CHECK_ACTIVE
+SVAL 1 Aeteria
+BEQ 0x1 0xC 0x1
+SVAL 1 AeteriaStealable
+BEQ 0x1 0xC 0x1
+ENUF 0x65
+GOTO 0x2
+LABEL 0x1
+CAM1 Affogato
+CUMO Affogato
+STAL 60
+CURE
+Text(Placeholder1)
+SetFlag(0x65)
+GameOver
+LABEL 0x2
+NoFade
+ENDA
 	
 ReinEvent1:
 SpawnReinforcements(ReinLeft)
@@ -298,6 +409,10 @@ ReinEvent6:
 SpawnReinforcements(ExtraReinRightBigGroup)
 STAL 60
 SpawnReinforcements(MidFortRein3)
+STAL 60
+SpawnReinforcements(LeftGuys)
+STAL 60
+SpawnReinforcements(RighterFortRein)
 NoFade
 ENDA
 
@@ -305,6 +420,8 @@ ReinEvent7:
 SpawnReinforcements(ExtraReinLeft3)
 STAL 60
 SpawnReinforcements(ExtraReinRight3)
+STAL 60
+SpawnReinforcements(RighterFortRein2)
 NoFade
 ENDA
 
@@ -316,6 +433,10 @@ NoFade
 ENDA
 
 Traps1:
+BLST [15,9] KillerBallista
+BLST [11,4] Ballista
+BLST [19,4] Ballista
+RedSigil(15,1)
 	ENDTRAP
 	ALIGN 4
 
@@ -327,11 +448,32 @@ BeginningScene:
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 NewRecruits
 	LOAD1 0x1 NPCUnits
+	CUSN Wegman
+	CUSN Klavdia
+	CUSN Gerolf
+	CenterTextbox(StorySynopsis)
 	ENUN
-	GotoPrepScreen
+	CALL $591FD8
+	FADU 30
+	STAL 20
+	CameraCursor(Selwyn)
+	CameraCursor(Sylveria)
+	Music(0xa9)
+	Text(ChBonusAfterPreps1)
+	STAL 30
+	CameraCursor(Affogato)
+	Music(0x3cd)
+	Text(ChBonusAfterPreps2)
+	CenterTextbox(RewardsNotif)
+	CUSA Wegman
+	CUSA Klavdia
+	CUSA Gerolf
+	NoFade
 	ENDA
 
 EndingScene:
-	MNC2 0x6
+	CenterTextbox(StorySynopsis2)
+	//MNC2 0x6
+MNTS 0x1 //return to title screen
 	NoFade
 	ENDA

@@ -17,6 +17,7 @@ DenyScrolling: //function for determining if you can scroll between stat screens
 POIN DenyStatScreenList
 
 DenyStatScreenList: //null-terminated list of classes for whom you cannot open the stat screen
-BYTE 0x51
+BYTE 0x51 //sentry
+BYTE 0x79 //tent
 BYTE 0
 

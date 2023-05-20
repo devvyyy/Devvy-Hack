@@ -19,16 +19,10 @@ ldr r1, BazookaID
 cmp r0, #0
 beq GoBack
 
-@set attacker attack to 0
+@set attacker attack to 15
 mov r0, r4
 add r0,#0x5A
-mov r3,#12
-strh r3,[r0]
-
-@set attacker battle hit to 0
-mov r0, r4
-add r0,#0x64
-mov r3,#80
+mov r3,#15
 strh r3,[r0]
 
 GoBack:

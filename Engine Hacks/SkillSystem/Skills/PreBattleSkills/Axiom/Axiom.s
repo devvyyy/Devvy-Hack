@@ -31,11 +31,12 @@ ldr r1, [r5,#4] @class data ptr
 cmp r1, #0 @if 0, this is stat screen
 beq End
 
-@add 3 AS
-mov	r0, #0x5E
-ldrh	r1, [r4,r0]	@load AS
-add	r1, #0x99
-strh	r1, [r4,r0]     @store
+@set attacker AS to 99
+mov r0, r4
+add r0,#0x5E
+mov r3,#99
+strh r3,[r0]
+
 
 End:
 pop	{r4, r15}

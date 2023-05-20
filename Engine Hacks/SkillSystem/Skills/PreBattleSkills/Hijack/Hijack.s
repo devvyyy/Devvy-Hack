@@ -15,7 +15,7 @@ ldr r1, HijackID
 cmp r0, #0
 beq End
 
-@make sure we're in combat (or combat prep)
+@make sure were in combat (or combat prep)
 ldrb r3, =gBattleData
 ldrb r3, [r3]
 cmp r3, #4
@@ -26,78 +26,25 @@ ldr r1, [r5,#4] @class data ptr
 cmp r1, #0 @if 0, this is stat screen
 beq End
 
-@this is the clownest way to do this wtf
-mov     r0, #0x4A      @Move to defenders's weapon (before battle)
-ldrb    r0, [r5, r0]   @Load defenders weap (before battle)
-cmp     r0, #0x28         @Hand Axe ID
-beq SevenMt
-cmp     r0, #0x1C         @Javelin ID
-beq SixMt
-cmp     r0, #0xCA         @Sagitar ID
-beq FiveMt
-cmp     r0, #0x2D         @Iron Bow ID
-beq SevenMt
-cmp     r0, #0x2E         @Steel Bow ID
-beq TenMt
-cmp     r0, #0xC3         @Iron Rifle ID
-beq TenMt
-b End
+@ bork: check enemy res
+mov r0, #5
+ldrb r1, [r5, #0x18] @defender res
+cmp r0, r1
+ble End @skip if foes res is greater than or equal to 5
 
-FiveMt:
-@subtract 5 atk from foe
-mov r1, #0x5A
-ldrh r0, [r5, r1] @atk
-sub r0, #5
-strh r0, [r5,r1]
+@ add 5 damage
+mov r0, r4
+add r0, #0x5a @attack
+ldrh r3, [r0]
+add r3, #5
+strh r3, [r0]
 
-@add 5 atk to unit
-mov r1, #0x5A
-ldrh r0, [r4, r1] @atk
-add r0, #5
+@grants defense to enemy equal to enemy res
+mov  r1, #0x5a
+ldrh r0, [r4, r1] @in battle defense
+ldrb r2, [r5, #0x18] @res
+sub  r0, r2
 strh r0, [r4,r1]
-b End
-
-SixMt:
-@subtract 6 atk from foe
-mov r1, #0x5A
-ldrh r0, [r5, r1] @atk
-sub r0, #6
-strh r0, [r5,r1]
-
-@add 6 atk to unit
-mov r1, #0x5A
-ldrh r0, [r4, r1] @atk
-add r0, #6
-strh r0, [r4,r1]
-b End
-
-SevenMt:
-@subtract 7 atk from foe
-mov r1, #0x5A
-ldrh r0, [r5, r1] @atk
-sub r0, #7
-strh r0, [r5,r1]
-
-@add 7 atk to unit
-mov r1, #0x5A
-ldrh r0, [r4, r1] @atk
-add r0, #7
-strh r0, [r4,r1]
-b End
-
-TenMt:
-@subtract 10 atk from foe
-mov r1, #0x5A
-ldrh r0, [r5, r1] @atk
-sub r0, #10
-strh r0, [r5,r1]
-
-@add 10 atk to unit
-mov r1, #0x5A
-ldrh r0, [r4, r1] @atk
-add r0, #10
-strh r0, [r4,r1]
-b End
 
 End:
 pop {r4-r7, r15}

@@ -16,6 +16,22 @@ CheckGaleforce: //decides if the unit should be cantoing or not
 #incbin "Galeforce/checkgaleforce.dmp"
 
 ALIGN 4
+AdaptivePoisePost:
+#incbin "AdaptivePoiseFlag/AdaptivePoise.dmp"
+POIN SkillTester
+WORD AdaptivePoiseID
+POIN AdaptivePoiseEvent
+#include "AdaptivePoiseFlag/AdaptivePoise.event"
+
+ALIGN 4
+AdaptivePoiseAlt:
+#incbin "AdaptivePoiseFlag/APPierce.dmp"
+POIN SkillTester
+WORD AdaptivePoiseID
+POIN AdaptivePoisePierce
+#include "AdaptivePoiseFlag/APPierce.event"
+
+ALIGN 4
 SavingGrace:
 #incbin "SavingGrace/SavingGrace.dmp"
 POIN SkillTester

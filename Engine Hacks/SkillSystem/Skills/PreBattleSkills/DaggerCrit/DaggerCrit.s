@@ -35,6 +35,8 @@ cmp     r0, #0xB1         @'Goodbye' Knife
 beq Crit50
 cmp     r0, #0xF7         @Oh the misery
 beq Crit100
+cmp     r0, #0xFE         @Syzygy
+beq Crit50Special
 b End
 
 Crit25:
@@ -63,6 +65,16 @@ strh r0, [r4,r1]
 mov r1, #0x62
 ldrh r0, [r4, r1] @avoid
 add r0, #10
+strh r0, [r4,r1]
+
+b End
+
+Crit50Special:
+
+@reduce 50 crit
+mov r1, #0x66
+ldrh r0, [r4, r1] @crit
+sub r0, #50
 strh r0, [r4,r1]
 
 b End

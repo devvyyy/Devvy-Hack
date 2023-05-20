@@ -1,0 +1,115 @@
+//Event file generated from Sappy .s format.
+        #include "MPlayDef.event"
+
+        #define    levelup2p22_grp  GUIVoices
+        #define    levelup2p22_pri  0
+        #define    levelup2p22_rev  0
+        #define    levelup2p22_key  0
+
+        // .rodata
+        // levelup2p22
+        ALIGN 4
+
+//****************** Track 0 (Midi-Chn.0) ******************//
+
+levelup2p22_0:
+        BYTE   KEYSH   levelup2p22_key+0
+// 000   ----------------------------------------
+        BYTE   TEMPO   200/2
+        BYTE           VOICE   8
+        BYTE           VOL     82
+        BYTE           PAN     c_v+8
+        BYTE           N18     As3   v100
+        BYTE   W18
+        BYTE           N06     Dn4
+        BYTE   W09
+        BYTE                   As3
+        BYTE   W09
+        BYTE           N15     Dn4
+        BYTE   W18
+        BYTE           N54     Cn4
+        BYTE   W42
+// 001   ----------------------------------------
+        BYTE   W12
+        BYTE   FINE
+
+//****************** Track 1 (Midi-Chn.1) ******************//
+
+levelup2p22_1:
+        BYTE   KEYSH   levelup2p22_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   8
+        BYTE           PAN     c_v-8
+        BYTE           VOL     80
+        BYTE           N18     Fn3   v100
+        BYTE   W18
+        BYTE           N06     Gn3
+        BYTE   W09
+        BYTE                   Fn3
+        BYTE   W09
+        BYTE           N15
+        BYTE   W18
+        BYTE           N54     Gn3
+        BYTE   W42
+// 001   ----------------------------------------
+        BYTE   W12
+        BYTE   FINE
+
+//****************** Track 2 (Midi-Chn.2) ******************//
+
+levelup2p22_2:
+        BYTE   KEYSH   levelup2p22_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   8
+        BYTE           VOL     59
+        BYTE           PAN     c_v+18
+        BYTE           N15     Dn2   v100
+        BYTE   W18
+        BYTE           N12     En2
+        BYTE   W18
+        BYTE           N15     Fn2
+        BYTE   W18
+        BYTE           N54     En3
+        BYTE   W42
+// 001   ----------------------------------------
+        BYTE   W12
+        BYTE   FINE
+
+//****************** Track 3 (Midi-Chn.3) ******************//
+
+levelup2p22_3:
+        BYTE   KEYSH   levelup2p22_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   8
+        BYTE           VOL     59
+        BYTE           PAN     c_v-14
+        BYTE           N15     Fn2   v100
+        BYTE   W18
+        BYTE           N12     Gn2
+        BYTE   W18
+        BYTE           N15     As2
+        BYTE   W18
+        BYTE           N54     Cn3
+        BYTE   W42
+// 001   ----------------------------------------
+        BYTE   W12
+        BYTE   FINE
+
+
+//********************** End of Song ***********************//
+
+        ALIGN 4
+levelup2p22:
+        BYTE   4                       // Num Tracks
+        BYTE   0                       // Unknown
+        BYTE   levelup2p22_pri         // Priority
+        BYTE   levelup2p22_rev         // Reverb
+
+        POIN2   levelup2p22_grp        
+
+        POIN2   levelup2p22_0
+        POIN2   levelup2p22_1
+        POIN2   levelup2p22_2
+        POIN2   levelup2p22_3
+
+        

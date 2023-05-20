@@ -4,7 +4,7 @@
   mov lr, \reg
   .short 0xf800
 .endm
-.equ ForesightID, SkillTester+4
+.equ CountermagicID, SkillTester+4
 .equ d100Result, 0x802a52c
 @ r0 is attacker, r1 is defender, r2 is current buffer, r3 is battle data
 push {r4-r7,lr}
@@ -25,7 +25,7 @@ bne End
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r5 @defender data
-ldr r1, ForesightID
+ldr r1, CountermagicID
 .short 0xf800
 cmp r0, #0
 beq End
@@ -63,4 +63,4 @@ pop {r15}
 .ltorg
 SkillTester:
 @POIN SkillTester
-@WORD ForesightID
+@WORD CountermagicID

@@ -16,6 +16,33 @@ Power Slide: Unit can Canto 1 space.[N]
 Activate to dash 3 spaces in any direction.[N]
 Effect recharges on kill.[X]
 
+## SD_HitmanSeer
+Infinite Arsenal: Unit has an arsenal of[N]
+5 personal weapons, each with an Equip[N]
+and Off-Hand effect.[X]
+
+## SD_HitmanSeer2
+Each weapon has 10 durability. Upon breaking,[N]
+it gets moved to the end of the queue, and[N]
+the next weapon in line is sent.[X]
+
+## SD_Chakrams
+Adrenaline: Combat grants a stack (max; 5, resets after[N]
+not Attacking). Each stack grants AS +1 and[N]
+deals 3 bonus magical damage (min; 1 damage).[X]
+
+## SD_Absolution
+# unit has no attack growth
+Living Cannon: Unit's attacks scale with 120% Str,[N]
+but can't follow-up. If Spd > foe's Spd, grants[N]
+Atk = difference between stats. Bow range +1.[N]
+
+## SD_Absolution2
+# Takedowns grant 1 stack.[N]
+Stacks grant 0.5 Str, 1 Hit, and every 10[N]
+stacks grants 1 Range (max; 10). Every 20[N]
+grants 1 Canto movement (max; 5).[X]
+
 ## SD_CombatMedic
 Even the Odds: If Hartwick initiates, restores (50% AP) HP[N]
 to allies within 2 spaces of both him and target (overlapping stacks),[N]
@@ -26,10 +53,14 @@ Heat Rising: Combat is a free action, but[N]
 grants 1 stack (max; 5). At max stacks,[N]
 Overheat and skip Hartwick's next turn.[X]
 
+## SD_DukeSkill
+The Skies Descend: Grants Selwyn and all[N]
+allies on the map Atk/AS = turn count.[X]
+
 ## SD_Tenacity
-Tenacity: If unit has any status effect,[N]
-grants Atk/AS +5 and deal 10 bonus[N]
-physical damage.[X]
+Tenacity: If Wellington has any status[N]
+effect, doubles Str and grants Move +2.[N]
+Counter before foe's first attack.[X]
 
 ## SD_Evolve
 Evolve: Grants bonus stats based on[N]
@@ -43,9 +74,9 @@ At max stacks, initiating deals (25% of foe's max HP + 150% AP)[N]
 magical damage, cannot follow-up or be countered, and has x2 range.[X]
 
 ## SD_CantoStatus
-With Me!: Derval's staves grant allies[N]
-Canto for 1 turn. If initiating, deals[N]
-+20 bonus magical damage.[X]
+Party Animal: Derval's staves grant allies[N]
+Canto and foes Rooted for 1 turn.[N]
+Grants units within 3 spaces Crit/Avoid +20.[X]
 
 ## SD_EyeForAnEye
 Pit Grit: Radcliff's counterattacks[N]
@@ -114,9 +145,9 @@ true damage = 500% of foe's missing HP.[X]
 
 ## SD_AdaptivePoise
 # global flag 0xB2
-[_A][_d][_a][_p][_t][_i][_v][_e][_SP][_P][_o][_i][_s][_e][_Colon][_SP][_A][_f][_t][_e][_r][_SP][_c][_o][_m][_b][_a][_t][_Comma][_SP][_W][_e][_g][_m][_a][_n][_SP][_t][_o][_g][_g][_l][_e][_s][N]
-[_b][_e][_t][_w][_e][_e][_n][_SP][_S][_w][_i][_n][_g][_Slash][_P][_i][_e][_r][_c][_e][_SP][_S][_t][_a][_n][_c][_e][_SP][_b][_a][_s][_e][_d][_SP][_o][_n][_SP][_w][_e][_a][_p][_o][_n][_SP][_t][_y][_p][_e][_Dot][N]
-[SwordIcon][AxeIcon][_Colon][_SP][_Plus][_4][_SP][_A][_t][_k][_Comma][_SP][_Dash][_2][_0][_SP][_H][_i][_t].[_SP][LanceIcon][BowIcon][_Colon][_SP][_Plus][_6][_SP][_A][_S][_Comma][_SP][_Dash][_4][_SP][_P][_r][_t][_Slash][_R][_s][_l][_Dot][X]
+[_A][_d][_a][_p][_t][_i][_v][_e][_SP][_P][_o][_i][_s][_e][_Colon][_SP][_A][_f][_t][_e][_r][_SP][_e][_x][_p][_l][_o][_i][_t][_i][_n][_g][_SP][_t][_h][_e][_SP][_W][_T][_Comma][_SP][_W][_e][_g][_m][_a][_n][N]
+[_t][_o][_g][_g][_l][_e][_s][_SP][_b][_e][_t][_w][_e][_e][_n][_SP][_S][_w][_i][_n][_g][_Slash][_P][_i][_e][_r][_c][_e][_SP][_S][_t][_a][_n][_c][_e][_Dot][N]
+[SwordIcon][_Colon][_SP][_Plus][_4][_SP][_A][_t][_k][_Comma][_SP][_Dash][_2][_0][_SP][_H][_i][_t].[_SP][LanceIcon][_Colon][_SP][_Plus][_6][_SP][_A][_S][_Comma][_SP][_Dash][_4][_SP][_P][_r][_t][_Slash][_R][_s][_l][_Dot][X]
 
 ## SD_BlindingFlash
 Blinding Flash: If Katsu initiates and[N]
@@ -152,7 +183,8 @@ spaces of an ally, deals 10 bonus physical[N]
 damage and reverses Defeatist's penalties.[X]
 
 ## SD_AnsgarMirrorPassive
-Forge Mastery: Ansgar increases weapon tier[N]
+Forge Mastery: Ansgar's Iron/Steel weapons are[N]
+treated as Silver. Increases weapon tier[N]
 by 1 (if applicable) to adjacent allies.[X]
 
 ## SD_NoraMirrorPassive
@@ -177,8 +209,9 @@ Moonlit Shackles: Pandoro inflicts Def -5 on[N]
 foe for 1 turn after combat.[X]
 
 ## SD_StrogyMirrorPassive
-Equalizer: If Stroganoff's Spd < foe's Spd -4,[N]
-strikes x2 consecutively.[X]
+Captain's Orders: Stroganoff grants Atk/AS +3[N]
+to allies within 2 spaces. Inflicts Atk/AS -3[N]
+to foes within 3 spaces.[X]
 
 ## SD_DoppioMirrorPassive
 Hero's Guard: If foe initiates, Doppio[N]
@@ -212,9 +245,9 @@ is 25% or less, Iris grants immunity to[N]
 non-Light attacks (excludes bosses).[X]
 
 ## SD_KaneMirrorPassive
-Booze Cruise: Kane inflicts Atk/Spd -3[N]
-on foes within 2 spaces, and grants Atk/Spd +3[N]
-to allies within 2 spaces.[X]
+Booze Cruise: Kane's staves grant Tipsy[N]
+to allies over 21 for 1 turn, granting[N]
+Atk/Rsl +10, but inflicting AS/Prt -4.[X]
 
 ## FallenStarStatusName
 Alacrity[X]
@@ -229,7 +262,7 @@ less after combat, restores 50% missing HP, Canto 5[N]
 spaces (if initiating), then grants Stasis for 1 turn.[X]
 
 ## SD_BulletAwesome
-Flow:[X]
+Ashen Flow:[X]
 
 ## SD_Overdrive2
 # uses flag 0x23, 0x24, and also 0x5 (?? in builder)
@@ -350,7 +383,7 @@ per turn).[X]
 # Flow, temp flags 0x25-0x28
 [_F]l[_o]w[_Colon][_SP][_C][_o]m[_b][_a][_t][_Slash][_s][_t][_e][_a]l[_Slash][_p]i[_c][_k][_SP][_g][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP][_LParen]m[_a][_x];[_SP][_4][_RParen][_Dot][N]
 [_A][_t][_SP][_m][_a][_x][_SP][_s][_t][_a][_c][_k][_s][_Comma][_SP][_c][_o][_n][_s][_u][_m][_e][_s][_SP][_a][_l][_l][_SP][_s][_t][_a][_c][_k][_s][_SP][_o][_n][_SP][_i][_n][_i][_t][_i][_a][_t][_i][_o][_n][_SP][_t][_o][N]
-[_x][_2][_SP][_C][_a][_n][_t][_o][_SP][_m][_o][_v][_e][_m][_e][_n][_t][_SP][_a][_n][_d][_SP][_d][_e][_a][_l][_SP][_b][_o][_n][_u][_s][_SP][_d][_a][_m][_a][_g][_e][_SP]=[_SP][_R][_e][_s][_Dot][X]
+[_x][_2][_SP][_S][_i][_d][_e][_s][_t][_e][_p][_SP][_C][_a][_n][_t][_o][_SP][_a][_n][_d][_SP][_d][_e][_a][_l][_SP][_b][_o][_n][_u][_s][_SP][_d][_a][_m][_a][_g][_e][_SP]=[_SP][_R][_e][_s][_Dot][X]
 
 ## WTIdea
 IDK: If weapon triangle matchup is neutral,[N]
@@ -408,9 +441,9 @@ Upgrade!!: Grants Yory Move +1. Turret deals[N]
 critically hit with base 10% chance.[X]
 
 ## SD_ElbowGrease
-Elbow Grease: Converts Yory's Str to Prt,[N]
-and Dex to Rsl. If deploying a turret,[N]
-grants another action (once per turn).[X]
+[_E][_l][_b][_o][_w][_SP][_G][_r][_e][_a][_s][_e][_Colon][_SP][_C][_o][_n][_v][_e][_r][_t][_s][_SP][_Y][_o][_r][_y]'[_s][_SP][_S][_t][_r][_SP][_t][_o][_SP][_P][_r][_t],[_SP][_a][_n][_d][_SP][_D][_e][_x][N]
+[_t][_o][_SP][_R][_s][_l][_Dot][_SP][_B][_a][_l][_l][_i][_s][_t][_a][_e][_SP][_g][_a][_i][_n][_SP][_Plus][_1][_0][_SP][_M][_t][_Comma][_SP][_Plus][_3][_0][_SP][_H][_i][_t][_Dot][_SP][_I][_f][_SP][_d][_e][_p][_l][_o][_y][_i][_n][_g][N]
+[_a][_SP][_t][_u][_r][_r][_e][_t][_Comma][_SP][_g][_r][_a][_n][_t][_s][_SP][_a][_n][_o][_t][_h][_e][_r][_SP][_a][_c][_t][_i][_o][_n][_SP]([_o][_n][_c][_e][_SP][_p][_e][_r][_SP][_t][_u][_r][_n])[_Dot][X]
 
 ## SD_SpellThief
 Spellthief: Steals the Mt of tier I[N]
@@ -504,9 +537,9 @@ Bow/Rifle, inflicts Def -10 on unit,[N]
 and foe follow-ups and unit cannot.[X]
 
 ## SD_Hijack
-Hijack: If foe uses a ranged weapon,[N]
-Marcel negates foe's base weapon Mt[N]
-and adds it to weapon Mt.[X]
+Arcane Mastery: Marcel deals 5 bonus[N]
+magical damage. (Bonus damage is a[N]
+separate calculation; 5 - foe's Res.)[X]
 
 ## SD_Restraint
 Inner Light: Chiffon's Splitting Maul[N]
@@ -579,7 +612,7 @@ Borrowed Time: After combat, Xidorn restores[N]
 5 HP and deals 5 damage to foe.[X]
 
 ## SD_RidersAxiom
-Rider's Axiom: On turns 1-3, Gerolf[N]
+Wreyvian Axiom: On turns 1-3, Gerolf[N]
 follow-ups and foe cannot.[X]
 
 ## SD_SoulSplitter
@@ -592,6 +625,7 @@ not adjacent to an ally, grants unit[N]
 another action (once per turn).[X]
 
 ## SD_Lionheart
+# add vantage ?!
 Lionheart: Grants Lennard +2 Avoid/Crit[N]
 per missing HP, but take 4 damage[N]
 after combat (cannot die from recoil).[X]
@@ -653,7 +687,7 @@ missing HP.[X]
 Fractured Soul: Gorlois takes -1 damage[N]
 for every 4 damage taken by foe.[X]
 
-## SD_SkiesDescend
+## SD_SkiesDescend2
 The Skies Descend: If foe's HP is full,[N]
 Gorlois' first hit deals bonus magical[N]
 damage = (5 + turn count x 2).[X]
@@ -734,7 +768,7 @@ skills that deal damage after[N]
 combat.[X]
 
 ## SD_Parity
-Parity: Melya neutralizes terrain[N]
+Parity: Opal neutralizes terrain[N]
 bonuses from both sides.[X]
 
 ## SD_BuiltDifferent
@@ -820,7 +854,7 @@ foe's Max HP/4.[X]
 # Sidestep
 [_S][_i][_d][_e][_s][_t][_e][_p][_Colon][_SP][_I][_f][_SP][_A][_f][_f][_o][_g][_a][_t][_o][_SP][_d][_o][_e][_s][_n][_SingleQuote][_t][_SP][_m][_o][_v][_e][_Comma][_SP][_C][_a][_n][_t][_o][_SP][_2][_SP][_s][_p][_a][_c][_e][_s][N]
 [_LParen][_C][_a][_n][_t][_o][_SP][_1][_SP][_s][_p][_a][_c][_e][_SP][_o][_t][_h][_e][_r][_w][_i][_s][_e][_RParen][_Dot][_SP][_G][_r][_a][_n][_t][_s][_SP][_a][_n][_o][_t][_h][_e][_r][_SP][_a][_c][_t][_i][_o][_n][N]
-[_a][_f][_t][_e][_r][_SP][_p][_i][_c][_k][_i][_n][_g][_Slash][_s][_t][_e][_a][_l][_i][_n][_g][_SP][_LParen][_o][_n][_c][_e][_SP][_p][_e][_r][_SP][_t][_u][_r][_n][_RParen][_Dot][_SP][_P][_a][_s][_s][_SP][_f][_o][_e][_s].[X]
+[_a][_f][_t][_e][_r][_SP][_p][_i][_c][_k][_i][_n][_g][_Slash][_s][_t][_e][_a][_l][_i][_n][_g][_SP][_LParen][_o][_n][_c][_e][_SP][_p][_e][_r][_SP][_t][_u][_r][_n][_RParen][_Dot][_SP][_P][_a][_s][_s][_SP][_f][_o][_e][_s][_Dot][X]
 
 ## SD_Vigor
 # Requiem: When using offensive staves, multiplies Eth by 1.25x and deals bonus damage equal to a quarter of foe's current HP.
@@ -1044,8 +1078,10 @@ Counter: Reflect physical damage[N]
 when attacked at 1-2 range.[X]
 
 ## SD_CounterMagic
-Countermagic: Reflect magical damage[N]
-when attacked at 1-2 range.[X]
+# Pale Cascade
+Voile de Foi: Sylveria counters magical[N]
+damage upon hit and ignores damage[N]
+from foe's critical hits and combat arts.[X]
 
 ## SD_Miracle
 Hallowed Soul: If Iris' HP is 50% or more,[N]
@@ -1179,7 +1215,8 @@ Colossus: Triples Strength.[N]
 
 ## SD_RallyStr
 Hoist the Flag: Rally to grant +4[N]
-Str/Eth to adjacent allies for 1 turn.[X]
+Str/Eth to adjacent allies for 1 turn.[N]
+Can move after steal/pick.[X]
 
 ## SD_RallyMag
 Rally Magic: +4 Mag to[N]
@@ -1288,8 +1325,8 @@ Bond: All allies within 3 spaces[N]
 recover a tenth of max HP each turn.[X]
 
 ## SD_Anathema
-Anathema: -10 Avoid/Crit Avoid to all[N]
-enemies within 3 spaces.[X]
+Anathema: Messel inflicts -10 Avoid/Crit Avoid[N]
+to all foes within 3 spaces.[X]
 
 ## SD_LilysPoise
 Lily's Poise: Adjacent allies gain[N]
@@ -1461,13 +1498,18 @@ Despoil: Obtain a bullion worth[N]
 (Luck % chance).[X]
 
 ## SD_Pivot
-Pivot: Unit can move to opposite[N]
+Pivot: Unit can dash to the opposite[N]
 side of an adjacent ally.[N]
 (Skill can be used during Canto.)[X]
 
+## SD_Vault
+Vault: Unit can dash to the opposite[N]
+side of an adjacent unit without using[N]
+an action. (Skill can be used during Canto.)[X]
+
 ## SD_Reposition
 Fling: Unit can pull an adjacent[N]
-unit to opposite side of unit.[N]
+unit to the opposite side of unit.[N]
 (Skill can target any allegiance.)[X]
 
 ## SD_Swap
@@ -1501,8 +1543,8 @@ Quantum Visage: Face changes[N]
 every time it's looked at.[X]
 
 ## SD_Trace
-Trace: During Battle, copies[N]
-the first Skill of the enemy.[X]
+Adaptability: Selwyn copies foe's[N]
+personal skill.[X]
 
 ## SD_Roll12
 1d12: Gain 1 of 12 random proc[N]
@@ -1615,11 +1657,6 @@ Fortress Defense:[N]
 ## SD_FortressResistance
 Fortress Resistance:[N]
 +5 Res, -3 Str/Mag[X]
-
-## SD_Foresight
-Foresight: Avoid the damage[N]
-from enemy Critical Hits and[N]
-Combat Arts.[X]
 
 ## SD_Axefaith
 Fallen Angel: Unit's Eye of Creation[N]
@@ -1824,8 +1861,13 @@ unit's HP is 50% or more, unit can[N]
 make a follow-up and foe cannot.[X]
 
 ## SD_Resolve
-Resolve: When HP is less than half,[N]
-gain 1.5x Str, Skl, & Spd.[X]
+# Inner Flame
+Coeur Allum[0xE9]: If Selwyn's HP is 50% or[N]
+less, multiplies Str, Skill, and Spd by 1.5x.[N]
+Grants Atk +5 to allies within 5 spaces.[X]
+
+## SD_Foresight
+Foresight[X]
 
 ## SD_Insight
 Insight: Hit +20.[X]
@@ -1834,8 +1876,8 @@ Insight: Hit +20.[X]
 Vigilance: Avoid +20.[X]
 
 ## SD_Daunt
-Daunt: -5 Hit and Crit to all[N]
-enemy units in a 3-space radius.[X]
+Daunt: Klavdia inflicts -5 Hit/Crit[N]
+to foes within 3 spaces.[X]
 
 ## SD_BloodTide
 Blood Tide: Atk and Hit +5[N]
@@ -1902,9 +1944,7 @@ against attacks recieved at range.[X]
 
 ## SD_TowerShieldPlus
 # boss shield icon; Commander?
-Obelisk: If unit's HP is full or if foe's[N]
-range = 2+, reduces damage taken by[N]
-50% and foe cannot land critical hits.[X]
+Obelisk: Reduces damage taken by 50%.[X]
 
 ## SD_VoidCurse
 Void Curse: This unit gives[N]
@@ -1961,8 +2001,9 @@ Dragon Fang: 1.5x damage.[N]
 (Skill% activation)[X]
 
 ## SD_Fortune
-Fortune: This unit[N]
-cannot be crit.[X]
+Guarding Stance: If unit's HP is 50% or more,[N]
+inflicts Atk -(4 + 25% of foe's Str/Eth) on foe.[N]
+Foe cannot land critical hits.[X]
 
 ## SD_Assassinate
 Duelist: If Rina initiates at 1 range,[N]
@@ -2068,8 +2109,7 @@ Lull Spectrum: Negates the[N]
 effects of rallies on opponent.[X]
 
 ## SD_Shade
-Shade: Enemies are less[N]
-likely to target this unit.[X]
+Going Rogue: Unit has less enemy priority.[X]
 
 ## SD_ShadePlus
 Shade+: Enemies won't[N]

@@ -1,0 +1,103 @@
+//Event file generated from Sappy .s format.
+        #include "MPlayDef.event"
+
+        #define    weaponbroke2p22_grp  GUIVoices
+        #define    weaponbroke2p22_pri  0
+        #define    weaponbroke2p22_rev  0
+        #define    weaponbroke2p22_key  0
+
+        // .rodata
+        // weaponbroke2p22
+        ALIGN 4
+
+//****************** Track 0 (Midi-Chn.0) ******************//
+
+weaponbroke2p22_0:
+        BYTE   KEYSH   weaponbroke2p22_key+0
+// 000   ----------------------------------------
+        BYTE   TEMPO   144/2
+        BYTE           VOICE   9
+        BYTE           PAN     c_v+8
+        BYTE           MOD     1
+        BYTE           VOL     80
+        BYTE           N05     Fn4   v100
+        BYTE   W06
+        BYTE                   Cn4
+        BYTE   W06
+        BYTE                   Fn4
+        BYTE   W06
+        BYTE                   En4
+        BYTE   W06
+        BYTE                   Cn4
+        BYTE   W06
+        BYTE                   En4
+        BYTE   W06
+        BYTE           N42     Ds4
+        BYTE   W18
+        BYTE           MOD     9
+        BYTE   W24
+        BYTE   FINE
+
+//****************** Track 1 (Midi-Chn.1) ******************//
+
+weaponbroke2p22_1:
+        BYTE   KEYSH   weaponbroke2p22_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   9
+        BYTE           PAN     c_v-10
+        BYTE           MOD     1
+        BYTE           VOL     72
+        BYTE           N05     Cn4   v100
+        BYTE   W06
+        BYTE                   Gs3
+        BYTE   W06
+        BYTE                   Cn4
+        BYTE   W06
+        BYTE                   Bn3
+        BYTE   W06
+        BYTE                   Gs3
+        BYTE   W06
+        BYTE                   Bn3
+        BYTE   W06
+        BYTE           N42     As3
+        BYTE   W24
+        BYTE           MOD     9
+        BYTE   W18
+        BYTE   FINE
+
+//****************** Track 2 (Midi-Chn.2) ******************//
+
+weaponbroke2p22_2:
+        BYTE   KEYSH   weaponbroke2p22_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   8
+        BYTE           PAN     c_v-4
+        BYTE           VOL     64
+        BYTE           MOD     4
+        BYTE           N10     Gs2   v100
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE           N42     Ds2
+        BYTE   W42
+        BYTE   FINE
+
+
+//********************** End of Song ***********************//
+
+        ALIGN 4
+weaponbroke2p22:
+        BYTE   3                       // Num Tracks
+        BYTE   0                       // Unknown
+        BYTE   weaponbroke2p22_pri     // Priority
+        BYTE   weaponbroke2p22_rev     // Reverb
+
+        POIN2   weaponbroke2p22_grp    
+
+        POIN2   weaponbroke2p22_0
+        POIN2   weaponbroke2p22_1
+        POIN2   weaponbroke2p22_2
+
+        

@@ -23,15 +23,20 @@ bls	SkipSet
 mov	r5, #0x0F
 
 SkipSet:
-@add turn to hit and avoid (if turn is higher than 15, add 15)
-mov	r0, #0x60
-ldrh	r1, [r4,r0]	@load hit
-add	r1, r5		@add turn to hit (max 15)
+@add turn to atk/def/as (if turn is higher than 15, add 15)
+mov	r0, #0x5A
+ldrh	r1, [r4,r0]	@load atk
+add	r1, r5		@add turn to atk (max 15)
 strh	r1, [r4,r0]     @store
 
-mov	r0, #0x62
-ldrh	r1, [r4,r0]	@load avoid
-add	r1, r5		@add turn to avoid (max 15)
+mov	r0, #0x5C
+ldrh	r1, [r4,r0]	@load def
+add	r1, r5		@add turn to def (max 15)
+strh	r1, [r4,r0]     @store
+
+mov	r0, #0x5E
+ldrh	r1, [r4,r0]	@load as
+add	r1, r5		@add turn to as (max 15)
 strh	r1, [r4,r0]     @store
 
 End:

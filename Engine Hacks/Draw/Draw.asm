@@ -56,12 +56,24 @@ bl Draw_GetAnimationIDByWeapon @ Takes no params, returns animation id to use
 ldr r3, =MemorySlot 
 str r0, [r3, #4] @ slot 1 - animation ID 
 
+@ in 807B8D4 SetupMapAnimSpellData it stores 2 in mine and 1 in Devvy's 
+@ 203E1F0+0x59 at 7A858 
+@ [203E1F0+0x5E]!! as 2 instead of 1 [30004e4]!!
+	.equ GetUnit, 0x8019430
 
 
-@ copied from function 080815C0 //MapAnim_MoveCameraOnTarget MapAnim_MoveCameraOnTarget
 ldr r3, =0x203E1F0 @(gMapAnimStruct )	{U}
 @ldr r3, =0x0203E1EC @(gMapAnimStruct )	{J}
 
+mov r2, r3 
+add r2, #0x5E
+ldrb r2, [r2]
+cmp r2, #1 
+bgt VanillaBehaviour
+ldr r2, =0x203A56C @ dfdr 
+b LoadTargetCoords
+
+VanillaBehaviour: 
 mov r1, r3 
 add r1, #0x59 
 ldrb r2, [r1]
@@ -69,21 +81,16 @@ lsl r1, r2, #2
 add r1, r2 
 lsl r1, #2 
 add r1, r3 
-ldr r2, [r1] 
+ldr r2, [r1]
+
+LoadTargetCoords:  
 mov r1, #0x10 
 ldsb r0, [r2, r1] @ XX 
 ldrb r1, [r2, #0x11] @ YY 
-lsl r1, #24 
-asr r1, #24 
-@ bl EnsureCameraOntoPosition - this is what the function usually does 
 
 
 ldr r3, =MemorySlot 
 add r3, #4*0x0B 
-
-@ldr r2, =CurrentUnit 
-@ldrb r0, [r2, #0x10] 
-@ldrb r1, [r2, #0x11] 
 
 strh r0, [r3] 
 strh r1, [r3, #2] 
@@ -346,8 +353,18 @@ bx r1
 Draw_GetActiveCoords:
 push {lr}
 
-ldr r3, =0x203E1F0 @(gMapAnimStruct )	@{U}
-@ldr r3, =0x0203E1EC @(gMapAnimStruct )	@{J}
+ldr r3, =0x203E1F0 @(gMapAnimStruct )	{U}
+@ldr r3, =0x0203E1EC @(gMapAnimStruct )	{J}
+
+mov r2, r3 
+add r2, #0x5E
+ldrb r2, [r2]
+cmp r2, #1 
+bgt VanillaBehaviour2
+ldr r2, =0x203A56C @ dfdr 
+b LoadTargetCoords2
+
+VanillaBehaviour2: 
 mov r1, r3 
 add r1, #0x59 
 ldrb r2, [r1]
@@ -355,12 +372,13 @@ lsl r1, r2, #2
 add r1, r2 
 lsl r1, #2 
 add r1, r3 
-ldr r2, [r1] 
+ldr r2, [r1]
+
+LoadTargetCoords2:  
 mov r1, #0x10 
 ldsb r0, [r2, r1] @ XX 
 ldrb r1, [r2, #0x11] @ YY 
-lsl r1, #24 
-asr r1, #24 
+
 
 
 pop {r2}

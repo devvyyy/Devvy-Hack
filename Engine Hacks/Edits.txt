@@ -1,6 +1,32 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+//Change Y location of map sprite in statscreen
+//On load
+PUSH
+ORG 0x886EC  //Y argument before function call
+BYTE 0x8C    //Y coord
+
+//Unit switch
+ORG 0x87E34  //Y argument before function call
+BYTE 0x8C    //Y coord
+POP
+
+//Prevent riding a ballista during canto
+// by Contro
+PUSH
+    ORG 0x248DE
+    SHORT 0x2187
+POP
+
+//Uncounterable Weapon Anim Fix
+PUSH
+
+ORG 0x057278
+BYTE 0x16 0xE0
+
+POP
+
 //Change Normal mode penalty into a bonus
 PUSH
 ORG 0x0180FA

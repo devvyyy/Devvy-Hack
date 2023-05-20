@@ -20,9 +20,9 @@ Erik_Mug:
 setMugEntry(0x4, Erik_Mug, 2, 6, 3, 4)
 
 ALIGN 16
-Frye_Mug:
-#incext PortraitFormatter "Frye.png"
-setMugEntry(0x5, Frye_Mug, 3, 5, 3, 3)
+Frye_Mug: //Frye by Pi
+#incext PortraitFormatter "PiRandal.png"
+setMugEntry(0x5, Frye_Mug, 3, 4, 3, 2)
 
 ALIGN 16 //Bronson edited by BuskHusker
 Bronson_Mug:
@@ -38,6 +38,26 @@ ALIGN 16 //Tammy by Levin
 Tammy_Mug:
 #incext PortraitFormatter "Tammy.png"
 setMugEntry(0x8, Tammy_Mug, 2, 6, 3, 4)
+
+ALIGN 16 //Selwyn by BuskerHuskerKalusker
+Selwyn_Mug:
+#incext PortraitFormatter "BuskMichalis.png"
+setMugEntry(0xBE, Selwyn_Mug, 3, 4, 3, 2)
+
+ALIGN 16 //Sylveria by LEVIN !!!!!
+Sylveria_Mug:
+#incext PortraitFormatter "LevinArmor.png"
+setMugEntry(0xBF, Sylveria_Mug, 3, 5, 3, 3)
+
+ALIGN 16 //Sylveria by LEVIN !!!!!
+SylveriaSicko_Mug:
+#incext PortraitFormatter "SylveriaSickoMode.png"
+setMugEntry(0xC0, SylveriaSicko_Mug, 3, 5, 3, 3)
+
+ALIGN 16 //Messel by Vlak
+Messel_Mug:
+#incext PortraitFormatter "Vlak4.png"
+setMugEntry(0xC1, Messel_Mug, 3, 5, 3, 3)
 
 ALIGN 16
 Gerolf_Mug:
@@ -59,10 +79,10 @@ Aoife_Mug:
 #incext PortraitFormatter "Aoife.png"
 setMugEntry(0x0B, Aoife_Mug, 3, 4, 3, 2)
 
-ALIGN 16 //Abernathy by Levin
+ALIGN 16 //Therese by RW
 Abernathy_Mug:
-#incext PortraitFormatter "Abernathy.png"
-setMugEntryExtend(0x0C, Abernathy_Mug, 2, 6, 3, 4, 0, 4, 0, 0)
+#incext PortraitFormatter "RWVernelle.png"
+setMugEntry(0x0C, Abernathy_Mug, 4, 5, 3, 3)
 
 ALIGN 4
 Wegman_Mug: //sword mini
@@ -134,8 +154,8 @@ setMugEntry(0x17, Solum_Mug, 3, 5, 3, 3)
 
 ALIGN 16
 Yufka_Mug:
-#incext PortraitFormatter "Yufka.png"
-setMugEntry(0x18, Yufka_Mug, 3, 5, 3, 3)
+#incext PortraitFormatter "Vlak1.png"
+setMugEntry(0x18, Yufka_Mug, 4, 5, 4, 3)
 
 ALIGN 16 //Lili by Laurent Lacroix
 Lili_Mug:
@@ -173,20 +193,14 @@ Irene_Mug:
 setMugEntry(0x1C, Irene_Mug, 3, 6, 3, 4)
 
 ALIGN 16
-FlorisMugData:
-#incbin "Floris_mug.dmp"
-#incbin "Floris_frames.dmp"
-#incbin "Floris_palette.dmp"
-#incbin "Floris_minimug.dmp"
-setMugEntry(0x1D, FlorisMugData, 3, 4, 3, 2)
+Floris_Mug:
+#incext PortraitFormatter "Floris.png"
+setMugEntry(0x1D, Floris_Mug, 3, 4, 3, 2)
 
 ALIGN 16
-FlorisDressMugData:
-#incbin "FlorisDress_mug.dmp"
-#incbin "Floris_frames.dmp"
-#incbin "Floris_palette.dmp"
-#incbin "Floris_minimug.dmp"
-setMugEntry(0xBA, FlorisDressMugData, 3, 4, 3, 2)
+FlorisDress_Mug:
+#incext PortraitFormatter "FlorisDress.png"
+setMugEntry(0xBA, FlorisDress_Mug, 3, 4, 3, 2)
 
 ALIGN 16
 Katsu_Mug: //by Busky Husky
@@ -273,22 +287,22 @@ ALIGN 4
 AffoHato_Palette:
 #incbin "AffoHato_palette.dmp"
 
-setMugEntryExtend(0x50, AffoHato_Mug, AffoHato_Mini, AffoHato_Palette, AffoHato_Frames, 3, 5, 3, 3, 10, 2, 10, 4)
+setMugEntryExtend(0x50, AffoHato_Mug, AffoHato_Mini, AffoHato_Palette, AffoHato_Frames, 3, 5, 3, 3, 0, 4, 0, 0)
 
 ALIGN 4
 OneBulletHat:
 #incbin "1bullethat_minimug.dmp"
-setMugEntryExtend(0xB1, AffoHato_Mug, OneBulletHat, AffoHato_Palette, AffoHato_Frames, 3, 5, 3, 3, 10, 2, 10, 4)
+setMugEntryExtend(0xB1, AffoHato_Mug, OneBulletHat, AffoHato_Palette, AffoHato_Frames, 3, 5, 3, 3, 0, 4, 0, 0)
 
 ALIGN 4
 TwoBulletHat:
 #incbin "2bullethat_minimug.dmp"
-setMugEntryExtend(0xB2, AffoHato_Mug, TwoBulletHat, AffoHato_Palette, AffoHato_Frames, 3, 5, 3, 3, 10, 2, 10, 4)
+setMugEntryExtend(0xB2, AffoHato_Mug, TwoBulletHat, AffoHato_Palette, AffoHato_Frames, 3, 5, 3, 3, 0, 4, 0, 0)
 
 ALIGN 4
 ThreeBulletHat:
 #incbin "3bullethat_minimug.dmp"
-setMugEntryExtend(0xB3, AffoHato_Mug, ThreeBulletHat, AffoHato_Palette, AffoHato_Frames, 3, 5, 3, 3, 10, 2, 10, 4)
+setMugEntryExtend(0xB3, AffoHato_Mug, ThreeBulletHat, AffoHato_Palette, AffoHato_Frames, 3, 5, 3, 3, 0, 4, 0, 0)
 
 ALIGN 4
 FourBulletHat:
@@ -539,8 +553,8 @@ setMugEntry(0x49, Steakfries_Mug, 2, 5, 3, 3)
 
 ALIGN 16
 Levain_Mug:
-#incext PortraitFormatter "Levain.png"
-setMugEntry(0xB7, Levain_Mug, 3, 5, 3, 3)
+#incext PortraitFormatter "Vlak2.png"
+setMugEntry(0xB7, Levain_Mug, 4, 5, 4, 3)
 
 ALIGN 16 //Shon by autonima
 Shon_Mug:

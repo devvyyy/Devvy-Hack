@@ -41,6 +41,10 @@ bool TargetSelectionRework_HandleWeanponChange(struct SelectTargetProc* proc) {
     s8 uid_pre;
     struct SelectTarget *it, *current = proc->currentTarget;
 
+    if (!(L_BUTTON & gKeyStatusPtr->heldKeys)) {
+        return false;
+    }
+
     if (DPAD_LEFT & gKeyStatusPtr->repeatedKeys) {
         for (i = 1; i < UNIT_ITEM_COUNT; i++)
             if (CanUnitUseWeapon(gActiveUnit, gActiveUnit->items[i]) &&

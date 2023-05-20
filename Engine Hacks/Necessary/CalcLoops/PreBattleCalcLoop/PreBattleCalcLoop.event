@@ -34,13 +34,14 @@ POIN DefendingCheck
 
 //POIN SpurStr SpurMag SpurSpd SpurDef SpurRes
 POIN Moxie Wrath Anima1 Anima2 Anima3 Anima4 Dark1 Dark2 Dark3 Dark4 Dark5
-//POIN DriveStr DriveMag DriveDef
-POIN DriveSpd DriveRes
-//POIN LuckySeven OddRhythm EvenRhythm QuickBurn SlowBurn
+//POIN DriveMag DriveDef
+POIN DriveSpd DriveRes DriveStr
+//POIN LuckySeven OddRhythm EvenRhythm QuickBurn
+POIN SlowBurn
 //POIN Demoiselle Gentilhomme MaleficAura Tantivy Focus Inspiration Solidarity VoiceOfPeace Anathema LilysPoise Hex Loyalty
 POIN Charisma Charm Shrewd AeterianFealtyAura Inspire BitterCold ChainReaction RayDark Blackfire Intimidate Infiltrator Paranoia
-//POIN HeavyDuty Warlock ElbowRoom NaturalCover Gamble WindDisciple Perfectionist Puissance Hawkeye LightWeight Trample Opportunist BattleVeteran SilentPride Vanity Restraint AssassinateDamageBonus KnightAspirant LifeAndDeath SoulSplitter GonnaGoWild Falcon ArcaneBlade FairFight Atlas StormBlood FieryBlood
-POIN BulletPre AeterianFealty Phase BurstFireStats MiraclePre AdaptivePoise ColdFlare StaticPanic ShortShield Steadfast ShowStopper DuckPre SanctuaryPre GlowRing AshenRing Starseer Whirlwind Hasty ShiningRifleSkill Parity HighRoller Axiom PathOfBlade FinalBoss SearingSword Lunatic ShieldDef RupturedSky ThunderClap Bulwark Alacrity SteelSoul Megalovania Vigor Defeatist LastResort Outrider HeavyStrikes DaggerCrit Charge Warpath Keepsake RifleSkill LethalTempo Tresillo ElbowGreasePre Hijack SplittingMaulMag PureWaterEffect
+//POIN HeavyDuty Warlock ElbowRoom NaturalCover Gamble WindDisciple Perfectionist Puissance Hawkeye LightWeight Trample Opportunist BattleVeteran SilentPride Restraint AssassinateDamageBonus KnightAspirant LifeAndDeath SoulSplitter GonnaGoWild Falcon ArcaneBlade FairFight Atlas StormBlood FieryBlood
+POIN BulletPre AeterianFealty Phase BurstFireStats MiraclePre AdaptivePoise ColdFlare StaticPanic ShortShield Steadfast ShowStopper DuckPre SanctuaryPre GlowRing AshenRing Starseer Whirlwind Hasty ShiningRifleSkill Parity HighRoller Axiom PathOfBlade FinalBoss SearingSword Lunatic ShieldDef RupturedSky ThunderClap Bulwark Alacrity SteelSoul Megalovania Vigor Defeatist LastResort Outrider HeavyStrikes DaggerCrit Charge Warpath Keepsake RifleSkill LethalTempo Tresillo ElbowGreasePre Hijack SplittingMaulMag Vanity PureWaterEffect
 //POIN Parry BloodTide WhitePool NightTide Insight Prescience Vigilance DefiantAvo DefiantCrit TowerShield IndoorFighter OutdoorFighter Fortune
 POIN Daunt KingMark Deadeye DoubleLion ShadowEye Daredevil
 //POIN Thotslayer Thighdeology Armorboost Horseguard Skyguard ForeignPrincess ChargePlus
@@ -112,11 +113,13 @@ AuraSkillEntry(AeterianFealtyID)
 //AuraSkillEntry(InspirationID)
 //AuraSkillEntry(LilysPoiseID)
 //AuraSkillEntry(SpurStrID)
+AuraSkillEntry(ResolveID)
 //AuraSkillEntry(SpurMagID)
 //AuraSkillEntry(SpurSpdID)
 //AuraSkillEntry(SpurDefID)
 //AuraSkillEntry(SpurResID)
 AuraSkillEntry(DriveResID)
+AuraSkillEntry(DriveStrID)
 AuraSkillEntry(DriveSpdID)
 //AuraSkillEntry(NiceThighsID)
 AuraSkillEntry(DauntID)
