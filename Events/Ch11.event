@@ -247,6 +247,9 @@ UNIT Aeteria LArmor 0x1 Level(9, Enemy, 1)     [13,15] 0b 0x0 0x0 0x0 [Javelin] 
 UNIT Aeteria Hero 0x1 Level(1, Enemy, 1)     [6,4] 0b 0x0 0x0 0x0 [IronSword] AttackInRangeAI
 UNIT Aeteria General 0x1 Level(2, Enemy, 1)     [22,8] 0b 0x0 0x0 0x0 [ShortBrand,ShortSpear,ShortAxe] BossAI
 UNIT Aeteria SPal 0x1 Level(9, Enemy, 1)     [7,1] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+	UNIT
+
+EnemyUnits2:
 UNIT PromoSoul Halberdier 0x1 Level(9, Enemy, 1)     [5,11] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
 UNIT PromoSoul Warrior 0x1 Level(9, Enemy, 1)     [4,14] 0b 0x0 0x0 0x0 [SteelAxe,IronBow] TwoActionAI
 UNIT Aeteria Soldier 0x1 Level(9, Enemy, 1)     [20,6] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
@@ -386,6 +389,7 @@ BeginningScene:
 	LOAD1 0x1 XavierLesUnit
 	LOAD1 0x1 TheArcherGang
 	LOAD1 0x1 EnemyUnits
+	LOAD1 0x1 EnemyUnits2
 	ENUN
 	GotoPrepScreen
 	ENDA

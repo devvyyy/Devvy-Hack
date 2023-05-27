@@ -7,7 +7,7 @@ ALIGN 4
 NewSupportTable:
 
 ChiffonSupport:
-SupportCompatibility(Iris,Kane,Irene,Ogrim,Affogato,0,0)
+SupportCompatibility(Iris,Velius,Irene,Ogrim,Affogato,0,0)
 SupportInitialValues(0xF,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x20,0x10,0x10,0x10,0x15,0x10,0x10)
 BYTE 5 //number of partners
@@ -70,21 +70,21 @@ BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 KaneSupport:
-SupportCompatibility(Ansgar,Iris,Ogrim,Xidorn,Chiffon,0,0)
+SupportCompatibility(Ansgar,Iris,Ogrim,Xidorn,Irene,0,0)
 SupportInitialValues(0xF,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x15,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 TammySupport:
-SupportCompatibility(Floris,Therese,Velius,Verna,Pandoro,0,0)
+SupportCompatibility(Floris,Therese,Sequin,Verna,Pandoro,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 SequinSupport:
-SupportCompatibility(Nora,Jaye,Noel,Polly,Edith,0,0)
+SupportCompatibility(Nora,Jaye,Noel,Polly,Tammy,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
@@ -133,7 +133,7 @@ BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 IreneSupport:
-SupportCompatibility(Frye,Pandoro,Chiffon,Zopf,Velius,0,0)
+SupportCompatibility(Frye,Pandoro,Chiffon,Zopf,Kane,0,0)
 SupportInitialValues(0xF,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x15,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
@@ -210,7 +210,7 @@ BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 BardSupport:
-SupportCompatibility(Iris,Ogrim,Sofie,Luitgard,Lili,0,0)
+SupportCompatibility(Iris,Ogrim,Sofie,Velius,Lili,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
@@ -231,7 +231,7 @@ BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 LuitgardSupport:
-SupportCompatibility(Polly,BardUnit,Nora,Ulrich,Mocha,0,0)
+SupportCompatibility(Polly,Iris,Nora,Ulrich,Mocha,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
@@ -259,14 +259,14 @@ BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 VeliusSupport:
-SupportCompatibility(Iris,Tammy,Irene,Ogrim,Wegman,0,0)
+SupportCompatibility(BardUnit,Edith,Chiffon,Ogrim,Wegman,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 EdithSupport:
-SupportCompatibility(Jaye,Sequin,Therese,Polly,Radcliff,0,0)
+SupportCompatibility(Jaye,Velius,Therese,Polly,Radcliff,0,0)
 SupportInitialValues(0xA,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x10,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners
@@ -294,7 +294,7 @@ BYTE 5 //number of partners
 BYTE 0x0 0x0 //separator
 
 IrisSupport:
-SupportCompatibility(Chiffon,Velius,BardUnit,Kane,Sofie,0,0)
+SupportCompatibility(Chiffon,Luitgard,BardUnit,Kane,Sofie,0,0)
 SupportInitialValues(0xF,0xA,0xA,0xA,0xA,0xA,0xA)
 SupportPerChapter(0x20,0x10,0x10,0x10,0x10,0x10,0x10)
 BYTE 5 //number of partners

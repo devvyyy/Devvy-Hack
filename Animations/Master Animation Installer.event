@@ -491,6 +491,7 @@ ALIGN 4 //Winter Priest
 {
 #include "Priest/Unarmed/Installer.event"
 }
+ALIGN 4
 {
 #include "ClericFix/Installer.event"
 }
@@ -498,7 +499,11 @@ ALIGN 4 //Parson
 {
 #include "Parson/Magic/Light Installer.event"
 }
+ALIGN 4
+{
 #include "Parson/Staff/Staff Installer.event"
+}
+ALIGN 4
 {
 #include "Parson/Unarmed/Unarmed Installer.event"
 }
@@ -510,6 +515,7 @@ ALIGN 4 //Bishop (M) by Mikey Seregon, EltritchAbomination
 {
 #include "Bishop M/Magic/Installer.event"
 }
+ALIGN 4
 {
 #include "Bishop M/Unarmed/Installer.event"
 }
@@ -520,10 +526,21 @@ ALIGN 4 //Bishop (F) by Mikey Seregon, EltritchAbomination
 {
 #include "Bishop F/Unarmed/Installer.event"
 }
-
 ALIGN 4 //Mystic by RedBean
 {
 #include "Mystic/Magic/Magic Installer.event"
+}
+ALIGN 4 //Sergeant by Spud
+{
+#include "Sergeant/Lance/Lance Installer.event"
+}
+ALIGN 4
+{
+#include "Sergeant/Sword/Sword Installer.event"
+}
+ALIGN 4
+{
+#include "Sergeant/Unarmed/Unarmed Installer.event"
 }
 {
 #include "Mystic/Staff/Staff Installer.event"
@@ -711,8 +728,14 @@ MysticAnim:
 AnimaAnim(0x9D)
 LightAnim(0x9D)
 DarkAnim(0x9D)
-StaffAnim(0x4A)
 UnarmedAnim(0x9D)
+StaffAnim(0x9E)
+WORD 0x0    // Seperator
+
+SergeantAnim:
+SpearAnim(0x53)
+SwordAnim(0x54)
+UnarmedAnim(0x55)
 WORD 0x0    // Seperator
 
 ALIGN 4

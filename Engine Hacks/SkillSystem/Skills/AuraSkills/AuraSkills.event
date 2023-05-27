@@ -15,6 +15,12 @@ SHORT $4718 $46C0
 #include "SpurSkills/SpurSkills.event"
 
 ALIGN 4
+DriveCanto:
+#incbin "DriveCanto/DriveCanto.dmp"
+POIN AuraSkillCheck
+WORD DriveCantoID
+
+ALIGN 4
 AeterianFealtyAura:
 #incbin "AeterianFealtyAura/AeterianFealtyAura.dmp"
 POIN NewAuraSkillCheck
@@ -208,6 +214,12 @@ POIN NewAuraSkillCheck
 WORD SolidarityID
 
 #include "DriveSkills/DriveSkills.event"
+
+ALIGN 4
+DriveMag:
+#incbin "DriveSkills/DriveMag/DriveMag.dmp"
+POIN NewAuraSkillCheck
+WORD DriveCantoID
 
 ALIGN 4
 Daunt:

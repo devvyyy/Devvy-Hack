@@ -22,6 +22,8 @@ MESSAGE CharBasedPromos
 ALIGN 4
 CharBasedPromoList:
 CharBasedPromoEntry(Affogato,Scout,0x3) //part 1
+CharBasedPromoEntry(Affogato,0x3,Sniper)
+CharBasedPromoEntry(Affogato,Sniper,0x3)
 CharBasedPromoEntry(Ansgar,LArmor,General)
 CharBasedPromoEntry(Breve,SCav,SPaladin)
 CharBasedPromoEntry(Hildr,0x6,APaladin)
@@ -38,7 +40,7 @@ CharBasedPromoEntry(Doppio,Soldier,Halberdier)
 CharBasedPromoEntry(Floris,Priest,Bishop)
 CharBasedPromoEntry(Atheya,0x20,0x22)
 CharBasedPromoEntry(Noel,Fighter,Warrior)
-CharBasedPromoEntry(Lennard,Freelancer,Halberdier)
+CharBasedPromoEntry(Lennard,Freelancer,SergeantClass)
 CharBasedPromoEntry(Therese,SArmor,General)
 CharBasedPromoEntry(Kane,Seer,0x31)
 CharBasedPromoEntry(Lili,Monk,Bishop_F)
@@ -48,8 +50,8 @@ CharBasedPromoEntry(Wilken,Shaman,Druid)
 CharBasedPromoEntry(Jaye,Mage_F,Sage_F)
 CharBasedPromoEntry(Yufka,Shaman_F,Druid_F)
 CharBasedPromoEntry(Cortado,0x60,LPaladin)
-CharBasedPromoEntry(Polly,Thaumaturge,MageKnight)
-CharBasedPromoEntry(Graham,Priest,Bishop)
+CharBasedPromoEntry(Polly,Thaumaturge,MageKnight_F)
+//CharBasedPromoEntry(Graham,Priest,Bishop)
 CharBasedPromoEntry(Verna,Occultist,0x31)
 CharBasedPromoEntry(Moose,WyvernRider,WyvernKnight)
 

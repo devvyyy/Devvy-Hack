@@ -1,6 +1,18 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+//Make juna fruit set lvl 1; able to be used at any level
+PUSH
+
+ORG 0x2950e
+BYTE 0x00
+
+ORG 0x2F9BE
+BYTE 0x0A 0x20 0x2C 0x7A 0x24 0x1A
+
+POP
+
+
 //Change Y location of map sprite in statscreen
 //On load
 PUSH

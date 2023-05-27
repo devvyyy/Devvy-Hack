@@ -473,7 +473,7 @@ BeginningScene:
 
 EndingScene:
 	CenterTextbox(StorySynopsis2)
-	//MNC2 0x6
-MNTS 0x1 //return to title screen
+	MNC2 0x6
+//MNTS 0x1 //return to title screen
 	NoFade
 	ENDA

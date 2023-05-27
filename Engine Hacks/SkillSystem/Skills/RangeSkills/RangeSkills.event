@@ -7,6 +7,14 @@ POIN SkillTester
 POIN RangeSkillList
 
 ALIGN 4
+WarpathRangeBonus:
+#incbin "WarpathRange/WarpathRange.dmp"
+
+ALIGN 4
+DaggerRangeBonus:
+#incbin "DaggerRange/DaggerRange.dmp"
+
+ALIGN 4
 BowRangeBonus:
 #incbin "BowRange/BowRange.dmp"
 
@@ -28,6 +36,8 @@ TomeRangeBonus:
 
 ALIGN 4
 RangeSkillList:
+RangeSkill(LocktouchID, DaggerRangeBonus|1)
+RangeSkill(WarpathID, WarpathRangeBonus|1)
 RangeSkill(BurstFireID, BurstFireBonus|1)
 RangeSkill(BowRangeUpID, BowRangeBonus|1)
 RangeSkill(StaffSavantID, StaffSavantBonus|1)

@@ -288,7 +288,11 @@
 
 //Bond: All allies within 3 tiles recover 10% HP each turn.
 //Author Unknown (Initial Commit)
-#define BondID 93
+#define BondID 255
+
+//Drive Canto: drive canto
+//Kelik Zenair
+#define DriveCantoID 93
 
 //Forager: Recover 20% HP each turn if on a Plain, Forest or Mountain.
 //By Leonarth
@@ -314,7 +318,7 @@
 
 //Keep Up: At start of turn, if unit is within 3 spaces of an ally with Canto or Canto+, unit gains +2 Mov.
 //By Sme
-#define KeepUpID 255
+#define KeepUpID 251
 
 //Indoor March: At start of turn, if unit is on indoor terrain, unit gains +2 Mov.
 //By Sme
@@ -1070,7 +1074,7 @@
 
 //Enrage: Inflict berserk status. (Skill% activation)
 //By Sme
-#define EnrageID 251
+#define EnrageID 255
 
 //Flare: Halve enemy resistance. (Skill% activation)
 //By Sme

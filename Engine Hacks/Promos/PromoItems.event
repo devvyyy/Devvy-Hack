@@ -7,8 +7,8 @@ BYTE 0x0
 LunarBraceList:
 BYTE 0x0
 
-SolarBraceList:
-BYTE 0x0
+SolarBraceList: //second seal
+BYTE 0x3 0x4 SPal LPal APal General Hero Hero_F Swordmaster Swordmaster_F Assassin Assassin_F Sniper Sniper_F Ranger Ranger_F 0x21 0x22 Sage Sage_F MageKnight MageKnight_F Bishop Bishop_F 0x0 
 
 #define PromoItem(Index,List) "ORG PromotionItemTable + 0x4 + (Index * 12); POIN List"
 

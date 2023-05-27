@@ -19,12 +19,22 @@ Effect recharges on kill.[X]
 ## SD_HitmanSeer
 Infinite Arsenal: Unit has an arsenal of[N]
 5 personal weapons, each with an Equip[N]
-and Off-Hand effect.[X]
+and Off-Hand effect; 2 at a time.[X]
 
 ## SD_HitmanSeer2
 Each weapon has 10 durability. Upon breaking,[N]
 it gets moved to the end of the queue, and[N]
 the next weapon in line is sent.[X]
+
+## SD_Rewind
+Rewind: Once per map, if unit's HP is 25% or[N]
+less after combat, restores 50% missing HP, Canto[N]
+(if initiating), then grants Stasis for 1 turn.[X]
+
+## SD_DirtyFighting2
+Dirty Fighting: If foe can't counter, Dira[N]
+always lands a critical hit and follow-up.[N]
+Inflicts Rooted for 1 turn after combat.[X]
 
 ## SD_Chakrams
 Adrenaline: Combat grants a stack (max; 5, resets after[N]
@@ -58,9 +68,22 @@ The Skies Descend: Grants Selwyn and all[N]
 allies on the map Atk/AS = turn count.[X]
 
 ## SD_Tenacity
-Tenacity: If Wellington has any status[N]
-effect, doubles Str and grants Move +2.[N]
-Counter before foe's first attack.[X]
+Tenacity: If unit has any status[N]
+effect, doubles Str and grants Move +2.[X]
+
+## SD_Crossfade
+Crossfade: Unit can switch between 2 auras to[N]
+all allies within 3 spaces. Heal mode: At start[N]
+of turn, restores 30% HP. Speed mode: +2 move.[X]
+
+## SD_DriveCanto
+Pathfinder: Wulfric grants allies within 2[N]
+spaces AS +2 and Canto (Canto doesn't[N]
+stack; fixed move Canto takes priority).[X]
+
+## SD_Boomerang
+Boomerang Shield: Grants unit's shields[N]
+range +4 and Atk scales with 1.5x Str.[X]
 
 ## SD_Evolve
 Evolve: Grants bonus stats based on[N]
@@ -256,11 +279,6 @@ Alacrity[X]
 # change skill wording to 'grants [statusname] before combat, lingering for 1 turn'?
 Mocha dodges all attacks.[X]
 
-## SD_Rewind
-Rewind: Once per map, if unit's HP is 25% or[N]
-less after combat, restores 50% missing HP, Canto 5[N]
-spaces (if initiating), then grants Stasis for 1 turn.[X]
-
 ## SD_BulletAwesome
 Ashen Flow:[X]
 
@@ -381,7 +399,7 @@ per turn).[X]
 
 ## SD_Gaming
 # Flow, temp flags 0x25-0x28
-[_F]l[_o]w[_Colon][_SP][_C][_o]m[_b][_a][_t][_Slash][_s][_t][_e][_a]l[_Slash][_p]i[_c][_k][_SP][_g][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP][_LParen]m[_a][_x];[_SP][_4][_RParen][_Dot][N]
+[_F]l[_o]w[_Colon][_SP][_C][_o]m[_b][_a][_t][_Slash][_S][_t][_e][_a]l[_Slash][_P]i[_c][_k][_SP][_g][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP][_LParen]m[_a][_x];[_SP][_4][_RParen][_Dot][N]
 [_A][_t][_SP][_m][_a][_x][_SP][_s][_t][_a][_c][_k][_s][_Comma][_SP][_c][_o][_n][_s][_u][_m][_e][_s][_SP][_a][_l][_l][_SP][_s][_t][_a][_c][_k][_s][_SP][_o][_n][_SP][_i][_n][_i][_t][_i][_a][_t][_i][_o][_n][_SP][_t][_o][N]
 [_x][_2][_SP][_S][_i][_d][_e][_s][_t][_e][_p][_SP][_C][_a][_n][_t][_o][_SP][_a][_n][_d][_SP][_d][_e][_a][_l][_SP][_b][_o][_n][_u][_s][_SP][_d][_a][_m][_a][_g][_e][_SP]=[_SP][_R][_e][_s][_Dot][X]
 
@@ -391,7 +409,7 @@ unit has Weapon Triangle advantage.[X]
 
 ## SD_DuckandCover
 # zopf personal?
-Duck and Cover: If Zopf does not move,[N]
+Duck and Cover: If Zopf doesn't move,[N]
 grants Hit +30 and Canto 5 spaces.[X]
 
 ## SD_FunnyTime
@@ -651,7 +669,7 @@ Spirit Cleave: Deals bonus damage =[N]
 
 ## SD_Maestro
 [_M][_a][_e][_s]t[_r][_o][_Colon] [_I]l[_s][_e]'[_s] [_R]ifl[_e][_s] [_h][_a][_v][_e] [_u][_n]i[_q][_u][_e] [_p][_r][_o][_p][_e][_r]ti[_e][_s][_Colon][N]
-[_M]t -[_5], [_W]t +[_2], [_H]it [_Plus][_1][_0][_Dot] T[_h][_e][_y] [_a]l[_s][_o] [_d][_o] [_b][_o][_n][_u][_s][N]
+[_M]t [_Minus][_5][_Comma] [_W]t [_Plus][_2][_Comma] [_H]it [_Plus][_1][_0][_Dot] T[_h][_e][_y] [_a]l[_s][_o] [_d][_o] [_b][_o][_n][_u][_s][N]
 [_d][_a]m[_a][_g][_e] [_e][_q][_u][_a]l t[_o] [_5][_0]% [_o]f f[_o][_e]'[_s] mi[_s][_s]i[_n][_g] [_H][_P][_Dot][X]
 
 ## SD_Lifeline
@@ -1216,7 +1234,7 @@ Colossus: Triples Strength.[N]
 ## SD_RallyStr
 Hoist the Flag: Rally to grant +4[N]
 Str/Eth to adjacent allies for 1 turn.[N]
-Can move after steal/pick.[X]
+Can move after Steal/Pick.[X]
 
 ## SD_RallyMag
 Rally Magic: +4 Mag to[N]
@@ -1272,9 +1290,9 @@ Life and Death: +10 to[N]
 damage dealt and taken.[X]
 
 ## SD_LockTouch
-Cunning: Unit can pick locks, steal[N]
-items, and gets +2 spaces of vision[N]
-in fog and darkness.[X]
+Cunning: Unit can Pick locks and Steal[N]
+items. Grants Sidearm range +1 and[N]
++2 spaces of vision in fog/darkness.[X]
 
 ## SD_Lunge
 Lunge: Swap places with the[N]
@@ -1763,7 +1781,7 @@ than foe's Wt, ignores foe's weapon Mt.[X]
 ## SD_Warpath
 Bulwark: If Edith's HP is 75% or more,[N]
 grants +25% Str and inflicts -25% Str[N]
-to foe.[X]
+to foe. Shield range +2.[X]
 
 ## SD_Outrider
 Outrider: Grants Cortado Def/Res =[N]

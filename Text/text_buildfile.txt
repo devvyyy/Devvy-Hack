@@ -90,7 +90,7 @@ allegiance.[N]
  [N]
 Every mounted unit also gets[N]
 Canto, and every thief unit[N]
-gets Locktouch.[N]
+gets Cunning.[N]
  [N]
 Main characters also get a[N]
 class skill, and get a mastery[N]
@@ -342,10 +342,6 @@ Warrior, Archer[N]
 Objectives[X]
 
 # 0x63A
-Seize, Arrive, and Escape are[N]
-map-ending actions[N]
-(Black menu text).[N]
- [N]
 Prologue: Seize, Chest[N]
 1-1: Defeat boss, Chest, Village[N]
 1-1x (Clear Prologue/1-1 within[N]
@@ -359,6 +355,36 @@ Chests[N]
 1-F: Defend unit/Secure[N]
 fortresses, Chests[N][X]
 
+# 0x4A6
+A magical potion that increases[N]
+user's growth rates by 5%.[X]
+
+# 0x402
+Ethos[X]
+
+# 0x4AA
+A bizarre potion that sets a[N]
+unit's Lvl to 10.[X]
+
+# 0x4E3
+Give this to a[N]
+unit you want to[N]
+promote/reclass.[X]
+
+# 0x3F8
+Second Seal[X]
+
+# 0x4A9
+# put a note somewhere that infantry/armor and cav/flier cant become the other (except affogato)
+A whimsical seal that changes the[N]
+class of any Lvl 5+ promoted unit[N]
+to a unique promoted class.[X]
+
+# 0x4E2
+Switches between[N]
+2 classes. Note:[N]
+Ranks can be lost.[N]
+
 # 0x554
 Zzzz... Zzzzz...[N]
 Sleeping now... Can't move,[N]
@@ -371,6 +397,13 @@ speed, and utility. Equip: [SwordIcon][X]
 # 0x316
 Lethal slayers with disquiet steps[N]
 with blades made to kill. Equip: [SwordIcon][X]
+
+# 0x302
+Sergeant[X]
+
+# 0x34E
+Commanders with great power who lead[N]
+the charge in battle. Equip: [LanceIcon][SwordIcon][X]
 
 # 0x242
 Locro[X]
@@ -1004,7 +1037,7 @@ Tundra[X]
 [_W][_y][_v][_e][_r][_n] [_K][_n]i[_g][_h]t[X]
 
 # 0x2E0
-Gold Knight[X]
+Cataphract[X]
 
 # 0x32B
 Majestic armored knights with[N]
@@ -1367,16 +1400,16 @@ Prologue I: No Way Out[X]
 2-2: The Gates of Omios[X]
 
 ## Ch10Name
-2-3: By The Crescent's Edge[X]
+2-4: By The Crescent's Edge[X]
 
 ## Ch11Name
-2-4: Blood Hunt[X]
+2-5: Blood Hunt[X]
 
 ## Ch12Name
 Prologue II: Oblivion[X]
 
 ## Ch13Name
-2-5: The Maw of Ice[X]
+2-6: The Maw of Ice[X]
 
 ## Ch14Name
 2-F: Eclipse in Absolution[X]
@@ -1385,7 +1418,7 @@ Prologue II: Oblivion[X]
 1-6: Incoming Onslaught[X]
 
 ## ChIDKName2
-2-6: New Light[X]
+2-3: New Light[X]
 
 ## ChIDKName3
 3-1: Price of Victory[X]

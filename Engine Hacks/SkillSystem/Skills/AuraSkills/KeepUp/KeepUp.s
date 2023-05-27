@@ -1,7 +1,7 @@
 .thumb
 .align
 
-.equ DebuffTable, AuraSkillCheck+4
+.equ DebuffTable, NewAuraSkillCheck+4
 .equ ArmorMarchBit, DebuffTable+4
 .equ EntrySize, ArmorMarchBit+4
 .equ SkillTester, EntrySize+4
@@ -57,7 +57,7 @@ beq CheckIndoorMarch
 @if so, check for Canto or Canto+ on units in a 3 tile radius
 
 @get nearby units
-ldr	r0,AuraSkillCheck
+ldr	r0,NewAuraSkillCheck
 mov	lr,r0
 mov	r0,r4			@unit to check
 ldr	r1,CantoID		@skill
@@ -67,7 +67,7 @@ mov	r3,#2			@range
 cmp r0,#0
 bne Set
 
-ldr	r0,AuraSkillCheck
+ldr	r0,NewAuraSkillCheck
 mov	lr,r0
 mov	r0,r4			@unit to check
 ldr	r1,CantoPlusID	@skill
@@ -178,6 +178,6 @@ bx	r0
 .ltorg
 .align
 
-AuraSkillCheck:
+NewAuraSkillCheck:
 
 

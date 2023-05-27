@@ -439,6 +439,15 @@ Quarrel_Mug:
 #incext PortraitFormatter "Quarrel.png"
 setMugEntry(0x3C, Quarrel_Mug, 3, 5, 3, 3)
 
+ALIGN 16
+Wellington_Mug:
+#incext PortraitFormatter "Wellington.png"
+setMugEntryExtend(0xC2, Wellington_Mug, 3, 5, 3, 2, 12, 6, 12, 8)
+
+ALIGN 16
+Opal_Mug:
+#incext PortraitFormatter "LevinCav.png"
+setMugEntry(0xC3, Opal_Mug, 3, 5, 2, 3)
 
 // Bad Guys
 ALIGN 16 //Marcellus by Laurent Lacroix

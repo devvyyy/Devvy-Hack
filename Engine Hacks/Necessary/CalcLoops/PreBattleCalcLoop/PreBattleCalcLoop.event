@@ -34,8 +34,8 @@ POIN DefendingCheck
 
 //POIN SpurStr SpurMag SpurSpd SpurDef SpurRes
 POIN Moxie Wrath Anima1 Anima2 Anima3 Anima4 Dark1 Dark2 Dark3 Dark4 Dark5
-//POIN DriveMag DriveDef
-POIN DriveSpd DriveRes DriveStr
+//POIN DriveDef
+POIN DriveSpd DriveRes DriveStr DriveMag
 //POIN LuckySeven OddRhythm EvenRhythm QuickBurn
 POIN SlowBurn
 //POIN Demoiselle Gentilhomme MaleficAura Tantivy Focus Inspiration Solidarity VoiceOfPeace Anathema LilysPoise Hex Loyalty
@@ -120,6 +120,7 @@ AuraSkillEntry(ResolveID)
 //AuraSkillEntry(SpurResID)
 AuraSkillEntry(DriveResID)
 AuraSkillEntry(DriveStrID)
+AuraSkillEntry(DriveCantoID) //AS boost
 AuraSkillEntry(DriveSpdID)
 //AuraSkillEntry(NiceThighsID)
 AuraSkillEntry(DauntID)
