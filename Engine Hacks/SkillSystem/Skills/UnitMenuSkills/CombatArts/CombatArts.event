@@ -38,7 +38,7 @@ POIN 0x4f459 //On Help Box
 SetCombatArtCost(00,0) //Attack
 SetCombatArtCost(01,0) //Rescue
 SetCombatArtCost(02,0) //Pair Up
-SetCombatArtCost(03,2) //Lunge
+SetCombatArtCost(03,1) //Lunge
 SetCombatArtCost(04,2) //Mercy
 SetCombatArtCost(05,2) //Gamble
 SetCombatArtCost(06,2) //Adept
@@ -76,7 +76,7 @@ MenuCommand(UM_SureShot, UM_SureShotDesc, NormalText, SureShotUsability, SureSho
 
 
 //Lunge
-MenuCommand(UM_Lunge, UM_LungeDesc, NormalText, LungeUsability, LungeEffect, $22c31, $22c99)
+//MenuCommand(UM_Lunge, UM_LungeDesc, NormalText, LungeUsability, LungeEffect, $22c31, $22c99)
 
 //Mercy
 MenuCommand(UM_Mercy, UM_MercyDesc, NormalText, MercyUsability, MercyEffect, $22c31, $22c99)

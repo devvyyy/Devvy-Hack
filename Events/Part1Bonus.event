@@ -109,7 +109,7 @@ Armory(ArmoryBruh,8,0)
 	END_MAIN
 	
 ShopBruh:
-SHLI Wind Mend Fear Elixir PureWater Antitoxin Mine LightRune
+SHLI Wind Mend Fear Elixir PureWater Antitoxin LightRune Mine
 ALIGN 4
 
 ArmoryBruh:
@@ -155,7 +155,7 @@ LoadUnit(22,2)
 	UNIT
 	
 NewRecruits:
-UNIT Lennard Deserter 0x1 Level(3, Ally, 0)     [14,0] 0b 0x0 0x0 0x0 [SapphireLance,ShortSpear,Mine] [0x0,0x0,0x0,0x0]
+UNIT Lennard Deserter 0x1 Level(3, Ally, 0)     [14,0] 0b 0x0 0x0 0x0 [SapphireLance,ShortSpear,0x7E] [0x0,0x0,0x0,0x0]
 UNIT Therese SArmor 0x1 Level(4, Ally, 0)     [16,0] 0b 0x0 0x0 0x0 [SteelBlade,0x66,0xFD] [0x0,0x0,0x0,0x0]
 		UNIT
 	
@@ -177,10 +177,10 @@ UNIT Wreyvine WyvernRider 0x1 Level(6, NPC, 1)     [23,2] 0b 0x0 0x0 0x0 [SteelL
 UNIT Wreyvine Archer 0x1 Level(4, NPC, 1)     [11,4] 0b 0x0 0x0 0x0 [ShortBow,Vulnerary] [0,3,0,32]
 UNIT Wreyvine Archer 0x1 Level(4, NPC, 1)     [19,4] 0b 0x0 0x0 0x0 [ShortBow,Vulnerary] [0,3,0,32]
 
-UNIT 0xFA 0x79 0x1 Level(1, NPC, 1)     [9,4] 0b 0x0 0x0 0x0 [EnergyRing] [0,3,0,32] //tents
-UNIT 0xFA 0x79 0x1 Level(1, NPC, 1)     [21,4] 0b 0x0 0x0 0x0 [MageBow] [0,3,0,32]
-UNIT 0xFA 0x79 0x1 Level(1, NPC, 1)     [9,9] 0b 0x0 0x0 0x0 [MasterSeal] [0,3,0,32]
-UNIT 0xFA 0x79 0x1 Level(1, NPC, 1)     [21,9] 0b 0x0 0x0 0x0 [0x7F] [0,3,0,32]
+UNIT Supplies1 0x79 0x1 Level(1, NPC, 1)     [9,4] 0b 0x0 0x0 0x0 [EnergyRing] [0,3,0,32] //tents
+UNIT Supplies2 0x79 0x1 Level(1, NPC, 1)     [21,4] 0b 0x0 0x0 0x0 [MageBow] [0,3,0,32]
+UNIT Supplies3 0x79 0x1 Level(1, NPC, 1)     [9,9] 0b 0x0 0x0 0x0 [MasterSeal] [0,3,0,32]
+UNIT Supplies4 0x79 0x1 Level(1, NPC, 1)     [21,9] 0b 0x0 0x0 0x0 [0x7F] [0,3,0,32]
 
 	UNIT
 	
@@ -473,6 +473,27 @@ BeginningScene:
 
 EndingScene:
 	CenterTextbox(StorySynopsis2)
+	
+	CHECK_ALIVE Supplies1
+	BEQ 0x1 0xC 0x0
+	GiveItem(EnergyRing,Affogato)
+	LABEL 0x1
+	
+	CHECK_ALIVE Supplies2
+	BEQ 0x2 0xC 0x0
+	GiveItem(MageBow,Affogato)
+	LABEL 0x2
+	
+	CHECK_ALIVE Supplies3
+	BEQ 0x3 0xC 0x0
+	GiveItem(MasterSeal,Affogato)
+	LABEL 0x3
+	
+	CHECK_ALIVE Supplies4
+	BEQ 0x4 0xC 0x0
+	GiveItem(0x7F,Affogato)
+	LABEL 0x4
+	
 	MNC2 0x6
 //MNTS 0x1 //return to title screen
 	NoFade

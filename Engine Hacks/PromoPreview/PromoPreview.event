@@ -1,0 +1,39 @@
+
+PUSH
+ORG $1E800
+jumpToHack(PromoPreviewWrapper)
+POP
+
+#include "PromoPreviewWrapper.lyn.event"
+
+#include "PromoPreview.lyn.event"
+
+ALIGN 4
+PromotesToTextIDLink:
+WORD PromotesToText
+NoUseTextIDLink:
+WORD NoUseText
+
+#define PromoItemEntry(itemID,promoList) "BYTE itemID 0 0 0; POIN promoList"
+#define PromoItemsEnd "WORD 0 0"
+
+ALIGN 4
+PromoItemsList:
+PromoItemEntry(MasterSeal,MasterSealPromoList)
+PromoItemEntry(SolarBrace,SolarBracePromoList)
+PromoItemsEnd
+
+#define PromoListEntry(baseClass,promoClass) "BYTE baseClass promoClass"
+#define PromoListEnd "SHORT 0"
+
+ALIGN 4
+MasterSealPromoList:
+PromoListEntry(Scout,0x3)
+
+PromoListEnd
+
+ALIGN 4
+SolarBracePromoList:
+PromoListEntry(Scout,Sniper)
+
+PromoListEnd

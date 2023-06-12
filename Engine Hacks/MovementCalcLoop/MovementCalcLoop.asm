@@ -31,6 +31,13 @@ PostBattleMovementCalcLoopFunc:
 push {r4, lr} 
 mov r4, r0
 
+ldr r3, =0x203f101
+ldrb r2, [r3] 
+mov r1, #0 
+strb r1, [r3] 
+cmp r2, #0 
+bne SkipPostBattleCalcLoop
+
 ldr r3, =gActionData
 ldrb r0, [r3, #0x11] 
 cmp r0, #2 

@@ -21,7 +21,7 @@ TURN 0x0 TopRightRein [6,0] 0x0
 TurnEventEnemy(0,SunnyEvent,7)
 TurnEventEnemy(0,HelloChat,8)
 TURN 0x0 TopLeftRein2 [9,0] 0x0
-TURN 0x0 GoodbyeDespair [20,0] 0x0
+TURN 0x0 GoodbyeDespair [21,0] 0x0
 	END_MAIN
 	
 CheckNoUnits:
@@ -208,8 +208,9 @@ ThiefReinUnit:
 UNIT NoKeyThief Thief 0x0 Level(1, Enemy, 1)     [12,3] DropItem 0 1 REDA15R5 [SteelDagger, 0xAF,] [6,12,4,0]
 		UNIT
 	
-YoHereToInstaKill: //make her warp in
-UNIT Aoife Sage_F 0x1 Level(12, Enemy, 0)     [0,5] DropItem 0x0 0x0 0x0 [0xEA,WhiteGem] StallOneTurnAI
+YoHereToInstaKill: //YO CHANGE THIS TO the dukes (who are actually there)?!111
+//UNIT Aoife Sage_F 0x1 Level(12, Enemy, 0)     [0,5] DropItem 0x0 0x0 0x0 [0xEA,WhiteGem] StallOneTurnAI
+UNIT Wellington GreatKnight 0x1 Level(13, Enemy, 0)     [0,5] DropItem 0x0 0x0 0x0 [Runesword,BluntGlaive,ShortAxe] StallOneTurnAI
 	UNIT
 	
 YoHereToInstaKill2: //spawn at bot with knights

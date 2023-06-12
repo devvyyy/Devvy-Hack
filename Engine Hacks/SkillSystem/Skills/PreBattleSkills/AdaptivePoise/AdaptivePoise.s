@@ -23,30 +23,36 @@ cmp r0,#1
 beq PierceStance
 
 SwingStance:
-@add 4 Atk
+@add 5 Atk
 mov r1, #0x5A
 ldrh r0, [r4, r1] @atk
-add r0, #4
+add r0, #5
 strh r0, [r4,r1]
 
-@sub 20 hit
-mov r1, #0x60
-ldrh r0, [r4, r1] @atk
-sub r0, #20
+@sub 15 avoid
+mov r1, #0x62
+ldrh r0, [r4, r1] @avo
+sub r0, #15
+strh r0, [r4,r1]
+
+@sub 15 crit avoid
+mov r1, #0x68
+ldrh r0, [r4, r1] @cravoid
+sub r0, #15
 strh r0, [r4,r1]
 
 b End
 
 PierceStance:
-@add 6 AS
+@add 8 AS
 mov r1, #0x5E
 ldrh r0, [r4, r1] @AS
-add r0, #6
+add r0, #8
 strh r0, [r4,r1]
 
 @ sub 4 defense
 mov r1, #0x5C
-ldrh r0, [r4, r1] @atk
+ldrh r0, [r4, r1] @defenses
 sub r0, #4
 strh r0, [r4,r1]
 

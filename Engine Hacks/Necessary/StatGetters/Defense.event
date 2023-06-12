@@ -8,7 +8,7 @@ pDefenseModifiers: // Defense
 	POIN prSleepHalfDef prPoisonHalfDef
 	POIN prAvoidBuffDef
 	POIN prAcrobatCheck
-	POIN prCantoRingDef prCounterDef prBulwarkRing
+	POIN prCantoRingDef prCounterDef prBulwarkRing prGrimRingDef
 //	POIN prTemperedFateDef
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
@@ -49,6 +49,11 @@ rIfUnitHasNotSkill(SanctuaryID)
 prCantoRingDef:
 rIfUnitHasNotSkill(SanctuaryID)
 	rIfUnitHasSkill(CantoOneID)
+		rSubConst(4)
+		
+prGrimRingDef:
+rIfUnitHasNotSkill(SanctuaryID)
+	rIfUnitHasSkill(GrimRingID)
 		rSubConst(4)
 		
 prBulwarkRing:

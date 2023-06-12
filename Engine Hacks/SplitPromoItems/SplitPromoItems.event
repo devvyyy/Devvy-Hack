@@ -20,14 +20,11 @@ POP
 ALIGN 4
 PromoItemsList:
 PromoItemEntry(MasterSeal,MasterSealPromoList)
-PromoItemEntry(OceanSeal,OceanSealPromoList)
-PromoItemEntry(SolarBrace,AffogatoPromoList)
-PromoItemEntry(LunarBrace,LunarBracePromoList)
+PromoItemEntry(SolarBrace,SolarBracePromoList)
 PromoItemsEnd
 
 ALIGN 4
 SplitPromoItemsList:
-BYTE MasterSeal 
 BYTE 0
 
 #define PromoListEntry(baseClass,promoClass) "BYTE baseClass promoClass"
@@ -35,41 +32,14 @@ BYTE 0
 
 ALIGN 4
 MasterSealPromoList:
-PromoListEntry(Mercenary,Hero)
-PromoListEntry(Soldier,Halberdier)
-PromoListEntry(Fighter,Warrior)
-PromoListEntry(Pirate,Berserker)
-PromoListEntry(Myrmidon,Swordmaster)
-PromoListEntry(Myrmidon_F,Swordmaster_F)
-PromoListEntry(Archer,Sniper)
-PromoListEntry(Archer_F,Sniper_F)
-PromoListEntry(Mage,Sage)
-PromoListEntry(Mage_F,Sage_F)
-PromoListEntry(Shaman,Druid)
-PromoListEntry(Shaman_F,Druid_F)
-PromoListEntry(Monk,Bishop)
-PromoListEntry(Monk,Bishop_F)
-PromoListEntry(SCav,SPaladin)
-PromoListEntry(LCav,LPaladin)
-PromoListEntry(ACav,APaladin)
-PromoListEntry(0x53,APaladin)
-PromoListEntry(SArmor,General)
-PromoListEntry(LArmor,General)
-PromoListEntry(AArmor,General)
-PromoListEntry(Thief,Rogue)
-PromoListEntry(AArmor,General)
-PromoListEntry(PegRider,FalconKnight)
-PromoListEntry(WyvRider,WyvernKnight)
+PromoListEntry(Scout,0x3)
+
 PromoListEnd
 
 ALIGN 4
-LunarBracePromoList:
-PromoListEntry(EirikaLord,EirikaMasterLord)
-PromoListEnd
+SolarBracePromoList:
+PromoListEntry(Scout,Sniper)
 
-ALIGN 4
-AffogatoPromoList:
-PromoListEntry(Hunter,EphraimMasterLord)
 PromoListEnd
 
 #endif // SPLIT_PROMO_ITEMS

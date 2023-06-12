@@ -84,6 +84,11 @@ Abernathy_Mug:
 #incext PortraitFormatter "RWVernelle.png"
 setMugEntry(0x0C, Abernathy_Mug, 4, 5, 3, 3)
 
+ALIGN 16 //Chiasa by Levin
+Dira_Mug:
+#incext PortraitFormatter "LevinChiasa.png"
+setMugEntry(0xC4, Dira_Mug, 2, 6, 2, 4)
+
 ALIGN 4
 Wegman_Mug: //sword mini
 #incbin "Wegman_mug.dmp"
@@ -100,12 +105,12 @@ ALIGN 4
 Wegman_Palette:
 #incbin "Wegman_palette.dmp"
 
-setMugEntryExtend(0xD, Wegman_Mug, Wegman_Mini, Wegman_Palette, Wegman_Frames, 3, 5, 3, 3, 10, 4, 0, 0)
+setMugEntryExtend(0xD, Wegman_Mug, Wegman_Mini, Wegman_Palette, Wegman_Frames, 3, 5, 3, 3, 12, 6, 12, 8)
 
 ALIGN 4
 Wegman_ShieldMini: //shield mini
 #incbin "WegmanShield_minimug.dmp"
-setMugEntryExtend(0xBB, Wegman_Mug, Wegman_ShieldMini, Wegman_Palette, Wegman_Frames, 3, 5, 3, 3, 10, 4, 0, 0)
+setMugEntryExtend(0xBB, Wegman_Mug, Wegman_ShieldMini, Wegman_Palette, Wegman_Frames, 3, 5, 3, 3, 12, 6, 12, 8)
 
 ALIGN 16 //Flan by ZessDynamite
 Flan_Mug:
@@ -343,6 +348,11 @@ ALIGN 16
 Zopf_Mug: //Zopf by Laurent, Levin
 #incext PortraitFormatter "Zopf2.png"
 setMugEntryExtend(0x24, Zopf_Mug, 3, 5, 2, 3, 0, 2, 0, 0)
+
+ALIGN 16
+AffogatoAlt_Mug:
+#incext PortraitFormatter "Edgygato.png"
+setMugEntryExtend(0xC5, AffogatoAlt_Mug, 3, 5, 3, 3, 10, 4, 10, 2)
 
 ALIGN 16
 Velius_Mug:

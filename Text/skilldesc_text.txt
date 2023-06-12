@@ -16,6 +16,16 @@ Power Slide: Unit can Canto 1 space.[N]
 Activate to dash 3 spaces in any direction.[N]
 Effect recharges on kill.[X]
 
+## SD_Kalista
+Run 'N Gun: Unit's attacks scale with 75% Str.[N]
+First attack does not end turn. Canto 1[N]
+space after combat.[X]
+
+## SD_TwinBlades
+Twin Blades: Unit's attacks scale with 50% Str[N]
+and strike x2 consecutively. If initiating,[N]
+grants AS +4, Prt/Rsl -4.[X]
+
 ## SD_HitmanSeer
 Infinite Arsenal: Unit has an arsenal of[N]
 5 personal weapons, each with an Equip[N]
@@ -27,19 +37,19 @@ it gets moved to the end of the queue, and[N]
 the next weapon in line is sent.[X]
 
 ## SD_Rewind
-Rewind: Once per map, if unit's HP is 25% or[N]
-less after combat, restores 50% missing HP, Canto[N]
-(if initiating), then grants Stasis for 1 turn.[X]
+Rewind: Once per map, if unit's HP is 25% or less[N]
+after combat, restores 50% missing HP, Canto[N]
+(if initiating), then grants Stasis for 1 turn. Refresh on kill.[X]
 
 ## SD_DirtyFighting2
-Dirty Fighting: If foe can't counter, Dira[N]
-always lands a critical hit and follow-up.[N]
-Inflicts Rooted for 1 turn after combat.[X]
+Fusillade: If foe can't counter, Quarrel[N]
+follow-ups and foe cannot, and if Spd >[N]
+foe's Spd, strike x2 consecutively.[X]
 
 ## SD_Chakrams
 Adrenaline: Combat grants a stack (max; 5, resets after[N]
 not Attacking). Each stack grants AS +1 and[N]
-deals 3 bonus magical damage (min; 1 damage).[X]
+deals 3 bonus magical damage.[X]
 
 ## SD_Absolution
 # unit has no attack growth
@@ -157,9 +167,9 @@ If foe is defeated, refreshes barrier.[X]
 
 ## SD_AllOut
 # show in MMB/change mug
-Limit Break: Unit can toggle 'All Out' to
+Limit Break: Unit can toggle 'All Out' to[N]
 halve max HP/Def/Res, but grants Atk =[N]
-HP lost, and unit follows up and foe cannot.[X]
+HP lost + 25% of foe's current HP.[X]
 
 ## SD_Executors
 Obliterate: If unit initiates and foe is[N]
@@ -170,7 +180,7 @@ true damage = 500% of foe's missing HP.[X]
 # global flag 0xB2
 [_A][_d][_a][_p][_t][_i][_v][_e][_SP][_P][_o][_i][_s][_e][_Colon][_SP][_A][_f][_t][_e][_r][_SP][_e][_x][_p][_l][_o][_i][_t][_i][_n][_g][_SP][_t][_h][_e][_SP][_W][_T][_Comma][_SP][_W][_e][_g][_m][_a][_n][N]
 [_t][_o][_g][_g][_l][_e][_s][_SP][_b][_e][_t][_w][_e][_e][_n][_SP][_S][_w][_i][_n][_g][_Slash][_P][_i][_e][_r][_c][_e][_SP][_S][_t][_a][_n][_c][_e][_Dot][N]
-[SwordIcon][_Colon][_SP][_Plus][_4][_SP][_A][_t][_k][_Comma][_SP][_Dash][_2][_0][_SP][_H][_i][_t].[_SP][LanceIcon][_Colon][_SP][_Plus][_6][_SP][_A][_S][_Comma][_SP][_Dash][_4][_SP][_P][_r][_t][_Slash][_R][_s][_l][_Dot][X]
+[SwordIcon][_Colon][_SP][_Plus][_5][_SP][_A][_t][_k][_Comma][_SP][_Dash][_1][_5][_SP][_A][_v][_o][_Slash][_D][_d][_g][_Dot][_SP][LanceIcon][_Colon][_SP][_Plus][_8][_SP][_A][_S][_Comma][_SP][_Dash][_4][_SP][_P][_r][_t][_Slash][_R][_s][_l][_Dot][X]
 
 ## SD_BlindingFlash
 Blinding Flash: If Katsu initiates and[N]
@@ -515,7 +525,7 @@ initiates, unit dodges all attacks.[X]
 
 ## SD_ShonSkill
 Gallant: If foe's HP is full, grants[N]
-Atk/AS/Def/Res +3 and deals 10 bonus[N]
+Atk/AS/Prt/Rsl +3 and deals 10 bonus[N]
 physical damage.[X]
 
 ## SD_SiegSkill
@@ -621,9 +631,9 @@ Maynard neutralizes foe's Atk/AS/Rsl,[N]
 setting them to 0.[X]
 
 ## SD_TouchOfFrost
-Absolute Zero: If Wilken's Res > foe's[N]
-Res, reduces damage taken = difference[N]
-between Res stats.[X]
+Absolute Zero: If Velius' Res > foe's[N]
+Res, deals bonus damage/reduces damage[N]
+taken = difference between Res stats.[X]
 
 ## SD_Chronoshift
 Borrowed Time: After combat, Xidorn restores[N]
@@ -767,9 +777,9 @@ cavalry ally, unit takes -2 damage.[X]
 
 ## SD_Galestorm
 # Pursuer
-Fusillade: If foe can't counter, Quarrel[N]
-follow-ups and foe cannot, and if Spd >[N]
-foe's Spd, strike x2 consecutively.[X]
+Dirty Fighting: If foe can't counter, Dira[N]
+deals bonus damage = 3 + 200% of foe's missing HP.[N]
+Inflicts Rooted on foe for 1 turn after combat.[X]
 
 ## SD_Graaaagh
 Gonna Go Wild: Grants Crit =[N]
@@ -792,11 +802,6 @@ bonuses from both sides.[X]
 ## SD_BuiltDifferent
 Cheap Shot: If foe's HP is 50% or[N]
 less, grants unit Str/AS +2.[X]
-
-## SD_SteelSoul
-Steel Soul: If Ogrim initiates and[N]
-Def > foe's Str/Eth, strikes x2[N]
-consecutively.[X]
 
 ## SD_Shrewd
 Third Eye: Grants bonus Hit =[N]
@@ -1106,6 +1111,11 @@ Hallowed Soul: If Iris' HP is 50% or more,[N]
 neutralizes Mt of tier I magic and[N]
 survive the next lethal attack.[X]
 
+## SD_HallowedGround
+Hallowed Ground: Iris grants "If unit's[N]
+HP is 50% or more, survive the next lethal[N]
+attack" to allies within 3 spaces.[X]
+
 ## SD_Swordfaire
 Swordfaire: +4 damage[N]
 when equipping a sword.[X]
@@ -1295,9 +1305,9 @@ items. Grants Sidearm range +1 and[N]
 +2 spaces of vision in fog/darkness.[X]
 
 ## SD_Lunge
-Lunge: Swap places with the[N]
-opponent after combat.[N]
-(No effect if Move is --)[X]
+Steel Soul: If Ogrim initiates and Def >[N]
+foe's Str/Eth, strikes x2 consecutively.[N]
+Use to swap spaces after combat.[X]
 
 ## SD_Intimidate
 Intimidate: Inflicts Avo -10 to[N]

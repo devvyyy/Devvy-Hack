@@ -1,5 +1,5 @@
 .thumb
-.equ SteelSoulID, SkillTester+4
+.equ LungeID, SkillTester+4
 .equ gBattleData, 0x203A4D4
 
 push {r4-r7, lr}
@@ -25,7 +25,7 @@ ble End @skip if def is less or equal than foes atk
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r4 @attacker data
-ldr r1, SteelSoulID
+ldr r1, LungeID
 .short 0xf800
 cmp r0, #0
 beq End
@@ -44,4 +44,4 @@ pop {r4-r7, r15}
 .ltorg
 SkillTester:
 @Poin SkillTester
-@WORD SteelSoulID
+@WORD LungeID

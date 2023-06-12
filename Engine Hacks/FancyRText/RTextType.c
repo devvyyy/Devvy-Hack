@@ -153,6 +153,22 @@ int GetItemDescId(int item) {
 			case 0xCB: //Last Hour
                 itemDesc = 0x21D;				
         }
+
+	}
+	else if (IsBattleReal() && SkillTester(&gBattleActor.unit, 83)) { //unit with LungeID
+        switch ((item & 0xFF)) {
+			case 0x64: //Buckler
+                itemDesc = 0x224;
+			case 0x65: //Kite
+                itemDesc = 0x220;
+			case 0x66: //Heater
+                itemDesc = 0x221;
+			case 0x67: //Adarga
+                itemDesc = 0x222;
+            case 0x68: //Hexlock Shield
+                itemDesc = 0x223;
+        }
+		
     }
     else if (IsDescDurabilityBased(itemDesc)) {
         itemDesc = GetDurabilityBasedItemTable(itemDesc)[(item >> 0x8)];

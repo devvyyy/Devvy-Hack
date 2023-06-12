@@ -1,5 +1,7 @@
     PROTECT 0xC00000 //start of anim table?
 	//PROTECT 0x95F5A4 //summon table
+//	PROTECT $18744
+//	PROTECT 0x203f101
 
 
 #ifdef _FE8_
@@ -66,9 +68,10 @@ ALIGN 4
 //	#include "Engine Hacks/DancerRingRefresh/Installer.event" //By Sme
 //	#include "Engine Hacks/AltharesMoment/Installer.event" //By Tequila
 	#include "Engine Hacks/MagicSwordRework/Installer.event" //By Sme
-//	#include "Engine Hacks/PromoPreview/PromoPreview.event" //By Sme
+	#include "Engine Hacks/PromoPreview/PromoPreview.event" //By Sme
 	#include "Engine Hacks/RangedAnims/Installer.event" //By Circles
 	#include "Engine Hacks/CharBasedPromos/CharBasedPromos.event" //By Sme
+//	#include "Engine Hacks/SplitPromoItems/SplitPromoItems.event" //By Sme
 	#include "Engine Hacks/NegateDef/Installer.event" //by Vesly
 	#include "Engine Hacks/BattleStatsWithAnimsOff/Installer.event" //by Vesly
 	#include "Engine Hacks/StealWithFullInv/Installer.event" //by Vesly

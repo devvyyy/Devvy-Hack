@@ -9,7 +9,7 @@ pResistanceModifiers: // Resistance
 	POIN prSleepHalfRes prPoisonHalfRes
 	POIN prAvoidBuffRes
 	POIN prAcrobatCheckRes
-	POIN prCantoRingRes prBulwarkRingRes
+	POIN prCantoRingRes prBulwarkRingRes prGrimRingRes
 //	POIN prTemperedFateRes
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
@@ -57,6 +57,11 @@ rIfUnitHasNotSkill(SanctuaryID)
 prCantoRingRes:
 rIfUnitHasNotSkill(SanctuaryID)
 	rIfUnitHasSkill(CantoOneID)
+		rSubConst(4)
+		
+prGrimRingRes:
+rIfUnitHasNotSkill(SanctuaryID)
+	rIfUnitHasSkill(GrimRingID)
 		rSubConst(4)
 		
 prBulwarkRingRes:

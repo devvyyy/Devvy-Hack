@@ -68,7 +68,7 @@ Skills[X]
 Every playable unit comes with a[N]
 personal skill and a movement[N]
 skill depending on their[N]
-movement type.[N]
+base movement type.[N]
 Units can get up to[N]
 5 different skills.[N]
  [N]
@@ -79,7 +79,9 @@ and Flying units get Pivot.[N]
  [N]
 Some exceptions:[N]
 Scouts get Pivot,[N]
-Parsons get Rotate,[N]
+Renegades get Smite,[N]
+Parsons and Hierophants[N]
+get Rotate, and Bards[N]
 and Technicians get Smite.[N]
  [N]
 Movement skills on mounted[N]
@@ -103,7 +105,7 @@ white border.[N]
 Combat arts have a[N]
 purple border.[N]
 Mastery skills have a[N]
-green border.
+green border.[N]
  [N]
 Physical bonus damage targets[N]
 Def and magical targets Res.[N]
@@ -140,6 +142,13 @@ sent to the convoy.[N]
  [N]
 Houses give experience the first[N]
 time you visit them.[N]
+ [N]
+Master Seals promote any[N]
+unpromoted unit at Lv. 10+.[N]
+ [N]
+Second Seals promote any[N]
+promoted unit to a new[N]
+class based on personality.[N]
  [N]
 Only the first Ring passive[N]
 effect is applied.[X]
@@ -296,8 +305,8 @@ Effective against cavalry.[N]
 [_O][_f][_f][_Dash][_H][_a][_n][_d][_Colon][_SP][_M][_t][_SP][_Plus][_4][_Dot][X]
 
 # 0x21D
-Ashen Rider's oblivion. Res +5. Maxes[N]
-Flow after combat. [_Lock]: Void affinity.[N]
+Ashen Rider's oblivion; return to nothing.[N]
+Res +5. Maxes Flow after combat.[N]
 [_O][_f][_f][_Dash][_H][_a][_n][_d][_Colon][_SP][_M][_t][_SP][_Plus][_3][_Dot][X]
 
 # 0x21F
@@ -359,17 +368,23 @@ fortresses, Chests[N][X]
 A magical potion that increases[N]
 user's growth rates by 5%.[X]
 
-# 0x402
-Ethos[X]
-
 # 0x4AA
 A bizarre potion that sets a[N]
-unit's Lvl to 10.[X]
+unit's Lv. to 10.[X]
 
 # 0x4E3
 Give this to a[N]
 unit you want to[N]
 promote/reclass.[X]
+
+# 0x01E
+Level set to 10.[X]
+
+# 0x01F
+Level set to 10.[X]
+
+# 0x402
+Ethos[X]
 
 # 0x3F8
 Second Seal[X]
@@ -377,13 +392,13 @@ Second Seal[X]
 # 0x4A9
 # put a note somewhere that infantry/armor and cav/flier cant become the other (except affogato)
 A whimsical seal that changes the[N]
-class of any Lvl 5+ promoted unit[N]
-to a unique promoted class.[X]
+class of any promoted unit to a unique[N]
+promoted class (W. Ranks can be lost).[X]
 
 # 0x4E2
 Switches between[N]
 2 classes. Note:[N]
-Ranks can be lost.[N]
+Ranks can be lost.[X]
 
 # 0x554
 Zzzz... Zzzzz...[N]
@@ -609,12 +624,12 @@ Whimsical musicians whose melodies let[N]
 allies move again.[X]
 
 # 0x2A9
-A knight of Wreyvine's general[N]
-army, loyal to the King.[X]
+A knight of Wreyvine's royal army.[N]
+They're loyal to their king.[X]
 
 # 0x4A5
 A rare seal that promotes any[N]
-unpromoted unit at Lvl 10+.[X]
+unpromoted unit at Lv. 10+.[X]
 
 # 0x4DE
 Use this on any unit[N]
@@ -719,12 +734,22 @@ Hefty Sash[X]
 Atk = Def. Unit can't follow-up. Both[N]
 sides can't counter. Pivot over target.[X]
 
+# 0x224
+Atk = Def. Unit can't follow-up. Both[N]
+sides can't counter. Pivot over target.[N]
+([_S][_t][_e][_e][_l][_SP][_S][_o][_u][_l]'[_s][_SP][_I][_n][_v][_e][_r][_s][_i][_o][_n][_SP][_d][_i][_s][_a][_b][_l][_e][_s][_SP][_m][_o][_v][_e][_m][_e][_n][_t][_Dot])[X]
+
 # 0x3de
 [_K][_i][_t][_e][_SP][_S][_h][_i][_e][_l][_d][X]
 
 # 0x48d
 Atk = Def. Unit can't follow-up. Both[N]
 sides can't counter. Shove 1 space.[X]
+
+# 0x220
+Atk = Def. Unit can't follow-up. Both[N]
+sides can't counter. Shove 1 space.[N]
+([_S][_t][_e][_e][_l][_SP][_S][_o][_u][_l]'[_s][_SP][_I][_n][_v][_e][_r][_s][_i][_o][_n][_SP][_d][_i][_s][_a][_b][_l][_e][_s][_SP][_m][_o][_v][_e][_m][_e][_n][_t][_Dot])[X]
 
 # 0x3df
 [_H][_e][_a][_t][_e][_r][_SP][_S][_h][_i][_e][_l][_d][X]
@@ -733,6 +758,11 @@ sides can't counter. Shove 1 space.[X]
 Atk = Def. Unit can't follow-up. Both[N]
 sides can't counter. Drag back 1 space.[X]
 
+# 0x221
+Atk = Def. Unit can't follow-up. Both[N]
+sides can't counter. Drag back 1 space.[N]
+([_S][_t][_e][_e][_l][_SP][_S][_o][_u][_l]'[_s][_SP][_I][_n][_v][_e][_r][_s][_i][_o][_n][_SP][_d][_i][_s][_a][_b][_l][_e][_s][_SP][_m][_o][_v][_e][_m][_e][_n][_t][_Dot])[X]
+
 # 0x3e0
 [_A][_d][_a][_r][_g][_a][_SP][_S][_h][_i][_e][_l][_d][X]
 
@@ -740,12 +770,22 @@ sides can't counter. Drag back 1 space.[X]
 Atk = Def. Unit can't follow-up. Both[N]
 sides can't counter. Move back 1 space.[X]
 
+# 0x222
+Atk = Def. Unit can't follow-up. Both[N]
+sides can't counter. Move back 1 space.[N]
+([_S][_t][_e][_e][_l][_SP][_S][_o][_u][_l]'[_s][_SP][_I][_n][_v][_e][_r][_s][_i][_o][_n][_SP][_d][_i][_s][_a][_b][_l][_e][_s][_SP][_m][_o][_v][_e][_m][_e][_n][_t][_Dot])[X]
+
 # 0x3e1
 [_H][_e][_x][_l][_o][_c][_k][_SP][_S][_h][_i][_e][_l][_d][X]
 
 # 0x490
 Atk = Def. Unit can't follow-up. Both[N]
 sides can't counter. Drag back 1 space.[X]
+
+# 0x223
+Atk = Def. Unit can't follow-up. Both[N]
+sides can't counter. Drag back 1 space.[N]
+([_S][_t][_e][_e][_l][_SP][_S][_o][_u][_l]'[_s][_SP][_I][_n][_v][_e][_r][_s][_i][_o][_n][_SP][_d][_i][_s][_a][_b][_l][_e][_s][_SP][_m][_o][_v][_e][_m][_e][_n][_t][_Dot])[X]
 
 # 0x21E
 [_P][_i][_e][_r][_c][_e][X]
@@ -1292,16 +1332,16 @@ Do you want to quit?[N]
  on this mode.[X]
 
 # 0x14A
+# WT Mt raised +/-4.
  Enemies have[N]
- higher stats.[N]
- WT Mt raised +/-4.[N][X]
+ higher stats.[X]
 
 # 0x14B
+# WT is +/-5 Mt/Hit.
  Enemies have much[N]
  higher stats.[N]
  Player units have[N]
- better inventories.[N]
- WT is +/-5 Mt/Hit.[X]
+ better inventories.[X]
  
 # 0x2EB
 Strategist[X]
@@ -1366,8 +1406,8 @@ and Eustace.[X]
 Wreyvine[X]
 
 # 0x6C4
-If Spd > target's Spd,[N]
-unit can steal items.[X]
+Steal a target's item.[N]
+Does not end turn.[X]
 
 # 0x160 PrologueChName
 Prologue I: No Way Out[X]
@@ -1524,10 +1564,10 @@ teaches a skill[N]
 when used.[X]
 
 ## PromotesToText
-Promote to:[X]
+Promotion:[X]
 
 ## NoUseText
-Cannot Use[X]
+Cannot use.[X]
 
 #include "Names.txt"
 

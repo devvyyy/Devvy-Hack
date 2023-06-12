@@ -12,6 +12,12 @@ BYTE 0x0A 0x20 0x2C 0x7A 0x24 0x1A
 
 POP
 
+//Make Steal not need a speed check
+
+PUSH
+ORG 0x025BBE
+BYTE 00 00
+POP
 
 //Change Y location of map sprite in statscreen
 //On load
@@ -355,11 +361,11 @@ CheckWexpWeaponTypeHook:
     WORD 0x19ED2550 0x24287828 0x5C2619E4 0xD0012E00 0x47184B01 0x47184B01 0x802C133 0x802C113
 
 // Remove Kill Bonus for WEXP
-PUSH
 //by Alusq
-ORG $2c142
-BYTE 0x01 0x29 0x0 0xDC 
-POP
+//PUSH
+//ORG $2c142
+//BYTE 0x01 0x29 0x0 0xDC 
+//POP
 
 //Prevents Archer palette from being overwritten
 //by 7743
