@@ -33,6 +33,25 @@ add   r1,r0,r1 @wow this is an awful way to do this
 add   r1,r0,r1
 strh  r1,[r4,r2]
 
+@under 50% hp
+ldrb r0, [r4, #0x12]
+lsr r0, #1 @max hp/2
+ldrb r1, [r4, #0x13] @currhp
+cmp r1, r0
+bgt End
+
+mov   r2,#0x62
+ldrh  r1,[r4,r2]
+add   r1,r0,r1 @wow this is an awful way to do this
+add   r1,r0,r1
+strh  r1,[r4,r2]
+
+mov   r2,#0x66 @crit
+ldrh  r1,[r4,r2]
+add   r1,r0,r1 @wow this is an awful way to do this
+add   r1,r0,r1
+strh  r1,[r4,r2]
+
 End:
 pop {r4-r7, r15}
 .align

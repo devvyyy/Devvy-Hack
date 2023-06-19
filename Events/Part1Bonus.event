@@ -156,7 +156,7 @@ LoadUnit(22,2)
 	
 NewRecruits:
 UNIT Lennard Deserter 0x1 Level(3, Ally, 0)     [14,0] 0b 0x0 0x0 0x0 [SapphireLance,ShortSpear,0x7E] [0x0,0x0,0x0,0x0]
-UNIT Therese SArmor 0x1 Level(4, Ally, 0)     [16,0] 0b 0x0 0x0 0x0 [SteelBlade,0x66,0xFD] [0x0,0x0,0x0,0x0]
+UNIT Therese SArmor 0x1 Level(5, Ally, 0)     [16,0] 0b 0x0 0x0 0x0 [SteelBlade,0x66,0xFD] [0x0,0x0,0x0,0x0]
 		UNIT
 	
 NPCUnits:
@@ -179,7 +179,7 @@ UNIT Wreyvine Archer 0x1 Level(4, NPC, 1)     [19,4] 0b 0x0 0x0 0x0 [ShortBow,Vu
 
 UNIT Supplies1 0x79 0x1 Level(1, NPC, 1)     [9,4] 0b 0x0 0x0 0x0 [EnergyRing] [0,3,0,32] //tents
 UNIT Supplies2 0x79 0x1 Level(1, NPC, 1)     [21,4] 0b 0x0 0x0 0x0 [MageBow] [0,3,0,32]
-UNIT Supplies3 0x79 0x1 Level(1, NPC, 1)     [9,9] 0b 0x0 0x0 0x0 [MasterSeal] [0,3,0,32]
+UNIT Supplies3 0x79 0x1 Level(1, NPC, 1)     [9,9] 0b 0x0 0x0 0x0 [ArmsScroll] [0,3,0,32]
 UNIT Supplies4 0x79 0x1 Level(1, NPC, 1)     [21,9] 0b 0x0 0x0 0x0 [0x7F] [0,3,0,32]
 
 	UNIT
@@ -299,7 +299,7 @@ UNIT Aeteria Mage 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R20 [Thunder,] 
 	
 MidFortRein4:
 UNIT Aeteria Occultist 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA17R17 [Flux,] StallOneTurnAI
-UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R19 [DarkTome2,] ChargeAI
+UNIT AeteriaStealable Shaman 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R19 [DarkTome2,JunaFruit] ChargeAI
 UNIT Aeteria Merc 0x1 Level(6, Enemy, 1)     [17,19] 0 0 1 REDA16R20 [SteelSword,] ChargeAI
 UNIT Aeteria Archer 0x1 Level(5, Enemy, 1)     [17,19] 0b 0x0 0x0 0x0 [Longbow,] ChargeAI
 	UNIT
@@ -486,7 +486,7 @@ EndingScene:
 	
 	CHECK_ALIVE Supplies3
 	BEQ 0x3 0xC 0x0
-	GiveItem(MasterSeal,Affogato)
+	GiveItem(ArmsScroll,Affogato)
 	LABEL 0x3
 	
 	CHECK_ALIVE Supplies4

@@ -631,9 +631,9 @@ Maynard neutralizes foe's Atk/AS/Rsl,[N]
 setting them to 0.[X]
 
 ## SD_TouchOfFrost
-Absolute Zero: If Velius' Res > foe's[N]
-Res, deals bonus damage/reduces damage[N]
-taken = difference between Res stats.[X]
+Absolute Zero: If Velius' Res > foe's Res,[N]
+deals bonus damage/reduces damage taken[N]
+= difference between Res stats.[X]
 
 ## SD_Chronoshift
 Borrowed Time: After combat, Xidorn restores[N]
@@ -653,10 +653,10 @@ not adjacent to an ally, grants unit[N]
 another action (once per turn).[X]
 
 ## SD_Lionheart
-# add vantage ?!
-Lionheart: Grants Lennard +2 Avoid/Crit[N]
-per missing HP, but take 4 damage[N]
-after combat (cannot die from recoil).[X]
+# add vantage ?! Lionheart
+Adrenaline: Grants Lennard +2 Avoid/Crit[N]
+per missing HP, doubled to +4 below 50%[N]
+HP. Take 4 damage after combat.[X]
 
 ## SD_BladeFan
 Heavy Weapons Fan: If unit is using[N]
@@ -678,9 +678,9 @@ Spirit Cleave: Deals bonus damage =[N]
 50% of foe's Def and Res.[X]
 
 ## SD_Maestro
-[_M][_a][_e][_s]t[_r][_o][_Colon] [_I]l[_s][_e]'[_s] [_R]ifl[_e][_s] [_h][_a][_v][_e] [_u][_n]i[_q][_u][_e] [_p][_r][_o][_p][_e][_r]ti[_e][_s][_Colon][N]
-[_M]t [_Minus][_5][_Comma] [_W]t [_Plus][_2][_Comma] [_H]it [_Plus][_1][_0][_Dot] T[_h][_e][_y] [_a]l[_s][_o] [_d][_o] [_b][_o][_n][_u][_s][N]
-[_d][_a]m[_a][_g][_e] [_e][_q][_u][_a]l t[_o] [_5][_0]% [_o]f f[_o][_e]'[_s] mi[_s][_s]i[_n][_g] [_H][_P][_Dot][X]
+Maestro: Ilse's Rifles have unique properties:[N]
+Hit +30, Crit -20. They also deal bonus damage[N]
+= 25% of foe's max HP.[X]
 
 ## SD_Lifeline
 Lifeline: After combat, if unit's HP[N]
@@ -887,7 +887,17 @@ use 1.25x Eth and deal bonus damage[N]
 
 ## SD_Defeatist
 Defeatist: If Ulrich's HP is 50% or[N]
-less, inflicts Str/Spd -50%.[X]
+less, inflicts Str/Spd -50%.[N]
+Use to leave foes with 1 HP.[X]
+
+## SD_KnightAspirant
+Knight Aspirant: If Otto's HP is 75%[N]
+or greater, grants Atk +2/Avoid +15.[X]
+
+## SD_KnightAspirant
+Wreyvian Authority: Ulrich grants allies[N]
+within 3 spaces Atk/AS +5. Rally to grant[N]
+All +2 to allies within 2 spaces.[X]
 
 ## SD_LastResort
 Last Resort: If Latte's HP is 50% or[NL]
@@ -1821,10 +1831,6 @@ when fighting enemy at 2 range.[X]
 ## SD_MageSlayer
 Mage Slayer: If foe uses magic,[N]
 grants Atk +2/Crit +10.[X]
-
-## SD_KnightAspirant
-Knight Aspirant: When above 75%[N]
-HP, grants +2 Atk/+15 Avoid.[X]
 
 ## SD_Watchful
 Watchful: This unit cannot be[N]

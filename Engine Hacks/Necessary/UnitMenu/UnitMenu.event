@@ -84,13 +84,13 @@ UnitMenuTable:
 
 	//Lunge
 	MenuCommand(UM_Lunge, UM_LungeDesc, NormalText, LungeUsability, LungeEffect, $22c31, $22c99)
+	
+	//Mercy
+	MenuCommand(UM_Mercy, UM_MercyDesc, NormalText, MercyUsability, MercyEffect, $22c31, $22c99)
 
   #ifdef COMBAT_ARTS
 	MenuCommand(UM_CombatArts, UM_CombatArtsDesc, NormalText, CombatArtsUsability, CombatArtsEffect, $22c31, $22c99)
   #else // COMBAT_ARTS
-
-	//Mercy
-	MenuCommand(UM_Mercy, UM_MercyDesc, NormalText, MercyUsability, MercyEffect, $22c31, $22c99)
 
 	//Gamble
 	MenuCommand(UM_Gamble, UM_GambleDesc, NormalText, GambleUsability, GambleEffect, $22c31, $22c99)

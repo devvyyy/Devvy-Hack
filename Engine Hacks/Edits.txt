@@ -19,6 +19,12 @@ ORG 0x025BBE
 BYTE 00 00
 POP
 
+// Prevent Dancer Rings from being greyed out in statscreen
+PUSH
+ORG 0x16ed0
+SHORT 0x2900
+POP
+
 //Change Y location of map sprite in statscreen
 //On load
 PUSH

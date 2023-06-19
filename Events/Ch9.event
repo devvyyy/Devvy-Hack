@@ -23,6 +23,7 @@ TurnEventEnemy(0,OMGMyHeroAGAIN,6)
 ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0x8,KatsuRecruit, Chiffon, 0x2)
+CharacterEventBothWays(0x9,FlanRecruit, Chiffon, Flan)
 	END_MAIN
 
 KatsuRecruit:
@@ -31,6 +32,15 @@ STAL 33
 Text(Placeholder1)
 MURE 0x2
 CUSA 0x2
+NoFade
+ENDA
+
+FlanRecruit:
+MUSS 0x30
+STAL 33
+Text(Placeholder2)
+MURE 0x2
+CUSA Flan
 NoFade
 ENDA
 

@@ -120,7 +120,8 @@ BYTE 4 MapMonster //staff
 BYTE 5 MapMagic 
 BYTE 6 MapLight 
 BYTE 7 MapDark
-BYTE $B ThinSlashAnimID // Daggers (and Shields if they didnt already have an animation)
+BYTE $A ThinSlashAnimID // Daggers
+BYTE $B CircleAnimID // Shields
 BYTE $11 ThinSlashAnimID //Dragonstones
 //BYTE 0 ThinSlashAnimID // Sword // old entries 
 //BYTE 1 Hit1AnimID // Lance 

@@ -116,10 +116,10 @@ bne End
 
 DoTheThing:
 
-@debuffed 2, add 4 atk to unit
+@debuffed 5, add 10 atk to unit
 mov r1, #0x5A
 ldrh r0, [r4, r1] @atk
-add r0, #2
+add r0, #10
 strh r0, [r4,r1]
 
 End:

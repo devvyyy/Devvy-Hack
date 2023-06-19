@@ -2,7 +2,7 @@
 @true if unit has Mercy skill AND attack is available
 @NOTE does not check terrain! 
 
-.equ MercyID, SkillTester+4
+.equ DefeatistID, SkillTester+4
 .thumb
 .org 0
 push {r4-r7,lr}
@@ -16,7 +16,7 @@ bne False
 
 @check if active unit has Mercy
 mov r0, r4 @test
-ldr r1, MercyID
+ldr r1, DefeatistID
 ldr r2, SkillTester
 mov lr, r2
 .short 0xf800 @test if unit has the skill
@@ -47,4 +47,4 @@ bx r1
 .ltorg
 SkillTester:
 @POIN SkillTester
-@WORD MercyID
+@WORD DefeatistID

@@ -79,6 +79,11 @@ Aoife_Mug:
 #incext PortraitFormatter "Aoife.png"
 setMugEntry(0x0B, Aoife_Mug, 3, 4, 3, 2)
 
+ALIGN 16 //Eustace by GaryTop
+Eustace_Mug:
+#incext PortraitFormatter "GaryTopJack.png"
+setMugEntry(0xC6, Eustace_Mug, 3, 5, 3, 3)
+
 ALIGN 16 //Therese by RW
 Abernathy_Mug:
 #incext PortraitFormatter "RWVernelle.png"
@@ -312,7 +317,7 @@ setMugEntryExtend(0xB3, AffoHato_Mug, ThreeBulletHat, AffoHato_Palette, AffoHato
 ALIGN 4
 FourBulletHat:
 #incbin "4bullethat_minimug.dmp"
-setMugEntryExtend(0xB4, AffoHato_Mug, FourBulletHat, AffoHato_Palette, AffoHato_Frames, 3, 5, 3, 3, 10, 2, 10, 4)
+setMugEntryExtend(0xB4, AffoHato_Mug, FourBulletHat, AffoHato_Palette, AffoHato_Frames, 3, 5, 3, 3, 0, 4, 0, 0)
 
 ALIGN 16
 AffoSadBoi_Mug: //I hate school :sob:
@@ -595,6 +600,20 @@ Kelik_Mug:
 #incext PortraitFormatter "Kelik.png"
 setMugEntry(0x54, Kelik_Mug, 3, 5, 3, 3)
 
+ALIGN 16
+LtUlrich_Mug:
+#incext PortraitFormatter "LtUlrichOGColors.png"
+setMugEntryExtend(0xC7, LtUlrich_Mug, 3, 5, 2, 3, 0, 0, 0, 2)
+
+ALIGN 16
+Otto_Mug:
+#incext PortraitFormatter "Otto.png"
+setMugEntry(0xC8, Otto_Mug, 2, 6, 2, 4)
+
+ALIGN 16
+OttoScar_Mug:
+#incext PortraitFormatter "OttoScar.png"
+setMugEntry(0xC9, OttoScar_Mug, 2, 6, 2, 4)
 
 // Lol
 ALIGN 16 //lol
