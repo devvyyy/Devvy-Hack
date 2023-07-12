@@ -46,7 +46,7 @@ POIN BulletPre AeterianFealty Phase BurstFireStats MiraclePre AdaptivePoise Cold
 POIN Daunt KingMark Deadeye DoubleLion ShadowEye Daredevil
 //POIN Thotslayer Thighdeology Armorboost Horseguard Skyguard ForeignPrincess ChargePlus
 POIN BlueFlame BlueFlameAura Frostbite Cultured KeepUp
-POIN MoonEvoked Lionheart Maestro Frenzy DevilAxeSkill CurtainCallSkill GrimRing Executors Nevermore ResolutePyre // This was moved here because Str/Mag Split conflict, and... I'm not sure why it wouldn't be here in the first place.
+POIN MoonEvoked Lionheart Maestro FlowCombat Frenzy DevilAxeSkill CurtainCallSkill GrimRing Executors Nevermore ResolutePyre // This was moved here because Str/Mag Split conflict, and... I'm not sure why it wouldn't be here in the first place.
 //POIN UpWithArch
 
 //stuff that recalcs via setting AS to 99 (to prevent it from being anything but 99)
@@ -60,6 +60,7 @@ POIN PykeUltPre //deletes atk
 POIN Eulogy //deletes atk
 //POIN Thunderstorm //deletes atk
 POIN BazookaPre //deletes atk/hit
+POIN Rageblade //deletes crit (might need to be moved further down?)
 POIN StancesASM
 
 #ifdef ENABLE_GBA_LETHALITY

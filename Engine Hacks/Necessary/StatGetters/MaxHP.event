@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pMaxHPModifiers: // Maximum HP
-	POIN prAddUnitMaxHP prHexingRodEffect prAddEquipHP prItemPassiveHp prNullifyIfBroken
+	POIN prAddUnitMaxHP prHexingRodEffect prAddEquipHP prItemPassiveHp prNullifyIfBroken prFlowStateCheckHP
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -23,6 +23,11 @@ prHexingRodEffect:
 prNullifyIfBroken:
 	rIfUnitHasStatus(0x14)
 		rHalved
+		
+prFlowStateCheckHP:
+	rIfUnitHasSkill(FlowStateID)
+		rIfUnitHasState(0x10000000)
+			rHalved
 
 prItemPassiveHp:
 #ifndef DONT_STACK_BOOSTS

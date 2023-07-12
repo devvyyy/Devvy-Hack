@@ -12,7 +12,7 @@ setMugEntry(0x2, Zane_Mug, 3, 5, 3, 3)
 ALIGN 16
 Ogrim_Mug: //Ogrim edited by BuskHusker
 #incext PortraitFormatter "Ogrim.png"
-setMugEntryExtend(0x3, Ogrim_Mug, 3, 4, 3, 3, 10, 4, 0, 0)
+setMugEntryExtend(0x3, Ogrim_Mug, 3, 4, 3, 3, 0, 4, 0, 0)
 
 ALIGN 16 //Erik by Lenh, Busk, Levin
 Erik_Mug:
@@ -337,12 +337,12 @@ setMugEntryExtend(0x28, Breve_Mug, 3, 5, 3, 3, 10, 2, 10, 4)
 ALIGN 16
 Ansgar_Mug: //Ansgar edited by L95
 #incext PortraitFormatter "AnsgarV2StatScreen.png"
-setMugEntryExtend(0x23, Ansgar_Mug, 2, 4, 2, 2, 0, 2, 0, 0)
+setMugEntryExtend(0x23, Ansgar_Mug, 3, 4, 3, 2, 12, 6, 12, 8)
 
 ALIGN 16
 AnsgarLeft_Mug:
 #incext PortraitFormatter "AnsgarLeft.png"
-setMugEntryExtend(0x4E, AnsgarLeft_Mug, 3, 4, 3, 2, 10, 4, 0, 0)
+setMugEntryExtend(0x4E, AnsgarLeft_Mug, 3, 4, 3, 2, 12, 6, 12, 8)
 
 ALIGN 16
 AnsgarRight_Mug:
@@ -446,8 +446,13 @@ setMugEntryExtend(0x2F, Bard_Mug, 3, 4, 2, 2, 0, 4, 0, 1)
 
 ALIGN 16
 Xavier_Mug:
-#incext PortraitFormatter "Xidorn.png"
-setMugEntry(0x30, Xavier_Mug, 3, 4, 3, 3)
+#incext PortraitFormatter "Xavier.png"
+setMugEntry(0x30, Xavier_Mug, 3, 5, 3, 3)
+
+ALIGN 16
+XavierAlt_Mug:
+#incext PortraitFormatter "XavierOffense.png"
+setMugEntry(0xCB, XavierAlt_Mug, 3, 5, 3, 3)
 
 ALIGN 16
 Quarrel_Mug:
@@ -462,7 +467,7 @@ setMugEntryExtend(0xC2, Wellington_Mug, 3, 5, 3, 2, 12, 6, 12, 8)
 ALIGN 16
 Opal_Mug:
 #incext PortraitFormatter "LevinCav.png"
-setMugEntry(0xC3, Opal_Mug, 3, 5, 2, 3)
+setMugEntry(0xC3, Opal_Mug, 2, 5, 3, 3)
 
 // Bad Guys
 ALIGN 16 //Marcellus by Laurent Lacroix
@@ -606,14 +611,19 @@ LtUlrich_Mug:
 setMugEntryExtend(0xC7, LtUlrich_Mug, 3, 5, 2, 3, 0, 0, 0, 2)
 
 ALIGN 16
+LtUlrichOwned_Mug:
+#incext PortraitFormatter "LtUlrichOwned.png"
+setMugEntryExtend(0xC8, LtUlrichOwned_Mug, 3, 5, 2, 3, 0, 0, 0, 2)
+
+ALIGN 16
 Otto_Mug:
 #incext PortraitFormatter "Otto.png"
-setMugEntry(0xC8, Otto_Mug, 2, 6, 2, 4)
+setMugEntry(0xC9, Otto_Mug, 2, 6, 2, 4)
 
 ALIGN 16
 OttoScar_Mug:
 #incext PortraitFormatter "OttoScar.png"
-setMugEntry(0xC9, OttoScar_Mug, 2, 6, 2, 4)
+setMugEntry(0xCA, OttoScar_Mug, 2, 6, 2, 4)
 
 // Lol
 ALIGN 16 //lol

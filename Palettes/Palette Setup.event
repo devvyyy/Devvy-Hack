@@ -156,10 +156,6 @@
 	setPalette(0x36,Tammy_Bishop)
 	setCBSP(0x36,0xA,0x3,0x2C)
 
-// Strogan_General
-	setPalette(0x37,Strogan_General)
-	setCBSP(0x37,0x19,0x3,0x0B)
-
 // Doppio_Halberdier
 	setPalette(0x38,Doppio_Halberdier)
 	setCBSP(0x38,0x1B,0x3,0x5B)
@@ -448,9 +444,13 @@
 	setPalette(0x4C,Lost_Parson)
 	setCBSP(0x4C,0x8E,0x4,0x5A)
 
-// Lost_King
-	setPalette(0x4C,Lost_King)
-	setCBSP(0x4C,0x8E,0x5,0x0C)
+// Lost_Hiero
+	setPalette(0x4C,Lost_Hiero)
+	setCBSP(0x4C,0x8E,0x5,0x7C)
+
+// Lost_GoldKnight
+	setPalette(0x4C,Lost_GoldKnight)
+	setCBSP(0x4C,0x8E,0x5,0x35)
 
 // Generic_SwordsmanM
 	setGenericPalette(0x11,Generic_SwordsmanM)
@@ -509,13 +509,19 @@
 	setGenericPalette(0x43,Generic_Armor)
 	setGenericPalette(0xA2,Generic_Armor)
 
-// Generic_General
-	setGenericPalette(0x44,Generic_General)
-	setGenericPalette(0x45,Generic_General)
-	setGenericPalette(0x46,Generic_General)
-	setGenericPalette(0x47,Generic_General)
-	setGenericPalette(0x48,Generic_General)
-	setGenericPalette(0x49,Generic_General)
+// Generic_GeneralSword
+	setGenericPalette(0x44,Generic_GeneralSword)
+
+// Generic_GeneralLance
+	setGenericPalette(0x45,Generic_GeneralLance)
+
+// Generic_GeneralAxe
+	setGenericPalette(0x46,Generic_GeneralAxe)
+	setGenericPalette(0x47,Generic_GeneralAxe)
+
+// Generic_GeneralBowUnarmed
+	setGenericPalette(0x48,Generic_GeneralBowUnarmed)
+	setGenericPalette(0x49,Generic_GeneralBowUnarmed)
 
 // Generic_Wyv
 	setGenericPalette(0x58,Generic_Wyv)

@@ -113,6 +113,16 @@ UnitMenuTable:
   //UM_Summon
   MenuCommand(0x693,0x6DD,NormalText,NewSummonUsability,0x244B8)
   
+  //Resupply
+	MenuCommand(UM_Resupply, UM_ResupplyDesc, OrangeText, AmmoUsability, AmmoEffect)
+
+  //Demolish
+	MenuCommand(UM_Demolish, UM_DemolishDesc, GrayText, DemolishUsability, DemolishEffect)
+	
+  //Full Tilt
+	MenuCommand(UM_Flow, UM_FlowDesc, NormalText, FlowUsability, FlowEffect)
+	MenuCommand(UM_Unflow, UM_UnflowDesc, NormalText, UnflowUsability, UnflowEffect)
+  
   UM_Summon_DK
 
   //UM_Pick

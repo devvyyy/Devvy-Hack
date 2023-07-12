@@ -38,6 +38,12 @@ ldrb r2, [r4, #0x17] @def
 add  r0, r2
 strh r0, [r4,r1]
 
+@add 20 cravoid
+mov r1, #0x68
+ldrh r0, [r4, r1] @cravoid
+add r0, #20
+strh r0, [r4,r1]
+
 @make sure were in combat (or combat prep)
 ldrb r3, =gBattleData
 ldrb r3, [r3]

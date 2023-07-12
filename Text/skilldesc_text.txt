@@ -16,6 +16,15 @@ Power Slide: Unit can Canto 1 space.[N]
 Activate to dash 3 spaces in any direction.[N]
 Effect recharges on kill.[X]
 
+## SD_Style
+Infernal Impulse: Initiating, landing a Crit, and dodging[N]
+builds Style, from C-S. Not initiating combat[N]
+resets Style. Each rank grants +5 Hit/Crit/Avoid.[N]
+
+## SD_Style2
+At S rank, grants an additional 1.5x Str/Spd,[N]
+and unit can cast Abyssal Trigger.[X]
+
 ## SD_Kalista
 Run 'N Gun: Unit's attacks scale with 75% Str.[N]
 First attack does not end turn. Canto 1[N]
@@ -136,10 +145,10 @@ unpromoted/5 promoted. Deals bonus physical[N]
 damage = 200% of foe's missing HP.[X]
 
 ## SD_HostileLoyalty
-# at level 7; just make it bargain; arms dealer
-Hostile Loyalty: Gus reduces prices by 50% and has[N]
-a (Luck)% chance to get a bullion on initiated kills.[N]
-Grants Hit/Avoid/Crit/Crit Avoid +(Gold/2500).[X]
+# at level 7; just make it bargain; arms dealer; a (Luck)% chance to get a bullion on initiated kills.
+Hostile Loyalty: Gus reduces prices by 50%.[N]
+Grants Str/Spd/Def/Res +(Inventory Worth/2500).[N]
+Grants Hit/Avoid/Crit/Crit Avoid +(Army Gold/2500).[X]
 
 ## SD_DirtyFighting
 # at level 12; gambler?
@@ -164,6 +173,12 @@ both sides strike x2 consecutively.[X]
 Gift of the Fallen: One combat per map, Yufka[N]
 deals 10 bonus damage and negates all enemy attacks.[N]
 If foe is defeated, refreshes barrier.[X]
+
+## SD_YufkaPersonal
+# repurpose old PHASING
+Phasing: Yufka's second slot is equipped[N]
+as an Off-Hand weapon, granting 50% of its[N]
+Mt and a weakened additional effect.[X]
 
 ## SD_AllOut
 # show in MMB/change mug
@@ -353,13 +368,14 @@ HP = 20% of missing HP and grants[N]
 "Deal +10 damage" for 2 turns.[X]
 
 ## SD_Zephyr
-# use new status effect
-Zephyr: If Xavier initiates, grants[N]
-Whirlwind to both sides for 1 turn.[X]
+# USES 0x22; use new status effect; Zephyr: If Xavier initiates, grants NEWLINE Whirlwind to both sides for 1 turn. Maybe Mov +2 in new skill idk
+[_F][_u][_l][_l][_SP][_T][_i][_l][_t][_Colon][_SP][_X][_a][_v][_i][_e][_r][_SP][_c][_a][_n][_SP][_t][_o][_g][_g][_l][_e][_SP][_a][_SP][_s][_t][_a][_n][_c][_e][_SP][_w][_i][_t][_h][_SP][_Z][_e][_p][_h][_y][_r][_Colon][N]
+[_G][_r][_a][_n][_t][_s][_SP][_M][_o][_v][_e][_SP][_x][_2][_Dot][_SP][_C][_o][_n][_v][_e][_r][_t][_s][_SP][_5][_0]%[_SP][_o][_f][_SP][_m][_a][_x][_SP][_H][_P][_SP][_t][_o][_SP][_A][_t][_k][_Comma][N]
+[_a][_n][_d][_SP][_5][_0]%[_SP][_o][_f][_SP][_D][_e][_f][_Slash][_R][_e][_s][_SP][_t][_o][_SP][_A][_S][_Dot][X]
 
 ## SD_Zephyr2
 Zephyr: Once per map, if Xavier initiates, win[N]
-Spd check and dodge all attacks.
+Spd check and dodge all attacks.[N]
 If foe is defeated, effect is refreshed.[X]
 
 ## SD_Overheat
@@ -464,9 +480,10 @@ grants another action after attacking,[N]
 but take 1 damage after combat.[X]
 
 ## SD_Upgrade
-Upgrade!!: Grants Yory Move +1. Turret deals[N]
-+3 damage, ignores 40% Def instead, and can[N]
-critically hit with base 10% chance.[X]
+# add something here---like ballistae effects? idk
+Upgrade!!: Grants Yory Move +1. Can now[N]
+alternatively load turret with AoE[N]
+rockets.[X]
 
 ## SD_ElbowGrease
 [_E][_l][_b][_o][_w][_SP][_G][_r][_e][_a][_s][_e][_Colon][_SP][_C][_o][_n][_v][_e][_r][_t][_s][_SP][_Y][_o][_r][_y]'[_s][_SP][_S][_t][_r][_SP][_t][_o][_SP][_P][_r][_t],[_SP][_a][_n][_d][_SP][_D][_e][_x][N]
@@ -891,10 +908,12 @@ less, inflicts Str/Spd -50%.[N]
 Use to leave foes with 1 HP.[X]
 
 ## SD_KnightAspirant
-Knight Aspirant: If Otto's HP is 75%[N]
-or greater, grants Atk +2/Avoid +15.[X]
+# lance cav?
+Knight Aspirant: If Otto's HP is 75% or[N]
+more, grants Atk/AS +2, Hit/Avoid +15.[X]
 
-## SD_KnightAspirant
+## SD_WreyvianAuthority
+# halberdier
 Wreyvian Authority: Ulrich grants allies[N]
 within 3 spaces Atk/AS +5. Rally to grant[N]
 All +2 to allies within 2 spaces.[X]
@@ -932,8 +951,8 @@ initiates, strikes x2 consecutively.[X]
 
 ## SD_ColdFlare
 Cold Flare: If Akatsuki's HP isn't full,[N]
-grants bonus Atk/AS = 25% of unit's[N]
-Res and deal +10 bonus magical damage.[X]
+grants bonus Atk/AS = 25% of Res and[N]
+deal +10 bonus magical damage.[X]
 
 ## SD_ColdFlare2
 Cold Flare: If foe is physical, grants Atk +3.[N]

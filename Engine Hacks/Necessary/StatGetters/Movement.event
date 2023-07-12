@@ -18,6 +18,7 @@ pMovModifiers: // Movement
 	POIN prPassCheck
 	POIN prEmpowerCheck
 	POIN prCantoRing
+	POIN prFlowStateCheck
 	POIN prStatusOverdriveMovCheck
 WORD 0
 
@@ -66,6 +67,11 @@ prStatusZephyrCheck:
 	rIfUnitHasStatus(0x19)
 		rIfUnitHasSkill(ZephyrID)
 			rAddConst(4)
+			
+prFlowStateCheck:
+	rIfUnitHasSkill(FlowStateID)
+		rIfUnitHasState(0x10000000)
+			rDoubled
 			
 prPassCheck: //player thieves
 	rIfUnitHasState(0x400)

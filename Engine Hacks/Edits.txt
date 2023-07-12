@@ -1,6 +1,33 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+// Fix vanilla Berserk/Sleep targetting bug
+//by Vesly
+PUSH
+ORG $405B4 
+SHORT $2804 // cmp r0, #4 
+SHORT $D92C // bls 0x8040612 
+SHORT $2108 // mov r1, #8 
+SHORT $5671 // ldsb r1, [r6, r1] 
+SHORT $1809 // add r1, r0 
+SHORT $4551 // cmp r1, r10 
+SHORT $DB27 // blt 0x8040612 
+SHORT $B401 // push {r0} 
+SHORT $46c0 // nop 
+
+ORG $405F2 
+SHORT $BC02 // pop {r1} 
+ORG $405F8 
+SHORT $7A33 // ldrb r3, [r6, #8] 
+SHORT $185B // add r3, r1 
+ORG $40606
+SHORT $5E22 // ldsh r2, [r4, r0] 
+SHORT $9206 // str r2, [sp, #0x18] 
+SHORT $7Af6 // ldrb r6, [r6, #0xB] 
+SHORT $469A // mov r10, r3 
+SHORT $46C0 // nop 
+POP
+
 //Make juna fruit set lvl 1; able to be used at any level
 PUSH
 

@@ -60,6 +60,134 @@ ALIGN 4
 MercyEffect:
 #incbin "Mercy/MercyEffect.dmp"
 
+ALIGN 4 //thanks retinaaaa
+DemolishEffect:
+#incbin "Demolish/FlowEffect.dmp"
+POIN DemolishEvent
+
+DemolishEvent:
+EVBIT_MODIFY 0x4
+CHECK_ALIVE 0x3F //sentry
+BNE 0x776 0x0 0xC //play alternate event and don't end turn if sentry is dead
+Text(TurretAlt)
+GOTO 0x9001
+
+LABEL 0x776
+
+TEXTSTART
+TEXTSHOW TurretTalk
+TEXTEND
+REMA
+SVAL 0x7 0x1
+BNE 0x9000 0xC 0x7
+SOUN 0xF1
+EVBIT_MODIFY 0x0
+DISA_IF 0x3F
+GOTO 0x9001
+LABEL 0x9000
+EVBIT_MODIFY 0x0
+LABEL 0x9001
+EVBIT_T 0x7
+ENDA
+
+ALIGN 4
+DemolishUsability:
+#incbin "Demolish/FlowUsability.dmp"
+POIN SkillTester
+WORD ElbowGreaseID
+
+ALIGN 4 //thanks retinaaaa
+AmmoEffect:
+#incbin "Ammo/AmmoEffect.dmp"
+POIN AmmoEvent
+
+AmmoEvent:
+EVBIT_MODIFY 0x4
+CHECK_ALIVE 0x3F //sentry
+BNE 0x776 0x0 0xC //play alternate event and don't end turn if sentry is dead
+Text(TurretAlt)
+GOTO 0x9001
+
+LABEL 0x776
+
+//ASMC 0xB88571 //clear items
+STAL 0x10
+SOUN 0x2f4
+STAL 0x15
+
+SOUN 0xB1
+STAL 0x5
+BYTE 0x40 0x0D 0x3F 0x44; POIN SilentGiveItem+1
+
+SOUN 0xB1
+STAL 0x5
+BYTE 0x40 0x0D 0x3F 0x44; POIN SilentGiveItem+1
+
+SOUN 0xB1
+STAL 0x5
+BYTE 0x40 0x0D 0x3F 0x44; POIN SilentGiveItem+1
+
+SOUN 0xB1
+STAL 0x5
+BYTE 0x40 0x0D 0x3F 0x44; POIN SilentGiveItem+1
+
+SOUN 0xB1
+STAL 0x5
+BYTE 0x40 0x0D 0x3F 0x44; POIN SilentGiveItem+1
+
+STAL 0x15
+SOUN 0x2D7
+
+LABEL 0x9001
+EVBIT_T 0x7
+ENDA
+
+ALIGN 4
+AmmoUsability:
+#incbin "Ammo/AmmoUsability.dmp"
+POIN AuraSkillCheck
+WORD ShootTwiceID
+
+ALIGN 4
+UnflowUsability: //don't ask
+#incbin "Flow/FlowUsability.dmp"
+POIN SkillTester
+WORD FlowStateID
+ALIGN 4
+FlowUsability:
+#incbin "Flow/UnflowUsability.dmp"
+POIN SkillTester
+WORD FlowStateID
+
+ALIGN 4
+FlowCombat:
+#incbin "Flow/FlowInBattle.dmp"
+POIN SkillTester
+WORD FlowStateID
+
+ALIGN 4
+FlowEffect:
+#incbin "Flow/FlowEffect.dmp"
+POIN FlowEvent
+ALIGN 4
+UnflowEffect:
+#incbin "Flow/UnflowEffect.dmp"
+POIN UnflowEvent
+
+FlowEvent:
+ENUT 0x22
+SOUN 0x122
+//SOUN 0x3b5
+STAL 0x5
+NoFade
+ENDA
+
+UnflowEvent:
+ENUF 0x22
+SOUN 0x313
+STAL 0x5
+NoFade
+ENDA
 
 #include "CombatArts/CombatArts.event"
 

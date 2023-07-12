@@ -8,6 +8,7 @@ pDefenseModifiers: // Defense
 	POIN prSleepHalfDef prPoisonHalfDef
 	POIN prAvoidBuffDef
 	POIN prAcrobatCheck
+	POIN prFlowStateCheckDef
 	POIN prCantoRingDef prCounterDef prBulwarkRing prGrimRingDef
 //	POIN prTemperedFateDef
 	#ifdef DEBUFFS_MIN_ZERO
@@ -71,6 +72,11 @@ rIfUnitHasStatus(0x1)
 prTemperedFateDef:
 rIfUnitHasStatus(0x13)
 	rAddConst(50)
+	
+prFlowStateCheckDef:
+	rIfUnitHasSkill(FlowStateID)
+		rIfUnitHasState(0x10000000)
+			rHalved
 
 prItemPassiveDefense:
 #ifndef DONT_STACK_BOOSTS

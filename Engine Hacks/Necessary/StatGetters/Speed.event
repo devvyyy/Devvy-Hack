@@ -9,6 +9,7 @@ pSpeedModifiers: // Speed
 	POIN prMinZero
 	#endif
 	POIN prEmpowerSpdCheck
+//	POIN prFlowStateCheckSpd
 	POIN prStatusOverdriveSpdCheck prBulwarkRingSpd
 //	POIN prTemperedFateSpd
 WORD 0
@@ -44,6 +45,11 @@ rIfUnitHasNotSkill(SanctuaryID)
 prTemperedFateSpd:
 rIfUnitHasStatus(0x13)
 	rConstant(0)
+	
+prFlowStateCheckSpd:
+	rIfUnitHasSkill(FlowStateID)
+		rIfUnitHasState(0x10000000)
+			rDoubled
 
 prItemPassiveSpeed:
 #ifndef DONT_STACK_BOOSTS

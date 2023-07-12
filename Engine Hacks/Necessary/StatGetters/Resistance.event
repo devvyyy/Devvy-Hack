@@ -9,6 +9,7 @@ pResistanceModifiers: // Resistance
 	POIN prSleepHalfRes prPoisonHalfRes
 	POIN prAvoidBuffRes
 	POIN prAcrobatCheckRes
+	POIN prFlowStateCheckRes
 	POIN prCantoRingRes prBulwarkRingRes prGrimRingRes
 //	POIN prTemperedFateRes
 	#ifdef DEBUFFS_MIN_ZERO
@@ -67,6 +68,11 @@ rIfUnitHasNotSkill(SanctuaryID)
 prBulwarkRingRes:
 rIfUnitHasSkill(BattleVeteranID)
 		rAddConst(7)
+		
+prFlowStateCheckRes:
+	rIfUnitHasSkill(FlowStateID)
+		rIfUnitHasState(0x10000000)
+			rHalved
 
 prLifeAndDeathMinus:
 _testSkill(HeroesLifeAndDeathID,0,5)

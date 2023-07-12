@@ -104,16 +104,19 @@ int SetupWeaponHelpText(u16 item) {
     Text_InsertString(&gHelpTextHandles[0], 0x2F, 0x8, GetStringFromIndex(0x500)); //range
     Text_InsertString(&gHelpTextHandles[0], 0x61, 0x8, GetStringFromIndex(0x502)); //weight
 
-    Text_InsertString(&gHelpTextHandles[1], 0x0, 0x8, GetStringFromIndex(0x503)); //might
+    
     if (IsItemShield(item)) {
-        Text_InsertString(&gHelpTextHandles[1], 0x2F, 0x8, GetStringFromIndex(0x04EF)); //def
-        Text_InsertString(&gHelpTextHandles[1], 0x61, 0x8, GetStringFromIndex(0x04F0)); //res
+        Text_InsertString(&gHelpTextHandles[1], 0x0, 0x8, GetStringFromIndex(0x04EF)); //def
+        Text_InsertString(&gHelpTextHandles[1], 0x2F, 0x8, GetStringFromIndex(0x04F0)); //res
+		Text_InsertString(&gHelpTextHandles[1], 0x61, 0x8, GetStringFromIndex(0x0225)); //dodge
     }
     else if (IsItemDagger(item)) {
+		Text_InsertString(&gHelpTextHandles[1], 0x0, 0x8, GetStringFromIndex(0x503)); //might
         Text_InsertString(&gHelpTextHandles[1], 0x2F, 0x8, GetStringFromIndex(0x4F4)); //hit
         Text_InsertString(&gHelpTextHandles[1], 0x61, 0x8, GetStringFromIndex(0x21E)); //lethality
     }
     else {
+		Text_InsertString(&gHelpTextHandles[1], 0x0, 0x8, GetStringFromIndex(0x503)); //might
         Text_InsertString(&gHelpTextHandles[1], 0x2F, 0x8, GetStringFromIndex(0x4F4)); //hit
         Text_InsertString(&gHelpTextHandles[1], 0x61, 0x8, GetStringFromIndex(0x501)); //crit
     }

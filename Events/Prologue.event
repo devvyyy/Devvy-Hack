@@ -38,6 +38,7 @@ CharacterEventBothWays(0x10,AffoBreveConvo, Affo, Breve)
 CharacterEventBothWays(0xB,HildrUlrichConvo, Hildr, Ulrich)
 CharacterEventBothWays(0xC,AnsgarAffoConvo, Ansgar, Affo)
 CharacterEventBothWays(0xD,HildrAffoConvo, Hildr, Affo)
+CharacterEventBothWays(0xA,AnsgarBreveConvo, Ansgar, Breve)
 END_MAIN
 
 AffoBreveConvo:
@@ -51,6 +52,14 @@ AffoBreveConvo:
 HildrUlrichConvo:
 	MUSI
 	Text(HildrUlrichTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+AnsgarBreveConvo:
+	MUSI
+	Text(AnsgarBreveConvo)
 	MUNO
 	MURE 2
 	NoFade
@@ -253,7 +262,7 @@ FADU 20
 STAL 10
 CameraCursor(Affogato)
 CameraCursor(Ulrich)
-Text(Prologue4)
+Text(Prologue3)
 STAL 5
 NoFade
 ENDA
@@ -345,6 +354,9 @@ STAL 5
 BROWNBOXTEXT AeteriaCapitalText [8,8]
 STAL 15
 Text(PrologueAeteriaEnding)
+
+CenterTextbox(PrologueSummary)
+
 FADI 60
 STAL 10
 MNC2 0x1

@@ -32,7 +32,7 @@ TURN 0x0 TriggerHappyHavoc [13,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEvent(0x0,YoryTurretCheck,Yory,0x3F)
+//CharacterEvent(0x0,YoryTurretCheck,Yory,0x3F)
 CharacterEventBothWays(0x10,AffoGorloisConvo, Affo, Gorlois)
 CharacterEventBothWays(0x11,IronRuneConvo, Gorlois, Stroganoff)
 CharacterEventBothWays(0x12,AnsgarThereseConvo, Ansgar, Therese)
@@ -52,9 +52,9 @@ CharacterEventBothWays(0x23,YoryLiliConvo, Yory, Lili)
 ALIGN 32
 MiscBasedEvents:
 AREA 0xD KillTopMoat [17,2] [18,2]
-AREA 0xA FortniteLeft [5,18] [5,18]
-AREA 0xB FortniteMid [13,11] [13,11]
-AREA 0xC FortniteRight [18,16] [18,16]
+AREA 0xA FortniteLeft [7,20] [7,20]
+AREA 0xB FortniteMid [15,13] [15,13]
+AREA 0xC FortniteRight [20,19] [20,19]
 	CauseGameOverIfLordDies
 	END_MAIN
 
@@ -62,11 +62,18 @@ LocationBasedEvents:
 Chest(MasterSeal,21,0)
 Chest(0x74,12,6)
 Chest(0x5F,14,7)
-Door(10,9)
-Door(21,3)
-Door(15,8)
-Door(17,8)
-Door(18,8)
+Door(16,10)
+Door(18,10)
+Door(19,10)
+Door(23,5)
+Door(24,5)
+Door(16,3)
+Door(12,11)
+Door(12,12)
+//Stairs(0x1,3,0,15,1)
+//Stairs(0x2,3,1,15,1)
+//Stairs(0x3,13,0,17,1)
+//Stairs(0x4,13,1,17,1)
 	END_MAIN
 
 Dunno1:
@@ -86,136 +93,145 @@ Tutorial:
 	END_MAIN
 
 Units1:
-LoadUnit(5,4)
-LoadUnit(6,4)
-LoadUnit(7,4)
-LoadUnit(5,5)
-LoadUnit(6,5)
-LoadUnit(7,5)
-LoadUnit(8,4)
-LoadUnit(8,5)
+LoadUnit(7,6)
+LoadUnit(8,6)
+LoadUnit(9,6)
+LoadUnit(7,7)
+LoadUnit(8,7)
+LoadUnit(9,7)
+
+LoadUnit(1,6)
+LoadUnit(16,5)
+
+LoadUnit(22,7)
+LoadUnit(23,7)
+LoadUnit(24,7)
+LoadUnit(22,8)
+LoadUnit(23,8)
+LoadUnit(24,8)
+
+LoadUnit(17,5)
 LoadUnit(18,5)
 LoadUnit(19,5)
-LoadUnit(20,5)
-LoadUnit(18,6)
-LoadUnit(19,6)
-LoadUnit(20,6)
-LoadUnit(21,5)
-LoadUnit(21,6)
 	UNIT
 
-EnemyUnits:
-UNIT Selwyn 0x31 0x1 Level(10, Enemy, 0)     [20,17] DropItem 0x0 0x0 0x0 [0xFE,SecondSeal] BossAI
-UNIT Aeteria Occultist 0x1 Level(7, Enemy, 1)     [0,9] DropItem 0x0 0x0 0x0 [Flux,Elixir] ChargeAI
-UNIT Aeteria WyvernRider 0x1 Level(6, Enemy, 1)     [1,9] 0b 0x0 0x0 0x0 [IronLabrys] ChargeAI
-UNIT Aeteria AxeArmor 0x1 Level(7, Enemy, 1)     [9,9] DropItem 0x0 0x0 0x0 [SteelLabrys,ShortAxe,DoorKey] BossAI
-UNIT Aeteria Shaman 0x1 Level(6, Enemy, 1)     [1,13] 0b 0x0 0x0 0x0 [DarkTome2] AttackInRangeAI
+EnemyUnits: //InfantrySoul, CavSoul, FlierSoul, ArmorSoul, MagSoul, PromoSoul, StealSoul
+UNIT Selwyn 0x31 0x1 Level(10, Enemy, 0)     [12,21] DropItem 0x0 0x0 0x0 [0xFE,SecondSeal] BossAI
+UNIT Aeteria Occultist 0x1 Level(7, Enemy, 1)     [9,13] DropItem 0x0 0x0 0x0 [Flux,Elixir] ChargeAI
+UNIT Aeteria WyvernRider 0x1 Level(6, Enemy, 1)     [2,10] 0b 0x0 0x0 0x0 [IronLabrys] ChargeAI
+UNIT Aeteria AxeArmor 0x1 Level(7, Enemy, 1)     [10,10] 0b 0x0 0x0 0x0 [SteelLabrys,ShortAxe,] ChargeAI
 UNIT Aeteria Thaumaturge 0x1 Level(6, Enemy, 1)     [6,11] 0b 0x0 0x0 0x0 [Thunder] StallOneTurnAI
-UNIT Aeteria Myrmidon 0x1 Level(6, Enemy, 1)     [20,11] 0b 0x0 0x0 0x0 [KillingEdge] TwoActionAI
-UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [22,10] DropItem 0x0 0x0 0x0 [Flux,Mine] ChargeAI
-UNIT Aeteria LanceArmor 0x1 Level(7, Enemy, 1)     [17,7] 0b 0x0 0x0 0x0 [Spear] BossAI
-UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [0,5] 0b 0x0 0x0 0x0 [DarkTome2] StallOneTurnAI
-UNIT AeteriaStealable Soldier 0x1 Level(6, Enemy, 1)     [5,7] 0b 0x0 0x0 0x0 [IronGlaive,Elixir] ChargeAI
+UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [22,11] DropItem 0x0 0x0 0x0 [Flux,Mine] ChargeAI
+UNIT AeteriaStealable Shaman 0x1 Level(7, Enemy, 1)     [18,11] 0b 0x0 0x0 0x0 [DarkTome1,PureWater] BossAI
+UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [0,11] 0b 0x0 0x0 0x0 [DarkTome2] StallOneTurnAI
+UNIT AeteriaStealable Soldier 0x1 Level(6, Enemy, 1)     [1,2] 0b 0x0 0x0 0x0 [IronGlaive,Elixir] ChargeAI
 UNIT Aeteria Mercenary 0x1 Level(6, Enemy, 1)     [3,12] 0b 0x0 0x0 0x0 [IronSword,Zanbato] AttackInRangeAI
-UNIT Aeteria Archer 0x1 Level(6, Enemy, 1)     [13,2] 0b 0x0 0x0 0x0 [IronBow] TwoActionAI
-UNIT AeteriaStealable Mage 0x1 Level(6, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [Thunder,PureWater] AttackInRangeAI
-UNIT Aeteria Fighter 0x1 Level(6, Enemy, 1)     [10,5] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
-UNIT Aeteria SCav 0x1 Level(6, Enemy, 1)     [9,3] 0b 0x0 0x0 0x0 [Armorslayer,Vulnerary] AttackInRangeAI
-UNIT Aeteria PegRider 0x1 Level(6, Enemy, 1)     [8,13] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
-UNIT Aeteria PegRider 0x1 Level(6, Enemy, 1)     [17,1] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
-UNIT Aeteria Pirate 0x1 Level(6, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [ShortAxe,] BossAI
-UNIT Aeteria Archer 0x1 Level(6, Enemy, 1)     [4,3] 0b 0x0 0x0 0x0 [KillerBow] ChargeAI
+UNIT Aeteria Archer 0x1 Level(6, Enemy, 1)     [18,14] 0b 0x0 0x0 0x0 [IronBow] TwoActionAI
+UNIT Aeteria Fighter 0x1 Level(6, Enemy, 1)     [24,12] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
+UNIT Aeteria SCav 0x1 Level(6, Enemy, 1)     [7,16] 0b 0x0 0x0 0x0 [Armorslayer,PureWater] AttackInRangeAI
+UNIT Aeteria PegRider 0x1 Level(1, Enemy, 1)     [22,15] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
+UNIT Aeteria SArmor 0x1 Level(1, Enemy, 1)     [14,13] DropItem 0x0 0x0 0x0 [Runesword,DoorKey] BossAI
+
+
+UNIT PromoSoul Swordmaster 0x1 Level(1, Enemy, 1)     [12,20] 0b 0x0 0x0 0x0 [KillingEdge] TwoActionAI
+UNIT CavSoul SPal 0x1 Level(1, Enemy, 1)     [11,21] 0b 0x0 0x0 0x0 [BraveSword] StallOneTurnAI
+UNIT PromoSoul Hero 0x1 Level(1, Enemy, 1)     [13,21] 0b 0x0 0x0 0x0 [LightBrand] ChargeAI
+UNIT MagSoul Bishop 0x1 Level(6, Enemy, 1)     [12,22] 0b 0x0 0x0 0x0 [Ray] StallOneTurnAI
+
+
 	UNIT
 	
 WyvernAndPeg:
-UNIT FlierSoul WyvRider 0x1 Level(6, Enemy, 1)     [8,18] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
-UNIT FlierSoul PegRider 0x1 Level(6, Enemy, 1)     [17,18] 0b 0x0 0x0 0x0 [Axereaver,IronLance] TwoActionAI
+UNIT FlierSoul WyvernKnight 0x1 Level(6, Enemy, 1)     [6,22] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
+UNIT FlierSoul Falcoknight 0x1 Level(6, Enemy, 1)     [21,22] 0b 0x0 0x0 0x0 [Axereaver,IronLance] ChargeAI
 	UNIT	
 
 LeftStairsRein1:
-UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [Flux] ChargeAI
-UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [DarkTome2] ChargeAI
+UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [0,11] 0b 0x0 0x0 0x0 [Flux] ChargeAI
+UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [0,17] 0 0 1 REDA2R17 [DarkTome2] ChargeAI
 	UNIT
 	
 MidReinWith1Unit:
-UNIT Aeteria Myrmidon 0x1 Level(7, Enemy, 1)     [13,11] 0b 0x0 0x0 0x0 [IronSword,Lancereaver] [0,0xF,4,0]
+UNIT Aeteria Myrmidon 0x1 Level(7, Enemy, 1)     [15,13] 0b 0x0 0x0 0x0 [IronSword,Lancereaver] [0,0xF,4,0]
 	UNIT
 	
 LeftStairsRein3:
-UNIT Aeteria Archer 0x1 Level(7, Enemy, 1)     [0,12] 0b 0x0 0x0 0x0 [SteelBow] ChargeAI
-UNIT Aeteria Mercenary 0x1 Level(6, Enemy, 1)     [0,12] 0 0 1 REDA1R12 [IronSword,Zanbato] ChargeAI
+UNIT Aeteria Archer 0x1 Level(7, Enemy, 1)     [0,0] 0 0 1 REDA0R2 [SteelBow] ChargeAI
+UNIT Aeteria Mercenary 0x1 Level(6, Enemy, 1)     [1,0] 0 0 1 REDA1R2 [IronSword,Zanbato] ChargeAI
 	UNIT
 	
 LeftMoatRein1:
-UNIT Aeteria Pirate 0x1 Level(6, Enemy, 1)     [18,0] 0b 0x0 0x0 0x0 [IronAxe] ChargeAI
+UNIT Aeteria Warrior 0x1 Level(1, Enemy, 1)     [19,0] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
+UNIT Aeteria LPal 0x1 Level(1, Enemy, 1)     [20,0] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
 	UNIT
 	
 LeftMoatRein2:
-UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [0,9] 0b 0x0 0x0 0x0 [Flux] ChargeAI
-UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [0,9] 0 0 1 REDA1R9 [DarkTome2] ChargeAI
+UNIT Aeteria Soldier 0x1 Level(6, Enemy, 1)     [0,17] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
+UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [0,19] 0 0 1 REDA2R18 [DarkTome2] ChargeAI
 	UNIT
 	
 LeftMoatRein3:
-UNIT Aeteria Occultist 0x1 Level(7, Enemy, 1)     [0,9] 0b 0x0 0x0 0x0 [DarkTome2] ChargeAI
-UNIT FlierSoul PegRider 0x1 Level(6, Enemy, 1)     [0,9] 0 0 1 REDA1R9 [IronLance] ChargeAI
+UNIT Aeteria Occultist 0x1 Level(7, Enemy, 1)     [0,11] 0b 0x0 0x0 0x0 [DarkTome2] ChargeAI
+UNIT ArmorSoul Parson 0x1 Level(6, Enemy, 1)     [0,17] 0 0 1 REDA2R16 [Light2] ChargeAI
 	UNIT
 	
 ThiefRein1:
-UNIT 0x64 Thief 0x1 Level(5, Enemy, 1)     [15,6] 0b 0x0 0x0 0x0 [Lancereaver,SteelDagger,ChestKey,ChestKey] ThiefAI
+UNIT 0x64 Thief 0x1 Level(5, Enemy, 1)     [13,9] 0b 0x0 0x0 0x0 [Lancereaver,SteelDagger,ChestKey,ChestKey] ThiefAI
 	UNIT
 	
 LeftStairsRein2:
-UNIT InfantrySoul Fighter 0x1 Level(7, Enemy, 1)     [0,12] 0 0 1 REDA1R12 [Swordreaver] ChargeAI
-UNIT InfantrySoul Soldier 0x1 Level(6, Enemy, 1)     [0,12] 0b 0x0 0x0 0x0 [Axereaver,SteelLance] ChargeAI
+UNIT InfantrySoul Warrior 0x1 Level(1, Enemy, 1)     [0,0] 0 0 1 REDA0R2 [Swordreaver] ChargeAI
+UNIT InfantrySoul Halberdier 0x1 Level(1, Enemy, 1)     [1,0] 0 0 1 REDA1R2 [Axereaver,SteelLance] ChargeAI
 	UNIT
 	
 TopMoat1:
-UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [17,0] 0b 0x0 0x0 0x0 [DarkTome2] StallOneTurnAI
-UNIT FlierSoul WyvernRider 0x1 Level(7, Enemy, 1)     [18,0] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
+UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [26,18] 0b 0x0 0x0 0x0 [DarkTome2] StallOneTurnAI
+UNIT FlierSoul WyvernKnight 0x1 Level(1, Enemy, 1)     [26,19] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
 	UNIT
 	
 TopMoat2:
-UNIT Aeteria Occultist 0x1 Level(7, Enemy, 1)     [18,0] 0b 0x0 0x0 0x0 [DarkTome1] ChargeAI
-UNIT Aeteria Pirate 0x1 Level(7, Enemy, 1)     [17,0] 0b 0x0 0x0 0x0 [IronAxe] ChargeAI
+UNIT Aeteria Occultist 0x1 Level(7, Enemy, 1)     [0,17] 0b 0x0 0x0 0x0 [DarkTome1] ChargeAI
+UNIT Aeteria Pirate 0x1 Level(7, Enemy, 1)     [0,18] 0b 0x0 0x0 0x0 [IronAxe] ChargeAI
 	UNIT
 	
 TopMoat3:
-UNIT FlierSoul PegRider 0x1 Level(7, Enemy, 1)     [18,0] 0b 0x0 0x0 0x0 [HeavySpear] ChargeAI
+UNIT FlierSoul Falcoknight 0x1 Level(1, Enemy, 1)     [26,18] 0b 0x0 0x0 0x0 [HeavySpear] ChargeAI
 	UNIT
 	
 BottomLeftStairs:
-UNIT FlierSoul WyvernRider 0x1 Level(7, Enemy, 1)     [17,0] 0b 0x0 0x0 0x0 [SteelAxe,Hammer] ChargeAI
+UNIT FlierSoul WyvernKnight 0x1 Level(1, Enemy, 1)     [26,19] 0b 0x0 0x0 0x0 [SteelAxe,Hammer] ChargeAI
 	UNIT
 	
 ANOTHERWYVERN:
-UNIT FlierSoul WyvernRider 0x1 Level(6, Enemy, 1)     [5,18] 0 0 1 REDA5R17 [SteelAxe] ChargeAI
+UNIT ArmorSoul 0x7c 0x1 Level(2, Enemy, 1)     [7,20] 0 0 1 REDA5R17 [Light2] ChargeAI
 	UNIT
 	
 InnerFortRein1:
-UNIT Aeteria Shaman 0x1 Level(7, Enemy, 1)     [13,11] 0b 0x0 0x0 0x0 [DarkTome2] [0,0xF,4,0]
-UNIT Aeteria Fighter 0x1 Level(6, Enemy, 1)     [13,11] 0 0 1 REDA14R11 [IronLabrys] [0,0xF,4,0]
+UNIT Aeteria Shaman 0x1 Level(7, Enemy, 1)     [15,13] 0b 0x0 0x0 0x0 [DarkTome2] [0,0xF,4,0]
+UNIT Aeteria Fighter 0x1 Level(6, Enemy, 1)     [15,13] 0 0 1 REDA13R12 [IronLabrys] [0,0xF,4,0]
 	UNIT
 
 InnerFortRein2:
-UNIT InfantrySoul Archer 0x1 Level(6, Enemy, 1)     [13,11] 0b 0x0 0x0 0x0 [SteelBow] [0,0xF,4,0]
-UNIT CavSoul LCav 0x1 Level(7, Enemy, 1)     [13,11] 0 0 1 REDA14R11 [Horseslayer] [0,0xF,4,0]
+UNIT PromoSoul Sniper 0x1 Level(1, Enemy, 1)     [15,13] 0b 0x0 0x0 0x0 [SteelBow] [0,0xF,4,0]
+UNIT CavSoul LPal 0x1 Level(1, Enemy, 1)     [15,13] 0 0 1 REDA16R12 [Horseslayer] [0,0xF,4,0]
 	UNIT
 	
 LeftFortRein1:
-UNIT Aeteria Myrmidon 0x1 Level(6, Enemy, 1)     [5,18] 0b 0x0 0x0 0x0 [IronSword] [0,0xF,4,0]
+UNIT FlierSoul GriffonKnight 0x1 Level(1, Enemy, 1)     [7,20] 0b 0x0 0x0 0x0 [SteelBow] [0,0xF,4,0]
 	UNIT
 	
 LeftFortRein2:
-UNIT Aeteria Fighter 0x1 Level(7, Enemy, 1)     [5,18] 0b 0x0 0x0 0x0 [SteelLabrys,Swordreaver] [0,0xF,4,0]
-UNIT Aeteria Hunter 0x1 Level(7, Enemy, 1)     [5,18] 0 0 1 REDA3R18 [Longbow,SteelBow] [0,0xF,4,0]
+UNIT Aeteria Fighter 0x1 Level(7, Enemy, 1)     [7,20] 0b 0x0 0x0 0x0 [SteelLabrys,Swordreaver] [0,0xF,4,0]
+UNIT Aeteria Hunter 0x1 Level(7, Enemy, 1)     [7,20] 0 0 1 REDA6R19 [Longbow,SteelBow] [0,0xF,4,0]
 	UNIT
 	
 RightFortRein1:
-UNIT InfantrySoul Mercenary 0x1 Level(7, Enemy, 1)     [18,16] 0b 0x0 0x0 0x0 [IronSword] [0,0xF,4,0]
+UNIT Aeteria Mercenary 0x1 Level(7, Enemy, 1)     [20,19] 0b 0x0 0x0 0x0 [IronSword] [0,0xF,4,0]
+UNIT CavSoul APal 0x1 Level(1, Enemy, 1)     [20,19] 0 0 1 REDA22R19 [IronAxe] [0,0xF,4,0]
 	UNIT
 	
 RightFortRein2:
-UNIT Aeteria Thaumaturge 0x1 Level(6, Enemy, 1)     [18,16] 0 0 1 REDA19R17 [Iceberg] TwoActionAI
+UNIT Aeteria Thaumaturge 0x1 Level(6, Enemy, 1)     [20,19] 0 0 1 REDA22R18 [Iceberg] TwoActionAI
 	UNIT
 	
 RightStairsRein1:
@@ -223,43 +239,56 @@ UNIT Aeteria Thaumaturge 0x1 Level(7, Enemy, 1)     [9,13] 0b 0x0 0x0 0x0 [Thund
 	UNIT
 	
 RightStairsRein2:
-UNIT InfantrySoul Myrm 0x1 Level(7, Enemy, 1)     [9,13] 0 0 1 REDA9R12 [Flamberge] ChargeAI
-UNIT CavSoul ACav 0x1 Level(7, Enemy, 1)     [9,13] 0b 0x0 0x0 0x0 [Halberd] ChargeAI
+UNIT PromoSoul Halberdier 0x1 Level(1, Enemy, 1)     [19,0] 0 0 1 REDA19R1 [SteelLance] TwoActionAI
+UNIT CavSoul APal 0x1 Level(1, Enemy, 1)     [20,0] 0b 0x0 0x0 0x0 [Halberd] TwoActionAI
 	UNIT
 	
 RightFortRein3:
-UNIT AeteriaStealable Mage 0x1 Level(7, Enemy, 1)     [18,16] 0b 0x0 0x0 0x0 [Wind,Talisman] [0,0xF,4,0]
+UNIT AeteriaStealable Mage 0x1 Level(7, Enemy, 1)     [20,19] 0b 0x0 0x0 0x0 [Wind,Talisman] [0,0xF,4,0]
 	UNIT
 	
 RightFortRein4:
-UNIT InfantrySoul Soldier 0x1 Level(7, Enemy, 1)     [18,16] 0b 0x0 0x0 0x0 [0xDD,Javelin] TwoActionAI
+UNIT ArmorSoul GoldKnight 0x1 Level(2, Enemy, 1)     [20,19] 0b 0x0 0x0 0x0 [MageSword,Javelin] TwoActionAI
 	UNIT
 	
 HolyFuckWhy1:
-UNIT InfantrySoul Soldier 0x1 Level(6, Enemy, 1)     [18,16] 0 0 1 REDA21R16 [IronLance] AttackInRangeAI
-UNIT AeteriaStealable Thaumaturge 0x1 Level(6, Enemy, 1)     [18,16] 0 0 1 REDA21R18 [Fire,PureWater] StallOneTurnAI
-UNIT MagSoul Druid 0x1 Level(1, Enemy, 1)     [18,16] DropItem 0 1 REDA19R17 [Flux, 0xCE] BossAI
-UNIT InfantrySoul Mercenary 0x1 Level(7, Enemy, 1)     [18,16] 0 0 1 REDA16R17 [SteelSword,] AttackInRangeAI
+UNIT InfantrySoul Soldier 0x1 Level(6, Enemy, 1)     [22,18] 0 0 1 REDA21R16 [IronLance] AttackInRangeAI
+UNIT MagSoul Thaumaturge 0x1 Level(6, Enemy, 1)     [20,19] 0 0 1 REDA22R18 [Fire,] StallOneTurnAI
+UNIT MagSoul Druid 0x1 Level(3, Enemy, 1)     [20,19] DropItem 0 1 REDA21R20 [Flux, 0xCE] BossAI
+UNIT InfantrySoul Mercenary 0x1 Level(7, Enemy, 1)     [20,19] 0 0 1 REDA19R19 [SteelSword,] AttackInRangeAI
 	UNIT
 
 HolyFuckWhy2:
-UNIT MagSoul Sage 0x1 Level(1, Enemy, 1)     [5,18] DropItem 0 1 REDA4R17 [Fire,MasterSeal] BossAI
-UNIT CavSoul SwordCav 0x1 Level(6, Enemy, 1)     [5,18] 0 0 1 REDA1R16 [SteelSword] TwoActionAI
-UNIT CavSoul LanceCav 0x1 Level(6, Enemy, 1)     [5,18] 0 0 1 REDA0R18 [IronLance] ChargeAI
-UNIT CavSoul PegRider 0x1 Level(6, Enemy, 1)     [5,18] 0 0 1 REDA7R18 [IronLance] TwoActionAI
-UNIT InfantrySoul Archer 0x1 Level(7, Enemy, 1)     [5,18] 0 0 1 REDA2R18 [BodkinRifle,] AttackInRangeAI
+UNIT MagSoul Sage 0x1 Level(2, Enemy, 1)     [7,20] DropItem 0 1 REDA6R21 [Fire,MasterSeal] BossAI
+UNIT CavSoul SwordCav 0x1 Level(6, Enemy, 1)     [7,20] 0 0 1 REDA6R19 [SteelSword] TwoActionAI
+UNIT CavSoul LanceCav 0x1 Level(6, Enemy, 1)     [7,20] 0 0 1 REDA5R20 [IronLance] ChargeAI
+UNIT FlierSoul PegRider 0x1 Level(6, Enemy, 1)     [7,20] 0 0 1 REDA7R17 [IronLance] TwoActionAI
+UNIT InfantrySoul Archer 0x1 Level(7, Enemy, 1)     [7,20] 0 0 1 REDA8R19 [BodkinRifle,] AttackInRangeAI
 	UNIT
 
 HolyFuckWhy3:
-UNIT MagSoul Bishop 0x1 Level(1, Enemy, 1)     [13,11] DropItem 0 1 REDA12R10 [Light1,EnergyRing] BossAI
-UNIT InfantrySoul Archer 0x1 Level(6, Enemy, 1)     [13,11] 0 0 1 REDA16R12 [SteelBow] AttackInRangeAI
+UNIT MagSoul Bishop 0x1 Level(1, Enemy, 1)     [15,13] DropItem 0 1 REDA15R12 [Ray,EnergyRing] BossAI
+UNIT InfantrySoul Hunter 0x1 Level(6, Enemy, 1)     [15,13] 0 0 1 REDA14R15 [Longbow] AttackInRangeAI
 	UNIT
 
 RedSussy:
-UNIT King KingClass 0x1 Level(15, NPC, 0)     [6,1] 0b 0x0 0x0 0x0 [SteelBlade,SteelGlaive,SteelLabrys,0xD2] BossAI
-UNIT Gorlois Parson 0x1 Level(7, NPC, 0)     [6,3] 0b 0x0 0x0 0x0 [0x40,0xA0, Elixir] BossAI
-UNIT Lili Monk 0x1 Level(5, Ally, 0)     [7,2] 0b 0x0 0x0 0x0 [Light1,0x9E,Vulnerary] [0x0,0x0,0x0,0x0]
-UNIT Ogrim Parson 0x1 Level(6, Ally, 0)     [7,2] 0b 0x0 0x0 0x0 [Spark,0x68] [0x0,0x0,0x0,0x0]
+UNIT King KingClass 0x1 Level(15, NPC, 0)     [8,3] 0b 0x0 0x0 0x0 [SteelBlade,SteelGlaive,SteelLabrys,0xD2] BossAI
+UNIT Gorlois Parson 0x1 Level(7, NPC, 0)     [8,5] 0b 0x0 0x0 0x0 [0x40,0xA0, Elixir] BossAI
+UNIT Lili Monk 0x1 Level(5, Ally, 0)     [7,7] 0b 0x0 0x0 0x0 [Light1,0x9E,0xFC] [0x0,0x0,0x0,0x0]
+UNIT Ogrim Parson 0x1 Level(6, Ally, 0)     [10,7] 0b 0x0 0x0 0x0 [Spark,Physic,0x68] [0x0,0x0,0x0,0x0]
+
+UNIT Wreyvine Archer 0x1 Level(5, NPC, 1)     [4,1] 0b 0x0 0x0 0x0 [ShortBow,Elixir] [0,3,0,32]
+UNIT Wreyvine Archer 0x1 Level(5, NPC, 1)     [11,1] 0b 0x0 0x0 0x0 [ShortBow,Elixir] [0,3,0,32]
+
+UNIT Wreyvine Soldier 0x1 Level(5, NPC, 1)     [6,8] 0b 0x0 0x0 0x0 [SteelLance,ShortSpear,Vulnerary] BossAI
+UNIT Wreyvine SArmor 0x1 Level(5, NPC, 1)     [7,8] 0b 0x0 0x0 0x0 [Skypiercer,Elixir] BossAI
+UNIT Wreyvine LArmor 0x1 Level(5, NPC, 1)     [10,8] 0b 0x0 0x0 0x0 [Spear,Elixir] BossAI
+UNIT Wreyvine Fighter 0x1 Level(5, NPC, 1)     [11,8] 0b 0x0 0x0 0x0 [SteelAxe,ShortSpear,Vulnerary] BossAI
+
+UNIT Wreyvine Archer 0x1 Level(5, NPC, 1)     [21,9] 0b 0x0 0x0 0x0 [IronRifle,ShortBow,Vulnerary] BossAI
+UNIT Wreyvine Soldier 0x1 Level(5, NPC, 1)     [22,9] 0b 0x0 0x0 0x0 [SteelLance,ShortSpear,Elixir] BossAI
+UNIT Wreyvine Soldier 0x1 Level(5, NPC, 1)     [24,9] 0b 0x0 0x0 0x0 [SteelLance,ShortSpear,Elixir] BossAI
+UNIT Wreyvine Archer 0x1 Level(5, NPC, 1)     [25,9] 0b 0x0 0x0 0x0 [IronRifle,ShortBow,Vulnerary] BossAI
 	UNIT
 	
 CutsceneUnits:
@@ -272,13 +301,14 @@ UNIT Aoife Sage_F 0x1 Level(12, Enemy, 0)     [12,18] 0b 0x0 0x0 0x0 [] BossAI
 	UNIT
 
 Traps1:
-BLST [9,7] KillerBallista
-BLST [21,7] KillerBallista
-GreenSigil(17,2)
-GreenSigil(18,2)
-BlueSigil(13,11)
-BlueSigil(5,18)
-BlueSigil(18,16)
+BLST [4,1] KillerBallista
+BLST [12,1] KillerBallista
+//GreenSigil(17,2)
+//GreenSigil(18,2)
+
+BlueSigil(15,13)
+BlueSigil(7,20)
+BlueSigil(20,19)
 	ENDTRAP
 	ALIGN 4
 
@@ -291,7 +321,7 @@ SVAL 0x2 0x0
 CALL 0x9EE1B8
 STAL 10
 SOUN 0x60
-RemoveTrapAtCoords(5,18)
+RemoveTrapAtCoords(7,20)
 CameraCursor(King)
 STAL 60
 CURE
@@ -315,7 +345,7 @@ SVAL 0x2 0x0
 CALL 0x9EE1B8
 STAL 10
 SOUN 0x60
-RemoveTrapAtCoords(13,11)
+RemoveTrapAtCoords(15,13)
 CameraCursor(King)
 STAL 60
 CURE
@@ -339,7 +369,7 @@ SVAL 0x2 0x0
 CALL 0x9EE1B8
 STAL 10
 SOUN 0x60
-RemoveTrapAtCoords(18,16)
+RemoveTrapAtCoords(20,19)
 CameraCursor(King)
 STAL 60
 CURE
@@ -385,14 +415,14 @@ ENDA
 
 Turn1WTF:
 STAL 3
-CAM1 [13,11]
-FlashCursor(13,11,60)
+CAM1 [15,13]
+FlashCursor(15,13,60)
 STAL 5
-CAM1 [5,18]
-FlashCursor(5,18,60)
+CAM1 [7,20]
+FlashCursor(7,20,60)
 STAL 5
-CAM1 [18,16]
-FlashCursor(18,16,60)
+CAM1 [20,19]
+FlashCursor(20,19,60)
 STAL 3
 CameraCursor(Affogato)
 Text(Ch6Warning1)
@@ -986,6 +1016,9 @@ QuickRemu(Lennard,20)
 QuickRemu(Yory,21)
 QuickRemu(Lili,22)
 QuickRemu(Kane,23)
+QuickRemu(Wegman,24)
+QuickRemu(Klavdia,25)
+QuickRemu(Gerolf,26)
 MUSCMID 0x7FFF
 STAL 120
 EVBIT_F 0x2

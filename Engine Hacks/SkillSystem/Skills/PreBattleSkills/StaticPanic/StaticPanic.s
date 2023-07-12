@@ -33,7 +33,7 @@ bne End @skip if enemy phase
 @add spd/2 attack
 mov  r1, #0x5A
 ldrh r0, [r4, r1] @attack
-ldrb r2, [r4, #0x16] @spd
+ldrb r2, [r4, #0x12] @max hp
 lsr  r2, #1 @divide this by 2
 add  r0, r2
 strh r0, [r4,r1]
