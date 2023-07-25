@@ -158,7 +158,7 @@ int GetItemDescId(int item) {
         }
 
 	}
-	else if (IsBattleReal() && SkillTester(&gBattleActor.unit, 83)) { //unit with LungeID
+	if (IsBattleReal() && SkillTester(&gBattleActor.unit, 83)) { //unit with LungeID
         switch ((item & 0xFF)) {
 			case 0x64: //Buckler
                 itemDesc = 0x224;
@@ -173,7 +173,7 @@ int GetItemDescId(int item) {
         }
 		
     }
-    else if (IsDescDurabilityBased(itemDesc)) {
+    if (IsDescDurabilityBased(itemDesc)) {
         itemDesc = GetDurabilityBasedItemTable(itemDesc)[(item >> 0x8)];
     }
 

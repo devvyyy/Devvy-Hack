@@ -84,10 +84,10 @@ Eustace_Mug:
 #incext PortraitFormatter "GaryTopJack.png"
 setMugEntry(0xC6, Eustace_Mug, 3, 5, 3, 3)
 
-ALIGN 16 //Therese by RW
-Abernathy_Mug:
-#incext PortraitFormatter "RWVernelle.png"
-setMugEntry(0x0C, Abernathy_Mug, 4, 5, 3, 3)
+ALIGN 16
+Therese_Mug:
+#incext PortraitFormatter "Therese.png"
+setMugEntryExtend(0xC, Therese_Mug, 3, 5, 3, 3, 10, 4, 12, 8)
 
 ALIGN 16 //Chiasa by Levin
 Dira_Mug:
@@ -598,7 +598,7 @@ setMugEntry(0x52, Sieg_Mug, 3, 5, 3, 3)
 ALIGN 16 //Anakin by Busk (body), head spliced from Roland
 Anakin_Mug:
 #incext PortraitFormatter "Anakin.png"
-setMugEntry(0x53, Anakin_Mug, 3, 5, 3, 3)
+setMugEntry(0x53, Anakin_Mug, 3, 6, 3, 3)
 
 ALIGN 16 //Kelik minimug by Lenh
 Kelik_Mug:

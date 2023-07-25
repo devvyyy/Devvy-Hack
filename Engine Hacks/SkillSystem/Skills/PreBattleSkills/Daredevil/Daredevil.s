@@ -79,12 +79,12 @@ str r1,[r0]
 
 mov r1, #0x66 @crit
 ldrh r0, [r4, r1]
-add r0, #40
+add r0, #77
 strh r0, [r4,r1]
 
 mov r1, #0x66 @crit
 ldrh r0, [r5, r1]
-add r0, #40
+add r0, #77
 strh r0, [r5,r1]
 
 End:

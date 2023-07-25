@@ -45,7 +45,7 @@ AffoUlrichConvo:
 	
 AnsgarBreveConvo:
 	MUSI
-	Text(AnsgarBreveTalk)
+	Text(AnsgarBreveTalk2)
 	MUNO
 	MURE 2
 	NoFade
@@ -192,23 +192,22 @@ HardUnits(LunaticUnits,EvelynUnit)
 	LOAD1 0x1 EnemyUnits
 Music(0x47)
 SetBackground(0x3C)
-Text(Ch1Opening1)
+Text(Ch1Opening0)
 FADI 20
 CLEAN
 FADU 60
 STAL 5
 CameraCursor(Sequin)
+CameraCursor(Nora)
 STAL 10
 Music(0x53)
 SetBackground(0x34)
-Text(Ch1Opening2)
+Text(Ch1Opening1)
 ClearBackground
 STAL 5
 	LOAD2 0x1 CutsceneUnits
 	ENUN
 STAL 10
-Music(0x92)
-Text(Ch1Opening3)
 	GotoPrepScreen
 	ENDA
 

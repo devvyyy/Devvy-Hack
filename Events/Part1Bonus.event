@@ -12,21 +12,21 @@ PointerList:
 	POIN $0 $0 $0
 	POIN BeginningScene EndingScene
 
-TurnBasedEvents:
-TurnEventEnemy(0,Ahahahaha,1)
+TurnBasedEvents: //find and replace '// FEE3 replace this' with nothing later bye
+// FEE3 replace thisTurnEventEnemy(0,Ahahahaha,1)
 TURN 0x0 ReinEvent1 [2,0] 0x0
-TURN 0x0 WoundedConvo [2,0] 0x0
+// FEE3 replace thisTURN 0x0 WoundedConvo [2,0] 0x0
 TURN 0x0 ReinEvent2 [3,0] 0x0
 TURN 0x0 ReinEvent3 [4,0] 0x0
-TURN 0x0 KingConvo [4,0] 0x0
+// FEE3 replace thisTURN 0x0 KingConvo [4,0] 0x0
 TURN 0x0 ReinEvent4 [5,0] 0x0
-TurnEventEnemy(0,SelwynSickoMode,5)
+// FEE3 replace thisTurnEventEnemy(0,SelwynSickoMode,5)
 TURN 0x0 ReinEvent5 [6,0] 0x0
 TURN 0x0 ReinEvent6 [7,0] 0x0
-TURN 0x0 EscapeConvo [7,0] 0x0
+// FEE3 replace thisTURN 0x0 EscapeConvo [7,0] 0x0
 TURN 0x0 ReinEvent7 [8,0] 0x0
 TURN 0x0 ReinEvent8 [9,0] 0x0
-TURN 0x0 BruhConvo [9,0] 0x0
+// FEE3 replace thisTURN 0x0 BruhConvo [9,0] 0x0
 TURN 0x0 TriggerHappyHavoc [10,0] 0x0
 	END_MAIN
 	
@@ -451,20 +451,20 @@ BeginningScene:
 	CUSN Wegman
 	CUSN Klavdia
 	CUSN Gerolf
-	CenterTextbox(StorySynopsis)
-	ENUN
-	CALL $591FD8
-	FADU 30
-	STAL 20
-	CameraCursor(Selwyn)
-	CameraCursor(Sylveria)
-	Music(0xa9)
-	Text(ChBonusAfterPreps1)
-	STAL 30
+// FEE3 replace this	CenterTextbox(StorySynopsis)
+// FEE3 replace this	ENUN
+CALL $591FD8
+// FEE3 replace this	FADU 30
+// FEE3 replace this	STAL 20
+// FEE3 replace this	CameraCursor(Selwyn)
+// FEE3 replace this	CameraCursor(Sylveria)
+// FEE3 replace this	Music(0xa9)
+// FEE3 replace this	Text(ChBonusAfterPreps1)
+// FEE3 replace this	STAL 30
 	CameraCursor(Affogato)
-	Music(0x3cd)
-	Text(ChBonusAfterPreps2)
-	CenterTextbox(RewardsNotif)
+// FEE3 replace this	Music(0x3cd)
+// FEE3 replace this	Text(ChBonusAfterPreps2)
+// FEE3 replace this	CenterTextbox(RewardsNotif)
 	CUSA Wegman
 	CUSA Klavdia
 	CUSA Gerolf
@@ -472,7 +472,7 @@ BeginningScene:
 	ENDA
 
 EndingScene:
-	CenterTextbox(StorySynopsis2)
+// FEE3 replace this	CenterTextbox(StorySynopsis2)
 	
 	CHECK_ALIVE Supplies1
 	BEQ 0x1 0xC 0x0
@@ -494,7 +494,7 @@ EndingScene:
 	GiveItem(0x7F,Affogato)
 	LABEL 0x4
 	
-	MNC2 0x6
-//MNTS 0x1 //return to title screen
+// FEE3 replace this	MNC2 0x6
+MNTS 0x1 //return to title screen
 	NoFade
 	ENDA

@@ -28,7 +28,6 @@ CharacterBasedEvents:
 CharacterEventBothWays(0x21, PandoroRecruit, Ulrich, Pandoro)
 CharacterEventBothWays(0x21, PandoroAffoRecruit, Affogato, Pandoro)
 CharacterEventBothWays(0x21, BreneRecruit, Affogato, Irene)
-CharacterEventBothWays(0x21, BreneBreveRecruit, Breve, Irene)
 CharacterEventBothWays(0x22, MochaNoraConvo, Nora, Mocha)
 CharacterEventBothWays(0x23, HildrBreveConvo, Breve, Hildr)
 CharacterEventBothWays(0x24, AffoSeqConvo, Affogato, Sequin)
@@ -76,6 +75,7 @@ LoadUnit(10,17)
 	
 CutscenePeg:
 UNIT Mocha PegasusRider 0x1 Level(3, Ally, 0)     [14,0] 0 0 1 REDA9R2 [SteelBlade,SteelBlade,SteelBlade,SteelBlade,] AttackInRangeAI
+UNIT Eiskaffee GriffonRider 0x1 Level(3, Ally, 0)     [13,0] 0 0 1 REDA10R0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade,] AttackInRangeAI
 	UNIT
 	
 WoohooPeg:
@@ -195,11 +195,6 @@ STAL 15
 MUSC 0x4B
 Text(Ch2Opening3)
 STAL 10
-FADI 60
-SetBackground(0x3F)
-Text(Ch2Opening4)
-ClearBackground
-STAL 10
 CAM1 [8,1]
 CenterTextbox(FogDisclaimer)
 GotoPrepScreen
@@ -239,7 +234,15 @@ ENUN
 CUMO [9,2]
 STAL 60
 CURE
-Text(Ch2MochaAppear1)
+Text(Ch2Opening4) //the center
+CAM1 [8,5]
+Text(Ch2Opening4Point5) //the house
+CAM1 [9,8]
+Text(Ch2Opening4Point75) //the boat
+CAM1 [1,16]
+Text(Ch2Opening4Point99)
+MOVE 0x3C Eiskaffee [9,0]
+DISA Eiskaffee
 STAL 30
 MOVE 0x3C Mocha [14,0]
 ENUN
@@ -249,7 +252,7 @@ CAM1 [2,1]
 HardUnits(LunaticUnits,WoohooPeg)
 CameraCursor(Mocha)
 MUSS 0x30
-Text(Ch2MochaAppear2)
+Text(Ch2MochaAppear1)
 CamOff
 	NoFade
 VCWF 5
@@ -282,16 +285,7 @@ Text(IreneAffoRecruit)
 MURE 0x2
 CUSA Pandoro
 CUSA Irene
-NoFade
-ENDA
-
-BreneBreveRecruit:
-MUSS 0x30
-STAL 33
-Text(IreneBreveRecruit)
-MURE 0x2
-CUSA Pandoro
-CUSA Irene
+SilentlyGiveItem(BlueGem, Irene)
 NoFade
 ENDA
 
