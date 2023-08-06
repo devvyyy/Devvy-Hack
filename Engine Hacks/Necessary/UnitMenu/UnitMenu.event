@@ -113,6 +113,9 @@ UnitMenuTable:
   //UM_Summon
   MenuCommand(0x693,0x6DD,NormalText,NewSummonUsability,0x244B8)
   
+  //Stealth Time!
+	MenuCommand(UM_Stealth, UM_StealthDesc, NormalText, StealthUsability, StealthEffect)
+  
   //Resupply
 	MenuCommand(UM_Resupply, UM_ResupplyDesc, OrangeText, AmmoUsability, AmmoEffect)
 

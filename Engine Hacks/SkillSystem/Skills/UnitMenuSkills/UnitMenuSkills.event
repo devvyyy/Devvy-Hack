@@ -189,5 +189,29 @@ STAL 0x5
 NoFade
 ENDA
 
+ALIGN 4
+StealthEffect:
+#incbin "Stealth/StealthEffect.dmp"
+POIN StealthEvent
+
+ALIGN 4
+StealthCombat:
+#incbin "Stealth/StealthInBattle.dmp"
+POIN SkillTester
+WORD StealthID
+
+ALIGN 4
+StealthUsability:
+#incbin "Stealth/StealthUsability.dmp"
+POIN SkillTester
+WORD StealthID
+
+StealthEvent:
+SOUN 0xDD
+ENUT 0x25
+STAL 0x5
+NoFade
+ENDA
+
 #include "CombatArts/CombatArts.event"
 

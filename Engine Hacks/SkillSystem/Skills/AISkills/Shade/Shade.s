@@ -17,7 +17,7 @@
 
 @r4 contains the total AI weight and this is the last function in the lineup
 @if we set r4 and return 0 it will subtract 0 from the value we set it as given these skills
-@so we don't need to hook after this function
+@so we dont need to hook after this function
 @set r4 to 1 if Shade (if 0 it would use r5 instead)
 
 

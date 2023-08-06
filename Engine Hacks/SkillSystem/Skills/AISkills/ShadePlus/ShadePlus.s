@@ -15,7 +15,7 @@
 .equ AITargetFalseReturn,0x803D609
 .equ IsUnitEnemyWithActiveUnit,0x803c819
 .equ SkillTester,EALiterals+0
-.equ ShadePlusID,EALiterals+4
+.equ StealthID,EALiterals+4
 
 cmp r4,#0
 beq DoNotTarget
@@ -28,7 +28,6 @@ and r1,r2
 cmp r1,#0
 bne DoNotTarget
 
-
 mov r0,r4
 ldr r7,[sp,#0x24]
 bl BXR7
@@ -39,10 +38,18 @@ beq DoNotTarget
 ldr r0,SkillTester
 mov r14,r0
 mov r0,r4
-ldr r1,ShadePlusID
+ldr r1,StealthID
 .short 0xF800
 cmp r0,#0
 beq DoTarget
+
+@check if flag 0x25 set; if so, add status
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0x25
+.short 0xF800
+cmp r0,#1
+bne DoTarget
 
 DoNotTarget:
 ldr r1,=AITargetFalseReturn
@@ -66,4 +73,4 @@ bx r7
 
 EALiterals:
 @POIN SkillTester
-@WORD ShadePlusID
+@WORD StealthID

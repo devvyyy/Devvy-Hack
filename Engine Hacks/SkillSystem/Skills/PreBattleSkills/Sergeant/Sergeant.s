@@ -41,11 +41,11 @@ lsl r2, #0x10 @0x20000 negate def/res
 tst r1, r2
 bne BraveCheck
 
-@apply def +4
+@apply def +5
 mov r0, r4
 add r0,#0x5C
 ldrh r3,[r0]
-add r3,#4
+add r3,#5
 strh r3,[r0]
 
 BraveCheck:
@@ -54,12 +54,18 @@ cmp r0,r4
 beq Done @skip if player phase
 
 @ set brave flag
-mov r0,r4
-add r0,#0x4C @item ability word
-ldr r1,[r0]
-mov r2,#0x20 @brave flag
-orr r1,r2
-str r1,[r0]
+@mov r0,r4
+@add r0,#0x4C @item ability word
+@ldr r1,[r0]
+@mov r2,#0x20 @brave flag
+@orr r1,r2
+@str r1,[r0]
+
+@set attacker AS to 99
+mov r0, r4
+add r0,#0x5E
+mov r3,#99
+strh r3,[r0]
 
 Done:
 pop {r4-r7}

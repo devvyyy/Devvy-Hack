@@ -268,6 +268,24 @@ POIN GetUnitsInRange
 #include "SavageBlow/SavageBlowEvent.event"
 
 ALIGN 4
+BreakStealth:
+#incbin "BreakStealth/BreakStealth.dmp"
+POIN SkillTester
+WORD StealthID
+POIN BreakStealthEvent
+POIN GetUnitsInRange
+POIN AuraSkillCheck
+#include "BreakStealth/BreakStealthEvent.event"
+
+ALIGN 4
+BreakStealthAlt:
+#incbin "BreakStealth/AttackBreakStealth.dmp"
+POIN SkillTester
+WORD StealthID
+POIN BreakStealthEventAttack
+#include "BreakStealth/BreakStealthEvent.event"
+
+ALIGN 4
 Bazooka:
 #incbin "Bazooka/Bazooka.dmp"
 POIN SkillTester

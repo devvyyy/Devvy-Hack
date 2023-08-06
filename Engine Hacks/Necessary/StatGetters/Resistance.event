@@ -12,6 +12,7 @@ pResistanceModifiers: // Resistance
 	POIN prFlowStateCheckRes
 	POIN prCantoRingRes prBulwarkRingRes prGrimRingRes
 //	POIN prTemperedFateRes
+//	POIN prFlorisMarkedRes
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -49,6 +50,10 @@ rIfUnitHasStatus(0x8)
 prTemperedFateRes:
 rIfUnitHasStatus(0x13)
 	rAddConst(50)
+	
+prFlorisMarkedRes:
+	rIfUnitHasStatus(SickStatusID)
+		rDoubled
 	
 prAcrobatCheckRes:
 rIfUnitHasNotSkill(SanctuaryID)

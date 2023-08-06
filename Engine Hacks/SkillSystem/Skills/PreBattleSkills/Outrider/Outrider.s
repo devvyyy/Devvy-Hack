@@ -1,5 +1,7 @@
 .thumb
 .equ OutriderID, SkillTester+4
+.equ MovGetter, OutriderID+4
+.equ GetUnit,0x8019430
 
 push {r4-r7, lr}
 ldr     r5,=0x203a4ec @attacker
@@ -30,14 +32,43 @@ beq End
 
 @Add damage
 
+@fast, but only works for player units
 ldr r3,=0x203a968 @Spaces Moved
 ldrb r2,[r3]
-mov r1, #0x5C @Def
+
+mov r1, #0x5C
 ldrh r0, [r4, r1]
-mov r3,#0x1
-mul r3,r2
-add r0, r3
-add r0, r3
+add r0, r2
+add r0, r2
+strh r0, [r4,r1]
+
+@get units move
+ldr r0,MovGetter
+mov r14,r0
+mov r0,r4
+mov r1,#0
+.short 0xF800
+@r0= units move *2 for some reason
+lsr r0,r0,#1 @r0 = unit's move
+
+@get units used up movement from action struct
+ldr r1,=0x203A958 @action struct
+add r1,#0x10 @squares moved this turn
+ldrb r1,[r1] @r1 = squares moved
+
+@get remaining move
+sub r0,r1
+cmp r0,#0 @see if we've moved as far as possible
+bgt End @if not, no bonus
+
+@set hit to 100 but real
+mov r1, #0x60
+mov r0, #255
+strh r0, [r4,r1]
+
+@set hit to 100 but real
+mov r1, #0x66
+mov r0, #255
 strh r0, [r4,r1]
 
 End:
@@ -46,4 +77,4 @@ pop {r4-r7, r15}
 .ltorg
 SkillTester:
 @Poin SkillTester
-@WORD DominateID
+@WORD OutriderID

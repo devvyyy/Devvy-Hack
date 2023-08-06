@@ -1,0 +1,18 @@
+#include "Extensions/ProcDefinitions.txt"
+#include "Extensions/Hack Installation.txt"
+
+PUSH
+    ORG 0x1D1B8
+    jumpToHack(CancelTradeHook)
+    ORG 0x1D4A8
+    jumpToHack(RefreshMovementHook)
+POP
+
+#include "RefreshMovementHook.lyn.event"
+#include "CancelTradeHook.lyn.event"
+
+//This proc is here to exist for a couple of frames so RefreshMovementHook knows not to reset movement
+ALIGN 4
+CantoBugProc:
+PROC_SLEEP(1)
+PROC_END

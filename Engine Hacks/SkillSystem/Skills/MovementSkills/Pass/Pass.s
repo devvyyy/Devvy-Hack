@@ -1,7 +1,7 @@
 .thumb
 .org 0x0
-.equ CloseCallID, SkillTester+4
-@Bx'd to from 3003D28
+.equ StealthID, SkillTester+4
+@Bxd to from 3003D28
 @This function sets the Z flag if the moving unit can cross the other unit's tile, either because they're either both allied/npcs or enemies, or because the mover has Pass
 push  {r0-r6,r14}   @actually necessary to push the scratch registers in this case
 ldrb  r4,[r3,#0xA]  @allegiance byte of current unit
@@ -13,10 +13,19 @@ ldr   r0,GetCharData
 mov   r14,r0
 ldrb  r0,[r3,#0xA]
 .short  0xF800      @returns char data pointer of moving unit
+
 ldr   r1,SkillTester
 mov   r14,r1
-ldr   r1,CloseCallID
+ldr   r1,StealthID
 .short  0xF800
+cmp r0,#1
+bne GoBack
+
+@check if flag 0x25 set; if so, add status
+ldr r0,CheckEventId
+mov r14,r0
+mov r0,#0x25
+.short 0xF800
 cmp   r0,#0x1     @set z flag if unit has Pass
 GoBack:
 pop   {r0-r6}
@@ -28,6 +37,8 @@ bx    r4
 .align
 GetCharData:
 .long 0x08019430
+CheckEventId:
+.long 0x8083da8
 GoBackAddress:
 .long 0x03003D34    @note that we need to switch back to arm
 SkillTester:

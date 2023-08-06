@@ -52,7 +52,7 @@ echo:
 echo Assembling (epically)
 
 cd "%base_dir%Event Assembler"
-ColorzCore A FE8 "-output:%target_rom%" "-input:%main_event%"
+ColorzCore A FE8 "-output:%target_rom%" "-input:%main_event%" --nocash-sym
 
 if /I not [%1]==[quick] (
 

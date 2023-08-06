@@ -25,11 +25,6 @@ resets Style. Each rank grants +5 Hit/Crit/Avoid.[N]
 At S rank, grants an additional 1.5x Str/Spd,[N]
 and unit can cast Abyssal Trigger.[X]
 
-## SD_Kalista
-Run 'N Gun: Unit's attacks scale with 75% Str.[N]
-First attack does not end turn. Canto 1[N]
-space after combat.[X]
-
 ## SD_TwinBlades
 Twin Blades: Unit's attacks scale with 50% Str[N]
 and strike x2 consecutively. If initiating,[N]
@@ -73,9 +68,9 @@ Atk = difference between stats. Bow range +1.[N]
 
 ## SD_Absolution2
 # Takedowns grant 1 stack.[N]
-Stacks grant 0.5 Str, 1 Hit, and every 10[N]
-stacks grants 1 Range (max; 10). Every 20[N]
-grants 1 Canto movement (max; 5).[X]
+Stacks grant 0.5 Str, 1 Hit, 0.25 Crit,[N]
+0.1 Range (max; 10), and 0.05 Canto[N]
+movement(max; 5).[X]
 
 ## SD_CombatMedic
 Even the Odds: If Hartwick initiates, restores (50% AP) HP[N]
@@ -136,13 +131,6 @@ Bad Blood: If Gus' Lvl > foe's Lvl, foe can't[N]
 counter. If foe can't counter, deals bonus[N]
 physical damage = (10 + 200% of foe's missing HP).[X]
 
-## SD_BadBloodAlt2
-# maybe his gimmick is he steals personal skills?
-# for if im too lazy + druid
-Bad Blood: Gus can fight certain bosses to learn skills.[N]
-Deals (5 + 200% of foe's missing HP) bonus physical[N]
-damage against bosses and foes at 50% HP or less.[N]
-
 ## SD_BadBlood
 # bro this bitch gonna have 2 luck (also starts out level 2 like he's an est ig???)
 Bad Blood: Gus learns new skills at Lvl 7/12[N]
@@ -156,14 +144,12 @@ Grants Str/Spd/Def/Res +(Inventory Worth/2500).[N]
 Grants Hit/Avoid/Crit/Crit Avoid +(Army Gold/2500).[X]
 
 ## SD_DirtyFighting
-# at level 12; gambler?
-Dirty Fighting: If foe can't counter, Gus[N]
+Dirty Fighting: If foe can't counter, unit[N]
 always lands a critical hit. If at WTA,[N]
 dodge all attacks and Canto 4 spaces.[X]
 
 ## SD_ShowStopper
-# at level 5 promo, Ambush and Eviscerate; boss
-The Show Stopper: If Gus' Lvl > foe's Lvl,[N]
+The Show Stopper: If unit's Lvl > foe's Lvl,[N]
 foe can't counter and deals bonus damage[N]
 = (10 + 25% of foe's max HP). (Promoted Lvl +20.)[X]
 
@@ -205,8 +191,8 @@ true damage = 500% of foe's missing HP.[X]
 ## SD_AdaptivePoiseRework
 # global flag 0xB2
 Adaptive Poise: Wegman can toggle between Swing/Pierce Stance.[N]
-[SwordIcon]: +Atk = Spd. -30 Avo/Ddg.[N]
-[LanceIcon]: +AS = Str. -8 Prt/Rsl.[X]
+[SwordIcon]: +Atk = Spd, -30 Avo/Ddg.[N]
+[LanceIcon]: +AS = Str, -8 Prt/Rsl.[X]
 
 ## SD_BlindingFlash
 Blinding Flash: If Katsu initiates and[N]
@@ -270,7 +256,7 @@ foe for 1 turn after combat.[X]
 ## SD_StrogyMirrorPassive
 Captain's Orders: Stroganoff grants Atk/AS +3[N]
 to allies within 2 spaces. Inflicts Atk/AS -3[N]
-to foes within 3 spaces.[X]
+to foes within 2 spaces.[X]
 
 ## SD_DoppioMirrorPassive
 Hero's Guard: If foe initiates, Doppio[N]
@@ -322,7 +308,7 @@ Ashen Flow:[X]
 # uses flag 0x23, 0x24, and also 0x5 (?? in builder)
 [_R][_u][0xe9]e[_SP][_L][_u][_n][_a][_i][_r]e[_Colon][_SP][_I][_n][_i][_t][_i][_a][_t][_i][_n][_g][_SP][_g][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP][_LParen][_m][_a][_x];[_SP][_2][_RParen][_Dot][N]
 [_A][_t][_SP][_m][_a][_x][_SP][_s][_t][_a][_c][_k][_s][_Comma][_SP][_C][_h][_i][_f][_f][_o][_n][_SP][_a][_c][_t][_i][_v][_a][_t][_e][_s][_SP][_O][_v][_e][_r][_d][_r][_i][_v][_e][_SP][_o][_n][N]
-[_i][_n][_i][_t][_i][_a][_t][_i][_o][_n][_Comma][_SP][_l][_a][_s][_t][_i][_n][_g][_SP][_u][_n][_t][_i][_l][_SP][_o][_u][_t][_SP][_o][_f][_SP][_s][_t][_a][_c][_k][_s][_Dot][X]
+[_i][_n][_i][_t][_i][_a][_t][_i][_o][_n][_SP][_a][_f][_t][_e][_r][_SP][_c][_o][_m][_b][_a][_t][_Comma][_SP][_l][_a][_s][_t][_i][_n][_g][_SP][_u][_n][_t][_i][_l][_SP][_o][_u][_t][_SP][_o][_f][_SP][_s][_t][_a][_c][_k][_s][_Dot][X]
 
 ## FullMoonStatusName
 Overdrive[X]
@@ -435,8 +421,8 @@ grants another action at 0 Move (once[N]
 per turn).[X]
 
 ## SD_Gaming
-# Flow, temp flags 0x25-0x28
-[_F]l[_o]w[_Colon][_SP][_C][_o]m[_b][_a][_t][_Slash][_S][_t][_e][_a]l[_Slash][_P]i[_c][_k][_SP][_g][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP][_LParen]m[_a][_x];[_SP][_4][_RParen][_Dot][N]
+# Flow, temp flags 0x26-0x28 (used to use 0x25) MAKE THIS 3 stacks now!!
+[_F]l[_o]w[_Colon][_SP][_C][_o]m[_b][_a][_t][_Slash][_S][_t][_e][_a]l[_Slash][_P]i[_c][_k][_SP][_g][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP][_LParen]m[_a][_x];[_SP][_3][_RParen][_Dot][N]
 [_A][_t][_SP][_m][_a][_x][_SP][_s][_t][_a][_c][_k][_s][_Comma][_SP][_c][_o][_n][_s][_u][_m][_e][_s][_SP][_a][_l][_l][_SP][_s][_t][_a][_c][_k][_s][_SP][_o][_n][_SP][_i][_n][_i][_t][_i][_a][_t][_i][_o][_n][_SP][_t][_o][N]
 [_x][_2][_SP][_S][_i][_d][_e][_s][_t][_e][_p][_SP][_C][_a][_n][_t][_o][_SP][_a][_n][_d][_SP][_d][_e][_a][_l][_SP][_b][_o][_n][_u][_s][_SP][_d][_a][_m][_a][_g][_e][_SP]=[_SP][_R][_e][_s][_Dot][X]
 
@@ -506,8 +492,8 @@ Spellthief: Steals the Mt of tier I[N]
 magic spells.[X]
 
 ## SD_Alacrity
-Alacrity: If Mocha uses all movement[N]
-and initiates, dodge all attacks.[X]
+Alacrity: If Mocha uses all Move and[N]
+initiates, always hit and dodge attacks.[X]
 
 ## SD_SoulBlade
 Soul Blade: Ignores unit's weapon Mt,[N]
@@ -776,7 +762,7 @@ sets their Crit/Avoid to 0.[X]
 
 ## SD_ThunderClap
 Grounding: If foe's terrain has bonuses,[N]
-Doppio ignores the bonuses and deals[N]
+Doppio ignores those bonuses and deals[N]
 bonus magical damage = foe's Spd x 2.[X]
 
 ## SD_Falcon
@@ -905,7 +891,19 @@ foe's Max HP/4.[X]
 # Sidestep
 [_S][_i][_d][_e][_s][_t][_e][_p][_Colon][_SP][_I][_f][_SP][_A][_f][_f][_o][_g][_a][_t][_o][_SP][_d][_o][_e][_s][_n][_SingleQuote][_t][_SP][_m][_o][_v][_e][_Comma][_SP][_C][_a][_n][_t][_o][_SP][_2][_SP][_s][_p][_a][_c][_e][_s][N]
 [_LParen][_C][_a][_n][_t][_o][_SP][_1][_SP][_s][_p][_a][_c][_e][_SP][_o][_t][_h][_e][_r][_w][_i][_s][_e][_RParen][_Dot][_SP][_G][_r][_a][_n][_t][_s][_SP][_a][_n][_o][_t][_h][_e][_r][_SP][_a][_c][_t][_i][_o][_n][N]
-[_a][_f][_t][_e][_r][_SP][_p][_i][_c][_k][_i][_n][_g][_Slash][_s][_t][_e][_a][_l][_i][_n][_g][_SP][_LParen][_o][_n][_c][_e][_SP][_p][_e][_r][_SP][_t][_u][_r][_n][_RParen][_Dot][_SP][_P][_a][_s][_s][_SP][_f][_o][_e][_s][_Dot][X]
+[_a][_f][_t][_e][_r][_SP][_p][_i][_c][_k][_i][_n][_g][_Slash][_s][_t][_e][_a][_l][_i][_n][_g][_SP][_LParen][_o][_n][_c][_e][_SP][_p][_e][_r][_SP][_t][_u][_r][_n][_RParen][_Dot][X]
+
+## SD_Stealth
+# uses flag 0x25
+[_G][_u][_e][_r][_r][_i][_l][_l][_a][_SP][_W][_a][_r][_f][_a][_r][_e][_Colon][_SP][_O][_n][_c][_e][_SP][_p][_e][_r][_SP][_m][_a][_p][_Comma][_SP][_c][_a][_n][_SP][_S][_t][_e][_a][_l][_t][_h][_Colon][_SP][_P][_a][_s][_s][N]
+[_f][_o][_e][_s][_Comma][_SP][_u][_n][_t][_a][_r][_g][_e][_t][_t][_a][_b][_l][_e][_Comma][_SP][_a][_l][_w][_a][_y][_s][_SP][_h][_i][_t];[_SP][_a][_t][_t][_a][_c][_k][_i][_n][_g][_Slash][_b][_e][_i][_n][_g][N]
+[_a][_d][_j][_a][_c][_e][_n][_t][_SP][_t][_o][_SP][_a][_SP][_f][_o][_e][_SP][_b][_r][_e][_a][_k][_s][_SP][_S][_t][_e][_a][_l][_t][_h][_Dot][_SP][_E][_n][_d][_s][_SP][_t][_u][_r][_n][_Dot][X]
+
+## SD_Stacks
+# Flow, temp flags 0x26-0x28 (used to use 0x25) MAKE THIS 3 stacks now!!
+Bulwark: Combat grants 1 stack (max; 3).[N]
+Stacks grant 4 Prt/Rsl. Initating at max[N]
+stacks consumes to deal bonus damage = current HP.[X]
 
 ## SD_Vigor
 # Requiem: When using offensive staves, multiplies Eth by 1.25x and deals bonus damage equal to a quarter of foe's current HP.
@@ -914,8 +912,8 @@ use 1.25x Eth and deal bonus damage[N]
 = 25% of foe's current HP.[X]
 
 ## SD_Defeatist
-Defeatist: If Ulrich's HP is 50% or[N]
-less, inflicts Str/Spd -50%.[N]
+Defeatist: If Ulrich's HP is 50% or less,[N]
+inflicts Str/Spd -50%.[N]
 Use to leave foes with 1 HP.[X]
 
 ## SD_KnightAspirant
@@ -955,10 +953,30 @@ foe's Res.[X]
 Thunderhead: If unit's HP is 75%[N]
 or more, Crit +15.[X]
 
+## SD_Charge
+Charge: Grants Breve Atk = Move used.[N]
+If all Move is used, strikes x2[N]
+consecutively.[X]
+
+## SD_Steadfast
+Steadfast: Grants Hildr AS = Move used.[N]
+If all Move is used, reduces damage[N]
+taken = (Spd - foe's Spd; min 0).[X]
+
+## SD_Outrider
+Outrider: Grants Cortado Prt/Rsl =[N]
+Move used x 2. If all Move is used,[N]
+always land a critical hit.[X]
+
 ## SD_Sergeant
 Warden: If Ansgar is within 2 spaces of[N]
-an ally, grants Prt +4, and if foe also[N]
-initiates, strikes x2 consecutively.[X]
+an ally, grants Prt +5, and if foe also[N]
+initiates, follow-up and foe cannot.[X]
+
+## SD_Kalista
+Martial Poise: Therese's attacks scale with[N]
+75% Str, but first initiation doesn't end[N]
+turn. Canto 1 space after combat.[X]
 
 ## SD_ColdFlare
 Cold Flare: If Akatsuki's HP isn't full,[N]
@@ -1363,8 +1381,8 @@ unmounted units.[X]
 
 ## SD_Camaraderie
 Camaraderie: If unit is within 2 spaces[N]
-of an ally, restores a tenth of max HP[N]
-at the start of each turn..[X]
+of an ally, restores 10% max HP[N]
+at the start of each turn.[X]
 
 ## SD_ForeignPrincess
 Foreign Princess: Foreign army units[N]
@@ -1833,21 +1851,9 @@ Bulwark: If Edith's HP is 75% or more,[N]
 grants +25% Str and inflicts -25% Str[N]
 to foe. Shield range +2.[X]
 
-## SD_Outrider
-Outrider: Grants Cortado Def/Res =[N]
-movement expended x 2.[X]
-
 ## SD_HeavyStrikes
 Heavy Strikes: Add weapon[N]
 weight to critical chance.[X]
-
-## SD_Charge
-Charge: Grants Breve Atk =[N]
-movement expended.[X]
-
-## SD_Steadfast
-Steadfast: Grants Hildr AS =[N]
-50% of movement expended.[X]
 
 ## SD_Infiltrator
 Ghost Factory: If Verna is within 4[N]
