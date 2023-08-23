@@ -61,14 +61,6 @@ mov    r2, #0x01    @range
 cmp r0, #0
 beq End
 
-ldr r2,=#0x3004E50
-ldr r2, [r2] @Gets unit pointer
-ldr    r0, [r2,#0x0C]    @status bitfield
-mov    r1, #0x01
-lsl    r1, #0x1c
-eor r0,r1
-str    r0, [r2,#0x0C]    @status bitfield
-
 Event:
 mov    r6, #0x00        @reset counter
 ldr    r0,=#0x800D07C        @event engine thingy

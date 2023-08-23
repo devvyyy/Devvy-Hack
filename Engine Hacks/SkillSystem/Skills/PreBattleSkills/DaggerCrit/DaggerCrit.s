@@ -37,6 +37,8 @@ cmp     r0, #0xF7         @Oh the misery
 beq Crit100
 cmp     r0, #0xFE         @Syzygy
 beq Crit50Special
+cmp     r0, #0xB9         @Dirk
+beq DirkSpecial
 b End
 
 Crit25:
@@ -75,6 +77,44 @@ Crit50Special:
 mov r1, #0x66
 ldrh r0, [r4, r1] @crit
 sub r0, #50
+strh r0, [r4,r1]
+
+b End
+
+DirkSpecial:
+
+mov r1, #0x62
+ldrh r0, [r4, r1] @avoid
+add r0, #20
+strh r0, [r4,r1]
+
+@reduce 50 crit
+mov r1, #0x66
+ldrh r0, [r4, r1] @crit
+sub r0, #50
+strh r0, [r4,r1]
+
+@check if flag 0x25 set; if set, doubles to canto 4
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0x25
+.short 0xF800
+cmp r0,#1
+bne End @if flag is not on, reduce crit as normal
+
+@set crit to 100
+mov r1, #0x66
+mov r0, #100
+strh r0, [r4,r1]
+
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq End
+
+@set crit to 100 but real
+mov r1, #0x66
+mov r0, #255
 strh r0, [r4,r1]
 
 b End

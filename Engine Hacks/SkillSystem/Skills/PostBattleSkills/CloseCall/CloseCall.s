@@ -99,14 +99,15 @@ sub r0, #1
 strb 	r0, [r6, #0x10]	@squares moved this turn
 
 @ check if attacked
-ldrb 	r0, [r6,#0x11]	@action taken this turn
-cmp	r0, #0x2 @attack
-bne	GoCanto
+@ldrb 	r0, [r6,#0x11]	@action taken this turn
+@cmp	r0, #0x2 @attack
+@bne	GoCanto
+@ used to be an attack check for flow proc attack
 
-@check if flag 0x28 set; if set, doubles to canto 2
+@check if flag 0x25 set; if set, doubles to canto 2
 ldr r0,=#0x8083da8 @CheckEventId
 mov r14,r0
-mov r0,#0x28
+mov r0,#0x25
 .short 0xF800
 cmp r0,#1
 bne GoCanto @if flag is not on, canto normally; otherwise set canto 2
@@ -129,14 +130,15 @@ sub r0, #2
 strb 	r0, [r6, #0x10]	@squares moved this turn
 
 @ check if attacked
-ldrb 	r0, [r6,#0x11]	@action taken this turn
-cmp	r0, #0x2 @attack
-bne	GoCanto
+@ldrb 	r0, [r6,#0x11]	@action taken this turn
+@cmp	r0, #0x2 @attack
+@bne	GoCanto
+@ again used to be an attack check for flow proc attack
 
-@check if flag 0x28 set; if set, doubles to canto 4
+@check if flag 0x25 set; if set, doubles to canto 4
 ldr r0,=#0x8083da8 @CheckEventId
 mov r14,r0
-mov r0,#0x28
+mov r0,#0x25
 .short 0xF800
 cmp r0,#1
 bne GoCanto @if flag is not on, Canto 2 as normal

@@ -172,32 +172,16 @@ BEQ 1 0x0 0xC
 Music(0x4C)
 SetBackground(0x38)
 Text(Ch5Opening1)
+LABEL 1
 FADI 60
 CLEAN
 FADU 60
-STAL 5
-LABEL 1
-Music(0x2E)
-SetBackground(0x34)
-STAL 5
-BROWNBOXTEXT WreyvianOutskirtsText [8,8] // box in the top right that's pretty cool for small text
-STAL 15
-Text(Ch5OpeningEnemyMoment)
-ClearBackground
 STAL 10
 Music(0x48)
 SetBackground(0x33)
-CHECK_ALIVE Mocha
-BEQ 2 0x0 0xC
 TEXTSTART
 TEXTSHOW Ch5Opening2
 TEXTEND
-GOTO 3
-LABEL 2
-TEXTSTART
-TEXTSHOW Ch5OpeningAlt2
-TEXTEND
-LABEL 3
 MUSC 0x92
 TEXTCONT
 TEXTEND
@@ -206,12 +190,6 @@ CLEAN
 Music(0x24)
 SetBackground(0x39)
 STAL 5
-CHECK_ALIVE Mocha
-BEQ 4 0x0 0xC
-Text(Ch5Opening3)
-GOTO 5
-LABEL 4
-Text(Ch5OpeningAlt3)
 LABEL 5
 FADI 45
 	LOAD1 0x1 EnemyUnits
@@ -246,6 +224,18 @@ Text(Ch5Ending1Alt)
 
 LABEL 2
 MNC2 0xF
+NoFade
+ENDA
+
+Turn1Moment:
+CameraCursor(0x4c)
+Music(0x2E)
+SetBackground(0x34)
+STAL 5
+BROWNBOXTEXT WreyvianOutskirtsText [8,8] // box in the top right that's pretty cool for small text
+STAL 15
+Text(Ch5OpeningEnemyMoment)
+ClearBackground
 NoFade
 ENDA
 	

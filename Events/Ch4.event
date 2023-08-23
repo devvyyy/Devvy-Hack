@@ -200,7 +200,10 @@ UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [9,13] 0b 0x0 0x0 0x0 [SteelBlade,
 UNIT
 
 EndCutsceneUnits2:
-UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [10,14] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [11,5] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [11,0] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+
+
 UNIT
 
 Traps1:
@@ -319,41 +322,26 @@ SetBackground(0x2B)
 Text(Ch4Ending1)
 FADI 60
 CLEAN
-Music(0x26)
-FADU 16
-STAL 5
-BROWNBOXTEXT LaterThatNight [8,8] // box in the top right that's pretty cool for small text
-STAL 15
-MOVE 0xD Affogato [8,14]
-ENUN
-STAL 10
-Text(Ch4Ending2)
-SOUN 0xAF
-STAL 10
-MOVE 0xD Affogato [11,13]
-ENUN
-STAL 10
-SOUN 0xAF
-MOVE 0xD Affogato [9,12]
-ENUN
-SOUN 0xCC
-STAL 15
+
+SVAL 0xB 0x40008 //change map
+LOMA 0x3
+
 LOAD2 0x1 EndCutsceneUnits2
+
+FADU 16
+//BROWNBOXTEXT LaterThatNight [8,8] // box in the top right that's pretty cool for small text
+
 STAL 20
+Text(Ch4Ending2)
+STAL 10
 Music(0x48)
 SetBackground(0x0C)
-CharacterConditionalDialog(Doppio,Ch4Ending3,Ch4EndingAlt3)
+Text(Ch4Ending3)
+
+//CharacterConditionalDialog(Doppio,Ch4Ending3,Ch4EndingAlt3)
 FADI 60
-STAL 7
 CLEAN
-Music(0x63)
-STAL 3
-SetBackground(0x43)
-STAL 5
-BROWNBOXTEXT PalaceText [8,8] // box in the top right that's pretty cool for small text
-STAL 15
-Text(Ch4Ending4)
-STAL 5
+//BROWNBOXTEXT PalaceText [8,8] // box in the top right that's pretty cool for small text
 	MNC2 0x5
 	NoFade
 	ENDA

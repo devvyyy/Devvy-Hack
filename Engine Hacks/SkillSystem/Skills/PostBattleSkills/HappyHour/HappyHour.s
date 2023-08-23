@@ -5,7 +5,7 @@
 .endm
 .equ HappyHourID, SkillTester+4
 .equ HappyHourEvent, HappyHourID+4
-.equ AuraSkillCheck, HappyHourEvent+4
+.equ GetUnitsInRange, HappyHourEvent+4
 .thumb
 push	{r4-r7,lr}
 
@@ -33,12 +33,11 @@ cmp	r0, #0x00
 beq	End
 
 @Check if there are allies in 3 spaces
-ldr	r0, AuraSkillCheck
+ldr	r0, GetUnitsInRange
 mov	lr, r0
 mov	r0, r4		@attacker
-mov	r1, #0x00
-mov	r2, #0x00	@can_trade
-mov	r3, #0x03	@range
+mov	r1, #0x00   @can_trade
+mov	r2, #0x02	@range
 .short	0xf800
 
 mov	r4, r0		@number of units

@@ -1,60 +1,23 @@
-//Show Heal Amount (FE7/8)
+//Show Heal Amount (FE8)
 //By Tequila
 
 #ifndef __SHOW_HEAL_AMOUNT__
-	#ifdef _FE7_
-		
-		#define __SHOW_HEAL_AMOUNT__
-		#ifndef FreeSpace
-			#define FreeSpace 0xD00000
-			ORG FreeSpace
-		#endif
-		#define Arrow_Text_ID 0x12B1 //currently just a hyphen; make a text id with '->' and put it here (DON'T CHANGE THE VANILLA ONE)
-		
-		#include "Extensions/Hack Installation.txt"
-		
-		PUSH
-		
-		ORG $232A0
-		jumpToHack(FE7_Show_Heal_Amount)
-		
-		POP
-		
-		ALIGN 4
-		FE7_Show_Heal_Amount:
-		#incbin "FE7-Show Heal Amount.dmp"
-		WORD Arrow_Text_ID
-		
-	#endif
-#endif
 
-#ifndef __SHOW_HEAL_AMOUNT__
-	#ifdef _FE8_
-
-		#define __SHOW_HEAL_AMOUNT__
-		#ifndef FreeSpace
-			#define FreeSpace 0xB2B200
-			ORG FreeSpace
-		#endif
-		#define Arrow_Text_ID ArrowReplacement//currently just a hyphen; make a text id with '->' and put it here (DON'T CHANGE THE VANILLA ONE)
+	#define __SHOW_HEAL_AMOUNT__
+	#define Arrow_Text_ID ArrowReplacement //currently just a hyphen; make a text id with '->' and put it here (DON'T CHANGE THE VANILLA ONE)
 		
-		#include "Extensions/Hack Installation.txt"
+	#include "Extensions/Hack Installation.txt"
 		
-		PUSH
+	PUSH
 		
-		ORG $24670
-		jumpToHack(FE8_Show_Heal_Amount)
+	ORG $24670
+	jumpToHack(FE8_Show_Heal_Amount)
 		
-		POP
+	POP
 		
-		ALIGN 4
-		FE8_Show_Heal_Amount:
-		#incbin "FE8-Show Heal Amount.dmp"
-		WORD Arrow_Text_ID
+	ALIGN 4
+	FE8_Show_Heal_Amount:
+	#include "FE8_ShowHealAmount.lyn.event"
+	WORD Arrow_Text_ID
 	
-	#endif	
-#endif
-
-#ifndef __SHOW_HEAL_AMOUNT__
-	ERROR You're not assembling FE7 or FE8 events!
 #endif

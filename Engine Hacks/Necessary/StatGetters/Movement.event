@@ -46,6 +46,7 @@ prNullifyIfRooted:
 		rConstant(0)
 		
 prFlorisMarked:
+rIfUnitHasNotSkill(ShootTwiceID)
 	rIfUnitHasStatus(SickStatusID)
 		rAddConst(1)
 		

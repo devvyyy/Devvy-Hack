@@ -297,7 +297,7 @@ UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [2,18] 0 0 1 REDA2R17 [SteelBlade
 	UNIT
 	
 LeCutscene:
-UNIT Aoife Sage_F 0x1 Level(12, Enemy, 0)     [12,18] 0b 0x0 0x0 0x0 [] BossAI
+UNIT Selwyn 0x31 0x1 Level(10, Enemy, 0)     [12,18] 0 0x0 0x0 0x0 [0xFE,SteelBlade,SteelBlade,SteelBlade] BossAI
 	UNIT
 
 Traps1:
@@ -601,62 +601,27 @@ ENDA
 BeginningScene:
 	LOAD1 0x1 RedSussy
 	ENUN
-Music(0x107)
-SetBackground(0x35) //black
-Text(Ch6Opening0)
-STAL 20
-Music(0x48)
 SetBackground(0x2B)
 STAL 7
-BROWNBOXTEXT PalaceOutskirtsText [8,8]
-Text(Ch6Opening1)
-FADI 60
-CLEAN
-FADU 60
-STAL 5
+//BROWNBOXTEXT PalaceOutskirtsText [8,8]
 BROWNBOXTEXT PalaceText [8,8]
-STAL 15
-Music(0x92)
-STAL 15
+Text(Ch6Opening1)
+Text(Ch6Opening2)
+
 LOAD2 0x1 CutsceneUnits
 CameraCursor(Affogato)
-STAL 15
-SetBackground(0x40)
-DoubleConditionalDialog(Breve,Hildr,Ch6Opening2,Ch6OpeningAlt2,3,4)
-STAL 30
-Music(0x24)
-Text(Introducethedarnedunitspls)
-STAL 5
-FADI 60
-CLEAN
-FADU 60
-STAL 5
-Music(0xED)
-SetBackground(0x29)
-STAL 5
-BROWNBOXTEXT ThroneRoomText [8,8]
-STAL 15
-DoubleConditionalDialog(Brudet,Stroganoff,Ch6Opening3,Ch6OpeningAlt3,5,6)
+
+//DoubleConditionalDialog(Breve,Hildr,Ch6Opening2,Ch6OpeningAlt2,3,4)
+
+
+//DoubleConditionalDialog(Brudet,Stroganoff,Ch6Opening3,Ch6OpeningAlt3,5,6)
 STAL 5
 FADI 60
 CLEAN
 	LOAD1 0x1 EnemyUnits
 FADU 30
-STAL 10
-Music(0x93)
-SetBackground(0x42)
-TripleIfAliveDialog(Ansgar,Hildr,Breve,Ch6Opening4,7)
-STAL 15
-FADI 15
-Music(0x28)
-STAL 5
-FADU 40
-Text(Ch6Opening5)
-STAL 5
-FADI 60
-CLEAN
-FADU 40
-STAL 20
+
+//TripleIfAliveDialog(Ansgar,Hildr,Breve,Ch6Opening4,7)
 
 CameraCursor(Gorlois)
 Text(Ch6Opening6)
@@ -814,23 +779,23 @@ STAL 30
 Text(Ch6Ending0)
 MUNO
 Music(0x26)
-MOVE 0xA Aoife [14,18]
+MOVE 0xA Selwyn [14,18]
 ENUN
 DISA_IF 0x34
 STAL 10
 CAM1 [6,3]
 LOAD2 0x1 LeCutscene
 ENUN
-SVAL 0x2 Aoife
+SVAL 0x2 Selwyn
 _WARP 0xFFFF 0xFFFD [5,2]
 CALL 0x9EE4F8
-_WARP 0x0 Aoife [5,2]
+_WARP 0x0 Selwyn [5,2]
 STAL 15
 Text(Ch6Ending0Again)
 STAL 5
-SVAL 0x2 Aoife
+SVAL 0x2 Selwyn
 CALL 0x9EE51C
-DISA Aoife
+DISA Selwyn
 EVBIT_T 0x7
 
 FADI 60

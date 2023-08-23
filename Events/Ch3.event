@@ -81,6 +81,10 @@ LoadUnit(3,17)
 LoadUnit(4,17)
 	UNIT
 
+THEGUY:
+UNIT Selwyn 0x31 0x1 Level(10, Enemy, 0)     [17,0] DropItem 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+	UNIT
+
 EnemyUnits:
 UNIT Alicot SArmor 0x1 Level(5, Enemy, 0)     [13,1] DropItem 0x0 0x0 0x0 [SteelBlade,Flamberge,Dracoshield] BossAI
 UNIT Aeteria Shaman 0x1 Level(3, Enemy, 1)     [16,2] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
@@ -210,9 +214,6 @@ CALL 0x9EE4A0
 SVAL 0x2 Eiskaffee
 CALL 0x9EE4A0
 
-MUSC 0x4E
-SetBackground(0x3D)
-Text(Ch3Ending1)
 FADI 60
 CLEAN
 
@@ -225,6 +226,7 @@ TEXTSTART
 TEXTSHOW Ch3Ending2
 TEXTEND
 MUSC 0x3DE
+TEXTSHOW Ch3Ending2Point5
 TEXTCONT
 TEXTEND
 REMA
@@ -346,7 +348,19 @@ NoFade
 ENDA
 
 ReinWarning:
+SpawnReinforcements(THEGUY)
+SVAL 0x2 Selwyn
+_WARP 0xFFFF 0xFFFD [13,2]
+CALL 0x9EE4F8
+_WARP 0x0 Selwyn [13,2]
+STAL 15
+
 ChargeWarning(Alicot,Ch3ReinWarning)
+
+SVAL 0x2 Selwyn
+CALL 0x9EE51C
+DISA Selwyn
+
 NoFade
 ENDA
 

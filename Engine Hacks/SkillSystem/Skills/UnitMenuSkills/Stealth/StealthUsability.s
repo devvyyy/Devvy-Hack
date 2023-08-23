@@ -13,26 +13,26 @@ and r0,r1
 cmp r0,#0
 bne False
 
-@check if active unit has flow
+@check if active unit has the funny
 mov r0, r4 @test
 ldr r1, StealthID
 ldr r2, SkillTester
 mov lr, r2
 .short 0xf800 @test if unit has the skill
 cmp r0, #0
-bne HasFlow
+bne True
 b False
 
-HasFlow:
-@now check if flow active
-ldr	r0, [r4,#0x0C]	@status bitfield
-mov	r1, #0x01
-lsl	r1, #0x1c
-and	r0, r1
-cmp	r0, #0x00
-bne	False
-
 True:
+
+@check if flag 0x25 set; if set, unit cant stealth since its already active
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0x25
+.short 0xF800
+cmp r0,#1
+beq False
+
 mov r0,#1
 b End
 

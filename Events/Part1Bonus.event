@@ -18,12 +18,12 @@ TURN 0x0 ReinEvent1 [2,0] 0x0
 TURN 0x0 WoundedConvo [2,0] 0x0
 TURN 0x0 ReinEvent2 [3,0] 0x0
 TURN 0x0 ReinEvent3 [4,0] 0x0
-TURN 0x0 KingConvo [4,0] 0x0
+//TURN 0x0 KingConvo [4,0] 0x0
 TURN 0x0 ReinEvent4 [5,0] 0x0
 TurnEventEnemy(0,SelwynSickoMode,5)
 TURN 0x0 ReinEvent5 [6,0] 0x0
 TURN 0x0 ReinEvent6 [7,0] 0x0
-TURN 0x0 EscapeConvo [7,0] 0x0
+//TURN 0x0 EscapeConvo [7,0] 0x0
 TURN 0x0 ReinEvent7 [8,0] 0x0
 TURN 0x0 ReinEvent8 [9,0] 0x0
 TURN 0x0 BruhConvo [9,0] 0x0
@@ -186,6 +186,13 @@ UNIT Supplies4 0x79 0x1 Level(1, NPC, 1)     [21,9] 0b 0x0 0x0 0x0 [0x7F] [0,3,0
 	
 KlavdiaFlying:
 UNIT Klavdia WyvernKnight 0x1 Level(10, NPC, 0)     [15,0] 0 0 1 REDA25R0 [SteelBlade] [0x0,0x0,0x0,0x0]
+	UNIT
+	
+CutsceneUnits:
+UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [14,13] 0 0 1 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [15,14] 0 0 1 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Selwyn 0x31 0x1 Level(10, Enemy, 0)     [15,16] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Sylveria Necromancer 0x1 Level(7, Enemy, 0)     [15,17] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
 	UNIT
 
 EnemyUnits:
@@ -456,7 +463,33 @@ BeginningScene:
 	CUSN Wegman
 	CUSN Klavdia
 	CUSN Gerolf
-	CenterTextbox(StorySynopsis)
+
+Music(0x4C)
+SetBackground(0x2f)
+	Text(ChBonusOpening1)
+
+ClearBackground	
+
+Music(0x27) //reunion
+SetBackground(0x30)
+	Text(ChBonusOpening2)
+	Text(ChBonusOpening3)
+	
+	FADI 60
+	
+	SVAL 0xB 0x50008 //change map
+	LOMA 0x6
+	
+	FADU 60
+	
+	SetBackground(0x29) //throne room
+	
+	Text(ChBonusOpening4)
+	
+	Music(0x26) //Raid!!
+	Text(ChBonusOpening5)
+
+
 	ENUN
 CALL $591FD8
 	FADU 30
@@ -477,7 +510,23 @@ CALL $591FD8
 	ENDA
 
 EndingScene:
-	CenterTextbox(StorySynopsis2)
+
+FADI 60
+DoAllThree
+LOAD2 0x1 CutsceneUnits
+FADU 60
+CameraCursor(Selwyn)
+	Text(ChBonusEnding1) //do an event here like KELIK THEME HOL Y SHI t
+
+MOVE 0xA Sylveria [16,16]
+ENUN
+
+//bro idk she KELIKS and it summons the spooky units ooooh HERE
+	
+	Text(ChBonusEnding2)
+	
+CameraCursor(Affogato)
+	Text(ChBonusEnding3)
 	
 	CHECK_ALIVE Supplies1
 	BEQ 0x1 0xC 0x0
