@@ -41,38 +41,65 @@ O-[.4]Of course,[.4] Your Majesty.[.6][N]
 The Trinity does not bring failure.[A][X]
 
 ## Ch6Opening1
-Brudet
-Your Majesty! The Aeterians have breached our outward defenses! Prepare the holy guard for battle.
+[3L]
+[FFL][LoadBrudet][R][LoadKing][FR][LoadKlavdia]
 
-Klavdia
-Orders? Make it quick[,] Anatolius. The enemy is nearly upon us. There's barely any opportunity to reposition. We'll have to make do with what we have.
+[FFL][MoveMidLeft]
 
-King
-[Beat]Very well[,] then. Let them come! Fear not our enemies[,] we've held so long. The trespassers will regret laying foot on Wreyvian soil.
+[ML]
+Your Majesty![.6] The Aeterians have breached[N]
+our outward defenses![.6] Prepare the holy[N]
+guard for battle.[AN]
 
-Gorlois
-Looks like we don't have a choice in the matter.
+[FR]
+Orders? Make it quick[,] Anatolius.[.6] The enemy[N]
+is nearly upon us.[.6] There's barely any[N]
+opportunity to reposition.[AN]
+We'll have to make do with what we have.[AN]
+
+[R]
+[Beat]Very well[,] then.[.6] Let them come![.6][N]
+Fear not our enemies[,] we've held so long.[.6N]
+They'll regret laying foot on Wreyvian soil.[AN]
+
+[FR][ClearFace][LoadGorlois]
+
+[FR]
+Looks like we don't have a choice in[N]
+the matter.[AN]
 [CloseEyes][Beat]
 
-Iris
-We've fought by your side for as long as we can remember[,] Your Majesty. And so we'll fight to end this war yet again. We need to form up now.
+[R][ClearFace][LoadIris]
+[ML][ClearFace][LoadKing]
 
-Ogrim
+[R]
+We've fought by your side for as long as[N]
+we can remember[,] Your Majesty.[.6] And[n]
+so we'll fight to end this war yet again.[AN]
+We need to form up now.[AN]
+
+[ClearFace][LoadOgrim]
+
+[R]
 [Pause]Very well.[AN]
 
-Gorlois
-If we can secure the fortresses[,] we'll stop any further reinforcements. That should buy us some much needed time. Come[,] Aohr! Protect His Majesty!
+[FR]
+If we can [ToggleRed]secure[ToggleRed] the fortresses[,] we'll stop[n]
+any further reinforcements.[.6] That should buy[N]
+us some much needed time.[AN]
+Come[,] Aohr![.6] Protect His Majesty with me![AN]
 [X]
 
 ## Ch6Opening2
-[OpenFarLeft][LoadHildr][OpenLeft][LoadAffo][OpenRight][LoadBreve][OpenFarRight][LoadUlrich]
-Affogato
+[FL][LoadAffo][L][LoadUlrich][FFR][LoadGorlois]
+
+[FL]
 Do we have an actual plan[,] sir?[AN]
 
-Ulrich
+[L]
 [Pause]Survive.[AN]
 
-Gorlois (rushes into screen)
+[FFR][MoveMidRight]
 Everybody[,] get ready.[.6] Fight![.6N]
 Fight to your last breaths![.6] If[N]
 His Majesty falls[,] everything is over![AN]
@@ -149,10 +176,9 @@ Your Majesty[,] we must retreat! I'll lead the way!
 [OpenFarFarLeft][LoadAoife][OpenRight][LoadKing][OpenFarRight][LoadGorlois]
 
 Selwyn
-Vengeance is upon us! Now[,] surrender--your life is forfeit.
+Vengeance is upon us! Now[,] surrender--your life is forfeit.[X]
 
-(He moves toward the King) AND THEN KELIK SHOWS UP WITH A STEEL CHAIR !!!11 ;scream: l;scream: scmrea; 😱
-
+## Ch6EndingINBATTLE
 Selwyn
 You. Kneel.
 
@@ -160,38 +186,52 @@ King
 [Beat]Why do you persist[,] Duke Omios? You know Wreyvine is not responsible. 
 
 Selwyn
-Silence. I have heard enough from a murderer!
+Silence. I have heard enough from a murderer![X]
 
-(Selwyn crits the fuck out of the king! one shot! lets goooo)
+## Ch6EndingPOSTBATTLE
 
 Gorlois
 [Beat]Your Majesty! King Anatolius[Beat]! You[Beat]
 
 Affogato
-Lord Gorlois! Run!
+Lord Gorlois! Run![X]
 
-Gorlois
-You[Beat] You'll[Beat]
-(Gorlois crits Selwyn; he survives cause he has too much res lol)
+## Ch6EndingINBATTLE2
+# (Gorlois crits Selwyn; he survives cause he has too much res lol)
 
-Selwyn
-[Beat]You must not be underestimated[Beat]Yet you dare attempt to put a finger on me[Beat]? You will pay with your life!
+[MR][LoadGorlois]
+You[Beat] You'll[Beat][AN][ClearFace]
+
+
+[ML][LoadSelwyn]
+[Beat]You started this war[Beat] And[N]
+yet you dare attempt to attack me[Beat]?[AN]
+You will pay with your life![AN]
 
 [X]
 
 ## Ch6Ending0AgainAgain
-[OpenMidLeft][LoadMaynard][OpenMidRight][LoadAoife]
+[3L]
+[FFR][LoadUlrich][MoveMidRight]
 
-Ulrich
-You will not throw away your life[,] Lord Gorlois. You have to run with the rest of us.
+You will not throw away your life[,][N]
+Lord Gorlois.[.6] You have to run[N]
+with the rest of us.[AN][CloseSpeechSlow][MoveFarFarLeft]
 
 [X]
 
 ## Ch6Ending1
-[OpenFarLeft][LoadGorlois][OpenFarRight][LoadKing]
+[3L]
+[MR][LoadSelwyn]
 
-[Beat]Cowards. They fare not against our army. Oh yes[,] it's an eye for an eye. With the King's death[,] Aeteria becomes whole. Now[Beat] We've done our justice. Hear this[,] stragglers of Wreyvine! We will return[,] and we will raze your kingdom to the ground!
-
+[Beat]Cowards.[.6] They fare not against our army.[N]
+Oh yes[,] it's an eye for an eye.[.6] With[N]
+the King's death[,] Aeteria becomes whole![AN]
+Now[Beat] We've done our justice.[.6N]
+Hear this[,] stragglers of Wreyvine![AN]
+We will return[,] and we will raze[N]
+your kingdom to the ground.[.6N]
+For the glory of Aeteria![AN]
 
 [X]
 

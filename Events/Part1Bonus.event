@@ -482,7 +482,11 @@ SetBackground(0x30)
 	
 	FADU 60
 	
+	FADI 60
+	SVAL 0xB 0x08015 //change map
+	LOMA 0xF
 	SetBackground(0x29) //throne room
+	FADU 60
 	
 	Text(ChBonusOpening4)
 	

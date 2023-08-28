@@ -61,7 +61,7 @@ b End
 Apply:
 
 @ apply defense status to unit(0x19)
-mov r0, #0x26 @first number is duration, second number is status effect (status expansion makes it any status with 1 turn i think???)
+mov r0, #0x06 @first number is duration, second number is status effect (status expansion makes it any status with 1 turn i think???)
 mov r1, #0x30 @status
 strb r0, [r4, r1]
 
@@ -120,7 +120,7 @@ b End
 ApplyDefender:
 
 @ apply defense status to unit(0x19)
-mov r0, #0x26 @first number is duration, second number is status effect (status expansion makes it any status with 1 turn i think???)
+mov r0, #0x06 @first number is duration, second number is status effect (status expansion makes it any status with 1 turn i think???)
 mov r1, #0x30 @status
 strb r0, [r5, r1]
 

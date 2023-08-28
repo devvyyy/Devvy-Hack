@@ -415,6 +415,13 @@ POIN SkillTester
 WORD BargainID
 
 ALIGN 4
+Upgrade:
+#incbin "Upgrade/Upgrade.dmp"
+POIN SkillTester
+WORD UpgradeID
+WORD WaryFighterID
+
+ALIGN 4
 Intrepid:
 #incbin "Intrepid/Intrepid.dmp"
 POIN SkillTester

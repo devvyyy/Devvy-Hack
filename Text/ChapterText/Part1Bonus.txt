@@ -98,8 +98,8 @@ Gorlois![.6] Shut the doors.[AN]
 
 [ML]
 We'll meet with the King.[.6] Affogato[,] Mocha.[6N]
-You two recon the premises and inform us immediately[N]
-if you see anything suspicious.[AN]
+You two recon the premises and inform us[N]
+immediately if you see anything suspicious.[AN]
 We're wounded[,] exhausted--[.4]don't let[N]
 Aeteria get the drop on us.[.6] Good luck.[AN]
 
@@ -173,7 +173,15 @@ Lieutenant.[.6] Come with me.[AN]
 [R][LoadKing][FR][LoadGorlois]
 
 [R]
-Knights of the 7th Platoon. Knights of the royal guard. You all understand why you're here. Our twin country has accused us of assassinating their Empress. I truly appreciate your work in fulfilling previous orders. But I am afraid the time for a pivotal battle comes upon us[,] unprepared as we are.
+Knights of the 7th Platoon.[.6] Knights of[N]
+the royal guard.[.6] You all understand[N]
+why you're here.[AN]
+Our twin country has accused us of[N]
+assassinating their Empress.[.6] I truly[N]
+appreciate your work thus far.[AN]
+But I am afraid the time for a pivotal[N]
+battle comes upon us[,] unprepared[N]
+as we are.[AN]
 
 [FR]
 Your Majesty[Beat] If I may[,] I fear we must try more[Beat] drastic measures.
@@ -183,14 +191,15 @@ This is the same strategy Aeteria used[N]
 twenty years ago[Beat][AN][ClearFace]
 
 [ML][LoadKlavdia]
-We'll get overrun if we don't charge them head on.[6N]
-If we want to push them back and cull their[N]
-numbers[,] that must be our strategy.[AN][ClearFace]
+We'll get overrun if we don't charge them[N]
+head on. If we want to push them back and[N]
+cull their numbers[,] that must be our strategy.[AN][ClearFace]
 
 [ML][LoadGerolf]
-A defensive strategy would be our only choice here[N]
-if we want to prevent the Aeterians from moving[N]
-towards us.[.6] Traps[,] blockades[,] what else[Beat]?[AN][ClearFace]
+A defensive strategy would be our only[N]
+choice here if we want to prevent the[N]
+Aeterians from moving towards us.[AN]
+Traps[,] blockades[,] what else[Beat]?[AN][ClearFace]
 
 [ML][LoadWegman]
 Traps?![.6] General[,] where is your sense of honor?![AN][ClearFace]
@@ -244,57 +253,63 @@ Understood[,] Your Majesty.[AN]
 [X]
 
 ## ChBonusOpening5
+[3l]
+[FL][LoadWegman][L][LoadUlrich][R][LoadKlavdia][FR][LoadGerolf]
 
-Ulrich
+[L]
 You[,] and the other soldiers of the 7th Platoon.[6N]
 All of our soldiers that are here right now[N]
 must hold them off.[AN]
+
+[FL]
 The King's Battalion will stay on the[N]
 front lines until further orders.[6n]
 Protect the King.[an]
 
-Klavdia
+[R]
 We need a coordinated attack from all forces[,][N]
 a grand strategy to outmaneuver the enemy.[6N]
 Under siege[,] we're likely to suffer[N]
 a few losses along the way.[AN]
 
-Gerolf
-They're focusing their attacks on the northern front.[6N]
-This is it.[.6] Wreyvine cannot fall.[.6N]
-There's no time for hesitation.[AN]
+[FR]
+They're focusing their attacks on the[N]
+northern front.[.6] This is it.[.6] Wreyvine[N]
+cannot fall.[.6] No hesitation.[AN]
 
-Ulrich
+[FR]
 Alright.[.6] Shall we?[AN]
 
 [X]
 
 
 ## ChBonusEnding1
+[3L]
+[ML][LoadSelwyn][MR][LoadSylveria]
 
-Selwyn
+[ML]
 We[Beat] Our victorious momentum[Beat]![.6] It[N]
 is falling apart?! How could this possibly[N]
 be happening?![AN]
 No[Beat] Do not lose hope[,] everyone![6N]
 Our judgment shall smite them all![AN]
 
-Sylveria
+[MR]
 Brother[Beat] If[Beat] When the time arises[Beat][N]
 A reminder that I will be with you.[AN]
 
-Selwyn
+[ML]
 Do not waste your energy on such hogwash![6N]
 Our army will take them all on![AN]
 
-Sylveria
+[MR]
 I disagree[,] brother.[.6] They are not[N]
 relenting[,] despite our efforts.[AN]
 
-Selwyn
+[ML]
 Sylveria.[.6] No.[AN]
 
-Sylveria
+[MR]
 You[,] Knights of Wreyvine[Beat]I am but a weapon[,][N]
 a conduit for the Ashen Rider.[.6] Everything[N]
 is in my reach.[AN]
@@ -308,67 +323,66 @@ the Constellation[Beat]![AN]
 Selwyn
 No[,] stop![AN]
 
-Sylveria
-The Wreyvians are not prepared for the weight[N]
-of what is coming[Beat][AN]
+[MR]
+The Wreyvians are not prepared for the[N]
+weight of what is coming[Beat][AN]
 
-[LoadSylveriaSickoMode]
+[MR][LoadSylveriaSickoMode]
 
 I am unbound by fate.[.6] I am the one in control.[6N]
 I will take everything from them[Beat]![AN]
-
-
 [X]
 
 
 ## ChBonusEnding2
+# (holy fucking shit; sylveria collapses like Kelik from TLP after using the etherium which this entire scene was based on)
+[ML][LoadSylveria][MR][LoadSelwyn]
 
-Sylveria
-(Midblink) I[Beat]!
+[3L]
+[ML]
+[MidBlink]I[Beat]![AN][CloseEyes]
+I am[Beat] tired[Beat] I must rest[Beat][AN]
 
-(holy fucking shit; sylveria collapses like Kelik from TLP after using the etherium which this entire scene was based on)
-
-Affogato
-Are those[Beat] ghosts?!
-
-Stroganoff
-Oh[,] what the $@%#?!
-
-Brudet
-I can hardly see through them[Beat] Keep your guard up[,] everyone!
-
-Sylveria
-I am[Beat] sleepy[Beat] I must rest[Beat]
-
-Selwyn
-Vengeful spirits[,] ethereal soldiers[,] forged by the Ashen Rider--the Constellation. The Celestians[,] the lost souls morphed through moonlight. They're finally at our side!
+[MR]
+Vengeful spirits[,] ethereal soldiers[,][N]
+forged by the Ashen Rider.[.6] The warriors[N]
+of the lost Constellation![AN]
+They are finally at our side![AN]
 
 Sylveria
 [Beat]
 
-Selwyn
+[MR]
 Enough[,] Sylveria.[.6] Retreat.[.6][n]
 Rest easy for now[Beat]
 
 Generic Soldier (but awesome!)
 Your orders[,] Duke Omios?[an]
 
-Selwyn
-Follow the Celestians into the castle siege.[6N]
+[MR]
+Follow the soldiers into the castle siege.[6N]
 Fight on![.6] Castle Wreyvine falls today![AN]
 
 [X]
 
 ## ChBonusEnding3
 
-Ghosts?! I knew it!
+[ML][LoadAffogato]
+Are those[Beat] ghosts?![AN][ClearFace]
 
+[ML][LoadStroganoff]
+Oh[,] what the hell is that guy on about?![.6][N]
+That ain't fair at all![AN][ClearFace]
+
+[ML][LoadBrudet]
+I can hardly see through them[Beat][N]
+Keep your guard up[,] everyone![AN][ClearFace]
+
+[ML][LoadUlrich]
 With those ghosts[,] they have seemingly[N]
-endless numbers[Beat]
-
-Everybody[,] run into Castle Wreyvine![6N]
+endless numbers[Beat] Everybody[,] retreat[N]
+to Castle Wreyvine![AN]
 We cannot hold them any longer in a siege![AN]
-
 
 [X]
 
@@ -528,11 +542,12 @@ Aeterian army outside.[AN]
 
 [OpenMidLeft]
 We are running low on medical supplies[,] sir.[6N]
-Ether and magic cannot make up for that fact.[6N]
+Our clerics and priests cannot make[N]
+up for that.[AN]
 Have we received any orders[,] sir?[AN]
 
 [OpenMidRight]
-No[,] lass. I fear we must continue to heal[N]
+No[,] lass.[.6] I fear we must continue to heal[N]
 and escape if the Pale Citadel were to fall.[6N]
 *sigh* Oh[,] by the Hallowed One[Beat][AN]
 I pray we can reunite alive[Beat][AN]
@@ -575,31 +590,41 @@ Oh[,] blind faith will not do. Aohr[,] go. Find us an overhead route in the case
 
 ## InBattle4
 # We're in a bad spot here,[.4][N]
+[3L]
+
 [OpenFarLeft][LoadKing][OpenLeft][LoadGorlois][OpenMidRight][LoadLili]
+
+[OpenLeft]
+[Beat]Most of the gates are overrun by Aeterian[N]
+soldiers.[.6] We'll have to charge through.[AN]
+
 [OpenMidRight]
+Charge through?[.6] Where on the hallowed[N]
+lands of Ideon could we possibly be[N]
+charging through?[AN]
 
-Gorlois
-[Beat]Most of the gates are overrun by Aeterian soldiers. We'll have to charge through.
+[OpenFarLeft]
+Northelm is home to many strongholds.[6N]
+Any one of them shall suffice for[N]
+the future of Wreyvine.[AN]
 
-Iris
-Charge through? Where on the hallowed lands of Ideon could we possibly be charging through?
-
-King
-Northelm is home to many strongholds. Any one of them shall suffice for the future of Wreyvine.
-
-Gorlois
-The future of Wreyvine? The now is death and war! Your Majesty[,] we must relocate to a safer position. It's best to keep our lives if we can[,] considering the situation[Beat] 
+[OpenLeft]
+The future of Wreyvine?[.6] The now[N]
+is death and war![.6] Your Majesty[,][N]
+we must relocate to a safer position.[AN]
+It's best to keep our lives if we can[,][N]
+considering the situation[Beat][AN]
 
 [X]
 
 ## WTFMan
-[OpenMidRight][LoadAffo]
-Affogato
+[OpenMidLeft][LoadAffo]
+[OpenMidLeft]
 This is an unreasonable amount of soldiers.[6N]
 We're being pushed back.[.6] Sir[,] we must[N]
 escape into the castle[Beat][AN]
 
-Ulrich
+[OpenMidRight][LoadUlrich]
 No.[.6] This is fine.[.6] Move onwards[,] if you can![6N]
 Don't give them any room![AN]
 
