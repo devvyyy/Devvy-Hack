@@ -4,12 +4,12 @@
 
 .equ SkillTester, Con_Getter+4
 .equ StealPlusID, SkillTester+4
-.equ WatchfulID, StealPlusID+4
+.equ CommanderID, StealPlusID+4
 
 push	{r4-r7,r14}
 mov		r4,r0
 mov		r5,r1
-ldr		r1,WatchfulID
+ldr		r1,CommanderID
 ldr		r3,SkillTester
 mov		r14,r3
 .short	0xF800

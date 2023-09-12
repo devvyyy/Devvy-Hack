@@ -63,9 +63,11 @@ after not Attacking). Each stack grants AS +2 and[N]
 
 ## SD_Absolution
 # unit has no attack growth and absolute dumpster spd
-Living Cannon: Unit's attacks scale with[N]
-(80 + Lvl x 2)% Str. +Hit/Crit = (Lvl).[N]
-Bow range +(Lvl/5); promoted = +20 Lvl.[N]
+Living Cannon[N]
+- Unit's attacks scale with[N]
+(80 + Lvl x 2)% Str.[N]
+- Grants +Hit/Crit = (Lvl).[N]
+- Bow range +(Lvl/5); promoted = +20 Lvl.[N]
 
 ## SD_Absolution2
 # Takedowns grant 1 stack.[N]
@@ -163,14 +165,6 @@ sides strike x2 consecutively.[X]
 Gift of the Fallen: One combat per map, Yufka[N]
 deals 10 bonus damage and negates all enemy attacks.[N]
 If foe is defeated, refreshes barrier.[X]
-
-## SD_YufkaPersonal
-# repurpose old PHASING
-Spellphasing[N]
-- Yufka's second slot is equipped as[N]
-an Off-Hand weapon, granting 50% of its[N]
-Mt and a lesser additional effect.[N]
-(Only dark tomes can be Off-Hands.)[X]
 
 ## SD_AllOut
 # show in MMB/change mug
@@ -586,9 +580,11 @@ a = unit's base Atk, b = Spd, and c = Skl.)[X]
 
 ## SD_Phase
 # Affogato: Sidestep, Flow, Locktouch, Shove, Phasing (Ultimate Skill, keep Shove as Maverick); Chiffon: Moon Evoked, Rally Strength, Locktouch, Shove, IDK YET (Ultimate Skill)
-[_P][_h][_a][_s]i[_n][_g][_Colon][_Space][_E][_q][_u]i[_p][_p][_e][_d][_Space][_B][_o]w[_Slash][_R]i[_f]l[_e][_Space]i[_s][_Space][_g][_r][_a][_n]t[_e][_d][_Space][_3][_0]%[_SP][_M]t[N]
-[_a][_n][_d][_Space]l[_e][_s][_s][_e][_r][_Space][_s][_e][_c][_o][_n][_d][_a][_r][_y][_Space][_e][_f][_f][_e][_c]t[_s][_Space][_f][_r][_o]m[_Space]t[_h][_e][_Space][_o][_f][_f]-[_h][_a][_n][_d][N]
-[_R]i[_f]l[_e][_Space]i[_n][_Space][_2][_n][_d][_Space]i[_n][_v][_e][_n]t[_o][_r][_y][_Space][_s]l[_o]t[_Space][_LParen][_e][_x][_c]l[_u][_d][_e][_s][_Space][_E][_f][_f][_Dot][_RParen][_Dot][X]
+Spellphasing[N]
+- Yufka's second slot is equipped as[N]
+an Off-Hand weapon, granting 50% of[N]
+its Mt and a lesser additional effect.[N]
+(Only dark tomes can be Off-Hands.)[X]
 
 ## SD_BloodHunt
 Blood Hunt: If foe's HP is 50% or less,[N]
@@ -606,9 +602,10 @@ Bow/Rifle, inflicts Def -10 on unit,[N]
 and foe follow-ups and unit cannot.[X]
 
 ## SD_Hijack
-Arcane Mastery: Marcel deals 5 bonus[N]
-magical damage. (Bonus damage is a[N]
-separate calculation; 5 - foe's Res.)[X]
+Arcane Mastery[N]
+- Marcel deals 5 bonus magical damage.[N]
+(Bonus damage is a separate[N]
+calculation; 5 - foe's Res.)[X]
 
 ## SD_Restraint
 Inner Light: Chiffon's Splitting Maul[N]
@@ -782,8 +779,11 @@ Adaptive: Grants Def/Res +4 if unit's[N]
 Def + Res > foe's Def/Res.[X]
 
 ## SD_Stalwart
-Stalwart: If Edith cannot counter,[N]
-foe cannot follow-up.[X]
+Stalwart[N]
+- Unit reduces damage taken from[N]
+follow-up attacks by Def.[X]
+- Reduces damage taken from 3rd[N]
+and 4th hits by Def x 2.[X]
 
 ## SD_PykeMoment
 Like Dominoes: Executes foes below[N]
@@ -795,9 +795,10 @@ Gift of the Fallen: During the first[N]
 turn, Yufka dodges all enemy attacks.[X]
 
 ## SD_KingMark
-King's Mark: If HP of foes within 4[N]
-spaces of the marked is 75% or less,[N]
-sets their Crit/Avoid to 0.[X]
+King's Mark[N]
+- If HP of foes within 4 spaces of[N]
+the marked is 75% or less, sets[N]
+their Crit/Avoid to 0.[X]
 
 ## SD_ThunderClap
 Grounding[N]
@@ -814,16 +815,18 @@ Hasty: Lowers threshold for unit to[N]
 follow-up to 1 AS.[X]
 
 ## SD_HighRoller
-High Roller: If Kevron is at WT[N]
-disadvantage, guaranteed Hit/Crit.[X]
+High Roller[N]
+- If Kevron is at WT disadvantage,[N]
+guaranteed Hit/Crit.[X]
 
 ## SD_IDK
 Behemoth: Neutralizes foe's terrain[N]
 bonuses.[X]
 
 ## SD_OneBladeArmy
-One Man Army: If Velius is holding 1[N]
-item, grants Mt +3, Hit/Crit +20.[X]
+One Man Army[N]
+- If Velius is holding 1 item,[N]
+grants Mt +3, Hit/Crit +20.[X]
 
 ## SD_Promenade
 Promenade: If within 2 spaces of a[N]
@@ -844,7 +847,7 @@ unit's missing HP.[X]
 ## SD_Sanctuary
 # Sanctuary
 Tenacity[N]
-- Stroganoff reverses weapon combat penalties[N]
+- Stroganoff reverses weapon penalties[N]
 (WT disadvantage, dark magic, etc.).[N]
 - Neutralizes stat penalties[N]
 (rescue, staves, equippable rings, etc.).[X]
@@ -880,9 +883,9 @@ Lone Wolf: If unit is not adjacent to[N]
 an ally, grants Crit +15.[X]
 
 ## SD_Megalovania
-Brave Bird: If Biscotti's current HP[N]
-> foe's current HP, strikes x2[N]
-consecutively.[X]
+Brave Bird[N]
+- If Biscotti's current HP > foe's[N]
+current HP, strikes x2 consecutively.[X]
 
 ## SD_RayDark
 Augmentation: Grants adjacent[N]
@@ -1234,9 +1237,11 @@ when attacked at 1-2 range.[X]
 
 ## SD_CounterMagic
 # Pale Cascade
-Voile de Foi: Sylveria counters magical[N]
-damage upon hit and ignores damage[N]
-from foe's critical hits and combat arts.[X]
+Voile de Foi[N]
+- Sylveria counters magical damage[N]
+damage upon hit.[N]
+- Negates damage from foe's[N]
+critical hits and combat arts.[X]
 
 ## SD_Miracle
 Hallowed Soul[N]
@@ -1434,9 +1439,11 @@ Life and Death: +10 to[N]
 damage dealt and taken.[X]
 
 ## SD_LockTouch
-Cunning: Unit can Pick locks and Steal[N]
-items. Grants Sidearm range +1 and[N]
-+2 spaces of vision in fog/darkness.[X]
+Thief Basics[N]
+- Unit can pick locks and steal items.[N]
+- Grants Sidearm range +1.[N]
+- Grants +2 spaces of vision in[N]
+fog/darkness.[X]
 
 ## SD_Lunge
 Steel Soul[N]
@@ -1898,8 +1905,9 @@ Hex: Inflicts -15 Avoid to all[N]
 adjacent enemies.[X]
 
 ## SD_Barricade
-Barricade: Alicot halves damage taken[N]
-after first being struck.[X]
+Barricade[N]
+- Alicot reduces damage taken from[N]
+the 2nd attack onwards by 50%.[X]
 
 ## SD_BarricadePlus
 Barricade+: Damage taken is halved[N]
@@ -1949,6 +1957,7 @@ Heavy Strikes: Add weapon[N]
 weight to critical chance.[X]
 
 ## SD_Infiltrator
+# lost princess?
 Ghost Factory[N]
 - If Verna is within 4 spaces of[N]
 2+ enemies, grants Crit/Avoid +30.[X]
@@ -2026,9 +2035,11 @@ make a follow-up and foe cannot.[X]
 
 ## SD_Resolve
 # Inner Flame
-Coeur Allum[0xE9]: If Selwyn's HP is 50% or[N]
-less, multiplies Str, Skill, and Spd by 1.5x.[N]
-Grants Atk +5 to allies within 5 spaces.[X]
+Coeur Allum[0xE9][N]
+- If Selwyn's HP is 50% or less,[N]
+multiplies Str, Skill, and Spd by 1.5x.[N]
+- Grants Atk +5 to allies within[N]
+5 spaces.[X]
 
 ## SD_Foresight
 Foresight[X]
@@ -2111,8 +2122,10 @@ Tower Shield: Gain 6 defense[N]
 against attacks recieved at range.[X]
 
 ## SD_TowerShieldPlus
-# boss shield icon; Commander?
-Obelisk: Reduces damage taken by 50%.[X]
+# boss shield icon; Commander?; - Negates foe's effects that deal[N]bonus damage scaling with % HP.[X]
+Obelisk[N]
+- Reduces damage taken by 50%.[N]
+- Prevents foe from stealing.[X]
 
 ## SD_VoidCurse
 Void Curse: This unit gives[N]

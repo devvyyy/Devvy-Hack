@@ -12,7 +12,7 @@
 
 push {r1-r3}
 
-# Are we in OVERDRIVE!!!!1?
+@ Are we in OVERDRIVE!!!!1?
 mov r0, #0x1F
 and r0, r3 @ status index low 4 bits
 cmp r0, #0x15 @ Overdrive index
@@ -31,16 +31,16 @@ beq CheckPetrify
   b GoBack
 
 CheckPetrify:
-# Are we petrified?
+@ Are we petrified?
 mov r0, #0x1F
-and r0, r3 @ status index low 4 bits
+and r0, r3 @ status index low 5 bits
 cmp r0, #0xB @ petrify index
 beq YesPetrify
 cmp r0, #0xD @ also petrify index
 bne NoPetrify
 
 YesPetrify:
-# We are petrified so unset state bits
+@ We are petrified so unset state bits
 mov r2, #2
 mvn r2, r2
 
@@ -54,6 +54,7 @@ pop {r1-r3}
 mov r0,#0x1F @otherwise, status is over
 and r0,r3 @the status nybble must be preserved so the cured status FX can work
 strb r0,[r1]
+b GoBack
 
 DecrementStatusTimer: @the part of the vanilla function that the hook overwrites and we return to after
 pop {r1-r3}
