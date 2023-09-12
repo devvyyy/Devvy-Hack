@@ -1,5 +1,5 @@
 @Drive Def: allies within 2 spaces gain +4 defense in combat.
-.equ DriveDefID, AuraSkillCheck+4
+.equ SergeantID, AuraSkillCheck+4
 .thumb
 push {r4-r7,lr}
 @goes in the battle loop.
@@ -8,23 +8,12 @@ push {r4-r7,lr}
 mov r4, r0
 mov r5, r1
 
-mov r0, r5       @Move defender data into r1.
-mov r1, #0x4c    @Move to the defender's weapon ability
-ldr r1, [r0,r1]
-mov r2, #0x42
-tst r1, r2
-bne     Done @do nothing if magic bit set
-mov r2, #0x2
-lsl r2, #0x10 @0x20000 negate def/res
-tst r1, r2
-bne Done
-
 CheckSkill:
 @now check for the skill
 ldr r0, AuraSkillCheck
 mov lr, r0
 mov r0, r4 @attacker
-ldr r1, DriveDefID
+ldr r1, SergeantID
 mov r2, #0 @can_trade
 mov r3, #2 @range
 .short 0xf800
@@ -37,11 +26,15 @@ beq Done
 @ sub     r3,#4    @Subtract 4 from the defender's damage.
 @ strh    r3,[r0]     @Store defender avoid.
 
+ldr r0,=#0x203A4EC @attacker struct
+cmp r0,r4
+beq Done @if not attacker, dont do
+
 @testing
 mov r0, r4
 add r0, #0x5c @attacker defense
 ldrh r3, [r0]
-add r3, #4
+add r3, #5
 strh r3, [r0]
 
 Done:
@@ -52,4 +45,4 @@ bx r0
 .ltorg
 AuraSkillCheck:
 @ POIN AuraSkillCheck
-@ WORD DriveDefID
+@ WORD SergeantID

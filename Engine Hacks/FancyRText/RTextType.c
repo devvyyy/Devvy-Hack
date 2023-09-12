@@ -130,32 +130,24 @@ int GetItemDescId(int item) {
 
     if (IsBattleReal() && SkillTester(&gBattleActor.unit, 102)) { //unit with PhaseID
         switch ((item & 0xFF)) {
-            case 0xC3: //Iron Rifle :)
+            case 0x45: // Dark I :)
                 itemDesc = 0x212;
-            case 0xC4: //Steel Rifle :]
+            case 0x46: //Miasma II :]
                 itemDesc = 0x213;
-            case 0xC5: //Silver Rifle :D
+            case 0x47: //Shade III :D
                 itemDesc = 0x214;
-            case 0xC8: //Snaring Rifle >:0
+            case 0x48: //Umbra IV >:0
                 itemDesc = 0x215;
-			case 0xD8: //Bloody Rifle
+			case 0x49: //Blight V
                 itemDesc = 0x216;
-			case 0xD9: //Lockin Rifle
+			case 0x4A: //Shadowpyre X
                 itemDesc = 0x217;
-			case 0xDA: //Sonic Rifle
+			case 0x9C: //Moonshine B
                 itemDesc = 0x218;				
-			case 0xDB: //Backshield Rifle
+			case 0x9F: //Moonlight R
                 itemDesc = 0x219;
-			case 0x8A: //Arcane Rifle
-                itemDesc = 0x21A;
-			case 0xAD: //Bodkin Rifle
-                itemDesc = 0x21B;	
-			case 0xA9: //Hunting Rifle
-                itemDesc = 0x21C;
-			case 0x84: //Magnum Rifle
-                itemDesc = 0x21F;
-			case 0xCB: //Last Hour
-                itemDesc = 0x21D;				
+			case 0xA2: //Moonfall S
+                itemDesc = 0x21A;				
         }
 
 	}

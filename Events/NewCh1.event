@@ -188,8 +188,6 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-HardUnits(LunaticUnits,EvelynUnit)
-	LOAD1 0x1 EnemyUnits
 Music(0x47)
 SetBackground(0x3C)
 Text(Ch1Opening0)
@@ -197,16 +195,18 @@ FADI 20
 CLEAN
 FADU 60
 STAL 5
-CameraCursor(Sequin)
-CameraCursor(Nora)
+HardUnits(LunaticUnits,EvelynUnit)
+	LOAD1 0x1 EnemyUnits
 STAL 10
+	LOAD2 0x1 CutsceneUnits
+	ENUN
+	CameraCursor(Sequin)
+CameraCursor(Nora)
 Music(0x53)
 SetBackground(0x34)
 Text(Ch1Opening1)
 ClearBackground
 STAL 5
-	LOAD2 0x1 CutsceneUnits
-	ENUN
 STAL 10
 	GotoPrepScreen
 	ENDA

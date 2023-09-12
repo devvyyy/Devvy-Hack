@@ -248,21 +248,23 @@ TEXTEND
 ClearBackground
 ENUN
 STAL 5
-SetBackground(0x3C)
-TEXTSTART
-TEXTSHOW Prologue3
-TEXTEND
-MUSC 0x4D
-TEXTCONT
-TEXTEND
-REMA
 FADI 20
 CLEAN
 FADU 20
 STAL 10
 CameraCursor(Affogato)
 CameraCursor(Ulrich)
-Text(Prologue3)
+
+MUSC 0x4D
+SetBackground(0x3C)
+TEXTSTART
+TEXTSHOW Prologue3
+TEXTEND
+MUSCFAST 0x7FFF
+TEXTCONT
+TEXTEND
+ClearBackground
+
 STAL 5
 NoFade
 ENDA
@@ -355,7 +357,7 @@ BROWNBOXTEXT AeteriaCapitalText [8,8]
 STAL 15
 Text(PrologueAeteriaEnding)
 
-CenterTextbox(PrologueSummary)
+//CenterTextbox(PrologueSummary)
 
 FADI 60
 STAL 10

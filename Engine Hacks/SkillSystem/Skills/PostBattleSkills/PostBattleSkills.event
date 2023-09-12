@@ -184,6 +184,16 @@ POIN FuryEvent
 #include "Fury/FuryEvent.event"
 
 ALIGN 4
+RedirectDamage:
+#incbin "Redirect/Redirect.dmp"
+WARNING RedirectDamage
+POIN SkillTester
+WORD SergeantID
+POIN FuryEvent
+POIN GetUnitsInRange
+#include "Redirect/MarkDamageTaken.lyn.event"
+
+ALIGN 4
 Chronoshift:
 #incbin "Chronoshift/Chronoshift.dmp"
 POIN SkillTester

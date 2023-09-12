@@ -27,6 +27,12 @@ beq End
 
 ThingySussy:
 
+@ check the fucking levels!
+mov r1, #10
+ldrb r0, [r4, #0x8] @attacker lvl
+cmp r1, r0
+bgt End @branch if lvl is less than 10
+
 @not at stat screen
 ldr r1, [r5,#4] @class data ptr
 cmp r1, #0 @if 0, this is stat screen

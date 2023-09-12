@@ -35,7 +35,7 @@ bne End @if not attacker, don't do
 mov r0,r4
 add r0,#0x5A
 ldrh r1,[r0]
-add r1,#3
+add r1,#5
 strh r1,[r0]
 
 End:

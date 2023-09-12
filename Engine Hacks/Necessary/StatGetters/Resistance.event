@@ -11,6 +11,7 @@ pResistanceModifiers: // Resistance
 	POIN prAcrobatCheckRes
 	POIN prFlowStateCheckRes
 	POIN prCantoRingRes prBulwarkRingRes prGrimRingRes
+	//POIN prPaleRingRes prAshenRingRes
 //	POIN prTemperedFateRes
 //	POIN prFlorisMarkedRes
 	#ifdef DEBUFFS_MIN_ZERO
@@ -69,6 +70,14 @@ prGrimRingRes:
 rIfUnitHasNotSkill(SanctuaryID)
 	rIfUnitHasSkill(GrimRingID)
 		rSubConst(4)
+		
+prPaleRingRes:
+	rIfUnitHasSkill(GlowRingID)
+		rAddConst(5)
+		
+prAshenRingRes:
+	rIfUnitHasSkill(AshenRingID)
+		rAddConst(5)
 		
 prBulwarkRingRes:
 rIfUnitHasSkill(BattleVeteranID)
