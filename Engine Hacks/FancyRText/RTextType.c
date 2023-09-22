@@ -147,7 +147,7 @@ int GetItemDescId(int item) {
 			case 0x9F: //Moonlight R
                 itemDesc = 0x219;
 			case 0xA2: //Moonfall S
-                itemDesc = 0x21A;				
+                itemDesc = 0x21A;			
         }
 
 	}
