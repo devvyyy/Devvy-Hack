@@ -33,12 +33,13 @@ TURN 0x0 ShamanRein1 [6,0] 0x0
 END_MAIN
 
 CharacterBasedEvents:
-CharacterEventBothWays(0xE,UlrichAffoConvo, Ulrich, Affo) //put this first so it displays first
+CharacterEventBothWays(0x79,UlrichAffoConvo, Ulrich, Affo) //put this first so it displays first
+//0x79 is a global flag
 CharacterEventBothWays(0x10,AffoBreveConvo, Affo, Breve)
-CharacterEventBothWays(0xB,HildrUlrichConvo, Hildr, Ulrich)
 CharacterEventBothWays(0xC,AnsgarAffoConvo, Ansgar, Affo)
-CharacterEventBothWays(0xD,HildrAffoConvo, Hildr, Affo)
+CharacterEventBothWays(0xD,HildrAffoConvo, Hildr, Affo) //affo convos display first
 CharacterEventBothWays(0xA,AnsgarBreveConvo, Ansgar, Breve)
+CharacterEventBothWays(0xB,HildrUlrichConvo, Hildr, Ulrich)
 END_MAIN
 
 AffoBreveConvo:
@@ -67,7 +68,18 @@ AnsgarBreveConvo:
 	
 AnsgarAffoConvo:
 	MUSI
-	Text(AnsgarAffoTalk)
+
+TEXTSTART
+TEXTSHOW AnsgarAffoTalk
+TEXTEND
+SOUN 0xDD
+ENUT 0x25
+STAL 0x5
+
+TEXTCONT
+TEXTEND
+REMA
+
 	MUNO
 	MURE 2
 	NoFade
@@ -94,7 +106,17 @@ Chest(SteelBow,13,6)
 Door(11,7)
 Door(12,7)
 LOCA 0x0 GamingPrologue [2,2] 0x11
+
 END_MAIN
+
+StealthConvo:
+CHECK_EVENTID 0x25
+BEQ 0x776 0xC 0x0
+CameraCursor(Affogato)
+Text(StealthTime)
+LABEL 0x776
+NoFade
+ENDA
 
 GamingPrologue:
 CHECK_ALIVE 0x68
@@ -111,6 +133,7 @@ MiscBasedEvents:
 AREA 0x8 FirstMoveTime [0,9] [7,11]
 AREA 0xF WallSus [10,5] [14,8]
 AREA 0x0 GaidenPrologue [7,6] [7,6]
+AREA 0xE StealthConvo [5,0] [14,2]
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -143,16 +166,16 @@ UNIT Ulrich LPaladin 0x1 Level(5, Ally, 1)   [7,6] 0b 0 1 REDA7R7 [BraveLance,0x
 UNIT
 
 EnemyUnits:
-UNIT Aeteria Mercenary 0x1 Level(1, Enemy, 1)     [8,11] 0b 0x0 0x0 0x0 [IronSword,] [0x6,0x3,0x4,0x20]
+UNIT Aeteria Mercenary 0x1 Level(1, Enemy, 1)     [7,11] 0b 0x0 0x0 0x0 [IronSword,] [0x6,0x3,0x4,0x20]
 UNIT Aeteria Soldier 0x1 Level(1, Enemy, 1)     [5,1] 0b 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
 UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [1,10] 0b 0x0 0x0 0x0 [Flux,] [0x6,0x3,0x4,0x20]
 UNIT AeteriaStealable Shaman 0x1 Level(1, Enemy, 1)      [12,9] 0b 0x0 0x0 0x0 [Flux,Mine] [0x6,0x3,0x4,0x20]
 UNIT Aeteria 0x58 0x1 Level(1, Enemy, 1)      [4,5] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
-UNIT Aeteria Shaman 0x1 Level(1, Enemy, 0)      [13,2] DropItem 0x0 0x0 0x0 [Flux,Speedwing] BossAI
+UNIT Aeteria Shaman 0x1 Level(1, Enemy, 0)      [10,1] DropItem 0x0 0x0 0x0 [Flux,Speedwing] BossAI
 UNIT Marcellus 0x58 0x1 Level(5, Enemy, 0)      [2,2] 0b 0x0 0x0 0x0 [DarkTome2,] [0,3,4,32]
-UNIT Aeteria Fighter 0x1 Level(1, Enemy, 1)     [5,10] 0b 0x0 0x0 0x0 [IronAxe,] [0x6,0x3,0x4,0x20]
+UNIT Aeteria Fighter 0x1 Level(1, Enemy, 1)     [4,10] 0b 0x0 0x0 0x0 [IronAxe,] [0x6,0x3,0x4,0x20]
 UNIT Aeteria Mercenary 0x1 Level(1, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
-UNIT Aeteria Mercenary 0x1 Level(1, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
+UNIT Aeteria Soldier 0x1 Level(1, Enemy, 1)     [10,10] 0b 0x0 0x0 0x0 [IronLance,] [0x6,0x3,0x4,0x20]
 UNIT Aeteria Soldier 0x1 Level(1, Enemy, 1)     [12,5] 0b 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
 UNIT Aeteria Soldier 0x1 Level(1, Enemy, 1)     [2,7] DropItem 0x0 0x0 0x0 [IronLance,Vulnerary] BossAI
 UNIT AeteriaStealable Fighter 0x1 Level(1, Enemy, 1)     [6,3] 0b 0x0 0x0 0x0 [IronAxe,RedGem] AttackInRangeAI
@@ -189,6 +212,20 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+MUSCSLOW 0x3de
+SetBackground(0x23)
+STAL 30
+BROWNBOXTEXT AeteriaText [8,8]
+STAL 5
+BROWNBOXTEXT AeteriaCapitalText [8,8]
+STAL 10
+TEXTSTART
+TEXTSHOW PrologueFirst
+TEXTEND
+MUSC 0x107
+TEXTCONT
+TEXTEND
+
 ENUT 0xC6
 ENUT 0xC7
 ENUT 0xC8
@@ -210,6 +247,7 @@ STAL 20
 //FADI 5
 //CLEAN
 SetBackground(0x35)
+STAL 20
 MUSC 0x48
 SetBackground(0x25)
 STAL 10
@@ -252,7 +290,6 @@ FADI 20
 CLEAN
 FADU 20
 STAL 10
-CameraCursor(Affogato)
 CameraCursor(Ulrich)
 
 MUSC 0x4D
@@ -266,6 +303,7 @@ TEXTEND
 ClearBackground
 
 STAL 5
+CameraCursor(Affogato)
 NoFade
 ENDA
 
@@ -279,12 +317,16 @@ LABEL 0x9000
 
 Music(0x32)
 SetBackground(0x3C)
+GOTO 999 //fuck
+
 CHECK_ALIVE Breve //if alive continue, if dead go to LABEL 0x1
 BEQ 1 0xC 0x0
 CHECK_ALIVE Hildr
 BEQ 2 0x0 0xC
 CHECK_ALIVE Ansgar
 BEQ 3 0x0 0xC
+
+LABEL 999
 Text(EndingSceneHildrAnsgarPrologue) //everyone's alive
 GOTO 0x420 //end
 
@@ -408,11 +450,13 @@ STAL 60
 CURE
 Text(OhNoHeNotices)
 SVAL 0x1 0x03030000 // sets ai to [0x3,0x3,0x0,0x0]
-CHAI [8,11] // changes the ai of this coordinate
+CHAI [7,11] // changes the ai of this coordinate
+SVAL 0x1 0x03030000 // sets ai to [0x3,0x3,0x0,0x0]
+CHAI [10,10] // changes the ai of this coordinate
 SVAL 0x1 0x00120400 // sets ai to [0x0,0x12,0x4,0x0]
 CHAI [1,10] // changes the ai of this coordinate
 SVAL 0x1 0x00030000 // sets ai to [0x0,0x3,0x0,0x0]
-CHAI [5,10] // changes the ai of this coordinate
+CHAI [4,10] // changes the ai of this coordinate
 SVAL 0x1 0x00030000 // sets ai to [0x0,0x3,0x0,0x0]
 CHAI [12,9] // changes the ai of this coordinate
 SVAL 0x1 0x00060400 // sets ai to [0x0,0x6,0x4,0x0]

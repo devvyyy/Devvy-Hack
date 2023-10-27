@@ -35,8 +35,10 @@
 #define TripleIfAliveDialog(character,character2,character3,alivetext,label) "CHECK_ALIVE character; BEQ label 0x0 0xC; CHECK_ALIVE character2; BEQ label 0x0 0xC; CHECK_ALIVE character3; BEQ label 0x0 0xC; Text(alivetext); LABEL label"
 #define ChargeWarning(character,alivetext) "CHECK_ALIVE character; BEQ 1 0x0 0xC;CAM1 character;STAL 20; FlashCursor(character,60); Text(alivetext); LABEL 1"
 #define CameraCursor(character) "CAM1 character; STAL 20; FlashCursor(character,60)"
+#define Cursor(character) "FlashCursor(character,60)"
 #define CameraLong(character,time) "CAM1 character; STAL 20; FlashCursor(character,time)"
 #define CameraMove(character) "CAM1 [character]"
+#define Camera(character) "CAM1 [character]"
 #define Highlight(character) "CUMO [character]; STAL 60; CURE"
 #define MusicChange(song) "MUSC song"
 #define Music(song) "MUSC song"
@@ -47,6 +49,7 @@
 #define HardUnits(normalunits,hardunits) "CHECK_HARD; BEQ 0x724 0xC 0x0; LOAD1 0x1 normalunits; GOTO 0x725; LABEL 0x724; LOAD1 0x1 hardunits; LABEL 0x725"
 #define HardItem(unit,item) "CHECK_HARD; BEQ 0x720 0xC 0x0; BYTE 0x40 0x0D unit item; POIN SilentGiveItem+1; LABEL 0x720"
 #define BossAI [0,3,4,32]
+#define RangeAI AttackInRangeAI
 #define CommanderAI [0xD,3,4,0]
 #define TwoActionAI [0,6,4,0]
 #define StillAI [0,3,4,32]

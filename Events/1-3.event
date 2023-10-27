@@ -15,6 +15,8 @@ PointerList:
 TurnBasedEvents:
 TURN 0x0 FirstMove [1,0] 0x0
 TurnEventEnemy(0,ReinWarning,1)
+#define TurnEventNPC(eventID,pointer,turn) "TURN eventID pointer [turn, 0] 0x4"
+TurnEventNPC(0,NPCTalkingGamers,1)
 TURN 0x0 WaterfallRein [3,0] 0x0
 TURN 0x0 TopLeftRein [4,0] 0x0
 TURN 0x0 BottomLeftRein [5,0] 0x0
@@ -26,12 +28,13 @@ TURN 0x0 WestRein [10,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
+CharacterEventBothWays(0xA, UlrichStroganRecruit, Ulrich, Stroganoff)
 CharacterEventBothWays(0xA, StroganRecruit, 0x0, Stroganoff)
 CharacterEventBothWays(0xA, EisRecruit, 0x0, Eiskaffee)
 CharacterEventBothWays(0xA, DoppioRecruit, 0x0, Doppio)
-CharacterEventBothWays(0xB, EisSeqConvo, Sequin, Eiskaffee)
-CharacterEventBothWays(0xC, PanMochaConvo, Mocha, Pandoro)
-CharacterEventBothWays(0xD, UlrichDoppioConvo, Ulrich, Doppio)
+//CharacterEventBothWays(0xB, EisSeqConvo, Sequin, Eiskaffee)
+//CharacterEventBothWays(0xC, PanMochaConvo, Mocha, Pandoro)
+//CharacterEventBothWays(0xD, UlrichDoppioConvo, Ulrich, Doppio)
 	END_MAIN
 
 MiscBasedEvents:
@@ -105,12 +108,12 @@ UNIT Aeteria Thaumaturge 0x1 Level(3, Enemy, 1)     [3,1] 0b 0x0 0x0 0x0 [Fire,]
 UNIT Aeteria Occultist 0x1 Level(3, Enemy, 1)     [11,17] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
 UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [0,6] 0b 0x0 0x0 0x0 [DarkTome2,] BossAI
 UNIT Aeteria Shaman 0x1 Level(3, Enemy, 1)     [2,12] 0b 0x0 0x0 0x0 [DarkTome1] AttackInRangeAI
-UNIT Aeteria Archer 0x1 Level(3, Enemy, 1)     [4,11] DropItem 0x0 0x0 0x0 [Longbow,Vulnerary] BossAI
+UNIT Aeteria Archer 0x1 Level(3, Enemy, 1)     [4,11] DropItem 0x0 0x0 0x0 [Longbow,PureWater] BossAI
 UNIT Aeteria Myrmidon 0x1 Level(3, Enemy, 1)     [14,9] 0b 0x0 0x0 0x0 [SteelSword,] BossAI
 UNIT Aeteria Archer 0x1 Level(3, Enemy, 1)     [7,16] 0b 0x0 0x0 0x0 [IronBow,] AttackInRangeAI
-UNIT AeteriaStealable Mage 0x1 Level(3, Enemy, 1)     [6,17] 0b 0x0 0x0 0x0 [Fire,PureWater] ChargeAI
+UNIT Aeteria Mage 0x1 Level(3, Enemy, 1)     [6,17] DropItem 0x0 0x0 0x0 [Fire] ChargeAI
 UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
-UNIT Aeteria Archer 0x1 Level(3, Enemy, 1)     [9,11] 0b 0x0 0x0 0x0 [IronBow] BossAI
+UNIT Aeteria Archer 0x1 Level(4, Enemy, 1)     [9,11] 0b 0x0 0x0 0x0 [Longbow] BossAI
 UNIT Aeteria ACav 0x1 Level(3, Enemy, 1)     [0,2] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
 	UNIT
 	
@@ -178,6 +181,11 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+SetBackground(0x35)
+Sound(0xD8)
+Text(BruhMoment)
+Sound(0xA0)
+STAL 3
 SetBackground(0x26)
 Music(0xE4)
 STAL 5
@@ -192,7 +200,7 @@ Music(0x3E4)
 STAL 5
 BROWNBOXTEXT NorthelmOutskirtsText [8,8]
 STAL 15
-CharacterConditionalDialog(Hildr,Ch3Opening2,Ch3OpeningAlt2)
+CharacterConditionalDialog(Mocha,Ch3Opening2,Ch3OpeningAlt2)
 STAL 10
 FADI 60
 SetFlag(0xB)
@@ -203,6 +211,9 @@ HardUnits(LunaticUnits,YoItThem)
 	CUSN Doppio
 	CUSN Eiskaffee
 	ENUN
+	SVAL 0x1 0x18 //24, 3/4 of 32?
+	SET_HP Stroganoff
+	
 	CALL $591FD8 //prep screen
 	ENDA
 
@@ -220,33 +231,26 @@ CLEAN
 MUSCSLOW VictorySadBGM
 SetBackground(0x3E)
 
-CHECK_ALIVE Stroganoff
-BEQ 1 0x0 0xC
 TEXTSTART
 TEXTSHOW Ch3Ending2
 TEXTEND
-MUSC 0x3DE
-TEXTSHOW Ch3Ending2Point5
-TEXTCONT
-TEXTEND
 REMA
 
-GOTO 2
-LABEL 1
-Text(Ch3EndingAlt2)
-LABEL 2
+CharacterConditionalDialog(Eisner,Ch3Ending2Point5,Ch3Ending2Point5Alt)
 
 Music(0x3CD)
-CHECK_ALIVE Stroganoff
-BEQ 3 0x0 0xC
-Text(Ch3Ending3)
-GOTO 4
-LABEL 3
-Text(Ch3EndingAlt3)
-LABEL 4
+CHECK_ALIVE Eisner; BEQ 0x420 0x0 0xC; Text(Ch3Ending3); GOTO 0x776; LABEL 0x420; Text(Ch3EndingAlt3); LABEL 0x776
 	MNC2 0x4
 	NoFade
 	ENDA
+	
+	NPCTalkingGamers:
+	CAM1[12,8]
+	Text(Turn2Talk)
+	STAL 5
+	NoFade
+	ENDA
+	
 	
 FirstMove:
 	CAM1[8,15]
@@ -270,6 +274,19 @@ StroganRecruit:
 MUSS 0x30
 STAL 33
 Text(StroganTalk)
+MURE 0x2
+CUSA Stroganoff
+CUSA Eiskaffee
+CUSA Doppio
+UnsetFlag(0xB)
+UnsetFlag(0xD)
+NoFade
+ENDA
+
+UlrichStroganRecruit:
+MUSS 0x30
+STAL 33
+Text(StroganUlrichRecruit)
 MURE 0x2
 CUSA Stroganoff
 CUSA Eiskaffee
@@ -350,9 +367,9 @@ ENDA
 ReinWarning:
 SpawnReinforcements(THEGUY)
 SVAL 0x2 Selwyn
-_WARP 0xFFFF 0xFFFD [13,2]
+_WARP 0xFFFF 0xFFFD [14,3]
 CALL 0x9EE4F8
-_WARP 0x0 Selwyn [13,2]
+_WARP 0x0 Selwyn [14,3]
 STAL 15
 
 ChargeWarning(Alicot,Ch3ReinWarning)
@@ -445,7 +462,7 @@ NoFade
 ENDA
 
 ShopBruh:
-SHLI Thunder Mend Vulnerary PureWater Mine LightRune
+SHLI Mend Vulnerary PureWater Mine LightRune
 ALIGN 4
 
 ArmoryBruh:

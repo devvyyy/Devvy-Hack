@@ -57,7 +57,7 @@ rIfUnitHasNotSkill(SanctuaryID)
 prEmpowerEthCheck: //thief rush
 	rIfUnitHasState(0x400)
 		rIfUnitHasSkill(CharismaID)
-			rAddConst(4)
+			rAddConst(5)
 			
 prCritBuffAtk:
 	rIfUnitHasStatus(0x7)

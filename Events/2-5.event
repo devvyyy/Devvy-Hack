@@ -163,7 +163,7 @@ UNIT Aeteria PegRider 0x1 Level(5, Enemy, 1)     [21,4] 0b 0x0 0x0 0x0 [SteelLan
 	
 LesNewRecruits: //the imperial court people
 UNIT Yufka Shaman_F 0x1 Level(6, Enemy, 0)   [14,5] 0b 0x0 0x0 0x0 [DarkTome2,Moonshine] BossAI
-UNIT Levain MageKnight 0x1 Level(3, Enemy, 0)   [3,17] 0b 0x0 0x0 0x0 [Iceberg,Smog,Elixir] BossAI
+UNIT Levain MageKnight 0x1 Level(3, Enemy, 0)   [3,17] 0b 0x0 0x0 0x0 [Iceberg,Elixir] BossAI
 	UNIT
 
 	
@@ -217,6 +217,6 @@ BeginningScene:
 	ENDA
 
 EndingScene:
-	MNC2 0xA
+	MNC2 0xA //2-6
 	NoFade
 	ENDA

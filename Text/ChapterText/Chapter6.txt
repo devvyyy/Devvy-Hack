@@ -52,9 +52,9 @@ our outward defenses![.6] Prepare the holy[N]
 guard for battle.[AN]
 
 [FR]
-Orders? Make it quick[,] Anatolius.[.6] The enemy[N]
+Orders?[.6] Make it quick[,] Anatolius.[.6] The enemy[N]
 is nearly upon us.[.6] There's barely any[N]
-opportunity to reposition.[AN]
+opportunity to reposition.[AN][Clear]
 We'll have to make do with what we have.[AN]
 
 [R]
@@ -67,7 +67,6 @@ They'll regret laying foot on Wreyvian soil.[AN]
 [FR]
 Looks like we don't have a choice in[N]
 the matter.[AN]
-[CloseEyes][Beat]
 
 [R][ClearFace][LoadIris]
 [ML][ClearFace][LoadKing]
@@ -75,29 +74,86 @@ the matter.[AN]
 [R]
 We've fought by your side for as long as[N]
 we can remember[,] Your Majesty.[.6] And[n]
-so we'll fight to end this war yet again.[AN]
-We need to form up now.[AN]
+so we'll fight to end this war yet again.[AN][Clear]
+We need to form up now![AN]
 
 [ClearFace][LoadOgrim]
 
 [R]
-[Pause]Very well.[AN]
+[Pause]Very well.[.6] If this is the only[N]
+course of action remaining[,] then[Beat][AN]
 
 [FR]
 If we can [ToggleRed]secure[ToggleRed] the fortresses[,] we'll stop[n]
 any further reinforcements.[.6] That should buy[N]
-us some much needed time.[AN]
-Come[,] Aohr![.6] Protect His Majesty with me![AN]
+us some much needed time.[AN][Clear]
+Come[,] Aohr![.6] Protect His Majesty[N]
+with me![AN]
+[X]
+
+## Ch6OpeningAlt1
+# need to introduce new units
+[3L]
+[FFL][LoadBrudet][R][LoadKing][FR][LoadStrogan]
+
+[FFL][MoveMidLeft]
+
+[ML]
+Your Majesty![.6] The Aeterians have breached[N]
+our outward defenses![.6] Prepare the holy[N]
+guard for battle.[AN]
+
+[FR]
+You see this shit outside?![.6N]
+We gotta do what we gotta do![AN]
+
+[R]
+[Beat]Very well[,] then.[.6] Let them come![.6][N]
+Fear not our enemies[,] we've held so long.[.6N]
+They'll regret laying foot on Wreyvian soil.[AN]
+
+[FR][ClearFace][LoadGorlois]
+
+[FR]
+Looks like we don't have a choice in[N]
+the matter.[AN]
+
+[R][ClearFace][LoadIris]
+[ML][ClearFace][LoadKing]
+
+[R]
+We've fought by your side for as long as[N]
+we can remember[,] Your Majesty.[.6] And[n]
+so we'll fight to end this war yet again.[AN][Clear]
+We need to form up now![AN]
+
+[ClearFace][LoadOgrim]
+
+[R]
+[Pause]Very well.[.6] If this is the only[N]
+course of action remaining[,] then[Beat][AN]
+
+[FR]
+If we can [ToggleRed]secure[ToggleRed] the fortresses[,] we'll stop[n]
+any further reinforcements.[.6] That should buy[N]
+us some much needed time.[AN][Clear]
+Come[,] Aohr![.6] Protect His Majesty[N]
+with me![AN]
 [X]
 
 ## Ch6Opening2
 [FL][LoadAffo][L][LoadUlrich][FFR][LoadGorlois]
+[3l]
 
 [FL]
-Do we have an actual plan[,] sir?[AN]
+Awaiting orders.[AN]
 
 [L]
-[Pause]Survive.[AN]
+We don't have an actual plan[Beat][N]
+[Pause]Just survive.[AN]
+
+[FL]
+[Beat][AN]
 
 [FFR][MoveMidRight]
 Everybody[,] get ready.[.6] Fight![.6N]
@@ -105,12 +161,15 @@ Fight to your last breaths![.6] If[N]
 His Majesty falls[,] everything is over![AN]
 [X]
 
+ 
+
+
 ## Ch6OpeningAlt2
 [OpenMidLeft][LoadAffo][OpenMidRight][LoadUlrich]
 [X]
 
 ## Introducethedarnedunitspls
-[OpenFarFarLeft][LoadAffogato][OpenRight][LoadTherese][OpenFarRight][LoadLennard]
+[OpenFarFarLeft][LoadAffoSwitch][OpenRight][LoadTherese][OpenFarRight][LoadLennard]
 
 [X]
 
@@ -128,23 +187,31 @@ His Majesty falls[,] everything is over![AN]
 [X]
 
 ## Ch6Opening6
-[OpenFarLeft][LoadLili][OpenLeft][LoadGorlois][OpenMidRight][LoadKing]
+[3l]
+[OpenMidRight][LoadAffo]
+[ToggleMouthMove](I'll need to improvise a strategy[Beat])[AN][ToggleMouthMove]
+
 [X]
 
 ## Ch6Warning1
-[OpenMidLeft][LoadAffoSwitch]
-[OpenMidLeft]Something terrible is coming[N]
-from the [ToggleRed]fortresses[ToggleRed] and [ToggleRed]waters[ToggleRed][Beat][AN]
-Everyone,[.4][MoveMidLeft] brace yourselves![A][X]
+[3l]
+[OpenMidRight][LoadAffoSwitch]
+Sir.[.6] There's enemies residing in the[N]
+[ToggleRed]fortresses and the waters[ToggleRed].[AN][Clear]
+We should limit their points of attack[N]
+by sealing the fortress gates and[.4][N]
+bide time to figure out an escape plan.[AN][Clear]
+Either way[,] we'll force them to[N]
+press the attack and push.[AN]
+[X]
 
 ## Ch6WTFMoment
 [OpenMidLeft][LoadAffoSwitch]
-[OpenMidLeft]What[Beat] are those[Beat]?[.6][N]
-[CloseEyes]They look like shadows[Beat][AN][OpenEyes]
-I don't know what they're[N]
-sending at us,[AN]
-but we'll get through[N]
-this,[.4] no problem.[AN][X]
+[OpenMidLeft]
+
+[X]
+
+
 
 ## Ch6WTFAltMoment
 [OpenMidLeft][LoadAffoSwitch]
@@ -156,67 +223,69 @@ but we'll get through[N]
 this,[.4] no problem.[A][X]
 
 ## Ch6Ending0
-[OpenFarFarRight][LoadAoife][MoveLeft]
-[OpenLeft]
+[3l]
+[R][LoadUlrich][FR][LoadAffoSwitch]
 
-Affogato
-We[Beat] can't[Beat] hold them off[Beat][AN]
+[FR]
+[ToggleMouthMove](What's the most viable escape route[Beat]?)[ToggleMouthMove][AN]
 
-Klavdia
+[R]
+We can't hold them off[Beat]![AN]
+[MoveRight][CloseEyes]How?![.6] How is nothing working[N]
+against their endless army?![AN][OpenEyes]
+
+[ML][LoadAffoSwitch]
 We have no other choice.[.6] Run through[N]
-the back route![.6] We retreat towards[N]
-the North[Beat] It's the only way out![AN]
+the back route.[.6] We retreat towards[N]
+the North[Beat] It's the only way out![AN][ClearFace]
+[R][ClearFace][FR][ClearFace]
 
-Gorlois
-Your Majesty[,] we must retreat! I'll lead the way!
+[FFR][LoadGorlois][MoveMidLeft]
+Your Majesty[,] we must retreat![.6][N]
+I'll lead the way![AN]
 
 [X]
 
 ## Ch6Ending0Again
-[OpenFarFarLeft][LoadAoife][OpenRight][LoadKing][OpenFarRight][LoadGorlois]
-
-Selwyn
-Vengeance is upon us! Now[,] surrender--your life is forfeit.[X]
+[3L]
+[MR][LoadSelwyn]
+Victory is ours![.6] Now[,] surrender--[N]
+your life is forfeit.[AN][X]
 
 ## Ch6EndingINBATTLE
-Selwyn
-You. Kneel.
+[ML][LoadSelwyn]
+You.[.6] Kneel.[AN][ClearFace]
 
-King
-[Beat]Why do you persist[,] Duke Omios? You know Wreyvine is not responsible. 
-
-Selwyn
-Silence. I have heard enough from a murderer![X]
-
-## Ch6EndingPOSTBATTLE
-
-Gorlois
-[Beat]Your Majesty! King Anatolius[Beat]! You[Beat]
-
-Affogato
-Lord Gorlois! Run![X]
-
-## Ch6EndingINBATTLE2
-# (Gorlois crits Selwyn; he survives cause he has too much res lol)
-
-[MR][LoadGorlois]
-You[Beat] You'll[Beat][AN][ClearFace]
-
+[MR][LoadKing]
+[Beat]Why do you persist[,] Duke Omios?[.6] You[N]
+know Wreyvine is not responsible![AN][ClearFace]
 
 [ML][LoadSelwyn]
-[Beat]You started this war[Beat] And[N]
-yet you dare attempt to attack me[Beat]?[AN]
-You will pay with your life![AN]
+Silence.[.6] I have heard enough[n]
+from a murderer![AN][X]
 
+## Ch6EndingPOSTBATTLE
+[ML][LoadSelwyn]
+Oh.[.6] Just like that?[AN]
+
+[R][LoadGorlois]
+[Beat]Your Majesty![.6] King Anatolius[Beat]![N]
+You[Beat][AN]
+
+[FR][LoadAffoSwitch]
+Lord Gorlois.[.6] Escape.[AN]
+
+[R]
+You[Beat] You'll[Beat][AN]
 [X]
 
 ## Ch6Ending0AgainAgain
 [3L]
 [FFR][LoadUlrich][MoveMidRight]
 
-You will not throw away your life[,][N]
-Lord Gorlois.[.6] You have to run[N]
-with the rest of us.[AN][CloseSpeechSlow][MoveFarFarLeft]
+There's nothing you can do here[,][N]
+Lord Gorlois![.6] Escape the castle with[N]
+the rest of us![AN][CloseSpeechSlow][MoveFarFarLeft]
 
 [X]
 
@@ -224,15 +293,15 @@ with the rest of us.[AN][CloseSpeechSlow][MoveFarFarLeft]
 [3L]
 [MR][LoadSelwyn]
 
-[Beat]Cowards.[.6] They fare not against our army.[N]
-Oh yes[,] it's an eye for an eye.[.6] With[N]
-the King's death[,] Aeteria becomes whole![AN]
+They fare not against our army.[N]
+It's an eye for an eye.[.6] With the[N]
+King's death[,] Aeteria becomes whole.[AN]
 Now[Beat] We've done our justice.[.6N]
-Hear this[,] stragglers of Wreyvine![AN]
-We will return[,] and we will raze[N]
-your kingdom to the ground.[.6N]
-For the glory of Aeteria![AN]
-
+Hear this[,] stragglers of Wreyvine![.6][N]
+Retreat if you must.[.6] We will not pursue.[AN]
+Yet we will return[,] and we will leave[N]
+none of your kingdom behind.[.6N]
+[ToggleSmile]For the glory of Aeteria![AN]
 [X]
 
 ## AffoInterrupt
@@ -500,7 +569,7 @@ I cannot guarantee[N]
 anything.[AN]
 But Lieutenant Wustenhoff did[N]
 tell me this:[AN]
-If anyone were to save him,[N]
+If anyone were to save him[,][N]
 it would be his daughter.[AN]
 He gave me this-[.4] told me to[N]
 give it when the time is right.[AN]
@@ -542,7 +611,7 @@ Captain, Stroganoff,[.4] er,[.4] sir.[A][X]
 
 ## YoryIrisTalk
 [OpenMidLeft][LoadLili][OpenMidRight][LoadYory]
-[OpenMidRight]If you'd stop glaring at me,[N]
+[OpenMidRight]If you'd stop glaring at me[,][N]
 I'd really appreciate it[Beat][AN]
 
 [OpenMidLeft]
@@ -717,7 +786,7 @@ All the clacking while you go around[N]
 is driving me crazy.[AN]
 [OpenMidRight]They're just standard medical[N]
 supplies.[AN]
-Staves,[.4] vulneraries,[.4] holy waters,[N]
+Staves,[.4] vulneraries,[.4] holy waters[,][N]
 that sort of deal.[AN]
 [OpenMidLeft]Aren't they heavy?[.6] Can't imagine[N]
 carrying so many vulneraries.[AN]
@@ -794,7 +863,7 @@ from now on.[AN]
 To [ToggleRed]Secure[ToggleRed] a fortress,[.4] simply[N]
 [ToggleRed]Wait[ToggleRed] on it.[AN]
 [ToggleRed]Securing[ToggleRed] a fortress seals all[N]
-reinforcements from that fortress.[X]
+reinforcements from that fortress.[AN][X]
 
 ## KingBossQP1Final
 [OpenMidRight][LoadKing]The blade is drawn by[N]
@@ -813,18 +882,22 @@ all costs![AN][Clear]
 [_G][_o] [_g][_e]t [ToggleSmile]'[_e][_m]![AN][ToggleSmile][Clear][X]
 
 ## KingLeftFort
+[3l]
 [OpenMidLeft][LoadKing]Looks like the left fortress[N]
-is secured.[A][X]
+is secured.[.6] Nice job.[A][X]
 
 ## KingMidFort
+[3l]
 [OpenMidLeft][LoadKing]Looks like the middle fortress[N]
-is secured.[A][X]
+is secured.[.6] Sweet.[A][X]
 
 ## KingRightFort
+[3l]
 [OpenMidLeft][LoadKing]Looks like the right fortress[N]
-is secured.[A][X]
+is secured.[.6] Great.[A][X]
 
 ## GorloisWaterwaysDialogue
+[3l]
 [OpenMidLeft][LoadGorlois]Reinforcements should be stopped[N]
 from those waterways.[A][X]
 
@@ -846,7 +919,7 @@ to them[Beat]![A][X]
 [OpenMidRight][LoadGorlois]This is troubling.[N]
 I'm sorry,[.4] my liege,[AN]
 but I must retreat for[N]
-now.[A][X]
+now[Beat][A][X]
 
 ## AffoGorloisTalk
 [OpenMidLeft][LoadGorloisBird]

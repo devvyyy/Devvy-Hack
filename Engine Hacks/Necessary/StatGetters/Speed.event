@@ -31,7 +31,7 @@ prRallySpd:
 prEmpowerSpdCheck: //thief rush
 	rIfUnitHasState(0x400)
 		rIfUnitHasSkill(CharismaID)
-			rAddConst(4)
+			rAddConst(5)
 			
 prStatusOverdriveSpdCheck:
 	rIfUnitHasStatus(0x15) //Overdrive

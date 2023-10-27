@@ -1,5 +1,6 @@
 .thumb
 .equ KeepsakeID, SkillTester+4
+.equ DefeatistID, KeepsakeID+4
 
 push {r4-r7, lr}
 ldr     r5,=0x203a4ec @attacker
@@ -22,42 +23,43 @@ ldr r1, KeepsakeID
 cmp r0, #0
 beq End
 
-@@ Charge + Steadfast
+@has defeatist?
+ldr r0, SkillTester
+mov lr, r0
+mov r0, r4 @Attacker data
+ldr r1, DefeatistID
+.short 0xf800
+cmp r0, #0
+beq End
 
-@not broken movement map
-ldr r0,=0x203a968
-ldrb r0,[r0]
-cmp r0,#0x80
-bge End
+@under 50% hp
+ldrb r0, [r4, #0x12]
+lsr r0, #1 @max hp/2
+ldrb r1, [r4, #0x13] @currhp
+cmp r1, r0
+bgt End
 
-@Add damage and AS
-
-ldr r3,=0x203a968 @Spaces Moved
-ldrb r2,[r3]
-lsr r2,#0x1
-mov r1, #0x5A
-ldrh r0, [r4, r1]
-add r0, r2
+@halve str and as
+mov  r1, #0x5A
+ldrh r0, [r4, r1] @attack
+ldrb r2, [r4, #0x14] @str
+lsr  r2, #1 @50%
+add  r0, r2
+add  r0, r2
 strh r0, [r4,r1]
-mov r1, #0x5E
-ldrh r0, [r4, r1]
-add r0, r2
+
+mov  r1, #0x5E
+ldrh r0, [r4, r1] @spd
+ldrb r2, [r4, #0x16] @spd
+lsr  r2, #1 @50%
+add  r0, r2
+add  r0, r2
 strh r0, [r4,r1]
 
-@@ Warden
-
-@hp not at full
-ldrb r0, [r4, #0x12] @max hp
-ldrb r1, [r4, #0x13] @curr hp
-cmp r0, r1
-bne End @skip if not max hp
-
-@Add Def
-mov r0, r4
-add r0,#0x5C
-ldrh r3,[r0]
-add r3,#3
-strh r3,[r0]
+mov r1, #0x5c @def
+ldrh r0, [r4, r1]
+add r0, #5
+strh r0, [r4,r1]
 
 End:
 pop {r4-r7, r15}

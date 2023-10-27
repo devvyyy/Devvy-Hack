@@ -22,9 +22,10 @@ TURN 0x0 BisCharge [8,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0xA,SeqEvelConvo, Sequin, Evelyn)
-CharacterEventBothWays(0xB,AffoUlrichConvo, Affogato, Ulrich)
-CharacterEventBothWays(0xC,AnsgarBreveConvo, Ansgar, Breve)
+//CharacterEventBothWays(0xA,SeqEvelConvo, Sequin, Evelyn)
+CharacterEventBothWays(0x7A,AffoUlrichConvo, Affogato, Ulrich)
+//7A is a global flag
+//CharacterEventBothWays(0xC,AnsgarBreveConvo, Ansgar, Breve)
 	END_MAIN
 
 SeqEvelConvo:
@@ -92,7 +93,7 @@ LoadUnit(13,1)
 
 EvelynUnit:
 UNIT Evelyn Troubadour 0x1 Level(1, Ally, 0)   [13,0] 0b 0x0 0x0 0x0 [Heal,Barrier,Slow,] [0x0,0x0,0x0,0x0]
-UNIT Sequin Mage 0x1 Level(1, Ally, 0)   [12,0] 0b 0x0 0x0 0x0 [Fire,PoisonDagger,Vulnerary] [0x0,0x0,0x0,0x0]
+UNIT Sequin Mage 0x1 Level(1, Ally, 0)   [12,0] 0b 0x0 0x0 0x0 [0xED,PoisonDagger,Vulnerary] [0x0,0x0,0x0,0x0]
 	UNIT
 	
 LunaticUnits:
@@ -102,6 +103,7 @@ UNIT Sequin Mage 0x1 Level(1, Ally, 0)   [12,1] 0b 0x0 0x0 0x0 [Thunder,PoisonDa
 
 EnemyUnits:
 UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [7,2] 0 0 1 REDA7R4 [Flux] ChargeAI
+UNIT Aeteria Mage 0x1 Level(1, Enemy, 1)     [10,5] DropItem 0 1 REDA7R4 [Fire] ChargeAI
 UNIT Aeteria Fighter 0x1 Level(1, Enemy, 1)     [5,13] 0 0 1 REDA6R10 [IronAxe] AttackInRangeAI
 UNIT Aeteria LCav 0x1 Level(1, Enemy, 1)     [15,12] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
 UNIT Aeteria Mercenary 0x1 Level(1, Enemy, 1)     [12,7] DropItem 0 1 REDA12R4 [IronSword,PureWater] TwoActionAI
@@ -208,7 +210,18 @@ Text(Ch1Opening1)
 ClearBackground
 STAL 5
 STAL 10
-	GotoPrepScreen
+	CALL $591FD8 //preps
+	
+	MUNO
+	
+	FADU 30
+	STAL 20
+	CHECK_DEPLOYED Sequin
+	BEQ 0x776 0xC 0x0
+	CameraCursor(Sequin)
+	Text(MagesMoment)
+LABEL 0x776
+NoFade
 	ENDA
 
 EndingScene:
@@ -230,6 +243,8 @@ LOAD2 0x1 EndCutsceneUnits
 Music(VictoryBGM)
 SetBackground(0x36)
 CHECK_ALIVE Sequin
+BEQ 1 0x0 0xC
+CHECK_ALIVE Nora
 BEQ 1 0x0 0xC
 CHECK_ALIVE Breve
 BEQ 1 0x0 0xC
@@ -276,23 +291,18 @@ CLEAN
 SetBackground(0x3A)
 MUSCSLOW 0x4A
 CHECK_ALIVE Ansgar
-BEQ 7 0x0 0xC
+BEQ 6 0x0 0xC
 CHECK_ALIVE Breve
 BEQ 4 0x0 0xC
 CHECK_ALIVE Hildr
 BEQ 4 0x0 0xC
 GOTO 5
-LABEL 7
-Text(Ch1Ending3Alt2)
-STAL 10
-GiveItem(SnaringRifle,Affogato)
-Text(Ch1Ending3Alt2Point5)
-GOTO 6
+
 LABEL 4
 Text(Ch1Ending3Alt1)
 STAL 10
 GiveItem(SnaringRifle,Affogato)
-Text(Ch1Ending3Point5)
+Text(Ch1Ending3Point5Alt)
 GOTO 6
 LABEL 5
 Text(Ch1Ending3)
@@ -328,7 +338,7 @@ BEQ 8 0x0 0xC
 CHECK_ALIVE Hildr
 BEQ 8 0x0 0xC
 
-MUSC 0xA9
+MUSC 0x7FFF //Mute
 TEXTSHOW Ch1EndingGaiden
 TEXTCONT
 TEXTEND

@@ -40,19 +40,6 @@ bne	End
 @cmp  r0, #0x0
 @beq End
 
-@ ally hp is below 10??
-mov r0, #11
-ldrb r1, [r5, #0x13] @defender current hp
-cmp r0, r1
-bgt THESKILL @skip if allys hp is greater than or equal to 10
-
-@ally hp is below 25%
-ldrb r0,[r5,#0x12] @max hp
-ldrb r1,[r5,#0x13] @cur hp
-lsl r1,r1,#2
-cmp r1,r0
-bgt End
-
 THESKILL:
 
 @Get adjacent allies
@@ -65,6 +52,27 @@ beq  End
 
 mov  r4, r0       @r4 = Units in range list
 Loop:
+
+@is target a wall?
+ldr  r0, [r5] @r0 = character data pointer
+ldrb r0, [r0, #0x4] @r0 = character ID
+cmp r0, #0xFE
+beq End
+
+@is target a snag?
+ldr  r0, [r5] @r0 = character data pointer
+ldrb r0, [r0, #0x4] @r0 = character ID
+cmp r0, #0xFF
+beq End
+
+@Check if damage was taken during combat
+ldr  r0, =gActionData
+mov  r1, #0x1C
+ldrb r0, [r0, r1]
+mov  r1, #0x2 @gActionData.defenderTookDamage
+tst  r0, r1
+beq  End
+
 ldrb r5, [r4]     @r5 = Nth unit index of units in range list
 cmp  r5, #0x0
 beq  End

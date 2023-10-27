@@ -14,6 +14,12 @@ ldr r1, RagebladeID
 cmp r0, #0
 beq End
 
+@check weapon for splitting maul
+mov     r0, #0x4A      @Move to attackers's weapon (before battle)
+ldrb    r0, [r4, r0]   @Load attackers weap (before battle)
+cmp     r0, #0xE9         @Splitting Maul
+beq End //0 crit
+
 @check sword
 mov		r1,#0x50
 ldrb r0,[r4,r1] @weapon type

@@ -39,12 +39,23 @@ ldrb r1, [r5, #0x18] @defender res
 cmp r0, r1
 ble Next @skip if foes res is greater than or equal to 4
 
-@ add 4 damage
-mov r0, r4
-add r0, #0x5a @attack
-ldrh r3, [r0]
-add r3, #4
-strh r3, [r0]
+@ check enemy RES
+ldrb r0, [r4, #0x14] @attacker str
+ldrb r1, [r5, #0x18] @defender res
+mov r2, #2
+
+lsr   r0,#0x1     @str/2
+
+cmp r0, r1
+ble Done @skip if blahblah no one cares
+
+@ add str damage
+mov  r1, #0x5A
+ldrh r0, [r4, r1] @attack
+ldrb r2, [r5, #0x14] @str
+lsr  r2, #1 @divide this by 2
+add  r0, r2
+strh r0, [r4,r1]
 
 @grants defense to enemy equal to enemy res
 mov  r1, #0x5a
@@ -70,7 +81,7 @@ bne Done
 mov r0, r4
 add r0, #0x5c @attacker defense
 ldrh r3, [r0]
-add r3, #2
+add r3, #5
 strh r3, [r0]
 
 Done:

@@ -1,0 +1,233 @@
+EventPointerTable(0x86, PointerList)
+
+PointerList:
+	POIN TurnBasedEvents
+	POIN CharacterBasedEvents
+	POIN LocationBasedEvents
+	POIN MiscBasedEvents
+	POIN Dunno1 Dunno2 Dunno3 Tutorial
+	POIN Traps1 Traps2
+	POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+	POIN $0 $0 $0
+	POIN $0 $0 $0
+	POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TURN 0x0 Rein1 [3,0] 0x0
+TURN 0x0 Rein2 [6,0] 0x0
+TURN 0x0 Rein3 [9,0] 0x0
+	END_MAIN
+	
+Rein1:
+SpawnReinforcements(BotRein)
+STAL 60
+SpawnReinforcements(BotRein2)
+NoFade
+ENDA
+
+Rein2:
+SpawnReinforcements(LeftRein)
+STAL 60
+SpawnReinforcements(RightRein)
+NoFade
+ENDA
+
+Rein3:
+SpawnReinforcements(BotReinWyverns)
+NoFade
+ENDA
+
+ALIGN 32
+CharacterBasedEvents:
+
+	END_MAIN
+
+MiscBasedEvents:
+	CauseGameOverIfLordDies
+	END_MAIN
+
+LocationBasedEvents:
+Village(0x8,SussyHouse1,4,11)
+Village(0x9,SussyHouse2,20,14)
+	END_MAIN
+
+Dunno1:
+
+	END_MAIN
+
+Dunno2:
+
+	END_MAIN
+
+Dunno3:
+
+	END_MAIN
+
+Tutorial:
+
+	END_MAIN
+
+Units1:
+UNIT Chiffon 0x10 0x1 Level(2, Ally, 0)   [0,14] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(2, Ally, 0)   [1,14] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(2, Ally, 0)   [0,15] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(2, Ally, 0)   [1,15] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(2, Ally, 0)   [0,16] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(2, Ally, 0)   [1,16] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+
+UNIT Chiffon 0x10 0x1 Level(2, Ally, 0)   [7,26] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(2, Ally, 0)   [8,26] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(2, Ally, 0)   [9,26] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(2, Ally, 0)   [7,27] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(2, Ally, 0)   [8,27] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(2, Ally, 0)   [9,27] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+
+	UNIT
+
+EnemyUnits:
+UNIT Melya APal 0x1 Level(13, Enemy, 0)     [20,1] DropItem 0x0 0x0 0x0 [KillerAxe,0xB8] BossAI
+UNIT Wellington GreatKnight 0x1 Level(12, Enemy, 0)     [17,18] DropItem 0x0 0x0 0x0 [Runesword,0xB4] BossAI
+
+UNIT Aeteria Mercenary 0x1 Level(3, Enemy, 1)     [8,21] 0b 0x0 0x0 0x0 [IronSword,] ChargeAI
+UNIT Aeteria Fighter 0x1 Level(2, Enemy, 1)     [10,18] 0b 0x0 0x0 0x0 [SteelAxe,] AttackInRangeAI
+
+UNIT Aeteria Soldier 0x1 Level(2, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [SteelLance,] TwoActionAI
+UNIT Aeteria Shaman 0x1 Level(3, Enemy, 1)     [4,14] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT Aeteria Mercenary 0x1 Level(2, Enemy, 1)     [13,2] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
+UNIT Aeteria Shaman 0x1 Level(2, Enemy, 1)     [17,22] 0b 0x0 0x0 0x0 [DarkTome2,] TwoActionAI
+UNIT Aeteria Shaman 0x1 Level(2, Enemy, 1)     [22,12] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
+UNIT Aeteria Soldier 0x1 Level(2, Enemy, 1)     [19,7] 0b 0x0 0x0 0x0 [SteelLance,] AttackInRangeAI
+UNIT Aeteria Shaman 0x1 Level(3, Enemy, 1)     [15,3] 0b 0x0 0x0 0x0 [DarkTome2,] TwoActionAI
+UNIT Aeteria Mercenary 0x1 Level(2, Enemy, 1)     [25,4] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
+UNIT Aeteria LArmor 0x1 Level(3, Enemy, 1)     [10,2] 0b 0x0 0x0 0x0 [IronGlaive,ShortSpear] AttackInRangeAI
+
+UNIT Aeteria Soldier 0x1 Level(2, Enemy, 1)     [13,18] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
+UNIT Aeteria Mage 0x1 Level(2, Enemy, 1)     [18,2] DropItem 0x0 0x0 0x0 [Bolting,Talisman] BossAI
+UNIT Aeteria SArmor 0x1 Level(3, Enemy, 1)     [21,5] 0b 0x0 0x0 0x0 [SteelBlade,] RangeAI 
+UNIT Aeteria AArmor 0x1 Level(3, Enemy, 1)     [13,19] 0b 0x0 0x0 0x0 [ShortAxe,] BossAI
+
+UNIT Aeteria Mage 0x1 Level(2, Enemy, 1)     [16,10] 0b 0x0 0x0 0x0 [Fire,] BossAI
+UNIT AeteriaStealable Mage 0x1 Level(3, Enemy, 1)     [10,9] 0b 0x0 0x0 0x0 [Thunder,PureWater] BossAI
+UNIT Aeteria Mercenary 0x1 Level(2, Enemy, 1)     [17,10] 0b 0x0 0x0 0x0 [IronSword,] BossAI
+UNIT Aeteria SCav 0x1 Level(2, Enemy, 1)     [20,17] 0b 0x0 0x0 0x0 [IronSword,] StallOneTurnAI
+UNIT Aeteria Thaumaturge 0x1 Level(3, Enemy, 1)     [12,4] 0b 0x0 0x0 0x0 [Thunder,] StallOneTurnAI
+UNIT Aeteria LCav 0x1 Level(3, Enemy, 1)     [18,19] 0b 0x0 0x0 0x0 [Javelin,] TwoActionAI
+UNIT Aeteria ACav 0x1 Level(2, Enemy, 1)     [16,17] 0b 0x0 0x0 0x0 [SteelAxe,] AttackInRangeAI
+
+UNIT Aeteria Myrmidon 0x1 Level(3, Enemy, 1)     [14,8] 0b 0x0 0x0 0x0 [KillingEdge,] StallOneTurnAI
+
+UNIT Aeteria Mercenary 0x1 Level(2, Enemy, 1)     [9,6] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
+
+UNIT Aeteria Thaumaturge 0x1 Level(3, Enemy, 1)     [8,3] 0b 0x0 0x0 0x0 [Fire,] TwoActionAI
+UNIT Aeteria Mercenary 0x1 Level(2, Enemy, 1)     [16,6] 0b 0x0 0x0 0x0 [IronSword,] ChargeAI
+
+UNIT AeteriaStealable Archer 0x1 Level(3, Enemy, 1)     [5,19] 0b 0x0 0x0 0x0 [SteelBow,Elixir] AttackInRangeAI
+UNIT Aeteria Archer 0x1 Level(2, Enemy, 1)     [7,16] 0b 0x0 0x0 0x0 [Longbow] BossAI
+UNIT Aeteria Shaman 0x1 Level(3, Enemy, 1)     [8,13] DropItem 0x0 0x0 0x0 [Moonfall,PureWater] TwoActionAI
+UNIT Aeteria Archer 0x1 Level(2, Enemy, 1)     [17,15] 0b 0x0 0x0 0x0 [IronLance,EnergyRing] BossAI
+
+UNIT Aeteria Archer 0x1 Level(1, Enemy, 1)     [12,14] 0b 0x0 0x0 0x0 [ShortBow,] BossAI
+UNIT Aeteria Archer 0x1 Level(1, Enemy, 1)     [13,11] DropItem 0x0 0x0 0x0 [IronDagger,GreenGem] BossAI
+
+UNIT Dira Thief 0x1 Level(4, Ally, 1)     [1,2] 0b 0x0 0x0 0x0 [SilverDagger,0xB0,0x7D] BossAI
+
+	UNIT
+	
+BotRein:
+UNIT Aeteria LCav 0x1 Level(3, Enemy, 1)     [8,27] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
+UNIT Aeteria Shaman 0x1 Level(3, Enemy, 1)     [9,27] 0b 0x0 0x0 0x0 [DarkTome2,] ChargeAI
+	UNIT
+	
+BotRein2:
+UNIT Aeteria Thaumaturge 0x1 Level(3, Enemy, 1)     [16,27] 0b 0x0 0x0 0x0 [Thunder,] ChargeAI
+UNIT Aeteria Thaumaturge 0x1 Level(3, Enemy, 1)     [17,27] 0b 0x0 0x0 0x0 [Wind,] ChargeAI
+	UNIT
+
+LeftRein:
+UNIT Aeteria PegRider 0x1 Level(3, Enemy, 1)     [0,14] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT Aeteria WyvRider 0x1 Level(3, Enemy, 1)     [0,15] 0b 0x0 0x0 0x0 [IronLabrys,] ChargeAI
+	UNIT
+	
+RightRein:
+UNIT Aeteria Occultist 0x1 Level(3, Enemy, 1)     [25,17] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
+UNIT Aeteria ACav 0x1 Level(3, Enemy, 1)     [25,18] 0b 0x0 0x0 0x0 [IronLabrys,] ChargeAI
+	UNIT
+	
+BotReinWyverns:
+UNIT Aeteria PegRider 0x1 Level(4, Enemy, 1)     [8,27] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
+UNIT Aeteria WyvRider 0x1 Level(4, Enemy, 1)     [9,27] 0b 0x0 0x0 0x0 [ShortAxe,] ChargeAI
+UNIT Aeteria PegRider 0x1 Level(4, Enemy, 1)     [16,27] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
+UNIT Aeteria WyvRider 0x1 Level(4, Enemy, 1)     [17,27] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
+	UNIT
+	
+ThievesOMG: //tons of thieves FROM THE HOUSES with droppables that retreat to top left or bottom right
+UNIT NoKeyThief Thief 0x0 Level(3, Enemy, 1)            [4,11] DropItem 0 1 REDA4R13 [SilverDagger, GoldGem,] ThiefAI
+UNIT NoKeyThief Thief 0x0 Level(3, Enemy, 1)            [4,12] DropItem 0 1 REDA4R13 [0xB1, Warp,] ThiefAI
+	UNIT
+
+ThievesOMG2: //tons of thieves FROM THE HOUSES with droppables that retreat to top left or bottom right
+UNIT NoKeyThief Thief 0x0 Level(3, Enemy, 1)            [20,14] DropItem 0 1 REDA20R16 [PoisonDagger, 0xb8,] ThiefAI
+	UNIT
+
+SussyHouse1:
+Text(Placeholder1)
+SpawnReinforcements(ThievesOMG)
+NoFade
+ENDA
+
+SussyHouse2:
+Text(Placeholder2)
+SpawnReinforcements(ThievesOMG2)
+NoFade
+ENDA
+
+Traps1:
+BLST [12,14] Ballista
+BLST [13,11] Ballista
+
+BlueSigil(8,0)
+BlueSigil(9,0)
+BlueSigil(10,0)
+BlueSigil(11,0)
+
+
+RedSigil(15,0) //LoS??
+RedSigil(16,1) //LoS??
+
+RedSigil(20,3) //LoS??
+RedSigil(21,3) //LoS??
+
+RedSigil(24,2) //LoS??
+RedSigil(25,2) //LoS??
+
+RedSigil(11,18) //LoS??
+RedSigil(11,19) //LoS??
+
+RedSigil(16,11) //LoS??
+RedSigil(17,11) //LoS??
+
+RedSigil(16,24) //LoS??
+RedSigil(17,24) //LoS??
+
+RedSigil(22,15) //LoS??
+RedSigil(23,16) //LoS??
+RedSigil(24,17) //LoS??
+RedSigil(24,18) //LoS??
+
+	ENDTRAP
+	ALIGN 4
+
+Traps2:
+	ENDTRAP
+	ALIGN 4
+
+BeginningScene:
+	LOAD1 0x1 EnemyUnits
+	ENUN
+	GotoPrepScreen
+	ENDA
+
+EndingScene:
+	MNC2 0x9 //2-4
+	NoFade
+	ENDA

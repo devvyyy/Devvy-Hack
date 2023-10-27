@@ -25,10 +25,11 @@ TURN 0x0 TopLeftPegasi [9,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
+CharacterEventBothWays(0xC,AffoUlrichConvoCh5, Affogato, Ulrich) //add this later final talk to unlock gaiden
 //CharacterEvent(0x0,YoryTurretCheck,Yory,0x3F)
-CharacterEventBothWays(0xC, MochaRinaConvo, Mocha, Rina)
-CharacterEventBothWays(0xD, SeqUlrichConvo, Sequin, Ulrich)
-CharacterEventBothWays(0xE, EisDoppioConvo, Doppio, Eiskaffee)
+//CharacterEventBothWays(0xC, MochaRinaConvo, Mocha, Rina)
+//CharacterEventBothWays(0xD, SeqUlrichConvo, Sequin, Ulrich)
+//CharacterEventBothWays(0xE, EisDoppioConvo, Doppio, Eiskaffee)
 CharacterEventBothWays(0x20, RecruitRecruitThief, 0x0, Noel)
 	END_MAIN
 
@@ -46,6 +47,14 @@ House(0x0,House1,6,17)
 House(0x0,House2,13,16)
 Vendor(ShopAwesome,6,12)
 	END_MAIN
+	
+AffoUlrichConvoCh5:
+	MUSI
+	Text(Ch5AffoUlrichTalk) //uhhh they talk about insert past here/remembered shit idk bro!!1
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
 
 Dunno1:
 
@@ -95,6 +104,7 @@ UNIT BadGuy SwordCav 0x1 Level(6, Enemy, 1)     [14,19] 0b 0x0 0x0 0x0 [IronSwor
 UNIT BadGuy Mage 0x1 Level(5, Enemy, 1)     [9,4] 0b 0x0 0x0 0x0 [Fire] TwoActionAI
 UNIT BadGuy Mercenary 0x1 Level(5, Enemy, 1)     [10,9] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
 UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [0,19] 0b 0x0 0x0 0x0 [IronBow] AttackInRangeAI
+UNIT BadGuy Mage 0x1 Level(6, Enemy, 1)     [4,8] DropItem 0x0 0x0 0x0 [Thunder,] StallOneTurnAI
 UNIT BadGuy Hunter 0x1 Level(6, Enemy, 1)     [13,8] 0b 0x0 0x0 0x0 [Longbow,] BossAI
 UNIT BadGuy Freelancer 0x1 Level(5, Enemy, 1)     [12,11] 0b 0x0 0x0 0x0 [SteelLance,] AttackInRangeAI
 UNIT BadGuy Shaman 0x1 Level(5, Enemy, 1)     [11,15] 0b 0x0 0x0 0x0 [Flux] AttackInRangeAI
@@ -125,7 +135,7 @@ UNIT TorchBrigand Brigand 0x1 Level(6, Enemy, 1)     [14,14] 0b 0x0 0x0 0x0 [Ste
 	UNIT
 	
 SpookyBrigand2:
-UNIT TorchBrigand Raider 0x1 Level(5, Enemy, 1)     [0,8] 0 0 1 REDA1R8 [SteelSword,RedGem] BrigandAI
+UNIT TorchBrigand Raider 0x1 Level(5, Enemy, 1)     [0,8] 0 0 1 REDA1R8 [SteelSword,0xa3] BrigandAI
 	UNIT
 	
 TopRightFort:
@@ -157,6 +167,20 @@ UNIT BadGuy PegRider 0x1 Level(6, Enemy, 1)     [0,0] 0b 0x0 0x0 0x0 [SteelLance
 UNIT BadGuy PegRider 0x1 Level(5, Enemy, 1)     [0,1] 0b 0x0 0x0 0x0 [Horseslayer] ChargeAI
 UNIT BadGuy PegRider 0x1 Level(5, Enemy, 1)     [0,2] 0b 0x0 0x0 0x0 [Axereaver,Javelin] ChargeAI
 	UNIT
+	
+CutsceneUnits1:
+UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [3,0] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+	UNIT
+	
+CutsceneUnits2:
+UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [1,3] 0 0 1 REDA4R1 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Brudet WyvernRider_F 0x1 Level(1, Ally, 1)     [0,3] 0 0 1 REDA3R1 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+	UNIT
+	
+CutsceneUnits3:
+UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [13,17] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [14,16] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+	UNIT
 
 Traps1:
 	ENDTRAP
@@ -167,30 +191,36 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-CHECK_ALIVE Irene
-BEQ 1 0x0 0xC
+//talk only exists if previous talks were fulfilled
+CHECK_EVENTID 0x79 //affo talk 1
+BNE 1 0x0 0xC
+CHECK_EVENTID 0x7A //affo talk 2
+BNE 1 0x0 0xC
+GOTO 2
+
+LABEL 1
+SetFlag(0xC) //prevents talk if previous 2 werent done
+
+LABEL 2
+
 Music(0x4C)
 SetBackground(0x38)
 Text(Ch5Opening1)
-LABEL 1
 FADI 60
 CLEAN
 FADU 60
-STAL 10
-Music(0x48)
+STAL 5
+	LOAD2 0x1 CutsceneUnits1
+	LOAD2 0x1 CutsceneUnits2
+STAL 15
+Music(0x24)
 SetBackground(0x33)
 TEXTSTART
 TEXTSHOW Ch5Opening2
 TEXTEND
-MUSC 0x92
-TEXTCONT
-TEXTEND
 FADI 60
 CLEAN
-Music(0x24)
-SetBackground(0x39)
 STAL 5
-LABEL 5
 FADI 45
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 NagitoKomaeda
@@ -200,29 +230,53 @@ HardUnits(LunaticUnits,NewNew)
 	ENDA
 
 EndingScene:
-CHECK_EVENTID 0x10
-BNE 1 0x0 0xC
-CHECK_EVENTID 0x11
-BNE 1 0x0 0xC
-Music(VictoryBGM)
-SetBackground(0x33)
-Text(Ch5Ending1)
+MuteMusic
 FADI 60
-CLEAN
-SetBackground(0x0)
-STAL 5
-Music(0x27)
-Text(Ch5Ending2)
+DoAllThree
+CamOn
+LOAD2 0x1 CutsceneUnits3
+CamOff
+FADU 60
 STAL 10
-GiveItem(Talisman,Affogato)
-STAL 5
-ENUT 0x12C
-GOTO 2; LABEL 1
-Music(0x63)
+CameraCursor(Affogato)
+CameraCursor(Ulrich)
+STAL 10
+MUSCSLOW VictoryBGM
 SetBackground(0x33)
-Text(Ch5Ending1Alt)
+STAL 5
+	CHECK_ALIVE Ulrich
+	BEQ 0x1 0xC 0x0
+CHECK_EVENTID 0x79 //skips to normal ending if 1 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7A //skips to normal ending if 2 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0xC //affo talk 3; only possible if 1 and 2 were completed
+BEQ 1 0x0 0xC //if flag isnt set skip to normal ending
+
+TEXTSTART
+TEXTSHOW Ch5Ending1
+TEXTEND
+MUSC 0x115
+TEXTSHOW Ch5EndingGaiden
+TEXTCONT
+TEXTEND
+REMA
+
+SetFlag(0x7B) //GAIDEN UNLOCKED EID FLAG
+UnsetFlag(0x79)
+UnsetFlag(0x7A)
+
+CenterTextbox(Ch5GaidenUnlock)
+GiveItem(0xEE,Ulrich)
+GOTO 2
+
+LABEL 1
+
+Text(Ch5Ending1)
 
 LABEL 2
+FADI 60
+CLEAN
 MNC2 0xF
 NoFade
 ENDA
@@ -354,7 +408,7 @@ NoFade
 ENDA
 
 ShopAwesome:
-SHLI SteelSword SteelLance SteelAxe SteelBow Thunder Mend Elixir PureWater
+SHLI SteelSword SteelLance SteelAxe SteelBow Mend Elixir PureWater
 ALIGN 4
 
 VillageCheck1:

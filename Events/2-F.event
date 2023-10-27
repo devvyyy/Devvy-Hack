@@ -1,0 +1,140 @@
+EventPointerTable(0x87, PointerList)
+
+PointerList:
+	POIN TurnBasedEvents
+	POIN CharacterBasedEvents
+	POIN LocationBasedEvents
+	POIN MiscBasedEvents
+	POIN Dunno1 Dunno2 Dunno3 Tutorial
+	POIN Traps1 Traps2
+	POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+	POIN $0 $0 $0
+	POIN $0 $0 $0
+	POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+
+	END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+
+	END_MAIN
+
+MiscBasedEvents:
+	CauseGameOverIfLordDies
+	END_MAIN
+
+LocationBasedEvents:
+
+	END_MAIN
+
+Dunno1:
+
+	END_MAIN
+
+Dunno2:
+
+	END_MAIN
+
+Dunno3:
+
+	END_MAIN
+
+Tutorial:
+
+	END_MAIN
+
+Units1:
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [36,8] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [37,8] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [38,8] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [39,8] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [36,9] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [37,9] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [38,9] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [39,9] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [36,10] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [37,10] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [38,10] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [39,10] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+
+	UNIT
+
+EnemyUnits:
+UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [30,8] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
+UNIT Aeteria Merc 0x1 Level(10, Enemy, 1)     [30,10] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+UNIT Aeteria General 0x1 Level(5, Enemy, 1)     [30,9] 0b 0x0 0x0 0x0 [IronLance] BossAI
+UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [26,8] 0b 0x0 0x0 0x0 [IronLance] RangeAI
+UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [26,10] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
+UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [20,8] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
+UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [20,10] 0b 0x0 0x0 0x0 [IronLance] RangeAI
+UNIT Aeteria General 0x1 Level(5, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [IronLance] BossAI
+UNIT Aeteria Halberdier 0x1 Level(5, Enemy, 1)     [32,9] 0b 0x0 0x0 0x0 [IronLance] RangeAI
+UNIT Aeteria Sage 0x1 Level(3, Enemy, 1)     [14,8] 0b 0x0 0x0 0x0 [Bolting] BossAI
+UNIT AeteriaStealable Sage 0x1 Level(3, Enemy, 1)     [14,10] 0b 0x0 0x0 0x0 [Wind,Stopwatch] BossAI
+UNIT Aeteria Druid 0x1 Level(4, Enemy, 1)     [11,9] DropItem 0x0 0x0 0x0 [DarkTome3,Silence] BossAI
+
+UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [23,7] 0b 0x0 0x0 0x0 [IronLance] RangeAI
+UNIT Aeteria Archer 0x1 Level(10, Enemy, 1)     [24,9] 0b 0x0 0x0 0x0 [ShortBow,IronDagger] BossAI //ballista 1
+UNIT Aeteria Archer 0x1 Level(10, Enemy, 1)     [14,9] 0b 0x0 0x0 0x0 [ShortBow,SteelDagger] BossAI //ballista 2
+UNIT Aeteria Sniper 0x1 Level(2, Enemy, 1)     [9,10] 0b 0x0 0x0 0x0 [ShortBow,SilverDagger] BossAI //ballista 3
+UNIT Aeteria Archer 0x1 Level(10, Enemy, 1)     [28,9] 0b 0x0 0x0 0x0 [ShortBow,IronDagger] BossAI //ballista 3
+
+UNIT Aeteria Fighter 0x1 Level(10, Enemy, 1)     [12,7] 0b 0x0 0x0 0x0 [SteelAxe] RangeAI
+UNIT Aeteria Mage 0x1 Level(10, Enemy, 1)     [17,8] 0b 0x0 0x0 0x0 [Fire] TwoActionAI
+UNIT Aeteria Merc 0x1 Level(10, Enemy, 1)     [22,8] 0b 0x0 0x0 0x0 [IronSword] RangeAI
+UNIT Aeteria Mage 0x1 Level(10, Enemy, 1)     [23,11] 0b 0x0 0x0 0x0 [Thunder] TwoActionAI
+UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [28,7] 0b 0x0 0x0 0x0 [IronLance] RangeAI
+UNIT Aeteria LCav 0x1 Level(10, Enemy, 1)     [24,6] 0b 0x0 0x0 0x0 [IronLance] RangeAI
+UNIT Aeteria Occultist 0x1 Level(10, Enemy, 1)     [12,11] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
+UNIT Aeteria Occultist 0x1 Level(10, Enemy, 1)     [18,10] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
+
+UNIT Aeteria PegRider 0x1 Level(10, Enemy, 1)     [7,15] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
+UNIT Aeteria PegRider 0x1 Level(10, Enemy, 1)     [8,1] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
+UNIT Aeteria WyvRider 0x1 Level(10, Enemy, 1)     [8,17] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
+UNIT Aeteria WyvRider 0x1 Level(10, Enemy, 1)     [7,3] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
+UNIT Aeteria GriffonRider 0x1 Level(10, Enemy, 1)     [10,1] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
+UNIT Aeteria PegRider 0x1 Level(10, Enemy, 1)     [0,0] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
+UNIT Aeteria Occultist 0x1 Level(10, Enemy, 1)     [11,3] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
+UNIT Aeteria Auspex 0x1 Level(10, Enemy, 1)     [13,17] 0b 0x0 0x0 0x0 [Flux,LightTome1] StallOneTurnAI
+
+UNIT Aeteria Halberdier 0x1 Level(5, Enemy, 1)     [2,8] 0b 0x0 0x0 0x0 [Spear,Halberd] BossAI
+UNIT Aeteria Sergeant 0x1 Level(5, Enemy, 1)     [2,7] DropItem 0x0 0x0 0x0 [Flamberge,BluntGlaive] BossAI
+
+UNIT Aeteria SCav 0x1 Level(10, Enemy, 1)     [5,7] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
+UNIT Aeteria ACav 0x1 Level(10, Enemy, 1)     [7,8] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
+UNIT Aeteria APal 0x1 Level(5, Enemy, 1)     [4,10] 0b 0x0 0x0 0x0 [IronLance] RangeAI
+UNIT Aeteria LCav 0x1 Level(10, Enemy, 1)     [5,12] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
+UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [2,14] 0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
+UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [4,1] 0b 0x0 0x0 0x0 [Flux] RangeAI
+UNIT Aeteria Thaumaturge 0x1 Level(10, Enemy, 1)     [7,3] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
+UNIT Aeteria LCav 0x1 Level(10, Enemy, 1)     [4,15] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
+UNIT Aeteria WyvRider 0x1 Level(10, Enemy, 1)     [2,17] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
+	UNIT
+
+Traps1:
+BLST [28,9] 0x35
+BLST [24,9] IronBallista
+BLST [14,9] IronBallista
+BLST [9,10] 0x35
+	ENDTRAP
+	ALIGN 4
+
+Traps2:
+	ENDTRAP
+	ALIGN 4
+
+BeginningScene:
+	LOAD1 0x1 EnemyUnits
+	ENUN
+	GotoPrepScreen
+	ENDA
+
+EndingScene:
+	MNC2 0x13 //planned 3-Prologue?!
+	MNTS 0x1 //return to title screen
+	NoFade
+	ENDA

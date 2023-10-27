@@ -7,7 +7,7 @@
 ALIGN 16 //Zane by Lenh
 Zane_Mug:
 #incext PortraitFormatter "Zane.png"
-setMugEntry(0x2, Zane_Mug, 3, 5, 3, 3)
+setMugEntryExtend(0x2, Zane_Mug, 3, 5, 3, 3, 0, 0, 0, 0)
 
 ALIGN 16
 Ogrim_Mug: //Ogrim edited by BuskHusker
@@ -361,7 +361,7 @@ setMugEntryExtend(0x24, Zopf_Mug, 3, 5, 2, 3, 0, 2, 0, 0)
 
 ALIGN 16
 AffogatoAlt_Mug:
-#incext PortraitFormatter "Edgygato.png"
+#incext PortraitFormatter "AffoHairDown.png"
 setMugEntryExtend(0xC5, AffogatoAlt_Mug, 3, 5, 3, 3, 10, 4, 10, 2)
 
 ALIGN 16

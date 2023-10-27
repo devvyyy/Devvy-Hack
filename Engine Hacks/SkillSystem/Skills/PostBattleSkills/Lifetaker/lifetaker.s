@@ -3,14 +3,25 @@
   mov lr, \reg
   .short 0xf800
 .endm
-.equ LifetakerID, SkillTester+4
-.equ LifetakerEvent, LifetakerID+4
+.equ AssassinateID, SkillTester+4
+.equ LifetakerEvent, AssassinateID+4
 .thumb
 push	{lr}
+@check range
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#1
+bne End
+
 @check if dead
 ldrb	r0, [r4,#0x13]
 cmp	r0, #0x00
 beq	End
+
+@check if enemy is dead
+ldrb	r0, [r5,#0x13]
+cmp	r0, #0x00
+bne	End
 
 @check if attacked this turn
 ldrb 	r0, [r6,#0x11]	@action taken this turn
@@ -21,14 +32,9 @@ ldrb	r1, [r4,#0x0B]	@allegiance byte of the character we are checking
 cmp	r0, r1		@check if same character
 bne	End
 
-@check if killed enemy
-ldrb	r0, [r5, #0x13]	@currhp
-cmp	r0, #0
-bne	End
-
 @check for skill
 mov	r0, r4
-ldr	r1, LifetakerID
+ldr	r1, AssassinateID
 ldr	r3, SkillTester
 mov	lr, r3
 .short	0xf800
@@ -86,5 +92,5 @@ bx	r0
 .align
 SkillTester:
 @POIN SkillTester
-@WORD LifetakerID
+@WORD AssassinateID
 @POIN LifetakerEvent

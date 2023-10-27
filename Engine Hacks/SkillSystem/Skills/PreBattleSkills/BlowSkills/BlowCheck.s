@@ -65,6 +65,13 @@ add     r3,#0x14    @Add 20 to the attacker's crit.
 strh    r3,[r0]     @Store attacker crit.
 b       SkillReturn
 DartingSkill:
+
+@check weapon for damnation staff so it doesnt get AS lmao
+mov     r0, #0x4A      @Move to attackers's weapon (before battle)
+ldrb    r0, [r4, r0]   @Load attackers weap (before battle)
+cmp     r0, #0xD3         @Damnation Staff
+beq SkillReturn
+
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
 add     r0,#0x5E    @Move to the attacker's AS.
 ldrh    r3,[r0]     @Load the attacker's AS into r3.

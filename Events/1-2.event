@@ -25,12 +25,13 @@ TURN 0x0 GoodbyeDespair [10,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x21, PandoroRecruit, Ulrich, Pandoro)
 CharacterEventBothWays(0x21, PandoroAffoRecruit, Affogato, Pandoro)
 CharacterEventBothWays(0x21, BreneRecruit, Affogato, Irene)
-CharacterEventBothWays(0x22, MochaNoraConvo, Nora, Mocha)
-CharacterEventBothWays(0x23, HildrBreveConvo, Breve, Hildr)
-CharacterEventBothWays(0x24, AffoSeqConvo, Affogato, Sequin)
+CharacterEventBothWays(0x21, PandoroRecruit, 0x0, Pandoro)
+CharacterEventBothWays(0x21, IreneRecruit, 0x0, Irene)
+//CharacterEventBothWays(0x22, MochaNoraConvo, Nora, Mocha)
+//CharacterEventBothWays(0x23, HildrBreveConvo, Breve, Hildr)
+//CharacterEventBothWays(0x24, AffoSeqConvo, Affogato, Sequin)
 	END_MAIN
 
 MiscBasedEvents:
@@ -214,7 +215,7 @@ BEQ 1 0x0 0xC
 CHECK_ALIVE Pandoro
 BEQ 1 0x0 0xC
 MusicChange(VictoryBGM)
-SetBackground(0x3B)
+SetBackground(0x3F)
 TEXTSTART
 TEXTSHOW Ch2Ending2
 TEXTEND
@@ -235,23 +236,36 @@ CUMO [9,2]
 STAL 60
 CURE
 Text(Ch2Opening4) //the center
-CAM1 [8,5]
+CAM1 [8,6]
 Text(Ch2Opening4Point5) //the house
-CAM1 [9,8]
+CAM1 [9,9]
 Text(Ch2Opening4Point75) //the boat
-CAM1 [1,16]
+CAM1 [1,17]
 Text(Ch2Opening4Point99)
-MOVE 0x3C Eiskaffee [9,0]
-DISA Eiskaffee
-STAL 30
-MOVE 0x3C Mocha [14,0]
-ENUN
-DISA Mocha
+CALL ContinueEvent
+NoFade
+ENDA
+
+ContinueEvent:
 STAL 5
-CAM1 [2,1]
+DISA Mocha
+DISA Eiskaffee
+SOUN 0x263
+STAL 7
+SOUN 0x264
+STAL 10
+SOUN 0x265
+SOUN 0x263
+STAL 7
+SOUN 0x264
+STAL 10
+SOUN 0x265
+
 HardUnits(LunaticUnits,WoohooPeg)
+STAL 5
 CameraCursor(Mocha)
 MUSS 0x30
+STAL 10
 Text(Ch2MochaAppear1)
 CamOff
 	NoFade
@@ -261,7 +275,17 @@ ENDA
 PandoroRecruit:
 MUSS 0x30
 STAL 33
-Text(PanUlrichRecruit)
+Text(PanGenericRecruit)
+MURE 0x2
+CUSA Pandoro
+CUSA Irene
+NoFade
+ENDA
+
+IreneRecruit:
+MUSS 0x30
+STAL 33
+Text(IreneGenericRecruit)
 MURE 0x2
 CUSA Pandoro
 CUSA Irene

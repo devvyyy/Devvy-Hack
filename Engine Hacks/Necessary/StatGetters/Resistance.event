@@ -10,7 +10,7 @@ pResistanceModifiers: // Resistance
 	POIN prAvoidBuffRes
 	POIN prAcrobatCheckRes
 	POIN prFlowStateCheckRes
-	POIN prCantoRingRes prBulwarkRingRes prGrimRingRes
+	POIN prCantoRingRes prBulwarkRingRes prGrimRingRes prUlrichRingRes
 	//POIN prPaleRingRes prAshenRingRes
 //	POIN prTemperedFateRes
 //	POIN prFlorisMarkedRes
@@ -74,6 +74,10 @@ rIfUnitHasNotSkill(SanctuaryID)
 prPaleRingRes:
 	rIfUnitHasSkill(GlowRingID)
 		rAddConst(5)
+		
+prUlrichRingRes:
+	rIfUnitHasSkill(KeepsakeID)
+		rAddConst(10)
 		
 prAshenRingRes:
 	rIfUnitHasSkill(AshenRingID)

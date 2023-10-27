@@ -29,9 +29,9 @@ TURN 0x3 EndingScene [11,0] 0x0
 ALIGN 32
 CharacterBasedEvents:
 //CharacterEvent(0x0,YoryTurretCheck,Yory,0x3F)
-CharacterEventBothWays(0x9, NoraFlorisConvo, Nora, Floris)
-CharacterEventBothWays(0x10, YoryKaneConvo, Yory, Kane)
-CharacterEventBothWays(0x11, FlorisUlrichConvo, Floris, Ulrich)
+//CharacterEventBothWays(0x9, NoraFlorisConvo, Nora, Floris)
+//CharacterEventBothWays(0x10, YoryKaneConvo, Yory, Kane)
+//CharacterEventBothWays(0x11, FlorisUlrichConvo, Floris, Ulrich)
 	END_MAIN
 
 MiscBasedEvents:
@@ -95,6 +95,7 @@ UNIT Aeteria Mercenary 0x1 Level(4, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [IronSwo
 UNIT Aeteria Mercenary 0x1 Level(4, Enemy, 1)     [6,9] DropItem 0x0 0x0 0x0 [Zanbato,Mine] DefendAI
 UNIT Aeteria Fighter 0x1 Level(4, Enemy, 1)     [3,10] 0b 0x0 0x0 0x0 [IronAxe,] DefendAI
 UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [5,12] 0b 0x0 0x0 0x0 [DarkTome2,] DefendAI
+UNIT Aeteria LCav 0x1 Level(4, Enemy, 1)     [9,9] 0b 0x0 0x0 0x0 [SteelLance,] DefendAI
 UNIT Aeteria Mage 0x1 Level(5, Enemy, 0)     [6,5] 0b 0x0 0x0 0x0 [AnimaTome1,] WallAI
 UNIT Aeteria Mage 0x1 Level(4, Enemy, 0)     [12,0] 0b 0x0 0x0 0x0 [AnimaTome1,] TwoActionAI
 UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [3,4] 0b 0x0 0x0 0x0 [Flux,] DefendAI
@@ -115,13 +116,13 @@ UNIT HolyGuard Cleric 0x1 Level(5, NPC, 1)     [10,15] 0 0 1 REDA10R13 [Slow, Vu
 UNIT
 
 TankyHealerWTF:
-UNIT Floris Priest 0x1 Level(4, Ally, 0)     [6,12] 0x0 0x0 0x0 0x0 [Mend,Haze] AttackInRangeAI
-UNIT Yory 0x61 0x1 Level(3, Ally, 0)     [5,13] 0x0 0x0 0x0 0x0 [Dragonstone,0xF2,0xF3,Mine,] AttackInRangeAI
+UNIT Floris Priest 0x1 Level(4, Ally, 0)     [9,12] 0x0 0x0 0x0 0x0 [Mend,Haze] AttackInRangeAI
+UNIT Yory 0x61 0x1 Level(3, Ally, 0)     [10,12] 0x0 0x0 0x0 0x0 [Dragonstone,0xF2,0xF3,Mine,] AttackInRangeAI
 UNIT
 
 LunaticUnits:
-UNIT Floris Priest 0x1 Level(4, Ally, 1)     [6,12] 0x0 0x0 0x0 0x0 [Mend,Haze,TorchStaff] AttackInRangeAI
-UNIT Yory 0x61 0x1 Level(3, Ally, 1)     [5,13] 0x0 0x0 0x0 0x0 [Dragonstone,0xF2,0xF3,Mine,] AttackInRangeAI
+UNIT Floris Priest 0x1 Level(4, Ally, 1)     [9,12] 0x0 0x0 0x0 0x0 [Mend,Haze,TorchStaff] AttackInRangeAI
+UNIT Yory 0x61 0x1 Level(3, Ally, 1)     [10,12] 0x0 0x0 0x0 0x0 [Dragonstone,0xF2,0xF3,Mine,] AttackInRangeAI
 UNIT
 
 ArenaRein:
@@ -201,8 +202,21 @@ UNIT
 
 EndCutsceneUnits2:
 UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [11,5] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
-UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [11,0] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [11,1] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
 
+UNIT Selwyn 0x31 0x1 Level(10, Enemy, 0)     [6,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Sylveria Necromancer 0x1 Level(7, Enemy, 0)     [6,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+
+UNIT Aeteria SArmor 0x1 Level(1, Enemy, 0)     [4,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria LArmor 0x1 Level(1, Enemy, 0)     [4,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Sage 0x1 Level(1, Enemy, 0)     [3,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Druid 0x1 Level(1, Enemy, 0)     [3,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Soldier 0x1 Level(1, Enemy, 0)     [2,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Merc 0x1 Level(1, Enemy, 0)     [2,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Mage 0x1 Level(1, Enemy, 0)     [1,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Shaman 0x1 Level(1, Enemy, 0)     [1,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria ACav 0x1 Level(1, Enemy, 0)     [0,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Thaumaturge 0x1 Level(1, Enemy, 0)     [0,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
 
 UNIT
 
@@ -241,9 +255,6 @@ STAL 5
 BROWNBOXTEXT NorthelmBorderText [8,8] // box in the top right that's pretty cool for small text
 STAL 15
 
-CHECK_ALIVE Stroganoff
-BEQ 1 0x0 0xC
-
 TEXTSTART
 TEXTSHOW Ch4Opening1
 TEXTEND
@@ -257,23 +268,6 @@ MUSC 0x25
 TEXTCONT
 TEXTEND
 
-GOTO 2
-LABEL 1
-
-TEXTSTART
-TEXTSHOW Ch4OpeningAlt1
-TEXTEND
-SOUN 0xA6
-STAL 5
-SOUN 0xA7
-STAL 10
-SOUN 0x268
-STAL 15
-MUSC 0x25
-TEXTCONT
-TEXTEND
-
-LABEL 2
 FADI 60
 CLEAN
 	LOAD1 0x1 EnemyUnits
@@ -284,6 +278,7 @@ SilentlyGiveItem(0xD6, Yory)
 FADU 45
 STAL 15
 CameraCursor(Floris)
+CameraCursor(Yory)
 MUSC 0x26
 SetBackground(0x3F)
 Text(Ch4Opening2)
@@ -315,8 +310,6 @@ SOUN 0x50
 STAL 40
 Music(VictoryBGM)
 LOAD2 0x1 EndCutsceneUnits
-FADU 12
-CameraCursor(Affogato)
 STAL 5
 SetBackground(0x2B)
 Text(Ch4Ending1)
@@ -328,20 +321,36 @@ LOMA 0x3
 
 LOAD2 0x1 EndCutsceneUnits2
 
+VCWF 0
+
+Music(0x81)
+
 FADU 16
 //BROWNBOXTEXT LaterThatNight [8,8] // box in the top right that's pretty cool for small text
 
-STAL 20
+CAM1 [8,6]
+
+MOVE 0xA Affogato [11,6]
+ENUN
+STAL 15
+CameraCursor(Sylveria)
+CameraCursor(Selwyn)
+STAL 5
 Text(Ch4Ending2)
-STAL 10
-Music(0x48)
-SetBackground(0x0C)
+STAL 5
+
+MOVE 0xA Affogato [11,2]
+ENUN
+
+Music(0x25)
+SetBackground(0x3e)
 Text(Ch4Ending3)
 
 //CharacterConditionalDialog(Doppio,Ch4Ending3,Ch4EndingAlt3)
 FADI 60
 CLEAN
 //BROWNBOXTEXT PalaceText [8,8] // box in the top right that's pretty cool for small text
+	Music(0x7FFF)
 	MNC2 0x5
 	NoFade
 	ENDA
@@ -412,7 +421,7 @@ LoadReinforcements(WaterRein2)
 STAL 20
 LoadReinforcements(ThiefRein2)
 VCWF 2
-CharacterConditionalDialog(Pandoro,AffoReinText,AffoReinTextAlt)
+CharacterConditionalDialog(Ulrich,AffoReinText,AffoReinTextAlt)
 STAL 30
 NoFade
 ENDA

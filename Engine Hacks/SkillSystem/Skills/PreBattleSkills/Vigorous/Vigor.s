@@ -21,6 +21,11 @@ ldrb r3, [r3]
 cmp r3, #4
 beq End
 
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq End
+
 @Unit has skill, check to see if unit has a staff equipped
 mov     r0, #0x50      @Move to the attacking unit weapon type.
 ldrb    r0, [r4, r0]   @Load the attacking unit weapon type.

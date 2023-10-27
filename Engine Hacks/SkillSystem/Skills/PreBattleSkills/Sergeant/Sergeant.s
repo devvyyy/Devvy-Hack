@@ -42,11 +42,11 @@ lsl r2, #0x10 @0x20000 negate def/res
 tst r1, r2
 bne BraveCheck
 
-@apply def +5
+@apply def +7
 mov r0, r4
 add r0,#0x5C
 ldrh r3,[r0]
-add r3,#5
+add r3,#7
 strh r3,[r0]
 
 BraveCheck:

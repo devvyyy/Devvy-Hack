@@ -60,7 +60,7 @@ ldr	r0,=#0x8019224	@mov getter
 mov	lr, r0
 mov	r0, r4		@attacker
 .short	0xF800
-sub r0, #1
+sub r0, #2
 strb 	r0, [r6, #0x10]	@squares moved this turn
 
 @if canto, unset 0x2 and set 0x40
