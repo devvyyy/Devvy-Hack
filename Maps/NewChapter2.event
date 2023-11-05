@@ -11,6 +11,7 @@ MapChanges:
 TileMap(1,1,9,1,1,ChestOpen)
 TileMap(3,12,2,3,2,DestroyNooo)
 TileMap(2,13,3,1,1,DoorGaming)
+TileMap(4,9,8,1,1,FakeDoor)
 TileMapEnd
 
 ChestOpen:
@@ -22,6 +23,10 @@ SHORT 0xca4 0xca8 0xcac 0xd24 0xd28 0xd2c
 ALIGN 4
 
 DoorGaming:
+SHORT 0x80 
+ALIGN 4
+
+FakeDoor:
 SHORT 0x80 
 ALIGN 4
 

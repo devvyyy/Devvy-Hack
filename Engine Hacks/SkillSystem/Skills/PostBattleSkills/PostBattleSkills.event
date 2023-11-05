@@ -323,6 +323,14 @@ POIN GetUnitsInRange
 #include "HappyHour/HappyHourEvent.event"
 
 ALIGN 4
+HappyHourSelf:
+#incbin "HappyHour/HappyHourSelf.dmp"
+POIN SkillTester
+WORD HappyHourID
+POIN HappyHourEventSelf
+#include "HappyHour/HappyHourEvent.event"
+
+ALIGN 4
 MoonEvokedPost:
 #incbin "MoonEvokedPost/MoonEvokedPost.dmp"
 POIN SkillTester

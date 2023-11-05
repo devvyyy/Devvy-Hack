@@ -15,7 +15,7 @@ mov lr, r0
 mov r0, r4 @attacker
 ldr r1, VoiceOfPeaceID
 mov r2, #3 @are_enemies
-mov r3, #2 @range
+mov r3, #5 @range
 .short 0xf800
 cmp r0, #0
 beq Done
@@ -23,7 +23,7 @@ beq Done
 mov r0, r4
 add     r0,#0x5A    @Move to the attacker's damage.
 ldrh    r3,[r0]     @Load the attacker's damage into r3.
-sub     r3,#2    @Subtract 2 from the attacker's damage.
+sub     r3,#5    @Subtract 2 from the attacker's damage.
 strh    r3,[r0]     @Store attacker dmg.
 
 Done:

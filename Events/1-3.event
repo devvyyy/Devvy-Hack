@@ -152,22 +152,33 @@ UNIT Aeteria LArmor 0x1 Level(4, Enemy, 1)     [0,9] 0b 0x0 0x0 0x0 [SteelGlaive
 
 YoItThem:
 UNIT Stroganoff AArmor 0x1 Level(6, Ally, 0)     [10,8] 0b 0x0 0x0 0x0 [SteelLabrys,EmeraldAxe,0x65,0xf1] [0x0,0x3,0x0,0x20]
-UNIT Eiskaffee GriffonRider 0x1 Level(4, Ally, 0)     [11,9] 0b 0x0 0x0 0x0 [IronRifle,Elixir] [0x0,0x3,0x0,0x20]
-UNIT Doppio Soldier 0x1 Level(5, Ally, 0)     [12,8] 0b 0x0 0x0 0x0 [KillerLance, Elixir] [0x0,0x3,0x0,0x20]
+UNIT Eiskaffee GriffonRider 0x1 Level(4, Ally, 0)     [11,9] 0b 0x0 0x0 0x0 [IronRifle,MageBow,PureWater] [0x0,0x3,0x0,0x20]
+UNIT Doppio Soldier 0x1 Level(5, Ally, 0)     [12,8] 0b 0x0 0x0 0x0 [MageLance, ShortSpear,Elixir] [0x0,0x3,0x0,0x20]
 UNIT Wreyvine Mercenary 0x1 Level(3, NPC, 1)     [9,9] 0b 0x0 0x0 0x0 [KillingEdge,Armorslayer] StallOneTurnAI
 UNIT Wreyvine Soldier 0x1 Level(3, NPC, 1)     [13,9] 0b 0x0 0x0 0x0 [SapphireLance,Javelin] StallOneTurnAI
 	UNIT
 	
 LunaticUnits:
-UNIT Stroganoff AArmor 0x1 Level(6, Ally, 1)     [10,8] 0b 0x0 0x0 0x0 [SteelLabrys,EmeraldAxe,0x65,0xf1] [0x0,0x3,0x0,0x20]
-UNIT Eiskaffee GriffonRider 0x1 Level(4, Ally, 1)     [11,9] 0b 0x0 0x0 0x0 [IronRifle,0xDB,Elixir] [0x0,0x3,0x0,0x20]
-UNIT Doppio Soldier 0x1 Level(5, Ally, 1)     [12,8] 0b 0x0 0x0 0x0 [KillerLance, ShortSpear, Elixir] [0x0,0x3,0x0,0x20]
+UNIT Stroganoff AArmor 0x1 Level(6, Ally, 1)     [10,8] 0b 0x0 0x0 0x0 [SilverLabrys,EmeraldAxe,0x65,0xf1] [0x0,0x3,0x0,0x20]
+UNIT Eiskaffee GriffonRider 0x1 Level(4, Ally, 1)     [11,9] 0b 0x0 0x0 0x0 [BraveBow,0xDB,Elixir] [0x0,0x3,0x0,0x20]
+UNIT Doppio Soldier 0x1 Level(5, Ally, 1)     [12,8] 0b 0x0 0x0 0x0 [BraveLance, ShortSpear, Elixir] [0x0,0x3,0x0,0x20]
 UNIT Wreyvine Mercenary 0x1 Level(4, NPC, 1)     [9,9] 0b 0x0 0x0 0x0 [BraveSword,ShortBrand] StallOneTurnAI
 UNIT Wreyvine Soldier 0x1 Level(4, NPC, 1)     [13,9] 0b 0x0 0x0 0x0 [BraveLance,ShortSpear] StallOneTurnAI
 	UNIT
+	
+CutsceneUnits:
+UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [13,3] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [14,4] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+
+UNIT Stroganoff AArmor 0x1 Level(6, Ally, 1)     [14,2] 0b 0x0 0x0 0x0 [SteelLabrys,EmeraldAxe,0x65,0xf1] [0x0,0x3,0x0,0x20]
+	UNIT
+
+IfEisnerAlive:
+UNIT Eiskaffee GriffonRider 0x1 Level(4, Ally, 1)     [15,2] 0b 0x0 0x0 0x0 [IronRifle,0xDB,Elixir] [0x0,0x3,0x0,0x20]
+	UNIT
 
 AtheyaCutscene:
-UNIT Atheya WyvernRider_F 0x1 Level(5, NPC, 0)     [6,13] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] AttackInRangeAI
+UNIT Atheya WyvernRider_F 0x1 Level(5, NPC, 0)     [16,18] 0 0 1 REDA15R3 [IronLabrys,Halberd,Elixir,] AttackInRangeAI
 	UNIT
 
 Traps1:
@@ -226,19 +237,34 @@ SVAL 0x2 Eiskaffee
 CALL 0x9EE4A0
 
 FADI 60
-CLEAN
-
+DoAllThree
+CAM1 [14,3]
+LOAD2 0x1 CutsceneUnits
+LOAD2 0x1 IfEisnerAlive
+FADU 60
+STAL 20
 MUSCSLOW VictorySadBGM
+STAL 10
 SetBackground(0x3E)
 
 TEXTSTART
 TEXTSHOW Ch3Ending2
 TEXTEND
 REMA
-
+STAL 10
+ClearBackground
+STAL 20
+CamOn
+LOAD2 0x1 AtheyaCutscene
+CamOff
+STAL 15
 CharacterConditionalDialog(Eisner,Ch3Ending2Point5,Ch3Ending2Point5Alt)
 
+MOVE 0xA Atheya [15,4]
+STAL 5
+
 Music(0x3CD)
+SetBackground(0x3E)
 CHECK_ALIVE Eisner; BEQ 0x420 0x0 0xC; Text(Ch3Ending3); GOTO 0x776; LABEL 0x420; Text(Ch3EndingAlt3); LABEL 0x776
 	MNC2 0x4
 	NoFade
@@ -439,11 +465,11 @@ FlambergeVillage:
 STORETOSOMETHING 0x0 // lowers music volume
 MUSI // lowers music volume
 SVAL 0x2 0x1 // decides background 
-SVAL 0x3 FlambergeVillageText // decides text id
+SVAL 0x3 MageSwordVillageText // decides text id
 CALL 0x9EE310 // runs the text
 MUNO // increases music volume
 	CALL 0x591F40
-	SVAL 0x3 0xC6
+	SVAL 0x3 MageSword
   GIVEITEMTO 0xFFFF
 NoFade
 ENDA

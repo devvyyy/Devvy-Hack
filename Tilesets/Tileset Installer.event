@@ -150,8 +150,13 @@ ALIGN 4
     SnowBernPalette:
     #incbin "SnowBern/SnowyPalette.bin"
 	
+	ALIGN 4
+    SnowBernPaletteNight:
+    #incbin "SnowBern/SnowPeaksObjectsNight.pal"
+	
     ALIGN 4
     EventPointerTable(0x51, SnowBernPalette)
+    EventPointerTable(0xCE, SnowBernPaletteNight)
     EventPointerTable(0x52, SnowBernMapConfig)
     EventPointerTable(0x50, SnowBernImage)
     EventPointerTable(0xD0, SnowBernAnims)

@@ -93,17 +93,17 @@ LoadUnit(13,1)
 
 EvelynUnit:
 UNIT Evelyn Troubadour 0x1 Level(1, Ally, 0)   [13,0] 0b 0x0 0x0 0x0 [Heal,Barrier,Slow,] [0x0,0x0,0x0,0x0]
-UNIT Sequin Mage 0x1 Level(1, Ally, 0)   [12,0] 0b 0x0 0x0 0x0 [0xED,PoisonDagger,Vulnerary] [0x0,0x0,0x0,0x0]
+UNIT Sequin Mage 0x1 Level(1, Ally, 0)   [12,0] 0b 0x0 0x0 0x0 [IronDagger,PoisonDagger,Vulnerary] [0x0,0x0,0x0,0x0]
 	UNIT
 	
 LunaticUnits:
 UNIT Evelyn Troubadour 0x1 Level(1, Ally, 1)   [13,0] 0b 0x0 0x0 0x0 [Heal,Barrier,Slow,Vulnerary] [0x0,0x0,0x0,0x0]
-UNIT Sequin Mage 0x1 Level(1, Ally, 0)   [12,1] 0b 0x0 0x0 0x0 [Thunder,PoisonDagger,Vulnerary] [0x0,0x0,0x0,0x0]
+UNIT Sequin Mage 0x1 Level(1, Ally, 0)   [12,1] 0b 0x0 0x0 0x0 [0xAE,PoisonDagger,Vulnerary] [0x0,0x0,0x0,0x0]
 	UNIT
 
 EnemyUnits:
 UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [7,2] 0 0 1 REDA7R4 [Flux] ChargeAI
-UNIT Aeteria Mage 0x1 Level(1, Enemy, 1)     [10,5] DropItem 0 1 REDA7R4 [Fire] ChargeAI
+UNIT Aeteria Mage 0x1 Level(1, Enemy, 1)     [12,7] DropItem 0 1 REDA11R7 [Fire] ChargeAI
 UNIT Aeteria Fighter 0x1 Level(1, Enemy, 1)     [5,13] 0 0 1 REDA6R10 [IronAxe] AttackInRangeAI
 UNIT Aeteria LCav 0x1 Level(1, Enemy, 1)     [15,12] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
 UNIT Aeteria Mercenary 0x1 Level(1, Enemy, 1)     [12,7] DropItem 0 1 REDA12R4 [IronSword,PureWater] TwoActionAI

@@ -200,7 +200,7 @@ and if Spd > foe's Spd +8, foe cannot counter.[X]
 Saving Grace[N]
 - Grants Katsu another action after[N]
 Rescue/Drop/Take/Give.[N]
-(once per turn, Canto disabled.)[X]
+(Once per turn, Canto disabled.)[X]
 
 ## SD_AmonglaSwag
 16-Caliber Net: After combat, unit Roots[N]
@@ -263,7 +263,7 @@ foe cannot land a critical hit.[X]
 
 ## SD_EspressoMirrorPassive
 Second Wind: If Galeforce activates, grants[N]
-Espresso Atk/Skill/Spd +5 for 1 turn.[X]
+Eisner Atk/Skill/Spd +5 for 1 turn.[X]
 
 ## SD_BrudetMirrorPassive
 Dragonforce: Brudet deals bonus damage and[N]
@@ -321,9 +321,10 @@ action after combat. If foe is[N]
 defeated, stack is restored.[X]
 
 ## SD_Paranoia
-Paranoia: If foe's range > 3, Locro[N]
-dodges all attacks. Can pass through[N]
-foes. If HP < 100%, Avoid/AS +20.[X]
+Paranoia[N]
+- If foe's range > 3, Locro dodges[N]
+all attacks.[N]
+- If HP < 100%, Avoid/AS +20.[X]
 
 ## SD_SettW
 Down But Not Out: If unit's HP is 25% or less,[N]
@@ -369,7 +370,7 @@ HP = 20% of missing HP and grants[N]
 "Deal +10 damage" for 2 turns.[X]
 
 ## SD_Zephyr
-# USES 0x22; use new status effect; Zephyr: If Xavier initiates, grants NEWLINE Whirlwind to both sides for 1 turn. Maybe Mov +2 in new skill idk
+# USES global flag 0x22; use new status effect; Zephyr: If Xavier initiates, grants NEWLINE Whirlwind to both sides for 1 turn. Maybe Mov +2 in new skill idk
 Full Tilt[N]
 - Xavier can toggle a stance with Zephyr:[N]
 Grants Move x2. Converts 50% of max HP[N]
@@ -390,9 +391,9 @@ Str/Skill and sets Spd/Move to 0 for 1 turn.[X]
 ## SD_Radiance
 # shirt uses 0xB1
 Motivate[N]
-- Floris' staves mark allies.[N]
-- Mark grants Move +1.[N]
-- Restores (Def + 5) HP to all marked[N]
+- Floris' staves mark allies for the map.[N]
+- Mark grants allies Res +5.[N]
+- Restores (Eth + 5) HP to all marked[N]
 allies on the map after combat.[X]
 
 ## SD_Gamer
@@ -447,7 +448,9 @@ unit has Weapon Triangle advantage.[X]
 # zopf personal?
 Duck and Cover[N]
 - If Zopf doesn't move, grants[N]
-Hit +30 and Canto 5 spaces.[X]
+Hit +30 and Canto 5 spaces.[N]
+- If terrain has bonuses, counter[N]
+before foe's first attack.[X]
 
 ## SD_FunnyTime
 I Make The Rules: If unit's Spd < foe's Spd,[N]
@@ -503,7 +506,7 @@ current HP.[X]
 ## SD_ElbowGrease
 Elbow Grease[N]
 - Converts Yory's Str to Prt, Dex to Rsl.[N]
-- Ballistae gain +10 Mt, +30 Hit.[N]
+- Ballistae gain +10 Atk, +30 Hit.[N]
 - Deploying a turret grants another[N]
 action (once per turn).[X]
 
@@ -533,8 +536,9 @@ weapon Mt.[X]
 ## SD_HappyHour
 Happy Hour[N]
 - After using a consumable item,[N]
-Kane restores HP to allies within[N]
-3 spaces = ally's Luck.[X]
+restores HP to allies within 3 spaces[N]
+= ally's Luck and grants Kane[N]
+another action.[X]
 
 ## SD_CorneredWolf
 Cornered Wolf: When within 3 spaces of[N]
@@ -752,7 +756,9 @@ less HP.[X]
 # luna 50%, then reduce frye's damage by 50% enemy res; make this give swords 1-2?
 Searing Sword[N]
 - Frye's physical sword deal damage[N]
-based off 50% offoe's Def/Res.[X]
+based off 50% of foe's Def/Res.[N]
+- If Spd > foe's Spd, reduces damage[N]
+taken = difference between stats.[X]
 
 ## SD_CantoTwo
 Canter: Unit can move 1 space[N]
@@ -943,7 +949,7 @@ foe's Max HP/4.[X]
 # Sidestep
 Sidestep[N]
 - If Affogato doesn't move, Canto 2[N]
-spaces (1 otherwise; x2 in Stealth).[N]
+spaces (1 if moved; x2 in Stealth).[N]
 - Grants another action after[N]
 picking/stealing (once per turn).[X]
 
@@ -968,7 +974,7 @@ deals bonus magical damage = Spd.[X]
 
 ## SD_Vigor
 # Requiem: When using offensive staves, multiplies Eth by 1.25x and deals bonus damage equal to a quarter of foe's current HP.
-Requiem[N]
+Requiem; Infinite Power![N]
 - Yvonne's offensive staves use 1.25x[N]
 Eth and deal bonus damage = 25%[N]
 of foe's current HP.[X]
@@ -1044,9 +1050,9 @@ a critical hit.[X]
 ## SD_Sergeant
 # Warden/Steadfast
 Stand Behind Me[N]
-- If foe initiates on an adjacent ally,[N]
-Ansgar blocks the first lethal hit(s)[N]
-and takes 10 damage.[N]
+- If foe initiates on an ally within 4[N]
+spaces, Ansgar blocks the first lethal[N]
+hit per combat and takes 10 damage.[N]
 - If adjacent to an ally, grants Prt +7.[X]
 
 ## SD_ShieldDef
@@ -1122,13 +1128,16 @@ Wary Fighter: Unit cannot[N]
 double or be doubled.[X]
 
 ## SD_SureShot
-Sure Shot: A precision attack that[N]
-always hits and does 1.5x damage.[N]
-(Skill % activation)[X]
+# uses flag 0x22
+Ace in the Hole[N]
+- Levain readies next hits to Headshot.[N]
+- Headshots have +10 range, always hit,[N]
+and deal bonus damage = 200% of[N]
+foe's missing HP.[X]
 
 ## SD_Provoke
-Provoke: Enemies are more[N]
-likely to target this unit.[X]
+Provoke[N]
+- Enemies will target this unit.[X]
 
 ## SD_Mercy
 Mercy: Enemies are left[N]
@@ -1259,7 +1268,7 @@ critical hits and combat arts.[X]
 ## SD_Miracle
 Hallowed Soul[N]
 - If Iris' HP is 50% or more,[N]
-neutralizes Mt of tier I magic and[N]
+neutralizes Mt of foe's magic and[N]
 survive the next lethal attack.[X]
 
 ## SD_HallowedGround
@@ -1295,9 +1304,11 @@ Slayer: Deal effective damage[N]
 to monster units.[X]
 
 ## SD_Summon
-Sentry: Deploy an immobile turret with 5[N]
-range that ignores 20% of foe's Def,[N]
-shoots x2, and acts twice per turn.[X]
+Sentry[N]
+- Deploy an immobile turret with 5 range,[N]
+ignores 20% of foe's Def, shoots x2,[N]
+and acts twice per turn (5 ammo rounds).[N]
+- Adjacent units can supply ammunition.[X]
 
 ## SD_Dance
 Dance: Refresh an ally unit[N]
@@ -1309,9 +1320,9 @@ after attacking and defeating a foe.[X]
 
 ## SD_Galeforce
 Galeforce[N]
-- If Espresso defeats a foe, grants[N]
+- If Eisner defeats a foe, grants[N]
 another action with -50% Move.[N]
-(once per turn, Canto disabled.)[X]
+(Once per turn, Canto disabled.)[X]
 
 ## SD_Renewal
 Renewal: Restore 30% of max HP[N]
@@ -1342,8 +1353,9 @@ Charm: Allies within 2[N]
 spaces deal +2 damage.[X]
 
 ## SD_VoiceOfPeace
-Voice of Peace: Enemies within[N]
-2 spaces deal -2 damage.[X]
+Pacifist[N]
+- Tammy inflicts Atk -5 on foes[N]
+within 5 spaces.[X]
 
 ## SD_Amaterasu
 Amaterasu: Allies within 2 spaces[N]
@@ -1395,7 +1407,8 @@ Colossus: Triples Strength.[N]
 
 ## SD_RallyStr
 Hoist the Flag[N]
-- Can move after Steal/Pick.[N]
+- Can move after stealing/picking[N]
+(but not if under a granted action).[N]
 - Use Rally to grant +4 Str/Eth[N]
 to adjacent allies for 1 turn.[X]
 
@@ -1551,7 +1564,8 @@ Seal Skill: Debuff opponent's Skl[N]
 by 6 after combat. (Recover 1/turn)[X]
 
 ## SD_SealSpd
-Snare: Inflicts Spd -5 on foe after[N]
+Snaring Edge[N]
+Aloys inflicts Spd -5 on foe after[N]
 combat (recovers 1/turn).[X]
 
 ## SD_SealLuk
@@ -1633,13 +1647,13 @@ reduced by 25%. Charge: 2[X]
 
 ## SD_Shove
 Shove[N]
-Unit can push an adjacent unit[N]
+- Unit can push an adjacent unit[N]
 1 space away.[N]
 (Skill can target any allegiance.)[X]
 
 ## SD_Smite
 Smite[N]
-Unit can push an adjacent unit[N]
+- Unit can push an adjacent unit[N]
 2 spaces away.[N]
 (Skill can target any allegiance.)[X]
 
@@ -1692,26 +1706,26 @@ Despoil: Obtain a bullion worth[N]
 
 ## SD_Pivot
 Pivot[N]
-Unit can dash to the opposite side[N]
+- Unit can dash to the opposite side[N]
 of an adjacent ally.[N]
 (Skill can be used during Canto.)[X]
 
 ## SD_Vault
 Vault[N]
-Unit can dash to the opposite side[N]
+- Unit can dash to the opposite side[N]
 of an adjacent unit without using[N]
 an action.[N]
 (Skill can be used during Canto.)[X]
 
 ## SD_Reposition
 Fling[N]
-Unit can pull an adjacent unit[N]
+- Unit can pull an adjacent unit[N]
 to the opposite side of unit.[N]
 (Skill can target any allegiance.)[X]
 
 ## SD_Swap
 Swap[N]
-Unit can swap spaces with an[N]
+- Unit can swap spaces with an[N]
 adjacent ally.[N]
 (Skill can be used during Canto.)[X]
 
@@ -2046,8 +2060,8 @@ Drive Defense: Allies within[N]
 Encourage[N]
 - Nora grants +5 Rsl to allies within[N]
 2 spaces.[N]
-- Physical allies within 2 spaces[N]
-deal (50% Str) bonus magical damage.[X]
+- Physical allies within 2 spaces deal[N]
+(50% ally Str) bonus magical damage.[X]
 
 ## SD_Blossom
 Blossom: 2x growth rates,[N]
@@ -2235,9 +2249,11 @@ Negates enemy hit bonus from[N]
 weapon triangle advantage.[X]
 
 ## SD_BlueFlame
-Guardian: Yufka grants +2 Prt to[N]
-adjacent allies. If adjacent to an[N]
-ally, grants +4 Prt.[X]
+Guardian[N]
+- If Yufka is within 2 spaces of an[N]
+ally, grants Prt +5.[N]
+- Grants Prt +5 to allies within[N]
+2 spaces.[X]
 
 ## SD_DoubleLion
 Double Lion: All weapons[N]
@@ -2288,8 +2304,8 @@ effectiveness multipliers.[X]
 Stand United[N]
 - If Therese initiates within 2 spaces of[N]
 a physical armored ally, grants Atk +5,[N]
-and if adjacent, grants another action[N]
-(action once per turn; no reclasses).[X]
+and if adjacent, grants another action.[N]
+(Action once per turn; no reclasses).[X]
 
 ## SD_LullStr
 Lull Str: Negates the effects of[N]
@@ -2415,7 +2431,7 @@ applied to the attacker.[X]
 
 ## SD_Swarp
 Rotate[N]
-Unit can swap spaces with an[N]
+- Unit can swap spaces with an[N]
 ally within (Eth/3) spaces.[N]
 (Minimum range of 5 spaces).[X]
 

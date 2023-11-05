@@ -19,7 +19,7 @@ Everything is set.[.6] Are we all ready?[AN]
 [FL]
 I've arranged the fastest route to Castle[N]
 Wreyvine.[.6] We're moving north[,] passing[N]
-through the port town of Solbyen,[AN][Clear]
+through the port town of Solbyen,[AN]
 through the capital city[,] and then we'll[N]
 reach the palace from there.[AN]
 
@@ -106,12 +106,29 @@ slice our way out![.6] Just like old times![AN]
 
 [X]
 
+## Ch2Opening3ButAwesome
+[3l]
+[OpenMidLeft][LoadLatte]
+[Pause]Where even am I?[.6] Yo[,] guy with[N]
+the spear.[.6] You from around here?[AN]
+
+[OpenMidRight][LoadSoldier]
+No[,] we're not Wreyvian.[.6] Just like[N]
+everybody else on this Aeterian ship.[6N]
+You have a few screws loose?[AN]
+
+[OpenMidLeft]
+Oh[,] right.[.6] That makes total sense.[6N]
+Carry on[,] then.[.6] I'm with you guys.[AN]
+
+[X]
+
 ## Ch2Opening4
 [3L]
 [ML][LoadMocha][MR][LoadEiskaffee]
 
 [ML]
-[Beat]Where is he?[.6] We've looked everywhere[,][N]
+[Pause]Where is he?[.6] We've looked everywhere[,][N]
 but[Beat] Captain Brudet told us[Beat][N]
 Oh[,] by the Hallowed One,[AN]
 there's Aeterian soldiers here[,] too![AN]
@@ -160,17 +177,67 @@ Oh![.6] [Beat]Yeah[,] now I see him.[.6] Phew.[AN]
 Alright[,] I'm off to report to Captain[N]
 Stroganoff at the capital.[.6] You[N]
 deliver the message to him,[AN]
-and aide the knights to Northelm.[.6][N]
+and aid the knights to Northelm.[.6][N]
 Don't die[,] Mocha.[AN]
 
 [X]
 
 ## Ch2Ending1
 # verified
+[3L]
 [OpenMidLeft][LoadAffo]The path forward is clear.[.6][N]
 [MoveMidLeft]Everyone,[.4] follow me.[A][X]
 
 ## Ch2Ending2
+# verified
+[3L]
+[OpenFarLeft][LoadUlrich][OpenLeft][LoadAffo][OpenMidRight][LoadMocha]
+
+[L]
+While we're on the way to the capital[,][N]
+tell us what you know about the[N]
+ongoing invasion.[AN]
+
+[MR]
+Alright[,] alright.[.6] Lemme think here[Beat][N]
+From what I've heard[,] the Duke intends on[N]
+razing Wreyvine to the ground--[AN][Clear]
+And I think he's serious about it[,] too![AN]
+
+[FL]
+Wreyvine has always had 'iffy' relations with[n]
+Aeteria[,] to say the least.[.6] I remember[N]
+times from a bygone age[Beat][AN]
+When it was[Beat] amicable.[.6] It wasn't until[N]
+the Empress' Holy War twenty-four years ago[N]
+that things are as they are now.[AN]
+
+[MR]
+Now come on![.6] Hurry it up![.6] We[N]
+have to rescue Wreyvian soldiers[N]
+at the capital city![AN][CloseSpeechSlow][MoveFarFarRight]
+
+[L][MoveRight]
+
+[FL][MoveMidLeft]
+Affogato.[.6] Wait.[AN]
+
+[R][ClearFace][MR][LoadAffogato]
+I think we need to hurry.[AN]
+
+[FL]
+Where did you learn to[N]
+handle a bow?[AN]
+
+It happened one day.[6n]
+Next question.[AN]
+
+
+[Beat] And where 
+
+[X]
+
+## Ch2Ending2ButOld
 # verified
 [3L]
 [OpenFarLeft][LoadUlrich][OpenLeft][LoadAffo][OpenRight][LoadIrene][OpenFarRight][LoadPandoro]
@@ -241,7 +308,7 @@ messenger to be sent here?[an]
 
 [R]
 Sir[,] I bring word from Northelm:[.4][0x80][0x2C][0xA][N]
-"There's a horde of Aeterians at the capital[N]
+[OpenQuote]There's a horde of Aeterians at the capital[N]
 city![.6] They'll be upon us soon!"[AN][0x80][0x2C][0xD]
 We're in a race for time.[.6] The duke and[N]
 the apostle themselves have passed through[N]
@@ -278,8 +345,8 @@ If you're lookin' for a tussle,[AN][Clear]
 I'll be *hic* happy to provide![AN][ClearFace][ToggleSmile]
 
 [OpenMidLeft][LoadUlrich]
-Father Ogrim?![.6] One of Wreyvine's most valorous[N]
-soldiers[Beat] on duty[Beat][AN]
+Father Ogrim?![.6] One of Wreyvine's most[N]
+valorous soldiers[Beat] on duty[Beat][AN]
 Oh[,] what a bother[Beat][AN][Clear]
 [CloseEyes]I definitely have a few[N]
 words for him later[Beat][AN][ClearFace][OpenEyes]
@@ -373,6 +440,36 @@ How about you hire me?[AN]
 What's up?[.6] My pockets have been light[N]
 lately[,] and you seem like you need a[N]
 merc.[.6] Deal? Just point me to the enemy![AN]
+[X]
+
+## LatteUlrichRecruit
+[3L]
+[OpenMidLeft][LoadLatte][OpenMidLeft][LoadUlrich]
+[OpenMidLeft]
+Lieutenant Ulrich.[.6] It's a pleasure[N]
+to see you again.[AN]
+
+[OpenMidLeft]
+You must be one of the new recruits.[6N]
+Levain[,] correct?[AN]
+
+[OpenMidLeft]
+Right.[.6] We were out on a reconnoitering[N]
+mission with Sir Xavier's 13th platoon.[6N]
+I got lost[,] though[Beat][AN]
+
+[OpenMidLeft]
+Come with us[,] Levain.[.6] We're headed[N]
+to the capital.[AN]
+
+[X]
+
+## LatteGenericRecruit
+[3L]
+[OpenMidLeft][LoadLatte]
+Oh[,] you're with the Wreyvian army.[.6] I'm[.6N]
+confident with my skill with a bow.[6N]
+Let me come with you.[AN]
 [X]
 
 

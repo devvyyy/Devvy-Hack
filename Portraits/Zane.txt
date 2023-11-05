@@ -411,8 +411,13 @@ setMugEntryExtend(0x48, Spooky_Mug, 3, 5, 3, 3, 10, 4, 0, 0)
 
 ALIGN 16
 Latte_Mug: //Latte by Laurent Lacroix
-#incext PortraitFormatter "Latte.png"
-setMugEntryExtend(0x27, Latte_Mug, 4, 5, 3, 3, 10, 4, 0, 0)
+#incext PortraitFormatter "Liev.png"
+setMugEntryExtend(0x27, Latte_Mug, 2, 5, 2, 3, 10, 4, 0, 0)
+
+ALIGN 16
+Headshot_Mug:
+#incext PortraitFormatter "BOOMHEADSHOT.png"
+setMugEntryExtend(0xCE, Headshot_Mug, 2, 5, 2, 3, 10, 4, 0, 0)
 
 ALIGN 16
 Stroganoff_Mug:

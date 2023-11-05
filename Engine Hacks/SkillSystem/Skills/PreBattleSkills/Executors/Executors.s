@@ -30,8 +30,8 @@ beq End
 ldrb  r0,[r5,#0x12] @defender max hp
 ldrb  r1,[r5,#0x13] @defender current hp
 sub   r0,r1
-mov r1,#5
-mul r0,r1 @multiply stat by 5
+@mov r1,#2 @5
+@mul r0,r1 @multiply stat by 5
 mov   r2,#0x5A
 ldrh  r1,[r4,r2]
 add   r1,r0,r1

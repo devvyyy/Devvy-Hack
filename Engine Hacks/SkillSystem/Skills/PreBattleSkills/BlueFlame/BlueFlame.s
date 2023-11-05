@@ -19,7 +19,7 @@ mov lr, r0
 mov r0, r4 @attacker
 mov r1, #0x0
 mov r2, #0 @are allies
-mov r3, #1 @range
+mov r3, #2 @range
 .short 0xf800
 cmp r0, #0
 beq End
@@ -44,7 +44,7 @@ bne End
 mov r0,#0x5C
 add r0,r4
 ldrb r1,[r0]
-add r1,#4
+add r1,#5
 strb r1,[r0]
 
 End:

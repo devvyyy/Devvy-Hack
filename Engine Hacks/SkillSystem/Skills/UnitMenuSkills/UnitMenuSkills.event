@@ -213,5 +213,40 @@ STAL 0x5
 NoFade
 ENDA
 
+ALIGN 4
+HeadshotUsability:
+#incbin "Headshot/HeadshotUsability.dmp"
+POIN SkillTester
+WORD SureShotID
+
+ALIGN 4
+HeadshotEffect: //sets the flag
+#incbin "Headshot/HeadshotEffect.dmp"
+POIN HeadshotEvent
+
+ALIGN 4
+HeadshotPostBattle: //unsets the flag post combat if flag is set
+#incbin "Headshot/HeadshotPostBattle.dmp"
+POIN SkillTester
+WORD SureShotID
+POIN HeadshotUnsetFlagEvent
+
+HeadshotEvent:
+ENUT 0x94
+SOUN 0xd1
+STAL 0x32
+SOUN 0xf0
+STAL 0x8
+NoFade
+ENDA
+
+HeadshotUnsetFlagEvent:
+ENUF 0x94
+SOUN 0x2cf
+STAL 0x5
+NoFade
+ENDA
+
+
 #include "CombatArts/CombatArts.event"
 

@@ -292,9 +292,9 @@ Under siege[,] we're likely to suffer[N]
 many losses along the way.[AN]
 
 [R]
-We need a coordinated defense from all forces;[.4][N]
-a grand strategy to outmaneuver the enemy[N]
-and minimize losses.[AN][Clear]
+We need a coordinated defense from all[N]
+forces;[.4] a grand strategy to outmaneuver[N]
+the enemy and minimize losses.[AN][Clear]
 
 [FR]
 They're focusing their attacks on the[N]
@@ -608,9 +608,11 @@ Come on[,] Therese[,] let's go![AN]
 # nvm make this turn 5
 [3l]
 [OpenMidLeft][LoadSelwyn][OpenMidRight][LoadSylveria]
-Very impressive for such a feeble[N]
-country.[.6] They can put up quite[N]
-a fight for us.[AN]
+
+[OpenMidLeft]
+Very impressive performance for such a[N]
+feeble country.[.6] They can put up quite[N]
+a fair fight for us.[AN][Clear]
 Unfortunately,[.4] steel is nothing[N]
 compared to magic.[.6] Onwards![AN]
 
@@ -669,7 +671,7 @@ hearts out at the front.[AN]
 [OpenMidLeft]
 We are running low on medical supplies[,] sir.[6N]
 Our clerics and priests cannot make[N]
-up for that.[AN]
+up for that.[AN][Clear]
 Have we received any orders[,] sir?[AN]
 
 [OpenMidRight]
@@ -702,7 +704,8 @@ the enemy at hand![AN]
 I will not allow it.[.6] You are my[N]
 second-in-command--my right-hand.[.4][N]
 if you were to fall,[AN][Clear]
-it would be ruinous for the kingdom.[AN]
+it would be ruinous for the holy guard.[6N]
+Nay[,] for the entire kingdom.[AN]
 
 [OpenLeft]
 I have spent my entire life following orders[,][N]
@@ -716,7 +719,7 @@ on divine providence.[AN]
 Wreyvine is neither losing[,][N]
 nor winning[Beat][AN]
 I trust in the Hallowed One to bring[N]
-them back safely.
+them back safely.[AN]
 
 [OpenFarLeft]
 We must prepare ourselves for the worst[,][N]
@@ -729,7 +732,7 @@ Will your attuned bird friend join them?[AN]
 [OpenLeft]
 Oh[,] blind faith will not do.[.6] Aohr[,] go.[6N]
 Find us an overhead route in the case[N]
-of an emergency--[.4]and make it quick.[AN]
+of an emergency--[.4]and make it quick![AN]
 
 [X]
 
@@ -757,10 +760,10 @@ the future of Wreyvine.[AN]
 [OpenLeft]
 The future of Wreyvine?[.6] The now[N]
 is death and war![.6] Your Majesty[,][N]
-we must relocate to a safer position.[AN][Clear]
+we must relocate to a safer position.[AN]
 It's best to keep our lives if we can[,][N]
-considering the situation[Beat][AN]
-[CloseEyes]What do we do[Beat]?[AN]
+considering the situation[Beat][6N]
+[CloseEyes]What are we to do[Beat]?[AN]
 [X]
 
 ## WTFMan
@@ -773,6 +776,33 @@ retreat into the castle?[AN]
 [OpenMidRight][LoadUlrich]
 No.[.6] This is fine.[.6] Move onwards[,] if you can![6N]
 Don't give them any room![AN]
+[X]
+
+## XavierRecruit
+[3L]
+
+[OpenMidRight][LoadXavier]
+General Wegman[Beat]![.6] There's so many of 'em![AN]
+
+[OpenMidLeft][LoadWegman]
+Xavier![.6] You all good?[.6][n]
+[Pause]Where are your men?[AN]
+
+[OpenMidRight]
+They've all fallen[Beat] They were all shot[N]
+down one-by-one![.6] There's many soldiers[N]
+beyond the initial premises[Beat][AN][Clear]
+Many of them look of high rank.[AN]
+
+[OpenMidLeft]
+By the Hallowed One[Beat] Xavier[,] will[N]
+you defend our remaining men with us?[AN]
+
+[MR]
+Yes[,] General.[.6] I'll do a lot more than[N]
+that.[.6] I'm ready to fight all-out.[6N][MoveMidRight]
+Go[,] Zeph![.6] We fight together![AN]
+
 [X]
 
 ## SelBossQ1
@@ -805,11 +835,10 @@ Yet your actions imply[N]
 you're an assassin.[AN]
 Wreyvine doesn't seem to[N]
 deploy spies.[AN][Clear]
-You[Beat] are a traitor![AN][Beat]
+You[Beat] must be a traitor![AN][Beat]
 
 [OpenMidRight][LoadAffo]
-Okay.[AN][Beat]
-
+Alright.[AN]
 
 [X]
 

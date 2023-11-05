@@ -35,6 +35,8 @@ cmp     r0, #0xB1         @'Goodbye' Knife
 beq Crit50
 cmp     r0, #0xF7         @Oh the misery
 beq Crit100
+cmp     r0, #0x90         @Mace
+beq Crit100
 cmp     r0, #0xFE         @Syzygy
 beq Crit50Special
 cmp     r0, #0xB9         @Dirk

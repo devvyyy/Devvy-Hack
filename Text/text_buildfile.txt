@@ -17,7 +17,7 @@ Weapons[X]
 The weapon triangle is[N]
 +/-2 Mt, +/-20 Hit.[N]
  [N]
-Hold down A and press[N]
+Hold down L and press[N]
 Left/Right to change[N]
 the equipped weapon[N]
 in the battle forecast.[N]
@@ -321,33 +321,36 @@ Scouting[X]
 Recruits[X]
 
 # 0x639
-Prologue: Hunter, Lance Paladin,[N]
+Prologue: Scout, Lance Paladin,[N]
 Sword Rider, Lance Armor[N]
 Axe Rider[N]
 1-1: Mage, Troubadour[N]
 1-1x: Seer[N]
-1-2: Swordsman, Pirate[N]
+1-2: Archer[N]
 1-3: Axe Armor, Soldier,[N]
 Griffon Rider[N]
 1-4: Technician, Priest[N]
 1-5: Wyvern Rider, Fighter[N]
 1-6: Sword Armor, Freelancer,[N]
 General, Wyvern Knight,[N]
-Sword Paladin[N]
-1-F: Monk[N]
+Sword Paladin,[N]
+Griffon Knight[N]
+1-F: Monk, Parson[N]
  [N]
 Prologue: Renegade, Strategist,[N]
-Cleric, Mage, Shaman,[N]
-Mercenary, Lance Rider[N]
+Mage Rider, Cleric, Mage,[N]
+Shaman, Mercenary,[N]
+Lance Rider[N]
 2-1: Occultist, Bard[N]
-2-2: General, Wyvern Rider[N]
-2-3: Shaman, Mage Knight[N]
-2-4: Pegasus Rider,[N]
-Rogue[N]
-2-5: Axe Paladin, Warrior,[N]
+2-2: Warrior, Ranger,[N]
 Archer[N]
-2-6: Sniper, Griffon Knight[N]
-2-F: Cataphract[X]
+2-3: Thief, Wyvern Rider[N]
+2-4: General, Hunter[N]
+2-5: Pegasus Rider,[N]
+Griffon Knight[N]
+2-6: Mage Knight[N]
+2-F: Axe Paladin, Cataphract[N]
+Pegasus Knight[X]
 
 # 0x602
 Objectives[X]
@@ -370,7 +373,7 @@ fortresses, Chests[N][X]
 
 # 0x4A6
 A magical potion that increases[N]
-user's growth rates by 5%.[X]
+user's growth rates by 7%.[X]
 
 # 0x4AA
 A bizarre potion that sets a[N]
@@ -435,8 +438,15 @@ off to all but his group of elites.[X]
 Aloys[X]
 
 # 0x29e
-A dutiful Wreyvian prison guard.[N]
+A dutiful Aeterian prison guard.[N]
 He's unafraid to speak his mind.[X]
+
+# 0x244
+Milo[X]
+
+# 0x29F
+An Aeterian prison guard.
+[X]
 
 # 0x19A
 Interlude I: Moonlight[X]
@@ -1211,13 +1221,14 @@ and resets their status.[X]
 Stiletto[X]
 
 # 0x40C
-Eff: [HorseIcon][ArmorIcon][X]
+Avoid +10. Deals bonus damage = foe's[N]
+missing HP.[X]
 
 # 0x388
 Cinquedea[X]
 
 # 0x439
-Targets Res. Eff: [DragonIcon][X]
+Avoid +10. Eff: [HorseIcon][ArmorIcon][DragonIcon][X]
 
 # 0x3f9
 Flare B[X]
@@ -1446,7 +1457,7 @@ Prologue I: No Way Out[X]
 1-F: Our Last Stand[X]
 
 # 0x167 Ch8Name
-2-1: New Light[X]
+2-1: Oblivion[X]
 
 # 0x168 Gaiden1Name
 1-1x: Gold Rush[X]
@@ -1461,12 +1472,12 @@ Prologue I: No Way Out[X]
 2-2: Blood Hunt[X]
 
 ## Ch12Name
-Prologue II: Oblivion[X]
+Prologue II: One Way Out[X]
 
-## Ch13Name
+## P3Ch4Name
 3-4: Maw of Ice[X]
 
-## Ch14Name
+## P3Ch5Name
 3-5: Absolution[X]
 
 ## ChIDKName

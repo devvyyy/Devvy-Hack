@@ -429,7 +429,7 @@ SongTable(0x3E4,CouragePrayer,0)
 
 ALIGN 4
 //Violence, Power, Enforcement
-SongTable(0xF3,songF3,0)
+SongTable(0xF3,songF3,1) //0 if reverting to battle theme; 1 if map enemy phase theme
 #include "ViolencePowerEnforcement.event"
 
 ALIGN 4
@@ -558,7 +558,7 @@ SongTable(0x3DB,song03DB,0)
 
 ALIGN 4
 //Blameless Thoughts
-SongTable(0x1B5,Blameless_V2,0)
+SongTable(0x1B5,Blameless_V2,1)
 #include "BlamelessThoughts.event"
 
 ALIGN 4

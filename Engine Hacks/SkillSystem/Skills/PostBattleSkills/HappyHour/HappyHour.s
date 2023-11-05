@@ -27,22 +27,16 @@ ldrb	r1, [r4,#0x0B]	@allegiance byte of the character we are checking
 cmp	r0, r1		@check if same character
 bne	End
 
-@check if dead
-ldrb	r0, [r4,#0x13]
-cmp	r0, #0x00
-beq	End
-
 @Check if there are allies in 3 spaces
 ldr	r0, GetUnitsInRange
 mov	lr, r0
 mov	r0, r4		@attacker
 mov	r1, #0x00   @can_trade
-mov	r2, #0x02	@range
+mov	r2, #0x03	@range
 .short	0xf800
 
-mov	r4, r0		@number of units
-ldr	r1,=#0x202B256
-mov	r5, r1		@start of buffer
+BreathOfLifeDamage:
+mov	r5, r0		@start of buffer
 mov	r6, #0x00	@counter
 cmp	r0, #0x00
 beq	End
@@ -50,6 +44,8 @@ beq	End
 
 CheckEventLoop:		@check if all units in range are at full hp and if so do not play sound
 ldrb	r0, [r5,r6]
+cmp r0, #0x00
+beq End
 add	r6,#1
 ldr	r2,=#0x8019430
 mov	lr, r2
@@ -58,8 +54,6 @@ ldrb	r2,[r0,#0x13]	@current hp
 ldrb  r0,[r0,#0x12] @max hp
 cmp r2, r0
 blt	Event
-cmp	r6,r4
-beq	End
 b	CheckEventLoop
 
 Event:
@@ -72,13 +66,14 @@ mov	r1, #0x01		@0x01 = wait for events
 
 BOL_loop:
 ldrb	r0, [r5,r6]
+cmp r0, #0x00
+beq End
 ldr	r2,=#0x8019430
 mov	lr, r2
 .short	0xf800
 @r0 is ram data
 mov	r7, r0
-ldrb	r0, [r7,#0x19]	@luck
-mov	r1, #0x01
+ldrb	r0, [r7,#0x19]	@max hp
 ldrb	r1, [r7,#0x13]	@r1 = current hp
 cmp	r1, #0x00	@checking if the unit is already dead, probably not needed but w/e
 beq	NextLoop
@@ -90,8 +85,7 @@ mov	r1, r0	@cap hp at max
 NextLoop:
 strb	r1, [r7,#0x13]
 add	r6, #0x01
-cmp	r6, r4
-blt	BOL_loop
+b	BOL_loop
 
 End:
 pop	{r4-r7}

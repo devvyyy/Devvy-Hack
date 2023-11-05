@@ -43,6 +43,16 @@ CharacterBasedEvents:
 	END_MAIN
 
 MiscBasedEvents:
+AREA 0xA AggroWellington [14,11] [20,22]
+AREA 0xA AggroWellington [11,18] [8,27]
+AREA 0xA AggroWellington [22,15] [22,21]
+AREA 0xA AggroWellington [23,16] [23,20]
+AREA 0xA AggroWellington [24,16] [24,18]
+
+AREA 0xB AggroOpal [17,0] [23,3]
+AREA 0xB AggroOpal [23,0] [25,2]
+AREA 0xB AggroOpal [16,0] [16,1]
+AREA 0xB AggroOpal [15,0] [15,0]
 	CauseGameOverIfLordDies
 	END_MAIN
 
@@ -85,89 +95,105 @@ UNIT Chiffon 0x10 0x1 Level(2, Ally, 0)   [9,27] 0b 0x0 0x0 0x0 [IronAxe,0xE9,El
 	UNIT
 
 EnemyUnits:
-UNIT Melya APal 0x1 Level(13, Enemy, 0)     [20,1] DropItem 0x0 0x0 0x0 [KillerAxe,0xB8] BossAI
+UNIT Opal APal 0x1 Level(13, Enemy, 0)     [20,1] DropItem 0x0 0x0 0x0 [KillerAxe,0xB8] BossAI
 UNIT Wellington GreatKnight 0x1 Level(12, Enemy, 0)     [17,18] DropItem 0x0 0x0 0x0 [Runesword,0xB4] BossAI
 
-UNIT Aeteria Mercenary 0x1 Level(3, Enemy, 1)     [8,21] 0b 0x0 0x0 0x0 [IronSword,] ChargeAI
-UNIT Aeteria Fighter 0x1 Level(2, Enemy, 1)     [10,18] 0b 0x0 0x0 0x0 [SteelAxe,] AttackInRangeAI
+UNIT Aeteria Mercenary 0x1 Level(8, Enemy, 1)     [8,21] 0b 0x0 0x0 0x0 [IronSword,] ChargeAI
+UNIT Aeteria Fighter 0x1 Level(7, Enemy, 1)     [10,18] 0b 0x0 0x0 0x0 [SteelAxe,] AttackInRangeAI
 
-UNIT Aeteria Soldier 0x1 Level(2, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [SteelLance,] TwoActionAI
-UNIT Aeteria Shaman 0x1 Level(3, Enemy, 1)     [4,14] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
-UNIT Aeteria Mercenary 0x1 Level(2, Enemy, 1)     [13,2] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
-UNIT Aeteria Shaman 0x1 Level(2, Enemy, 1)     [17,22] 0b 0x0 0x0 0x0 [DarkTome2,] TwoActionAI
-UNIT Aeteria Shaman 0x1 Level(2, Enemy, 1)     [22,12] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
-UNIT Aeteria Soldier 0x1 Level(2, Enemy, 1)     [19,7] 0b 0x0 0x0 0x0 [SteelLance,] AttackInRangeAI
-UNIT Aeteria Shaman 0x1 Level(3, Enemy, 1)     [15,3] 0b 0x0 0x0 0x0 [DarkTome2,] TwoActionAI
-UNIT Aeteria Mercenary 0x1 Level(2, Enemy, 1)     [25,4] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
-UNIT Aeteria LArmor 0x1 Level(3, Enemy, 1)     [10,2] 0b 0x0 0x0 0x0 [IronGlaive,ShortSpear] AttackInRangeAI
+UNIT Aeteria Soldier 0x1 Level(7, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [SteelLance,] TwoActionAI
+UNIT Aeteria Shaman 0x1 Level(8, Enemy, 1)     [4,14] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
+UNIT Aeteria Mercenary 0x1 Level(7, Enemy, 1)     [13,2] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
+UNIT Aeteria Shaman 0x1 Level(7, Enemy, 1)     [17,22] 0b 0x0 0x0 0x0 [DarkTome2,] TwoActionAI
+UNIT Aeteria Shaman 0x1 Level(7, Enemy, 1)     [22,12] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
+UNIT Aeteria Soldier 0x1 Level(7, Enemy, 1)     [19,7] 0b 0x0 0x0 0x0 [SteelLance,] AttackInRangeAI
+UNIT Aeteria Shaman 0x1 Level(8, Enemy, 1)     [15,3] 0b 0x0 0x0 0x0 [DarkTome2,] TwoActionAI
+UNIT Aeteria Mercenary 0x1 Level(7, Enemy, 1)     [25,4] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
+UNIT Aeteria LArmor 0x1 Level(8, Enemy, 1)     [10,2] 0b 0x0 0x0 0x0 [IronGlaive,ShortSpear] AttackInRangeAI
 
-UNIT Aeteria Soldier 0x1 Level(2, Enemy, 1)     [13,18] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
-UNIT Aeteria Mage 0x1 Level(2, Enemy, 1)     [18,2] DropItem 0x0 0x0 0x0 [Bolting,Talisman] BossAI
-UNIT Aeteria SArmor 0x1 Level(3, Enemy, 1)     [21,5] 0b 0x0 0x0 0x0 [SteelBlade,] RangeAI 
-UNIT Aeteria AArmor 0x1 Level(3, Enemy, 1)     [13,19] 0b 0x0 0x0 0x0 [ShortAxe,] BossAI
+UNIT Aeteria Soldier 0x1 Level(7, Enemy, 1)     [13,18] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
+UNIT Aeteria Mage 0x1 Level(7, Enemy, 1)     [18,2] DropItem 0x0 0x0 0x0 [Bolting,Talisman] BossAI
+UNIT Aeteria SArmor 0x1 Level(8, Enemy, 1)     [21,5] 0b 0x0 0x0 0x0 [SteelBlade,] RangeAI 
+UNIT Aeteria AArmor 0x1 Level(8, Enemy, 1)     [13,19] 0b 0x0 0x0 0x0 [ShortAxe,] BossAI
 
-UNIT Aeteria Mage 0x1 Level(2, Enemy, 1)     [16,10] 0b 0x0 0x0 0x0 [Fire,] BossAI
-UNIT AeteriaStealable Mage 0x1 Level(3, Enemy, 1)     [10,9] 0b 0x0 0x0 0x0 [Thunder,PureWater] BossAI
-UNIT Aeteria Mercenary 0x1 Level(2, Enemy, 1)     [17,10] 0b 0x0 0x0 0x0 [IronSword,] BossAI
-UNIT Aeteria SCav 0x1 Level(2, Enemy, 1)     [20,17] 0b 0x0 0x0 0x0 [IronSword,] StallOneTurnAI
-UNIT Aeteria Thaumaturge 0x1 Level(3, Enemy, 1)     [12,4] 0b 0x0 0x0 0x0 [Thunder,] StallOneTurnAI
-UNIT Aeteria LCav 0x1 Level(3, Enemy, 1)     [18,19] 0b 0x0 0x0 0x0 [Javelin,] TwoActionAI
-UNIT Aeteria ACav 0x1 Level(2, Enemy, 1)     [16,17] 0b 0x0 0x0 0x0 [SteelAxe,] AttackInRangeAI
+UNIT Aeteria Mage 0x1 Level(7, Enemy, 1)     [16,10] 0b 0x0 0x0 0x0 [Fire,] BossAI
+UNIT AeteriaStealable Mage 0x1 Level(8, Enemy, 1)     [10,9] 0b 0x0 0x0 0x0 [Thunder,PureWater] BossAI
+UNIT Aeteria Mercenary 0x1 Level(7, Enemy, 1)     [17,10] 0b 0x0 0x0 0x0 [IronSword,] BossAI
+UNIT Aeteria SCav 0x1 Level(7, Enemy, 1)     [20,17] 0b 0x0 0x0 0x0 [IronSword,] StallOneTurnAI
+UNIT Aeteria Thaumaturge 0x1 Level(8, Enemy, 1)     [12,4] 0b 0x0 0x0 0x0 [Thunder,] StallOneTurnAI
+UNIT Aeteria LCav 0x1 Level(8, Enemy, 1)     [18,19] 0b 0x0 0x0 0x0 [Javelin,] TwoActionAI
+UNIT Aeteria ACav 0x1 Level(7, Enemy, 1)     [16,17] 0b 0x0 0x0 0x0 [SteelAxe,] AttackInRangeAI
 
-UNIT Aeteria Myrmidon 0x1 Level(3, Enemy, 1)     [14,8] 0b 0x0 0x0 0x0 [KillingEdge,] StallOneTurnAI
+UNIT Aeteria Myrmidon 0x1 Level(8, Enemy, 1)     [14,8] 0b 0x0 0x0 0x0 [KillingEdge,] StallOneTurnAI
 
-UNIT Aeteria Mercenary 0x1 Level(2, Enemy, 1)     [9,6] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
+UNIT Aeteria Mercenary 0x1 Level(7, Enemy, 1)     [9,6] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
 
-UNIT Aeteria Thaumaturge 0x1 Level(3, Enemy, 1)     [8,3] 0b 0x0 0x0 0x0 [Fire,] TwoActionAI
-UNIT Aeteria Mercenary 0x1 Level(2, Enemy, 1)     [16,6] 0b 0x0 0x0 0x0 [IronSword,] ChargeAI
+UNIT Aeteria Thaumaturge 0x1 Level(8, Enemy, 1)     [8,3] 0b 0x0 0x0 0x0 [Fire,] TwoActionAI
+UNIT Aeteria Mercenary 0x1 Level(7, Enemy, 1)     [16,6] 0b 0x0 0x0 0x0 [IronSword,] ChargeAI
 
-UNIT AeteriaStealable Archer 0x1 Level(3, Enemy, 1)     [5,19] 0b 0x0 0x0 0x0 [SteelBow,Elixir] AttackInRangeAI
-UNIT Aeteria Archer 0x1 Level(2, Enemy, 1)     [7,16] 0b 0x0 0x0 0x0 [Longbow] BossAI
-UNIT Aeteria Shaman 0x1 Level(3, Enemy, 1)     [8,13] DropItem 0x0 0x0 0x0 [Moonfall,PureWater] TwoActionAI
-UNIT Aeteria Archer 0x1 Level(2, Enemy, 1)     [17,15] 0b 0x0 0x0 0x0 [IronLance,EnergyRing] BossAI
+UNIT AeteriaStealable Archer 0x1 Level(8, Enemy, 1)     [5,19] 0b 0x0 0x0 0x0 [SteelBow,Elixir] AttackInRangeAI
+UNIT Aeteria Archer 0x1 Level(7, Enemy, 1)     [7,16] 0b 0x0 0x0 0x0 [Longbow] BossAI
+UNIT Aeteria Shaman 0x1 Level(8, Enemy, 1)     [8,13] DropItem 0x0 0x0 0x0 [Moonfall,PureWater] TwoActionAI
+UNIT Aeteria Archer 0x1 Level(7, Enemy, 1)     [17,15] 0b 0x0 0x0 0x0 [IronLance,EnergyRing] BossAI
 
-UNIT Aeteria Archer 0x1 Level(1, Enemy, 1)     [12,14] 0b 0x0 0x0 0x0 [ShortBow,] BossAI
-UNIT Aeteria Archer 0x1 Level(1, Enemy, 1)     [13,11] DropItem 0x0 0x0 0x0 [IronDagger,GreenGem] BossAI
+UNIT Aeteria Archer 0x1 Level(7, Enemy, 1)     [12,14] 0b 0x0 0x0 0x0 [ShortBow,] BossAI
+UNIT Aeteria Archer 0x1 Level(8, Enemy, 1)     [13,11] DropItem 0x0 0x0 0x0 [IronDagger,GreenGem] BossAI
 
-UNIT Dira Thief 0x1 Level(4, Ally, 1)     [1,2] 0b 0x0 0x0 0x0 [SilverDagger,0xB0,0x7D] BossAI
-
+UNIT Dira Thief 0x1 Level(4, Ally, 1)     [1,2] 0b 0x0 0x0 0x0 [SilverDagger,0xB0,] BossAI
+UNIT Moose WyvernRider 0x1 Level(7, Ally, 0)     [2,3] 0b 0x0 0x0 0x0 [KillerAxe, EmeraldAxe,] ChargeAI
 	UNIT
 	
 BotRein:
-UNIT Aeteria LCav 0x1 Level(3, Enemy, 1)     [8,27] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
-UNIT Aeteria Shaman 0x1 Level(3, Enemy, 1)     [9,27] 0b 0x0 0x0 0x0 [DarkTome2,] ChargeAI
+UNIT Aeteria LCav 0x1 Level(9, Enemy, 1)     [8,27] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
+UNIT Aeteria Shaman 0x1 Level(8, Enemy, 1)     [9,27] 0b 0x0 0x0 0x0 [DarkTome2,] ChargeAI
 	UNIT
 	
 BotRein2:
-UNIT Aeteria Thaumaturge 0x1 Level(3, Enemy, 1)     [16,27] 0b 0x0 0x0 0x0 [Thunder,] ChargeAI
-UNIT Aeteria Thaumaturge 0x1 Level(3, Enemy, 1)     [17,27] 0b 0x0 0x0 0x0 [Wind,] ChargeAI
+UNIT Aeteria Thaumaturge 0x1 Level(10, Enemy, 1)     [16,27] 0b 0x0 0x0 0x0 [Thunder,] ChargeAI
+UNIT Aeteria Thaumaturge 0x1 Level(9, Enemy, 1)     [17,27] 0b 0x0 0x0 0x0 [Wind,] ChargeAI
 	UNIT
 
 LeftRein:
-UNIT Aeteria PegRider 0x1 Level(3, Enemy, 1)     [0,14] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT Aeteria WyvRider 0x1 Level(3, Enemy, 1)     [0,15] 0b 0x0 0x0 0x0 [IronLabrys,] ChargeAI
+UNIT Aeteria PegRider 0x1 Level(9, Enemy, 1)     [0,14] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT Aeteria WyvRider 0x1 Level(8, Enemy, 1)     [0,15] 0b 0x0 0x0 0x0 [IronLabrys,] ChargeAI
 	UNIT
 	
 RightRein:
-UNIT Aeteria Occultist 0x1 Level(3, Enemy, 1)     [25,17] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
-UNIT Aeteria ACav 0x1 Level(3, Enemy, 1)     [25,18] 0b 0x0 0x0 0x0 [IronLabrys,] ChargeAI
+UNIT Aeteria Occultist 0x1 Level(9, Enemy, 1)     [25,17] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
+UNIT Aeteria ACav 0x1 Level(8, Enemy, 1)     [25,18] 0b 0x0 0x0 0x0 [IronLabrys,] ChargeAI
 	UNIT
 	
 BotReinWyverns:
-UNIT Aeteria PegRider 0x1 Level(4, Enemy, 1)     [8,27] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
-UNIT Aeteria WyvRider 0x1 Level(4, Enemy, 1)     [9,27] 0b 0x0 0x0 0x0 [ShortAxe,] ChargeAI
-UNIT Aeteria PegRider 0x1 Level(4, Enemy, 1)     [16,27] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
-UNIT Aeteria WyvRider 0x1 Level(4, Enemy, 1)     [17,27] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
+UNIT Aeteria PegRider 0x1 Level(9, Enemy, 1)     [8,27] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
+UNIT Aeteria WyvRider 0x1 Level(8, Enemy, 1)     [9,27] 0b 0x0 0x0 0x0 [ShortAxe,] ChargeAI
+UNIT Aeteria PegRider 0x1 Level(9, Enemy, 1)     [16,27] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT Aeteria WyvRider 0x1 Level(10, Enemy, 1)     [17,27] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
 	UNIT
 	
 ThievesOMG: //tons of thieves FROM THE HOUSES with droppables that retreat to top left or bottom right
-UNIT NoKeyThief Thief 0x0 Level(3, Enemy, 1)            [4,11] DropItem 0 1 REDA4R13 [SilverDagger, GoldGem,] ThiefAI
-UNIT NoKeyThief Thief 0x0 Level(3, Enemy, 1)            [4,12] DropItem 0 1 REDA4R13 [0xB1, Warp,] ThiefAI
+UNIT NoKeyThief Thief 0x0 Level(4, Enemy, 1)            [4,11] DropItem 0 1 REDA4R13 [SilverDagger, GoldGem,] ThiefAI
+UNIT NoKeyThief Thief 0x0 Level(2, Enemy, 1)            [4,12] DropItem 0 1 REDA4R13 [0xB1, Warp,] ThiefAI
 	UNIT
 
 ThievesOMG2: //tons of thieves FROM THE HOUSES with droppables that retreat to top left or bottom right
-UNIT NoKeyThief Thief 0x0 Level(3, Enemy, 1)            [20,14] DropItem 0 1 REDA20R16 [PoisonDagger, 0xb8,] ThiefAI
+UNIT NoKeyThief Thief 0x0 Level(5, Enemy, 1)            [20,14] DropItem 0 1 REDA20R16 [PoisonDagger, 0xb8,] ThiefAI
 	UNIT
+	
+AggroWellington: //group1
+PlayerRangeCheck
+SVAL 0x1 0x00040000
+CHAI Wellington
+ChargeWarning(Wellington,Placeholder1)
+NoFade
+ENDA
+
+AggroOpal: //group2
+PlayerRangeCheck
+SVAL 0x1 0x00040000
+CHAI Opal
+ChargeWarning(Opal,Placeholder2)
+NoFade
+ENDA
 
 SussyHouse1:
 Text(Placeholder1)

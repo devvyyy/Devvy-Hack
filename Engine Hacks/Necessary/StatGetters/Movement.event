@@ -18,7 +18,8 @@ pMovModifiers: // Movement
 	POIN prPassCheck
 	POIN prEmpowerCheck
 	POIN prCantoRing
-	POIN prFlowStateCheck prFlorisMarked
+	POIN prFlowStateCheck
+	//POIN prFlorisMarked
 	POIN prStatusOverdriveMovCheck
 WORD 0
 
@@ -74,6 +75,11 @@ prFlowStateCheck:
 		rIfUnitHasState(0x10000000)
 			rDoubled
 			
+prFlowStateCheck:
+	rIfUnitHasSkill(FlowStateID)
+		rIfUnitHasState(0x10000000)
+			rDoubled
+			
 prPassCheck: //player thieves
 	rIfUnitHasState(0x400)
 		rIfUnitHasSkill(PassID)
@@ -82,6 +88,11 @@ prPassCheck: //player thieves
 prEmpowerCheck:
 	rIfUnitHasState(0x400)
 		rIfUnitHasSkill(CharismaID)
+			rConstant(0)
+			
+prEmpowerCheck:
+	rIfUnitHasState(0x400)
+		rIfUnitHasSkill(StaticPanicID)
 			rConstant(0)
 			
 prMoonCheck:

@@ -24,10 +24,18 @@ mov lr, r0
 mov r0, r5 @defender
 ldr r1, SergeantID
 mov r2, #0 @can_trade
-mov r3, #1 @range
+mov r3, #4 @range
 .short 0xf800
 cmp r0, #0
 beq End
+
+@did skill already proc in this round?
+ldr  r0, =gActionData
+mov  r1, #0x1C
+ldrb r0, [r0, r1]
+mov  r1, #0x2 @gActionData.defenderTookDamage
+tst  r0, r1
+bne  End
 
 @is ally a wall?
 ldr  r0, [r5] @r0 = character data pointer
@@ -50,11 +58,11 @@ blt  End    @if so, exit
 
 THESKILL:
 
-    @Check if this is a follow-up
-    ldr r2, [r6]
-    mov r0, #0x4 @ follow up
-    tst r0, r2
-    bne End
+@    @Check if this is a follow-up
+@    ldr r2, [r6]
+@    mov r0, #0x4 @ follow up
+@    tst r0, r2
+@    bne End
 
 @unset the miss flag
 ldr     r2,[r6]

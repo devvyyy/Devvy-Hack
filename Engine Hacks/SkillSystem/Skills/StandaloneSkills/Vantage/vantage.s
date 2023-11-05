@@ -1,6 +1,6 @@
 @ vantage replace 802af7c
-.equ LastResortID, SkillTester+4
-.equ VantagePlusID, LastResortID+4
+.equ DuckandCoverID, SkillTester+4
+.equ VantagePlusID, DuckandCoverID+4
 .thumb
 push {r4-r7,r14}
 ldr r4, =0x203a4ec @atr
@@ -19,24 +19,24 @@ bne VantagePlus
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r5 @defender data
-ldr r1, LastResortID
+ldr r1, DuckandCoverID
 .short 0xf800
 cmp r0, #0
 beq Normal
 
-@if vantage, check hp/2
-mov r2, #0x12
-ldsb r2, [r5, r2] @defender max hp
-lsr r2, #1 @halve it
-mov r3, #0x13
-ldsb r3, [r5,r3] @currhp
-cmp r3, r2
-bgt Normal
-@swap them
-eor r4,r5
-eor r5,r4
-eor r4,r5
-b Normal
+@tile has no bonuses
+mov r1, #0x56
+ldrb r0, [r4,r1] @terrain def
+cmp r0, #0
+bne VantagePlus
+add r1, #1
+ldrb r0, [r4,r1] @terrain avo
+cmp r0, #0
+bne VantagePlus
+add r1, #1
+ldrb r0, [r4,r1] @terrain res
+cmp r0, #0
+beq Normal
 
 @if showing animation
 @ ldr     r0,=0x802b444    @pointer to the current round
@@ -54,7 +54,7 @@ b Normal
 @ orr     r0,r1                @ 0802B438 4308     
 @ str     r0,[r3]                @ 0802B43A 6018  
 
-@ ldrb  r0, LastResortID
+@ ldrb  r0, DuckandCoverID
 @ strb  r0, [r3,#4] 
 
 VantagePlus:
@@ -81,5 +81,5 @@ pop {r4-r7,r15}
 .ltorg
 SkillTester:
 @POIN SkillTester
-@WORD LastResortID
+@WORD DuckandCoverID
 @WORD VatnagePlusID

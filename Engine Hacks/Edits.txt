@@ -894,10 +894,11 @@ PUSH
 POP
 
 // Prep Shop
-PUSH
-  ORG 0x99E64
-    POIN PrepScreenShop
-POP
+//conflicts with aurawolf shopping edits?
+//PUSH
+//  ORG 0x99E64
+//    POIN PrepScreenShop
+//POP
 
 ALIGN 4
 PrepScreenShop:

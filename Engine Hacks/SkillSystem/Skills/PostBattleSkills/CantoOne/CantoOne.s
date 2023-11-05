@@ -43,6 +43,14 @@ mov	lr, r3
 cmp	r0,#0x00
 beq	End
 
+@check if already galeforced this turn
+ldr	r0, [r4,#0x0C]	@status bitfield
+mov	r1, #0x04
+lsl	r1, #0x08
+and	r0, r1
+cmp	r0, #0x00
+bne	End
+
 @ move 3 squares after canto
 ldr	r0,=#0x8019224	@mov getter
 mov	lr, r0

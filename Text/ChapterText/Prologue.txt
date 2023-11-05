@@ -95,8 +95,8 @@ It was then that they struck.[AN]
 
 [L]
 [MoveLeft]Bah![.6] Worthless,[.4] the Trinity are![.6][N]
-I should have had them demoted and tried[N]
-for their incompetence![AN]
+I should have them demoted and tried[N]
+for their incompetence![AN][Clear]
 How could they just let such[N]
 a calamity transpire?![AN]
 
@@ -235,7 +235,7 @@ But![.6] What if there's GHOSTS or[N]
 something?![.6] Ooooooooh[Beat]![AN]
 
 [L]
-[MidBlink]Please stop.[AN]
+[MidBlink]Please stop.[AN][OpenEyes]
 
 [FR]
 It's a small mission for a small squadron.[.6][N]
@@ -249,14 +249,14 @@ Come on,[.4] now! Let us begin the mission.[AN]
 [OpenLeft][LoadHildr]
 I don't like the air of this place.[.6][N]
 What if we get ambushed and[Beat] [_d][_i][_e]?![.6N]
-Someone else lead the way![AN]!
+Someone else lead the way![AN]
 
 [OpenRight][LoadAnsgar]
 Easy does it,[.4] Hildr[Beat] Just stand by me,[.4][N]
 and this'll be done in a jiffy.[AN]
 
 [OpenFarLeft][LoadAffogato]
-There's Aeterian soldiers over there.[AN]
+There's Aeterian soldiers over there.[AN][Event]
 
 [R][ClearFace][L][ClearFace][L][LoadUlrich][OpenFarFarRight][LoadMarc]
 
@@ -1005,7 +1005,7 @@ Was your enlistment official?[AN]
 
 [OpenMidRight]
 I think so.[.6] The documents must've[N]
-been destroyed[,] lost[,] maybe the[N]
+been destroyed[,] lost[,] or maybe the[N]
 crows got to them.[AN]
 
 [OpenMidLeft]
@@ -1020,14 +1020,12 @@ scout.[.6] We'll all get through this.[AN]
 ## PrologueGaidenThrone
 [OpenMidLeft][LoadAffo]
 [OpenMidLeft]
-[ToggleMouthMove](Why am I trying to[N]
-turn back now?)[AN]
-[CloseEyes](Feels like I've been in[N]
-these ruins before[Beat])[AN]
-[OpenEyes](Maybe I should try [ToggleRed]coming back[N]
-to the ruins[ToggleRed] after this is over[Beat])[A][X]
+[3L]
+[ToggleMouthMove](Nope.[.6] Not going back.)[AN][ToggleMouthMove]
+[X]
 
 ## PrologueSus
+[3L]
 [OpenFarFarRight][LoadAffo][MoveMidRight]
 [ToggleMouthMove](Looks like that's where I[N]
 should [ToggleRed]seize[ToggleRed].)[A][ToggleMouthMove][X]

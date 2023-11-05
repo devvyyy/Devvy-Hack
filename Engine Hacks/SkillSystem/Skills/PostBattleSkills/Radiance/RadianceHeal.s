@@ -52,7 +52,7 @@ cmp	r0,#0x00
 beq	End
 
 @ heal amount
-mov r3, #0x17 @this is def
+mov r3, #0x14 @this is str/mag
 ldrb 	r3, [r4, r3]
 add r3, #10
 

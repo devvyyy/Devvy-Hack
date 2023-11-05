@@ -115,6 +115,9 @@ UnitMenuTable:
   
   //Stealth Time!
 	MenuCommand(UM_Stealth, UM_StealthDesc, NormalText, StealthUsability, StealthEffect)
+	
+//BOOM HEADSHOT
+	MenuCommand(UM_Headshot, UM_HeadshotDesc, NormalText, HeadshotUsability, HeadshotEffect)
   
   //Resupply
 	MenuCommand(UM_Resupply, UM_ResupplyDesc, OrangeText, AmmoUsability, AmmoEffect)

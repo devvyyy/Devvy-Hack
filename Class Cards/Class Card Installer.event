@@ -157,3 +157,11 @@ ArbalestCardPalette:
 #incbin "ArbalestCardPalette.dmp"
 ArbalestClassCard:
 setCardEntry(0xA4, ArbalestCard,ArbalestCardPalette)
+
+ALIGN 4
+WarMonkCard: //by Der
+#incbin "WarMonkCard.dmp"
+WarMonkPalette:
+#incbin "WarMonkCard_pal.dmp"
+WarMonkClassCard:
+setCardEntry(0xCD, WarMonkCard,WarMonkPalette)

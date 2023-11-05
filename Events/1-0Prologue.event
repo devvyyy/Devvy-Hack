@@ -102,7 +102,7 @@ HildrAffoConvo:
 	ENDA
 	
 LocationBasedEvents:
-Chest(SteelBow,13,6)
+Chest(0x60,13,6)
 Door(11,7)
 Door(12,7)
 LOCA 0x0 GamingPrologue [2,2] 0x11
@@ -158,11 +158,11 @@ UNIT Ulrich LPaladin 0x1 Level(5, Ally, 0)   [7,6] 0b 0 1 REDA7R7 [IronLance,Blu
 UNIT
 
 LunaticUnits:
-UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [7,6]  0b 0 1 REDA7R9 [SteelBow, 0xDB,0xB9,0xB2,] [0x0,0x0,0x0,0x0]
+UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [7,6]  0b 0 1 REDA7R9 [SteelBow, 0xDB,0xB9,0xb2] [0x0,0x0,0x0,0x0]
 UNIT Breve SCav 0x1 Level(3, Ally, 1)    [7,6] 0b 0 1 REDA6R8 [SteelSword,Sagitar,0xFC,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Ansgar LArmor 0x1 Level(4, Ally, 1)   [7,6] 0b 0 1 REDA7R8 [SteelGlaive,ShortSpear,0x64,0x7F] [0x0,0x0,0x0,0x0]
 UNIT Hildr 0x6 0x1 Level(2, Ally, 1)    [7,6] 0b 0 1 REDA8R8 [SteelAxe,HandAxe,0xEF,Elixir] [0x0,0x0,0x0,0x0]
-UNIT Ulrich LPaladin 0x1 Level(5, Ally, 1)   [7,6] 0b 0 1 REDA7R7 [BraveLance,0x8D,Elixir,BlackGem] [0x0,0x0,0x0,0x0]
+UNIT Ulrich LPaladin 0x1 Level(5, Ally, 1)   [7,6] 0b 0 1 REDA7R7 [BraveLance,BluntGlaive,Elixir,BlackGem] [0x0,0x0,0x0,0x0]
 UNIT
 
 EnemyUnits:
@@ -171,14 +171,14 @@ UNIT Aeteria Soldier 0x1 Level(1, Enemy, 1)     [5,1] 0b 0x0 0x0 0x0 [IronLance,
 UNIT Aeteria Shaman 0x1 Level(1, Enemy, 1)     [1,10] 0b 0x0 0x0 0x0 [Flux,] [0x6,0x3,0x4,0x20]
 UNIT AeteriaStealable Shaman 0x1 Level(1, Enemy, 1)      [12,9] 0b 0x0 0x0 0x0 [Flux,Mine] [0x6,0x3,0x4,0x20]
 UNIT Aeteria 0x58 0x1 Level(1, Enemy, 1)      [4,5] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
-UNIT Aeteria Shaman 0x1 Level(1, Enemy, 0)      [10,1] DropItem 0x0 0x0 0x0 [Flux,Speedwing] BossAI
+UNIT AeteriaStealable Shaman 0x1 Level(1, Enemy, 0)      [10,1] 0b 0x0 0x0 0x0 [Flux,Speedwing] BossAI
 UNIT Marcellus 0x58 0x1 Level(5, Enemy, 0)      [2,2] 0b 0x0 0x0 0x0 [DarkTome2,] [0,3,4,32]
 UNIT Aeteria Fighter 0x1 Level(1, Enemy, 1)     [4,10] 0b 0x0 0x0 0x0 [IronAxe,] [0x6,0x3,0x4,0x20]
 UNIT Aeteria Mercenary 0x1 Level(1, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
 UNIT Aeteria Soldier 0x1 Level(1, Enemy, 1)     [10,10] 0b 0x0 0x0 0x0 [IronLance,] [0x6,0x3,0x4,0x20]
 UNIT Aeteria Soldier 0x1 Level(1, Enemy, 1)     [12,5] 0b 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
 UNIT Aeteria Soldier 0x1 Level(1, Enemy, 1)     [2,7] DropItem 0x0 0x0 0x0 [IronLance,Vulnerary] BossAI
-UNIT AeteriaStealable Fighter 0x1 Level(1, Enemy, 1)     [6,3] 0b 0x0 0x0 0x0 [IronAxe,RedGem] AttackInRangeAI
+UNIT Aeteria Fighter 0x1 Level(1, Enemy, 1)     [6,3] DropItem 0x0 0x0 0x0 [IronAxe,RedGem] AttackInRangeAI
 UNIT
 
 ThievesGoBrr:
@@ -268,7 +268,8 @@ MUSC 0x4D
 FADU 30
 
 HardUnits(LunaticUnits,Units1)
-CHECK_HARD; BEQ 0x720 0xC 0x0; BYTE 0x40 0x0D Affogato 0xB2; POIN SilentGiveItem+1; SetFlag(0x12C); LABEL 0x720
+//this sets 0x12c which is the ring notif flag
+CHECK_HARD; BEQ 0x720 0xC 0x0; BYTE 0x40 0x0D Affogato Elixir; POIN SilentGiveItem+1; SetFlag(0x12C); LABEL 0x720
 CHECK_HARD; BEQ 0x721 0xC 0x0; BYTE 0x40 0x0D Ulrich 0xFB; POIN SilentGiveItem+1; LABEL 0x721
 
 ENUN
@@ -288,7 +289,7 @@ ENUN
 STAL 5
 FADI 20
 CLEAN
-FADU 20
+//FADU 20
 STAL 10
 CameraCursor(Ulrich)
 

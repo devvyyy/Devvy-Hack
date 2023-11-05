@@ -1,5 +1,6 @@
 .thumb
 .equ MiracleID, SkillTester+4
+.equ gBattleData, 0x203A4D4
 
 push {r4-r7, lr}
 mov r4, r0 @atkr
@@ -22,40 +23,32 @@ ldr r1, MiracleID
 cmp r0, #0
 beq End
 
-@check weapon
-mov     r0, #0x4A      @Move to defenders's weapon (before battle)
-ldrb    r0, [r5, r0]   @Load defenders weap (before battle)
-cmp     r0, #0x38         @Fire I
-beq FireIEff
-cmp     r0, #0x3F         @Light I
-beq LightIEff
-cmp     r0, #0x45         @Dark I
-beq DarkIEff
-b End
+@make sure were in combat (or battle forecast)
+ldrb r3, =gBattleData
+ldrb r3, [r3]
+cmp r3, #4
+beq End
 
-FireIEff:
-mov r1, #0x5C
-ldrh r0, [r4, r1] @combat def
-add r0, #6
+@make sure the enemy is a mage
+ldr r0,[r5,#0x4]
+mov r1,#0x30
+ldr r0,[r0,r1] @so this loads the units staff/anima/light/dark prof
+cmp r0,#0x0
+beq End @if theyre all 0 the enemy is not a mage
+
+@recalc enemy damage by atk setting to 0 first
+@set defender attack to 0
+mov r0, r5
+add r0,#0x5A
+mov r3,#0
+strh r3,[r0]
+
+@ add back attack = str
+mov  r1, #0x5A
+ldrh r0, [r5, r1] @str
+ldrb r2, [r5, #0x14] @strength
+add  r0, r2
 strh r0, [r4,r1]
-
-b End
-
-LightIEff:
-mov r1, #0x5C
-ldrh r0, [r4, r1] @combat def
-add r0, #5
-strh r0, [r4,r1]
-
-b End
-
-DarkIEff:
-mov r1, #0x5C
-ldrh r0, [r4, r1] @combat def
-add r0, #7
-strh r0, [r4,r1]
-
-b End
 
 End:
 pop {r4-r7, r15}

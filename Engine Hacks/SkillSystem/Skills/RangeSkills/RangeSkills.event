@@ -35,6 +35,10 @@ TomeRangeBonus:
 #incbin "TomeRange/TomeRange.dmp"
 
 ALIGN 4
+HeadshotBonus:
+#incbin "Headshot/Headshot.dmp"
+
+ALIGN 4
 RangeSkillList:
 RangeSkill(LocktouchID, DaggerRangeBonus|1)
 RangeSkill(WarpathID, WarpathRangeBonus|1)
@@ -43,4 +47,5 @@ RangeSkill(BowRangeUpID, BowRangeBonus|1)
 RangeSkill(StaffSavantID, StaffSavantBonus|1)
 RangeSkill(PointBlankID, PointBlankBonus|1)
 RangeSkill(TomeRangeUpID, TomeRangeBonus|1)
+RangeSkill(SureShotID, HeadshotBonus|1)
 RangeSkill(0,0)	//End of list

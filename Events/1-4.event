@@ -82,7 +82,7 @@ LoadUnit(10,12)
 	UNIT
 
 EnemyUnits:
-UNIT Hartmann Druid 0x1 Level(6, Enemy, 0)     [1,1] 0b 0x0 0x0 0x0 [DarkTome5,AngelicRobe] BossAI
+UNIT Hartmann Druid 0x1 Level(6, Enemy, 0)     [1,1] DropItem 0x0 0x0 0x0 [DarkTome5,AngelicRobe] BossAI
 UNIT Aeteria Thaumaturge 0x1 Level(4, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [Fire,] DefendAI
 UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [5,2] DropItem 0x0 0x0 0x0 [DarkTome2,DoorKey] BossAI
 UNIT Aeteria LArmor 0x1 Level(4, Enemy, 1)     [9,1] DropItem 0x0 0x0 0x0 [IronGlaive,ShortSpear,DoorKey] BossAI
@@ -116,12 +116,12 @@ UNIT HolyGuard Cleric 0x1 Level(5, NPC, 1)     [10,15] 0 0 1 REDA10R13 [Slow, Vu
 UNIT
 
 TankyHealerWTF:
-UNIT Floris Priest 0x1 Level(4, Ally, 0)     [9,12] 0x0 0x0 0x0 0x0 [Mend,Haze] AttackInRangeAI
+UNIT Floris Priest 0x1 Level(4, Ally, 0)     [9,12] 0x0 0x0 0x0 0x0 [Mend,Barrier,Haze] AttackInRangeAI
 UNIT Yory 0x61 0x1 Level(3, Ally, 0)     [10,12] 0x0 0x0 0x0 0x0 [Dragonstone,0xF2,0xF3,Mine,] AttackInRangeAI
 UNIT
 
 LunaticUnits:
-UNIT Floris Priest 0x1 Level(4, Ally, 1)     [9,12] 0x0 0x0 0x0 0x0 [Mend,Haze,TorchStaff] AttackInRangeAI
+UNIT Floris Priest 0x1 Level(4, Ally, 1)     [9,12] 0x0 0x0 0x0 0x0 [Mend,Barrier,Haze,TorchStaff] AttackInRangeAI
 UNIT Yory 0x61 0x1 Level(3, Ally, 1)     [10,12] 0x0 0x0 0x0 0x0 [Dragonstone,0xF2,0xF3,Mine,] AttackInRangeAI
 UNIT
 

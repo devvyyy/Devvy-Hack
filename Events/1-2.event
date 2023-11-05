@@ -25,10 +25,12 @@ TURN 0x0 GoodbyeDespair [10,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x21, PandoroAffoRecruit, Affogato, Pandoro)
-CharacterEventBothWays(0x21, BreneRecruit, Affogato, Irene)
-CharacterEventBothWays(0x21, PandoroRecruit, 0x0, Pandoro)
-CharacterEventBothWays(0x21, IreneRecruit, 0x0, Irene)
+//CharacterEventBothWays(0x21, PandoroAffoRecruit, Affogato, Pandoro)
+//CharacterEventBothWays(0x21, BreneRecruit, Affogato, Irene)
+//CharacterEventBothWays(0x21, PandoroRecruit, 0x0, Pandoro)
+//CharacterEventBothWays(0x21, IreneRecruit, 0x0, Irene)
+CharacterEventBothWays(0x21, UlrichLatteRecruit, Ulrich, Latte)
+CharacterEventBothWays(0x21, LatteRecruit, 0x0, Latte)
 //CharacterEventBothWays(0x22, MochaNoraConvo, Nora, Mocha)
 //CharacterEventBothWays(0x23, HildrBreveConvo, Breve, Hildr)
 //CharacterEventBothWays(0x24, AffoSeqConvo, Affogato, Sequin)
@@ -90,6 +92,10 @@ UNIT Mocha PegasusRider 0x1 Level(3, Ally, 1)     [5,18] 0 0 1 REDA4R15 [IronLan
 LunaPirate:
 UNIT Pandoro Pirate 0x1 Level(4, Ally, 0)   [1,11] 0b 0x0 0x0 0x0 [IronLabrys,PureWater] BossAI
 UNIT Irene Myrmidon_F 0x1 Level(3, Ally, 0)   [0,10] 0b 0x0 0x0 0x0 [KillingEdge,Vulnerary] BossAI
+	UNIT
+	
+WhenTheUnitIsSus:
+UNIT Latte Archer 0x1 Level(2, Ally, 0)   [1,11] 0b 0x0 0x0 0x0 [SteelBow,HuntingRifle,PureWater] BossAI
 	UNIT
 
 OhGodOhFuck:
@@ -165,6 +171,7 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+TILECHANGE 0x4
 SetBackground(0x2B)
 SOUN 0xA6
 STAL 3
@@ -182,19 +189,22 @@ MUSCSLOW 0x3E2
 CharacterConditionalDialog(Evelyn,Ch2Opening2,Ch2OpeningAlt2)
 FADI 60
 	LOAD1 0x1 EnemyUnits
-	LOAD1 0x1 LunaPirate
+	//LOAD1 0x1 LunaPirate
+	LOAD1 0x1 WhenTheUnitIsSus
 	ENUN
-	CUSE Pandoro
-	CUSE Irene
+	//CUSE Pandoro
+	//CUSE Irene
 CLEAN
 FADU 60
 STAL 10
-CameraCursor(Irene)
-STAL 3
-CameraCursor(Pandoro)
+//CameraCursor(Irene)
+//STAL 3
+//CameraCursor(Pandoro)
+CameraCursor(Latte)
 STAL 15
 MUSC 0x4B
-Text(Ch2Opening3)
+Text(Ch2Opening3ButAwesome)
+CUSE Latte
 STAL 10
 CAM1 [8,1]
 CenterTextbox(FogDisclaimer)
@@ -210,9 +220,11 @@ MUSI
 Text(Ch2Ending1)
 MUNO
 STAL 15
-CHECK_ALIVE Irene
-BEQ 1 0x0 0xC
-CHECK_ALIVE Pandoro
+//CHECK_ALIVE Irene
+//BEQ 1 0x0 0xC
+//CHECK_ALIVE Pandoro
+//BEQ 1 0x0 0xC
+CHECK_ALIVE Mocha
 BEQ 1 0x0 0xC
 MusicChange(VictoryBGM)
 SetBackground(0x3F)
@@ -289,6 +301,24 @@ Text(IreneGenericRecruit)
 MURE 0x2
 CUSA Pandoro
 CUSA Irene
+NoFade
+ENDA
+
+LatteRecruit:
+MUSS 0x30
+STAL 33
+Text(LatteGenericRecruit)
+MURE 0x2
+CUSA Latte
+NoFade
+ENDA
+
+UlrichLatteRecruit:
+MUSS 0x30
+STAL 33
+Text(LatteUlrichRecruit)
+MURE 0x2
+CUSA Latte
 NoFade
 ENDA
 
@@ -407,9 +437,13 @@ OhHeckItHim:
 LOAD1 0x1 TurnOnelalala
 STAL 5
 CAM1[7,8]
+Sound(0xb1)
+TILEREVERSE 0x4
 Text(HouseBG2, Ch2OgrimAppear1)
 LOAD1 0x1 OhGodOhFuck
 CameraCursor(0x69)
+Sound(0x2d7)
+TILECHANGE 0x4
 	TEXTSTART
 	Text(Ch2OgrimAppear2)
 	TEXTEND

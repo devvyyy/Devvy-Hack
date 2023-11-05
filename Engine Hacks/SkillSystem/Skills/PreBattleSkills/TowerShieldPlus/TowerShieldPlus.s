@@ -1,4 +1,5 @@
 .equ TowerShieldPlusID, SkillTester+4
+.equ gBattleData, 0x203A4D4
 .thumb
 push {r4-r7,lr}
 @goes in the battle loop.
