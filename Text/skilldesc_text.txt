@@ -372,10 +372,10 @@ HP = 20% of missing HP and grants[N]
 ## SD_Zephyr
 # USES global flag 0x22; use new status effect; Zephyr: If Xavier initiates, grants NEWLINE Whirlwind to both sides for 1 turn. Maybe Mov +2 in new skill idk
 Full Tilt[N]
-- Xavier can toggle a stance with Zephyr:[N]
-Grants Move x2. Converts 50% of max HP[N]
-to Atk, and 50% of Def/Res to AS.[N]
-(Penalties round down; bonuses round up).[X]
+- Xavier can toggle an All-Out stance:[N]
+Grants Move x2. Converts 50% of max[N]
+HP to Atk, and 50% of Def/Res to AS.[N]
+(Penalties round down; bonuses up).[X]
 
 ## SD_Zephyr2
 Zephyr: Once per map, if Xavier initiates, win[N]
@@ -770,8 +770,9 @@ Curtain Call: If foe's HP is below[N]
 missing HP.[X]
 
 ## SD_Nevermore
-Fractured Soul: Gorlois takes -1 damage[N]
-for every 4 damage taken by foe.[X]
+Fractured Soul[N]
+- Gorlois takes -1 damage for every[N]
+4 damage taken by foe.[X]
 
 ## SD_SkiesDescend2
 The Skies Descend: If foe's HP is full,[N]
@@ -1262,8 +1263,8 @@ when attacked at 1-2 range.[X]
 Voile de Foi[N]
 - Sylveria counters magical damage[N]
 damage upon hit.[N]
-- Negates damage from foe's[N]
-critical hits and combat arts.[X]
+- Negates all damage from foe's critical[N]
+hits, combat arts and active effects.[X]
 
 ## SD_Miracle
 Hallowed Soul[N]
@@ -1305,7 +1306,7 @@ to monster units.[X]
 
 ## SD_Summon
 Sentry[N]
-- Deploy an immobile turret with 5 range,[N]
+- Deploy an immobile turret with 8 range,[N]
 ignores 20% of foe's Def, shoots x2,[N]
 and acts twice per turn (5 ammo rounds).[N]
 - Adjacent units can supply ammunition.[X]
@@ -1383,8 +1384,9 @@ take -4 magical damage.[X]
 
 ## SD_Nihil
 # edit this later in SkillSystem.event
-Nevermore: Aohr neutralizes foe's effects[N]
-that "Deal bonus damage" or "Reduces[N]
+Nevermore[N]
+- Aohr neutralizes foe's effects that[N]
+"Deal bonus damage" or "Reduces[N]
 damage taken".[X]
 
 ## SD_Nullify
@@ -1741,7 +1743,7 @@ takes 6 damage after combat.[X]
 
 ## SD_Dazzle
 Overwhelm[N]
-- If Noel's Str > foe's Str, foe[N]
+- If Noel's Str > foe's Str/Eth, foe[N]
 cannot counterattack.[N]
 - Inflicts Avoid -20 on foes[N]
 within 2 spaces.[X]

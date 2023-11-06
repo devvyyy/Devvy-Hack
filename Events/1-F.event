@@ -118,7 +118,7 @@ LoadUnit(19,5)
 EnemyUnits: //InfantrySoul, CavSoul, FlierSoul, ArmorSoul, MagSoul, PromoSoul, StealSoul
 UNIT Selwyn 0x31 0x1 Level(12, Enemy, 1)     [12,21] DropItem 0x0 0x0 0x0 [0xFE,SecondSeal] BossAI
 
-UNIT Aeteria Hierophant 0x1 Level(1, Enemy, 1)     [9,13] DropItem 0x0 0x0 0x0 [Flux,Light1,Elixir] ChargeAI
+UNIT Aeteria Hierophant 0x1 Level(1, Enemy, 1)     [9,13] DropItem 0x0 0x0 0x0 [Light1,Elixir] ChargeAI
 UNIT Aeteria WyvernRider 0x1 Level(10, Enemy, 1)     [2,10] 0b 0x0 0x0 0x0 [IronLabrys] ChargeAI
 UNIT Aeteria AxeArmor 0x1 Level(10, Enemy, 1)     [10,10] 0b 0x0 0x0 0x0 [SteelLabrys,ShortAxe,] ChargeAI
 UNIT Aeteria Thaumaturge 0x1 Level(10, Enemy, 1)     [6,11] 0b 0x0 0x0 0x0 [Thunder] StallOneTurnAI
@@ -648,6 +648,8 @@ Text(Ch6Opening2)
 //DoubleConditionalDialog(Brudet,Stroganoff,Ch6Opening3,Ch6OpeningAlt3,5,6)
 
 //TripleIfAliveDialog(Ansgar,Hildr,Breve,Ch6Opening4,7)
+CLEAN
+STAL 10
 
 CameraCursor(Affogato)
 Text(Ch6Opening6)
