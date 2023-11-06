@@ -59,8 +59,8 @@ strb    r0,[r6,#4] @save the thing
 ldrb r1, [r5, #0x13] @r0 = opponent current HP
 ldrb r0, [r5, #0x12] @r0 = opponent max HP
 sub  r0, r1          @r0 = opponent missing HP
-mov r1,#2 @2
-mul r0,r1 @multiply stat by 2
+@mov r1,#2 @2
+@mul r0,r1 @multiply stat by 2
 
 @Store damage
 ldrh r1, [r7, #0x4]

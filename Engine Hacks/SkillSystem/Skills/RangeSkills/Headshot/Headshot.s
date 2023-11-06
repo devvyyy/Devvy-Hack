@@ -14,7 +14,7 @@
 	@r0: updated min max range word
 .set GetWeaponType, 0x8017548
 .set BonusWeaponType, 0x3 @Bows
-.set MaxRangeBonus, 0xA @10?
+.set MaxRangeBonus, 0x5 @0xA is 10?
 push 	{lr}
 add 	sp, #-0x4
 str 	r2, [sp]
