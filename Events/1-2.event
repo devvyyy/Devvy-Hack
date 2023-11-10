@@ -95,11 +95,11 @@ UNIT Irene Myrmidon_F 0x1 Level(3, Ally, 0)   [0,10] 0b 0x0 0x0 0x0 [KillingEdge
 	UNIT
 	
 WhenTheUnitIsSus:
-UNIT Latte Archer 0x1 Level(2, Ally, 0)   [1,11] 0b 0x0 0x0 0x0 [SteelBow,HuntingRifle,PureWater] BossAI
+UNIT Latte Archer 0x1 Level(2, Ally, 0)   [1,11] 0b 0x0 0x0 0x0 [SteelBow,HuntingRifle,PureWater] [0x6,0x3,0x4,0x20]
 	UNIT
 
-OhGodOhFuck:
-UNIT 0x69 Parson 0x1 Level(1, Enemy, 0)   [9,8] DropItem 0 1 REDA9R9 [Light2,Boots] [0x6,0x3,0x4,0x20]
+OhGodOhFuck: //ok this is the part 2 guy?!
+UNIT 0xC3 GreatKnight 0x1 Level(10, Enemy, 0)   [9,8] DropItem 0 1 REDA9R9 [LightBrand,HeavySpear,Halberd,Boots] [0x6,0x3,0x4,0x20]
 	UNIT
 
 EnemyUnits:
@@ -224,17 +224,36 @@ STAL 15
 //BEQ 1 0x0 0xC
 //CHECK_ALIVE Pandoro
 //BEQ 1 0x0 0xC
-CHECK_ALIVE Mocha
+
+CHECK_ALIVE Ulrich
+BEQ 0x1 0xC 0x0
+CHECK_EVENTID 0x79 //skips to normal ending if 1 wasnt completed
 BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7A //skips to normal ending if 2 wasnt completed
+BEQ 1 0x0 0xC
+
+CHECK_ALIVE Mocha //if mocha/ulrich alive and flags are set, do gaiden ending
+BEQ 2 0x0 0xC
 MusicChange(VictoryBGM)
 SetBackground(0x3F)
 TEXTSTART
-TEXTSHOW Ch2Ending2
+TEXTSHOW Ch2Ending2ButGaiden
 TEXTEND
-MUSC 0x115
+MUSC 0x4B
 TEXTCONT
 TEXTEND
+
+GOTO 2
+
 LABEL 1
+
+CHECK_ALIVE Mocha
+BEQ 2 0x0 0xC
+MusicChange(VictoryBGM)
+SetBackground(0x3F)
+Text(Ch2Ending2)
+
+LABEL 2 //end stuff
 	MNC2 0x3
 	NoFade
 	ENDA
@@ -401,9 +420,9 @@ ENDA
 
 OgrimHouseEpic:
 MUSI // lowers music volume
-CHECK_ALIVE 0x69
+CHECK_ALIVE 0xC3
 BEQ 9 0x0 0xC
-CameraCursor(0x69)
+CameraCursor(0xC3)
 Text(OgrimHouseEnter)
 GOTO 0x776
 
@@ -441,7 +460,7 @@ Sound(0xb1)
 TILEREVERSE 0x4
 Text(HouseBG2, Ch2OgrimAppear1)
 LOAD1 0x1 OhGodOhFuck
-CameraCursor(0x69)
+CameraCursor(0xC3)
 Sound(0x2d7)
 TILECHANGE 0x4
 	TEXTSTART
@@ -457,12 +476,12 @@ BNE 0x776 0x0 0xC
 CHECK_EVENTID 0x10
 BEQ 0x776 0xC 0x0 //If Flag 0x10 is on, continue. Otherwise, skip to 0x776
 	SVAL 0x1 0x00040000
-	CHAI 0x69
-CHECK_ALIVE 0x69
+	CHAI 0xC3
+CHECK_ALIVE 0xC3
 BEQ 0x776 0x0 0xC
-CAM1 0x69
+CAM1 0xC3
 STAL 20
-FlashCursor(0x69,60)
+FlashCursor(0xC3,60)
 Text(OgrimChargeText)
 ENUT 0x19
 LABEL 0x776

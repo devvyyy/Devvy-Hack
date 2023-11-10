@@ -42,26 +42,26 @@ ENDA
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0xA, RecruitLevainChiff, Chiffon, Levain)
-CharacterEventBothWays(0xB, RecruitYufkaChiff, Chiffon, Yufka)
-CharacterEventBothWays(0xB, RecruitYufkaVelius, Chiffon, Wulfric)
+CharacterEventBothWays(0xA, RecruitKatsuChiff, Chiffon, Katsu)
+CharacterEventBothWays(0xA, RecruitKatsuGeneric, Katsu, 0x0)
+//CharacterEventBothWays(0xA, RecruitYufkaVelius, Chiffon, Wulfric)
 	END_MAIN
 	
-RecruitLevainChiff:
+RecruitKatsuChiff:
 MUSS 0x30
 STAL 33
 Text(Placeholder1)
 MURE 0x2
-TurnAlly(Levain)
+TurnAlly(Katsu)
 NoFade
 ENDA
 
-RecruitYufkaChiff:
+RecruitKatsuGeneric:
 MUSS 0x30
 STAL 33
 Text(Placeholder1)
 MURE 0x2
-TurnAlly(Yufka)
+TurnAlly(Katsu)
 NoFade
 ENDA
 
@@ -164,6 +164,7 @@ UNIT Aeteria Thaumaturge 0x1 Level(5, Enemy, 1)     [6,22] 0b 0x0 0x0 0x0 [Fire]
 UNIT Aeteria GriffonRider 0x1 Level(5, Enemy, 1)     [19,1] 0b 0x0 0x0 0x0 [SteelBow] GroupOneAI
 UNIT Aeteria PegRider 0x1 Level(6, Enemy, 1)     [21,0] 0b 0x0 0x0 0x0 [SteelLance] GroupOneAI
 UNIT Aeteria PegRider 0x1 Level(5, Enemy, 1)     [21,4] 0b 0x0 0x0 0x0 [SteelLance] GroupOneAI
+UNIT Aeteria PegRider 0x1 Level(6, Enemy, 1)     [5,11] 0b 0x0 0x0 0x0 [Javelin] AttackInRangeAI
 	UNIT
 	
 LesNewRecruits: //the imperial court people
@@ -185,9 +186,9 @@ UNIT Aeteria ACav 0x1 Level(6, Enemy, 1)     [20,28] 0b 0x0 0x0 0x0 [ShortAxe] C
 	UNIT
 	
 WellingtonRein:
-UNIT Aeteria GriffonRider 0x1 Level(6, Enemy, 1)     [19,28] 0b 0x0 0x0 0x0 [SteelBow] ChargeAI
-UNIT Wellington GreatKnight 0x1 Level(13, Enemy, 0)     [0,5] DropItem 0x0 0x0 0x0 [Runesword,BluntGlaive,ShortAxe] ChargeAI
-UNIT Aeteria LCav 0x1 Level(6, Enemy, 1)     [21,28] 0b 0x0 0x0 0x0 [HeavySpear] ChargeAI
+UNIT Aeteria GriffonRider 0x1 Level(11, Enemy, 1)     [19,28] 0 0 1 REDA19R25 [SteelBow] ChargeAI
+UNIT Wellington GreatKnight 0x1 Level(13, Enemy, 0)     [20,28] DropItem 0 1 REDA20R24 [Runesword,BluntGlaive,ShortAxe] ChargeAI
+UNIT Aeteria LCav 0x1 Level(12, Enemy, 1)     [21,28] 0 0 1 REDA21R25 [HeavySpear] ChargeAI
 	UNIT
 	
 TentUnitGaming: //these are only on the left; destroy to get items?

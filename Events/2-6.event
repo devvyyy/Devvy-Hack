@@ -23,7 +23,8 @@ TurnEventEnemy(0,OMGMyHeroAGAIN,6)
 ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0x8,KatsuRecruit, Chiffon, Levain)
-CharacterEventBothWays(0x9,FlanRecruit, Chiffon, Flan)
+CharacterEventBothWays(0x8,KatsuRecruitGeneric, 0x0, Levain)
+//CharacterEventBothWays(0x9,FlanRecruit, Chiffon, Flan)
 	END_MAIN
 
 KatsuRecruit:
@@ -35,7 +36,7 @@ CUSA Levain
 NoFade
 ENDA
 
-FlanRecruit:
+KatsuRecruitGeneric:
 MUSS 0x30
 STAL 33
 Text(Placeholder2)

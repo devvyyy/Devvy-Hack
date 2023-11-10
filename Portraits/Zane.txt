@@ -262,9 +262,17 @@ Affogato_Palette:
 setMugEntryExtend(0x21, Affogato_Mug, Affogato_Mini, Affogato_Palette, Affogato_Frames, 3, 5, 3, 3, 10, 4, 10, 2)
 
 ALIGN 4
+AffogatoHood_Mug:
+#incbin "1bullet_mug.dmp"
+
+ALIGN 4
+AffogatoHood_Frames:
+#incbin "1bullet_frames.dmp"
+
+ALIGN 4
 OneBullet:
 #incbin "1bullet_minimug.dmp"
-setMugEntryExtend(0xAD, Affogato_Mug, OneBullet, Affogato_Palette, Affogato_Frames, 3, 5, 3, 3, 10, 4, 10, 2)
+setMugEntryExtend(0xAD, AffogatoHood_Mug, OneBullet, Affogato_Palette, AffogatoHood_Frames, 3, 5, 3, 3, 10, 4, 10, 2)
 
 ALIGN 16
 TwoBullet:
