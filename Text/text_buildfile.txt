@@ -16,8 +16,8 @@ Weapons[X]
 # 0x551
 Elemental affinity. Determines the[N]
 bonuses granted with supports.[N]
-Press Right for more detail,[N]
-including specific bonuses.[X]
+Press R on a playable character's[N]
+affinity for detail on bonuses.[X]
 
 # 0x61F
 The weapon triangle is[N]
@@ -79,7 +79,7 @@ Units can get up to[N]
 5 different skills.[N]
  [N]
 Infantry units get Shove,[N]
-Armored units get Reposition,[N]
+Armored units get Fling,[N]
 Cavalry units get Swap,[N]
 and Flying units get Pivot.[N]
  [N]
@@ -91,14 +91,15 @@ get Rotate, and Bards[N]
 and Technicians get Smite.[N]
  [N]
 Movement skills on mounted[N]
-units are a free action.[N]
+units can be used[N]
+during Canto.[N]
 Movement skills on infantry[N]
 units can target any[N]
 allegiance.[N]
  [N]
 Every mounted unit also gets[N]
 Canto, and every thief unit[N]
-gets Cunning.[N]
+gets Thief Basics.[N]
  [N]
 Main characters also get a[N]
 class skill, and get a mastery[N]
@@ -145,7 +146,7 @@ and key icons indicate that the[N]
 unit will pick locks and/or run.[N]
  [N]
 Items of dead player units and[N]
-turret drops are automatically[N]
+NPC drops are automatically[N]
 sent to the convoy.[N]
  [N]
 Houses give experience the first[N]
@@ -168,19 +169,6 @@ Talk/Support[X]
 Talk/Support are free actions[N]
 that can't be repeated[N]
 (Blue menu text).[N]
- [N]
-Talk conversations usually don't[N]
-give items, but some do.[N]
- [N]
-Talks that give items[N]
-are as follows:[N]
-1-2: Affogato/Sequin[N]
-1-4: Nora/Floris[N]
-1-F: Affogato/King (only if[N]
-1-5 villages were saved)[N]
-1-F: Nora/King (only if[N]
-Nora talked with Floris)[N]
-1-F: Stroganoff/Gorlois[N]
  [N]
 Every unit has 5 supports with[N]
 3 ranks with eachother.[N]
@@ -451,8 +439,8 @@ He's unafraid to speak his mind.[X]
 Milo[X]
 
 # 0x29F
-An Aeterian prison guard.
-[X]
+A waning Aeterian general of the imperial[N]
+court. He's lost to his magical pursuits.[X]
 
 # 0x19A
 Interlude I: Moonlight[X]
@@ -586,7 +574,7 @@ Dexterity. Affects hit and critical rate.[N]
 # 0x549
 Speed ([_A][_S]). Affects avoid, and if unit's[NL]
 AS > foe's AS + 4, unit can follow-up.[N]
-[_A][_v][_o][_i][_d][_SP]=[_SP]([_S][_p][_d][_SP][_Plus][_SP][_L][_u][_c][_k][_Dot])[N]
+[_A][_v][_o][_i][_d][_SP]=[_SP]([_A][_S][_SP][_Plus][_SP][_L][_u][_c][_k][_Dot])[N]
 [_A][_S][_SP]=[_SP]([_S][_p][_d][_SP][_Minus][_SP][_W][_Dot][_SP][_W][_t][_SP][_p][_e][_n][_a][_l][_t][_y][_Dot])[X]
 
 # 0x54A
@@ -971,18 +959,18 @@ Void Cleaver[X]
 
 # 0x443
 Long-range weapon. No WEXP.[N]
-[_Lock]: [BowIcon], Technician[X]
+[_Lock]: Infantry [BowIcon], Technician[X]
 
 # 0x444
 Very long-range weapon. No WEXP.[N]
-[_Lock]: [BowIcon], Technician[X]
+[_Lock]: Infantry [BowIcon], Technician[X]
 
 # 0x395
 [_R][_a][_p][_i][_d][_SP][_B][_a][_l][_l][_i][_s][_t][_a][X]
 
 # 0x445
 Strikes x2 consecutively. No WEXP.[N]
-[_Lock]: [BowIcon], Technician[X]
+[_Lock]: Infantry [BowIcon], Technician[X]
  
 # 0x35B
 [_P][_o][_i][_s][_o][_n][_SP][_D][_a][_g][_g][_e][_r][X]
@@ -1070,6 +1058,10 @@ Slow[X]
 
 # 0x3ea
 Winguard[X]
+
+# 0x499
+When in inventory, neutralizes[N]
+[FlierIcon] unit's weakness to bows.[X]
 
 # 0x478
 Inflicts Spd -5 on foe after combat[N]
@@ -1367,7 +1359,8 @@ Do you want to quit?[N]
  Enemies have much[N]
  higher stats.[N]
  Player units have[N]
- better inventories.[X]
+ better inventories[N]
+ in Part 1.[X]
  
 # 0x2EB
 Strategist[X]
@@ -1428,6 +1421,13 @@ within 24 turns.[X]
 Defeat Aoife, Maynard,[N]
 and Eustace.[X]
 
+# 0x241
+Solum[X]
+
+# 0x29C
+A stern Aeterian bounty hunter.[N]
+He's looking to hit it big.[X]
+
 # 0x24D
 Wreyvine[X]
 
@@ -1445,7 +1445,7 @@ Does not end turn.[X]
 Prologue I: No Way Out[X]
 
 # 0x161 Ch1Name
-1-1: Genesis[X]
+1-1: The First Strike[X]
 
 # 0x162 Ch2Name
 1-2: Winds Astride[X]
@@ -1463,7 +1463,7 @@ Prologue I: No Way Out[X]
 1-F: Our Last Stand[X]
 
 # 0x167 Ch8Name
-2-1: Oblivion[X]
+2-1: Breaking Out[X]
 
 # 0x168 Gaiden1Name
 1-1x: Gold Rush[X]

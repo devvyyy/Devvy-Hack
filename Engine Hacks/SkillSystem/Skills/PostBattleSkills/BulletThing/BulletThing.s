@@ -22,19 +22,19 @@ ldrb	r0, [r4,#0x13]
 cmp	r0, #0x00
 beq	End
 
-@check if last action was using a thief thing
-ldr r0,=#0x203A958
-ldrb r0,[r0,#0x11]
-mov r1,#0x6 @steal
-cmp r0,r1
-beq CheckFlag @if steal, branch to TheSkill
+@check if foe dead
+ldrb    r0, [r5,#0x13]
+cmp    r0, #0x00
+bne    End
 
-@is it pick?
-ldr r0,=#0x203A958
-ldrb r0,[r0,#0x11]
-mov r1,#0x15 @pick
-cmp r0,r1
-bne CheckAttack @if not pick, branch to End
+@check if attacked this turn
+ldrb 	r0, [r6,#0x11]	@action taken this turn
+cmp	r0, #0x2 @attack
+bne	End
+ldrb 	r0, [r6,#0x0C]	@allegiance byte of the current character taking action
+ldrb	r1, [r4,#0x0B]	@allegiance byte of the character we are checking
+cmp	r0, r1		@check if same character
+bne	End
 
 CheckFlag:
 @check if flag 0x28 set; if set, end
@@ -44,11 +44,6 @@ mov r0,#0x28
 .short 0xF800
 cmp r0,#1
 bne EventCheck @if flag is not on, add to counter
-
-CheckAttack: @check if attacked this turn
-ldrb 	r0, [r6,#0x11]	@action taken this turn
-cmp	r0, #0x2 @attack
-bne	End
 
 @ play event
 mov	r3, #0x00
@@ -80,6 +75,20 @@ beq End
 ldrb	r0, [r5,#0x13]
 cmp	r0, #0x00
 beq	End
+
+@check if foe dead
+ldrb    r0, [r4,#0x13]
+cmp    r0, #0x00
+bne    End
+
+@check if attacked this turn
+ldrb 	r0, [r6,#0x11]	@action taken this turn
+cmp	r0, #0x2 @attack
+bne	End
+ldrb 	r0, [r6,#0x0C]	@allegiance byte of the current character taking action
+ldrb	r1, [r4,#0x0B]	@allegiance byte of the character we are checking
+cmp	r0, r1		@check if same character
+bne	End
 
 @check if flag 0x28 set; if set, check if unit can counter
 ldr r0,=#0x8083da8 @CheckEventId

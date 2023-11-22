@@ -14,14 +14,47 @@ ldr r1, BulletID
 cmp r0, #0
 beq End
 
-@not at stat screen
-ldr r1, [r5,#4] @class data ptr
-cmp r1, #0 @if 0, this is stat screen
-beq End
+@check if flag 0x26 set; if so, proc skill
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0x26
+.short 0xF800
+cmp r0,#1
+bne NextCheck
 
-ldr r0,=#0x203A4EC @attacker struct
-cmp r0,r4
-bne End @if not attacker, end
+@add 3 damage
+mov r1, #0x5a
+ldrh r0, [r4, r1] @atk
+add r0, #1
+strh r0, [r4,r1]
+
+@add 5 hit
+mov r1, #0x60
+ldrh r0, [r4, r1] @hit
+add r0, #5
+strh r0, [r4,r1]
+
+NextCheck:
+
+@check if flag 0x27 set; if so, proc skill
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0x27
+.short 0xF800
+cmp r0,#1
+bne NextNextCheck
+
+@add 3 damage
+mov r1, #0x5a
+ldrh r0, [r4, r1] @atk
+add r0, #2
+strh r0, [r4,r1]
+
+@add 5 hit
+mov r1, #0x60
+ldrh r0, [r4, r1] @hit
+add r0, #10
+strh r0, [r4,r1]
 
 @check if flag 0x28 set; if so, proc skill
 ldr r0,=#0x8083da8 @CheckEventId
@@ -31,11 +64,18 @@ mov r0,#0x28
 cmp r0,#1
 bne End
 
-@add res attack
-mov  r1, #0x5A
-ldrh r0, [r4, r1] @attack
-ldrb r2, [r4, #0x18] @unit's res
-add  r0, r2
+NextNextCheck:
+
+@add 3 damage
+mov r1, #0x5a
+ldrh r0, [r4, r1] @atk
+add r0, #3
+strh r0, [r4,r1]
+
+@add 5 hit
+mov r1, #0x60
+ldrh r0, [r4, r1] @hit
+add r0, #15
 strh r0, [r4,r1]
 
 End:

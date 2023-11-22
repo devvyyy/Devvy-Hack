@@ -97,9 +97,13 @@ UNIT Irene Myrmidon_F 0x1 Level(3, Ally, 0)   [0,10] 0b 0x0 0x0 0x0 [KillingEdge
 WhenTheUnitIsSus:
 UNIT Latte Archer 0x1 Level(2, Ally, 0)   [1,11] 0b 0x0 0x0 0x0 [SteelBow,HuntingRifle,PureWater] [0x6,0x3,0x4,0x20]
 	UNIT
+	
+LevainLunatic:
+UNIT Latte Archer 0x1 Level(2, Ally, 1)   [1,11] 0b 0x0 0x0 0x0 [SteelBow,0x30,PureWater] [0x6,0x3,0x4,0x20]
+	UNIT
 
 OhGodOhFuck: //ok this is the part 2 guy?!
-UNIT 0xC3 GreatKnight 0x1 Level(10, Enemy, 0)   [9,8] DropItem 0 1 REDA9R9 [LightBrand,HeavySpear,Halberd,Boots] [0x6,0x3,0x4,0x20]
+UNIT 0xC3 GreatKnight 0x1 Level(10, Enemy, 0)   [9,8] DropItem 0 1 REDA9R9 [LightBrand,HeavySpear,Halberd,0xB4] [0x6,0x3,0x4,0x20]
 	UNIT
 
 EnemyUnits:
@@ -190,7 +194,8 @@ CharacterConditionalDialog(Evelyn,Ch2Opening2,Ch2OpeningAlt2)
 FADI 60
 	LOAD1 0x1 EnemyUnits
 	//LOAD1 0x1 LunaPirate
-	LOAD1 0x1 WhenTheUnitIsSus
+	//LOAD1 0x1 WhenTheUnitIsSus
+	HardUnits(LevainLunatic,WhenTheUnitIsSus)
 	ENUN
 	//CUSE Pandoro
 	//CUSE Irene
@@ -466,6 +471,7 @@ TILECHANGE 0x4
 	TEXTSTART
 	Text(Ch2OgrimAppear2)
 	TEXTEND
+BYTE 0x40 0x0D 0xC3 Boots; POIN SilentGiveItem+1
 ENUT 0x18
 NoFade
 ENDA

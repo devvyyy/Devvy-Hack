@@ -43,13 +43,6 @@ They can easily obfuscate their true[N]
 numbers to lead us we're fighting[N]
 larger forces.[AN]
 
-[FL]
-You got another theory?[AN]
-
-[OpenLeft]
-I do[,] but I have to make sure[N]
-I can confirm it beforehand.[AN]
-
 [OpenMidRight]
 If they cross through here[,] the people of[N]
 Wreyvine will be at risk.[.6] Wreyvine's army[N]
@@ -57,9 +50,30 @@ is not grand enough to guard every site.[AN]
 Farewell for now.[.6] Focus on protecting the[N]
 city border.[.6] I must take care of business[N]
 elsewhere in the capital.[AN]
-Send a messenger if you need assistance.[6N]
-They must not pass through these holy gates.[6N]
-Good luck out there.[AN]
+I leave it to you to cover the area.[6N]
+They must not pass through these gates.[6N]
+Send a messenger if you need assistance.[AN][Clear]
+Good luck out there.[AN][CloseSpeechSlow][MoveFarFarRight][ClearFace]
+
+[L][ClearFace][OpenMidRight][LoadAffo]
+[FL][MoveMidLeft]
+
+[ML]
+We're really stretched thin[,] huh?[AN]
+Are you as troubled as I am?[AN]
+
+[MR]
+No[,] I'm confident they don't have[N]
+the numbers to get through.[AN][Clear]
+There's only a few dozen[,] and they're[N]
+hardly near the gates.[.6] They must[N]
+all be between the mountains.[AN]
+
+[ML]
+So where are the rest of their forces?[AN]
+
+[MR]
+[Beat][AN]
 
 [X]
 
@@ -177,7 +191,7 @@ We must succeed for the Duke.[.6] The Apostle.[6N]
 The future of Aeteria[,] I swear on my heirs[Beat][N][2NL]
 [CloseEyes]Wreyvine will remember this day.[AN]
 [OpenEyes]They will regret the day they[N]
-left us behind in the shadows[Beat][AN]
+made the first strike![AN]
 
 [X]
 
@@ -263,14 +277,20 @@ the capital.[AN]
 [3l]
 [R]
 For years[,] Wreyvine has been a thorn to[N]
-Aeteria's lands.[.6] That ends today.[.6] They[.6N]
+Aeteria's lands.[.6] That ends today.[.6] They[N]
 have crossed a line we cannot forgive.[AN]
-We'll reclaim what was ours and[N]
-unite it under one Ideon.[.6] Aeterians.[.6N]
+This assault is a necessary move that Aeteria[N]
+has been obliged to finish.[.6] Even if we[N]
+face setbacks[,] Wreyvine will fall.[AN]
+We'll reclaim what was ours and unite[N]
+this land under one Ideon in time.[6N]
+I'll make absolute sure of it.[AN]
+Aeterians.[.6] Our forces of will are what[N]
+keeps us going in the darkest nights.[6N]
 Will you walk this path by my side?[AN]
 [ClearFace][FR][ClearFace]
 
-[FFR][LoadAffogato][MoveMidRight]
+[FFR][LoadAffoStealth][MoveMidRight]
 [Beat][AN][CloseSpeechSlow][MoveFarFarRight]
 [X]
 
@@ -350,7 +370,7 @@ Be careful.[......][A][X]
 [3L]
 [ToggleMouthMove](We can't let them through any of these[N]
 chokepoints. I can only imagine the chaos[N]
-if they succeeded.)[A][ToggleMouthMove][X]
+if they succeed.)[A][ToggleMouthMove][X]
 
 ## HartBossQ
 # verified
@@ -359,37 +379,12 @@ It is all you have.[A][X]
 
 ## HartAffoBossQ
 # verified
-[OpenMidLeft][LoadHartmann]You're[Beat] familiar.[.6][N]
-Why are you here?[AN][ClearFace]
-[OpenMidRight][LoadAffogato]
-That's an odd remark to[N]
-someone about to shoot you.[AN][ClearFace]
-[OpenMidLeft][LoadHartmann]Hmph.[.6] So you decided to[N]
-betray us yet again?[AN][ClearFace]
-[OpenMidRight][LoadAffogato]
-(Who is this man?)[.6N]
-Hm?[AN][ClearFace]
-[OpenMidLeft][LoadHartmann]It is a betrayal,[.4][N]
-is it not?[AN]
-To think you of all people[N]
-would avoid the call of power.[AN]
-I'm great at reading minds.[.6][N]
-Think of your potential![AN][ClearFace]
-[OpenMidRight][LoadAffogato]That's interesting but[Beat][N]
-I don't care.[A][ClearFace]
-[OpenMidLeft][LoadHartmann][Pause]You don't remember,[.4][N]
-do you[Beat]?[AN]
-Then allow me to ask a[N]
-different question:[AN]
-What of your forgotten[N]
-background,[.4] hunter?[AN]
-Are you not curious about[N]
-the secrets of your past?![AN][ClearFace]
-[OpenMidRight][LoadAffogato][ToggleMouthMove](This one's lost it.)[ToggleMouthMove][N]
-Sorry[,] I'm in a hurry.[A][X]
+[OpenMidLeft][LoadHartmann]You must bear mystical pow-[AN][ClearFace]
+
+[OpenMidRight][LoadAffogato]Sorry[,] I'm in a hurry.[A][X]
  
 ## HartDeathCh5
-[OpenMidLeft][LoadHartmann][ToggleSmile]Impressive[Beat][A][CloseEyes][X]
+[OpenMidLeft][LoadHartmann]You[Beat] bastards[Beat][A][CloseEyes][X]
 
 ## AffoReinText2
 [OpenMidRight][LoadAffo]
@@ -402,14 +397,13 @@ These must be the last ones arriving.)[AN]
 ## AffoReinText
 [OpenMidLeft][LoadUlrich][OpenMidRight][LoadAffo]
 [3l]
-[OpenMidLeft]I can barely see in this damned fog[Beat][N]
-Watch out.[.6] They're closing in on us![.6N]
+[OpenMidLeft]I can barely see when it's so dark[Beat][N]
 Affogato[,] status report?[AN]
 
 [MR]
 Nothing unexpected here.[.6] Their[N]
 forces are weak and crumbling.[.6N]
-That's what I don't get.[AN]
+Everything is under control.[AN]
 [X]
 
 ## AffoReinTextAlt
@@ -417,7 +411,7 @@ That's what I don't get.[AN]
 [OpenMidLeft][LoadAffo]
 [OpenMidLeft]The Aeterians are closing in on us.[6N]
 Follow my lead,[.4] we can't lose[N]
-eachother in this darkness.[A][X]
+our positions.[A][X]
 
 ## WTFWeAreDead
 [3L]

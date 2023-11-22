@@ -59,9 +59,9 @@ AREA 0xC FortniteRight [20,19] [20,19]
 	END_MAIN
 
 LocationBasedEvents:
-Chest(MasterSeal,21,0)
-Chest(0x74,12,6)
-Chest(0x5F,14,7)
+Chest(MasterSeal,24,3)
+Chest(0x74,14,8)
+Chest(0x5F,15,9)
 Door(16,10)
 Door(18,10)
 Door(19,10)
@@ -70,8 +70,8 @@ Door(24,5)
 Door(16,3)
 Door(12,11)
 Door(12,12)
-//Stairs(0x1,3,0,15,1)
-//Stairs(0x2,3,1,15,1)
+Stairs(1,15,1,13,1)
+Stairs(2,17,1,13,0)
 //Stairs(0x3,13,0,17,1)
 //Stairs(0x4,13,1,17,1)
 	END_MAIN
@@ -116,7 +116,7 @@ LoadUnit(19,5)
 	UNIT
 
 EnemyUnits: //InfantrySoul, CavSoul, FlierSoul, ArmorSoul, MagSoul, PromoSoul, StealSoul
-UNIT Selwyn 0x31 0x1 Level(12, Enemy, 1)     [12,21] DropItem 0x0 0x0 0x0 [0xFE,SecondSeal] BossAI
+UNIT Selwyn 0x31 0x1 Level(12, Enemy, 1)     [12,21] DropItem 0x0 0x0 0x0 [0xFE,MasterSeal] BossAI
 
 UNIT Aeteria Hierophant 0x1 Level(1, Enemy, 1)     [9,13] DropItem 0x0 0x0 0x0 [Light1,Elixir] ChargeAI
 UNIT Aeteria WyvernRider 0x1 Level(10, Enemy, 1)     [2,10] 0b 0x0 0x0 0x0 [IronLabrys] ChargeAI
@@ -273,7 +273,7 @@ UNIT InfantrySoul Hunter 0x1 Level(6, Enemy, 1)     [15,13] 0 0 1 REDA14R15 [Lon
 	UNIT
 
 RedSussy:
-UNIT King KingClass 0x1 Level(20, NPC, 1)     [8,3] 0b 0x0 0x0 0x0 [SteelBlade,SteelGlaive,SteelLabrys,] BossAI
+UNIT King KingClass 0x1 Level(20, NPC, 0)     [8,3] 0b 0x0 0x0 0x0 [MageSword,MageLance,MageAxe,] BossAI
 UNIT Gorlois Parson 0x1 Level(12, NPC, 1)     [8,5] 0b 0x0 0x0 0x0 [0xA0,Aura, Elixir] BossAI
 UNIT Lili Monk 0x1 Level(10, Ally, 0)     [7,7] 0b 0x0 0x0 0x0 [Divine,0x9E,0xFC] [0x0,0x0,0x0,0x0]
 UNIT Ogrim Parson 0x1 Level(10, Ally, 0)     [10,7] 0b 0x0 0x0 0x0 [Absorb,Recover,Physic,0x68] [0x0,0x0,0x0,0x0]
@@ -291,6 +291,27 @@ UNIT Wreyvine Archer 0x1 Level(8, NPC, 1)     [21,9] 0b 0x0 0x0 0x0 [MageBow,Iro
 UNIT Wreyvine Soldier 0x1 Level(9, NPC, 1)     [22,9] 0b 0x0 0x0 0x0 [MageLance,ShortSpear,Elixir] BossAI
 UNIT Wreyvine Soldier 0x1 Level(9, NPC, 1)     [24,9] 0b 0x0 0x0 0x0 [MageLance,ShortSpear,Elixir] BossAI
 UNIT Wreyvine Archer 0x1 Level(8, NPC, 1)     [25,9] 0b 0x0 0x0 0x0 [MageBow,IronRifle,Vulnerary] BossAI
+	UNIT
+	
+RedSussyLunatic:
+UNIT King KingClass 0x1 Level(20, NPC, 0)     [8,3] 0b 0x0 0x0 0x0 [MageSword,MageLance,MageAxe,] BossAI
+UNIT Gorlois Parson 0x1 Level(12, NPC, 1)     [8,5] 0b 0x0 0x0 0x0 [0xA0,Aura, Elixir] BossAI
+UNIT Lili Monk 0x1 Level(10, Ally, 1)     [7,7] 0b 0x0 0x0 0x0 [Divine,0x9E,0xFC,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Ogrim Parson 0x1 Level(10, Ally, 1)     [10,7] 0b 0x0 0x0 0x0 [Absorb,Recover,Physic,0x68] [0x0,0x0,0x0,0x0]
+
+UNIT Wreyvine Archer 0x1 Level(8, NPC, 1)     [4,1] 0b 0x0 0x0 0x0 [ShortBow,Elixir] [0,3,0,32]
+UNIT Wreyvine Archer 0x1 Level(8, NPC, 1)     [12,1] 0b 0x0 0x0 0x0 [ShortBow,Elixir] [0,3,0,32]
+UNIT 0x3A Cleric 0x1 Level(2, NPC, 1)     [13,5] 0b 0x0 0x0 0x0 [Physic,Fortify,Vulnerary] HealAI
+
+UNIT Wreyvine Soldier 0x1 Level(10, NPC, 1)     [6,8] 0b 0x0 0x0 0x0 [MageLance,ShortSpear,Vulnerary] BossAI
+UNIT Wreyvine SArmor 0x1 Level(12, NPC, 1)     [7,8] 0b 0x0 0x0 0x0 [Skypiercer,Elixir] BossAI
+UNIT Wreyvine LArmor 0x1 Level(12, NPC, 1)     [10,8] 0b 0x0 0x0 0x0 [Spear,Elixir] BossAI
+UNIT Wreyvine Fighter 0x1 Level(10, NPC, 1)     [11,8] 0b 0x0 0x0 0x0 [MageAxe,ShortAxe,Vulnerary] BossAI
+
+UNIT Wreyvine Archer 0x1 Level(9, NPC, 1)     [21,9] 0b 0x0 0x0 0x0 [MageBow,IronRifle,Vulnerary] BossAI
+UNIT Wreyvine Soldier 0x1 Level(10, NPC, 1)     [22,9] 0b 0x0 0x0 0x0 [MageLance,ShortSpear,Elixir] BossAI
+UNIT Wreyvine Soldier 0x1 Level(10, NPC, 1)     [24,9] 0b 0x0 0x0 0x0 [MageLance,ShortSpear,Elixir] BossAI
+UNIT Wreyvine Archer 0x1 Level(9, NPC, 1)     [25,9] 0b 0x0 0x0 0x0 [MageBow,IronRifle,Vulnerary] BossAI
 	UNIT
 	
 CutsceneUnits: //beginning scene
@@ -624,7 +645,8 @@ CharacterConditionalDialog(Klavdia,Ch6Opening1,Ch6OpeningAlt1)
 FADI 60
 CLEAN
 	LOAD1 0x1 EnemyUnits
-	LOAD1 0x1 RedSussy
+	//LOAD1 0x1 RedSussy
+	HardUnits(RedSussyLunatic,RedSussy)
 	ENUN
 FADU 30
 //FADU 60
@@ -797,6 +819,7 @@ SetBackground(0x43)
 Text(Ch6Ending0)
 
 FADI 60
+STAL 0x30
 SetFlag(0x84) //hides boss icons
 DoAllThree
 LOAD1 0x1 LeCutscene
@@ -1016,8 +1039,8 @@ QuickRemu(Breve,5)
 QuickRemu(Hildr,6)
 QuickRemu(Ansgar,7)
 QuickRemu(Latte,8)
-QuickRemu(Irene,9)
-QuickRemu(Pandoro,10)
+QuickRemu(Xavier,9)
+//QuickRemu(Pandoro,10)
 QuickRemu(Mocha,11)
 QuickRemu(Tammy,12)
 QuickRemu(Stroganoff,13)
@@ -1040,8 +1063,8 @@ STAL 120
 EVBIT_F 0x2
 CLEAN
 SetBackground(0x35)
-//MNC2 0xC //next chapter
-MNTS 0x1 //return to title screen
+MNC2 0xC //next chapter
+//MNTS 0x1 //return to title screen
 ENDA
 
 

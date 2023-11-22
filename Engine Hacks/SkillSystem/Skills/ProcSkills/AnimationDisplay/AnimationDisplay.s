@@ -17,6 +17,7 @@ ldr r1, BulletID
 .short 0xf800
 cmp r0, #0x0
 beq End
+b End @actually, lets not proc this lol
 
 @check if flag 0x28 set; if so, proc skill
 ldr r0,=#0x8083da8 @CheckEventId

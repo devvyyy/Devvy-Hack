@@ -29,7 +29,7 @@ beq GoBack
   mov r3, #2 @range
   .short 0xf800
   cmp r0, #0
-  bne GoBack
+  beq GoBack
     @if no allies in range, heal 20%
     add r5, #20
 

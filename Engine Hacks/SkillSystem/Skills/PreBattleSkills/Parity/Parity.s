@@ -19,6 +19,35 @@ ldr r1, ParityID
 cmp r0, #0
 beq End
 
+@check if user has a killing weapon
+mov     r0, #0x4A      @Move to attacker's weapon (before battle)
+ldrb    r0, [r4, r0]   @Load attackers weap (before battle)
+cmp     r0, #0x24         @ Killer Axe
+beq CheckEnemyCrit @if using killer axe, dont set crit to 0 and check enemy
+
+@set user crit to 0
+mov r1, #0x66
+mov r0, #0
+strh r0, [r4,r1]
+
+CheckEnemyCrit:
+
+@check if enemy has a killing weapon
+mov     r0, #0x4A      @Move to attacker's weapon (before battle)
+ldrb    r0, [r5, r0]   @Load attackers weap (before battle)
+cmp     r0, #0xD         @ Killing Edge
+beq TerrainStuff @if killer weapon, skip to terrain stuff and dont set crit to 0
+cmp     r0, #0x1a         @ Killer Lance
+beq TerrainStuff
+cmp     r0, #0x24         @ Killer Axe
+beq TerrainStuff
+
+@set foes crit to 0
+mov r1, #0x66
+mov r0, #0
+strh r0, [r5,r1]
+
+TerrainStuff:
 @def check
 mov r1, #0x4c
 ldr r1, [r5, r1]

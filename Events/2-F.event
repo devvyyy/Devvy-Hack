@@ -73,61 +73,67 @@ UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [39,11] 0b 0x0 0x0 0x0 [IronAxe,0xE9,]
 	UNIT
 
 EnemyUnits:
+UNIT Aoife Sage_F 0x1 Level(15, Enemy, 0)     [4,8] DropItem 0x0 0x0 0x0 [0xEA,WhiteGem] BossAI
 
-UNIT Messel Falcoknight 0x1 Level(10, Enemy, 1)     [12,9] 0b 0x0 0x0 0x0 [SilverLance,Elixir] BossAI
-UNIT Melya APal 0x1 Level(13, Enemy, 0)     [22,9] 0b 0x0 0x0 0x0 [KillerAxe,0xB8] BossAI
-UNIT Wellington GreatKnight 0x1 Level(12, Enemy, 0)     [29,9] 0b 0x0 0x0 0x0 [Runesword,0xB4] BossAI
+UNIT Messel Falcoknight 0x1 Level(10, Enemy, 0)     [12,9] 0b 0x0 0x0 0x0 [SilverLance,Axereaver,Elixir] BossAI
+UNIT Melya APal 0x1 Level(13, Enemy, 0)     [22,9] 0b 0x0 0x0 0x0 [KillerAxe,BraveAxe,0xB8] BossAI
+UNIT Wellington GreatKnight 0x1 Level(12, Enemy, 0)     [29,9] 0b 0x0 0x0 0x0 [Runesword,BluntGlaive,ShortAxe,0xB4] BossAI
 
-
-UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [30,8] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
-UNIT Aeteria Merc 0x1 Level(10, Enemy, 1)     [30,10] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
-UNIT Aeteria General 0x1 Level(5, Enemy, 1)     [30,9] 0b 0x0 0x0 0x0 [IronLance] BossAI
-UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [26,8] 0b 0x0 0x0 0x0 [IronLance] RangeAI
-UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [26,10] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
-UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [20,8] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
-UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [20,10] 0b 0x0 0x0 0x0 [IronLance] RangeAI
-UNIT Aeteria General 0x1 Level(5, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [IronLance] BossAI
-UNIT Aeteria Halberdier 0x1 Level(5, Enemy, 1)     [32,9] 0b 0x0 0x0 0x0 [IronLance] RangeAI
-UNIT Aeteria Sage 0x1 Level(3, Enemy, 1)     [14,8] 0b 0x0 0x0 0x0 [Bolting] BossAI
-UNIT AeteriaStealable Sage 0x1 Level(3, Enemy, 1)     [14,10] 0b 0x0 0x0 0x0 [Wind,Stopwatch] BossAI
+UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [30,8] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT Aeteria Merc 0x1 Level(10, Enemy, 1)     [30,10] 0b 0x0 0x0 0x0 [SteelSword,ShortBrand] TwoActionAI
+UNIT Aeteria General 0x1 Level(5, Enemy, 1)     [30,9] 0b 0x0 0x0 0x0 [Flamberge,IronLabrys,SteelGlaive,] BossAI
+UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [26,8] 0b 0x0 0x0 0x0 [SilverLance] RangeAI
+UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [26,10] 0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
+UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [20,8] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [20,10] 0b 0x0 0x0 0x0 [DarkTome2] RangeAI
+UNIT Aeteria General 0x1 Level(5, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [0x68,SteelBlade,Spear] BossAI
+UNIT Aeteria Halberdier 0x1 Level(5, Enemy, 1)     [32,9] DropItem 0x0 0x0 0x0 [SilverLance,Stopwatch] RangeAI
+UNIT Aeteria Sage 0x1 Level(3, Enemy, 1)     [13,8] 0b 0x0 0x0 0x0 [Bolting,Thunder] BossAI
+UNIT AeteriaStealable Sage 0x1 Level(3, Enemy, 1)     [14,10] 0b 0x0 0x0 0x0 [Wind,0x89] BossAI
 UNIT Aeteria Druid 0x1 Level(4, Enemy, 1)     [11,9] DropItem 0x0 0x0 0x0 [DarkTome3,Silence] BossAI
 
-UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [23,7] 0b 0x0 0x0 0x0 [IronLance] RangeAI
+UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [23,7] 0b 0x0 0x0 0x0 [SilverLance] RangeAI
 UNIT Aeteria Archer 0x1 Level(10, Enemy, 1)     [24,9] 0b 0x0 0x0 0x0 [ShortBow,IronDagger] BossAI //ballista 1
 UNIT Aeteria Archer 0x1 Level(10, Enemy, 1)     [14,9] 0b 0x0 0x0 0x0 [ShortBow,SteelDagger] BossAI //ballista 2
-UNIT Aeteria Sniper 0x1 Level(2, Enemy, 1)     [9,10] 0b 0x0 0x0 0x0 [ShortBow,SilverDagger] BossAI //ballista 3
+UNIT Aeteria Sniper 0x1 Level(3, Enemy, 1)     [9,10] 0b 0x0 0x0 0x0 [ShortBow,SilverDagger] BossAI //ballista 3
 UNIT Aeteria Archer 0x1 Level(10, Enemy, 1)     [28,9] 0b 0x0 0x0 0x0 [ShortBow,IronDagger] BossAI //ballista 3
-
-UNIT Aeteria Fighter 0x1 Level(10, Enemy, 1)     [12,7] 0b 0x0 0x0 0x0 [SteelAxe] RangeAI
+	UNIT
+	
+EnemyUnitsButAgain:
+UNIT Aeteria AArmor 0x1 Level(10, Enemy, 1)     [12,7] 0b 0x0 0x0 0x0 [SilverAxe,SteelLabrys] RangeAI
 UNIT Aeteria Mage 0x1 Level(10, Enemy, 1)     [17,8] 0b 0x0 0x0 0x0 [Fire] TwoActionAI
-UNIT Aeteria Merc 0x1 Level(10, Enemy, 1)     [22,8] 0b 0x0 0x0 0x0 [IronSword] RangeAI
+UNIT Aeteria Merc 0x1 Level(10, Enemy, 1)     [22,8] 0b 0x0 0x0 0x0 [IronBlade] RangeAI
 UNIT Aeteria Mage 0x1 Level(10, Enemy, 1)     [23,11] 0b 0x0 0x0 0x0 [Thunder] TwoActionAI
-UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [28,7] 0b 0x0 0x0 0x0 [IronLance] RangeAI
-UNIT Aeteria LCav 0x1 Level(10, Enemy, 1)     [24,6] 0b 0x0 0x0 0x0 [IronLance] RangeAI
-UNIT Aeteria Occultist 0x1 Level(10, Enemy, 1)     [12,11] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
-UNIT Aeteria Occultist 0x1 Level(10, Enemy, 1)     [18,10] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
+UNIT Aeteria Merc 0x1 Level(10, Enemy, 1)     [28,7] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
+UNIT Aeteria LCav 0x1 Level(10, Enemy, 1)     [24,6] 0b 0x0 0x0 0x0 [Horseslayer] RangeAI
+UNIT Aeteria Occultist 0x1 Level(10, Enemy, 1)     [12,11] DropItem 0x0 0x0 0x0 [DarkTome2] ChargeAI
+UNIT Aeteria Occultist 0x1 Level(10, Enemy, 1)     [18,10] 0b 0x0 0x0 0x0 [Flux] TwoActionAI
 
-UNIT Aeteria PegRider 0x1 Level(10, Enemy, 1)     [7,15] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
-UNIT Aeteria PegRider 0x1 Level(10, Enemy, 1)     [8,1] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
-UNIT Aeteria WyvRider 0x1 Level(10, Enemy, 1)     [8,17] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
-UNIT Aeteria WyvRider 0x1 Level(10, Enemy, 1)     [5,4] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
-UNIT Aeteria GriffonRider 0x1 Level(10, Enemy, 1)     [10,1] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
-UNIT Aeteria PegRider 0x1 Level(10, Enemy, 1)     [0,0] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
-UNIT Aeteria Occultist 0x1 Level(10, Enemy, 1)     [11,3] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
-UNIT Aeteria Auspex 0x1 Level(10, Enemy, 1)     [13,17] 0b 0x0 0x0 0x0 [Flux,LightTome1] StallOneTurnAI
+UNIT Aeteria PegRider 0x1 Level(10, Enemy, 1)     [7,15] 0b 0x0 0x0 0x0 [Javelin,SteelLance] StallOneTurnAI
+UNIT Aeteria WyvRider 0x1 Level(10, Enemy, 1)     [11,16] 0b 0x0 0x0 0x0 [Halberd,BluntLabrys] ChargeAI
+UNIT Aeteria PegRider 0x1 Level(10, Enemy, 1)     [8,1] 0b 0x0 0x0 0x0 [SapphireLance] StallOneTurnAI
+UNIT AeteriaStealable APal 0x1 Level(5, Enemy, 1)     [8,17] 0b 0x0 0x0 0x0 [SteelAxe, Elixir] ChargeAI
+UNIT Aeteria WyvRider 0x1 Level(10, Enemy, 1)     [5,4] 0b 0x0 0x0 0x0 [ShortAxe] StallOneTurnAI
+UNIT Aeteria Auspex 0x1 Level(4, Enemy, 1)     [10,1] 0b 0x0 0x0 0x0 [DarkTome2] ChargeAI
+UNIT Aeteria PegRider 0x1 Level(10, Enemy, 1)     [0,0] 0b 0x0 0x0 0x0 [IronLance,BluntGlaive] StallOneTurnAI
+UNIT Aeteria Occultist 0x1 Level(10, Enemy, 1)     [11,3] 0b 0x0 0x0 0x0 [Flux] StallOneTurnAI
+UNIT Aeteria Auspex 0x1 Level(5, Enemy, 1)     [13,17] 0b 0x0 0x0 0x0 [Flux,LightTome1] StallOneTurnAI
 
 UNIT Aeteria Halberdier 0x1 Level(5, Enemy, 1)     [2,8] 0b 0x0 0x0 0x0 [Spear,Halberd] BossAI
-UNIT Aeteria Sergeant 0x1 Level(5, Enemy, 1)     [2,7] DropItem 0x0 0x0 0x0 [Flamberge,BluntGlaive] BossAI
+UNIT Aeteria Hero 0x1 Level(4, Enemy, 1)     [6,0] 0b 0x0 0x0 0x0 [IronBlade,ShortAxe] TwoActionAI
+UNIT Aeteria SergeantClass 0x1 Level(5, Enemy, 1)     [2,7] DropItem 0x0 0x0 0x0 [Flamberge,BluntGlaive] BossAI
+	UNIT
 
-UNIT Aeteria SCav 0x1 Level(10, Enemy, 1)     [5,7] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
-UNIT Aeteria ACav 0x1 Level(10, Enemy, 1)     [7,8] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
-UNIT Aeteria APal 0x1 Level(5, Enemy, 1)     [4,10] 0b 0x0 0x0 0x0 [IronLance] RangeAI
-UNIT Aeteria LCav 0x1 Level(10, Enemy, 1)     [5,12] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
+EnemyUnitsButLast:
+UNIT Aeteria SCav 0x1 Level(10, Enemy, 1)     [5,7] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+UNIT AeteriaStealable ACav 0x1 Level(10, Enemy, 1)     [7,8] 0b 0x0 0x0 0x0 [SteelAxe, Talisman] StallOneTurnAI
+UNIT Aeteria APal 0x1 Level(5, Enemy, 1)     [4,10] 0b 0x0 0x0 0x0 [IronAxe,HandAxe] RangeAI
+UNIT Aeteria LCav 0x1 Level(10, Enemy, 1)     [5,12] 0b 0x0 0x0 0x0 [HeavySpear,SteelLance] TwoActionAI
 UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [2,14] 0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
 UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [4,1] 0b 0x0 0x0 0x0 [Flux] RangeAI
-UNIT Aeteria Thaumaturge 0x1 Level(10, Enemy, 1)     [7,3] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
-UNIT Aeteria LCav 0x1 Level(10, Enemy, 1)     [4,15] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
-UNIT Aeteria WyvRider 0x1 Level(10, Enemy, 1)     [2,17] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
+UNIT AeteriaStealable Thaumaturge 0x1 Level(10, Enemy, 1)     [7,3] 0b 0x0 0x0 0x0 [Wind,RedGem] StallOneTurnAI
+UNIT Aeteria LCav 0x1 Level(10, Enemy, 1)     [4,15] 0b 0x0 0x0 0x0 [SilverLance,ShortSpear] TwoActionAI
+UNIT Aeteria WyvRider 0x1 Level(10, Enemy, 1)     [2,17] 0b 0x0 0x0 0x0 [ShortAxe,SteelAxe] TwoActionAI
 	UNIT
 	
 WellingtonRecruit:
@@ -172,12 +178,14 @@ Traps2:
 
 BeginningScene:
 	LOAD1 0x1 EnemyUnits
+	LOAD1 0x1 EnemyUnitsButAgain
+	LOAD1 0x1 EnemyUnitsButLast
 	ENUN
 	GotoPrepScreen
 	ENDA
 
 EndingScene:
-	MNC2 0x13 //planned 3-Prologue?!
+	//MNC2 0x13 //planned 3-Prologue?!
 	MNTS 0x1 //return to title screen
 	NoFade
 	ENDA

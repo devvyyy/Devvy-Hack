@@ -2,6 +2,7 @@
 .thumb
 .equ GetUnitsInRange, SkillTester+4
 .equ InfiltratorID, GetUnitsInRange+4
+.equ gBattleData, 0x203A4D4
 push {r4-r7,lr}
 @goes in the battle loop.
 @r0 is the attacker
@@ -24,7 +25,7 @@ ldr r0, GetUnitsInRange
 mov lr, r0
 mov r0, r4 @attacker
 mov r1, #3 @Enemy
-mov r2, #2
+mov r2, #4
 .short 0xf800
 cmp r0, #0
 beq Done
@@ -42,15 +43,39 @@ cmp r2,#0x2
 blt Done
 
 Next:
-mov r0, #0x62
-ldrh r3, [r4,r0]
-add r3, #30
-strh r3, [r4,r0]
+@make sure we're in combat (or combat prep)
+ldrb r3, =gBattleData
+ldrb r3, [r3]
+cmp r3, #4
+beq Done
 
-mov r0, #0x66
-ldrh r3, [r4,r0]
-add r3, #30
-strh r3, [r4,r0]
+@set hit to 100 for both sides!
+mov r1, #0x60
+mov r0, #100
+strh r0, [r4,r1]
+
+@set hit to 100
+mov r1, #0x60
+mov r0, #100
+strh r0, [r5,r1]
+
+@add str/4 attack
+mov  r1, #0x5A
+ldrh r0, [r4, r1] @attack
+ldrb r2, [r4, #0x14] @str
+lsr  r2, #2
+add  r0, r2
+add  r0, r2
+strh r0, [r4,r1]
+
+@debuff str/4 attack to enemy
+mov  r1, #0x5A
+ldrh r0, [r5, r1] @attack
+ldrb r2, [r5, #0x14] @str/eth
+lsr  r2, #2
+add  r0, r2
+add  r0, r2
+strh r0, [r5,r1]
 
 
 Done:

@@ -304,7 +304,9 @@ STAL 20
 
 EndingScene:
 ENUT 0x3
-FADI 20
+FADI 32
+STAL 0x30
+UnsetFlag(0x25) //no stealth
 DoAllThree
 SOUN 0x50
 STAL 40
@@ -329,7 +331,10 @@ FADU 16
 //BROWNBOXTEXT LaterThatNight [8,8] // box in the top right that's pretty cool for small text
 
 CAM1 [8,6]
-
+STAL 5
+SOUN 0xDD
+SetFlag(0x25)
+STAL 20
 MOVE 0xA Affogato [11,6]
 ENUN
 STAL 15
@@ -340,6 +345,7 @@ Text(Ch4Ending2)
 STAL 5
 
 MOVE 0xA Affogato [11,2]
+UnsetFlag(0x25)
 ENUN
 
 Music(0x25)

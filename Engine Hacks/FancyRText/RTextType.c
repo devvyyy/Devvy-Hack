@@ -73,6 +73,7 @@ bool IsItemDagger(u16 item) {
    case 0xB1: //goodbye
    case 0xFE: //syzygy
    case 0xB9: //affogato dagger
+   case 0x90: //mace
         return TRUE;
 
     default:

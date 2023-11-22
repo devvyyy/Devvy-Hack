@@ -52,10 +52,10 @@ strh r0, [r4,r1]
 ldrb  r0,[r5,#0x12] @defender max hp
 ldrb  r1,[r5,#0x13] @defender current hp
 sub   r0,r1
-@lsr   r0,#0x2     @missing hp/4
+lsr   r0,#0x1     @missing hp/2
 mov   r2,#0x5A
 ldrh  r1,[r4,r2]
-add   r1,r0,r1
+@add   r1,r0,r1
 add   r1,r0,r1
 strh  r1,[r4,r2]
 

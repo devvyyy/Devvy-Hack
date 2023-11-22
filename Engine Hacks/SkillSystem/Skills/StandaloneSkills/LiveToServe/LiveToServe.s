@@ -6,7 +6,7 @@
 .endm
 .equ MaxHpGetter, 0x8019190
 .equ CurrHPGetter, 0x8019150
-.equ LiveToServeID, SkillTester+4
+.equ AeterianFealtyID, SkillTester+4
 
 @hook at 802ebd4
 @r5 is amount to heal
@@ -53,7 +53,7 @@ blh	0x80193a4	@heal ally
 @now check for the skill
 ldrb	r0,[r4,#0xc]
 blh	0x8019430
-ldr	r1,LiveToServeID
+ldr	r1,AeterianFealtyID
 ldr	r3,SkillTester
 mov	lr,r3
 .short 0xf800
@@ -124,4 +124,4 @@ bx r0
 .ltorg
 SkillTester:
 @POIN SkillTester
-@WORD LiveToServeID
+@WORD AeterianFealtyID

@@ -14,39 +14,55 @@ ldr r1, FrostbiteID
 cmp r0, #0
 beq End
 
-@ is res higher than foes res?
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq End
+
+@ is res higher than foes res + 5?
 ldrb r0, [r4, #0x18] @attacker res
 ldrb r1, [r5, #0x18] @defender res
+mov r2, #0x5
+add r1, r2
 cmp r0, r1
 ble End @skip if res is less or equal than foes res
 
-@add units res as attack
-mov  r1, #0x5A
-ldrh r0, [r4, r1] @load unit
-ldrb r2, [r4, #0x18] @unit res
-add  r0, r2
-strh r0, [r4,r1]
+@testing
+mov r0, r4
+add r0, #0x5a @attacker atk
+ldrh r3, [r0]
+add r3, #5
+strh r3, [r0]
 
-@add units res as defense
-mov  r1, #0x5C
-ldrh r0, [r4, r1] @load unit
-ldrb r2, [r4, #0x18] @unit res
-add  r0, r2
-strh r0, [r4,r1]
+@ is res higher than foes res + 10?
+ldrb r0, [r4, #0x18] @attacker res
+ldrb r1, [r5, #0x18] @defender res
+mov r2, #0xA
+add r1, r2
+cmp r0, r1
+ble End @skip if res is less or equal than foes res
 
-@subtract foes res as attack
-mov  r1, #0x5A
-ldrh r0, [r4, r1] @load unit
-ldrb r2, [r5, #0x18] @unit res
-sub  r0, r2
-strh r0, [r4,r1]
+@set attacker AS to 99
+mov r0, r4
+add r0,#0x5E
+mov r3,#99
+strh r3,[r0]
 
-@subtract foes res as defense
-mov  r1, #0x5C
-ldrh r0, [r4, r1] @load unit
-ldrb r2, [r5, #0x18] @unit res
-sub  r0, r2
-strh r0, [r4,r1]
+@ is res higher than foes res + 15?
+ldrb r0, [r4, #0x18] @attacker res
+ldrb r1, [r5, #0x18] @defender res
+mov r2, #0xF
+add r1, r2
+cmp r0, r1
+ble End @skip if res is less or equal than foes res
+
+@set brave
+mov r0,r4
+add r0,#0x4C @item ability word
+ldr r1,[r0]
+mov r2,#0x20 @brave flag
+orr r1,r2
+str r1,[r0]
 
 End:
 pop {r4-r7, r15}

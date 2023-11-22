@@ -16,7 +16,7 @@ pMovModifiers: // Movement
 //	POIN prMoonCheck
 	POIN prGaleforceCheck
 	POIN prPassCheck
-	POIN prEmpowerCheck
+	POIN prEmpowerCheck prStaticCheck prGalestormCheck
 	POIN prCantoRing
 	POIN prFlowStateCheck
 	//POIN prFlorisMarked
@@ -73,12 +73,7 @@ prStatusZephyrCheck:
 prFlowStateCheck:
 	rIfUnitHasSkill(FlowStateID)
 		rIfUnitHasState(0x10000000)
-			rDoubled
-			
-prFlowStateCheck:
-	rIfUnitHasSkill(FlowStateID)
-		rIfUnitHasState(0x10000000)
-			rDoubled
+			rAddConst(2)
 			
 prPassCheck: //player thieves
 	rIfUnitHasState(0x400)
@@ -90,9 +85,14 @@ prEmpowerCheck:
 		rIfUnitHasSkill(CharismaID)
 			rConstant(0)
 			
-prEmpowerCheck:
+prStaticCheck:
 	rIfUnitHasState(0x400)
 		rIfUnitHasSkill(StaticPanicID)
+			rConstant(0)
+			
+prGalestormCheck:
+	rIfUnitHasState(0x400)
+		rIfUnitHasSkill(GalestormID)
 			rConstant(0)
 			
 prMoonCheck:

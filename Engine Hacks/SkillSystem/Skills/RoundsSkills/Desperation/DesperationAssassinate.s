@@ -12,6 +12,19 @@
 .equ AssassinateID, DesperationID+4
 .equ IntrepidID, AssassinateID+4
 
+@is target opal?
+@ please dont do checks like this in the future holy fuck
+ldr  r0, [r5] @r0 = character data pointer
+ldrb r0, [r0, #0x4] @r0 = character ID
+cmp r0, #0x21
+beq NoSkill
+
+@is target opal, but as an enemy?
+ldr  r0, [r5] @r0 = character data pointer
+ldrb r0, [r0, #0x4] @r0 = character ID
+cmp r0, #0xC4
+beq NoSkill
+
 @check range
 ldr r0,=#0x203A4D4 @battle stats
 ldrb r0,[r0,#2] @range

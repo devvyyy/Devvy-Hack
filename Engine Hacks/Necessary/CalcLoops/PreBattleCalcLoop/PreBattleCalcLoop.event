@@ -33,15 +33,15 @@ POIN DefendingCheck
 #endif //BIORHYTHM
 
 //POIN SpurStr SpurMag SpurSpd SpurDef SpurRes
-POIN Moxie Wrath Anima1 Anima2 Anima3 Anima4 Dark1 Dark2 Dark3 Dark4 Dark5
+POIN Wrath Anima1 Anima2 Anima3 Anima4 Dark1 Dark2 Dark3 Dark4 Dark5
 //POIN DriveDef
 POIN DriveSpd DriveRes DriveStr DriveMag
 //POIN LuckySeven OddRhythm EvenRhythm QuickBurn
 POIN SlowBurn
 //POIN Demoiselle Gentilhomme MaleficAura Tantivy Focus Inspiration Solidarity VoiceOfPeace Anathema LilysPoise Hex Loyalty
-POIN Charisma Charm Shrewd AeterianFealtyAura Inspire BitterCold ChainReaction RayDark Blackfire Intimidate Infiltrator Paranoia
+POIN Charisma Charm Shrewd AeterianFealtyAura Inspire BitterCold ChainReaction RayDark Blackfire Intimidate Paranoia
 //POIN HeavyDuty Warlock ElbowRoom NaturalCover Gamble WindDisciple Perfectionist Puissance Hawkeye LightWeight Trample Opportunist BattleVeteran SilentPride Restraint AssassinateDamageBonus KnightAspirant LifeAndDeath SoulSplitter GonnaGoWild Falcon ArcaneBlade FairFight Atlas StormBlood FieryBlood
-POIN BulletPre AeterianFealty Phase BurstFireStats AdaptivePoise ColdFlare StaticPanic ShortShield Steadfast ShowStopper DuckPre SanctuaryPre GlowRing AshenRing Starseer Whirlwind Hasty ShiningRifleSkill Parity HighRoller Axiom PathOfBlade FinalBoss SearingSword Lunatic RupturedSky ThunderClap Bulwark Alacrity SteelSoul Megalovania Vigor Defeatist LastResort Outrider HeavyStrikes Charge ChargePlus Warpath Keepsake RifleSkill LethalTempo Tresillo ElbowGreasePre Upgrade Hijack SplittingMaulMag Vanity Leverage PureWaterEffect
+POIN BulletPre AeterianFealty Phase BurstFireStats AdaptivePoise ColdFlare StaticPanic ShortShield Steadfast ShowStopper DuckPre SanctuaryPre GlowRing AshenRing Starseer Whirlwind Hasty ShiningRifleSkill HighRoller Axiom PathOfBlade FinalBoss SearingSword Lunatic RupturedSky ThunderClap Bulwark Alacrity SteelSoul Megalovania Vigor Defeatist LastResort HeavyStrikes Charge ChargePlus Warpath Keepsake RifleSkill LethalTempo Tresillo ElbowGreasePre Upgrade Hijack SplittingMaulMag Vanity Leverage PureWaterEffect
 //POIN Parry BloodTide WhitePool NightTide Insight Prescience Vigilance DefiantAvo DefiantCrit TowerShield IndoorFighter OutdoorFighter Fortune
 POIN Daunt KingMark Deadeye DoubleLion ShadowEye Daredevil
 //POIN Thotslayer Thighdeology Armorboost Horseguard Skyguard ForeignPrincess
@@ -56,13 +56,16 @@ POIN Intrepid Galestorm
 POIN AxefaithHit
 POIN MagicSwordSkill MiraclePre //deletes atk
 POIN Sergeant //deletes atk
-POIN PykeUltPre //deletes atk
 POIN Eulogy //deletes atk
 //POIN Thunderstorm //deletes atk
 POIN BazookaPre //deletes atk/hit
 POIN StealthCombat //sets hit to 100
 POIN DaggerCrit ShieldDef
+POIN Moxie //deletes atk
+POIN Infiltrator //deletes hit
+POIN Outrider //deletes hit/crit
 POIN Rageblade HeadshotPre //deletes crit (might need to be moved further down?)
+POIN Parity //deletes crit lol
 POIN StancesASM
 
 #ifdef ENABLE_GBA_LETHALITY
@@ -79,8 +82,9 @@ POIN LethalitySkill NonGBALethalitySkill Bane
 //quick riposte goes after everything that might touch AS
 POIN QuickRiposte
 
-//tower shield plus/perfect pitch needs to go after every other skill that may affect defender's attack/hit respectively
+//tower shield plus (BOSS SKILL)/perfect pitch needs to go after every other skill that may affect defender's attack/hit respectively
 POIN TowerShieldPlus PerfectPitch
+POIN PykeUltPre //deletes atk AND needs to ignore towershield/boss skill lol
 
 // Because of how killing machine works, critical check should always be done last
 POIN CriticalCheck
@@ -126,10 +130,11 @@ AuraSkillEntry(DriveResID)
 AuraSkillEntry(DriveStrID)
 AuraSkillEntry(DriveCantoID) //AS boost
 AuraSkillEntry(DriveSpdID)
+AuraSkillEntry(BulletID)
 //AuraSkillEntry(NiceThighsID)
 AuraSkillEntry(DauntID)
 //AuraSkillEntry(MaleficAuraID)
-AuraSkillEntry(IntimidateID)
+AuraSkillEntry(DazzleID)
 //AuraSkillEntry(SolidarityID)
 //AuraSkillEntry(AnathemaID)
 //AuraSkillEntry(VoiceOfPeaceID)

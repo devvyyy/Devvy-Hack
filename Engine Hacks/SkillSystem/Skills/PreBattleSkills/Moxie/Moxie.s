@@ -19,6 +19,27 @@ ldr r1, MoxieID
 cmp r0, #0
 beq GoBack
 
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq GoBack
+
+@add res/4 speed
+mov  r1, #0x5E
+ldrh r0, [r5, r1] @speed
+ldrb r2, [r5, #0x18] @res
+lsr  r2, #2
+add  r0, r2
+strh r0, [r4,r1]
+
+@add res/4 attack
+mov  r1, #0x5A
+ldrh r0, [r5, r1] @attack
+ldrb r2, [r5, #0x18] @res
+lsr  r2, #2
+add  r0, r2
+strh r0, [r4,r1]
+
 mov r0, r5       @Move attacker data into r1.
 mov r1, #0x4c    @Move to the attacker's weapon ability
 ldr r1, [r0,r1]
@@ -26,19 +47,11 @@ mov r2, #0x42
 tst r1, r2
 bne     GoBack @do nothing if magic bit set
 
-@recalc enemy damage by atk setting to 0 first
-@set defender attack to 0
-mov r0, r5
-add r0,#0x5A
-mov r3,#0
+@set attacker AS to 99
+mov r0, r4
+add r0,#0x5E
+mov r3,#99
 strh r3,[r0]
-
-@ add back attack = str
-mov  r1, #0x5A
-ldrh r0, [r5, r1] @str
-ldrb r2, [r5, #0x14] @strength
-add  r0, r2
-strh r0, [r4,r1]
 
 GoBack:
 pop {r4-r7}

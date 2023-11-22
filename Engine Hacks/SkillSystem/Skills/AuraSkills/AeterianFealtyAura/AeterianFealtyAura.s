@@ -27,6 +27,26 @@ ldrh r2, [r4, r1]
 add r2, #5
 strh r2, [r4,r1]
 
+@is the attacker aeterian?
+ldr r0, [r4] @char
+ldr r0, [r0, #0x28] @char abilities
+ldr r1, [r4,#4] @class
+ldr r1, [r1,#0x28] @class abilities
+orr r0, r1
+mov r1, #0x40
+lsl r1, #8 @0x4000 IsFemale
+tst r0, r1
+beq Done @skip if no female flag (aeterian flag)
+
+mov r1,#0x60 @hit
+ldrh r2, [r4, r1]
+add r2, #5
+strh r2, [r4,r1]
+add r1, #0x2 @avoid
+ldrh r2, [r4, r1]
+add r2, #5
+strh r2, [r4,r1]
+
 Done:
 pop {r4-r7}
 pop {r0}

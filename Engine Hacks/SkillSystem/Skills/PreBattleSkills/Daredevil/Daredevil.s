@@ -59,6 +59,12 @@ beq End
 
 Effect:
 
+@grants hit +255 to attacker
+mov r1, #0x60
+ldrh r0, [r4, r1] @hit
+add r0, #255
+strh r0, [r4,r1]
+
 @ set brave flag on both units
 
 mov r0,r4

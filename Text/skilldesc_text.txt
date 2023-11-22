@@ -10,6 +10,22 @@ Burst Fire: Attack dealing AoE 2x1 damage[N]
 scaling with Dex. Converts Str to Hit.[N]
 Cost: 1 Durability.[X]
 
+## SD_Bruh
+# has 3 separate gamble-esque menus inside a combat art menu
+Arcane Perfection[N]
+Unit has access to a Spell-Mixing menu with[N]
+Disaster, Serenity, and Torment; casting[N]
+each interact with Equipped weapon slot.[N]
+(Can't follow-up; costs durability.)[X]
+
+## SD_Bruh1
+# DAMAGE: displays bonus effects on off-hand; example is like anima does X, dark does Y, light does Z
+Spell-Mixing: Disaster (5 cost)
+Anima: Deals +5 damage.
+Light:
+Dark: 
+[X]
+
 ## SD_PowerSlide
 # even through walls/go through walls like zeri?
 Power Slide: Unit can Canto 1 space.[N]
@@ -36,15 +52,53 @@ Hijack: Unit can copy an adjacent ally's[N]
 personal skill permanently (up to 5 skills;[N]
 excludes form-changing skills).[X]
 
-## SD_HitmanSeer
-Infinite Arsenal: Unit has an arsenal of[N]
-5 personal weapons, each with an Equip[N]
-and Off-Hand effect; 2 at a time.[X]
+## SD_HitmanAndTheSeer
+# each weapon has 10 durability
+Phasing Steel[N]
+Unit has an arsenal of 5 personal blades,[N]
+each with an Equip and Off-Hand effect;[N]
+2 at a time. Actives cost 3 durability.[N]
+Breaking queues the next weapon in cycle.[X]
 
-## SD_HitmanSeer2
-Each weapon has 10 durability. Upon breaking,[N]
-it gets moved to the end of the queue, and[N]
-the next weapon in line is sent.[X]
+## SD_HitmanWeapon1
+# default with high hit; actives can be used with any weapon; if you activate with off-hand, equip gets pushed to off-hand during/after active
+Ol' Reliable[N]
+Equip: Attacks scale with 120% Str.[N]
+Active: Deal (5 + foe's missing HP) bonus[N]
+damage on-hit with a guaranteed hit.[N]
+Off-Hand: +30 Hit to Equipped weapon.[X]
+
+## SD_HitmanWeapon2
+# magic
+Arcane Schimitar[N]
+Equip: Targets foe's Res, reverses WT.[N]
+Active: Triples WT effects; refresh if WTA.[N]
+Off-Hand: Equip attacks apply (20% Str) bonus[N]
+magical damage on-hit; (40%) with Actives.[X]
+
+## SD_HitmanWeapon3
+# tanking
+Shieldblade[N]
+Equip: Prt/Rsl +10. Knock back 1 space.[N]
+Active: Restores (5 + bonus damage) HP on-hit,[N]
+then Dash adjacent to targeted enemy.[N]
+Off-Hand: Prt/Rsl +(1 + 25% of missing HP).[X]
+
+## SD_HitmanWeapon4
+# speed/galeforce strats
+Quick Saber[N]
+Equip: AS +5. Actives can double (no extra cost).[N]
+Active: Strike x2 with halved damage,[N]
+then refresh (durability cost per use).[N]
+Off-Hand: Dash 2 spaces after combat.[X]
+
+## SD_HitmanWeapon5
+# random bullshit go; Attacks on marked foes always hit
+Throwing Chakram[N]
+Equip: Marks foes on-hit, consumed next hit.[N]
+When a foe is marked, grants +5 range[N]
+and deal 5 bonus damage per marked foe.[N]
+Off-Hand: Equip active effects mark foes.[X]
 
 ## SD_Rewind
 Time Winder[N]
@@ -128,7 +182,7 @@ Canto and foes Rooted for 1 turn.[N]
 Grants units within 3 spaces Crit/Avoid +20.[X]
 
 ## SD_EyeForAnEye
-Pit Grit[N]
+Down But Not Out[N]
 - Radcliff's counterattacks deal[N]
 bonus damage = 200% of damage[N]
 taken from foe's last attack.[X]
@@ -157,10 +211,11 @@ foe can't counter and deals bonus damage[N]
 
 ## SD_Daredevil
 # wyvern skill?
-Daredevil[N]
-- If [OpenQuote]Moose" would take a lethal attack,[N]
-grants both sides Crit +77 and both[N]
-sides strike x2 consecutively.[X]
+Daredevil Impulse[N]
+- If [OpenQuote]Moose" initiates and would take a[N]
+lethal attack, always hit, grants both[N]
+sides Crit +77, and both sides strike[N]
+x2 consecutively.[X]
 
 ## SD_Malzahar
 # maybe its at full hp but you take 1 true damage afterwards idk
@@ -182,16 +237,17 @@ true damage = 500% of foe's missing HP.[X]
 ## SD_AdaptivePoise
 # global flag 0xB2
 Adaptive Poise[N]
-- After exploiting the WT, Wegman[N]
-toggles Swing [SwordIcon] and Pierce [LanceIcon] Stance.[N]
-Swing [SwordIcon]: +Atk = Spd, -25 Avo/Ddg.[N]
-Pierce [LanceIcon]: +AS = Str, -8 Prt/Rsl.[X]
+[_Minus][_SP][_A][_f][_t][_e][_r][_SP][_e][_x][_p]l[_o]i[_t]i[_n][_g][_SP][_t][_h][_e][_SP][_W][_T][_Comma][_SP][_g][_r][_a][_n][_t][_s][_SP]W[_e][_g]m[_a][_n][N]
+[_a][_n][_o][_t][_h][_e][_r][_SP][_a][_c][_t]i[_o][_n][_SP]([_o][_n][_c][_e][_SP][_p][_e][_r][_SP][_t][_u][_r][_n])[_SP][_a][_n][_d][_SP][_s]w[_a][_p][_SP][_S][_t][_a][_n][_c][_e][_s][_Dot][N]
+[_S]wi[_n][_g][_SP][_S][_t][_a][_n][_c][_e][_SP][SwordIcon][_Colon][_SP][_Plus][_A][_t][_k][_SP]=[_SP][_S][_p][_d][_Comma][_SP][_Minus][_2][_5][_SP][_A][_v][_o][_Slash][_D][_d][_g][_Dot][N]
+[_P]i[_e][_r][_c][_e][_SP][_S][_t][_a][_n][_c][_e][_SP][LanceIcon][_Colon][_SP][_Plus][_A][_S][_SP]=[_SP][_S][_t][_r][_Comma][_SP][_Minus][_8][_SP][_P][_r][_t][_Slash][_R][_s]l[_Dot][X]
 
-## SD_AdaptivePoiseRework
-# global flag 0xB2
-Adaptive Poise: Wegman can toggle between Swing/Pierce Stance.[N]
-[SwordIcon]: +Atk = Spd, -30 Avo/Ddg.[N]
-[LanceIcon]: +AS = Str, -8 Prt/Rsl.[X]
+## SD_WreyvianHeart
+Wreyvian Heart[N]
+- If HP is 50% or more, grants Wegman,[N]
+Wreyvian allies, and Aeterian allies within[N]
+3 spaces Atk/Prt +3 and a consecutive[N]
+strike after first hit (doesn't stack).[X]
 
 ## SD_BlindingFlash
 Blinding Flash: If Katsu initiates and[N]
@@ -215,39 +271,49 @@ damage taken = 50% of foe's max HP.[X]
 
 ## SD_BreveMirrorPassive
 # Latent Powers
-Dual Strike: If Breve uses all movement[N]
-and initiates, strike x2 consecutively.[X]
+Moody[N]
+- On odd turns, grants Breve Hit/Crit +20.[N]
+- If any side's HP isn't full, 
 
 ## SD_HildrMirrorPassive
-Steady Strike: If Hildr uses all movement[N]
+Hyperactive[N]
+ If Hildr uses all movement[N]
 and initiates, grants Def +20.[X]
 
 ## SD_UlrichMirrorPassive
-Vanguard Resolve: If Ulrich is within 3[N]
-spaces of an ally, deals 10 bonus physical[N]
-damage and reverses Defeatist's penalties.[X]
+Anamnesis[N]
+- If Ulrich is within 3 spaces of a[N]
+Wreyvian ally, deals (Def) bonus physical[N]
+damage; if Aeterian, deals (Res) bonus[N]
+magical damage (can stack).[X]
 
 ## SD_AnsgarMirrorPassive
-Forge Mastery: Ansgar's Iron/Steel weapons are[N]
-treated as Silver. Increases weapon tier[N]
-by 1 (if applicable) to adjacent allies.[X]
+Forge Mastery[N]
+- If within 2 spaces of a physical[N]
+ally, grants Ansgar and those allies:[N]
+- Reduces damage taken = 25% of Def.[N]
+- Weapons have Silver Mt (if lower).[X]
 
 ## SD_NoraMirrorPassive
 Pacifist: If foe initiates, Nora reduces[N]
 foe's Str by 50% and ignores weapon Mt.[N]
 
 ## SD_SequinMirrorPassive
-Abscond: Sequin can Canto 3 spaces[N]
-after stealing.[X]
+Abscond[N]
+- Sequin can Canto 5 spaces[N]
+after stealing/picking.[N]
+- Movement is no longer set to[N]
+0 after stealing.[X]
 
 ## SD_MochaMirrorPassive
 Golden Feather: If Mocha initiates, inflicts[N]
 penalty on foe's AS/Prt = 50% of Res.[X]
 
 ## SD_RinaMirrorPassive
-Blitzing Reflexes: If Rina is not adjacent to[N]
-an ally and Spd > foe's Spd, deals bonus damage/[N]
-reduces damage taken = difference between Spd stats.[X]
+Blitzing Reflexes[N]
+- If Rina is not adjacent to an ally and[N]
+Spd > foe's Spd, deals bonus damage/reduces[N]
+damage taken = difference between Spd stats.[X]
 
 ## SD_PandoroMirrorPassive
 Moonlit Shackles: Pandoro inflicts Def -5 on[N]
@@ -350,16 +416,17 @@ damage after combat.[X]
 
 ## SD_ShadowEye
 Shadow Eye[N]
-- After combat, Levain inflicts[N]
+- After combat, Edvin inflicts[N]
 Soulbreak for 1 turn.[N]
 - If foe has any status effects,[N]
 grants Hit +30.[X]
 
 ## SD_StaticPanic
 Volatile Sparks[N]
-- If Jaye initiates, deals bonus[N]
-damage = 50% of Spd, chaining to[N]
-foes within 2 spaces of target.[X]
+- If Jaye initiates, deals bonus damage[N]
+= 50% of Spd, chaining to foes within[N]
+2 spaces of target; chains again with[N]
+100% Spd within 4 spaces if target died.[X]
 
 ## SD_SideHustle
 Side Hustle: After ending an action on[N]
@@ -375,7 +442,7 @@ HP = 20% of missing HP and grants[N]
 # USES global flag 0x22; use new status effect; Zephyr: If Xavier initiates, grants NEWLINE Whirlwind to both sides for 1 turn. Maybe Mov +2 in new skill idk
 Full Tilt[N]
 - Xavier can toggle an All-Out stance:[N]
-Grants Move x2. Converts 50% of max[N]
+Grants Move +2. Converts 50% of max[N]
 HP to Atk, and 50% of Def/Res to AS.[N]
 (Penalties round down; bonuses up).[X]
 
@@ -433,9 +500,11 @@ per turn).[X]
 
 ## SD_Gaming
 # Flow, temp flags 0x26-0x28 (used to use 0x25 also) MAKE THIS 3 stacks now!!
-[_F]l[_o]w[_Colon][_SP][_C][_o]m[_b][_a][_t][_Slash][_S][_t][_e][_a]l[_Slash][_P]i[_c][_k][_SP][_g][_r][_a][_n][_t][_s][_SP][_1][_SP][_s][_t][_a][_c][_k][_SP][_LParen]m[_a][_x];[_SP][_3][_RParen][_Dot][N]
-[_A][_t][_SP][_m][_a][_x][_SP][_s][_t][_a][_c][_k][_s][_Comma][_SP][_c][_o][_n][_s][_u][_m][_e][_s][_SP][_a][_l][_l][_SP][_s][_t][_a][_c][_k][_s][_SP][_o][_n][_SP][_i][_n][_i][_t][_i][_a][_t][_i][_o][_n][_SP][_t][_o][N]
-[_x][_2][_SP][_S][_i][_d][_e][_s][_t][_e][_p][_SP][_C][_a][_n][_t][_o][_SP][_a][_n][_d][_SP][_d][_e][_a][_l][_SP][_b][_o][_n][_u][_s][_SP][_d][_a][_m][_a][_g][_e][_SP]=[_SP][_R][_e][_s][_Dot][X]
+Dauntless Instinct[N]
+- Kills grant Klavdia a stack (max; 3).[N]
+Stacks grant Atk +1, Hit +5 each.[N]
+At max stacks, foes within 4 spaces[N]
+can't dodge attacks or critically hit.[X]
 
 ## SD_FlowGamingNew
 Bulwark: Combat grants 1 stack (max; 3).[N]
@@ -449,8 +518,8 @@ unit has Weapon Triangle advantage.[X]
 ## SD_DuckandCover
 # zopf personal?
 Duck and Cover[N]
-- If Zopf doesn't move, grants[N]
-Hit +30 and Canto 5 spaces.[N]
+- If Zopf moves 1 space or less, always[N]
+hit; if 0, Crit +50 and Canto 5 spaces.[N]
 - If terrain has bonuses, counter[N]
 before foe's first attack.[X]
 
@@ -481,11 +550,11 @@ another action.[X]
 [_g][_r][_a][_n][_t][_s][_SP][_M][_o][_v][_e][_SP][_Plus][_1][_SP][_a][_n][_d][_SP][_a][_t][_t][_a][_c][_k][_i][_n][_g][_SP][_i][_s][_SP][_a][_SP][_f][_r][_e][_e][_SP][_a][_c][_t][_i][_o][_n][_Dot][X]
 
 ## SD_AeterianFealty
-Vigil in Fealty[N]
-- If Graham is adjacent to Chiffon,[N]
-grants Hit/Avoid +50.[N]
-- Grants Hit/Avoid +5 to all allies[N]
-on the map.[X]
+Aeterian Fealty[N]
+- Graham's staves restore HP to self.[N]
+- If adjacent to Chiffon, Hit/Avoid +50.[N]
+- Grants Hit/Avoid +5 to all allies on[N]
+the map, doubled to +10 if Aeterian.[X]
 
 ## SD_BornInDarkness
 Test of Faith: Marks adjacent enemies.[N]
@@ -520,7 +589,9 @@ magic spells.[X]
 # Alacrity
 Momentum[N]
 - If Mocha uses all Move and initiates,[N]
-always hit and dodge attacks.[X]
+always hit and dodge attacks and deals[N]
+bonus damage = (difference between[N]
+Spd stats; min 0).[X]
 
 ## SD_SoulBlade
 Soul Blade: Ignores unit's weapon Mt,[N]
@@ -627,11 +698,10 @@ i[_s][_SP][_h]i[_g][_h][_e][_r][_Comma][_SP][_s]t[_r]i[_k][_e][_s][_SP][_x][_2][
 
 ## SD_Tresillo
 # LHT?!
-[_F][_Minus][_D][0x23][_Minus][_F][_Slash][_Slash][_C][0x23][_Minus][_G][0x23][_Minus][_F][N]
+[_F][_Minus][_D][0x23][_Minus][_F][_Slash][_Slash][_C][0x23][_Minus][_G][0x23][_Minus][_F][_Slash][_Slash][_D][0x23][_Minus][_C][0x23][_Minus][_C][_Minus][_C][0x23][_Minus][_A][0x23][_Minus][_A][0x23][N]
 - Converts Staniel's Str to bonus Avoid,[N]
 and Dex to bonus Dodge.[N]
-- If foe's range > 2, dodge all attacks.[N]
-- Can use Play to grant another action.[X]
+- If foe's range > 2, dodge all attacks.[X]
 
 ## SD_HeavyDuty
 Grit: If unit's HP is not full,[N]
@@ -650,9 +720,10 @@ Arm Wrestler: Grants +3 Atk/AS against[N]
 bosses, doubled if they have Shove/Smite.[X]
 
 ## SD_Moxie
-Aeterian Moxie: If a physical foe initiates,[N]
-Chiffon ignores foe's weapon Mt and makes[N]
-a follow-up and foe cannot.[X]
+Eye of the Occult[N]
+- Grants Milo Atk/AS = 25% of foe's Res.[N]
+- If foe doesn't use magic, follow-up[N]
+and foe cannot.[X]
 
 ## SD_SolLance
 Solar Thrust: Deals (10 - foe's Res) bonus damage[N]
@@ -684,10 +755,11 @@ neutralizes foe's Atk/AS/Rsl,[N]
 setting them to 0.[X]
 
 ## SD_TouchOfFrost
-Absolute Zero[N]
-- If Velius' Res > foe's Res, deals[N]
-bonus damage/reduces damage taken[N]
-= difference between Res stats.[X]
+Test of Faith[N]
+- If Velius' Res > foe's Res, grants WTA;[N]
+if Res difference > 5, also Atk +5;[N]
+if > 10, also follow-up and foe cannot;[N]
+if > 15, also strikes x2 consecutively.[X]
 
 ## SD_Chronoshift
 Borrowed Time: After combat, Xidorn restores[N]
@@ -696,7 +768,9 @@ Borrowed Time: After combat, Xidorn restores[N]
 ## SD_RidersAxiom
 Wreyvian Axiom[N]
 - On turns 1-3, Gerolf can follow-up[N]
-and foe cannot.[X]
+and foe cannot, and if initiating,[N]
+deals bonus damage/reduces damage[N]
+taken = turn count x 3.[X]
 
 ## SD_SoulSplitter
 Soul Splitter: Grants AS = foe's Res/2.[N]
@@ -757,10 +831,10 @@ less HP.[X]
 ## SD_SearingSword
 # luna 50%, then reduce frye's damage by 50% enemy res; make this give swords 1-2?
 Searing Sword[N]
-- Frye's physical sword deal damage[N]
+- Frye's physical swords deal damage[N]
 based off 50% of foe's Def/Res.[N]
 - If Spd > foe's Spd, reduces damage[N]
-taken = difference between stats.[X]
+taken = difference between Spd stats.[X]
 
 ## SD_CantoTwo
 Canter: Unit can move 1 space[N]
@@ -847,7 +921,7 @@ cavalry ally, unit takes -2 damage.[X]
 # Pursuer
 Dirty Fighting[N]
 - If foe can't counter, Dira deals bonus[N]
-damage = 3 + 200% of foe's missing HP.[N]
+damage = 3 + 50% of foe's missing HP.[N]
 - Inflicts Rooted on foe for 1 turn[N]
 after combat.[X]
 
@@ -870,8 +944,10 @@ combat.[X]
 
 ## SD_Parity
 Parity[N]
-- Opal neutralizes terrain bonuses[N]
-from both sides.[X]
+- Opal neutralizes terrain bonuses,[N]
+effects that change attack order or[N]
+alter follow-ups, and landing critical[N]
+hits (if weapon Crit < 30) for both sides.[X]
 
 ## SD_BuiltDifferent
 Cheap Shot: If foe's HP is 50% or[N]
@@ -1056,7 +1132,7 @@ Stand Behind Me[N]
 - If foe initiates on an ally within 4[N]
 spaces, Ansgar blocks the first lethal[N]
 hit per combat and takes 10 damage.[N]
-- If adjacent to an ally, grants Prt +7.[X]
+- If adjacent to an ally, grants Prt +10.[X]
 
 ## SD_ShieldDef
 [_S][_t][_a][_n][_d][_SP][_B][_e][_h][_i][_n][_d][_SP][_M][_e][X]
@@ -1074,9 +1150,10 @@ Martial Poise: Therese's attacks scale with[N]
 turn. Canto 1 space after combat.[X]
 
 ## SD_ColdFlare
-Cold Flare: If Akatsuki's HP isn't full,[N]
-grants bonus Atk/AS = 25% of Res and[N]
-deal +10 bonus magical damage.[X]
+Cold Flare[N]
+- If Akatsuki's HP isn't full, grants[N]
+bonus Atk/AS = 25% of Res and deals[N]
++10 bonus magical damage.[X]
 
 ## SD_ColdFlare2
 Cold Flare: If foe is physical, grants Atk +3.[N]
@@ -1136,7 +1213,7 @@ Ace in the Hole[N]
 - Levain readies next hits to Headshot.[N]
 - Headshots have +5 range, always hit,[N]
 converts 4 Crit to 1 damage, and deals[N]
-bonus damage = foe's missing HP.[X]
+bonus damage = foe's missing HP on-hit.[X]
 
 ## SD_Provoke
 Provoke[N]
@@ -1167,11 +1244,15 @@ Bane: Leave the opponent at 1 HP.[N]
 (Skill/2 % activation)[X]
 
 ## SD_Luna
-Luna: Ignores enemy's Def/Res.[N]
+Luna[N]
+Use combat art to ignore enemy's[N]
+Def/Res on-hit.[N]
 Cost: 3 Durability.[X]
  
 ## SD_Sol
-Sol: Restore damage dealt as HP.[N]
+Sol[N]
+Use combat art to restore HP =[N]
+damage dealt on-hit.[N]
 Cost: 3 Durability.[X]
 
 ## SD_Aether
@@ -1361,8 +1442,10 @@ Pacifist[N]
 within 5 spaces.[X]
 
 ## SD_Amaterasu
-Amaterasu: Allies within 2 spaces[N]
-recover 20% of max HP each turn.[X]
+Noctum Heart[N]
+- At start of turn, if within 2 spaces of[N]
+an ally, restores 20% HP to Verna and[N]
+allies within 2 spaces.[X]
 
 ## SD_SpurStr
 Spur Strength: Adjacent allies[N]
@@ -1413,7 +1496,7 @@ Colossus: Triples Strength.[N]
 Hoist the Flag[N]
 - Can move after stealing/picking[N]
 (but not if under a granted action).[N]
-- Use Rally to grant +4 Str/Eth[N]
+- Use Rally to grant Str/Eth +4[N]
 to adjacent allies for 1 turn.[X]
 
 ## SD_RallyMag
@@ -1441,8 +1524,10 @@ Rally Resistance: +4 Res[N]
 to allies within 2 spaces.[X]
 
 ## SD_RallyMov
-Merry Melody: Rally to grant +2[N]
-Move to adjacent allies (1 turn).[X]
+Merry Melodies[N]
+- Use Play to grant another action.[N]
+- Use Rally to grant Move +1 to[N]
+adjacent allies for 1 turn.[X]
 
 ## SD_RallySpectrum
 Rally Spectrum: +2 all stats[N]
@@ -1556,8 +1641,10 @@ Elbow Room: +3 damage dealt[N]
 when on open terrain.[X]
 
 ## SD_NaturalCover
-Natural Cover: -3 damage taken[N]
-when on terrain with effects.[X]
+Surprise Attack![N]
+- If Solum or foe's terrain has bonuses,[N]
+grants Atk/AS +4, always hit, and deal[N]
+bonus damage = foe's missing HP.[X]
 
 ## SD_SealStr
 Disarm: Inflicts Str/Eth -5 on foe after[N]
@@ -1735,9 +1822,10 @@ adjacent ally.[N]
 
 ## SD_BreathOfLife
 Merciful Wings[N]
-- If Messel initiates, restores 33% of[N]
-allies' max HP to allies within 2[N]
-spaces after combat.[X]
+- If Messel initiates, grants Rsl +10[N]
+during combat and restores 33% of[N]
+allies' max HP to allies within[N]
+2 spaces after combat.[X]
 
 ## SD_Fury
 Fury: +2 Atk/Spd/Def/Res. Unit[N]
@@ -1997,24 +2085,20 @@ Heavy Strikes: Add weapon[N]
 weight to critical chance.[X]
 
 ## SD_Infiltrator
-Ghost Factory[N]
-- If Verna is within 4 spaces of[N]
-2+ enemies, grants Crit/Avoid +30.[X]
-
-## SD_LostPrincess
-Perfect Maelstrom[N]
-- If Verna initiates and Spd > foe's[N]
-Spd +3, dodge foe's first attack(s)[N]
-and follow-up attack(s) deals bonus[N]
-damage = 20% of Spd.[X]
+Unbreakable[N]
+- If Edith is within 4 spaces of 2+[N]
+enemies, grants +50% Str, inflicts[N]
+-50% Str/Eth to foe, and both sides[N]
+can't dodge attacks.[X]
 
 ## SD_Vanity
 Vanity: Gain +2 Damage and +10 Hit[N]
 when fighting enemy at 2 range.[X]
 
 ## SD_MageSlayer
-Mage Slayer: If foe uses magic,[N]
-grants Atk +2/Crit +10.[X]
+Arcane Superiority[N]
+- If foe uses magic, grants Lefse[N]
+Atk +5, Hit/Avoid/Crit +30.[X]
 
 ## SD_Watchful
 Watchful: This unit cannot be[N]
@@ -2115,8 +2199,9 @@ Night Tide: Def and Res +5[N]
 to adjacent allies.[X]
 
 ## SD_Prescience
-Prescience: When initiating[N]
-battle, Hit/Avo +15.[X]
+Intuition[N]
+- If Alair initiates, grants Hit/Avo +30,[N]
+doubled to +60 if using a Sidearm.[X]
 
 ## SD_DefiantAvo
 Defiant Avoid: When HP is 25%[N]
@@ -2253,11 +2338,11 @@ Negates enemy hit bonus from[N]
 weapon triangle advantage.[X]
 
 ## SD_BlueFlame
-Guardian[N]
-- If Yufka is within 2 spaces of an[N]
-ally, grants Prt +5.[N]
-- Grants Prt +5 to allies within[N]
-2 spaces.[X]
+Vigil to the Blood Moon[N]
+- If within 2 spaces of an ally, grants[N]
+Yufka and allies within 2 spaces[N]
+Atk = 50% of foe's missing HP and[N]
+Prt = 50% of that unit's missing HP.[X]
 
 ## SD_DoubleLion
 Double Lion: All weapons[N]
@@ -2306,10 +2391,10 @@ effectiveness multipliers.[X]
 
 ## SD_Cultured
 Stand United[N]
-- If Therese initiates within 2 spaces of[N]
-a physical armored ally, grants Atk +5,[N]
-and if adjacent, grants another action.[N]
-(Action once per turn; no reclasses).[X]
+- If Therese initiates within 3 spaces of[N]
+an ally with Fling, grants Atk +5 and[N]
+strikes x2 consecutively, and if adjacent,[N]
+grants another action (once per turn).[X]
 
 ## SD_LullStr
 Lull Str: Negates the effects of[N]

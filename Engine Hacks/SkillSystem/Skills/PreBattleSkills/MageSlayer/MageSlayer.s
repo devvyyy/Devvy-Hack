@@ -34,9 +34,19 @@ ldrh r0, [r4, r1] @Attack
 add r0, #2
 strh r0, [r4,r1]
 
+mov r1, #0x60
+ldrh r0, [r4, r1] @Hit
+add r0, #30
+strh r0, [r4,r1]
+
+mov r1, #0x62
+ldrh r0, [r4, r1] @Avoid
+add r0, #30
+strh r0, [r4,r1]
+
 mov r1, #0x66
 ldrh r0, [r4, r1] @Crit
-add r0, #10
+add r0, #30
 strh r0, [r4,r1]
 
 End:

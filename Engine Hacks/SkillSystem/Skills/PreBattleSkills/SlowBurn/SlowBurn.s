@@ -17,7 +17,7 @@ beq	End
 ldr	r5,=#0x202BCF0
 ldrh	r5, [r5,#0x10]
 mov	r0, #0x01
-sub	r5, r0
+@sub	r5, r0
 cmp	r5, #0x0F
 bls	SkipSet
 mov	r5, #0x0F

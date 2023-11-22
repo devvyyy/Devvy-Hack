@@ -61,14 +61,14 @@ sub r0,r1
 cmp r0,#0 @see if we've moved as far as possible
 bgt End @if not, no bonus
 
-@set hit to 100 but real
+@set hit to 255
 mov r1, #0x60
 mov r0, #255
 strh r0, [r4,r1]
 
-@set hit to 100 but real
-mov r1, #0x66
-mov r0, #255
+@set BATTLE crit to 100
+mov r1, #0x6A
+mov r0, #100
 strh r0, [r4,r1]
 
 End:

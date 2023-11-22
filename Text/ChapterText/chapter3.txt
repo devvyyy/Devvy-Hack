@@ -32,7 +32,8 @@ not dead[,] then that means aid'll come.[AN][Clear]
 Or are you lot ready to just lay down[N]
 and die like that?[AN]
 
-[FFL]The Aeterian soldiers are approaching[,][N]
+[R]
+The Aeterian soldiers are approaching[,][N]
 Captain.[.6] We need orders.[AN]
 
 [ML]
@@ -46,9 +47,6 @@ get executed on the same spear?[AN]
 These are both terrible choices![AN][CloseSpeechSlow][MoveFarFarRight][.6][.6][MoveFarRight]
 Actually[,] I'd rather we go down swinging![6N]
 Lead the way[,] Captain Stroganoff![AN][ClearFace]
-
-[FR][LoadEiskaffee]
-Is anyone in the city guard okay[Beat]?[AN]
 
 [R]
 [ToggleSmile]That's a wonderful idea[,] Captain![.6] Instead[.6N]
@@ -105,51 +103,67 @@ This job is so tiring[Beat][AN]
 
 [L]
 Sir Ulrich is coming to our aid[,][N]
-Captain.[.6] Shall we approach?[AN]
+Captain.[.6] Any further orders?[AN]
 
 [FL]
 Oh![.6] The legendary knight? He's said to[N]
 have taken down an entire Aeterian[N]
-army before he retired![AN]
+army before he retired![AN][Clear]
+We're saved![AN]
 
 [L]
 Yeah[,] alright.[.6] You need to read[N]
 less fantasy.[AN]
 
 [MR]
-Aw[,] Ricky?![.6] No way![.6] He's never gonna[N]
-approve of my poor life choices![.6N]
-We're lettin' him come to us![AN]
+Ho[,] my man Ricky?![.6] He'll definitely[N]
+be happy to see a familiar brother![AN]
+Come on[,] boys[,] let's go![AN]
 
 [L]
-I don't think some random knight's opinion[N]
-matters to you.[.6] Captain Brudet has[N]
-a few words on that matter[Beat][AN]
+Captain[,] I strongly suggest not[N]
+abandoning our position[Beat][AN]
+
+[FL]
+I don't think such a valorous knight[N]
+would be as enthusiastic as you are[N]
+at seeing him[Beat][AN]
 
 [MR]
-Hell no![.6] I demand the damned respect that[N]
-I don't show to no one![.6] Where else is[N]
-my claim to fame and fortune?![AN]
-Heh[,] I actually got in a few mugs[N]
-before this started[Beat] and it's[N]
-starting to really kick in[Beat][AN]
+Why the hell not?![.6] I'm chivalrous[,][N]
+honorable[,] and humble--[.4]in a[N]
+down-to-earth[,] mature way.[AN]
 
-[L]
-There's no way that Sir Ulrich cares.[.6N]
-Actually[,] I'm not sure he'll like hearing[N]
+[FL]
+I'm not quite sure he'll like hearing[N]
 about your many pardons.[AN][Clear]
 [Pause]Or your drinking habits.[.6N]
 Or your record[,] too.[.6] I just[N]
 think we shouldn't tell him[Beat][AN]
 
 [MR]
-Warfare is really just petty theft with a[N]
-slight touch o' murder.[.6] I have[N]
-complete moral justification![AN]
+Hell no![.6] I demand the damned respect that[N]
+I don't show to no one![.6] Where else is[N]
+my claim to fame and fortune?![AN]
+
+[FL]
+Hey[,] just curious.[.6] Were you drinking?[AN]
+
+[MR]
+Yessir[,] I actually got in a few mugs[N]
+before this started[Beat] and it's[N]
+starting to really kick in[Beat][AN]
+They call it liquid courage for a[N]
+good reason[.6] Let's waste 'em--[.4][N]
+and take all their crap!![AN]
 
 [FL][MoveFarLeft]
 Yeah![.6] For honor and justice and glory![.6][N]
 Let's save Northelm!![AN]
+
+[L]
+[CloseEyes]Captain Brudet[Beat] I finally understand why[N]
+you talk about him the way you do[Beat][AN]
 
 [X]
 
@@ -221,16 +235,16 @@ survive the battle[,] so let's go.[AN]
 
 ## Ch3Ending2
 [3l]
-[FL][LoadUlrich][L][LoadAffogato][MR][LoadStrogan]
+[ML][LoadAffogato][MR][LoadStrogan]
 
 [MR]
 You blokes really saved our hides back there[,][N]
 just in time.[.6] You lot a new squadron?[6N]
 I've never seen the likes of ya here before.[AN]
 
-[L]
+[ML]
 We're part of the new 7th Platoon[N]
-of Wreyvine.[AN]
+of Wreyvine.[AN][MoveLeft]
 
 [MR]
 Hey[,] lucky number[,] I hear ya. So[,] we did[N]
@@ -240,7 +254,7 @@ And you[,] Ulrich[,] you're leading an army[N]
 again[,] huh? I can't say that's even a[N]
 lil' expected[Beat][AN]
 
-[FL]
+[FL][LoadUlrich]
 We took back the front of the capital city[Beat][N]
 Can you confirm that everybody is safe?[AN]
 
@@ -413,15 +427,15 @@ over to the border fortress at once.[AN]
 [MR]
 Sir Alicot of the Aeterian Imperial Army.[6N]
 I am glad to see you are still alive and well.[6N]
-How fare you?[AN][Clear]
-I must inform you that enemy troops[N]
-are heading your way[,] sir.[AN]
+How fare you?[AN]
 
 [ML]
 Ah[,] Duke Omios![.6] I did not see you there.[6N]
 I will tell the men to meet them head on.[AN]
 
 [MR]
+I must inform you that enemy troops[N]
+are heading your way[,] sir.[6N]
 And[,] in addition[,] if I may[Beat][AN]
 
 [ML]
@@ -516,7 +530,7 @@ enough.[.6] Did you get lost or something?[A][X]
 ## DoppioTalk
 [3l]
 [OpenMidLeft][LoadDoppio][MidRight][LoadFace][0xFF][0xFF]
-[OpenMidLeft]Phew,[.4] I almost thought we were a goner![.6N]
+[OpenMidLeft]Phew,[.4] I almost thought we were goners![.6N]
 [ToggleSmile]Alright[Beat] Let's beat down the Aeterians[N]
 and save the city![A][X]
 
@@ -577,7 +591,9 @@ given a sword made of a cold metal[N]
 that tore the ether out of mages.[AN]
 If he was here today[,] I think he'd[N]
 love it if you wielded it against[N]
-those occultic Aeterians![AN]
+those occultic Aeterians![AN][Clear]
+Here you go[,] show 'em what[N]
+Wreyvine's made of![AN]
 
 [X]
 
@@ -682,7 +698,8 @@ familiar.[.6] Sorry.[AN]
 
 ## AlicotDeathQ
 # verified
-[OpenMidLeft][LoadAlicot]You did well[Beat][A][X]
+[OpenMidLeft][LoadAlicot][ToggleSmile]Hahaha[Beat]![.6] I die knowing[N]
+Wreyvine will fall[Beat][A][ToggleSmile][X]
 
 ## StroganAlicotBossQ
 [OpenMidLeft][LoadAlicot]
@@ -693,7 +710,7 @@ drinking on the job?[AN][ClearFace]
 
 [OpenMidRight][LoadStrogan]
 A lil' bit o' both don't[N]
-hurt nobody.[ClearFace]
+hurt nobody.[AN][ClearFace]
 
 [OpenMidLeft][LoadAlicot]
 Truly Wreyvine's finest.[.6N]

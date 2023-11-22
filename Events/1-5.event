@@ -99,7 +99,7 @@ UNIT BadGuyStealable SArmor 0x1 Level(5, Enemy, 1)     [3,18] 0b 0x0 0x0 0x0 [St
 UNIT BadGuyStealable Hunter 0x1 Level(5, Enemy, 1)     [4,12] 0b 0x0 0x0 0x0 [Longbow,BlueGem] BossAI
 UNIT BadGuy AxeArmor 0x1 Level(5, Enemy, 1)     [9,12] 0b 0x0 0x0 0x0 [Swordreaver,HandAxe] BossAI
 UNIT BadGuy Myrm 0x1 Level(5, Enemy, 1)     [8,15] 0b 0x0 0x0 0x0 [Zanbato] AttackInRangeAI
-UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [6,18] 0b 0x0 0x0 0x0 [DarkTome2] AttackInRangeAI
+UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [6,18] 0b 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
 UNIT BadGuy SwordCav 0x1 Level(6, Enemy, 1)     [14,19] 0b 0x0 0x0 0x0 [IronSword,Vulnerary] ChargeAI
 UNIT BadGuy Raider 0x1 Level(5, Enemy, 1)     [9,4] 0b 0x0 0x0 0x0 [Sagitar] TwoActionAI
 UNIT BadGuy Mercenary 0x1 Level(5, Enemy, 1)     [10,9] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
@@ -113,14 +113,6 @@ UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [14,10] 0b 0x0 0x0 0x0 [HandAxe,]
 UNIT BadGuyStealable AxeCav 0x1 Level(5, Enemy, 1)     [14,12] 0b 0x0 0x0 0x0 [IronAxe,Vulnerary] TwoActionAI
 UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [6,14] 0x0 0x0 0x0 0x0 [IronBow] TwoActionAI
 	UNIT
-	
-NewNew:
-UNIT Atheya WyvernRider_F 0x1 Level(5, Ally, 0)     [6,13] 0x0 0x0 0x0 0x0 [IronLabrys,Halberd,Elixir,] AttackInRangeAI
-UNIT
-
-LunaticUnits:
-UNIT Atheya WyvernRider_F 0x1 Level(5, Ally, 1)     [6,13] 0x0 0x0 0x0 0x0 [KillerAxe,Halberd,Elixir,Speedwing] AttackInRangeAI
-UNIT
 
 NagitoKomaeda:
 UNIT Murray Deserter 0x1 Level(7, Enemy, 0)     [13,15] DropItem 0x0 0x0 0x0 [SapphireLance,ShortSpear,GoddessIcon] BossAI
@@ -130,16 +122,20 @@ Recruits:
 UNIT Noel Fighter 0x1 Level(3, Ally, 0)     [14,9] 0b 0x0 0x0 0x0 [0x22,0x2C,RedGem] BossAI
 	UNIT
 	
+RecruitsLunatic:
+UNIT Noel Fighter 0x1 Level(3, Ally, 1)     [14,9] 0b 0x0 0x0 0x0 [BluntLabrys,0x2C,GreenGem] BossAI
+	UNIT
+	
 SpookyBrigand:
 UNIT TorchBrigand Brigand 0x1 Level(6, Enemy, 1)     [14,14] 0b 0x0 0x0 0x0 [SteelLabrys,GreenGem] BrigandAI
 	UNIT
 	
 SpookyBrigand2:
-UNIT TorchBrigand Raider 0x1 Level(5, Enemy, 1)     [0,8] 0 0 1 REDA1R8 [SteelSword,0xa3] BrigandAI
+UNIT TorchBrigand Raider 0x1 Level(5, Enemy, 1)     [0,8] 0 0 1 REDA1R8 [SteelSword,0x8] BrigandAI
 	UNIT
 	
 TopRightFort:
-UNIT BadGuy Shaman 0x1 Level(6, Enemy, 1)     [10,3] 0b 0x0 0x0 0x0 [DarkTome2,] ChargeAI
+UNIT BadGuy Soldier 0x1 Level(6, Enemy, 1)     [10,3] 0b 0x0 0x0 0x0 [HeavySpear,] ChargeAI
 UNIT BadGuy Mercenary 0x1 Level(5, Enemy, 1)     [10,3] 0 0 1 REDA11R3 [SteelBlade,Armorslayer] ChargeAI
 	UNIT
 	
@@ -149,7 +145,7 @@ UNIT BadGuy PegRider 0x1 Level(5, Enemy, 1)     [14,2] 0b 0x0 0x0 0x0 [SteelLanc
 	UNIT
 
 LeftRocks:
-UNIT BadGuy Shaman 0x1 Level(5, Enemy, 1)     [5,19] 0b 0x0 0x0 0x0 [Flux,] ChargeAI
+UNIT BadGuy Brigand 0x1 Level(5, Enemy, 1)     [5,19] 0b 0x0 0x0 0x0 [ShortAxe,] ChargeAI
 UNIT BadGuy Hunter 0x1 Level(5, Enemy, 1)     [6,19] 0b 0x0 0x0 0x0 [IronBow,] StallOneTurnAI
 	UNIT
 	
@@ -176,6 +172,12 @@ CutsceneUnits2:
 UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [1,3] 0 0 1 REDA4R1 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
 UNIT Brudet WyvernRider_F 0x1 Level(5, Ally, 1)     [0,3] 0 0 1 REDA3R1 [IronLabrys,Halberd,Elixir,] [0x0,0x0,0x0,0x0]
 	UNIT
+	
+CutsceneUnits2Lunatic:
+UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [1,3] 0 0 1 REDA4R1 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Atheya WyvernRider_F 0x1 Level(5, Ally, 1)     [0,3] 0 0 1 REDA3R1 [KillerAxe,BraveAxe,Elixir,Speedwing] AttackInRangeAI
+UNIT
+
 	
 CutsceneUnits3:
 UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [13,17] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
@@ -211,7 +213,7 @@ CLEAN
 //FADU 60
 STAL 5
 	LOAD2 0x1 CutsceneUnits1
-	LOAD2 0x1 CutsceneUnits2
+CHECK_HARD; BEQ 0x724 0xC 0x0; LOAD1 0x1 CutsceneUnits2Lunatic; GOTO 0x725; LABEL 0x724; LOAD1 0x1 CutsceneUnits2; LABEL 0x725
 STAL 15
 Music(0x24)
 SetBackground(0x33)
@@ -223,20 +225,20 @@ CLEAN
 STAL 5
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 NagitoKomaeda
-HardUnits(LunaticUnits,NewNew)
 	ENUN
 	GotoPrepScreen
 	ENDA
 
 EndingScene:
 MuteMusic
-FADI 60
+FADI 32
+STAL 0x30
 DoAllThree
 SetFlag(0x84)
 CamOn
 LOAD2 0x1 CutsceneUnits3
 CamOff
-FADU 60
+FADU 16
 STAL 10
 CameraCursor(Affogato)
 CameraCursor(Ulrich)
@@ -295,7 +297,8 @@ NoFade
 ENDA
 	
 RecruitThief:
-LOAD1 0x1 Recruits
+//LOAD1 0x1 Recruits
+HardUnits(RecruitsLunatic,Recruits)
 ENUN
 CameraCursor(Noel)
 Text(NoelIntro)

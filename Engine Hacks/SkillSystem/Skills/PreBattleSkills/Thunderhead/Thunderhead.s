@@ -24,7 +24,7 @@ beq End
 @ check if moved more than 1: if so, end
 ldr r3,=0x203a968 @Spaces Moved
 ldrb r2,[r3]
-cmp r2, #0x0
+cmp r2, #0x1
 bne End
 
 @ check if initiating
@@ -35,7 +35,19 @@ bne End @if not attacker, end
 @ hit +30
 mov r1, #0x60 @hit
 ldrh r2, [r4, r1]
-add r2, #0x30
+add r2, #255
+strh r2, [r4,r1]
+
+@ check if moved more than 0: if so, end
+ldr r3,=0x203a968 @Spaces Moved
+ldrb r2,[r3]
+cmp r2, #0x0
+bne End
+
+@ hit +30
+mov r1, #0x62 @crit
+ldrh r2, [r4, r1]
+add r2, #50
 strh r2, [r4,r1]
 
 End:

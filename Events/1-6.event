@@ -34,7 +34,8 @@ TURN 0x0 TriggerHappyHavoc [10,0] 0x0
 	
 AddLesRein:
 RefreshSMS
-SpawnReinforcements(NewRecruits)
+HardUnits(NewRecruitsLunatic,NewRecruits)
+//SpawnReinforcements(NewRecruits)
 STAL 5
 CameraCursor(Lennard)
 CameraCursor(Therese)
@@ -105,7 +106,8 @@ CALL (EndingScene)
 ENDA
 
 RecruitXavier:
-SpawnReinforcements(XavierLesUnit)
+HardUnits(XavierLunatic,XavierLesUnit)
+//SpawnReinforcements(XavierLesUnit)
 CameraCursor(Xidorn)
 Text(XavierRecruit)
 NoFade
@@ -185,15 +187,27 @@ UNIT Therese SArmor 0x1 Level(5, Ally, 0)     [16,0] 0b 0x0 0x0 0x0 [SteelBlade,
 	UNIT Wreyvine LArmor 0x1 Level(10, NPC, 1)     [15,0] 0 0 1 REDA15R2 [0x7C,ShortSpear,Elixir] BossAI
 		
 		UNIT
+
+NewRecruitsLunatic:
+UNIT Lennard Deserter 0x1 Level(3, Ally, 1)     [14,0] 0b 0x0 0x0 0x0 [KillerLance,MageLance,0x7E] [0x0,0x0,0x0,0x0]
+UNIT Therese SArmor 0x1 Level(5, Ally, 1)     [16,0] 0b 0x0 0x0 0x0 [SteelBlade,MageSword,0x66,0xFD] [0x0,0x0,0x0,0x0]
+	UNIT Wreyvine Soldier 0x1 Level(10, NPC, 1)     [15,0] 0b 0x0 0x0 0x0 [BraveLance,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT Wreyvine LArmor 0x1 Level(12, NPC, 1)     [15,0] 0 0 1 REDA15R2 [0x7C,Spear,Elixir] BossAI
+		
+		UNIT
 		
 XavierLesUnit:
 UNIT Xidorn GriffonKnight 0x1 Level(4, Ally, 0)   [23,0] 0 0 1 REDA15R4 [0xDB, 0x67,] [0x0,0x0,0x0,0x0]
 	UNIT
 	
+XavierLunatic:
+UNIT Xidorn GriffonKnight 0x1 Level(4, Ally, 1)   [23,0] 0 0 1 REDA15R4 [0xDB, 0x67,0x71] [0x0,0x0,0x0,0x0]
+	UNIT
+	
 NPCUnits:
 UNIT Wegman General 0x1 Level(10, Ally, 0)     [15,8] 0b 0x0 0x0 0x0 [0xF,SteelGlaive,SteelLabrys,SilverRifle] [0x0,0x0,0x0,0x0]
 UNIT Gerolf SPal 0x1 Level(8, Ally, 0)     [16,7] 0b 0x0 0x0 0x0 [BraveSword,LightBrand] [0x0,0x0,0x0,0x0]
-UNIT Klavdia WyvernKnight 0x1 Level(9, Ally, 0)     [14,7] 0b 0x0 0x0 0x0 [MageAxe,PoisonAxe] [0x0,0x0,0x0,0x0]
+UNIT Klavdia WyvernKnight 0x1 Level(9, Ally, 0)     [14,7] 0b 0x0 0x0 0x0 [MageAxe,0x5A] [0x0,0x0,0x0,0x0]
 
 UNIT Wreyvine Soldier 0x1 Level(7, NPC, 1)     [6,1] 0b 0x0 0x0 0x0 [MageLance,ShortSpear,Elixir] StallOneTurnAI
 //UNIT Wreyvine Fighter 0x1 Level(6, NPC, 1)     [5,2] 0b 0x0 0x0 0x0 [HandAxe,SteelAxe,Elixir] StallOneTurnAI
@@ -206,12 +220,36 @@ UNIT Wreyvine WyvernRider 0x1 Level(8, NPC, 1)     [23,2] 0b 0x0 0x0 0x0 [MageAx
 UNIT Wreyvine Archer 0x1 Level(5, NPC, 1)     [11,4] 0b 0x0 0x0 0x0 [ShortBow,Vulnerary] [0,3,0,32]
 UNIT Wreyvine Archer 0x1 Level(5, NPC, 1)     [19,4] 0b 0x0 0x0 0x0 [ShortBow,Vulnerary] [0,3,0,32]
 
-UNIT Supplies1 0x79 0x1 Level(1, NPC, 1)     [9,4] 0b 0x0 0x0 0x0 [EnergyRing] [0,3,0,32] //tents
-UNIT Supplies2 0x79 0x1 Level(1, NPC, 1)     [21,4] 0b 0x0 0x0 0x0 [MageBow] [0,3,0,32]
-UNIT Supplies3 0x79 0x1 Level(1, NPC, 1)     [9,9] 0b 0x0 0x0 0x0 [ArmsScroll] [0,3,0,32]
-UNIT Supplies4 0x79 0x1 Level(1, NPC, 1)     [21,9] 0b 0x0 0x0 0x0 [0x7F] [0,3,0,32]
+UNIT Supplies1 0x79 0x1 Level(1, NPC, 0)     [9,4] 0b 0x0 0x0 0x0 [EnergyRing] [0,3,0,32] //tents
+UNIT Supplies2 0x79 0x1 Level(1, NPC, 0)     [21,4] 0b 0x0 0x0 0x0 [MageBow] [0,3,0,32]
+UNIT Supplies3 0x79 0x1 Level(1, NPC, 0)     [9,9] 0b 0x0 0x0 0x0 [ArmsScroll] [0,3,0,32]
+UNIT Supplies4 0x79 0x1 Level(1, NPC, 0)     [21,9] 0b 0x0 0x0 0x0 [0x7F] [0,3,0,32]
 
 	UNIT
+	
+NPCUnitsLunatic:
+UNIT Wegman General 0x1 Level(10, Ally, 1)     [15,8] 0b 0x0 0x0 0x0 [SilverBlade,SilverGlaive,SilverLabrys,SilverRifle] [0x0,0x0,0x0,0x0]
+UNIT Gerolf SPal 0x1 Level(8, Ally, 1)     [16,7] 0b 0x0 0x0 0x0 [BraveSword,LightBrand,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Klavdia WyvernKnight 0x1 Level(9, Ally, 1)     [14,7] 0b 0x0 0x0 0x0 [MageAxe,PoisonAxe,PureWater] [0x0,0x0,0x0,0x0]
+
+UNIT Wreyvine Soldier 0x1 Level(8, NPC, 1)     [6,1] 0b 0x0 0x0 0x0 [MageLance,ShortSpear,Elixir] StallOneTurnAI
+//UNIT Wreyvine Fighter 0x1 Level(7, NPC, 1)     [5,2] 0b 0x0 0x0 0x0 [HandAxe,SteelAxe,Elixir] StallOneTurnAI
+
+UNIT Wreyvine GriffonRider 0x1 Level(9, NPC, 1)     [7,2] 0b 0x0 0x0 0x0 [MageBow,SteelRifle,Vulnerary] StallOneTurnAI
+UNIT Wreyvine Merc 0x1 Level(8, NPC, 1)     [24,1] 0b 0x0 0x0 0x0 [MageSword,ShortBrand,Elixir] StallOneTurnAI
+//UNIT Wreyvine Myrmidon 0x1 Level(8, NPC, 1)     [25,2] 0b 0x0 0x0 0x0 [Flamberge,KillingEdge,Elixir] StallOneTurnAI
+UNIT Wreyvine WyvernRider 0x1 Level(9, NPC, 1)     [23,2] 0b 0x0 0x0 0x0 [MageAxe,SteelLabrys,Vulnerary] StallOneTurnAI
+
+UNIT Wreyvine Archer 0x1 Level(7, NPC, 1)     [11,4] 0b 0x0 0x0 0x0 [ShortBow,Vulnerary] [0,3,0,32]
+UNIT Wreyvine Archer 0x1 Level(7, NPC, 1)     [19,4] 0b 0x0 0x0 0x0 [ShortBow,Vulnerary] [0,3,0,32]
+
+UNIT Supplies1 0x79 0x1 Level(1, NPC, 0)     [9,4] 0b 0x0 0x0 0x0 [EnergyRing] [0,3,0,32] //tents
+UNIT Supplies2 0x79 0x1 Level(1, NPC, 0)     [21,4] 0b 0x0 0x0 0x0 [MageBow] [0,3,0,32]
+UNIT Supplies3 0x79 0x1 Level(1, NPC, 0)     [9,9] 0b 0x0 0x0 0x0 [ArmsScroll] [0,3,0,32]
+UNIT Supplies4 0x79 0x1 Level(1, NPC, 0)     [21,9] 0b 0x0 0x0 0x0 [0x7F] [0,3,0,32]
+
+	UNIT
+
 	
 CutsceneUnits1:
 UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [18,5] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
@@ -430,10 +468,10 @@ UNIT Aeteria LPal 0x1 Level(5, Enemy, 1)     [29,6] 0 0 1 REDA28R6 [SteelLance,]
 	UNIT
 	
 ExtraReinRightBigGroup:
-UNIT Aeteria GriffonRider 0x1 Level(8, Enemy, 1)     [29,16] 0b 0x0 0x0 0x0 [IronBow,] ChargeAI
+UNIT Aeteria Merc 0x1 Level(8, Enemy, 1)     [29,16] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
 UNIT Aeteria WyvernRider 0x1 Level(9, Enemy, 1)     [29,17] 0b 0x0 0x0 0x0 [IronAxe,] StallOneTurnAI
 UNIT Aeteria WyvernKnight 0x1 Level(3, Enemy, 1)     [23,23] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
-UNIT Aeteria GriffonRider 0x1 Level(8, Enemy, 1)     [24,23] 0b 0x0 0x0 0x0 [SteelBow,] ChargeAI
+UNIT Aeteria Soldier 0x1 Level(8, Enemy, 1)     [24,23] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
 	UNIT
 	
 WeAreDead:
@@ -586,7 +624,8 @@ FADI 60
 DoAllThree
 	LOAD1 0x1 EnemyUnits
 	//LOAD1 0x1 NewRecruits
-	LOAD1 0x1 NPCUnits
+	//LOAD1 0x1 NPCUnits
+	HardUnits(NPCUnitsLunatic,NPCUnits)
 	CUSN Wegman
 	CUSN Klavdia
 	CUSN Gerolf
@@ -614,7 +653,28 @@ CALL $591FD8
 
 EndingScene:
 
+	CHECK_ALIVE Supplies1
+	BEQ 0x1 0xC 0x0
+	GiveItem(EnergyRing,Affogato)
+	LABEL 0x1
+	
+	CHECK_ALIVE Supplies2
+	BEQ 0x2 0xC 0x0
+	GiveItem(MageBow,Affogato)
+	LABEL 0x2
+	
+	CHECK_ALIVE Supplies3
+	BEQ 0x3 0xC 0x0
+	GiveItem(ArmsScroll,Affogato)
+	LABEL 0x3
+	
+	CHECK_ALIVE Supplies4
+	BEQ 0x4 0xC 0x0
+	GiveItem(0x7F,Affogato)
+	LABEL 0x4
+
 FADI 60
+STAL 0x30
 DoAllThree
 TILECHANGE 0x8
 RefreshSMS
@@ -756,26 +816,6 @@ ENUN
 	
 	SetBackground(0x38)
 	Text(ChBonusEnding3)
-	
-	CHECK_ALIVE Supplies1
-	BEQ 0x1 0xC 0x0
-	GiveItem(EnergyRing,Affogato)
-	LABEL 0x1
-	
-	CHECK_ALIVE Supplies2
-	BEQ 0x2 0xC 0x0
-	GiveItem(MageBow,Affogato)
-	LABEL 0x2
-	
-	CHECK_ALIVE Supplies3
-	BEQ 0x3 0xC 0x0
-	GiveItem(ArmsScroll,Affogato)
-	LABEL 0x3
-	
-	CHECK_ALIVE Supplies4
-	BEQ 0x4 0xC 0x0
-	GiveItem(0x7F,Affogato)
-	LABEL 0x4
 	
 	MNC2 0x6
 //MNTS 0x1 //return to title screen

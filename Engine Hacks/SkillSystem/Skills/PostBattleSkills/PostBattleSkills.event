@@ -49,6 +49,15 @@ POIN GetUnitsInRange
 #include "StaticPost/StaticEvent.event"
 
 ALIGN 4
+StaticPostDies:
+#incbin "StaticPostDies/StaticPost.dmp"
+POIN SkillTester
+WORD StaticPanicID
+POIN StaticExplodeEvent
+POIN GetUnitsInRange
+#include "StaticPostDies/StaticEventDies.event"
+
+ALIGN 4
 Snaring:
 #incbin "Snaring/Snaring.dmp"
 POIN SkillTester
