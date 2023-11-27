@@ -51,22 +51,24 @@ beq YesThereIsSkill
 b End        @If not a Rifle, end skill
 
 YesThereIsSkill:
-@subtract 5 atk
-mov r1, #0x5A
-ldrh r0, [r4, r1] @atk
-sub r0, #5
-strh r0, [r4,r1]
 
-@subtract 2 as
-mov r1, #0x5E
-ldrh r0, [r4, r1] @as
-sub r0, #2
-strh r0, [r4,r1]
-
-@add 10 hit
+@add 30 hit
 mov r1, #0x60
 ldrh r0, [r4, r1] @hit
 add r0, #10
+strh r0, [r4,r1]
+
+@get crit in r6
+mov		r1,#0x66
+ldrh	r6,[r4,r1]
+lsr		r6,#2
+mov r0,#0
+strh	r0,[r4,r1]
+
+@do the thing
+mov r1, #0x5a
+ldrh r0, [r4, r1]
+add r0, r6
 strh r0, [r4,r1]
 
 @not at stat screen

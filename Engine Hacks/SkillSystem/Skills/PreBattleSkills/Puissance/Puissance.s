@@ -1,5 +1,5 @@
 .thumb
-.equ PuissanceID, SkillTester+4
+.equ DazzleID, SkillTester+4
 .equ gBattleData, 0x203A4D4
 
 push {r4-r7, lr}
@@ -10,7 +10,7 @@ mov r5, r1 @dfdr
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r4 @attacker data
-ldr r1, PuissanceID
+ldr r1, DazzleID
 .short 0xf800
 cmp r0, #0
 beq End
@@ -38,4 +38,4 @@ pop {r4-r7, r15}
 .ltorg
 SkillTester:
 @Poin SkillTester
-@WORD PuissanceID
+@WORD DazzleID

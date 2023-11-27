@@ -27,8 +27,8 @@ mov r0,#0x28
 cmp r0,#1
 bne Done
 
-@set crit to 0
-mov r1, #0x66
+@set BATTLE crit to 0
+mov r1, #0x6A
 mov r0, #0
 strh r0, [r4,r1]
 

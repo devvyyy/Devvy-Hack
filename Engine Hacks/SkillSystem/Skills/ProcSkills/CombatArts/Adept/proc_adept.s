@@ -4,7 +4,7 @@
   mov lr, \reg
   .short 0xf800
 .endm
-.equ AdeptID, SkillTester+4
+.equ MagicSwordID, SkillTester+4
 .equ d100Result, 0x802a52c
 .equ recurse_round, 0x802b83c
 
@@ -34,7 +34,7 @@ bne End
 @ldr r0, SkillTester
 @mov lr, r0
 @mov r0, r4 @attacker data
-@ldr r1, AdeptID
+@ldr r1, MagicSwordID
 @.short 0xf800
 ldr r0,=#0x0203F101
 ldrb r0,[r0]
@@ -46,22 +46,41 @@ bne End
 @mov r1, r4 @skill user
 @blh d100Result
 @cmp r0, #1
-@bne End 
+@bne End
+
+@check range
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#1
+bgt End
 
 @make sure this is the actual attacker kthx
 ldr r0,=#0x203A4EC
 cmp r0,r4
 bne End
 
+@and increase damage by 5!
+ldrh r0,[r7,#4]
+add r0, #5
+strh r0, [r7, #4] @final damage
+
+@prevent from proccing if not physical
+mov r0, r4
+mov r1, #0x4c    @Move to the attacker's weapon ability
+ldr r1, [r0,r1]
+mov r2, #0x42
+tst r1, r2
+bne     End @do nothing if magic bit set
+
 @if we proc, set the brave effect flag for the NEXT hit
-ldrb r1, AdeptID @first mark Adept active
+ldrb r1, MagicSwordID @first mark Adept active
 strb r1, [r6,#4]
 
 add     r6, #8 @double width battle buffer   
 mov     r0, #0x40
 lsl     r0, #8  
 str     r0,[r6]                @ 0802B43A 6018  
-ldrb r0, AdeptID
+ldrb r0, MagicSwordID
 strb r0, [r6,#4] @save the skill ID at byte #4
 
 @now add the number of rounds - 
@@ -79,4 +98,4 @@ pop {r15}
 .ltorg
 SkillTester:
 @POIN SkillTester
-@WORD AdeptID
+@WORD MagicSwordID

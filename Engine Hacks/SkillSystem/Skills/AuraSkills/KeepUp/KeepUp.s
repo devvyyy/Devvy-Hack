@@ -1,7 +1,7 @@
 .thumb
 .align
 
-.equ DebuffTable, NewAuraSkillCheck+4
+.equ DebuffTable, AuraSkillCheck+4
 .equ ArmorMarchBit, DebuffTable+4
 .equ EntrySize, ArmorMarchBit+4
 .equ SkillTester, EntrySize+4
@@ -10,8 +10,8 @@
 .equ IndoorMarchID, MoonEvokedID+4
 .equ IndoorTerrainList, ArmorMarchList+4
 .equ ForagerList, IndoorTerrainList+4
-.equ KeepUpID, ForagerList+4
-.equ IndoorMarchID, KeepUpID+4
+.equ SergeantID, ForagerList+4
+.equ IndoorMarchID, SergeantID+4
 .equ NatureRushID, IndoorMarchID+4
 .equ CantoID, NatureRushID+4
 .equ CantoPlusID, CantoID+4
@@ -26,13 +26,14 @@ mov r4,r0 @attacker
 mov r5,r1 @defender
 
 @ first check mine LMAO
-ldr r0,SkillTester
-mov r14,r0
-mov r0,r4
-ldr r1,MoonEvokedID
-.short 0xF800
-cmp r0,#0
-beq CheckKeepUp
+@ldr r0,SkillTester
+@mov r14,r0
+@mov r0,r4
+@ldr r1,MoonEvokedID
+@.short 0xF800
+@cmp r0,#0
+@beq CheckKeepUp
+b CheckKeepUp
 
 @if skill, check for units HP
 
@@ -49,33 +50,24 @@ CheckKeepUp:
 ldr r0,SkillTester
 mov r14,r0
 mov r0,r4
-ldr r1,KeepUpID
+ldr r1,SergeantID
 .short 0xF800
 cmp r0,#0
 beq CheckIndoorMarch
 
 @if so, check for Canto or Canto+ on units in a 3 tile radius
 
-@get nearby units
-ldr	r0,NewAuraSkillCheck
-mov	lr,r0
-mov	r0,r4			@unit to check
-ldr	r1,CantoID		@skill
-mov	r2,#0			@can_trade
-mov	r3,#2			@range
-.short	0xf800
-cmp r0,#0
-bne Set
-
-ldr	r0,NewAuraSkillCheck
-mov	lr,r0
-mov	r0,r4			@unit to check
-ldr	r1,CantoPlusID	@skill
-mov	r2,#0			@can_trade
-mov	r3,#2			@range
-.short	0xf800
-cmp r0,#0
-bne Set
+@Check if there are allies in 2 spaces
+ldr r0, AuraSkillCheck
+mov lr, r0
+mov r0, r4 @attacker
+mov r1, #0
+mov r2, #0 @can_trade
+mov r3, #2 @range
+.short 0xf800
+cmp r0, #0
+beq GoBack
+b Set
 
 CheckIndoorMarch:
 
@@ -178,6 +170,6 @@ bx	r0
 .ltorg
 .align
 
-NewAuraSkillCheck:
+AuraSkillCheck:
 
 

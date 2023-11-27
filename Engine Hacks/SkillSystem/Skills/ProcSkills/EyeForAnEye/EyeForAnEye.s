@@ -1,6 +1,6 @@
 .thumb
 
-.equ EyeForAnEyeID, SkillTester+4
+.equ SanctuaryID, SkillTester+4
 
 @ r0 is attacker, r1 is defender, r2 is current buffer, r3 is battle data
 push {r4-r7,lr}
@@ -12,7 +12,7 @@ mov r7, r3 @battle data
 ldr r2, SkillTester
 mov lr, r2
 mov r0, r4
-ldr r1, EyeForAnEyeID
+ldr r1, SanctuaryID
 .short 0xf800
 cmp r0, #0x0
 beq End
@@ -36,7 +36,7 @@ beq End
                 @Add damage
                 ldrb r0, [r7, #0x4] @Damage this round
                 ldrb r1, [r3, #0x3] @Damage in last round
-                lsl  r1, #0x1       @MULTIPLY by 2
+                @lsl  r1, #0x1       @MULTIPLY by 2
                 add  r0, r1
                 strb r0, [r7, #0x4]
                 @Set attacker skill bit
@@ -46,7 +46,7 @@ beq End
                 orr  r0, r1
                 str  r0, [r6]
                 @Set activated skill
-                ldr  r1, EyeForAnEyeID
+                ldr  r1, SanctuaryID
                 strb r1, [r6, #0x4]
 
 
@@ -59,4 +59,4 @@ bx  r0
 .ltorg
 SkillTester:
 @POIN SkillTester
-@POIN EyeForAnEyeID
+@POIN SanctuaryID

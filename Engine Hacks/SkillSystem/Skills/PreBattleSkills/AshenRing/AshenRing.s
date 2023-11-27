@@ -121,7 +121,7 @@ DoTheThing:
 @add 2 def to unit
 mov r1, #0x5C
 ldrh r0, [r4, r1] @def
-add r0, #2
+add r0, #5
 strh r0, [r4,r1]
 b End
 

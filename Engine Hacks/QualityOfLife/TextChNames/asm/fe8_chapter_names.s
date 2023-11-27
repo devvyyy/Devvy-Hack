@@ -42,7 +42,7 @@ mov     r1,r8               @@ 08082342 4641
 swi #0xC
 
 ldr     r0, Font_Graphic_Ptr                @@ 08082348 4805  @font graphic - compressed 
-ldr     r1,=0x2020188               @@ 0808234A 4906  @unknown - buffer , was 2020140
+ldr     r1,=0x2026E30               @@ 0808234A 4906  @unknown - buffer , was 2020140
 blh      0x8012f50                @@ 0808234C F790FF0C @decompress image to buffer
 b       loc_80823C6               @@ 08082350 E039     
   .ltorg
@@ -80,7 +80,7 @@ b       loc_80823A2               @@ 0808239A E002
 loc_80823A0:    
 mov     r6,r5               @@ 080823A0 1C2E   
 loc_80823A2:  
-ldr     r0,=0x2020188               @@ 080823A2 480E      @buffer again, changed from 140
+ldr     r0,=0x2026E30               @@ 080823A2 480E      @buffer again, changed from 140
 mov     r1,r8               @@ 080823A4 4641     
 mov     r3,r6               @@ 080823A6 1C33     
 bl      sub_8082168               @@ 080823A8 F7FFFEDE 

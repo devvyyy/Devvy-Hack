@@ -15,6 +15,18 @@ SHORT $4718 $46C0
 #include "SpurSkills/SpurSkills.event"
 
 ALIGN 4
+WreyvianHeart:
+#incbin "WreyvianHeart/WreyvianHeart.dmp"
+POIN AuraSkillCheck
+WORD AdeptID
+
+ALIGN 4
+StandBackUp:
+#incbin "StandBackUp/StandBackUp.dmp"
+POIN AuraSkillCheck
+WORD EyeForAnEyeID
+
+ALIGN 4
 DriveCanto:
 #incbin "DriveCanto/DriveCanto.dmp"
 POIN AuraSkillCheck
@@ -257,7 +269,7 @@ WORD BlueFlameID
 ALIGN 4
 KeepUp:
 #incbin "KeepUp/KeepUp.dmp"
-POIN NewAuraSkillCheck
+POIN AuraSkillCheck
 WORD DebuffTable
 WORD ArmorMarchBit
 WORD 8 //size of debuff table entry
@@ -265,8 +277,8 @@ POIN SkillTester
 POIN ArmorMarchList
 POIN IndoorTerrainList
 POIN ForagerList
-WORD MoonEvokedID
-WORD KeepUpID
+//WORD MoonEvokedID
+WORD SergeantID
 WORD IndoorMarchID
 WORD NatureRushID
 WORD CantoID

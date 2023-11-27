@@ -41,10 +41,10 @@ weapon type.[N]
 Daggers each pierce a % of[N]
 foe's Def.[N]
 Shields all reposition the user[N]
-or foe. Note that this cannot[N]
+or foe. Note that this can't[N]
 cross or leave any terrain,[N]
-and cannot reposition foes[N]
-with -- Move.[N]
+and also can't reposition[N]
+foes with -- Move.[N]
  [N]
 Anima magic grants Atk bonuses[N]
 to nearby allies, with the[N]
@@ -62,7 +62,7 @@ Flamberge deal a fixed amount[N]
 of damage, ignoring the[N]
 user's Str.[N]
  [N]
-Long-range weapons cannot[N]
+Long-range weapons can't[N]
 counter or be countered.[N]
 For example, siege tomes,[N]
 staves, and the Big Iron.[X]
@@ -609,9 +609,14 @@ spaces to adjacent spaces.[N]
 # 0x519
 Rooted[X]
 
+# 0x51b
+Iron Call[X]
+
 # 0x558
-This'll leave a mark![N]
-Deals +10 damage.[X]
+The Iron Tusks' primordial flame.[N]
+Grants Str/Eth +3, increased to +5[N]
+for Wreyvians; also grants Wreyvians[N]
+Movement based on movement type.[X]
 
 # 0x559
 Endure and survive.[N]
@@ -670,7 +675,7 @@ This text shouldn't be viewable[N]
 in game?[X]
 
 # 0x3D8
-Royal Idol[X]
+Imperial Idol[X]
 
 # 0x3f5
 Essence[X]
@@ -729,10 +734,10 @@ Converts Crit into bonus Atk.[X]
 [_A][_r][_c][_a][_n][_e][_SP][_B][_r][_a][_c][_e][X]
 
 # 0x3d9
-Pale Locket[X]
+Ferric Locket[X]
 
 # 0x3DA
-Imperial Idol[X]
+Royal Idol[X]
 
 # 0x3DC
 Hefty Sash[X]
@@ -824,15 +829,16 @@ Imbued with dark magic. Ignores Str.[N]
 Restores HP = damage dealt.[X]
 
 # 0x483
-Increases max HP by[N]
-3 points.[X]
+A holy garb woven from fine fibers.[N]
+Increases max HP by 3 when used.[X]
 
 # 0x4C1
-Raises Max HP.[X]
+Raises max HP when used.[X]
 
 # 0x484
-Increases Strength or Ether by[N]
-1 point.[X]
+An intricate bracelet full of power.[N]
+Increases Strength/Ether by 1[N]
+when used.[X]
 
 # 0x4C2
 Raises either[N]
@@ -842,47 +848,47 @@ strength or ether.[X]
 Ether increased.[X]
 
 # 0x485
-Increases Dexterity by[N]
-2 points.[X]
+A tome of forgotten combat techniques.[N]
+Increases Dexterity by 2 when used.[N]
 
 # 0x4C3
 Raises dexterity.[X]
 
 # 0x486
-Increases Speed by[N]
-1 point.[X]
+A mystical feather from those extinct.[N]
+Increases Speed by 1 when used.[X]
 
 # 0x4C4
 Raises speed.[X]
 
 # 0x487
-Increases Luck by[N]
-2 points.[X]
+An idol to Aeteria's Crescent Serpent.[N]
+Increases Luck by 2 points.[X]
 
 # 0x4C5
 Raises luck.[X]
 
 # 0x488
-Increases Defense by[N]
-1 point.[X]
+A hardy locket from the forge.[N]
+Increases Defense by 1 when used.[X]
 
 # 0x4C6
 Raises defense.[X]
 
 # 0x489
-Increases Resistance by[N]
-1 point.[X]
+An idol to Wreyvine's Iron Tusks.[N]
+Increases Resistance by 1 when used.[X]
 
 # 0x4C7
 Raises resistance.[X]
 
 # 0x48A
-Increases Movement by[N]
-1 point.[X]
+A brisk pair of newly-crafted boots.[N]
+Increases Movement by 1 when used.[X]
 
 # 0x48B
-Increases Constitution by[N]
-1 point.[X]
+A heavy belt for the most vigorous.[N]
+Increases Constitution by 1 when used.[X]
 
 # 0x433
 Can attack at range.[X]
@@ -1326,7 +1332,7 @@ Armored vessels of faith of which infinite[N]
 ether slumbers within. Equip: [AnimaIcon][LightIcon][DarkIcon][StaffIcon][X]
 
 # 0x432
-Grants bonus Hit = unit's missing HP.[N]
+Grants bonus Hit = unit's missing HP x2.[N]
 "[_Y][_o][_u][_SP][_b][_l][_e][_e][_d][_Comma][_SP][_s][_o][_SP][_t][_h][_e][_y][_SP][_w][_i][_l][_l][_Dot]"[X]
 
 # 0x2AD

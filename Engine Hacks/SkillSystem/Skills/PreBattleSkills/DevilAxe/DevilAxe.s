@@ -16,6 +16,7 @@ sub   r0,r1
 mov   r2,#0x60
 ldrh  r1,[r4,r2]
 add   r1,r0,r1
+add   r1,r0,r1
 strh  r1,[r4,r2]
 NoAddAtk:
 pop   {r4}

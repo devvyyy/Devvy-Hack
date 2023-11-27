@@ -32,20 +32,20 @@ POIN DefendingCheck
   POIN BiorhythmFunc
 #endif //BIORHYTHM
 
-//POIN SpurStr SpurMag SpurSpd SpurDef SpurRes
+//POIN  SpurMag SpurSpd SpurDef SpurRes
 POIN Wrath Anima1 Anima2 Anima3 Anima4 Dark1 Dark2 Dark3 Dark4 Dark5
 //POIN DriveDef
-POIN DriveSpd DriveRes DriveStr DriveMag
+POIN DriveSpd DriveRes DriveStr DriveMag SpurStr
 //POIN LuckySeven OddRhythm EvenRhythm QuickBurn
-POIN SlowBurn
+POIN SlowBurn Puissance
 //POIN Demoiselle Gentilhomme MaleficAura Tantivy Focus Inspiration Solidarity VoiceOfPeace Anathema LilysPoise Hex Loyalty
 POIN Charisma Charm Shrewd AeterianFealtyAura Inspire BitterCold ChainReaction RayDark Blackfire Intimidate Paranoia
-//POIN HeavyDuty Warlock ElbowRoom NaturalCover Gamble WindDisciple Perfectionist Puissance Hawkeye LightWeight Trample Opportunist BattleVeteran SilentPride Restraint AssassinateDamageBonus KnightAspirant LifeAndDeath SoulSplitter GonnaGoWild Falcon ArcaneBlade FairFight Atlas StormBlood FieryBlood
-POIN BulletPre AeterianFealty Phase BurstFireStats AdaptivePoise ColdFlare StaticPanic ShortShield Steadfast ShowStopper DuckPre SanctuaryPre GlowRing AshenRing Starseer Whirlwind Hasty ShiningRifleSkill HighRoller Axiom PathOfBlade FinalBoss SearingSword Lunatic RupturedSky ThunderClap Bulwark Alacrity SteelSoul Megalovania Vigor Defeatist LastResort HeavyStrikes Charge ChargePlus Warpath Keepsake RifleSkill LethalTempo Tresillo ElbowGreasePre Upgrade Hijack SplittingMaulMag Vanity Leverage PureWaterEffect
+//POIN HeavyDuty Warlock ElbowRoom NaturalCover Gamble WindDisciple Perfectionist Hawkeye LightWeight Trample Opportunist BattleVeteran SilentPride Restraint AssassinateDamageBonus KnightAspirant LifeAndDeath SoulSplitter GonnaGoWild Falcon ArcaneBlade FairFight Atlas StormBlood FieryBlood
+POIN BulletPre WreyvianHeart AeterianFealty Phase BurstFireStats AdaptivePoise ColdFlare StaticPanic ShortShield Steadfast ShowStopper DuckPre SanctuaryPre GlowRing AshenRing Starseer Whirlwind Hasty ShiningRifleSkill HighRoller Axiom PathOfBlade FinalBoss SearingSword Lunatic RupturedSky ThunderClap Bulwark Alacrity SteelSoul Megalovania Vigor Defeatist LastResort HeavyStrikes Charge ChargePlus Warpath Keepsake RifleSkill LethalTempo Tresillo ElbowGreasePre Upgrade Hijack SplittingMaulMag Vanity Leverage PureWaterEffect
 //POIN Parry BloodTide WhitePool NightTide Insight Prescience Vigilance DefiantAvo DefiantCrit TowerShield IndoorFighter OutdoorFighter Fortune
 POIN Daunt KingMark Deadeye DoubleLion ShadowEye Daredevil
 //POIN Thotslayer Thighdeology Armorboost Horseguard Skyguard ForeignPrincess
-POIN BlueFlame BlueFlameAura Frostbite Cultured KeepUp
+POIN BlueFlame BlueFlameAura StandBackUp Frostbite Cultured KeepUp
 POIN MoonEvoked Lionheart Maestro FlowCombat Frenzy DevilAxeSkill CurtainCallSkill GrimRing Executors Nevermore ResolutePyre // This was moved here because Str/Mag Split conflict, and... I'm not sure why it wouldn't be here in the first place.
 //POIN UpWithArch
 
@@ -121,6 +121,7 @@ AuraSkillEntry(AeterianFealtyID)
 //AuraSkillEntry(InspirationID)
 //AuraSkillEntry(LilysPoiseID)
 //AuraSkillEntry(SpurStrID)
+AuraSkillEntry(TresilloID)
 AuraSkillEntry(ResolveID)
 //AuraSkillEntry(SpurMagID)
 //AuraSkillEntry(SpurSpdID)
@@ -141,6 +142,8 @@ AuraSkillEntry(DazzleID)
 AuraSkillEntry(CharismaID)
 //AuraSkillEntry(HexID)
 AuraSkillEntry(BlueFlameID)
+AuraSkillEntry(AdeptID)
+AuraSkillEntry(EyeForAnEyeID)
 
 PUSH
 ORG 0x2a3f8

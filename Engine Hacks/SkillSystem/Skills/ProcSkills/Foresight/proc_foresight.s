@@ -51,6 +51,25 @@ cmp	r1,#0
 beq	End
 
 EnemyCrit:
+
+@unset the miss flag
+ldr     r2,[r6]
+lsl     r1,r2,#0xD                @ 0802B42C 0351     
+lsr     r1,r1,#0xD                @ 0802B42E 0B49     
+mov     r0,#0x2          @miss flag     @ 0802B430 2002  
+mvn  r0, r0
+and     r1,r0            @unset it
+mov     r0, #0x80
+lsl     r0, #8           @0x8000, defender skill activated
+orr     r1, r0
+
+ldr     r0,=#0xFFF80000                @ 0802B434 4804     
+and     r0,r2                @ 0802B436 4010     
+orr     r0,r1                @ 0802B438 4308     
+str     r0,[r6]                @ 0802B43A 6018   
+ldrb r0, CountermagicID
+strb r0, [r6,#4]
+
 @set damage to 0
 mov r0, #0
 strh r0, [r7, #4] @final damage

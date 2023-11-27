@@ -5,7 +5,7 @@
 
 pPowerModifiers: // Power
 	POIN prAddUnitPower prHalveIfCapturing prDebuffStr prAddEquipPower prItemPassivePow prRallyStr prLifeAndDeathBonus prSkillFury prFortressDefensePow VigorDanceCheck prFortressResistancePow prResolve prHostileLoyalty prDefiantStr prPushStr
-	POIN prDesperation prCounter prBulwarkRingAtk
+	POIN prDesperation prCounter prBulwarkRingAtk prTuskedHorn prAddMoreIfWreyvian
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -58,6 +58,15 @@ prEmpowerEthCheck: //thief rush
 	rIfUnitHasState(0x400)
 		rIfUnitHasSkill(CharismaID)
 			rAddConst(5)
+			
+prTuskedHorn:
+rIfUnitHasStatus(0x5) //atk buff?
+	rAddConst(3)
+
+prAddMoreIfWreyvian:
+rIfUnitHasStatus(0x5) //atk buff?
+	rIfUnitHasNotAttribute(CA_FEMALE)
+		rAddConst(2)
 			
 prCritBuffAtk:
 	rIfUnitHasStatus(0x7)

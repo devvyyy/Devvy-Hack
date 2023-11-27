@@ -32,6 +32,7 @@ CharacterBasedEvents:
 CharacterEventBothWays(0x21, UlrichLatteRecruit, Ulrich, Latte)
 CharacterEventBothWays(0x21, LatteRecruit, 0x0, Latte)
 //CharacterEventBothWays(0x22, MochaNoraConvo, Nora, Mocha)
+//CharacterEventBothWays(0x22, SequinAnsgarConvo, Sequin, Ansgar)
 //CharacterEventBothWays(0x23, HildrBreveConvo, Breve, Hildr)
 //CharacterEventBothWays(0x24, AffoSeqConvo, Affogato, Sequin)
 	END_MAIN
@@ -99,7 +100,7 @@ UNIT Latte Archer 0x1 Level(2, Ally, 0)   [1,11] 0b 0x0 0x0 0x0 [SteelBow,Huntin
 	UNIT
 	
 LevainLunatic:
-UNIT Latte Archer 0x1 Level(2, Ally, 1)   [1,11] 0b 0x0 0x0 0x0 [SteelBow,0x30,PureWater] [0x6,0x3,0x4,0x20]
+UNIT Latte Archer 0x1 Level(2, Ally, 1)   [1,11] 0b 0x0 0x0 0x0 [KillerBow,0x30,PureWater] [0x6,0x3,0x4,0x20]
 	UNIT
 
 OhGodOhFuck: //ok this is the part 2 guy?!
@@ -370,6 +371,14 @@ ENDA
 MochaNoraConvo:
 	MUSI
 	Text(MochaEvelTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+SequinAnsgarConvo:
+	MUSI
+	Text(SeqAnsgarTalk)
 	MUNO
 	MURE 2
 	NoFade

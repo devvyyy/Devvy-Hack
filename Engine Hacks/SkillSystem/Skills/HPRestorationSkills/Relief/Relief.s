@@ -31,7 +31,7 @@ beq GoBack
   cmp r0, #0
   beq GoBack
     @if no allies in range, heal 20%
-    add r5, #20
+    add r5, #50
 
 GoBack:
 mov r0,r5

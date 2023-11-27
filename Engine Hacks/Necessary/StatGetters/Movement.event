@@ -8,19 +8,21 @@ pMovModifiers: // Movement
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff-1
 	#endif
-	POIN prNullifyIfRooted
-	POIN prNullifyIfGuardAI
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
 //	POIN prMoonCheck
+	POIN prTuskedHornMove prAddMoreIfArmor prAddLessIfMounted
 	POIN prGaleforceCheck
 	POIN prPassCheck
+	POIN prSavingGraceCheck
 	POIN prEmpowerCheck prStaticCheck prGalestormCheck
 	POIN prCantoRing
 	POIN prFlowStateCheck
 	//POIN prFlorisMarked
 	POIN prStatusOverdriveMovCheck
+	POIN prNullifyIfRooted
+	POIN prNullifyIfGuardAI
 WORD 0
 
 prAddUnitBaseMov: // byte 0x12 in ROM class data is base class movement
@@ -41,6 +43,11 @@ prNullifyIfGuardAI:
 	rIfUnitHasNotAllegience(UA_BLUE)
 		rIfUnitHasGuardAI
 			rConstant(0)
+			
+prSavingGraceCheck:
+rIfUnitHasSkill(SavingGraceID)
+	rIfUnitHasState(US_RESCUING)
+		rAddConst(2)
 
 prNullifyIfRooted:
 	rIfUnitHasStatus(0x17)
@@ -103,6 +110,23 @@ prMoonCheck:
 prStatusOverdriveMovCheck:
 	rIfUnitHasStatus(0x15) //Overdrive
 			rAddConst(2)
+			
+prTuskedHornMove:
+rIfUnitHasStatus(0x5) //atk buff?
+	rIfUnitHasNotAttribute(CA_FEMALE)
+		rAddConst(3)
+
+prAddMoreIfArmor:
+rIfUnitHasStatus(0x5) //atk buff?
+	rIfUnitHasNotAttribute(CA_FEMALE)
+		rIfUnitHasAttribute(CA_WYVERN)
+		rAddConst(2)
+		
+prAddLessIfMounted:
+rIfUnitHasStatus(0x5) //atk buff?
+	rIfUnitHasNotAttribute(CA_FEMALE)
+		rIfUnitHasAttribute(CA_MOUNTEDAID)
+			rSubConst(2)
 
 prRallyMov:
 	#include "_asm/RallyMov.lyn.event"

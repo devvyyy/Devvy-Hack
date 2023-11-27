@@ -61,14 +61,27 @@ sub r0,r1
 cmp r0,#0 @see if we've moved as far as possible
 bgt End @if not, no bonus
 
-@set hit to 255
+@add 4 damage
 mov r1, #0x60
-mov r0, #255
+ldrh r0, [r4, r1] @atk
+add r0, #255
 strh r0, [r4,r1]
 
 @set BATTLE crit to 100
-mov r1, #0x6A
+mov r1, #0x66
 mov r0, #100
+strh r0, [r4,r1]
+
+@set foes crit avo to 0
+@mov r1, #0x68
+@mov r0, #0
+@strh r0, [r5,r1]
+
+@add foes luck crit
+mov  r1, #0x66
+ldrh r0, [r4, r1] @attack
+ldrb r2, [r5, #0x19] @luck
+add  r0, r2
 strh r0, [r4,r1]
 
 End:

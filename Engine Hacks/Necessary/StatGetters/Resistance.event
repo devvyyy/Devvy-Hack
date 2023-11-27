@@ -14,6 +14,7 @@ pResistanceModifiers: // Resistance
 	//POIN prPaleRingRes prAshenRingRes
 //	POIN prTemperedFateRes
 	POIN prFlorisMarkedRes
+	POIN prNullifyIfMageRing //sets res to 0
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -91,6 +92,10 @@ prFlowStateCheckRes:
 	rIfUnitHasSkill(FlowStateID)
 		rIfUnitHasState(0x10000000)
 			rHalved
+			
+prNullifyIfMageRing:
+	rIfUnitHasSkill(TomeRangeUpID)
+		rConstant(0)
 
 prLifeAndDeathMinus:
 _testSkill(HeroesLifeAndDeathID,0,5)

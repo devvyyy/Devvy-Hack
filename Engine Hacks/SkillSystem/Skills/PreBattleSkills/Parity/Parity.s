@@ -42,7 +42,7 @@ beq TerrainStuff
 cmp     r0, #0x24         @ Killer Axe
 beq TerrainStuff
 
-@set foes crit to 0
+@set foes crit to 0 if they dont use a killer
 mov r1, #0x66
 mov r0, #0
 strh r0, [r5,r1]
@@ -77,7 +77,6 @@ bge Avo
 mov r2, #0
 Avo:
 strh r2, [r4,r1]
-
 
 CheckRes:
 mov r1, #0x4c

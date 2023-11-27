@@ -33,6 +33,7 @@ mov r1, #0x60
 ldrh r0, [r4, r1] @hit
 add r0, #5
 strh r0, [r4,r1]
+b End
 
 NextCheck:
 
@@ -55,6 +56,7 @@ mov r1, #0x60
 ldrh r0, [r4, r1] @hit
 add r0, #10
 strh r0, [r4,r1]
+b End
 
 @check if flag 0x28 set; if so, proc skill
 ldr r0,=#0x8083da8 @CheckEventId

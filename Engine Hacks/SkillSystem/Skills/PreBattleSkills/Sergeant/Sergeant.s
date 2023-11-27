@@ -25,7 +25,7 @@ mov lr, r0
 mov r0, r4 @attacker
 mov r1, #0
 mov r2, #0 @can_trade
-mov r3, #1 @range
+mov r3, #2 @range
 .short 0xf800
 cmp r0, #0
 beq Done
@@ -46,7 +46,7 @@ bne BraveCheck
 mov r0, r4
 add r0,#0x5C
 ldrh r3,[r0]
-add r3,#10
+add r3,#5 @changing this value every week!
 strh r3,[r0]
 
 BraveCheck:

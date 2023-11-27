@@ -108,8 +108,8 @@ after combat, restores all HP, Canto[N]
 the start of next player phase.[X]
 
 ## SD_DirtyFighting2
-Fusillade: If foe cannot counter, Quarrel[N]
-follow-ups and foe cannot, and if Spd >[N]
+Fusillade: If foe can't counter, Quarrel[N]
+follow-ups and foe can't, and if Spd >[N]
 foe's Spd, strike x2 consecutively.[X]
 
 ## SD_Chakrams
@@ -182,10 +182,12 @@ Canto and foes Rooted for 1 turn.[N]
 Grants units within 3 spaces Crit/Avoid +20.[X]
 
 ## SD_EyeForAnEye
-Down But Not Out[N]
-- Radcliff's counterattacks deal[N]
-bonus damage = 200% of damage[N]
-taken from foe's last attack.[X]
+# Down But Not Out
+Stand Back Up[N]
+- Radcliff grants allies within 3 spaces[N]
+Prt/Rsl = 25% of that unit's missing HP,[N]
+and Hit/Avoid = 50% of that unit's[N]
+missing HP.[X]
 
 ## SD_BadBloodAlt
 # for if im too lazy
@@ -244,10 +246,10 @@ Adaptive Poise[N]
 
 ## SD_WreyvianHeart
 Wreyvian Heart[N]
-- If HP is 50% or more, grants Wegman,[N]
-Wreyvian allies, and Aeterian allies within[N]
-3 spaces Atk/Prt +3 and a consecutive[N]
-strike after first hit (doesn't stack).[X]
+- If HP is 50% or more, grants Wegman[N]
+and Wreyvian allies Atk/Prt +3, and if[N]
+also physical, and a consecutive strike[N]
+after first hit (doesn't stack).[X]
 
 ## SD_BlindingFlash
 Blinding Flash: If Katsu initiates and[N]
@@ -258,7 +260,8 @@ and if Spd > foe's Spd +8, foe cannot counter.[X]
 Saving Grace[N]
 - Grants Katsu another action after[N]
 Rescue/Drop/Take/Give.[N]
-(Once per turn, Canto disabled.)[X]
+(Once per turn, Canto disabled.)[N]
+- If rescuing an ally, grants Move +2.[X]
 
 ## SD_AmonglaSwag
 16-Caliber Net: After combat, unit Roots[N]
@@ -273,7 +276,8 @@ damage taken = 50% of foe's max HP.[X]
 # Latent Powers
 Moody[N]
 - On odd turns, grants Breve Hit/Crit +20.[N]
-- If any side's HP isn't full, 
+- If any side's HP isn't full, idk lol!
+[X]
 
 ## SD_HildrMirrorPassive
 Hyperactive[N]
@@ -368,7 +372,8 @@ Alacrity[X]
 Mocha dodges all attacks.[X]
 
 ## SD_BulletAwesome
-Ashen Flow:[X]
+# MagicSwordID
+Twin Suns:[X]
 
 ## SD_Overdrive2
 # uses flag 0x23, 0x24, and also 0x5 (?? in builder)
@@ -390,7 +395,7 @@ defeated, stack is restored.[X]
 
 ## SD_Paranoia
 Paranoia[N]
-- If foe's range > 3, Locro dodges[N]
+- If foe's range > 2, Locro dodges[N]
 all attacks.[N]
 - If HP < 100%, Avoid/AS +20.[X]
 
@@ -701,7 +706,8 @@ i[_s][_SP][_h]i[_g][_h][_e][_r][_Comma][_SP][_s]t[_r]i[_k][_e][_s][_SP][_x][_2][
 [_F][_Minus][_D][0x23][_Minus][_F][_Slash][_Slash][_C][0x23][_Minus][_G][0x23][_Minus][_F][_Slash][_Slash][_D][0x23][_Minus][_C][0x23][_Minus][_C][_Minus][_C][0x23][_Minus][_A][0x23][_Minus][_A][0x23][N]
 - Converts Staniel's Str to bonus Avoid,[N]
 and Dex to bonus Dodge.[N]
-- If foe's range > 2, dodge all attacks.[X]
+- If foe's range > 2, dodge all attacks.[N]
+- Grants adjacent allies Atk +3.[X]
 
 ## SD_HeavyDuty
 Grit: If unit's HP is not full,[N]
@@ -723,7 +729,7 @@ bosses, doubled if they have Shove/Smite.[X]
 Eye of the Occult[N]
 - Grants Milo Atk/AS = 25% of foe's Res.[N]
 - If foe doesn't use magic, follow-up[N]
-and foe cannot.[X]
+and foe can't.[X]
 
 ## SD_SolLance
 Solar Thrust: Deals (10 - foe's Res) bonus damage[N]
@@ -737,8 +743,9 @@ foe cannot.[X]
 
 ## SD_ResolutePyre
 Resolute Pyre[N]
-- Grants Eth/Crit = 50% of Aoife[N]
-and foe's missing HP.[X]
+- Grants Aoife Eth/Crit = 50% of[N]
+both sides' missing HP.[N]
+- Immune to status staves.[X]
 
 ## SD_EustacePersonal
 Hollow Front[N]
@@ -752,13 +759,14 @@ Def/Res +5 and Avoid +50.[X]
 Empty Moment[N]
 - If magic foe initiates, Maynard[N]
 neutralizes foe's Atk/AS/Rsl,[N]
-setting them to 0.[X]
+setting them to 0.[N]
+- Immune to status staves.[X]
 
 ## SD_TouchOfFrost
 Test of Faith[N]
 - If Velius' Res > foe's Res, grants WTA;[N]
 if Res difference > 5, also Atk +5;[N]
-if > 10, also follow-up and foe cannot;[N]
+if > 10, also follow-up and foe can't;[N]
 if > 15, also strikes x2 consecutively.[X]
 
 ## SD_Chronoshift
@@ -766,9 +774,9 @@ Borrowed Time: After combat, Xidorn restores[N]
 5 HP and deals 5 damage to foe.[X]
 
 ## SD_RidersAxiom
-Wreyvian Axiom[N]
+Ramping Axiom[N]
 - On turns 1-3, Gerolf can follow-up[N]
-and foe cannot, and if initiating,[N]
+and foe can't, and if initiating,[N]
 deals bonus damage/reduces damage[N]
 taken = turn count x 3.[X]
 
@@ -810,9 +818,9 @@ Spirit Cleave: Deals bonus damage =[N]
 ## SD_Maestro
 Maestro[N]
 - Ilse's Rifles have unique properties:[N]
-Hit +30, Crit -20.[N]
-- Rifles also deal bonus damage = 25%[N]
-of foe's max HP.[X]
+Hit +30, Crit is converted to damage.[N]
+- Rifles also deal bonus damage = 50%[N]
+of foe's missing HP.[X]
 
 ## SD_Lifeline
 Lifeline: After combat, if unit's HP[N]
@@ -930,12 +938,12 @@ Gonna Go Wild: Grants Crit =[N]
 unit's missing HP.[X]
 
 ## SD_Sanctuary
-# Sanctuary
+# Sanctuary; (WT disadvantage, dark magic, etc.), (rescue, staves, equippable rings, etc.)
 Tenacity[N]
-- Stroganoff reverses weapon penalties[N]
-(WT disadvantage, dark magic, etc.).[N]
-- Neutralizes stat penalties[N]
-(rescue, staves, equippable rings, etc.).[X]
+- Stroganoff neutralizes stat penalties.[N]
+- Reverses in-combat weapon penalties.[N]
+- Counterattacks deal bonus damage =[N]
+damage taken from foe's last attack.[X]
 
 ## SD_Ether
 Ethereal Guard: Neutralizes foe's[N]
@@ -1129,10 +1137,10 @@ a critical hit.[X]
 ## SD_Sergeant
 # Warden/Steadfast
 Stand Behind Me[N]
-- If foe initiates on an ally within 4[N]
+- If foe initiates on an ally within 2[N]
 spaces, Ansgar blocks the first lethal[N]
-hit per combat and takes 10 damage.[N]
-- If adjacent to an ally, grants Prt +10.[X]
+hit per combat and takes 10 damage; if[N]
+in block range, grants Prt +5, Move +2.[X]
 
 ## SD_ShieldDef
 [_S][_t][_a][_n][_d][_SP][_B][_e][_h][_i][_n][_d][_SP][_M][_e][X]
@@ -1167,7 +1175,7 @@ grants Attack Speed +2.[X]
 # Dive-Bomb
 Dive-Bomb[N]
 - If Brudet initiates and both sides' HP[N]
-is full, follow-up and foe cannot, and[N]
+is full, follow-up and foe can't, and[N]
 if also at 1 range, follow-ups occur[N]
 before foe can counter.[X]
 
@@ -1186,8 +1194,11 @@ Savior: Nullifies penalties[N]
 when using Rescue.[X]
 
 ## SD_Adept
-Adept: Gain a consecutive attack.[N]
-(Speed % activation)[X]
+Wreyvian Heart[N]
+- Wegman's Wreyvian allies within 3[N]
+spaces can use Twin Suns.[N]
+- Grants Atk/Prt +1 to all allies,[N]
+increased to +3 if Wreyvian.[X]
 
 ## SD_Acrobat
 Shadow Step: Unit can traverse walls[N]
@@ -1347,7 +1358,7 @@ Voile de Foi[N]
 - Sylveria counters magical damage[N]
 upon hit (can't kill).[N]
 - Negates all damage from foe's critical[N]
-hits, combat arts and active effects.[X]
+hits, combat arts, and active effects.[X]
 
 ## SD_Miracle
 Hallowed Soul[N]
@@ -1444,8 +1455,9 @@ within 5 spaces.[X]
 ## SD_Amaterasu
 Noctum Heart[N]
 - At start of turn, if within 2 spaces of[N]
-an ally, restores 20% HP to Verna and[N]
-allies within 2 spaces.[X]
+an ally, restores 50% HP to Verna and[N]
+restores 30% HP to allies within[N]
+2 spaces.[X]
 
 ## SD_SpurStr
 Spur Strength: Adjacent allies[N]
@@ -1833,8 +1845,8 @@ takes 6 damage after combat.[X]
 
 ## SD_Dazzle
 Overwhelm[N]
-- If Noel's Str > foe's Str/Eth, foe[N]
-cannot counterattack.[N]
+- If Noel's Str > foe's Str/Eth, grants[N]
+Atk +3 and foe can't counterattack.[N]
 - Inflicts Avoid -20 on foes[N]
 within 2 spaces.[X]
 

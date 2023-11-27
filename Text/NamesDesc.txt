@@ -283,16 +283,16 @@ awkward, but truly stalwart.[N]
 [_A][_o][_h][_r][_SingleQuote][_s][_SP][_h][_i][_s][_SP][_b][_e][_s][_t][_SP][_f][_r][_i][_e][_n][_d][_Dot][X]
 
 ## AoifeDesc
-The Sage of the Trinity. According to[N]
+The Aeterian Trinity's Flame. According to[N]
 her, she's quite [OpenQuote]dapper"...?[X]
 
 ## EustaceDesc
-The Druid of the Trinity. Beneath their[N]
-mask of silence lies a shrouded soul.[X]
+The Aeterian Trinity's Seeker. Beneath[N]
+their mask lies a forlorn, shrouded soul.[X]
 
 ## MaynardDesc
-The Bishop of the Trinity. He's nothing[N]
-more than a tired, resentful man.[X]
+The Aeterian Trinity's Light. He wants[N]
+nothing more than to end the war.[X]
 
 ## SylveriaName
 Sylveria[X]
@@ -429,34 +429,44 @@ Boosts damage = Unit's Atk/4.[X]
 [_a][_n][_d][_SP][_R][_o][_o][_t][_s][_SP][_f][_o][_r][_SP][_1][_SP][_t][_u][_r][_n][_Dot][_SP][_E][_f][_f][_Colon][_Space][0x7D][HorseIcon][_Space][_Lock][_Colon][_SP][_A][_f][_f][_o][_g][_a][_t][_o][X]
 
 ## Anima1Desc
-Grants Atk +1 to adjacent allies.[X]
+Grants Atk +1 to adjacent allies.[N]
+(Doesn't stack with itself.)[X]
 
 ## Anima2Desc
-Grants Atk +2 to adjacent allies.[X]
+Grants Atk +2 to adjacent allies.[N]
+(Doesn't stack with itself.)[X]
 
 ## Anima3Desc
-Grants Atk +3 to adjacent allies.[X]
+Grants Atk +3 to adjacent allies.[N]
+(Doesn't stack with itself.)[X]
 
 ## Anima4Desc
-Grants Atk +4 to adjacent allies.[X]
+Grants Atk +4 to adjacent allies.[N]
+(Doesn't stack with itself.)[X]
 
 ## Anima5Desc
-Grants Atk +5 to allies within 2 spaces.[X]
+Grants Atk +5 to allies within 2 spaces.[N]
+(Doesn't stack with itself.)[X]
 
 ## Dark1Desc
-Inflicts Atk -1 to adjacent foes.[X]
+Inflicts Atk -1 to adjacent foes.[N]
+(Doesn't stack with itself.)[X]
 
 ## Dark2Desc
-Inflicts Atk -2 to adjacent foes.[X]
+Inflicts Atk -2 to adjacent foes.[N]
+(Doesn't stack with itself.)[X]
 
 ## Dark3Desc
-Inflicts Atk -3 to adjacent foes.[X]
+Inflicts Atk -3 to adjacent foes.[N]
+(Doesn't stack with itself.)[X]
 
 ## Dark4Desc
-Inflicts Atk -4 to adjacent foes.[X]
+Inflicts Atk -4 to adjacent foes.[N]
+(Doesn't stack with itself.)[X]
 
 ## Dark5Desc
-Inflicts Atk -5 to foes within 2 spaces.[X]
+Inflicts Atk -5 to foes within 2 spaces.[N]
+(Doesn't stack with itself.)[X]
 
 ## Light1Desc
 Restores 3 HP after combat.[X]
@@ -529,9 +539,8 @@ dark magic during combat.[X]
 
 ## LoyalRingDesc
 # ashen ring now!!
-A faithful ring. Restores HP to[N]
-wearer equal to HP restored with[N]
-a staff.[X]
+A sorcerer's ring. Grants magic/staff[N]
+range +1. Sets Res = 0.[X]
 
 ## BulwarkRingName
 Bulwark Ring[X]
@@ -964,9 +973,10 @@ An ephemeral ring. Wearer can traverse[N]
 impassible terrain at 2 cost. Def/Res -5.[X]
 
 ## MarchRingDesc
-A knight's ring. Grants Move +1 to[N]
+A knight's ring. Grants Move +2 to[N]
 wearer and adjacent [ArmorIcon] allies if[N]
-adjacent to an [ArmorIcon] ally at start of turn.[X]
+adjacent to an [ArmorIcon] ally at start of turn.[N]
+(Doesn't stack with similar skills.)[X]
 
 ## SacrosanctRingDesc
 A sacred ring. Wearer negates all damage[N]
@@ -976,10 +986,10 @@ if [StaffIcon] equipped). Luck/Res +5.[X]
 ## TemperedRingDesc
 A tempered ring. Restores 5 HP to[N]
 the wearer after combat.[N]
-(Does not stack with Shine II.)[X]
+(Doesn't stack with Shine II.)[X]
 
 ## MarkedDesc
-Marked by the Hallowed One's light.[N]
+Follow the Hearthbringer's holy light.[N]
 Res +5. Restores (Floris' Eth + 5) HP[N]
 after Floris leaves combat.[X]
 
@@ -1019,6 +1029,37 @@ Lantern[X]
 Lights 8 tiles through fog[N]
 (Decays by 1/turn).[X]
 
+## HornName
+Tusked Horn[X]
+
+## HornDesc
+# 3 uses? important chars have it?
+Sound the call of the Hearthbringer.[N]
+Grants a unit within 3 spaces Str/Eth[N]
++3 for 1 turn, doubled to +6 if Wreyvian.[N]
+If Wreyvian, also grants Move +3;[N]
++5 if [ArmorIcon]; +1 if [HorseIcon][PegasusIcon].[X]
+
+## HornDesc2
+A Wreyvian horn that[N]
+grants bonus Str/Eth[N]
+and Movement.[X]
+
+## PaleName
+Pale Light[X]
+
+## PaleDesc
+A Wreyvian craft that Silences a[N]
+foe within 3 spaces for 1 turn,[N]
+preventing magic and talks.[X]
+
+## WreyvianObeliskName
+Wreyvian Obelisk[X]
+
+## WreyvianObeliskDesc
+Hammered, pure ore that absorbs 50% of[N]
+foe's Eth and adds it to holder's Atk.[X]
+
 ## YoryTool6Name
 [_C][_h][_r][_o][_n][_o][_b][_r][_e][_a][_k][_e][_r][X]
 
@@ -1057,7 +1098,7 @@ in the thread please. or maybe you're[N]
 just using builder idk[X]
 
 ## CaptainAxeDesc
-Armor: Follow-up and foe cannot.[N]
+Armor: Follow-up and foe can't.[N]
 Flying: If initiating, grants Atk +5.[N]
 [_Lock]: Captain[X]
 

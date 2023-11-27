@@ -45,7 +45,7 @@ THESKILL:
 @Get adjacent allies
 mov  r0, r5
 mov  r1, #0 @are allies
-mov  r2, #4 @range
+mov  r2, #2 @range
 blh  GetUnitsInRange, r3
 cmp  r0, #0x0
 beq  End

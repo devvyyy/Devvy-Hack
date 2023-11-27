@@ -139,7 +139,7 @@ SHLI Mend Fear Elixir PureWater Antitoxin LightRune Mine Stopwatch
 ALIGN 4
 
 ArmoryBruh:
-SHLI SteelBlade SteelGlaive SteelLabrys ShortBow Longbow SteelDagger 0x64
+SHLI MageSword SteelBlade MageLance SteelGlaive MageAxe SteelLabrys ShortBow Longbow SteelDagger 0x64
 ALIGN 4
 
 Dunno1:
@@ -206,8 +206,8 @@ UNIT Xidorn GriffonKnight 0x1 Level(4, Ally, 1)   [23,0] 0 0 1 REDA15R4 [0xDB, 0
 	
 NPCUnits:
 UNIT Wegman General 0x1 Level(10, Ally, 0)     [15,8] 0b 0x0 0x0 0x0 [0xF,SteelGlaive,SteelLabrys,SilverRifle] [0x0,0x0,0x0,0x0]
-UNIT Gerolf SPal 0x1 Level(8, Ally, 0)     [16,7] 0b 0x0 0x0 0x0 [BraveSword,LightBrand] [0x0,0x0,0x0,0x0]
-UNIT Klavdia WyvernKnight 0x1 Level(9, Ally, 0)     [14,7] 0b 0x0 0x0 0x0 [MageAxe,0x5A] [0x0,0x0,0x0,0x0]
+UNIT Gerolf SPal 0x1 Level(8, Ally, 0)     [16,7] 0b 0x0 0x0 0x0 [BraveSword,LightBrand,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Klavdia WyvernKnight 0x1 Level(9, Ally, 0)     [14,7] 0b 0x0 0x0 0x0 [MageAxe,0x5A,PureWater] [0x0,0x0,0x0,0x0]
 
 UNIT Wreyvine Soldier 0x1 Level(7, NPC, 1)     [6,1] 0b 0x0 0x0 0x0 [MageLance,ShortSpear,Elixir] StallOneTurnAI
 //UNIT Wreyvine Fighter 0x1 Level(6, NPC, 1)     [5,2] 0b 0x0 0x0 0x0 [HandAxe,SteelAxe,Elixir] StallOneTurnAI
@@ -629,6 +629,7 @@ DoAllThree
 	CUSN Wegman
 	CUSN Klavdia
 	CUSN Gerolf
+	SilentlyGiveItem(0x77, Wegman)
 
 CALL $591FD8
 	

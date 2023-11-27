@@ -44,8 +44,8 @@ ENDA
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0xA, RecruitKatsuChiff, Chiffon, Katsu)
 CharacterEventBothWays(0xA, RecruitKatsuGeneric, Katsu, 0x0)
+CharacterEventBothWays(0xA, RecruitKatsuChiff, Chiffon, Katsu)
 //CharacterEventBothWays(0xA, RecruitYufkaVelius, Chiffon, Wulfric)
 	END_MAIN
 	
@@ -221,9 +221,9 @@ BlueSigil(2,0) //blue is escape points
 BlueSigil(3,0)
 BlueSigil(4,0)
 
-RedSigil(20,28) //red is where all the aeterian reinforcements come from (brigands from left)
+RedSigil(19,28) //red is where all the aeterian reinforcements come from (brigands from left)
+RedSigil(20,28)
 RedSigil(21,28)
-RedSigil(22,28)
 	ENDTRAP
 	ALIGN 4
 
