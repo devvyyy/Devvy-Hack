@@ -8,9 +8,7 @@
 
 		SaveFileHelpTextValues:
 		push	{r14}
-		ldr		r3, =SaveFileValues
-		mov		lr, r3
-		.short	0xF800
+		blh		SaveFileValues, r1
 		pop		{r0}
 		bx		r0
 		

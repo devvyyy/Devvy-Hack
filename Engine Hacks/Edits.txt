@@ -1,6 +1,13 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+//enemies heal any% missing hp enemies instead of < 50%
+
+PUSH
+ORG 0xD8671
+BYTE 0x64 //100%
+
+POP
 
 //promoted enemy autolevel bonus (default is +9)
 

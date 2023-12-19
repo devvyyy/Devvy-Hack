@@ -42,31 +42,33 @@ The Trinity does not bring failure.[A][X]
 
 ## Ch6Opening1
 [3L]
-[FFL][LoadBrudet][R][LoadKing][FR][LoadKlavdia]
+[FFL][LoadBrudet][MR][LoadKing]
 
 [FFL][MoveMidLeft]
 
 [ML]
 Your Majesty![.6] The Aeterians have breached[N]
 our outward defenses![.6] Prepare the holy[N]
-guard for battle.[AN]
+guard for battle.[AN][CloseSpeechSlow][MoveFarLeft]
+[L][LoadKlavdia]
 
-[FR]
+[L]
 Orders?[.6] Make it quick[,] Anatolius.[.6] The enemy[N]
 is nearly upon us.[.6] There's barely any[N]
 opportunity to reposition.[AN][Clear]
 We'll have to make do with what we have.[AN]
 
-[R]
+[MR]
 [Beat]Very well[,] then.[.6] Let them come![.6][N]
 Fear not our enemies[,] we've held so long.[.6N]
-They'll regret laying foot on Wreyvian soil.[AN]
+They'll regret laying foot on Wreyvian soil.[AN][CloseSpeechSlow][MoveRight]
 
-[FR][ClearFace][LoadGorlois]
+[FR][LoadGorlois]
 
 [FR]
 Looks like we don't have a choice in[N]
-the matter.[AN]
+the matter.[.6] We must call the[N]
+healers into the battle.[AN] 
 
 [R][ClearFace][LoadIris]
 [ML][ClearFace][LoadKing]
@@ -80,8 +82,9 @@ We need to form up now![AN]
 [ClearFace][LoadOgrim]
 
 [R]
-[Pause]Very well.[.6] If this is the only[N]
-course of action remaining[,] then[Beat][AN]
+[Pause]Very well.[.6] If putting untrained medics[N]
+at the front of the battlefield is our[N]
+last course of action[,] then[Beat][AN]
 
 [FR]
 If we can [ToggleRed]secure[ToggleRed] the fortresses[,] we'll stop[n]
@@ -206,12 +209,14 @@ press the attack and push.[AN]
 [X]
 
 ## Ch6WTFMoment
-[OpenMidLeft][LoadAffoSwitch]
+[3L]
+[OpenFarFarLeft][LoadAffoSwitch][MoveMidLeft]
 [OpenMidLeft]
-
+[ToggleMouthMove]
+(These must be the strongest of Aeteria's[N]
+soldiers[Beat] If we're cornered here, then this[N]
+is our last chance to fight[Beat]!)[AN][ToggleMouthMove]
 [X]
-
-
 
 ## Ch6WTFAltMoment
 [OpenMidLeft][LoadAffoSwitch]
@@ -230,7 +235,7 @@ this,[.4] no problem.[A][X]
 [ToggleMouthMove](What's the most viable escape route[Beat]?)[ToggleMouthMove][AN][ClearFace]
 
 [R]
-We can't hold them off[Beat]![AN]
+Their forces are thinning[,] but so are we[Beat]![AN]
 [MoveRight][CloseEyes]How?![.6] How is nothing working[N]
 against their endless army?![AN][OpenEyes]
 
@@ -248,9 +253,19 @@ I'll lead the way![AN]
 
 ## Ch6Ending0Again
 [3L]
-[MR][LoadSelwyn]
-Victory is ours![.6] Now[,] surrender--[N]
-your life is forfeit.[AN][X]
+[FL][LoadGorlois][L][LoadKing]
+
+[FFR][LoadSelwyn][MoveMidRight]
+Victory is ours![.6] Now[,] surrender--[.4][N]
+your life is forfeit.[AN]
+
+[FL][MoveFarLeft]
+How did you--[.4]watch out[,] Your Majesty![AN]
+
+[L]
+[Beat][AN]
+
+[X]
 
 ## Ch6EndingINBATTLE
 [ML][LoadSelwyn]
@@ -294,11 +309,10 @@ the rest of us![AN][CloseSpeechSlow][MoveFarFarLeft]
 ## Ch6Ending1
 [3L]
 [MR][LoadSelwyn]
-
-They fare not against our army.[N]
-It's an eye for an eye.[.6] With the[N]
-King's death[,] Aeteria becomes whole.[AN]
-Now[Beat] We've done our justice.[.6N]
+[CloseEyes]Mother[Beat] With the Wreyvian King's demise[,][N]
+Aeteria becomes whole once again.[.6] You[N]
+can finally rest in peace.[AN][OpenEyes]
+[OpenEyes]Now[Beat][OpenEyes] We have done what is righteous.[.6N][OpenEyes]
 Hear this[,] stragglers of Wreyvine![.6][N]
 Retreat if you must.[.6] We will not pursue.[AN]
 Yet we will return[,] and we will leave[N]

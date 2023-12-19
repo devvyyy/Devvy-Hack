@@ -87,15 +87,15 @@ Some exceptions:[N]
 Scouts get Pivot,[N]
 Renegades get Smite,[N]
 Parsons and Hierophants[N]
-get Rotate, and Bards[N]
+get Castle, and Bards[N]
 and Technicians get Smite.[N]
  [N]
 Movement skills on mounted[N]
 units can be used[N]
 during Canto.[N]
 Movement skills on infantry[N]
-units can target any[N]
-allegiance.[N]
+and armored units can[N]
+target any allegiance.[N]
  [N]
 Every mounted unit also gets[N]
 Canto, and every thief unit[N]
@@ -109,15 +109,16 @@ Personal skills have a[N]
 golden border.[N]
 Class skills have a[N]
 white border.[N]
-Combat arts have a[N]
-purple border.[N]
-Mastery skills have a[N]
-green border.[N]
+If a skill has an[N]
+active effect, it[N]
+has a purple border.[N]
  [N]
 Physical bonus damage targets[N]
 Def and magical targets Res.[N]
 Each instance of bonus damage[N]
 is calculated separately.[N]
+Bonus damage is added[N]
+onto your total Atk.[N]
  [N]
 Note that Sidestep doesn't[N]
 trigger on free actions[N]
@@ -833,7 +834,8 @@ A holy garb woven from fine fibers.[N]
 Increases max HP by 3 when used.[X]
 
 # 0x4C1
-Raises max HP when used.[X]
+Raises max HP[N]
+when used.[X]
 
 # 0x484
 An intricate bracelet full of power.[N]
@@ -903,8 +905,9 @@ Shield[X]
 [OpenQuote]Diplomacy"[X]
 
 # 0x422
-[_E][_x][_e][_c][_u][_t][_e][_s][_SP][_f][_o][_e][_s][_SP][_b][_e][_l][_o][_w][_SP][_2][_5]%[_SP][_H][_P][_Dot][_SP][_I][_f][_SP][_f][_o][_e][_SP][_i][_s][_SP][_d][_e][_f][_e][_a][_t][_e][_d][_Comma][N]
-[_g][_r][_a][_n][_t][_s][_SP][_a][_n][_o][_t][_h][_e][_r][_SP][_a][_c][_t][_i][_o][_n][_SP][_a][_n][_d][_SP][_g][_i][_v][_e][_s][_SP][_C][_h][_i][_f][_f][_o][_n][_SP][_E][_X][_P][_Dot][X]
+Executes foes below 25% HP. If foe is[N]
+defeated, grants another action, and[N]
+gives Chiffon EXP. [_Lock]: Graham[X]
 
 # 0x429
 Executes low HP foes,[N]
@@ -962,6 +965,18 @@ pressing both L + A.[X]
 
 # 0x382
 Void Cleaver[X]
+
+# 0x19B
+1-Fx: Enemy[X]
+
+# 0x2b9
+A dutiful Aeterian rider. She's a fair,[N]
+yet bloodthirsty warrior.[X]
+
+# 0x2bb
+A Wreyvian priest of the holy guard.[N]
+He's a meek, gentle giant.[N]
+Age: 19; Origin: Wreyvine[X]
 
 # 0x443
 Long-range weapon. No WEXP.[N]
@@ -1030,6 +1045,10 @@ Fear[X]
 Inflicts Str/Eth -5 on foe after combat[N]
 (recovers 1 per turn).[X]
 
+# 0x47D
+Restores an adjacent ally's chosen[N]
+weapon or staff to full durability.[X]
+
 # 0x4b5
 Inflicts Str/Eth -5 on[N]
 foe after combat[N]
@@ -1046,10 +1065,9 @@ Strikes x2 consecutively. Def +5.[X]
 Meriasyl[X]
 
 # 0x426
-The mighty spear of the lost old land.[N]
+The mighty spear of the old, lost land.[N]
 Halves damage taken after first[N]
 being struck. Res +5.[X]
-
 
 # 0x396
 Bring It Down[X]
@@ -1067,7 +1085,7 @@ Winguard[X]
 
 # 0x499
 When in inventory, neutralizes[N]
-[FlierIcon] unit's weakness to bows.[X]
+[FlierIcon] unit's [BowIcon] weakness.[X]
 
 # 0x478
 Inflicts Spd -5 on foe after combat[N]

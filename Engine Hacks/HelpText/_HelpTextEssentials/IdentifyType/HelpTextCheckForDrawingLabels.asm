@@ -11,19 +11,13 @@
 		mov		r5, r0
 		ldr		r4, [r5,#0x58]
 		ldr		r0, =gSomeMoreTextRelatedStuffIGuess
-		ldr		r3, =Text_SetFont
-		mov		lr, r3
-		.short	0xF800
+		blh		Text_SetFont, r1
 		
 		mov		r0, #0
-		ldr		r3, =Text_SetFontStandardGlyphSet
-		mov		lr, r3
-		.short	0xF800
+		blh		Text_SetFontStandardGlyphSet, r1
 		
 		mov		r0, r4
-		ldr		r3, =CheckTypeOfHelpText
-		mov		lr, r3
-		.short	0xF800
+		blh		CheckTypeOfHelpText, r1
 		
 		@Once type of help text is found (or determined to be not special/having its own routine), load routine for drawing labels
 		ldr		r3, [r0,#8]
@@ -40,14 +34,10 @@
 		add		r1, #0x64
 		strh	r0, [r1]
 		mov		r0, #0
-		ldr		r3, =Text_SetFont
-		mov		lr, r3
-		.short	0xF800
+		blh		Text_SetFont, r1
 		
 		mov		r0, r5
-		ldr		r3, =BreakProcLoop
-		mov		lr, r3
-		.short	0xF800
+		blh		BreakProcLoop, r1
 		
 		pop		{r4-r5}
 		pop		{r0}

@@ -22,13 +22,8 @@
 		mov		r0, r6
 		add		r0, #0x4C
 		ldrh	r0, [r0]
-		ldr		r3, =String_GetFromIndex
-		mov		lr, r3
-		.short	0xF800
-		
-		ldr		r3, =Text_GetStringTextWidth
-		mov		lr, r3
-		.short	0xF800
+		blh		String_GetFromIndex, r1
+		blh		Text_GetStringTextWidth, r1
 		
 		add		r5, #0x10
 		cmp		r0, #0x08

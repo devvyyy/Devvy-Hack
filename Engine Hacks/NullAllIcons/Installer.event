@@ -1,0 +1,8 @@
+#include "Extensions/Hack Installation.txt"
+
+PUSH
+    ORG 0x275F4
+    jumpToHack(NullIcons)
+POP
+
+#include "NullIcons.lyn.event"

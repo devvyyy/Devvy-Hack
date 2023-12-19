@@ -165,3 +165,19 @@ WarMonkPalette:
 #incbin "WarMonkCard_pal.dmp"
 WarMonkClassCard:
 setCardEntry(0xCD, WarMonkCard,WarMonkPalette)
+
+ALIGN 4
+GladiatorCard: //by L95
+#incbin "Gladiator.dmp"
+GladiatorPalette:
+#incbin "GladiatorPalette.dmp"
+GladiatorClassCard:
+setCardEntry(0x74, GladiatorCard,GladiatorPalette)
+
+ALIGN 4
+BrigandCard: //by SamirPlayz
+#incbin "Brigand.dmp"
+BrigandPalette:
+#incbin "BrigandPalette.dmp"
+BrigandClassCard:
+setCardEntry(0x8b, BrigandCard,BrigandPalette)

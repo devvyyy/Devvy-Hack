@@ -1,5 +1,7 @@
 .thumb
 
+.include "../HelpTextEssentialsDefs.s"
+
 .global HelpTextCheckForAdditionalSpace
 .type HelpTextCheckForAdditionalSpace, %function
 
@@ -16,9 +18,7 @@
 		mov		r0, r6
 		add		r0, #0x4E
 		ldrh	r0, [r0]
-		ldr		r3, =CheckTypeOfHelpText
-		mov		lr, r3
-		.short	0xF800
+		blh		CheckTypeOfHelpText, r1
 		
 		@Once type of help text is found (or determined to be not special/having its own routine), load routine for determining the space of help text bubble
 		ldr		r3, [r0,#4]

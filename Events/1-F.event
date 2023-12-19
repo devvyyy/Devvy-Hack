@@ -116,7 +116,7 @@ LoadUnit(19,5)
 	UNIT
 
 EnemyUnits: //InfantrySoul, CavSoul, FlierSoul, ArmorSoul, MagSoul, PromoSoul, StealSoul
-UNIT Selwyn 0x31 0x1 Level(12, Enemy, 1)     [12,21] DropItem 0x0 0x0 0x0 [0xFE,MasterSeal] BossAI
+UNIT Selwyn 0x31 0x1 Level(12, Enemy, 1)     [12,21] DropItem 0x0 0x0 0x0 [0xFE,AngelicRobe] BossAI
 
 UNIT Aeteria Hierophant 0x1 Level(1, Enemy, 1)     [9,13] DropItem 0x0 0x0 0x0 [Light1,Elixir] ChargeAI
 UNIT Aeteria WyvernRider 0x1 Level(10, Enemy, 1)     [2,10] 0b 0x0 0x0 0x0 [IronLabrys] ChargeAI
@@ -329,6 +329,11 @@ UNIT Gorlois Parson 0x1 Level(7, NPC, 0)     [8,4] 0b 0x0 0x0 0x0 [0x40,0xA0, El
 UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [11,6] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
 UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [10,5] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
 	UNIT
+	
+CutsceneUnitsFlashback:
+UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [13,17] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [14,16] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+	UNIT
 
 Traps1:
 BLST [4,1] KillerBallista
@@ -486,7 +491,7 @@ CameraCursor(Affogato)
 
 //CHECK_EVENTID 0xA1
 //BEQ 0x776 0xC 0x0
-//Text(Ch6WTFMoment)
+Text(Ch6WTFMoment)
 //GOTO 0x420
 //LABEL 0x776
 //Text(Ch6WTFAltMoment)
@@ -581,7 +586,7 @@ NoFade
 ENDA
 
 RFortEvent2:
-CHECK_EVENTID 0xB
+CHECK_EVENTID 0xC
 BNE 0x0 0xC 0x0
 SpawnReinforcements(RightFortRein2)
 STAL 60
@@ -1062,8 +1067,32 @@ MUSCMID 0x7FFF
 STAL 120
 EVBIT_F 0x2
 CLEAN
+CHECK_EVENTID 0x7E
+BEQ 0x9000 0xC 0x0
+
+//gaiden unlocked ending
+
+SVAL 0xB 0x10000C //change map
+LOMA 0x5
+SetFlag(0x84)
+CamOn
+LOAD2 0x1 CutsceneUnitsFlashback
+CamOff
+STAL 30
+CameraCursor(Ulrich)
+Text(Gaiden2Opening1)
+MOVE 0xA Ulrich [13,15]
+STAL 10
+Text(Gaiden2Opening2)
+STAL 15
+MNC2 0x3E
+GOTO 0x9001
+
+//normal ending
+LABEL 0x9000
 SetBackground(0x35)
-MNC2 0xC //next chapter
+MNC2 0xC //part 2 chapterrr
+LABEL 0x9001
 //MNTS 0x1 //return to title screen
 ENDA
 

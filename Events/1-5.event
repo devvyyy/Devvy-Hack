@@ -14,7 +14,7 @@ PointerList:
 
 TurnBasedEvents:
 TURN 0x0 KillVillageBrigand [2,0] 0x0
-TurnEventEnemy(0,RecruitThief,3)
+//TurnEventEnemy(0,RecruitThief,3)
 TURN 0x0 ReinforcementsWarning [3,0] 0x0
 TURN 0x0 LeftRocksRein [4,0] 0x0
 TURN 0x0 BottomRightRein [5,0] 0x0
@@ -30,7 +30,7 @@ CharacterEventBothWays(0xC,AffoUlrichConvoCh5, Affogato, Ulrich) //add this late
 //CharacterEventBothWays(0xC, MochaRinaConvo, Mocha, Rina)
 //CharacterEventBothWays(0xD, SeqUlrichConvo, Sequin, Ulrich)
 //CharacterEventBothWays(0xE, EisDoppioConvo, Doppio, Eiskaffee)
-CharacterEventBothWays(0x20, RecruitRecruitThief, 0x0, Noel)
+//CharacterEventBothWays(0x20, RecruitRecruitThief, 0x0, Noel)
 	END_MAIN
 
 MiscBasedEvents:
@@ -119,7 +119,7 @@ UNIT Murray Deserter 0x1 Level(7, Enemy, 0)     [13,15] DropItem 0x0 0x0 0x0 [Sa
 	UNIT
 	
 Recruits:
-UNIT Noel Fighter 0x1 Level(3, Ally, 0)     [14,9] 0b 0x0 0x0 0x0 [0x22,0x2C,RedGem] BossAI
+UNIT Noel Fighter 0x1 Level(3, Ally, 0)     [14,9] 0b 0x0 0x0 0x0 [KillerAxe,0x2C,RedGem] BossAI
 	UNIT
 	
 RecruitsLunatic:
@@ -210,11 +210,11 @@ SetBackground(0x38)
 Text(Ch5Opening1)
 FADI 60
 CLEAN
-//FADU 60
-STAL 5
 	LOAD2 0x1 CutsceneUnits1
-CHECK_HARD; BEQ 0x724 0xC 0x0; LOAD1 0x1 CutsceneUnits2Lunatic; GOTO 0x725; LABEL 0x724; LOAD1 0x1 CutsceneUnits2; LABEL 0x725
-STAL 15
+	STAL 15
+FADU 30
+CHECK_HARD; BEQ 0x727 0xC 0x0; LOAD1 0x1 CutsceneUnits2Lunatic; GOTO 0x726; LABEL 0x727; LOAD1 0x1 CutsceneUnits2; LABEL 0x726
+STAL 25
 Music(0x24)
 SetBackground(0x33)
 TEXTSTART
@@ -225,6 +225,7 @@ CLEAN
 STAL 5
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 NagitoKomaeda
+HardUnits(RecruitsLunatic,Recruits)
 	ENUN
 	GotoPrepScreen
 	ENDA
@@ -252,7 +253,11 @@ CHECK_EVENTID 0x79 //skips to normal ending if 1 wasnt completed
 BEQ 1 0x0 0xC
 CHECK_EVENTID 0x7A //skips to normal ending if 2 wasnt completed
 BEQ 1 0x0 0xC
-CHECK_EVENTID 0xC //affo talk 3; only possible if 1 and 2 were completed
+CHECK_EVENTID 0x7B //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7C //skips to normal ending if 4 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7D //affo talk 5; only possible if 1-4 were completed
 BEQ 1 0x0 0xC //if flag isnt set skip to normal ending
 
 TEXTSTART
@@ -264,13 +269,16 @@ TEXTCONT
 TEXTEND
 REMA
 
-SetFlag(0x7B) //GAIDEN UNLOCKED EID FLAG
+SetFlag(0x7E) //GAIDEN UNLOCKED EID FLAG
 UnsetFlag(0x79)
 UnsetFlag(0x7A)
+UnsetFlag(0x7B)
+UnsetFlag(0x7C)
+UnsetFlag(0x7D)
 
 CenterTextbox(Ch5GaidenUnlock)
-GiveItem(0xEE,Ulrich)
-GiveItem(0x89,Ulrich)
+//GiveItem(0xEE,Ulrich)
+//GiveItem(0x89,Ulrich)
 GOTO 2
 
 LABEL 1

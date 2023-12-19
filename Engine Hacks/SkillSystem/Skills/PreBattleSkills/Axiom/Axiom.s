@@ -20,6 +20,19 @@ ldr	r1, AxiomID
 cmp	r0, #0
 beq	End
 
+@is target opal?
+@ please dont do checks like this in the future holy fuck
+ldr  r0, [r5] @r0 = character data pointer
+ldrb r0, [r0, #0x4] @r0 = character ID
+cmp r0, #0x21
+beq End
+
+@is target opal, but as an enemy?
+ldr  r0, [r5] @r0 = character data pointer
+ldrb r0, [r0, #0x4] @r0 = character ID
+cmp r0, #0xC4
+beq End
+
 @make sure were in combat (or combat prep)
 ldrb r3, =gBattleData
 ldrb r3, [r3]

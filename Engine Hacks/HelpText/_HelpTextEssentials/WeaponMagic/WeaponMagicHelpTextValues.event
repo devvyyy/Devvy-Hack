@@ -1,16 +1,18 @@
 
 //vanilla stops at 08089D4F
-//this stops at 08089D45
+//this also stops at 08089D4F
 
 WeaponMagicHelpTextValues:
 SHORT 0xB5F0 0x1C05  //push {r4-r7,r14}; mov r5, r0
-SHORT 0x4C11 0x1C21 //ldr r4 (0x0203E7AC); mov r1, r4
+SHORT 0x4C13 0x1C21 //ldr r4 (0x0203E7AC); mov r1, r4
 
 //Rank
 BL(0x16D94)
-//SHORT 0x78A1 //ldrb r1, [r4,#2] (where to show up on line) 
-//SHORT 0x2120 //mov r1, #0x20
 SHORT 0x2121 //mov r1, #0x21
+SHORT 0x8802 //ldrh r2, [r0]
+SHORT 0x2AFF //cmp r2, #0xFF
+SHORT 0xDD00 //ble (0x89CEA)
+SHORT 0x3906 //sub r1, #6
 BL(SetUp_RankRange)
 
 //Range

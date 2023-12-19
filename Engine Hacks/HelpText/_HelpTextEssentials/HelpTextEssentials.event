@@ -2,9 +2,6 @@
 PUSH
 
 //Jump to new routines
-ORG 0x89088
-jumpToHack(StatScreen_HelpBoxIdle)
-
 ORG 0x891AC
 jumpToHack(HelpTextCheckForAdditionalSpace)
   
@@ -18,11 +15,12 @@ ORG 0x89C40
 WeaponMagicHelpTextLabels:
 
 ORG 0x89CD4
-#include "WeaponMagic/WeaponMagicHelpTextValues.event"
+WeaponMagicHelpTextValues:
+//#include "WeaponMagic/WeaponMagicHelpTextValues.event"
 
-#ifndef MoreStaffInfoInstall
-	#include "Staff/StaffHelpTextLabels.event"
-	ALIGN 4
+#ifndef USE_HELP_TEXT_MORE_STAFF_INFO
+	ORG 0x89D50
+	StaffHelpTextInfo:
 #endif
 
 //Monster Weapon stat display (credit Brendor, circles for buildfile version)
@@ -47,10 +45,6 @@ ALIGN 4
 #include "IdentifyType/HelpTextCheckForDrawingValues.lyn.event"
 ALIGN 4
 
-#include "Misc/StatScreen_HelpBoxIdle.lyn.event"
-ALIGN 4
-
-
 #include "WeaponMagic/WeaponMagicHelpTextCheck.lyn.event"
 ALIGN 4
 
@@ -60,19 +54,6 @@ ALIGN 4
 
 #include "Staff/StaffHelpTextCheck.lyn.event"
 ALIGN 4
-
-#ifndef MoreStaffInfoInstall
-
-	#include "Staff/StaffHelpTextValues.lyn.event"
-	ALIGN 4
-
-	StaffRankItemLink:
-	SHORT 0x0509
-	StaffRangeItemLink:
-	SHORT 0x0500
-	ALIGN 4
-	
-#endif
 
 #include "SaveFile/SaveFileHelpTextCheck.lyn.event"
 ALIGN 4

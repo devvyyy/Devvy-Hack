@@ -32,8 +32,21 @@ castle for final map!!![AN]
 [X]
 
 ## RewardsNotif
-You get a reward for each[N]
+You get a reward at the[N]
+end of the chapter for each[N]
 supply tent that survives.[A]
+[X]
+
+## WegmanUlrichTalk
+
+[3l]
+[OpenMidLeft][LoadWegman][OpenMidRight][LoadUlrich]
+What's up with you[,] man?[AN]
+
+We thought you were dead and you[N]
+suddenly show up after two[N]
+decades presumed dead![AN]
+
 [X]
 
 ## ChBonusOpening1
@@ -586,7 +599,7 @@ Everyone else is fighting their[N]
 hardest out here.[AN]
 
 [ML]
-Yup[,] got it[,] boss.[.6] I'll try my[N]
+Word[,] Therese.[.6] I'll try my[,] er[,][N]
 hardest out here.[AN]
 
 [MR]
@@ -686,10 +699,54 @@ I pray we can reunite alive[Beat][AN]
 ## InBattle3
 # We're in a bad spot here,[.4][N]
 [3L]
-[OpenFarLeft][LoadKing][OpenLeft][LoadGorlois][OpenMidRight][LoadLili]
+[OpenMidLeft][LoadKing][MR][LoadGorlois][FFR][LoadIris]
+
+[MR]
+This is dire[,] is it not?[.6] Must we not[N]
+act as an unofficial war council?[AN]
+
+[OpenMidLeft]
+Divine Iris[,] the council requires your[N]
+clairvoyance yet again.[AN][ML][MoveFarLeft][MR][ClearFace][L][LoadGorlois]
+
+[FFR][MoveMidRight]
+[MR]
+Your Majesty.[.6] What do you require[N]
+of my duties?[AN]
+
+[OpenMidLeft]
+Could you see any escape routes that our[N]
+scouts did not?[AN]
+
+[MR]
+[Pause]All of the gates are overrun by Aeterian[N]
+soldiers.[.6] I fear our only choice is to exit[N]
+the castle and charge through.[AN]
+
+[OpenLeft]
+Charge through?![.6] Where on the hallowed[N]
+lands of Ideon could we possibly be[N]
+charging through?[AN]
+
+[FL]
+Northelm is home to many strongholds.[6N]
+Any one of them shall suffice for[N]
+the future of Wreyvine.[AN]
+
+[OpenLeft]
+The future of Wreyvine?[.6] The now[N]
+is death and war![.6] Your Majesty[,][N]
+we must relocate to a safer position.[AN]
+It's best to keep our lives if we can[,][N]
+considering the situation[Beat][6N]
+[CloseEyes]What are we to do[Beat]?[AN]
 
 [OpenMidRight]
-Must we act as an unofficial war council[Beat]?[AN]
+[CloseEyes]Gorlois[,] I can see[Beat] the fighting[Beat][N]
+Wreyvine is neither losing[,][N]
+nor winning[Beat][AN][Clear]
+I trust in the Hearthbringer to bring[N]
+them back well and safely.[AN]
 
 [OpenLeft]
 I'm telling you[,] Your Majesty.[.6] I[N]
@@ -708,61 +765,20 @@ Nay[,] for the entire kingdom.[AN]
 [OpenLeft]
 I have spent my entire life following orders[,][N]
 Your Majesty.[.6] Yet it is now that you[N]
-stay my hand?[AN]
-We of the holy guard judge[N]
+stay my hand?[AN][Clear]
+We of the holy guard judge only[N]
 on divine providence.[AN]
 
-[OpenMidRight]
-[CloseEyes] Gorlois[,] I can see[Beat] the fighting[Beat][N]
-Wreyvine is neither losing[,][N]
-nor winning[Beat][AN]
-I trust in the Iron Tusks to bring[N]
-them back safely.[AN]
-
-[OpenFarLeft]
-We must prepare ourselves for the worst[,][N]
-despite their efforts.[.6] The kingdom[N]
-of Wreyvine must stand eternal.[AN]
-Lord Gorlois[,] our scouts are finding[N]
-potential escape routes[Beat][N]
-Will your attuned bird friend join them?[AN]
+[FL]
+It would be far too reckless to allow[N]
+the Aeterian army to know that you are[N]
+out there[,] and I am undefended.[AN]
 
 [OpenLeft]
-Oh[,] blind faith will not do.[.6] Aohr[,] go.[6N]
-Find us an overhead route in the case[N]
-of an emergency--[.4]and make it quick![AN]
+[CloseEyes]If you insist[,] then[Beat][AN]
 
 [X]
 
-## InBattle4
-# We're in a bad spot here,[.4][N]
-[3L]
-
-[OpenFarLeft][LoadKing][OpenLeft][LoadGorlois][OpenMidRight][LoadLili]
-
-[OpenLeft]
-[Pause]Most of the gates are overrun by Aeterian[N]
-soldiers.[.6] Our only choice is to exit the[N]
-castle and charge through.[AN]
-
-[OpenLeft]
-Charge through?[.6] Where on the hallowed[N]
-lands of Ideon could we possibly be[N]
-charging through?[AN]
-
-[OpenMidRight]
-Northelm is home to many strongholds.[6N]
-Any one of them shall suffice for[N]
-the future of Wreyvine.[AN]
-
-[OpenLeft]
-The future of Wreyvine?[.6] The now[N]
-is death and war![.6] Your Majesty[,][N]
-we must relocate to a safer position.[AN]
-It's best to keep our lives if we can[,][N]
-considering the situation[Beat][6N]
-[CloseEyes]What are we to do[Beat]?[AN]
-[X]
 
 ## WTFMan
 [3L]
@@ -802,6 +818,32 @@ Yes[,] General.[.6] I'll do a lot more than[N]
 that.[.6] I'm ready to fight all-out.[6N][MoveMidRight]
 [MoveMidRight]Go[,] Zeph![.6] We fight together![AN]
 
+[X]
+
+## AffogatoP16Convo
+[OpenMidRight][LoadAffogato]
+[Beat][AN][Clear]
+[ToggleMouthMove](Is this truly their[N]
+entire army[Beat]?[AN]
+The Duke must have something[N]
+else he's planning.)
+[X]
+
+## BreveP16Convo
+[OpenMidRight][LoadBreve]
+I guess I was always[N]
+ready for this.[AN]
+[X]
+
+## AnsgarP16Convo
+[OpenMidRight][LoadAnsgar]
+Deep breaths[Beat][AN]
+[X]
+
+## NoelP16Convo
+[OpenMidRight][LoadNoel]
+I hear Aeterians are about[N]
+to go extinct around here.[AN]
 [X]
 
 ## SelBossQ1

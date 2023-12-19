@@ -76,6 +76,14 @@ ldr r1, [r5,#4] @class data ptr
 cmp r1, #0 @if 0, this is stat screen
 beq End
 
+@add skill/4 attack
+mov  r1, #0x5A
+ldrh r0, [r4, r1] @attack
+ldrb r2, [r4, #0x15] @skill
+lsr  r2, #2 @divide this by 4
+add  r0, r2
+strh r0, [r4,r1]
+
 @add 50% of foes missing hp as damage
 ldrb  r0,[r5,#0x12] @defender max hp
 ldrb  r1,[r5,#0x13] @defender current hp

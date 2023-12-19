@@ -25,12 +25,22 @@ beq End
 
 mov r1, #0x5A
 ldrh r0, [r4, r1] @Damage
-add r0, #2
+add r0, #3
+strh r0, [r4,r1]
+
+mov r1, #0x5E
+ldrh r0, [r4, r1] @AS
+add r0, #3
+strh r0, [r4,r1]
+
+mov r1, #0x60
+ldrh r0, [r4, r1] @hit
+add r0, #30
 strh r0, [r4,r1]
 
 mov r1, #0x62
 ldrh r0, [r4, r1] @Avoid
-add r0, #15
+add r0, #30
 strh r0, [r4,r1]
 
 End:

@@ -21,10 +21,19 @@ ldrb r3, [r3]
 cmp r3, #4
 beq End
 
+@make sure the enemy is a mage
+ldr r0,[r5,#0x4]
+mov r1,#0x30
+ldr r0,[r0,r1] @so this loads the unit's staff/anima/light/dark prof
+cmp r0,#0x0
+bne SkipStrCheck @if they're all 0 the enemy is not a mage
+
 ldrb r0, [r4, #0x14] @attacker str
 ldrb r1, [r5, #0x14] @defender str
 cmp r0, r1
 ble End @skip if str is less or equal
+
+SkipStrCheck:
 
 @add 3 damage
 mov r1, #0x5a

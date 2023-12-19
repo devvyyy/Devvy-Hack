@@ -1,0 +1,182 @@
+EventPointerTable(0xD5, PointerList)
+
+PointerList:
+	POIN TurnBasedEvents
+	POIN CharacterBasedEvents
+	POIN LocationBasedEvents
+	POIN MiscBasedEvents
+	POIN Dunno1 Dunno2 Dunno3 Tutorial
+	POIN Traps1 Traps2
+	POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+	POIN $0 $0 $0
+	POIN $0 $0 $0
+	POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+
+	END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+
+	END_MAIN
+
+MiscBasedEvents:
+	CauseGameOverIfLordDies
+	END_MAIN
+
+LocationBasedEvents:
+
+	END_MAIN
+
+Dunno1:
+
+	END_MAIN
+
+Dunno2:
+
+	END_MAIN
+
+Dunno3:
+
+	END_MAIN
+
+Tutorial:
+
+	END_MAIN
+
+Units1:
+UNIT 0xCA Halberdier 0x1 Level(10, Ally, 0)     [10,9] 0x0 0x0 0x0 0x0 [0x8E,Spear,Halberd,0x77] ChargeAI
+UNIT 0xCB LCav 0x1 Level(4, Ally, 0)     [9,9] 0x0 0x0 0x0 0x0 [SilverLance,ShortSpear,Elixir] ChargeAI
+UNIT Wreyvine Soldier 0x1 Level(4, NPC, 1)     [7,9] 0x0 0x0 0x0 0x0 [SteelLance,Vulnerary] ChargeAI
+UNIT Wreyvine LCav 0x1 Level(3, NPC, 1)     [6,8] 0x0 0x0 0x0 0x0 [IronLance,Elixir] ChargeAI
+UNIT Wreyvine ACav 0x1 Level(3, NPC, 1)     [6,10] 0x0 0x0 0x0 0x0 [IronAxe,Elixir] ChargeAI
+UNIT Wreyvine Fighter 0x1 Level(4, NPC, 1)     [9,11] 0x0 0x0 0x0 0x0 [SteelAxe,PureWater] ChargeAI
+UNIT Wreyvine Fighter 0x1 Level(4, NPC, 1)     [9,7] 0x0 0x0 0x0 0x0 [KillerAxe,Vulnerary] ChargeAI
+UNIT Wreyvine LArmor 0x1 Level(5, NPC, 1)     [5,9] 0x0 0x0 0x0 0x0 [ShortSpear,0x65,Elixir] ChargeAI
+UNIT Wreyvine SArmor 0x1 Level(5, NPC, 1)     [9,8] 0x0 0x0 0x0 0x0 [ShortBrand,0x65,Elixir] ChargeAI
+UNIT Wreyvine AArmor 0x1 Level(5, NPC, 1)     [9,10] 0x0 0x0 0x0 0x0 [ShortAxe,0x65,Elixir] ChargeAI
+UNIT Wreyvine Archer 0x1 Level(3, NPC, 1)     [6,9] 0x0 0x0 0x0 0x0 [IronRifle,Vulnerary] ChargeAI
+UNIT Wreyvine Archer 0x1 Level(2, NPC, 1)     [6,6] 0x0 0x0 0x0 0x0 [ShortBow,IronDagger] ChargeAI
+UNIT Wreyvine Archer 0x1 Level(2, NPC, 1)     [6,12] 0x0 0x0 0x0 0x0 [SteelBow,Vulnerary] ChargeAI
+UNIT Wreyvine GriffonRider 0x1 Level(3, NPC, 1)     [5,7] 0x0 0x0 0x0 0x0 [IronRifle,Elixir] ChargeAI
+UNIT Wreyvine GriffonRider 0x1 Level(3, NPC, 1)     [5,11] 0x0 0x0 0x0 0x0 [Longbow,PureWater] ChargeAI
+	UNIT
+
+OgrimGang:
+UNIT 0xCD Priest 0x1 Level(3, Ally, 1)     [14,4] 0x0 0x0 0x0 0x0 [Mend,Rescue,Pain,0xCF] ChargeAI
+	UNIT
+
+EnemyUnits:
+UNIT 0x9b Thaumaturge 0x1 Level(10, Enemy, 1)     [13,8] 0b 0x0 0x0 0x0 [Fire,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [15,10] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [16,8] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [18,10] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [20,9] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [19,11] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [21,7] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [23,8] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [12,11] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [24,10] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [22,12] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [25,9] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [27,7] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [28,9] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [26,11] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [29,9] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [31,10] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b PegRider 0x1 Level(10, Enemy, 1)     [38,2] 0b 0x0 0x0 0x0 [IronLance,] StallOneTurnAI
+UNIT 0x9b PegRider 0x1 Level(10, Enemy, 1)     [38,14] 0b 0x0 0x0 0x0 [IronLance,] StallOneTurnAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [32,8] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [34,11] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [35,9] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [36,11] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+	UNIT
+
+Traps1:
+BLST [6,6] Ballista
+BLST [6,12] Ballista
+RedSigil(8,7)
+RedSigil(8,8)
+RedSigil(8,9)
+RedSigil(8,10)
+RedSigil(8,11)
+	ENDTRAP
+	ALIGN 4
+
+Traps2:
+	ENDTRAP
+	ALIGN 4
+	
+KillThePartyFirst:
+QuickRemu(Affogato,1)
+QuickRemu(Ulrich,2)
+QuickRemu(Evelyn,3)
+QuickRemu(Sequin,4)
+QuickRemu(Breve,5)
+QuickRemu(Hildr,6)
+QuickRemu(Ansgar,7)
+QuickRemu(Latte,8)
+QuickRemu(Xavier,9)
+//QuickRemu(Pandoro,10)
+QuickRemu(Mocha,11)
+QuickRemu(Tammy,12)
+QuickRemu(Stroganoff,13)
+QuickRemu(Eiskaffee,14)
+QuickRemu(Doppio,15)
+QuickRemu(Floris,16)
+QuickRemu(Atheya,17)
+QuickRemu(Noel,18)
+QuickRemu(Therese,19)
+QuickRemu(Lennard,20)
+QuickRemu(Yory,21)
+QuickRemu(Lili,22)
+QuickRemu(Kane,23)
+QuickRemu(Wegman,24)
+QuickRemu(Klavdia,25)
+QuickRemu(Gerolf,26)
+QuickRemu(Ogrim,27)
+NoFade
+ENDA
+
+BeginningScene:
+CALL KillThePartyFirst
+	STAL 10
+	LOAD1 0x1 Units1
+	LOAD1 0x1 EnemyUnits
+	
+SVAL 0xB 0x80009
+CUSA 0xFFFE
+SVAL 0xB 0xA0009
+CUSA 0xFFFE
+SVAL 0xB 0xB0009
+CUSA 0xFFFE
+SVAL 0xB 0x70009
+CUSA 0xFFFE
+SVAL 0xB 0x90007
+CUSA 0xFFFE
+SVAL 0xB 0x80006
+CUSA 0xFFFE
+SVAL 0xB 0x90006
+CUSA 0xFFFE
+SVAL 0xB 0xA0006
+CUSA 0xFFFE
+SVAL 0xB 0x90005
+CUSA 0xFFFE
+SVAL 0xB 0x60006
+CUSA 0xFFFE
+SVAL 0xB 0xC0006
+CUSA 0xFFFE
+SVAL 0xB 0x70005
+CUSA 0xFFFE
+SVAL 0xB 0xB0005
+CUSA 0xFFFE
+
+	ENUN
+	NoFade
+	ENDA
+
+EndingScene:
+	MNC2 0xC
+	NoFade
+	ENDA

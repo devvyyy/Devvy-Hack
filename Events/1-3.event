@@ -28,6 +28,7 @@ TURN 0x0 WestRein [10,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
+CharacterEventBothWays(0x7C,AffoUlrichConvoCh3, Affogato, Ulrich)
 CharacterEventBothWays(0xA, UlrichStroganRecruit, Ulrich, Stroganoff)
 CharacterEventBothWays(0xA, StroganRecruit, 0x0, Stroganoff)
 CharacterEventBothWays(0xA, EisRecruit, 0x0, Eiskaffee)
@@ -36,6 +37,14 @@ CharacterEventBothWays(0xA, DoppioRecruit, 0x0, Doppio)
 //CharacterEventBothWays(0xC, PanMochaConvo, Mocha, Pandoro)
 //CharacterEventBothWays(0xD, UlrichDoppioConvo, Ulrich, Doppio)
 	END_MAIN
+	
+AffoUlrichConvoCh3:
+	MUSI
+	Text(AffoUlrichCh3Talk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
 
 MiscBasedEvents:
 	CauseGameOverIfLordDies

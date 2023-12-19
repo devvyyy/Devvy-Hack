@@ -10,6 +10,12 @@ Burst Fire: Attack dealing AoE 2x1 damage[N]
 scaling with Dex. Converts Str to Hit.[N]
 Cost: 1 Durability.[X]
 
+## SD_PykeMoment2
+# 1 str, 5% growth
+Like Dominoes: If unit initiates, kills[N]
+foes below (5 + Skill) HP (always hits).[N]
+Grants unit another action on kill.[X]
+
 ## SD_Bruh
 # has 3 separate gamble-esque menus inside a combat art menu
 Arcane Perfection[N]
@@ -383,13 +389,43 @@ Ru[0xe9]e Lunaire[N]
 Overdrive on initiation after combat.[N]
 - Overdrive lasts until out of stacks.[X]
 
+## SD_CantoTwo
+Time to Reload[N]
+- Can Canto 3 spaces after combat.[N]
+(Granted actions have priority over[N]
+Canto effects. Canto doesn't stack.)[X]
+
+## SD_ChiffonTwo
+# chiffon has TWO personal crossbows (guns with 1-2 range) related to the sun (Helion) and moon (Perihel); no more thiefing tho
+Ideon's Lights[N]
+- Grants access to Helion and Perihel.[N]
+- Each weapon has an Equip effect and[N]
+an Off-Hand (2nd inventory slot) effect.[N]
+- Can only use Rifles and Sidearms.[X]
+
+## SD_ChiffonThree
+# sustain
+Helion, the Solar Glare[N]
+- Equip: Foe can't counter. Canto spaces[N]
+= Overdrive stacks after combat (max; 2).[N]
+- Use to restore HP = damage dealt.[N]
+- Off-Hand: Restores 4 HP after combat.[X]
+
+## SD_ChiffonFour
+# dps
+Perihel, the Lunar Vigil[N]
+- Equip: Targets Res. Grants Atk/AS +3[N]
+per Overdrive stack (max; 6).[N]
+- Use to ignore foe's Def/Res.[N]
+- Off-Hand: Deal +4 damage.[X]
+
 ## FullMoonStatusName
 Overdrive[X]
 
 ## FullMoonStatusDesc
 # needs narrowfonting???
 Spd x2, Move +2. Initiating consumes[N]
-1 stack but grants Chiffon another[N]
+1 stack and grants Chiffon another[N]
 action after combat. If foe is[N]
 defeated, stack is restored.[X]
 
@@ -525,8 +561,7 @@ unit has Weapon Triangle advantage.[X]
 Duck and Cover[N]
 - If Zopf moves 1 space or less, always[N]
 hit; if 0, Crit +50 and Canto 5 spaces.[N]
-- If terrain has bonuses, counter[N]
-before foe's first attack.[X]
+- Counter before foe's first attack.[X]
 
 ## SD_FunnyTime
 I Make The Rules: If unit's Spd < foe's Spd,[N]
@@ -765,7 +800,7 @@ setting them to 0.[N]
 ## SD_TouchOfFrost
 Test of Faith[N]
 - If Velius' Res > foe's Res, grants WTA;[N]
-if Res difference > 5, also Atk +5;[N]
+if Res difference > 5, also counter first;[N]
 if > 10, also follow-up and foe can't;[N]
 if > 15, also strikes x2 consecutively.[X]
 
@@ -774,7 +809,7 @@ Borrowed Time: After combat, Xidorn restores[N]
 5 HP and deals 5 damage to foe.[X]
 
 ## SD_RidersAxiom
-Ramping Axiom[N]
+Rising Axiom[N]
 - On turns 1-3, Gerolf can follow-up[N]
 and foe can't, and if initiating,[N]
 deals bonus damage/reduces damage[N]
@@ -818,7 +853,7 @@ Spirit Cleave: Deals bonus damage =[N]
 ## SD_Maestro
 Maestro[N]
 - Ilse's Rifles have unique properties:[N]
-Hit +30, Crit is converted to damage.[N]
+Hit +30, grants Atk = 25% of Skill.[N]
 - Rifles also deal bonus damage = 50%[N]
 of foe's missing HP.[X]
 
@@ -843,10 +878,6 @@ Searing Sword[N]
 based off 50% of foe's Def/Res.[N]
 - If Spd > foe's Spd, reduces damage[N]
 taken = difference between Spd stats.[X]
-
-## SD_CantoTwo
-Canter: Unit can move 1 space[N]
-after action.[X]
 
 ## SD_CurtainCall
 Curtain Call: If foe's HP is below[N]
@@ -1074,17 +1105,9 @@ inflicts Str/Spd -50%.[N]
 
 ## SD_KnightAspirant
 # lance cav?
-Knight Aspirant[N]
+Idealist[N]
 - If Otto's HP is 75% or more,[N]
-grants Atk/AS +2, Hit/Avoid +15.[X]
-
-## SD_WreyvianAuthority
-# halberdier
-Wreyvian Authority[N]
-- Ulrich grants Atk/AS +5 to[N]
-allies within 2 spaces.
-- Use to grant all stats +2 to[N]
-allies within 2 spaces.[X]
+grants Atk/AS +3, Hit/Avoid +30.[X]
 
 ## SD_LastResort
 Last Resort[N]
@@ -1456,8 +1479,7 @@ within 5 spaces.[X]
 Noctum Heart[N]
 - At start of turn, if within 2 spaces of[N]
 an ally, restores 50% HP to Verna and[N]
-restores 30% HP to allies within[N]
-2 spaces.[X]
+30% HP to allies within 2 spaces.[X]
 
 ## SD_SpurStr
 Spur Strength: Adjacent allies[N]
@@ -1506,8 +1528,6 @@ Colossus: Triples Strength.[N]
 
 ## SD_RallyStr
 Hoist the Flag[N]
-- Can move after stealing/picking[N]
-(but not if under a granted action).[N]
 - Use Rally to grant Str/Eth +4[N]
 to adjacent allies for 1 turn.[X]
 
@@ -1537,13 +1557,18 @@ to allies within 2 spaces.[X]
 
 ## SD_RallyMov
 Merry Melodies[N]
-- Use Play to grant another action.[N]
-- Use Rally to grant Move +1 to[N]
+- Use Play to grant another action[N]
+to an adjacent ally.[N]
+- Use Rally to grant Move +3 to[N]
 adjacent allies for 1 turn.[X]
 
 ## SD_RallySpectrum
-Rally Spectrum: +2 all stats[N]
-to allies within 2 spaces.[X]
+# halberdier
+Wreyvian Authority[N]
+- Ulrich grants Atk/Prt/Rsl +5 to[N]
+allies within 2 spaces.[N]
+- Rally to grant all core stats +2[N]
+to adjacent allies for 1 turn.[X]
 
 ## SD_BowRangeUp
 Bow Range +1: Maximum range[N]
@@ -1816,8 +1841,8 @@ of an adjacent ally.[N]
 ## SD_Vault
 Vault[N]
 - Unit can dash to the opposite side[N]
-of an adjacent unit without using[N]
-an action.[N]
+of an adjacent unit, and once per turn,[N]
+without using an action.[N]
 (Skill can be used during Canto.)[X]
 
 ## SD_Reposition
@@ -1845,10 +1870,10 @@ takes 6 damage after combat.[X]
 
 ## SD_Dazzle
 Overwhelm[N]
-- If Noel's Str > foe's Str/Eth, grants[N]
-Atk +3 and foe can't counterattack.[N]
-- Inflicts Avoid -20 on foes[N]
-within 2 spaces.[X]
+- If Noel's Str > foe's Str, grants Atk[N]
++3 and foe can't counterattack.[N]
+(If foe uses Eth, foe's Str = 0.)[N]
+- Inflicts Avoid -20 on adjacent foes.[X]
 
 ## SD_TriAdept
 Triangle Adept: Doubles weapon[N]
@@ -1993,8 +2018,9 @@ is adjacent to an armored ally, grants[N]
 Move +1, also to adjacent armored allies.[X]
 
 ## SD_VigorDance
-Inspiring Tune: Refreshing a unit grants[N]
-them +2 Str/Eth/Def for 1 turn.[X]
+Inspiring Tune[N]
+- If Staniel refreshes an ally, grants[N]
+ally +2 Str/Eth/Def for 1 turn.[X]
 
 ## SD_Forager
 Forager: Recover 20% of max HP each turn[N]
@@ -2254,9 +2280,17 @@ or lower, gain +4 Resistance.[X]
 ## SD_Bargain
 The Right Incentive[N]
 - Gus reduces shop prices by 50%.[N]
-- Str/Spd/Def/Res +(price of[N]
+- Str/Spd/Def/Res +(total price of[N]
 inventory/2500).[N]
 - Hit/Avoid/Crit/Ddg +(Gold/2500).[X]
+
+## SD_BusinessSense
+# While The Iron's Hot; also unit is a thief
+It's Just Business[N]
+- Grants Atk/AS +(Gold/2500) to Larry[N]
+and allies within 3 spaces (no supports).[N]
+- Enemies drop a random item on death.[N]
+- Adjacent allies can buy items/supply.[X]
 
 ## SD_ShortShield
 Short Shield: Gain 6 defense[N]
@@ -2531,7 +2565,8 @@ Synchronize: Statuses are also[N]
 applied to the attacker.[X]
 
 ## SD_Swarp
-Rotate[N]
+# Rotate
+Castle[N]
 - Unit can swap spaces with an[N]
 ally within (Eth/3) spaces.[N]
 (Minimum range of 5 spaces).[X]

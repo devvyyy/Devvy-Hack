@@ -10,10 +10,7 @@
 
 		WeaponMagicHelpTextCheck:
 		push	{r14}
-		
-		ldr		r3, =GetItemAttributes
-		mov		lr, r3
-		.short	0xF800
+		blh		GetItemAttributes, r1
 		
 		@Check if monster weapon
 		  @if so, display stats

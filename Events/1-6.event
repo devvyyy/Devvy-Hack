@@ -20,7 +20,7 @@ TURN 0x0 WoundedConvo [2,0] 0x0
 TurnEventNPC(0,AddLesRein,2)
 TURN 0x0 ReinEvent2 [3,0] 0x0
 TURN 0x0 ReinEvent3 [4,0] 0x0
-//TURN 0x0 KingConvo [4,0] 0x0
+TURN 0x0 KingConvo [4,0] 0x0
 TURN 0x0 ReinEvent4 [5,0] 0x0
 TurnEventEnemy(0,SelwynSickoMode,5)
 TURN 0x0 ReinEvent5 [6,0] 0x0
@@ -94,7 +94,7 @@ FlashCursor(15,0,60)
 STAL 30
 MUSI
 SetBackground(0x29)
-Text(InBattle4)
+//Text(InBattle4)
 ClearBackground
 MUNO
 NoFade
@@ -223,14 +223,14 @@ UNIT Wreyvine Archer 0x1 Level(5, NPC, 1)     [19,4] 0b 0x0 0x0 0x0 [ShortBow,Vu
 UNIT Supplies1 0x79 0x1 Level(1, NPC, 0)     [9,4] 0b 0x0 0x0 0x0 [EnergyRing] [0,3,0,32] //tents
 UNIT Supplies2 0x79 0x1 Level(1, NPC, 0)     [21,4] 0b 0x0 0x0 0x0 [MageBow] [0,3,0,32]
 UNIT Supplies3 0x79 0x1 Level(1, NPC, 0)     [9,9] 0b 0x0 0x0 0x0 [ArmsScroll] [0,3,0,32]
-UNIT Supplies4 0x79 0x1 Level(1, NPC, 0)     [21,9] 0b 0x0 0x0 0x0 [0x7F] [0,3,0,32]
+UNIT Supplies4 0x79 0x1 Level(1, NPC, 0)     [21,9] 0b 0x0 0x0 0x0 [MasterSeal] [0,3,0,32]
 
 	UNIT
 	
 NPCUnitsLunatic:
-UNIT Wegman General 0x1 Level(10, Ally, 1)     [15,8] 0b 0x0 0x0 0x0 [SilverBlade,SilverGlaive,SilverLabrys,SilverRifle] [0x0,0x0,0x0,0x0]
-UNIT Gerolf SPal 0x1 Level(8, Ally, 1)     [16,7] 0b 0x0 0x0 0x0 [BraveSword,LightBrand,Elixir] [0x0,0x0,0x0,0x0]
-UNIT Klavdia WyvernKnight 0x1 Level(9, Ally, 1)     [14,7] 0b 0x0 0x0 0x0 [MageAxe,PoisonAxe,PureWater] [0x0,0x0,0x0,0x0]
+UNIT Wegman General 0x1 Level(10, Ally, 0)     [15,8] 0b 0x0 0x0 0x0 [SilverBlade,SilverGlaive,SilverLabrys,SilverRifle] [0x0,0x0,0x0,0x0]
+UNIT Gerolf SPal 0x1 Level(8, Ally, 0)     [16,7] 0b 0x0 0x0 0x0 [BraveSword,LightBrand,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Klavdia WyvernKnight 0x1 Level(9, Ally, 0)     [14,7] 0b 0x0 0x0 0x0 [MageAxe,PoisonAxe,PureWater] [0x0,0x0,0x0,0x0]
 
 UNIT Wreyvine Soldier 0x1 Level(8, NPC, 1)     [6,1] 0b 0x0 0x0 0x0 [MageLance,ShortSpear,Elixir] StallOneTurnAI
 //UNIT Wreyvine Fighter 0x1 Level(7, NPC, 1)     [5,2] 0b 0x0 0x0 0x0 [HandAxe,SteelAxe,Elixir] StallOneTurnAI
@@ -246,7 +246,7 @@ UNIT Wreyvine Archer 0x1 Level(7, NPC, 1)     [19,4] 0b 0x0 0x0 0x0 [ShortBow,Vu
 UNIT Supplies1 0x79 0x1 Level(1, NPC, 0)     [9,4] 0b 0x0 0x0 0x0 [EnergyRing] [0,3,0,32] //tents
 UNIT Supplies2 0x79 0x1 Level(1, NPC, 0)     [21,4] 0b 0x0 0x0 0x0 [MageBow] [0,3,0,32]
 UNIT Supplies3 0x79 0x1 Level(1, NPC, 0)     [9,9] 0b 0x0 0x0 0x0 [ArmsScroll] [0,3,0,32]
-UNIT Supplies4 0x79 0x1 Level(1, NPC, 0)     [21,9] 0b 0x0 0x0 0x0 [0x7F] [0,3,0,32]
+UNIT Supplies4 0x79 0x1 Level(1, NPC, 0)     [21,9] 0b 0x0 0x0 0x0 [MasterSeal] [0,3,0,32]
 
 	UNIT
 
@@ -317,7 +317,7 @@ UNIT Aeteria Ranger 0x1 Level(7, Enemy, 1)     [16,23] 0 0 1 REDA16R23 [DarkTome
 
 EnemyUnits:
 //make these actual bosses
-UNIT Selwyn 0x31 0x1 Level(10, Enemy, 0)     [7,18] DropItem 0x0 0x0 0x0 [0xFE,AngelicRobe] BossAI
+UNIT Selwyn 0x31 0x1 Level(10, Enemy, 0)     [7,18] DropItem 0x0 0x0 0x0 [0xFE,MasterSeal] BossAI
 UNIT Sylveria Necromancer 0x1 Level(7, Enemy, 0)     [6,19] DropItem 0x0 0x0 0x0 [0xFF,Silence] BossAI
 
 //thieves
@@ -374,7 +374,7 @@ UNIT Aeteria ACav 0x1 Level(9, Enemy, 1)     [29,18] 0b 0x0 0x0 0x0 [SteelAxe,] 
 	
 ExtraReinRight3: //in between the forts reins
 UNIT Aeteria ACav 0x1 Level(10, Enemy, 1)     [23,23] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
-UNIT Aeteria MageRider 0x1 Level(10, Enemy, 1)     [24,23] 0b 0x0 0x0 0x0 [Thunder,] WallAI
+UNIT Aeteria MageRider 0x1 Level(10, Enemy, 1)     [24,23] DropItem 0x0 0x0 0x0 [Thunder,] WallAI
 	UNIT
 	
 ExtraReinLeft1: //in between the forts reins
@@ -671,7 +671,7 @@ EndingScene:
 	
 	CHECK_ALIVE Supplies4
 	BEQ 0x4 0xC 0x0
-	GiveItem(0x7F,Affogato)
+	GiveItem(MasterSeal,Affogato)
 	LABEL 0x4
 
 FADI 60

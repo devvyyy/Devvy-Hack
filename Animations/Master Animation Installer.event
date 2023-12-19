@@ -41,15 +41,15 @@ ALIGN 4
 }
 ALIGN 4 //Tellius F!Fighter by MK404, Pikmin1211, Maiser6
 {
-#include "Chiffon/Axe/Installer.event"
+#include "Gunner/Bow/Bow Installer.event"
 }
+//ALIGN 4
+//{
+//#include "Gunner/Handaxe/Installer.event"
+//}
 ALIGN 4
 {
-#include "Chiffon/Handaxe/Installer.event"
-}
-ALIGN 4
-{
-#include "Chiffon/Unarmed/Installer.event"
+#include "Gunner/Unarmed/Unarmed Installer.event"
 }
 ALIGN 4 //Wustenhoff
 {
@@ -143,18 +143,18 @@ ALIGN 4
 //{
 //#include "BaldSwordmaster/Sword/Installer.event"
 //}
-ALIGN 4 //Fighter by Leo_link
-{
-#include "Fighter/Axe/Installer.event"
-}
-ALIGN 4
-{
-#include "Fighter/Handaxe/Installer.event"
-}
-ALIGN 4
-{
-#include "Fighter/Unarmed/Installer.event"
-}
+//ALIGN 4 //Fighter by Leo_link
+//{
+//#include "Fighter/Axe/Installer.event"
+//}
+//ALIGN 4
+//{
+//#include "Fighter/Handaxe/Installer.event"
+//}
+//ALIGN 4
+//{
+//#include "Fighter/Unarmed/Installer.event"
+//}
 ALIGN 4 //Warrior by Leo_link, Nuramon, Spud
 {
 #include "Warrior/Axe/Axe Installer.event"
@@ -245,11 +245,11 @@ ALIGN 4
 }
 ALIGN 4 //Adventurer by Leo_link
 {
-#include "Adventurer/Bow/Installer.event"
+#include "Adventurer/Bow/Bow Installer.event"
 }
 ALIGN 4
 {
-#include "Adventurer/Unarmed/Installer.event"
+#include "Adventurer/Magic/Magic Installer.event"
 }
 ALIGN 4 //Cavalier (F) by TEAM SALVAGED
 {
@@ -556,6 +556,30 @@ ALIGN 4
 {
 #include "WarMonk/Unarmed/Unarmed Installer.event"
 }
+ALIGN 4 //Brigand
+{
+#include "Brigand/Axe/Axe Installer.event"
+}
+ALIGN 4
+{
+#include "Brigand/HandAxe/Handaxe Installer.event"
+}
+ALIGN 4
+{
+#include "Brigand/Unarmed/Unarmed Installer.event"
+}
+ALIGN 4 //Gladiator
+{
+#include "Gladiator/Axe/Axe Installer.event"
+}
+ALIGN 4
+{
+#include "Gladiator/Handaxe/Handaxe Installer.event"
+}
+ALIGN 4
+{
+#include "Gladiator/Unarmed/Unarmed Installer.event"
+}
 
 AkatAnim:
 SwordAnim(0x03)
@@ -568,8 +592,8 @@ UnarmedAnim(0x09)
 WORD 0x0    // Seperator
 
 ChiffonAnim:
-AxeAnim(0xBC)
-HandAxeAnim(0xBD)
+BowAnim(0xBC)
+//HandAxeAnim(0xBD)
 UnarmedAnim(0xBE)
 WORD 0x0    // Seperator
 

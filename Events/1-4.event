@@ -28,11 +28,20 @@ TURN 0x3 EndingScene [11,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
+CharacterEventBothWays(0x7D,AffoUlrichConvoCh4, Affogato, Ulrich)
 //CharacterEvent(0x0,YoryTurretCheck,Yory,0x3F)
 //CharacterEventBothWays(0x9, NoraFlorisConvo, Nora, Floris)
 //CharacterEventBothWays(0x10, YoryKaneConvo, Yory, Kane)
 //CharacterEventBothWays(0x11, FlorisUlrichConvo, Floris, Ulrich)
 	END_MAIN
+	
+AffoUlrichConvoCh4:
+	MUSI
+	Text(AffoUlrichCh4Talk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
 
 MiscBasedEvents:
 	CauseGameOverIfLordDies
@@ -136,6 +145,7 @@ UNIT Aeteria Fighter 0x1 Level(5, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [SteelAxe,
 UNIT
 
 WaterRein:
+UNIT FlyingMag Seer 0x1 Level(4, Enemy, 1)     [13,0] DropItem 0x0 0x0 0x0[Light] ChargeAI
 UNIT UPirate Pirate 0x1 Level(4, Enemy, 1)     [15,0] 0b 0x0 0x0 0x0 [IronAxe] DefendAI
 UNIT UPirate Pirate 0x1 Level(5, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [SteelAxe] DefendAI
 UNIT

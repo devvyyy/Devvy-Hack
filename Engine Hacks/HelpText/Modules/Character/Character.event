@@ -1,0 +1,142 @@
+
+#define CharDescEntry(charID,age,pronounsTextID) "BYTE charID age; SHORT pronounsTextID; WORD 0"
+#define DynamicCharDescEntry(charID,age,pronounsTextID,routinePointer) "BYTE charID age; SHORT pronounsTextID; POIN routinePointer"
+
+CharDescList:
+CharDescEntry(Affogato,25,HeHim)
+//CharDescEntry(Seth,51,HeHim)
+//CharDescEntry(Ephraim,65,HeHim)
+//CharDescEntry(Ross,24,HeHim)
+
+//End of list
+WORD 0
+ALIGN 4
+
+OverridePromoGainInfoList:
+/*This is for units with more than 2 tiers of classes; you can keep this list empty if this isn't applicable to your hack
+
+SHORT unitID numberOfOverrides
+BYTE classId1 classId2 classId3 0
+classId1: A class that the unit can promote to
+classId2: If this unit is in this class while looking at info about the first class, do not use this class for mov/con calculations
+classId3: If unit is in the second class, use this class for calculations instead
+Lastly, a zero is used to make each override word aligned
+
+Here's an example:
+BYTE Paladin Recruit_1 Cavalier 0
+If this unit is currently a Recruit_1 when the player views the Paladin page, the unit is treated as if they are a Cavalier for calculating the mov/con gains
+*/
+
+SHORT Affogato 4
+BYTE Hero Journeyman_1 Fighter 0
+BYTE Warrior Journeyman_1 Fighter 0
+BYTE Berserker Journeyman_1 Pirate 0
+BYTE Journeyman_3 Journeyman_1 Journeyman_2 0
+
+//End of the list (do not need to terminate each character after all of their entries)
+WORD 0
+ALIGN 4
+
+
+/*
+#include "asmExamples/CheckForAgeRevelation.lyn.event"
+ALIGN 4
+
+#include "asmExamples/IdentifyAsWoman.lyn.event"
+ALIGN 4
+
+#include "asmExamples/PrologueFiveYearGap.lyn.event"
+ALIGN 4
+*/
+
+
+
+//-------------------------------------------
+//WIZARD CHECKPOINT
+//Do not touch anything below unless you know what you're doing
+//-------------------------------------------
+
+
+
+//---------------------------
+//Age/Pronouns
+//---------------------------
+
+	#include "asmCharDesc/GetCharDescEntry.lyn.event"
+	ALIGN 4
+
+	#include "asmCharDesc/GetAgeDigitCount.lyn.event"
+	ALIGN 4
+
+	#include "asmCharDesc/NewNameDescGetter.lyn.event"
+	ALIGN 4
+
+	#include "asmCharDesc/CharacterHelpTextSpace.lyn.event"
+	ALIGN 4
+
+	#include "asmCharDesc/CharacterHelpTextInfo.lyn.event"
+	ALIGN 4
+
+	CharacterLabelLink:
+	SHORT AgeLabel
+	SHORT PronounLabel
+
+	UnknownAgeLink:
+	SHORT UnknownAge
+
+	HeHimLink:
+	SHORT HeHim
+
+	SheHerLink:
+	SHORT SheHer
+
+	TheyThemLink:
+	SHORT TheyThem
+
+	AnyPronounsLink:
+	SHORT AnyPronouns
+
+	HeTheyLink:
+	SHORT HeThey
+
+	SheTheyLink:
+	SHORT SheThey
+
+	HeAnyLink:
+	SHORT HeAny
+
+	SheAnyLink:
+	SHORT SheAny
+
+	TheyAnyLink:
+	SHORT TheyAny
+	ALIGN 4
+
+
+//---------------------------
+//Promotion Information
+//---------------------------
+
+	#include "asmPromo/PromotionHelpTextSpace.lyn.event"
+	ALIGN 4
+
+	#include "asmPromo/PromotionHelpTextLabels.lyn.event"
+	ALIGN 4
+
+	#include "asmPromo/PromotionHelpTextValues.lyn.event"
+	ALIGN 4
+
+	#include "asmPromo/ShouldPromoGainInfoBeOverridden.lyn.event"
+	ALIGN 4
+
+	PromotionLabelLink:
+	SHORT ClassTextId
+	SHORT MovTextId
+	SHORT ConTextId
+	SHORT HpTextId
+	SHORT PowTextId
+	SHORT SklTextId
+	SHORT SpdTextId
+	SHORT DefTextId
+	SHORT ResTextId
+	ALIGN 4
