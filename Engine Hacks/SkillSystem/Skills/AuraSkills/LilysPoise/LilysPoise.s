@@ -38,6 +38,24 @@ ldrh r3, [r0]
 add r3, #5
 strh r3, [r0]
 
+mov r0, r4
+add     r0,#0x60    @Move to the attacker's hit.
+ldrh    r3,[r0]     @Load the attacker's crit into r3.
+add     r3,#15    @add 10.
+strh    r3,[r0]     @Store.
+
+mov r0, r4
+add     r0,#0x62    @Move to the attacker's avo.
+ldrh    r3,[r0]     @Load the attacker's crit into r3.
+add     r3,#15    @add 10.
+strh    r3,[r0]     @Store.
+
+mov r0, r4
+add     r0,#0x68    @Move to the attacker's hit.
+ldrh    r3,[r0]     @Load the attacker's crit into r3.
+add     r3,#15    @add 10.
+strh    r3,[r0]     @Store.
+
 Done:
 pop {r4-r7}
 pop {r0}

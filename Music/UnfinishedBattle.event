@@ -3,7 +3,7 @@
 
 	#define	songEC_grp  voicegroup000
 	#define	songEC_pri  0
-	#define	songEC_rev  0
+	#define	songEC_rev  148 //0x94
 	#define	songEC_mvl  127
 	#define	songEC_key  0
 	#define	songEC_tbs  1
@@ -21,7 +21,7 @@ songEC_001:
 // 000   ----------------------------------------
  BYTE   KEYSH   songEC_key+0
  BYTE   TEMPO   160*songEC_tbs/2
- BYTE   VOICE   65
+ BYTE   VOICE   61
  BYTE   PAN   c_v+26
  BYTE   VOL   70*songEC_mvl/mxv
  BYTE   W96

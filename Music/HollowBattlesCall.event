@@ -3,7 +3,7 @@
 
 	#define	song03DF_grp  BCVoices
 	#define	song03DF_pri  0
-	#define	song03DF_rev  0
+	#define	song03DF_rev  208 //0xD0
 	#define	song03DF_mvl  127
 	#define	song03DF_key  0
 	#define	song03DF_tbs  1
@@ -22,7 +22,7 @@ song03DF_001:
  BYTE   KEYSH   song03DF_key+0
 Label_018C32B6:
  BYTE   TEMPO   50*song03DF_tbs/2
- BYTE   VOICE   4
+ BYTE   VOICE   0
  BYTE   PAN   c_v+0
  BYTE   VOL   31*song03DF_mvl/mxv
  BYTE   BEND   c_v+0
@@ -1052,7 +1052,7 @@ song03DF_004:
 //  #04 //000   ----------------------------------------
  BYTE   KEYSH   song03DF_key+0
 Label_0183F652:
- BYTE   VOICE   47
+ BYTE   VOICE   46
  BYTE   VOL   68*song03DF_mvl/mxv
  BYTE   PAN   c_v-7
  BYTE   BEND   c_v+0

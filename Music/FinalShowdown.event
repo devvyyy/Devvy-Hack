@@ -3,7 +3,7 @@
 
 	#define	songC5_grp  BCVoices
 	#define	songC5_pri  0
-	#define	songC5_rev  0
+	#define	songC5_rev  208 //0xD0
 	#define	songC5_mvl  127
 	#define	songC5_key  0
 	#define	songC5_tbs  1
@@ -181,7 +181,7 @@ songC5_002:
  BYTE   KEYSH   songC5_key+0
  BYTE   VOICE   63
  BYTE   PAN   c_v+17
- BYTE   VOL   26*songC5_mvl/mxv
+ BYTE   VOL   30*songC5_mvl/mxv
  BYTE   BEND   c_v+0
  BYTE   W96
 //  #02 //001   ----------------------------------------

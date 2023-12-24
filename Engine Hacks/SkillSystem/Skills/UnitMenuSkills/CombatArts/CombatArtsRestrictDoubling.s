@@ -68,6 +68,11 @@ b    NoDouble// neither can double if we got this far
 CheckAtkConditions:
 /////////////////////
 
+@are we using astra?
+ldr r0,=#0x0203F101
+ldrb r0,[r0]
+cmp r0, #8 @astra art ID
+beq RetNoChange
 
 @are combat arts allowed to double?
 ldr r0,=CombatArtDoubleOptionLink

@@ -1,0 +1,72 @@
+#ifndef callHackNew 
+	#define callHackNew(offset) 		"BYTE $01 $4B $9E $46 $00 $F8 $01 $E0; POIN (offset|0x1)"
+#endif 
+//[088ADAF8]?
+
+PUSH 
+ORG $23314 
+jumpToHack(ItemSelectPortraitFix) // ItemMenu
+ORG $2D7E0
+callHackNew(TradeSelectPortraitFix_UnitA) // Trade 
+ORG $2D7F8
+callHackNew(TradeSelectPortraitFix_UnitB)
+ORG $73DC8
+jumpToHack(LevelUpPortraitFix)
+ORG $23AF4 
+jumpToHack(StaffPortraitFix)
+
+//Add a check for r0=0 in the decompression routine so that no$gba doesn't crash when trying to decompress something it shouldn't (Tequila)
+ORG $12F52
+  SHORT $2800 $D014 $22FA $0612 $1852 $4B0A $2501 $429A $D800 $2500 $4A09 $7803 $24F0 $4023 $08DB $195B $009B $18D2 $6812 $46C0 $46C0
+// Don't draw portrait on item select menu if unit is generic (hypergammaspaces)
+ORG $22BE8
+  SHORT $6808 $88C0 $2800
+
+POP 
+
+
+
+
+ALIGN 4 
+PUSH; ORG CURRENTOFFSET+1; 
+ItemSelectPortraitFix: ; POP 
+#incbin "ItemSelectPortraitFix.dmp" 
+
+
+
+ALIGN 4 
+PUSH; ORG CURRENTOFFSET+1; 
+TradeSelectPortraitFix_UnitA: ; POP 
+#incbin "TradeSelectPortraitFix_UnitA.dmp" 
+
+
+ALIGN 4 
+PUSH; ORG CURRENTOFFSET+1; 
+TradeSelectPortraitFix_UnitB: ; POP 
+#incbin "TradeSelectPortraitFix_UnitB.dmp" 
+
+
+ALIGN 4 
+PUSH; ORG CURRENTOFFSET+1; 
+LevelUpPortraitFix: ; POP 
+#incbin "LevelUpPortraitFix.dmp" 
+
+
+ALIGN 4 
+PUSH; ORG CURRENTOFFSET+1; 
+StaffPortraitFix: ; POP 
+#incbin "StaffPortraitFix.dmp" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

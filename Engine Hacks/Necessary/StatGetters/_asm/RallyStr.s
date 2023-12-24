@@ -34,7 +34,7 @@ mov r0, #0x80
 and r0, r1
 cmp r0, #0x0
 beq noRallySpectrum
-add r4, #0x2
+add r4, #0x5
 noRallySpectrum:
 
 End:

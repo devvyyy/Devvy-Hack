@@ -13,15 +13,83 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-
+TURN 0x0 Turn2OgrimGaming [2,0] 0x0 //dialogue
+TURN 0x0 Turn3Rein [3,0] 0x0 //dialogue
+TURN 0x0 Turn4Rein [3,0] 0x0
+TURN 0x0 Turn5Rein [5,0] 0x0 //dialogue
+TURN 0x0 Turn6Rein [6,0] 0x0
+TURN 0x0 Turn7Rein [7,0] 0x0 //dialogue
+TURN 0x0 Turn9Rein [9,0] 0x0
+TURN 0x3 EndingScene [10,0] 0x0
 	END_MAIN
+	
+Turn2OgrimGaming:
+CamOn
+CAM1 [5,3]
+LOAD1 0x1 OgrimGang
+Text(Gaiden2InBattle2)
+NoFade
+ENDA
+
+Turn3Rein:
+LoadReinforcements(Turn3Enemies)
+STAL 15
+CameraCursor(0xCC)
+Text(Gaiden2InBattle3)
+NoFade
+ENDA
+
+Turn4Rein:
+LoadReinforcements(Turn4Enemies)
+STAL 20
+LoadReinforcements(Turn4Enemies2)
+NoFade
+ENDA
+
+Turn5Rein:
+LoadReinforcements(Turn5Enemies)
+STAL 15
+CameraCursor(0xCB)
+Text(Gaiden2InBattle5)
+NoFade
+ENDA
+
+Turn6Rein:
+LoadReinforcements(Turn6Enemies)
+NoFade
+ENDA
+
+Turn7Rein:
+LoadReinforcements(Turn7Enemies)
+STAL 20
+LoadReinforcements(Turn7Enemies2)
+STAL 15
+CameraCursor(0xCA)
+Text(Gaiden2InBattle4)
+NoFade
+ENDA
+
+Turn9Rein:
+LoadReinforcements(Turn9Enemies)
+NoFade
+ENDA
+
 
 ALIGN 32
 CharacterBasedEvents:
-
+CharacterEvent(0xA,OttoUlrichConvo,0xCA,0xCB)
 	END_MAIN
+	
+OttoUlrichConvo:
+	MUSI
+	Text(OttoUlrichTalk1)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
 
 MiscBasedEvents:
+AREA 0x0 ReinforcementEventLMAO [0,0] [8,18]
 	CauseGameOverIfLordDies
 	END_MAIN
 
@@ -47,55 +115,183 @@ Tutorial:
 
 Units1:
 UNIT 0xCA Halberdier 0x1 Level(10, Ally, 0)     [10,9] 0x0 0x0 0x0 0x0 [0x8E,Spear,Halberd,0x77] ChargeAI
-UNIT 0xCB LCav 0x1 Level(4, Ally, 0)     [9,9] 0x0 0x0 0x0 0x0 [SilverLance,ShortSpear,Elixir] ChargeAI
-UNIT Wreyvine Soldier 0x1 Level(4, NPC, 1)     [7,9] 0x0 0x0 0x0 0x0 [SteelLance,Vulnerary] ChargeAI
-UNIT Wreyvine LCav 0x1 Level(3, NPC, 1)     [6,8] 0x0 0x0 0x0 0x0 [IronLance,Elixir] ChargeAI
-UNIT Wreyvine ACav 0x1 Level(3, NPC, 1)     [6,10] 0x0 0x0 0x0 0x0 [IronAxe,Elixir] ChargeAI
-UNIT Wreyvine Fighter 0x1 Level(4, NPC, 1)     [9,11] 0x0 0x0 0x0 0x0 [SteelAxe,PureWater] ChargeAI
-UNIT Wreyvine Fighter 0x1 Level(4, NPC, 1)     [9,7] 0x0 0x0 0x0 0x0 [KillerAxe,Vulnerary] ChargeAI
-UNIT Wreyvine LArmor 0x1 Level(5, NPC, 1)     [5,9] 0x0 0x0 0x0 0x0 [ShortSpear,0x65,Elixir] ChargeAI
-UNIT Wreyvine SArmor 0x1 Level(5, NPC, 1)     [9,8] 0x0 0x0 0x0 0x0 [ShortBrand,0x65,Elixir] ChargeAI
-UNIT Wreyvine AArmor 0x1 Level(5, NPC, 1)     [9,10] 0x0 0x0 0x0 0x0 [ShortAxe,0x65,Elixir] ChargeAI
-UNIT Wreyvine Archer 0x1 Level(3, NPC, 1)     [6,9] 0x0 0x0 0x0 0x0 [IronRifle,Vulnerary] ChargeAI
-UNIT Wreyvine Archer 0x1 Level(2, NPC, 1)     [6,6] 0x0 0x0 0x0 0x0 [ShortBow,IronDagger] ChargeAI
-UNIT Wreyvine Archer 0x1 Level(2, NPC, 1)     [6,12] 0x0 0x0 0x0 0x0 [SteelBow,Vulnerary] ChargeAI
-UNIT Wreyvine GriffonRider 0x1 Level(3, NPC, 1)     [5,7] 0x0 0x0 0x0 0x0 [IronRifle,Elixir] ChargeAI
-UNIT Wreyvine GriffonRider 0x1 Level(3, NPC, 1)     [5,11] 0x0 0x0 0x0 0x0 [Longbow,PureWater] ChargeAI
+UNIT 0xCB LCav 0x1 Level(4, Ally, 0)     [9,9] 0x0 0x0 0x0 0x0 [SilverLance,ShortSpear,Elixir,PureWater] ChargeAI
+UNIT Wreyvine Soldier 0x1 Level(8, NPC, 1)     [7,9] 0x0 0x0 0x0 0x0 [SteelLance,SapphireLance,Vulnerary] ChargeAI
+UNIT Wreyvine LCav 0x1 Level(6, NPC, 1)     [6,8] 0x0 0x0 0x0 0x0 [IronLance,Javelin,Elixir] ChargeAI
+UNIT Wreyvine ACav 0x1 Level(6, NPC, 1)     [6,10] 0x0 0x0 0x0 0x0 [IronAxe,HandAxe,Elixir] ChargeAI
+UNIT Wreyvine Fighter 0x1 Level(7, NPC, 1)     [9,11] 0x0 0x0 0x0 0x0 [SteelAxe,Hammer,PureWater] ChargeAI
+UNIT Wreyvine Fighter 0x1 Level(7, NPC, 1)     [9,7] 0x0 0x0 0x0 0x0 [KillerAxe,Swordreaver,Vulnerary] ChargeAI
+UNIT Wreyvine LArmor 0x1 Level(10, NPC, 1)     [5,9] 0x0 0x0 0x0 0x0 [SteelGlaive,ShortSpear,0x65,Elixir] ChargeAI
+UNIT Wreyvine SArmor 0x1 Level(10, NPC, 1)     [9,8] 0x0 0x0 0x0 0x0 [SteelBlade,ShortBrand,0x65,Elixir] ChargeAI
+UNIT Wreyvine AArmor 0x1 Level(10, NPC, 1)     [9,10] 0x0 0x0 0x0 0x0 [SteelLabrys,ShortAxe,0x65,Elixir] ChargeAI
+UNIT Wreyvine Archer 0x1 Level(5, NPC, 1)     [6,9] 0x0 0x0 0x0 0x0 [IronRifle,0xdb,Vulnerary] ChargeAI
+UNIT Wreyvine Archer 0x1 Level(3, NPC, 1)     [6,6] 0x0 0x0 0x0 0x0 [ShortBow,IronDagger,Vulnerary] ChargeAI
+UNIT Wreyvine Archer 0x1 Level(3, NPC, 1)     [6,12] 0x0 0x0 0x0 0x0 [SteelBow,0x30,Vulnerary] ChargeAI
+UNIT Wreyvine GriffonRider 0x1 Level(4, NPC, 1)     [5,7] 0x0 0x0 0x0 0x0 [IronRifle,HuntingRifle,Elixir] ChargeAI
+UNIT Wreyvine GriffonRider 0x1 Level(4, NPC, 1)     [5,11] 0x0 0x0 0x0 0x0 [Longbow,BodkinRifle,PureWater] ChargeAI
 	UNIT
 
 OgrimGang:
-UNIT 0xCD Priest 0x1 Level(3, Ally, 1)     [14,4] 0x0 0x0 0x0 0x0 [Mend,Rescue,Pain,0xCF] ChargeAI
+UNIT 0xCD Priest 0x1 Level(3, Ally, 0)     [5,0] 0 0 1 REDA6R2 [Mend,Rescue,Pain,0xCF] ChargeAI
+UNIT 0x80 Parson 0x1 Level(9, Ally, 1)     [4,0] 0 0 1 REDA5R2 [Physic,Fortify,Smog] ChargeAI
 	UNIT
 
 EnemyUnits:
+UNIT 0xCC 0x6 0x1 Level(16, Enemy, 0)     [38,9] 0b 0x0 0x0 0x0 [KillerAxe,0xFC] RangeAI
 UNIT 0x9b Thaumaturge 0x1 Level(10, Enemy, 1)     [13,8] 0b 0x0 0x0 0x0 [Fire,] ChargeAI
 UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [15,10] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [16,8] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [18,10] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [20,9] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [19,11] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [21,7] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [23,8] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [12,11] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [24,10] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [22,12] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [25,9] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [27,7] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [28,9] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [26,11] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [29,9] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [31,10] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b PegRider 0x1 Level(10, Enemy, 1)     [38,2] 0b 0x0 0x0 0x0 [IronLance,] StallOneTurnAI
-UNIT 0x9b PegRider 0x1 Level(10, Enemy, 1)     [38,14] 0b 0x0 0x0 0x0 [IronLance,] StallOneTurnAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [32,8] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [34,11] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [35,9] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [36,11] 0b 0x0 0x0 0x0 [IronLance,] ChargeAI
+UNIT 0x9b Mage 0x1 Level(10, Enemy, 1)     [16,8] 0b 0x0 0x0 0x0 [Fire,] ChargeAI
+UNIT 0x9b Merc 0x1 Level(11, Enemy, 1)     [18,10] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
+UNIT 0x9b General 0x1 Level(5, Enemy, 1)     [20,9] 0b 0x0 0x0 0x0 [ShortAxe,SteelBlade,0x65] BossAI
+UNIT 0x9b ACav 0x1 Level(11, Enemy, 1)     [19,11] 0b 0x0 0x0 0x0 [SteelAxe,] TwoActionAI
+UNIT 0x9b Archer 0x1 Level(11, Enemy, 1)     [21,7] 0b 0x0 0x0 0x0 [SteelBow,] ChargeAI
+UNIT 0x9b Soldier 0x1 Level(11, Enemy, 1)     [23,8] 0b 0x0 0x0 0x0 [IronLance,] TwoActionAI
+UNIT 0x9b Soldier 0x1 Level(12, Enemy, 1)     [12,11] 0b 0x0 0x0 0x0 [SteelLance,] TwoActionAI
+UNIT 0x9b SCav 0x1 Level(12, Enemy, 1)     [24,10] 0b 0x0 0x0 0x0 [SteelSword,] TwoActionAI
+UNIT 0x9b LCav 0x1 Level(12, Enemy, 1)     [22,12] 0b 0x0 0x0 0x0 [SteelLance,] TwoActionAI
+UNIT 0x9b Thaumaturge 0x1 Level(12, Enemy, 1)     [25,9] 0b 0x0 0x0 0x0 [Thunder,] StallOneTurnAI
+UNIT 0x9b Mage 0x1 Level(13, Enemy, 1)     [27,7] 0b 0x0 0x0 0x0 [Thunder,] ChargeAI
+UNIT 0x9b Mage 0x1 Level(13, Enemy, 1)     [28,9] 0b 0x0 0x0 0x0 [Wind,] TwoActionAI
+UNIT 0x9b Soldier 0x1 Level(13, Enemy, 1)     [26,11] 0b 0x0 0x0 0x0 [SteelLance,] TwoActionAI
+UNIT 0x9b Druid 0x1 Level(6, Enemy, 1)     [29,9] 0b 0x0 0x0 0x0 [Moonfall,] BossAI
+UNIT 0x9b SCav 0x1 Level(13, Enemy, 1)     [31,10] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
+UNIT 0x9b PegRider 0x1 Level(13, Enemy, 1)     [38,2] 0b 0x0 0x0 0x0 [IronLance,] StallOneTurnAI
+UNIT 0x9b PegRider 0x1 Level(13, Enemy, 1)     [38,14] 0b 0x0 0x0 0x0 [Javelin,] StallOneTurnAI
+UNIT 0x9b ACav 0x1 Level(14, Enemy, 1)     [32,8] 0b 0x0 0x0 0x0 [SteelAxe,] RangeAI
+UNIT 0x9b Soldier 0x1 Level(14, Enemy, 1)     [34,11] 0b 0x0 0x0 0x0 [IronLance,] RangeAI
+UNIT 0x9b General 0x1 Level(7, Enemy, 1)     [35,9] 0b 0x0 0x0 0x0 [0x65,SilverBow] RangeAI
+UNIT 0x9b LArmor 0x1 Level(14, Enemy, 1)     [36,11] 0b 0x0 0x0 0x0 [SteelLance,ShortSpear] RangeAI
+UNIT 0x9b Shaman 0x1 Level(14, Enemy, 1)     [39,8] 0b 0x0 0x0 0x0 [DarkTome2,] RangeAI
+UNIT 0x9b LCav 0x1 Level(15, Enemy, 1)     [40,5] 0b 0x0 0x0 0x0 [ShortSpear,] RangeAI
+UNIT 0x9b Shaman 0x1 Level(15, Enemy, 1)     [18,9] 0b 0x0 0x0 0x0 [DarkTome2,] RangeAI
+UNIT 0x9b Mage 0x1 Level(15, Enemy, 1)     [25,6] 0b 0x0 0x0 0x0 [Bolting,] RangeAI
+UNIT 0x9b GreatKnight 0x1 Level(7, Enemy, 1)     [37,9] 0b 0x0 0x0 0x0 [SteelBlade,SteelGlaive,] BossAI
+UNIT 0x9b Occultist 0x1 Level(15, Enemy, 1)     [39,18] 0b 0x0 0x0 0x0 [DarkTome1,] StallOneTurnAI
 	UNIT
+	
+EndingCutscene1:
+UNIT 0xCA Halberdier 0x1 Level(10, Ally, 0)     [7,9] 0x0 0x0 0x0 0x0 [0x8E,Spear,Halberd,0x77] ChargeAI
+UNIT 0xCB LCav 0x1 Level(4, Ally, 0)     [7,8] 0x0 0x0 0x0 0x0 [SilverLance,ShortSpear,Elixir] ChargeAI
+UNIT 0xCD Priest 0x1 Level(3, Ally, 0)     [7,10] 0x0 0x0 0x0 0x0 [Mend,Rescue,Pain,0xCF] ChargeAI
+
+UNIT Wreyvine Soldier 0x1 Level(4, Ally, 1)     [5,7] 0x0 0x0 0x0 0x0 [SteelLance,SapphireLance,Vulnerary] ChargeAI
+UNIT 0x80 SCav 0x1 Level(4, Ally, 1)     [6,11] 0x0 0x0 0x0 0x0 [IronSword] ChargeAI
+
+UNIT 0x9b Shaman 0x1 Level(11, Enemy, 1)     [11,8] 0b 0x0 0x0 0x0 [DarkTome1,] TwoActionAI
+UNIT 0x9b Mage 0x1 Level(11, Enemy, 1)     [11,10] 0b 0x0 0x0 0x0 [Thunder,] TwoActionAI
+UNIT 0xCC 0x6 0x1 Level(16, Enemy, 0)     [10,9] 0b 0x0 0x0 0x0 [KillerAxe,0xFC] RangeAI
+UNIT 0xC3 Mage 0x1 Level(16, NPC, 0)     [5,18] 0b 0x0 0x0 0x0 [KillerAxe,0xFC] RangeAI //cause moving normally wont work
+	UNIT
+	
+EndingCutscene2: //moves into the map
+UNIT 0x9b 0x4f 0x1 Level(15, Enemy, 1)     [15,9] 0 0 1 REDA11R9 [0x3e,] ChargeAI
+UNIT 0x9b SPal 0x1 Level(15, Enemy, 1)     [15,8] 0 0 1 REDA12R8 [SilverSword,] ChargeAI
+UNIT 0x9b LPal 0x1 Level(15, Enemy, 1)     [15,9] 0 0 1 REDA12R9 [SilverLance,] ChargeAI
+UNIT 0x9b APal 0x1 Level(15, Enemy, 1)     [15,10] 0 0 1 REDA12R10 [SilverAxe,] ChargeAI
+	UNIT
+	
+RandomBatch1:
+UNIT 0x9b SCav 0x1 Level(15, Enemy, 1)     [40,8] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(15, Enemy, 1)     [40,9] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
+UNIT 0x9b ACav 0x1 Level(15, Enemy, 1)     [40,10] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
+	UNIT
+	
+RandomBatch2:
+UNIT 0x9b Mage 0x1 Level(15, Enemy, 1)     [40,8] 0b 0x0 0x0 0x0 [Thunder,] ChargeAI
+UNIT 0x9b Thaumaturge 0x1 Level(15, Enemy, 1)     [40,9] 0b 0x0 0x0 0x0 [Fire,] ChargeAI
+UNIT 0x9b Shaman 0x1 Level(15, Enemy, 1)     [40,10] 0b 0x0 0x0 0x0 [DarkTome2,] ChargeAI
+	UNIT
+	
+RandomBatch3:
+UNIT 0x9b Falcoknight 0x1 Level(15, Enemy, 1)     [40,3] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
+UNIT 0x9b WyvernRider 0x1 Level(15, Enemy, 1)     [40,15] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
+UNIT 0x9b Occultist 0x1 Level(15, Enemy, 1)     [40,8] 0b 0x0 0x0 0x0 [DarkTome1,] ChargeAI
+	UNIT
+	
+Turn3Enemies:
+UNIT 0x9b Thaumaturge 0x1 Level(10, Enemy, 1)     [3,0] 0b 0x0 0x0 0x0 [Thunder,] ChargeAI
+UNIT 0x9b SCav 0x1 Level(10, Enemy, 1)     [4,0] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [5,0] 0b 0x0 0x0 0x0 [ShortSpear,] ChargeAI
+	UNIT
+	
+Turn4Enemies:
+UNIT 0x9b Mage 0x1 Level(10, Enemy, 1)     [40,9] 0b 0x0 0x0 0x0 [Thunder,] ChargeAI
+UNIT 0x9b SCav 0x1 Level(10, Enemy, 1)     [40,12] 0b 0x0 0x0 0x0 [ShortBrand,] ChargeAI
+	UNIT
+	
+Turn4Enemies2:
+UNIT 0x9b PegRider 0x1 Level(10, Enemy, 1)     [39,9] 0b 0x0 0x0 0x0 [SteelLance,] StallOneTurnAI
+	UNIT
+	
+Turn5Enemies:
+UNIT 0x9b Thaumaturge 0x1 Level(10, Enemy, 1)     [40,8] 0b 0x0 0x0 0x0 [Thunder,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(10, Enemy, 1)     [40,9] 0b 0x0 0x0 0x0 [ShortSpear,] ChargeAI
+UNIT 0x9b SPal 0x1 Level(5, Enemy, 1)     [40,10] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
+UNIT 0x9b LPal 0x1 Level(5, Enemy, 1)     [40,11] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
+UNIT 0x9b ACav 0x1 Level(10, Enemy, 1)     [40,12] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
+	UNIT
+	
+Turn6Enemies:
+UNIT 0x9b MageKnight 0x1 Level(5, Enemy, 1)     [3,0] 0b 0x0 0x0 0x0 [Thunder,] ChargeAI
+UNIT 0x9b APal 0x1 Level(5, Enemy, 1)     [4,0] 0b 0x0 0x0 0x0 [IronAxe,] ChargeAI
+UNIT 0x9b Thaumaturge 0x1 Level(10, Enemy, 1)     [3,0] 0b 0x0 0x0 0x0 [Fire,] ChargeAI
+	UNIT
+	
+Turn7Enemies2:
+UNIT 0x9b Occultist 0x1 Level(10, Enemy, 1)     [39,3] 0b 0x0 0x0 0x0 [DarkTome1,] ChargeAI
+	UNIT
+	
+Turn7Enemies:
+UNIT 0x9b Falcoknight 0x1 Level(10, Enemy, 1)     [40,7] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
+UNIT 0x9b Thaumaturge 0x1 Level(10, Enemy, 1)     [40,10] 0b 0x0 0x0 0x0 [Wind,] ChargeAI
+	UNIT
+	
+Turn9Enemies:
+UNIT 0x9b GreatKnight 0x1 Level(5, Enemy, 1)     [40,7] 0b 0x0 0x0 0x0 [ShortBrand,IronGlaive,SteelAxe,] ChargeAI
+UNIT 0x9b MageKnight 0x1 Level(5, Enemy, 1)     [40,10] 0b 0x0 0x0 0x0 [Bolting,Wind] ChargeAI
+	UNIT
+	
+ReinforcementEventLMAO:
+
+CHECK_ACTIVE
+SVAL 1 0x9b
+BNE 0x776 0xC 0x1
+//SVAL 1 0xcc
+//BNE 0x776 0xC 0x1
+
+RANDOMNUMBER 0x2
+SVAL 0x7 0x0
+BEQ 0x1 0xC 0x7
+SVAL 0x7 0x1
+BEQ 0x2 0xC 0x7
+SVAL 0x7 0x2
+BEQ 0x3 0xC 0x7
+GOTO 5
+LABEL 1
+
+SpawnReinforcements(RandomBatch1)
+
+GOTO 5
+LABEL 2
+
+SpawnReinforcements(RandomBatch2)
+
+GOTO 5
+LABEL 3
+
+SpawnReinforcements(RandomBatch3)
+
+LABEL 5
+STAL 0x5
+
+LABEL 0x776
+NoFade
+ENDA
+
 
 Traps1:
-BLST [6,6] Ballista
-BLST [6,12] Ballista
+BLST [6,6] IronBallista
+BLST [6,12] KillerBallista
 RedSigil(8,7)
 RedSigil(8,8)
 RedSigil(8,9)
@@ -140,8 +336,15 @@ NoFade
 ENDA
 
 BeginningScene:
+SetFlag(0x99) //specific boss quote
+Music(0x2b)
+SetBackground(0x34)
+TextCont(Gaiden2Opening3,0x63)
+STAL 15
+
+FADI 60
+CLEAN
 CALL KillThePartyFirst
-	STAL 10
 	LOAD1 0x1 Units1
 	LOAD1 0x1 EnemyUnits
 	
@@ -172,11 +375,217 @@ CUSA 0xFFFE
 SVAL 0xB 0xB0005
 CUSA 0xFFFE
 
+Music(0x28)
+FADU 30
+STAL 10
+CameraCursor(0xcc)
+Text(Gaiden2Opening4)
+
+STAL 15
+CenterTextbox(Gaiden2Notif)
+
 	ENUN
 	NoFade
 	ENDA
 
 EndingScene:
+MUSCSLOW 0x58
+SetFlag(0x84) //hides boss icons
+SetFlag(0x4) //secondary map theme (water)
+UnsetFlag(0x99)
+SetFlag(0x8)
+SetFlag(0x65)
+FADI 60
+RemoveTrapAtCoords(8,7)
+RemoveTrapAtCoords(8,8)
+RemoveTrapAtCoords(8,9)
+RemoveTrapAtCoords(8,10)
+RemoveTrapAtCoords(8,11)
+
+MUSC 0x58
+DoAllThree
+CAM1 [7,9]
+LOAD2 0x1 EndingCutscene1
+FADU 15
+STAL 30
+CameraCursor(0xCA)
+Text(Gaiden2Ending1)
+
+LOAD2 0x1 EndingCutscene2
+STAL 15
+Text(Gaiden2Ending2)
+
+MOVE 0x3C 0xCB [6,8]
+MOVE 0x3C 0xCD [5,18]
+ENUN
+//WORD 0x3C2F49 0xC300CD
+DISA_IF 0xCD
+
+STAL 5
+
+CameraCursor(0xCC)
+Music(0x3e1)
+Text(Gaiden2Ending3)
+
+WORD 0x3C2F49 0x8000CC
+ENUN
+
+StartBattle
+CriticalHit(0,36)
+SetScriptedBattle(100,12,39,55,14,0)
+FIG2 0xCC 0x80 KillerAxe
+SET_SOMETHING 0x80
+//DISA_IF 0x80
+
+WORD 0x3C2F49 0xCB00CC
+ENUN
+
+StartBattle
+CriticalHit(0,49)
+SetScriptedBattle(98,13,33,72,23,0)
+FIG2 0xCC 0x7f KillerAxe
+SET_SOMETHING 0x7f
+//DISA_IF 0x7f
+STAL 10
+Text(Gaiden2Ending4)
+
+SetFlag(0xEE)
+StartBattle
+NormalDamage(0,22)
+SetScriptedBattle(100,22,29,63,12,0)
+FIG1 0xCC 0xCB KillerAxe
+Music(0x3E3)
+
+Text(Gaiden2Ending5)
+MOVE 0xF 0xCB [5,17]
+
+CameraCursor(0xCC)
+
+Text(Gaiden2Ending5After)
+
+WORD 0x3C2F49 0xCA00CC
+ENUN
+
+Text(Gaiden2Ending6)
+
+StartBattle
+CriticalHit(0,16)
+MissedAttack(1,0)
+SetScriptedBattle(83,4,44,92,25,0)
+FIG1 0xCC 0xCA KillerAxe
+Music(0x3E3)
+
+Text(Gaiden2Ending8)
+
+StartBattle
+CriticalHit(0,16)
+NormalDamage(1,25)
+CriticalHit(0,16)
+SetScriptedBattle(83,4,44,92,25,0)
+FIG1 0xCC 0xCA KillerAxe
+Music(0x3E3)
+
+Text(Gaiden2Ending9)
+SET_SOMETHING 0xCA
+
+CameraCursor(0xCC)
+FADI 45
+DoAllThree
+
+STAL 5
+MUSCSLOW 0x3DE
+STAL 15
+SetBackground(0x36)
+Text(Gaiden2Ending10)
+
+MUSCMID 0x7fff
+
+SOUN 0x96
+STAL 15
+SOUN 0x9b
+STAL 15
+SOUN 0x97
+STAL 15
+SOUN 0x9c
+STAL 15
+SOUN 0x9d
+STAL 15
+SOUN 0x9e
+STAL 15
+SOUN 0x9b
+STAL 15
+SOUN 0x9a
+STAL 15
+SOUN 0x99
+STAL 15
+SOUN 0x9f
+STAL 15
+SOUN 0x9c
+STAL 15
+SOUN 0x9d
+STAL 15
+SOUN 0x9e
+STAL 15
+SOUN 0x9b
+STAL 15
+SOUN 0x99
+STAL 15
+SOUN 0x9f
+
+FADI 30
+STAL 250
+
+SOUN 0x9b
+STAL 80
+SOUN 0x9c
+STAL 70
+SOUN 0x9d
+STAL 50
+SOUN 0x9e
+STAL 45
+SOUN 0x9f
+STAL 100
+SOUN 0x9c
+
+MUSCSLOW 0x4b
+FADU 15
+Text(Gaiden2Ending11)
+
+FADI 15
+MUSCSLOW 0x47
+SetBackground(0x34)
+FADU 15
+
+Text(Gaiden2Ending14)
+GiveItem(0xEE,Ulrich)
+GiveItem(0x8E,Ulrich)
+
+UnsetFlag(0x65)
+UnsetFlag(0x84)
+UnsetFlag(0xEE)
+DISA_IF 0xCA
+DISA_IF 0xCB
+DISA_IF 0xCD
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x80
 	MNC2 0xC
 	NoFade
 	ENDA

@@ -68,26 +68,11 @@ strh    r3, [r7, #4]
 
 @ lsl     r3, #0x18
 
-@if we proc
-ldr     r2,[r6]    
-lsl     r1,r2,#0xD                @ 0802B42C 0351     
-lsr     r1,r1,#0xD                @ 0802B42E 0B49     
-mov     r0, #0x40
-lsl     r0, #8           @0x4000, attacker skill activated
-orr     r1, r0
-ldr     r0,=#0xFFF80000                @ 0802B434 4804     
-and     r0,r2                @ 0802B436 4010     
-orr     r0,r1                @ 0802B438 4308   
-@ orr     r0,r3  
-str     r0,[r6]                @ 0802B43A 6018 
-ldrb    r0, AstraID
-strb    r0,[r6,#4] @save the thing
-
 @now add the number of rounds - 
 mov r1, #0x38
 mov r2, sp
 ldr r0, [r2,r1] @location of number of rounds on the stack... hopefully
-add r0, #4
+add r0, #1
 str r0, [r2,r1]
 
 @HERE'S THE TRICKY BIT: UPDATE A NEW ROUND OF BATTLE AND SET THE OFFENSIVE SKILL FLAG
@@ -98,7 +83,7 @@ mov r0, #0
 str     r0,[r4]                @ 0802B43A 6018 
 ldrb    r0, AstraID
 strb    r0,[r4,#4] @save the thing
-mov     r0, #4 @number of extra attacks
+mov     r0, #1 @number of extra attacks
 strb    r0,[r4,#6]
 b End
 

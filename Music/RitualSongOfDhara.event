@@ -3,7 +3,7 @@
 
 	#define	song03D9_grp  voicegroup001
 	#define	song03D9_pri  0
-	#define	song03D9_rev  0
+	#define	song03D9_rev  192 //0xC0
 	#define	song03D9_mvl  127
 	#define	song03D9_key  0
 	#define	song03D9_tbs  1
@@ -1143,7 +1143,7 @@ Label_018C2910:
 song03D9_002:
 //  #02 //000   ----------------------------------------
  BYTE   KEYSH   song03D9_key+0
- BYTE   VOICE   74
+ BYTE   VOICE   73
  BYTE   PAN   c_v+3
  BYTE   VOL   28*song03D9_mvl/mxv
  BYTE   BEND   c_v+0
