@@ -33,10 +33,19 @@ CharacterEventBothWays(0xA, UlrichStroganRecruit, Ulrich, Stroganoff)
 CharacterEventBothWays(0xA, StroganRecruit, 0x0, Stroganoff)
 CharacterEventBothWays(0xA, EisRecruit, 0x0, Eiskaffee)
 CharacterEventBothWays(0xA, DoppioRecruit, 0x0, Doppio)
-//CharacterEventBothWays(0xB, EisSeqConvo, Sequin, Eiskaffee)
+CharacterEventBothWays(0xB, SequinStrogyConvo, Sequin, Stroganoff)
 //CharacterEventBothWays(0xC, PanMochaConvo, Mocha, Pandoro)
 //CharacterEventBothWays(0xD, UlrichDoppioConvo, Ulrich, Doppio)
 	END_MAIN
+	
+	
+SequinStrogyConvo:
+	MUSI
+	Text(SeqStroganoffTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
 	
 AffoUlrichConvoCh3:
 	MUSI

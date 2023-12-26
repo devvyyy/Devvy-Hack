@@ -138,6 +138,22 @@ Text(ChiffonDeath)
 STAL 3
 ENDA
 
+UlrichBossQEvent:
+TEXTSTART
+TEXTSHOW MarcBossQ
+TEXTEND
+SOUN 0xc8
+STAL 15
+SOUN 0xc8
+STAL 30
+SOUN 0xca
+STAL 5
+
+TEXTCONT
+TEXTEND
+REMA
+ENDA
+
 YoryTurretCheck: //used for demolishing turret
 EVBIT_MODIFY 0x4
 TEXTSTART

@@ -27,7 +27,7 @@ ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0xC,AffoUlrichConvoCh5, Affogato, Ulrich) //add this later final talk to unlock gaiden
 //CharacterEvent(0x0,YoryTurretCheck,Yory,0x3F)
-//CharacterEventBothWays(0xC, MochaRinaConvo, Mocha, Rina)
+CharacterEventBothWays(0xC, BrudetSequinConvo, Brudet, Sequin)
 //CharacterEventBothWays(0xD, SeqUlrichConvo, Sequin, Ulrich)
 //CharacterEventBothWays(0xE, EisDoppioConvo, Doppio, Eiskaffee)
 //CharacterEventBothWays(0x20, RecruitRecruitThief, 0x0, Noel)
@@ -330,9 +330,9 @@ UnsetFlag(0x12C)
 NoFade
 ENDA
 
-MochaRinaConvo:
+BrudetSequinConvo:
 	MUSI
-//CharacterConditionalDialog(Atheya,Ch5MochaRina,Ch5MochaRinaAlt)
+CharacterConditionalDialog(Atheya,SeqBrudetTalk,SeqBrudetTalk)
 	MUNO
 	MURE 2
 	NoFade

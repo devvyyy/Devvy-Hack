@@ -78,11 +78,20 @@ ENDA
 ALIGN 32
 CharacterBasedEvents:
 CharacterEvent(0xA,OttoUlrichConvo,0xCA,0xCB)
+CharacterEvent(0xB,OgrimUlrichConvo,0xCA,0xCD)
 	END_MAIN
 	
 OttoUlrichConvo:
 	MUSI
 	Text(OttoUlrichTalk1)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+OgrimUlrichConvo:
+	MUSI
+	Text(OgrimUlrichTalk1)
 	MUNO
 	MURE 2
 	NoFade

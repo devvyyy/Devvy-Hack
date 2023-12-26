@@ -239,7 +239,7 @@ I didn't know the King had a new advisor.[AN]
 [ML][LoadStroganoff]
 Yeah[,] he's an odd fellow.[.6] Talks to his crow[N]
 like he actually understands the[N]
-bloody creature![.6] My enemy![AN]
+bloody creature![.6] What a weirdo![AN]
 
 [MR][MoveFarRight]
 
@@ -552,9 +552,9 @@ people to defend.[A][X]
 Everyone[Beat] Get out of hiding and[N]
 [ToggleRed]seize[ToggleRed] the capital![AN]
 As the battle goes on,[.4] the sun shall set,[AN]
-and the [ToggleRed]dark grows[ToggleRed].[6N]
+and the [ToggleRed]dark grows[ToggleRed].[AN][Clear]
 Strike when they're blinded by the[N]
-by the growing darkness.[AN][Clear]
+growing darkness.[AN][Clear]
 Come,[.4] let's give the crows[N]
 a feast tonight![A][X]
 
@@ -569,8 +569,10 @@ prioritise helping the others seize![A][X]
 ## TurretTalk
 # surely there's a better way to do this???
 [OpenMidLeft][LoadYory][0x80][0x2B][0x03]
+[3l]
 [ToggleMouthMove](Do I want to [ToggleRed]demolish[ToggleRed][N]
-the sentry turret?)[AN]
+the sentry turret?)[6N]
+(This [ToggleRed]ends your action[ToggleRed].)[AN]
 [Yes][N][X]
 
 ## TurretAlt
