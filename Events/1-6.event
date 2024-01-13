@@ -578,9 +578,30 @@ Traps2:
 
 BeginningScene:
 
+	CHECK_ALIVE Ulrich
+	BEQ 0x1 0xC 0x0
+CHECK_EVENTID 0x7E //skips to normal start if gaiden wasnt unlocked
+BEQ 1 0x0 0xC
+
+MUSCSLOW 0x47
+SetBackground(0x34)
+STAL 5
+BROWNBOXTEXT TwentyfourYearsAgo [8,8]
+STAL 15
+BROWNBOXTEXT IdeonsBridgeText [8,8]
+STAL 15
+Text(OttoUlrichFlashback)
+FADI 60
+SetBackground(0x36)
+STAL 5
+
+Text(AfterTheFlashback)
+
+LABEL 1
+
 Music(0x4C)
 SetBackground(0x2f)
-	Text(ChBonusOpening1)
+Text(ChBonusOpening1)
 
 ClearBackground	
 

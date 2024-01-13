@@ -629,9 +629,8 @@ magic spells.[X]
 # Alacrity
 Momentum[N]
 - If Mocha uses all Move and initiates,[N]
-always hit and dodge attacks and deals[N]
-bonus damage = (difference between[N]
-Spd stats; min 0).[X]
+always hit, dodge all attacks, and deals[N]
+bonus damage = (Spd - foe's Spd; min 0).[X]
 
 ## SD_SoulBlade
 Soul Blade: Ignores unit's weapon Mt,[N]
@@ -1148,7 +1147,7 @@ x2 consecutively.[X]
 Eager Rush[N]
 - Grants Hildr AS = Move used.[N]
 - If all Move is used, reduces damage[N]
-taken = (Spd - foe's Spd; min 0).[X]
+taken = 5 + (Spd - foe's Spd; min 0).[X]
 
 ## SD_Outrider
 Outrider[N]
