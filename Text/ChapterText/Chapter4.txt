@@ -40,8 +40,8 @@ No[,] I don't think this force is as grand[N]
 as we think it is.[.6] The sky is dark[N]
 and covered in fog.[AN]
 They can easily obfuscate their true[N]
-numbers to lead us we're fighting[N]
-larger forces.[AN]
+numbers to lead us to believe we're[N]
+fighting larger forces.[AN]
 
 [OpenMidRight]
 If they cross through here[,] the people of[N]
@@ -193,8 +193,8 @@ the charge at once![AN]
 
 [OpenMidRight]
 We must succeed for the Duke.[.6] The Apostle.[6N]
-The future of Aeteria[,] I swear on my heirs[Beat][N][2NL]
-[CloseEyes]Wreyvine will remember this day.[AN]
+The future of Aeteria[,] I swear on my heirs[Beat][N]
+[CloseEyes]Wreyvine will remember this day.[AN][Clear]
 [OpenEyes]They will regret the day they[N]
 made the first strike![AN]
 
@@ -237,14 +237,14 @@ Yeah[,] yeah.[.6] Looks like it.[AN]
 
 [FR][MoveMidRight]
 How did the crow know to track me down?[6N]
-Let me read this[Beat][N][2nl]
-[Beat]Ah[,] it's from[Beat] Gorlois?[AN]
+Let me read this[Beat][N]
+[Beat]Ah[,] it's from[Beat] Gorlois?[AN][2nl]
 I didn't know the King had a new advisor.[AN]
 
 [ML][LoadStroganoff]
 Yeah[,] he's an odd fellow.[.6] Talks to his crow[N]
 like he actually understands the[N]
-bloody creature![.6] What a weirdo![AN]
+bloody creature![.6] What a drongo![AN]
 
 [MR][MoveFarRight]
 
@@ -379,8 +379,64 @@ if they succeed.)[A][ToggleMouthMove][X]
 
 ## HartBossQ
 # verified
-[OpenMidLeft][LoadHartmann]Grasp towards the light[Beat][.6][N]
+[OpenMidLeft][LoadHartmann]Grasp towards the light[Beat][N]
 It is all you have.[A][X]
+
+## HartSeqBossQ
+[OpenMidLeft][LoadHartmann]
+A mage amongst their ranks?[AN][Clear]
+And I thought I'd never see[N]
+the day Wreyvine looks upon[AN]
+anima with anything[n]
+besides fear and scorn.[an][ClearFace]
+
+[OpenMidRight][LoadSequin]
+Heh[,] I ~am~ a man of[N]
+quite a few unique talents,[AN]
+if I may say so myself.[AN][ClearFace]
+
+[OpenMidLeft][LoadHartmann]
+You serve the same men[N]
+who would throw you upon[AN]
+a pyre without hesitation[,][N]
+solely for that [OpenQuote]talent".[AN]
+Join me.[.6] I shall treat you[N]
+better than they ever could.[AN][ClearFace]
+
+[OpenMidRight][LoadSequin]
+I'll never stoop to the[N]
+level of an Aeterian.[AN]
+[X]
+
+## HartKaneBossQ
+[OpenMidLeft][LoadHartmann]
+You[,] light mage.[AN][Clear]
+Are they forcing you here[N]
+against your will?[AN]
+You certainly don't[N]
+look the part of a soldier.[AN][ClearFace]
+
+[OpenMidRight][LoadKane]
+Ehhh[Beat] I'd really say[N]
+I'm no one in particular.[AN]
+But I'm more than enough to[N]
+deal with folks like you.[AN][ClearFace]
+
+[OpenMidLeft][LoadHartmann]
+I cannot comprehend how[N]
+a man like you could[AN]
+ever call Wreyvine home[Beat][AN][Clear]
+Why not leave? Aeteria will[N]
+be[Beat] much more welcoming.[AN]
+I will personally request[N]
+refuge for your loved ones.[AN][ClearFace]
+
+[OpenMidRight][LoadKane]
+Look at you[,] talkin' like you[N]
+got me all figured out[,] eh.[AN]
+I'll have ya know[Beat] you don't[N]
+know a thing aboot me.[AN]
+[X]
 
 ## HartAffoBossQ
 # verified
@@ -434,11 +490,11 @@ Uncle.[.6] You[,] too are on the front lines[N]
 this war?[.6] Is such a fate unavoidable?[AN]
 
 [OpenMidLeft]
-Nora[,] that's something I should be[N]
-asking you.[.6] You're not very[N]
-sturdy or clad in armor.[AN]
-You know your father was a towering[N]
-figure both in-and-out of battle.[6N]
+Nora[,] that's something I should be asking[N]
+you.[.6] You have no experience of the[N]
+ways of the battlefield.[AN]
+You know your father was a towering figure[N]
+both in-and-out of battle with his armor.[6N]
 When will you follow his legacy?[AN]
 
 [OpenMidRight]
@@ -453,11 +509,15 @@ you to doubt your skills here today.[AN]
 I resigned my position as a soldier after[N]
 the old war to honor my brother's legacy;[.4] to[N]
 follow the hallowed path of the Great Flame.[AN]
+For me[,] living life to the fullest with[N]
+the fleeting time I have left is fighting[N]
+for Wreyvine's future--[.4]for you.[AN][Clear]
+What doubts plague your mind?[AN]
 
 [OpenMidRight]
-Is it truly my right to practice magic[N]
-on the battlefield?[.6] Arcane power[N]
-so disastrous if used incorrectly?[AN]
+Is it truly my right to practice magic on[N]
+the battlefield?[.6] Arcane power so[N]
+disastrous if used incorrectly?[AN]
 
 [OpenMidLeft]
 Nora[,] as long as you devote yourself to[N]
@@ -536,12 +596,18 @@ the response![AN]
 ## AffoUlrichCh4Talk
 
 [3l]
-[OpenMidLeft][LoadAffo][OpenMidRight][LoadUlrich]
-
-[OpenMidRight]
-Are you nervous?[AN]
+[OpenMidLeft][LoadAffo]
 
 [OpenMidLeft]
+[ToggleMouthMove](...Then that must mean I was sent to Wreyvine[N]
+under the same command... Was I really[N]
+assigned to fight with them?)[ToggleMouthMove]
+
+[OpenMidRight][LoadUlrich]
+Affogato.[.6] Are you nervous?[AN]
+
+[OpenMidLeft]
+I was lost in thought[,] Sir Ulrich.[6N]
 Right now[,] not particularly.[.6] The[N]
 Aeterians don't pose much of a threat.[an]
 
@@ -556,21 +622,22 @@ met the 7th Platoon.[AN]
 
 [OpenMidRight]
 What's so scary about[Beat] that?[.6] You're[N]
-not really one to fear[,] I found.[AN]
+not really one to fear[,] I find.[AN]
 
 [OpenMidLeft]
 Their formations[,] tactics[,] movements are[6N]
 flashes from a war I never fought in.[6N]
-It makes me wonder if I'm losing my mind.[AN]
+It makes me wonder if I'm losing my mind.[AN][Clear]
+I know I'm supposed to be here[,] but[Beat][AN]
 
 [OpenMidRight]
 Why did you sign up?[.6] Did you know[N]
 you were enlisting to fight Aeteria?[AN]
 
 [OpenMidLeft]
-No.[.6] I fear I must've been headed[N]
-to Wreyvine for a different reason.[AN]
-[Pause]Stay alive out there.[AN]
+No.[.6] I fear I must've been headed to[N]
+Wreyvine for a different reason.[AN]
+[Pause]Stay alive out there[,] sir.[AN]
 
 [X]
 

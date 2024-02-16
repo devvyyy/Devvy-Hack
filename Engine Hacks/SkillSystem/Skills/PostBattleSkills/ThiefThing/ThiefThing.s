@@ -4,6 +4,7 @@
   .short 0xf800
 .endm
 .equ CloseCallID, SkillTester+4
+.equ OverdriveID, CloseCallID+4
 @.equ ThiefEvent, SkillTester+4
 .thumb
 
@@ -17,6 +18,15 @@ beq	End
 @check for skill
 mov	r0, r4
 ldr	r1, CloseCallID
+ldr	r3, SkillTester
+mov	lr, r3
+.short	0xf800
+cmp		r0,#0
+bne		End
+
+@check for skill
+mov	r0, r4
+ldr	r1, OverdriveID
 ldr	r3, SkillTester
 mov	lr, r3
 .short	0xf800

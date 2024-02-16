@@ -54,6 +54,14 @@ mov	lr, r3
 cmp	r0,#0x00
 beq	End
 
+@check if flag 0x25 set; if set, dont canto
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0x25
+.short 0xF800
+cmp r0,#1
+beq End
+
 @check if moved all the squares
 ldr	r0,=#0x8019224	@mov getter
 mov	lr, r0
@@ -84,71 +92,12 @@ cmp r0,r1
 beq End
 
 CantoProc:
-@ check if moved more than 1: if so, canto 1 instead of 2
-ldr r3,=0x203a968 @Spaces Moved
-ldrb r2,[r3]
-cmp r2, #0x0 @0 spaces
-beq CanTwo
-
-@ CANTO 1: move 1 square after canto
-ldr	r0,=#0x8019224	@mov getter
-mov	lr, r0
-mov	r0, r4		@attacker
-.short	0xF800
-sub r0, #1
-strb 	r0, [r6, #0x10]	@squares moved this turn
-
-@ check if attacked
-@ldrb 	r0, [r6,#0x11]	@action taken this turn
-@cmp	r0, #0x2 @attack
-@bne	GoCanto
-@ used to be an attack check for flow proc attack
-
-@check if flag 0x25 set; if set, doubles to canto 2
-ldr r0,=#0x8083da8 @CheckEventId
-mov r14,r0
-mov r0,#0x25
-.short 0xF800
-cmp r0,#1
-bne GoCanto @if flag is not on, canto normally; otherwise set canto 2
-
+@ CANTO 2: move 2 square after canto
 ldr	r0,=#0x8019224	@mov getter
 mov	lr, r0
 mov	r0, r4		@attacker
 .short	0xF800
 sub r0, #2
-strb 	r0, [r6, #0x10]	@squares moved this turn
-
-b GoCanto @go canto 2
-
-CanTwo: @ CANTO 2: move 2 squares after canto
-ldr	r0,=#0x8019224	@mov getter
-mov	lr, r0
-mov	r0, r4		@attacker
-.short	0xF800
-sub r0, #2
-strb 	r0, [r6, #0x10]	@squares moved this turn
-
-@ check if attacked
-@ldrb 	r0, [r6,#0x11]	@action taken this turn
-@cmp	r0, #0x2 @attack
-@bne	GoCanto
-@ again used to be an attack check for flow proc attack
-
-@check if flag 0x25 set; if set, doubles to canto 4
-ldr r0,=#0x8083da8 @CheckEventId
-mov r14,r0
-mov r0,#0x25
-.short 0xF800
-cmp r0,#1
-bne GoCanto @if flag is not on, Canto 2 as normal
-
-@canto 4
-ldr	r0,=#0x8019224	@mov getter
-mov	lr, r0
-mov	r0, r4		@attacker
-.short	0xF800
-sub r0, #4
 strb 	r0, [r6, #0x10]	@squares moved this turn
 
 GoCanto: @END: if canto, unset 0x2 and set 0x40

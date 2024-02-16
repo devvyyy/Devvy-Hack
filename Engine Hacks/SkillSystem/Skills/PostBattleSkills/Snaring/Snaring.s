@@ -4,6 +4,7 @@
   .short 0xf800
 .endm
 .equ DartingBlowID, SkillTester+4
+.equ CommanderID, DartingBlowID+4
 .thumb
 push	{r4-r7,lr}
 
@@ -50,8 +51,17 @@ beq Apply
 cmp r0, #0x0
 beq Apply
 b End
-
 Apply:
+
+@oh but dont inflict if boss??!
+mov	r0, r5
+ldr	r1, CommanderID
+ldr	r3, SkillTester
+mov	lr, r3
+.short	0xf800
+cmp	r0,#0x00
+bne	End
+
 @ apply Rooted status (0x11)
 mov r0, #0x37 @first number is duration, second number is status effect (status expansion makes it any status with 1 turn i think???)
 mov r1, #0x30 @status

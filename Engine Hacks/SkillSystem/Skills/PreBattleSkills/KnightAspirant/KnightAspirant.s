@@ -7,8 +7,8 @@ mov r5, r1 @dfdr
 
 @Above 75% hp
 ldrb r0, [r4, #0x12]
-lsr r0, #2 @max hp/2
 mov r1,#0x3
+lsr r0, #2 @max hp/2
 mul r0, r1
 ldrb r1, [r4, #0x13] @currhp
 cmp r1, r0

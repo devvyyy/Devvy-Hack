@@ -14,7 +14,7 @@
 .thumb
 push {r4-r6,lr}
 
-mov r11, r11
+@mov r11, r11
 
 @check if attacked this turn
 ldrb 	r0, [r6,#0x11]	@action taken this turn

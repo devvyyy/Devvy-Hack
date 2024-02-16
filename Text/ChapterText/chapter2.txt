@@ -424,7 +424,7 @@ W-What?[.6] No[,] I don't know[N]
 anything about that.[AN]
 
 [OpenMidRight]
-My sincere apologies[,] but[Beat]
+My sincere apologies[,] but[Beat][AN]
 
 [OpenMidLeft]
 [MoveMidLeft]
@@ -544,21 +544,21 @@ merc.[.6] Deal? Just point me to the enemy![AN]
 
 ## LatteUlrichRecruit
 [3L]
-[OpenMidLeft][LoadLatte][OpenMidLeft][LoadUlrich]
+[OpenMidLeft][LoadLatte][OpenMidRight][LoadUlrich]
 [OpenMidLeft]
 Lieutenant Ulrich.[.6] It's a pleasure[N]
 to see you again.[AN]
 
-[OpenMidLeft]
+[OpenMidRight]
 You must be one of the new recruits.[6N]
 Levain[,] correct?[AN]
 
 [OpenMidLeft]
 Right.[.6] We were out on a reconnoitering[N]
 mission with Sir Xavier's 13th platoon.[6N]
-I got lost[,] though[Beat][AN]
+I couldn't find my way[,] though[Beat][AN]
 
-[OpenMidLeft]
+[OpenMidRight]
 Alright.[.6] Come with us[,] Levain.[.6] We're[N]
 headed to the capital.[AN]
 
@@ -635,7 +635,7 @@ Hildr.[.6] I wanted to ask.[AN]
 Yeeeeees?[AN]
 
 [OpenMidLeft]
-Where did your[Beat] idealism come from?[6N]
+Where does your[Beat] idealism come from?[6N]
 Let me guess:[.4] your entire family[N]
 was in the royal guard?[.6] Is that it?[AN]
 
@@ -753,10 +753,10 @@ What the hell is that supposed to mean?[AN]
 To be frank[,] using an axe in battle[N]
 is all I'm good at.[.6] The rest of my[N]
 family was the same with the edge of a[AN]
-blade or spear.[.6] It's in the blood.[AN]
-I just don't adapt well to[Beat] standard[N]
-occupations;[.4] I can't focus or follow[,][N]
-and I end up messing everything up[Beat]]AN]
+blade or spear.[.6] It's in the blood.[AN][Clear]
+I just don't adapt well to the usual[N]
+stuff;[.4] It's hard to focus or follow[,][N]
+and I just end up messing everything up[Beat][AN]
 But on the battlefield[,] it feels like[N]
 I can keep up with myself[,][N]
 you know?[AN][Clear]
@@ -940,12 +940,12 @@ am I wrong?[AN]
 No[,] I don't.[AN]
 
 [OpenMidRight]
-[Pause]Huh?
+[Pause]Huh?[AN]
 
 [OpenMidLeft]
 I don't think I have a background in[N]
-military strategy.[.6] Now I must go[N]
-back to work[,] sir.[AN]
+military strategy.[.6] Now I must head[N]
+back to scouting[,] sir.[AN]
 
 [OpenMidRight]
 You know that's not what I was asking.[AN]
@@ -966,7 +966,7 @@ that I returned to my service to atone.[AN]
 You've served for a long time.[AN]
 
 [OpenMidRight]
-You ought to tell me more about[N]
+Uh-huh.[.6] You ought to tell me more about[N]
 yourself sometime.[AN]
 
 [X]
@@ -1003,10 +1003,41 @@ would love this challenge.[AN][X]
 [MidLeft][LoadWellington]
 You raise your blade at me?[6N]
 I don't have time for this.[AN]
-But[Beat] Very well![6N]
+Yet I am easily entertained[,][N]
+and life is quite dull.[AN]
+So[Beat] Very well[,] Wreyvian![6N]
 Let's test your mettle.[AN][X]
 
+## WulfricAffoBossQ
+# verified
+[MidLeft][LoadWellington]
+You're[Beat]![.6] You're not[N]
+supposed to be here.[AN]
+Your station was with[N]
+the others[,] soldier.[AN][ClearFace]
+
+[MidRight][LoadAffogato]
+[Mouth](I recognize this man's face[,][N]
+yet he's not making any sense...)[AN][Mouth][Clear]
+I don't understand what[N]
+you're talking about.[AN][ClearFace]
+
+[MidLeft][LoadWellington]
+Aren't you[,] too[,] headed[N]
+the capital?[AN]
+[Pause]Nay[,] you're not Aeterian.[6N]
+What a shameful mistake.[AN]
+Pardon me[,] but I must[N]
+fulfill my duty.[AN][ClearFace]
+
+[MidRight][LoadAffogato]
+[Mouth](What a perplexing man. But he[N]
+must've jolted a memory...[AN]
+[Close]If the Aeterian army is heading[N]
+towards the capital[,] then[Eyes]...!)[AN][Mouth][Clear]
  
+[X]
+
 ## OgrimBDeath
 # verified
 [MidLeft][LoadWellington]

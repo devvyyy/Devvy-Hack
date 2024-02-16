@@ -249,6 +249,8 @@ SetBackground(0x33)
 STAL 5
 	CHECK_ALIVE Ulrich
 	BEQ 0x1 0xC 0x0
+CHECK_EVENTID 0x78 //skips to normal ending if affo never fought wulfric
+BEQ 1 0x0 0xC
 CHECK_EVENTID 0x79 //skips to normal ending if 1 wasnt completed
 BEQ 1 0x0 0xC
 CHECK_EVENTID 0x7A //skips to normal ending if 2 wasnt completed
@@ -270,6 +272,7 @@ TEXTEND
 REMA
 
 SetFlag(0x7E) //GAIDEN UNLOCKED EID FLAG
+UnsetFlag(0x78)
 UnsetFlag(0x79)
 UnsetFlag(0x7A)
 UnsetFlag(0x7B)

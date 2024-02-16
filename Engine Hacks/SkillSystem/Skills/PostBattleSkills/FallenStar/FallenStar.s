@@ -4,6 +4,7 @@
   .short 0xf800
 .endm
 .equ ShadowEyeID, SkillTester+4
+.equ CommanderID, ShadowEyeID+4
 .thumb
 push	{r4-r7,lr}
 
@@ -51,6 +52,16 @@ beq Apply
 b End
 
 Apply:
+
+@oh but dont inflict if boss??!
+mov	r0, r5
+ldr	r1, CommanderID
+ldr	r3, SkillTester
+mov	lr, r3
+.short	0xf800
+cmp	r0,#0x00
+bne	End
+
 @ apply Shadow Eye status (0x14)
 mov r0, #0x34 @first number is duration, second number is status effect (status expansion makes it any status with 1 turn i think???)
 mov r1, #0x30 @status

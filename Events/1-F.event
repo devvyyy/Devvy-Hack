@@ -200,7 +200,7 @@ UNIT FlierSoul Falcoknight 0x1 Level(3, Enemy, 1)     [26,18] 0b 0x0 0x0 0x0 [He
 	UNIT
 	
 BottomLeftStairs:
-UNIT FlierSoul WyvernKnight 0x1 Level(3, Enemy, 1)     [26,19] 0b 0x0 0x0 0x0 [SteelAxe,Hammer] ChargeAI
+UNIT FlierSoul WyvernKnight 0x1 Level(3, Enemy, 1)     [26,19] 0b 0x0 0x0 0x0 [SteelAxe,Halberd] ChargeAI
 	UNIT
 	
 ANOTHERWYVERN:
@@ -817,6 +817,10 @@ CharacterConditionalDialog(Stroganoff,AnsgarThereseTalk,AnsgarThereseTalkAlt)
 	ENDA
 
 EndingScene:
+UnsetFlag(0x91)
+UnsetFlag(0x92)
+UnsetFlag(0x93)
+
 SetFlag(0x16) //disable king boss quote
 SetFlag(0x99) //disable selwyn boss quote
 Music(0xF3)
@@ -1072,9 +1076,15 @@ BEQ 0x9000 0xC 0x0
 
 //gaiden unlocked ending
 
+FADI 16
+
 SVAL 0xB 0x10000C //change map
 LOMA 0x5
 SetFlag(0x84)
+FADU 8
+STAL 40
+BROWNBOXTEXT OtherDayText [8,8]
+STAL 20
 CamOn
 LOAD2 0x1 CutsceneUnitsFlashback
 CamOff

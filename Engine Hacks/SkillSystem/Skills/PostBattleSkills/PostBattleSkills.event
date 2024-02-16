@@ -62,12 +62,42 @@ Snaring:
 #incbin "Snaring/Snaring.dmp"
 POIN SkillTester
 WORD DartingBlowID
+WORD CommanderID
+
+ALIGN 4
+EvilEyeSkill:
+#incbin "EvilEye/EvilEye.dmp"
+POIN SkillTester
+POIN GetUnitsInRange
+WORD EndTurnID
+POIN EvilEyeEvent
+WORD CommanderID
+
+EvilEyeEvent:
+CAM1 0xFFFF
+//SOUN 0x314 //bling sound
+//SOUN 0x37E //charging loud sound
+//SOUN 0x3c6 //evil eye sound
+//SOUN 0x3D1 //skill activation sound
+
+ASMC ASMC_GetBattleTarget|1
+SADD sB sC s0
+WARP_IN
+STAL 0x32
+//SOUN 0x32A //dog sound
+
+
+//SOUN 0x331 //gorgon scream
+
+NoFade
+ENDA
 
 ALIGN 4
 DirtyFighting:
 #incbin "DirtyFighting/DirtyFighting.dmp"
 POIN SkillTester
 WORD GalestormID
+WORD CommanderID
 
 ALIGN 4
 OverdriveStatus:
@@ -96,6 +126,7 @@ ShadowEyeMark:
 #incbin "FallenStar/FallenStar.dmp"
 POIN SkillTester
 WORD ShadowEyeID
+WORD CommanderID
 
 ALIGN 4
 Shieldbow:
@@ -183,6 +214,11 @@ POIN AuraSkillCheck
 //WORD ParryID
 //POIN ParryEvent
 //#include "ParryPost/ParryEvent.event"
+
+ALIGN 4
+EndTurnSkill:
+#include "EndTurn/EndTurn.lyn.event"
+WORD EndTurnID
 
 ALIGN 4
 LionheartDamage:
@@ -435,6 +471,7 @@ ThiefThing: //universal steal galeforce (make it restrict move?)
 #incbin "ThiefThing/ThiefThing.dmp"
 POIN SkillTester
 WORD CloseCallID
+WORD OverdriveID
 //POIN ThiefEvent
 //#include "ThiefThing/ThiefEvent.event"
 
@@ -445,6 +482,14 @@ POIN SkillTester
 WORD CloseCallID
 POIN SidestepEvent
 #include "Sidestep/SidestepEvent.event"
+
+ALIGN 4
+ChiffonSidestep:
+#incbin "ChiffonSidestep/Sidestep.dmp"
+POIN SkillTester
+WORD OverdriveID
+POIN ChiffonSidestepEvent
+#include "ChiffonSidestep/SidestepEvent.event"
 
 ALIGN 4
 CantoTwo:
@@ -486,13 +531,14 @@ ALIGN 4
 Gridmaster:
 #incbin "Gridmaster/Gridmaster.dmp"
 POIN SkillTester
-WORD GridmasterID
+WORD CloseCallID
 WORD ACTION_MOVETARGET
 WORD ACTION_MOVEACTIVE
 WORD ACTION_SWAP
 WORD ACTION_PUSH
 WORD ACTION_SWARP
-
+POIN SidestepStealthEvent
+#include "Sidestep/SidestepEvent.event"
 
 PUSH //some changes to vanilla code to make everything work
 ORG $1D24C //check for canto, modified to just check for cantoing bit set

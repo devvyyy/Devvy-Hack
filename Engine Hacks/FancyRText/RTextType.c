@@ -74,6 +74,7 @@ bool IsItemDagger(u16 item) {
    case 0xFE: //syzygy
    case 0xB9: //affogato dagger
    case 0x90: //mace
+   case 0x53: //smite
         return TRUE;
 
     default:

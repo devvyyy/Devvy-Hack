@@ -16,6 +16,55 @@ Like Dominoes: If unit initiates, kills[N]
 foes below (5 + Skill) HP (always hits).[N]
 Grants unit another action on kill.[X]
 
+## SD_HBR
+Heaven Burns Red[N]
+- If foe initiates combat, after combat,[N]
+after all post-combat effects trigger,[N]
+unit ends the actions of all foes within[N]
+8 spaces and foes with Heaven affinity.[X]
+
+## SD_SuppressiveFire
+Suppressive Fire[N]
+- If unit initiates combat, after combat,[N]
+after all post-combat effects trigger,[N]
+ends the actions of all foes within 3[N]
+spaces of target.[X]
+
+## SD_BloodFury
+Blood Fury[N]
+- If unit doesn't kill, takes 5 damage[N]
+after combat.[N]
+- Restores 25% max HP on kill.[N]
+- Grants Atk/AS = 50% of missing HP.[X]
+
+## SD_Radiance
+# shirt uses 0xB1, change order of marking/healing in calc loop so marking an ally missing hp with barrier also heals them?
+Encourage[N]
+- Nora's staves mark allies for the map.[N]
+- Grants marked allies Res +5.[N]
+- Restores (Eth + 5) HP to all marked[N]
+allies on the map after action.[X]
+
+## SD_Fom
+# Glare? Pressure? Intimidate? Domineer?
+Evil Eye[N]
+- If Floris initiates combat, after combat,[N]
+after all post-combat effects trigger,[N]
+Fears target and ends the actions of[N]
+closest foes within 4 spaces of target.[X]
+
+## SD_DriveRes
+Hallowed Soul[N]
+- Iris neutralizes Mt of foe's magic.[N]
+- Grants Rsl +5 and (50% ally Str)[N]
+bonus magical damage to allies within[N]
+3 spaces. (If ally uses Eth, Str = 0.)[X]
+
+## SD_Miracle
+Miracle[N]
+- If unit's HP is 50% or more, survives[N]
+the next lethal attack.[X]
+
 ## SD_Bruh
 # has 3 separate gamble-esque menus inside a combat art menu
 Arcane Perfection[N]
@@ -498,14 +547,6 @@ Overheat: If unit attacked, combat grants[N]
 1 stack (max; 3). At max stacks, halves[N]
 Str/Skill and sets Spd/Move to 0 for 1 turn.[X]
 
-## SD_Radiance
-# shirt uses 0xB1
-Motivate[N]
-- Floris' staves mark allies for the map.[N]
-- Mark grants allies Res +5.[N]
-- Restores (Eth + 5) HP to all marked[N]
-allies on the map after combat.[X]
-
 ## SD_Gamer
 Bereft: If unit is within 2 spaces of an ally,[N]
 strike x2 consecutively, but deals (20% of ally's[N]
@@ -584,7 +625,7 @@ First Blood: Kills on turn 1 grant[N]
 another action.[X]
 
 ## SD_ApheliosHowMANYYEARS
-# Moon Evoked, temp flags 0x23 (half) and 0x24 (full)
+# Moon Evoked, temp flags 0x23 (half) and 0x24 (full) NVM NOT ANYMORE
 [_M][_o][_o][_n][_SP][_E][_v][_o][_k][_e][_d][_Colon][_SP][_I][_f][_SP][_C][_h][_i][_f][_f][_o][_n]'[_s][_SP][_H][_P][_SP][_i][_s][_SP][_5][_0]%[_SP][_o][_r][_SP][_l][_e][_s][_s][_Comma][_SP][_g][_r][_a][_n][_t][_s][N]
 [_A][_S][_Slash][_A][_v][_o][_i][_d][_SP]=[_SP][_m][_i][_s][_s][_i][_n][_g][_SP][_H][_P][_Comma][_SP][_a][_n][_d][_SP][_a][_t][_SP][_2][_5]%[_SP][_H][_P][_SP][_o][_r][_SP][_l][_e][_s][_s][_Comma][_SP][_a]l[_s][_o][N]
 [_g][_r][_a][_n][_t][_s][_SP][_M][_o][_v][_e][_SP][_Plus][_1][_SP][_a][_n][_d][_SP][_a][_t][_t][_a][_c][_k][_i][_n][_g][_SP][_i][_s][_SP][_a][_SP][_f][_r][_e][_e][_SP][_a][_c][_t][_i][_o][_n][_Dot][X]
@@ -667,23 +708,30 @@ restores 4 HP after combat. (+4 extra[N]
 restored for every 25% below max HP).[X]
 
 ## SD_AnakinSkill
-Motivating Presence: Grants allies[N]
-within 3 spaces Hit/Avoid/Crit +10,[N]
-tripled if that unit is above 50% HP.[N]
+Motivating Presence[N]
+- This Lost Soul grants allies within[N]
+3 spaces Hit/Avoid/Crit +10, tripled[N]
+if that ally is above 50% HP.[X]
 
 ## SD_KelikSkill
-Etherium: If unit initiates or if foe[N]
-uses magic, grants Atk +6. If magic foe[N]
-initiates, unit dodges all attacks.[X]
+Etherium[N]
+- If this Lost Soul initiates or if foe[N]
+uses magic, grants Atk +10.[N]
+- If magic foe initiates, dodge[N]
+all attacks.[X]
 
 ## SD_ShonSkill
-Gallant: If foe's HP is full, grants[N]
-Atk/AS/Prt/Rsl +3 and deals 10 bonus[N]
-physical damage.[X]
+Gallant[N]
+- If foe's HP is full, grants this[N]
+Lost Soul Atk/AS/Prt/Rsl +3 and[N]
+deals 10 bonus physical damage.[X]
 
 ## SD_SiegSkill
-Tearing Skies: If unit initiates, unit[N]
-follow-ups and foe cannot.[X]
+Tearing Skies[N]
+- If this Lost Soul initiates, follow-up[N]
+and foe cannot.
+- Deals bonus damage/reduces damage[N]
+taken = (Spd - foe's Spd; min 0).[X]
 
 ## SD_AmongUs
 Quadratic Strike: Grants Atk +X.[N]
@@ -925,9 +973,10 @@ their Crit/Avoid to 0.[X]
 
 ## SD_ThunderClap
 Grounding[N]
-- If foe's terrain has bonuses, Doppio[N]
-ignores those bonuses and deals bonus[N]
-magical damage = foe's Spd x 2.[X]
+- If foe's terrain has bonuses or if foe[N]
+has a status effect, Doppio ignores foe's[N]
+terrain bonuses and deals bonus magical[N]
+damage = foe's Spd x 2.[X]
 
 ## SD_Kalista
 Martial Poise[N]
@@ -1070,20 +1119,20 @@ Eye of the King: Deals damage =[N]
 foe's Max HP/4.[X]
 
 ## SD_CloseCall
-# Sidestep
+# After dashing, if not in Stealth, grants another action and Stealth.
 Sidestep[N]
-- If Affogato doesn't move, Canto 2[N]
-spaces (1 if moved; x2 in Stealth).[N]
-- Grants another action after[N]
-picking/stealing (once per turn).[X]
+- Affogato can Canto 2 spaces after[N]
+any action (can't Canto while Stealthed).[N]
+- After dashing, if not in Stealth, enter[N]
+Stealth and grants another action.[X]
 
 ## SD_Stealth
-# Guerrilla Warfare; uses flag 0x25
+# Guerrilla Warfare; uses flag 0x25; 0xEF is affogato mug flag
 Guerrilla Warfare[N]
 - Can enter Stealth: Pass through foes,[N]
 untargettable, always hit; attacking or[N]
 being adjacent to a foe breaks Stealth.[N]
-- Activating ends turn.[X]
+- Activating ends action.[X]
 
 ## SD_Stacks
 # Flow, temp flags 0x26-0x28 (used to use 0x25) MAKE THIS 3 stacks now!!
@@ -1297,10 +1346,10 @@ Cost: 5 Durability.[X]
 
 ## SD_Astra
 Lightslinger[N]
-- Use to strike x2 consecutively[N]
-with 50% damage (can follow-up).[N]
+- Use to strike x2 consecutively with[N]
+50% total damage (can follow-up).[N]
 - Can Canto 3 spaces after combat.[N]
-(Granted actions have priority.)[X]
+(Granted actions take priority.)[X]
 
 ## SD_Discipline
 Discipline: Weapon experience[N]
@@ -1386,12 +1435,6 @@ Voile de Foi[N]
 upon hit (can't kill).[N]
 - Negates all damage from foe's critical[N]
 hits, combat arts, and active effects.[X]
-
-## SD_Miracle
-Hallowed Soul[N]
-- If Iris' HP is 50% or more,[N]
-neutralizes Mt of foe's magic and[N]
-survive the next lethal attack.[X]
 
 ## SD_HallowedGround
 Hallowed Ground: Iris grants "If unit's[N]
@@ -1874,8 +1917,8 @@ takes 6 damage after combat.[X]
 
 ## SD_Dazzle
 Overwhelm[N]
-- If Noel's Str > foe's Str, grants Atk[N]
-+3 and foe can't counterattack.[N]
+- If Noel's Str > foe's Str, follow-up[N]
+and foe can't counterattack.[N]
 (If foe uses Eth, foe's Str = 0.)[N]
 - Inflicts Avoid -20 on adjacent foes.[X]
 
@@ -2189,13 +2232,6 @@ Drive Luck: Allies within[N]
 Drive Defense: Allies within[N]
 2 spaces receive +4 defense.[X]
 
-## SD_DriveRes
-Encourage[N]
-- Nora grants +5 Rsl to allies within[N]
-2 spaces.[N]
-- Physical allies within 2 spaces deal[N]
-(50% ally Str) bonus magical damage.[X]
-
 ## SD_Blossom
 Blossom: 2x growth rates,[N]
 but 1/2 exp gain.[X]
@@ -2311,7 +2347,9 @@ against attacks recieved at range.[X]
 # boss shield icon; Commander?; - Negates foe's effects that deal bonus damage scaling with % HP.
 Obelisk[N]
 - Reduces damage taken by 50%.[N]
-- Prevents foe from stealing.[X]
+- Prevents foe from stealing.[N]
+- Immune to Root, Stun, Blind, Fear,[N]
+Confusion, and Soulbreak.[X]
 
 ## SD_VoidCurse
 Void Curse: This unit gives[N]

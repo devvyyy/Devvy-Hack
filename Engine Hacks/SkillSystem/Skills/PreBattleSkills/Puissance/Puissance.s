@@ -36,10 +36,16 @@ ble End @skip if str is less or equal
 SkipStrCheck:
 
 @add 3 damage
-mov r1, #0x5a
-ldrh r0, [r4, r1] @atk
-add r0, #3
-strh r0, [r4,r1]
+@mov r1, #0x5a
+@ldrh r0, [r4, r1] @atk
+@add r0, #3
+@strh r0, [r4,r1]
+
+@set attacker AS to 99
+mov r0, r4
+add r0,#0x5E
+mov r3,#99
+strh r3,[r0]
 
 End:
 pop {r4-r7, r15}

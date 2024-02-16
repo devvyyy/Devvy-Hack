@@ -1,6 +1,7 @@
 @802c874 checks uncounterable
 .equ DazzleID, SkillTester+4
 .equ MoonlightID, DazzleID+4
+.equ gBattleTarget, 0x0203A56C
 @jumptohack at 802c864
 
 .thumb
@@ -15,6 +16,15 @@ mov r1, #0x80
 and r0, r1
 cmp r0, #0
 bne Uncounterable
+
+@ Are we FEARED?!
+ldr  r0, =gBattleTarget
+mov  r1, #0x30
+ldrb r3, [r0, r1] @r3 = unit status
+mov  r0, #0x1F
+and  r0, r3 @ status index low 4 bits
+cmp  r0, #0x8 @ Fear index
+beq  Uncounterable
 
 @make sure the enemy is a mage
 ldr r0,[r5,#0x4]

@@ -37,7 +37,7 @@ POIN Wrath Anima1 Anima2 Anima3 Anima4 Dark1 Dark2 Dark3 Dark4 Dark5
 //POIN DriveDef
 POIN DriveSpd DriveRes DriveStr DriveMag SpurStr LilysPoise
 //POIN LuckySeven OddRhythm EvenRhythm QuickBurn
-POIN SlowBurn Puissance
+POIN SlowBurn
 //POIN Demoiselle Gentilhomme MaleficAura Tantivy Focus Inspiration Solidarity VoiceOfPeace Anathema Hex Loyalty
 POIN Charisma Charm Shrewd AeterianFealtyAura Inspire BitterCold ChainReaction RayDark Blackfire Intimidate Paranoia
 //POIN HeavyDuty Warlock ElbowRoom Gamble WindDisciple Perfectionist Hawkeye LightWeight Trample Restraint AssassinateDamageBonus LifeAndDeath SoulSplitter ArcaneBlade FairFight Atlas StormBlood FieryBlood
@@ -49,8 +49,10 @@ POIN BlueFlame BlueFlameAura StandBackUp Frostbite Cultured KeepUp
 POIN MoonEvoked Lionheart Maestro FlowCombat Frenzy DevilAxeSkill CurtainCallSkill GrimRing Executors Nevermore ResolutePyre // This was moved here because Str/Mag Split conflict, and... I'm not sure why it wouldn't be here in the first place.
 //POIN UpWithArch
 
+POIN StatusEffectsPre //adds 30 crit??
+
 //stuff that recalcs via setting AS to 99 (to prevent it from being anything but 99)
-POIN Intrepid Galestorm
+POIN Intrepid Puissance Galestorm
 
 //stuff that recalcs via deletion (to prevent it from being anything but 0)
 POIN AxefaithHit
@@ -66,6 +68,8 @@ POIN Infiltrator //deletes hit
 POIN Outrider //deletes hit/crit
 POIN Rageblade HeadshotPre //deletes crit (might need to be moved further down?)
 POIN Parity //deletes crit lol
+
+
 POIN StancesASM
 
 #ifdef ENABLE_GBA_LETHALITY

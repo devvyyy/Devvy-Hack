@@ -133,6 +133,7 @@ these are already defined
 #define AvoRingStatusID 8
 #define SickStatusID 9
 #define PetrifyStatusID 13
+#define FearStatusID 8
 */
 
 SetStatusName(NoStatusID,0x536)
@@ -140,7 +141,7 @@ SetStatusName(PoisonStatusID,0x514)
 SetStatusName(SleepStatusID,0x515)
 SetStatusName(SilenceStatusID,0x516)
 SetStatusName(BerserkStatusID,0x517)
-SetStatusName(AtkRingStatusID,0x51B)
+SetStatusName(AtkRingStatusID,0x51B) //this is the iron call status
 SetStatusName(DefRingStatusID,0x51C)
 SetStatusName(CritRingStatusID,0x51D)
 SetStatusName(AvoRingStatusID,0x51E)
@@ -158,6 +159,7 @@ SetStatusDesc(PoisonStatusID,0x553)
 SetStatusDesc(SleepStatusID,0x554)
 SetStatusDesc(SilenceStatusID,0x556)
 SetStatusDesc(BerserkStatusID,0x555)
+//SetStatusDesc(AtkRingStatusID,FearedStatusDesc)
 SetStatusDesc(AtkRingStatusID,0x558)
 SetStatusDesc(DefRingStatusID,0x559)
 SetStatusDesc(CritRingStatusID,0x55A)
@@ -186,7 +188,7 @@ SetStatusBlinkyIconFunc(BerserkStatusID,BlinkyIconFuncSleepIcon)
 SetStatusBlinkyIconFunc(AtkRingStatusID,BlinkyIconFuncDancerRingIcon)
 SetStatusBlinkyIconFunc(DefRingStatusID,BlinkyIconFuncDancerRingIcon)
 SetStatusBlinkyIconFunc(CritRingStatusID,BlinkyIconFuncSleepIcon) //rooted is 0x17!!!
-SetStatusBlinkyIconFunc(AvoRingStatusID,BlinkyIconFuncDancerRingIcon)
+SetStatusBlinkyIconFunc(AvoRingStatusID,BlinkyIconFuncSleepIcon) //this is fear now
 SetStatusBlinkyIconFunc(SickStatusID,BlinkyIconFuncDancerRingIcon)
 //fill the rest with no icon by default to avoid issues
 SetStatusBlinkyIconFunc(10,BlinkyIconFuncSleepIcon) //rooted, looks like they need to match??? (like 0x0 and 0x10????) idk
@@ -201,7 +203,7 @@ SetStatusBlinkyIconFunc(18,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(19,BlinkyIconFuncDancerRingIcon) //Whirlwind
 SetStatusBlinkyIconFunc(20,BlinkyIconFuncSleepIcon)
 SetStatusBlinkyIconFunc(21,BlinkyIconFuncNoIcon)
-SetStatusBlinkyIconFunc(22,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(22,BlinkyIconFuncSleepIcon) //Feared
 SetStatusBlinkyIconFunc(23,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(24,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(25,BlinkyIconFuncNoIcon)

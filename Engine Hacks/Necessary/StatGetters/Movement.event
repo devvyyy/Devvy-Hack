@@ -14,13 +14,14 @@ pMovModifiers: // Movement
 //	POIN prMoonCheck
 	POIN prTuskedHornMove prAddMoreIfArmor prAddLessIfMounted
 	POIN prGaleforceCheck
-	POIN prPassCheck
+//	POIN prPassCheck
 	POIN prSavingGraceCheck
-	POIN prEmpowerCheck prStaticCheck prGalestormCheck
+//	POIN prEmpowerCheck prStaticCheck prGalestormCheck
 	POIN prCantoRing
 	POIN prFlowStateCheck
 	//POIN prFlorisMarked
 	POIN prStatusOverdriveMovCheck
+	POIN prAvoidBuffMove
 	POIN prNullifyIfRooted
 	POIN prNullifyIfGuardAI
 WORD 0
@@ -52,6 +53,10 @@ rIfUnitHasSkill(SavingGraceID)
 prNullifyIfRooted:
 	rIfUnitHasStatus(0x17)
 		rConstant(0)
+		
+prAvoidBuffMove: //feared
+rIfUnitHasStatus(0x8)
+	rConstant(0)
 		
 prFlorisMarked:
 rIfUnitHasNotSkill(ShootTwiceID)
@@ -106,6 +111,11 @@ prMoonCheck:
 	rIfUnitHasState(0x400)
 		rIfUnitHasSkill(OverdriveID)
 			rConstant(0)
+			
+//prSidestepCheck:
+//	rIfUnitHasState(0x80000000)
+//		rIfUnitHasSkill(CloseCallID)
+//			rAddConst(2)
 			
 prStatusOverdriveMovCheck:
 	rIfUnitHasStatus(0x15) //Overdrive

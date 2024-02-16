@@ -34,7 +34,7 @@ ENDA
 Turn3Rein:
 LoadReinforcements(Turn3Enemies)
 STAL 15
-CameraCursor(0xCC)
+CameraCursor(0xCD)
 Text(Gaiden2InBattle3)
 NoFade
 ENDA
@@ -404,6 +404,9 @@ CenterTextbox(Gaiden2Notif)
 	ENDA
 
 EndingScene:
+SVAL 0x1 0x23
+SET_HP 0xCA
+
 MUSCSLOW 0x58
 SetFlag(0x84) //hides boss icons
 SetFlag(0x4) //secondary map theme (water)

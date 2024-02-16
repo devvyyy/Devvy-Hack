@@ -6,16 +6,35 @@ Northelm Outskirts[X]
 [3l]
 [OpenMidLeft][LoadAffo][OpenMidRight][LoadUlrich]
 
+[OpenMidLeft]
+[ToggleMouthMove](Why is that face so familiar...?)[ToggleMouthMove][N]
+Sir.[.6] Is the enemy leader one who's[N]
+renowned in Aeteria?[AN] 
+
 [OpenMidRight]
-Have you met many of Wreyvine's captains[N]
-and generals[,] Affogato?[.6] Take Captain[N]
-Stroganoff for example.[AN][Clear]
+It's been many years since Sir Alicot last[N]
+showed his face in Wreyvine[,] I'd say.[6N]
+What makes you ask of an Aeterian knight?[AN]
+
+[OpenMidLeft]
+[ToggleMouthMove](That doesn't explain why I recognise him.)[ToggleMouthMove][N]
+I'm trying to keep myself informed with[N]
+Wreyvine and Aeteria's commanders.[AN]
+It'll be important for me to keep track of[N]
+which ones are particularly noteworthy[N]
+or renowned on the front.[AN]
+
+[OpenMidRight]
+Then say[Beat] Have you met many of Wreyvine's[N]
+captains and generals[,] Affogato?[.6] Take[N]
+Captain Stroganoff for example.[AN]
 If we fail our mission here[,] it'd be quite[N]
-a big hit for Wreyvine.[AN]
+a big hit for Wreyvine.[.6] I don't like the[N]
+guy[,] but he's pretty important.[AN]
 
 [OpenMidLeft]
 A few in name[,] never in nature.[AN]
-I know what the Captain is like.[.6] With that[N]
+I know what that Captain is like.[.6] With that[N]
 in mind[,] I'm fine with never crossing paths.[AN]
 
 [OpenMidRight]
@@ -23,7 +42,7 @@ He's a bit of a[Beat] a lot of things[,][N]
 actually[Beat] but we still must do[N]
 our duty.[AN][Clear]
 Remind me;[.4] how long have you been part[N]
-of Wreyvine's forces again?[AN]
+of Wreyvine's forces?[AN]
 
 [OpenMidLeft]
 Months.[.6] I never bothered speaking to[N]
@@ -104,7 +123,7 @@ let's execute THEM on the same spear![AN]
 Greed and fervor never did me any wrong.[.6N]
 They call me Captain for a reason.[AN][ToggleSmile]
 
-[FR]
+[FR][LoadEisner]
 Such an inspirational speaker.[.6] Half folk hero[,][N]
 half deranged lunatic.[.6] But there's no other[N]
 way[Beat] You get my bow this time[,] you oaf.[AN]
@@ -199,7 +218,7 @@ Yessir[,] I actually got in a few mugs[N]
 before this started[Beat] and it's[N]
 starting to really kick in[Beat][AN]
 They call it liquid courage for a[N]
-good reason[.6] Let's waste 'em--[.4][N]
+good reason.[.6] Let's waste 'em--[.4][N]
 and take all their crap!![AN]
 
 [FL][MoveFarLeft]
@@ -208,7 +227,7 @@ Let's save Northelm!![AN]
 
 [L]
 [CloseEyes]Captain Brudet[Beat] I finally understand why[N]
-you talk about him the way you do[Beat][AN]
+you speak of him the way you do[Beat][AN]
 
 [X]
 
@@ -305,7 +324,7 @@ Can you confirm that everybody is safe?[AN]
 
 [MR]
 Yeah[,] the folks're alright.[.6] We did our jobs![6N]
-Congrats[,] everyone. That's that[,] then[,] yeah?[6N]
+Congrats[,] everyone.[.6] That's that[,] then[,] yeah?[6N]
 Feast later?[.6] Anyone?[AN]
 
 [X]
@@ -323,7 +342,7 @@ wyvern dragged in.[.6] How're ya doin'--[.4][N]
 you wanna share a pipe or pint later??[AN]
 
 [MR]
-[MidBlink][Beat]Hi[,] Tauno.[MidBlink][.6] I am here with reinforcements[,][N]
+[MidBlink][Beat]Hi[,] Tauno.[OpenEyes][.6] I am here with reinforcements[,][N]
 but all is taken care of[,] it seems.[6N]
 My apologies for not arriving sooner.[AN]
 Eisner[,] you never reported back[,][N]
@@ -572,6 +591,188 @@ There's an enemy.[.6] Goodbye.[AN]
 [OpenMidLeft][ToggleSmile]Sheesh,[ToggleSmile][.4] took you long[N]
 enough.[.6] Did you get lost or something?[A][X]
 
+## EisMochaRecruitTalk
+[OpenMidLeft][LoadEis][MidRight][LoadMocha]
+[3l]
+
+[OpenMidLeft]
+Mocha[,] you're here.[.6] And alive.[6N]
+[ToggleSmile]Right on time.[AN][ToggleSmile]
+
+[MidRight]
+On time is practically late![.6] You know[N]
+how it is.[.6] Gotta get to places quick[N]
+and early[,] y'know?[AN]
+
+[OpenMidLeft]
+Can't disappoint the Captain[,] yeah?[6N]
+Hey[,] did you remember to clock in?[AN]
+
+[MidRight]
+[CloseEyes]Aw[,] crap![AN]
+
+[X]
+
+## EisStrogyTalk
+[OpenMidLeft][LoadEis][MidRight][LoadStrogan]
+[3l]
+
+[MidRight]
+Yo[,] Eisner buddy![.6] Ya up for a game?[AN]
+
+[OpenMidLeft]
+I'm down for pre-or-post-battle matters[N]
+with you[,] Captain.[.6] But on the[N]
+battlefield?[.6] This is irresponsible.[AN]
+
+[MidRight]
+If ya think 'bout it[,] we ain't in any[N]
+danger right now if we can chatter.[AN]
+
+[OpenMidLeft]
+Even then[,] gambling itself is[Beat] irresponsible.[6N]
+I expect more from a Wreyvian Captain.[.6] I mean[N]
+what if you waste away your gold?[AN]
+
+[MR]
+What if I WIN[,] Eisner?![.6] The high'll[N]
+keep me all year[Beat][AN]
+
+[OpenMidLeft]
+Alright[,] I got a little game for you.[.6][N]
+I'll even pay you a hefty sum of gold.[6N]
+It might be a bit of a challenge[,] though.[AN]
+
+[MR]
+Oho?[.6] A mighty man of my caliber is always up[N]
+for a challenge![.6] Now what could this be?[AN]
+
+[ML]
+No verbal communication with me for the[N]
+rest of the battle.[.6] But you win[N]
+gold at the end.[AN]
+
+[OpenMidLeft]
+[Beat][AN]
+
+[MidRight]
+I'll give you a thousand for this task.[AN]
+
+[OpenMidLeft]
+A humble thousand?![.6] That's hardly enough to[N]
+get me tipsy![.6] Do you take me for a[N]
+damned fool[,] junior?[AN]
+
+[MR]
+Sometimes.[AN]
+
+[X]
+
+## DoppioEisnerTalk
+[OpenMidLeft][LoadEis][MidRight][LoadDoppio]
+[3l]
+
+[MidRight]
+Hey Eisner[,] how'd you manage to ride a[N]
+beast as ferocious as a mighty griffon?[AN]
+
+[OpenMidLeft]
+Flanagan is a calm griffon[,] but he wasn't[N]
+always like that.[.6] He gave me one hell[N]
+of a nasty scar.[AN]
+Was totally my fault[,] though.[.6] I didn't[N]
+respect his boundaries when trying to tame[N]
+this fellow.[AN]
+
+[MidRight]
+You tamed him?[.6] By yourself?![.6] If you're[N]
+such a wonder with animals[,] then how'd[N]
+you end up working with us?[AN]
+
+[OpenMidLeft]
+I grew up in the Wreyvian capital[,] but I[N]
+never liked it.[.6] That's why I prefer[N]
+working as a scout[,] always in nature.[AN]
+Operating as a fancy messenger boy[N]
+wasn't my first choice[,] but it pays and[N]
+I get to explore the land.[AN][Clear]
+Not so bad.[AN]
+
+[MidRight]
+That's how I ended up in the royal guard.[6N]
+My sister and I used to try and tame horses[N]
+when we were kids.[AN]
+We'd leave the city and go out into the[N]
+nearby forests.[.6] She was always better[N]
+at it than I am.[AN]
+
+[OpenMidLeft]
+You have a sister?[.6] Does she work in[N]
+the city guard[,] too?[AN]
+
+[MidRight][MoveFarRight][FR]
+Eisner.[.6] There's.[.6] SO MANY enemies among us![6N]
+Talk to you later![.6] Bye![AN]
+
+[OpenMidLeft]
+Uhhh[Beat] Uhm.[.6] Alright.[AN]
+
+[X]
+
+## MochaEisnerTalk
+[OpenMidLeft][LoadMocha][MidRight][LoadEisner]
+[3l]
+
+[OpenMidLeft]
+Eisner![.6] How's it hanging[,] dude?[AN]
+
+[MidRight]
+Eh[,] I'm alright.[AN]
+
+[OpenMidLeft]
+Alright?[AN]
+
+[MidRight]
+Yeah.[.6] I'm just living life[,] shooting[N]
+enemies and getting paid.[AN]
+
+[MidRight]
+[OpenMidLeft]
+Just living life[Beat][AN]
+
+[MidRight]
+[Pause]Mocha.[.6] Can you please stop repeating[N]
+what I say?[AN]
+
+[OpenMidLeft]
+Oh[,] sorry![.6] Bad habit[Beat] Captain Luca used[N]
+to tell me all the time to repeat the[N]
+lessons she told me.[AN][Clear]
+She said it made it easier to remember[N]
+things[,] especially in training![AN]
+
+[MidRight]
+I've never worked under Captain Luca.[6N]
+I hear she was a brave[,] stronghearted[N]
+knight[,] and loyalist to the end.[AN]
+
+[OpenMidLeft]
+She taught me everything about aerial[N]
+combat and making the most of what[N]
+little we had here.[AN][Clear]
+She taught me that Aeterians are the enemy.[6N]
+The Captain was a valorous[,] true knight![AN]
+
+[MidRight]
+Mocha[Beat] I've never seen you look[N]
+so determined.[AN]
+
+[OpenMidLeft]
+The Wreyvian army must never lose again.[6N]
+Come[,] Eis![.6] Fly with me![AN]
+
+[X]
+
 ## DoppioTalk
 [3l]
 [OpenMidLeft][LoadDoppio][MidRight][LoadFace][0xFF][0xFF]
@@ -665,7 +866,7 @@ treaded the rivers,[.4] so who knows?[A][X]
 [3L]
 
 [OpenMidRight]
-Hey![.6] what the hell do you think[N]
+Hey![.6] What the hell do you think[N]
 you're holdin'[,] kid?![AN]
 
 [OpenMidLeft]
@@ -681,8 +882,8 @@ Quit the act[,] I don't give a damn as[N]
 long as you're not aimin' the shit at me.[6N]
 And as long as you're not Aeterian.[AN]
 There are worse things in the world.[6N]
-Like[Beat] debt.[.6] Yeah[,] I think gold-eyed[N]
-Russel's still after me[Beat][AN]
+Like[Beat] debt[,] yeah.[.6] Aw[,] bugger[Beat] I think[N]
+gold-eyed Russel's still after me[Beat][AN]
 
 [OpenMidLeft]
 [Pause]Huh?[.6] Captain[,] sir-[AN]
@@ -728,7 +929,7 @@ I may be a rookie[,] but I've[N]
 trained under the one and[AN]
 only Captain Stroganoff![AN]
 He's taught me all I need to[N]
-know to secure this city![AN][ClearFace]
+know how to secure this city![AN][ClearFace]
 
 [OpenMidLeft][LoadAlicot]
 Oh[,] so you follow in the[N]
@@ -752,10 +953,18 @@ Terrible influence.[AN]
 
 ## AffoAlicotBossQ
 # verified
-[OpenMidLeft][LoadAlicot]Fourteen long years,[.4] I've[N]
+[OpenMidLeft][LoadAlicot]
+Hey[,] I know you.[.6] You must[N]
+be one of Aeteria's[Beat][AN][ClearFace]
+
+[OpenMidRight][LoadAffogato]
+You don't know me.[AN][ClearFace]
+
+[OpenMidLeft][LoadAlicot]
+[Pause]Fourteen long years,[.4] I've[N]
 waited for this moment.[AN]
-Surrender,[.4] Wreyvians.[.6] We will not[N]
-lose here.[.6] Perish[,] now.[AN]
+Surrender,[.4] Wreyvians.[.6] We will[N]
+not lose here.[.6] Perish[,] now.[AN]
 [ClearFace]
 [OpenMidRight][LoadAffogato]
 Sorry[,] I'm in a bit of a hurry.[A][X]
@@ -831,7 +1040,7 @@ familiar.[.6] Sorry.[AN]
 ## AlicotDeathQ
 # verified
 [OpenMidLeft][LoadAlicot][ToggleSmile]Hahaha[Beat]![.6] I die knowing[N]
-Wreyvine will fall[Beat][A][ToggleSmile][X]
+Wreyvine will fall here[Beat]![A][ToggleSmile][X]
 
 ## StroganAlicotBossQ
 [OpenMidLeft][LoadAlicot]
@@ -850,4 +1059,4 @@ Come at me[,] fool![AN][ClearFace]
 
 [OpenMidRight][LoadStrogan]
 Just keep yourself nice and[N]
-still while I swing[Beat][AN][ClearFace][X]
+still while I swing[Beat]![AN][ClearFace][X]

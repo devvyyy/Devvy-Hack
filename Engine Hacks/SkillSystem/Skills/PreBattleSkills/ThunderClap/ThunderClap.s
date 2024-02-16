@@ -1,9 +1,19 @@
 .thumb
 .equ ThunderClapID, SkillTester+4
+.equ gBattleTarget, 0x0203A56C
 
 push {r4-r7, lr}
 mov r4, r0 @atkr
 mov r5, r1 @dfdr
+
+@ Are we BLANK STATUS?!
+ldr  r0, =gBattleTarget
+mov  r1, #0x30
+ldrb r3, [r0, r1] @r3 = unit status
+mov  r0, #0x1F
+and  r0, r3 @ status index low 4 bits
+cmp  r0, #0x0 @ NO STATUS
+bne  CheckSkill
 
 @enemy tile has no bonuses
 mov r1, #0x57

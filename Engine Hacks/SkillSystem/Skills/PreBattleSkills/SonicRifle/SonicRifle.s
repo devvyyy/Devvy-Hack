@@ -33,7 +33,7 @@ beq End
 @add 30 crit
 mov r1, #0x66
 ldrh r0, [r4, r1] @crt
-add r0, #30
+add r0, #255
 strh r0, [r4,r1]
 
 End:

@@ -190,6 +190,10 @@ LesNewRecruits: //the imperial court people
 UNIT 0x2 PegRider 0x1 Level(6, Enemy, 1)     [6,12] 0b 0x0 0x0 0x0 [SapphireLance,CurtainCall] BossAI
 	UNIT
 	
+LunaticUnits: //the imperial court people
+UNIT 0x2 PegRider 0x1 Level(6, Enemy, 1)     [6,12] 0b 0x0 0x0 0x0 [SapphireLance,CurtainCall,Elixir] BossAI
+	UNIT
+	
 EscortUnit: //escort/escape map
 
 	UNIT
@@ -235,7 +239,8 @@ BeginningScene:
 	ENUT AllUnitsMustEscapeFlag
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 TentUnitGaming
-	LOAD1 0x1 LesNewRecruits
+	//LOAD1 0x1 LesNewRecruits
+HardUnits(LunaticUnits,LesNewRecruits)
 	ENUN
 	GotoPrepScreen
 	ENDA

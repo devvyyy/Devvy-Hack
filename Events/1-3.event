@@ -31,6 +31,7 @@ CharacterBasedEvents:
 CharacterEventBothWays(0x7C,AffoUlrichConvoCh3, Affogato, Ulrich)
 CharacterEventBothWays(0xA, UlrichStroganRecruit, Ulrich, Stroganoff)
 CharacterEventBothWays(0xA, StroganRecruit, 0x0, Stroganoff)
+CharacterEventBothWays(0xA, MochaEisRecruit, 0x0, Eiskaffee)
 CharacterEventBothWays(0xA, EisRecruit, 0x0, Eiskaffee)
 CharacterEventBothWays(0xA, DoppioRecruit, 0x0, Doppio)
 CharacterEventBothWays(0xB, SequinStrogyConvo, Sequin, Stroganoff)
@@ -354,6 +355,19 @@ UnsetFlag(0xD)
 NoFade
 ENDA
 
+MochaEisRecruit:
+MUSS 0x30
+STAL 33
+Text(EisMochaRecruitTalk)
+MURE 0x2
+CUSA Stroganoff
+CUSA Eiskaffee
+CUSA Doppio
+UnsetFlag(0xB)
+UnsetFlag(0xD)
+NoFade
+ENDA
+
 DoppioRecruit:
 MUSS 0x30
 STAL 33
@@ -455,7 +469,7 @@ FountainFunny:
 SVAL 0x2 0x0
 CALL 0x9EE1B8
 Text(AmongstWhom)
-GiveItem(GoddessIcon,0xFFFF)
+GiveItem(0x61,0xFFFF)
 NoFade
 ENDA
 

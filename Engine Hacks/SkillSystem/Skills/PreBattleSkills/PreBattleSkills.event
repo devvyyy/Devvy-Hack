@@ -66,10 +66,15 @@ POIN SkillTester
 WORD BulletID
 
 ALIGN 4
+StatusEffectsPre:
+#incbin "Status/Status.dmp"
+POIN SkillTester
+
+ALIGN 4
 MiraclePre:
 #incbin "MiraclePre/MiraclePre.dmp"
 POIN SkillTester
-WORD MiracleID
+WORD DriveResID
 
 ALIGN 4
 SanctuaryPre:

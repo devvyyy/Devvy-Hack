@@ -403,9 +403,9 @@ Switches between[N]
 Ranks can be lost.[X]
 
 # 0x554
-Zzzz... Zzzzz...[N]
-Sleeping now... Can't move,[N]
-defenses halved...[X]
+Zzzz... Zzzzzzz.....[N]
+Sleep halves Def/Res and[N]
+prevents moving and acting.[X]
 
 # 0x326
 Devilish thieves with high movement,[N]
@@ -480,7 +480,7 @@ have laid claim to Ideon.[X]
 Eth[X]
 
 # 0x518
-[_M][_o][_t][_i][_v][_a][_t][_e][X]
+[_E][_n][_c][_o][_u][_r][_a][_g][_e][X]
 
 # 0x391
 Shortbow[X]
@@ -492,7 +492,15 @@ Shortbow[X]
 Affin[X]
 
 # 0x78B
-[_W][_e][_a][_p][_o][_n][X]
+Equip[X]
+
+# 0x3f7
+Miracle Ring[X]
+
+# 0x4a8
+A sacred ring. Wearer survives the next[N]
+lethal hit with 1 HP if user's HP is 50%[N]
+or more (at time of hit).[X]
 
 # 0x4FA
 [_S][_t][_a][_t][X]
@@ -527,8 +535,8 @@ Stasis[X]
 
 # 0x557
 Trapped in a tempered fate...[N]
-Invulnerable during combat, and[N]
-can't move or act.[X]
+Units in Stasis are invulnerable[N]
+in combat and can't move or act.[X]
 
 # 0x3cf
 Door Drone[X]
@@ -621,15 +629,20 @@ Movement based on movement type.[X]
 
 # 0x559
 Endure and survive.[N]
-Take -15 damage.[X]
+Lifeline reduces damage taken[N]
+by 15 in combat.[X]
 
 # 0x55A
 I'm gonna go wild![N]
 Grants Crit +15.[X]
 
+# 0x51E
+Fear[X]
+
 # 0x55B
-Boxing with shadows.[N]
-Grants Avoid +15.[X]
+Aaiiee! Lost in paranoia...![N]
+Fear prevents counters and movement[N]
+and grants attackers Crit +30.[X]
 
 # 0x31F
 Dauntless riders with mastery over[N]
@@ -735,7 +748,7 @@ Converts Crit into bonus Atk.[X]
 [_A][_r][_c][_a][_n][_e][_SP][_B][_r][_a][_c][_e][X]
 
 # 0x3d9
-Ferric Locket[X]
+[_F][_e][_r][_r][_i][_c][_SP][_L][_o][_c][_k][_e][_t][X]
 
 # 0x3DA
 Royal Idol[X]
@@ -996,10 +1009,25 @@ Strikes x2 consecutively. No WEXP.[N]
 # 0x35B
 [_P][_o][_i][_s][_o][_n][_SP][_D][_a][_g][_g][_e][_r][X]
 
+# 0x552
+Normal condition.[N]
+Status effects last 1 turn[N]
+(unless specified).[X]
+
 # 0x553
-Ooooog...[N]
+Ooooogh...[N]
 Poison halves Def/Res and deals[N]
 10 damage next turn.[X]
+
+# 0x555
+Rarrrrr! Gonna go wild!![N]
+Berserk makes you uncontrollably[N]
+target the weakest unit.[X]
+
+# 0x556
+......[N]
+Silence disables magic, staves,[N]
+talks, and supports.[X]
 
 # 0x40B
 Avoid +10. Poisons for 1 turn on-damage,[N]
@@ -1018,28 +1046,28 @@ Poisons for 1 turn on-damage.[X]
 Strikes x2 consecutively.[X]
 
 # 0x3a9
-Fire I[X]
+Embers I[X]
 
 # 0x3aa
-Thunder II[X]
+Lightning II[X]
 
 # 0x3b0
-Light I[X]
+Dawn I[X]
 
 # 0x3b1
-Shine II[X]
+Daylight II[X]
 
 # 0x3b2
-Divine III[X]
+Sunshine III[X]
 
 # 0x3b3
-Glimmer IV[X]
+Solaris IV[X]
 
 # 0x3b4
-Aura V[X]
+Daybreak V[X]
 
 # 0x3c8
-Fear[X]
+Weaken[X]
 
 # 0x477
 Inflicts Str/Eth -5 on foe after combat[N]
@@ -1078,7 +1106,7 @@ Initiating at max stacks deals 10[N]
 bonus magical damage.[X]
 
 # 0x3c9
-Slow[X]
+Exhaust[X]
 
 # 0x3ea
 Winguard[X]
@@ -1097,10 +1125,11 @@ foe after combat[N]
 (recovers 1 per turn).[X]
 
 # 0x3ca
-Pain[X]
+Smite[X]
 
 # 0x479
-Deals 20% max HP to foe after combat.[X]
+Deals 20% max HP to foe after combat.[N]
+(Only triggers if damage was dealt.)[X]
 
 # 0x4b7
 Deals damage = 20%[N]
@@ -1350,7 +1379,7 @@ Armored vessels of faith of which infinite[N]
 ether slumbers within. Equip: [AnimaIcon][LightIcon][DarkIcon][StaffIcon][X]
 
 # 0x432
-Grants bonus Hit = unit's missing HP x2.[N]
+Grants bonus Hit = unit's missing HP x 2.[N]
 "[_Y][_o][_u][_SP][_b][_l][_e][_e][_d][_Comma][_SP][_s][_o][_SP][_t][_h][_e][_y][_SP][_w][_i][_l][_l][_Dot]"[X]
 
 # 0x2AD
@@ -1384,7 +1413,7 @@ Do you want to quit?[N]
  higher stats.[N]
  Player units have[N]
  better inventories[N]
- in Part 1.[X]
+ and auto-levels.[X]
  
 # 0x2EB
 Strategist[X]
@@ -1457,7 +1486,13 @@ Wreyvine[X]
 
 # 0x6C4
 Steal a target's item.[N]
-Does not end turn.[X]
+Grants another action[N]
+once per turn.[X]
+
+# 0x6DE
+Open doors and chests without[N]
+using keys. Grants another action[N]
+once per turn.[X]
 
 # 0x182
 2-3: Fugitives[X]

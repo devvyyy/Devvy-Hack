@@ -26,7 +26,7 @@ mov r0,#0x5 @overdrive flag
 .short 0xF800
 pop {r3}
 cmp r0, #0x0
-beq CheckPetrify
+beq DecrementStatusTimer
   pop {r1-r3}
   b GoBack
 

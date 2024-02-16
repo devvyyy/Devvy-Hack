@@ -13,9 +13,10 @@ POIN PostCombatSkills
 PostCombatSkills: //I like having savage blow as the first one because it makes the activation sound play first
 POIN GroupAI
 POIN BreakStealth SavageBlow StaticPost StaticPostDies BreathOfLife Despoil PykeUlt PykeUltEXP Lifetaker HappyHour HappyHourSelf Fury Bazooka BurstFireDamage RedirectDamage LionheartDamage Chronoshift Heal1 Heal2 Heal3 Heal4 PoisonStrike GrislyWound//lifetaker should probably go after any messages because it can mess with the palette a bit
-POIN Canto CantoPlus CantoTwo CantoOne Lightslinger DriveCanto CloseCall Sidestep BulletThing Overdrive OverdriveDecay OverdriveStatus ThiefThing LastHour Duelist ElbowGrease ShootTwice ShootTwiceEXP SavingGrace DuckandCover Galeforce MoonEvokedPost MoonEvokedPostMugOff MoonEvokedPostMug MoonEvokedAboveHalf MoonEvokedBelowHalf CulturedPostCombat ReMove Powerstaff Gridmaster //this order for canto and friends is the only one I tested
-POIN RadianceDamage RadianceMarking Snaring DirtyFighting ShadowEyeMark ZephyrMark Shieldbow AdaptivePoisePost
+POIN Canto CantoPlus CantoTwo CantoOne Lightslinger DriveCanto CloseCall Sidestep ChiffonSidestep BulletThing Overdrive OverdriveDecay OverdriveStatus ThiefThing LastHour Duelist ElbowGrease ShootTwice ShootTwiceEXP SavingGrace DuckandCover Galeforce MoonEvokedPost MoonEvokedPostMugOff MoonEvokedPostMug MoonEvokedAboveHalf MoonEvokedBelowHalf CulturedPostCombat ReMove Powerstaff Gridmaster //this order for canto and friends is the only one I tested
+POIN RadianceMarking RadianceDamage Snaring DirtyFighting ShadowEyeMark ZephyrMark Shieldbow AdaptivePoisePost
 POIN BreakStealthAlt HeadshotPostBattle
+POIN EvilEyeSkill EndTurnSkill
 WORD 0 //Terminator
 
 PROTECT $1D308 $1D314

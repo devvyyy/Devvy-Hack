@@ -11,11 +11,6 @@ push	{r4-r7,lr}
 cmp	r4, r5
 beq	End
 
-@ check if attack is used
-ldrb 	r0, [r6,#0x11]	@action taken this turn
-cmp	r0, #0x2 @combat
-bne	End
-
 Continue:
 @ check for skill
 mov	r0, r4
@@ -27,7 +22,7 @@ cmp	r0,#0x00
 beq	CheckDefender
 
 @ heal amount
-mov r3, #0x18 //this is res
+mov r3, #0x14 //this is str/mag, 0x18 is res
 ldrb 	r3, [r4, r3]
 add r3, #5
 
@@ -92,7 +87,7 @@ cmp	r0,#0x00
 beq	End
 
 @ heal amount
-mov r3, #0x17 //this is def
+mov r3, #0x14 //this is str/mag, 0x18 is res
 ldrb 	r3, [r5, r3]
 add r3, #5
 b FromDefender

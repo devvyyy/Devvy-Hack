@@ -48,12 +48,6 @@ bne End
 @cmp r0, #1
 @bne End
 
-@check range
-ldr r0,=#0x203A4D4 @battle stats
-ldrb r0,[r0,#2] @range
-cmp r0,#1
-bgt End
-
 @make sure this is the actual attacker kthx
 ldr r0,=#0x203A4EC
 cmp r0,r4
@@ -71,6 +65,12 @@ ldr r1, [r0,r1]
 mov r2, #0x42
 tst r1, r2
 bne     End @do nothing if magic bit set
+
+@check range to prevent proccing if not 1 range
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#1
+bgt End
 
 @if we proc, set the brave effect flag for the NEXT hit
 ldrb r1, MagicSwordID @first mark Adept active

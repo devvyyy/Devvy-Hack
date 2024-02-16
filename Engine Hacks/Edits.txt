@@ -1,6 +1,13 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+
+//Unset bit 0x80000000 at the end of every phase
+PUSH
+    ORG 0x18854
+    WORD 0x7FFFBBD
+POP
+
 //enemies heal any% missing hp enemies instead of < 50%
 
 PUSH

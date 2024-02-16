@@ -61,7 +61,7 @@ MiscBasedEvents:
 
 LocationBasedEvents:
 Chest(Warp,3,1)
-Village(0x20,ZeriGaming,12,12)	
+Village(0x15,ZeriGaming,12,12)	
 House(0x0,House1,5,8)
 	END_MAIN
 
@@ -97,7 +97,7 @@ UNIT Sequin Mage 0x1 Level(1, Ally, 0)   [12,0] 0b 0x0 0x0 0x0 [IronDagger,Poiso
 	UNIT
 	
 LunaticUnits:
-UNIT Evelyn Troubadour 0x1 Level(1, Ally, 1)   [13,0] 0b 0x0 0x0 0x0 [Heal,Barrier,Slow,Vulnerary] [0x0,0x0,0x0,0x0]
+UNIT Evelyn Troubadour 0x1 Level(1, Ally, 1)   [13,0] 0b 0x0 0x0 0x0 [Heal,Barrier,Slow,PureWater] [0x0,0x0,0x0,0x0]
 UNIT Sequin Mage 0x1 Level(1, Ally, 0)   [12,1] 0b 0x0 0x0 0x0 [0xAE,PoisonDagger,Vulnerary] [0x0,0x0,0x0,0x0]
 	UNIT
 
@@ -369,7 +369,7 @@ ENDA
 
 DisclaimerEvent:
 PlayerRangeCheck
-CHECK_EVENTID 0x20
+CHECK_EVENTID 0x15
 BEQ 0x1 0xC 0x0
 STAL 20
 	CenterTextbox(RingDisclaimer)

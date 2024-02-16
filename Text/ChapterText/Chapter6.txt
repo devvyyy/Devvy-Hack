@@ -70,28 +70,34 @@ Looks like we don't have a choice in[N]
 the matter.[.6] We must call the[N]
 healers into the battle.[AN] 
 
-[R][ClearFace][LoadIris]
-[ML][ClearFace][LoadKing]
+[FR][ClearFace][LoadTammy]
 
-[R]
+I-[.4]I just can't believe that the[N]
+Aeterians have marched so far[Beat][AN]
+
+[FR][ClearFace][LoadIris]
+
+[FR]
 We've fought by your side for as long as[N]
 we can remember[,] Your Majesty.[.6] And[n]
 so we'll fight to end this war yet again.[AN][Clear]
-We need to form up now![AN]
+We must form up now.[AN]
 
-[ClearFace][LoadOgrim]
+[R][ClearFace][LoadOgrim]
 
 [R]
 [Pause]Very well.[.6] If putting untrained medics[N]
 at the front of the battlefield is our[N]
 last course of action[,] then[Beat][AN]
 
+[FR][ClearFace][LoadGorlois]
+
 [FR]
 If we can [ToggleRed]secure[ToggleRed] the fortresses[,] we'll stop[n]
 any further reinforcements.[.6] That should buy[N]
 us some much needed time.[AN][Clear]
-Come[,] Aohr![.6] Protect His Majesty[N]
-with me![AN]
+Come[,] Aohr![.6] Protect His Majesty and[N]
+Wreyvine with me![AN]
 [X]
 
 ## Ch6OpeningAlt1
@@ -282,6 +288,7 @@ Silence.[.6] I have heard enough[n]
 from a murderer![AN][X]
 
 ## Ch6EndingPOSTBATTLE
+[3L]
 [ML][LoadSelwyn]
 Oh.[.6] Just like that?[AN]
 
@@ -321,9 +328,8 @@ none of your kingdom behind.[.6N]
 [X]
 
 ## AffoInterrupt
+# this also has ulrich cause uhhh retreat lol
 [OpenLeft][LoadAffoSwitch]
-[MidBlink]Shadow.[.6] Warriors.[.6] [OpenEyes]That's it,[.4][N]
-I'm[Beat] I'm done.[AN][ClearFace]
 
 [OpenRight][LoadUlrich]
 This has escalated far beyond[N]
@@ -889,13 +895,190 @@ in fear.[AN]
 The palace stands eternal.[.6][N]
 We refuse to fall.[A][X]
 
+## SelAffoBossQ2
+[OpenMidLeft][LoadSelwyn]
+Allow me to demonstrate why[N]
+Aeteria's sorcery has no equal.[AN]
+[X]
+
+## AffogatoP1C7Convo
+[OpenMidRight][LoadAffogato]
+[ToggleMouthMove](Another one. Even their ghost[N]
+soldiers are fearsome.)[AN][ToggleMouthMove]
+[X]
+
+## BreveP1C7Convo
+[OpenMidRight][LoadBreve]
+Look at you Aeterian scum[N]
+pile up at our castle[Beat][AN][Clear]
+I'll take care of it.[AN]
+[X]
+
+## HildrP1C7Convo
+[OpenMidRight][LoadHildr]
+[Smile]I am Hildr of Wreyvine.[.6] You[N]
+shall all know my name![AN]
+And soon[,] I shall be one[N]
+who slays even ghosts![AN][Clear]
+Surrender now![AN]
+[X]
+
+## AnsgarP1C7Convo
+[OpenMidRight][LoadAnsgar]
+[Close]Phew[Beat] Deep breaths[Beat][Open][N]
+I'll see 'em soon[Beat][AN]
+[X]
+
+## UlrichP1C7Convo
+[OpenMidRight][LoadUlrich]
+Oh[,] cruel Fate[Beat][AN]
+[X]
+
+## NoraP1C7Convo
+[OpenMidRight][LoadNora]
+[Close]Oh[Beat] Is this truly the[N]
+only way?[AN]
+[X]
+
+## SequinP1C7Convo
+[OpenMidRight][LoadSequin]
+A-[.4]Aeterian trash[Beat] Have a taste[N]
+of your own magic![AN]
+[X]
+
+## KaneP1C7Convo
+[OpenMidRight][LoadKane]
+It's aboot time we kick y'all[N]
+outta Wreyvine.[AN]
+[X]
+
+## MochaP1C7Convo
+[OpenMidRight][LoadMocha]
+[Smile]I'm not scared anymore![.6] I feel[N]
+so invigorated!![AN][Clear]
+Come on[,] buster.[.6] Have at you!![AN][Smile]
+[X]
+
+## LevainP1C7Convo
+[OpenMidRight][LoadLevain]
+Another arrow in another[N]
+Aeterian on our lands.[AN][Clear]
+As it should.[AN]
+[X]
+
+## StroganoffP1C7Convo
+[OpenMidRight][LoadStroganoff]
+Ya know[,] my man 'Tolius is[N]
+quite an important guy.[AN]
+'Suppose that means I ain't[N]
+lettin' ya hurt 'im.[AN]
+[X]
+
+## DoppioP1C7Convo
+[OpenMidRight][LoadDoppio]
+All you Aeterians do is[N]
+take and take and take[Beat][AN]
+That ends today.[.6] You will[N]
+go no further.[AN]
+[X]
+
+## EisnerP1C7Convo
+[OpenMidRight][LoadEisner]
+Sometimes I delude myself[N]
+into thinking that maybe[Beat][AN]
+Wreyvine and Aeteria will[N]
+somehow unite in peace.[AN]
+What a bunch of nonsense.[6N]
+Ideon will never be one.[AN]
+[X]
+
+## FlorisP1C7Convo
+[OpenMidRight][LoadFloris]
+What more could you dastards[N]
+possibily want from us[Beat]?[AN][Clear]
+Repent.[.6] Stand down.[AN]
+[X]
+
+## YoryP1C7Convo
+[OpenMidRight][LoadYory]
+G-[.4]Get away from me![6N]
+Someone p-[.4]please[Beat][AN]
+[X]
+
+## BrudetP1C7Convo
+[OpenMidRight][LoadBrudet]
+Abominations in our lands.[6N]
+You shall be purged.[AN]
+[X]
+
+## NoelP1C7Convo
+[OpenMidRight][LoadNoel]
+I hear Aeterians are about[N]
+to go extinct around here.[AN]
+[X]
+
+## ThereseP1C7Convo
+[OpenMidRight][LoadTherese]
+Aeteria cheats and tramples[N]
+all over Wreyvian dreams.[AN]
+As one of the royal guard[,][N]
+it is my duty to halt you.[AN]
+[X]
+
+## LennardP1C7Convo
+[OpenMidRight][LoadLennard]
+Woo[,] I guess I was always[N]
+ready for this.[AN][Clear]
+[Smile]Let's do this.[AN]
+[X]
+
+## WegmanP1C7Convo
+[OpenMidRight][LoadWegman]
+And war begins yet again[Beat][AN]
+[X]
+
+## KlavdiaP1C7Convo
+[OpenMidRight][LoadKlavdia]
+You face the King's Fang.[6N]
+There is no more running.[AN]
+[X]
+
+## GerolfP1C7Convo
+[OpenMidRight][LoadGerolf]
+Face me.[AN]
+[X]
+
+## XavierP1C7Convo
+[OpenMidRight][LoadXavier]
+What a Charlie Foxtrot you[N]
+Aeterians brought[Beat][AN]
+I'll avenge them all before[N]
+I punch out.[AN]
+[X]
+
+## OgrimP1C7Convo
+[OpenMidRight][LoadOgrim]
+[Close]O Hearthbringer[Beat] Bring[N]
+a swift end to these fools[Beat][AN]
+[X]
+
+## IrisP1C7Convo
+[OpenMidRight][LoadIris]
+Wreyvine will last eternal.[6N]
+Your end will come.[AN]
+[X]
+
+
+
+
+
 ## GorloisBossQP1Final
 [OpenMidRight][LoadGorlois]Defend the King at[N]
 all costs![AN][Clear]
 [BoopPitch][0x4]
 [OpenMidRight][LoadGorloisBird]
 [BoopPitch][0xD]
-[_G][_o] [_g][_e]t [ToggleSmile]'[_e][_m]![AN][ToggleSmile][Clear][X]
+[_G][_o] [_g][_e]t [ToggleSmile]'[_e][_m]![AN][ToggleSmile][X]
 
 ## KingLeftFort
 [3l]
