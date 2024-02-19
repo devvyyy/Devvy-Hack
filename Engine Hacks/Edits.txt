@@ -8,6 +8,12 @@ PUSH
     WORD 0x7FFFBBD
 POP
 
+//BARD SOUND??!??
+PUSH
+ORG 0x58D30
+BYTE 0x98 0x96 0x05 0x08
+POP
+
 //enemies heal any% missing hp enemies instead of < 50%
 
 PUSH
@@ -310,7 +316,7 @@ POP
 //Poison Damage (default 1)
 PUSH
 ORG 0x025a3e
-BYTE 0xA //10 damage
+BYTE 0x5 //5 damage; 0xA is 10
 ORG 0x025A36
 BYTE 0x0 //0 blur
 POP

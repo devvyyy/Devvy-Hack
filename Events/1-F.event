@@ -280,7 +280,7 @@ UNIT Ogrim Parson 0x1 Level(10, Ally, 0)     [10,7] 0b 0x0 0x0 0x0 [Absorb,Recov
 
 UNIT Wreyvine Archer 0x1 Level(7, NPC, 1)     [4,1] 0b 0x0 0x0 0x0 [ShortBow,Elixir] [0,3,0,32]
 UNIT Wreyvine Archer 0x1 Level(7, NPC, 1)     [12,1] 0b 0x0 0x0 0x0 [ShortBow,Elixir] [0,3,0,32]
-UNIT 0x3A Cleric 0x1 Level(2, NPC, 1)     [13,5] 0b 0x0 0x0 0x0 [Physic,Vulnerary] HealAI
+UNIT 0x3A Cleric 0x1 Level(2, NPC, 1)     [13,5] 0b 0x0 0x0 0x0 [Pain,Physic,Vulnerary] HealAI
 
 UNIT Wreyvine Soldier 0x1 Level(9, NPC, 1)     [6,8] 0b 0x0 0x0 0x0 [MageLance,ShortSpear,Vulnerary] BossAI
 UNIT Wreyvine SArmor 0x1 Level(10, NPC, 1)     [7,8] 0b 0x0 0x0 0x0 [Skypiercer,Elixir] BossAI
@@ -301,7 +301,7 @@ UNIT Ogrim Parson 0x1 Level(10, Ally, 1)     [10,7] 0b 0x0 0x0 0x0 [Absorb,Recov
 
 UNIT Wreyvine Archer 0x1 Level(8, NPC, 1)     [4,1] 0b 0x0 0x0 0x0 [ShortBow,Elixir] [0,3,0,32]
 UNIT Wreyvine Archer 0x1 Level(8, NPC, 1)     [12,1] 0b 0x0 0x0 0x0 [ShortBow,Elixir] [0,3,0,32]
-UNIT 0x3A Cleric 0x1 Level(2, NPC, 1)     [13,5] 0b 0x0 0x0 0x0 [Physic,Fortify,Vulnerary] HealAI
+UNIT 0x3A Cleric 0x1 Level(2, NPC, 1)     [13,5] 0b 0x0 0x0 0x0 [Pain,Physic,Fortify,Elixir] HealAI
 
 UNIT Wreyvine Soldier 0x1 Level(10, NPC, 1)     [6,8] 0b 0x0 0x0 0x0 [MageLance,ShortSpear,Vulnerary] BossAI
 UNIT Wreyvine SArmor 0x1 Level(12, NPC, 1)     [7,8] 0b 0x0 0x0 0x0 [Skypiercer,Elixir] BossAI
@@ -817,6 +817,7 @@ CharacterConditionalDialog(Stroganoff,AnsgarThereseTalk,AnsgarThereseTalkAlt)
 	ENDA
 
 EndingScene:
+UnsetFlag(0x7B)
 UnsetFlag(0x91)
 UnsetFlag(0x92)
 UnsetFlag(0x93)

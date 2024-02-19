@@ -127,6 +127,20 @@ ShadowEyeMark:
 POIN SkillTester
 WORD ShadowEyeID
 WORD CommanderID
+POIN SoulbreakEvent
+
+SoulbreakEvent:
+CAM1 0xFFFF
+
+ASMC ASMC_GetBattleTarget|1
+SADD sB sC s0
+
+BREAKING_SACRED_STONE 0xFFFE
+
+STAL 0x32
+
+NoFade
+ENDA
 
 ALIGN 4
 Shieldbow:

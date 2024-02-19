@@ -142,6 +142,7 @@ ENUN
 Text(Placeholder1)
 MOVE Akatsuki 0xA [2,22]
 DISA Akatsuki
+RefreshSMS
 NoFade
 ENDA
 
@@ -219,7 +220,7 @@ UNIT Edith General 0x1 Level(3, Ally, 1)     [10,15] 0b 0x0 0x0 0x0 [SteelRifle,
 UNIT Aeteria AArmor 0x1 Level(10, Enemy, 1)     [9,15] 0b 0x0 0x0 0x0 [ShortAxe] BossAI
 UNIT Aeteria SArmor 0x1 Level(10, Enemy, 1)     [11,15] 0b 0x0 0x0 0x0 [Flamberge] BossAI
 UNIT Aeteria SPal 0x1 Level(10, Enemy, 1)     [8,8] 0b 0x0 0x0 0x0 [SteelSword] GroupOneAI
-UNIT AeteriaStealable Soldier 0x1 Level(9, Enemy, 1)     [12,10] DropItem 0x0 0x0 0x0 [IronLance,Speedwing] AttackInRangeAI
+UNIT AeteriaStealable Soldier 0x1 Level(9, Enemy, 1)     [12,10] 0b 0x0 0x0 0x0 [IronLance,Speedwing] AttackInRangeAI
 UNIT Aeteria Soldier 0x1 Level(9, Enemy, 1)     [10,13] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
 UNIT Aeteria Fighter 0x1 Level(9, Enemy, 1)     [22,8] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
 UNIT Aeteria Soldier 0x1 Level(9, Enemy, 1)     [16,19] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
@@ -370,6 +371,7 @@ SetBackground(0x1)
 //Text(Ch8ZopfIntro)
 Text(Placeholder2)
 ClearBackground
+RefreshSMS
 NoFade
 ENDA
 

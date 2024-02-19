@@ -27,6 +27,14 @@ ldr r1, TowerShieldPlusID
 cmp r0, #0
 beq AttackerCheck
 
+@check if attacker has execute
+mov     r0, #0x4A      @Move to attacker's weapon (before battle)
+ldrb    r0, [r5, r0]   @Load attackers weap (before battle)
+cmp     r0, #0xE8         @Misericorde/Curtain Call
+beq End
+cmp     r0, #0xF0         @Diplomacy
+beq End
+
 mov r1, r4
 add r1, #0x5C  		@defender def
 ldrh r2,[r1]		@load it to register
@@ -52,6 +60,14 @@ mov r0, r5 @attacker data
 ldr r1, TowerShieldPlusID
 .short 0xf800
 cmp r0, #0
+beq End
+
+@check if defender has execute
+mov     r0, #0x4A      @Move to attacker's weapon (before battle)
+ldrb    r0, [r5, r0]   @Load attackers weap (before battle)
+cmp     r0, #0xE8         @Misericorde/Curtain Call
+beq End
+cmp     r0, #0xF0         @Diplomacy
 beq End
 
 mov r1, r5
