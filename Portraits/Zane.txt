@@ -154,7 +154,7 @@ setMugEntry(0x15, Kevron_Mug, 3, 5, 3, 3)
 
 ALIGN 16 //Wilfried by hypergammaspaces, monkeybard
 Wilfried_Mug:
-#incext PortraitFormatter "Wilfried.png"
+#incext PortraitFormatter "Echoes_Merc.png"
 setMugEntry(0x16, Wilfried_Mug, 3, 5, 3, 3)
 
 ALIGN 16 //Solum by Laurent Lacroix
@@ -352,15 +352,20 @@ Ansgar_Mug: //Ansgar edited by L95
 #incext PortraitFormatter "AnsgarV2StatScreen.png"
 setMugEntryExtend(0x23, Ansgar_Mug, 3, 4, 3, 2, 12, 6, 12, 8)
 
-ALIGN 16
-AnsgarLeft_Mug:
-#incext PortraitFormatter "AnsgarLeft.png"
-setMugEntryExtend(0x4E, AnsgarLeft_Mug, 3, 4, 3, 2, 12, 6, 12, 8)
+//ALIGN 16
+//AnsgarLeft_Mug:
+//#incext PortraitFormatter "AnsgarLeft.png"
+//setMugEntryExtend(0x4E, AnsgarLeft_Mug, 3, 4, 3, 2, 12, 6, 12, 8)
 
 ALIGN 16
-AnsgarRight_Mug:
-#incext PortraitFormatter "AnsgarRight.png"
-setMugEntryExtend(0x4F, AnsgarRight_Mug, 0, 0, 0, 0, 0, 0, 0, 0)
+Brigand_Mug: //Brigand by hypergammaspaces
+#incext PortraitFormatter "Echoes_Bandit.png"
+setMugEntry(0x4e, Brigand_Mug, 2, 5, 3, 3)
+
+ALIGN 16
+BrigandBoss_Mug:
+#incext PortraitFormatter "brigandboss.png"
+setMugEntry(0x4F, BrigandBoss_Mug, 3, 5, 3, 3)
 
 ALIGN 16
 Zopf_Mug: //Zopf by Laurent, Levin
@@ -513,10 +518,10 @@ Kisra_Mug:
 #incext PortraitFormatter "Kisra.png"
 setMugEntry(0x32, Kisra_Mug, 3, 5, 3, 3)
 
-ALIGN 16 //Biscotti by Laurent Lacroix
+ALIGN 16 //Biscotti by LEVIN?!?!
 Biscotti_Mug:
 #incext PortraitFormatter "Biscotti.png"
-setMugEntry(0x33, Biscotti_Mug, 3, 6, 3, 4)
+setMugEntry(0x33, Biscotti_Mug, 2, 5, 3, 3)
 
 ALIGN 16 //Lefse by Laurent Lacroix
 Lefse_Mug:
@@ -690,6 +695,11 @@ setMugEntry(0x6B, SoldierGeneric2, 2, 6, 3, 4)
 SoldierGeneric3: //(Aeterian) Soldier Generic 3 by hypergammaspaces
 #incext PortraitFormatter "Echoes_Cavalier.png"
 setMugEntry(0x6C, SoldierGeneric3, 2, 5, 2, 3)
+
+SoldierGeneric4: //(Aeterian) Soldier Generic 3 by LAURENT
+#incext PortraitFormatter "GenericMage.png"
+setMugEntry(0x36, SoldierGeneric4, 3, 5, 3, 3)
+
 
 WreyvineSoldierGeneric: //(Wreyvian) Soldier Generic by hypergammaspaces
 #incext PortraitFormatter "SoldierWreyvine.png"

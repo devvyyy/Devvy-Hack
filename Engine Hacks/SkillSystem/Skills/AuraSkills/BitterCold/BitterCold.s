@@ -35,7 +35,20 @@ beq Done
 mov r0, r4 			@Move attacker data into r1.
 add     r0,#0x5A    @Move to the attacker's damage.
 ldrh    r3,[r0]     @Load the attacker's damage into r3.
-add     r3,#2    @add 2 to the attacker's damage.
+add     r3,#3    @add 2 to the attacker's damage.
+strh    r3,[r0]     @Store attacker damage.
+
+@under 50% hp
+ldrb r0, [r5, #0x12]
+lsr r0, #1 @max hp/2
+ldrb r1, [r5, #0x13] @currhp
+cmp r1, r0
+bgt End
+
+mov r0, r4 			@Move attacker data into r1.
+add     r0,#0x5A    @Move to the attacker's damage.
+ldrh    r3,[r0]     @Load the attacker's damage into r3.
+add     r3,#3    @add 2 to the attacker's damage.
 strh    r3,[r0]     @Store attacker damage.
 
 Done:

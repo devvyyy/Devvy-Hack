@@ -125,12 +125,12 @@ UNIT HolyGuard Cleric 0x1 Level(5, NPC, 1)     [10,15] 0 0 1 REDA10R13 [Slow, Vu
 UNIT
 
 TankyHealerWTF:
-UNIT Floris Priest 0x1 Level(4, Ally, 0)     [9,12] 0x0 0x0 0x0 0x0 [Mend,Barrier,Haze] AttackInRangeAI
+//UNIT Floris Priest 0x1 Level(4, Ally, 0)     [9,12] 0x0 0x0 0x0 0x0 [Mend,Barrier,Haze] AttackInRangeAI
 UNIT Yory 0x61 0x1 Level(3, Ally, 0)     [10,12] 0x0 0x0 0x0 0x0 [Dragonstone,0xF2,0xF3,Mine,] AttackInRangeAI
 UNIT
 
 LunaticUnits:
-UNIT Floris Priest 0x1 Level(4, Ally, 1)     [9,12] 0x0 0x0 0x0 0x0 [Mend,Barrier,Haze,TorchStaff] AttackInRangeAI
+//UNIT Floris Priest 0x1 Level(4, Ally, 1)     [9,12] 0x0 0x0 0x0 0x0 [Mend,Barrier,Haze,PureWater] AttackInRangeAI
 UNIT Yory 0x61 0x1 Level(3, Ally, 1)     [10,12] 0x0 0x0 0x0 0x0 [Dragonstone,0xF2,0xF3,0xF8,] AttackInRangeAI
 UNIT
 
@@ -189,11 +189,11 @@ UNIT FlyingPhys PegRider 0x1 Level(6, Enemy, 1)     [0,7] 0 0 1 REDA1R8 [IronLan
 UNIT
 
 ArenaRein4:
-UNIT Aeteria Myrmidon 0x1 Level(4, Enemy, 1)     [16,6] 0x0 0x0 0x0 0x0 [IronSword] DefendAI
+UNIT Aeteria Myrmidon 0x1 Level(6, Enemy, 1)     [16,6] 0x0 0x0 0x0 0x0 [IronSword] DefendAI
 UNIT
 
 InsideRein:
-UNIT Aeteria ACav 0x1 Level(5, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [IronAxe,HandAxe] DefendAI
+UNIT Aeteria ACav 0x1 Level(6, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [IronAxe,HandAxe] DefendAI
 UNIT FlyingMag Occultist 0x1 Level(5, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [DarkTome1,] WallAI
 UNIT
 
@@ -252,12 +252,11 @@ Traps2:
 
 BeginningScene:
 
-RANDOMNUMBER 0x64 //floris random shirt LOL
-SVAL 0x7 0x32
-BLT 0x9000 0xC 0x7
-SetFlag(0xB1) //floris shirt flag, 0xB2 is wegman's toggle flag
-REMA
-LABEL 0x9000
+//RANDOMNUMBER 0x64 //floris random shirt LOL
+//SVAL 0x7 0x32
+//BLT 0x9000 0xC 0x7
+//SetFlag(0xB1) //floris shirt flag, 0xB2 is wegman's toggle flag
+//LABEL 0x9000
 
 SetBackground(0x3F)
 Music(0x4E)
@@ -287,7 +286,7 @@ SilentlyGiveItem(0xD6, Yory)
 	ENUN
 FADU 45
 STAL 15
-CameraCursor(Floris)
+//CameraCursor(Floris)
 CameraCursor(Yory)
 MUSC 0x26
 SetBackground(0x3F)

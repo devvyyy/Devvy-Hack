@@ -1,6 +1,31 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+//Gas Trap status effect (default is 0x1: Poison)
+PUSH
+ORG 0x3649E
+BYTE 0x0
+POP
+
+//dont game over if theres 0 alive
+//PUSH
+//ORG 0x019024
+//BYTE 0x01 0x20
+//POP
+
+//fire trap damage
+PUSH
+ORG 0x2E31C
+BYTE 0x5
+
+POP
+
+//prevents top left tile in a tileset from exploding after talk
+PUSH
+ORG 0x35728
+BYTE 0x00 0x00 0x00 0x00
+POP
+
 
 //Unset bit 0x80000000 at the end of every phase
 PUSH
@@ -41,7 +66,7 @@ POP
 
 PUSH
 ORG 0x07A92E
-BYTE 0x32
+BYTE 0x24
 POP
 
 // Fix vanilla Berserk/Sleep targetting bug

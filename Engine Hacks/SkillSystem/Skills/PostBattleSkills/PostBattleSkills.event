@@ -230,6 +230,13 @@ POIN AuraSkillCheck
 //#include "ParryPost/ParryEvent.event"
 
 ALIGN 4
+BloodMoonSkill:
+#include "BloodMoon/EndTurnEPAll.lyn.event"
+POIN SkillTester
+POIN GetUnitsInRange
+WORD BlueFlameID
+
+ALIGN 4
 EndTurnSkill:
 #include "EndTurn/EndTurn.lyn.event"
 WORD EndTurnID
@@ -465,6 +472,12 @@ CantoPlus:
 #incbin "CantoPlus/cantoplus.dmp"
 POIN SkillTester
 WORD CantoPlusID
+
+ALIGN 4
+WildCardCanto:
+#incbin "WildCard/canto.dmp"
+POIN SkillTester
+WORD CharismaID
 
 ALIGN 4
 Duelist:

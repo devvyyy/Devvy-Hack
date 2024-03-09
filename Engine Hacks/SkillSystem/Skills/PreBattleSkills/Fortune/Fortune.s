@@ -1,7 +1,7 @@
 .thumb
 .align
 
-.equ FortuneID,SkillTester+4
+.equ BarricadeID,SkillTester+4
 
 push {r4-r7,lr}
 @goes in the battle loop.
@@ -19,7 +19,7 @@ beq	 GoBack
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r4
-ldr r1, FortuneID
+ldr r1, BarricadeID
 .short 0xf800
 cmp r0, #0
 beq CheckDefender
@@ -34,7 +34,7 @@ CheckDefender:
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r5
-ldr r1, FortuneID
+ldr r1, BarricadeID
 .short 0xf800
 cmp r0,#0
 beq GoBack
@@ -55,5 +55,5 @@ bx r0
 
 SkillTester:
 @POIN SkillTester
-@WORD FortuneID
+@WORD BarricadeID
 

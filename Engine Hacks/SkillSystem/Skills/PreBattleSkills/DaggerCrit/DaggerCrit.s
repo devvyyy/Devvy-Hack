@@ -41,6 +41,8 @@ cmp     r0, #0xFE         @Syzygy
 beq Crit50Special
 cmp     r0, #0xB9         @Dirk
 beq DirkSpecial
+cmp     r0, #0x53         @Smite
+beq Crit100NoAvoid
 b End
 
 Crit25:
@@ -138,17 +140,18 @@ b End
 
 Crit100:
 
-@reduce 100 crit
-mov r1, #0x66
-ldrh r0, [r4, r1] @crit
-sub r0, #99 @99 because uhhhh 100 doesnt fit ecks dee
-strh r0, [r4,r1]
-
 mov r1, #0x62
 ldrh r0, [r4, r1] @avoid
 add r0, #10
 strh r0, [r4,r1]
 
+Crit100NoAvoid: //better way
+
+@reduce 100 crit
+mov r1, #0x66
+ldrh r0, [r4, r1] @crit
+sub r0, #99 @99 because uhhhh 100 doesnt fit ecks dee
+strh r0, [r4,r1]
 End:
 pop {r4-r7, r15}
 .align

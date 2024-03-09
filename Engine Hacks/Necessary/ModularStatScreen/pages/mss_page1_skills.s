@@ -40,11 +40,11 @@ str r0,[sp,#0x14]
     draw_textID_at 13, 3, textID=0x4fe, growth_func=2
   MagStrDone:
 
-draw_textID_at 13, 5, textID=0x4EC, growth_func=3 @skl
-draw_textID_at 13, 7, textID=0x4ED, growth_func=4 @spd
-draw_textID_at 13, 9, textID=0x4ee, growth_func=5 @luck
-draw_textID_at 13, 11, textID=0x4ef, growth_func=6 @def
-draw_textID_at 13, 13, textID=0x4f0, growth_func=7 @res
+draw_textID_at 21, 3, textID=0x4EC, growth_func=3 @skl
+draw_textID_at 13, 5, textID=0x4ED, growth_func=4 @spd
+draw_textID_at 21, 5, textID=0x4ee, growth_func=5 @luck
+draw_textID_at 13, 7, textID=0x4ef, growth_func=6 @def
+draw_textID_at 21, 7, textID=0x4f0, growth_func=7 @res
 
 b 	LiteralJump1
 .ltorg 
@@ -78,26 +78,26 @@ ShowGrowths: @things in this section are only drawn when in growths mode
 
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#4]		@str growth getter
-draw_growth_at 18, 3
+draw_growth_at 17, 3
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#8]		@skl growth getter
-draw_growth_at 18, 5
+draw_growth_at 25, 3
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#12]		@spd growth getter
-draw_growth_at 18, 7
+draw_growth_at 17, 5
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#16]		@luk growth getter
-draw_growth_at 18, 9
+draw_growth_at 25, 5
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#20]		@def growth getter
-draw_growth_at 18, 11
+draw_growth_at 17, 7
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#24]		@res growth getter
-draw_growth_at 18, 13
+draw_growth_at 25, 7
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0]			@hp growth getter (not displaying because there's no room atm)
-draw_growth_at 18, 15
-draw_textID_at 13, 15, textID=0x4E9, growth_func=1 @hp name
+draw_growth_at 17, 9
+draw_textID_at 13, 9, textID=0x4E9, growth_func=1 @hp name
 
 b		literalJump2
 .ltorg
@@ -106,14 +106,14 @@ ShowStats2: @things in this section are only drawn when not in growths mode
 
 
 draw_str_bar_at 16, 3
-draw_skl_bar_at 16, 5
-draw_spd_bar_at 16, 7
-draw_luck_bar_at 16, 9
-draw_def_bar_at 16, 11
-draw_res_bar_at 16, 13
+draw_skl_bar_at 24, 3
+draw_spd_bar_at 16, 5
+draw_luck_bar_at 24, 5
+draw_def_bar_at 16, 7
+draw_res_bar_at 24, 7
 
-draw_textID_at 13, 15, 0x4f6 @move
-draw_move_bar_with_getter_at 16, 15
+draw_textID_at 13, 9, 0x4f6 @move
+draw_move_bar_with_getter_at 16, 9
 
 b literalJump2
 
@@ -124,19 +124,19 @@ literalJump2:
 
 
 
-draw_textID_at 13, 17, textID=0x4f7 @con
-draw_con_bar_with_getter_at 16, 17
+draw_textID_at 21, 9, textID=0x4f7 @con
+draw_con_bar_with_getter_at 24, 9
 
-draw_textID_at 21, 3, textID=0x4f8 @aid
-draw_number_at 25, 3, 0x80189B8, 2 @aid getter
-draw_aid_icon_at 26, 3
+draw_textID_at 21, 11, textID=0x4f8 @aid
+draw_number_at 25, 11, 0x80189B8, 2 @aid getter
+draw_aid_icon_at 27, 11
 
-draw_trv_text_at 21, 5
+//draw_trv_text_at 13, 15
 
-draw_textID_at 21, 7, textID=0x4F1 @Affinity
-draw_affinity_icon_at 24, 7
+draw_textID_at 13, 11, textID=0x4F1 @Affinity
+draw_affinity_icon_at 16, 11
 
-draw_status_text_at 21, 9
+draw_status_text_at 13, 13
 
 b exitVanillaStatStuff
 
@@ -147,7 +147,7 @@ exitVanillaStatStuff:
 
 ldr r0,=TalkTextIDLink
 ldrh r0,[r0]
-draw_talk_text_at 21, 11
+draw_talk_text_at 21, 13
 
 b startSkills
 
@@ -160,7 +160,7 @@ startSkills:
 
 ldr r0,=SkillsTextIDLink
 ldrh r0, [r0]
-draw_textID_at 21, 13, colour=White @skills
+draw_textID_at 15, 15, colour=White @skills
 
 
 mov r0,r8
@@ -172,35 +172,35 @@ mov r6,r0
 ldrb r0,[r6]
 cmp r0,#0
 beq SkillsEnd
-draw_skill_icon_at 21, 15
+draw_skill_icon_at 18, 15
 
 ldrb r0,[r6,#1]
 cmp r0,#0
 beq SkillsEnd
-draw_skill_icon_at 23, 15
+draw_skill_icon_at 20, 15
 
 ldrb r0,[r6,#2]
 cmp r0,#0
 beq SkillsEnd
-draw_skill_icon_at 25, 15
+draw_skill_icon_at 22, 15
 
 ldrb r0,[r6,#3]
 cmp r0,#0
 beq SkillsEnd
-draw_skill_icon_at 27, 15
+draw_skill_icon_at 24, 15
 
 //bottom row
 ldrb r0,[r6,#4]
 cmp r0,#0
 beq SkillsEnd
-draw_skill_icon_at 24, 17
+draw_skill_icon_at 26, 15
 
 //probably not using the 6th skill slot (no one has a class skill except the technician lmao)
 //this makes it awkwardly move to the right i think uhhh but whatever its never viewable in game?
 ldrb r0,[r6,#5]
 cmp r0,#0
 beq SkillsEnd
-draw_skill_icon_at 26, 17
+draw_skill_icon_at 23, 17
 b SkillsEnd
 
 .ltorg
@@ -208,8 +208,8 @@ b SkillsEnd
 
 SkillsEnd:
 
-@ draw_textID_at 13, 15, textID=0x4f6 @move
-@ draw_move_bar_at 16, 15
+@ draw_textID_at 13, 9, textID=0x4f6 @move
+@ draw_move_bar_at 16, 9
 
 @blh DrawBWLNumbers
 

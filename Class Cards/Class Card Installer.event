@@ -181,3 +181,11 @@ BrigandPalette:
 #incbin "BrigandPalette.dmp"
 BrigandClassCard:
 setCardEntry(0x8b, BrigandCard,BrigandPalette)
+
+ALIGN 4
+CratesCard: //by Laurent Lacroix
+#incbin "Crates.dmp"
+CratesPalette:
+#incbin "CratesPalette.dmp"
+CratesClassCard:
+setCardEntry(0xa7, CratesCard,CratesPalette)

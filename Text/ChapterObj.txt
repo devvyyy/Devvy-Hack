@@ -41,10 +41,10 @@ Arrive[X]
 Conquer[X]
 
 ## SeizeCh3
-Seize inn[X]
+Seize Inn[X]
 
 ## SeizeCh2
-Seize bridge[X]
+Seize Bridge[X]
 
 ## SeizeCh2LongObj
 Seize the bridge[N]
@@ -58,11 +58,11 @@ Seize the inn.[X]
 
 ## DefendCh4LongObj
 Defend for 11 turns[N]
-or defeat Hartmann.[X]
+or Defeat Hartmann.[X]
 
 ## SecureCh6LongObj
 Secure fortresses or[N]
-defend for 12 turns.[X]
+Defend for 12 turns.[X]
 
 ## DefendCh6LongObj
 Defend the King for[N]
@@ -83,15 +83,19 @@ Seize throne[X]
 
 ## Ch7LongObj
 Decimate enemy and[N]
-rescue in 12 turns.[X]
+Rescue in 12 turns.[X]
 
 ## Ch7LongObj2
 Rescue prisoners and[N]
-escape the prison.[X]
+Escape the prison.[X]
 
 ## P2BonusObj
 Escape the outskirts[N]
 within 14 turns.[X]
+
+## Ch2LongObj
+Escape the port city[N]
+within 10 turns.[X]
 
 ## Ch8LongObj
 Escape the crown city[N]
@@ -126,6 +130,14 @@ Trinity.[X]
 ## SurviveObj
 Survive[X]
 
+## EscortSeizeObj
+Escort+Arrive[X]
+
+## Ch4NewObjLong
+# Escape the city?
+Escort all villagers,[N]
+then Arrive in 20.[X]
+
 ## FinalGaidenObj
 Survive for[N]
 10 turns.[X]
@@ -141,6 +153,7 @@ Survive for[N]
 #include "ChapterText/Chapter3.txt"
 
 #include "ChapterText/Chapter4.txt"
+#include "ChapterText/NewChapter4.txt"
 
 #include "ChapterText/Chapter5.txt"
 

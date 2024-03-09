@@ -154,7 +154,7 @@ UNIT Affogato Scout 0x1 Level(1, Ally, 0)     [7,6]  0b 0 1 REDA7R9 [IronBow, Ir
 UNIT Breve SCav 0x1 Level(3, Ally, 0)    [7,6] 0b 0 1 REDA6R8 [IronSword,Sagitar,Vulnerary] [0x0,0x0,0x0,0x0]
 UNIT Ansgar LArmor 0x1 Level(4, Ally, 0)   [7,6] 0b 0 1 REDA7R8 [IronGlaive,Javelin,0x64,PureWater] [0x0,0x0,0x0,0x0]
 UNIT Hildr 0x6 0x1 Level(2, Ally, 0)    [7,6] 0b 0 1 REDA8R8 [IronAxe,HandAxe,Vulnerary] [0x0,0x0,0x0,0x0]
-UNIT Ulrich LPaladin 0x1 Level(5, Ally, 0)   [7,6] 0b 0 1 REDA7R7 [IronLance,BluntGlaive,Elixir,0xFB] [0x0,0x0,0x0,0x0]
+UNIT Ulrich LPaladin 0x1 Level(5, Ally, 0)   [7,6] 0b 0 1 REDA7R7 [IronLance,BluntGlaive,Elixir,0x6b] [0x0,0x0,0x0,0x0]
 UNIT
 
 LunaticUnits:
@@ -270,7 +270,9 @@ FADU 30
 HardUnits(LunaticUnits,Units1)
 //this sets 0x12c which is the ring notif flag
 CHECK_HARD; BEQ 0x720 0xC 0x0; BYTE 0x40 0x0D Affogato Elixir; POIN SilentGiveItem+1; SetFlag(0x12C); LABEL 0x720
-CHECK_HARD; BEQ 0x721 0xC 0x0; BYTE 0x40 0x0D Ulrich 0xFB; POIN SilentGiveItem+1; LABEL 0x721
+//CHECK_HARD; BEQ 0x721 0xC 0x0; BYTE 0x40 0x0D Ulrich 0xFB; POIN SilentGiveItem+1; LABEL 0x721
+
+BYTE 0x40 0x0D Ulrich 0xFB; POIN SilentGiveItem+1; LABEL 0x721
 
 ENUN
 STAL 40

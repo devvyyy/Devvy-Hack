@@ -123,7 +123,7 @@ UNIT AeteriaStealable Soldier 0x1 Level(3, Enemy, 1)     [15,13] 0b 0x0 0x0 0x0 
 UNIT Aeteria Soldier 0x1 Level(3, Enemy, 1)     [4,7] 0b 0x0 0x0 0x0 [0x95] AttackInRangeAI
 UNIT Aeteria SCav 0x1 Level(3, Enemy, 1)     [16,11] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
 UNIT Aeteria SCav 0x1 Level(3, Enemy, 1)     [2,8] 0b 0x0 0x0 0x0 [IronSword,] ChargeAI
-UNIT Aeteria Thaumaturge 0x1 Level(3, Enemy, 1)     [3,1] 0b 0x0 0x0 0x0 [Fire,] TwoActionAI
+UNIT Aeteria Thaumaturge 0x1 Level(3, Enemy, 1)     [1,1] 0b 0x0 0x0 0x0 [Fire,] TwoActionAI
 UNIT Aeteria Occultist 0x1 Level(3, Enemy, 1)     [11,17] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
 UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [0,6] 0b 0x0 0x0 0x0 [DarkTome2,] BossAI
 UNIT Aeteria Shaman 0x1 Level(3, Enemy, 1)     [2,12] 0b 0x0 0x0 0x0 [DarkTome1] AttackInRangeAI
@@ -134,9 +134,12 @@ UNIT Aeteria Mage 0x1 Level(3, Enemy, 1)     [6,17] DropItem 0x0 0x0 0x0 [Fire] 
 UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
 UNIT Aeteria Archer 0x1 Level(4, Enemy, 1)     [9,11] 0b 0x0 0x0 0x0 [Longbow] BossAI
 UNIT Aeteria ACav 0x1 Level(3, Enemy, 1)     [0,2] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
+
+UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [12,11] DropItem 0x0 0x0 0x0 [PureWater] [0,3,0,32]
+UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [2,1] DropItem 0x0 0x0 0x0 [KillingEdge] [0,3,0,32]
 	UNIT
 	
-	
+
 Rein1:
 UNIT Aeteria Mercenary 0x1 Level(3, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [Armorslayer,] ChargeAI
 UNIT Aeteria LCav 0x1 Level(3, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
@@ -254,6 +257,12 @@ SVAL 0x2 Doppio
 CALL 0x9EE4A0
 SVAL 0x2 Eiskaffee
 CALL 0x9EE4A0
+
+RANDOMNUMBER 0x64 //floris random shirt LOL
+SVAL 0x7 0x32
+BLT 0x9000 0xC 0x7
+SetFlag(0xB1) //floris shirt flag, 0xB2 is wegman's toggle flag
+LABEL 0x9000
 
 FADI 32
 STAL 0x30

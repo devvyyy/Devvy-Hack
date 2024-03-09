@@ -512,15 +512,15 @@ ALIGN 4
 SongTable(0xDB,songDB,1)
 #include "Dreaming.event"
 
-//ALIGN 4
-//And Thus Fate Becomes Cruel
-//SongTable(0xA8,songA8,1)
-//#include "FateBecomesCruel.event"
-
 ALIGN 4
+//And Thus Fate Becomes Cruel
+SongTable(0x3c1,songA8,1)
+#include "FateBecomesCruel.event"
+
+//ALIGN 4
 //Corridors of Time
-SongTable(0xA8,songA8,1)
-#include "Zeal.event"
+//SongTable(0xA8,songA8,1)
+//#include "Zeal.event"
 
 ALIGN 4
 //Ring of Revolving Fate

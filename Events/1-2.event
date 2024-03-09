@@ -20,7 +20,7 @@ TURN 0x0 BoatRein [5,0] 0x0
 TURN 0x0 MountainRein [6,0] 0x0
 TURN 0x0 EastRein [7,0] 0x0
 TURN 0x0 NorthRein [8,0] 0x0
-TURN 0x0 GoodbyeDespair [10,0] 0x0
+TURN 0x0 GoodbyeDespair [11,0] 0x0
 	END_MAIN
 
 ALIGN 32
@@ -31,6 +31,7 @@ CharacterEventBothWays(0x7B,AffoUlrichConvoCh2, Affogato, Ulrich)
 //CharacterEventBothWays(0x21, PandoroRecruit, 0x0, Pandoro)
 //CharacterEventBothWays(0x21, IreneRecruit, 0x0, Irene)
 CharacterEventBothWays(0x21, UlrichLatteRecruit, Ulrich, Latte)
+CharacterEventBothWays(0x21, MochaLatteRecruit, Mocha, Latte)
 CharacterEventBothWays(0x21, LatteRecruit, 0x0, Latte)
 //CharacterEventBothWays(0x22, MochaNoraConvo, Nora, Mocha)
 CharacterEventBothWays(0x22, SequinAnsgarConvo, Sequin, Ansgar)
@@ -54,8 +55,10 @@ AFEV 0x0 EndingScene 0x3
 
 LocationBasedEvents:
 Chest(Armorslayer,1,9)
-Seize(0,1)
-Seize(0,2)
+//Seize(0,1)
+//Seize(0,2)
+Escape(0,1)
+Escape(0,2)
 Village(0x20,SallyCars,13,3)	
 House(0x0,OgrimHouseEpic,9,8)
 	END_MAIN
@@ -185,6 +188,7 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+ENUT AllUnitsMustEscapeFlag
 TILECHANGE 0x4
 SetBackground(0x2B)
 SOUN 0xA6
@@ -351,6 +355,15 @@ UlrichLatteRecruit:
 MUSS 0x30
 STAL 33
 Text(LatteUlrichRecruit)
+MURE 0x2
+CUSA Latte
+NoFade
+ENDA
+
+MochaLatteRecruit:
+MUSS 0x30
+STAL 33
+Text(LatteMochaRecruit)
 MURE 0x2
 CUSA Latte
 NoFade
