@@ -289,6 +289,7 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+//SetFlag(0x12B) //PART 2 FLAG THAT CHANGES COLOR
 	LOAD1 0x1 EnemyUnits
 	ENUT AllUnitsMustEscapeFlag
 	//LOAD1 0x1 OKREALNEWPARTY

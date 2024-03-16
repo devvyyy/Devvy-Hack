@@ -13,16 +13,17 @@ ldr r1, HighRollerID
 cmp r0, #0
 beq NoSkill
 
-add     r1,#0x50    @Move to the defending unit's weapon type.
-ldrb    r1,[r1]        @Load in the defending unit's weapon type.   
-
-cmp r1, #0x2
-bne AutoDouble
-
+@anti reaver?!
 mov     r0, #0x4A      @Move to defenders's weapon (before battle)
 ldrb    r0, [r5, r0]   @Load defenders weap (before battle)
 cmp     r0, #0x2A         @Swordreaver ID
 beq AutoDouble
+
+@Unit has skill, check to see if unit has axe equipped
+mov     r0, #0x50      @Move to the attacking unit weapon type.
+ldrb    r0, [r5, r0]   @Load the defending unit weapon type.
+cmp     r0, #2         @Is it Axe?
+bne     AutoDouble        @If not, goto autodouble
 
 @add crit
 mov r1, #0x66

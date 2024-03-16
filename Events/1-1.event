@@ -22,17 +22,18 @@ TURN 0x0 BisCharge [8,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-//CharacterEventBothWays(0xA,SeqEvelConvo, Sequin, Evelyn)
+CharacterEventBothWays(0xA,NoraHildrConvo, Nora, Hildr)
 CharacterEventBothWays(0x7A,AffoUlrichConvo, Affogato, Ulrich)
 //7A is a global flag
 //CharacterEventBothWays(0xC,AnsgarBreveConvo, Ansgar, Breve)
 	END_MAIN
 
-SeqEvelConvo:
+NoraHildrConvo:
 	MUSI
-	Text(SeqEvelTalk)
+	Text(HildrNoraCh1Talk)
 	MUNO
 	MURE 2
+	GiveItem(GreenGem,Nora)
 	NoFade
 	ENDA
 	
@@ -42,6 +43,10 @@ AffoUlrichConvo:
 	MUNO
 	MURE 2
 	NoFade
+CHECK_EVENTID 0x79 //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+	SOUN 0x60
+LABEL 0x1
 	ENDA
 	
 AnsgarBreveConvo:

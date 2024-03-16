@@ -27,15 +27,17 @@ mov r0,#0x28
 cmp r0,#1
 bne Done
 
-@set BATTLE crit to 0
-mov r1, #0x6A
-mov r0, #0
-strh r0, [r4,r1]
+@add attack to foe
+mov r1, #0x5A
+ldrh r0, [r5, r1] @atk
+add r0, #5
+strh r0, [r5,r1]
 
-@set avoid to 0
-mov r1, #0x62
-mov r0, #0
-strh r0, [r4,r1]
+@add hit to foe
+mov r1, #0x60
+ldrh r0, [r5, r1] @hit
+add r0, #200
+strh r0, [r5,r1]
 
 Done:
 pop {r4-r7}

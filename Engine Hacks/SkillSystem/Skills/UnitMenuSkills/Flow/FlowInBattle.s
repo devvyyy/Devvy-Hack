@@ -1,22 +1,26 @@
-.thumb	@ flow gaming
-.org 0x0
+.thumb
 .equ FlowStateID, SkillTester+4
-push  {r4,r14} @ r0 = battle struct
-mov   r0,r4
-@check for flow
-ldr   r1, FlowStateID
-ldr   r2,SkillTester
-mov   r14,r2
-.short  0xF800
-cmp   r0,#0x0
-beq   End
-@check for bit
-ldr  r0,[r4,#0xC] @attacker max hp
-mov	r1, #0x01
-lsl	r1, #0x1c
-and	r0, r1
-cmp	r0, #0x00
-beq	End
+
+push {r4-r7, lr}
+mov r4, r0 @atkr
+mov r5, r1 @dfdr
+
+@has skill
+ldr r0, SkillTester
+mov lr, r0
+mov r0, r4 @attacker data
+ldr r1, FlowStateID
+.short 0xf800
+cmp r0, #0
+beq End
+
+@check if flag 022 set
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0x22
+.short 0xF800
+cmp r0,#1
+bne End @if flag is not on, DIE
 @modify stats
 
 @add hp attack
@@ -43,12 +47,11 @@ ldrb r2, [r4, #0x18] @def
 add  r0, r2
 strh r0, [r4,r1]
 
-End:
-pop   {r4}
-pop   {r0}
-bx    r0
 
+End:
+pop {r4-r7, r15}
 .align
+.ltorg
 SkillTester:
 @POIN SkillTester
 @WORD FlowStateID

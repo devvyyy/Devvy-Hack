@@ -30,6 +30,12 @@ after all post-combat effects trigger,[N]
 ends the actions of all foes within 3[N]
 spaces of target.[X]
 
+## SD_FalseAlarm
+False Alarm[N]
+- Unit can toggle Overload for all units.[N]
+- Overload disables all "if" conditionals;[N] 
+skill effects will always trigger.[X]
+
 ## SD_BloodFury
 Blood Fury[N]
 - If unit doesn't kill, takes 5 damage[N]
@@ -40,9 +46,9 @@ after combat.[N]
 ## SD_Radiance
 # shirt uses 0xB1, change order of marking/healing in calc loop so marking an ally missing hp with barrier also heals them?
 Encourage[N]
-- Nora's staves mark allies for the map.[N]
-- Grants marked allies Res +5.[N]
-- Restores (Eth + 5) HP to all marked[N]
+- Nora's staves Bless allies for the map.[N]
+(Clears status effects on ally, if any.)[N]
+- Restores (Eth + 5) HP to all Blessed[N]
 allies on the map after action.[X]
 
 ## SD_Fom
@@ -508,7 +514,7 @@ damage after combat.[X]
 ## SD_ShadowEye
 Shadow Eye[N]
 - If Edvin initiates, after combat,[N]
-inflicts Soulbreak for 1 turn.[N]
+inflicts Soulbreak for the map.[N]
 - If foe has any status effects,[N]
 grants Hit +30.[X]
 
@@ -587,7 +593,7 @@ Dauntless Instinct[N]
 - Kills grant Klavdia a stack (max; 3).[N]
 - Stacks grant Atk +1, Hit +5 each.[N]
 - At max stacks, foes within 4 spaces[N]
-can't dodge attacks or critically hit.[X]
+take +5 damage and can't dodge attacks.[X]
 
 ## SD_FlowGamingNew
 Bulwark: Combat grants 1 stack (max; 3).[N]
@@ -691,13 +697,14 @@ weapon Mt.[X]
 Happy Hour[N]
 - After using a consumable item,[N]
 restores HP to allies within 3 spaces[N]
-= ally's Luck and grants Kane[N]
+= (ally's Luck x 2) and grants Kane[N]
 another action.[X]
 
 ## SD_CorneredWolf
 Cornered Wolf: When within 3 spaces of[N]
 2 or more enemies, or when below 50% HP,[N]
-grants Atk +4/Hit +40, and negates WTD.[X]
+grants Atk +4/Hit +40, negates WTD[,] and[N]
+strikes x2 consecutively.[X]
 
 ## SD_BladeWhirl
 Blade Whirl: If unit initiates against a[N]
@@ -876,8 +883,8 @@ another action (once per turn).[X]
 ## SD_Lionheart
 # add vantage ?! Lionheart
 Adrenaline[N]
-- Grants Lennard +2 Avoid/Crit per[N]
-missing HP, doubled to +4 below 50% HP.[N]
+- Grants Lennard +1 Avoid/Crit per[N]
+missing HP, upped to +3 below 50% HP.[N]
 - Take 4 damage after combat.[N]
 (Post-combat damage can't kill.)[X]
 
@@ -1266,10 +1273,10 @@ NPCs on the map with HP > 50% or more.[X]
 
 ## SD_BitterCold
 Bitter Cold[N]
-- Hartmann inflicts Rsl -3 to all[N]
-foes on the map with < 100% HP,[N]
-doubled to -6 to all foes with[N]
-< 50% HP (Rsl can go below 0).[X]
+- Hartmann inflicts Rsl -3 to all foes on[N]
+the map with < 100% HP, doubled to -6 to[N]
+all foes with < 50% HP.[N]
+(Rsl can go below 0.)[X]
 
 ## SD_Savior
 Savior: Nullifies penalties[N]

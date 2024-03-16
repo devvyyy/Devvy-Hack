@@ -1,8 +1,13 @@
+## AffogatoHurry
+[3L]
+[MR][LoadAffogato]
+[Mouth](We should make haste.)[A][Mouth][X]
+
 ## AffogatoEscape
 [3L]
 [MR][LoadAffogato]
 The path forward is clear.[.6][N]
-[MoveMidLeft]Everyone,[.4] follow my lead.[A][X]
+Everyone,[.4] follow my lead.[A][X]
 
 ## BreveEscape
 [3L]
@@ -998,11 +1003,36 @@ to the battle.[AN]
 [OpenMidRight][ToggleSmile]Oh,[.4] [MoveMidRight]okay![A][X]
 
 ## AffoSeqTalk
-[OpenMidLeft][LoadSequin]
-[OpenMidRight][LoadAffo]
+[OpenMidLeft][LoadSequin][OpenMidRight][LoadAffo]
 [3l]
+[OpenMidLeft]
+Hello[,] scout man![.6] You a scoundrel too?[6N]
+I saw you rob that imperial soldier outside[N]
+the ruins back there.[AN]
 
+[OpenMidRight]
+I wouldn't consider myself a 'scoundrel' or[N]
+anything like that.[.6] I'm just trained in[N]
+tracking and purloin.[AN]
 
+[OpenMidLeft]
+Wow[,] the royal guard has training in[N]
+stealing stuff?[.6] Anyway[,] if you're so[N]
+inclined[,] take a nice look at this.[AN]
+I snuck out last night and took a[Beat] 'gander'[N]
+at the nearby shops.[.6] Solbyen's shops're full[N]
+of the finest material to grab--[.4]buy![AN]
+Grab this[,] dig a hole where they can't see it.[6N]
+Drop this in[,] and watch an imperial soldier[N]
+get caught in the blast[Beat][AN]
+
+[OpenMidRight]
+[Mouth](An explosive? Cowardly as this might be[,][N]
+I think we could use it.)[AN][Mouth][Clear]
+Thanks.[.6] I'll be sure to use it.[AN]
+
+[OpenMidLeft]
+[Smile]Anything for a fellow Wreyvian rogue.[AN]
 
 [X]
 
@@ -1086,8 +1116,8 @@ Ah[,] they're Wreyvian soldiers on duty.[6n]
 Very well.[.6] I'm Count Wellington of[N]
 Aeteria's imperial court.[AN]
 I mustn't intrude[,] yet it's my obligation[N]
-as an Aeterian general to return combat if[N]
-they decide the first strike.[AN][Clear]
+as an Aeterian general to return combat[N]
+if they decide the first strike.[AN][Clear]
 [MoveMidRight]Let's see how you handle this.[A][Clear]
 
 [MidLeft][LoadAffogato]
@@ -1100,6 +1130,11 @@ What's my strategy[Beat]?)[AN][ToggleMouthMove]
 
 [3l]
 [OpenMidLeft][LoadAffo][OpenMidRight][LoadUlrich]
+
+[OpenMidLeft]
+[Mouth](Where could've I been stationed before I[N]
+found myself here? Could I have been[N]
+headed towards the capital...?)[AN][Mouth]
 
 [OpenMidRight]
 Hey[,] I was wondering[Beat] How did you[N]
@@ -1202,7 +1237,7 @@ you're talking about.[AN][ClearFace]
 
 [MidLeft][LoadWellington]
 Aren't you[,] too[,] headed[N]
-the capital?[AN]
+towards the capital?[AN]
 [Pause]Nay[,] you're not Aeterian.[6N]
 What a shameful mistake.[AN]
 Pardon me[,] but I must[N]
@@ -1210,17 +1245,18 @@ fulfill my duty.[AN][ClearFace]
 
 [MidRight][LoadAffogato]
 [Mouth](What a perplexing man. But he[N]
-must've jolted a memory...[AN]
+must've known something...[AN]
 [Close]If the Aeterian army is heading[N]
 towards the capital[,] then[Eyes]...!)[AN][Mouth][Clear]
+Alright[.6] Go ahead.[AN]
  
 [X]
 
 ## OgrimBDeath
 # verified
 [MidLeft][LoadWellington]
-Wreyvian soldiers are more[N]
-skilled than I thought.[AN]
+How foolish of me to misjudge[N]
+the enemy army.[AN]
 Well done.[.6] Unfortunately[,] I[N]
 must report back to the Duke.[AN]
 [X]

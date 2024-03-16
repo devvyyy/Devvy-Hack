@@ -31,15 +31,24 @@ CharacterBasedEvents:
 CharacterEventBothWays(0x7C,AffoUlrichConvoCh3, Affogato, Ulrich)
 CharacterEventBothWays(0xA, UlrichStroganRecruit, Ulrich, Stroganoff)
 CharacterEventBothWays(0xA, StroganRecruit, 0x0, Stroganoff)
-CharacterEventBothWays(0xA, MochaEisRecruit, 0x0, Eiskaffee)
+CharacterEventBothWays(0xA, MochaEisRecruit, Mocha, Eiskaffee)
 CharacterEventBothWays(0xA, EisRecruit, 0x0, Eiskaffee)
 CharacterEventBothWays(0xA, DoppioRecruit, 0x0, Doppio)
 CharacterEventBothWays(0xB, SequinStrogyConvo, Sequin, Stroganoff)
 //CharacterEventBothWays(0xC, PanMochaConvo, Mocha, Pandoro)
+CharacterEventBothWays(0x1A,AnsgarUlrichConvo, Ansgar, Ulrich)
 //CharacterEventBothWays(0xD, UlrichDoppioConvo, Ulrich, Doppio)
 	END_MAIN
 	
-	
+AnsgarUlrichConvo:
+	MUSI
+	Text(AnsgarUlrichCh1Talk)
+	MUNO
+	MURE 2
+	GiveItem(SapphireLance,Ulrich)
+	NoFade
+	ENDA
+
 SequinStrogyConvo:
 	MUSI
 	Text(SeqStroganoffTalk)
@@ -54,6 +63,14 @@ AffoUlrichConvoCh3:
 	MUNO
 	MURE 2
 	NoFade
+CHECK_EVENTID 0x79 //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7A //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x78 //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+	SOUN 0x60
+LABEL 0x1
 	ENDA
 
 MiscBasedEvents:
@@ -130,12 +147,12 @@ UNIT Aeteria Shaman 0x1 Level(3, Enemy, 1)     [2,12] 0b 0x0 0x0 0x0 [DarkTome1]
 UNIT Aeteria Archer 0x1 Level(3, Enemy, 1)     [4,11] DropItem 0x0 0x0 0x0 [Longbow,PureWater] BossAI
 UNIT Aeteria Myrmidon 0x1 Level(3, Enemy, 1)     [14,9] 0b 0x0 0x0 0x0 [SteelSword,] BossAI
 UNIT Aeteria Archer 0x1 Level(3, Enemy, 1)     [7,16] 0b 0x0 0x0 0x0 [IronBow,] AttackInRangeAI
-UNIT Aeteria Mage 0x1 Level(3, Enemy, 1)     [6,17] DropItem 0x0 0x0 0x0 [Fire] ChargeAI
+UNIT AeteriaStealable Mage 0x1 Level(3, Enemy, 1)     [6,17] 0b 0x0 0x0 0x0 [Fire,PureWater] ChargeAI
 UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [Flux,] TwoActionAI
 UNIT Aeteria Archer 0x1 Level(4, Enemy, 1)     [9,11] 0b 0x0 0x0 0x0 [Longbow] BossAI
 UNIT Aeteria ACav 0x1 Level(3, Enemy, 1)     [0,2] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
 
-UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [12,11] DropItem 0x0 0x0 0x0 [PureWater] [0,3,0,32]
+UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [14,2] DropItem 0x0 0x0 0x0 [PureWater] [0,3,0,32]
 UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [2,1] DropItem 0x0 0x0 0x0 [KillingEdge] [0,3,0,32]
 	UNIT
 	
@@ -295,7 +312,7 @@ STAL 5
 Music(0x3CD)
 SetBackground(0x3E)
 CHECK_ALIVE Eisner; BEQ 0x420 0x0 0xC; Text(Ch3Ending3); GOTO 0x776; LABEL 0x420; Text(Ch3EndingAlt3); LABEL 0x776
-	MNC2 0x4
+	MNC2 0x13
 	NoFade
 	ENDA
 	
@@ -449,6 +466,15 @@ DISA Selwyn
 NoFade
 ENDA
 
+LastStandDialogue:
+CHECK_ENEMIES
+SVAL 0x7 0x1
+BNE 0x7 0xC 0x7
+ChargeWarning(Alicot,Ch3LastStandWarning)
+LABEL 0x7
+NoFade
+ENDA
+
 WaterfallRein:
 BossRein(Alicot,Rein3)
 NoFade
@@ -534,5 +560,5 @@ SHLI Mend Vulnerary PureWater Mine LightRune
 ALIGN 4
 
 ArmoryBruh:
-SHLI SteelSword Sagitar SteelLance Javelin SteelAxe HandAxe SteelBow ShortBow
+SHLI SteelSword RubySword Sagitar SteelLance SapphireLance Javelin SteelAxe EmeraldAxe HandAxe SteelBow ShortBow
 ALIGN 4

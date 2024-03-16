@@ -8,10 +8,7 @@
 .equ furydamage, 4
 .thumb
 push	{lr}
-@check if dead
-ldrb	r0, [r4,#0x13]
-cmp	r0, #0x00
-beq	End
+
 
 @check if attacked this turn
 ldrb 	r0, [r6,#0x11]	@action taken this turn
@@ -26,6 +23,11 @@ mov	lr, r3
 .short	0xf800
 cmp	r0,#0x00
 beq	CheckDefender
+
+@check if dead
+ldrb	r0, [r4,#0x13]
+cmp	r0, #0x00
+beq	End
 
 @take 5 damage
 ldrb	r1, [r4,#0x12]	@r1=maxhp
@@ -65,6 +67,11 @@ mov lr, r3
 .short  0xf800
 cmp r0,#0x00
 beq End
+
+@check if dead
+ldrb	r0, [r5,#0x13]
+cmp	r0, #0x00
+beq	End
 
 @take 7 damage
 ldrb  r1, [r5,#0x12]  @r1=maxhp

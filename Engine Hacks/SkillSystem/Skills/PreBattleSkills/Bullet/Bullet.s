@@ -58,6 +58,7 @@ add r0, #10
 strh r0, [r4,r1]
 b End
 
+NextNextCheck:
 @check if flag 0x28 set; if so, proc skill
 ldr r0,=#0x8083da8 @CheckEventId
 mov r14,r0
@@ -65,8 +66,6 @@ mov r0,#0x28
 .short 0xF800
 cmp r0,#1
 bne End
-
-NextNextCheck:
 
 @add 3 damage
 mov r1, #0x5a

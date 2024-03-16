@@ -43,7 +43,7 @@ ldrb r0, [r5, #0x12]
 lsr r0, #1 @max hp/2
 ldrb r1, [r5, #0x13] @currhp
 cmp r1, r0
-bgt End
+bgt Done
 
 mov r0, r4 			@Move attacker data into r1.
 add     r0,#0x5A    @Move to the attacker's damage.

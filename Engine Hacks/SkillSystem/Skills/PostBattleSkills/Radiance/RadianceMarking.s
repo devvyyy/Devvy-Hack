@@ -60,16 +60,17 @@ mov	lr, r3
 cmp	r0,#0x00
 beq	End
 
+@ so this wipes statuses EXCEPT stasis
 @ check status, does not clear anything else
-mov r1, #0x30
-ldrb r0, [r5, r1]
-mov r1, #0x0F
-and r0, r1 
-cmp r0, #0x9
-beq Apply
-cmp r0, #0x0
-beq Apply
-b End
+@mov r1, #0x30
+@ldrb r0, [r5, r1]
+@mov r1, #0x0F
+@and r0, r1 
+@cmp r0, #0x2D
+@beq Apply
+@cmp r0, #0x0
+@beq Apply
+@b End
 
 Apply:
 @ apply Freeze (0x9)

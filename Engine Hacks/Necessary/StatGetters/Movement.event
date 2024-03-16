@@ -84,8 +84,13 @@ prStatusZephyrCheck:
 			
 prFlowStateCheck:
 	rIfUnitHasSkill(FlowStateID)
-		rIfUnitHasState(0x10000000)
-			rAddConst(2)
+  rIf(CheckMyFlag)
+    rAddConst(2)
+    //rAddConst(3)
+CheckMyFlag:
+  rForConstant(0x22)
+    // CheckEventId
+    rCallExternal(0x8083da8)
 			
 prPassCheck: //player thieves
 	rIfUnitHasState(0x400)

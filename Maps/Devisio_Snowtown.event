@@ -9,17 +9,17 @@ Map:
 
 MapChanges:
 TileMap(0,10,15,2,3,TheAwesomeWall)
-TileMap(1,13,15,1,1,BotDoor)
-TileMap(2,2,7,1,1,LeftDoor)
-TileMap(3,12,3,1,1,TopDoor)
+TileMap(1,12,14,3,2,BotBurned)
+TileMap(2,13,15,1,1,BotDoor)
+TileMap(3,2,7,1,1,LeftDoor)
+TileMap(4,12,3,1,1,TopDoor)
+TileMap(5,22,12,3,2,RightBurned) //changed so destroyed goes above doors
 TileMap(6,23,13,1,1,RightDoor)
-TileMap(4,12,14,3,2,BotBurned)
-TileMap(7,22,12,3,2,RightBurned)
-TileMap(5,19,0,3,1,ObjectiveUnlocked)
+TileMap(7,19,0,3,1,ObjectiveUnlocked)
 TileMapEnd
 
 TheAwesomeWall:
-SHORT 0x480 0x8c4 0x284 0x380 0x404 0x400 
+SHORT 0x480 0x8c4 0x284 0x380 0x72c 0x528 
 ALIGN 4
 
 BotDoor:

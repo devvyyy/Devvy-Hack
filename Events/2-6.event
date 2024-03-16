@@ -46,6 +46,7 @@ NoFade
 ENDA
 
 MiscBasedEvents:
+AFEV 0x0 EndTheGameOMG 0x3
 //AFEV 0x0 OpenTheDoor 0x0
 AFEV 0x0 OpalCharges 0x0
 AFEV 0x0 WulfricCharges 0x0
@@ -53,6 +54,11 @@ AFEV 0x0 WulfricCharges 0x0
 AREA 0x8 MoveTheBoss [10,0] [17,3]
 	CauseGameOverIfLordDies
 	END_MAIN
+	
+EndTheGameOMG:
+CALL EndingScene
+NoFade
+ENDA
 	
 MoveTheBoss:
 PlayerRangeCheck

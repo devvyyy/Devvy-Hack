@@ -42,15 +42,16 @@ cmp	r0, r1		@check if same character
 bne	End
 
 @ check status, does not clear anything else
-mov r1, #0x37
+mov r1, #0x30
 ldrb r0, [r5, r1]
 mov r1, #0x0F
 and r0, r1 
-cmp r0, #0x10
+cmp r0, #0x2D
 beq Apply
 cmp r0, #0x0
 beq Apply
 b End
+
 Apply:
 
 @oh but dont inflict if boss??!

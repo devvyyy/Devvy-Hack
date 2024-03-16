@@ -25,7 +25,7 @@ TURN 0x0 GoodbyeDespair [11,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x7B,AffoUlrichConvoCh2, Affogato, Ulrich)
+CharacterEventBothWays(0x78,AffoUlrichConvoCh2, Affogato, Ulrich)
 //CharacterEventBothWays(0x21, PandoroAffoRecruit, Affogato, Pandoro)
 //CharacterEventBothWays(0x21, BreneRecruit, Affogato, Irene)
 //CharacterEventBothWays(0x21, PandoroRecruit, 0x0, Pandoro)
@@ -36,7 +36,7 @@ CharacterEventBothWays(0x21, LatteRecruit, 0x0, Latte)
 //CharacterEventBothWays(0x22, MochaNoraConvo, Nora, Mocha)
 CharacterEventBothWays(0x22, SequinAnsgarConvo, Sequin, Ansgar)
 //CharacterEventBothWays(0x23, HildrBreveConvo, Breve, Hildr)
-//CharacterEventBothWays(0x24, AffoSeqConvo, Affogato, Sequin)
+CharacterEventBothWays(0x24, AffoSeqConvo, Affogato, Sequin)
 	END_MAIN
 	
 AffoUlrichConvoCh2:
@@ -45,13 +45,27 @@ AffoUlrichConvoCh2:
 	MUNO
 	MURE 2
 	NoFade
+CHECK_EVENTID 0x79 //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7A //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+	SOUN 0x60
+LABEL 0x1
 	ENDA
 
 MiscBasedEvents:
 	CauseGameOverIfLordDies
 AFEV 0x0 RunRunRunRun 0x18
 AFEV 0x0 EndingScene 0x3
+AREA 0x0 CancelReinIfEscaped [0,1] [0,2]
 	END_MAIN
+	
+CancelReinIfEscaped:
+PlayerRangeCheck
+SetFlag(0xA)
+NoFade
+ENDA
+
 
 LocationBasedEvents:
 Chest(Armorslayer,1,9)
@@ -116,7 +130,7 @@ UNIT Latte Archer 0x1 Level(2, Ally, 1)   [1,11] 0b 0x0 0x0 0x0 [KillerBow,0x30,
 	UNIT
 
 OhGodOhFuck: //ok this is the part 2 guy?!
-UNIT 0xC3 GreatKnight 0x1 Level(10, Enemy, 0)   [9,8] DropItem 0 1 REDA9R9 [LightBrand,HeavySpear,Halberd,0xB4] [0x6,0x3,0x4,0x20]
+UNIT 0xC3 GreatKnight 0x1 Level(10, Enemy, 0)   [9,8] DropItem 0 1 REDA9R9 [LightBrand,HeavySpear,Halberd,] [0x6,0x3,0x4,0x20]
 	UNIT
 
 EnemyUnits:
@@ -434,19 +448,40 @@ NoFade
 ENDA
 
 MountainRein:
+CHECK_EVENTID 0xA
+BNE 1 0x0 0xC
+
 SpawnReinforcements(MountainEnemies)
+
+LABEL 0x1
+
 NoFade
 ENDA
 
 EastRein:
+CameraCursor(Affogato)
+Text(AffogatoHurry)
+SetFlag(0x4) //bgm flag
+STAL 5
+CHECK_EVENTID 0xA
+BNE 1 0x0 0xC
+
 SpawnReinforcements(EastEnemies)
 STAL 20
 SpawnReinforcements(SouthEnemies)
+
+LABEL 0x1
 NoFade
 ENDA
 
 NorthRein:
+
+CHECK_EVENTID 0xA
+BNE 1 0x0 0xC
+
 SpawnReinforcements(NorthEnemies)
+
+LABEL 0x1
 NoFade
 ENDA
 

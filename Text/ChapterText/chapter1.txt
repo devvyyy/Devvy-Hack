@@ -58,8 +58,8 @@ were supposed to stay at Castle Wreyvine.[AN][CloseSpeechSlow][MoveMidRight]
 
 [L]
 But Captain[,] sir![.6] Didn't you hear the news--[.4][N]
-see all those Aeterians everywhere?![.6] I tried[N]
-to rob one but he wouldn't let me![AN]
+see all those imperial soldiers everywhere?![.6][N]
+I tried to rob one but he wouldn't let me![AN]
 
 [MR]
 Yes[,] we fought off a few soldiers[N]
@@ -79,9 +79,9 @@ The bridge connecting the two countries[N]
 is hundreds of miles away.[AN][CloseSpeechSlow][MoveRight]
 
 [FFR][LoadAffogato][MoveFarRight]
-Sir.[.6] We're surrounded by presumably Aeterian[N]
-soldiers.[.6] I suspected enough from all of[N]
-the fresh prints in the snow.[AN]
+Sir.[.6] We're surrounded by imperial soldiers.[.6][N]
+I suspected enough from all of the fresh[N]
+prints in the snow.[AN]
 
 [R]
 Understood.[.6] Everyone[,] get ready for battle.[6N]
@@ -171,7 +171,12 @@ but I know I'm supposed to be here.[AN]
 
 [OpenMidRight]
 [Pause]Okay[,] then.[.6] I won't question[N]
-it any further.[.6] Carry on.[AN]
+it any further.[.6] Carry on.[AN][ClearFace]
+
+[OpenMidLeft]
+[Mouth](I know he has a lot of hide... I'm sure[N]
+it'd useful to get to know him. Perhaps I[N]
+should [ToggleRed]speak to him about each battle[ToggleRed].)[AN][Mouth]
 
 [X]
 
@@ -222,6 +227,93 @@ Look[,] are you with me or not?[AN][ClearFace]
 
 [OpenMidRight]
 Hey[,] wait[Beat] I[Beat][AN]
+
+[X]
+
+## AnsgarUlrichCh1Talk
+# sapphire lance
+
+[3l]
+[OpenMidLeft][LoadAnsgar][OpenMidRight][LoadUlrich]
+
+[OpenMidLeft]
+Ulrich[,] Sir.[.6] I grace you witha fine work![6N]
+I couldn't forge anythin'[,] so I thought[N]
+I'd buya a spear from Solbyen.[AN]
+
+[OpenMidRight]
+Oh[Beat] Thanks.[AN]
+
+[OpenMidLeft]
+Ya don't think it's shoddy[,] unfinely made[,] eh?[AN]
+
+[OpenMidRight]
+No[,] I appreciate it.[.6] It's just[Beat] strange.[6N]
+Why now[,] Ansgar?[AN]
+
+[OpenMidLeft]
+The day's just started[,] and yer still quite[N]
+quiet[,] ya know?[.6] I guess ye don't go[N]
+on a lot 'bout yerself.[AN]
+What better way than to give a nice[N]
+lil' gift for my platoon cap'n?[6N]
+Ya like it?[AN]
+
+[OpenMidRight]
+Sure[,] it's a fine spear.[AN]
+
+[OpenMidLeft]
+So[Beat] Ya don't like talkin' 'bout yerself[,] eh?[AN]
+
+[OpenMidRight]
+[Smile]I mean[,] I'm saving my life story all for my[N]
+future novel.[.6] I can't spoil it.[AN][Smile]
+
+[OpenMidLeft]
+Haha![.6] [Pause]Is that a joke[,] Sir?[AN]
+
+[OpenMidRight]
+Perhaps.[.6] Thank you for the gift.[.6] Now we[N]
+need to hurry to the capital.[AN]
+
+[X]
+
+## HildrNoraCh1Talk
+#
+[3l]
+[OpenMidLeft][LoadHildr][OpenMidRight][LoadNora]
+
+[OpenMidLeft]
+[Smile]Hey[,] nice to meet you![.6] What's your name?[6N]
+I'm Hildr[,] and I've been fighting with--[AN]
+
+[OpenMidRight]
+P-[.4]Please slow down[Beat] I think it may be[N]
+unwise to rub elbows when battle comes.[6N]
+That being said[,] I am Nora.[AN]
+
+[OpenMidLeft]
+That's a nice horse you got![.6] She's just like[N]
+my Stevia with her cute coat![AN]
+
+[OpenMidRight]
+Uhm[Beat] Yeah.[AN]
+
+[OpenMidLeft]
+So[,] Nora[Beat]
+
+[OpenMidRight]
+I don't want to be rude[,] but[Beat] Can you[N]
+fraternize[Beat] later?[.6] We only just met[,][N]
+and I want us all to survive this battle.[AN]
+
+[OpenMidLeft]
+[Smile]Ah[,] you're right.[.6] My bad.[.6] Hey[,] take this.[6N]
+I found it outside of the ruins 'cause of its[N]
+sheen![.6] Hopefully it'll make it up to you?[AN]
+
+[OpenMidRight]
+Uh[,] sure[Beat] You don't have to[,] but[Beat][AN]
 
 [X]
 
@@ -1372,7 +1464,7 @@ like that other guy.[AN]
 ## BisDeath
 [OpenMidLeft][LoadFace][0x33][0x1]
 No[Beat] No way[Beat] Are you kidding[Beat]?[.6N]
-How lame[Beat][A][CloseEyes][X]
+What a way to go[Beat][A][CloseEyes][X]
 
 ## BisAffoBossQ
 [OpenMidLeft][LoadFace][0x33][0x1]
@@ -1380,6 +1472,8 @@ You![.6] Bowman![.6] Fight head on[,][N]
 you coward![.6] Fie![AN][ClearFace]
 
 [MR][LoadAffogato]
+[Mouth](She seems rather disorganized,[N]
+but I can't let my guard down.)[Mouth][AN][Clear]
 Sorry[,] I'm a bit of a hurry.[AN]
 
 [X]

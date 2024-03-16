@@ -11,14 +11,14 @@ mov   r14,r2
 .short  0xF800
 cmp   r0,#0x0
 beq   End
-@check for bit
-ldr  r0,[r4,#0xC] @attacker max hp
-mov	r1, #0x01
-lsl	r1, #0x1c
-and	r0, r1
-cmp	r0, #0x00
-beq	End
-@modify stats
+
+@check if flag 0x25 set; if set, doubles to canto 4
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0x25
+.short 0xF800
+cmp r0,#1
+bne End @if flag is not on, reduce crit as normal
 
 @set hit to 100 but real
 mov r1, #0x60

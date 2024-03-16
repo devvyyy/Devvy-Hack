@@ -13,6 +13,7 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventEnemy(0,Turn1Moment,1)
 TURN 0x0 KillVillageBrigand [2,0] 0x0
 //TurnEventEnemy(0,RecruitThief,3)
 TURN 0x0 ReinforcementsWarning [3,0] 0x0
@@ -27,7 +28,7 @@ ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0xC,AffoUlrichConvoCh5, Affogato, Ulrich) //add this later final talk to unlock gaiden
 //CharacterEvent(0x0,YoryTurretCheck,Yory,0x3F)
-CharacterEventBothWays(0xC, BrudetSequinConvo, Brudet, Sequin)
+CharacterEventBothWays(0xD, BrudetSequinConvo, Brudet, Sequin)
 //CharacterEventBothWays(0xD, SeqUlrichConvo, Sequin, Ulrich)
 //CharacterEventBothWays(0xE, EisDoppioConvo, Doppio, Eiskaffee)
 //CharacterEventBothWays(0x20, RecruitRecruitThief, 0x0, Noel)
@@ -53,6 +54,20 @@ AffoUlrichConvoCh5:
 	Text(Ch5AffoUlrichTalk) //uhhh they talk about insert past here/remembered shit idk bro!!1
 	MUNO
 	MURE 2
+CHECK_EVENTID 0x79 //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7A //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x78 //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7C //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7B //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7D //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+	SOUN 0x60
+LABEL 0x1
 	NoFade
 	ENDA
 
@@ -182,6 +197,7 @@ UNIT
 CutsceneUnits3:
 UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [13,17] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
 UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [14,16] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Atheya WyvernRider_F 0x1 Level(5, Ally, 1)     [13,14] 0b 0x0 0x0 0x0 [KillerAxe,BraveAxe,Elixir,Speedwing] AttackInRangeAI
 	UNIT
 
 Traps1:
@@ -194,10 +210,19 @@ Traps2:
 
 BeginningScene:
 //talk only exists if previous talks were fulfilled
-CHECK_EVENTID 0x79 //affo talk 1
+CHECK_EVENTID 0x78 //affo talk 1
 BNE 1 0x0 0xC
-CHECK_EVENTID 0x7A //affo talk 2
+CHECK_EVENTID 0x79 //affo talk 2
 BNE 1 0x0 0xC
+CHECK_EVENTID 0x7A //affo talk 3
+BNE 1 0x0 0xC
+CHECK_EVENTID 0x7B //affo talk 4
+BNE 1 0x0 0xC
+CHECK_EVENTID 0x7C //affo talk 5
+BNE 1 0x0 0xC
+CHECK_EVENTID 0x7D //affo talk 6
+BNE 1 0x0 0xC
+
 GOTO 2
 
 LABEL 1
@@ -249,19 +274,22 @@ SetBackground(0x33)
 STAL 5
 	CHECK_ALIVE Ulrich
 	BEQ 0x1 0xC 0x0
-CHECK_EVENTID 0x78 //skips to normal ending if affo never fought wulfric
+CHECK_EVENTID 0x78 //skips to normal ending if 3 wasnt completed
 BEQ 1 0x0 0xC
 CHECK_EVENTID 0x79 //skips to normal ending if 1 wasnt completed
 BEQ 1 0x0 0xC
 CHECK_EVENTID 0x7A //skips to normal ending if 2 wasnt completed
 BEQ 1 0x0 0xC
-CHECK_EVENTID 0x7B //skips to normal ending if 3 wasnt completed
+CHECK_EVENTID 0x7B //skips to normal ending if affo never fought wulfric OR talked with ulrich is 2
 BEQ 1 0x0 0xC
 CHECK_EVENTID 0x7C //skips to normal ending if 4 wasnt completed
 BEQ 1 0x0 0xC
 CHECK_EVENTID 0x7D //affo talk 5; only possible if 1-4 were completed
 BEQ 1 0x0 0xC //if flag isnt set skip to normal ending
+CHECK_EVENTID 0xC //this chapters talk; only possible if all previous talks were completed (auto-set if not completed)
+BEQ 1 0x0 0xC //if flag isnt set skip to normal ending
 
+EVBIT_MODIFY 0x4 //prevents B press skips??/ i think??
 TEXTSTART
 TEXTSHOW Ch5Ending1
 TEXTEND
@@ -279,6 +307,7 @@ UnsetFlag(0x7B)
 UnsetFlag(0x7C)
 UnsetFlag(0x7D)
 
+SOUN 0xF0
 CenterTextbox(Ch5GaidenUnlock)
 //GiveItem(0xEE,Ulrich)
 //GiveItem(0x89,Ulrich)
@@ -286,6 +315,7 @@ GOTO 2
 
 LABEL 1
 
+EVBIT_MODIFY 0x0
 Text(Ch5Ending1)
 
 LABEL 2

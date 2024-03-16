@@ -90,8 +90,12 @@ rIfUnitHasSkill(BattleVeteranID)
 		
 prFlowStateCheckRes:
 	rIfUnitHasSkill(FlowStateID)
-		rIfUnitHasState(0x10000000)
-			rHalved
+  rIf(CheckMyFlag)
+    rHalved
+CheckMyFlag:
+  rForConstant(0x22)
+    // CheckEventId
+    rCallExternal(0x8083da8)
 			
 prNullifyIfMageRing:
 	rIfUnitHasSkill(TomeRangeUpID)

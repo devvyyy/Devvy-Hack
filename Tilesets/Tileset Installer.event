@@ -62,11 +62,15 @@ ALIGN 4
 	ALIGN 4
 	FlasubanVillageMapConfig:
     #incbin "FlasubanVillage/newfe8village_comp.dmp"
+	ALIGN 4
+	FlasubanVillageFieryPalette:
+	#incbin "FlasubanVillage/FieryPalette_pal.dmp"
 	
 	ALIGN 4
 	EventPointerTable(0x42, FlasubanVillageObjects)
     EventPointerTable(0x43, FlasubanVillagePalette)
 	EventPointerTable(0x44, FlasubanVillageMapConfig)
+	EventPointerTable(0x5b, FlasubanVillageFieryPalette)
 	
 	
 	//FF2 Town by WaVe

@@ -32,7 +32,7 @@ CharacterEventBothWays(0x7D,AffoUlrichConvoCh4, Affogato, Ulrich)
 //CharacterEvent(0x0,YoryTurretCheck,Yory,0x3F)
 //CharacterEventBothWays(0x9, NoraFlorisConvo, Nora, Floris)
 //CharacterEventBothWays(0x10, YoryKaneConvo, Yory, Kane)
-//CharacterEventBothWays(0x11, FlorisUlrichConvo, Floris, Ulrich)
+CharacterEventBothWays(0x11, FlorisUlrichConvo, Floris, Ulrich)
 	END_MAIN
 	
 AffoUlrichConvoCh4:
@@ -40,6 +40,18 @@ AffoUlrichConvoCh4:
 	Text(AffoUlrichCh4Talk)
 	MUNO
 	MURE 2
+CHECK_EVENTID 0x79 //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7A //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x78 //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7C //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7B //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+	SOUN 0x60
+LABEL 0x1
 	NoFade
 	ENDA
 
@@ -437,7 +449,11 @@ STAL 20
 SpawnReinforcements(ThiefRein2)
 VCWF 2
 CharacterConditionalDialog(Ulrich,AffoReinText,AffoReinTextAlt)
+STAL 10
+CameraCursor(Hartmann)
+Text(HartReinText)
 STAL 30
+SetFlag(0x4) //bgm flag
 NoFade
 ENDA
 
@@ -481,6 +497,7 @@ FlorisUlrichConvo:
 	Text(UlrichFlorisTalk)
 	MUNO
 	MURE 2
+	GiveItem(0xE1,Ulrich)
 	NoFade
 	ENDA
 	

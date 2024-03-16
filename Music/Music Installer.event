@@ -203,6 +203,11 @@ SongTable(0x012D,song012D,1)
 #include "KnightsOfWind.event"
 
 ALIGN 4
+//Knights of the Wind 2
+SongTable(0x204,Knights2,1)
+#include "Knights2.event"
+
+ALIGN 4
 //Combat ~Resistance
 SongTable(0x3CB,song03CB,1)
 #include "BattleV.event"
@@ -273,6 +278,11 @@ SongTable(0x64,song64,1)
 #include "DeepSpace.event"
 
 ALIGN 4
+//Mission to Deep Space 2
+SongTable(0x206,DeepSpace2,1)
+#include "DeepSpace2.event"
+
+ALIGN 4
 //Oblivion's Joy
 SongTable(0xC4,songC4, 1)
 #include "OblivionsJoy.event"
@@ -339,13 +349,18 @@ SongTable(0xC5,songC5,1)
 
 ALIGN 4
 //Last Battle Decision from midishrine
-//SongTable(0x63,song03AA,1)
-//#include "LastBattleDecision.event"
+SongTable(0x15C,song03AA,1)
+#include "LastBattleDecision.event"
 
 ALIGN 4
 //A Knight's Vow
 SongTable(0x63,song63,1)
 #include "FE12AfterBattle.event"
+
+ALIGN 4
+//A Knight's Vow (Arranged)
+SongTable(0x3B4,KnightOathArranged,1)
+#include "KnightsOathArranged.event"
 
 ALIGN 4
 //Runa Song by Runa
@@ -362,15 +377,20 @@ ALIGN 4
 SongTable(0xE1,songE1,1)
 #include "Feena.event"
 
-//ALIGN 4
+ALIGN 4
 //Silver Will by Scott Mtc.
-//SongTable(0xC6,songC6,1)
-//#include "SilverWill.event"
+SongTable(0x3AE,SilverWillMoment,1)
+#include "SilverWill.event"
 
 ALIGN 4
 //Silver Will ~Golden Wings edited by Scraiza
 SongTable(0xC6,songC6,1)
 #include "SilverWillGoldenWings.event"
+
+ALIGN 4
+//Setup
+SongTable(0x3AB,SetUp,1)
+#include "Setup.event"
 
 ALIGN 4
 //Dark Caverns by viejiux
@@ -413,10 +433,10 @@ ALIGN 4
 SongTable(0x10B,song010B,0)
 #include "ComingFury.event"
 
-//ALIGN 4
+ALIGN 4
 //The Dragon Emperor
-//SongTable(0x146,song0146,1)
-//#include "DragonEmperor.event"
+SongTable(0x3b1,RepairedDEnotefix,1) //assuming this got replaced by dreadful batte
+#include "RepairedDEnotefix.event" //so ig we're going full circle and reverting this lol
 
 ALIGN 4
 //The Dreadful Battle
@@ -459,12 +479,17 @@ SongTable(0x62,song62,1)
 ALIGN 4
 //Endless Battle (Again)
 SongTable(0x94,song94,1)
-#include "EndlessBattleButAwesome.event"
+#include "EndlessBattle2.event"
 
 ALIGN 4
 //Those Who Dare To Change History (I think)
 SongTable(0x143,song0143,1)
 #include "DareToChangeHistory.event"
+
+ALIGN 4
+//Those Who Dare To Change History (I think)
+SongTable(0x20E,History2,1)
+#include "History2.event"
 
 ALIGN 4
 //Eternal Hydrogen from khinsider
@@ -517,6 +542,11 @@ ALIGN 4
 SongTable(0x3c1,songA8,1)
 #include "FateBecomesCruel.event"
 
+ALIGN 4
+//And Thus Fate Becomes Cruel (Variant)
+SongTable(0x3c5,song03C1,1)
+#include "FateCruelVARIANT.event"
+
 //ALIGN 4
 //Corridors of Time
 //SongTable(0xA8,songA8,1)
@@ -543,9 +573,19 @@ SongTable(0x12F,Tense,1)
 #include "TenseMove.event"
 
 ALIGN 4
+//Tense Movements ~Variant
+SongTable(0x2bb,TenseMovementsAlt,1)
+#include "TenseMovementsVariant.event"
+
+ALIGN 4
 //Tales of the Old Kingdom
 SongTable(0x13A,song013A,1)
 #include "TaleOfOldKingdom.event"
+
+ALIGN 4
+//Tales of the Old Kingdom 2
+SongTable(0x205,Tales2,1)
+#include "Tales2.event"
 
 ALIGN 4
 //The Tale Told By The Wind

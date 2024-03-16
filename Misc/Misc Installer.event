@@ -55,6 +55,21 @@ ORG 0x59EE40
 
 ORG 0x59EE60
 #incbin "NPCPal.bin"
+
+ORG 0x59EEA0
+#incbin "FirePalettePlayer_pal.dmp"
+
+ORG 0x59EEE0
+#incbin "FirePaletteEnemy_pal.dmp"
+
+//ALIGN 4
+//FireEnemyPlayer:
+//#incbin "FirePalettePlayer_pal.dmp"
+
+//ALIGN 4
+//FireEnemyPalette:
+//#incbin "FirePaletteEnemy_pal.dmp"
+
 POP
 
 //Phase Screen

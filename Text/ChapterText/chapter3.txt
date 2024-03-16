@@ -139,7 +139,7 @@ Aye[,] that's the spirit![AN]
 [X]
 
 ## BruhMoment
-[FL][BoopPitch][0xD]
+[BoxHeight][0x01][FL][BoopPitch][0xD]
 Oh[,] bloody hell![AN][X]
 
 ## StrogyBattle
@@ -171,8 +171,8 @@ Captain.[.6] Any further orders?[AN]
 
 [FL]
 Oh![.6] The legendary knight? He's said to[N]
-have taken down an entire Aeterian[N]
-army before he retired![AN][Clear]
+have taken down an entire Aeterian army[N]
+before he gracefully retired![AN][Clear]
 We're saved![AN]
 
 [L]
@@ -181,7 +181,7 @@ less fantasy.[AN]
 
 [MR]
 Ho[,] my man Ricky?![.6] He'll definitely[N]
-be happy to see a familiar brother![AN]
+be happy to see a familiar brother![6N]
 Come on[,] boys[,] let's go![AN]
 
 [L]
@@ -199,11 +199,11 @@ honorable[,] and humble--[.4]in a[N]
 down-to-earth[,] mature way.[AN]
 
 [FL]
-I'm not quite sure he'll like hearing[N]
-about your many pardons.[AN][Clear]
-[Pause]Or your drinking habits.[.6N]
-Or your record[,] too.[.6] I just[N]
-think we shouldn't tell him[Beat][AN]
+I'm not quite sure he'll enjoy hearing[N]
+about your many pardons[,] Captain.[6N]
+[Pause]Or your drinking habits.[AN][Clear]
+Or your prior record[,] too.[.6] I just[N]
+think we shouldn't say anything[Beat][AN]
 
 [MR]
 Hell no![.6] I demand the damned respect that[N]
@@ -455,8 +455,8 @@ abandoned outpost?[.6] Are the Aeterians usin'[N]
 it as a sort of makeshift hideout?[AN]
 
 [MR]
-Precisely.[.6] The Aeterian soldiers made[N]
-their way there a mere three days prior[,][N]
+Precisely.[.6] The imperial army made their[N]
+way there a mere three days prior[,][N]
 and began to transport soldiers.[AN]
 
 [FR]
@@ -567,6 +567,16 @@ pursuit of the Wreyvian army.[AN]
 [ML]
 As you command[,] sir.[.6] I put my faith[N]
 in you.[.6] Glory to Aeteria![AN]
+
+[X]
+
+## Ch3LastStandWarning
+[MR][LoadAlicot]
+[3L]
+So[Beat] everyone has fallen to the Wreyvians.[6N]
+O Serpent of Aeteria[Beat] Aide the Duke and[N]
+Apostle in their mission.[AN][Clear][MoveMR]
+Come![.6] I take my stand here![AN]
 
 [X]
 
@@ -955,9 +965,9 @@ on our holy lands[AN]
 mere days ago.[.6] Do[N]
 you see[,] now?[AN]
 There is nothing left[N]
-for you.[AN]
-Watch,[.4] as we take over[N]
-your city and kingdom.[A][X]
+for you[,] Wreyvian.[AN]
+Watch,[.4] as we raze your[N]
+kingdom to ashes.[A][X]
 
 ## AlicotDoppioBossQ
 # verified
@@ -969,7 +979,7 @@ Shameful.[.6] Do they just[N]
 go and ask[,]
 [BoopPitch][0xF][OpenQuote]Hey[,] you wanna[N]
 sign up for the city guard?"[AN][BoopPitch][0xD]
-[OpenQuote]Yeah![.6] Let's beat the crap[N]
+Then [OpenQuote]Yeah![.6] Let's beat the crap[N]
 outta those Aeterians!"[AN][BoopPitch][0xF]
 [OpenQuote]Perfect.[.6] Here's a lil' wittle[N]
 spear and shield.[.6] Go get 'em!"[AN][BoopPitch][0xD][ClearFace]
@@ -1005,20 +1015,31 @@ Terrible influence.[AN]
 ## AffoAlicotBossQ
 # verified
 [OpenMidLeft][LoadAlicot]
-Hey[,] I know you.[.6] You must[N]
-be one of Aeteria's[Beat][AN][ClearFace]
+I knew a man much like you[N]
+in Aeteria's 24th Division.[AN]
+His gaze was always fixed[N]
+on the mission at hand.[AN]
+
+[AN][ClearFace]
 
 [OpenMidRight][LoadAffogato]
+[Mouth](Is he trying to... fraternize[N]
+with the enemy? Such folly.)[Mouth][AN][Clear]
 You don't know me.[AN][ClearFace]
 
 [OpenMidLeft][LoadAlicot]
-[Pause]Fourteen long years,[.4] I've[N]
-waited for this moment.[AN]
-Surrender,[.4] Wreyvians.[.6] We will[N]
-not lose here.[.6] Perish[,] now.[AN]
+Perhaps.[.6] But I've fought enough[N]
+to know Aeterian ardor.[AN]
+And from this battle[,] I know[N]
+there's much on your mind.[AN]
+Surrender,[.4] scout.[.6] The imperial[N]
+army will not perish here.[AN]
 [ClearFace]
+
 [OpenMidRight][LoadAffogato]
-Sorry[,] I'm in a bit of a hurry.[A][X]
+[Mouth](While he seems overzealous, I[N]
+shouldn't write off his acumen.)[Mouth][AN][Clear]
+Sorry[,] I'm in a bit of a hurry[Beat][A][X]
 
 ## SeqEisTalk
 # unset flag after recruitment

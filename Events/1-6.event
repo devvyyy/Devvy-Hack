@@ -671,7 +671,7 @@ Armory(ArmoryBruh,8,0)
 	END_MAIN
 	
 ShopBruh:
-SHLI Mend Fear Elixir PureWater Antitoxin LightRune Mine Stopwatch
+SHLI Mend Fear Slow Corrode Elixir PureWater Antitoxin LightRune Mine Stopwatch
 ALIGN 4
 
 ArmoryBruh:
@@ -954,7 +954,7 @@ UNIT Aeteria Sage 0x1 Level(3, Enemy, 1)     [17,19] DropItem 0 1 REDA16R20 [Bol
 	
 MidFortRein4:
 UNIT Aeteria Occultist 0x1 Level(11, Enemy, 1)     [17,19] 0 0 1 REDA17R17 [Flux,] StallOneTurnAI
-UNIT AeteriaStealable Druid 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R19 [DarkTome2,0x98] ChargeAI
+UNIT AeteriaStealable Druid 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R19 [DarkTome2,0xB4] ChargeAI
 UNIT Aeteria Hero 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R20 [SteelSword,SteelAxe] ChargeAI
 UNIT Aeteria Archer 0x1 Level(11, Enemy, 1)     [17,19] 0b 0x0 0x0 0x0 [SteelBow,] ChargeAI
 	UNIT
@@ -1012,7 +1012,7 @@ CAM1 Affogato
 CUMO Affogato
 STAL 60
 CURE
-Text(Placeholder1)
+Text(WTFWeAreDead)
 SetFlag(0x65)
 GameOver
 LABEL 0x2

@@ -16,16 +16,26 @@ TurnBasedEvents:
 TURN 0x0 FirstMove [1,0] 0x0
 //TurnEventNPC(0,AddLesRein,1)
 TurnEventEnemy(0,WhenTheGuyIsSus,1)
-TURN 0x0 ReinWave1 [4,0] 0x0
-TurnEventEnemy(0,BurnDownBot,3)
-TURN 0x0 ReinWave2 [6,0] 0x0
-TurnEventEnemy(0,BurnDownRight,6)
-TURN 0x0 ReinWave3 [8,0] 0x0
-TURN 0x0 ReinWave4 [10,0] 0x0
-TURN 0x0 ReinWave5 [12,0] 0x0
-TURN 0x0 ReinWave6 [14,0] 0x0
-TURN 0x0 GoodbyeDespair [21,0] 0x0
+TURN 0x0 ReinWave1 [5,0] 0x0
+TurnEventEnemy(0,BurnDownBot,4)
+TURN 0x0 LeftReinWave1 [7,0] 0x0
+TURN 0x0 ReinWave2 [16,0] 0x0
+TurnEventEnemy(0,BurnDownRight,8)
+TURN 0x0 LeftReinWave2 [13,0] 0x0
+TURN 0x0 ReinWave3 [12,0] 0x0
+TURN 0x0 HugeRein [10,0] 0x0
+TURN 0x0 ReinWave4 [15,0] 0x0
+TURN 0x0 LeftReinWave3 [14,0] 0x0
+TURN 0x0 ReinWave5 [9,0] 0x0
+TURN 0x0 ReinWave6 [18,0] 0x0
+TURN 0x0 GoodbyeDespair [13,0] 0x0
 	END_MAIN
+	
+WhenTheChapterIsSussy:
+PlayerRangeCheck
+CALL EndingScene
+NoFade
+ENDA
 	
 FirstMove:
 	CAM1[4,14]
@@ -50,7 +60,11 @@ FirstMove:
 	ENDA
 	
 GoodbyeDespair:
+CHECK_EVENTID 0xF
+BNE 0x776 0xC 0x0 //game over if second obj not met
 GameOver
+
+LABEL 0x776
 ENDA
 	
 WhenTheGuyIsSus:
@@ -65,18 +79,17 @@ ENDA
 BurnDownBot:
 CAM1 [13,14]
 Sound(0xBF)
-TILECHANGE 0x4
+TILECHANGE 0x1
 
 STAL 5
-CHECK_EVENTID 0xC
+CHECK_EVENTID 0x10
 BNE 1 0x0 0xC
 
 CameraCursor(Affogato)
 Text(Ch4FailObjectiveText)
+SetFlag(0xC) //set flag ONLY if villager wasnt in village before
 
 LABEL 0x1
-
-SetFlag(0xC)
 
 NoFade
 ENDA
@@ -85,45 +98,182 @@ ENDA
 BurnDownRight:
 CAM1 [22,11]
 Sound(0xBF)
-TILECHANGE 0x7
+TILECHANGE 0x5
 
 STAL 5
-CHECK_EVENTID 0xD
+CHECK_EVENTID 0x9
 BNE 1 0x0 0xC
 
 CameraCursor(Affogato)
 Text(Ch4FailObjectiveText)
+SetFlag(0xD)
 
 LABEL 0x1
-SetFlag(0xD)
 
 NoFade
 ENDA
 
 ALIGN 32
 CharacterBasedEvents:
-
+CharacterEventBothWays(0x7B,AffoUlrichConvoCh4New, Affogato, Ulrich)
+CharacterEventBothWays(0x14, BreveHildrConvo, Breve, Hildr)
+CharacterEventBothWays(0x16, AnsgarNoraConvo, Ansgar, Nora)
+CharacterEventBothWays(0x18, StroganoffDoppioConvo, Stroganoff, Doppio)
+CharacterEventBothWays(0x19, ThereseLennardConvo, Therese, Lennard)
+CharacterEventBothWays(0x1A, MochaEisnerConvo, Mocha, Eisner)
+CharacterEventBothWays(0x1B, LevainKaneConvo, Levain, Kane)
 	END_MAIN
+	
+BreveHildrConvo:
+	MUSI
+	Text(Ch4BreveHildrSpeak)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+AnsgarNoraConvo:
+	MUSI
+	Text(Ch4AnsgarNoraSpeak)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+StroganoffDoppioConvo:
+	MUSI
+	Text(Ch4DoppioStroganoffSpeak)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+ThereseLennardConvo:
+	MUSI
+	Text(Ch4LennardThereseSpeak)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+MochaEisnerConvo:
+	MUSI
+	Text(Ch4MochaEisnerSpeak)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+LevainKaneConvo:
+	MUSI
+	Text(Ch4LevainKaneSpeak)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
+AffoUlrichConvoCh4New:
+	MUSI
+	Text(AffoUlrichCh4NewTalk)
+	MUNO
+	MURE 2
+CHECK_EVENTID 0x79 //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7A //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x78 //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7C //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+	SOUN 0x60
+LABEL 0x1
+	NoFade
+	ENDA
 
 MiscBasedEvents:
+//AREA 0x3 WhenTheChapterIsSussy [0,15] [0,15] //test failsafe
 AFEV 0x0 OpenTheDoor 0x0
 AFEV 0x0 LeftVillagerReal 0x0
 AFEV 0x0 RightVillagerReal 0x0
 AFEV 0x0 TopVillagerReal 0x0
 AFEV 0x0 BotVillagerReal 0x0
+AFEV 0x0 EndTheGameOMG 0x3
+//AREA 0x13 AffoMoment [0,6] [24,13]
+//AREA 0x14 BreveHildrMoment [0,6] [24,13]
+//AREA 0x15 SequinMoment [0,6] [24,13]
+//AREA 0x16 AnsgarNoraMoment [0,6] [24,13]
+//AREA 0x17 FlorisMoment [0,6] [24,13]
+//AREA 0x18 StroganoffDoppioMoment [0,6] [24,13]
+//AREA 0x19 ThereseLennardMoment [0,6] [24,13]
+//AREA 0x1A MochaEisnerMoment [0,6] [24,13]
+//AREA 0x1B LevainKaneMoment [0,6] [24,13]
 	CauseGameOverIfLordDies
 	END_MAIN
+	
+#define SussyMomentOne(Character,Flag,ConvoText) "CHECK_ALIVE Character; BEQ 0x776 0x0 0xC;CHECK_EVENTID 0xF;BEQ 0x776 0xC 0x0;CHECK_ACTIVE;SVAL 1 Character;BEQ 0x1 0xC 0x1;LABEL 0x776;ENUF Flag;GOTO 0x2;LABEL 0x1;Text(ConvoText);LABEL 0x2"
+#define SussyMomentTwo(Character1,Character2,Flag,ConvoText) "CHECK_EVENTID 0xF;BEQ 0x776 0xC 0x0;CHECK_ACTIVE;SVAL 1 Character1;BEQ 0x1 0xC 0x1;CHECK_ACTIVE;SVAL 1 Character2;BEQ 0x1 0xC 0x1;LABEL 0x776;ENUF Flag;GOTO 0x2;LABEL 0x1;CHECK_DEPLOYED Character1; BEQ 0x2 0x0 0xC;CHECK_DEPLOYED Character2; BEQ 0x2 0x0 0xC;Text(ConvoText);LABEL 0x2"
+	
+AffoMoment:
+SussyMomentOne(Affogato,0x13,Ch4AffoSpeak)
+NoFade
+ENDA
+
+BreveHildrMoment:
+SussyMomentTwo(Breve,Hildr,0x14,Ch4BreveHildrSpeak)
+NoFade
+ENDA
+
+SequinMoment:
+SussyMomentOne(Sequin,0x15,Ch4SequinSpeak)
+NoFade
+ENDA
+
+AnsgarNoraMoment:
+SussyMomentTwo(Ansgar,Nora,0x16,Ch4AnsgarNoraSpeak)
+NoFade
+ENDA
+
+FlorisMoment:
+SussyMomentOne(Floris,0x17,Ch4FlorisSpeak)
+NoFade
+ENDA
+
+StroganoffDoppioMoment:
+SussyMomentTwo(Stroganoff,Doppio,0x18,Ch4DoppioStroganoffSpeak)
+NoFade
+ENDA
+
+ThereseLennardMoment:
+SussyMomentTwo(Therese,Lennard,0x19,Ch4LennardThereseSpeak)
+NoFade
+ENDA
+
+MochaEisnerMoment:
+SussyMomentTwo(Mocha,Eisner,0x1A,Ch4MochaEisnerSpeak)
+NoFade
+ENDA
+
+LevainKaneMoment:
+SussyMomentTwo(Levain,Kane,0x1B,Ch4LevainKaneSpeak)
+NoFade
+ENDA
+
+	
+EndTheGameOMG:
+CALL EndingScene
+NoFade
+ENDA
 
 LocationBasedEvents:
-Arrive(19,0)
-Arrive(20,0)
-Arrive(21,0)
+Escape(19,0)
+Escape(20,0)
+Escape(21,0)
 Village(0x8,LeftVillage,2,7)
 Village(0x9,RightVillage,23,13)
 Village(0x10,BotVillage,13,15)
 Village(0x11,TopVillage,12,3)
 	END_MAIN
-	
+
 	
 LeftVillage:
 MUSI; SMOV 2 0x0; SMOV 3 LeftVillagerVillage; CALL $9EE310; MUNO;
@@ -200,18 +350,18 @@ LoadUnit(8,17)
 
 EnemyUnits:
 
-UNIT Aeteria PegRider 0x1 Level(4, Enemy, 1)     [10,8] 0b 0x0 0x0 0x0 [IronLance,Horseslayer,] TwoActionAI
+UNIT Aeteria PegRider 0x1 Level(4, Enemy, 1)     [10,8] 0b 0x0 0x0 0x0 [IronLance,] TwoActionAI
 UNIT AeteriaStealable SCav 0x1 Level(4, Enemy, 1)     [4,10] 0b 0x0 0x0 0x0 [SteelSword,Torch] ChargeAI
-UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [8,9] 0b 0x0 0x0 0x0 [ShortSpear,Axereaver] RangeAI
+UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [8,9] 0b 0x0 0x0 0x0 [IronLance] RangeAI
 UNIT Aeteria Mage 0x1 Level(4, Enemy, 1)     [7,11] 0b 0x0 0x0 0x0 [Thunder,] ChargeAI
-UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [2,13] 0b 0x0 0x0 0x0 [DarkTome1,] ChargeAI
+UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [3,13] 0b 0x0 0x0 0x0 [DarkTome1,] TwoActionAI
 UNIT Aeteria LCav 0x1 Level(4, Enemy, 1)     [10,12] 0b 0x0 0x0 0x0 [SteelLance,] RangeAI
-UNIT Aeteria Merc 0x1 Level(4, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [IronSword,] TwoActionAI
-UNIT Aeteria Thaumaturge 0x1 Level(5, Enemy, 1)     [6,8] 0b 0x0 0x0 0x0 [Thunder,] ChargeAI
+UNIT Aeteria Merc 0x1 Level(4, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [IronSword,] RangeAI
+UNIT Aeteria Thaumaturge 0x1 Level(5, Enemy, 1)     [18,12] 0b 0x0 0x0 0x0 [Fire,] RangeAI
 UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [1,9] 0b 0x0 0x0 0x0 [DarkTome1,] ChargeAI
-UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [12,10] 0b 0x0 0x0 0x0 [ShortSpear,HeavySpear,] ChargeAI
+UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [12,10] 0b 0x0 0x0 0x0 [ShortSpear,HeavySpear,] BossAI
 UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [0,11] 0b 0x0 0x0 0x0 [IronLance,] RangeAI
-UNIT Aeteria Merc 0x1 Level(4, Enemy, 1)     [17,11] 0b 0x0 0x0 0x0 [Zanbato,] StallOneTurnAI
+UNIT Aeteria Merc 0x1 Level(4, Enemy, 1)     [17,11] 0b 0x0 0x0 0x0 [Sagitar,] StallOneTurnAI
 UNIT AeteriaStealable LCav 0x1 Level(4, Enemy, 1)     [22,4] 0b 0x0 0x0 0x0 [SteelLance,SecretBook] RangeAI
 UNIT Aeteria Thaumaturge 0x1 Level(5, Enemy, 1)     [20,15] 0b 0x0 0x0 0x0 [Fire,] RangeAI
 UNIT Aeteria Mage 0x1 Level(5, Enemy, 1)     [15,14] 0b 0x0 0x0 0x0 [Fire,] RangeAI
@@ -219,28 +369,28 @@ UNIT Aeteria LCav 0x1 Level(4, Enemy, 1)     [20,10] 0b 0x0 0x0 0x0 [SteelLance,
 UNIT Aeteria PegRider 0x1 Level(4, Enemy, 1)     [19,17] 0b 0x0 0x0 0x0 [IronLance,] RangeAI
 UNIT Aeteria Thaumaturge 0x1 Level(5, Enemy, 1)     [14,6] DropItem 0x0 0x0 0x0 [Thunder,PureWater] TwoActionAI
 UNIT Aeteria Thaumaturge 0x1 Level(5, Enemy, 1)     [22,8] 0b 0x0 0x0 0x0 [Fire,] RangeAI
-UNIT Aeteria ACav 0x1 Level(4, Enemy, 1)     [19,7] 0b 0x0 0x0 0x0 [Halberd,] TwoActionAI
+UNIT Aeteria ACav 0x1 Level(4, Enemy, 1)     [19,7] 0b 0x0 0x0 0x0 [SteelAxe,] TwoActionAI
 UNIT Aeteria Mage 0x1 Level(5, Enemy, 1)     [19,3] DropItem 0x0 0x0 0x0 [Thunder,] RangeAI
 UNIT Aeteria Cleric 0x1 Level(5, Enemy, 1)     [17,5] 0b 0x0 0x0 0x0 [Fear,] BossAI
-UNIT Aeteria Priest 0x1 Level(4, Enemy, 1)     [5,6] 0b 0x0 0x0 0x0 [Pain,Slow,] BossAI
+UNIT Aeteria Priest 0x1 Level(5, Enemy, 1)     [5,6] 0b 0x0 0x0 0x0 [Pain,Slow,] BossAI
 UNIT Aeteria AArmor 0x1 Level(4, Enemy, 1)     [12,4] 0b 0x0 0x0 0x0 [ShortAxe,SteelLabrys] BossAI
 UNIT Aeteria SArmor 0x1 Level(4, Enemy, 1)     [20,5] 0b 0x0 0x0 0x0 [Flamberge,Skypiercer] RangeAI
-UNIT Aeteria Troubadour 0x1 Level(4, Enemy, 1)     [15,2] 0b 0x0 0x0 0x0 [Slow,] TwoActionAI
-UNIT Aeteria Troubadour 0x1 Level(5, Enemy, 1)     [1,0] 0b 0x0 0x0 0x0 [Fear,] StallOneTurnAI
+UNIT Aeteria Troubadour 0x1 Level(5, Enemy, 1)     [15,2] 0b 0x0 0x0 0x0 [Fear,] RangeAI
+UNIT Aeteria ACav 0x1 Level(4, Enemy, 1)     [1,0] 0b 0x0 0x0 0x0 [IronAxe,] RangeAI
 UNIT Aeteria WyvernRider 0x1 Level(4, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [SteelAxe,] RangeAI
 UNIT Aeteria WyvernRider 0x1 Level(4, Enemy, 1)     [13,13] 0b 0x0 0x0 0x0 [SteelAxe,] RangeAI
-UNIT Aeteria SCav 0x1 Level(4, Enemy, 1)     [8,5] 0b 0x0 0x0 0x0 [RubySword,] StallOneTurnAI
-UNIT Aeteria SCav 0x1 Level(4, Enemy, 1)     [24,11] 0b 0x0 0x0 0x0 [EmeraldAxe,] RangeAI
-UNIT Aeteria Archer 0x1 Level(4, Enemy, 1)     [10,16] 0b 0x0 0x0 0x0 [Longbow,] ChargeAI
-UNIT Aeteria SArmor 0x1 Level(4, Enemy, 1)     [23,14] 0b 0x0 0x0 0x0 [Skypiercer,IronBlade] BossAI
-UNIT Aeteria PegRider 0x1 Level(4, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [Javelin,HeavySpear] StallOneTurnAI
+UNIT Aeteria SCav 0x1 Level(4, Enemy, 1)     [8,5] 0b 0x0 0x0 0x0 [IronSword,] StallOneTurnAI
+UNIT Aeteria SCav 0x1 Level(4, Enemy, 1)     [24,11] 0b 0x0 0x0 0x0 [SteelSword,] RangeAI
+UNIT Aeteria Archer 0x1 Level(4, Enemy, 1)     [13,0] 0b 0x0 0x0 0x0 [Longbow,] StallOneTurnAI
+UNIT Aeteria SArmor 0x1 Level(4, Enemy, 1)     [23,14] 0b 0x0 0x0 0x0 [ShortBrand,IronBlade] BossAI
+UNIT Aeteria PegRider 0x1 Level(4, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
 UNIT AeteriaStealable Priest 0x1 Level(4, Enemy, 1)     [14,16] 0b 0x0 0x0 0x0 [Smog,PureWater] TwoActionAI
 UNIT AeteriaStealable WyvernRider 0x1 Level(4, Enemy, 1)     [10,5] 0b 0x0 0x0 0x0 [SteelAxe,GoddessIcon] TwoActionAI
 UNIT Aeteria Troubadour 0x1 Level(4, Enemy, 1)     [2,2] 0b 0x0 0x0 0x0 [Physic,Haze] HealAI
-UNIT AeteriaStealable LArmor 0x1 Level(4, Enemy, 1)     [4,5] 0b 0x0 0x0 0x0 [ShortSpear,RedGem] BossAI
+UNIT AeteriaStealable LArmor 0x1 Level(4, Enemy, 1)     [4,5] 0b 0x0 0x0 0x0 [ShortSpear,Horseslayer,RedGem] BossAI
 
 UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [8,1] DropItem 0x0 0x0 0x0 [ShortAxe] [0,3,0,32]
-UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [0,6] DropItem 0x0 0x0 0x0 [0x98] [0,3,0,32]
+UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [0,6] DropItem 0x0 0x0 0x0 [GreenGem] [0,3,0,32]
 UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [16,8] DropItem 0x0 0x0 0x0 [TorchStaff] [0,3,0,32]
 	UNIT
 	
@@ -250,7 +400,7 @@ UNIT 0x6A Thaumaturge 0x1 Level(10, Enemy, 0)     [1,0] 0 0 1 REDA3R3 [Bolting,F
 	
 NewRecruits:
 UNIT Floris Priest 0x1 Level(4, Ally, 0)     [9,12] 0x0 0x0 0x0 0x0 [Mend,Barrier,Haze] AttackInRangeAI
-UNIT Lennard Deserter 0x1 Level(3, Ally, 0)     [14,0] 0b 0x0 0x0 0x0 [KillerLance,SapphireLance,0x6B] [0x0,0x0,0x0,0x0]
+UNIT Lennard Deserter 0x1 Level(3, Ally, 0)     [14,0] 0b 0x0 0x0 0x0 [KillerLance,HeavySpear,0x6B] [0x0,0x0,0x0,0x0]
 UNIT Therese SArmor 0x1 Level(5, Ally, 0)     [16,0] 0b 0x0 0x0 0x0 [MageSword,0x66,0xFD] [0x0,0x0,0x0,0x0]
 	//NIT Wreyvine Soldier 0x1 Level(8, NPC, 1)     [15,0] 0b 0x0 0x0 0x0 [BraveLance,Vulnerary] [0x0,0x0,0x0,0x0]
 	//UNIT Wreyvine LArmor 0x1 Level(10, NPC, 1)     [15,0] 0 0 1 REDA15R2 [0x7C,ShortSpear,Elixir] BossAI
@@ -273,7 +423,6 @@ UNIT Wreyvine 0x70 0x1 Level(1, NPC, 1)     [0,10] 0 0 1 REDA3R10 [Elixir,] Boss
 UNIT Akatsuki 0x6F 0x1 Level(1, NPC, 1)     [0,10] 0 0 1 REDA3R10 [Elixir,] BossAI
 	UNIT
 	
-	
 CutsceneUnits2:
 UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [3,17] 0 0 1 REDA3R14 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
 UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [4,17] 0 0 1 REDA4R14 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
@@ -281,9 +430,43 @@ UNIT Floris Priest 0x1 Level(4, Ally, 0)     [3,17] 0 0 1 REDA3R15 [SteelBlade,S
 UNIT Stroganoff AArmor 0x1 Level(6, Ally, 1)     [4,17] 0 0 1 REDA4R16 [SteelLabrys,EmeraldAxe,0x65,0xf1] [0x0,0x3,0x0,0x20]
 	UNIT
 	
+CutsceneUnits3:
+UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [19,4] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [21,5] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+	UNIT
+	
 Rein1:
 UNIT Aeteria Thaumaturge 0x1 Level(5, Enemy, 1)     [1,0] 0 0 1 REDA1R3 [Wind,] ChargeAI
 UNIT Aeteria SCav 0x1 Level(4, Enemy, 1)     [2,0] 0 0 1 REDA2R3 [SteelSword,] ChargeAI
+	UNIT
+	
+LeftRein1:
+UNIT Aeteria Thaumaturge 0x1 Level(6, Enemy, 1)     [0,8] 0x0 0x0 0x0 0x0 [Thunder,] StallOneTurnAI
+UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [0,9] 0x0 0x0 0x0 0x0 [DarkTome2,] StallOneTurnAI
+UNIT Aeteria Mage 0x1 Level(6, Enemy, 1)     [0,10] 0x0 0x0 0x0 0x0 [Wind,] StallOneTurnAI
+	UNIT
+	
+LeftRein2:
+UNIT Aeteria Troubadour 0x1 Level(6, Enemy, 1)     [0,8] 0x0 0x0 0x0 0x0 [Smog,] StallOneTurnAI
+UNIT Aeteria Priest 0x1 Level(6, Enemy, 1)     [0,9] DropItem 0x0 0x0 0x0 [Mend,] HealAI
+UNIT Aeteria Cleric 0x1 Level(6, Enemy, 1)     [0,10] 0x0 0x0 0x0 0x0 [Slow,] StallOneTurnAI
+	UNIT
+	
+LeftRein3:
+UNIT Aeteria Thaumaturge 0x1 Level(6, Enemy, 1)     [0,8] 0x0 0x0 0x0 0x0 [Thunder,] ChargeAI
+UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [0,9] 0x0 0x0 0x0 0x0 [DarkTome1,] ChargeAI
+UNIT Aeteria Thaumaturge 0x1 Level(6, Enemy, 1)     [0,10] 0x0 0x0 0x0 0x0 [Wind,] ChargeAI
+	UNIT
+	
+BotRein1: //with right Reins
+UNIT Aeteria LCav 0x1 Level(5, Enemy, 1)     [3,17] 0 0 1 REDA3R15 [SteelLance,] ChargeAI
+UNIT Aeteria Soldier 0x1 Level(5, Enemy, 1)     [4,17] 0 0 1 REDA4R17 [SteelSword,] ChargeAI
+UNIT Aeteria Mage 0x1 Level(5, Enemy, 1)     [5,17] 0 0 1 REDA5R17 [Wind,] ChargeAI
+	UNIT
+	
+RightRein1: //with bot Reins
+UNIT Aeteria Soldier 0x1 Level(6, Enemy, 1)     [24,8] 0x0 0x0 0x0 0x0 [SteelLance,] ChargeAI
+UNIT Aeteria Merc 0x1 Level(5, Enemy, 1)     [24,11] 0x0 0x0 0x0 0x0 [SteelSword,] ChargeAI
 	UNIT
 	
 Rein2:
@@ -314,7 +497,7 @@ UNIT Aeteria Occultist 0x1 Level(6, Enemy, 1)     [23,0] 0 0 1 REDA23R3 [DarkTom
 	UNIT
 
 LeftVillager:
-UNIT 0xf4 0x6D 0x1 Level(1, NPC, 1)     [2,7] 0 0 1 REDA2R8 [Elixir,] BossAI
+UNIT 0xf4 0x6D 0x1 Level(1, NPC, 1)     [2,7] 0 0 1 REDA2R8 [Elixir,] AttackInRangeAI
 	UNIT
 	
 ReinWave1:
@@ -322,8 +505,30 @@ BossRein(0x6A,Rein1)
 NoFade
 ENDA
 
+HugeRein:
+SpawnReinforcements(BotRein1)
+STAL 20
+SpawnReinforcements(RightRein1)
+NoFade
+ENDA
+
+LeftReinWave1:
+SpawnReinforcements(LeftRein1)
+NoFade
+ENDA
+
+LeftReinWave2:
+SpawnReinforcements(LeftRein2)
+NoFade
+ENDA
+
+LeftReinWave3:
+BossRein(0x6A,LeftRein3)
+NoFade
+ENDA
+
 ReinWave2:
-BossRein(0x6A,Rein2)
+SpawnReinforcements(Rein2)
 NoFade
 ENDA
 
@@ -333,7 +538,7 @@ NoFade
 ENDA
 
 ReinWave4:
-BossRein(0x6A,Rein4)
+SpawnReinforcements(Rein4)
 NoFade
 ENDA
 
@@ -343,20 +548,20 @@ NoFade
 ENDA
 
 ReinWave6:
-BossRein(0x6A,Rein6)
+SpawnReinforcements(Rein6)
 NoFade
 ENDA
 
 TopVillager:
-UNIT 0xf5 0x6E 0x1 Level(1, NPC, 1)     [12,3] 0 0 1 REDA12R4 [Elixir,] BossAI
+UNIT 0xf5 0x6E 0x1 Level(1, NPC, 1)     [12,3] 0 0 1 REDA12R4 [Elixir,] AttackInRangeAI
 	UNIT
 
 BotVillager:
-UNIT 0xf6 0x6F 0x1 Level(1, NPC, 1)     [13,15] 0 0 1 REDA13R16 [Elixir,] BossAI
+UNIT 0xf6 0x6F 0x1 Level(1, NPC, 1)     [13,15] 0 0 1 REDA13R16 [Elixir,] AttackInRangeAI
 	UNIT
 
 RightVillager:
-UNIT 0xFC 0x70 0x1 Level(1, NPC, 1)     [23,13] 0 0 1 REDA23R13 [Elixir,] BossAI
+UNIT 0xFC 0x70 0x1 Level(1, NPC, 1)     [23,13] 0 0 1 REDA23R13 [Elixir,] AttackInRangeAI
 	UNIT
 
 LeftVillagerReal:
@@ -410,7 +615,7 @@ CUMO 0xFC
 STAL 60
 CURE
 Text(RightVillagerThanks)
-GiveItem(0xED,0xFFFF)
+GiveItem(0xB1,0xFFFF)
 STAL 5
 MOVE 0xA 0xFC [21,18]
 ENUN
@@ -493,15 +698,51 @@ CHECK_EVENTID 0xC
 BEQ 0x776 0xC 0x0
 CHECK_EVENTID 0xD
 BEQ 0x776 0xC 0x0
-	
+
+MUSCSLOW 0x7FFF
 CAM1 [18,3]
-TILECHANGE 0x5 //THE ROAD TO RUIN!!!!!!!!!!!111111111
-
-CameraCursor(Affogato)
-Text(LetsGoDudes)
+TILECHANGE 0x7 //THE ROAD TO RUIN!!!!!!!!!!!111111111
+STAL 15
+SOUN 0xBA
 STAL 5
+EARTHQUAKE_START 0x0
+STAL 25
+FAWI 30
+SOUN 0x2f0
+SVAL 0xB 0x40008 //change map
+LOMA 0x41
+SetFlag(0x4) //bgm flag
 
-ENUT 0xF
+UnsetFlag(0x14)
+UnsetFlag(0x16)
+UnsetFlag(0x18)
+UnsetFlag(0x1A)
+UnsetFlag(0x1B)
+
+RemoveTrapAtCoords(20,17)
+RemoveTrapAtCoords(21,17)
+RemoveTrapAtCoords(22,17)
+STAL 50
+SetFlag(0xA)
+SetFlag(0xB)
+SetFlag(0xC)
+SetFlag(0xD)
+SetFlag(0xF)
+ASMC 0x8026629
+SOUN 0x37a
+STAL 5
+FAWU 15
+STAL 10
+EARTHQUAKE_END
+STAL 3
+CameraCursor(Affogato)
+SetBackground(0x46)
+Text(LetsGoDudes)
+ClearBackground
+
+STAL 5
+CenterTextbox(ArriveDescription)
+
 LABEL 0x776
 NoFade
 ENDA
@@ -510,65 +751,65 @@ ENDA
 #define Ch4FireTrapStartTurn 1
 Traps1:
 //FireTrap(1,17,Ch4FireTrapStartTurn,1)
-FireTrap(8,17,Ch4FireTrapStartTurn,1)
-FireTrap(9,17,Ch4FireTrapStartTurn,1)
-FireTrap(10,17,Ch4FireTrapStartTurn,1)
-FireTrap(11,17,Ch4FireTrapStartTurn,1)
-FireTrap(10,16,Ch4FireTrapStartTurn,1)
-FireTrap(11,16,Ch4FireTrapStartTurn,1)
-FireTrap(12,16,Ch4FireTrapStartTurn,1)
-FireTrap(12,17,Ch4FireTrapStartTurn,1)
-FireTrap(13,16,Ch4FireTrapStartTurn,1)
-FireTrap(13,12,Ch4FireTrapStartTurn,1)
-FireTrap(14,16,Ch4FireTrapStartTurn,1)
-FireTrap(20,16,Ch4FireTrapStartTurn,1)
-FireTrap(15,13,Ch4FireTrapStartTurn,1)
-FireTrap(15,12,Ch4FireTrapStartTurn,1)
-FireTrap(20,14,Ch4FireTrapStartTurn,1)
-FireTrap(21,14,Ch4FireTrapStartTurn,1)
-FireTrap(21,15,Ch4FireTrapStartTurn,1)
-FireTrap(22,14,Ch4FireTrapStartTurn,1)
+//FireTrap(8,17,Ch4FireTrapStartTurn,1)
+//FireTrap(9,17,Ch4FireTrapStartTurn,1)
+//FireTrap(10,17,Ch4FireTrapStartTurn,1)
+//FireTrap(11,17,Ch4FireTrapStartTurn,1)
+//FireTrap(10,16,Ch4FireTrapStartTurn,1)
+//FireTrap(11,16,Ch4FireTrapStartTurn,1)
+//FireTrap(12,16,Ch4FireTrapStartTurn,1)
+//FireTrap(12,17,Ch4FireTrapStartTurn,1)
+//FireTrap(13,16,Ch4FireTrapStartTurn,1)
+//FireTrap(13,12,Ch4FireTrapStartTurn,1)
+//FireTrap(14,16,Ch4FireTrapStartTurn,1)
+//FireTrap(20,16,Ch4FireTrapStartTurn,1)
+//FireTrap(15,13,Ch4FireTrapStartTurn,1)
+//FireTrap(15,12,Ch4FireTrapStartTurn,1)
+//FireTrap(20,14,Ch4FireTrapStartTurn,1)
+//FireTrap(21,14,Ch4FireTrapStartTurn,1)
+//FireTrap(21,15,Ch4FireTrapStartTurn,1)
+//FireTrap(22,14,Ch4FireTrapStartTurn,1)
 //FireTrap(23,14,Ch4FireTrapStartTurn,1)
-FireTrap(23,15,Ch4FireTrapStartTurn,1)
-FireTrap(22,16,Ch4FireTrapStartTurn,1)
-FireTrap(20,11,Ch4FireTrapStartTurn,1)
-FireTrap(18,12,Ch4FireTrapStartTurn,1)
-FireTrap(8,10,Ch4FireTrapStartTurn,1)
-FireTrap(9,10,Ch4FireTrapStartTurn,1)
-FireTrap(10,10,Ch4FireTrapStartTurn,1)
-FireTrap(11,10,Ch4FireTrapStartTurn,1)
+//FireTrap(23,15,Ch4FireTrapStartTurn,1)
+//FireTrap(22,16,Ch4FireTrapStartTurn,1)
+//FireTrap(20,11,Ch4FireTrapStartTurn,1)
+//FireTrap(18,12,Ch4FireTrapStartTurn,1)
+//FireTrap(8,10,Ch4FireTrapStartTurn,1)
+//FireTrap(9,10,Ch4FireTrapStartTurn,1)
+//FireTrap(10,10,Ch4FireTrapStartTurn,1)
+//FireTrap(11,10,Ch4FireTrapStartTurn,1)
 //FireTrap(12,10,Ch4FireTrapStartTurn,1)
-FireTrap(13,10,Ch4FireTrapStartTurn,1)
-FireTrap(14,10,Ch4FireTrapStartTurn,1)
-FireTrap(17,10,Ch4FireTrapStartTurn,1)
-FireTrap(3,9,Ch4FireTrapStartTurn,1)
-FireTrap(3,8,Ch4FireTrapStartTurn,1)
-FireTrap(4,8,Ch4FireTrapStartTurn,1)
-FireTrap(8,8,Ch4FireTrapStartTurn,1)
-FireTrap(9,8,Ch4FireTrapStartTurn,1)
-FireTrap(12,9,Ch4FireTrapStartTurn,1)
+//FireTrap(13,10,Ch4FireTrapStartTurn,1)
+//FireTrap(14,10,Ch4FireTrapStartTurn,1)
+//FireTrap(17,10,Ch4FireTrapStartTurn,1)
+//FireTrap(3,9,Ch4FireTrapStartTurn,1)
+//FireTrap(3,8,Ch4FireTrapStartTurn,1)
+//FireTrap(4,8,Ch4FireTrapStartTurn,1)
+//FireTrap(8,8,Ch4FireTrapStartTurn,1)
+//FireTrap(9,8,Ch4FireTrapStartTurn,1)
+//FireTrap(12,9,Ch4FireTrapStartTurn,1)
 //FireTrap(16,8,Ch4FireTrapStartTurn,1)
-FireTrap(20,8,Ch4FireTrapStartTurn,1)
-FireTrap(23,8,Ch4FireTrapStartTurn,1)
-FireTrap(24,8,Ch4FireTrapStartTurn,1)
+//FireTrap(20,8,Ch4FireTrapStartTurn,1)
+//FireTrap(23,8,Ch4FireTrapStartTurn,1)
+//FireTrap(24,8,Ch4FireTrapStartTurn,1)
 //FireTrap(0,7,Ch4FireTrapStartTurn,1)
-FireTrap(4,7,Ch4FireTrapStartTurn,1)
-FireTrap(23,7,Ch4FireTrapStartTurn,1)
-FireTrap(6,12,Ch4FireTrapStartTurn,1)
-FireTrap(7,12,Ch4FireTrapStartTurn,1)
-FireTrap(2,13,Ch4FireTrapStartTurn,1)
-FireTrap(3,14,Ch4FireTrapStartTurn,1)
-FireTrap(4,14,Ch4FireTrapStartTurn,1)
-FireTrap(3,15,Ch4FireTrapStartTurn,1)
-FireTrap(4,15,Ch4FireTrapStartTurn,1)
-FireTrap(5,15,Ch4FireTrapStartTurn,1)
-FireTrap(6,15,Ch4FireTrapStartTurn,1)
-FireTrap(8,15,Ch4FireTrapStartTurn,1)
-FireTrap(8,15,Ch4FireTrapStartTurn,1)
-FireTrap(9,15,Ch4FireTrapStartTurn,1)
-FireTrap(10,15,Ch4FireTrapStartTurn,1)
-FireTrap(19,9,Ch4FireTrapStartTurn,1)
-FireTrap(9,9,Ch4FireTrapStartTurn,1)
+//FireTrap(4,7,Ch4FireTrapStartTurn,1)
+//FireTrap(23,7,Ch4FireTrapStartTurn,1)
+//FireTrap(6,12,Ch4FireTrapStartTurn,1)
+//FireTrap(7,12,Ch4FireTrapStartTurn,1)
+//FireTrap(2,13,Ch4FireTrapStartTurn,1)
+//FireTrap(3,14,Ch4FireTrapStartTurn,1)
+//FireTrap(4,14,Ch4FireTrapStartTurn,1)
+//FireTrap(3,15,Ch4FireTrapStartTurn,1)
+//FireTrap(4,15,Ch4FireTrapStartTurn,1)
+//FireTrap(5,15,Ch4FireTrapStartTurn,1)
+//FireTrap(6,15,Ch4FireTrapStartTurn,1)
+//FireTrap(8,15,Ch4FireTrapStartTurn,1)
+//FireTrap(8,15,Ch4FireTrapStartTurn,1)
+//FireTrap(9,15,Ch4FireTrapStartTurn,1)
+//FireTrap(10,15,Ch4FireTrapStartTurn,1)
+//FireTrap(19,9,Ch4FireTrapStartTurn,1)
+//FireTrap(9,9,Ch4FireTrapStartTurn,1)
 
 BlueSigil(19,0)
 BlueSigil(20,0)
@@ -586,6 +827,13 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+SetFlag(0x14)
+SetFlag(0x16)
+SetFlag(0x18)
+SetFlag(0x1A)
+SetFlag(0x1B)
+//UnsetFlag(AllUnitsMustEscapeFlag)
+//SetFlag(LordMustEscapeLastFlag)
 Music(0x48)
 STAL 15
 LOAD1 0x1 CutsceneUnits
@@ -638,12 +886,32 @@ STAL 10
 CamOn
 LOAD2 0x1 CutsceneUnits2
 STAL 15
-SetBackground(0x46)
+SetBackground(0x3d)
 Text(Ch4NewOpening5)
 	GotoPrepScreen
 	ENDA
 
 EndingScene:
+FADI 30
+MUSCSLOW 0x7FFF
+UnsetFlag(LordMustEscapeLastFlag)
+SetFlag(AllUnitsMustEscapeFlag)
+DoAllThree
+LOAD2 0x1 CutsceneUnits3
+CAM1 [19,6]
+FADU 5
+
+STAL 150
+
+//SetBackground(0x19)
+SetBackground(0x46)
+TEXTSTART
+TEXTSHOW Ch4EndingNew1
+TEXTEND
+MUSC 0x3B4
+TEXTCONT
+TEXTEND
+
 	MNC2 0x4
 	NoFade
 	ENDA

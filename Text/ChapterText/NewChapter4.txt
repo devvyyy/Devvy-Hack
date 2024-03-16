@@ -45,7 +45,8 @@ What was that[Beat]?[AN]
 [Pause]I[Beat][AN][ClearFace][0x80][0x2D][0x86][0x8D][0x80][0x80][.4]
 
 [FL]
-Ah![AN][MoveML] Wha[Beat][AN]
+Ah![AN][MoveML]
+Wha[Beat][AN]
 
 [R]
 W-What the hell?![AN]
@@ -189,16 +190,21 @@ We must move at once.[.6] Follow me![AN]
 ## Ch4NewOpening5
 # move to map; fire everywhere
 [3L]
-[FFL][LoadAffogato][MoveL][FL][LoadUlrich]
+[FFL][LoadAffogato][MoveL][FL][LoadFloris]
+
+[L]
+[Beat][AN]
 
 [FL]
-W-[.4]What is this horrible madness[Beat]?![6N]
+W-[.4]What is this madness[Beat]?![AN][ClearFace][LoadUlrich]
+
+[FL]
 Those bastards[Beat] They really turned to[N]
 burning and ransacking civilians?![AN][Clear]
 How could Aeteria[Beat] How[Beat]?[AN]
 
 [FFR][LoadOldWoman][MoveFarRight]
-K-[.4]Knights of Wreyvine![.6] Thank the Bringer![.6][N][MoveMidRight]
+K-[.4]Knights of Wreyvine![.6] Thank the Bringer![AN][MoveMidRight]
 Please[Beat] There's still people trapped in[N]
 their own homes by the Aeterian soldiers![AN][CloseSpeechSlow][MoveFFL][Clear]
 
@@ -208,46 +214,71 @@ If this attack started after the rescues,[N]
 could there be any stragglers?)[Mouth][AN]
 Sir.[.6] I believe there are civilians alive[N]
 in some of the homes.[.6] Your orders?[6N]
-Our time looks to be limited.[AN]
+Our time looks to be limited.[AN][CloseSpeechSlow]
 
 [FL][MoveL][L]
-[Pause]We have to try to get them out[Beat] But[Beat][AN]
-I-[.4]I can't think of[Beat][AN]
+[Pause]We have to try to get them out before the[N]
+blaze reaches them[Beat] It doesn't[Beat][AN]
+I can't think of a viable way[Beat][AN]
 
 [MR][LoadStroganoff]
 Alright[,] Rick.[.6] Ya good?[.6] I'd say this'd[N]
 be the one time it'd be actually okay to[N]
-just[Beat] Charge in there![AN][CloseSpeechSlow][MoveFarRight]
-
-[R][LoadFloris]
-That might be our only option if we hope[N]
-to save them[Beat][AN]
+just[Beat] Charge in there![AN][ClearFace]
 
 [L][MoveL]
 Alright[,] then.[.6] We have to move[,][N]
 on the double![AN]
+
 [X]
 
 ## Ch4BotHouseBurningText
 # right after preps
 [3L]
-[ML][LoadStroganoff][MR][LoadAffo]
+[ML][LoadStroganoff][R][LoadTherese][FR][LoadLennard]
+
+[R]
+To think the empire is capable of something[N]
+so horrible[Beat] We must rescue the survivors[,][N]
+no matter the cost.[AN]
+
+[FR]
+As a merc[,] you see a lot of villages being[N]
+wiped out[,] but never quite like this[Beat][AN]
+
 [ML]
 If we wanna rescue 'em[,] we'll haveta carry[N]
 the survivors out to safety:[.4] the road[N]
 back to the front o' the city.[AN][Clear]
 It should be secured right now[,] so that'll[N]
-be the easy route.[.6] You[,] scout.[AN]
+be the easy route.[AN][Clear]
 
+[R]
+I cannot imagine any of this will be[N]
+the easy route[,] but I suppose I must[N]
+trust your judgement.[AN]
+
+[FR]
+Alright[,] let's go.[.6] We don't have time[N]
+to lose!![AN]
+
+[R][ClearFace][FR][ClearFace]
+
+[ML][MoveLeft]
+Hey[,] scout guy![.6] Can you guide us through[N]
+the fire[,] or is that too tall a task?[AN]
+
+[FFR][LoadAffogato][MoveMR]
 [MR]
-Right.[.6] I'll lead the way[,] Captain.[6N]
-[Mouth](We won't have much time... We should[N]
-prioritize the houses closest to the fire.)[AN][Mouth][ClearFace]
+Not at all.[.6] I'll lead the way[,] Captain.[AN][Clear]
+[Mouth](We won't have much time before their[N]
+homes trap them... We should prioritize[N]
+the houses closest to the fire.)[AN][Mouth][ClearFace]
 [X]
 
 ## Ch4BotHouseBurningText2
 # right after preps
-
+[3L]
 [ML][LoadStroganoff]
 [ML][MoveLeft][MoveL]
 Citizens of Northelm![.6] If you're still in there[Beat][N]
@@ -257,21 +288,23 @@ us knights come and evacuate ya'll![AN]
 
 ## NewCh4IntroText
 # right after prep text
-Visit the villages to[N]
-gather villagers and[N]
-drop them.[AN][Clear]
-Each villager gives[N]
-you an item after[N]
-their rescue.[AN][Clear]
-The Arrive points will[N]
-open after all 4 villagers[N]
-are escorted or dead.[A][Clear]
-Open Plain tiles in the lower[N]
-half of the map will burn units[N]
-for 5 damage and wipe away status[AN]
-effects at the end of each turn.[AN]
+Visit the houses to get a civilian[N]
+to move onto the map. They will[N]
+move right below their home.[AN][Clear]
+To escort them, Rescue the civilian[N]
+and Drop them onto the green-marked[N]
+spaces on the bottom right.[AN][Clear]
+Each civilian gives you an item after[N]
+their rescue. They can also all die[N]
+without a Game Over.[AN][Clear]
+The Escape points on the top right[N]
+will open after all 4 villagers[N]
+are either escorted or dead.[A][Clear]
+After that, you have 20 turns total[N]
+to Escape with every unit to[N]
+clear the map.[AN][Clear]
 The lower houses will burn down[N]
-after turn 3 and turn 6, killing[N]
+after turn 4 and turn 8, killing[N]
 the civilians inside.[A][Clear]
 Good luck.[A][X]
 
@@ -315,7 +348,8 @@ Focus on the mission at hand[,] Sir.[AN]
 
 [MR]
 They'll[Beat] Urgh[Beat] We'll save the civilians.[6N]
-And then[Beat] Aeteria will atone.[AN]
+And then[Beat] Aeteria will atone.[.6] I'll[N]
+trust you on this.[AN]
 
 [OpenMidLeft]
 I'll be with you every step of[N]
@@ -327,9 +361,7 @@ the way[,] Sir.[AN]
 # these play if you wait next to a burning house
 [3L]
 [ML][LoadAffogato]
-[Mouth](We need to save those civilians before[N]
-their home traps them in the flames...)[6N][Mouth][AN]
-[X]
+[Mouth](Barbarity.)[Mouth][AN][X]
 
 ## Ch4BreveHildrSpeak
 # these play if EITHER wait next to a burning house (if both are deployed)
@@ -342,11 +374,16 @@ but to stoop so low[Beat] I suppose I[N]
 didn't expect anything else.[AN]
 
 [MR]
-This is horrible[Beat] What can we[N]
-even do[Beat]?[AN]
+This is horrible[Beat] What can we even[N]
+do[Beat]?[.6] Pace through razed earth[N]
+and burnt corpses?[AN]
 
 [ML]
 Let's give them hell[,] Hildr.[AN]
+
+[MR]
+I hope there are those who can still[N]
+be saved[Beat][AN]
 
 [X]
 
@@ -355,8 +392,9 @@ Let's give them hell[,] Hildr.[AN]
 [3L]
 [ML][LoadSequin]
 [ML]
-No[Beat] Not again[Beat] [Close]How could[Beat][N]
-Why would[Beat][AN]
+No[Beat][Close] Not again[Beat] [Close]How could[Beat][N]
+Why would[Beat][Open] I[Beat] I won't stop until[N]
+they all lie by the fire they started[Beat]![AN]
 
 [X]
 
@@ -364,19 +402,21 @@ Why would[Beat][AN]
 # these play if EITHER wait next to a burning house
 [3L]
 [ML][LoadAnsgar][MR][LoadNora]
+
 [ML]
 Mages[Beat] They think they rule the place.[6N]
-And Aeteria[Beat] Dastards.[AN]
+And Aeteria[Beat] Absolute dastards[,] they are![6N]
+Nora[Beat] are you alright?[AN]
 
+[MR]
+Of course.[.6] But it is truly saddening[N]
+to see Northelm in such a state[Beat][AN]
+I fear for the future of the kingdom.[AN][Clear]
+Although[Beat] It's getting hard to breathe[beat][AN]
 
-
-I'll carry 'em[,] and you'll let 'em[N]
-ride with ye[,] okay?[AN]
-
-Of course.
-
-
-
+[ML]
+'Ere[,] take this hanky and cover your face[N]
+with it.[.6] Everythin'll be okay[Beat][AN]
 [X]
 
 ## Ch4FlorisSpeak
@@ -384,28 +424,96 @@ Of course.
 [3L]
 [ML][LoadFloris]
 Pfeh[,] I'd expect nothing less than such[N]
-damnation from the empire[Beat][AN]
-
+damnationfrom the empire[Beat] Is this truly the[N]
+price we must pay for our negligence[Beat]?[AN][Clear]
+[Close]My apologies for the people of Northelm.[6N]
+May you all rest your last in peace[Beat][AN]
 [X]
-
 
 ## Ch4DoppioStroganoffSpeak
 # these play if EITHER wait next to a burning house
 [3L]
 [ML][LoadDoppio][MR][LoadStroganoff]
 
-I feel like I'm bein' cooked alive[Beat][AN]
+[MR]
+What a sorry sight Northelm's in[Beat][N]
+At least most of 'em are safe.[.6] But[Beat] Grgh[Beat][N]
+I feel like I'm bein' cooked alive 'ere[Beat][AN]
 
 [ML]
-Captain.[.6] They will pay.
+Stand up[,] Captain![.6] Aeteria has to pay for[N]
+their crimes here.[.6] And we MUST save those[N]
+who cannot save themselves![AN][Clear]
+That's the duty of a Wreyvian knight![6N]
+Follow me[,] we must head to the border.[AN]
+[MoveFFR][Clear]
 
-
-
-Chaaaarge![AN]
-
+[MR]
+Ah--[.4]wait[Beat] Hol' on[Beat] [Close]I just need[N]
+a sec to catch my b-[.4]breath[Beat][AN]
 [X]
 
+## Ch4LennardThereseSpeak
+# these play if EITHER wait next to a burning house
+[3L]
+[ML][LoadTherese][MR][LoadLennard]
 
+[ML]
+This is horrific.[.6] I never expected such an[N]
+immense blaze to spawn from such a small fire.[6N]
+It makes it a little hard to keep going[Beat][AN]
+
+[MR]
+You have to keep moving[,] Ser.[.6] If you stop[,][N]
+the flames'll catch up to you![AN]
+[X]
+
+## Ch4MochaEisnerSpeak
+# these play if EITHER wait next to a burning house
+[3L]
+[ML][LoadMocha][MR][LoadEisner]
+
+[ML]
+Oh Gods[Beat] It's revolting[Beat] Just a little[N]
+spark[Beat] and bam![.6] The entire city is gone![AN]
+
+[MR]
+Frankly[,] this is catastrophic.[.6] If we[N]
+mess up here[,] we die.[AN]
+
+[ML]
+Eis![.6] We have to find a way to save[N]
+this village![.6] Perhaps we could find[N]
+a nearby river or[Beat][AN]
+
+[MR]
+The time for that has already passed.[6N]
+We need to get out of here before[N]
+our mounts burn to a crisp.[AN]
+[X]
+
+## Ch4LevainKaneSpeak
+# these play if EITHER wait next to a burning house
+[3L]
+[ML][LoadLevain][MR][LoadKane]
+[ML]
+Mother was right.[.6] They were all right.[6N]
+The empire will never stop until they[N]
+take everything.[AN][Clear]
+They will never be forgiven by any[N]
+and all in this army.[AN]
+
+[MR]
+Hey[,] kid[Beat] Stop that.[.6] Calm down[,] and[N]
+think:[.4] what can we do amidst this chaos?[AN]
+
+[ML]
+They will all fall by my bow.[AN][ClearFace]
+
+[MR]
+Sigh[Beat][AN]
+
+[X]
 
 ## Ch4FailObjectiveText
 # these play when a house burns down without saving the villager
@@ -439,8 +547,8 @@ in this desecrate city.[.6] We will send a[N]
 barrage of spells they cannot react to.[AN]
 
 [MR]
-Hey[,] if the Wreyvians try to kill me[,] you[N]
-must all retreat.[.6] I told them to halt[N]
+Hey[,] if the Wreyvians try to kill me[,] I[N]
+told [ToggleRed]reinforcements from the back to halt[ToggleRed][N]
 if I were to[Beat] [Smile]make my leave.[AN][Smile]
 
 [FL]
@@ -460,8 +568,8 @@ as Northelm goes down ablaze.[AN]
 [ML][LoadAffogato][MR][LoadUlrich]
 
 [MR]
-This can't be good.[.6] There are so many[N]
-flashing rays coming at us[Beat]![AN]
+Everybody[,] brace yourselves for their[N]
+incoming assault![AN]
 
 [ML]
 They have many faithful among their[N]
@@ -490,44 +598,145 @@ Affogato.[.6] Go.[AN]
 
 ## Ch4EndingNew1
 # bg 19 (rain) then 0x34 then 0x3b
+[3L]
+[ML][LoadUlrich][MR][LoadAffogato]
 
-[ML][LoadAffogato][MR][LoadUlrich]
-
-
+[ML]
 [Beat][AN]
 
-(There's nothing left here...[N]
-We have to head to the border before[N]
-the Aeterians break through.)[AN][Clear]
-[Pause]Sir.[AN]
+[MR]
+[Mouth](There's nothing left here... We have[N]
+to head to the border before the[N]
+Aeterians break through.)[AN][Clear][Mouth]
+[Pause]Sir.[.6] The Captain and the others[N]
+are already on their way.[AN]
 
-Stop. Please stop. We failed in our mission.
+[ML]
+Stop.[.6] Please stop.[.6] We failed in our mission.[6N]
+We were supposed to protect Northelm[Beat][N]
+Now[,] look.[.6] It's piles of ash.[AN]
 
-We did all we could do.
+[MR]
+We did all we could do.[.6] If you want[,] I[N]
+could survey the village.[.6] There may still[N]
+be more stragglers.[AN]
 
+[ML]
+No[,] you're right.[.6] We must move on and[N]
+leave everything behind.[AN]
 
-You're unnerving.
+[MR]
+I didn't say that.[AN]
 
-I've never felt such hatred in my heart for[N]
-the empire since the day they took[N]
-my commander.[AN]
+[ML]
+I know what you meant.[.6] You're methodical.[.6][N]
+Your gaze is always[Beat] unnerving[,] fixed[N]
+ever onward.[.6] You know what you want.[AN]
 
+[MR]
+Sir.[AN][Event]
 
-is only going to get you killed.
+[ML]
+[Pause]I haven't always fought for Wreyvine.[6N]
+Years ago[,] I was under Aeteria's banner in[N]
+the holy war.[AN]
+It was Fate who demanded that I turned my[N]
+spear on my home.[.6] I didn't know if it was[N]
+the right choice.[AN]
+I wasn't capable of using magic[,] so[N]
+they handed me a torch.[.6] It was a sight[N]
+quite similar to this one[Beat][AN]
+We razed homes and charred blighted civilians[N]
+who weren't quick enough to run or were[N]
+foolish enough to stand against us.[AN]
 
+[MR]
+[Beat][AN]
+
+[ML]
+But I didn't abhor the empire until the day[N]
+my commander fell twenty-four years ago[N]
+against them.[AN]
+I watched Aeteria fight in the holy war.[6N]
+They've always fought their battles with[N]
+this ferity and zealotry.[AN]
+
+[MR]
+That's a long time to realize you're fighting[N]
+for the wrong side.[AN]
+
+[ML]
+I suppose I was naive to only now realize[N]
+that I chose the right path amidst all[N]
+this senselessness.[AN]
+I'm finally given a chance to fight for the[N]
+people of Wreyvine[,] yet I squandered it.[AN]
+How can we even hope to win this war[Beat]?[AN]
+
+[MR]
+We'll continue to do what we can do.[6N]
+This is only the beginning of the war.[AN]
+
+[ML]
 Do you still doubt the power of the[N]
-Aeterian empire?!
+Aeterian empire[,] Affogato?![.6] Even as[N]
+you watch the flames and melting snow?[AN]
+They don't burn you at the stake[,] they[N]
+cremate the entirety of village until the[N]
+soil is naught but ashes![AN]
 
-They don't burn you at the stake[,][N]
-they cremate your village until[N]
-it's naught but ashes!
+[MR]
+I've never doubted the empire[,] no.[.6][N]
+But this fear of yours is only going[N]
+to get you killed.[AN]
+Look around you: ignited wood[,] scorched[N]
+earth amidst the dead[,] buried by heaps[N]
+of singed stone.[AN]
+We need to focus on the 'now'[,] Sir[,][N]
+which is surviving the Aeterian invasion[N]
+with the most troops intact.[AN]
+We can move onto reconstruction after we[N]
+make sure Wreyvine makes it out of this[N]
+war unbroken.[AN]
+
+[ML]
+[Beat][AN]
+
+[MR]
+I'm sorry[,] but we'll all die if we fall[N]
+into Aeteria's trap.[.6] We all trust you to[N]
+lead us to survival.[AN]
+
+[ML]
+I can't think[Beat] I just don't understand[N]
+why they chose to stall us at the capital[N]
+if they wanted to assassinate the King.[AN]
+
+[MR]
+[Mouth](Right, that doesn't make any sense.[N]
+How is the imperial army able to be almost[N]
+everywhere at once?[AN]
+If they're aiming to kill the King, then[N]
+it'd surely be wiser to concentrate their[N]
+forces rather than splitting up.[AN]
+Yet we haven't gotten a report from[N]
+Castle Wreyvine... Their tactics don't seem to[N]
+make any sort of sense[,] but...)[AN][Mouth]
+
+[ML]
+Affogato?[.6] Did you--[AN]
+
+[MR]
+Let's go[,] Sir.[.6] People are waiting.[6N]
+It should be a long but uneventful trek[N]
+from here to the city border.[AN]
 
 [X]
 
 ## EdvinBossQ
 [OpenMidLeft][LoadEdvin]
 Good day[,] Wreyvian.[.6] Are you[N]
-enjoying the blaze?[AN]
+enjoying the sights?[AN]
 Look out[,] friend[Beat][N]
 Hah!![.6] Lightning crash![A][X]
 
@@ -552,17 +761,19 @@ from limb from limb[Beat][AN]
 [X]
 
 ## EdvinUlrichBossQ
-[OpenMidLeft][LoadEdvin]
-
+[OpenMidRight][LoadUlrich]
 You are despicable.[.6][N]
-To torch down a--[AN]
+To torch down h--[AN][ClearFace]
 
+[OpenMidLeft][LoadEdvin]
 A torch?[.6] Why[,] it's called[N]
 [OpenQuote]magic"[,] buddy.[AN]
 Can you spell that?[.6] It's[N]
-m-[.4]a-[.4]g[Beat][AN]
+m-[.4]a-[.4]g[Beat][AN][ClearFace]
 
-Enough of this.[AN]
+[OpenMidRight][LoadUlrich]
+Enough of this.[.6][N] You[N]
+will die here.[AN]
 
 [X]
 
@@ -585,8 +796,9 @@ T-[.4]Thank you!![AN]
 [3L]
 [OpenMidLeft][LoadPigtails][MidRight][LoadFace][0xFF][0xFF]
 [OpenMidLeft]
-Howdy![.6] I heard the royal guard was coming[N]
-to pick us all up.[.6] I'm so glad[Beat][AN]
+Have mercy![.6] Oh[,] that's right.[.6] I heard[N]
+the royal guard was coming to rescue us.[.6][N]
+I'm so glad[Beat][AN]
 [X]
 
 ## RightVillagerThanks
@@ -636,13 +848,22 @@ I don't give a damn anymore![AN]
 
 ## LetsGoDudes
 # after objective is done (either through dead villagers or escorted)
-[OpenMidLeft][LoadAffogato][3L]
-We're done here.[.6] Let's move before the[N]
-flames catch us.[AN]
+[OpenMidLeft][LoadAffogato][3L][OpenMidRight][LoadUlrich]
 
+[OpenMidRight]
+What the hell?![.6] Is[Beat] Is everybody okay?![6N]
+The entire villa's caught ablaze[Beat]!![AN]
+
+[OpenMidLeft]
+[Pause]We're done here[,] Sir.[.6] Let's move on to[N]
+the border before the flames catch us.[AN]
+
+[OpenMidRight]
+Right.[.6] We haven't a moment to lose.[6N][Close]
+I can't believe this all happened[Beat][AN]
 [X]
 
 ## ArriveDescription
 # after objective is done (either through dead villagers or escorted)
-Any player unit can [ToggleRed]Arrive[ToggleRed] on[N]
-those spaces to end the map.[A][X]
+All player units must [ToggleRed]Escape[ToggleRed] at those[N]
+spaces to end the map.[A][X]

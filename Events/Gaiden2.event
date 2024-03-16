@@ -20,7 +20,7 @@ TURN 0x0 Turn5Rein [5,0] 0x0 //dialogue
 TURN 0x0 Turn6Rein [6,0] 0x0
 TURN 0x0 Turn7Rein [7,0] 0x0 //dialogue
 TURN 0x0 Turn9Rein [9,0] 0x0
-TURN 0x3 EndingScene [10,0] 0x0
+TURN 0x3 EndingScene [11,0] 0x0
 	END_MAIN
 	
 Turn2OgrimGaming:
@@ -71,14 +71,17 @@ ENDA
 
 Turn9Rein:
 LoadReinforcements(Turn9Enemies)
+STAL 15
+CameraCursor(0xCA)
+Text(Gaiden2InBattle6)
 NoFade
 ENDA
 
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEvent(0xA,OttoUlrichConvo,0xCA,0xCB)
-CharacterEvent(0xB,OgrimUlrichConvo,0xCA,0xCD)
+CharacterEventBothWays(0xA,OttoUlrichConvo,0xCA,0xCB)
+CharacterEventBothWays(0xB,OgrimUlrichConvo,0xCA,0xCD)
 	END_MAIN
 	
 OttoUlrichConvo:
@@ -141,8 +144,8 @@ UNIT Wreyvine GriffonRider 0x1 Level(4, NPC, 1)     [5,11] 0x0 0x0 0x0 0x0 [Long
 	UNIT
 
 OgrimGang:
-UNIT 0xCD Priest 0x1 Level(3, Ally, 0)     [5,0] 0 0 1 REDA6R2 [Mend,Rescue,Pain,0xCF] ChargeAI
-UNIT 0x80 Parson 0x1 Level(9, Ally, 1)     [4,0] 0 0 1 REDA5R2 [Physic,Fortify,Smog] ChargeAI
+UNIT 0xCD Priest 0x1 Level(3, Ally, 0)     [5,0] 0 0 1 REDA6R4 [Mend,Rescue,Pain,0xCF] ChargeAI
+UNIT 0x80 Parson 0x1 Level(9, Ally, 1)     [4,0] 0 0 1 REDA5R4 [Physic,Fortify,Smog] ChargeAI
 	UNIT
 
 EnemyUnits:
