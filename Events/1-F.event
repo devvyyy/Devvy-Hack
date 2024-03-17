@@ -33,11 +33,12 @@ TURN 0x0 TriggerHappyHavoc [13,0] 0x0
 ALIGN 32
 CharacterBasedEvents:
 //CharacterEvent(0x0,YoryTurretCheck,Yory,0x3F)
-//CharacterEventBothWays(0x10,AffoGorloisConvo, Affo, Gorlois)
-//CharacterEventBothWays(0x11,IronRuneConvo, Gorlois, Stroganoff)
+CharacterEventBothWays(0x10,AffoGorloisConvo, Affo, Gorlois)
+CharacterEventBothWays(0x11,IrisOgrimConvo, Iris, Ogrim)
+CharacterEventBothWays(0x12,IronRuneConvo, Gorlois, Stroganoff)
 //CharacterEventBothWays(0x12,AnsgarThereseConvo, Ansgar, Therese)
 //CharacterEventBothWays(0x13,AffoKingConvo, Affo, King)
-//CharacterEventBothWays(0x14,NoraKingConvo, Nora, King)
+CharacterEventBothWays(0x14,NoraKingConvo, Nora, King)
 //CharacterEventBothWays(0x15,StroganSeqConvo, Stroganoff, Sequin)
 //CharacterEventBothWays(0x16,BrudetMochaConvo, Brudet, Mocha)
 //CharacterEventBothWays(0x17,BreveFlorisConvo, Breve, Floris)
@@ -695,6 +696,14 @@ AffoGorloisConvo:
 	NoFade
 	ENDA
 	
+IrisOgrimConvo:
+	MUSI
+	Text(IrisOgrimTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
 YoryLiliConvo:
 	MUSI
 	Text(YoryIrisTalk)
@@ -794,17 +803,10 @@ AffoKingConvo:
 	
 NoraKingConvo:
 	MUSI
-	CHECK_EVENTID 0x79
-	BEQ 1 0x0 0xC
 	Text(NoraKingTalk)
-	GiveItem(Rescue, Nora)
-	GOTO 2
-	LABEL 1
-	Text(NoraKingTalkAlt)
-	LABEL 2
 	MUNO
 	MURE 2
-	UnsetFlag(0x79)
+	GiveItem(Rescue, Nora)
 	NoFade
 	ENDA
 	

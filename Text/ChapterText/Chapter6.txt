@@ -20,6 +20,46 @@ Throne Room[X]
 ## FewHoursLaterText
 A few hours later...[X]
 
+## IrisOgrimTalk
+[3L]
+[OpenMidLeft][LoadIris][OpenMidRight][LoadOgrim]
+
+[OpenMidRight]
+Divine One.[.6] If I may[,] regarding the battle[Beat][AN]
+
+[OpenMidLeft]
+Speak[,] Father Ogrim.[.6] As of now[,] we have a[N]
+brief respite.[.6] His Majesty is in no harm.[AN]
+
+[OpenMidRight]
+I'll be brief.[.6] I never thought I'd be fighting[N]
+imperial soldiers again.[.6] My last real battle[N]
+was at the bridge[Beat][AN]
+
+[OpenMidLeft]
+After the old war[,] we were slaughtered one[N]
+by one[,] in the name of Aeteria's Silver Serpent.[.6][N]
+The holy guard now must rely on eachother.[AN]
+
+[OpenMidRight]
+You're powerful[,] Divine One.[.6] These days[,] I think[N]
+of tomorrow and I quiver[Beat] beneath this steel.[6N]
+I fear I am weak in the face of adversity.[AN]
+
+[OpenMidLeft]
+Find yourself[,] Ogrim.[.6] All of your training--[.4][N]
+recitals[,] prayers[,] tutelage--[.4]you now fight[N]
+for His Majesty in a paramount battle.[AN]
+His Majesty relies on us.[.6] If you can muster the[N]
+strength[,] the Hearthbringer shall set your[N]
+soul free.[AN]
+
+[OpenMidRight]
+Right.[.6] There is no other way forward.[.6] We[N]
+shall smite them all for His Majesty.[AN]
+
+[X]
+
 ## Ch6Opening0
 [BoopPitch][0xD]
 [OpenMidLeft]
@@ -575,29 +615,37 @@ alive,[.4] I guarantee it.[A][X]
 
 ## NoraKingTalk
 [OpenMidLeft][LoadKing][OpenMidRight][LoadNora]
-[OpenMidLeft]Be careful,[.4] lass.[.6] We don't[N]
-know where they lurk.[AN]
-[OpenMidRight]Sorry[Beat] [CloseEyes]These halls[Beat][N]
-[OpenEyes][MoveMidRight]I can't focus.[AN]
-Y-[.4]Your Majesty,[.4] I know this[N]
-isn't a good time[Beat][AN]
-[CloseEyes]Is he-[.4] [OpenEyes]Is my[N]
-father okay[Beat]?[AN]
-[OpenMidLeft]The lieutenant is a strong[N]
-man.[.6] He will be alright.[AN]
-Nora,[.4] listen.[.6] I cannot[N]
-promise anything.[AN]
-I cannot guarantee[N]
-anything.[AN]
-But Lieutenant Wustenhoff did[N]
-tell me this:[AN]
-If anyone were to save him[,][N]
-it would be his daughter.[AN]
-He gave me this-[.4] told me to[N]
-give it when the time is right.[AN]
-Keep this dear to you,[.4] Nora.[N]
-[MoveMidLeft]Make your father proud.[AN]
-[OpenMidRight][Beat][A][X]
+[OpenMidRight]
+
+[OpenMidRight]
+Your Majesty.[.6] Is there time left to speak?[AN]
+
+[OpenMidLeft]
+Ah[,] you must be Wustenhoff's kin.[.6] I do not[N]
+believe that we ever exchanged formalities.[AN]
+
+[OpenMidRight]
+My name is Nora.[.6] I recently joined the holy guard.[6N]
+I feel my heart waver heavily[,] yet[Beat] I know that[N]
+it is my duty as a Sister.[AN]
+
+[OpenMidLeft]
+So you intend in your father's footsteps.[.6] How[N]
+honorable a Wreyvian to do so.[AN]
+
+[OpenMidRight]
+[Beat][AN]
+
+[OpenMidLeft]
+Regarding the lieutenant.[.6] I was tasked with bestowing[N]
+this artifact to you whence the time came.[AN]
+Today must be the right time.[AN][Clear]
+I believe it will serve you well.[AN]
+
+[OpenMidRight]
+Thank you[,] Your Majesty.[AN]
+
+[X]
 
 ## NoraKingTalkAlt
 [OpenMidLeft][LoadKing][OpenMidRight][LoadNora]
@@ -1124,59 +1172,86 @@ now[Beat][A][X]
 
 ## AffoGorloisTalk
 [OpenMidLeft][LoadGorloisBird]
-[OpenMidLeft]
-[BoopPitch][0xF]
-[_C][_a][_n] t[_h][_e] [_o]t[_h][_e][_r][_s] [_u][_n][_d][_e][_r][_s]t[_a][_n][_d][N]
-[_m][_y] [_s][_p][_e][_e][_c][_h]?[A][2NL]
+[OpenMidLeft][3L]
+
 [OpenMidLeft][LoadGorlois]
-[BoopPitch][0xD]
-I don't believe so,[.4] no.[A][2NL]
+[BoopPitch][0xF]
+[_G][_o][_r][_l][_o][_i][_s]![.6][_SP][_G][_o][_r][_l][_o][_i][_s]![.6][_SP][_T][_h][_a][_t][_SP][_m][_a][_n][_SP][_o][_v][_e][_r][_SP][_t][_h][_e][_r][_e][Beat][N]
+[_H][_e]'[_s][_SP][_d][_a][_n][_g][_e][_r][_o][_u][_s].[.6][_SP][_H][_e]'[_s][_SP][_a][_SP][_w][_e][_a][_p][_o][_n].[AN]
+
 [OpenMidLeft][LoadGorloisBird]
-[BoopPitch][0xF]
-[_S][_o] t[_h][_e] [_o]t[_h][_e][_r][_s] [ToggleSmile][_h][_e][_a][_r][_Dot][_Dot][_Dot] [_y][_o][_u] [_r][_e][_s][_p][_o][_n][_d]i[_n][_g][N]
-t[_o] [_a] [_b][_u][_n][_c][_h] [_o][_f] '[_c][_a][_w] [_c][_a][_w]'[_s]?[A][2NL][ToggleSmile]
-[OpenMidLeft][LoadGorlois]
 [BoopPitch][0xD]
-[ToggleSmile]Indeed.[.6] Right without exception as[N]
-always,[.4] my little bird friend.[A][2NL]
-[OpenMidRight][LoadAffoSwitch]
-[ToggleMouthMove](I shouldn't disturb him.)[A][ToggleMouthMove][X]
+How do you mean[,] Aohr?[AN]
+
+[OpenMidLeft][LoadGorlois]
+[BoopPitch][0xF]
+[_I][_SP][_s][_e][_n][_s][_e][_SP][_n][_o][_t][_h][_i][_n][_g][_SP][_b][_u][_t][_SP][_t][_r][_o][_u][_b][_l][_e][_SP][_c][_o][_m][_i][_n][_g][_SP][_f][_r][_o][_m][N]
+[_t][_h][_a][_t][_SP][_a][_r][_c][_h][_e][_r].[.6][_SP][_H][_e]'[_s][_SP][_t][_h][_e][_SP][_e][_n][_e][_m][_y].[.6][_SP][_H][_e]'[_s][_SP][_n][_o][N]
+[_d][_i][_f][_f][_e][_r][_e][_n][_t][_SP][_t][_h][_a][_n][_SP][_t][_h][_o][_s][_e][_SP][_d][_e][_f][_e][_n][_d][_i][_n][_g][_SP][_t][_h][_e][_SP][_D][_u][_k][_e].[AN]
+
+[OpenMidLeft]
+[BoopPitch][0xD]
+Calm down[,] my friend[Beat] I will interrogate[N]
+further when the King is safe.[AN]
+
+[OpenMidRight][LoadAffogato]
+[OpenMidRight]
+[Mouth](What was that about...?)[Mouth]
+[X]
 
 ## StroganGorloisTalk
-[OpenMidRight][LoadStroganoff]
-[OpenMidLeft][LoadGorlois]
+[OpenMidLeft][LoadGorlois][OpenMidRight][LoadStroganoff][3L]
 [BoopPitch][0xD]
-[OpenMidRight]Gorlois![.4] G'day,[.4] mate.[.6][N]
+
+[OpenMidRight]
+My best pal Gorlois of the clergy bros![.4][N]
+G'day,[.4] mate.[.6][N]
 [Pause]What're ya looking at?[AN]
+
 [OpenMidLeft][LoadGorloisBird]
 [BoopPitch][0xF]
-[_G][_a][_h],[.4] [_a][_n][_o]t[_h][_e][_r] [_o][_n][_e] [_o][_f][N]
-t[_h][_e] [_k][_n]i[_g][_h]t[_s]?[AN]
 [_T][_e]ll t[_h][_a]t [_m][_a][_n] t[_o] [ToggleSmile][_d][_e][_p][_a][_r]t,[.4] [_s][_c][_r][_a][_m],[.4][N]
 [_v][_a][_m][_o][_o][_s][_e]!![AN][Clear][ToggleSmile]
+
 [OpenMidLeft][LoadGorlois][BoopPitch][0xD]
-[Pause]Hey, Captain Strogy![.6] I'm so,[.4] so glad we[N]
-have your aide in this battle.[AN]
+[Pause]Captain![.6] I'm so,[.4] so glad we have your[N]
+aide in this battle.[.6] Incredibly happy.[6N]
+I am jumping for joy.[AN]
 
 [OpenMidRight]
-Yours as well,[.4] Gorlois![.6] Just try[N]
-not to blind anyone again,[.4] eh?[AN]
+Yours as well,[.4] Gorlois![.6] Just try not to blind[N]
+anyone again with light,[.4] eh?[.6] Hey[,] your crow's[N]
+givin' me the stink-eye.[AN][Clear]
+What's his bloody problem?[AN]
 
-[OpenMidLeft]
-Your tenacity is[Beat] admirable.[.6][N]
-As always[Beat]?[AN]
+[OpenMidLeft][LoadGorloisBird][BoopPitch][0x000F]
+[_I][_SP][_h][_a][_t][_e][_SP][_h][_i][_m].[_SP][_T][_h][_a][_t][_SP][_t][_o][_w][_n][_SP][_b][_o][_o][_z][_e][_r][_SP][_i][_s][_SP][_s][_t][_u][_p][_i][_d],[_SP][_i][_n][_s][_u][_f][_f][_e][_r][_a][_b][_l][_e],[N]
+[_a][_n][_d][_SP][_h][_e][_SP][_t][_r][_i][_e][_d][_SP][_s][_w][_a][_t][_t][_i][_n][_g][_SP][_m][_e][_SP][_a][_w][_a][_y]![AN]
+
+[OpenMidLeft][LoadGorlois][BoopPitch][0xD]
+First[,] Aohr is a raven.[.6] Second[,] I feel as though[N]
+I must do something[,] Tauno.[AN]
 
 [OpenMidRight]
-Your crow's givin' me the stink-eye.[.6][N]
-What's his problem?[AN]
+Like what?[.6] We can hit the town later and--[AN]
 
-[OpenMidLeft]
-[Pause]Look.[.6] I think it would be wise[N]
-to[Beat] move over there.[AN]
-Better choke point,[.4] and[Beat] better[.6][N]
-[Pause]defense[.6][.4] spot.[AN]
-Er,[.4] anyways.[.6] Take this.[.6] It'll[N]
-be useful,[.4] hopefully.[A][X]
+[OpenMidLeft][LoadGorloisBird][BoopPitch][0xF]
+All on his mind are the crassest[,] most obscene[N]
+sacrilege.[.6] I truly pity those who must[N]
+work under his command.[AN]
+
+[OpenMidLeft][LoadGorlois][BoopPitch][0xD]
+Captain[,] take this.[.6] There are many shadow soldiers[N]
+over the halls of the castle![.6] Block them[,] now![6N]
+This is an immediate order.[AN][CloseSpeechSlow][MoveLeft]
+
+[OpenMidRight]
+Huh?[.6] W-[.4]Wait[Beat][AN]
+
+[OpenLeft]
+Where I'm pointing.[.6] Go there.[.6] Now.[AN]
+
+[X]
 
 ## StroganBrudetTalk
 [OpenMidLeft][LoadBrudet][OpenMidRight][LoadStrogan]

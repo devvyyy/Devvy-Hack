@@ -30,7 +30,7 @@ CharacterEventBothWays(0xC,AffoUlrichConvoCh5, Affogato, Ulrich) //add this late
 //CharacterEvent(0x0,YoryTurretCheck,Yory,0x3F)
 CharacterEventBothWays(0xD, BrudetSequinConvo, Brudet, Sequin)
 //CharacterEventBothWays(0xD, SeqUlrichConvo, Sequin, Ulrich)
-//CharacterEventBothWays(0xE, EisDoppioConvo, Doppio, Eiskaffee)
+CharacterEventBothWays(0xAC, EisDoppioConvo, Doppio, Eiskaffee)
 //CharacterEventBothWays(0x20, RecruitRecruitThief, 0x0, Noel)
 	END_MAIN
 
@@ -380,7 +380,7 @@ ENDA
 
 EisDoppioConvo:
 MUSI
-//Text(EisDoppioTalk)
+Text(EisDoppioTalk)
 MUNO
 NoFade
 ENDA
