@@ -138,7 +138,7 @@ UNIT Aeteria General 0x1 Level(2, Enemy, 1)     [14,13] DropItem 0x0 0x0 0x0 [Sh
 UNIT 0x43 0x4 0x1 Level(5, Enemy, 1)     [12,20] 0b 0x0 0x0 0x0 [Flamberge] TwoActionAI
 UNIT 0x40 SPal 0x1 Level(5, Enemy, 1)     [11,21] 0b 0x0 0x0 0x0 [BraveSword] StallOneTurnAI
 UNIT 0x41 Hero 0x1 Level(5, Enemy, 1)     [13,21] 0b 0x0 0x0 0x0 [LightBrand] ChargeAI
-UNIT 0x42 Bishop 0x1 Level(5, Enemy, 1)     [12,22] 0b 0x0 0x0 0x0 [Ray] StallOneTurnAI
+UNIT 0x42 Bishop 0x1 Level(5, Enemy, 1)     [12,22] 0b 0x0 0x0 0x0 [Slow] StallOneTurnAI
 
 
 	UNIT
@@ -676,7 +676,7 @@ Text(Ch6Opening2)
 //DoubleConditionalDialog(Brudet,Stroganoff,Ch6Opening3,Ch6OpeningAlt3,5,6)
 
 //TripleIfAliveDialog(Ansgar,Hildr,Breve,Ch6Opening4,7)
-CLEAN
+ClearBackground
 STAL 10
 
 CameraCursor(Affogato)

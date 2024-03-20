@@ -199,7 +199,8 @@ Awaiting orders.[AN]
 
 [L]
 We don't have an actual plan[Beat][N]
-[Pause]Just survive.[AN]
+[Pause]Just survive.[.6] We have to do everything[N]
+in our power to make sure we live.[AN]
 
 [FL]
 [Beat][AN]
@@ -1171,23 +1172,26 @@ but I must retreat for[N]
 now[Beat][A][X]
 
 ## AffoGorloisTalk
-[OpenMidLeft][LoadGorloisBird]
+[OpenMidLeft][LoadGorlois]
 [OpenMidLeft][3L]
 
-[OpenMidLeft][LoadGorlois]
-[BoopPitch][0xF]
-[_G][_o][_r][_l][_o][_i][_s]![.6][_SP][_G][_o][_r][_l][_o][_i][_s]![.6][_SP][_T][_h][_a][_t][_SP][_m][_a][_n][_SP][_o][_v][_e][_r][_SP][_t][_h][_e][_r][_e][Beat][N]
-[_H][_e]'[_s][_SP][_d][_a][_n][_g][_e][_r][_o][_u][_s].[.6][_SP][_H][_e]'[_s][_SP][_a][_SP][_w][_e][_a][_p][_o][_n].[AN]
-
 [OpenMidLeft][LoadGorloisBird]
+[BoopPitch][0xF]
+[_G][_o][_r][_l][_o][_i][_s]![_SP][_G][_o][_r][_l][_o][_i][_s]![_SP][_T][_h][_a][_t][_SP][_m][_a][_n][_SP][_o][_v][_e][_r][_SP][_t][_h][_e][_r][_e]...[N]
+[_H][_e]'[_s][_SP][_d][_a][_n][_g][_e][_r][_o][_u][_s].[_SP][_H][_e]'[_s][_SP][_a][_SP][_w][_e][_a][_p][_o][_n]...[AN]
+[CloseSpeechSlow]
+
+[OpenMidLeft][LoadGorlois]
 [BoopPitch][0xD]
 How do you mean[,] Aohr?[AN]
+[CloseSpeechSlow]
 
-[OpenMidLeft][LoadGorlois]
+[OpenMidLeft][LoadGorloisBird]
 [BoopPitch][0xF]
 [_I][_SP][_s][_e][_n][_s][_e][_SP][_n][_o][_t][_h][_i][_n][_g][_SP][_b][_u][_t][_SP][_t][_r][_o][_u][_b][_l][_e][_SP][_c][_o][_m][_i][_n][_g][_SP][_f][_r][_o][_m][N]
-[_t][_h][_a][_t][_SP][_a][_r][_c][_h][_e][_r].[.6][_SP][_H][_e]'[_s][_SP][_t][_h][_e][_SP][_e][_n][_e][_m][_y].[.6][_SP][_H][_e]'[_s][_SP][_n][_o][N]
+[_t][_h][_a][_t][_SP][_a][_r][_c][_h][_e][_r].[_SP][_H][_e]'[_s][_SP][_t][_h][_e][_SP][_e][_n][_e][_m][_y].[_SP][_H][_e]'[_s][_SP][_n][_o][N]
 [_d][_i][_f][_f][_e][_r][_e][_n][_t][_SP][_t][_h][_a][_n][_SP][_t][_h][_o][_s][_e][_SP][_d][_e][_f][_e][_n][_d][_i][_n][_g][_SP][_t][_h][_e][_SP][_D][_u][_k][_e].[AN]
+[CloseSpeechSlow]
 
 [OpenMidLeft]
 [BoopPitch][0xD]
@@ -1196,7 +1200,7 @@ further when the King is safe.[AN]
 
 [OpenMidRight][LoadAffogato]
 [OpenMidRight]
-[Mouth](What was that about...?)[Mouth]
+[Mouth](What was that about...?)[AN][Mouth]
 [X]
 
 ## StroganGorloisTalk
@@ -1210,8 +1214,9 @@ G'day,[.4] mate.[.6][N]
 
 [OpenMidLeft][LoadGorloisBird]
 [BoopPitch][0xF]
-[_T][_e]ll t[_h][_a]t [_m][_a][_n] t[_o] [ToggleSmile][_d][_e][_p][_a][_r]t,[.4] [_s][_c][_r][_a][_m],[.4][N]
+[_T][_e]ll t[_h][_a]t [_m][_a][_n] t[_o] [ToggleSmile][_d][_e][_p][_a][_r]t, [_s][_c][_r][_a][_m],[N]
 [_v][_a][_m][_o][_o][_s][_e]!![AN][Clear][ToggleSmile]
+[CloseSpeechSlow]
 
 [OpenMidLeft][LoadGorlois][BoopPitch][0xD]
 [Pause]Captain![.6] I'm so,[.4] so glad we have your[N]
@@ -1227,6 +1232,7 @@ What's his bloody problem?[AN]
 [OpenMidLeft][LoadGorloisBird][BoopPitch][0x000F]
 [_I][_SP][_h][_a][_t][_e][_SP][_h][_i][_m].[_SP][_T][_h][_a][_t][_SP][_t][_o][_w][_n][_SP][_b][_o][_o][_z][_e][_r][_SP][_i][_s][_SP][_s][_t][_u][_p][_i][_d],[_SP][_i][_n][_s][_u][_f][_f][_e][_r][_a][_b][_l][_e],[N]
 [_a][_n][_d][_SP][_h][_e][_SP][_t][_r][_i][_e][_d][_SP][_s][_w][_a][_t][_t][_i][_n][_g][_SP][_m][_e][_SP][_a][_w][_a][_y]![AN]
+[CloseSpeechSlow]
 
 [OpenMidLeft][LoadGorlois][BoopPitch][0xD]
 First[,] Aohr is a raven.[.6] Second[,] I feel as though[N]
@@ -1236,9 +1242,10 @@ I must do something[,] Tauno.[AN]
 Like what?[.6] We can hit the town later and--[AN]
 
 [OpenMidLeft][LoadGorloisBird][BoopPitch][0xF]
-All on his mind are the crassest[,] most obscene[N]
-sacrilege.[.6] I truly pity those who must[N]
-work under his command.[AN]
+[_A][_l][_l][_SP][_o][_n][_SP][_h][_i][_s][_SP][_m][_i][_n][_d][_SP][_a][_r][_e][_SP][_t][_h][_e][_SP][_c][_r][_a][_s][_s][_e][_s][_t],[_SP][_m][_o][_s][_t][_SP][_o][_b][_s][_c][_e][_n][_e][N]
+[_s][_a][_c][_r][_i][_l][_e][_g][_e].[_SP][_I][_SP][_t][_r][_u][_l][_y][_SP][_p][_i][_t][_y][_SP][_t][_h][_o][_s][_e][_SP][_w][_h][_o][_SP][_m][_u][_s][_t][N]
+[_w][_o][_r][_k][_SP][_u][_n][_d][_e][_r][_SP][_h][_i][_s][_SP][_c][_o][_m][_m][_a][_n][_d].[AN]
+[CloseSpeechSlow]
 
 [OpenMidLeft][LoadGorlois][BoopPitch][0xD]
 Captain[,] take this.[.6] There are many shadow soldiers[N]

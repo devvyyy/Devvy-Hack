@@ -722,11 +722,11 @@ Motivating Presence[N]
 if that ally is above 50% HP.[X]
 
 ## SD_KelikSkill
-Etherium[N]
+Will Power[N]
 - If this Lost Soul initiates or if foe[N]
-uses magic, grants Atk +10.[N]
-- If magic foe initiates, dodge[N]
-all attacks.[X]
+uses magic, grants Atk +10, Crit +30.[N]
+- If foe initiates and HP is 25% or less,[N]
+ends other faction's phase after combat.[X]
 
 ## SD_ShonSkill
 Gallant[N]
@@ -737,7 +737,7 @@ deals 10 bonus physical damage.[X]
 ## SD_SiegSkill
 Tearing Skies[N]
 - If this Lost Soul initiates, follow-up[N]
-and foe cannot.
+and foe cannot and dodge all attacks.
 - Deals bonus damage/reduces damage[N]
 taken = (Spd - foe's Spd; min 0).[X]
 
