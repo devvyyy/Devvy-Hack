@@ -60,11 +60,16 @@ worn out[Beat][A][ClearFace]
 Retreat and fight another day![A][X]
 
 ## BruleeDeath
-[OpenMidRight][LoadBrulee]
+[OpenMidRight][LoadFloris]
 Ol' Hearthbringer[,] great Tusks[Beat][N]
 Are we unworthy of your flame[Beat]?[AN]
 The bells[Beat] Oh, it's[Beat][N]
 [CloseEyes]It's[Beat] calling[Beat][A][CloseEyes][X]
+
+## FlorisRetreat2
+[OpenMidRight][LoadFloris]
+You dastards will all[N]
+regret this[Beat][A][X]
 
 ## KaneDeath
 [OpenMidRight][LoadKane]
@@ -107,6 +112,11 @@ Glory[Beat] to Wreyvine![A][CloseEyes][X]
 I was careless[Beat] My apologies[,][N]
 but I must retreat.[A][X]
 
+## BreveRetreat2
+[OpenMidLeft][LoadBreve]
+You're just gonna let[N]
+me go?[.6] Tsch.[A][X]
+
 ## HildrDeath
 [OpenMidRight][LoadHildr]
 A-[.4]And the curtain[Beat] falls[Beat][A][CloseEyes][X]
@@ -115,6 +125,11 @@ A-[.4]And the curtain[Beat] falls[Beat][A][CloseEyes][X]
 [OpenMidRight][LoadHildr]
 Ouch![.6] Sorry[,] I gotta fall[N]
 back[,] or it's over![A][X]
+
+## HildrRetreat2
+[OpenMidLeft][LoadHildr]
+Oof![.6] I'm gonna run before[N]
+this gets messy![A][X]
 
 ## AnsgarDeath
 [OpenMidRight][LoadAnsgar]
@@ -125,6 +140,13 @@ it h-[.4]home[Beat][A][CloseEyes][X]
 [OpenMidRight][LoadAnsgar]
 Oof[Beat] Easy does it[,] eh?[.6][N]
 I'm goin' for a lil' rest[Beat][A][X]
+
+## AnsgarRetreat2
+[OpenMidLeft][LoadAnsgar]
+Ye don't seemta be 'ith[N]
+the imperial army.[AN]
+'Spose we were wrong[N]
+for opposin' ya.[AN][X]
 
 ## FlanDeath
 [OpenMidRight][LoadDira]
@@ -143,6 +165,10 @@ But[Beat] [0x80][0x38][0x8]Why here[Beat]?[A][CloseEyes][0x80][0x38][0xFF][X]
 [OpenMidRight][LoadAffoSwitch]
 I must retreat.[AN][X]
 
+## AffoRetreat2
+[OpenMidLeft][LoadAffoSwitch]
+[Beat][AN][X]
+
 ## AffoEpicDeath
 [OpenMidRight][LoadAffoSwitch]
 No[Beat] Is this really[Beat][N]
@@ -156,6 +182,11 @@ this[Beat][A][CloseEyes][X]
 necessary?[AN]
 I'm going to take a step back[N]
 and support from afar.[AN][X]
+
+## UlrichRetreat2
+[OpenMidLeft][LoadUlrich]
+What could you possibly[N]
+want from us[Beat]?[A][X]
 
 ## UlrichDeath2
 [OpenMidRight][LoadUlrich]
@@ -180,7 +211,7 @@ Was I delusional[Beat] to[N]
 think we could win?[A][CloseEyes][ClearFace]
 
 [OpenMidRight][LoadLtUlrich]
-Young Otto[Beat][N]
+Young Otto[Beat][N][CloseEyes]
 I'm sorry[Beat][AN]
 
 [X]
@@ -226,6 +257,10 @@ save anyone[Beat][A][X]
 [OpenMidRight][LoadLatte]
 This is how it ends[Beat][A][CloseEyes][X]
 
+## LatteRetreat2
+[OpenMidRight][LoadLatte]
+You[Beat][A][X]
+
 ## IreneDeath
 [OpenMidRight][LoadIrene]
 Too slow[Beat][.6][N]
@@ -254,11 +289,24 @@ I've failed you[Beat][A][CloseEyes][X]
 Call me a coward[,] but I'm gonna[N]
 have to scram![AN][X]
 
+## StroganRetreat2
+# shoutouts to character relevancy armor
+[OpenMidLeft][LoadStrogan]
+Hey[,] hey![.6] Unhand me![6N]
+Don't just leave me here!![A][X]
+
 ## BrudetRetreat
 # shoutouts to blahblsafaf
 [OpenMidRight][LoadAtheya]
 What a setback for Wreyvine[Beat][.6][N]
 My apologies.[.6] I must withdraw.[AN]
+[X]
+
+## BrudetRetreat2
+# shoutouts to blahblsafaf
+[OpenMidLeft][LoadAtheya]
+You leave me alive[Beat][N]
+An enemy of the empire?[AN]
 [X]
 
 ## EisDeath
@@ -269,6 +317,11 @@ My apologies.[.6] I must withdraw.[AN]
 How annoying.[.6] I'm[N]
 gonna retreat.[AN][X]
 
+## EisRetreat2
+[OpenMidLeft][LoadEis]
+Letting me go?[.6][N]
+Alright[,] peace.[X]
+
 ## DoppioDeath
 [OpenMidRight][LoadDoppio]Si[Beat]ster[Beat][.6] All of[N]
 our dreams[Beat][A][CloseEyes][X]
@@ -276,7 +329,12 @@ our dreams[Beat][A][CloseEyes][X]
 ## DoppioRetreat
 [OpenMidRight][LoadDoppio]
 Oof[,] I actually lost?[6N]
-I'm gonna retreat[Beat][AN][X]
+I'm gonna retreat[Beat][A][X]
+
+## DoppioRetreat2
+[OpenMidLeft][LoadDoppio]
+How merciful[Beat] Are you[N]
+planning something?[A][X]
 
 ## BardDeath
 [OpenMidRight][LoadBard]One,[....] two,[....] three,[....] four[Beat][N]
@@ -303,8 +361,22 @@ big break[Beat][A][Clear]
 Sorry[,] but I have[N]
 to scram![AN][X]
 
+## YoryRetreat2
+[OpenMidLeft][LoadYory]
+Yowch![.6] Alright[,] if you're[N]
+really lettin' me go[Beat][A][X]
+
 ## NoelDeath
 [OpenMidRight][LoadNoel]W-[.4]Watch your back[Beat][A][CloseEyes][X]
+
+## NoelRetreat
+[OpenMidRight][LoadNoel]
+I must leave[Beat][A][X]
+
+## NoelRetreat2
+[OpenMidLeft][LoadNoel]
+I[Beat] Don't think this[N]
+means I forgive you.[X]
 
 ## LennardDeath
 [OpenMidRight][LoadLennard]I can[Beat] keep going[Beat]![A][CloseEyes][X]
@@ -315,6 +387,11 @@ a hit on me?![A][Clear]
 Alrighty[,] I'm gonna leave[N]
 before this gets bad.[AN][X]
 
+## LennardRetreat2
+[OpenMidLeft][LoadLennard]
+So I'm not dying here.[6N]
+Thanks[,] I guess[Beat][A][X]
+
 ## ThereseDeath
 [OpenMidRight][LoadTherese]It's dark[Beat] Where is[N]
 everyone[Beat]?[A][CloseEyes][X]
@@ -324,6 +401,11 @@ everyone[Beat]?[A][CloseEyes][X]
 Unbelievable.[.6] I must take[N]
 my leave and withdraw.[AN][X]
 
+## ThereseRetreat2
+[OpenMidLeft][LoadTherese]
+You grant me mercy?[.6] Hah[,][N]
+what a twist of fate.[A][X]
+
 ## GerolfDeath
 [OpenMidRight][LoadGerolf]And so[Beat] I never could[N]
 fulfill that promise[Beat][A][CloseEyes][X]
@@ -332,6 +414,10 @@ fulfill that promise[Beat][A][CloseEyes][X]
 [OpenMidRight][LoadGerolf]
 You don't take me yet[Beat][N]
 I will retreat.[A][X]
+
+## GerolfRetreat2
+[OpenMidLeft][LoadGerolf]
+How unexpected.[A][X]
 
 ## WulfricDeath
 [OpenMidRight][LoadWulfric]Without our pain[,] we wouldn't[N]
@@ -348,6 +434,13 @@ to the very end[Beat][A][CloseEyes][X]
 [OpenMidRight][LoadWegman]Oof[Beat] You didn't haveta[N]
 be like that[Beat][AN][X]
 
+## WegmanRetreat2
+[OpenMidLeft][LoadWegman]
+To be shown mercy by[N]
+the enemy[Beat][AN]
+Perhaps your liberation[N]
+army is just.[A][X]
+
 ## KlavdiaDeath
 [OpenMidRight][LoadKlavdia]
 If this is the will of the[N]
@@ -356,6 +449,11 @@ Iron Tusks[Beat][.4] Then[Beat][A][CloseEyes][X]
 ## KlavdiaRetreat
 [OpenMidRight][LoadKlavdia]
 I must retreat.[AN][X]
+
+## KlavdiaRetreat2
+[OpenMidLeft][LoadKlavdia]
+[Pause]Why do you stay[N]
+your blade?[A][X]
 
 ## FryeDeath
 [OpenMidRight][LoadFrye]

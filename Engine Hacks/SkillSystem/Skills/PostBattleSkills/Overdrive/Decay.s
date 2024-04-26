@@ -43,11 +43,25 @@ b End
 
 Noverdrive:
 
+@check for bit
+@ldr    r0, [r4,#0x0C]    @status bitfield
+@mov    r1, #0x1
+@lsl    r1, #0x1F
+@and    r0, r1
+@beq	DoItAnyways @if bit is set, already got free refresh this turn
+
+@hp not at full
+ldrb r0, [r4, #0x12] @max hp
+ldrb r1, [r4, #0x13] @curr hp
+cmp r0, r1
+bne DoItAnyways @decay if hp isnt full
+
 @check if enemy is dead
 ldrb	r0, [r5,#0x13]
 cmp	r0, #0x00
 beq	End @dont decay if enemy is dead
 
+DoItAnyways:
 @ play event
 mov	r3, #0x00
 ldrb	r0, [r4,#0x11]		@load y coordinate of character

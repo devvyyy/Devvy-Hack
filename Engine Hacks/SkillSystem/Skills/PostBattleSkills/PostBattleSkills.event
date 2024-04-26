@@ -245,7 +245,14 @@ LionheartDamage:
 POIN SkillTester
 WORD LionheartID
 POIN FuryEvent
-#include "Fury/FuryEvent.event"
+
+ALIGN 4
+OverdriveDamage:
+#incbin "OverdriveDamage/fury.dmp"
+POIN SkillTester
+WORD OverdriveID
+POIN OverdriveDamageEvent
+#include "OverdriveDamage/FuryEvent.event"
 
 ALIGN 4
 RedirectDamage:

@@ -33,10 +33,10 @@ cmp    r0,#0x00
 bne    CheckNearEnemies
 
 @If unit isnt an enemy, end
-ldrb   r0, [r4, #0xB] @r0 = Unit Index
-mov    r1, #0x80      @r1 = enemy allegiance value
-tst    r0, r1
-beq    End
+@ldrb   r0, [r4, #0xB] @r0 = Unit Index
+@mov    r1, #0x80      @r1 = enemy allegiance value
+@tst    r0, r1
+@beq    End
 
 @Check if we stopped next to an enemy Stealth user
 ldr    r0, AuraSkillCheck

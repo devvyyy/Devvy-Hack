@@ -1,0 +1,14 @@
+#define csvmacro000(arg000,arg001,arg002,arg003,arg004,arg005) "SHORT arg000; BYTE arg001 arg002 arg003 arg004; SHORT arg005; "
+
+ChangeStatusBGEachChapter_Table:
+// text id, unit id, class id, map id, mode id, flag id
+csvmacro000(AffoDescEnemy,Affogato,0x00,0x12,0xFF,0x00)  // default1
+csvmacro000(BreveDescEnemy,Breve,0x00,0x12,0xFF,0x00)  // default1
+csvmacro000(HildrDescEnemy,Hildr,0x00,0x12,0xFF,0x00)  // default1
+csvmacro000(AnsgarDescEnemy,Ansgar,0x00,0x12,0xFF,0x00)  // default1
+csvmacro000(UlrichDescEnemy,Ulrich,0x00,0x12,0xFF,0x00)  // default1
+csvmacro000(AffoDescEnemy,Affogato,0x00,0x12,0xFF,0x00)  // default1
+csvmacro000(AffoDescEnemy,Affogato,0x00,0x12,0xFF,0x00)  // default1
+csvmacro000(AffoDescEnemy,Affogato,0x00,0x12,0xFF,0x00)  // default1
+
+csvmacro000(0x00,0x00,0x00,0x00,0x00,0x00)  // term

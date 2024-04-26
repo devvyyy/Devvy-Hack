@@ -58,13 +58,27 @@ mov r0,#0x5
 cmp r0,#1
 bne End
 
+@if foe is dead, also set a bit to prevent refreshing
+@ldrb	r0, [r5,#0x13]
+@cmp	r0, #0x00
+@bne	Refresh
+
+@ldr    r0, [r4,#0x0C]    @status bitfield
+@mov    r1, #0x42
+@mvn    r1, r1
+@and    r0, r1        @unset bits 0x42
+@mov    r1, #0x01
+@lsl    r1, #0x1F
+@orr    r0, r1
+@str    r0, [r4,#0x0C]
+
 Refresh:
 @unset 0x2 and 0x40, write to status
 ldr	r0, [r4,#0x0C]	@status bitfield
 mov	r1, #0x42
 mvn	r1, r1
 and	r0, r1		@unset bits 0x42
-str	r0, [r4,#0x0C]	
+str	r0, [r4,#0x0C]
 
 End:
 pop	{r0}

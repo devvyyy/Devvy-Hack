@@ -83,6 +83,10 @@ ALIGN 4
 }
 {
   ALIGN 4
+  #include "3-2.event"
+}
+{
+  ALIGN 4
   #include "3-4.event"
 }
 {
@@ -174,6 +178,93 @@ LABEL 0x9000
 EVBIT_MODIFY 0x0
 LABEL 0x9001
 EVBIT_T 0x7
+ENDA
+
+#define Part1DeathQuote(deathquote,character) "STAL 5; Text(deathquote);CUSA character; REMU character" //for death quotes
+
+AffoPart2DeathQ:
+Part1DeathQuote(AffoRetreat2,Affogato)
+NoFade
+ENDA
+
+BrevePart2DeathQ:
+Part1DeathQuote(BreveRetreat2,Breve)
+NoFade
+ENDA
+
+HildrPart2DeathQ:
+Part1DeathQuote(HildrRetreat2,Hildr)
+NoFade
+ENDA
+
+UlrichPart2DeathQ:
+Part1DeathQuote(UlrichRetreat2,Ulrich)
+NoFade
+ENDA
+
+AnsgarPart2DeathQ:
+Part1DeathQuote(AnsgarRetreat2,Ansgar)
+NoFade
+ENDA
+
+FlorisPart2DeathQ:
+Part1DeathQuote(FlorisRetreat2,Floris)
+NoFade
+ENDA
+
+StroganoffPart2DeathQ:
+Part1DeathQuote(StroganRetreat2,Stroganoff)
+NoFade
+ENDA
+
+DoppioPart2DeathQ:
+Part1DeathQuote(DoppioRetreat2,Doppio)
+NoFade
+ENDA
+
+EisPart2DeathQ:
+Part1DeathQuote(EisRetreat2,Eisner)
+NoFade
+ENDA
+
+TheresePart2DeathQ:
+Part1DeathQuote(ThereseRetreat2,Therese)
+NoFade
+ENDA
+
+LennardPart2DeathQ:
+Part1DeathQuote(LennardRetreat2,Lennard)
+NoFade
+ENDA
+
+BrudetPart2DeathQ:
+Part1DeathQuote(BrudetRetreat2,Brudet)
+NoFade
+ENDA
+
+NoelPart2DeathQ:
+Part1DeathQuote(NoelRetreat2,Noel)
+NoFade
+ENDA
+
+LevainPart2DeathQ:
+Part1DeathQuote(LatteRetreat2,Latte)
+NoFade
+ENDA
+
+GerolfPart2DeathQ:
+Part1DeathQuote(GerolfRetreat2,Gerolf)
+NoFade
+ENDA
+
+KlavdiaPart2DeathQ:
+Part1DeathQuote(KlavdiaRetreat2,Klavdia)
+NoFade
+ENDA
+
+YoryPart2DeathQ:
+Part1DeathQuote(YoryRetreat2,Yory)
+NoFade
 ENDA
 
 // People who stay in the party when they die

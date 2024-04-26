@@ -1,6 +1,12 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+//Prevent goal window values from causing chapters to end with no enemies present
+PUSH
+ORG 0x83ED6
+SHORT 0xE01F //Ignore chapter ID
+POP
+
 //Gas Trap status effect (default is 0x1: Poison)
 PUSH
 ORG 0x3649E

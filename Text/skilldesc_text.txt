@@ -16,6 +16,24 @@ Like Dominoes: If unit initiates, kills[N]
 foes below (5 + Skill) HP (always hits).[N]
 Grants unit another action on kill.[X]
 
+## SD_CageFight
+Cage Fight[N]
+- If both sides' aren't adjacent to an[N]
+ally/foe, grants both sides Atk = that unit's[N]
+missing HP, and if initiating, grants an[N]
+additional strike after first attack.[X]
+
+## SD_FastUnitLOL
+Blitzing Reflexes[N]
+- If initiating or if unit's Spd > foe's Spd,[N]
+strikes again after first attack that[N]
+deals X% damage and reduces damage taken[N]
+from foe's counter = Spd difference (min; 0).[X]
+
+## SD_FastUnitLOL2
+(If unit can follow-up or strike x2 consecutively,[N]
+or if Range > 1, X = 50%; otherwise, X = 100%.)[X]
+
 ## SD_HBR
 Heaven Burns Red[N]
 - If foe initiates combat, after combat,[N]
@@ -479,11 +497,12 @@ per Overdrive stack (max; 6).[N]
 Overdrive[X]
 
 ## FullMoonStatusDesc
-# needs narrowfonting???
+# needs narrowfonting??? Once per turn, ???
 Spd x2, Move +2. Initiating consumes[N]
 1 stack and grants Chiffon another[N]
-action after combat. If foe is[N]
-defeated, stack is restored.[X]
+action after combat. If foe is defeated[N]
+and HP is full, take 1 damage and[N]
+restores consumed stack.[X]
 
 ## SD_Paranoia
 Paranoia[N]
@@ -1198,7 +1217,7 @@ foe's Res.[X]
 
 ## SD_Blackfire
 Ravenous Vortex[N]
-- Polly inflicts Atk/AS -2 on[N]
+- Polly inflicts Atk/AS -5 on[N]
 adjacent foes.[N]
 - If tome is equipped, grants WTA and[N]
 triples WT effects for both sides.[X]

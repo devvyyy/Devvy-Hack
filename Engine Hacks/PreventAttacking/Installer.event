@@ -1,0 +1,45 @@
+#include "EAstdlib.event"
+#include "Extensions/Hack Installation.txt"
+
+PUSH 
+ORG $2517C 
+jumpToHack(PreventAttacking) 
+
+POP 
+
+
+// Uncomment this part if you want to prevent attacking, trading, rescuing, etc. 
+/*
+PUSH
+ORG $24EE4
+jumpToHack(PreventAttTradeRescueEtc)
+POP 
+*/
+
+// Prevent Attacking 
+// By Vesly 
+// Prevents the player from attacking units based on the target's unit ID or class ID. 
+// Will only take effect when a certain flag is on, or always if flag is 0xFF.  
+
+#include "PreventAttacking.lyn.event"
+#include "PreventAttTradeRescueEtc.lyn.event"
+
+ALIGN 4
+PreventAttackingTable:
+// UnitID, ClassID, FlagID
+// Unit or Class ID of 0x00 prevents ALL chars/classes from attacking 
+// Flag ID of 0xFF prevents ALL units 
+
+//BYTE 0x00 0x00 0xFF // Prevent player units from attacking in any circumstances 
+
+//BYTE 0x68 0x00 0xFF // Prevent players from attacking O'Neil. 
+//BYTE 0x00 0x07 0xFF // Prevent players from attacking Paladins. 
+BYTE Affogato 0x63 0x25 // Prevent players from attacking O'Neil while flag 0xB0 is on. 
+
+ALIGN 4; WORD 0 // Terminator 
+
+
+
+
+
+

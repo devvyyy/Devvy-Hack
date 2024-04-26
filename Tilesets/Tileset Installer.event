@@ -195,12 +195,17 @@ ALIGN 4
     #incbin "GammaCastle/SnowCastle.pal.bin"
 	
 	ALIGN 4
+    GammaCastlePaletteNight:
+    #incbin "GammaCastle/NightPal.dmp"
+	
+	ALIGN 4
     GammaCastleMapConfig:
     #incext compress "GammaCastle/SnowCastle.mapchip_config"
 
 	ALIGN 4
 	EventPointerTable(0x6c, GammaCastleImage)
     EventPointerTable(0x6d, GammaCastlePalette)
+    EventPointerTable(0x72, GammaCastlePaletteNight)
 	EventPointerTable(0x6e, GammaCastleMapConfig)
 	
 	ALIGN 4

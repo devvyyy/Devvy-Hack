@@ -314,8 +314,10 @@ setMugEntryExtend(0xB1, AffoHato_Mug, OneBulletHat, AffoHato_Palette, AffoHato_F
 
 ALIGN 4
 TwoBulletHat:
-#incbin "2bullethat_minimug.dmp"
-setMugEntryExtend(0xB2, AffoHato_Mug, TwoBulletHat, AffoHato_Palette, AffoHato_Frames, 3, 5, 3, 3, 0, 4, 0, 0)
+//#incbin "2bullethat_minimug.dmp"
+#incbin "1bulletenemy_minimug.dmp"
+//setMugEntryExtend(0xB2, AffoHato_Mug, TwoBulletHat, AffoHato_Palette, AffoHato_Frames, 3, 5, 3, 3, 0, 4, 0, 0)
+setMugEntryExtend(0xB2, AffogatoHood_Mug, TwoBulletHat, Affogato_Palette, AffogatoHood_Frames, 3, 5, 3, 3, 10, 2, 10, 4)
 
 ALIGN 4
 ThreeBulletHat:
@@ -339,7 +341,7 @@ setMugEntryExtend(0x22, Ulrich_Mug, 3, 5, 2, 3, 0, 0, 0, 2)
 
 ALIGN 16
 OmegaSquad_Mug:
-#incext PortraitFormatter "EnemyAffogato.png"
+#incext PortraitFormatter "AffoIndoors.png"
 setMugEntryExtend(0xCC, OmegaSquad_Mug, 3, 5, 3, 3, 10, 4, 10, 2)
 
 ALIGN 16
