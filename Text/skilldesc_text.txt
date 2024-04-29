@@ -23,14 +23,14 @@ ally/foe, grants both sides Atk = that unit's[N]
 missing HP, and if initiating, grants an[N]
 additional strike after first attack.[X]
 
-## SD_FastUnitLOL
+## SD_PotentFake
 Blitzing Reflexes[N]
 - If initiating or if unit's Spd > foe's Spd,[N]
 strikes again after first attack that[N]
 deals X% damage and reduces damage taken[N]
 from foe's counter = Spd difference (min; 0).[X]
 
-## SD_FastUnitLOL2
+## SD_PotentFake2
 (If unit can follow-up or strike x2 consecutively,[N]
 or if Range > 1, X = 50%; otherwise, X = 100%.)[X]
 
@@ -699,6 +699,23 @@ Momentum[N]
 always hit, dodge all attacks, and deals[N]
 bonus damage = (Spd - foe's Spd; min 0).[X]
 
+## SD_AlacrityREAL
+Alacrity[N]
+- If Mocha initiates, grants Avoid +15, and if[N]
+Spd > foe's Spd, grants an additional strike[N]
+after first attack.[N]
+[X]
+
+## SD_Potent
+Pursuer[N]
+- If initiating and Spd > foe's Spd, grants[N]
+unit an additional strike after first attack.[X]
+
+## SD_SussyTuesdays
+Spite[N]
+- If foe can follow-up, grants unit an[N]
+additional strike after first attack.[X]
+
 ## SD_SoulBlade
 Soul Blade: Ignores unit's weapon Mt,[N]
 but unit deals split damage.[X]
@@ -1059,8 +1076,18 @@ unit's missing HP.[X]
 Bull-Headed[N]
 - Stroganoff neutralizes stat penalties.[N]
 - Reverses in-combat weapon penalties.[N]
+- If foe can follow-up or strike x2[N]
+consecutively, strikes again.
+
 - Counterattacks deal bonus damage =[N]
 damage taken from foe's last attack.[X]
+
+## SD_Sanctuary2
+Bull-Headed[N]
+- Foes always attack Stroganoff first.[N]
+- Counterattacks deal bonus damage =[N]
+damage taken from foe's last attack[N]
+and strike x2 consecutively.[X]
 
 ## SD_Ether
 Ethereal Guard: Neutralizes foe's[N]
