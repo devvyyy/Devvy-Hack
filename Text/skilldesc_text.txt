@@ -34,6 +34,14 @@ from foe's counter = Spd difference (min; 0).[X]
 (If unit can follow-up or strike x2 consecutively,[N]
 or if Range > 1, X = 50%; otherwise, X = 100%.)[X]
 
+## SD_TalesOfIdeon
+Tales of Glory[N]
+- Rick has no supports, but has 3 Talks[N]
+per chapter that give items.[N]
+- 
+
+[X]
+
 ## SD_HBR
 Heaven Burns Red[N]
 - If foe initiates combat, after combat,[N]
@@ -714,9 +722,19 @@ counter first.[N]
 [X]
 
 ## SD_Potent
-Pursuer[N]
-- If initiating and Spd > foe's Spd, grants[N]
-unit an additional strike after first attack.[X]
+# Out for Blood; Axe to Grind; Imminent/Certain Death; Pursuer; Domineer???!!
+Imminent Death[N]
+- Haye's follow-ups trigger twice and[N]
+foe's follow-ups deal 30 less damage.[N]
+- If Spd > foe's Spd, grants Atk = 50%[N]
+50% of Spd and Prt/Rsl = 25% of Spd.[X]
+
+## SD_Immovable
+Immovable[N]
+- Unit attacks last and can't dodge.[N]
+- Reduces damage taken by 50% of Def;[N]
+further reduced by a flat 20 on foe's[N]
+follow-ups.[X]
 
 ## SD_SussyTuesdays
 Spite[N]
@@ -973,11 +991,11 @@ less HP.[X]
 
 ## SD_SearingSword
 # luna 50%, then reduce frye's damage by 50% enemy res; make this give swords 1-2?
-Searing Sword[N]
+Blazer[N]
 - Frye's physical swords deal damage[N]
 based off 50% of foe's Def/Res.[N]
-- If Spd > foe's Spd, reduces damage[N]
-taken = difference between Spd stats.[X]
+- If first attack hits, grants an[N]
+additional strike after.[X]
 
 ## SD_CurtainCall
 Curtain Call: If foe's HP is below[N]
@@ -1088,10 +1106,10 @@ damage taken from foe's last attack.[X]
 
 ## SD_Sanctuary2
 Bull-Headed[N]
-- Foes always attack Stroganoff first.[N]
+- Stroganoff attacks last and can't dodge.[N]
+- First attack strikes x2 consecutively.[N]
 - Counterattacks deal bonus damage =[N]
-damage taken from foe's last attack[N]
-and strike x2 consecutively.[X]
+damage taken from foe's last attack.[N]
 
 ## SD_Ether
 Ethereal Guard: Neutralizes foe's[N]
@@ -1211,10 +1229,11 @@ deals bonus magical damage = Spd.[X]
 
 ## SD_Vigor
 # Requiem: When using offensive staves, multiplies Eth by 1.25x and deals bonus damage equal to a quarter of foe's current HP.
-Requiem; Infinite Power![N]
+Essence Reaper[N]
 - Yvonne's offensive staves use 1.25x[N]
-Eth and deal bonus damage = 25%[N]
-of foe's current HP.[X]
+Eth, deal bonus damage = 25% of foe's[N]
+current HP, and restore HP = 25% of[N]
+damage dealt on-hit.[X]
 
 ## SD_Defeatist
 Defeatist[N]
@@ -1986,7 +2005,7 @@ takes 6 damage after combat.[X]
 ## SD_Dazzle
 Overwhelm[N]
 - If Noel's Str > foe's Str, follow-up[N]
-and foe can't counterattack.[N]
+and foe can't follow-up or counterattack.[N]
 (If foe uses Eth, foe's Str = 0.)[N]
 - Inflicts Avoid -20 on adjacent foes.[X]
 

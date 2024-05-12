@@ -24,7 +24,7 @@ POIN Proc_Moonbow
 
 POIN Proc_Eclipse	//skills that do damage and all that
 
-POIN Proc_Potent
+POIN Proc_Potent Proc_PotentReal
 
 POIN Proc_Impale Proc_Colossus 
 #ifndef COMBAT_ARTS
@@ -58,7 +58,7 @@ POIN Proc_CapDamage	//check that damage is not over cap
 
 POIN Proc_Foresight Proc_Miracle Proc_Mercy Proc_Aegis Proc_Pavise Proc_GreatShield	//skills that set damage to 0 or lower it
 //damage reduction goes AFTER damage negation
-//POIN Proc_HalvedFollowUp
+POIN Proc_HalvedFollowUp
 
 POIN Proc_StealHP 
 
@@ -67,6 +67,8 @@ POIN Proc_StealHP
 #else // COMBAT_ARTS
 	POIN CombatArt_Sol
 #endif // COMBAT_ARTS
+
+POIN Proc_SolarBrace
 
 POIN Proc_AetherHeal	//skills that heal based on final damage
 

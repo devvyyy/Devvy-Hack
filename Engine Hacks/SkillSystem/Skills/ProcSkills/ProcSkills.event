@@ -231,13 +231,19 @@ ALIGN 4
 Proc_HalvedFollowUp:
 #incbin "HalvedFollowUp/HalvedFollowUp.dmp"
 POIN SkillTester
-WORD DriveResID
+WORD PotentID
 
 ALIGN 4
 Proc_Vengeance:
 #incbin "Vengeance/proc_vengeance.dmp"
 POIN SkillTester
 WORD VengeanceID
+
+Proc_SolarBrace:
+#incbin "SolarBrace/proc_solarbrace.dmp"
+POIN SkillTester
+WORD VigorID
+WORD LiquidOozeID
 
 #include "CombatArts/CombatArtProcSkills.event"
 

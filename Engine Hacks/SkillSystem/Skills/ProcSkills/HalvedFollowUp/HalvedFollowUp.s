@@ -4,25 +4,13 @@
   mov lr, \reg
   .short 0xf800
 .endm
-.equ DriveResID, SkillTester+4
-.equ gBattleTarget, 0x0203A56C
-.equ gBattleData, 0x203A4D4
+.equ PotentID, SkillTester+4
 @ r0 is attacker, r1 is defender, r2 is current buffer, r3 is battle data
 push {r4-r7,lr}
 mov r4, r0 @attacker
 mov r5, r1 @defender
 mov r6, r2 @battle buffer
 mov r7, r3 @battle data
-
-@ Are we WARDED?!
-ldr  r0, =gBattleTarget
-mov  r1, #0x30
-ldrb r3, [r0, r1] @r3 = unit status
-mov  r0, #0x1F
-and  r0, r3 @ status index low 4 bits
-cmp  r0, #0x09 @ Ward index
-bne End
-
 ldr     r0,[r2]           @r0 = battle buffer                @ 0802B40A 6800     
 lsl     r0,r0,#0xD                @ 0802B40C 0340     
 lsr     r0,r0,#0xD        @Without damage data                @ 0802B40E 0B40     
@@ -33,14 +21,31 @@ tst r0, r1
 bne End
 @if another skill already activated, dont do anything
 
-@make sure we are in combat (or combat prep)
-ldrb    r3, =gBattleData
-ldrb    r3, [r3]
-mov  r2, #0x1
-tst  r2, r3
-beq  End
+@ldr r0,=#0x203A4EC @attacker struct
+@cmp r0,r4
+@bne End @skip if player phase
 
+@ is spd higher than foes spd?
+@ldrb r0, [r4, #0x16] @attacker spd
+@ldrb r1, [r5, #0x16] @defender spd
+@cmp r0, r1
+@ble End @skip if spd is less or equal than foes spd
 
+@check for Pavise proc
+ldr r0, SkillTester
+mov lr, r0
+mov r0, r5 @defender data
+ldr r1, PotentID
+.short 0xf800
+cmp r0, #0
+beq End
+@if skill found, check proc
+
+    @Check if this is a follow-up
+    ldr r2, [r6]
+    mov r0, #0x4 @ follow up
+    tst r0, r2
+    beq End @proc only on doubles
 
 @if we proc, set the defensive skill flag
 ldr     r2,[r6]    
@@ -54,13 +59,12 @@ ldr     r0,=#0xFFF80000                @ 0802B434 4804
 and     r0,r2                @ 0802B436 4010     
 orr     r0,r1                @ 0802B438 4308     
 str     r0,[r6]                @ 0802B43A 6018   
-ldrb r0, DriveResID
+ldrb r0, PotentID
 strb r0, [r6,#4]
 
-
-@and lower damage by 10!
+@and lower damage by 5!
 ldrh r0,[r7,#4]
-sub r0, #10
+sub r0, #30
 strh r0, [r7, #4] @final damage
 
 End:
