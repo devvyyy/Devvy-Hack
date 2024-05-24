@@ -1,29 +1,29 @@
 //Event file generated from Sappy .s format.
 	#include "MPlayDef.event"
 
-	#define	songA8_grp  voicegroup001
-	#define	songA8_pri  0
-	#define	songA8_rev  208 //0xD0
-	#define	songA8_mvl  127
-	#define	songA8_key  0
-	#define	songA8_tbs  1
-	#define	songA8_exg  0
-	#define	songA8_cmp  1
+	#define	ZEAL_grp  voicegroup001
+	#define	ZEAL_pri  0
+	#define	ZEAL_rev  208 //0xD0
+	#define	ZEAL_mvl  127
+	#define	ZEAL_key  0
+	#define	ZEAL_tbs  1
+	#define	ZEAL_exg  0
+	#define	ZEAL_cmp  1
 
 	// .rodata
-	//	songA8
+	//	ZEAL
 	ALIGN 4
 
 
 //**************** Track 1 (Midi-Chn.0) ****************//
 
-songA8_001:
+ZEAL_001:
 // 000   ----------------------------------------
- BYTE   KEYSH   songA8_key+0
- BYTE   TEMPO   124*songA8_tbs/2
+ BYTE   KEYSH   ZEAL_key+0
+ BYTE   TEMPO   124*ZEAL_tbs/2
  BYTE   VOICE   104
  BYTE   PAN   c_v+6
- BYTE   VOL   32*songA8_mvl/mxv
+ BYTE   VOL   32*ZEAL_mvl/mxv
  BYTE   W96
 // 001   ----------------------------------------
  BYTE   W96
@@ -234,11 +234,11 @@ Label_0_01473B8E:
 
 //**************** Track 2 (Midi-Chn.1) ****************//
 
-songA8_002:
+ZEAL_002:
 // 000   ----------------------------------------
- BYTE   KEYSH   songA8_key+0
+ BYTE   KEYSH   ZEAL_key+0
  BYTE   VOICE   8
- BYTE   VOL   29*songA8_mvl/mxv
+ BYTE   VOL   29*ZEAL_mvl/mxv
  BYTE   PAN   c_v+1
  BYTE   N05  Dn3  v100
  BYTE   W02
@@ -4349,12 +4349,12 @@ Label_1_01490ED4:
 
 //**************** Track 3 (Midi-Chn.2) ****************//
 
-songA8_003:
+ZEAL_003:
 // 000   ----------------------------------------
- BYTE   KEYSH   songA8_key+0
+ BYTE   KEYSH   ZEAL_key+0
  BYTE   VOICE   88
  BYTE   PAN   c_v-28
- BYTE   VOL   18*songA8_mvl/mxv
+ BYTE   VOL   18*ZEAL_mvl/mxv
  BYTE   W96
 // 001   ----------------------------------------
  BYTE   W96
@@ -4583,12 +4583,12 @@ Label_2_01473606:
 
 //**************** Track 4 (Midi-Chn.3) ****************//
 
-songA8_004:
+ZEAL_004:
 // 000   ----------------------------------------
- BYTE   KEYSH   songA8_key+0
+ BYTE   KEYSH   ZEAL_key+0
  BYTE   VOICE   38
  BYTE   PAN   c_v-23
- BYTE   VOL   29*songA8_mvl/mxv
+ BYTE   VOL   29*ZEAL_mvl/mxv
  BYTE   W96
 // 001   ----------------------------------------
  BYTE   W96
@@ -4751,11 +4751,11 @@ Label_3_01474C2F:
 
 //**************** Track 5 (Midi-Chn.4) ****************//
 
-songA8_005:
+ZEAL_005:
 // 000   ----------------------------------------
- BYTE   KEYSH   songA8_key+0
+ BYTE   KEYSH   ZEAL_key+0
  BYTE   VOICE   104
- BYTE   VOL   32*songA8_mvl/mxv
+ BYTE   VOL   32*ZEAL_mvl/mxv
  BYTE   PAN   c_v+63
  BYTE   W96
 // 001   ----------------------------------------
@@ -4967,12 +4967,12 @@ Label_4_01474D10:
 
 //**************** Track 6 (Midi-Chn.5) ****************//
 
-songA8_006:
+ZEAL_006:
 // 000   ----------------------------------------
- BYTE   KEYSH   songA8_key+0
+ BYTE   KEYSH   ZEAL_key+0
  BYTE   VOICE   85
  BYTE   PAN   c_v-32
- BYTE   VOL   18*songA8_mvl/mxv
+ BYTE   VOL   18*ZEAL_mvl/mxv
  BYTE   W96
 // 001   ----------------------------------------
  BYTE   W96
@@ -5201,12 +5201,12 @@ Label_5_01474876:
 
 //**************** Track 7 (Midi-Chn.6) ****************//
 
-songA8_007:
+ZEAL_007:
 // 000   ----------------------------------------
- BYTE   KEYSH   songA8_key+0
+ BYTE   KEYSH   ZEAL_key+0
  BYTE   VOICE   124
  BYTE   PAN   c_v+0
- BYTE   VOL   37*songA8_mvl/mxv
+ BYTE   VOL   37*ZEAL_mvl/mxv
  BYTE   W96
 // 001   ----------------------------------------
  BYTE   W96
@@ -5350,20 +5350,20 @@ Label_6_01473E2C:
 //******************************************************//
 	ALIGN 4
 
-songA8:
+ZEAL:
 	BYTE	7	// NumTrks
 	BYTE	0	// NumBlks
-	BYTE	songA8_pri	// Priority
-	BYTE	songA8_rev	// Reverb.
+	BYTE	ZEAL_pri	// Priority
+	BYTE	ZEAL_rev	// Reverb.
     
-	POIN2	songA8_grp
+	POIN2	ZEAL_grp
     
-	POIN2	songA8_001
-	POIN2	songA8_002
-	POIN2	songA8_003
-	POIN2	songA8_004
-	POIN2	songA8_005
-	POIN2	songA8_006
-	POIN2	songA8_007
+	POIN2	ZEAL_001
+	POIN2	ZEAL_002
+	POIN2	ZEAL_003
+	POIN2	ZEAL_004
+	POIN2	ZEAL_005
+	POIN2	ZEAL_006
+	POIN2	ZEAL_007
 
 	

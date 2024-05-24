@@ -259,9 +259,11 @@ Atk > 10: +5 AS. idk[X]
 
 ## SD_CombatMedic3
 # railgun
-Rev'd Up: If Hartwick attacked, combat grants 1 stack (max; 5).[N]
-At max stacks, initiating deals (25% of foe's max HP + 150% AP)[N]
-magical damage, cannot follow-up or be countered, and has x2 range.[X]
+Rev'd Up[N]
+- Combat grants Hartwick 1 stack (max; 5).[N]
+- At max stacks, initiating deals[N]
+(25% of foe's max HP + 150% AP) magical damage[N]
+with 0 AS and has +10 range.[X]
 
 ## SD_CantoStatus
 Party Animal: Derval's staves grant allies[N]
@@ -507,10 +509,9 @@ Overdrive[X]
 ## FullMoonStatusDesc
 # needs narrowfonting??? Once per turn, ???
 Spd x2, Move +2. Initiating consumes[N]
-1 stack and grants Chiffon another[N]
-action after combat. If foe is defeated[N]
-and HP is full, take 1 damage and[N]
-restores consumed stack.[X]
+1 stack and grants another action.[N]
+If HP is full, take 1 damage instead[N]
+of consuming 1 stack.[X]
 
 ## SD_Paranoia
 Paranoia[N]
@@ -727,7 +728,7 @@ Imminent Death[N]
 - Haye's follow-ups trigger twice and[N]
 foe's follow-ups deal 30 less damage.[N]
 - If Spd > foe's Spd, grants Atk = 50%[N]
-50% of Spd and Prt/Rsl = 25% of Spd.[X]
+of Spd and Prt/Rsl = 25% of Spd.[X]
 
 ## SD_Immovable
 Immovable[N]
@@ -1109,7 +1110,7 @@ Bull-Headed[N]
 - Stroganoff attacks last and can't dodge.[N]
 - First attack strikes x2 consecutively.[N]
 - Counterattacks deal bonus damage =[N]
-damage taken from foe's last attack.[N]
+damage taken from foe's last attack.[X]
 
 ## SD_Ether
 Ethereal Guard: Neutralizes foe's[N]
@@ -1385,6 +1386,14 @@ Ace in the Hole[N]
 converts 4 Crit to 1 damage, and deals[N]
 bonus damage = foe's missing HP on-hit.[X]
 
+## SD_AssaultTroop
+# uses flag idk but it needs a flag also put on ARMOR!!!1
+Run Them Down![N]
+- Unit readies next initiated attack to[N]
+Charge, granting Move +5 until used.[N]
+- Charge deals bonus damage = Move used[N]
+and first attack strikes x2 consecutively.[X]
+
 ## SD_Provoke
 Provoke[N]
 - Enemies will target this unit.[X]
@@ -1436,6 +1445,13 @@ Lightslinger[N]
 50% total damage (can follow-up).[N]
 - Can Canto 3 spaces after combat.[N]
 (Granted actions take priority.)[X]
+
+## SD_Astra2
+Lightslinger[N]
+- Use to consume all Overdrive stacks[N]
+to deal 25% foe's max HP damage each.[N]
+- At max stacks, deals the same damage[N]
+to foes within 3 spaces of target.[X]
 
 ## SD_Discipline
 Discipline: Weapon experience[N]

@@ -26,8 +26,8 @@ prNullifyIfBroken:
 		
 prFlowStateCheckHP:
 	rIfUnitHasSkill(FlowStateID)
-		rIfUnitHasState(0x10000000)
-			rHalved
+  rIf(CheckMyFlag)
+    rHalved
 
 prItemPassiveHp:
 #ifndef DONT_STACK_BOOSTS

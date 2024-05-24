@@ -57,9 +57,9 @@ cmp r0, r1
 bne DoItAnyways @decay if hp isnt full
 
 @check if enemy is dead
-ldrb	r0, [r5,#0x13]
-cmp	r0, #0x00
-beq	End @dont decay if enemy is dead
+@ldrb	r0, [r5,#0x13]
+@cmp	r0, #0x00
+@beq	End @dont decay if enemy is dead
 
 DoItAnyways:
 @ play event

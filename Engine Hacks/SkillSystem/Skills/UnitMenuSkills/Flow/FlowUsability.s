@@ -24,13 +24,14 @@ bne HasFlow
 b False
 
 HasFlow:
-@now check if flow active
-ldr	r0, [r4,#0x0c]	@status bitfield
-mov	r1, #0x01
-lsl	r1, #0x1c
-and	r0, r1
-cmp	r0, #0x00
-beq	False
+@check if flag 022 set
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0x22
+.short 0xF800
+cmp r0,#1
+bne False @if flag is not on, DIE
+@modify stats
 
 True:
 mov r0,#1
