@@ -1,6 +1,8 @@
 @ vantage replace 802af7c
 .equ FrostbiteID, SkillTester+4
 .equ DuckandCoverID, FrostbiteID+4
+.equ BullHeadedID, DuckandCoverID+4
+
 .thumb
 push {r4-r7,r14}
 ldr r4, =0x203a4ec @atr
@@ -21,15 +23,28 @@ ldrb r0, [r0, #0x4] @r0 = character ID
 cmp r0, #0xC4
 beq Normal
 
-@check for Vantage, Vantage+ 
+@check for Vantage, Vantage+, Eye For An Eye
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r5 @defender data
 ldr r1, DuckandCoverID
 .short 0xF800
 cmp r0, #0
-bne VantagePlus
+bne Vantage
 
+ldr r0, SkillTester
+mov lr, r0
+mov r0, r4 @defender data
+ldr r1, BullHeadedID
+.short 0xF800
+cmp r0, #0
+beq CheckVantage
+    mov r0, #0x52
+    ldsb r0, [r5, r0]
+    cmp r0, #0x0
+    bne Vantage
+
+CheckVantage:
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r5 @defender data
@@ -46,19 +61,12 @@ add r1, r2
 cmp r0, r1
 ble Normal @skip if res is less or equal than foes res
 
-VantagePlus:
+Vantage:
+@swap them
 eor r4,r5
 eor r5,r4
 eor r4,r5
-mov r1, #0x66 @crit
-mov r0, #0
-strh r0, [r4,r1]
-@mov r1, #0x68 @crit avoid
-@mov r0, #0
-@strh r0, [r4,r1]
-mov r1, #0x6A @battle crit
-mov r0, #0
-strh r0, [r4,r1]
+b Normal
 
 Normal:
 str r4, [r6]
@@ -69,6 +77,3 @@ pop {r4-r7,r15}
 .align
 .ltorg
 SkillTester:
-@POIN SkillTester
-@WORD FrostbiteID
-@WORD VatnagePlusID

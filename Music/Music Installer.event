@@ -549,13 +549,18 @@ SongTable(0x3c1,songA8,1)
 
 ALIGN 4
 //And Thus Fate Becomes Cruel (Variant)
-SongTable(0x3c5,song03C1,1)
+SongTable(0x3c5,FateCruelVariant,1)
 #include "FateCruelVARIANT.event"
 
 ALIGN 4
 //Corridors of Time
 SongTable(0xA8,ZEAL,1)
 #include "Zeal.event"
+
+ALIGN 4
+//With Pride in Your Heart
+SongTable(0x25E,PrideHeart,1)
+#include "WithPrideInYourHeart.event"
 
 ALIGN 4
 //Ring of Revolving Fate

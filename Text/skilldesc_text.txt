@@ -16,6 +16,13 @@ Like Dominoes: If unit initiates, kills[N]
 foes below (5 + Skill) HP (always hits).[N]
 Grants unit another action on kill.[X]
 
+## SD_LunaticModeEnemies
+Menacing Aura[N]
+- If unit's HP isn't full, counters first[N]
+and grants Atk/AS/Prt/Rsl +5.[N]
+- Restores 50% max HP at the start[N]
+of each turn.[N]
+
 ## SD_CageFight
 Cage Fight[N]
 - If both sides' aren't adjacent to an[N]
@@ -273,7 +280,7 @@ Grants units within 3 spaces Crit/Avoid +20.[X]
 ## SD_EyeForAnEye
 # Down But Not Out
 Stand Back Up[N]
-- Radcliff grants allies within 3 spaces[N]
+- Raya grants allies within 3 spaces[N]
 Prt/Rsl = 25% of that unit's missing HP,[N]
 and Hit/Avoid = 50% of that unit's[N]
 missing HP.[X]
@@ -763,10 +770,10 @@ restores HP to allies within 3 spaces[N]
 another action.[X]
 
 ## SD_CorneredWolf
-Cornered Wolf: When within 3 spaces of[N]
-2 or more enemies, or when below 50% HP,[N]
-grants Atk +4/Hit +40, negates WTD[,] and[N]
-strikes x2 consecutively.[X]
+Cornered Wolf[N]
+- If unit is within 3 spaces of 2+ enemies,[N]
+or if HP is 50% or less, grants Atk +4/Hit +40,[N]
+negates WTD, and strikes x2 consecutively.[X]
 
 ## SD_BladeWhirl
 Blade Whirl: If unit initiates against a[N]
@@ -779,27 +786,27 @@ restored for every 25% below max HP).[X]
 
 ## SD_AnakinSkill
 Motivating Presence[N]
-- This Lost Soul grants allies within[N]
-3 spaces Hit/Avoid/Crit +10, tripled[N]
-if that ally is above 50% HP.[X]
+- This Lost Soul grants all allies on[N]
+the map Hit/Avoid +15, tripled if that[N]
+ally is above 50% HP.[X]
 
 ## SD_KelikSkill
 Will Power[N]
 - If this Lost Soul initiates or if foe[N]
 uses magic, grants Atk +10, Crit +30.[N]
-- If foe initiates and HP is 25% or less,[N]
+- If HP is 25% or less and foe initiates,[N]
 ends other faction's phase after combat.[X]
 
 ## SD_ShonSkill
 Gallant[N]
 - If foe's HP is full, grants this[N]
-Lost Soul Atk/AS/Prt/Rsl +3 and[N]
-deals 10 bonus physical damage.[X]
+Lost Soul AS/Prt/Rsl +3 and Atk +X.[N]
+(X = 3 + 50% of foe's Str/Eth.)[X]
 
 ## SD_SiegSkill
 Tearing Skies[N]
 - If this Lost Soul initiates, follow-up[N]
-and foe cannot and dodge all attacks.
+and foe cannot and dodge all attacks.[N]
 - Deals bonus damage/reduces damage[N]
 taken = (Spd - foe's Spd; min 0).[X]
 
@@ -927,7 +934,7 @@ Borrowed Time: After combat, Xidorn restores[N]
 5 HP and deals 5 damage to foe.[X]
 
 ## SD_RidersAxiom
-Rising Axiom[N]
+Ataraxia[N]
 - On turns 1-3, Gerolf can follow-up[N]
 and foe can't, and if initiating,[N]
 deals bonus damage/reduces damage[N]
@@ -1105,12 +1112,13 @@ Bull-Headed[N]
 - Counterattacks deal bonus damage =[N]
 damage taken from foe's last attack.[X]
 
-## SD_Sanctuary2
-Bull-Headed[N]
-- Stroganoff attacks last and can't dodge.[N]
-- First attack strikes x2 consecutively.[N]
-- Counterattacks deal bonus damage =[N]
-damage taken from foe's last attack.[X]
+## SD_BullHeaded
+# - Reverses penalties (stats, WTD, etc.). ?
+The Best Defense...[N]
+- Stroganoff attacks last/can't dodge.[N]
+- Attacks deal bonus damage = damage[N]
+taken from foe's last attack this combat[N]
+and restore HP = 25% of damage dealt.[X]
 
 ## SD_Ether
 Ethereal Guard: Neutralizes foe's[N]
@@ -1268,7 +1276,7 @@ foe's Res.[X]
 
 ## SD_Blackfire
 Ravenous Vortex[N]
-- Polly inflicts Atk/AS -5 on[N]
+- Penny inflicts Atk/AS -5 on[N]
 adjacent foes.[N]
 - If tome is equipped, grants WTA and[N]
 triples WT effects for both sides.[X]
@@ -1332,10 +1340,10 @@ grants Attack Speed +2.[X]
 ## SD_Intrepid
 # Dive-Bomb
 Dive-Bomb[N]
-- If Brudet initiates and both sides' HP[N]
-is full, follow-up and foe can't, and[N]
-if also at 1 range, follow-ups occur[N]
-before foe can counter.[X]
+- If Brudet initiates and foe's HP is full,[N]
+follow-up and foe can't, and if also at[N]
+1 range, follow-ups occur before foe[N]
+can counter.[X]
 
 ## SD_Inspire
 Inspire: Wustenhoff grants +5 Atk and [OpenQuote]Unit[N]
@@ -1390,7 +1398,7 @@ bonus damage = foe's missing HP on-hit.[X]
 # uses flag idk but it needs a flag also put on ARMOR!!!1
 Run Them Down![N]
 - Unit readies next initiated attack to[N]
-Charge, granting Move +5 until used.[N]
+Charge, granting Move x2 until used.[N]
 - Charge deals bonus damage = Move used[N]
 and first attack strikes x2 consecutively.[X]
 
@@ -2520,7 +2528,7 @@ Duelist[N]
 - If Rina initiates at 1 range,[N]
 follow-ups occur before counter, and if[N]
 foe is also defeated, Canto 2 spaces[N]
-and restores 25% max HP.[X]
+and restores 25% max HP after combat.[X]
 
 ## SD_ArcaneBlade
 Arcane Blade: When initiating battle[N]

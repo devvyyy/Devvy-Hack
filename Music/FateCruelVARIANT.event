@@ -1,30 +1,30 @@
 //Event file generated from Sappy .s format.
 	#include "MPlayDef.event"
 
-	#define	song03C1_grp  voicegroup000
-	#define	song03C1_pri  0
-	#define	song03C1_rev  200
-	#define	song03C1_mvl  127
-	#define	song03C1_key  0
-	#define	song03C1_tbs  1
-	#define	song03C1_exg  0
-	#define	song03C1_cmp  1
+	#define	FateCruelVariant_grp  voicegroup000
+	#define	FateCruelVariant_pri  0
+	#define	FateCruelVariant_rev  200
+	#define	FateCruelVariant_mvl  127
+	#define	FateCruelVariant_key  0
+	#define	FateCruelVariant_tbs  1
+	#define	FateCruelVariant_exg  0
+	#define	FateCruelVariant_cmp  1
 
 	// .rodata
-	//	song03C1
+	//	FateCruelVariant
 	ALIGN 4
 
 
 //**************** Track 1 (Midi-Chn.0) ****************//
 
-song03C1_001:
+FateCruelVariant_001:
 //  #01 //000   ----------------------------------------
- BYTE   KEYSH   song03C1_key+0
+ BYTE   KEYSH   FateCruelVariant_key+0
 Label_01983E6A:
- BYTE   TEMPO   160*song03C1_tbs/2
+ BYTE   TEMPO   160*FateCruelVariant_tbs/2
  BYTE   VOICE   100
  BYTE   PAN   c_v+8
- BYTE   VOL   18*song03C1_mvl/mxv
+ BYTE   VOL   18*FateCruelVariant_mvl/mxv
  BYTE   W96
 //  #01 //001   ----------------------------------------
  BYTE   W96
@@ -604,19 +604,19 @@ Label_01983F15:
  BYTE   GoTo
   POIN2 Label_01983E6A
 //  #01 //071   ----------------------------------------
- BYTE   VOL   18*song03C1_mvl/mxv
+ BYTE   VOL   18*FateCruelVariant_mvl/mxv
  BYTE   W84
  BYTE   FINE
 
 //**************** Track 2 (Midi-Chn.1) ****************//
 
-song03C1_002:
+FateCruelVariant_002:
 //  #02 //000   ----------------------------------------
- BYTE   KEYSH   song03C1_key+0
+ BYTE   KEYSH   FateCruelVariant_key+0
 Label_019850F2:
  BYTE   VOICE   126
  BYTE   PAN   c_v+63
- BYTE   VOL   52*song03C1_mvl/mxv
+ BYTE   VOL   52*FateCruelVariant_mvl/mxv
  BYTE   TIE  Gs3  v064
  BYTE   W96
 //  #02 //001   ----------------------------------------
@@ -769,12 +769,12 @@ Label_019850F2:
 
 //**************** Track 3 (Midi-Chn.2) ****************//
 
-song03C1_003:
+FateCruelVariant_003:
 //  #03 //000   ----------------------------------------
- BYTE   KEYSH   song03C1_key+0
+ BYTE   KEYSH   FateCruelVariant_key+0
 Label_01985302:
  BYTE   VOICE   54
- BYTE   VOL   29*song03C1_mvl/mxv
+ BYTE   VOL   29*FateCruelVariant_mvl/mxv
  BYTE   PAN   c_v-36
  BYTE   W96
 //  #03 //001   ----------------------------------------
@@ -1140,13 +1140,13 @@ Label_019853E3:
 
 //**************** Track 4 (Midi-Chn.3) ****************//
 
-song03C1_004:
+FateCruelVariant_004:
 //  #04 //000   ----------------------------------------
- BYTE   KEYSH   song03C1_key+0
+ BYTE   KEYSH   FateCruelVariant_key+0
 Label_01985506:
  BYTE   VOICE   52
  BYTE   PAN   c_v-8
- BYTE   VOL   23*song03C1_mvl/mxv
+ BYTE   VOL   23*FateCruelVariant_mvl/mxv
  BYTE   W12
  BYTE   N96  Cs2  v120
  BYTE   W84
@@ -1468,13 +1468,13 @@ Label_01985697:
 
 //**************** Track 5 (Midi-Chn.4) ****************//
 
-song03C1_005:
+FateCruelVariant_005:
 //  #05 //000   ----------------------------------------
- BYTE   KEYSH   song03C1_key+0
+ BYTE   KEYSH   FateCruelVariant_key+0
 Label_0198420E:
  BYTE   VOICE   40
  BYTE   PAN   c_v+20
- BYTE   VOL   15*song03C1_mvl/mxv
+ BYTE   VOL   15*FateCruelVariant_mvl/mxv
  BYTE   W96
 //  #05 //001   ----------------------------------------
  BYTE   W96
@@ -1764,18 +1764,18 @@ Label_01984238:
  BYTE   GoTo
   POIN2 Label_0198420E
 //  #05 //071   ----------------------------------------
- BYTE   VOL   15*song03C1_mvl/mxv
+ BYTE   VOL   15*FateCruelVariant_mvl/mxv
  BYTE   W84
  BYTE   FINE
 
 //**************** Track 6 (Midi-Chn.5) ****************//
 
-song03C1_006:
+FateCruelVariant_006:
 //  #06 //000   ----------------------------------------
- BYTE   KEYSH   song03C1_key+0
+ BYTE   KEYSH   FateCruelVariant_key+0
 Label_01984C2A:
  BYTE   VOICE   55
- BYTE   VOL   30*song03C1_mvl/mxv
+ BYTE   VOL   30*FateCruelVariant_mvl/mxv
  BYTE   PAN   c_v-20
  BYTE   W96
 //  #06 //001   ----------------------------------------
@@ -2167,13 +2167,13 @@ Label_01984D84:
 
 //**************** Track 7 (Midi-Chn.6) ****************//
 
-song03C1_007:
+FateCruelVariant_007:
 //  #07 //000   ----------------------------------------
- BYTE   KEYSH   song03C1_key+0
+ BYTE   KEYSH   FateCruelVariant_key+0
 Label_0198593E:
  BYTE   VOICE   42
  BYTE   PAN   c_v-4
- BYTE   VOL   18*song03C1_mvl/mxv
+ BYTE   VOL   18*FateCruelVariant_mvl/mxv
  BYTE   W96
 //  #07 //001   ----------------------------------------
  BYTE   W96
@@ -2705,18 +2705,18 @@ Label_01985AF4:
  BYTE   GoTo
   POIN2 Label_0198593E
 //  #07 //071   ----------------------------------------
- BYTE   VOL   18*song03C1_mvl/mxv
+ BYTE   VOL   18*FateCruelVariant_mvl/mxv
  BYTE   W84
  BYTE   FINE
 
 //**************** Track 8 (Midi-Chn.7) ****************//
 
-song03C1_008:
+FateCruelVariant_008:
 //  #08 //000   ----------------------------------------
- BYTE   KEYSH   song03C1_key+0
+ BYTE   KEYSH   FateCruelVariant_key+0
 Label_015DF236:
  BYTE   VOICE   1
- BYTE   VOL   16*song03C1_mvl/mxv
+ BYTE   VOL   16*FateCruelVariant_mvl/mxv
  BYTE   PAN   c_v+2
  BYTE   W96
 //  #08 //001   ----------------------------------------
@@ -3012,19 +3012,19 @@ Label_015DF308:
  BYTE   GoTo
   POIN2 Label_015DF236
 //  #08 //071   ----------------------------------------
- BYTE   VOL   16*song03C1_mvl/mxv
+ BYTE   VOL   16*FateCruelVariant_mvl/mxv
  BYTE   PAN   c_v+2
  BYTE   W84
  BYTE   FINE
 
 //**************** Track 9 (Midi-Chn.8) ****************//
 
-song03C1_009:
+FateCruelVariant_009:
 //  #09 //000   ----------------------------------------
- BYTE   KEYSH   song03C1_key+0
+ BYTE   KEYSH   FateCruelVariant_key+0
 Label_019848EE:
  BYTE   VOICE   59
- BYTE   VOL   12*song03C1_mvl/mxv
+ BYTE   VOL   12*FateCruelVariant_mvl/mxv
  BYTE   PAN   c_v-5
  BYTE   W12
  BYTE   N96  Cs1  v120
@@ -3209,20 +3209,20 @@ Label_019848EE:
  BYTE   GoTo
   POIN2 Label_019848EE
 //  #09 //071   ----------------------------------------
- BYTE   VOL   12*song03C1_mvl/mxv
+ BYTE   VOL   12*FateCruelVariant_mvl/mxv
  BYTE   PAN   c_v-5
  BYTE   W84
  BYTE   FINE
 
 //**************** Track 10 (Midi-Chn.9) ****************//
 
-song03C1_010:
+FateCruelVariant_010:
 //  #10 //000   ----------------------------------------
- BYTE   KEYSH   song03C1_key+0
+ BYTE   KEYSH   FateCruelVariant_key+0
 Label_015DF3D6:
  BYTE   VOICE   30
  BYTE   PAN   c_v-19
- BYTE   VOL   19*song03C1_mvl/mxv
+ BYTE   VOL   19*FateCruelVariant_mvl/mxv
  BYTE   W96
 //  #10 //001   ----------------------------------------
  BYTE   W96
@@ -3616,13 +3616,13 @@ Label_015DF54E:
 
 //**************** Track 11 (Midi-Chn.10) ****************//
 
-song03C1_011:
+FateCruelVariant_011:
 //  #11 //000   ----------------------------------------
- BYTE   KEYSH   song03C1_key+0
+ BYTE   KEYSH   FateCruelVariant_key+0
 Label_015DF5D6:
  BYTE   VOICE   47
  BYTE   PAN   c_v-8
- BYTE   VOL   25*song03C1_mvl/mxv
+ BYTE   VOL   25*FateCruelVariant_mvl/mxv
  BYTE   N04  Gs1  v120
  BYTE   W04
  BYTE   N04
@@ -4047,13 +4047,13 @@ Label_015DF775:
 
 //**************** Track 12 (Midi-Chn.11) ****************//
 
-song03C1_012:
+FateCruelVariant_012:
 //  #12 //000   ----------------------------------------
- BYTE   KEYSH   song03C1_key+0
+ BYTE   KEYSH   FateCruelVariant_key+0
 Label_015DF81A:
  BYTE   VOICE   53
  BYTE   PAN   c_v+40
- BYTE   VOL   11*song03C1_mvl/mxv
+ BYTE   VOL   11*FateCruelVariant_mvl/mxv
  BYTE   BEND   c_v+1
  BYTE   W96
 //  #12 //001   ----------------------------------------
@@ -4460,13 +4460,13 @@ Label_015DF912:
 
 //**************** Track 13 (Midi-Chn.12) ****************//
 
-song03C1_013:
+FateCruelVariant_013:
 //  #13 //000   ----------------------------------------
- BYTE   KEYSH   song03C1_key+0
+ BYTE   KEYSH   FateCruelVariant_key+0
 Label_015DFA0E:
  BYTE   VOICE   124
  BYTE   PAN   c_v-20
- BYTE   VOL   29*song03C1_mvl/mxv
+ BYTE   VOL   29*FateCruelVariant_mvl/mxv
  BYTE   W12
  BYTE   N12  Dn1  v112
  BYTE   W12
@@ -4991,12 +4991,12 @@ Label_015DFBA8:
 
 //**************** Track 14 (Midi-Chn.13) ****************//
 
-song03C1_014:
+FateCruelVariant_014:
 //  #14 //000   ----------------------------------------
- BYTE   KEYSH   song03C1_key+0
+ BYTE   KEYSH   FateCruelVariant_key+0
 Label_015DFD76:
  BYTE   VOICE   29
- BYTE   VOL   16*song03C1_mvl/mxv
+ BYTE   VOL   16*FateCruelVariant_mvl/mxv
  BYTE   PAN   c_v+16
  BYTE   W12
  BYTE   N12  Cs1  v120
@@ -5408,7 +5408,7 @@ Label_015DFF02:
  BYTE   GoTo
   POIN2 Label_015DFD76
 //  #14 //071   ----------------------------------------
- BYTE   VOL   16*song03C1_mvl/mxv
+ BYTE   VOL   16*FateCruelVariant_mvl/mxv
  BYTE   PAN   c_v+16
  BYTE   W84
  BYTE   FINE
@@ -5416,27 +5416,27 @@ Label_015DFF02:
 //******************************************************//
 	ALIGN 4
 
-song03C1:
+FateCruelVariant:
 	BYTE	14	// NumTrks
 	BYTE	0	// NumBlks
-	BYTE	song03C1_pri	// Priority
-	BYTE	song03C1_rev	// Reverb.
+	BYTE	FateCruelVariant_pri	// Priority
+	BYTE	FateCruelVariant_rev	// Reverb.
     
-	POIN2	song03C1_grp
+	POIN2	FateCruelVariant_grp
     
-	POIN2	song03C1_001
-	POIN2	song03C1_002
-	POIN2	song03C1_003
-	POIN2	song03C1_004
-	POIN2	song03C1_005
-	POIN2	song03C1_006
-	POIN2	song03C1_007
-	POIN2	song03C1_008
-	POIN2	song03C1_009
-	POIN2	song03C1_010
-	POIN2	song03C1_011
-	POIN2	song03C1_012
-	POIN2	song03C1_013
-	POIN2	song03C1_014
+	POIN2	FateCruelVariant_001
+	POIN2	FateCruelVariant_002
+	POIN2	FateCruelVariant_003
+	POIN2	FateCruelVariant_004
+	POIN2	FateCruelVariant_005
+	POIN2	FateCruelVariant_006
+	POIN2	FateCruelVariant_007
+	POIN2	FateCruelVariant_008
+	POIN2	FateCruelVariant_009
+	POIN2	FateCruelVariant_010
+	POIN2	FateCruelVariant_011
+	POIN2	FateCruelVariant_012
+	POIN2	FateCruelVariant_013
+	POIN2	FateCruelVariant_014
 
 	

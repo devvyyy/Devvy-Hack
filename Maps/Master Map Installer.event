@@ -9,96 +9,127 @@
 #endif
 #define SetChapterData(ChapterID,ObjectType1,ObjectType2,PaletteID,TileConfig,MapID,MapPointer,Anims1,Anims2,MapChanges) "PUSH; ORG ChapterDataTable+(ChapterID*148)+4; BYTE ObjectType1 ObjectType2 PaletteID TileConfig MapID Anims1 Anims2 MapChanges; EventPointerTable(MapID,MapPointer); POP" 
 
+ALIGN 4
 {
 #include "NewPrologue.event"
 }
+ALIGN 4
 {
 #include "NewChapter1.event"
 }
+ALIGN 4
 {
 #include "NewChapter2.event"
 }
+ALIGN 4
 {
 #include "NewChapter3.event"
 }
+ALIGN 4
 {
 #include "Chapter4.event"
 }
+ALIGN 4
 {
 #include "Devisio_Snowtown.event"
 }
+ALIGN 4
 {
 #include "Chapter5.event"
 }
+ALIGN 4
 {
 #include "RWPart1Final.event"
 }
+ALIGN 4
 {
 #include "Part1Final2.event"
 }
+ALIGN 4
 {
 #include "Chapter7New.event"
 }
+ALIGN 4
 {
 #include "NewChapter8.event"
 }
+ALIGN 4
 {
 #include "Chapter9.event"
 }
+ALIGN 4
 {
 #include "Chapter10.event"
 }
+ALIGN 4
 {
 #include "NewPrologue2.event"
 }
+ALIGN 4
 {
 #include "Chapter12Sunset.event"
 }
+ALIGN 4
 {
 #include "Chapter12Night.event"
 }
+ALIGN 4
 {
 #include "Chapter12.event"
 }
+ALIGN 4
 {
 #include "Chapter13.event"
 }
+ALIGN 4
 {
 #include "HayeFight.event"
 }
+ALIGN 4
 {
 #include "HayeFightDay.event"
 }
+ALIGN 4
 {
 #include "Part2BonusReal.event"
 }
+ALIGN 4
 {
 #include "Gaiden1.event"
 }
+ALIGN 4
 {
 #include "Cutscene1.event"
 }
+ALIGN 4
 {
 #include "Duskwave.event"
 }
+ALIGN 4
 {
 #include "Interlude.event"
 }
+ALIGN 4
 {
 #include "Part1FinalGaiden.event"
 }
+ALIGN 4
 {
 #include "RivianCastle.event"
 }
+ALIGN 4
 {
 #include "1-FxReal.event"
 }
+ALIGN 4
 {
 #include "Fiery1-4.event"
 }
+ALIGN 4
 {
 #include "devvy_radiantdawn.event"
 }
+ALIGN 4
 {
 #include "3-2.event"
 }

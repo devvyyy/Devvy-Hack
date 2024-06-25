@@ -10,10 +10,10 @@ cmp r0,r4
 bne End @skip if enemy phase
 
 @hp not at full
-ldrb r0, [r4, #0x12] @max hp
-ldrb r1, [r4, #0x13] @curr hp
-cmp r0, r1
-bne End @skip if not max hp
+@ldrb r0, [r4, #0x12] @max hp
+@ldrb r1, [r4, #0x13] @curr hp
+@cmp r0, r1
+@bne End @skip if not max hp
 
 @enemy hp not at full
 ldrb r0, [r5, #0x12] @max hp

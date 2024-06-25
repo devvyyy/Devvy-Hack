@@ -1,4 +1,5 @@
     PROTECT 0xC00000 //start of anim table?
+//	PROTECT 0x8B10A8
 //	PROTECT 0xF69828 //some boon/chtext thing
 	//PROTECT 0x95F5A4 //summon table
 //	PROTECT $18744
@@ -17,7 +18,7 @@
     //Text first for Text ID definitions
     #include "Text/Install Text Data.event"
     MESSAGE Used text space ends at currentOffset
-
+//PROTECT 0x8B10AE
     //CSV tables
 ALIGN 4
     #include "Tables/Table Installer.event"
