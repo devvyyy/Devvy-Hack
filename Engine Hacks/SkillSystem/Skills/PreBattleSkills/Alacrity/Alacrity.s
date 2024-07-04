@@ -19,6 +19,7 @@ ldr r1, AlacrityID
 cmp r0, #0
 beq GoBack
 
+b SpdDamage
 @get units move
 ldr r0,MovGetter
 mov r14,r0
@@ -49,6 +50,12 @@ mov r1, #0x60
 ldrh r0, [r4, r1] @avoid
 add r0, #255
 strh r0, [r4,r1]
+
+SpdDamage:
+
+ldr r0,=#0x203A4EC @attacker struct
+cmp r0,r4
+bne End @skip if enemy phase
 
 @ is spd higher than foes spd?
 ldrb r0, [r4, #0x16] @attacker spd

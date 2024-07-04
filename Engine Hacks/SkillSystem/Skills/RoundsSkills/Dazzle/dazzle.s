@@ -1,6 +1,6 @@
 @802c874 checks uncounterable
-.equ DazzleID, SkillTester+4
-.equ MoonlightID, DazzleID+4
+.equ AlacrityID, SkillTester+4
+.equ MoonlightID, AlacrityID+4
 .equ gBattleTarget, 0x0203A56C
 @jumptohack at 802c864
 
@@ -27,24 +27,32 @@ cmp  r0, #0x8 @ Fear index
 beq  Uncounterable
 
 @make sure the enemy is a mage
-ldr r0,[r5,#0x4]
-mov r1,#0x30
-ldr r0,[r0,r1] @so this loads the unit's staff/anima/light/dark prof
-cmp r0,#0x0
-bne SkipStrCheck @if they're all 0 the enemy is not a mage
+@ldr r0,[r5,#0x4]
+@mov r1,#0x30
+@ldr r0,[r0,r1] @so this loads the unit's staff/anima/light/dark prof
+@cmp r0,#0x0
+@bne SkipStrCheck @if they're all 0 the enemy is not a mage
 
-ldrb r0, [r4, #0x14] @attacker str
-ldrb r1, [r5, #0x14] @defender str
+@ldrb r0, [r4, #0x14] @attacker str
+@ldrb r1, [r5, #0x14] @defender str
+@cmp r0, r1
+@ble Normal @skip if str is less or equal
+
+@ is spd higher than foes spd +8?
+ldrb r0, [r4, #0x16] @defender spd
+ldrb r1, [r5, #0x16] @defender spd
+mov r2, #8
+add r1, r2 @spd + 8
 cmp r0, r1
-ble Normal @skip if str is less or equal
+ble Normal @skip if foes spd + 8 is greater than or equal to units spd
 
-SkipStrCheck:
+@SkipStrCheck:
 
 @otherwise check skill ONLY on the attacker
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r4 @attacker data
-ldr r1, DazzleID
+ldr r1, AlacrityID
 .short 0xf800
 cmp r0, #0
 bne Uncounterable
@@ -74,4 +82,4 @@ bx r1
 .ltorg
 SkillTester:
 @POIN SkillTester
-@WORD DazzleID
+@WORD AlacrityID

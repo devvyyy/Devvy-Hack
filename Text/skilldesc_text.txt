@@ -711,9 +711,9 @@ magic spells.[X]
 ## SD_Alacrity
 # Alacrity
 Momentum[N]
-- If Mocha uses all Move and initiates,[N]
-always hit, dodge all attacks, and deals[N]
-bonus damage = (Spd - foe's Spd; min 0).[X]
+- If Mocha initiates, deals bonus damage
+= (Spd - foe's Spd; min 0), and if Spd >[N]
+foe's Spd +8, foe can't counter.[X]
 
 ## SD_AlacrityREAL
 Alacrity[N]
@@ -1060,9 +1060,8 @@ damage = foe's Spd x 2.[X]
 
 ## SD_Kalista
 Martial Poise[N]
-- Doppio deals bonus damage on first[N]
-hit and reduces damage taken from[N]
-foe's first hit = 50% of Spd.[N]
+- Doppio and adjacent non-mounted allies[N]
+can Canto 1 space after combat.[N]
 - Counter before foe's first attack.[X]
 
 ## SD_Falcon
@@ -1106,15 +1105,14 @@ unit's missing HP.[X]
 
 ## SD_Sanctuary
 # Sanctuary; Tenacity; (WT disadvantage, dark magic, etc.), (rescue, staves, equippable rings, etc.); - If foe can attack 2+ times, first attack strikes x2 consecutively
-Bull-Headed[N]
-- Stroganoff neutralizes stat penalties.[N]
-- Reverses in-combat weapon penalties.[N]
-- Counterattacks deal bonus damage =[N]
-damage taken from foe's last attack.[X]
+Will Power[N]
+- Noel ignores stat penalties (Rescue,[N]
+item penalties, etc.) and reverses[N]
+combat penalties (WTD, dark magic, etc.).[X]
 
 ## SD_BullHeaded
-# - Reverses penalties (stats, WTD, etc.). ?
-The Best Defense...[N]
+# - Reverses penalties (stats, WTD, etc.). ? The Best Defense...
+Bull-Headed[N]
 - Stroganoff attacks last/can't dodge.[N]
 - Attacks deal bonus damage = damage[N]
 taken from foe's last attack this combat[N]
@@ -1284,6 +1282,13 @@ triples WT effects for both sides.[X]
 ## SD_Whirlwind
 Thunderhead: If unit's HP is 75%[N]
 or more, Crit +15.[X]
+
+## SD_Joust
+Joust[N]
+- If initiating, deals bonus damage[N]
+= spaces moved.[N]
+- If foe initiates, reduces damage taken[N]
+= spaces moved x 2.[N][X]
 
 ## SD_Charge
 Stampede[N]

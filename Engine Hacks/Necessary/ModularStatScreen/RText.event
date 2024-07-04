@@ -141,10 +141,10 @@
 
   #ifdef PRESS_SELECT_TO_VIEW_GROWTHS
     PersonalDataRText:
-      RMenu(0,ST_Str,ST_Name,ST_Skl,0x76,0x4,PersonalDataDesc1)
+      RMenu(ST_Skill1,ST_Str,ST_Name,ST_Skl,0x76,0x4,PersonalDataDesc1)
   #else
     PersonalDataRText:
-      RMenu(0,ST_Str,ST_Name,0,0x76,0x4,PersonalDataDesc2)
+      RMenu(ST_Skill1,ST_Str,ST_Name,0,0x76,0x4,PersonalDataDesc2)
   #endif
   
 #else // USE_STRMAG_SPLIT
@@ -218,10 +218,10 @@ ST_Skill6:
   RMenu(ST_Skill3,0,ST_Skill5,0,0xd6,0x88,5,RTextLoop,SkillDescGetter+20)
 #ifdef PRESS_SELECT_TO_VIEW_GROWTHS
   PersonalDataRText:
-  RMenu(0,ST_Str,0,0,0x76,0x4,PersonalDataDesc1)
+  RMenu(ST_Skill1,ST_Str,0,0,0x76,0x4,PersonalDataDesc1)
 #else
   PersonalDataRText:
-  RMenu(0,ST_Str,0,0,0x76,0x4,PersonalDataDesc2)
+  RMenu(ST_Skill1,ST_Str,0,0,0x76,0x4,PersonalDataDesc2)
 #endif
   
   

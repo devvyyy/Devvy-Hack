@@ -204,10 +204,10 @@
 
  #ifdef PRESS_SELECT_TO_VIEW_GROWTHS
     PersonalDataRText:
-    RMenu(0,ST_Str,0,0,0x76,0x4,PersonalDataDesc1)
+    RMenu(ST_Skill1,ST_Str,0,0,0x76,0x4,PersonalDataDesc1)
   #else
     PersonalDataRText:
-    RMenu(0,ST_Str,0,0,0x76,0x4,PersonalDataDesc2)
+    RMenu(ST_Skill1,ST_Str,0,0,0x76,0x4,PersonalDataDesc2)
   #endif
 
 
