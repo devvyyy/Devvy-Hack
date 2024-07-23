@@ -15,12 +15,6 @@ ldr r1, PotentID
 cmp r0, #0
 beq End
 
-@ is spd higher than foes spd?
-ldrb r0, [r4, #0x16] @attacker spd
-ldrb r1, [r5, #0x16] @defender spd
-cmp r0, r1
-ble End @skip if spd is less or equal than foes spd
-
 @not at stat screen
 ldr r1, [r5,#4] @class data ptr
 cmp r1, #0 @if 0, this is stat screen
@@ -32,21 +26,48 @@ ldrb r3, [r3]
 cmp r3, #4
 beq End
 
+@ is spd higher than foes spd?
+ldrb r0, [r4, #0x16] @attacker spd
+ldrb r1, [r5, #0x16] @defender spd
+cmp r0, r1
+ble CheckEnemy @skip if spd is less or equal than foes spd
+
 @add spd/2 attack
-mov  r1, #0x5A
-ldrh r0, [r4, r1] @attack
-ldrb r2, [r4, #0x16] @spd
-lsr  r2, #1 @divide this by 2
-add  r0, r2
-strh r0, [r4,r1]
+@mov  r1, #0x5A
+@ldrh r0, [r4, r1] @attack
+@ldrb r2, [r4, #0x16] @spd
+@lsr  r2, #1 @divide this by 2
+@add  r0, r2
+@strh r0, [r4,r1]
 
 @add def/4 defense
-mov  r1, #0x5C
-ldrh r0, [r4, r1] @def
-ldrb r2, [r4, #0x16] @spd
-lsr  r2, #2 @divide this by 4
-add  r0, r2
-strh r0, [r4,r1]
+@mov  r1, #0x5C
+@ldrh r0, [r4, r1] @def
+@ldrb r2, [r4, #0x16] @spd
+@lsr  r2, #2 @divide this by 4
+@add  r0, r2
+@strh r0, [r4,r1]
+
+@set attacker AS to 99
+mov r0, r4
+add r0,#0x5E
+mov r3,#99
+strh r3,[r0]
+b End
+
+CheckEnemy:
+@ is foes spd higher than units spd?
+ldrb r0, [r4, #0x16] @attacker spd
+ldrb r1, [r5, #0x16] @defender spd
+cmp r1, r0
+ble End @skip if foes spd is less or equal than units spd
+
+@set defender AS to 99
+mov r0, r5
+add r0,#0x5E
+mov r3,#99
+strh r3,[r0]
+b End
 
 End:
 pop {r4-r7, r15}

@@ -15,9 +15,95 @@ Age: 31; Origin: Wreyvine[X]
 A royal guard captain of Wreyvine. Her[N]
 bloodline is the hallmark of Wreyvine.[X]
 
+## BronsName
+# NPC and/or replacement unit for retreats; ulrich/captains come back after TS
+Bronson[X]
+
 ## BronsDesc
-A loyal and thrill-seeking soldier.[N]
-He's harsh, but hearty.[X]
+# as NPC
+A thrill-seeking Wreyvian knight.[N]
+He's known to be harsh, but hardy.[X]
+
+## BronsDescPlayer
+# soldier replacement if wegster died
+A thrill-seeking Wreyvian knight.[N]
+He's known to be harsh, but hardy.[N]
+Age: 33; Origin: Wreyvine[X]
+
+## SvanaName
+# NPC and/or replacement unit for retreats
+Svan[X]
+
+## SvanaDesc
+# as NPC
+A rather lax Wreyvian recruit.[N]
+She prefers slacking off to battle.[X]
+
+## SvanaDescPlayer
+# peg rider replacement if klavvy died
+A rather lax Wreyvian new recruit.[N]
+She prefers slacking off to battle.[N]
+Age: 26; Origin: Wreyvine[X]
+
+## FlamurName
+# NPC and/or replacement unit for retreats
+Flamur[X]
+
+## FlamurDesc
+# as NPC
+An opportunistic Wreyvian recruit.[N]
+His mind is heavy and weary.[X]
+
+## FlamurDescPlayer
+# cav replacement if gerolf died
+An opportunistic Wreyvian recruit.[N]
+His mind is heavy and weary.[N]
+Age: 23; Origin: Wreyvine[X]
+
+## MayaName
+# NPC and/or replacement unit for retreats
+Maya[X]
+
+## MayaDesc
+# as NPC
+A dedicated sister of the holy guard.[N]
+Her piety can't be understated.[X]
+
+## MayaDescPlayer
+# troubadour replacement if ogrim died
+A dedicated sister of the holy guard.[N]
+Her piety can't be understated.[N]
+Age: 31; Origin: Wreyvine[X]
+
+## EmanuelName
+# NPC and/or replacement unit for retreats
+Emaneuil[X]
+
+## EmanuelDesc
+# as NPC
+A wise strategist for the Wreyvian army.[N]
+He formerly served the royal house.[X]
+
+## EmanuelDescPlayer
+# parson replacement if iris died
+A wise strategist for the Wreyvian army.[N]
+He formerly served the royal house.[N]
+Age: 45; Origin: Wreyvine[X]
+
+## ReinierName
+# NPC and/or replacement unit for retreats
+Reinier[X]
+
+## ReinierDesc
+# as NPC
+A war advisor for the Wreyvian army.[N]
+He's seen the horrors of conflict.[X]
+
+## ReinierDescPlayer
+# general replacement if therese died
+A war advisor for the Wreyvian army.[N]
+He knows the horrors of conflict.[N]
+Age: 49; Origin: Wreyvine[X]
 
 ## BrigitDesc
 A poised Aeterian scholar. She's a[N]
@@ -141,7 +227,7 @@ Age: 47; Origin: Wreyvine[X]
 
 ## WegDescEnemy
 A hearty Wreyvian general. He remains cheerful[N]
-and disarming in the drums of war.[X]
+and disarming amidst the drums of war.[X]
 
 ## NoelDesc
 A true-hearted Wreyvian soldier. Her[N]
@@ -1068,25 +1154,9 @@ Deals 10 bonus magical damage.[X]
 Avoid +10. Deals 10 bonus[N]
 magical damage.[X]
 
-## BrevePrfDesc
-Strikes x2 consecutively if all movement[N]
-is expended. [_Lock]: Breve[X]
-
-## HildrPrfDesc
-+10 Def on initiation. Eff: [ArmorIcon][N]
-[_Lock]: Hildr[X]
-
-## AnsgarPrfDesc
-If HP = or > 50%, ignores enemy's weapon Mt.[N]
-[_Lock]: Ansgar[X]
-
 ## SequinPrfDesc
 Ignores 75% of foe's Res. Eff: [HorseIcon]
 [_Lock]: Sequin[X]
-
-## UlrichPrfDesc
-Reverses Defeatist's penalties. Eff: [DarkIcon][N]
-[_Lock]: Ulrich[X]
 
 ## NoraPrfDesc
 All allies within 5 spaces deal +(25% Str)[N]
@@ -1098,7 +1168,7 @@ An ephemeral ring. Wearer can traverse[N]
 impassible terrain at 2 cost. Def/Res -5.[X]
 
 ## MarchRingDesc
-A knight's ring. Grants Move +2 to[N]
+A leader's ring. Grants Move +2 to[N]
 wearer and adjacent [ArmorIcon] allies if[N]
 adjacent to an [ArmorIcon] ally at start of turn.[N]
 (Doesn't stack with similar skills.)[X]
@@ -1221,10 +1291,45 @@ if you see this in-game, report it[N]
 in the thread please. or maybe you're[N]
 just using builder idk[X]
 
+## CaptainAxeName
+Blackiron Ax[X]
+
 ## CaptainAxeDesc
-Armor: Follow-up and foe can't.[N]
-Flying: If initiating, grants Atk +5.[N]
-[_Lock]: Captain[X]
+A captain's war axe. Eff: [AnimaIcon][LightIcon][DarkIcon][N]
+Neutralizes effectiveness. Res +10.[N]
+[_Lock]: Brudet, Stroganoff[X]
+
+## BrevePrfName
+Fulmination[X]
+
+## BrevePrfDesc
+A blade for the moody.[N]
+If foe initiates, Crit +90.[N]
+[_Lock]: Breve[X]
+
+## HildrPrfName
+Valkyrie[X]
+
+## HildrPrfDesc
+A palstave for the worthy.[N]
+Ignores Rescue penalties.[N]
+[_Lock]: Hildr[X]
+
+## AnsgarPrfName
+Magnum Opus[X]
+
+## AnsgarPrfDesc
+An atgeir for the weary. Eff: [ArmorIcon][N]
+Ignores foe's weapon Mt.[N]
+[_Lock]: Ansgar[X]
+
+## HayePrfName
+Xiuhcoatl[X]
+
+## HayePrfDesc
+Ataraxia. If Spd > foe's Spd, grants Atk[N]
+= 50% of Spd and Prt/Rsl = 25% of Spd.[N]
+[_Lock]: Haye[X]
 
 ## BossGuyName
 Eternal[X]
@@ -1261,13 +1366,13 @@ Worn Locket[X]
 
 ## LocketDesc
 An old locket with a picture of[N]
-2 soldiers. They look happy.[X]
+2 soldiers. They look happy.[N]
+[_Lock]: Ulrich[X]
 
 ## LocketUlrichDesc
 His treasured pendant. Reverses Defeatist's[N]
 penalties and grants Prt/Rsl +5 if HP is 50%[N]
 or less. Move +1, Res +5. [_Lock]: Ulrich[X]
-
 
 ## RangeHealName
 Remedy[X]
@@ -1296,7 +1401,7 @@ Glacier A[X]
 ## DefensiveTomesDesc
 # Defensive tomes or grant WT?? or BOTH?!
 Grants Def +10. Grants full WTA against[N]
-bows, daggers, and shields.
+bows, daggers, and shields.[X]
 
 ## DarkDefensiveName
 Munio A[X]
@@ -1371,7 +1476,7 @@ faithful silence hidden in dusk.[N]
 Sun[N]
 This unit is born of daybreak, their[N]
 exuberance and vigor shining at dawn.[N]
-+5 Crit/+10 Dodge per support.[X]
++5 Crit/+10 Crit Avoid per support.[X]
 
 ## EarthAffDesc
 Earth[N]

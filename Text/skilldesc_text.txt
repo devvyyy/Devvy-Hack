@@ -24,11 +24,44 @@ and grants Atk/AS/Prt/Rsl +5.[N]
 of each turn.[N]
 
 ## SD_CageFight
+# new units start here
 Cage Fight[N]
-- If both sides' aren't adjacent to an[N]
-ally/foe, grants both sides Atk = that unit's[N]
-missing HP, and if initiating, grants an[N]
+- If Bronson initiates and foe can counter,[N]
+grants Atk +5, and if either sides' HP[N]
+< 100%, grants both sides an[N]
 additional strike after first attack.[X]
+
+## SD_LoafOff
+Loaf Off[N]
+- If Svana Waits without acting, restores[N]
+50% of Max HP.[N]
+- If initiating, grants Atk/AS = (10 -[N]
+number of movement used).[X]
+
+## SD_Overachiever
+Overachiever[N]
+- Flamur's follow-ups trigger twice;[N]
+if unable to follow-up, grants an[N]
+additional attack after first attack.[X]
+
+## SD_OnSwiftWings
+Guardian Angel[N]
+- Grants Maya another action after[N]
+using a staff (once per turn).[N]
+- If an ally's HP is below 75%,[N]
+grants Move +2.[X]
+
+## SD_Domineer
+Domineer[N]
+- Emaneuil inflicts -25% Str/Eth/Spd and[N]
+Hit/Avoid -15 to foes within 3 spaces.[X]
+
+## SD_StandTogether
+Stand Together[N]
+- If within 5 spaces of 4+ allies, Renier[N]
+and those allies reduce damage taken =[N]
+25% of respective unit's Def and, if[N]
+initiating, strike x2 consecutively.[X]
 
 ## SD_PotentFake
 Blitzing Reflexes[N]
@@ -93,7 +126,7 @@ Fears target and ends the actions of[N]
 closest foes within 4 spaces of target.[X]
 
 ## SD_DriveRes
-Hallowed Soul[N]
+Hallowed Souls[N]
 - Iris neutralizes Mt of foe's magic.[N]
 - Grants Rsl +5 and (50% ally Str)[N]
 bonus magical damage to allies within[N]
@@ -371,33 +404,36 @@ damage taken = 50% of foe's max HP.[X]
 ## SD_BreveMirrorPassive
 # Latent Powers
 Moody[N]
-- On odd turns, grants Breve Hit/Crit +20.[N]
-- If any side's HP isn't full, grants[N]
-Atk/AS +10.[X]
+- On odd turns, Breve always lands a critical[N]
+hit, and if HP isn't full, grants Atk = 3[N]
++ 25% of missing HP.[X]
 
 ## SD_HildrMirrorPassive
-Hyperactive[N]
- If Hildr uses all movement[N]
-and initiates, grants Def +20.[X]
+Winged Valkyrie[N]
+- If Hildr is Rescuing an ally, ignores Rescue[N]
+penalties, grants Move +2, and grants Atk =[N]
+allies with HP < 100%.[X]
 
 ## SD_UlrichMirrorPassive
 Anamnesis[N]
 - If Ulrich is within 3 spaces of a[N]
-Wreyvian ally, deals (Def) bonus physical[N]
-damage; if Aeterian, deals (Res) bonus[N]
-magical damage (can stack).[X]
+Wreyvian ally, deals (Str) bonus physical[N]
+damage; of an Aeterian ally, deals (Str)[N]
+bonus magical damage (can stack).[X]
 
 ## SD_AnsgarMirrorPassive
-Forge Mastery[N]
-- If within 2 spaces of a physical[N]
+Ringing of Steel[N]
+- If within 3 spaces of a physical[N]
 ally, grants Ansgar and those allies:[N]
-- Reduces damage taken = 25% of Def.[N]
+- Reduces damage taken = 50% of Def.[N]
 - Weapons have Silver Mt (if lower).[X]
 
 ## SD_NoraMirrorPassive
-Pacifist[N]
-- If foe initiates, Nora reduces foe's[N]
-Str by 50% and ignores weapon Mt.[X]
+Noble Legacy[N]
+- If Nora has a Light tome equipped,[N]
+deals bonus damage/reduces damage taken[N]
+= 25% of Res, and if Res > foe's Res,[N]
+follow-up and foe can't.[X]
 
 ## SD_SequinMirrorPassive
 Touch of Frost[N]
@@ -407,8 +443,83 @@ bonus magical damage.[N]
 within 2 spaces of target.[X]
 
 ## SD_MochaMirrorPassive
-Golden Feather: If Mocha initiates, inflicts[N]
-penalty on foe's AS/Prt = 50% of Res.[X]
+Golden Feather[N]
+- If Mocha's Spd > foe's Spd -10, perform an[N]
+additional follow-up attack that deals 5[N]
+reduced damage (if AS > foe's AS +4, occurs[N]
+after follow-up; otherwise as follow-up).[X]
+
+## SD_StrogyMirrorPassive
+# Rampage doubles Str/Eth, but halves Skill/Spd/Def/Res.
+Party Animal[N]
+- After using a consumable item, grants[N]
+Stroganoff another action and Rampage[N]
+for 1 turn, but take 5 damage.[X]
+
+## SD_DoppioMirrorPassive
+Martial Poise[N]
+- Doppio and adjacent non-mounted allies[N]
+can Canto 1 space after combat.[N]
+- Counter before foe's first attack.[X]
+
+## SD_EspressoMirrorPassive
+Second Wind[N]
+- If Galeforce activates, grants Eisner[N]
+Atk/Skill/Spd +5 for 1 turn.[X]
+
+## SD_BrudetMirrorPassive
+Dragonforce[N]
+- Brudet deals bonus damage and[N]
+reduces damage taken = 25% of Def,[N]
+doubled when HP is 50% or less.[X]
+
+## SD_NoelMirrorPassive
+Grin and Bear It[N]
+- Grants Noel Atk/Prt = 25% of missing HP.[N]
+- If initiating and foe's HP is full,[N]
+strikes x2 consecutively.[X]
+
+## SD_YoryMirrorPassive
+Overclock[N]
+- Yory can Canto 1 space after combat.[N]
+- Big Iron strikes x4 consecutively and[N]
+deals 5 bonus magical damage, but take[N]
+10 damage after initiating combat.[X]
+
+## SD_FlorisMirrorPassive
+Domineer[N]
+- Floris inflicts -25% Str/Eth/Spd and -50%[N]
+Avoid to foes within 3 spaces.[X]
+
+## SD_LennardMirrorPassive
+Boasting Shout[N]
+If Lennard initiates and defeats foe,[N]
+grants Atk/Spd +5 and Provoke for 1 turn,[N]
+but sets Def/Res to 0 for 1 turn.[X]
+
+## SD_ThereseMirrorPassive
+Valiant[N]
+- If foe's HP is full, grants Doppio[N]
+Atk +4, follow-ups trigger twice, and[N]
+if also initiating, follow-up and[N]
+foe can't.[X]
+
+## SD_WegmanMirrorPassive
+Lionheart[N]
+- Wegman reduces damage taken from foe's[N]
+first attack by 10 and second attack[N]
+onwards by 20.[X]
+
+## SD_IrisMirrorPassive
+Celestial Light[N]
+- If HP of adjacent units is 25% or less,[N]
+on turns 1-10, Iris grants those allies[N]
+immunity to non-Light attacks.[X]
+
+## SD_KaneMirrorPassive
+Booze Cruise: Kane's staves grant Tipsy[N]
+to allies over 21 for 1 turn, granting[N]
+Atk/Rsl +10, but inflicting AS/Prt -4.[X]
 
 ## SD_RinaMirrorPassive
 Blitzing Reflexes[N]
@@ -419,47 +530,6 @@ damage taken = difference between Spd stats.[X]
 ## SD_PandoroMirrorPassive
 Moonlit Shackles: Pandoro inflicts Def -5 on[N]
 foe for 1 turn after combat.[X]
-
-## SD_StrogyMirrorPassive
-Captain's Orders: Stroganoff grants Atk/AS +3[N]
-to allies within 2 spaces. Inflicts Atk/AS -3[N]
-to foes within 2 spaces.[X]
-
-## SD_DoppioMirrorPassive
-Hero's Guard: If foe initiates, Doppio[N]
-makes a follow-up and foe cannot, and[N]
-foe cannot land a critical hit.[X]
-
-## SD_EspressoMirrorPassive
-Second Wind: If Galeforce activates, grants[N]
-Eisner Atk/Skill/Spd +5 for 1 turn.[X]
-
-## SD_BrudetMirrorPassive
-Dragonforce: Brudet deals bonus damage and[N]
-reduces damage taken = 25% of Def.[X]
-
-## SD_YoryMirrorPassive
-Overclock: Canto 1 space. Yory's Big Iron strikes[N]
-x4 consecutively and deals 5 bonus magical damage.[X]
-
-## SD_FlorisMirrorPassive
-Catch These Hands: At 1 range, Floris ignores[N]
-weapon Mt, targets Def, and strikes x2 consecutively.[X]
-
-## SD_LennardMirrorPassive
-Boasting Shout: If Lennard initiates and defeats foe,[N]
-grants Atk/Spd +5 and Provoke for 1 turn, but[N]
-sets Def/Res to 0.[X]
-
-## SD_IrisMirrorPassive
-Hallowed Ascension: If HP of adjacent units[N]
-is 25% or less, Iris grants immunity to[N]
-non-Light attacks (excludes bosses).[X]
-
-## SD_KaneMirrorPassive
-Booze Cruise: Kane's staves grant Tipsy[N]
-to allies over 21 for 1 turn, granting[N]
-Atk/Rsl +10, but inflicting AS/Prt -4.[X]
 
 ## FallenStarStatusName
 Alacrity[X]
@@ -655,10 +725,6 @@ Strong and Tough: If unit's Move or Spd[N]
 is less than foe's Move or Spd, x2 hits,[N]
 and unit follow-ups and foe cannot.[X]
 
-## SD_StandTogether
-Stand Together: If adjacent to 2 or more[N]
-allies, grants Def +10.[X]
-
 ## SD_PerfectPitch
 dummy[X]
 
@@ -711,16 +777,16 @@ magic spells.[X]
 ## SD_Alacrity
 # Alacrity
 Momentum[N]
-- If Mocha initiates, deals bonus damage
+- If Mocha initiates, deals bonus damage[N]
 = (Spd - foe's Spd; min 0), and if Spd >[N]
 foe's Spd +8, foe can't counter.[X]
 
 ## SD_AlacrityREAL
 Alacrity[N]
-- If Mocha initiates, grants an additional[N]
-strike after first attack, and if all Move[N]
-is used, dodge all attacks.[N]
-[X]
+- If Mocha's Spd > foe's Spd -10, perform an[N]
+additional follow-up attack that deals 5[N]
+reduced damage (if AS > foe's AS +4, occurs[N]
+after follow-up; otherwise as follow-up).[X]
 
 ## SD_Limber
 Deft Handling[N]
@@ -734,8 +800,8 @@ counter first.[N]
 Imminent Death[N]
 - Haye's follow-ups trigger twice and[N]
 foe's follow-ups deal 30 less damage.[N]
-- If Spd > foe's Spd, grants Atk = 50%[N]
-of Spd and Prt/Rsl = 25% of Spd.[X]
+- Whichever side has higher Spd[N]
+follow-ups and other side can't.[X]
 
 ## SD_Immovable
 Immovable[N]
@@ -903,7 +969,7 @@ foe cannot.[X]
 
 ## SD_ResolutePyre
 Resolute Pyre[N]
-- Grants Aoife Eth/Crit = 50% of[N]
+- Grants Aoife Atk/Crit = 50% of[N]
 both sides' missing HP.[N]
 - Immune to status staves.[X]
 
@@ -915,12 +981,12 @@ Atk +5/Hit +50.[N]
 Def/Res +5 and Avoid +50.[X]
 
 ## SD_Eulogy
-# Eulogy of Aeteria
+# Eulogy of Aeteria; Grey Watcher
 Empty Moment[N]
-- If magic foe initiates, Maynard[N]
-neutralizes foe's Atk/AS/Rsl,[N]
-setting them to 0.[N]
-- Immune to status staves.[X]
+- If Maynard initiates, after combat,[N]
+ends the actions of closest foes within 6[N]
+spaces of target; if foe initiates, ends[N]
+the actions of all foes within 3 spaces.[X]
 
 ## SD_TouchOfFrost
 Test of Faith[N]
@@ -934,7 +1000,7 @@ Borrowed Time: After combat, Xidorn restores[N]
 5 HP and deals 5 damage to foe.[X]
 
 ## SD_RidersAxiom
-Ataraxia[N]
+Apotheosis[N]
 - On turns 1-3, Gerolf can follow-up[N]
 and foe can't, and if initiating,[N]
 deals bonus damage/reduces damage[N]
@@ -1057,12 +1123,6 @@ Grounding[N]
 has a status effect, Doppio ignores foe's[N]
 terrain bonuses and deals bonus magical[N]
 damage = foe's Spd x 2.[X]
-
-## SD_Kalista
-Martial Poise[N]
-- Doppio and adjacent non-mounted allies[N]
-can Canto 1 space after combat.[N]
-- Counter before foe's first attack.[X]
 
 ## SD_Falcon
 Falcon: During turns 1-5, grants[N]
