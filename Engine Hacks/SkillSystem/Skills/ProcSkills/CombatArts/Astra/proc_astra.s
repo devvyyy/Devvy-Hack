@@ -61,10 +61,10 @@ bne End
 @astra effect starts here
 
 @write the damage, since we're skipping ahead
-mov     r2, #4
-ldrsh   r3, [r7, r2]
-asr     r3, #1 @damage halved
-strh    r3, [r7, #4]
+@mov     r2, #4
+@ldrsh   r3, [r7, r2]
+@asr     r3, #1 @damage halved
+@strh    r3, [r7, #4]
 
 @ lsl     r3, #0x18
 
@@ -91,10 +91,10 @@ b End
 
 AlreadyAstra:
 @write the damage, since we're skipping ahead
-mov     r2, #4
-ldrsh   r3, [r7, r2]
-asr     r3, #1 @damage halved
-strh    r3, [r7, #4]
+@mov     r2, #4
+@ldrsh   r3, [r7, r2]
+@asr     r3, #1 @damage halved
+@strh    r3, [r7, #4]
 
 ldrb    r0,[r6,#6] @attacks remaining
 sub     r0, #1

@@ -18,9 +18,14 @@ AnsgarRightShiftTSA:
 ALIGN 4
 UlrichLeftShiftTSA:
 #incbin "gfx/Ulrich.dmp"
+
 ALIGN 4
 WegmanLeftShiftTSA:
 #incbin "gfx/Wegman.dmp"
+
+ALIGN 4
+WegmanTimeskipLeftShiftTSA:
+#incbin "gfx/TimeskipWegman.dmp"
 
 #define PortraitTSAListEntry(portraitID, xMouth, yMouth, TSAPointer) "SHORT portraitID; BYTE xMouth yMouth; POIN TSAPointer"
 
@@ -31,4 +36,5 @@ PortraitTSAListEntry(0x29, 2, 5, RightShiftTSA) //Strogy portrait example
 PortraitTSAListEntry(0x22, 3, 5, UlrichLeftShiftTSA) //Ulrich
 PortraitTSAListEntry(0xD, 2, 5, WegmanLeftShiftTSA) //Wegman
 PortraitTSAListEntry(0xBB, 2, 5, WegmanLeftShiftTSA) //Wegman Alt
+PortraitTSAListEntry(0xE4, 2, 5, WegmanTimeskipLeftShiftTSA) //Wegman Alt
 SHORT 0 //TERMINATOR

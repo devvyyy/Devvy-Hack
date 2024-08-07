@@ -24,7 +24,7 @@
 		ldr		r1, [r1]
 		
 		mov		r2, r4
-		ldr		r3, =MakeShopArmory
+		ldr		r3, =0x080B4220
 		mov		lr, r3
 		.short	0xF800
 		pop		{r4}

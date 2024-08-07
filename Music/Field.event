@@ -24,7 +24,7 @@ Label_018894A6:
  BYTE   TEMPO   150*songC3_tbs/2
  BYTE   VOICE   36
  BYTE   PAN   c_v-4
- BYTE   VOL   22*songC3_mvl/mxv
+ BYTE   VOL   24*songC3_mvl/mxv
  BYTE   N84  AnM1  v100
  BYTE   N84  An0
  BYTE   W84
@@ -680,7 +680,7 @@ Label_018896F2:
 //  #01 //067   ----------------------------------------
  BYTE   TEMPO   150*songC3_tbs/2
  BYTE   VOICE   36
- BYTE   VOL   22*songC3_mvl/mxv
+ BYTE   VOL   24*songC3_mvl/mxv
  BYTE   FINE
 
 //**************** Track 2 (Midi-Chn.1) ****************//
@@ -690,8 +690,8 @@ songC3_002:
  BYTE   KEYSH   songC3_key+0
 Label_01888A62:
  BYTE   VOICE   95
- BYTE   VOL   22*songC3_mvl/mxv
- BYTE   PAN   c_v-16
+ BYTE   VOL   25*songC3_mvl/mxv
+ BYTE   PAN   c_v-18
  BYTE   N84  En3  v064
  BYTE   N84  An3
  BYTE   N84  Cn4
@@ -1019,8 +1019,8 @@ Label_01888BBE:
   POIN2 Label_01888A62
 //  #02 //067   ----------------------------------------
  BYTE   VOICE   95
- BYTE   VOL   22*songC3_mvl/mxv
- BYTE   PAN   c_v-16
+ BYTE   VOL   25*songC3_mvl/mxv
+ BYTE   PAN   c_v-18
  BYTE   FINE
 
 //**************** Track 3 (Midi-Chn.2) ****************//
@@ -1774,7 +1774,7 @@ songC3_004:
 Label_018C35BE:
  BYTE   VOICE   100
  BYTE   PAN   c_v-13
- BYTE   VOL   23*songC3_mvl/mxv
+ BYTE   VOL   24*songC3_mvl/mxv
  BYTE   N96  En3  v064
  BYTE   W96
 //  #04 //001   ----------------------------------------
@@ -2265,7 +2265,7 @@ Label_018C3786:
   POIN2 Label_018C35BE
 //  #04 //068   ----------------------------------------
  BYTE   VOICE   100
- BYTE   VOL   23*songC3_mvl/mxv
+ BYTE   VOL   24*songC3_mvl/mxv
  BYTE   FINE
 
 //**************** Track 5 (Midi-Chn.4) ****************//
@@ -2796,7 +2796,7 @@ songC3_006:
  BYTE   KEYSH   songC3_key+0
 Label_0188858A:
  BYTE   VOICE   1
- BYTE   PAN   c_v-19
+ BYTE   PAN   c_v-24
  BYTE   VOL   28*songC3_mvl/mxv
  BYTE   W96
 //  #06 //001   ----------------------------------------
@@ -3261,7 +3261,7 @@ songC3_007:
 Label_018C3ABE:
  BYTE   VOICE   48
  BYTE   PAN   c_v+8
- BYTE   VOL   21*songC3_mvl/mxv
+ BYTE   VOL   22*songC3_mvl/mxv
  BYTE   N48  En3  v100
  BYTE   N48  An3
  BYTE   N48  Cn4
@@ -3992,7 +3992,7 @@ Label_018C3D54:
   POIN2 Label_018C3ABE
 //  #07 //067   ----------------------------------------
  BYTE   VOICE   48
- BYTE   VOL   21*songC3_mvl/mxv
+ BYTE   VOL   22*songC3_mvl/mxv
  BYTE   FINE
 
 //**************** Track 8 (Midi-Chn.7) ****************//
@@ -4002,7 +4002,7 @@ songC3_008:
  BYTE   KEYSH   songC3_key+0
 Label_018C3E52:
  BYTE   VOICE   124
- BYTE   VOL   36*songC3_mvl/mxv
+ BYTE   VOL   38*songC3_mvl/mxv
  BYTE   N12  Cn1  v064
  BYTE   N12  Fs1
  BYTE   N12  Cs2

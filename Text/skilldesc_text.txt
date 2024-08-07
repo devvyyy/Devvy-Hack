@@ -68,7 +68,7 @@ Blitzing Reflexes[N]
 - If initiating or if unit's Spd > foe's Spd,[N]
 strikes again after first attack that[N]
 deals X% damage and reduces damage taken[N]
-from foe's counter = Spd difference (min; 0).[X]
+from foe's counter = Spd difference (min 0).[X]
 
 ## SD_PotentFake2
 (If unit can follow-up or strike x2 consecutively,[N]
@@ -126,7 +126,7 @@ Fears target and ends the actions of[N]
 closest foes within 4 spaces of target.[X]
 
 ## SD_DriveRes
-Hallowed Souls[N]
+Hallowed Radiance[N]
 - Iris neutralizes Mt of foe's magic.[N]
 - Grants Rsl +5 and (50% ally Str)[N]
 bonus magical damage to allies within[N]
@@ -409,10 +409,10 @@ hit, and if HP isn't full, grants Atk = 3[N]
 + 25% of missing HP.[X]
 
 ## SD_HildrMirrorPassive
-Winged Valkyrie[N]
+Valkyrie[N]
 - If Hildr is Rescuing an ally, ignores Rescue[N]
 penalties, grants Move +2, and grants Atk =[N]
-allies with HP < 100%.[X]
+number of allies with HP < 100%.[X]
 
 ## SD_UlrichMirrorPassive
 Anamnesis[N]
@@ -785,7 +785,7 @@ foe's Spd +8, foe can't counter.[X]
 Alacrity[N]
 - If Mocha's Spd > foe's Spd -10, perform an[N]
 additional follow-up attack that deals 5[N]
-reduced damage (if AS > foe's AS +4, occurs[N]
+reduced damage (if able to follow-up, occurs[N]
 after follow-up; otherwise as follow-up).[X]
 
 ## SD_Limber
@@ -1268,12 +1268,12 @@ Eye of the King: Deals damage =[N]
 foe's Max HP/4.[X]
 
 ## SD_CloseCall
-# After dashing, if not in Stealth, grants another action and Stealth.
+# After dashing, if not in Stealth, enter Stealth and grants another action.
 Sidestep[N]
 - Affogato can Canto 2 spaces after[N]
 any action while not in Stealth.[N]
-- After dashing, if not in Stealth, enter[N]
-Stealth and grants another action.[X]
+- Can Vault to dash over a unit, and,[N]
+if not in Stealth, enter Stealth and g
 
 ## SD_Stealth
 # Guerrilla Warfare; uses flag 0x25; 0xEF is affogato mug flag
@@ -1514,8 +1514,8 @@ Cost: 5 Durability.[X]
 
 ## SD_Astra
 Lightslinger[N]
-- Use to strike x2 consecutively with[N]
-50% total damage (can follow-up).[N]
+- Use to strike x2 consecutively.[N]
+(x2 Durability used; can follow-up).[N]
 - Can Canto 3 spaces after combat.[N]
 (Granted actions take priority.)[X]
 
@@ -1816,10 +1816,10 @@ damage dealt and taken.[X]
 
 ## SD_LockTouch
 Thief Basics[N]
-- Unit can pick locks and steal items.[N]
-- Grants Sidearm range +1.[N]
-- Grants +2 spaces of vision in[N]
-fog/darkness and disables traps.[X]
+- Unit can pick locks, steal items,[N]
+disable traps, and Vault over units.[N]
+- Grants Sidearm range +1 and +2[N]
+spaces of vision in fog/darkness.[N]
 
 ## SD_Lunge
 Steel Soul[N]

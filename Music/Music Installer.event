@@ -242,10 +242,25 @@ ALIGN 4
 SongTable(0xC0,songC0,1)
 #include "Earthbound.event"
 
-//ALIGN 4
-//Forest of Celceta from khinsider
-//SongTable(0x144,Celceta,1)
-//#include "Celceta.event"
+ALIGN 4
+//Forest of Celceta NO LONGER from khinsider
+SongTable(0x15D,Celceta,1)
+#include "Celceta.event"
+
+ALIGN 4
+//Out of Chaos
+SongTable(0x254,OutofChaos,1)
+#include "OutofChaos.event"
+
+ALIGN 4
+//Charge!!
+SongTable(0x255,ChargeMusic,1)
+#include "Charge.event"
+
+ALIGN 4
+//Eyvel
+SongTable(0x256,EyvelSong,1)
+#include "Eyvel.event"
 
 ALIGN 4
 //Tears of Sylph
@@ -289,7 +304,7 @@ SongTable(0xC4,songC4, 1)
 
 ALIGN 4 
 //Vs. Ernst by Ruby
-SongTable(0xE8,songE8,0)
+SongTable(0xE8,VsErnstEvent,0)
 #include "VsErnst.event"
 
 ALIGN 4

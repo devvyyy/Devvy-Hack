@@ -13,6 +13,8 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TURN 0x8 SussyHouse1 [2,0] 0x0
+TURN 0x9 SussyHouse2 [4,0] 0x0
 TURN 0x0 Rein1 [3,0] 0x0
 TURN 0x0 Rein2 [6,0] 0x0
 TURN 0x0 Rein3 [9,0] 0x0
@@ -74,8 +76,8 @@ Escape(9,0)
 Escape(10,0)
 Escape(11,0)
 
-Armory(ArmoryDaggers,13,1)
-Armory(ArmoryMagic,18,4)
+Vendor(ArmoryDaggers,13,1)
+Vendor(ArmoryMagic,18,4)
 Village(0x8,SussyHouse1,4,11)
 Village(0x9,SussyHouse2,20,14)
 	END_MAIN
@@ -260,13 +262,13 @@ ChargeWarning(0xc4,Placeholder2)
 NoFade
 ENDA
 
-SussyHouse1:
+SussyHouse1: //auto activates on turn 2
 Text(Placeholder1)
 SpawnReinforcements(ThievesOMG)
 NoFade
 ENDA
 
-SussyHouse2:
+SussyHouse2: //auto activates on turn 4
 Text(Placeholder2)
 SpawnReinforcements(ThievesOMG2)
 NoFade
