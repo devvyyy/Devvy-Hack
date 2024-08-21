@@ -8,9 +8,10 @@ pDefenseModifiers: // Defense
 	POIN prSleepHalfDef prPoisonHalfDef
 //	POIN prAvoidBuffDef
 	POIN prAcrobatCheck
-	POIN prFlowStateCheckDef
+	POIN prSergeantCheck
 	POIN prCantoRingDef prCounterDef prBulwarkRing prGrimRingDef
 //	POIN prTemperedFateDef
+	POIN prFlowStateCheckDef //last one so it halves correctly
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -72,6 +73,11 @@ rIfUnitHasStatus(0x1)
 prTemperedFateDef:
 rIfUnitHasStatus(0x13)
 	rAddConst(50)
+	
+prSergeantCheck:
+	rIfUnitHasState(0x400)
+		rIfUnitHasSkill(SergeantID)
+			rAddConst(10)
 	
 prFlowStateCheckDef:
 	rIfUnitHasSkill(FlowStateID)

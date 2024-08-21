@@ -7,14 +7,46 @@
 	
 	#define PortraitSelectionEntry(TruePortraitID,FalsePortraitID,EventIDPointerList,ControlCode) "POIN EventIDPointerList ; SHORT ControlCode TruePortraitID FalsePortraitID 0"
 	ALIGN 4
-	PortraitSelectionTable:
-	PortraitSelectionEntry(0x50,0x21,AffoMugList,0xABAB)
+	PortraitSelectionTable: //timeskip, normal, pointer, label thingy
+//	PortraitSelectionEntry(0x50,0x21,AffoMugList,0xABAB)
+
+	PortraitSelectionEntry(0x50,0x21,TimeskipMugList,0xABAB)
+	
+	PortraitSelectionEntry(0xEB,0x22,TimeskipMugList,0xAAAA) //ulrich
+	PortraitSelectionEntry(0xD5,0x28,TimeskipMugList,0xABAA) //breve
+	PortraitSelectionEntry(0xD6,0x1A,TimeskipMugList,0xACAA) //hildr
+	PortraitSelectionEntry(0xD7,0x23,TimeskipMugList,0xADAA) //ansgar
+	PortraitSelectionEntry(0xD8,0x1F,TimeskipMugList,0xADAA) //sequin
+	PortraitSelectionEntry(0xD9,0x1B,TimeskipMugList,0xADAA) //nora
+	PortraitSelectionEntry(0xDA,0x2C,TimeskipMugList,0xADAA) //mocha
+	PortraitSelectionEntry(0xDB,0x27,TimeskipMugList,0xADAA) //levain
+	PortraitSelectionEntry(0xDC,0x29,TimeskipMugList,0xADAA) //strogy
+	PortraitSelectionEntry(0xDD,0x2D,TimeskipMugList,0xADAA) //doppio
+	PortraitSelectionEntry(0xDE,0x2A,TimeskipMugList,0xADAA) //eisner
+	PortraitSelectionEntry(0xDF,0x3b,TimeskipMugList,0xADAA) //lennard
+	PortraitSelectionEntry(0xE0,0xC,TimeskipMugList,0xADAA) //therese
+	PortraitSelectionEntry(0xE1,0x1D,TimeskipMugList,0xADAA) //floris
+	PortraitSelectionEntry(0xE2,0x2E,TimeskipMugList,0xADAA) //yory
+	PortraitSelectionEntry(0xE3,0x10,TimeskipMugList,0xADAA) //brudet
+	PortraitSelectionEntry(0xEC,0x3a,TimeskipMugList,0xADAA) //noel
+	PortraitSelectionEntry(0xE4,0xD,TimeskipMugList,0xADAA) //wegman
+	PortraitSelectionEntry(0xE5,0x42,TimeskipMugList,0xADAA) //klavdia
+	PortraitSelectionEntry(0xE6,0x9,TimeskipMugList,0xADAA) //gerolf
+	PortraitSelectionEntry(0xE7,0xCB,TimeskipMugList,0xADAA) //xavier
+	PortraitSelectionEntry(0xE8,0x30,TimeskipMugList,0xADAA) //xavier
+	PortraitSelectionEntry(0xE9,0x19,TimeskipMugList,0xADAA) //iris
+	PortraitSelectionEntry(0xEA,0x3,TimeskipMugList,0xADAA) //ogrim
+	PortraitSelectionEntry(0xEB,0x1E,TimeskipMugList,0xADAA) //kane
+	
 	PortraitSelectionEntry(0xBA,0x1D,FlorisMugList,0xACAC)
 	PortraitSelectionEntry(0xCB,0x30,XavierMugList,0xADAD)
 
 	SHORT 0x0 0x0 0x0 0x0 0x0 0x0
-	AffoMugList:
-	BYTE 0xEF True 0x0 0x0
+//	AffoMugList: //timeskip
+//	BYTE 0xEF True 0x0 0x0
+	
+	TimeskipMugList: //timeskip
+	BYTE 0xEF True 0x0 0x0 //if 0xEF is on, everyone becomes timeskipcore
 	
 	FlorisMugList:
 	BYTE 0xB1 True 0x0 0x0

@@ -16,6 +16,20 @@ Like Dominoes: If unit initiates, kills[N]
 foes below (5 + Skill) HP (always hits).[N]
 Grants unit another action on kill.[X]
 
+## SD_Stubborn
+Mulish[N]
+- If unit doesn't deal damage to foe,[N]
+grants another action.[N]
+- If foe can follow-up, grants Atk =[N]
+(unit's AS - foe's AS, - 4).[X]
+
+## SD_Sniper
+Line 'em Up[N]
+- Grants unit bonus Range with Bows[N]
+= spaces moved.[N]
+- Grants bonus Range with Bows +2[N]
+when on a Fortress.[X]
+
 ## SD_LunaticModeEnemies
 Menacing Aura[N]
 - If unit's HP isn't full, counters first[N]
@@ -450,7 +464,7 @@ reduced damage (if AS > foe's AS +4, occurs[N]
 after follow-up; otherwise as follow-up).[X]
 
 ## SD_StrogyMirrorPassive
-# Rampage doubles Str/Eth, but halves Skill/Spd/Def/Res.
+# Rampage doubles Str/Eth, but halves Dex/Spd/Def/Res.
 Party Animal[N]
 - After using a consumable item, grants[N]
 Stroganoff another action and Rampage[N]
@@ -465,7 +479,7 @@ can Canto 1 space after combat.[N]
 ## SD_EspressoMirrorPassive
 Second Wind[N]
 - If Galeforce activates, grants Eisner[N]
-Atk/Skill/Spd +5 for 1 turn.[X]
+Atk/Dex/Spd +5 for 1 turn.[X]
 
 ## SD_BrudetMirrorPassive
 Dragonforce[N]
@@ -778,8 +792,8 @@ magic spells.[X]
 # Alacrity
 Momentum[N]
 - If Mocha initiates, deals bonus damage[N]
-= (Spd - foe's Spd; min 0), and if Spd >[N]
-foe's Spd +8, foe can't counter.[X]
+= 50% of (Spd - foe's Spd; min 0), and if[N]
+Spd > foe's Spd +8, foe can't counter.[X]
 
 ## SD_AlacrityREAL
 Alacrity[N]
@@ -1124,6 +1138,11 @@ has a status effect, Doppio ignores foe's[N]
 terrain bonuses and deals bonus magical[N]
 damage = foe's Spd x 2.[X]
 
+## SD_ThunderClap2
+Phalanx[N]
+- Doppio can Swap with an adjacent ally;[N]
+once per turn, grants another action.[X]
+
 ## SD_Falcon
 Falcon: During turns 1-5, grants[N]
 Attack Speed +3.[X]
@@ -1174,7 +1193,7 @@ combat penalties (WTD, dark magic, etc.).[X]
 # - Reverses penalties (stats, WTD, etc.). ? The Best Defense...
 Bull-Headed[N]
 - Stroganoff attacks last/can't dodge.[N]
-- Attacks deal bonus damage = damage[N]
+- Counters deal bonus damage = damage[N]
 taken from foe's last attack this combat[N]
 and restore HP = 25% of damage dealt.[X]
 
@@ -1272,16 +1291,16 @@ foe's Max HP/4.[X]
 Sidestep[N]
 - Affogato can Canto 2 spaces after[N]
 any action while not in Stealth.[N]
-- Can Vault to dash over a unit, and,[N]
-if not in Stealth, enter Stealth and g
+- Vaulting, if not in Stealth, enters[N]
+Stealth and grants another action.[X]
 
 ## SD_Stealth
 # Guerrilla Warfare; uses flag 0x25; 0xEF is affogato mug flag
 Guerrilla Warfare[N]
 - Can enter Stealth: Pass through foes,[N]
-untargettable, always hit, can't Canto;[N]
-attacking or being adjacent to a foe[N]
-breaks Stealth.[X]
+untargettable, always hit, can't Canto.[N]
+- Attacking or ending an action adjacent[N]
+to a foe breaks Stealth.[X]
 
 ## SD_Stacks
 # Flow, temp flags 0x26-0x28 (used to use 0x25) MAKE THIS 3 stacks now!!
@@ -1305,7 +1324,7 @@ damage dealt on-hit.[X]
 ## SD_Defeatist
 Defeatist[N]
 - If Ulrich's HP is 50% or less,[N]
-inflicts Str/Spd -50%.[N]
+inflicts Atk/AS -5.[N]
 - Use to leave foes with 1 HP.[X]
 
 ## SD_KnightAspirant
@@ -1373,10 +1392,10 @@ a critical hit.[X]
 ## SD_Sergeant
 # Warden/Steadfast
 Stand Behind Me[N]
+- Ansgar can Safeguard adjacent allies.[N]
 - If foe initiates on an ally within 2[N]
-spaces, Ansgar blocks the first lethal[N]
-hit per combat and takes 10 damage; if[N]
-in block range, grants Prt +5, Move +2.[X]
+spaces, blocks the first lethal hit per[N]
+combat, but takes 10 damage (can't kill).[X]
 
 ## SD_ShieldDef
 [_S][_t][_a][_n][_d][_SP][_B][_e][_h][_i][_n][_d][_SP][_M][_e][X]
@@ -1496,15 +1515,15 @@ Bane: Leave the opponent at 1 HP.[N]
 (Skill/2 % activation)[X]
 
 ## SD_Luna
-Luna[N]
-Use combat art to ignore enemy's[N]
-Def/Res on-hit.[N]
+Lunar Flash[N]
+- Can use Luna combat art to ignore[N]
+foe's Def/Res on-hit.[N]
 Cost: 3 Durability.[X]
  
 ## SD_Sol
-Sol[N]
-Use combat art to restore HP =[N]
-damage dealt on-hit.[N]
+Solar Strike[N]
+- Can use Sol combat art to restore HP[N]
+= damage dealt on-hit.[N]
 Cost: 3 Durability.[X]
 
 ## SD_Aether
@@ -1817,9 +1836,9 @@ damage dealt and taken.[X]
 ## SD_LockTouch
 Thief Basics[N]
 - Unit can pick locks, steal items,[N]
-disable traps, and Vault over units.[N]
-- Grants Sidearm range +1 and +2[N]
-spaces of vision in fog/darkness.[N]
+disable traps, and Vault over allies.[N]
+- Grants +1 Sidearm range and +2[N]
+spaces of vision in fog/darkness.[X]
 
 ## SD_Lunge
 Steel Soul[N]
@@ -2070,7 +2089,7 @@ without using an action.[N]
 
 ## SD_Reposition
 Fling[N]
-- Unit can pull an adjacent unit[N]
+- Unit can Fling an adjacent unit[N]
 to the opposite side of unit.[N]
 (Skill can target any allegiance.)[X]
 
@@ -2081,7 +2100,8 @@ adjacent ally.[N]
 (Skill can be used during Canto.)[X]
 
 ## SD_BreathOfLife
-Merciful Wings[N]
+# Merciful Wings
+Wings of a Savior[N]
 - If Messel initiates, grants Rsl +10[N]
 during combat and restores 33% of[N]
 allies' max HP to allies within[N]

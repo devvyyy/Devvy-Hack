@@ -47,6 +47,10 @@ IconDisplayList:
 //0x64 seems to be used for sleep despite being empty wtf???
 
 //defend icons
+BYTE 0xCE 0; SHORT 0; 		BYTE 0xFF 0x11 0 0 //0x11 is the diamond; recruits
+BYTE 0xCF 0; SHORT 0; 		BYTE 0xFF 0x11 0 0 //0x11 is the diamond; messenger
+
+//stealable icons
 BYTE AeteriaStealable 0; SHORT 0; 		BYTE 0xFF 0x41 0 0 //0xFF seems to be the defend icon? (default)
 BYTE FlyingMagStealable 0; SHORT 0; 		BYTE 0xFF 0x41 0 0
 BYTE BadGuyStealable 0; SHORT 0; 		BYTE 0xFF 0x41 0 0

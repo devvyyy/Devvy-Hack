@@ -1,0 +1,91 @@
+EventPointerTable(0xA2, PointerList)
+
+PointerList:
+	POIN TurnBasedEvents
+	POIN CharacterBasedEvents
+	POIN LocationBasedEvents
+	POIN MiscBasedEvents
+	POIN Dunno1 Dunno2 Dunno3 Tutorial
+	POIN Traps1 Traps2
+	POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+	POIN $0 $0 $0
+	POIN $0 $0 $0
+	POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+//TurnEventEnemy(0,ChangeTime,3)
+	END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+
+	END_MAIN
+
+MiscBasedEvents:
+//AREA 0x13 SussyMoment [0,0] [19,10]
+DefeatAll(EndingScene)
+	CauseGameOverIfLordDies
+	END_MAIN
+	
+
+LocationBasedEvents:
+
+	END_MAIN
+
+Dunno1:
+
+	END_MAIN
+
+Dunno2:
+
+	END_MAIN
+
+Dunno3:
+
+	END_MAIN
+
+Tutorial:
+
+	END_MAIN
+
+Units1:
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [11,10] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+	UNIT
+
+EnemyUnits:
+UNIT Beran 0x64 0x1 Level(10, Enemy, 0)     [11,2] 0b 0x0 0x0 0x0 [Siegmund] StallOneTurnAI
+	UNIT
+
+Traps1:
+//BLST [9,4] IronBallista
+	ENDTRAP
+	ALIGN 4
+
+Traps2:
+	ENDTRAP
+	ALIGN 4
+
+BeginningScene:
+	LOAD1 0x1 EnemyUnits
+	ENUN
+	SVAL 0x1 0x1A //26
+	SET_HP Beran
+	CALL $591FD8
+FADU 60
+CameraCursor(Chiffon)
+Text(Placeholder1)
+SOUN 0x119 //bolting sparks
+ENUT 0x24
+ENUT 0x5
+STAL 0x50
+SOUN 0x82 //sleep staff sound
+	ENDA
+	
+ChiffonDuelLose:
+CALL EndingScene
+	ENDA
+
+EndingScene:
+	MNC2 0x23
+	NoFade
+	ENDA

@@ -281,6 +281,43 @@ homes trap them... We should prioritize[N]
 the houses closest to the fire.)[AN][Mouth][ClearFace]
 [X]
 
+## Ch4BotHouseBurningTextAlternate
+# right after preps
+[3L]
+[ML][LoadStroganoff][R][LoadAffogato][FR][LoadUlrich]
+
+[FR]
+To think the empire is capable of this[Beat][N]
+Nonetheless[,] we must prioritize rescuing[N]
+the survivors[,] no matter the cost.[AN]
+
+[R]
+Sir.[.4] Look at the villages.[.6] There's[N]
+people still inside.[AN]
+
+[ML]
+If we wanna rescue 'em[,] we'll haveta carry[N]
+the survivors out to safety:[.4] the road[N]
+back to the front o' the city.[AN][Clear]
+It should be secured right now[,] so that'll[N]
+be the easy route.[AN][Clear]
+
+[FR]
+I cannot imagine there's an 'easy route'[,][N]
+but I suppose I must trust your judgement.[6N]
+Let us head out at once.[AN][CloseSpeechSlow][ClearFace]
+
+[ML][MoveLeft]
+Hey[,] scout guy![.6] Can you guide us through[N]
+the fire[,] or is that too tall a task?[AN]
+
+[R]
+Not at all.[.6] I'll lead the way[,] Captain.[AN][Clear]
+[Mouth](We won't have much time before their[N]
+homes trap them... We should prioritize[N]
+the houses closest to the fire.)[AN][Mouth][ClearFace]
+[X]
+
 ## Ch4BotHouseBurningText2
 # right after preps
 [3L]
@@ -293,21 +330,21 @@ us knights come and evacuate ya'll![AN]
 
 ## NewCh4IntroText
 # right after prep text
-Visit the houses to get a civilian[N]
+[ToggleRed]Visit[ToggleRed] the houses to get a civilian[N]
 to move onto the map. They will[N]
-move right below their home.[AN][Clear]
-To escort them, Rescue the civilian[N]
-and Drop them onto the green-marked[N]
-spaces on the bottom right.[AN][Clear]
+move right below their home.[A][Clear]
+To escort them, [ToggleRed]Rescue[ToggleRed] the civilian[N]
+and [ToggleRed]Drop[ToggleRed] them onto the green-marked[N]
+spaces on the bottom right.[A][Clear]
 Each civilian gives you an item after[N]
 their rescue. They can also all die[N]
-without a Game Over.[AN][Clear]
+without a Game Over.[A][Clear]
 The Escape points on the top right[N]
 will open after all 4 villagers[N]
 are either escorted or dead.[A][Clear]
 After that, you have 20 turns total[N]
 to Escape with every unit to[N]
-clear the map.[AN][Clear]
+clear the map.[A][Clear]
 The lower houses will burn down[N]
 after turn 4 and turn 8, killing[N]
 the civilians inside.[A][Clear]
@@ -858,7 +895,7 @@ Where[Beat] Where is everyone[Beat][AN]
 [OpenMidLeft]
 Saviors[Beat] They've finally arrived to free[N]
 us from the injustice of Aeteria[Beat][N]
-Save Northelm[Beat]![AN]
+Save Northelm[Beat] I beg of you![AN]
 [X]
 
 ## BotVillagerThanks

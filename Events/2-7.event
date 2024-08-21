@@ -29,9 +29,34 @@ CharacterBasedEvents:
 	END_MAIN
 
 MiscBasedEvents:
+AREA 0x13 SussyMoment [0,0] [19,10]
 DefeatAll(EndingScene)
 	CauseGameOverIfLordDies
 	END_MAIN
+	
+SussyMoment:
+
+
+MUSCSLOW 0x7FFF
+CAM1 [9,19]
+STAL 15
+SOUN 0xBA
+STAL 5
+EARTHQUAKE_START 0x0
+STAL 25
+FAWI 30
+SOUN 0x2f0
+SetFlag(0x4) //bgm flag
+ASMC 0x8026629
+SOUN 0x37a
+STAL 5
+FAWU 15
+STAL 10
+EARTHQUAKE_END
+STAL 3
+CameraCursor(Chiffon)
+Text(Placeholder1)
+	ENDA
 
 LocationBasedEvents:
 
@@ -78,7 +103,7 @@ UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [11,29] 0b 0x0 0x0 0x0 [IronAxe,0xE9,]
 	UNIT
 
 EnemyUnits:
-UNIT Gheb 0x64 0x1 Level(10, Enemy, 1)     [9,2] 0b 0x0 0x0 0x0 [SilverBlade] RangeAI
+UNIT Gheb 0x64 0x1 Level(10, Enemy, 1)     [9,2] 0b 0x0 0x0 0x0 [Siegmund] RangeAI
 
 UNIT Aeteria Druid 0x1 Level(3, Enemy, 1)     [9,19] 0b 0x0 0x0 0x0 [Moonfall] BossAI
 UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [7,18] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI

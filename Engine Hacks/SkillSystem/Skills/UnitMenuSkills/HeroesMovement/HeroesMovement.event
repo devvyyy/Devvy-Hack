@@ -25,7 +25,8 @@
 
 prPivotCommand_Availability:
 	rGetWrapper // value defaults to 0 (False)
-			rWithConstant(PivotID)
+			//rWithConstant(PivotID)
+			rWithConstant(LocktouchID)
 				rCallExternal(SkillTester)
 
 prRepositionCommand_Availability:
@@ -36,7 +37,8 @@ prRepositionCommand_Availability:
 
 prSwapCommand_Availability:
 	rGetWrapper
-			rWithConstant(SwapID)
+		rIfUnitHasNotState(US_CANTOING)
+			rWithConstant(SergeantID)
 				rCallExternal(SkillTester)
 
 prShoveCommand_Availability:

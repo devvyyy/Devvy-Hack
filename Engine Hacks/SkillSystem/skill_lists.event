@@ -20,9 +20,9 @@ ALIGN 4
 
 SwapSkillList:
 BYTE 01 CantoPlusID
-BYTE 01 SwapID
+//BYTE 01 SwapID
 BYTE 21 CantoPlusID
-BYTE 21 SwapID
+//BYTE 21 SwapID
 BYTE 00 00
 ALIGN 4
 
@@ -34,9 +34,9 @@ ALIGN 4
 
 PivotSkillList: //cavs, this is swap but i'm too lazy to switch armors and cavs
 BYTE 01 CantoPlusID
-BYTE 01 PivotID
+//BYTE 01 PivotID
 BYTE 21 CantoPlusID
-BYTE 21 PivotID
+//BYTE 21 PivotID
 BYTE 00 00
 ALIGN 4
 
@@ -48,17 +48,17 @@ ALIGN 4
 
 PivotSkillList2: //thieves
 BYTE 01 LocktouchID
-BYTE 01 PivotID
+//BYTE 01 PivotID
 BYTE 21 LocktouchID
-BYTE 21 PivotID
+//BYTE 21 PivotID
 BYTE 00 00
 ALIGN 4
 
 PThiefSkillList: //thieves, in char levelup table
 BYTE 01 LocktouchID
-BYTE 01 ShoveID
+//BYTE 01 ShoveID
 BYTE 21 LocktouchID
-BYTE 21 ShoveID
+//BYTE 21 ShoveID
 BYTE 00 00
 ALIGN 4
 
@@ -66,15 +66,16 @@ AffogatoSkillList:
 //BYTE 01 BulletID
 BYTE 01 StealthID
 BYTE 01 LocktouchID
-BYTE 01 PivotID
+//BYTE 01 PivotID
 BYTE 00 00
 ALIGN 4
 
 ChiffonSkillList:
 //BYTE 01 RallyStrID
 BYTE 01 AstraID
-BYTE 01 LocktouchID
-BYTE 01 PivotID
+//BYTE 01 LocktouchID
+//BYTE 01 PivotID
+BYTE 01 ShoveID
 BYTE 00 00
 ALIGN 4
 

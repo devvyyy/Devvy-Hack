@@ -1,0 +1,241 @@
+#######################################################
+#AE 
+#
+#When importing to FEditorAdv delete # and after each line.
+#######################################################
+/// - Mode 1               #Melee Animation
+C03                               #Start attack animation; need 07 right after this.
+C07                               #Start attack animation; need 03 right before this.
+1 p- Affo_000.png
+4 p- Affo_001.png
+6 p- Affo_002.png
+C23                               #Play shorter sword swinging SFE
+2 p- Affo_003.png
+2 p- Affo_004.png
+3 p- Affo_005.png
+3 p- Affo_006.png
+C19                               #Play bow pulling SFE
+3 p- Affo_007.png
+2 p- Affo_008.png
+2 p- Affo_009.png
+20 p- Affo_010.png
+2 p- Affo_011.png
+C05                               #Call spell associated with equipped weapon
+2 p- Affo_012.png
+2 p- Affo_013.png
+2 p- Affo_014.png
+1 p- Affo_015.png
+C01                               #NOP
+C06                               #Begin opponent's turn after hit.next code 0D.
+3 p- Affo_016.png
+2 p- Affo_017.png
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 3               #Melee Critical Animation
+C03                               #Start attack animation; need 07 right after this.
+C07                               #Start attack animation; need 03 right before this.
+1 p- Affo_000.png
+3 p- Affo_018.png
+3 p- Affo_019.png
+2 p- Affo_020.png
+C37                               #Play sword clicking SFE
+3 p- Affo_021.png
+6 p- Affo_022.png
+2 p- Affo_023.png
+C35                               #Play longer wing flapping SFE
+12 p- Affo_024.png
+4 p- Affo_025.png
+10 p- Affo_026.png
+C25                               #Play wing flap SFE
+2 p- Affo_027.png
+2 p- Affo_028.png
+2 p- Affo_029.png
+2 p- Affo_030.png
+6 p- Affo_031.png
+C36                               #Play sword unsheathing SFE
+10 p- Affo_032.png
+C22                               #Play short sword swinging SFE
+2 p- Affo_033.png
+C20                               #Play hit SFE (sounds like Knight Lord with Durandal's hit)
+C14                               #Heavy vibration of screen
+4 p- Affo_034.png
+1 p- Affo_035.png
+1 p- Affo_036.png
+2 p- Affo_037.png
+8 p- Affo_026.png
+4 p- Affo_038.png
+C19                               #Play bow pulling SFE
+5 p- Affo_039.png
+2 p- Affo_040.png
+2 p- Affo_041.png
+C19                               #Play bow pulling SFE
+10 p- Affo_042.png
+15 p- Affo_043.png
+C05                               #Call spell associated with equipped weapon
+3 p- Affo_044.png
+2 p- Affo_045.png
+2 p- Affo_046.png
+1 p- Affo_047.png
+C01                               #NOP
+C06                               #Begin opponent's turn after hit.next code 0D.
+2 p- Affo_048.png
+2 p- Affo_049.png
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 5               #Ranged Animation 
+C03                               #Start attack animation; need 07 right after this.
+C07                               #Start attack animation; need 03 right before this.
+1 p- Affo_000.png
+4 p- Affo_001.png
+6 p- Affo_002.png
+C22                               #Play short sword swinging SFE
+2 p- Affo_003.png
+2 p- Affo_004.png
+3 p- Affo_005.png
+3 p- Affo_006.png
+C19                               #Play bow pulling SFE
+3 p- Affo_007.png
+2 p- Affo_008.png
+2 p- Affo_009.png
+20 p- Affo_010.png
+2 p- Affo_011.png
+C05                               #Call spell associated with equipped weapon
+2 p- Affo_012.png
+2 p- Affo_013.png
+2 p- Affo_014.png
+1 p- Affo_015.png
+C01                               #NOP
+C06                               #Begin opponent's turn after hit.next code 0D.
+3 p- Affo_016.png
+2 p- Affo_017.png
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 6               #Ranged Critical Animation
+C03                               #Start attack animation; need 07 right after this.
+C07                               #Start attack animation; need 03 right before this.
+1 p- Affo_000.png
+3 p- Affo_018.png
+3 p- Affo_019.png
+2 p- Affo_020.png
+C37                               #Play sword clicking SFE
+3 p- Affo_021.png
+6 p- Affo_022.png
+2 p- Affo_023.png
+C35                               #Play longer wing flapping SFE
+15 p- Affo_024.png
+4 p- Affo_025.png
+10 p- Affo_026.png
+C25                               #Play wing flap SFE
+2 p- Affo_050.png
+2 p- Affo_051.png
+2 p- Affo_052.png
+6 p- Affo_052.png
+C36                               #Play sword unsheathing SFE
+10 p- Affo_053.png
+C22                               #Play short sword swinging SFE
+2 p- Affo_054.png
+2 p- Affo_055.png
+C20                               #Play hit SFE (sounds like Knight Lord with Durandal's hit)
+C15                               #Slight vibration of screen
+2 p- Affo_056.png
+2 p- Affo_057.png
+2 p- Affo_058.png
+10 p- Affo_026.png
+C25                               #Play wing flap SFE
+2 p- Affo_059.png
+2 p- Affo_060.png
+2 p- Affo_061.png
+7 p- Affo_062.png
+2 p- Affo_063.png
+C24                               #Play sword slashing air SFE
+2 p- Affo_064.png
+2 p- Affo_065.png
+2 p- Affo_066.png
+C20                               #Play hit SFE (sounds like Knight Lord with Durandal's hit)
+C14                               #Heavy vibration of screen
+2 p- Affo_067.png
+2 p- Affo_068.png
+10 p- Affo_026.png
+4 p- Affo_038.png
+C19                               #Play bow pulling SFE
+5 p- Affo_039.png
+2 p- Affo_040.png
+2 p- Affo_041.png
+C19                               #Play bow pulling SFE
+10 p- Affo_042.png
+15 p- Affo_043.png
+C05                               #Call spell associated with equipped weapon
+3 p- Affo_044.png
+2 p- Affo_045.png
+2 p- Affo_046.png
+1 p- Affo_047.png
+C01                               #NOP
+C06                               #Begin opponent's turn after hit.next code 0D.
+2 p- Affo_048.png
+2 p- Affo_049.png
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 7               #Dodge Melee Attack
+C18                               #Use this instead of 02 to dodge toward the foreground instead of toward the background
+1 p- Affo_000.png
+C0E                               #Start of dodging frames (should go after standing frame and before dodging animation)
+2 p- Affo_069.png
+1 p- Affo_070.png
+C01                               #NOP
+2 p- Affo_069.png
+1 p- Affo_000.png
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 8               #Dodge Ranged Attack
+C18                               #Use this instead of 02 to dodge toward the foreground instead of toward the background
+1 p- Affo_000.png
+C0E                               #Start of dodging frames (should go after standing frame and before dodging animation)
+2 p- Affo_069.png
+1 p- Affo_070.png
+C01                               #NOP
+2 p- Affo_069.png
+1 p- Affo_000.png
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 9               #Equiped with Melee Weapon
+1 p- Affo_000.png
+C01                               #NOP
+~~~
+/// - Mode 10               #Standing motions
+1 p- Affo_000.png
+C01                               #NOP
+~~~
+/// - Mode 11               #Equiped with Ranged weapon
+1 p- Affo_000.png
+C01                               #NOP
+~~~
+/// - Mode 12               #Attack Missed Animation
+C53                               #?
+C03                               #Start attack animation; need 07 right after this.
+C07                               #Start attack animation; need 03 right before this.
+1 p- Affo_000.png
+4 p- Affo_001.png
+6 p- Affo_002.png
+C22                               #Play short sword swinging SFE
+2 p- Affo_003.png
+2 p- Affo_004.png
+3 p- Affo_005.png
+3 p- Affo_006.png
+C19                               #Play bow pulling SFE
+3 p- Affo_007.png
+2 p- Affo_008.png
+2 p- Affo_009.png
+20 p- Affo_010.png
+2 p- Affo_011.png
+C05                               #Call spell associated with equipped weapon
+2 p- Affo_012.png
+2 p- Affo_013.png
+2 p- Affo_014.png
+1 p- Affo_015.png
+C01                               #NOP
+C06                               #Begin opponent's turn after hit.next code 0D.
+3 p- Affo_016.png
+2 p- Affo_017.png
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - End of animation

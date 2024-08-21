@@ -223,10 +223,9 @@ Moose_Mug:
 setMugEntry(0xBC, Moose_Mug, 3, 5, 2, 3)
 
 ALIGN 16
-Locro_Mug:
-#incext PortraitFormatter "Locro.png"
-setMugEntry(0xBD, Locro_Mug, 3, 5, 3, 3)
-
+Irma_Mug:
+#incext PortraitFormatter "GAMMAirma.png"
+setMugEntry(0xBD, Irma_Mug, 3, 5, 2, 3)
 
 ALIGN 16
 Kane_Mug:
@@ -333,6 +332,11 @@ ALIGN 16
 Haye_Mug:
 #incext PortraitFormatter "Haye.png"
 setMugEntry(0x57, Haye_Mug, 3, 5, 3, 2)
+
+ALIGN 16
+HayeDuel_Mug:
+#incext PortraitFormatter "HayeDuel.png"
+setMugEntryExtend(0xF1, HayeDuel_Mug, 3, 5, 3, 2, 10, 4, 0, 0)
 
 ALIGN 16
 Ulrich_Mug:
@@ -515,10 +519,10 @@ Marcellus_Mug:
 #incext PortraitFormatter "Marcellus.png"
 setMugEntry(0x31, Marcellus_Mug, 3, 5, 3, 3)
 
-ALIGN 16 //Kisra by Laurent Lacroix
-Kisra_Mug:
-#incext PortraitFormatter "Kisra.png"
-setMugEntry(0x32, Kisra_Mug, 3, 5, 3, 3)
+ALIGN 16 //by gamma
+Locro_Mug:
+#incext PortraitFormatter "GAMMAhalcyon.png"
+setMugEntry(0x32, Locro_Mug, 2, 5, 3, 3)
 
 ALIGN 16 //Biscotti by LEVIN?!?!
 Biscotti_Mug:
@@ -717,6 +721,11 @@ TimeskipSequin_Mug:
 setMugEntry(0xD8, TimeskipSequin_Mug, 4, 5, 3, 3)
 
 ALIGN 16
+TimeskipUlrich_Mug:
+#incext PortraitFormatter "TimeskipUlrich.png"
+setMugEntryExtend(0xEB, TimeskipUlrich_Mug, 3, 5, 2, 3, 0, 0, 0, 2)
+
+ALIGN 16
 TimeskipNora_Mug: //Nora edited by Busker Husker Tusker Cornhusker Duster Buster
 #incext PortraitFormatter "TimeskipNora.png"
 setMugEntry(0xD9, TimeskipNora_Mug, 3, 5, 3, 3)
@@ -730,6 +739,11 @@ ALIGN 16
 TimeskipLevain_Mug:
 #incext PortraitFormatter "TimeskipLevain.png"
 setMugEntryExtend(0xDB, TimeskipLevain_Mug, 2, 5, 2, 3, 10, 4, 0, 0)
+
+ALIGN 16
+TimeskipLevainHeadshot_Mug:
+#incext PortraitFormatter "TimeskipLevainHeadshot.png"
+setMugEntryExtend(0xED, TimeskipLevainHeadshot_Mug, 2, 5, 2, 3, 10, 4, 0, 0)
 
 ALIGN 16
 TimeskipStroganoff_Mug:
@@ -774,7 +788,7 @@ setMugEntry(0xE3, TimeskipBrudet_Mug, 3, 5, 3, 3)
 ALIGN 16
 TimeskipNoel_Mug: //by BUSKHUSKER sussy
 #incext PortraitFormatter "TimeskipNoel.png"
-setMugEntry(0xE4, TimeskipNoel_Mug, 3, 5, 3, 3)
+setMugEntry(0xEC, TimeskipNoel_Mug, 3, 5, 3, 3)
 
 ALIGN 16
 TimeskipWegman_Mug:
@@ -785,6 +799,21 @@ ALIGN 16
 TimeskipKlavdia_Mug:
 #incext PortraitFormatter "TimeskipKlavdia.png"
 setMugEntry(0xE5, TimeskipKlavdia_Mug, 3, 5, 3, 3)
+
+ALIGN 16
+TimeskipKlav_Mug1Stack:
+#incext PortraitFormatter "TimeskipKlavdia1Stack.png"
+setMugEntry(0xEE, TimeskipKlav_Mug1Stack, 3, 5, 3, 3)
+
+ALIGN 16
+TimeskipKlav_Mug2Stacks:
+#incext PortraitFormatter "TimeskipKlavdia2Stacks.png"
+setMugEntry(0xEF, TimeskipKlav_Mug2Stacks, 3, 5, 3, 3)
+
+ALIGN 16
+TimeskipKlav_Mug3Stacks:
+#incext PortraitFormatter "TimeskipKlavdia3Stacks.png"
+setMugEntry(0xF0, TimeskipKlav_Mug3Stacks, 3, 5, 3, 3)
 
 ALIGN 16
 TimeskipGerolf_Mug:
@@ -811,6 +840,10 @@ TimeskipOgrim_Mug:
 #incext PortraitFormatter "TimeskipOgrim.png"
 setMugEntry(0xEA, TimeskipOgrim_Mug, 3, 5, 3, 3)
 
+ALIGN 16
+TimeskipKane_Mug:
+#incext PortraitFormatter "TimeskipKane.png"
+setMugEntry(0xEC, TimeskipKane_Mug, 3, 5, 3, 3)
 
 // Lol
 ALIGN 16 //lol

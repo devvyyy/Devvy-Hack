@@ -25,6 +25,23 @@ TURN 0x0 GoodbyeDespair [14,0] 0x0
 GoodbyeDespair:
 GameOver
 ENDA
+
+WeAreDead:
+CHECK_ACTIVE
+SVAL 1 0x65
+BEQ 0x1 0xC 0x1
+ENUF 0x92
+GOTO 0x2
+LABEL 0x1
+CAM1 Chiffon
+CUMO Chiffon
+STAL 60
+CURE
+Text(Placeholder1)
+SetFlag(0x92) //fail side objective global flag
+LABEL 0x2
+NoFade
+ENDA
 	
 Rein1:
 SpawnReinforcements(BotReinReal)
@@ -56,6 +73,8 @@ CharacterBasedEvents:
 	END_MAIN
 
 MiscBasedEvents:
+AREA 0x92 WeAreDead [2,0] [2,0]
+
 AREA 0xA AggroWellington [14,11] [20,22]
 AREA 0xA AggroWellington [12,18] [24,24]
 AREA 0xA AggroWellington [11,18] [11,19]

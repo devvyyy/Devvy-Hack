@@ -9,8 +9,7 @@ bne     GoBack
 mov r4, r0 @atkr
 mov r5, r1 @dfdr
 
-
-@has Charge
+@has Alacrity
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r4 @Attacker data
@@ -18,40 +17,6 @@ ldr r1, AlacrityID
 .short 0xf800
 cmp r0, #0
 beq GoBack
-
-b SpdDamage
-@get units move
-ldr r0,MovGetter
-mov r14,r0
-mov r0,r4
-mov r1,#0
-.short 0xF800
-@r0= units move *2 for some reason
-lsr r0,r0,#1 @r0 = unit's move
-
-@get units used up movement from action struct
-ldr r1,=0x203A958 @action struct
-add r1,#0x10 @squares moved this turn
-ldrb r1,[r1] @r1 = squares moved
-
-@get remaining move
-sub r0,r1
-cmp r0,#0 @see if we've moved as far as possible
-bgt GoBack @if not, no bonus
-
-@otherwise, grants avoid +255
-mov r1, #0x62
-ldrh r0, [r4, r1] @avoid
-add r0, #255
-strh r0, [r4,r1]
-
-@otherwise, grants hit +255
-mov r1, #0x60
-ldrh r0, [r4, r1] @avoid
-add r0, #255
-strh r0, [r4,r1]
-
-SpdDamage:
 
 ldr r0,=#0x203A4EC @attacker struct
 cmp r0,r4
@@ -67,6 +32,7 @@ ble GoBack @skip if spd is less or equal than foes spd
 mov  r1, #0x5A
 ldrh r0, [r4, r1] @load unit
 ldrb r2, [r4, #0x16] @unit spd
+lsr  r2, #1 @divide this by 2
 add  r0, r2
 strh r0, [r4,r1]
 
@@ -74,6 +40,7 @@ strh r0, [r4,r1]
 mov  r1, #0x5A
 ldrh r0, [r4, r1] @load unit
 ldrb r2, [r5, #0x16] @enemy spd
+lsr  r2, #1 @divide this by 2
 sub  r0, r2
 strh r0, [r4,r1]
 

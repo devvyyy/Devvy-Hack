@@ -5,9 +5,9 @@
 		#define setText(textID, offset) "PUSH; ORG (TextTable+4*textID); POIN (offset | 0x80000000); POP" 
 	#endif
 	
-	#define SupplyViewCommand 0x0F36
-	#define SupplyViewCommandHelpText 0x0F37
-	#define SupplyConvoyResponse_View 0x0F38
+	#define SupplyViewCommand 0x018E
+	#define SupplyViewCommandHelpText 0x018F
+	#define SupplyConvoyResponse_View 0x0190
 	
 	setText(SupplyViewCommand,SupplyViewCommandText)
 	setText(SupplyViewCommandHelpText,SupplyViewCommandHelpTextText)

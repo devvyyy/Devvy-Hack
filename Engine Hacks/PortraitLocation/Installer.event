@@ -32,9 +32,15 @@ WegmanTimeskipLeftShiftTSA:
 ALIGN 4
 PortraitTSAList:
 PortraitTSAListEntry(0x29, 2, 5, RightShiftTSA) //Strogy portrait example
+PortraitTSAListEntry(0xDC, 2, 5, RightShiftTSA) //Strogy TIMESKIP
+
 //PortraitTSAListEntry(0x23, 3, 4, AnsgarRightShiftTSA) //Ansgar
+//PortraitTSAListEntry(0xD7, 3, 4, AnsgarRightShiftTSA) //Ansgar TIMESKIP
+
 PortraitTSAListEntry(0x22, 3, 5, UlrichLeftShiftTSA) //Ulrich
+PortraitTSAListEntry(0xEB, 3, 5, UlrichLeftShiftTSA) //Ulrich TIMESKIP
+
 PortraitTSAListEntry(0xD, 2, 5, WegmanLeftShiftTSA) //Wegman
 PortraitTSAListEntry(0xBB, 2, 5, WegmanLeftShiftTSA) //Wegman Alt
-PortraitTSAListEntry(0xE4, 2, 5, WegmanTimeskipLeftShiftTSA) //Wegman Alt
+PortraitTSAListEntry(0xE4, 2, 5, WegmanTimeskipLeftShiftTSA) //Wegman TIMESKIP
 SHORT 0 //TERMINATOR

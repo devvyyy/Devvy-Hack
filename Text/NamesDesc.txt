@@ -301,7 +301,7 @@ Resistance. He bears a vengeful spirit.[N]
 Age: 26; Origin: Aeteria[X]
 
 ## VeliusDesc
-A jaded Aeterian count. He's troubled,[N]
+A jaded Aeterian general. He's troubled,[N]
 grumpy, and can't let go of the past.[N]
 Age: 54; Origin: Aeteria[X]
 
@@ -467,6 +467,14 @@ army. A mystifying enigma.[X]
 A soldier of Aeteria's imperial army.[N]
 They're loyal to their late empress.[X]
 
+## NewRecruitDesc
+A new soldier of the imperial army.[N]
+They lack experience.[X]
+
+## MessengerDesc
+A messenger of the imperial army.[N]
+They're lead by General Messel.[X]
+
 ## AeteriaGaidenDesc
 A soldier of Aeteria's imperial army.[N]
 Their loyalty lies with their empress.[X]
@@ -569,16 +577,16 @@ her empathy is her greatest gift.[N]
 Age: 50; Origin: Aeteria[X]
 
 ## VeliusDesc2
-A jaded Aeterian count. He tries his[N]
-best to be formal.[X]
+A jaded Aeterian general. He's formal[N]
+in his pursuit of truth.[X]
 
 ## LuitgardDesc2
 A solemn general of Aeteria. She's said[N]
 to be the Ashen Rider reborn.[X]
 
 ## CyrielleDesc2
-A surly Aeterian imperial general. He's[N]
-lived through many battles.[X]
+A surly Aeterian imperial general. His[N]
+mercy has lived through many battles.[X]
 
 ## LevainDesc
 A shrewd Aeterian scribe of the court.[N]
@@ -606,13 +614,15 @@ A steadfast Aeterian prison guard.[N]
 She's straightfoward and giving.[X]
 
 ## ChiffonDesc
-The last heir to Aeteria. She's a rowdy[N]
+A sensible mercenary. She's a rowdy[N]
 dreamer yearning for a new start.[N]
 Age: 25; Origin: Aeteria[X]
 
-## ChiffonDescPrologue
-The hidden princess of Aeteria. She[N]
-longs to be useful like her comrades.[X]
+## ChiffonDescAlt
+# post reveal
+The last heir to Aeteria. She's a rowdy[N]
+dreamer yearning for a new start.[N]
+Age: 25; Origin: Aeteria[X]
 
 ## FlamDesc
 Casts flames astride. Ignores Str.[N]
@@ -769,7 +779,7 @@ Grit Ring[X]
 ## CounterRingDesc
 A pit fighter's ring. Wearer counters[N]
 physical damage upon hit at 1 range[N]
-(can't kill). Str/Eth/Skill/Def -4.[X]
+(can't kill). Str/Eth/Dex/Def -4.[X]
 
 ## CountermagicRingName
 Arcane Ring[X]
@@ -919,8 +929,8 @@ A bullion of gold bars worth[N]
 a measly 300 gold.[X]
 
 ## PykeDesc2
-Here is your[N]
-share.[X]
+Here's your share.[N]
+Sells for 300 gold.[X]
 
 ## EffMageDesc
 Effective against magic. Res +5.[X]
@@ -955,9 +965,8 @@ Unit can traverse impassible terrain[N]
 at 2 cost. Avoid +10, Def/Res -5.[X]
 
 ## HookDaggerDesc
-...And sinker. Drags foe to unit and[N]
-move both back 1 space. Poisons for[N]
-5 turns on-damage. Avoid +10.[X]
+...And sinker. Drags foe to unit.[N]
+Poisons for 5 turns. Avoid +10.[X]
 
 ## IronDaggerDesc
 Avoid +10.[X]
@@ -1039,13 +1048,13 @@ Doubles weapon triangle effects.[X]
 Grants WTA against bows and sidearms.[N]
 Poisons for 1 turn on-damage.[X]
 
-## AffinityRingName
-Affinity Ring[X]
-
 ## AffinityRingDesc
 A blacksmith's ring. Wearer neutralizes[N]
 WTD, and weapons have a (Luck)%[N]
 chance to not consume durability.[X]
+
+## AffinityRingName
+Affinity Ring[X]
 
 ## WingRingName
 Stride Ring[X]
@@ -1060,8 +1069,8 @@ Critical Ring[X]
 
 ## CritRingDesc
 A volatile ring. Grants the wearer Crit[N]
-= Skill and halves bonus damage from[N]
-foe's critical hits. Luck -50%.[X]
+= Dex and halves bonus damage from[N]
+foe's critical hits. Dex +5, Luck -50%.[X]
 
 ## DesperationRingName
 Daring Ring[X]
@@ -1069,7 +1078,7 @@ Daring Ring[X]
 ## DesperationRingDesc
 A bold ring. Wearer's follow-ups occur[N]
 before foe can counterattack.[N]
-Str/Eth/Skill/Luck -3.[X]
+Str/Eth/Dex/Luck -3.[X]
 
 ## LostSoulMagicDesc
 Ethereal lost souls created by dark arts,[N]
@@ -1322,14 +1331,6 @@ Magnum Opus[X]
 An atgeir for the weary. Eff: [ArmorIcon][N]
 Ignores foe's weapon Mt.[N]
 [_Lock]: Ansgar[X]
-
-## HayePrfName
-Xiuhcoatl[X]
-
-## HayePrfDesc
-Ataraxia. If Spd > foe's Spd, grants Atk[N]
-= 50% of Spd and Prt/Rsl = 25% of Spd.[N]
-[_Lock]: Haye[X]
 
 ## BossGuyName
 Eternal[X]
