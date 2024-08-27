@@ -74,6 +74,11 @@ bool IsItemDagger(u16 item) {
    case 0xFE: //syzygy
    case 0xB9: //affogato dagger
    case 0x90: //mace
+   case 0x45: //dark 1
+   case 0x46: //2
+   case 0x47: //3
+   case 0x48: //4
+   case 0x49: //5
    case 0x53: //smite
         return TRUE;
 

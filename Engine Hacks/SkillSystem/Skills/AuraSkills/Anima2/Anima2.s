@@ -22,7 +22,7 @@ beq Done
 mov r0, r4
 add     r0,#0x5A    @Move to the attacker's damage.
 ldrh    r3,[r0]     @Load the attacker's damage into r3.
-add     r3,#2    @add 1 damage.
+add     r3,#3    @add 1 damage.
 strh    r3,[r0]     @Store dmg.
 
 Done:

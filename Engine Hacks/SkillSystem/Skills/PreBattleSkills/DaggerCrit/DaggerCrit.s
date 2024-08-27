@@ -4,6 +4,8 @@ push {r4-r7, lr}
 mov r4, r0 @atkr
 mov r5, r1 @dfdr
 
+@ edit: wtf this is an abomination what the hell
+
 @check weapon
 mov     r0, #0x4A      @Move to attackers's weapon (before battle)
 ldrb    r0, [r4, r0]   @Load attackers weap (before battle)
@@ -43,6 +45,15 @@ cmp     r0, #0xB9         @Dirk
 beq DirkSpecial
 cmp     r0, #0x53         @Smite
 beq Crit100NoAvoid
+cmp     r0, #0x46         @Dark 2
+beq Crit75Special
+cmp     r0, #0x47         @Dark 3
+beq Crit50Special
+cmp     r0, #0x48         @Dark 4
+beq Crit75Special
+cmp     r0, #0x49         @Dark 5
+beq Crit100NoAvoid
+
 b End
 
 Crit25:
@@ -75,12 +86,32 @@ strh r0, [r4,r1]
 
 b End
 
+Crit25Special:
+
+@reduce 25 crit
+mov r1, #0x66
+ldrh r0, [r4, r1] @crit
+sub r0, #25
+strh r0, [r4,r1]
+
+b End
+
 Crit50Special:
 
 @reduce 50 crit
 mov r1, #0x66
 ldrh r0, [r4, r1] @crit
 sub r0, #50
+strh r0, [r4,r1]
+
+b End
+
+Crit75Special:
+
+@reduce 75 crit
+mov r1, #0x66
+ldrh r0, [r4, r1] @crit
+sub r0, #75
 strh r0, [r4,r1]
 
 b End
