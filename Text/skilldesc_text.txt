@@ -1305,16 +1305,18 @@ to a foe breaks Stealth.[X]
 ## SD_Stealth2
 # make these class skills?
 Umbral Steps[N]
-- Can enter Stealth: Pass through foes,[N]
-untargettable, always hit, can't Canto.[N]
+- Can enter Unseen: Pass foes, always hit,[N]
+untargettable, traverse walls, no Canto.[N]
 - Attacking or ending an action adjacent[N]
-to a foe breaks Stealth.[X]
+to a foe breaks Unseen.[X]
 
 ## SD_Stacks
 # Flow, temp flags 0x26-0x28 (used to use 0x25) MAKE THIS 3 stacks now!!
-True Grit: Combat grants 1 stack (max; 3).[N]
-Stacks grant 4 Prt/Rsl. Initating at max[N]
-stacks consumes to deal bonus damage = current HP.[X]
+True Grit[N]
+- Combat grants 1 stack (max; 3).[N]
+- Stacks grant 4 Prt/Rsl each.[N]
+- Initating at max stacks consumes all[N]
+stacks to deal bonus damage = current HP.[X]
 
 ## SD_LUCIAN
 Charged Blades: If foe is defeated, unit's[N]

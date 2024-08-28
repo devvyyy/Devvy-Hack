@@ -1,10 +1,16 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+PUSH
+//Number of objects allocated for non-fire weather particles
+ORG 0x30224
+BYTE 0x10
+POP
+
 // Save in Valni/Lagdou
 PUSH
 ORG 0x09500C
-BYTE 0xC0 0x46 0x05 0xE0 
+BYTE 0xC0 0x46 0x05 0xE0
 POP
 
 //Prevent goal window values from causing chapters to end with no enemies present
@@ -963,6 +969,21 @@ POP
 PUSH
     ORG $030332
         BYTE $0F // 16 particles ($0F+1) instead of 32
+
+//HEAVY SNOWSTORM but less
+//by Contro
+ORG 0x3061C
+BYTE 0xF
+
+//SANDSTORM but less
+//by Contro
+ORG 0x30500
+BYTE 0xF
+
+//RAIN but less
+//by Contro
+ORG 0x30418
+BYTE 0xF
 POP
 
 // Prep Shop
