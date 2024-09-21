@@ -1,0 +1,6 @@
+#define csvmacro000(unit,class,mapid,edition,flag) "BYTE unit class mapid edition; SHORT flag 00; "
+
+MultiSeizeUnits_Table:
+csvmacro000(Affogato,0xFF,0xFF,0xFF,0x0)
+csvmacro000(Chiffon,0xFF,0xFF,0xFF,0x0) 
+csvmacro000(0x0,0x0,0x0,0x0,0x0)    // term

@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pLuckModifiers: // Luck
-	POIN prAddUnitLuck prHalveIfCapturing prDebuffLck prAddEquipLuck prItemPassiveLuck prRallyLck prDefiantLck
+	POIN prAddUnitLuck prHalveIfCapturing prDebuffLck prAddEquipLuck prItemPassiveLuck prRallyLck prZephyrLuck prDefiantLck
 	POIN prCriticalForceLuck prDesperationLuck
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
@@ -29,6 +29,10 @@ prRallyLck:
 prAvoidBuffLuck:
 rIfUnitHasStatus(0x8)
 	rAddConst(3)
+	
+prZephyrLuck:
+rIfUnitHasStatus(0xB)
+	rConstant(0)
 	
 prCriticalForceLuck:
 rIfUnitHasNotSkill(SanctuaryID)

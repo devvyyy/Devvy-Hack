@@ -1,0 +1,15 @@
+// 7743
+PUSH
+ORG $37b64		//FE8U
+jumpToHack(MultiSeizeUnits)
+POP
+
+
+ALIGN 4
+MultiSeizeUnits:
+#incbin "MultiSeizeUnits.dmp"
+POIN MultiSeizeUnits_Table
+
+//MultiSeizeUnits_Table:
+#include "MultiSeizeUnits_Table.event"
+

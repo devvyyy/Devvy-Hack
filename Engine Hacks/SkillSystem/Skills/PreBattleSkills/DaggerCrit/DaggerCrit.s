@@ -46,7 +46,7 @@ beq DirkSpecial
 cmp     r0, #0x53         @Smite
 beq Crit100NoAvoid
 cmp     r0, #0x46         @Dark 2
-beq Crit75Special
+beq Crit25Special
 cmp     r0, #0x47         @Dark 3
 beq Crit50Special
 cmp     r0, #0x48         @Dark 4

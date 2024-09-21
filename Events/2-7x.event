@@ -66,6 +66,8 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+SetFlag(0xF)
+ASMC 0x8026629
 	LOAD1 0x1 EnemyUnits
 	ENUN
 	SVAL 0x1 0x1A //26

@@ -47,7 +47,10 @@ STAL 25
 FAWI 30
 SOUN 0x2f0
 SetFlag(0x4) //bgm flag
+//SetFlag(0xF) //fire flag
+//maybe no fire lol
 ASMC 0x8026629
+//WORD 0x52820 //fire weather breaks everything!
 SOUN 0x37a
 STAL 5
 FAWU 15
@@ -56,6 +59,7 @@ EARTHQUAKE_END
 STAL 3
 CameraCursor(Chiffon)
 Text(Placeholder1)
+NoFade
 	ENDA
 
 LocationBasedEvents:

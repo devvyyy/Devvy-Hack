@@ -187,6 +187,10 @@ BeginningScene:
 	ENDA
 
 EndingScene:
+SetFlag(0xF)
+ASMC 0x8026629
+
+
 UnsetFlag(0x12B) //PART 2 FLAG THAT CHANGES COLOR
 	//MNC2 0x13 //planned 3-Prologue?!
 	MNTS 0x1 //return to title screen

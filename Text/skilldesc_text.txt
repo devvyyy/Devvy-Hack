@@ -153,25 +153,44 @@ the next lethal attack.[X]
 
 ## SD_Bruh
 # has 3 separate gamble-esque menus inside a combat art menu
-Arcane Perfection[N]
+Visionary[N]
 Unit has access to a Spell-Mixing menu with[N]
-Disaster, Serenity, and Torment; casting[N]
+Devastation, Salvation, and Purgation; casting[N]
 each interact with Equipped weapon slot.[N]
 (Can't follow-up; costs durability.)[X]
 
 ## SD_Bruh1
 # DAMAGE: displays bonus effects on off-hand; example is like anima does X, dark does Y, light does Z
-Spell-Mixing: Disaster (5 cost)
-Anima: Deals +5 damage.
-Light:
-Dark: 
-[X]
+# Blaze, Smite, Earthwake
+Spell-Mixing: Devastation (3 cost)[N]
+Anima: Deals +(50% foe's max HP) damage.[N]
+Light: +3 Attack range.[N]
+Dark: Deals 25% of foe's max HP to target and[N]
+foes within 3 spaces of target after combat.[X]
+
+## SD_Bruh2
+Spell-Mixing: Salvation (2 cost)[N]
+# Mend, Martyr, Munio
+Anima: Restores 50% HP after combat.[N]
+Light: Restores 25% to allies within 3 spaces[N]
+after combat.[N]
+Dark: Grants Prt/Rsl +10 (lingers for 1 turn).[X]
+
+## SD_Bruh3
+# Snare, Stillness, Scowl
+Spell-Mixing: Purgation (4 cost)[N]
+Anima: Roots target, then swap spaces.[N]
+Light: Silences target and ends the actions[N]
+of foes within 2 spaces of target.[N]
+Dark: Fears target and inflicts Res -5.[X]
 
 ## SD_PowerSlide
 # even through walls/go through walls like zeri?
-Power Slide: Unit can Canto 1 space.[N]
-Activate to dash 3 spaces in any direction.[N]
-Effect recharges on kill.[X]
+Power Slide[N]
+- Unit can Canto 1 space (2 after combat).[N]
+- Activate to dash 5 spaces in any cardinal[N]
+direction, even through walls (once per map;[N]
+active recharges if foe is defeated.)[X]
 
 ## SD_Style
 Infernal Impulse: Initiating and ending combat with[N]
@@ -1064,9 +1083,10 @@ Hit +30, grants Atk = 25% of Skill.[N]
 of foe's missing HP.[X]
 
 ## SD_Lifeline
-Lifeline: After combat, if unit's HP[N]
-is below 25%, grants Def/Res +10[N]
-for 1 turn.[X]
+Lifeline
+- After combat, if unit's HP is[N]
+below 25%, grants Def/Res +10 for[N]
+1 turn.[X]
 
 ## SD_OldManSkill
 Borrowed Time: Grants Avoid +25 for[N]
@@ -1097,8 +1117,8 @@ reduces damage taken = 50% of foe's[N]
 missing HP.[X]
 
 ## SD_SkiesDescend2
-The Skies Descend: If foe's HP is full,[N]
-Gorlois' first hit deals bonus magical[N]
+The Skies Descend[N]
+- Gorlois' first hit deals bonus true[N]
 damage = (5 + turn count x 2).[X]
 
 ## SD_TrueGuard
@@ -1409,6 +1429,13 @@ combat, but takes 10 damage (can't kill).[X]
 
 ## SD_ShieldDef
 [_S][_t][_a][_n][_d][_SP][_B][_e][_h][_i][_n][_d][_SP][_M][_e][X]
+
+## SD_HumanShield
+Cull the Weak[N]
+- If unit initiates on a foe with an ally[N]
+within 2 spaces, blocks the first lethal hit per[N]
+combat, but those allies take 30 damage[N]
+(can't kill).[X]
 
 ## SD_TasteOfBlood
 Certain Death[N]

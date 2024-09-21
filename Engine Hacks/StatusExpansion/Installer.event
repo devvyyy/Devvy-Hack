@@ -151,7 +151,8 @@ SetStatusName(0x11,0x51A) //counter (??? wtf is this did i write this comment wt
 SetStatusName(PetrifyStatusID,0x51A)
 SetStatusName(0x14,ShadowEyeName) //Gravity
 SetStatusName(0x17,0x519) //rooted
-SetStatusName(0x19,WhirlwindName) //Whirlwind
+//SetStatusName(0x19,WhirlwindName) //Whirlwind EDIT: silver gaze
+SetStatusName(0xB,WhirlwindName) //Whirlwind EDIT: silver gaze
 SetStatusName(0x15,FullMoonStatusName) //Overdrive
 
 SetStatusDesc(NoStatusID,0x552)
@@ -170,7 +171,7 @@ SetStatusDesc(0x11,0x51A)
 SetStatusDesc(PetrifyStatusID,0x557) //Stasis
 SetStatusDesc(0x14,ShadowEyeDesc) //Shadow Eye
 SetStatusDesc(0x17,RootDesc) //Rooted
-SetStatusDesc(0x19,WhirlwindDesc) //Whirlwind
+SetStatusDesc(0xB,WhirlwindDesc) //Whirlwind
 SetStatusDesc(0x15,FullMoonStatusDesc) //Overdrive
 
 #define BlinkyIconFuncNoIcon $278A6
@@ -199,8 +200,8 @@ SetStatusBlinkyIconFunc(14,BlinkyIconFuncSleepIcon) //Shadow Eye
 SetStatusBlinkyIconFunc(15,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(16,BlinkyIconFuncDancerRingIcon) //Def Buff is 0x6
 SetStatusBlinkyIconFunc(17,BlinkyIconFuncSleepIcon) //Rooted
-SetStatusBlinkyIconFunc(18,BlinkyIconFuncNoIcon)
-SetStatusBlinkyIconFunc(19,BlinkyIconFuncDancerRingIcon) //Whirlwind
+SetStatusBlinkyIconFunc(18,BlinkyIconFuncSleepIcon)
+SetStatusBlinkyIconFunc(19,BlinkyIconFuncSleepIcon) //Whirlwind
 SetStatusBlinkyIconFunc(20,BlinkyIconFuncSleepIcon)
 SetStatusBlinkyIconFunc(21,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(22,BlinkyIconFuncSleepIcon) //Feared
@@ -213,6 +214,7 @@ SetStatusBlinkyIconFunc(28,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(29,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(30,BlinkyIconFuncNoIcon)
 SetStatusBlinkyIconFunc(31,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(0xB,BlinkyIconFuncSleepIcon)
 
 
 /*

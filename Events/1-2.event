@@ -187,6 +187,37 @@ UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [14,5] 0b 0x0 0x0 0x0 [DarkTome2]
 UNIT Aeteria Occultist 0x1 Level(3, Enemy, 1)     [14,4] 0b 0x0 0x0 0x0 [DarkTome1] ChargeAI
 UNIT
 
+CutsceneUnits:
+UNIT Selwyn GreatKnight 0x1 Level(1, Enemy, 0)     [38,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+
+UNIT Aeteria Soldier 0x1 Level(1, Enemy, 0)     [34,7] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria LArmor 0x1 Level(1, Enemy, 0)     [34,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria General 0x1 Level(1, Enemy, 0)     [34,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria AArmor 0x1 Level(1, Enemy, 0)     [34,10] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Mercenary 0x1 Level(1, Enemy, 0)     [34,11] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+
+UNIT Aeteria Mage 0x1 Level(1, Enemy, 0)     [35,7] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Sylveria Hunter 0x1 Level(1, Enemy, 0)     [35,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Occultist 0x1 Level(1, Enemy, 0)     [35,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Archer 0x1 Level(1, Enemy, 0)     [35,10] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Thaumaturge 0x1 Level(1, Enemy, 0)     [35,11] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+
+UNIT Aeteria Mage 0x1 Level(1, Enemy, 0)     [36,7] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Shaman 0x1 Level(1, Enemy, 0)     [36,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Druid 0x1 Level(1, Enemy, 0)     [36,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Monk 0x1 Level(1, Enemy, 0)     [36,10] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Mage 0x1 Level(1, Enemy, 0)     [36,11] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+
+UNIT Aeteria Bishop 0x1 Level(1, Enemy, 0)     [37,7] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Sage 0x1 Level(1, Enemy, 0)     [37,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Druid 0x1 Level(1, Enemy, 0)     [34,10] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria APal 0x1 Level(1, Enemy, 0)     [34,11] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+	UNIT
+	
+CutsceneUnits2:
+UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [30,8] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+	UNIT
+	
 Traps1:
 BlueSigil(0,1)
 BlueSigil(0,2)
@@ -202,6 +233,32 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+//FADI 60
+Music(0x48)
+SVAL 0xB 0x90022
+LOMA 0x3E
+
+LOAD2 0x1 CutsceneUnits2
+LOAD2 0x1 CutsceneUnits
+
+FADU 3
+STAL 15
+Text(Ch2Flashback1)
+
+WORD 0x22820
+MOVE 0x3 Affogato [33,7]
+STAL 20
+Text(Ch2Flashback2)
+ENUN
+STAL 5
+CameraCursor(Sylveria)
+Text(Ch2Flashback3)
+STAL 20
+FAWI 5
+SVAL 0xB 0x30008
+LOMA 0x2
+WORD 0x12820
+STAL 20
 ENUT AllUnitsMustEscapeFlag
 TILECHANGE 0x4
 SetBackground(0x2B)

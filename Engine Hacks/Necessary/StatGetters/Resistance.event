@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pResistanceModifiers: // Resistance
-	POIN prAddUnitResistance prHalveIfCapturing prDebuffRes prAddEquipResistance prItemPassiveResistance prRallyRes prAddPureWaterBarrierMod prLifeAndDeathMinus prSkillFury prFortressResistanceRes prHostileLoyalty prDefiantRes prPushRes
+	POIN prAddUnitResistance prHalveIfCapturing prDebuffRes prAddEquipResistance prItemPassiveResistance prRallyRes prAddPureWaterBarrierMod prLifeAndDeathMinus prSkillFury prFortressResistanceRes prStatusZephyrEnemyCheckRes prHostileLoyalty prDefiantRes prPushRes
 	POIN prMinZero
 	POIN prSleepHalfRes prPoisonHalfRes
 //	POIN prAvoidBuffRes
@@ -100,6 +100,10 @@ CheckMyFlag:
 prNullifyIfMageRing:
 	rIfUnitHasSkill(TomeRangeUpID)
 		rConstant(0)
+		
+prStatusZephyrEnemyCheckRes:
+	rIfUnitHasStatus(0xB)
+			rConstant(0)
 
 prLifeAndDeathMinus:
 _testSkill(HeroesLifeAndDeathID,0,5)

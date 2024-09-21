@@ -72,9 +72,10 @@ NoFade
 ENDA
 
 LocationBasedEvents:
-Escape(22,5)
-Escape(22,6)
-Escape(22,7)
+//Escape(22,5)
+//Escape(22,6)
+//Escape(22,7)
+LOCA 0x0 SussyEvent [14,5] 0x11
 DurabilityChest(0xBC,LunaID,19,4) //luna
 Door(21,11)
 Door(22,11)
@@ -82,7 +83,30 @@ Door(17,4)
 Stairs(1,16,19,20,12)
 Stairs(2,17,19,20,13)
 	END_MAIN
-	
+
+SussyEvent:
+
+CHECK_ALIVE 0x51 //locro
+BNE 1 0x0 0xC
+
+CHECK_ALIVE 0xC4 //opal
+BNE 1 0x0 0xC
+
+CHECK_ALIVE 0xC3 //wulfric
+BNE 1 0x0 0xC
+
+SetFlag(0x3)
+GOTO 2
+
+LABEL 1
+
+Text(Placeholder1)
+
+LABEL 2
+NoFade
+ENDA
+
+
 OpenTheDoor:
 
 CHECK_EVENTID 0xE //complete
@@ -294,9 +318,10 @@ NoFade
 ENDA
 
 Traps1:
-BlueSigil(22,5)
-BlueSigil(22,6)
-BlueSigil(22,7)
+//BlueSigil(22,5)
+//BlueSigil(22,6)
+//BlueSigil(22,7)
+BlueSigil(14,5)
 	ENDTRAP
 	ALIGN 4
 

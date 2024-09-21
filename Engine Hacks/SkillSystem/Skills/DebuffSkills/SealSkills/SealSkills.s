@@ -31,6 +31,10 @@ mov r0, r4
 
 ApplySeals:
 
+ldr r0,=#0x203A4EC @attacker struct
+cmp r0,r4
+bne End @skip if enemy phase
+
 @check if either one of us are dead
 ldrb r0,[r5,#0x13]
 cmp r0,#0
