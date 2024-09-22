@@ -39,7 +39,51 @@ MiscBasedEvents:
 	CauseGameOverIfLordDies
 	AREA 0x10 VillageCheck1 [13,6] [13,6]
 	AREA 0x11 VillageCheck2 [1,14] [1,14]
+	AREA 0x0 AffoBackstoryCheck [0,8] [14,19]
 	END_MAIN
+	
+AffoBackstoryCheck:
+
+CHECK_EVENTID 0x12
+BNE 0x1 0xC 0x0
+
+CHECK_ACTIVE
+SVAL 1 Affogato
+BNE 0x1 0xC 0x1
+
+MUSI
+CameraCursor(Affogato)
+FAWI 45
+SOUN 0x2EB
+CamOn
+Load2 0x1 FlashbackUnits
+CamOff
+FAWU 25
+
+CameraCursor(0x70)
+CameraCursor(0x6F)
+STAL 30
+Text(Ch2Flashback5)
+MOVE 0xA 0x6F [14,16]
+ENUN
+DISA_IF 0x6F
+STAL 5
+MOVE 0x2 0x70 [10,13]
+ENUN
+MUSCSLOW 0x7FFF
+STAL 5
+Text(Ch2Flashback6)
+FAWI 15
+//SOUN 0x2ED
+DISA_IF 0x70
+SetFlag(0x12)
+FAWU 3
+ASMC 0x160D1
+MUNO
+
+LABEL 0x1
+NoFade
+ENDA
 
 LocationBasedEvents:
 Village(0x8,JavelinVillage,13,6)
@@ -131,6 +175,11 @@ UNIT BadGuy Hunter 0x1 Level(6, Enemy, 1)     [6,14] 0x0 0x0 0x0 0x0 [IronBow] T
 
 NagitoKomaeda:
 UNIT Murray Deserter 0x1 Level(9, Enemy, 0)     [13,15] DropItem 0x0 0x0 0x0 [SapphireLance,ShortSpear,GoddessIcon] BossAI
+	UNIT
+	
+FlashbackUnits:
+UNIT 0x70 Hunter 0x1 Level(1, Ally, 0)     [12,14] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT 0x6F Shaman 0x1 Level(1, NPC, 0)     [13,15] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
 	UNIT
 	
 Recruits:

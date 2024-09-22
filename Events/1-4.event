@@ -346,7 +346,7 @@ LOAD2 0x1 EndCutsceneUnits2
 
 VCWF 0
 
-Music(0x81)
+Music(0x8E)
 
 FADU 16
 //BROWNBOXTEXT LaterThatNight [8,8] // box in the top right that's pretty cool for small text
@@ -363,11 +363,42 @@ CameraCursor(Sylveria)
 CameraCursor(Selwyn)
 STAL 5
 Text(Ch4Ending2)
+MOVE 0x3 Affogato [10,7]
 STAL 5
+Sound(0x2eC)
 
-MOVE 0xA Affogato [11,2]
+MUSI
+FADI 30
+STAL 3
+_MUSICSOMETHING 32767
+MUSCSLOW 0x7FFF
+SetBackground(0x35)
+Text(Ch2Flashback4)
+Sound(0x2E9)
+ClearBackground
+STAL 20
+Text(Ch4Ending2Point5)
+STAL 3
+FAWI 20
+Sound(0x2EB)
+MUSCSLOW 0x256
+SetBackground(0x40)
+
+STAL 5
+TEXTSTART; TEXTSHOW Ch2Flashback4Point5Again; TEXTEND; FAWI 4; ClearBackground; STAL 7; TEXTCONT; TEXTEND; REMA
+STAL 15
+MUNO
+Sound(0x84)
+STAL 3
+Music(0x8E)
+CamOn
+Text(Ch2Flashback4Point5)
+MOVE 0xA Ulrich [11,2]
+STAL 5
+MOVE 0xA Affogato [11,3]
 UnsetFlag(0x25)
 ENUN
+CamOff
 
 Music(0x25)
 SetBackground(0x3e)

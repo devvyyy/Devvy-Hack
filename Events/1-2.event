@@ -234,6 +234,7 @@ Traps2:
 
 BeginningScene:
 //FADI 60
+Sound(0x2EC)
 Music(0x48)
 SVAL 0xB 0x90022
 LOMA 0x3E
@@ -241,7 +242,7 @@ LOMA 0x3E
 LOAD2 0x1 CutsceneUnits2
 LOAD2 0x1 CutsceneUnits
 
-FADU 3
+FADU 2
 STAL 15
 Text(Ch2Flashback1)
 
@@ -253,8 +254,13 @@ ENUN
 STAL 5
 CameraCursor(Sylveria)
 Text(Ch2Flashback3)
+MOVE 0x3 Affogato [33,8]
+ENUN
+Text(Ch2Flashback3Point5)
 STAL 20
-FAWI 5
+Sound(0x8d)
+FAWI 3
+//Sound(0x6d)
 SVAL 0xB 0x30008
 LOMA 0x2
 WORD 0x12820
