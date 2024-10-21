@@ -47,10 +47,11 @@ STAL 25
 FAWI 30
 SOUN 0x2f0
 SetFlag(0x4) //bgm flag
-//SetFlag(0xF) //fire flag
+SetFlag(0xF) //fire flag
+TILECHANGE 0x1
 //maybe no fire lol
 ASMC 0x8026629
-//WORD 0x52820 //fire weather breaks everything!
+WORD 0x52820 //fire weather breaks everything!
 SOUN 0x37a
 STAL 5
 FAWU 15

@@ -93,6 +93,16 @@ NoFade
 ENDA
 
 ALIGN 4
+GreyWatcherEP:
+#include "BloodMoon/EndTurnEPAll.lyn.event"
+WORD EulogyID
+
+ALIGN 4
+GreyWatcherPP:
+#include "EndTurn/EndTurn.lyn.event"
+WORD EulogyID
+
+ALIGN 4
 DirtyFighting:
 #incbin "DirtyFighting/DirtyFighting.dmp"
 POIN SkillTester

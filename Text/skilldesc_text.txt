@@ -71,11 +71,10 @@ Domineer[N]
 Hit/Avoid -15 to foes within 3 spaces.[X]
 
 ## SD_StandTogether
-Stand Together[N]
-- If within 5 spaces of 4+ allies, Renier[N]
-and those allies reduce damage taken =[N]
-25% of respective unit's Def and, if[N]
-initiating, strike x2 consecutively.[X]
+Stand As One[N]
+- Reinier grants allies within 5 spaces[N]
+Prt +(5 + 25% of ally's Def) and immunity[N]
+to attacks from 3+ spaces away.[X]
 
 ## SD_PotentFake
 Blitzing Reflexes[N]
@@ -448,6 +447,7 @@ penalties, grants Move +2, and grants Atk =[N]
 number of allies with HP < 100%.[X]
 
 ## SD_UlrichMirrorPassive
+# uh give him wreyvian authority
 Anamnesis[N]
 - If Ulrich is within 3 spaces of a[N]
 Wreyvian ally, deals (Str) bonus physical[N]
@@ -477,13 +477,13 @@ within 2 spaces of target.[X]
 
 ## SD_MochaMirrorPassive
 Golden Feather[N]
-- If Mocha's Spd > foe's Spd -10, perform an[N]
-additional follow-up attack that deals 5[N]
-reduced damage (if AS > foe's AS +4, occurs[N]
-after follow-up; otherwise as follow-up).[X]
+- If Mocha initiates, grants an additional[N]
+attack after first attack, and if[N]
+Spd > foe's Spd, reduces damage[N]
+taken by difference between stats.[X]
 
 ## SD_StrogyMirrorPassive
-# Rampage doubles Str/Eth, but halves Dex/Spd/Def/Res.
+# Rampage doubles Str/Eth, but halves Dex/Spd/Def/Res; reduces damage taken by 20, but take 10 damage after combat.
 Party Animal[N]
 - After using a consumable item, grants[N]
 Stroganoff another action and Rampage[N]
@@ -550,9 +550,11 @@ on turns 1-10, Iris grants those allies[N]
 immunity to non-Light attacks.[X]
 
 ## SD_KaneMirrorPassive
-Booze Cruise: Kane's staves grant Tipsy[N]
-to allies over 21 for 1 turn, granting[N]
-Atk/Rsl +10, but inflicting AS/Prt -4.[X]
+Booze Cruise[N]
+- Kane's staves grant Move +2 for[N]
+1 turn.[N]
+- Allies within 2 spaces restore[N]
+5 HP after combat.[X]
 
 ## SD_RinaMirrorPassive
 Blitzing Reflexes[N]
@@ -561,7 +563,8 @@ Spd > foe's Spd, deals bonus damage/reduces[N]
 damage taken = difference between Spd stats.[X]
 
 ## SD_PandoroMirrorPassive
-Moonlit Shackles: Pandoro inflicts Def -5 on[N]
+Moonlit Shackles[N]
+- Pandoro inflicts Def -5 on[N]
 foe for 1 turn after combat.[X]
 
 ## FallenStarStatusName
@@ -627,7 +630,7 @@ of consuming 1 stack.[X]
 Paranoia[N]
 - If foe's range > 2, Locro dodges[N]
 all attacks.[N]
-- If HP < 100%, Avoid/AS +20.[X]
+- If HP < 100%, grants Avoid/AS +20.[X]
 
 ## SD_SettW
 Down But Not Out: If unit's HP is 25% or less,[N]
@@ -1014,8 +1017,8 @@ Atk +5/Hit +50.[N]
 Def/Res +5 and Avoid +50.[X]
 
 ## SD_Eulogy
-# Eulogy of Aeteria; Grey Watcher
-Empty Moment[N]
+# Eulogy of Aeteria; Empty Moment
+Grey Watcher[N]
 - If Maynard initiates, after combat,[N]
 ends the actions of closest foes within 6[N]
 spaces of target; if foe initiates, ends[N]
