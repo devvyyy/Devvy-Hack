@@ -1,7 +1,7 @@
 @ vantage replace 802af7c
 .equ FrostbiteID, SkillTester+4
-.equ DuckandCoverID, FrostbiteID+4
-.equ BullHeadedID, DuckandCoverID+4
+.equ BlueFlameID, FrostbiteID+4
+.equ BullHeadedID, BlueFlameID+4
 
 .thumb
 push {r4-r7,r14}
@@ -27,7 +27,7 @@ beq Normal
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r5 @defender data
-ldr r1, DuckandCoverID
+ldr r1, BlueFlameID
 .short 0xF800
 cmp r0, #0
 bne Vantage

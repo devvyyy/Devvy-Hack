@@ -60,35 +60,36 @@
       RMenu(ST_Level,0,0,ST_Skills,0x6,0x88,0x544)
 
     ST_Str:
-      RMenu(PersonalDataRText,ST_Spd,ST_Name,ST_Skl,0x66,0x18,0x546,StrMagGetter)
+      RMenu(PersonalDataRText,ST_Spd,ST_Name,ST_Skl,100,48,0x546,StrMagGetter)
 
     ST_Skl:
-      RMenu(PersonalDataRText,ST_Luck,ST_Str,0,0xa6,0x18,0x548)
+      RMenu(PersonalDataRText,ST_Luck,ST_Str,0,164,48,0x548)
 
     ST_Spd:
-      RMenu(ST_Str,ST_Def,ST_Name,ST_Luck,0x66,0x28,0x549)
+      RMenu(ST_Str,ST_Def,ST_Name,ST_Luck,100,64,0x549)
 
     ST_Luck:
-      RMenu(ST_Skl,ST_Res,ST_Spd,0,0xa6,0x28,0x54a)
+      RMenu(ST_Skl,ST_Res,ST_Spd,0,164,64,0x54a)
 
     ST_Def:
-      RMenu(ST_Spd,ST_Mov,ST_Name,ST_Res,0x66,0x38,0x54b)
+      RMenu(ST_Spd,ST_Mov,ST_Name,ST_Res,100,80,0x54b)
 
     ST_Res:
-      RMenu(ST_Luck,ST_Con,ST_Def,0,0xa6,0x38,0x54c)
+      RMenu(ST_Luck,ST_Con,ST_Def,0,164,80,0x54c)
 
     ST_Mov:
-      RMenu(ST_Def,ST_Affin,ST_Name,ST_Con,0x66,0x48,0x54d,MovHPDescGetter)
+      RMenu(ST_Def,ST_Affin,ST_Name,ST_Con,100,96,0x54d,MovHPDescGetter)
 
     ST_Con:
-      RMenu(ST_Res,ST_Aid,ST_Mov,0,0xA6,0x48,0x54e)
+      RMenu(ST_Res,ST_Aid,ST_Mov,0,164,96,0x54e)
+	  //0x66,0x88
   POP
   
   //the rest of these are here because space
   
   ALIGN 4
   ST_Aid:
-    RMenu(ST_Con,ST_Talk,ST_Affin,0,0xa6,0x58,0x54F)
+    RMenu(ST_Con,ST_Talk,ST_Affin,0,164,112,0x54F)
   
   ST_Trv:
     RMenu(ST_Aid,ST_Affin,ST_Skl,0,0xa6,0x28,0x550)
@@ -101,37 +102,37 @@
 	   //RMenu(ST_Trv,ST_Cond,ST_Spd,0,0xa6,0x38,SS_BiorhythmRText)
 	//#endif //BIORHYTHM
        //RMenu(ST_Trv,ST_Cond,ST_Spd,0,0xa6,0x38,0x551)
-	    RMenu(ST_Mov,ST_Cond,ST_Name,ST_Aid,0x66,0x58,0x551,AffinityDescGetter)
+	    RMenu(ST_Mov,ST_Cond,ST_Name,ST_Aid,100,112,0x551,AffinityDescGetter)
 
   ST_AffinDesc:
-	RMenu(ST_Trv,ST_Cond,ST_Affin,ST_Aid,0xbe,0x38,AffinityDescLooper,AffinityDescGetter)
+	RMenu(ST_Trv,ST_Cond,ST_Affin,ST_Aid,0xbe,0x90,AffinityDescLooper,AffinityDescGetter)
 
   ST_Cond:
-    RMenu(ST_Affin,ST_Skills,ST_Class,ST_Talk,0x66,0x68,0x552,ConditionGetter)
+    RMenu(ST_Affin,0,ST_Class,ST_Talk,100,128,0x552,ConditionGetter)
 
   ST_Talk:
-    RMenu(ST_Aid,ST_Skill2,ST_Cond,0,0xA6,0x68,SS_TalkRText)
+    RMenu(ST_Aid,0,ST_Cond,0,164,128,SS_TalkRText)
 
   ST_Skills: //this is the text that says skills
-    RMenu(ST_Cond,ST_Skill1,ST_Exp,ST_Skill1,0x77,0x78,SS_SkillsRText)
+    RMenu(PersonalDataRText,ST_Skill1,ST_Exp,ST_Skill1,150,15,SS_SkillsRText)
 
 // RMenu(up,down,left,right,xcoord,ycoord,SlotID,Looper,Getter)
   ST_Skill1:
-    RMenu(ST_Cond,ST_Skill2,ST_Skills,ST_Skill2,0x8F,0x78,0,RTextLoop,SkillDescGetter)
+    RMenu(ST_Skills,ST_Str,ST_Skill5,ST_Skill2,110,30,0,RTextLoop,SkillDescGetter)
 
   ST_Skill2:
-    RMenu(ST_Talk,ST_Skill3,ST_Skill1,ST_Skill3,0x9F,0x78,1,RTextLoop,SkillDescGetter+4)
+    RMenu(ST_Skills,ST_Str,ST_Skill1,ST_Skill3,135,30,1,RTextLoop,SkillDescGetter+4)
 
   ST_Skill3:
-    RMenu(ST_Talk,ST_Skill4,ST_Skill2,ST_Skill4,0xAF,0x78,2,RTextLoop,SkillDescGetter+8)
+    RMenu(ST_Skills,ST_Luck,ST_Skill2,ST_Skill4,160,30,2,RTextLoop,SkillDescGetter+8)
 
   ST_Skill4:
-    RMenu(ST_Talk,ST_Skill5,ST_Skill3,ST_Skill5,0xbF,0x78,3,RTextLoop,SkillDescGetter+12)
+    RMenu(ST_Skills,ST_Luck,ST_Skill3,ST_Skill5,185,30,3,RTextLoop,SkillDescGetter+12)
 
 //5th skill is at the bottom (so affo's off-hand stuff is centered)
 
   ST_Skill5:
-    RMenu(ST_Talk,ST_Skills,ST_Skill4,ST_Skill6,0xCF,0x78,4,RTextLoop,SkillDescGetter+16)
+    RMenu(ST_Skills,ST_Luck,ST_Skill5,0,0xd6,0x88,5,RTextLoop,SkillDescGetter+20)
 	
 //prob not using anything after this? final boss has nevermore/fractured heart (add nullify)/fallen angel/king's mark
 
@@ -141,7 +142,7 @@
 
   #ifdef PRESS_SELECT_TO_VIEW_GROWTHS
     PersonalDataRText:
-      RMenu(ST_Skill1,ST_Str,ST_Name,ST_Skl,0x76,0x4,PersonalDataDesc1)
+      RMenu(0,ST_Skills,ST_Name,0,0x76,0x4,PersonalDataDesc1) //this one
   #else
     PersonalDataRText:
       RMenu(ST_Skill1,ST_Str,ST_Name,0,0x76,0x4,PersonalDataDesc2)
@@ -187,7 +188,8 @@ ALIGN 4
 ST_Con:
   RMenu(PersonalDataRText,ST_Aid,ST_Str,0,0xA6,0x18,0x54e)
 ST_Aid:
-  RMenu(ST_Con,ST_Cond,ST_Mag,0,0xa6,0x28,0x54F)
+  RMenu(ST_Con,ST_Cond,ST_Mag,0,164,112,0x54F)
+  //164,112
 ST_Cond:
   RMenu(ST_Aid,ST_Affin,ST_Skl,0,0xa6,0x38,0x552,ConditionGetter)
 ST_Affin:

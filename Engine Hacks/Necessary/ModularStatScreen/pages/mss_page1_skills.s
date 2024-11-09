@@ -33,18 +33,18 @@ str r0,[sp,#0x14]
   cmp     r0,#0x0       
   beq     NotMag        
     @draw Mag at 13, 3. colour defaults to yellow.
-    draw_textID_at 13, 3, textID=0x4ff, growth_func=2
+    draw_textID_at 13, 6, textID=0x4ff, growth_func=2
     b       MagStrDone    
   NotMag:
     @draw Str at 13, 3
-    draw_textID_at 13, 3, textID=0x4fe, growth_func=2
+    draw_textID_at 13, 6, textID=0x4fe, growth_func=2
   MagStrDone:
 
-draw_textID_at 21, 3, textID=0x4EC, growth_func=3 @skl
-draw_textID_at 13, 5, textID=0x4ED, growth_func=4 @spd
-draw_textID_at 21, 5, textID=0x4ee, growth_func=5 @luck
-draw_textID_at 13, 7, textID=0x4ef, growth_func=6 @def
-draw_textID_at 21, 7, textID=0x4f0, growth_func=7 @res
+draw_textID_at 21, 6, textID=0x4EC, growth_func=3 @skl
+draw_textID_at 13, 8, textID=0x4ED, growth_func=4 @spd
+draw_textID_at 21, 8, textID=0x4ee, growth_func=5 @luck
+draw_textID_at 13, 10, textID=0x4ef, growth_func=6 @def
+draw_textID_at 21, 10, textID=0x4f0, growth_func=7 @res
 
 b 	LiteralJump1
 .ltorg 
@@ -78,42 +78,40 @@ ShowGrowths: @things in this section are only drawn when in growths mode
 
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#4]		@str growth getter
-draw_growth_at 17, 3
+draw_growth_at 19, 6
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#8]		@skl growth getter
-draw_growth_at 25, 3
+draw_growth_at 27, 8
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#12]		@spd growth getter
-draw_growth_at 17, 5
+draw_growth_at 19, 8
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#16]		@luk growth getter
-draw_growth_at 25, 5
+draw_growth_at 27, 6
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#20]		@def growth getter
-draw_growth_at 17, 7
+draw_growth_at 19, 10
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#24]		@res growth getter
-draw_growth_at 25, 7
+draw_growth_at 27, 10
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0]			@hp growth getter (not displaying because there's no room atm)
-draw_growth_at 17, 9
-draw_textID_at 13, 9, textID=0x4E9, growth_func=1 @hp name
+draw_growth_at 19, 12
+draw_textID_at 13, 12, textID=0x4E9, growth_func=1 @hp name
 
 b		literalJump2
 .ltorg
 
 ShowStats2: @things in this section are only drawn when not in growths mode
 
-
-draw_str_bar_at 16, 3
-draw_skl_bar_at 24, 3
-draw_spd_bar_at 16, 5
-draw_luck_bar_at 24, 5
-draw_def_bar_at 16, 7
-draw_res_bar_at 24, 7
-
-draw_textID_at 13, 9, 0x4f6 @move
-draw_move_bar_with_getter_at 16, 9
+draw_str_bar_at 16, 6                                                                                                             
+draw_skl_bar_at 24, 8                                                     
+draw_spd_bar_at 16, 8                                                        
+draw_luck_bar_at 24, 6                                                       
+draw_def_bar_at 16, 10                                                        
+draw_res_bar_at 24, 10                                                         
+draw_textID_at 13, 12, 0x4f6 @move
+draw_move_bar_with_getter_at 16, 12
 
 b literalJump2
 
@@ -124,19 +122,19 @@ literalJump2:
 
 
 
-draw_textID_at 21, 9, textID=0x4f7 @con
-draw_con_bar_with_getter_at 24, 9
+draw_textID_at 21, 12, textID=0x4f7 @con
+draw_con_bar_with_getter_at 24, 12
 
-draw_textID_at 21, 11, textID=0x4f8 @aid
-draw_number_at 25, 11, 0x80189B8, 2 @aid getter
-draw_aid_icon_at 27, 11
+draw_textID_at 21, 14, textID=0x4f8 @aid
+draw_number_at 25, 14, 0x80189B8, 2 @aid getter
+draw_aid_icon_at 26, 14
 
 //draw_trv_text_at 13, 15
 
-draw_textID_at 13, 11, textID=0x4F1 @Affinity
-draw_affinity_icon_at 16, 11
+draw_textID_at 13, 14, textID=0x4F1 @Affinity
+draw_affinity_icon_at 16, 14
 
-draw_status_text_at 13, 13
+draw_status_text_at 13, 16
 
 b exitVanillaStatStuff
 
@@ -147,7 +145,7 @@ exitVanillaStatStuff:
 
 ldr r0,=TalkTextIDLink
 ldrh r0,[r0]
-draw_talk_text_at 21, 13
+draw_talk_text_at 21, 16
 
 b startSkills
 
@@ -160,7 +158,7 @@ startSkills:
 
 ldr r0,=SkillsTextIDLink
 ldrh r0, [r0]
-draw_textID_at 15, 15, colour=White @skills
+draw_textID_at 19, 2, colour=White @skills
 
 
 mov r0,r8
@@ -172,35 +170,35 @@ mov r6,r0
 ldrb r0,[r6]
 cmp r0,#0
 beq SkillsEnd
-draw_skill_icon_at 18, 15
+draw_skill_icon_at 14, 4
 
 ldrb r0,[r6,#1]
 cmp r0,#0
 beq SkillsEnd
-draw_skill_icon_at 20, 15
+draw_skill_icon_at 17, 4
 
 ldrb r0,[r6,#2]
 cmp r0,#0
 beq SkillsEnd
-draw_skill_icon_at 22, 15
+draw_skill_icon_at 20, 4
 
 ldrb r0,[r6,#3]
 cmp r0,#0
 beq SkillsEnd
-draw_skill_icon_at 24, 15
+draw_skill_icon_at 23, 4
 
 //bottom row
 ldrb r0,[r6,#4]
 cmp r0,#0
 beq SkillsEnd
-draw_skill_icon_at 26, 15
+draw_skill_icon_at 26, 4
 
 //probably not using the 6th skill slot (no one has a class skill except the technician lmao)
 //this makes it awkwardly move to the right i think uhhh but whatever its never viewable in game?
 ldrb r0,[r6,#5]
 cmp r0,#0
 beq SkillsEnd
-draw_skill_icon_at 23, 17
+draw_skill_icon_at 28, 4
 b SkillsEnd
 
 .ltorg

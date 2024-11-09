@@ -70,12 +70,6 @@ Domineer[N]
 - Emaneuil inflicts -25% Str/Eth/Spd and[N]
 Hit/Avoid -15 to foes within 3 spaces.[X]
 
-## SD_StandTogether
-Stand As One[N]
-- Reinier grants allies within 5 spaces[N]
-Prt +(5 + 25% of ally's Def) and immunity[N]
-to attacks from 3+ spaces away.[X]
-
 ## SD_PotentFake
 Blitzing Reflexes[N]
 - If initiating or if unit's Spd > foe's Spd,[N]
@@ -181,7 +175,7 @@ Spell-Mixing: Purgation (4 cost)[N]
 Anima: Roots target, then swap spaces.[N]
 Light: Silences target and ends the actions[N]
 of foes within 2 spaces of target.[N]
-Dark: Fears target and inflicts Res -5.[X]
+Dark: Fear and Res -5 on target for 1 turn.[X]
 
 ## SD_PowerSlide
 # even through walls/go through walls like zeri?
@@ -747,10 +741,10 @@ unit has Weapon Triangle advantage.[X]
 
 ## SD_DuckandCover
 # zopf personal?
-Duck and Cover[N]
-- If Zopf moves 1 space or less, always[N]
-hit; if 0, Crit +50 and Canto 5 spaces.[N]
-- Counter before foe's first attack.[X]
+Hunter's Volley[N]
+- If initiating, grants Chester range[N]
+= 50% of Move used and follow-ups[N]
+trigger twice (follow-ups don't stack).[X]
 
 ## SD_FunnyTime
 I Make The Rules: If unit's Spd < foe's Spd,[N]
@@ -763,10 +757,6 @@ and unit follow-ups and foe cannot.[X]
 
 ## SD_PerfectPitch
 dummy[X]
-
-## SD_FirstBlood
-First Blood: Kills on turn 1 grant[N]
-another action.[X]
 
 ## SD_ApheliosHowMANYYEARS
 # Moon Evoked, temp flags 0x23 (half) and 0x24 (full) NVM NOT ANYMORE
@@ -1012,9 +1002,9 @@ both sides' missing HP.[N]
 ## SD_EustacePersonal
 Hollow Front[N]
 - If Eustace's HP = 50% or more, grants[N]
-Atk +5/Hit +50.[N]
-- If less than 50%, grants[N]
-Def/Res +5 and Avoid +50.[X]
+Prt/Rsl +5 and Avoid +50.[N]
+- If less than 50%, instead grants[N]
+Atk +5/Hit +50.[X]
 
 ## SD_Eulogy
 # Eulogy of Aeteria; Empty Moment
@@ -1059,16 +1049,6 @@ missing HP, upped to +3 below 50% HP.[N]
 - Take 4 damage after combat.[N]
 (Post-combat damage can't kill.)[X]
 
-## SD_BladeFan
-Heavy Weapons Fan: If unit is using[N]
-a Blade, Glaive, Labrys, or Rifle,[N]
-grants Atk +3/Hit +10.[X]
-
-## SD_BladeHater
-Heavy Weapons Hater: If foe is using[N]
-a Blade, Glaive, Labrys, or Rifle,[N]
-grants Atk +3/Hit +10.[X]
-
 ## SD_DesolateBlade
 Desolate Blade: Attacks mark target for[N]
 1 turn/combat. Marked foes take 25%[N]
@@ -1084,12 +1064,6 @@ Maestro[N]
 Hit +30, grants Atk = 25% of Skill.[N]
 - Rifles also deal bonus damage = 50%[N]
 of foe's missing HP.[X]
-
-## SD_Lifeline
-Lifeline
-- After combat, if unit's HP is[N]
-below 25%, grants Def/Res +10 for[N]
-1 turn.[X]
 
 ## SD_OldManSkill
 Borrowed Time: Grants Avoid +25 for[N]
@@ -1201,10 +1175,6 @@ damage = 3 + 50% of foe's missing HP.[N]
 - Inflicts Rooted on foe for 1 turn[N]
 after combat.[X]
 
-## SD_Graaaagh
-Gonna Go Wild: Grants Crit =[N]
-unit's missing HP.[X]
-
 ## SD_Sanctuary
 # Sanctuary; Tenacity; (WT disadvantage, dark magic, etc.), (rescue, staves, equippable rings, etc.); - If foe can attack 2+ times, first attack strikes x2 consecutively
 Will Power[N]
@@ -1233,12 +1203,161 @@ alter follow-ups, and landing critical[N]
 hits (if weapon Crit < 30) for both sides.[X]
 
 ## SD_BuiltDifferent
-Cheap Shot: If foe's HP is 50% or[N]
-less, grants unit Str/AS +2.[X]
+# RUNES
+Low Blow[N]
+- If foe has a status or can't[N]
+counter, grants unit AS +2.[X]
+
+## SD_Coup
+Coup de Grace[N]
+- If foe's HP is 50% or less,[N]
+grants unit Atk +4.[X]
+
+## SD_CutDown
+Cut Down[N]
+- If foe's HP is full,[N]
+grants unit Atk +2.[X]
+
+## SD_Rushdown
+Rushdown[N]
+- On turn 1, grants unit Atk/AS +5.[X]
+
+## SD_FirstBlood
+First Blood[N]
+- On turn 1, if foe is defeated, grants[N]
+unit another action (triggers once;[N]
+doesn't stack; if similar effect triggers,[N]
+this effect also triggers).[X]
 
 ## SD_Shrewd
-Third Eye: Grants bonus Hit =[N]
-foe's missing HP.[X]
+Third Eye[N]
+- Grants bonus Hit to unit = foe's[N]
+missing HP.[X]
+
+## SD_MagicTouch
+Magic Touch[N]
+- Unit deals 10 bonus magical damage.[X]
+
+## SD_IronWall
+Iron Wall[N]
+- If unit's Def > foe's Def, inflicts[N]
+penalty to foe's AS = difference[N]
+between stats.[X]
+
+## SD_Edgelord
+Lone Wolf[N]
+- If unit is not adjacent to[N]
+an ally, grants Crit +15.[X]
+
+## SD_Anathema
+Stare[N]
+- Unit inflicts -5 Hit/Avoid/[N]
+to foes within 2 spaces.[X]
+
+## SD_GatheringStorm
+Slow Burn[N]
+- Grants unit +3 Hit/Avoid for[N]
+each passing turn (max; 15).[X]
+
+## SD_Lifeline
+Adrenaline[N]
+- After combat, if unit's HP is[N]
+below 25%, take -15 damage for[N]
+1 turn.[X]
+
+## SD_AbsoluteFocus
+Focus[N]
+- If unit's HP is full, grants[N]
+Atk +1/Hit +10.[X]
+
+## SD_ShieldBash
+Shield Bash[N]
+- If unit is using a Shield,[N]
+grants Atk +5 and Canto 3 spaces.[N]
+(Canto doesn't stack; highest move[N]
+move Canto takes priority.)[X]
+
+## SD_RayDark
+Raise Morale[N]
+- Grants adjacent allies Atk/AS +2.[X]
+
+## SD_Guardian
+Guardian[N]
+- Grants adjacent allies Prt/Rsl +2.[X]
+
+## SD_WinMore
+War Cry[N]
+- If foe is defeated, restores 20% HP[N]
+to unit after combat.[X]
+
+## SD_Graaaagh
+Rage[N]
+- Grants Crit = unit's missing HP.[X]
+
+## SD_Typhoon
+Zephyr[N]
+- If unit's Spd > foe's Spd +10,[N]
+follow-ups trigger twice.[X]
+
+## SD_HealMoment
+Perseverance[N]
+- Unit restores 3 HP after combat.[N]
+(Doesn't stack with Dawn I.)[X]
+
+## SD_HeavyStrikes
+Heavy Strikes[N]
+- Grants unit Crit = Weapon Wt.[X]
+
+## SD_BluntForce
+Blunt Force[N]
+- Converts unit's Crit to damage at[N]
+a rate of 4/1.[X]
+
+## SD_Sharpshooter
+Sharpshooter[N]
+- If unit moves 2 spaces or less,[NL]
+grants Hit/Crit +15.[X]
+
+## SD_StormBlood
+Tension[N]
+- If unit's HP isn't full,[N]
+grants AS +2.[X]
+
+## SD_BestDefense
+The Best Defense...[N]
+- Converts 25% of unit's Def into Atk.[X]
+
+## SD_BladeFan
+Heavy Weapons Fan[N]
+- If unit is using a Blade, Glaive, Labrys,[N]
+Rifle, or Magnum, grants Atk +2/Hit +10.[X]
+
+## SD_BladeHater
+Heavy Weapons Grudge[N]
+- If foe is using a Blade, Glaive, Labrys,[N]
+Rifle, or Magnum, grants Atk +4/Hit +20.[X]
+
+## SD_LightWeight
+Light Weight[N]
+- When holding 3 or less items,[N]
+grants unit AS +3.[X]
+
+## SD_Respite
+Elbow Room[N]
+- If unit is on open terrain,[N]
+grants Hit +10.[X]
+
+## SD_SneakAttack
+Well-Prepared[N]
+- If unit is on terrain with effects,[N]
+grants Atk +2.[X]
+
+## SD_Megalovania
+# Brave Bird?? END OF RUNES
+Tenacity[N]
+- If Biscotti's current HP < foe's[N]
+current HP, grants Atk/AS +10 and[N]
+strikes x2 consecutively.[X]
 
 ## SD_Forlorn
 Forlorn: If unit is not adjacent to[N]
@@ -1248,33 +1367,10 @@ an ally, foe cannot follow-up.[X]
 Ruptured Heart: All foes on the map with[N]
 50% or less HP take +2 damage.[X]
 
-## SD_Edgelord
-Lone Wolf: If unit is not adjacent to[N]
-an ally, grants Crit +15.[X]
-
-## SD_Megalovania
-# Brave Bird??
-Tenacity[N]
-- If Biscotti's current HP < foe's[N]
-current HP, grants Atk/AS +10 and[N]
-strikes x2 consecutively.[X]
-
-## SD_RayDark
-Augmentation: Grants adjacent[N]
-allies Atk/AS +2.[X]
-
 ## SD_Conniving
 Conniving: Unit can steal items, pick[N]
 locks, and gets +2 spaces of vision in[N]
 fog/darkness.[X]
-
-## SD_Respite
-Respite: If unit is on open[N]
-terrain, grants Hit +30.[X]
-
-## SD_Sharpshooter
-Sharpshooter: If unit moves 2 or less[NL]
-spaces, grants Crit +30.[X]
 
 ## SD_Moonstruck
 Moonstruck: Grants Atk to both sides[NL]
@@ -1376,10 +1472,6 @@ both sides deal +5 damage.[X]
 Pure Heart: Adjacent allies take[N]
 -2 damage from dark magic.[X]
 
-## SD_StormBlood
-Storm Blood: If Latte's HP is[N]
-not full, grants AS +2.[X]
-
 ## SD_Warlock
 Warlock: Adjacent allies target[N]
 foe's Res.[X]
@@ -1396,11 +1488,11 @@ Thunderhead: If unit's HP is 75%[N]
 or more, Crit +15.[X]
 
 ## SD_Joust
-Joust[N]
-- If initiating, deals bonus damage[N]
-= spaces moved.[N]
-- If foe initiates, reduces damage taken[N]
-= spaces moved x 2.[N][X]
+Jousting[N]
+- If initiating, deals bonus damage =[N]
+spaces moved, and if all Move is used,[N]
+Canto 10 spaces after combat.[N]
+- If foe initiates, grants Prt +5.[X]
 
 ## SD_Charge
 Stampede[N]
@@ -1595,6 +1687,7 @@ gains are doubled. Unit may[N]
 S-Rank multiple weapon types.[X]
 
 ## SD_Swordbreaker
+# add these to magnum!?
 Swordbreaker: +50 Hit/Avo when[N]
 enemy has a sword equipped.[X]
 
@@ -1666,7 +1759,7 @@ when attacked at 1-2 range.[X]
 # Pale Cascade
 Voile de Foi[N]
 - Sylveria counters magical damage[N]
-upon hit (can't kill).[N]
+taken on-hit (can't kill).[N]
 - Negates all damage from foe's critical[N]
 hits, combat arts, and active effects.[X]
 
@@ -1936,10 +2029,6 @@ no allies within 3 spaces.[X]
 Bond: All allies within 3 spaces[N]
 recover a tenth of max HP each turn.[X]
 
-## SD_Anathema
-Anathema: Messel inflicts -10 Avoid/Crit Avoid[N]
-to all foes within 3 spaces.[X]
-
 ## SD_LilysPoise
 Lily's Poise: Adjacent allies gain[N]
 +1/-3 damage dealt/received.[X]
@@ -2026,10 +2115,6 @@ attack, avoid +10. [X]
 ## SD_Pursuit
 Pursuit: When under attack,[N]
 attack speed +2. [X]
-
-## SD_LightWeight
-Light Weight: When holding three[N]
-or less items, attack speed +3.[X]
 
 ## SD_KillingMachine
 Killing Machine: Total critical[N]
@@ -2405,10 +2490,6 @@ grants +25% Str and inflicts -25% Str[N]
 to foe.[N]
 - Shield range +2.[X]
 
-## SD_HeavyStrikes
-Heavy Strikes: Add weapon[N]
-weight to critical chance.[X]
-
 ## SD_Infiltrator
 Unbreakable[N]
 - If Edith is within 4 spaces of 2+[N]
@@ -2466,8 +2547,10 @@ Drive Luck: Allies within[N]
 2 spaces receive +4 luck.[X]
 
 ## SD_DriveDef
-Drive Defense: Allies within[N]
-2 spaces receive +4 defense.[X]
+Stand As One[N]
+- Reinier reduces damage taken for allies[N]
+within 5 spaces = 5 + 50% of respective[N]
+ally's Def (max; 20).[X]
 
 ## SD_Blossom
 Blossom: 2x growth rates,[N]
@@ -2561,7 +2644,7 @@ or lower, gain +4 Resistance.[X]
 The Right Incentive[N]
 - Gus reduces shop prices by 50%.[N]
 - Str/Spd/Def/Res +(total price of[N]
-inventory/2500).[N]
+inventory/1000).[N]
 - Hit/Avoid/Crit/Ddg +(Gold/2500).[X]
 
 ## SD_BusinessSense
@@ -2669,7 +2752,7 @@ weapon triangle advantage.[X]
 Vigil to the Blood Moon[N]
 - Grants Yufka and adjacent allies[N]
 Atk/Prt = 25% of both sides' missing HP.[N]
-- If foe initiates, after combat, ends[N]
+- If foe initiates, counter first and ends[N]
 the actions of foes within 3 spaces.[X]
 
 ## SD_DoubleLion

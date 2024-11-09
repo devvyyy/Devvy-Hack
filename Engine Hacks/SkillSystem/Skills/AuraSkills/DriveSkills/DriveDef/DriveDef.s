@@ -1,5 +1,5 @@
 @Drive Def: allies within 2 spaces gain +4 defense in combat.
-.equ SergeantID, AuraSkillCheck+4
+.equ DriveDefID, AuraSkillCheck+4
 .thumb
 push {r4-r7,lr}
 @goes in the battle loop.
@@ -13,22 +13,12 @@ CheckSkill:
 ldr r0, AuraSkillCheck
 mov lr, r0
 mov r0, r4 @attacker
-ldr r1, SergeantID
+ldr r1, DriveDefID
 mov r2, #0 @can_trade
-mov r3, #2 @range
+mov r3, #5 @range
 .short 0xf800
 cmp r0, #0
 beq Done
-
-@ mov r0, r5
-@ add     r0,#0x5A    @Move to the defender's damage.
-@ ldrh    r3,[r0]     @Load the defender's damage into r3.
-@ sub     r3,#4    @Subtract 4 from the defender's damage.
-@ strh    r3,[r0]     @Store defender avoid.
-
-ldr r0,=#0x203A4EC @attacker struct
-cmp r0,r4
-beq Done @if not attacker, dont do
 
 @testing
 mov r0, r4
@@ -36,6 +26,20 @@ add r0, #0x5c @attacker defense
 ldrh r3, [r0]
 add r3, #5
 strh r3, [r0]
+
+@make sure were in combat (or combat prep)
+ldrb r3, =gBattleData
+ldrb r3, [r3]
+cmp r3, #4
+beq Done
+
+@add def/2 def
+mov  r1, #0x5C
+ldrh r0, [r4, r1] @def
+ldrb r2, [r5, #0x17] @def
+lsr  r2, #1 @divide this by 2
+add  r0, r2
+strh r0, [r4,r1]
 
 Done:
 pop {r4-r7}
@@ -45,4 +49,4 @@ bx r0
 .ltorg
 AuraSkillCheck:
 @ POIN AuraSkillCheck
-@ WORD SergeantID
+@ WORD DriveDefID

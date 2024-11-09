@@ -165,7 +165,7 @@ setMugEntry(0x17, Solum_Mug, 3, 5, 3, 3)
 ALIGN 16
 Yufka_Mug:
 #incext PortraitFormatter "Vlak1.png"
-setMugEntry(0x18, Yufka_Mug, 4, 5, 4, 3)
+setMugEntryExtend(0x18, Yufka_Mug,3, 5, 3, 3, 0, 4, 0, 0)
 
 ALIGN 16 //Lili by Laurent Lacroix
 Lili_Mug:
@@ -698,6 +698,16 @@ ALIGN 16
 Secret_Mug:
 #incext PortraitFormatter "SecretShop.png"
 setMugEntry(0x68, Secret_Mug, 3, 3, 2, 0)
+
+ALIGN 16
+Reinier_Mug:
+#incext PortraitFormatter "Reinier.png"
+setMugEntryExtend(0xF5, Reinier_Mug, 2, 4, 3, 2, 12, 8, 10, 4)
+
+ALIGN 16
+Z_Mug:
+#incext PortraitFormatter "Z.png"
+setMugEntry(0xF6, Z_Mug, 4, 5, 1, 4)
 
 // TIMESKIP MUGS
 ALIGN 16
