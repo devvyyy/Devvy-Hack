@@ -630,6 +630,16 @@ Malcolm_Mug: //Graham edited by BuskerHuskerkaShushker
 setMugEntry(0x44, Malcolm_Mug, 3, 6, 3, 4)
 
 ALIGN 16
+MalcolmEnemy_Mug: //Graham edited by BuskerHuskerkaShushker
+#incext PortraitFormatter "MalcolmEnemy.png"
+setMugEntry(0xf7, MalcolmEnemy_Mug, 3, 6, 3, 4)
+
+ALIGN 16
+YufkaEnemy_Mug:
+#incext PortraitFormatter "YufkaEnemy.png"
+setMugEntry(0xf8, YufkaEnemy_Mug, 3, 5, 3, 3)
+
+ALIGN 16
 Derval_Mug: //Derval by Laurent Lacroix
 #incext PortraitFormatter "Derval.png"
 setMugEntry(0x56, Derval_Mug, 3, 5, 3, 3)

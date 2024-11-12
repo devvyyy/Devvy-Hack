@@ -22,8 +22,27 @@ TURN 0x0 ReinEvent5 [4,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-
+CharacterEventBothWays(0x10,ReinierThereseConvo, 0x62, Therese)
+CharacterEventBothWays(0x11,ReinierConvo, 0x62, 0x0)
 	END_MAIN
+
+ReinierThereseConvo:
+MUSS 0x63
+STAL 30
+Text(Placeholder1)
+MURE 0x2
+CUSA 0x62
+NoFade
+ENDA
+	
+ReinierConvo:
+MUSS 0x3b4
+STAL 30
+Text(Placeholder2)
+MURE 0x2
+CUSA 0x62
+NoFade
+ENDA
 
 MiscBasedEvents:
 AREA 0x8 Mine1 [10,10] [10,10]
@@ -226,7 +245,7 @@ UNIT Aeteria Archer 0x1 Level(8, Enemy, 1)     [7,11] 0b 0x0 0x0 0x0 [IronRifle,
 UNIT Aeteria Soldier 0x1 Level(8, Enemy, 1)     [6,22] 0b 0x0 0x0 0x0 [IronLance,] TwoActionAI
 UNIT Aeteria Merc 0x1 Level(8, Enemy, 1)     [7,20] 0b 0x0 0x0 0x0 [SteelSword,] TwoActionAI
 UNIT Aeteria Fighter 0x1 Level(9, Enemy, 1)     [4,19] 0b 0x0 0x0 0x0 [SteelAxe,] RangeAI
-UNIT Aeteria Soldier 0x1 Level(8, Enemy, 1)     [2,15] 0b 0x0 0x0 0x0 [SteelLance,] TwoActionAI
+UNIT Aeteria Soldier 0x1 Level(8, Enemy, 1)     [2,15] 0b 0x0 0x0 0x0 [SteelLance,] RangeAI
 UNIT Aeteria Myrm 0x1 Level(9, Enemy, 1)     [2,18] DropItem 0x0 0x0 0x0 [KillingEdge,] TwoActionAI
 UNIT Aeteria SArmor 0x1 Level(8, Enemy, 1)     [20,15] 0b 0x0 0x0 0x0 [SteelBlade,] RangeAI
 UNIT AeteriaStealable SArmor 0x1 Level(9, Enemy, 1)     [4,16] 0b 0x0 0x0 0x0 [Flamberge,BlueGem] RangeAI

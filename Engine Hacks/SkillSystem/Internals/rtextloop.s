@@ -6,6 +6,11 @@
   .short 0xf800
 .endm
 
+.equ DirectionRight, 0x10
+.equ DirectionLeft,  0x20
+.equ DirectionUp,    0x40
+.equ DirectionDown,  0x80
+
 push {r4-r7,lr}
 mov r4,r0
 ldr r5, =0x2003bfc
@@ -18,10 +23,20 @@ mov r7, r1 @save number of skills
 ldrb r2, [r0] @first skill
 cmp r2, #0
 bne HasSkills
-mov r0, r4
-blh      0x80893B4  @change to next one left
-cmp r0, #1 @can it loop again?
-beq End
+
+@Check direction
+mov     r0,r4                @ 08088B66 1C20     
+add     r0,#0x50                @ 08088B68 3050     
+ldrh    r0,[r0]        @direction        @ 08088B6A 8800  
+cmp     r0, #DirectionRight
+beq     GoRight
+cmp     r0, #DirectionLeft
+beq     GoLeft
+cmp     r0, #DirectionUp
+beq     GoUp
+cmp     r0, #DirectionDown
+beq     GoDown
+b       GoUp
 
 HasSkills:
 mov r1, r6
@@ -40,19 +55,33 @@ add     r0,#0x50                @ 08088B68 3050
 ldrh    r0,[r0]        @direction        @ 08088B6A 8800     
 cmp     r0,#0x0                @ 08088B6C 2800     
 beq     GoLeft                @ 08088B6E D003     
-cmp     r0,#0x10    @right            @ 08088B70 2810     
-beq     GoUp                @ 08088B72 D001     
-cmp     r0,#0x40    @up            @ 08088B74 2840     
-bne     GoLeft                @ 08088B76 D105
+cmp     r0, #DirectionRight
+beq     GoRight
+cmp     r0, #DirectionLeft
+beq     GoLeft
+cmp     r0, #DirectionUp
+beq     GoUp
+cmp     r0, #DirectionDown
+beq     GoDown
 
 GoUp:
 mov r0,r4
-blh      #0x8089354    @change to next one up           @ 08088B7A F000FBEB 
+blh      0x8089354    @change to next one up           @ 08088B7A F000FBEB 
 b       End                @ 08088B7E E006     
+
+GoDown:
+mov r0,r4
+blh      0x8089384    @change to next one up           @ 08088B7A F000FBEB 
+b       End                @ 08088B7E E006    
 
 GoLeft:     
 mov     r0,r4                @ 08088B78 1C20     
 blh 0x80893b4 @goes left
+b End
+
+GoRight:
+mov     r0,r4                @ 08088B78 1C20     
+blh 0x80893e4
 b End
 
 @ loc_0x8088B84:

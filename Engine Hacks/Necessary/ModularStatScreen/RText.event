@@ -60,10 +60,10 @@
       RMenu(ST_Level,0,0,ST_Skills,0x6,0x88,0x544)
 
     ST_Str:
-      RMenu(PersonalDataRText,ST_Spd,ST_Name,ST_Skl,100,48,0x546,StrMagGetter)
+      RMenu(ST_Skill1,ST_Spd,ST_Name,ST_Skl,100,48,0x546,StrMagGetter)
 
     ST_Skl:
-      RMenu(PersonalDataRText,ST_Luck,ST_Str,0,164,48,0x548)
+      RMenu(ST_Skill1,ST_Luck,ST_Str,0,164,48,0x548)
 
     ST_Spd:
       RMenu(ST_Str,ST_Def,ST_Name,ST_Luck,100,64,0x549)
@@ -114,11 +114,11 @@
     RMenu(ST_Aid,0,ST_Cond,0,164,128,SS_TalkRText)
 
   ST_Skills: //this is the text that says skills
-    RMenu(PersonalDataRText,ST_Skill1,ST_Exp,ST_Skill1,150,15,SS_SkillsRText)
+    RMenu(PersonalDataRText,ST_Skill1,ST_Name,ST_Str,150,15,SS_SkillsRText)
 
 // RMenu(up,down,left,right,xcoord,ycoord,SlotID,Looper,Getter)
   ST_Skill1:
-    RMenu(ST_Skills,ST_Str,ST_Skill5,ST_Skill2,110,30,0,RTextLoop,SkillDescGetter)
+    RMenu(ST_Skills,ST_Str,0,ST_Skill2,110,30,0,RTextLoop,SkillDescGetter)
 
   ST_Skill2:
     RMenu(ST_Skills,ST_Str,ST_Skill1,ST_Skill3,135,30,1,RTextLoop,SkillDescGetter+4)
@@ -132,7 +132,7 @@
 //5th skill is at the bottom (so affo's off-hand stuff is centered)
 
   ST_Skill5:
-    RMenu(ST_Skills,ST_Luck,ST_Skill5,0,0xd6,0x88,5,RTextLoop,SkillDescGetter+20)
+    RMenu(ST_Skills,ST_Luck,ST_Skill5,ST_Skill1,0xd6,0x88,5,RTextLoop,SkillDescGetter+20)
 	
 //prob not using anything after this? final boss has nevermore/fractured heart (add nullify)/fallen angel/king's mark
 
