@@ -107,6 +107,11 @@ prSwarpCommand_Effect:
 	POIN (_prSwarp_MakeTargetList+1)
 	POIN _pSwarpSelectorDefinition
 
+ALIGN 4
+prSlideCommand_Usability:
+	#incbin "asm/TargetCommandUsability.bin"
+	POIN (_prSwarp_MakeTargetList+1)
+	POIN (prSlideCommand_Availability+1)
 
 
 // PIVOT STUFF

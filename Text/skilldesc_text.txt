@@ -135,9 +135,9 @@ closest foes within 4 spaces of target.[X]
 ## SD_DriveRes
 Hallowed Radiance[N]
 - Iris neutralizes Mt of foe's magic.[N]
-- Grants Rsl +5 and (50% ally Str)[N]
-bonus magical damage to allies within[N]
-3 spaces. (If ally uses Eth, Str = 0.)[X]
+- Grants Rsl +5, (50% ally Str/Eth)[N]
+bonus magical damage, and Solar Strike[N]
+to allies within 3 spaces.[X]
 
 ## SD_Miracle
 Miracle[N]
@@ -308,20 +308,24 @@ all allies within 3 spaces. Heal mode: At start[N]
 of turn, restores 30% HP. Speed mode: +2 move.[X]
 
 ## SD_DriveCanto
-Pathfinder[N]
-- Wulfric grants allies within 2 spaces[N]
-AS +2 and Canto.[N]
-(Canto doesn't stack; fixed move[N]
-Canto takes priority.)[X]
+# Ferromancy
+Ferric Trail[N]
+- Wulfric can toggle between granting[N]
+unmounted allies within 2 spaces:
+Gallop: AS = 20% of ally's Def and Canto.[N]
+Reinforce: Atk/Prt = 50% of foe's Def.[X]
 
 ## SD_Boomerang
-Boomerang Shield: Grants unit's shields[N]
-range +4 and Atk scales with 1.5x Str.[X]
+Shielderang[N]
+- Grants unit's shields range +2 and[N]
+Atk also scales with 50% Str.[X]
 
 ## SD_Evolve
-Evolve: Grants bonus stats based on[N]
-stat thresholds.
-Atk > 10: +5 AS. idk[X]
+Glorious Evolution[N]
+- Grants bonuses based on stat thresholds.[N]
+Atk > 15: Canto 2 spaces after combat.[N]
+Spd > 10: Follow-ups trigger twice.[N]
+Def > 8: -5 taken from first attack.[X]
 
 ## SD_CombatMedic3
 # railgun
@@ -340,9 +344,9 @@ Grants units within 3 spaces Crit/Avoid +20.[X]
 # Down But Not Out
 Stand Back Up[N]
 - Raya grants allies within 3 spaces[N]
-Prt/Rsl = 25% of that unit's missing HP,[N]
-and Hit/Avoid = 50% of that unit's[N]
-missing HP.[X]
+Prt/Rsl = 25% of ally's missing HP,[N]
+and Hit/Avoid = 50% of ally's missing[N]
+HP (calculated at start of combat).[X]
 
 ## SD_BadBloodAlt
 # for if im too lazy
@@ -676,7 +680,7 @@ Full Tilt[N]
 - Xavier can toggle an All-Out stance:[N]
 Grants Move +2. Converts 50% of max[N]
 HP to Atk, and 50% of Def/Res to AS.[N]
-(Penalties round down; bonuses up).[X]
+(Penalties round down; bonuses up.)[X]
 
 ## SD_Zephyr2
 Zephyr: Once per map, if Xavier initiates, win[N]
@@ -718,9 +722,11 @@ upon death at 1 HP: If unit defeats foe,[N]
 restores HP to full.[X]
 
 ## SD_Anchor
-Anchor: If unit attacks without moving,[N]
-grants another action at 0 Move (once[N]
-per turn).[X]
+Anchor Down[N]
+- Unit can toggle Artillery Mode:[N]
+Sets Move to 0, but initiating combat[N]
+grants another action (max 3; resets[N]
+only after reverting).[X]
 
 ## SD_Gaming
 # Flow, temp flags 0x26-0x28 (used to use 0x25 also) MAKE THIS 3 stacks now!!
@@ -1177,10 +1183,17 @@ after combat.[X]
 
 ## SD_Sanctuary
 # Sanctuary; Tenacity; (WT disadvantage, dark magic, etc.), (rescue, staves, equippable rings, etc.); - If foe can attack 2+ times, first attack strikes x2 consecutively
-Will Power[N]
-- Noel ignores stat penalties (Rescue,[N]
-item penalties, etc.) and reverses[N]
-combat penalties (WTD, dark magic, etc.).[X]
+Call to Arms[N]
+- Noel can use War Cry on turn 1.[N]
+- Ignores stat penalties (Rescue, item[N]
+penalties, etc.) and reverses combat[N]
+penalties (WTD, dark magic, etc.).[X]
+
+## AnotherNoelRework
+Martial Poise[N]
+- Grants Noel and adjacent Wreyvian[N]
+allies +1 Move.[N]
+- Canto 2 spaces after combat.[X]
 
 ## SD_BullHeaded
 # - Reverses penalties (stats, WTD, etc.). ? The Best Defense...
@@ -1189,6 +1202,13 @@ Bull-Headed[N]
 - Counters deal bonus damage = damage[N]
 taken from foe's last attack this combat[N]
 and restore HP = 25% of damage dealt.[X]
+
+## SD_BullHeaded2
+The Best Defense...[N]
+- Stroganoff can War Cry on turn 1.[N]
+- Attack last, but counters deal bonus[N]
+damage = damage taken from last attack[N]
+this combat and gain 25% Lifesteal.[X]
 
 ## SD_Ether
 Ethereal Guard: Neutralizes foe's[N]
@@ -1220,7 +1240,7 @@ grants unit Atk +2.[X]
 
 ## SD_Rushdown
 Rushdown[N]
-- On turn 1, grants unit Atk/AS +5.[X]
+- On turn 1, grants unit Atk +5.[X]
 
 ## SD_FirstBlood
 First Blood[N]
@@ -1235,7 +1255,7 @@ Third Eye[N]
 missing HP.[X]
 
 ## SD_MagicTouch
-Magic Touch[N]
+Arcane Touch[N]
 - Unit deals 10 bonus magical damage.[X]
 
 ## SD_IronWall
@@ -1251,7 +1271,7 @@ an ally, grants Crit +15.[X]
 
 ## SD_Anathema
 Stare[N]
-- Unit inflicts -5 Hit/Avoid/[N]
+- Unit inflicts -5 Hit/Avoid[N]
 to foes within 2 spaces.[X]
 
 ## SD_GatheringStorm
@@ -1268,22 +1288,24 @@ below 25%, take -15 damage for[N]
 ## SD_AbsoluteFocus
 Focus[N]
 - If unit's HP is full, grants[N]
-Atk +1/Hit +10.[X]
+Hit/Avoid +10.[X]
 
 ## SD_ShieldBash
 Shield Bash[N]
-- If unit is using a Shield,[N]
-grants Atk +5 and Canto 3 spaces.[N]
-(Canto doesn't stack; highest move[N]
+- If unit is using a Shield, grants[N]
+Atk +5 and Canto 3 spaces.[N]
+(Canto doesn't stack; the highest fixed[N]
 move Canto takes priority.)[X]
 
 ## SD_RayDark
 Raise Morale[N]
-- Grants adjacent allies Atk/AS +2.[X]
+- Grants adjacent allies Atk +2.[N]
+(Doesn't stack with itself.)[X]
 
 ## SD_Guardian
 Guardian[N]
-- Grants adjacent allies Prt/Rsl +2.[X]
+- Grants adjacent allies Prt +2.[N]
+(Doesn't stack with itself.)[X]
 
 ## SD_WinMore
 War Cry[N]
@@ -1295,7 +1317,7 @@ Rage[N]
 - Grants Crit = unit's missing HP.[X]
 
 ## SD_Typhoon
-Zephyr[N]
+Celerity[N]
 - If unit's Spd > foe's Spd +10,[N]
 follow-ups trigger twice.[X]
 
@@ -1316,7 +1338,7 @@ a rate of 4/1.[X]
 ## SD_Sharpshooter
 Sharpshooter[N]
 - If unit moves 2 spaces or less,[NL]
-grants Hit/Crit +15.[X]
+grants Crit +15.[X]
 
 ## SD_StormBlood
 Tension[N]
@@ -1342,6 +1364,11 @@ Light Weight[N]
 - When holding 3 or less items,[N]
 grants unit AS +3.[X]
 
+## SD_HeavyBurden
+Heavy Load[N]
+- When holding 3 or more items,[N]
+grants unit Atk +3.[X]
+
 ## SD_Respite
 Elbow Room[N]
 - If unit is on open terrain,[N]
@@ -1351,6 +1378,10 @@ grants Hit +10.[X]
 Well-Prepared[N]
 - If unit is on terrain with effects,[N]
 grants Atk +2.[X]
+
+## SD_VigorRune
+Vigor[N]
+- Grants unit HP +5.[X]
 
 ## SD_Megalovania
 # Brave Bird?? END OF RUNES
@@ -1856,6 +1887,11 @@ Noctum Heart[N]
 an ally, restores 50% HP to Verna and[N]
 30% HP to allies within 2 spaces.[X]
 
+## SD_ShadowSlide
+Shadow Slide[N]
+- Verna can swap spaces with an ally[N]
+within (Eth/3; min 5) spaces during Canto.[X]
+
 ## SD_SpurStr
 Spur Strength: Adjacent allies[N]
 deal +4 physical damage.[X]
@@ -2272,10 +2308,10 @@ decide on a name or face.[X]
 ## SD_Charisma
 #  After picking/stealing, grants Eth/Spd +4 for 1 turn and Canto 3 spaces.
 Wild Card[N]
-- Grants Sequin and allies within 2[N]
-spaces Hit/Avoid +15.[N]
-- Grants Eth/Spd +5 and Canto for 1[N]
-turn after picking/stealing.[X]
+- Grants Sequin Eth/Spd +5 and Canto[N]
+for 1 turn after picking/stealing.[N]
+- Can swap spaces with an ally within[N]
+(Eth/3; min 5) spaces during Canto.[X]
 
 ## SD_HeroesDeathBlow
 Death Blow: +6 Attack[N]

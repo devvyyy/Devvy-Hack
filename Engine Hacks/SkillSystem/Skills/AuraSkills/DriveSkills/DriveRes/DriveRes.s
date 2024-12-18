@@ -25,13 +25,13 @@ ldr r1, [r5,#4] @class data ptr
 cmp r1, #0 @if 0, this is stat screen
 beq Done
 
-@ blade of the ruined king
-mov r0, r4       @Move attacker data into r1.
-mov r1, #0x4c    @Move to the attacker's weapon ability
-ldr r1, [r0,r1]
-mov r2, #0x42
-tst r1, r2
-bne     Next @do nothing if magic bit not set
+@@ blade of the ruined king
+@mov r0, r4       @Move attacker data into r1.
+@mov r1, #0x4c    @Move to the attacker's weapon ability
+@ldr r1, [r0,r1]
+@mov r2, #0x42
+@tst r1, r2
+@bne     Next @do nothing if magic bit not set
 
 @ check enemy res
 mov r0, #4

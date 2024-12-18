@@ -102,6 +102,9 @@ UnitMenuTable:
 	MenuCommand(UM_Capture, UM_CaptureDesc, NormalText, Capture_Usability, Capture_Effect_Func, $22c31, $22c99)
   #endif // COMBAT_ARTS
 
+ //GoddessDance
+	MenuCommand(UM_GoddessDance, UM_GoddessDanceDesc, NormalText, GoddessDanceUsability, GoddessDanceEffect, $22c31, $22c99)
+
   UM_Staff
   UM_Ride
   UM_Exit
@@ -169,6 +172,7 @@ UnitMenuTable:
 	MenuCommand(UM_Reposition, UM_RepositionDesc, NormalText, prRepositionCommand_Usability, prRepositionCommand_Effect)
 	//MenuCommand(UM_Swap,       UM_SwapDesc,       NormalText, prSwapCommand_Usability,       prSwapCommand_Effect)
 	MenuCommand(UM_Swarp,      UM_SwarpDesc,      NormalText, prSwarpCommand_Usability,      prSwarpCommand_Effect)
+	MenuCommand(UM_ShadowSlide,      UM_ShadowSlideDesc,      NormalText, prSlideCommand_Usability,      prSwarpCommand_Effect)
   
    // Rally preview conflicts with window semitransparency changes
    // So we only add that in if it is disabled

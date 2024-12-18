@@ -13,6 +13,7 @@
 #define ACTION_SWAP       0x25
 #define ACTION_PUSH       0x26
 #define ACTION_SWARP	  0x27
+#define ACTION_SLIDE	  0x28
 
 #define TEXT_BOTTOMHELP_PIVOT      0
 #define TEXT_BOTTOMHELP_REPOSITION 0
@@ -57,6 +58,12 @@ prSwarpCommand_Availability:
 	rGetWrapper
 		rIfUnitHasNotState(US_CANTOING)
 			rWithConstant(SwarpID)
+				rCallExternal(SkillTester)
+				
+prSlideCommand_Availability:
+	rGetWrapper
+		rIfUnitHasState(US_CANTOING)
+			rWithConstant(CharismaID)
 				rCallExternal(SkillTester)
 				
 #else // HEROES_MOVEMENT_SKILL_REQUIRED

@@ -62,16 +62,16 @@ allies for 1 turn.[X]
  Inversion[X]
 
 ## UM_LungeDesc
-A holy guard's technique.[N]
-Swap spaces with target foe after[N]
-combat (Shields will not move).[N]
+Ogrim swap spaces with target foe after[N]
+combat (Shields will not move him).[N]
 (x2 Durability per hit)[X]
 
 ## UM_Mercy
  Mercy[X]
 
 ## UM_MercyDesc
-Leaves target foe with at least 1 HP.[N]
+Ulrich leaves the target foe with[N]
+at least 1 HP.[N]
 (x2 Durability per hit)[X]
 
 ## UM_Gamble
@@ -124,10 +124,19 @@ unit's opposite side.[N]
  Safeguard[X]
 
 ## UM_SwapDesc
-- Swap spaces with an adjacent ally.[N]
-- Grants Ansgar Def +10 for 1 turn and[N]
-grants another action (once per turn).[N]
-- Grants target ally Def +5 for 1 turn.[X]
+Ansgar swaps spaces with an adjacent[N]
+ally, granting him Def +10 and another[N]
+action (once per turn); grants target[N]
+ally Def +5 for 1 turn.[X]
+
+## UM_ShadowSlide
+ Trace[X]
+
+## UM_ShadowSlideDesc
+Sequin swaps spaces with an ally[N]
+within (Eth/3; min 5) spaces from[N]
+initial position before Canto.[N]
+([_O][_n][_l][_y][_SP][_u][_s][_a][_b][_l][_e][_SP][_d][_u][_r][_i][_n][_g][_SP][_C][_a][_n][_t][_o][_Dot])[X]
 
 ## UM_Capture
  Capture[X]
@@ -154,11 +163,10 @@ and costs weapon durability.[X]
  Twin Suns[X]
  
 ## UM_AdeptDesc
-A Wreyvian combat technique.[N]
-- Deals +5 true damage on first hit.[N]
-- If using a physical weapon at 1 range,[N]
+Deals +5 true damage on first hit, and[N]
+if using a physical weapon at 1 range,[N]
 also strikes again after first attack.[N]
-(2 Durability per hit)[X]
+(x2 Durability per hit)[X]
 
 ## UM_Aether
  Aether[X]
@@ -181,8 +189,8 @@ can follow-up, 2 Durability per hit)[X]
  Dragon Fang[X]
  
 ## UM_DragonFangDesc
-1.5x damage.[N]
-(3 Durability Per Hit)[X]
+Attack deals 1.5x damage.[N]
+(x2 Durability per hit)[X]
 
 ## UM_Glacies
  Glacies[X]
@@ -203,16 +211,14 @@ to damage dealt.[N]
  Luna[X]
  
 ## UM_LunaDesc
-An Aeterian combat technique.[N]
-- Ignores foe's Def/Res.[N]
+Ignores foe's Def/Res.[N]
 (3 Durability Per Hit)[X]
 
 ## UM_Sol
  Sol[X]
  
 ## UM_SolDesc
-A Wreyvian combat technique.[N]
-- Restores damage dealt as HP.[N]
+Restores damage dealt as HP.[N]
 (3 Durability Per Hit)[X]
 
 ## UM_SureShot
@@ -227,5 +233,12 @@ hits and does 1.5x damage.[N]
  Castle[X]
 
 ## UM_SwarpDesc
-Swap positions with a distant[N]
-ally (within Eth/3 spaces).[X]
+Swap spaces with an ally[N]
+within (Eth/3; min 5) spaces.[X]
+
+## UM_GoddessDance
+ War Cry[X]
+
+## UM_GoddessDanceDesc
+Noel grants another action[N]
+to adjacent Wreyvian allies.[X]

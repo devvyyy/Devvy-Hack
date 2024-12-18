@@ -190,6 +190,18 @@ NoFade
 ENDA
 
 ALIGN 4
+GoddessDanceUsability:
+#incbin "GoddessDance/GoddessDanceUsability.dmp"
+POIN SkillTester
+WORD SanctuaryID
+POIN GetUnitsInRange
+
+ALIGN 4
+GoddessDanceEffect:
+#incbin "GoddessDance/GoddessDanceEffect.dmp"
+POIN GetUnitsInRange
+
+ALIGN 4
 StealthEffect:
 #incbin "Stealth/StealthEffect.dmp"
 POIN StealthEvent
