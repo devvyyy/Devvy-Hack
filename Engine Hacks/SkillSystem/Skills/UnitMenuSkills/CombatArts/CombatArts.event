@@ -146,7 +146,7 @@ ALIGN 4
 DragonFangUsability:
 #incbin "CombatArtUsability.dmp"
 POIN SkillTester
-WORD DragonFangID
+WORD SanctuaryID
 WORD 9 //Dragon Fang art ID
 POIN CombatArtCostTable
 
@@ -196,9 +196,9 @@ WORD 12 //Luna art ID
 
 ALIGN 4
 SolUsability:
-#incbin "CombatArtUsability.dmp"
-POIN SkillTester
-WORD SolID
+#incbin "SolUsability.dmp"
+POIN AuraSkillCheck
+WORD DriveResID
 WORD 13 //Sol art ID
 POIN CombatArtCostTable
 

@@ -3,8 +3,16 @@
 .equ GoddessDanceMarker, 0x203F101
 .equ GetUnit, 0x8019430
 .equ ActionStruct, 0x203A958
+.equ StanielActiveEvent, GetUnitsInRange+4
 
 push {lr}
+
+ldr r0,=#0x800D07C    @event engine thingy
+mov lr, r0
+ldr r0, StanielActiveEvent @this event is just "play sound"
+mov r1, #0x01   @0x01 = wait for events
+.short  0xF800
+
 mov r0, #1           @the byte for the 'wait' acition
 ldr r1,=ActionStruct @load the action struct
 strb r0,[r1,#0x11]   @store the action take as 

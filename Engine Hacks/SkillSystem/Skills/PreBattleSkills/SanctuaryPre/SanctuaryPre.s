@@ -26,6 +26,14 @@ ldr r1, [r5,#4] @class data ptr
 cmp r1, #0 @if 0, this is stat screen
 beq End
 
+@add hp/4 attack
+mov  r1, #0x5A
+ldrh r0, [r4, r1] @attack
+ldrb r2, [r5, #0x12] @max hp
+lsr  r2, #2 @divide this by 4
+add  r0, r2
+strh r0, [r4,r1]
+
 @ check if foe uses dark magic in combat
 mov     r0, #0x4A      @Move to defenders's weapon (before battle)
 ldrb    r0, [r5, r0]   @Load defenders weap (before battle)

@@ -36,7 +36,7 @@ beq Done
 mov r0, r4
 add     r0,#0x5A    @Move to the attacker's damage.
 ldrh    r3,[r0]     @Load the attacker's damage into r3.
-add     r3,#2    @add 2 to the attacker's damage.
+add     r3,#5    @add 2 to the attacker's damage.
 strh    r3,[r0]     @Store attacker avoid.
 
 Done:

@@ -17,6 +17,14 @@ mov r3, #2 @range
 cmp r0, #0
 beq End
 
+@check if global flag 0xEC set
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0xEC
+.short 0xF800
+cmp r0,#1
+beq End @if flag is not on, DIE
+
 @check if current chracter
 ldrb  r0, [r6,#0x11]  @action taken this turn
 cmp r0, #0x1E @check if found enemy in the fog

@@ -1,5 +1,5 @@
 @Spur Def: adjacent allies gain +4 defense in combat.
-.equ TresilloID, AuraSkillCheck+4
+.equ SpurStrID, AuraSkillCheck+4
 .thumb
 push {r4-r7,lr}
 @goes in the battle loop.
@@ -19,7 +19,7 @@ mov r5, r1
 ldr r0, AuraSkillCheck
 mov lr, r0
 mov r0, r4 @attacker
-ldr r1, TresilloID
+ldr r1, SpurStrID
 mov r2, #0 @can_trade
 mov r3, #1 @range
 .short 0xf800
@@ -40,4 +40,4 @@ bx r0
 .ltorg
 AuraSkillCheck:
 @ POIN AuraSkillCheck
-@ WORD TresilloID
+@ WORD SpurStrID

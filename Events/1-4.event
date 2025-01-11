@@ -68,7 +68,8 @@ Door(8,1)
 Door(4,2)
 Chest(0xFB,16,4) //Stopwatch
 Chest(MageLance,2,3)
-DurabilityChest(0xBC,SolID,1,4)
+Chest(ShortAxe,1,4)
+//DurabilityChest(0xBC,SolID,1,4)
 	END_MAIN
 
 Dunno1:
@@ -143,7 +144,7 @@ UNIT
 
 LunaticUnits:
 //UNIT Floris Priest 0x1 Level(4, Ally, 1)     [9,12] 0x0 0x0 0x0 0x0 [Mend,Barrier,Haze,PureWater] AttackInRangeAI
-UNIT Yory 0x61 0x1 Level(3, Ally, 1)     [10,12] 0x0 0x0 0x0 0x0 [Dragonstone,0xF2,0xF3,0xF8,] AttackInRangeAI
+UNIT Yory 0x61 0x1 Level(3, Ally, 1)     [10,12] 0x0 0x0 0x0 0x0 [Dragonstone,0xF2,0xF3,Mine,] AttackInRangeAI
 UNIT
 
 ArenaRein:

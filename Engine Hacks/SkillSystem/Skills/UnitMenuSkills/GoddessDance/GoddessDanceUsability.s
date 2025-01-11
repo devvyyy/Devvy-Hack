@@ -1,8 +1,8 @@
 @GoddessDance Check
 @true if unit has GoddessDance skill
 
-.equ GoddessDanceID, SkillTester+4
-.equ GetUnitsInRange, GoddessDanceID+4
+.equ TresilloID, SkillTester+4
+.equ GetUnitsInRange, TresilloID+4
 .thumb
 .org 0
 
@@ -17,12 +17,20 @@ bne False
 
 @ check if active unit has GoddessDance
 mov r0, r4 @test
-ldr r1, GoddessDanceID
+ldr r1, TresilloID
 ldr r2, SkillTester
 mov lr, r2
 .short 0xf800 @test if unit has the skill
 cmp r0, #0
 beq False
+
+@check if flag 0x8B set
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0x8B
+.short 0xF800
+cmp r0,#1
+bne False @if flag is not on, DIE
 
 @get list of all allied units in range
 ldr r0, GetUnitsInRange
@@ -50,4 +58,4 @@ bx r1
 .ltorg
 SkillTester:
 @POIN AuraSkillCheck
-@WORD GoddessDanceID
+@WORD TresilloID

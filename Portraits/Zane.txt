@@ -471,7 +471,22 @@ setMugEntry(0x2E, Yory_Mug, 3, 5, 3, 3)
 ALIGN 16
 Bard_Mug:
 #incext PortraitFormatter "Bard.png"
-setMugEntryExtend(0x2F, Bard_Mug, 3, 4, 2, 2, 0, 4, 0, 1)
+setMugEntryExtend(0x2F, Bard_Mug, 3, 4, 2, 2, 10, 4, 12, 6)
+
+ALIGN 16
+Bard1Stack_Mug:
+#incext PortraitFormatter "Bard1Stack.png"
+setMugEntryExtend(0xFA, Bard1Stack_Mug, 3, 4, 2, 2, 10, 4, 12, 6)
+
+ALIGN 16
+Bard2Stacks_Mug:
+#incext PortraitFormatter "Bard2Stacks.png"
+setMugEntryExtend(0xFB, Bard2Stacks_Mug, 3, 4, 2, 2, 10, 4, 12, 6)
+
+ALIGN 16
+Bard3Stacks_Mug:
+#incext PortraitFormatter "Bard3Stacks.png"
+setMugEntryExtend(0xFC, Bard3Stacks_Mug, 3, 4, 2, 2, 10, 4, 12, 6)
 
 ALIGN 16
 Xavier_Mug:
@@ -492,6 +507,11 @@ ALIGN 16
 Wellington_Mug:
 #incext PortraitFormatter "Wellington.png"
 setMugEntryExtend(0xC2, Wellington_Mug, 3, 5, 3, 2, 12, 6, 12, 8)
+
+ALIGN 16
+WellingtonArmor_Mug:
+#incext PortraitFormatter "WellingtonARMOR.png"
+setMugEntryExtend(0xF9, WellingtonArmor_Mug, 3, 5, 3, 2, 12, 6, 12, 8)
 
 ALIGN 16
 Opal_Mug:

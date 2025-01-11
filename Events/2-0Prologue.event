@@ -1,3 +1,5 @@
+#define Haye Beran
+#define Edvin Levain
 EventPointerTable(Ch12AEvent, PointerList)
 
 PointerList:
@@ -89,7 +91,7 @@ AfterDoor1:
 Music(0x30)
 STAL 5
 SetBackground(0x41)
-Text(Placeholder1)
+Text(RecruitFrye)
 ClearBackground
 CUSA Frye
 GiveItem(SteelSword,Frye)
@@ -108,7 +110,7 @@ AfterDoor2:
 Music(0x30)
 STAL 5
 SetBackground(0x41)
-Text(Placeholder1)
+Text(RecruitVelius)
 ClearBackground
 CUSA Wulfric
 GiveItem(Flux,Wulfric)
@@ -127,7 +129,7 @@ AfterDoor3:
 Music(0x30)
 STAL 5
 SetBackground(0x41)
-Text(Placeholder1)
+Text(RecruitCortado)
 ClearBackground
 CUSA Cortado
 GiveItem(KillerLance,Cortado)
@@ -242,6 +244,11 @@ NoFuckingWay: //idk have her be like 'omg theres sussy sounds from the halls' th
 UNIT Gorlois Parson 0x1 Level(7, Enemy, 0)     [0,5] DropItem 0 1 REDA2R5 [Spark, AngelicRobe] StallOneTurnAI
 	UNIT
 	
+CutsceneUnits: //chiffon has to be the first loaded in
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [8,30] 0 0 1 REDA11R29 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Haye SergeantClass 0x1 Level(10, Enemy, 0)   [18,27] 0 0 1 REDA15R29 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT	
+	
 OKREALNEWPARTY: //tile change out
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [2,2] 0b 0x0 0x0 0x0 [IronBow,0xE9,Elixir,BlackGem] [0x0,0x0,0x0,0x0]
 UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [0,5] 0 0 1 REDA2R5 [0xf0,Mend,Sleep,0xAE,] [0x0,0x0,0x0,0x0]
@@ -289,24 +296,53 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-//SetFlag(0x12B) //PART 2 FLAG THAT CHANGES COLOR
-	LOAD1 0x1 EnemyUnits
-	ENUT AllUnitsMustEscapeFlag
-	//LOAD1 0x1 OKREALNEWPARTY
+ENUT AllUnitsMustEscapeFlag
+
+SVAL 0xB 0x21000D
+LOMA 0xD
+LOAD2 0x1 CutsceneUnits
+FADU 40
+
+Text(PrologueFlashback1)
+MOVE 0xF Haye [13,29]
+ENUN
+
+FADI 60
+DoAllThree
+SVAL 0xB 0x70007
 HardUnits(LunaticUnits,OKREALNEWPARTY)
+LOAD1 0x1 EnemyUnits
+TurnNPC(Cortado)
+	TurnNPC(Wilken)
+	TurnNPC(Frye)
+//SetFlag(0x12B) //PART 2 FLAG THAT CHANGES COLOR
+
+Music(0x4e)
+SetBackground(0x35)
+Text(PrologueTest1)
+ClearBackground
+STAL 10
+BROWNBOXTEXT FortSeleText [8,8]
+STAL 5
+Text(PrologueTest2)
 	ENUN
 	MOVE 0xD Jaye [2,5]
 	ENUN
+	SOUN 0xF4
+	STAL 10
+	FAWI 60
+	SOUN 0xF5
 	TILECHANGE 0x5 //chiffon cell door, idk make the screen flash with the bolting sound
+	STAL 30
+	FAWU 60
+	STAL 15
+	Text(PrologueTest2Continue)
 	MOVE 0xD Jaye [3,5]
 	ENUN
 	MOVE 0xF Chiffon [2,6]
 	ENUN
-	TurnNPC(Cortado)
-	TurnNPC(Wilken)
-	TurnNPC(Frye)
 	SilentlyGiveItem(Stopwatch, Graham)
-	CenterTextbox(P2PlaceholderPrologue)
+	Text(PrologueTest3)
 	STAL 5
 	NoFade
 	ENDA
@@ -321,6 +357,16 @@ NoFade
 ENDA
 
 EndingScene:
+Music(0x1)
+BG(0x35)
+Text(PrologueTestEnding1)
+ClearBackground
+Music(0x2)
+BG(0xB)
+STAL 5
+BROWNBOXTEXT AeteriaCapitalText [8,8]
+STAL 15
+Text(PrologueTestEnding2)
 	MNC2 0x7
 	NoFade
 	ENDA

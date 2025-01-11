@@ -102,13 +102,13 @@ UnitMenuTable:
 	MenuCommand(UM_Capture, UM_CaptureDesc, NormalText, Capture_Usability, Capture_Effect_Func, $22c31, $22c99)
   #endif // COMBAT_ARTS
 
- //GoddessDance
-	MenuCommand(UM_GoddessDance, UM_GoddessDanceDesc, NormalText, GoddessDanceUsability, GoddessDanceEffect, $22c31, $22c99)
-
   UM_Staff
   UM_Ride
   UM_Exit
   UM_Play
+  
+  //GoddessDance
+	MenuCommand(UM_GoddessDance, UM_GoddessDanceDesc, BlueText, GoddessDanceUsability, GoddessDanceEffect, $22c31, $22c99)
   
   //UM_Dance
   MenuCommand(0x67E,0x6C2,NormalText,NewDanceUsability,0x231D0)
@@ -127,13 +127,14 @@ UnitMenuTable:
   
   //Resupply
 	MenuCommand(UM_Resupply, UM_ResupplyDesc, OrangeText, AmmoUsability, AmmoEffect)
-
-  //Demolish
-	MenuCommand(UM_Demolish, UM_DemolishDesc, OrangeText, DemolishUsability, DemolishEffect)
 	
   //Full Tilt
 	MenuCommand(UM_Flow, UM_FlowDesc, NormalText, FlowUsability, FlowEffect)
 	MenuCommand(UM_Unflow, UM_UnflowDesc, NormalText, UnflowUsability, UnflowEffect)
+	
+  //Ferromancy
+	MenuCommand(UM_Ferric, UM_FerricDesc, NormalText, FerricUsability, FerricEffect)
+	MenuCommand(UM_UnFerric, UM_UnFerricDesc, NormalText, UnFerricUsability, UnFerricEffect)
   
   UM_Summon_DK
 
@@ -196,6 +197,9 @@ UnitMenuTable:
   
   //UM_Supply
   MenuCommand(0x68F,0x6D5,GreenText,NewSupplyUsability,0x23FB8)
+  
+   //Demolish
+MenuCommand(UM_Demolish, UM_DemolishDesc, GrayText, DemolishUsability, DemolishEffect)
   
   UM_Wait
 

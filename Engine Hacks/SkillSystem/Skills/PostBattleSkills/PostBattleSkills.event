@@ -185,6 +185,14 @@ POIN LastHourEvent
 #include "LastHour/LastHour.event"
 
 ALIGN 4
+StanielStacks:
+#incbin "StanielStacks/BulletThing.dmp"
+POIN SkillTester
+WORD TresilloID
+POIN StanielEvent
+#include "StanielStacks/BulletThing.event"
+
+ALIGN 4
 BulletThing:
 #incbin "BulletThing/BulletThing.dmp"
 POIN SkillTester

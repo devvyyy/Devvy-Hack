@@ -22,14 +22,53 @@ TURN 0x0 ReinEvent5 [4,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x10,ReinierThereseConvo, 0x62, Therese)
-CharacterEventBothWays(0x11,ReinierConvo, 0x62, 0x0)
+CharacterEventBothWays(0x12,ReinierThereseConvo, 0x62, Therese)
+CharacterEventBothWays(0x10,ReinierBrudetConvo, 0x62, Brudet)
+CharacterEventBothWays(0x10,ReinierStroganoffConvo, 0x62, Stroganoff)
+CharacterEventBothWays(0x10,ReinierUlrichConvo, 0x62, Ulrich)
+CharacterEventBothWays(0x10,ReinierConvo, 0x62, 0x0)
+CharacterEventBothWays(0x11,AffoUlrichConvo, Affogato, Ulrich)
 	END_MAIN
+	
+AffoUlrichConvo:
+	MUSI
+	Text(Ch6AffoUlrichTalk) //uhhh they talk about insert past here/remembered shit idk bro!!1
+	MUNO
+	MURE 2
+NoFade
+ENDA
 
 ReinierThereseConvo:
 MUSS 0x63
 STAL 30
-Text(Placeholder1)
+Text(Ch6ThereseReinierTalk)
+MURE 0x2
+CUSA 0x62
+NoFade
+ENDA
+
+ReinierBrudetConvo:
+MUSS 0x63
+STAL 30
+Text(Ch6BrudetReinierTalk)
+MURE 0x2
+CUSA 0x62
+NoFade
+ENDA
+
+ReinierStroganoffConvo:
+MUSS 0x63
+STAL 30
+Text(Ch6StroganoffReinierTalk)
+MURE 0x2
+CUSA 0x62
+NoFade
+ENDA
+
+ReinierUlrichConvo:
+MUSS 0x63
+STAL 30
+Text(Ch6UlrichReinierTalk)
 MURE 0x2
 CUSA 0x62
 NoFade
@@ -38,13 +77,15 @@ ENDA
 ReinierConvo:
 MUSS 0x3b4
 STAL 30
-Text(Placeholder2)
+Text(Ch6ReinierTalkGeneric)
 MURE 0x2
 CUSA 0x62
 NoFade
 ENDA
 
 MiscBasedEvents:
+AREA 0x13 MoveTheGuys [8,1] [16,7]
+AREA 0x13 MoveTheGuys [7,10] [23,17]
 AREA 0x8 Mine1 [10,10] [10,10]
 AREA 0x9 Mine2 [16,12] [16,12]
 AREA 0xA Mine3 [16,13] [16,13]
@@ -57,13 +98,28 @@ AREA 0x0 WEWIN [9,22] [15,27]
 	CauseGameOverIfLordDies
 	END_MAIN
 	
+MoveTheGuys:
+PlayerRangeCheck
+CameraCursor(Graham)
+	Text(ChReinierGrahamLeaves)
+	STAL 15
+	MOVE 0x50 Graham [11,18] //frames char coords
+	MOVE 0x50 Yufka [11,18] //frames char coords
+	MOVE 0x50 Gus [11,18] //frames char coords
+	DISA_IF Graham
+	DISA_IF Yufka
+	DISA_IF Gus
+	ENUN
+NoFade
+ENDA
+	
 WEWIN:
 CHECK_ACTIVE
 SVAL 1 0x62
 BEQ 0x1 0xC 0x1
 GOTO 0x2
 LABEL 0x1
-Text(Placeholder1)
+Text(Ch6ReinierWinText)
 ENUF 0x3
 CALL EndingScene
 LABEL 0x2
@@ -364,10 +420,38 @@ TILECHANGE 0xF
 	LOAD1 0x1 PartTwoers
 	LOAD1 0x1 NewGuys
 	ENUN
-	GotoPrepScreen
-	ENDA
+Music(0x4e)
+SetBackground(0x33)
+CharacterConditionalDialog(Therese,ChReinierOpening0,ChReinierOpening0Alt)
+ClearBackground
+STAL 15
+CameraCursor(0x62)
+Music(0x1A)
+STAL 10
+SetBackground(0x3C)
+BROWNBOXTEXT FortLoetoftText [8,8]
+STAL  5
+Text(ChReinierOpening1)
+ClearBackground
+STAL 20
+CameraCursor(Graham)
+CameraCursor(Yufka)
+CameraCursor(Gus)
+Text(ChReinierOpening2)
+STAL 30
+CALL $591FD8 //prep screen
+FADU 60
+STAL 30
+CameraCursor(Affogato)
+Text(ChReinierAfterPreps)
+NoFade
+ENDA
 
 EndingScene:
+REMU 0x62
+BG(0x3c)
+Music(0x63)
+CHECK_ALIVE Therese; BEQ 1 0x0 0xC; TEXTSTART; TEXTSHOW ChReinierEnding1Therese; TEXTEND; MUSC 0x106; TEXTCONT; TEXTEND; REMA; GOTO 2; LABEL 1; Text(ChReinierEnding1); LABEL 2
 	MNC2 0xF
 	NoFade
 	ENDA

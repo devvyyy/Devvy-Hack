@@ -313,6 +313,21 @@ SongTable(0xC2,songC2,1)
 #include "FirstStep.event"
 
 ALIGN 4
+//August Talks
+SongTable(0x2a5,AugustTalks,0)
+#include "AugustTalks.event"
+
+ALIGN 4
+//Runa Attack!
+SongTable(0x2a7,RunaAttack,0)
+#include "RunaAttack.event"
+
+ALIGN 4
+//Conversation 1
+SongTable(0x2a6,Conversation1,0)
+#include "Conversation.event"
+
+ALIGN 4
 //Ice Ridge of Noltia (Intro on Turn 1 before using Map BGM Change)
 SongTable(0x149,song0149,1)
 #include "NoltiaIntro.event"

@@ -68,7 +68,6 @@ SetBackground(0x41)
 Text(Ch7RecruitmentConvo)
 ClearBackground
 CUSA Verna
-CUSA BardUnit
 MURE 2
 NoFade
 ENDA
@@ -125,7 +124,6 @@ UNIT Wilken Shaman 0x1 Level(2, Ally, 0)     [7,12] 0b 0x0 0x0 0x0 [SteelBlade] 
 UNIT Jaye Mage_F 0x1 Level(2, Ally, 0)     [9,11] 0b 0x0 0x0 0x0 [SteelBlade] [0x0,0x0,0x0,0x0]
 UNIT Cortado LCav 0x1 Level(2, Ally, 0)     [10,10] 0b 0x0 0x0 0x0 [SteelBlade] [0x0,0x0,0x0,0x0]
 UNIT Verna Occultist 0x1 Level(2, Ally, 0)     [10,13] 0b 0x0 0x0 0x0 [SteelBlade] [0x0,0x0,0x0,0x0]
-UNIT BardUnit Bard 0x1 Level(2, Ally, 0)     [7,9] 0b 0x0 0x0 0x0 [SteelBlade] [0x0,0x0,0x0,0x0]
 	UNIT
 	
 EndingCutsceneUnits:
@@ -136,7 +134,6 @@ UNIT Wilken Shaman 0x1 Level(2, Ally, 0)     [9,16] 0b 0x0 0x0 0x0 [SteelBlade] 
 UNIT Jaye Mage_F 0x1 Level(2, Ally, 0)     [6,17] 0b 0x0 0x0 0x0 [SteelBlade] [0x0,0x0,0x0,0x0]
 UNIT Cortado LCav 0x1 Level(2, Ally, 0)     [7,17] 0b 0x0 0x0 0x0 [SteelBlade] [0x0,0x0,0x0,0x0]
 UNIT Verna Occultist 0x1 Level(2, Ally, 0)     [8,17] 0b 0x0 0x0 0x0 [SteelBlade] [0x0,0x0,0x0,0x0]
-UNIT BardUnit Bard 0x1 Level(2, Ally, 0)     [8,17] 0b 0x0 0x0 0x0 [SteelBlade] [0x0,0x0,0x0,0x0]
 	UNIT
 
 EnemyUnits: //Aeteria and AeteriaStealable
@@ -164,13 +161,11 @@ UNIT Aeteria Mage 0x1 Level(3, Enemy, 1)     [6,19] 0b 0x0 0x0 0x0 [Fire,] TwoAc
 	UNIT
 	
 LesBardo:
-UNIT BardUnit Bard 0x1 Level(1, Ally, 0)   [7,10] 0b 0x0 0x0 0x0 [LifeRing,Elixir,Antitoxin,PureWater] [0x0,0x0,0x0,0x0]
-UNIT Verna Occultist 0x1 Level(4, Ally, 0)   [8,10] 0b 0x0 0x0 0x0 [PoisonSword,Vulnerary] [0x0,0x0,0x0,0x0]
+UNIT Verna Occultist 0x1 Level(4, Ally, 0)   [8,10] 0b 0x0 0x0 0x0 [PoisonSword,ChestKey] [0x0,0x0,0x0,0x0]
 	UNIT
 	
 LunaticUnits:
-UNIT BardUnit Bard 0x1 Level(1, Ally, 1)   [7,10] 0b 0x0 0x0 0x0 [LifeRing,Elixir,Antitoxin,PureWater] [0x0,0x0,0x0,0x0]
-UNIT Verna Occultist 0x1 Level(4, Ally, 1)   [8,10] 0b 0x0 0x0 0x0 [PoisonSword,0x7E,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Verna Occultist 0x1 Level(4, Ally, 1)   [8,10] 0b 0x0 0x0 0x0 [PoisonSword,ChestKey,] [0x0,0x0,0x0,0x0]
 	UNIT
 
 Traps1:
@@ -182,54 +177,42 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-/*
+HardUnits(LunaticUnits,LesBardo)
+	CUSN Verna
+	LOAD1 0x1 EnemyUnits
+ENUN
 Music(0x93)
 SetBackground(0x18)
 STAL 5
 BROWNBOXTEXT HallText [8,8]
 STAL 15
-TextCont(Ch7Opening0,0x3DE)
+//TextCont(Ch7Opening0,0x3DE)
+Text(TwoOneOpening1)
+Text(TwoOneOpening1Point5)
 FADI 60
 CLEAN
 SetBackground(0x35) //black
 STAL 5
 SetBackground(0x15)
 Music(0x3CD)
-Text(Ch7Opening1)
+Text(TwoOneOpening2)
 FADI 60
 CLEAN
 SetBackground(0x35) //black
 Music(0x48)
 SetBackground(0x40)
 STAL 5
-BROWNBOXTEXT PalaceText [8,8]
+//BROWNBOXTEXT PalaceText [8,8]
 STAL 15
-Text(Ch7Opening2)
-*/
+Text(TwoOneOpening3)
 FADI 60
 CLEAN
-	//LOAD1 0x1 CutsceneUnits
-	//DISA_IF Chiffon
-	//LOAD1 0x1 LesBardo
-HardUnits(LunaticUnits,LesBardo)
-	CUSN Verna
-	CUSN BardUnit
-	LOAD1 0x1 EnemyUnits
-ENUN
 FADU 60
 STAL 10
 LOAD1 0x1 CutsceneUnits2
 ENUN
 CameraCursor(Chiffon)
 STAL 15
-//Music(0x118)
-//SetBackground(0x40)
-//Text(Ch7Opening3)
-//ClearBackground
-//STAL 5
-//Music(0x18e)
-//Text(Ch7Opening4)
-//STAL 30
 	GotoPrepScreen
 NoFade
 	ENDA
@@ -295,6 +278,7 @@ SetBackground(0x2B) //dawn
 TextCont(Ch7Ending5,0x104) //hel
 */
 
+Text(TwoOneEnding1)
 MNC2 0xB //2-2
 //MNTS 0x1 //return to title screen
 	NoFade

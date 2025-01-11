@@ -190,16 +190,61 @@ NoFade
 ENDA
 
 ALIGN 4
+UnFerricUsability: //don't ask
+#incbin "FerricToggle/FlowUsability.dmp"
+POIN SkillTester
+WORD DriveCantoID
+ALIGN 4
+FerricUsability:
+#incbin "FerricToggle/UnflowUsability.dmp"
+POIN SkillTester
+WORD DriveCantoID
+
+ALIGN 4
+FerricEffect:
+#incbin "FerricToggle/FlowEffect.dmp"
+POIN FerricEvent
+ALIGN 4
+UnFerricEffect:
+#incbin "FerricToggle/UnflowEffect.dmp"
+POIN UnFerricEvent
+
+FerricEvent:
+ENUT 0xEC
+SOUN 0x2D9
+//SOUN 0x3b5
+STAL 0x5
+NoFade
+ENDA
+
+UnFerricEvent: //horse mode
+ENUF 0xEC
+SOUN 0x2D1
+STAL 0x5
+NoFade
+ENDA
+
+ALIGN 4
 GoddessDanceUsability:
 #incbin "GoddessDance/GoddessDanceUsability.dmp"
 POIN SkillTester
-WORD SanctuaryID
+WORD TresilloID
 POIN GetUnitsInRange
 
 ALIGN 4
 GoddessDanceEffect:
 #incbin "GoddessDance/GoddessDanceEffect.dmp"
 POIN GetUnitsInRange
+POIN StanielActiveEvent
+
+StanielActiveEvent:
+ENUF 0x12A
+ENUF 0x12B
+ENUF 0x8B
+SOUN 0x2ea
+STAL 10
+NoFade
+ENDA
 
 ALIGN 4
 StealthEffect:

@@ -36,7 +36,7 @@ beq Done
 @add def/2 def
 mov  r1, #0x5C
 ldrh r0, [r4, r1] @def
-ldrb r2, [r5, #0x17] @def
+ldrb r2, [r4, #0x17] @def
 lsr  r2, #1 @divide this by 2
 add  r0, r2
 strh r0, [r4,r1]

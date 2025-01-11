@@ -1,48 +1,35 @@
-## 2-1Opening1
+## TwoOneOpening1
 [3L]
-[ML][LoadStaniel][MR][LoadVerna]
-
-[MR]
-So[Beat] What got you in this mess?[6N]
-You think we'll just rot in a cell for[N]
-the rest of our days?[AN]
-
-[ML]
-Rest of our days?[.6] And I thought we were sentenced[N]
-to death.[.6] They cannot even grant us that mercy?[6N]
-They were rounding up villagers in Drisvelg.[AN][Clear]
-I was just a humble vagrant, but it seems[N]
-my luck ran out[...][AN]
-
-[MR]
-How wretched.[AN]
-
-[ML]
-And you?[.6] What brings you to our lovely confinement?[AN]
-
-[MR]
-Well.[.6] I'm a noble who opposes the Duke, so he[N]
-wanted me dead.[AN]
-
-[ML]
-Royalty[,] eh?[.6] Say, is there anything I can do[N]
-to assist?[.6] How about a pirouette?[AN]
-
-[MR]
-I would rather die.[AN]
-
-[ML]
-[Beat][MoveMidLeft][AN]
-
-[MR]
-Actually[,] cellmate[,] can you play something on[N]
-that lyre of yours?[AN]
-
-[ML]
-The gittern[,] you mean?[.6] Why[,] yes[Beat][AN]
+[MR][LoadVerna]
+Yufka and Graham must be here to rescue me.[6N]
+But little do they know[Beat] I was able to[N]
+snatch a little key.[AN]
+Do they think a sorceress of House Kyveli[N]
+would be stopped by a simple cell?[6N]
+Such foolishness![AN]
 [X]
 
-## 2-1Opening2
+## TwoOneOpening1Point5
+[3L]
+[MR][LoadVerna]
+[Pause][N]
+[Beat][N]
+[ToggleMouthMove].....[ToggleMouthMove][AN][CF]
+No[Beat] No![.6] God damn it![6N]
+I picked up the wrong key[Beat][6N]
+Argh[,] curse you[,] Hayes![AN]
+The moment I get out of this wretched cell[,][N]
+I will tear you from limb to limb![.6][N]
+YOU HEAR ME?![AN]
+
+[FFL]
+Yeah[,] we hear you.[.6] Please stay quiet.[AN]
+
+[MR]
+[ToggleMouthMove].....[ToggleMouthMove][AN]
+[X]
+
+## TwoOneOpening2
 [3L]
 [ML][LoadGraham][MR][LoadChiffon]
 
@@ -52,47 +39,43 @@ That is adequate considering the territory.[AN]
 
 [MR][MoveRight][FR][LoadJaye]
 [FR]
-Psst, merc[Beat] 'Thirty minutes late' really[N]
+Psst[,] merc[Beat] 'Thirty minutes late' really[N]
 means an hour from the Reverend.[AN]
 
 [R]
 Yes[,] I'm quickly starting to understand his[N]
 eccentricities[Beat] Ah[,] Reverend.[.6] This is the[N]
 deepest floor of the prison[,] right?[AN][Clear]
-And we gotta save those prisoners and escape.[AN]
+So we gotta save those prisoners and escape.[AN]
 
 [ML]
-You are correct once again[,] Ser Chiffon.[6N]
-I am so glad our faith in you was not[N]
+I am glad our faith in you was not[N]
 misguided thus far.[AN]
 
 [FR]
-There are two prisoners in that cell.[6N]
-What do you propose we do?
+Verna's in that cell.[.6] Bunch of dogs[,][N]
+making it personal like that.[AN]
 
-[E]
-Who are these two prisoners?[.6] This looks to be the maximum[N]
-security area down here—they must be dangerous[N]
-prisoners--[.4]or at least worth a price.[AN]
+[R]
+Who's the prisoner?[.6] This looks to be the maximum[N]
+security area down here--[.4]they must be dangerous[N]
+or at least worth a price.[AN]
 
 [ML][MoveFarLeft][L][LoadYufka]
 Verna is a treasured member of our Order.[6N]
 She was a noble to Aeteria--[.4]her betrayal of the[N]
-throne and her occultic magic must have[AN]
-marked her as an important target.[AN][Clear]
-The other[Beat] [Beat] do not know who he is.[6N]
-Some[Beat] minstrel?[AN]
+throne marked her as an important target.[AN]
 
 [MR]
-Got it.[.6] So we'll break them out and get[N]
-out of this ruddy place[,] no one left behind.[AN]
+Got it.[.6] We'll break her out and get out[N]
+of this ruddy place[,] no one left behind.[AN]
 [X]
 
-## 2-1Opening3
+## TwoOneOpening3
 [3L]
-[ML][LoadSoldier][MR][LoadAlair]
+[ML][LoadSoldier][MR][LoadFace][0x56][0x1]
 [ML]
-Officer Alair, suspicious activity was detected[N]
+Officer Alair[,] suspicious activity was detected[N]
 in the lower levels of the prison.[6] It seems[N]
 these are not part of the same group of rebels[an]
 that are causing a ruckus at the crown city.[an]
@@ -142,4 +125,84 @@ same thing, Officer.[6] You know what would[n]
 really make him an unwise ruler?[an]
 Not raising our wages after giving us so[n]
 many men to manage![an]
+[X]
+
+## TwoOneEnding1
+[ML][LoadChiffon][MR][LoadVerna][3L]
+Another one down.[.6] Hey[,] this prison's looking[N]
+a little empty![AN]
+
+[MR]
+And you[Beat] must be my savior[,] Ser.[6N]
+Minister.[.6] Who is this?[AN]
+
+[ML][MoveFarLeft]
+
+[L][LoadYufka]
+This is our new mercenary ally[,] Ser Chiffon.[AN]
+
+[MR]
+Thanks[,] Ser Chiffon.[.6] Real inspired[,] watching you zip around[N]
+and zap the guards like that.[AN][MoveFarRight][Clear]
+
+[MR][LoadGraham]
+Excellent results[,] everyone.[.6] It is time for[N]
+us to leave.[.6] The prison no longer has any[N]
+strategic value.[AN]
+Especially considering the circumstances[,][N]
+Ser Chiffon, you handled your responsibilities[N]
+with grace and precision.[AN][Clear]
+As a hypothetical[,] what do you propose we[N]
+do next[,] with our situation in mind?[AN]
+
+[FL][MoveLeft]
+[CloseEyes](There's definitely a right answer...)[AN][Clear]
+This is the deepest part of the prison.[6n]
+Once we leave[,] you want us to regroup and[N]
+strike against the empire.[AN]
+
+[MR]
+A perfect response.[.6] We shall regroup with Captain Raya[N]
+and the rest of her Resistance mercenaries[N]
+who reside at the quiet village of Arma.[AN]
+That will be our sanctum before we begin[N]
+our attack on the crown city.[AN]
+
+[L]
+Crown city?![.6] Your rebellion starts at the[N]
+heart of the people?[AN]
+
+[FL]
+Yes.[.6] That is the first target.[.6] The people[N]
+of the empire must have hope.[AN]
+
+[L]
+Reverend.[.6] Why did you have us execute[N]
+those soldiers?[AN]
+
+[MR]
+The livelihood of the people depended on it.[6N]
+We took care of these thorns now so we do not[N]
+have to later.[AN][Clear]
+Would you have preferred that one of these[N]
+soldiers laying on the floor hack you to[N]
+bits in the future?[AN]
+
+[L]
+[Beat][AN]
+
+[MR]
+Seeds of doubt may plague you[,] Chiffon.[.6][N]
+But you are a mercenary:[.4] bloodshed is something[N]
+you are accustomed to[,] correct?[AN]
+Not to mention you have an axe to grind[N]
+with an imperial commander.[.6] I will[N]
+bring you closer to your objective.[AN]
+
+[L]
+Yes[Beat] I understand[,] Reverend.[AN]
+
+[MR]
+I guide you out of what is best for us.[6N]
+Now allow me to lead the way.[AN]
 [X]

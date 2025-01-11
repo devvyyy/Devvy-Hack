@@ -7,7 +7,7 @@
   mov lr, \reg
   .short 0xf800
 .endm
-.equ DragonFangID, SkillTester+4
+.equ SanctuaryID, SkillTester+4
 .equ d100Result, 0x802a52c
 @ r0 is attacker, r1 is defender, r2 is current buffer, r3 is battle data
 push {r4-r7,lr}
@@ -29,7 +29,7 @@ bne End
 @ldr r0, SkillTester
 @mov lr, r0
 @mov r0, r4 @attacker data
-@ldr r1, DragonFangID
+@ldr r1, SanctuaryID
 @.short 0xf800
 ldr r0,=#0x0203F101
 ldrb r0,[r0]
@@ -60,7 +60,7 @@ and     r0,r2                @ 0802B436 4010
 orr     r0,r1                @ 0802B438 4308     
 str     r0,[r6]                @ 0802B43A 6018  
 
-ldrb  r0, DragonFangID
+ldrb  r0, SanctuaryID
 strb  r0, [r6,#4] 
 
 @1.5x attack
@@ -83,5 +83,5 @@ pop {r15}
 .ltorg
 SkillTester:
 @POIN SkillTester
-@WORD DragonFangID
+@WORD SanctuaryID
 

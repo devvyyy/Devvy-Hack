@@ -1,8 +1,24 @@
 ## FortSeleText
 Fort Sele[X]
 
-## 2-POpening1
+## PrologueFlashback1
+[ML][LoadChiffonSickoMode][MR][LoadHaye][3L]
+[ML]
+So much for you[,] Major![AN]
+
+[MR]
+How dangerous.[.6] I cannot let you[N]
+leave here[,] mercenary.[AN]
+
+[X]
+
+## PrologueTest1
 [3L]
+[ResetPitch]
+[ML]
+Ugh[Beat] I can't believe I lost to[N]
+that clown[Beat] And I guess my luck's[N]
+finally run out now.[AN]
 
 [ResetPitch][FFR]
 Wakey-wakey.[A]
@@ -11,7 +27,7 @@ Wakey-wakey.[A]
 Uh[,] eggs and bakey?[AN]
 
 [ML]
-(Huh...? Am I dreaming...? Maybe I'm dead?[N]
+(Huh...? Am I actually awake...? Maybe I'm dead?[N]
 Did they finally get me...? It's been many[N]
 moons since[Beat][A][Clear]
 Since the war started after Aeteria[N]
@@ -27,11 +43,11 @@ Ugh[Beat] What the hell is going on?[AN]
 
 [X]
 
-## 2-POpening2
+## PrologueTest2
 [3L]
 [ML][LoadChiffon][R][LoadGraham][FR][LoadYufka]
 
-[ML][MML]
+[ML][MoveML]
 What is your deal?![AN]
 
 [R]
@@ -70,7 +86,7 @@ Now[,] now[,] Penny.[.6] The Order's mission is to recruit[N]
 worthy adversaries who will aid us in our[N]
 battle against the empire.[AN]
 
-Chiffon
+[ML]
 Oh.[.6] So you want me to fight for your cause.[6N]
 I suppose I must thank you for waking[N]
 me up from that nightmare.[AN]
@@ -177,7 +193,7 @@ who can aid us in our fight against Aeteria.[6N]
 You are esteemed in a militia, are you not?[AN]
 
 [ML]
-Right, but...[AN]
+Right[,] but...[AN]
 
 [R][ClearFace][LoadJaye]
 A mercenary like you must've seen a lot[N]
@@ -196,10 +212,14 @@ If you truly will fight with us, then let us[N]
 not waste any more time. There are more who[N]
 need to be rescued.[AN]
 
-[ML][MoveLeft]
-Got it[,], uhm[,] Reverend Graham.[6N]
-What's next?[AN]
+[R]
+Alright[,] stand back[,] friend![AN]
 
+[ML][MoveFarLeft]
+[Beat][AN][X]
+
+## PrologueTest2Continue
+[FL][LoadJaye][L][LoadChiffon][R][LoadGraham][FR][LoadYufka][3L]
 [R]
 Imperial forces will be upon us soon to[N]
 investigate the explosion.[.6] I suggest you[N]
@@ -210,13 +230,14 @@ You have our thanks[,] truly[,] Ser Chiffon.[.6][N]
 The Liberation efforts need any blade who will[N]
 fight with us[,] and...[AN]
 
-[ML]
+[L]
 How did you all even get in here?[6N]
-This place must be in the middle of nowhere...[AN]
+This place must be in the middle[N]
+of nowhere[Beat][AN]
 
-[FR][ClearFace][LoadJaye]
+[FL]
 Blew up the guard[,] blew up the doors,[N]
-blew up your cell.[.6] Any more questions?[AN]
+blew up your cell.[.6] Keep up.[AN]
 
 [R][ClearFace][LoadGraham]
 First things first.[.6] Let us all exit this prison[N]
@@ -230,7 +251,7 @@ bless us tonight.[AN]
 
 [X]
 
-## 2-POpening2
+## PrologueTest3
 # after she leaves cell
 [3L]
 [FL][ClearFace][LoadGraham][L][ClearFace][LoadChiffon]
@@ -239,7 +260,7 @@ bless us tonight.[AN]
 Are we all armed and ready to fight?[AN]
 
 [L]
-Let's go. Follow me, everyone!!
+Let's go. Follow me, everyone!![AN]
 
 [FL][MoveMidLeft]
 Not so fast.[.6] We--[AN]
@@ -276,33 +297,7 @@ will be our light...[A][CF]
 
 [X]
 
-## 2-POpening3
-[3L]
-
-[MR][LoadGraham]
-At a glance[,] there looks to be three prisoners[N]
-confined here who we absolutely must liberate[N]
-before we exit.[AN][Clear]
-Jaye[,] I assume those tools on your belt[N]
-are for breaking locks?[AN]
-
-[ML][LoadJaye]
-Yessir![.6] I think I'd prefer blasting[N]
-the cells open[,] though![AN][CF]
-
-[ML][LoadPolly]
-Mass destruction could potentially be bad, actually.[6N]
-I also pocketed a few keys earlier from[N]
-the guards you... annihilated earlier,[AN]
-if we find ourselves splitting up.[AN][CF]
-
-[ML][LoadChiffon]
-Alright, then.[.6] Let's run in and break[N]
-these folks out.[AN]
-
-[X]
-
-## 2-PEnding1
+## PrologueTestEnding1
 [3L]
 
 [MR][LoadChiffon]
@@ -323,7 +318,8 @@ Order a glorious victory today.[.6] And what[N]
 manner of witchcraft did you display in battle?[AN]
 
 [MR]
-No clue[,] honestly.[.6] It's just a thing.[AN]
+No clue[,] honestly.[.6] It's just a thing[N]
+I've always had.[AN]
 
 [ML]
 Ah[,] a "thing".[AN]
@@ -336,7 +332,7 @@ these prisons.[.6] Most aren't even armed.[AN]
 [ML][MoveFarLeft][L][LoadYufka]
 The empire has been increasing surveillance and[N]
 authority ever since the war began.[6N]
-It is strange...[A][Clear]
+It is strange[Beat][A][Clear]
 I presume the Emperor is filled with paranoia[N]
 at the thought of the citizens rising.[AN]
 
@@ -362,7 +358,7 @@ Allow me to mark this down.[AN]
 
 [MR]
 You and the Minister always seem to be[N]
-writing things down.
+writing things down.[AN]
 
 [FL]
 It is only natural to monitor the time we take.[6N]
@@ -393,7 +389,7 @@ around this man...)[AN][TMM]
 
 [X]
 
-## 2-PEnding2
+## PrologueTestEnding2
 [3L]
 [ML][LoadOpal][MR][LoadHaye]
 
@@ -408,7 +404,7 @@ or perhaps this new age of soldiers is[N]
 lacking in competence![AN]
 
 [ML]
-Major Haye. You may be a spearhead to the new[N]
+Major Haye[.6]. You may be a spearhead to the new[N]
 age of recruits[,] but do remember that you[,][N]
 too[,] are part of this new age.[AN]
 To think Aeteria is in such a pitiable state...[6N]
@@ -471,13 +467,12 @@ break you out.[.6] Come with me![AN]
 
 [ML]
 Slow down, soldier. You go on[,] talking and[N]
-running fast, but I don't even know your name.[AN]
+running fast[,] but--[AN]
 
 [MR]
-I'm Chiffon of the Liberation Army.[6N]
 You're a member of the Resistance, right?[6N]
-Take these.[AN][Clear]
-Just follow me and I'll explain everything later.[AN]
+I'm fighting with them as well.[6N]
+Take these and come with me.[AN]
 
 [X]
 
@@ -521,7 +516,7 @@ Your tomes[,] here they are.[.6] Let's go.[AN]
 
 [X]
 
-## RecruitVelius
+## RecruitCortado
 [3L]
 [ML][LoadCortado][MR][LoadChiffon]
 
@@ -530,11 +525,12 @@ Your tomes[,] here they are.[.6] Let's go.[AN]
 are you supposed to be?[AN]
 
 [ML]
-I'm Chiffon. I'm fighting with the others[N]
-against the Imperial army.[.6] Follow me.[AN]
+I'm with the Resistance[,] fighting with the[N]
+others against the Imperial army.[.6][N]
+Come with me.[AN]
 
 [MR]
-Alright, Chiff.[.6] People call me Cortado.[6N]
+People call me Cortado.[6N]
 Let's try not to die out there[,] yeah?[AN]
 
 [X]
