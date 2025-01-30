@@ -1,0 +1,1750 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	KnightsCircle_grp  voicegroup000
+	#define	KnightsCircle_pri  0
+	#define	KnightsCircle_rev  148
+	#define	KnightsCircle_mvl  31
+	#define	KnightsCircle_key  0
+	#define	KnightsCircle_tbs  1
+	#define	KnightsCircle_exg  0
+	#define	KnightsCircle_cmp  1
+
+	// .rodata
+	//	KnightsCircle
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+KnightsCircle_1:
+	BYTE	KEYSH   KnightsCircle_key+0
+KnightsCircle_1_B1:
+// 000   ----------------------------------------
+	BYTE	TEMPO   95*KnightsCircle_tbs/2
+	BYTE		VOICE   60
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*KnightsCircle_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N36     Cn3   v127
+	BYTE	W36
+	BYTE		N12     Gn3 
+	BYTE	W12
+	BYTE		TIE   
+	BYTE	W48
+// 001   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 002   ----------------------------------------
+KnightsCircle_1_002:
+	BYTE		N36     Fn3   v127
+	BYTE	W36
+	BYTE		N12     Dn3 
+	BYTE	W12
+	BYTE		TIE   
+	BYTE	W48
+	BYTE	PEND
+// 003   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 004   ----------------------------------------
+KnightsCircle_1_004:
+	BYTE		N36     Cn3   v127
+	BYTE	W36
+	BYTE		N12     Gn3 
+	BYTE	W12
+	BYTE		TIE   
+	BYTE	W48
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_1_002
+// 007   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Dn3 
+	BYTE	W06
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_1_004
+// 009   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE	W06
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_1_002
+// 011   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Dn3 
+	BYTE	W06
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_1_004
+// 013   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE	W06
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_1_002
+// 015   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Dn3 
+	BYTE	W06
+// 016   ----------------------------------------
+KnightsCircle_1_016:
+	BYTE		N60     Gn3   v127
+	BYTE	W60
+	BYTE		N12     Fn3 
+	BYTE	W12
+	BYTE		        Ds3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE	PEND
+// 017   ----------------------------------------
+KnightsCircle_1_017:
+	BYTE		N48     Gn3   v127
+	BYTE	W48
+	BYTE		N24     As3 
+	BYTE	W24
+	BYTE		        Cn4 
+	BYTE	W24
+	BYTE	PEND
+// 018   ----------------------------------------
+KnightsCircle_1_018:
+	BYTE		N60     As3   v127
+	BYTE	W60
+	BYTE		N12     Gs3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE	PEND
+// 019   ----------------------------------------
+KnightsCircle_1_019:
+	BYTE		N48     Ds3   v127
+	BYTE	W48
+	BYTE		N42     Dn3 
+	BYTE	W48
+	BYTE	PEND
+// 020   ----------------------------------------
+KnightsCircle_1_020:
+	BYTE		N60     Cn3   v127
+	BYTE	W60
+	BYTE		N12     Dn3 
+	BYTE	W12
+	BYTE		        Ds3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE	PEND
+// 021   ----------------------------------------
+KnightsCircle_1_021:
+	BYTE		N24     Gn3   v127
+	BYTE	W24
+	BYTE		        As3 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE	W24
+	BYTE	PEND
+// 022   ----------------------------------------
+KnightsCircle_1_022:
+	BYTE		N36     Fn3   v127
+	BYTE	W36
+	BYTE		N12     Gn3 
+	BYTE	W12
+	BYTE		N24     Gs3 
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE	W24
+	BYTE	PEND
+// 023   ----------------------------------------
+	BYTE		N90     Fn3 
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_1_016
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_1_017
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_1_018
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_1_019
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_1_020
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_1_021
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_1_022
+// 031   ----------------------------------------
+	BYTE		N90     Fn3   v127
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE		N48     Gn3 
+	BYTE	W48
+	BYTE		        Fn3 
+	BYTE	W48
+// 033   ----------------------------------------
+	BYTE		        En3 
+	BYTE	W48
+	BYTE		N24     Fn3 
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE	W24
+// 034   ----------------------------------------
+	BYTE		N12     As3 
+	BYTE	W12
+	BYTE		        Gs3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		N36     Ds3 
+	BYTE	W36
+	BYTE		N12     Fn3 
+	BYTE	W12
+// 035   ----------------------------------------
+	BYTE		N90     Gn3 
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE		N48     Fn3 
+	BYTE	W48
+	BYTE		        En3 
+	BYTE	W48
+// 037   ----------------------------------------
+	BYTE		        Dn3 
+	BYTE	W48
+	BYTE		N24     En3 
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE	W24
+// 038   ----------------------------------------
+	BYTE		N12     Dn3 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		N24     Dn3 
+	BYTE	W24
+	BYTE		        Ds3 
+	BYTE	W24
+// 039   ----------------------------------------
+	BYTE		N90     Fn3 
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE		N48     Gs3 
+	BYTE	W48
+	BYTE		        Gn3 
+	BYTE	W48
+// 041   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE	W48
+	BYTE		N24     Gn3 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE	W24
+// 042   ----------------------------------------
+	BYTE		N12     As3 
+	BYTE	W12
+	BYTE		        Gs3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		N36     Gn3 
+	BYTE	W36
+	BYTE		N12     Gs3 
+	BYTE	W12
+// 043   ----------------------------------------
+	BYTE		N90     As3 
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE		N36     Cn4 
+	BYTE	W36
+	BYTE		N12     Dn4 
+	BYTE	W12
+	BYTE		N24     Ds4 
+	BYTE	W24
+	BYTE		        Dn4 
+	BYTE	W24
+// 045   ----------------------------------------
+	BYTE		N90     Cn4 
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE		N36     Dn4 
+	BYTE	W36
+	BYTE		N12     Ds4 
+	BYTE	W12
+	BYTE		N24     Fn4 
+	BYTE	W24
+	BYTE		        Ds4 
+	BYTE	W24
+// 047   ----------------------------------------
+	BYTE		N90     Dn4 
+	BYTE	W92
+	BYTE	GoTo
+	 POIN2	KnightsCircle_1_B1
+KnightsCircle_1_B2:
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+KnightsCircle_2:
+	BYTE	KEYSH   KnightsCircle_key+0
+KnightsCircle_2_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   62
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*KnightsCircle_mvl/mxv
+	BYTE		PAN     c_v-64
+	BYTE	W48
+	BYTE		N36     Cn3   v076
+	BYTE	W36
+	BYTE		N12     Gn3 
+	BYTE	W12
+// 001   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 002   ----------------------------------------
+KnightsCircle_2_002:
+	BYTE	W48
+	BYTE		N36     Fn3   v076
+	BYTE	W36
+	BYTE		N12     Dn3 
+	BYTE	W12
+	BYTE	PEND
+// 003   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 004   ----------------------------------------
+KnightsCircle_2_004:
+	BYTE	W48
+	BYTE		N36     Cn3   v076
+	BYTE	W36
+	BYTE		N12     Gn3 
+	BYTE	W12
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_2_002
+// 007   ----------------------------------------
+	BYTE		N90     Dn3   v076
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_2_004
+// 009   ----------------------------------------
+	BYTE		N90     Gn3   v076
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_2_002
+// 011   ----------------------------------------
+	BYTE		N90     Dn3   v076
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_2_004
+// 013   ----------------------------------------
+	BYTE		N90     Gn3   v076
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_2_002
+// 015   ----------------------------------------
+	BYTE		N90     Dn3   v076
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+KnightsCircle_2_024:
+	BYTE		N72     Cn4   v076
+	BYTE	W72
+	BYTE		N24     Dn4 
+	BYTE	W24
+	BYTE	PEND
+// 025   ----------------------------------------
+	BYTE		N90     Ds4 
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE		N72     As3 
+	BYTE	W72
+	BYTE		N24     Cn4 
+	BYTE	W24
+// 027   ----------------------------------------
+	BYTE		N90     Dn4 
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_2_024
+// 029   ----------------------------------------
+	BYTE		N90     Ds4   v076
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE		N72     Fn4 
+	BYTE	W72
+	BYTE		N24     Gn4 
+	BYTE	W24
+// 031   ----------------------------------------
+	BYTE		N90     Gs4 
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+KnightsCircle_2_034:
+	BYTE		N06     Ds3   v076
+	BYTE	W24
+	BYTE		        As2 
+	BYTE	W24
+	BYTE		        Ds3 
+	BYTE	W24
+	BYTE		        As2 
+	BYTE	W24
+	BYTE	PEND
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_2_034
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+KnightsCircle_2_038:
+	BYTE		N06     As2   v076
+	BYTE	W24
+	BYTE		        Fn2 
+	BYTE	W24
+	BYTE		        As2 
+	BYTE	W24
+	BYTE		        Fn2 
+	BYTE	W24
+	BYTE	PEND
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_2_038
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+KnightsCircle_2_042:
+	BYTE		N06     Dn3   v076
+	BYTE	W24
+	BYTE		        As2 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE	W24
+	BYTE		        As2 
+	BYTE	W24
+	BYTE	PEND
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_2_042
+// 044   ----------------------------------------
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE		N06     Fn3   v076
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE	W24
+// 047   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE	W20
+	BYTE	GoTo
+	 POIN2	KnightsCircle_2_B1
+KnightsCircle_2_B2:
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+KnightsCircle_3:
+	BYTE	KEYSH   KnightsCircle_key+0
+KnightsCircle_3_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   61
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*KnightsCircle_mvl/mxv
+	BYTE		PAN     c_v+63
+	BYTE	W96
+// 001   ----------------------------------------
+KnightsCircle_3_001:
+	BYTE		N36     Cn4   v076
+	BYTE	W36
+	BYTE		N12     Gn4 
+	BYTE	W12
+	BYTE		N42   
+	BYTE	W48
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+KnightsCircle_3_003:
+	BYTE		N36     Fn4   v076
+	BYTE	W36
+	BYTE		N12     Dn4 
+	BYTE	W12
+	BYTE		N42   
+	BYTE	W48
+	BYTE	PEND
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_3_001
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_3_003
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_3_001
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_3_003
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_3_001
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_3_003
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+KnightsCircle_3_025:
+	BYTE		N12     Gn4   v076
+	BYTE	W12
+	BYTE		        Fn4 
+	BYTE	W12
+	BYTE		        Ds4 
+	BYTE	W12
+	BYTE		        Fn4 
+	BYTE	W12
+	BYTE		N42     Gn4 
+	BYTE	W48
+	BYTE	PEND
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+KnightsCircle_3_027:
+	BYTE		N12     Gs4   v076
+	BYTE	W12
+	BYTE		        Gn4 
+	BYTE	W12
+	BYTE		        Fn4 
+	BYTE	W12
+	BYTE		        Gn4 
+	BYTE	W12
+	BYTE		N42     Gs4 
+	BYTE	W48
+	BYTE	PEND
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_3_025
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_3_027
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+KnightsCircle_3_034:
+	BYTE	W12
+	BYTE		N12     As3   v076
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		N04     As3 
+	BYTE	W24
+	BYTE		N12   
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		N04     As3 
+	BYTE	W12
+	BYTE	PEND
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_3_034
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+KnightsCircle_3_038:
+	BYTE	W12
+	BYTE		N12     Dn4   v076
+	BYTE	W12
+	BYTE		        As3 
+	BYTE	W12
+	BYTE		N04     Dn4 
+	BYTE	W24
+	BYTE		N12   
+	BYTE	W12
+	BYTE		        As3 
+	BYTE	W12
+	BYTE		N04     Dn4 
+	BYTE	W12
+	BYTE	PEND
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_3_038
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_3_038
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_3_038
+// 044   ----------------------------------------
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE	W12
+	BYTE		N12     Fn4   v076
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+	BYTE		N04     Fn4 
+	BYTE	W24
+	BYTE		N12   
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+	BYTE		N04     Fn4 
+	BYTE	W12
+// 047   ----------------------------------------
+	BYTE	W12
+	BYTE		N12   
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+	BYTE		N04     Fn4 
+	BYTE	W24
+	BYTE		N12   
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+	BYTE		N04     Fn4 
+	BYTE	W08
+	BYTE	GoTo
+	 POIN2	KnightsCircle_3_B1
+KnightsCircle_3_B2:
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+KnightsCircle_4:
+	BYTE	KEYSH   KnightsCircle_key+0
+KnightsCircle_4_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   48
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*KnightsCircle_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE		TIE     Cn1   v127
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 006   ----------------------------------------
+	BYTE		TIE     As0 
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 008   ----------------------------------------
+	BYTE		TIE     Cn1 
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 010   ----------------------------------------
+	BYTE		TIE     As0 
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 012   ----------------------------------------
+	BYTE		N96     Gs0 
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE		N96   
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE		TIE     Cn1 
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 018   ----------------------------------------
+	BYTE		TIE     As0 
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 020   ----------------------------------------
+	BYTE		TIE     Cn1 
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 022   ----------------------------------------
+	BYTE		TIE     As0 
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 024   ----------------------------------------
+	BYTE		TIE     Cn1 
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 026   ----------------------------------------
+	BYTE		TIE     As0 
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 028   ----------------------------------------
+	BYTE		N96     Gs0 
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE		N96   
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE		TIE     Cn1 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 034   ----------------------------------------
+	BYTE		TIE     As0 
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 036   ----------------------------------------
+	BYTE		TIE     An0 
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 038   ----------------------------------------
+	BYTE		TIE     As0 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 040   ----------------------------------------
+	BYTE		TIE     Cn1 
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 042   ----------------------------------------
+	BYTE		TIE     Dn1 
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 044   ----------------------------------------
+	BYTE		TIE     Cn1 
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 046   ----------------------------------------
+	BYTE		N48     Dn1 
+	BYTE	W48
+	BYTE		        Ds1 
+	BYTE	W48
+// 047   ----------------------------------------
+	BYTE		N90     Fn1 
+	BYTE	W92
+	BYTE	GoTo
+	 POIN2	KnightsCircle_4_B1
+KnightsCircle_4_B2:
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+KnightsCircle_5:
+	BYTE	KEYSH   KnightsCircle_key+0
+KnightsCircle_5_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   49
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*KnightsCircle_mvl/mxv
+	BYTE		PAN     c_v+32
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE		TIE     Gn4   v076
+	BYTE		TIE     Cn5 
+	BYTE		TIE     Ds5 
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Gn4 
+	BYTE		        Cn5 
+	BYTE		        Ds5 
+// 010   ----------------------------------------
+	BYTE		TIE     Fn4 
+	BYTE		TIE     As4 
+	BYTE		TIE     Dn5 
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn4 
+	BYTE		        As4 
+	BYTE		        Dn5 
+	BYTE	W06
+// 012   ----------------------------------------
+KnightsCircle_5_012:
+	BYTE		TIE     Gs4   v076
+	BYTE		TIE     Cn5 
+	BYTE		TIE     Ds5 
+	BYTE	W96
+	BYTE	PEND
+// 013   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Cn5 
+	BYTE		        Ds5 
+	BYTE	W06
+// 014   ----------------------------------------
+	BYTE		TIE     Dn5 
+	BYTE		TIE     Fn5 
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gs4 
+	BYTE		        Dn5 
+	BYTE		        Fn5 
+	BYTE	W06
+// 016   ----------------------------------------
+KnightsCircle_5_016:
+	BYTE		N06     Gn3   v076
+	BYTE		N06     Cn4 
+	BYTE		N06     Ds4 
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE		N06     Cn4 
+	BYTE		N06     Ds4 
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE		N06     Cn4 
+	BYTE		N06     Ds4 
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE		N06     Cn4 
+	BYTE		N06     Ds4 
+	BYTE	W24
+	BYTE	PEND
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_5_016
+// 018   ----------------------------------------
+KnightsCircle_5_018:
+	BYTE		N06     Fn3   v076
+	BYTE		N06     As3 
+	BYTE		N06     Dn4 
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE		N06     As3 
+	BYTE		N06     Dn4 
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE		N06     As3 
+	BYTE		N06     Dn4 
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE		N06     As3 
+	BYTE		N06     Dn4 
+	BYTE	W24
+	BYTE	PEND
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_5_018
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_5_016
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_5_016
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_5_018
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_5_018
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_5_016
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_5_016
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_5_018
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_5_018
+// 028   ----------------------------------------
+KnightsCircle_5_028:
+	BYTE		N06     Gs3   v076
+	BYTE		N06     Cn4 
+	BYTE		N06     Ds4 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE		N06     Cn4 
+	BYTE		N06     Ds4 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE		N06     Cn4 
+	BYTE		N06     Ds4 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE		N06     Cn4 
+	BYTE		N06     Ds4 
+	BYTE	W24
+	BYTE	PEND
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_5_028
+// 030   ----------------------------------------
+KnightsCircle_5_030:
+	BYTE		N06     Gs3   v076
+	BYTE		N06     Dn4 
+	BYTE		N06     Fn4 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE		N06     Dn4 
+	BYTE		N06     Fn4 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE		N06     Dn4 
+	BYTE		N06     Fn4 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE		N06     Dn4 
+	BYTE		N06     Fn4 
+	BYTE	W24
+	BYTE	PEND
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_5_030
+// 032   ----------------------------------------
+	BYTE		TIE     En4   v076
+	BYTE		TIE     Gn4 
+	BYTE		TIE     Cn5 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     En4 
+	BYTE		        Gn4 
+	BYTE		        Cn5 
+	BYTE	W06
+// 034   ----------------------------------------
+	BYTE		TIE     Ds4 
+	BYTE		TIE     Gn4 
+	BYTE		TIE     As4 
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Ds4 
+	BYTE		        Gn4 
+	BYTE		        As4 
+	BYTE	W06
+// 036   ----------------------------------------
+	BYTE		TIE     Dn4 
+	BYTE		TIE     Fn4 
+	BYTE		TIE     An4 
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Dn4 
+	BYTE		        Fn4 
+	BYTE		        An4 
+	BYTE	W06
+// 038   ----------------------------------------
+	BYTE		TIE     Dn4 
+	BYTE		TIE     Fn4 
+	BYTE		TIE     As4 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE		N90     Dn5 
+	BYTE	W90
+	BYTE		EOT     Dn4 
+	BYTE		        Fn4 
+	BYTE		        As4 
+	BYTE	W06
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_5_012
+// 041   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gs4 
+	BYTE		        Cn5 
+	BYTE		        Ds5 
+	BYTE	W06
+// 042   ----------------------------------------
+	BYTE		TIE     Gn4   v076
+	BYTE		TIE     As4 
+	BYTE		TIE     Dn5 
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn4 
+	BYTE		        As4 
+	BYTE		        Dn5 
+	BYTE	W06
+// 044   ----------------------------------------
+	BYTE		TIE     Fn4 
+	BYTE		TIE     Gs4 
+	BYTE		TIE     Cn5 
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn4 
+	BYTE		        Gs4 
+	BYTE		        Cn5 
+	BYTE	W06
+// 046   ----------------------------------------
+	BYTE		TIE     Fn4 
+	BYTE		TIE     Gs4 
+	BYTE		TIE     Dn5 
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn4 
+	BYTE		        Gs4 
+	BYTE		        Dn5 
+	BYTE	W02
+	BYTE	GoTo
+	 POIN2	KnightsCircle_5_B1
+KnightsCircle_5_B2:
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.6) ****************//
+
+KnightsCircle_6:
+	BYTE	KEYSH   KnightsCircle_key+0
+KnightsCircle_6_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   127
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*KnightsCircle_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+KnightsCircle_6_008:
+	BYTE		N05     Cn1   v056
+	BYTE		N05     En1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N20   
+	BYTE	W24
+	BYTE	PEND
+// 009   ----------------------------------------
+KnightsCircle_6_009:
+	BYTE		N05     En1   v056
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N20   
+	BYTE	W24
+	BYTE	PEND
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_008
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_008
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_6_009
+// 047   ----------------------------------------
+	BYTE		N05     En1   v056
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N01   
+	BYTE	W01
+	BYTE		N01   
+	BYTE	W02
+	BYTE		N20   
+	BYTE	W20
+	BYTE	GoTo
+	 POIN2	KnightsCircle_6_B1
+KnightsCircle_6_B2:
+	BYTE	FINE
+
+//**************** Track 7 (Midi-Chn.11) ****************//
+
+KnightsCircle_7:
+	BYTE	KEYSH   KnightsCircle_key+0
+KnightsCircle_7_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   52
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*KnightsCircle_mvl/mxv
+	BYTE		PAN     c_v-32
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE		TIE     Gn3   v076
+	BYTE		TIE     Cn4 
+	BYTE		TIE     Ds4 
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Gn3 
+	BYTE		        Cn4 
+	BYTE		        Ds4 
+// 010   ----------------------------------------
+	BYTE		TIE     Fn3 
+	BYTE		TIE     As3 
+	BYTE		TIE     Dn4 
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        As3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 012   ----------------------------------------
+KnightsCircle_7_012:
+	BYTE		TIE     Gs3   v076
+	BYTE		TIE     Cn4 
+	BYTE		TIE     Ds4 
+	BYTE	W96
+	BYTE	PEND
+// 013   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Cn4 
+	BYTE		        Ds4 
+	BYTE	W06
+// 014   ----------------------------------------
+	BYTE		TIE     Dn4 
+	BYTE		TIE     Fn4 
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gs3 
+	BYTE		        Dn4 
+	BYTE		        Fn4 
+	BYTE	W06
+// 016   ----------------------------------------
+KnightsCircle_7_016:
+	BYTE		N04     Gn3   v076
+	BYTE		N04     Cn4 
+	BYTE		N04     Ds4 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE		N04     Cn4 
+	BYTE		N04     Ds4 
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE		N04     Cn4 
+	BYTE		N04     Ds4 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE		N04     Cn4 
+	BYTE		N04     Ds4 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE		N04     Cn4 
+	BYTE		N04     Ds4 
+	BYTE	W36
+	BYTE	PEND
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_7_016
+// 018   ----------------------------------------
+KnightsCircle_7_018:
+	BYTE		N04     Fn3   v076
+	BYTE		N04     As3 
+	BYTE		N04     Dn4 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE		N04     As3 
+	BYTE		N04     Dn4 
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE		N04     As3 
+	BYTE		N04     Dn4 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE		N04     As3 
+	BYTE		N04     Dn4 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE		N04     As3 
+	BYTE		N04     Dn4 
+	BYTE	W36
+	BYTE	PEND
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_7_018
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_7_016
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_7_016
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_7_018
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_7_018
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_7_016
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_7_016
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_7_018
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_7_018
+// 028   ----------------------------------------
+KnightsCircle_7_028:
+	BYTE		N04     Gs3   v076
+	BYTE		N04     Cn4 
+	BYTE		N04     Ds4 
+	BYTE	W12
+	BYTE		        Gs3 
+	BYTE		N04     Cn4 
+	BYTE		N04     Ds4 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE		N04     Cn4 
+	BYTE		N04     Ds4 
+	BYTE	W12
+	BYTE		        Gs3 
+	BYTE		N04     Cn4 
+	BYTE		N04     Ds4 
+	BYTE	W12
+	BYTE		        Gs3 
+	BYTE		N04     Cn4 
+	BYTE		N04     Ds4 
+	BYTE	W36
+	BYTE	PEND
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_7_028
+// 030   ----------------------------------------
+KnightsCircle_7_030:
+	BYTE		N04     Gs3   v076
+	BYTE		N04     Dn4 
+	BYTE		N04     Fn4 
+	BYTE	W12
+	BYTE		        Gs3 
+	BYTE		N04     Dn4 
+	BYTE		N04     Fn4 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE		N04     Dn4 
+	BYTE		N04     Fn4 
+	BYTE	W12
+	BYTE		        Gs3 
+	BYTE		N04     Dn4 
+	BYTE		N04     Fn4 
+	BYTE	W12
+	BYTE		        Gs3 
+	BYTE		N04     Dn4 
+	BYTE		N04     Fn4 
+	BYTE	W36
+	BYTE	PEND
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_7_030
+// 032   ----------------------------------------
+	BYTE		TIE     En3   v076
+	BYTE		TIE     Gn3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     En3 
+	BYTE		        Gn3 
+	BYTE		        Cn4 
+	BYTE	W06
+// 034   ----------------------------------------
+	BYTE		TIE     Ds3 
+	BYTE		TIE     Gn3 
+	BYTE		TIE     As3 
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Ds3 
+	BYTE		        Gn3 
+	BYTE		        As3 
+	BYTE	W06
+// 036   ----------------------------------------
+	BYTE		TIE     Dn3 
+	BYTE		TIE     Fn3 
+	BYTE		TIE     An3 
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Dn3 
+	BYTE		        Fn3 
+	BYTE		        An3 
+	BYTE	W06
+// 038   ----------------------------------------
+	BYTE		TIE     Dn3 
+	BYTE		TIE     Fn3 
+	BYTE		TIE     As3 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE		N90     Dn4 
+	BYTE	W90
+	BYTE		EOT     Dn3 
+	BYTE		        Fn3 
+	BYTE		        As3 
+	BYTE	W06
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	KnightsCircle_7_012
+// 041   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gs3 
+	BYTE		        Cn4 
+	BYTE		        Ds4 
+	BYTE	W06
+// 042   ----------------------------------------
+	BYTE		TIE     Gn3   v076
+	BYTE		TIE     As3 
+	BYTE		TIE     Dn4 
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        As3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 044   ----------------------------------------
+	BYTE		TIE     Fn3 
+	BYTE		TIE     Gs3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        Gs3 
+	BYTE		        Cn4 
+	BYTE	W06
+// 046   ----------------------------------------
+	BYTE		TIE     Fn3 
+	BYTE		TIE     Gs3 
+	BYTE		TIE     Dn4 
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        Gs3 
+	BYTE		        Dn4 
+	BYTE	W02
+	BYTE	GoTo
+	 POIN2	KnightsCircle_7_B1
+KnightsCircle_7_B2:
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+KnightsCircle:
+	BYTE	7	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	KnightsCircle_pri	// Priority
+	BYTE	KnightsCircle_rev	// Reverb.
+
+	POIN2	KnightsCircle_grp
+
+	POIN2	KnightsCircle_1
+	POIN2	KnightsCircle_2
+	POIN2	KnightsCircle_3
+	POIN2	KnightsCircle_4
+	POIN2	KnightsCircle_5
+	POIN2	KnightsCircle_6
+	POIN2	KnightsCircle_7
+
+	

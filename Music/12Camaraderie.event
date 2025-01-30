@@ -1,0 +1,2337 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	CamaraderieSong_grp  voicegroup000
+	#define	CamaraderieSong_pri  0
+	#define	CamaraderieSong_rev  148
+	#define	CamaraderieSong_mvl  28
+	#define	CamaraderieSong_key  0
+	#define	CamaraderieSong_tbs  1
+	#define	CamaraderieSong_exg  0
+	#define	CamaraderieSong_cmp  1
+
+	// .rodata
+	//	CamaraderieSong
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+CamaraderieSong_1:
+	BYTE	KEYSH   CamaraderieSong_key+0
+CamaraderieSong_1_B1:
+// 000   ----------------------------------------
+	BYTE	TEMPO   100*CamaraderieSong_tbs/2
+	BYTE		VOICE   27
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*CamaraderieSong_mvl/mxv
+	BYTE		PAN     c_v-32
+	BYTE		N17     Gn2   v100
+	BYTE		N17     As2 
+	BYTE		N17     Ds3 
+	BYTE	W18
+	BYTE		N06   
+	BYTE		N06     Gn3 
+	BYTE		N06     As3 
+	BYTE	W18
+	BYTE		N11     Gs3 
+	BYTE	W12
+	BYTE		N20     As2 
+	BYTE		N20     Ds3 
+	BYTE		N11     Gn3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		N17     Gn2 
+	BYTE		N17     Cn3 
+	BYTE		N17     Ds3 
+	BYTE	W18
+	BYTE		N06   
+	BYTE		N06     Gn3 
+	BYTE		N06     As3 
+	BYTE	W06
+// 001   ----------------------------------------
+CamaraderieSong_1_001:
+	BYTE	W12
+	BYTE		N11     Gs3   v100
+	BYTE	W12
+	BYTE		N20     Gn2 
+	BYTE		N20     Cn3 
+	BYTE		N11     Gn3 
+	BYTE	W12
+	BYTE		        Ds3 
+	BYTE	W12
+	BYTE		N17     Fn2 
+	BYTE		N17     Gs2 
+	BYTE		N17     Cn3 
+	BYTE	W18
+	BYTE		N06   
+	BYTE		N06     Ds3 
+	BYTE		N06     Gs3 
+	BYTE	W18
+	BYTE		N11     Gn3 
+	BYTE	W12
+	BYTE	PEND
+// 002   ----------------------------------------
+CamaraderieSong_1_002:
+	BYTE		N20     Fn2   v100
+	BYTE		N20     Gs2 
+	BYTE		N11     Ds3 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		N17     Fn2 
+	BYTE		N17     As2 
+	BYTE		N17     Dn3 
+	BYTE	W18
+	BYTE		N06     As2 
+	BYTE		N06     Dn3 
+	BYTE		N06     Fn3 
+	BYTE	W18
+	BYTE		N11     Gs3 
+	BYTE	W12
+	BYTE		N20     As2 
+	BYTE		N20     Dn3 
+	BYTE		N11     Gn3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE	PEND
+// 003   ----------------------------------------
+CamaraderieSong_1_003:
+	BYTE		N17     Gn2   v100
+	BYTE		N17     As2 
+	BYTE		N17     Ds3 
+	BYTE	W18
+	BYTE		N06   
+	BYTE		N06     Gn3 
+	BYTE		N06     As3 
+	BYTE	W18
+	BYTE		N11     Gs3 
+	BYTE	W12
+	BYTE		N20     As2 
+	BYTE		N20     Ds3 
+	BYTE		N11     Gn3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		N17     Gn2 
+	BYTE		N17     Cn3 
+	BYTE		N17     Ds3 
+	BYTE	W18
+	BYTE		N06   
+	BYTE		N06     Gn3 
+	BYTE		N06     As3 
+	BYTE	W06
+	BYTE	PEND
+// 004   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_001
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_002
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_003
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_001
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_002
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_003
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_001
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_002
+// 012   ----------------------------------------
+CamaraderieSong_1_012:
+	BYTE		N05     Ds3   v100
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		N48     Cn3 
+	BYTE		N48     Ds3 
+	BYTE		N48     Gs3 
+	BYTE	W54
+	BYTE		N05     Gn3 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		N48     Ds3 
+	BYTE		N48     Gn3 
+	BYTE		N48     As3 
+	BYTE	W06
+	BYTE	PEND
+// 013   ----------------------------------------
+CamaraderieSong_1_013:
+	BYTE	W48
+	BYTE		N05     Gs3   v100
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		N48     Fn3 
+	BYTE		N48     Gs3 
+	BYTE		N48     Cn4 
+	BYTE	W30
+	BYTE	PEND
+// 014   ----------------------------------------
+CamaraderieSong_1_014:
+	BYTE	W24
+	BYTE		N05     As3   v100
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		N48     Gn3 
+	BYTE		N48     As3 
+	BYTE		N48     Ds4 
+	BYTE	W54
+	BYTE	PEND
+// 015   ----------------------------------------
+CamaraderieSong_1_015:
+	BYTE		N17     An2   v100
+	BYTE		N17     Cn3 
+	BYTE		N17     Fn3 
+	BYTE	W18
+	BYTE		N06   
+	BYTE		N06     An3 
+	BYTE		N06     Cn4 
+	BYTE	W18
+	BYTE		N11     As3 
+	BYTE	W12
+	BYTE		N20     An2 
+	BYTE		N20     Cn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		N17     An2 
+	BYTE		N17     Dn3 
+	BYTE		N17     Fn3 
+	BYTE	W18
+	BYTE		N06   
+	BYTE		N06     An3 
+	BYTE		N06     Dn4 
+	BYTE	W06
+	BYTE	PEND
+// 016   ----------------------------------------
+CamaraderieSong_1_016:
+	BYTE	W12
+	BYTE		N11     Cn4   v100
+	BYTE	W12
+	BYTE		N20     An2 
+	BYTE		N20     Dn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		N17     Gn2 
+	BYTE		N17     As2 
+	BYTE		N17     Dn3 
+	BYTE	W18
+	BYTE		N06   
+	BYTE		N06     Gn3 
+	BYTE		N06     As3 
+	BYTE	W18
+	BYTE		N11     Gs3 
+	BYTE	W12
+	BYTE	PEND
+// 017   ----------------------------------------
+CamaraderieSong_1_017:
+	BYTE		N20     Gn2   v100
+	BYTE		N20     As2 
+	BYTE		N11     Gn3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		N17     Fn2 
+	BYTE		N17     As2 
+	BYTE		N17     Dn3 
+	BYTE	W18
+	BYTE		N06     As2 
+	BYTE		N06     Dn3 
+	BYTE		N06     Fn3 
+	BYTE	W18
+	BYTE		N11     Gs3 
+	BYTE	W12
+	BYTE		N20     As2 
+	BYTE		N20     Dn3 
+	BYTE		N11     Gn3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE	PEND
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_003
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_001
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_002
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_003
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_001
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_002
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_012
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_013
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_014
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_015
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_016
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_1_017
+// 030   ----------------------------------------
+	BYTE		N66     Cn3   v100
+	BYTE		N66     Ds3 
+	BYTE		N66     Gn3 
+	BYTE	W72
+	BYTE		        Cn3 
+	BYTE		N66     Fn3 
+	BYTE		N66     Gs3 
+	BYTE	W24
+// 031   ----------------------------------------
+	BYTE	W48
+	BYTE		        Cn3 
+	BYTE		N66     Ds3 
+	BYTE		N66     Gn3 
+	BYTE	W48
+// 032   ----------------------------------------
+	BYTE	W24
+	BYTE		        Cn3 
+	BYTE		N66     Fn3 
+	BYTE		N66     An3 
+	BYTE	W72
+// 033   ----------------------------------------
+	BYTE		N17     Ds3 
+	BYTE		N17     Gn3 
+	BYTE		N17     As3 
+	BYTE	W18
+	BYTE		N06     As2 
+	BYTE		N06     Ds3 
+	BYTE		N06     Gn3 
+	BYTE	W18
+	BYTE		N11     Ds4 
+	BYTE	W12
+	BYTE		N20     Ds3 
+	BYTE		N20     Gn3 
+	BYTE		N11     Dn4 
+	BYTE	W12
+	BYTE		        As3 
+	BYTE	W12
+	BYTE		N17     Fn3 
+	BYTE		N17     Gs3 
+	BYTE		N17     Cn4 
+	BYTE	W18
+	BYTE		N06     Cn3 
+	BYTE		N06     Fn3 
+	BYTE		N06     Gs3 
+	BYTE	W06
+// 034   ----------------------------------------
+	BYTE	W12
+	BYTE		N11     Ds4 
+	BYTE	W12
+	BYTE		N20     Fn3 
+	BYTE		N20     Gs3 
+	BYTE		N11     Dn4 
+	BYTE	W12
+	BYTE		        Cn4 
+	BYTE	W12
+	BYTE		N17     Gn3 
+	BYTE		N17     As3 
+	BYTE		N17     Dn4 
+	BYTE	W18
+	BYTE		N06     Dn3 
+	BYTE		N06     Gn3 
+	BYTE		N06     As3 
+	BYTE	W18
+	BYTE		N11     Fn4 
+	BYTE	W12
+// 035   ----------------------------------------
+	BYTE		N20     Gn3 
+	BYTE		N20     As3 
+	BYTE		N11     Ds4 
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+	BYTE		N17     Gs3 
+	BYTE		N17     Cn4 
+	BYTE		N17     Ds4 
+	BYTE	W18
+	BYTE		        Ds3 
+	BYTE		N17     Gs3 
+	BYTE		N17     Cn4 
+	BYTE	W18
+	BYTE		N11     Gn4 
+	BYTE	W12
+	BYTE		N20     Gs3 
+	BYTE		N20     Cn4 
+	BYTE		N11     Fn4 
+	BYTE	W12
+	BYTE		        Ds4 
+	BYTE	W12
+// 036   ----------------------------------------
+	BYTE		N05     Dn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		N48     As3 
+	BYTE		N48     Dn4 
+	BYTE		N48     Fn4 
+	BYTE	W54
+	BYTE		N05     Dn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		N48     As3 
+	BYTE		N48     Dn4 
+	BYTE		N48     Fn4 
+	BYTE	W06
+// 037   ----------------------------------------
+	BYTE	W48
+	BYTE		N05     Dn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		N48     Gs3 
+	BYTE		N48     As3 
+	BYTE		N48     Dn4 
+	BYTE		N48     Fn4 
+	BYTE	W30
+// 038   ----------------------------------------
+	BYTE	W24
+	BYTE		N05     Dn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		N48     Gs3 
+	BYTE		N48     As3 
+	BYTE		N48     Dn4 
+	BYTE		N48     Fn4 
+	BYTE	W52
+	BYTE	W01
+	BYTE	GoTo
+	 POIN2	CamaraderieSong_1_B1
+CamaraderieSong_1_B2:
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+CamaraderieSong_2:
+	BYTE	KEYSH   CamaraderieSong_key+0
+CamaraderieSong_2_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   33
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*CamaraderieSong_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N05     Ds1   v127
+	BYTE	W06
+	BYTE		N11     Gn1 
+	BYTE	W12
+	BYTE		N05     As1 
+	BYTE	W18
+	BYTE		N11     Ds2 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		N05     Gn1 
+	BYTE	W06
+	BYTE		N11     Cn2 
+	BYTE	W12
+	BYTE		N05     Ds2 
+	BYTE	W06
+// 001   ----------------------------------------
+CamaraderieSong_2_001:
+	BYTE	W12
+	BYTE		N11     Cn2   v127
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		        Ds1 
+	BYTE	W12
+	BYTE		N05     Fn1 
+	BYTE	W06
+	BYTE		N11     Gn1 
+	BYTE	W12
+	BYTE		N05     Gs1 
+	BYTE	W18
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE	PEND
+// 002   ----------------------------------------
+CamaraderieSong_2_002:
+	BYTE		N11     Cn2   v127
+	BYTE	W12
+	BYTE		        Ds2 
+	BYTE	W12
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		N11     Cn2 
+	BYTE	W12
+	BYTE		N05     As1 
+	BYTE	W18
+	BYTE		N11     Gs1 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE	PEND
+// 003   ----------------------------------------
+CamaraderieSong_2_003:
+	BYTE		N05     Ds1   v127
+	BYTE	W06
+	BYTE		N11     Gn1 
+	BYTE	W12
+	BYTE		N05     As1 
+	BYTE	W18
+	BYTE		N11     Ds2 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		N05     Gn1 
+	BYTE	W06
+	BYTE		N11     Cn2 
+	BYTE	W12
+	BYTE		N05     Ds2 
+	BYTE	W06
+	BYTE	PEND
+// 004   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_001
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_002
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_003
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_001
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_002
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_003
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_001
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_002
+// 012   ----------------------------------------
+CamaraderieSong_2_012:
+	BYTE		N05     Ds1   v127
+	BYTE	W06
+	BYTE		N11     Gs1 
+	BYTE	W12
+	BYTE		N05     Cn2 
+	BYTE	W18
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE		N05     Gn1 
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Ds2 
+	BYTE	W06
+	BYTE	PEND
+// 013   ----------------------------------------
+CamaraderieSong_2_013:
+	BYTE	W12
+	BYTE		N11     As1   v127
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		        Ds1 
+	BYTE	W12
+	BYTE		N05     Fn1 
+	BYTE	W06
+	BYTE		N11     Gs1 
+	BYTE	W12
+	BYTE		N05     Cn2 
+	BYTE	W18
+	BYTE		N11     Fn2 
+	BYTE	W12
+	BYTE	PEND
+// 014   ----------------------------------------
+CamaraderieSong_2_014:
+	BYTE		N11     Ds2   v127
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W12
+	BYTE		N05     Ds2 
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Gn1 
+	BYTE	W18
+	BYTE		N11     Ds1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE	PEND
+// 015   ----------------------------------------
+CamaraderieSong_2_015:
+	BYTE		N05     An1   v127
+	BYTE	W06
+	BYTE		N11     Fn1 
+	BYTE	W12
+	BYTE		N05     Cn2 
+	BYTE	W18
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE		N05     An1 
+	BYTE	W06
+	BYTE		N11     Dn2 
+	BYTE	W12
+	BYTE		N05     Fn2 
+	BYTE	W06
+	BYTE	PEND
+// 016   ----------------------------------------
+CamaraderieSong_2_016:
+	BYTE	W12
+	BYTE		N11     Dn2   v127
+	BYTE	W12
+	BYTE		        Cn2 
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		N05     Gn1 
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Gn1 
+	BYTE	W18
+	BYTE		N11     Dn1 
+	BYTE	W12
+	BYTE	PEND
+// 017   ----------------------------------------
+CamaraderieSong_2_017:
+	BYTE		N11     Gn1   v127
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fn1 
+	BYTE	W18
+	BYTE		N11     Dn1 
+	BYTE	W12
+	BYTE		        Ds1 
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE	PEND
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_003
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_001
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_002
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_003
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_001
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_002
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_012
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_013
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_014
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_015
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_016
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_2_017
+// 030   ----------------------------------------
+	BYTE		N42     Ds1   v127
+	BYTE	W48
+	BYTE		N20     Gn1 
+	BYTE	W24
+	BYTE		N42     Gs1 
+	BYTE	W24
+// 031   ----------------------------------------
+	BYTE	W24
+	BYTE		N20     Fn1 
+	BYTE	W24
+	BYTE		N42     Gn1 
+	BYTE	W48
+// 032   ----------------------------------------
+	BYTE		N20     As1 
+	BYTE	W24
+	BYTE		N42     Cn2 
+	BYTE	W48
+	BYTE		N20     An1 
+	BYTE	W24
+// 033   ----------------------------------------
+	BYTE		N42     As1 
+	BYTE	W48
+	BYTE		N20     Gn2 
+	BYTE	W24
+	BYTE		N42     Ds2 
+	BYTE	W24
+// 034   ----------------------------------------
+	BYTE	W24
+	BYTE		N20     Cn2 
+	BYTE	W24
+	BYTE		N42     Dn2 
+	BYTE	W48
+// 035   ----------------------------------------
+	BYTE		N20     As1 
+	BYTE	W24
+	BYTE		        Cn2 
+	BYTE	W24
+	BYTE		        Dn2 
+	BYTE	W24
+	BYTE		        Ds2 
+	BYTE	W24
+// 036   ----------------------------------------
+	BYTE		N17     Dn2 
+	BYTE	W18
+	BYTE		        As1 
+	BYTE	W18
+	BYTE		N11     Fn1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		        Cn2 
+	BYTE	W12
+	BYTE		N17     As1 
+	BYTE	W18
+	BYTE		        Fn1 
+	BYTE	W06
+// 037   ----------------------------------------
+	BYTE	W12
+	BYTE		N11     Dn1 
+	BYTE	W12
+	BYTE		        As0 
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE		N17     Gs1 
+	BYTE	W18
+	BYTE		        Fn1 
+	BYTE	W18
+	BYTE		N11     Gs1 
+	BYTE	W12
+// 038   ----------------------------------------
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE		        Ds1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE	W11
+	BYTE	GoTo
+	 POIN2	CamaraderieSong_2_B1
+CamaraderieSong_2_B2:
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+CamaraderieSong_3:
+	BYTE	KEYSH   CamaraderieSong_key+0
+CamaraderieSong_3_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   49
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*CamaraderieSong_mvl/mxv
+	BYTE		PAN     c_v+32
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE		N48     Ds5   v100
+	BYTE	W48
+	BYTE		N24     As4 
+	BYTE	W24
+	BYTE		N48     Cn5 
+	BYTE	W24
+// 004   ----------------------------------------
+	BYTE	W24
+	BYTE		N24     As4 
+	BYTE	W24
+	BYTE		        Gs4 
+	BYTE	W24
+	BYTE		        Cn5 
+	BYTE	W24
+// 005   ----------------------------------------
+	BYTE		        Ds5 
+	BYTE	W24
+	BYTE		N66     Dn5 
+	BYTE	W72
+// 006   ----------------------------------------
+CamaraderieSong_3_006:
+	BYTE		TIE     Gn2   v100
+	BYTE		N72     As2 
+	BYTE		TIE     Ds3 
+	BYTE	W72
+	BYTE		        Cn3 
+	BYTE	W24
+	BYTE	PEND
+// 007   ----------------------------------------
+	BYTE	W48
+	BYTE		EOT     Gn2 
+	BYTE		        Ds3 
+	BYTE		TIE     Fn2 
+	BYTE		N72     Gs2 
+	BYTE	W48
+// 008   ----------------------------------------
+	BYTE	W24
+	BYTE		EOT     Cn3 
+	BYTE		TIE     As2 
+	BYTE		N72     Dn3 
+	BYTE	W72
+	BYTE		EOT     Fn2 
+// 009   ----------------------------------------
+CamaraderieSong_3_009:
+	BYTE		TIE     Gn2   v100
+	BYTE		TIE     Ds3 
+	BYTE	W72
+	BYTE	PEND
+	BYTE		EOT     As2 
+	BYTE		TIE     Cn3 
+	BYTE	W24
+// 010   ----------------------------------------
+	BYTE	W48
+	BYTE		EOT     Gn2 
+	BYTE		        Ds3 
+	BYTE		TIE     Fn2 
+	BYTE		N72     Gs2 
+	BYTE	W48
+// 011   ----------------------------------------
+	BYTE	W24
+	BYTE		EOT     Cn3 
+	BYTE		N72     As2 
+	BYTE		N72     Dn3 
+	BYTE	W72
+	BYTE		EOT     Fn2 
+// 012   ----------------------------------------
+CamaraderieSong_3_012:
+	BYTE		N72     Gs2   v100
+	BYTE		N72     Cn3 
+	BYTE		TIE     Ds3 
+	BYTE	W72
+	BYTE		N72     Gn2 
+	BYTE		N72     As2 
+	BYTE	W24
+	BYTE	PEND
+// 013   ----------------------------------------
+	BYTE	W48
+	BYTE		EOT     Ds3 
+	BYTE		N72     Gs2 
+	BYTE		N72     Cn3 
+	BYTE		N72     Fn3 
+	BYTE	W48
+// 014   ----------------------------------------
+CamaraderieSong_3_014:
+	BYTE	W24
+	BYTE		N72     As2   v100
+	BYTE		N72     Ds3 
+	BYTE		N72     Gn3 
+	BYTE	W72
+	BYTE	PEND
+// 015   ----------------------------------------
+CamaraderieSong_3_015:
+	BYTE		TIE     An2   v100
+	BYTE		TIE     Cn3 
+	BYTE		TIE     Fn3 
+	BYTE	W72
+	BYTE		        Dn3 
+	BYTE	W24
+	BYTE	PEND
+// 016   ----------------------------------------
+	BYTE	W48
+	BYTE		EOT     An2 
+	BYTE		        Cn3 
+	BYTE		        Fn3 
+	BYTE		TIE     As2 
+	BYTE		N72     Gn3 
+	BYTE	W48
+// 017   ----------------------------------------
+	BYTE	W24
+	BYTE		N66     Fn3 
+	BYTE	W66
+	BYTE		EOT     As2 
+	BYTE		        Dn3 
+	BYTE	W06
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_3_006
+// 019   ----------------------------------------
+	BYTE	W48
+	BYTE		EOT     Gn2 
+	BYTE		        Ds3 
+	BYTE		TIE     Fn2   v100
+	BYTE		N72     Gs2 
+	BYTE	W48
+// 020   ----------------------------------------
+	BYTE	W24
+	BYTE		EOT     Cn3 
+	BYTE		TIE     As2 
+	BYTE		N72     Dn3 
+	BYTE	W72
+	BYTE		EOT     Fn2 
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_3_009
+	BYTE		EOT     As2 
+	BYTE		TIE     Cn3   v100
+	BYTE	W24
+// 022   ----------------------------------------
+	BYTE	W48
+	BYTE		EOT     Gn2 
+	BYTE		        Ds3 
+	BYTE		TIE     Fn2 
+	BYTE		N72     Gs2 
+	BYTE	W48
+// 023   ----------------------------------------
+	BYTE	W24
+	BYTE		EOT     Cn3 
+	BYTE		N72     As2 
+	BYTE		N72     Dn3 
+	BYTE	W72
+	BYTE		EOT     Fn2 
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_3_012
+// 025   ----------------------------------------
+	BYTE	W48
+	BYTE		EOT     Ds3 
+	BYTE		N72     Gs2   v100
+	BYTE		N72     Cn3 
+	BYTE		N72     Fn3 
+	BYTE	W48
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_3_014
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_3_015
+// 028   ----------------------------------------
+	BYTE	W48
+	BYTE		EOT     An2 
+	BYTE		        Cn3 
+	BYTE		        Fn3 
+	BYTE		TIE     As2   v100
+	BYTE		N72     Gn3 
+	BYTE	W48
+// 029   ----------------------------------------
+	BYTE	W24
+	BYTE		N66     Fn3 
+	BYTE	W66
+	BYTE		EOT     As2 
+	BYTE		        Dn3 
+	BYTE	W06
+// 030   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE		N72     Ds3 
+	BYTE		N72     Gn3 
+	BYTE	W72
+	BYTE		        Fn3 
+	BYTE		N72     Gs3 
+	BYTE	W24
+// 031   ----------------------------------------
+	BYTE	W48
+	BYTE		        Ds3 
+	BYTE		N72     Gn3 
+	BYTE	W48
+// 032   ----------------------------------------
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE		N72     An3 
+	BYTE	W72
+	BYTE		EOT     Cn3 
+// 033   ----------------------------------------
+	BYTE		N72     Ds3 
+	BYTE		N72     Gn3 
+	BYTE		N72     As3 
+	BYTE	W72
+	BYTE		        Fn3 
+	BYTE		N72     Gs3 
+	BYTE		N72     Cn4 
+	BYTE	W24
+// 034   ----------------------------------------
+	BYTE	W48
+	BYTE		        Gn3 
+	BYTE		N72     As3 
+	BYTE		N72     Dn4 
+	BYTE	W48
+// 035   ----------------------------------------
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE		N72     Cn4 
+	BYTE		N72     Ds4 
+	BYTE	W72
+// 036   ----------------------------------------
+	BYTE		TIE     Fn3 
+	BYTE		TIE     As3 
+	BYTE		TIE     Dn4 
+	BYTE		TIE     Fn4 
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        As3 
+	BYTE		        Dn4 
+	BYTE		        Fn4 
+	BYTE	W05
+	BYTE	GoTo
+	 POIN2	CamaraderieSong_3_B1
+CamaraderieSong_3_B2:
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+CamaraderieSong_4:
+	BYTE	KEYSH   CamaraderieSong_key+0
+CamaraderieSong_4_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   73
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*CamaraderieSong_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE		N06     Ds4   v127
+	BYTE	W06
+	BYTE		N12     As3 
+	BYTE	W12
+	BYTE		N06     Ds4 
+	BYTE	W18
+	BYTE		N12     Fn4 
+	BYTE	W12
+	BYTE		N06     Gn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		N56     Gn4 
+	BYTE	W24
+// 007   ----------------------------------------
+	BYTE	W36
+	BYTE		N11     Fn4 
+	BYTE	W12
+	BYTE		N04     Ds4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Ds4 
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		N05     Gn4 
+	BYTE	W06
+	BYTE		N06     Ds4 
+	BYTE	W06
+// 008   ----------------------------------------
+	BYTE		N12     Fn4 
+	BYTE	W12
+	BYTE		        Ds4 
+	BYTE	W12
+	BYTE		N48     Dn4 
+	BYTE	W48
+	BYTE		N24     As3 
+	BYTE	W24
+// 009   ----------------------------------------
+	BYTE		N06     Ds4 
+	BYTE	W06
+	BYTE		N12     Fn4 
+	BYTE	W12
+	BYTE		N06     Gn4 
+	BYTE	W18
+	BYTE		N12     Ds5 
+	BYTE	W12
+	BYTE		        Dn5 
+	BYTE	W12
+	BYTE		        As4 
+	BYTE	W12
+	BYTE		N48     Cn5 
+	BYTE	W24
+// 010   ----------------------------------------
+	BYTE	W24
+	BYTE		N20     As4 
+	BYTE	W24
+	BYTE		N04     Gs4 
+	BYTE	W06
+	BYTE		        Ds4 
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		N05     Ds5 
+	BYTE	W06
+	BYTE		N06     Cn5 
+	BYTE	W06
+// 011   ----------------------------------------
+	BYTE		N12     Dn5 
+	BYTE	W12
+	BYTE		        Cn5 
+	BYTE	W12
+	BYTE		N24     As4 
+	BYTE	W24
+	BYTE		        Gs4 
+	BYTE	W24
+	BYTE		N12     Gn4 
+	BYTE	W12
+	BYTE		        Fn4 
+	BYTE	W12
+// 012   ----------------------------------------
+CamaraderieSong_4_012:
+	BYTE		N48     Gs4   v127
+	BYTE	W48
+	BYTE		N24     Fn4 
+	BYTE	W24
+	BYTE		        Gn4 
+	BYTE	W24
+	BYTE	PEND
+// 013   ----------------------------------------
+CamaraderieSong_4_013:
+	BYTE		N24     Gs4   v127
+	BYTE	W24
+	BYTE		        As4 
+	BYTE	W24
+	BYTE		N48     Cn5 
+	BYTE	W48
+	BYTE	PEND
+// 014   ----------------------------------------
+CamaraderieSong_4_014:
+	BYTE		N24     Gs4   v127
+	BYTE	W24
+	BYTE		        As4 
+	BYTE	W24
+	BYTE		        Dn5 
+	BYTE	W24
+	BYTE		        Ds5 
+	BYTE	W24
+	BYTE	PEND
+// 015   ----------------------------------------
+CamaraderieSong_4_015:
+	BYTE		N24     Fn5   v127
+	BYTE	W24
+	BYTE		        Cn5 
+	BYTE	W24
+	BYTE		        As4 
+	BYTE	W24
+	BYTE		        An4 
+	BYTE	W24
+	BYTE	PEND
+// 016   ----------------------------------------
+CamaraderieSong_4_016:
+	BYTE		N24     Gn4   v127
+	BYTE	W24
+	BYTE		        Fn4 
+	BYTE	W24
+	BYTE		N48     Dn4 
+	BYTE	W48
+	BYTE	PEND
+// 017   ----------------------------------------
+CamaraderieSong_4_017:
+	BYTE		N24     Gn4   v127
+	BYTE	W24
+	BYTE		        Fn4 
+	BYTE	W24
+	BYTE		        Ds4 
+	BYTE	W24
+	BYTE		N20     Dn4 
+	BYTE	W24
+	BYTE	PEND
+// 018   ----------------------------------------
+	BYTE		N66     Ds4 
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_4_012
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_4_013
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_4_014
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_4_015
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_4_016
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_4_017
+// 030   ----------------------------------------
+	BYTE		N05     Ds4   v127
+	BYTE	W06
+	BYTE		N17     Cn4 
+	BYTE	W18
+	BYTE		N04     Ds4 
+	BYTE	W12
+	BYTE		N11     Fn4 
+	BYTE	W12
+	BYTE		N05     Gn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		N24     Cn5 
+	BYTE	W24
+// 031   ----------------------------------------
+	BYTE		        As4 
+	BYTE	W24
+	BYTE		        Gs4 
+	BYTE	W24
+	BYTE		N48     Gn4 
+	BYTE	W48
+// 032   ----------------------------------------
+	BYTE		N24     Ds4 
+	BYTE	W24
+	BYTE		N66     Fn4 
+	BYTE	W72
+// 033   ----------------------------------------
+	BYTE		N05     Gn4 
+	BYTE	W06
+	BYTE		N17     Ds4 
+	BYTE	W18
+	BYTE		N04     Gn4 
+	BYTE	W12
+	BYTE		N11     As4 
+	BYTE	W12
+	BYTE		N05     Ds5 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		N20     Gs4 
+	BYTE	W24
+// 034   ----------------------------------------
+	BYTE		        As4 
+	BYTE	W24
+	BYTE		        Cn5 
+	BYTE	W24
+	BYTE		N05     Dn5 
+	BYTE	W06
+	BYTE		N17     As4 
+	BYTE	W18
+	BYTE		N04     Dn5 
+	BYTE	W12
+	BYTE		N11     Cn5 
+	BYTE	W12
+// 035   ----------------------------------------
+	BYTE		        As4 
+	BYTE	W12
+	BYTE		        Gn4 
+	BYTE	W12
+	BYTE		N04     Gs4 
+	BYTE	W06
+	BYTE		        Ds4 
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		        Ds5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		        Gn5 
+	BYTE	W06
+	BYTE		        Ds5 
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+// 036   ----------------------------------------
+	BYTE		N48     Fn5 
+	BYTE	W48
+	BYTE		N24     Ds5 
+	BYTE	W24
+	BYTE		N48     Dn5 
+	BYTE	W24
+// 037   ----------------------------------------
+	BYTE	W24
+	BYTE		N24     Cn5 
+	BYTE	W24
+	BYTE		TIE     As4 
+	BYTE	W48
+// 038   ----------------------------------------
+	BYTE	W24
+	BYTE		N66     Gs4 
+	BYTE	W66
+	BYTE		EOT     As4 
+	BYTE	W05
+	BYTE	GoTo
+	 POIN2	CamaraderieSong_4_B1
+CamaraderieSong_4_B2:
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+CamaraderieSong_5:
+	BYTE	KEYSH   CamaraderieSong_key+0
+CamaraderieSong_5_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   65
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*CamaraderieSong_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE		N24     Fn3   v127
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE	W24
+	BYTE		N32     Gn3 
+	BYTE	W24
+// 013   ----------------------------------------
+CamaraderieSong_5_013:
+	BYTE	W12
+	BYTE		N11     Fn3   v127
+	BYTE	W12
+	BYTE		N04     Ds3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		N06     As3 
+	BYTE	W06
+	BYTE		N24     Gs3 
+	BYTE	W24
+	BYTE		        As3 
+	BYTE	W24
+	BYTE	PEND
+// 014   ----------------------------------------
+CamaraderieSong_5_014:
+	BYTE		N24     Cn4   v127
+	BYTE	W24
+	BYTE		N32     As3 
+	BYTE	W36
+	BYTE		N11     Ds4 
+	BYTE	W12
+	BYTE		N04     Dn4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		N06     Gn3 
+	BYTE	W06
+	BYTE	PEND
+// 015   ----------------------------------------
+CamaraderieSong_5_015:
+	BYTE		N48     Fn3   v127
+	BYTE	W48
+	BYTE		N24     Cn3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE	W24
+	BYTE	PEND
+// 016   ----------------------------------------
+CamaraderieSong_5_016:
+	BYTE		N24     En3   v127
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE	W24
+	BYTE		N72     Gn3 
+	BYTE	W48
+	BYTE	PEND
+// 017   ----------------------------------------
+	BYTE	W24
+	BYTE		N66     Fn3 
+	BYTE	W72
+// 018   ----------------------------------------
+	BYTE		N06     Ds3 
+	BYTE	W06
+	BYTE		N12     As2 
+	BYTE	W12
+	BYTE		N06     Ds3 
+	BYTE	W18
+	BYTE		N12     Fn3 
+	BYTE	W12
+	BYTE		N06     Gn3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		N56     Gn3 
+	BYTE	W24
+// 019   ----------------------------------------
+	BYTE	W36
+	BYTE		N11     Fn3 
+	BYTE	W12
+	BYTE		N04     Ds3 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		N05     Gn3 
+	BYTE	W06
+	BYTE		N06     Ds3 
+	BYTE	W06
+// 020   ----------------------------------------
+	BYTE		N12     Fn3 
+	BYTE	W12
+	BYTE		        Ds3 
+	BYTE	W12
+	BYTE		N48     Dn3 
+	BYTE	W48
+	BYTE		N24     As2 
+	BYTE	W24
+// 021   ----------------------------------------
+	BYTE		N06     Ds3 
+	BYTE	W06
+	BYTE		N12     Fn3 
+	BYTE	W12
+	BYTE		N06     Gn3 
+	BYTE	W18
+	BYTE		N12     Ds4 
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+	BYTE		        As3 
+	BYTE	W12
+	BYTE		N48     Cn4 
+	BYTE	W24
+// 022   ----------------------------------------
+	BYTE	W24
+	BYTE		N20     As3 
+	BYTE	W24
+	BYTE		N04     Gs3 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		N05     Ds4 
+	BYTE	W06
+	BYTE		N06     Cn4 
+	BYTE	W06
+// 023   ----------------------------------------
+	BYTE		N12     Dn4 
+	BYTE	W12
+	BYTE		        Cn4 
+	BYTE	W12
+	BYTE		N24     As3 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE	W24
+	BYTE		N12     Gn3 
+	BYTE	W12
+	BYTE		N36     Fn3 
+	BYTE	W12
+// 024   ----------------------------------------
+	BYTE	W24
+	BYTE		N24     Gn3 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE	W24
+	BYTE		N32     Gn3 
+	BYTE	W24
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_5_013
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_5_014
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_5_015
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_5_016
+// 029   ----------------------------------------
+	BYTE	W24
+	BYTE		N66     Fn3   v127
+	BYTE	W72
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W48
+	BYTE		N05     Ds3 
+	BYTE	W06
+	BYTE		N17     Cn3 
+	BYTE	W18
+	BYTE		N04     Ds3 
+	BYTE	W12
+	BYTE		N11     Fn3 
+	BYTE	W12
+// 032   ----------------------------------------
+	BYTE		N05     Gn3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		N24     Cn4 
+	BYTE	W24
+	BYTE		        As3 
+	BYTE	W24
+	BYTE		        An3 
+	BYTE	W24
+// 033   ----------------------------------------
+	BYTE		N48     Gn3 
+	BYTE	W48
+	BYTE		N24     Ds3 
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE	W24
+// 034   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE	W24
+	BYTE		        As3 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE	W24
+// 035   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE	W24
+	BYTE		        As3 
+	BYTE	W24
+	BYTE		        Cn4 
+	BYTE	W24
+// 036   ----------------------------------------
+	BYTE		TIE     Dn4 
+	BYTE	W72
+	BYTE		N66     Cn4 
+	BYTE	W24
+// 037   ----------------------------------------
+	BYTE	W48
+	BYTE		        As3 
+	BYTE	W48
+// 038   ----------------------------------------
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE	W66
+	BYTE		EOT     Dn4 
+	BYTE	W05
+	BYTE	GoTo
+	 POIN2	CamaraderieSong_5_B1
+CamaraderieSong_5_B2:
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.6) ****************//
+
+CamaraderieSong_6:
+	BYTE	KEYSH   CamaraderieSong_key+0
+CamaraderieSong_6_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   124
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*CamaraderieSong_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+// 001   ----------------------------------------
+CamaraderieSong_6_001:
+	BYTE		N05     As1   v127
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+// 003   ----------------------------------------
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+// 004   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_001
+// 005   ----------------------------------------
+	BYTE		N05     Dn1   v127
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+// 006   ----------------------------------------
+CamaraderieSong_6_006:
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Dn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Dn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 007   ----------------------------------------
+CamaraderieSong_6_007:
+	BYTE		N05     As1   v127
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Dn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 008   ----------------------------------------
+CamaraderieSong_6_008:
+	BYTE		N05     Dn1   v127
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Dn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 009   ----------------------------------------
+CamaraderieSong_6_009:
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Dn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Dn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_007
+// 011   ----------------------------------------
+CamaraderieSong_6_011:
+	BYTE		N05     Dn1   v127
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Dn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_006
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_007
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_008
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_009
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_007
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_011
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_006
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_007
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_008
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_009
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_007
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_011
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_006
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_007
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_008
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_009
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_007
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_011
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_006
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_007
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_008
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_009
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_007
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_011
+// 036   ----------------------------------------
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CamaraderieSong_6_001
+// 038   ----------------------------------------
+	BYTE		N05     Dn1   v127
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W05
+	BYTE	GoTo
+	 POIN2	CamaraderieSong_6_B1
+CamaraderieSong_6_B2:
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+CamaraderieSong:
+	BYTE	6	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	CamaraderieSong_pri	// Priority
+	BYTE	CamaraderieSong_rev	// Reverb.
+
+	POIN2	CamaraderieSong_grp
+
+	POIN2	CamaraderieSong_1
+	POIN2	CamaraderieSong_2
+	POIN2	CamaraderieSong_3
+	POIN2	CamaraderieSong_4
+	POIN2	CamaraderieSong_5
+	POIN2	CamaraderieSong_6
+
+	

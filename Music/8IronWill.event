@@ -1,0 +1,1361 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	IronWill_grp  voicegroup000
+	#define	IronWill_pri  0
+	#define	IronWill_rev  0
+	#define	IronWill_mvl  29
+	#define	IronWill_key  0
+	#define	IronWill_tbs  1
+	#define	IronWill_exg  0
+	#define	IronWill_cmp  1
+
+	// .rodata
+	//	IronWill
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+IronWill_1:
+	BYTE	KEYSH   IronWill_key+0
+IronWill_1_B1:
+// 000   ----------------------------------------
+	BYTE	TEMPO   100*IronWill_tbs/2
+	BYTE		VOICE   60
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-28
+	BYTE		VOL     127*IronWill_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W84
+	BYTE		N11     An1   v127
+	BYTE	W12
+// 008   ----------------------------------------
+IronWill_1_008:
+	BYTE		N32     Cn2   v127
+	BYTE	W36
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		N32     En2 
+	BYTE	W36
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE	PEND
+// 009   ----------------------------------------
+IronWill_1_009:
+	BYTE		N32     Fn2   v127
+	BYTE	W36
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		N32     Gn2 
+	BYTE	W36
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE	PEND
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_1_008
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_1_009
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_1_008
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_1_009
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_1_008
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_1_009
+// 016   ----------------------------------------
+	BYTE		N90     Fn1   v127
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+IronWill_1_020:
+	BYTE		N11     An2   v127
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		N32     An2 
+	BYTE	W36
+	BYTE		N11   
+	BYTE	W12
+	BYTE	PEND
+// 021   ----------------------------------------
+IronWill_1_021:
+	BYTE		N11     Fn3   v127
+	BYTE	W12
+	BYTE		N20     An2 
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		N20     An2 
+	BYTE	W24
+	BYTE		N11     Gn2 
+	BYTE	W12
+	BYTE	PEND
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_1_020
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_1_021
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_1_020
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_1_021
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_1_020
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_1_021
+// 028   ----------------------------------------
+	BYTE		N90     Fn2   v127
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W84
+	BYTE		N11     Cn2 
+	BYTE	W12
+// 032   ----------------------------------------
+IronWill_1_032:
+	BYTE		N80     Fn2   v127
+	BYTE	W84
+	BYTE		N11     Cn2 
+	BYTE	W12
+	BYTE	PEND
+// 033   ----------------------------------------
+	BYTE		N80     Fn1 
+	BYTE	W84
+	BYTE		N11     Cn2 
+	BYTE	W12
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_1_032
+// 035   ----------------------------------------
+	BYTE		N90     Fn1   v127
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	IronWill_1_B1
+IronWill_1_B2:
+// 036   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+IronWill_2:
+	BYTE	KEYSH   IronWill_key+0
+IronWill_2_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   61
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     117*IronWill_mvl/mxv
+	BYTE		PAN     c_v+36
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W84
+	BYTE		N11     An1   v127
+	BYTE	W12
+// 008   ----------------------------------------
+IronWill_2_008:
+	BYTE		N32     Cn2   v127
+	BYTE	W36
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		N32     En2 
+	BYTE	W36
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE	PEND
+// 009   ----------------------------------------
+IronWill_2_009:
+	BYTE		N32     Fn2   v127
+	BYTE	W36
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		N32     Gn2 
+	BYTE	W36
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE	PEND
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_2_008
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_2_009
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_2_008
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_2_009
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_2_008
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_2_009
+// 016   ----------------------------------------
+	BYTE		N90     Fn1   v127
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+IronWill_2_020:
+	BYTE		N11     An2   v127
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		N32     An2 
+	BYTE	W36
+	BYTE		N11   
+	BYTE	W12
+	BYTE	PEND
+// 021   ----------------------------------------
+IronWill_2_021:
+	BYTE		N11     Fn3   v127
+	BYTE	W12
+	BYTE		N20     An2 
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		N20     An2 
+	BYTE	W24
+	BYTE		N11     Gn2 
+	BYTE	W12
+	BYTE	PEND
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_2_020
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_2_021
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_2_020
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_2_021
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_2_020
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_2_021
+// 028   ----------------------------------------
+	BYTE		N90     Fn2   v127
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W84
+	BYTE		N11     Cn2 
+	BYTE	W12
+// 032   ----------------------------------------
+IronWill_2_032:
+	BYTE		N80     Fn2   v127
+	BYTE	W84
+	BYTE		N11     Cn2 
+	BYTE	W12
+	BYTE	PEND
+// 033   ----------------------------------------
+	BYTE		N80     Fn1 
+	BYTE	W84
+	BYTE		N11     Cn2 
+	BYTE	W12
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_2_032
+// 035   ----------------------------------------
+	BYTE		N90     Fn1   v127
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	IronWill_2_B1
+IronWill_2_B2:
+// 036   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+IronWill_3:
+	BYTE	KEYSH   IronWill_key+0
+IronWill_3_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   49
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     109*IronWill_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE		N90     An0   v100
+	BYTE		N90     An1 
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 016   ----------------------------------------
+IronWill_3_016:
+	BYTE		PAN     c_v+32
+	BYTE		TIE     Fn2   v076
+	BYTE		TIE     Fn3 
+	BYTE		N90     An3 
+	BYTE	W96
+	BYTE	PEND
+// 017   ----------------------------------------
+	BYTE		        Bn3 
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE		N90     An3 
+	BYTE		N90     Fn4 
+	BYTE	W90
+	BYTE		EOT     Fn2 
+	BYTE		        Fn3 
+	BYTE		        Cn4 
+	BYTE	W06
+// 020   ----------------------------------------
+	BYTE		PAN     c_v+0
+	BYTE		N90     An0   v100
+	BYTE		N90     An1 
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_3_016
+// 029   ----------------------------------------
+	BYTE		N90     Bn3   v076
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE		        Cn4 
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE		        Bn3 
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE		        Bn3 
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE		N90     An3 
+	BYTE		N90     Fn4 
+	BYTE	W90
+	BYTE		EOT     Fn2 
+	BYTE		        Fn3 
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE	GoTo
+	 POIN2	IronWill_3_B1
+IronWill_3_B2:
+// 036   ----------------------------------------
+	BYTE		PAN     c_v+0
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+IronWill_4:
+	BYTE	KEYSH   IronWill_key+0
+IronWill_4_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   127
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-11
+	BYTE		VOL     127*IronWill_mvl/mxv
+	BYTE		N11     Bn1   v127
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W12
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		N11     Bn1 
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		N05     Bn1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        Bn1 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+// 001   ----------------------------------------
+IronWill_4_001:
+	BYTE		N11     Bn1   v127
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W12
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		N11     Bn1 
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		N05     Bn1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        Bn1 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 004   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_4_001
+// 035   ----------------------------------------
+	BYTE		N11     Bn1   v127
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W12
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		N42     An1 
+	BYTE		N42     Bn1 
+	BYTE		N42     Cn2 
+	BYTE		N42     Dn2 
+	BYTE	W48
+	BYTE	GoTo
+	 POIN2	IronWill_4_B1
+IronWill_4_B2:
+// 036   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+IronWill_5:
+	BYTE	KEYSH   IronWill_key+0
+IronWill_5_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   127
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+11
+	BYTE		VOL     127*IronWill_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+IronWill_5_004:
+	BYTE		N20     Fs1   v127
+	BYTE	W24
+	BYTE		N20   
+	BYTE	W24
+	BYTE		N20   
+	BYTE	W24
+	BYTE		N20   
+	BYTE	W24
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_004
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_004
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_004
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_004
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_004
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_004
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_004
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_004
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_004
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W72
+	BYTE		N11     En1   v127
+	BYTE	W12
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+// 020   ----------------------------------------
+IronWill_5_020:
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_020
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_020
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_020
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_020
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_020
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_020
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_020
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_004
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_004
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_004
+// 031   ----------------------------------------
+	BYTE		N20     Fs1   v127
+	BYTE	W24
+	BYTE		N20   
+	BYTE	W24
+	BYTE		N20   
+	BYTE	W24
+	BYTE		N11     En1 
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		N05     En1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_020
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_020
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_5_020
+// 035   ----------------------------------------
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N42     Bn0 
+	BYTE		N42     Cn1 
+	BYTE		N42     Dn1 
+	BYTE		N42     En1 
+	BYTE		N42     An2 
+	BYTE	W48
+	BYTE	GoTo
+	 POIN2	IronWill_5_B1
+IronWill_5_B2:
+// 036   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.6) ****************//
+
+IronWill_6:
+	BYTE	KEYSH   IronWill_key+0
+IronWill_6_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   14
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     117*IronWill_mvl/mxv
+	BYTE		PAN     c_v-23
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE		N90     An0   v127
+	BYTE		N90     An1 
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE		N42     An0 
+	BYTE		N42     An1 
+	BYTE	W48
+	BYTE		N02     Bn2   v004
+	BYTE	W03
+	BYTE		        Cn3 
+	BYTE	W03
+	BYTE		        Bn2   v008
+	BYTE	W03
+	BYTE		        Cn3   v012
+	BYTE	W03
+	BYTE		        Bn2   v020
+	BYTE	W03
+	BYTE		        Cn3   v024
+	BYTE	W03
+	BYTE		        Bn2   v032
+	BYTE	W03
+	BYTE		        Cn3   v036
+	BYTE	W03
+	BYTE		        Bn2   v044
+	BYTE	W03
+	BYTE		        Cn3   v052
+	BYTE	W03
+	BYTE		        Bn2   v060
+	BYTE	W03
+	BYTE		        Cn3   v068
+	BYTE	W03
+	BYTE		        Bn2   v080
+	BYTE	W03
+	BYTE		        Cn3   v092
+	BYTE	W03
+	BYTE		        Bn2   v104
+	BYTE	W03
+	BYTE		        Cn3   v116
+	BYTE	W03
+// 008   ----------------------------------------
+	BYTE		N90     An0   v127
+	BYTE		N90     An1 
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE		        Fn0 
+	BYTE		N90     Fn1 
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE		        Fn0 
+	BYTE		N90     Fn1 
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE		        An0 
+	BYTE		N90     An1 
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE		        Fn0 
+	BYTE		N90     Fn1 
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE		        Fn0 
+	BYTE		N90     Fn1 
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE		        Fn0 
+	BYTE		N90     Fn1 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE		        Fn0 
+	BYTE		N90     Fn1 
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE		        Fn0 
+	BYTE		N90     Fn1 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	IronWill_6_B1
+IronWill_6_B2:
+// 036   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 7 (Midi-Chn.7) ****************//
+
+IronWill_7:
+	BYTE	KEYSH   IronWill_key+0
+IronWill_7_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   48
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     112*IronWill_mvl/mxv
+	BYTE		PAN     c_v-1
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+IronWill_7_016:
+	BYTE		TIE     Fn2   v076
+	BYTE		TIE     Fn3 
+	BYTE		N90     An3 
+	BYTE	W96
+	BYTE	PEND
+// 017   ----------------------------------------
+	BYTE		        Bn3 
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE		N90     An3 
+	BYTE		N90     Fn4 
+	BYTE	W90
+	BYTE		EOT     Fn2 
+	BYTE		        Fn3 
+	BYTE		        Cn4 
+	BYTE	W06
+// 020   ----------------------------------------
+IronWill_7_020:
+	BYTE		N20     An4   v076
+	BYTE	W24
+	BYTE		N20   
+	BYTE	W24
+	BYTE		N20   
+	BYTE	W24
+	BYTE		N20   
+	BYTE	W24
+	BYTE	PEND
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_7_020
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_7_020
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_7_020
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_7_020
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_7_020
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_7_020
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_7_020
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_7_016
+// 029   ----------------------------------------
+	BYTE		N90     Bn3   v076
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE		        Cn4 
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE		        Bn3 
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE		        Bn3 
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE		N90     An3 
+	BYTE		N90     Fn4 
+	BYTE	W90
+	BYTE		EOT     Fn2 
+	BYTE		        Fn3 
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE	GoTo
+	 POIN2	IronWill_7_B1
+IronWill_7_B2:
+// 036   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 8 (Midi-Chn.8) ****************//
+
+IronWill_8:
+	BYTE	KEYSH   IronWill_key+0
+IronWill_8_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   36
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     105*IronWill_mvl/mxv
+	BYTE		PAN     c_v-1
+	BYTE		N20     An1   v100
+	BYTE	W24
+	BYTE		        An0 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        An0 
+	BYTE	W24
+// 001   ----------------------------------------
+IronWill_8_001:
+	BYTE		N20     An1   v100
+	BYTE	W24
+	BYTE		        An0 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        An0 
+	BYTE	W24
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 004   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 016   ----------------------------------------
+IronWill_8_016:
+	BYTE		N20     Fn1   v100
+	BYTE	W24
+	BYTE		        Fn0 
+	BYTE	W24
+	BYTE		        Fn1 
+	BYTE	W24
+	BYTE		        Fn0 
+	BYTE	W24
+	BYTE	PEND
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_016
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_016
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_016
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_001
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_016
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_016
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_016
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_016
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_016
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_016
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IronWill_8_016
+// 035   ----------------------------------------
+	BYTE		N20     Fn1   v100
+	BYTE	W24
+	BYTE		        Fn0 
+	BYTE	W24
+	BYTE		N42     Fn1 
+	BYTE	W48
+	BYTE	GoTo
+	 POIN2	IronWill_8_B1
+IronWill_8_B2:
+// 036   ----------------------------------------
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+IronWill:
+	BYTE	8	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	IronWill_pri	// Priority
+	BYTE	IronWill_rev	// Reverb.
+
+	POIN2	IronWill_grp
+
+	POIN2	IronWill_1
+	POIN2	IronWill_2
+	POIN2	IronWill_3
+	POIN2	IronWill_4
+	POIN2	IronWill_5
+	POIN2	IronWill_6
+	POIN2	IronWill_7
+	POIN2	IronWill_8
+
+	

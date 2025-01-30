@@ -1,0 +1,2454 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	UnderMoonlight_grp  voicegroup000
+	#define	UnderMoonlight_pri  0
+	#define	UnderMoonlight_rev  160
+	#define	UnderMoonlight_mvl  30
+	#define	UnderMoonlight_key  0
+	#define	UnderMoonlight_tbs  1
+	#define	UnderMoonlight_exg  0
+	#define	UnderMoonlight_cmp  1
+
+	// .rodata
+	//	UnderMoonlight
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+UnderMoonlight_1:
+	BYTE	KEYSH   UnderMoonlight_key+0
+UnderMoonlight_1_B1:
+// 000   ----------------------------------------
+	BYTE	TEMPO   105*UnderMoonlight_tbs/2
+	BYTE		VOICE   14
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-20
+	BYTE		VOL     112*UnderMoonlight_mvl/mxv
+	BYTE		N90     An2   v076
+	BYTE		N90     An3 
+	BYTE		N90     An4 
+	BYTE	W96
+// 001   ----------------------------------------
+UnderMoonlight_1_001:
+	BYTE		N90     An2   v076
+	BYTE		N90     An3 
+	BYTE		N90     An4 
+	BYTE	W96
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_001
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_001
+// 012   ----------------------------------------
+UnderMoonlight_1_012:
+	BYTE		N90     Gn2   v076
+	BYTE		N90     Gn3 
+	BYTE		N90     Gn4 
+	BYTE	W96
+	BYTE	PEND
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_001
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_001
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_001
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_012
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_001
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE		N90     Gs2   v076
+	BYTE		N90     Gs3 
+	BYTE		N90     Gs4 
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_001
+// 024   ----------------------------------------
+	BYTE		N90     Bn2   v076
+	BYTE		N90     Bn3 
+	BYTE		N90     Bn4 
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE		N42     Cs3 
+	BYTE		N42     Cs4 
+	BYTE		N42     Cs5 
+	BYTE	W48
+	BYTE		        Bn2 
+	BYTE		N42     Bn3 
+	BYTE		N42     Bn4 
+	BYTE	W48
+// 026   ----------------------------------------
+	BYTE		        An2 
+	BYTE		N42     An3 
+	BYTE		N42     An4 
+	BYTE	W48
+	BYTE		        Gs2 
+	BYTE		N42     Gs3 
+	BYTE		N42     Gs4 
+	BYTE	W48
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_001
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_001
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_012
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_001
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_001
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_001
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_012
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_001
+// 043   ----------------------------------------
+	BYTE		N90     Gs2   v076
+	BYTE		N90     Gs3 
+	BYTE		N90     An4 
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_001
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_1_001
+	BYTE	GoTo
+	 POIN2	UnderMoonlight_1_B1
+UnderMoonlight_1_B2:
+// 046   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+UnderMoonlight_2:
+	BYTE	KEYSH   UnderMoonlight_key+0
+UnderMoonlight_2_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   50
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+29
+	BYTE		VOL     105*UnderMoonlight_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+UnderMoonlight_2_010:
+	BYTE		N72     En3   v127
+	BYTE	W72
+	BYTE		N24     Dn3 
+	BYTE	W24
+	BYTE	PEND
+// 011   ----------------------------------------
+UnderMoonlight_2_011:
+	BYTE		N12     Cs3   v127
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W24
+	BYTE		N36     An2 
+	BYTE	W36
+	BYTE		N24     En2 
+	BYTE	W24
+	BYTE	PEND
+// 012   ----------------------------------------
+UnderMoonlight_2_012:
+	BYTE		N12     An2   v127
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W24
+	BYTE		N24   
+	BYTE	W24
+	BYTE		N12     An2 
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE	PEND
+// 013   ----------------------------------------
+	BYTE		N96     Cs3 
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_2_010
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_2_011
+// 016   ----------------------------------------
+UnderMoonlight_2_016:
+	BYTE		N12     An2   v127
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W24
+	BYTE		N24   
+	BYTE	W24
+	BYTE		N12     Dn3 
+	BYTE	W12
+	BYTE		        Cs3 
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE	PEND
+// 017   ----------------------------------------
+	BYTE		N90     An2 
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE		N16     Gs3 
+	BYTE	W16
+	BYTE		        Fs3 
+	BYTE	W16
+	BYTE		        Gs3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE	W16
+	BYTE		        Dn3 
+	BYTE	W16
+// 019   ----------------------------------------
+	BYTE		N48     En3 
+	BYTE	W48
+	BYTE		        Cs3 
+	BYTE	W48
+// 020   ----------------------------------------
+	BYTE		N16     An2 
+	BYTE	W16
+	BYTE		        Bn2 
+	BYTE	W16
+	BYTE		        Cs3 
+	BYTE	W16
+	BYTE		        Dn3 
+	BYTE	W16
+	BYTE		        Cs3 
+	BYTE	W16
+	BYTE		        Fs3 
+	BYTE	W16
+// 021   ----------------------------------------
+	BYTE		N90     En3 
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE		N16   
+	BYTE	W16
+	BYTE		        Dn3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE	W16
+	BYTE		N24     Gs3 
+	BYTE	W24
+	BYTE		        En3 
+	BYTE	W24
+// 023   ----------------------------------------
+	BYTE		N16     An3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		N24     Cs4 
+	BYTE	W24
+	BYTE		        An3 
+	BYTE	W24
+// 024   ----------------------------------------
+	BYTE		N36     Bn3 
+	BYTE	W36
+	BYTE		        Fs3 
+	BYTE	W36
+	BYTE		N24     An3 
+	BYTE	W24
+// 025   ----------------------------------------
+	BYTE		N48     Gs3 
+	BYTE	W48
+	BYTE		        Fs3 
+	BYTE	W48
+// 026   ----------------------------------------
+	BYTE		        En3 
+	BYTE	W48
+	BYTE		N42     Dn3 
+	BYTE	W48
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_2_010
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_2_011
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_2_012
+// 030   ----------------------------------------
+	BYTE		N96     Cs3   v127
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_2_010
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_2_011
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_2_016
+// 034   ----------------------------------------
+	BYTE		N16     An2   v127
+	BYTE	W16
+	BYTE		        Cs3 
+	BYTE	W16
+	BYTE		        Fs3 
+	BYTE	W16
+	BYTE		N48     An3 
+	BYTE	W48
+// 035   ----------------------------------------
+	BYTE		N16     Gn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+	BYTE		        Fs3 
+	BYTE	W16
+// 036   ----------------------------------------
+	BYTE		        En3 
+	BYTE	W16
+	BYTE		        Fs3 
+	BYTE	W16
+	BYTE		        Gs3 
+	BYTE	W16
+	BYTE		N48     Bn3 
+	BYTE	W48
+// 037   ----------------------------------------
+	BYTE		N16     Cs4 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Gs3 
+	BYTE	W16
+// 038   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        Cs4 
+	BYTE	W16
+	BYTE		N48     En4 
+	BYTE	W48
+// 039   ----------------------------------------
+	BYTE		N16     Dn4 
+	BYTE	W16
+	BYTE		        Cs4 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		        En4 
+	BYTE	W16
+	BYTE		        Fs4 
+	BYTE	W16
+// 040   ----------------------------------------
+	BYTE		N48     Gn4 
+	BYTE	W48
+	BYTE		N24     Dn4 
+	BYTE	W24
+	BYTE		        Gn4 
+	BYTE	W24
+// 041   ----------------------------------------
+	BYTE		N48     An4 
+	BYTE	W48
+	BYTE		        Fs4 
+	BYTE	W48
+// 042   ----------------------------------------
+	BYTE		TIE     En4 
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W42
+	BYTE		EOT   
+	BYTE	W06
+	BYTE		N15   
+	BYTE	W16
+	BYTE		        Fs4 
+	BYTE	W16
+	BYTE		        Gs4 
+	BYTE	W16
+// 044   ----------------------------------------
+	BYTE		TIE     An4 
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+	BYTE	GoTo
+	 POIN2	UnderMoonlight_2_B1
+UnderMoonlight_2_B2:
+// 046   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+UnderMoonlight_3:
+	BYTE	KEYSH   UnderMoonlight_key+0
+UnderMoonlight_3_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   51
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-26
+	BYTE		VOL     98*UnderMoonlight_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+UnderMoonlight_3_002:
+	BYTE		TIE     Cs3   v076
+	BYTE		N96     En3 
+	BYTE		TIE     An3 
+	BYTE	W96
+	BYTE	PEND
+// 003   ----------------------------------------
+	BYTE		N96     Fs3 
+	BYTE	W96
+	BYTE		EOT     Cs3 
+	BYTE		        An3 
+// 004   ----------------------------------------
+UnderMoonlight_3_004:
+	BYTE		N96     Bn2   v076
+	BYTE		N96     Dn3 
+	BYTE		N96     Gn3 
+	BYTE	W96
+	BYTE	PEND
+// 005   ----------------------------------------
+UnderMoonlight_3_005:
+	BYTE		TIE     Cs3   v076
+	BYTE		TIE     En3 
+	BYTE		TIE     An3 
+	BYTE	W96
+	BYTE	PEND
+// 006   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     En3 
+// 007   ----------------------------------------
+	BYTE		N96     Fs3 
+	BYTE	W96
+	BYTE		EOT     Cs3 
+	BYTE		        An3 
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_3_004
+// 009   ----------------------------------------
+UnderMoonlight_3_009:
+	BYTE		N48     Dn3   v076
+	BYTE		N90     En3 
+	BYTE		N90     An3 
+	BYTE	W48
+	BYTE		N42     Cs3 
+	BYTE	W48
+	BYTE	PEND
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_3_002
+// 011   ----------------------------------------
+	BYTE		N96     Fs3   v076
+	BYTE	W96
+	BYTE		EOT     Cs3 
+	BYTE		        An3 
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_3_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_3_005
+// 014   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     En3 
+// 015   ----------------------------------------
+	BYTE		N96     Fs3   v076
+	BYTE	W96
+	BYTE		EOT     Cs3 
+	BYTE		        An3 
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_3_004
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_3_009
+// 018   ----------------------------------------
+UnderMoonlight_3_018:
+	BYTE		N96     Bn2   v076
+	BYTE		N96     En3 
+	BYTE		N96     Gs3 
+	BYTE	W96
+	BYTE	PEND
+// 019   ----------------------------------------
+	BYTE		        An2 
+	BYTE		N96     Cs3 
+	BYTE		N96     Fs3 
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE		N48     Cs3 
+	BYTE		N48     En3 
+	BYTE		N48     An3 
+	BYTE	W48
+	BYTE		        Bn2 
+	BYTE		TIE     En3 
+	BYTE		N48     Gs3 
+	BYTE	W48
+// 021   ----------------------------------------
+	BYTE		N96     Cs3 
+	BYTE		N96     An3 
+	BYTE	W96
+	BYTE		EOT     En3 
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_3_018
+// 023   ----------------------------------------
+	BYTE		N96     Cs3   v076
+	BYTE		N96     En3 
+	BYTE		N96     An3 
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE		        Ds3 
+	BYTE		N96     Fs3 
+	BYTE		N96     Bn3 
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE		N48     Bn2 
+	BYTE		N48     En3 
+	BYTE		N48     Gs3 
+	BYTE	W48
+	BYTE		        Dn3 
+	BYTE		N48     Fs3 
+	BYTE		N96     An3 
+	BYTE	W48
+// 026   ----------------------------------------
+	BYTE		N48     Cs3 
+	BYTE		N48     En3 
+	BYTE	W48
+	BYTE		        Bn2 
+	BYTE		N48     Dn3 
+	BYTE		N48     En3 
+	BYTE		N48     Gs3 
+	BYTE	W48
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_3_002
+// 028   ----------------------------------------
+	BYTE		N96     Fs3   v076
+	BYTE	W96
+	BYTE		EOT     Cs3 
+	BYTE		        An3 
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_3_004
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_3_005
+// 031   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     En3 
+// 032   ----------------------------------------
+	BYTE		N96     Fs3   v076
+	BYTE	W96
+	BYTE		EOT     Cs3 
+	BYTE		        An3 
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_3_004
+// 034   ----------------------------------------
+	BYTE		N96     Cs3   v076
+	BYTE		N96     Fs3 
+	BYTE		N96     An3 
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_3_004
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_3_018
+// 037   ----------------------------------------
+	BYTE		N48     Cs3   v076
+	BYTE		N48     En3 
+	BYTE		N48     An3 
+	BYTE	W48
+	BYTE		        Bn2 
+	BYTE		N48     En3 
+	BYTE		N48     Gs3 
+	BYTE	W48
+// 038   ----------------------------------------
+	BYTE		N96     Cs3 
+	BYTE		TIE     Fs3 
+	BYTE		TIE     An3 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE		N96     Dn3 
+	BYTE	W96
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+// 040   ----------------------------------------
+	BYTE		TIE     Dn3 
+	BYTE		N96     Gn3 
+	BYTE		N96     Bn3 
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE		        Fs3 
+	BYTE		N96     An3 
+	BYTE	W96
+	BYTE		EOT     Dn3 
+// 042   ----------------------------------------
+	BYTE		TIE     En3 
+	BYTE		N96     An3 
+	BYTE		TIE     Bn3 
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE		N96     Gs3 
+	BYTE	W96
+	BYTE		EOT     En3 
+	BYTE		        Bn3 
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_3_005
+// 045   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Cs3 
+	BYTE		        En3 
+	BYTE		        An3 
+	BYTE	GoTo
+	 POIN2	UnderMoonlight_3_B1
+UnderMoonlight_3_B2:
+// 046   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+UnderMoonlight_4:
+	BYTE	KEYSH   UnderMoonlight_key+0
+UnderMoonlight_4_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   81
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+21
+	BYTE		VOL     112*UnderMoonlight_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+UnderMoonlight_4_002:
+	BYTE		N72     En3   v127
+	BYTE	W72
+	BYTE		N24     Dn3 
+	BYTE	W24
+	BYTE	PEND
+// 003   ----------------------------------------
+UnderMoonlight_4_003:
+	BYTE		N12     Cs3   v127
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W24
+	BYTE		N36     An2 
+	BYTE	W36
+	BYTE		N24     En2 
+	BYTE	W24
+	BYTE	PEND
+// 004   ----------------------------------------
+UnderMoonlight_4_004:
+	BYTE		N12     An2   v127
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W24
+	BYTE		N24   
+	BYTE	W24
+	BYTE		N12     An2 
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE		N96     Cs3 
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_4_002
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_4_003
+// 008   ----------------------------------------
+UnderMoonlight_4_008:
+	BYTE		N12     An2   v127
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W24
+	BYTE		N24   
+	BYTE	W24
+	BYTE		N12     Dn3 
+	BYTE	W12
+	BYTE		        Cs3 
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE	PEND
+// 009   ----------------------------------------
+	BYTE		N90     An2 
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_4_002
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_4_003
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_4_004
+// 013   ----------------------------------------
+	BYTE		N96     Cs3   v127
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_4_002
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_4_003
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_4_008
+// 017   ----------------------------------------
+	BYTE		N90     An2   v127
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE		N16     Gs3 
+	BYTE	W16
+	BYTE		        Fs3 
+	BYTE	W16
+	BYTE		        Gs3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE	W16
+	BYTE		        Dn3 
+	BYTE	W16
+// 019   ----------------------------------------
+	BYTE		N48     En3 
+	BYTE	W48
+	BYTE		        Cs3 
+	BYTE	W48
+// 020   ----------------------------------------
+	BYTE		N16     An2 
+	BYTE	W16
+	BYTE		        Bn2 
+	BYTE	W16
+	BYTE		        Cs3 
+	BYTE	W16
+	BYTE		        Dn3 
+	BYTE	W16
+	BYTE		        Cs3 
+	BYTE	W16
+	BYTE		        Fs3 
+	BYTE	W16
+// 021   ----------------------------------------
+	BYTE		N90     En3 
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE		N16   
+	BYTE	W16
+	BYTE		        Dn3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE	W16
+	BYTE		N24     Gs3 
+	BYTE	W24
+	BYTE		        En3 
+	BYTE	W24
+// 023   ----------------------------------------
+	BYTE		N16     An3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		N24     Cs4 
+	BYTE	W24
+	BYTE		        An3 
+	BYTE	W24
+// 024   ----------------------------------------
+	BYTE		N36     Bn3 
+	BYTE	W36
+	BYTE		        Fs3 
+	BYTE	W36
+	BYTE		N24     An3 
+	BYTE	W24
+// 025   ----------------------------------------
+	BYTE		N48     Gs3 
+	BYTE	W48
+	BYTE		        Fs3 
+	BYTE	W48
+// 026   ----------------------------------------
+	BYTE		        En3 
+	BYTE	W48
+	BYTE		N42     Dn3 
+	BYTE	W48
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_4_002
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_4_003
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_4_004
+// 030   ----------------------------------------
+	BYTE		N96     Cs3   v127
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_4_002
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_4_003
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_4_008
+// 034   ----------------------------------------
+	BYTE		N16     An2   v127
+	BYTE	W16
+	BYTE		        Cs3 
+	BYTE	W16
+	BYTE		        Fs3 
+	BYTE	W16
+	BYTE		N48     An3 
+	BYTE	W48
+// 035   ----------------------------------------
+	BYTE		N16     Gn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+	BYTE		        Fs3 
+	BYTE	W16
+// 036   ----------------------------------------
+	BYTE		        En3 
+	BYTE	W16
+	BYTE		        Fs3 
+	BYTE	W16
+	BYTE		        Gs3 
+	BYTE	W16
+	BYTE		N48     Bn3 
+	BYTE	W48
+// 037   ----------------------------------------
+	BYTE		N16     Cs4 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Gs3 
+	BYTE	W16
+// 038   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        Cs4 
+	BYTE	W16
+	BYTE		N48     En4 
+	BYTE	W48
+// 039   ----------------------------------------
+	BYTE		N16     Dn4 
+	BYTE	W16
+	BYTE		        Cs4 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		        En4 
+	BYTE	W16
+	BYTE		        Fs4 
+	BYTE	W16
+// 040   ----------------------------------------
+	BYTE		N48     Gn4 
+	BYTE	W48
+	BYTE		N24     Dn4 
+	BYTE	W24
+	BYTE		        Gn4 
+	BYTE	W24
+// 041   ----------------------------------------
+	BYTE		N48     An4 
+	BYTE	W48
+	BYTE		        Fs4 
+	BYTE	W48
+// 042   ----------------------------------------
+	BYTE		TIE     En4 
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W42
+	BYTE		EOT   
+	BYTE	W06
+	BYTE		N15   
+	BYTE	W16
+	BYTE		        Fs4 
+	BYTE	W16
+	BYTE		        Gs4 
+	BYTE	W16
+// 044   ----------------------------------------
+	BYTE		TIE     An4 
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+	BYTE	GoTo
+	 POIN2	UnderMoonlight_4_B1
+UnderMoonlight_4_B2:
+// 046   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+UnderMoonlight_5:
+	BYTE	KEYSH   UnderMoonlight_key+0
+UnderMoonlight_5_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   123
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*UnderMoonlight_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+// 001   ----------------------------------------
+UnderMoonlight_5_001:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_001
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_001
+// 004   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_001
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_001
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_001
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_001
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_001
+// 009   ----------------------------------------
+UnderMoonlight_5_009:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 010   ----------------------------------------
+UnderMoonlight_5_010:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 011   ----------------------------------------
+UnderMoonlight_5_011:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_011
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_011
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_011
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_011
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_011
+// 017   ----------------------------------------
+UnderMoonlight_5_017:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_010
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_011
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_011
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_011
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_010
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_011
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_011
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_010
+// 026   ----------------------------------------
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fn1 
+	BYTE		N11     An2 
+	BYTE	W06
+	BYTE		N05     Gn1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gn1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fn1 
+	BYTE		N11     An2 
+	BYTE	W06
+	BYTE		N05     Gn1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     An1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gn1 
+	BYTE	W06
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_010
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_011
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_011
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_011
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_011
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_011
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_017
+// 034   ----------------------------------------
+UnderMoonlight_5_034:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_001
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_001
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_001
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_001
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_001
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_001
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_009
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_010
+// 043   ----------------------------------------
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_034
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_5_034
+	BYTE	GoTo
+	 POIN2	UnderMoonlight_5_B1
+UnderMoonlight_5_B2:
+// 046   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.6) ****************//
+
+UnderMoonlight_6:
+	BYTE	KEYSH   UnderMoonlight_key+0
+UnderMoonlight_6_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   52
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+6
+	BYTE		VOL     82*UnderMoonlight_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+UnderMoonlight_6_010:
+	BYTE		TIE     Cs3   v076
+	BYTE		N96     En3 
+	BYTE		TIE     An3 
+	BYTE	W96
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE		N96     Fs3 
+	BYTE	W96
+	BYTE		EOT     Cs3 
+	BYTE		        An3 
+// 012   ----------------------------------------
+UnderMoonlight_6_012:
+	BYTE		N96     Bn2   v076
+	BYTE		N96     Dn3 
+	BYTE		N96     Gn3 
+	BYTE	W96
+	BYTE	PEND
+// 013   ----------------------------------------
+UnderMoonlight_6_013:
+	BYTE		TIE     Cs3   v076
+	BYTE		TIE     En3 
+	BYTE		TIE     An3 
+	BYTE	W96
+	BYTE	PEND
+// 014   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     En3 
+// 015   ----------------------------------------
+	BYTE		N96     Fs3 
+	BYTE	W96
+	BYTE		EOT     Cs3 
+	BYTE		        An3 
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_6_012
+// 017   ----------------------------------------
+	BYTE		N48     Dn3   v076
+	BYTE		N90     En3 
+	BYTE		N90     An3 
+	BYTE	W48
+	BYTE		N42     Cs3 
+	BYTE	W48
+// 018   ----------------------------------------
+UnderMoonlight_6_018:
+	BYTE		N96     Bn2   v076
+	BYTE		N96     En3 
+	BYTE		N96     Gs3 
+	BYTE	W96
+	BYTE	PEND
+// 019   ----------------------------------------
+	BYTE		        An2 
+	BYTE		N96     Cs3 
+	BYTE		N96     Fs3 
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE		N48     Cs3 
+	BYTE		N48     En3 
+	BYTE		N48     An3 
+	BYTE	W48
+	BYTE		        Bn2 
+	BYTE		TIE     En3 
+	BYTE		N48     Gs3 
+	BYTE	W48
+// 021   ----------------------------------------
+	BYTE		N96     Cs3 
+	BYTE		N96     An3 
+	BYTE	W96
+	BYTE		EOT     En3 
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_6_018
+// 023   ----------------------------------------
+	BYTE		N96     Cs3   v076
+	BYTE		N96     En3 
+	BYTE		N96     An3 
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE		        Ds3 
+	BYTE		N96     Fs3 
+	BYTE		N96     Bn3 
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE		N48     Bn2 
+	BYTE		N48     En3 
+	BYTE		N48     Gs3 
+	BYTE	W48
+	BYTE		        Dn3 
+	BYTE		N48     Fs3 
+	BYTE		N96     An3 
+	BYTE	W48
+// 026   ----------------------------------------
+	BYTE		N48     Cs3 
+	BYTE		N48     En3 
+	BYTE	W48
+	BYTE		        Bn2 
+	BYTE		N48     Dn3 
+	BYTE		N48     En3 
+	BYTE		N48     Gs3 
+	BYTE	W48
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_6_010
+// 028   ----------------------------------------
+	BYTE		N96     Fs3   v076
+	BYTE	W96
+	BYTE		EOT     Cs3 
+	BYTE		        An3 
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_6_012
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_6_013
+// 031   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     En3 
+// 032   ----------------------------------------
+	BYTE		N96     Fs3   v076
+	BYTE	W96
+	BYTE		EOT     Cs3 
+	BYTE		        An3 
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_6_012
+// 034   ----------------------------------------
+	BYTE		N96     Cs3   v076
+	BYTE		N96     Fs3 
+	BYTE		N96     An3 
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_6_012
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_6_018
+// 037   ----------------------------------------
+	BYTE		N48     Cs3   v076
+	BYTE		N48     En3 
+	BYTE		N48     An3 
+	BYTE	W48
+	BYTE		        Bn2 
+	BYTE		N48     En3 
+	BYTE		N48     Gs3 
+	BYTE	W48
+// 038   ----------------------------------------
+	BYTE		N96     Cs3 
+	BYTE		TIE     Fs3 
+	BYTE		TIE     An3 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE		N96     Dn3 
+	BYTE	W96
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+// 040   ----------------------------------------
+	BYTE		TIE     Dn3 
+	BYTE		N96     Gn3 
+	BYTE		N96     Bn3 
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE		        Fs3 
+	BYTE		N96     An3 
+	BYTE	W96
+	BYTE		EOT     Dn3 
+// 042   ----------------------------------------
+	BYTE		TIE     En3 
+	BYTE		N96     An3 
+	BYTE		TIE     Bn3 
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE		N96     Gs3 
+	BYTE	W96
+	BYTE		EOT     En3 
+	BYTE		        Bn3 
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_6_013
+// 045   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Cs3 
+	BYTE		        En3 
+	BYTE		        An3 
+	BYTE	GoTo
+	 POIN2	UnderMoonlight_6_B1
+UnderMoonlight_6_B2:
+// 046   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 7 (Midi-Chn.7) ****************//
+
+UnderMoonlight_7:
+	BYTE	KEYSH   UnderMoonlight_key+0
+UnderMoonlight_7_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   46
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     117*UnderMoonlight_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W96
+// 001   ----------------------------------------
+UnderMoonlight_7_001:
+	BYTE	W48
+	BYTE		PAN     c_v-62
+	BYTE		N02     An2   v100
+	BYTE	W01
+	BYTE		PAN     c_v-59
+	BYTE	W01
+	BYTE		        c_v-57
+	BYTE	W01
+	BYTE		        c_v-54
+	BYTE		N02     En2 
+	BYTE		N02     An2 
+	BYTE	W01
+	BYTE		PAN     c_v-51
+	BYTE	W01
+	BYTE		        c_v-49
+	BYTE	W01
+	BYTE		        c_v-46
+	BYTE		N02   
+	BYTE	W01
+	BYTE		PAN     c_v-43
+	BYTE	W01
+	BYTE		        c_v-41
+	BYTE	W01
+	BYTE		        c_v-38
+	BYTE		N02     Cs3 
+	BYTE	W01
+	BYTE		PAN     c_v-35
+	BYTE	W01
+	BYTE		        c_v-33
+	BYTE	W01
+	BYTE		        c_v-30
+	BYTE		N02     An2 
+	BYTE		N02     Cs3 
+	BYTE	W01
+	BYTE		PAN     c_v-27
+	BYTE	W01
+	BYTE		        c_v-25
+	BYTE	W01
+	BYTE		        c_v-22
+	BYTE		N02   
+	BYTE	W01
+	BYTE		PAN     c_v-20
+	BYTE	W01
+	BYTE		        c_v-17
+	BYTE	W01
+	BYTE		        c_v-14
+	BYTE		N02     En3 
+	BYTE	W01
+	BYTE		PAN     c_v-12
+	BYTE	W01
+	BYTE		        c_v-9
+	BYTE	W01
+	BYTE		        c_v-6
+	BYTE		N02     Cs3 
+	BYTE		N02     En3 
+	BYTE	W01
+	BYTE		PAN     c_v-4
+	BYTE	W01
+	BYTE		        c_v-1
+	BYTE	W01
+	BYTE		        c_v+2
+	BYTE		N02   
+	BYTE	W01
+	BYTE		PAN     c_v+4
+	BYTE	W01
+	BYTE		        c_v+7
+	BYTE	W01
+	BYTE		        c_v+10
+	BYTE		N02     An3 
+	BYTE	W01
+	BYTE		PAN     c_v+12
+	BYTE	W01
+	BYTE		        c_v+15
+	BYTE	W01
+	BYTE		        c_v+18
+	BYTE		N02     En3 
+	BYTE		N02     An3 
+	BYTE	W01
+	BYTE		PAN     c_v+20
+	BYTE	W01
+	BYTE		        c_v+23
+	BYTE	W01
+	BYTE		        c_v+25
+	BYTE		N02   
+	BYTE	W01
+	BYTE		PAN     c_v+28
+	BYTE	W01
+	BYTE		        c_v+31
+	BYTE	W01
+	BYTE		        c_v+33
+	BYTE		N01     Cs4 
+	BYTE	W01
+	BYTE		PAN     c_v+36
+	BYTE	W01
+	BYTE		        c_v+39
+	BYTE		N01     An3 
+	BYTE		N01     Cs4 
+	BYTE	W01
+	BYTE		PAN     c_v+41
+	BYTE	W01
+	BYTE		        c_v+44
+	BYTE		N01   
+	BYTE	W01
+	BYTE		PAN     c_v+47
+	BYTE	W01
+	BYTE		        c_v+49
+	BYTE		N01     En4 
+	BYTE	W01
+	BYTE		PAN     c_v+52
+	BYTE	W01
+	BYTE		        c_v+55
+	BYTE		N01     Cs4 
+	BYTE		N01     En4 
+	BYTE	W01
+	BYTE		PAN     c_v+57
+	BYTE	W01
+	BYTE		        c_v+60
+	BYTE		N01   
+	BYTE	W01
+	BYTE		PAN     c_v+62
+	BYTE	W01
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE		        c_v+63
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_7_001
+// 010   ----------------------------------------
+	BYTE		PAN     c_v+63
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_7_001
+// 018   ----------------------------------------
+	BYTE		PAN     c_v+63
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_7_001
+// 022   ----------------------------------------
+	BYTE		PAN     c_v+63
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+UnderMoonlight_7_026:
+	BYTE	W48
+	BYTE		PAN     c_v-62
+	BYTE		N01     Gs2   v100
+	BYTE	W01
+	BYTE		PAN     c_v-59
+	BYTE	W01
+	BYTE		        c_v-57
+	BYTE		N01     En2 
+	BYTE		N01     Gs2 
+	BYTE	W01
+	BYTE		PAN     c_v-54
+	BYTE	W01
+	BYTE		        c_v-51
+	BYTE		N01   
+	BYTE	W01
+	BYTE		PAN     c_v-49
+	BYTE	W01
+	BYTE		        c_v-46
+	BYTE		N01     Bn2 
+	BYTE	W01
+	BYTE		PAN     c_v-43
+	BYTE	W01
+	BYTE		        c_v-41
+	BYTE		N01     Gs2 
+	BYTE		N01     Bn2 
+	BYTE	W01
+	BYTE		PAN     c_v-38
+	BYTE	W01
+	BYTE		        c_v-35
+	BYTE		N01   
+	BYTE	W01
+	BYTE		PAN     c_v-33
+	BYTE	W01
+	BYTE		        c_v-30
+	BYTE		N01     En3 
+	BYTE	W01
+	BYTE		PAN     c_v-27
+	BYTE	W01
+	BYTE		        c_v-25
+	BYTE		N01     Bn2 
+	BYTE		N01     En3 
+	BYTE	W01
+	BYTE		PAN     c_v-22
+	BYTE	W01
+	BYTE		        c_v-20
+	BYTE		N01   
+	BYTE	W01
+	BYTE		PAN     c_v-17
+	BYTE	W01
+	BYTE		        c_v-14
+	BYTE		N01     Gs3 
+	BYTE	W01
+	BYTE		PAN     c_v-12
+	BYTE	W01
+	BYTE		        c_v-9
+	BYTE		N01     En3 
+	BYTE		N01     Gs3 
+	BYTE	W01
+	BYTE		PAN     c_v-6
+	BYTE	W01
+	BYTE		        c_v-4
+	BYTE		N01   
+	BYTE	W01
+	BYTE		PAN     c_v-1
+	BYTE	W01
+	BYTE		        c_v+2
+	BYTE		N01     Bn3 
+	BYTE	W01
+	BYTE		PAN     c_v+4
+	BYTE	W01
+	BYTE		        c_v+7
+	BYTE		N01     Gs3 
+	BYTE		N01     Bn3 
+	BYTE	W01
+	BYTE		PAN     c_v+10
+	BYTE	W01
+	BYTE		        c_v+12
+	BYTE		N01   
+	BYTE	W01
+	BYTE		PAN     c_v+15
+	BYTE	W01
+	BYTE		        c_v+18
+	BYTE		N01     En4 
+	BYTE	W01
+	BYTE		PAN     c_v+20
+	BYTE	W01
+	BYTE		        c_v+23
+	BYTE		N01     Bn3 
+	BYTE		N01     En4 
+	BYTE	W01
+	BYTE		PAN     c_v+25
+	BYTE	W01
+	BYTE		        c_v+28
+	BYTE		N01   
+	BYTE	W01
+	BYTE		PAN     c_v+31
+	BYTE	W01
+	BYTE		        c_v+33
+	BYTE		N01     Gs4 
+	BYTE	W01
+	BYTE		PAN     c_v+36
+	BYTE	W01
+	BYTE		        c_v+39
+	BYTE		N01     En4 
+	BYTE		N01     Gs4 
+	BYTE	W01
+	BYTE		PAN     c_v+41
+	BYTE	W01
+	BYTE		        c_v+44
+	BYTE		N01   
+	BYTE	W01
+	BYTE		PAN     c_v+47
+	BYTE	W01
+	BYTE		        c_v+49
+	BYTE		N01     Bn4 
+	BYTE	W01
+	BYTE		PAN     c_v+52
+	BYTE	W01
+	BYTE		        c_v+55
+	BYTE		N01     Gs4 
+	BYTE		N01     Bn4 
+	BYTE	W01
+	BYTE		PAN     c_v+57
+	BYTE	W01
+	BYTE		        c_v+60
+	BYTE		N01   
+	BYTE	W01
+	BYTE		PAN     c_v+62
+	BYTE	W01
+	BYTE	PEND
+// 027   ----------------------------------------
+	BYTE		        c_v+63
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_7_026
+// 044   ----------------------------------------
+	BYTE		PAN     c_v+63
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	UnderMoonlight_7_B1
+UnderMoonlight_7_B2:
+// 046   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 8 (Midi-Chn.8) ****************//
+
+UnderMoonlight_8:
+	BYTE	KEYSH   UnderMoonlight_key+0
+UnderMoonlight_8_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   33
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-8
+	BYTE		VOL     109*UnderMoonlight_mvl/mxv
+	BYTE		N11     An1   v127
+	BYTE	W12
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W12
+// 001   ----------------------------------------
+UnderMoonlight_8_001:
+	BYTE		N11     An1   v127
+	BYTE	W12
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W12
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 004   ----------------------------------------
+UnderMoonlight_8_004:
+	BYTE		N11     Gn1   v127
+	BYTE	W12
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W12
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_004
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 018   ----------------------------------------
+UnderMoonlight_8_018:
+	BYTE		N11     En1   v127
+	BYTE	W12
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W12
+	BYTE	PEND
+// 019   ----------------------------------------
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W12
+// 020   ----------------------------------------
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		        Gs1 
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W12
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_018
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 024   ----------------------------------------
+	BYTE		N11     Bn1   v127
+	BYTE	W12
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W12
+// 025   ----------------------------------------
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+// 026   ----------------------------------------
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE	W12
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_004
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_004
+// 034   ----------------------------------------
+UnderMoonlight_8_034:
+	BYTE		N11     Fs1   v127
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W48
+	BYTE		        Cs1 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Cs1 
+	BYTE	W12
+	BYTE	PEND
+// 035   ----------------------------------------
+UnderMoonlight_8_035:
+	BYTE		N11     Gn1   v127
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W48
+	BYTE		        Dn1 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE	W12
+	BYTE	PEND
+// 036   ----------------------------------------
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W48
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE	W12
+// 037   ----------------------------------------
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W48
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE	W12
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_034
+// 039   ----------------------------------------
+UnderMoonlight_8_039:
+	BYTE		N11     Fs1   v127
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W48
+	BYTE		        Dn1 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE	W12
+	BYTE	PEND
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_035
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_039
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_018
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_018
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	UnderMoonlight_8_001
+	BYTE	GoTo
+	 POIN2	UnderMoonlight_8_B1
+UnderMoonlight_8_B2:
+// 046   ----------------------------------------
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+UnderMoonlight:
+	BYTE	8	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	UnderMoonlight_pri	// Priority
+	BYTE	UnderMoonlight_rev	// Reverb.
+
+	POIN2	UnderMoonlight_grp
+
+	POIN2	UnderMoonlight_1
+	POIN2	UnderMoonlight_2
+	POIN2	UnderMoonlight_3
+	POIN2	UnderMoonlight_4
+	POIN2	UnderMoonlight_5
+	POIN2	UnderMoonlight_6
+	POIN2	UnderMoonlight_7
+	POIN2	UnderMoonlight_8
+
+	

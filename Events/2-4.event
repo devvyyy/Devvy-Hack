@@ -74,10 +74,18 @@ NoFade
 ENDA
 
 MiscBasedEvents:
+AREA 0x14 DisclaimerEvent [5,4] [22,9]
 //AFEV 0x0 CheckNoUnits 0x0
 	CauseGameOverIfLordDies
 	AFEV 0 EndingScene 0x6
 	END_MAIN
+	
+DisclaimerEvent:
+PlayerRangeCheck
+CameraCursor(Chiffon)
+Text(Ch24Opening4)
+NoFade
+ENDA
 
 LocationBasedEvents:
 Chest(Flare,3,9)
@@ -195,6 +203,12 @@ UNIT BardUnit Bard 0x1 Level(1, Ally, 1)   [18,8] 0 0 1 REDA18R9 [LifeRing,Elixi
 AkatsukiOMG:
 UNIT Akatsuki Drifter 0x1 Level(5, Enemy, 0)     [2,22] 0 0 1 REDA2R19  [0xC2] ThiefAI
 	UNIT
+	
+CutsceneUnits:
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [20,0] 0 0 1 REDA20R0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Priest 0x1 Level(10, Ally, 0)   [21,0] 0 0 1 REDA21R1 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [22,0] 0 0 1 REDA22R0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT	
 
 EnemyUnits: //InfantrySoul, CavSoul, FlierSoul, ArmorSoul, MagSoul, PromoSoul, StealSoul
 
@@ -325,19 +339,35 @@ Traps2:
 
 BeginningScene:
 	ENUT AllUnitsMustEscapeFlag
-	LOAD1 0x1 Units1
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 TheResistanceGuysAgain
 	TurnEnemy(Edith)
 	//TurnEnemy(Moose)
 	ENUN
+	BG(0x3d)
+	Text(Ch24Opening1)
+	ClearBackground
+	STAL 20
+	LOAD1 0x1 CutsceneUnits
+	STAL 5
+	CameraCursor(Chiffon)
+	Text(Ch24Opening2)
+	
 	CALL $591FD8 //prep screen
 	FADU 60
+	Text(Ch24Opening3)
 	CenterTextbox(P2PlaceholderCh4)
 	NoFade
 	ENDA
 
 EndingScene:
+Text(Ch24Ending1)
+
+Background(0x31)
+Text(Ch24Ending2)
+Text(Ch24Ending3)
+
+
 	MNC2 0x10
 //MNTS 0x1 //return to title screen
 	NoFade

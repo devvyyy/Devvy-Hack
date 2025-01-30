@@ -42,7 +42,7 @@ of each turn.[N]
 Cage Fight[N]
 - If Bronson initiates and foe can counter,[N]
 grants Atk +5, and if either sides' HP[N]
-< 100%, grants both sides an[N]
+is less than 100%, grants both sides an[N]
 additional strike after first attack.[X]
 
 ## SD_LoafOff
@@ -343,7 +343,7 @@ Grants units within 3 spaces Crit/Avoid +20.[X]
 ## SD_EyeForAnEye
 # Down But Not Out
 Stand Back Up[N]
-- Raya grants allies within 3 spaces[N]
+- Raial grants allies within 3 spaces[N]
 Prt/Rsl = 25% of ally's missing HP,[N]
 and Hit/Avoid = 50% of ally's missing[N]
 HP (calculated at start of combat).[X]
@@ -417,7 +417,7 @@ and if Spd > foe's Spd +8, foe cannot counter.[X]
 
 ## SD_SavingGrace
 Saving Grace[N]
-- Grants Katsu another action after[N]
+- Grants Kian another action after[N]
 Rescue/Drop/Take/Give.[N]
 (Once per turn, Canto disabled.)[N]
 - If rescuing an ally, grants Move +2.[X]
@@ -434,9 +434,10 @@ damage taken = 50% of foe's max HP.[X]
 ## SD_BreveMirrorPassive
 # Latent Powers
 Moody[N]
-- On odd turns, Breve always lands a critical[N]
-hit, and if HP isn't full, grants Atk = 3[N]
-+ 25% of missing HP.[X]
+- On odd turns, Breve's attacks are all[N]
+critical hits, and if HP isn't full, grants[N]
+Atk = 3 + 25% of missing HP.[N]
+- On even turns, always hit.[X]
 
 ## SD_HildrMirrorPassive
 Valkyrie[N]
@@ -630,6 +631,11 @@ Paranoia[N]
 all attacks.[N]
 - If HP < 100%, grants Avoid/AS +20.[X]
 
+## SD_BunkerDown
+Bunker Down[N]
+- If unit is on terrain, grants[N]
+bow range +5 and take 5 less damage.[X]
+
 ## SD_SettW
 Down But Not Out: If unit's HP is 25% or less,[N]
 deals bonus damage = 300% of missing HP and grants[N]
@@ -747,7 +753,7 @@ unit has Weapon Triangle advantage.[X]
 
 ## SD_DuckandCover
 # zopf personal?
-Hunter's Volley[N]
+Pursuer[N]
 - If initiating, grants Chester range[N]
 = 50% of Move used and follow-ups[N]
 trigger twice (follow-ups don't stack).[X]
@@ -984,7 +990,7 @@ bosses, doubled if they have Shove/Smite.[X]
 
 ## SD_Moxie
 Eye of the Occult[N]
-- Grants Milo Atk/AS = 25% of[N]
+- Grants Anton Atk/AS = 25% of[N]
 foe's Res.[N]
 - If foe doesn't use magic, follow-up[N]
 and foe can't.[X]
@@ -1223,74 +1229,121 @@ alter follow-ups, and landing critical[N]
 hits (if weapon Crit < 30) for both sides.[X]
 
 ## SD_BuiltDifferent
-# RUNES
+# RUNES; Sequin, Dira, Gus
 Low Blow[N]
 - If foe has a status or can't[N]
 counter, grants unit AS +2.[X]
 
 ## SD_Coup
+# Breve, Gerolf, Opali
 Coup de Grace[N]
 - If foe's HP is 50% or less,[N]
 grants unit Atk +4.[X]
 
 ## SD_CutDown
+# Hildr
 Cut Down[N]
 - If foe's HP is full,[N]
 grants unit Atk +2.[X]
 
+## SD_LastStand
+# Cortado, Ulrich, Therese
+Last Stand[N]
+- If unit's HP is 50% or less,[N]
+grants unit Atk +3.[X]
+
 ## SD_Rushdown
+# Hildr, Gerolf, Mocha
 Rushdown[N]
 - On turn 1, grants unit Atk +5.[X]
 
 ## SD_FirstBlood
 First Blood[N]
 - On turn 1, if foe is defeated, grants[N]
-unit another action (triggers once;[N]
-doesn't stack; if similar effect triggers,[N]
-this effect also triggers).[X]
+unit another action.[N]
+(Triggers once; if similar effect triggers,[N]
+this effect also triggers at same time.)[X]
 
 ## SD_Shrewd
+# Iris, Yufka, Velius
 Third Eye[N]
 - Grants bonus Hit to unit = foe's[N]
 missing HP.[X]
 
+## SD_Transcendence
+# Iris, Velius, Penny, Yvonne
+Transcendence[N]
+- Grants unit Rsl = 20% of Lvl.[N]
+(Promoted = +20 to Lvl.)[X]
+
 ## SD_MagicTouch
+# Frye, Ulrich
 Arcane Touch[N]
-- Unit deals 10 bonus magical damage.[X]
+- Unit deals 7 bonus magical damage.[X]
 
 ## SD_IronWall
+# Ansgar, Therese
 Iron Wall[N]
 - If unit's Def > foe's Def, inflicts[N]
 penalty to foe's AS = difference[N]
-between stats.[X]
+between Def stats.[X]
+
+## SD_BulwarkRune
+# Wegman, Wellington
+Bulwark[N]
+- Grants bonus Prt = 20% of unit's[N]
+current HP.[X]
+
+## SD_SecondWind
+# Therese, Yory, "Moose"
+Second Wind[N]
+- At start of turn, restores 20% of[N]
+unit's max HP.[X]
+
+## SD_Unflinching
+# Stroganoff, Cortado
+Unflinching[N]
+- Grants unit Prt = 25% of missing HP.[X]
+
+## SD_Jack
+# Doppio, Wegman, "Moose"
+Jack of all Trades[N]
+- Grants Atk = every stat above 10.[N]
+(Excludes HP/Move/Con/Aid.)
 
 ## SD_Edgelord
+# Dira, Klavdia
 Lone Wolf[N]
 - If unit is not adjacent to[N]
 an ally, grants Crit +15.[X]
 
 ## SD_Anathema
+# Floris, Noel, Graham, Yvonne
 Stare[N]
 - Unit inflicts -5 Hit/Avoid[N]
 to foes within 2 spaces.[X]
 
 ## SD_GatheringStorm
-Slow Burn[N]
+# Velius, Graham
+Midnight Oil[N]
 - Grants unit +3 Hit/Avoid for[N]
 each passing turn (max; 15).[X]
 
 ## SD_Lifeline
-Adrenaline[N]
+# Noel, "Moose", Raial
+Endure[N]
 - After combat, if unit's HP is[N]
 below 25%, take -15 damage for[N]
 1 turn.[X]
 
 ## SD_AbsoluteFocus
+# Noel, Penny, Levain, Ilse
 Focus[N]
 - If unit's HP is full, grants[N]
 Hit/Avoid +10.[X]
 
 ## SD_ShieldBash
+# Ansgar, Stroganoff, Therese, Doppio
 Shield Bash[N]
 - If unit is using a Shield, grants[N]
 Atk +5 and Canto 3 spaces.[N]
@@ -1298,54 +1351,73 @@ Atk +5 and Canto 3 spaces.[N]
 move Canto takes priority.)[X]
 
 ## SD_RayDark
+# Brudet, Doppio, Staniel, Raial
 Raise Morale[N]
 - Grants adjacent allies Atk +2.[N]
 (Doesn't stack with itself.)[X]
 
 ## SD_Guardian
+# Ansgar, Wegman, Floris, Edith, Raial
 Guardian[N]
 - Grants adjacent allies Prt +2.[N]
 (Doesn't stack with itself.)[X]
 
 ## SD_WinMore
+# Eisner, Therese, Klavdia, Raial
+Triumph[N]
+- If foe is defeated, restores 20%[N]
+max HP to unit after combat.[X]
+
+## SD_WinMore2
+# Klavdia, Eisner, Stroganoff, Raial
 War Cry[N]
-- If foe is defeated, restores 20% HP[N]
-to unit after combat.[X]
+- If foe is defeated, grants Atk +10[N]
+until the start of next turn.[X]
 
 ## SD_Graaaagh
+# Stroganoff, Lennard, Cortado, Raial
 Rage[N]
 - Grants Crit = unit's missing HP.[X]
 
 ## SD_Typhoon
-Celerity[N]
-- If unit's Spd > foe's Spd +10,[N]
-follow-ups trigger twice.[X]
+# Mocha, Sequin, Rina, Affogato
+Fervor[N]
+- If unit's Spd > foe's Spd +X,[N]
+follow-ups trigger twice.[N]
+(If initiating, X = 4;[N]
+otherwise, X = 8.)[X]
 
 ## SD_HealMoment
+# Doppio, Edith, Raial
 Perseverance[N]
 - Unit restores 3 HP after combat.[N]
 (Doesn't stack with Dawn I.)[X]
 
 ## SD_HeavyStrikes
+# Stroganoff, Klavdia, Pandoro, Edith
 Heavy Strikes[N]
 - Grants unit Crit = Weapon Wt.[X]
 
 ## SD_BluntForce
+# Rina, Pandoro, Stroganoff
 Blunt Force[N]
 - Converts unit's Crit to damage at[N]
 a rate of 4/1.[X]
 
 ## SD_Sharpshooter
+# Levain, Ilse
 Sharpshooter[N]
 - If unit moves 2 spaces or less,[NL]
 grants Crit +15.[X]
 
 ## SD_StormBlood
+# Jaye, Gus, Noel, Xavier
 Tension[N]
 - If unit's HP isn't full,[N]
 grants AS +2.[X]
 
 ## SD_BestDefense
+# Xavier, Stroganoff
 The Best Defense...[N]
 - Converts 25% of unit's Def into Atk.[X]
 
@@ -1360,26 +1432,31 @@ Heavy Weapons Grudge[N]
 Rifle, or Magnum, grants Atk +4/Hit +20.[X]
 
 ## SD_LightWeight
+# Mocha, Gerolf, Penny
 Light Weight[N]
 - When holding 3 or less items,[N]
 grants unit AS +3.[X]
 
 ## SD_HeavyBurden
+# Klavdia, Wegman, Yvonne
 Heavy Load[N]
 - When holding 3 or more items,[N]
 grants unit Atk +3.[X]
 
 ## SD_Respite
+# Ilse, Xavier
 Elbow Room[N]
 - If unit is on open terrain,[N]
 grants Hit +10.[X]
 
 ## SD_SneakAttack
-Well-Prepared[N]
+# Sequin, Dira, Levain
+In Wait[N]
 - If unit is on terrain with effects,[N]
 grants Atk +2.[X]
 
 ## SD_VigorRune
+# Ansgar, Wegman, Doppio, Pandoro, Yvonne
 Vigor[N]
 - Grants unit HP +5.[X]
 
@@ -2796,6 +2873,14 @@ Apotheosis[N]
 (max; 4) and restores 25% max HP after combat.[N]
 - At max stacks, if foe is defeated,[N]
 consumes all stacks to end opposing turn.[X]
+
+## SD_YufkaNew2
+# Blood Moon: Ignores foe's Res, deals damage = user's missing HP. Costs 4 durability.
+Apotheosis[N]
+- If Yufka's HP is 25% or less after combat,[N]
+ends opposing turn and restores all HP.[N]
+(Once per map; doesn't trigger if dead.)
+- Magic allies can use Blood Moon.[X]
 
 ## SD_DoubleLion
 Double Lion: All weapons[N]

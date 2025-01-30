@@ -1,0 +1,2339 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	ChasingLeaves_grp  voicegroup000
+	#define	ChasingLeaves_pri  0
+	#define	ChasingLeaves_rev  0xB0
+	#define	ChasingLeaves_mvl  27
+	#define	ChasingLeaves_key  0
+	#define	ChasingLeaves_tbs  1
+	#define	ChasingLeaves_exg  0
+	#define	ChasingLeaves_cmp  1
+
+	// .rodata
+	//	ChasingLeaves
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+ChasingLeaves_1:
+	BYTE	KEYSH   ChasingLeaves_key+0
+// 000   ----------------------------------------
+	BYTE	TEMPO   95*ChasingLeaves_tbs/2
+	BYTE		VOICE   32
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+5
+	BYTE		VOL     127*ChasingLeaves_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+ChasingLeaves_1_B1:
+// 008   ----------------------------------------
+ChasingLeaves_1_008:
+	BYTE		N32     En1   v127
+	BYTE	W36
+	BYTE		N11     Bn1 
+	BYTE	W12
+	BYTE		N32     En2 
+	BYTE	W36
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE	PEND
+// 009   ----------------------------------------
+ChasingLeaves_1_009:
+	BYTE		N32     Fn1   v127
+	BYTE	W36
+	BYTE		N11     Dn2 
+	BYTE	W12
+	BYTE		N32     Fn2 
+	BYTE	W36
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        Fn2 
+	BYTE	W06
+	BYTE	PEND
+// 010   ----------------------------------------
+ChasingLeaves_1_010:
+	BYTE		N32     Gn2   v127
+	BYTE	W36
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        Bn1 
+	BYTE	W06
+	BYTE		N32     Dn2 
+	BYTE	W36
+	BYTE		N11     Gn2 
+	BYTE	W12
+	BYTE	PEND
+// 011   ----------------------------------------
+ChasingLeaves_1_011:
+	BYTE		N32     Fn2   v127
+	BYTE	W36
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        Bn1 
+	BYTE	W06
+	BYTE		N32     An1 
+	BYTE	W36
+	BYTE		N11     Fn1 
+	BYTE	W12
+	BYTE	PEND
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_008
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_009
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_010
+// 015   ----------------------------------------
+ChasingLeaves_1_015:
+	BYTE		N32     Fn2   v127
+	BYTE	W36
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        Bn1 
+	BYTE	W06
+	BYTE		N42     An1 
+	BYTE	W48
+	BYTE	PEND
+// 016   ----------------------------------------
+ChasingLeaves_1_016:
+	BYTE		N32     Cn2   v127
+	BYTE	W36
+	BYTE		N11     Bn1 
+	BYTE	W12
+	BYTE		N32     An1 
+	BYTE	W36
+	BYTE		N05     En1 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE	PEND
+// 017   ----------------------------------------
+ChasingLeaves_1_017:
+	BYTE		N32     Fn1   v127
+	BYTE	W36
+	BYTE		N11     Cn2 
+	BYTE	W12
+	BYTE		N15     Fn2 
+	BYTE	W16
+	BYTE		        En2 
+	BYTE	W16
+	BYTE		        Dn2 
+	BYTE	W16
+	BYTE	PEND
+// 018   ----------------------------------------
+ChasingLeaves_1_018:
+	BYTE		N32     Cn2   v127
+	BYTE	W36
+	BYTE		N11     Gn1 
+	BYTE	W12
+	BYTE		N32     En1 
+	BYTE	W36
+	BYTE		N05     Dn1 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE	W06
+	BYTE	PEND
+// 019   ----------------------------------------
+ChasingLeaves_1_019:
+	BYTE		N32     Gn1   v127
+	BYTE	W36
+	BYTE		N11     Bn1 
+	BYTE	W12
+	BYTE		N32     An1 
+	BYTE	W36
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE	PEND
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_016
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_017
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_018
+// 023   ----------------------------------------
+ChasingLeaves_1_023:
+	BYTE		N32     Gn1   v127
+	BYTE	W36
+	BYTE		N11     Bn1 
+	BYTE	W12
+	BYTE		N42     An1 
+	BYTE	W48
+	BYTE	PEND
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_008
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_009
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_010
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_011
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_008
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_009
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_010
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_015
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_016
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_017
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_018
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_019
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_016
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_017
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_018
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_023
+// 040   ----------------------------------------
+ChasingLeaves_1_040:
+	BYTE		N20     Dn1   v127
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE		        Bn1 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE	PEND
+// 041   ----------------------------------------
+ChasingLeaves_1_041:
+	BYTE		N20     Fn1   v127
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        Cn2 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+	BYTE	PEND
+// 042   ----------------------------------------
+ChasingLeaves_1_042:
+	BYTE		N20     Fn1   v127
+	BYTE	W24
+	BYTE		        Dn1 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        Fn1 
+	BYTE	W24
+	BYTE	PEND
+// 043   ----------------------------------------
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE		        Bn1 
+	BYTE	W24
+	BYTE		        Cn2 
+	BYTE	W24
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_040
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_041
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_1_042
+// 047   ----------------------------------------
+	BYTE		N20     Gn1   v127
+	BYTE	W24
+	BYTE		        Bn1 
+	BYTE	W24
+	BYTE		N42     An1 
+	BYTE	W48
+	BYTE	GoTo
+	 POIN2	ChasingLeaves_1_B1
+ChasingLeaves_1_B2:
+// 048   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+ChasingLeaves_2:
+	BYTE	KEYSH   ChasingLeaves_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   1
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     117*ChasingLeaves_mvl/mxv
+	BYTE		PAN     c_v-11
+	BYTE		N42     En3   v076
+	BYTE		N42     Gn3 
+	BYTE		N42     Bn3 
+	BYTE	W48
+	BYTE		N15     Bn2 
+	BYTE		N15     En3 
+	BYTE		N15     Gn3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE		N15     Gn3 
+	BYTE		N15     Bn3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE		N15     Gn3 
+	BYTE		N15     Bn3 
+	BYTE		N15     Dn4 
+	BYTE	W16
+// 001   ----------------------------------------
+ChasingLeaves_2_001:
+	BYTE		N42     Fn3   v076
+	BYTE		N42     An3 
+	BYTE		N42     Cn4 
+	BYTE	W48
+	BYTE		N15     Cn3 
+	BYTE		N15     Fn3 
+	BYTE		N15     An3 
+	BYTE	W16
+	BYTE		        Fn3 
+	BYTE		N15     An3 
+	BYTE		N15     Cn4 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE		N15     Cn4 
+	BYTE		N15     Fn4 
+	BYTE	W16
+	BYTE	PEND
+// 002   ----------------------------------------
+ChasingLeaves_2_002:
+	BYTE		N42     Bn3   v076
+	BYTE		N42     Dn4 
+	BYTE		N42     Gn4 
+	BYTE	W48
+	BYTE		N15     Gn3 
+	BYTE		N15     Bn3 
+	BYTE		N15     Dn4 
+	BYTE	W16
+	BYTE		        Dn3 
+	BYTE		N15     Gn3 
+	BYTE		N15     Bn3 
+	BYTE	W16
+	BYTE		        Bn2 
+	BYTE		N15     Dn3 
+	BYTE		N15     Gn3 
+	BYTE	W16
+	BYTE	PEND
+// 003   ----------------------------------------
+ChasingLeaves_2_003:
+	BYTE		N15     Dn3   v076
+	BYTE		N15     Fn3 
+	BYTE		N15     An3 
+	BYTE	W16
+	BYTE		        An2 
+	BYTE		N15     Dn3 
+	BYTE		N15     Fn3 
+	BYTE	W16
+	BYTE		        Dn3 
+	BYTE		N15     Fn3 
+	BYTE		N15     An3 
+	BYTE	W16
+	BYTE		N42     Fn3 
+	BYTE		N42     An3 
+	BYTE		N42     Dn4 
+	BYTE	W48
+	BYTE	PEND
+// 004   ----------------------------------------
+	BYTE		        En3 
+	BYTE		N42     Gn3 
+	BYTE		N42     Bn3 
+	BYTE	W48
+	BYTE		N15     Bn2 
+	BYTE		N15     En3 
+	BYTE		N15     Gn3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE		N15     Gn3 
+	BYTE		N15     Bn3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE		N15     Gn3 
+	BYTE		N15     Bn3 
+	BYTE		N15     Dn4 
+	BYTE	W16
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_001
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_002
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_003
+ChasingLeaves_2_B1:
+// 008   ----------------------------------------
+ChasingLeaves_2_008:
+	BYTE		N36     En2   v076
+	BYTE		N36     Gn2 
+	BYTE		N36     Bn2 
+	BYTE	W42
+	BYTE		N05     Gn2 
+	BYTE		N05     Bn2 
+	BYTE		N05     En3 
+	BYTE	W06
+	BYTE		N15     Gn2 
+	BYTE		N15     Bn2 
+	BYTE		N15     En3 
+	BYTE	W16
+	BYTE		        Gn2 
+	BYTE		N15     Bn2 
+	BYTE		N15     Dn3 
+	BYTE	W16
+	BYTE		        Gn2 
+	BYTE		N15     Bn2 
+	BYTE		N15     En3 
+	BYTE	W16
+	BYTE	PEND
+// 009   ----------------------------------------
+ChasingLeaves_2_009:
+	BYTE		N36     Fn2   v076
+	BYTE		N36     An2 
+	BYTE		N36     Dn3 
+	BYTE	W42
+	BYTE		N05     An2 
+	BYTE		N05     Dn3 
+	BYTE		N05     Fn3 
+	BYTE	W06
+	BYTE		N15     An2 
+	BYTE		N15     Dn3 
+	BYTE		N15     Fn3 
+	BYTE	W16
+	BYTE		        An2 
+	BYTE		N15     Dn3 
+	BYTE		N15     Gn3 
+	BYTE	W16
+	BYTE		        An2 
+	BYTE		N15     Dn3 
+	BYTE		N15     Fn3 
+	BYTE	W16
+	BYTE	PEND
+// 010   ----------------------------------------
+ChasingLeaves_2_010:
+	BYTE		N36     Bn2   v076
+	BYTE		N36     Dn3 
+	BYTE		N36     Gn3 
+	BYTE	W42
+	BYTE		N05     Dn3 
+	BYTE		N05     Gn3 
+	BYTE		N05     Bn3 
+	BYTE	W06
+	BYTE		N15     Dn3 
+	BYTE		N15     Gn3 
+	BYTE		N15     Bn3 
+	BYTE	W16
+	BYTE		        Dn3 
+	BYTE		N15     Fs3 
+	BYTE		N15     An3 
+	BYTE	W16
+	BYTE		        Dn3 
+	BYTE		N15     Gn3 
+	BYTE		N15     Bn3 
+	BYTE	W16
+	BYTE	PEND
+// 011   ----------------------------------------
+ChasingLeaves_2_011:
+	BYTE		N15     Fn3   v076
+	BYTE		N15     An3 
+	BYTE		N15     Cn4 
+	BYTE	W16
+	BYTE		        Cn3 
+	BYTE		N15     Fn3 
+	BYTE		N15     An3 
+	BYTE	W16
+	BYTE		        An2 
+	BYTE		N15     Cn3 
+	BYTE		N15     Fn3 
+	BYTE	W16
+	BYTE		        Fn2 
+	BYTE		N15     An2 
+	BYTE		N15     Cn3 
+	BYTE	W16
+	BYTE		        Cn2 
+	BYTE		N15     Fn2 
+	BYTE		N15     An2 
+	BYTE	W16
+	BYTE		        Fn2 
+	BYTE		N15     An2 
+	BYTE		N15     Cn3 
+	BYTE	W16
+	BYTE	PEND
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_008
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_009
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_010
+// 015   ----------------------------------------
+ChasingLeaves_2_015:
+	BYTE		N15     Fn3   v076
+	BYTE		N15     An3 
+	BYTE		N15     Cn4 
+	BYTE	W16
+	BYTE		        Cn3 
+	BYTE		N15     Fn3 
+	BYTE		N15     An3 
+	BYTE	W16
+	BYTE		        An2 
+	BYTE		N15     Cn3 
+	BYTE		N15     Fn3 
+	BYTE	W16
+	BYTE		N42     Fn2 
+	BYTE		N42     An2 
+	BYTE		N42     Cn3 
+	BYTE	W48
+	BYTE	PEND
+// 016   ----------------------------------------
+ChasingLeaves_2_016:
+	BYTE		N15     An2   v076
+	BYTE		N15     Cn3 
+	BYTE		N15     En3 
+	BYTE	W16
+	BYTE		        En2 
+	BYTE		N15     An2 
+	BYTE		N15     Cn3 
+	BYTE	W16
+	BYTE		        An2 
+	BYTE		N15     Cn3 
+	BYTE		N15     En3 
+	BYTE	W16
+	BYTE		N42     Bn2 
+	BYTE		N42     En3 
+	BYTE		N42     Gn3 
+	BYTE		N42     An3 
+	BYTE	W48
+	BYTE	PEND
+// 017   ----------------------------------------
+ChasingLeaves_2_017:
+	BYTE		N15     An2   v076
+	BYTE		N15     Cn3 
+	BYTE		N15     Fn3 
+	BYTE	W16
+	BYTE		        Fn2 
+	BYTE		N15     An2 
+	BYTE		N15     Cn3 
+	BYTE	W16
+	BYTE		        An2 
+	BYTE		N15     Cn3 
+	BYTE		N15     Fn3 
+	BYTE	W16
+	BYTE		N42     Cn3 
+	BYTE		N42     Fn3 
+	BYTE		N42     An3 
+	BYTE	W48
+	BYTE	PEND
+// 018   ----------------------------------------
+ChasingLeaves_2_018:
+	BYTE		N32     Cn3   v076
+	BYTE		N32     En3 
+	BYTE		N32     Gn3 
+	BYTE	W36
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Cn4 
+	BYTE	W12
+	BYTE		N42     Cn3 
+	BYTE		N42     En3 
+	BYTE		N15     Bn3 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE	PEND
+// 019   ----------------------------------------
+ChasingLeaves_2_019:
+	BYTE		N32     Gn3   v076
+	BYTE		N32     Bn3 
+	BYTE		N32     En4 
+	BYTE	W36
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		N42     An2 
+	BYTE		N42     Dn3 
+	BYTE		N42     Fs3 
+	BYTE	W48
+	BYTE	PEND
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_016
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_017
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_018
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_019
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_008
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_009
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_010
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_011
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_008
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_009
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_010
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_015
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_016
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_017
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_018
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_019
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_016
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_017
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_018
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_019
+// 040   ----------------------------------------
+ChasingLeaves_2_040:
+	BYTE		N96     Dn3   v076
+	BYTE		N96     Gn3 
+	BYTE		N96     Bn3 
+	BYTE	W96
+	BYTE	PEND
+// 041   ----------------------------------------
+ChasingLeaves_2_041:
+	BYTE		TIE     Fn3   v076
+	BYTE		TIE     An3 
+	BYTE		N96     Cn4 
+	BYTE	W96
+	BYTE	PEND
+// 042   ----------------------------------------
+	BYTE		TIE     Dn4 
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE	W06
+// 043   ----------------------------------------
+	BYTE		N48     Gn3 
+	BYTE	W48
+	BYTE		        Fs3 
+	BYTE	W42
+	BYTE		EOT     An3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_040
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_2_041
+// 046   ----------------------------------------
+	BYTE		TIE     Dn4   v076
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE	W06
+// 047   ----------------------------------------
+	BYTE		N48     Gn3 
+	BYTE	W48
+	BYTE		N42     Fs3 
+	BYTE	W42
+	BYTE		EOT     An3 
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE	GoTo
+	 POIN2	ChasingLeaves_2_B1
+ChasingLeaves_2_B2:
+// 048   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+ChasingLeaves_3:
+	BYTE	KEYSH   ChasingLeaves_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   0
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     117*ChasingLeaves_mvl/mxv
+	BYTE		PAN     c_v+32
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+ChasingLeaves_3_B1:
+// 008   ----------------------------------------
+	BYTE	W24
+	BYTE		N05     An4   v127
+	BYTE	W06
+	BYTE		N11     Bn4 
+	BYTE	W12
+	BYTE		N17   
+	BYTE	W18
+	BYTE		N11   
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W12
+	BYTE		        Gn4 
+	BYTE	W12
+// 009   ----------------------------------------
+	BYTE		N05     Bn4 
+	BYTE	W06
+	BYTE		N11     Cn5 
+	BYTE	W12
+	BYTE		N48     An4 
+	BYTE	W54
+	BYTE		N11     Bn4 
+	BYTE	W12
+	BYTE		        Cn5 
+	BYTE	W12
+// 010   ----------------------------------------
+	BYTE		N05     Bn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		N11     Dn5 
+	BYTE	W12
+	BYTE		        Cn5 
+	BYTE	W12
+	BYTE		        Bn4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W12
+	BYTE		        Gn4 
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+// 011   ----------------------------------------
+	BYTE		N05     Fn4 
+	BYTE	W06
+	BYTE		N11     Gn4 
+	BYTE	W12
+	BYTE		N17     An4 
+	BYTE	W18
+	BYTE		N11     Gn4 
+	BYTE	W12
+	BYTE		N20     Fn4 
+	BYTE	W24
+	BYTE		        Cn4 
+	BYTE	W24
+// 012   ----------------------------------------
+	BYTE	W24
+	BYTE		N05     Bn4 
+	BYTE	W06
+	BYTE		N11     Cn5 
+	BYTE	W12
+	BYTE		N17     Dn5 
+	BYTE	W18
+	BYTE		N11     Gn5 
+	BYTE	W12
+	BYTE		        An5 
+	BYTE	W12
+	BYTE		        Gn5 
+	BYTE	W12
+// 013   ----------------------------------------
+	BYTE		N05     Fn5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		N42     Fn5 
+	BYTE	W48
+	BYTE		N11     Gn5 
+	BYTE	W12
+	BYTE		N05     Fn5 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+// 014   ----------------------------------------
+	BYTE		N15     Dn5 
+	BYTE	W16
+	BYTE		        Bn4 
+	BYTE	W16
+	BYTE		        Dn5 
+	BYTE	W16
+	BYTE		N32     Gn5 
+	BYTE	W36
+	BYTE		N05     An5 
+	BYTE	W06
+	BYTE		        Gn5 
+	BYTE	W06
+// 015   ----------------------------------------
+	BYTE		N42     Fn5 
+	BYTE	W48
+	BYTE		        Cn5 
+	BYTE	W48
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W84
+	BYTE		N05     An4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+// 032   ----------------------------------------
+	BYTE		N07     Cn5 
+	BYTE	W08
+	BYTE		        En5 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Dn5 
+	BYTE	W08
+	BYTE		        En5 
+	BYTE	W08
+	BYTE		        Gn5 
+	BYTE	W08
+	BYTE		        An5 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Gn5 
+	BYTE	W08
+	BYTE		        An5 
+	BYTE	W08
+// 033   ----------------------------------------
+	BYTE		N11     Cn6 
+	BYTE	W12
+	BYTE		        Bn5 
+	BYTE	W12
+	BYTE		        An5 
+	BYTE	W12
+	BYTE		        Gn5 
+	BYTE	W12
+	BYTE		N32     Fn5 
+	BYTE	W36
+	BYTE		N05     En5 
+	BYTE	W06
+	BYTE		        Fn5 
+	BYTE	W06
+// 034   ----------------------------------------
+	BYTE		        Gn5 
+	BYTE	W06
+	BYTE		        Fn5 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		N11     Gn4 
+	BYTE	W12
+	BYTE		        Cn5 
+	BYTE	W12
+	BYTE		        Bn4 
+	BYTE	W12
+	BYTE		        Cn5 
+	BYTE	W12
+// 035   ----------------------------------------
+	BYTE		N15     Bn4 
+	BYTE	W16
+	BYTE		        Gn4 
+	BYTE	W16
+	BYTE		        En4 
+	BYTE	W16
+	BYTE		        Fs4 
+	BYTE	W16
+	BYTE		        An4 
+	BYTE	W16
+	BYTE		        Cn5 
+	BYTE	W16
+// 036   ----------------------------------------
+	BYTE		N32     En5 
+	BYTE	W36
+	BYTE		N11     Cn5 
+	BYTE	W12
+	BYTE		N15     Gn5 
+	BYTE	W16
+	BYTE		        Fn5 
+	BYTE	W16
+	BYTE		        En5 
+	BYTE	W16
+// 037   ----------------------------------------
+	BYTE		N05     Fn5 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Fn5 
+	BYTE	W06
+	BYTE		        Gn5 
+	BYTE	W06
+	BYTE		        Fn5 
+	BYTE	W06
+// 038   ----------------------------------------
+	BYTE		N15     En5 
+	BYTE	W16
+	BYTE		        Cn5 
+	BYTE	W16
+	BYTE		        Gn4 
+	BYTE	W16
+	BYTE		N32     Cn5 
+	BYTE	W36
+	BYTE		N05     En5 
+	BYTE	W06
+	BYTE		        Fn5 
+	BYTE	W06
+// 039   ----------------------------------------
+	BYTE		N15     Gn5 
+	BYTE	W16
+	BYTE		        En5 
+	BYTE	W16
+	BYTE		        Bn4 
+	BYTE	W16
+	BYTE		N42     Dn5 
+	BYTE	W48
+// 040   ----------------------------------------
+	BYTE		N12     Gn4 
+	BYTE	W12
+	BYTE		        Bn4 
+	BYTE	W12
+	BYTE		N06     Dn5 
+	BYTE	W06
+	BYTE		N12     Cn5 
+	BYTE	W12
+	BYTE		N18     Bn4 
+	BYTE	W18
+	BYTE		N12     An4 
+	BYTE	W12
+	BYTE		        Gn4 
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+// 041   ----------------------------------------
+	BYTE		        Fn4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W12
+	BYTE		N06     Cn5 
+	BYTE	W06
+	BYTE		N12     As4 
+	BYTE	W12
+	BYTE		N54     An4 
+	BYTE	W54
+// 042   ----------------------------------------
+	BYTE		N12     Dn5 
+	BYTE	W12
+	BYTE		        En5 
+	BYTE	W12
+	BYTE		N06     Fn5 
+	BYTE	W06
+	BYTE		N12     En5 
+	BYTE	W12
+	BYTE		N18     Dn5 
+	BYTE	W18
+	BYTE		N12     Cn5 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W12
+	BYTE		        Fn4 
+	BYTE	W12
+// 043   ----------------------------------------
+	BYTE		N06     Gn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        Fs5 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		N20     Dn5 
+	BYTE	W24
+// 044   ----------------------------------------
+	BYTE		N06     Gn5 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		N06   
+	BYTE	W06
+	BYTE		        Gn5 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		N06   
+	BYTE	W06
+	BYTE		        Gn5 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        Bn5 
+	BYTE	W06
+	BYTE		        Gn5 
+	BYTE	W06
+	BYTE		N06   
+	BYTE	W06
+	BYTE		        Bn5 
+	BYTE	W06
+	BYTE		        An5 
+	BYTE	W06
+	BYTE		N06   
+	BYTE	W06
+	BYTE		        Bn5 
+	BYTE	W06
+	BYTE		        Gn5 
+	BYTE	W06
+// 045   ----------------------------------------
+	BYTE		        Fn5 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		N06   
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		N06   
+	BYTE	W06
+	BYTE		        Fn5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+// 046   ----------------------------------------
+	BYTE		N16     Dn5 
+	BYTE	W16
+	BYTE		        Fn5 
+	BYTE	W16
+	BYTE		        En5 
+	BYTE	W16
+	BYTE		N48     Dn5 
+	BYTE	W48
+// 047   ----------------------------------------
+	BYTE		N16     Gn5 
+	BYTE	W16
+	BYTE		        Dn5 
+	BYTE	W16
+	BYTE		        Gn5 
+	BYTE	W16
+	BYTE		N42     Fs5 
+	BYTE	W48
+	BYTE	GoTo
+	 POIN2	ChasingLeaves_3_B1
+ChasingLeaves_3_B2:
+// 048   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+ChasingLeaves_4:
+	BYTE	KEYSH   ChasingLeaves_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   73
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*ChasingLeaves_mvl/mxv
+	BYTE		PAN     c_v-32
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE		N16     Gn3   v127
+	BYTE	W16
+	BYTE		        Fs3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+	BYTE		N42     Bn3 
+	BYTE	W48
+// 005   ----------------------------------------
+	BYTE		N16     Cn4 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		N42     Fn4 
+	BYTE	W48
+// 006   ----------------------------------------
+	BYTE		N16     Dn4 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+// 007   ----------------------------------------
+	BYTE		N90     An3 
+	BYTE	W96
+ChasingLeaves_4_B1:
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W48
+	BYTE		N24     An2   v127
+	BYTE	W24
+	BYTE		        Bn2 
+	BYTE	W24
+// 016   ----------------------------------------
+	BYTE		N16     Cn3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+	BYTE		        Fn3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE	W16
+	BYTE		        Dn3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE	W16
+// 017   ----------------------------------------
+	BYTE		N48     Fn3 
+	BYTE	W48
+	BYTE		N12     An3 
+	BYTE	W12
+	BYTE		        Bn3 
+	BYTE	W12
+	BYTE		        Cn4 
+	BYTE	W12
+	BYTE		        An3 
+	BYTE	W12
+// 018   ----------------------------------------
+	BYTE		N16     Gn3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+// 019   ----------------------------------------
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		N24     Cn4 
+	BYTE	W24
+	BYTE		N20     An3 
+	BYTE	W24
+// 020   ----------------------------------------
+	BYTE	W24
+	BYTE		N12     Cn4 
+	BYTE	W12
+	BYTE		        Bn3 
+	BYTE	W12
+	BYTE		        An3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+// 021   ----------------------------------------
+	BYTE		N16     Dn3 
+	BYTE	W16
+	BYTE		        Cn3 
+	BYTE	W16
+	BYTE		        Fn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+// 022   ----------------------------------------
+	BYTE		N36     Gn3 
+	BYTE	W36
+	BYTE		N06     Fn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		N12     Cn4 
+	BYTE	W12
+	BYTE		        Bn3 
+	BYTE	W12
+	BYTE		        An3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+// 023   ----------------------------------------
+	BYTE		N24     Bn3 
+	BYTE	W24
+	BYTE		        Cn4 
+	BYTE	W24
+	BYTE		N42     Dn4 
+	BYTE	W48
+// 024   ----------------------------------------
+	BYTE		N36     En2 
+	BYTE	W36
+	BYTE		N12     Bn2 
+	BYTE	W12
+	BYTE		N16     Dn3 
+	BYTE	W16
+	BYTE		        Cn3 
+	BYTE	W16
+	BYTE		        Dn3 
+	BYTE	W16
+// 025   ----------------------------------------
+	BYTE		N08     Fn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		        Gn3 
+	BYTE	W08
+	BYTE		        Fn3 
+	BYTE	W08
+	BYTE		        Dn3 
+	BYTE	W08
+	BYTE		        Fn3 
+	BYTE	W08
+	BYTE		N36     An3 
+	BYTE	W36
+	BYTE		N06     Bn3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+// 026   ----------------------------------------
+	BYTE		N24     Bn3 
+	BYTE	W24
+	BYTE		        An3 
+	BYTE	W24
+	BYTE		N06     Gn3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+// 027   ----------------------------------------
+	BYTE		N16     En4 
+	BYTE	W16
+	BYTE		        Fn4 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		N32     An3 
+	BYTE	W36
+	BYTE		N06     Fn3 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+// 028   ----------------------------------------
+	BYTE		N36     Bn2 
+	BYTE	W36
+	BYTE		N12     En3 
+	BYTE	W12
+	BYTE		N08     Gn3 
+	BYTE	W08
+	BYTE		        Fs3 
+	BYTE	W08
+	BYTE		        Gn3 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE	W08
+// 029   ----------------------------------------
+	BYTE		N36     An3 
+	BYTE	W36
+	BYTE		N12     Fn3 
+	BYTE	W12
+	BYTE		N08     Dn4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE	W08
+	BYTE		        Dn4 
+	BYTE	W08
+	BYTE		        Fn4 
+	BYTE	W08
+	BYTE		        En4 
+	BYTE	W08
+	BYTE		        Fn4 
+	BYTE	W08
+// 030   ----------------------------------------
+	BYTE		N16     Gn4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+// 031   ----------------------------------------
+	BYTE		        Fn4 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		        As3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+	BYTE		        Fn3 
+	BYTE	W16
+// 032   ----------------------------------------
+	BYTE		N90     En3 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE		N12     Gn3 
+	BYTE	W12
+	BYTE		        Bn3 
+	BYTE	W12
+	BYTE		N06     Dn4 
+	BYTE	W06
+	BYTE		N12     Cn4 
+	BYTE	W12
+	BYTE		N18     Bn3 
+	BYTE	W18
+	BYTE		N12     An3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+// 041   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		        An3 
+	BYTE	W12
+	BYTE		N06     Cn4 
+	BYTE	W06
+	BYTE		N12     As3 
+	BYTE	W12
+	BYTE		N54     An3 
+	BYTE	W54
+// 042   ----------------------------------------
+	BYTE		N12     Dn4 
+	BYTE	W12
+	BYTE		        En4 
+	BYTE	W12
+	BYTE		N06     Fn4 
+	BYTE	W06
+	BYTE		N12     En4 
+	BYTE	W12
+	BYTE		N18     Dn4 
+	BYTE	W18
+	BYTE		N12     Cn4 
+	BYTE	W12
+	BYTE		        An3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+// 043   ----------------------------------------
+	BYTE		N06     Gn3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		N20     Dn4 
+	BYTE	W24
+// 044   ----------------------------------------
+	BYTE		N06     Gn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		N06   
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		N06   
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		N06   
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		N06   
+	BYTE	W06
+	BYTE		        Bn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+// 045   ----------------------------------------
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		N06   
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		N06   
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+// 046   ----------------------------------------
+	BYTE		N16     Dn4 
+	BYTE	W16
+	BYTE		        Fn4 
+	BYTE	W16
+	BYTE		        En4 
+	BYTE	W16
+	BYTE		N48     Dn4 
+	BYTE	W48
+// 047   ----------------------------------------
+	BYTE		N16     Gn4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		        Gn4 
+	BYTE	W16
+	BYTE		N42     Fs4 
+	BYTE	W48
+	BYTE	GoTo
+	 POIN2	ChasingLeaves_4_B1
+ChasingLeaves_4_B2:
+// 048   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+ChasingLeaves_5:
+	BYTE	KEYSH   ChasingLeaves_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   48
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-7
+	BYTE		VOL     127*ChasingLeaves_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+ChasingLeaves_5_B1:
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+ChasingLeaves_5_040:
+	BYTE		N96     Dn3   v076
+	BYTE		N96     Gn3 
+	BYTE		N96     Bn3 
+	BYTE	W96
+	BYTE	PEND
+// 041   ----------------------------------------
+ChasingLeaves_5_041:
+	BYTE		TIE     Fn3   v076
+	BYTE		TIE     An3 
+	BYTE		N96     Cn4 
+	BYTE	W96
+	BYTE	PEND
+// 042   ----------------------------------------
+	BYTE		TIE     Dn4 
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE	W06
+// 043   ----------------------------------------
+	BYTE		N48     Gn3 
+	BYTE	W48
+	BYTE		        Fs3 
+	BYTE	W42
+	BYTE		EOT     An3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_5_040
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_5_041
+// 046   ----------------------------------------
+	BYTE		TIE     Dn4   v076
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE	W06
+// 047   ----------------------------------------
+	BYTE		N48     Gn3 
+	BYTE	W48
+	BYTE		N42     Fs3 
+	BYTE	W42
+	BYTE		EOT     An3 
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE	GoTo
+	 POIN2	ChasingLeaves_5_B1
+ChasingLeaves_5_B2:
+// 048   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.6) ****************//
+
+ChasingLeaves_6:
+	BYTE	KEYSH   ChasingLeaves_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   124
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*ChasingLeaves_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE		N02     As1   v004
+	BYTE		N78     En2   v044
+	BYTE	W03
+	BYTE		N02     As1   v004
+	BYTE	W03
+	BYTE		        As1   v008
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v012
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v016
+	BYTE	W03
+	BYTE		        As1   v020
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v024
+	BYTE	W03
+	BYTE		        As1   v028
+	BYTE	W03
+	BYTE		        As1   v032
+	BYTE	W03
+	BYTE		        As1   v036
+	BYTE	W03
+	BYTE		        As1   v040
+	BYTE	W03
+	BYTE		        As1   v044
+	BYTE	W03
+	BYTE		        As1   v052
+	BYTE	W03
+	BYTE		        As1   v056
+	BYTE	W03
+	BYTE		        As1   v064
+	BYTE	W03
+	BYTE		        As1   v068
+	BYTE	W03
+	BYTE		        As1   v076
+	BYTE	W03
+	BYTE		        As1   v084
+	BYTE	W03
+	BYTE		        As1   v088
+	BYTE	W03
+	BYTE		        As1   v096
+	BYTE	W03
+	BYTE		        As1   v104
+	BYTE	W03
+	BYTE		        As1   v112
+	BYTE	W03
+	BYTE		        As1   v120
+	BYTE	W03
+	BYTE		N05     En1   v127
+	BYTE	W06
+	BYTE		N11   
+	BYTE	W12
+ChasingLeaves_6_B1:
+// 008   ----------------------------------------
+	BYTE		N05     Cn1   v127
+	BYTE		N05     Fs1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+// 009   ----------------------------------------
+ChasingLeaves_6_009:
+	BYTE		N05     Cn1   v127
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 023   ----------------------------------------
+	BYTE		N05     Cn1   v127
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		N20     Cs1 
+	BYTE		N20     Fs1 
+	BYTE	W24
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_009
+// 039   ----------------------------------------
+	BYTE		N05     Cn1   v127
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+// 040   ----------------------------------------
+	BYTE		        Cn1 
+	BYTE		N05     Fs1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+// 041   ----------------------------------------
+ChasingLeaves_6_041:
+	BYTE		N05     Cn1   v127
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 042   ----------------------------------------
+ChasingLeaves_6_042:
+	BYTE		N05     Cn1   v127
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_041
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_042
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChasingLeaves_6_041
+// 046   ----------------------------------------
+	BYTE		N05     Cn1   v127
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cs1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+// 047   ----------------------------------------
+	BYTE		N20     Fs1 
+	BYTE		N90     An1 
+	BYTE		N90     Bn1 
+	BYTE		N90     Cn2 
+	BYTE		N90     Dn2 
+	BYTE		N90     An2 
+	BYTE	W24
+	BYTE		N20     Fs1 
+	BYTE	W24
+	BYTE		N20   
+	BYTE	W24
+	BYTE		N20   
+	BYTE	W24
+	BYTE	GoTo
+	 POIN2	ChasingLeaves_6_B1
+ChasingLeaves_6_B2:
+// 048   ----------------------------------------
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+ChasingLeaves:
+	BYTE	6	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	ChasingLeaves_pri	// Priority
+	BYTE	ChasingLeaves_rev	// Reverb.
+
+	POIN2	ChasingLeaves_grp
+
+	POIN2	ChasingLeaves_1
+	POIN2	ChasingLeaves_2
+	POIN2	ChasingLeaves_3
+	POIN2	ChasingLeaves_4
+	POIN2	ChasingLeaves_5
+	POIN2	ChasingLeaves_6
+
+	

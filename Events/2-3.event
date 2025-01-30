@@ -13,6 +13,8 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventEnemy(0,EnemyPhaseEventScream,1)
+TurnEventEnemy(0,EnemyPhaseEventScream2,2)
 TURN 0x8 SussyHouse1 [2,0] 0x0
 TURN 0x9 SussyHouse2 [4,0] 0x0
 TURN 0x0 Rein1 [3,0] 0x0
@@ -21,7 +23,21 @@ TURN 0x0 Rein3 [9,0] 0x0
 TURN 0x0 Rein4 [11,0] 0x0
 TURN 0x0 GoodbyeDespair [14,0] 0x0
 	END_MAIN
-	
+
+EnemyPhaseEventScream2:
+CameraCursor(0xc4)
+Text(Ch23InBattle4)
+CameraCursor(0xc3)
+Text(Ch23InBattle3)
+NoFade
+ENDA
+
+EnemyPhaseEventScream:
+CameraCursor(0xc4)
+Text(Ch23InBattle2)
+NoFade
+ENDA
+
 GoodbyeDespair:
 GameOver
 ENDA
@@ -337,18 +353,37 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-	ENUT AllUnitsMustEscapeFlag
-	LOAD1 0x1 EnemyUnits
-	//LOAD1 0x1 TheResistanceGuys
+ENUT AllUnitsMustEscapeFlag
 HardUnits(LunaticUnits,TheResistanceGuys)
+LOAD1 0x1 EnemyUnits
+BG(0x3d)
+Text(Ch23Opening1)
+Text(Ch23Opening2)
+BG(0x3b)
+Text(Ch23Opening3)
 	ENUN
 	CALL $591FD8 //prep screen
 	FADU 60
-	CenterTextbox(P2PlaceholderCh3)
+	CenterTextbox(Ch23InBattle1)
 	NoFade
 	ENDA
 
 EndingScene:
+BG(0x2b)
+Text(Ch23Ending1)
+ClearBackground
+BG(0x38)
+Text(Ch23Ending2)
+ClearBackground
+	FADI 60
+	SVAL 0xB 0x50008
+	LOMA 0x3D
+	FADU 60
+STAL 10
+BROWNBOXTEXT ArmaVillageText [8,8]
+STAL 5
+	BG(0x31)
+Text(Ch23Ending3)
 	MNC2 0x9 //2-4
 	NoFade
 	ENDA

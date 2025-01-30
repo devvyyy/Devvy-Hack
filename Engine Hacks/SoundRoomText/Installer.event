@@ -1,0 +1,223 @@
+
+// credit to pikmin1211
+
+#define SoundRoomSongTable NewSoundRoom
+
+ALIGN 4
+#include "DrawSoundRoomText.lyn.event"
+
+gSoundRoomUIProc:
+WORD 0x8A21338
+
+PUSH
+
+// dont draw the completion number
+ORG 0xAF4F4 // DrawUiNumber()
+SHORT 0x46C0 0x46C0 // nop nop
+
+ORG 0xB0094
+jumpToHack(DrawSoundRoomSongSourceHook)
+
+// center the title text properly
+ORG 0xB0052
+BYTE 0xA8
+
+POP
+
+#define SoundRoomSource(songId, textId) "WORD songId; SHORT textId 0"
+
+ALIGN 4
+SoundRoomSourceTable:
+// Eternal Winter
+SoundRoomSource(0x43, EW9SR)
+SoundRoomSource(0x26E, EW9SR)
+SoundRoomSource(0x26F, EW9SR)
+SoundRoomSource(0x270, EW9SR)
+SoundRoomSource(0x271, EW9SR)
+SoundRoomSource(0x272, EW9SR)
+SoundRoomSource(0x273, EW9SR)
+SoundRoomSource(0x274, EW9SR)
+SoundRoomSource(0x275, EW9SR)
+SoundRoomSource(0x276, EW9SR)
+SoundRoomSource(0x277, EW9SR)
+SoundRoomSource(0x278, EW9SR)
+SoundRoomSource(0x279, EW9SR)
+SoundRoomSource(0x27A, EW9SR)
+SoundRoomSource(0x27B, EW9SR)
+SoundRoomSource(0x27C, EW9SR)
+SoundRoomSource(0x27D, EW9SR)
+SoundRoomSource(0x27E, EW9SR)
+SoundRoomSource(0x27F, EW9SR)
+SoundRoomSource(0x280, EW9SR)
+SoundRoomSource(0x281, EW9SR)
+SoundRoomSource(0x282, EW9SR)
+SoundRoomSource(0x283, EW9SR)
+SoundRoomSource(0x284, EW9SR)
+
+// Fire Emblem
+SoundRoomSource(0x3DB, FEName)
+SoundRoomSource(0x3E7, FEName)
+SoundRoomSource(0x62, FEName)
+SoundRoomSource(0x94, FEName)
+SoundRoomSource(0x143, FEName)
+SoundRoomSource(0x20E, FEName)
+SoundRoomSource(0x1f0, FEName)
+SoundRoomSource(0x1f1, FEName)
+SoundRoomSource(0x1f2, FEName)
+SoundRoomSource(0x63, FEName)
+SoundRoomSource(0x3b4, FEName)
+SoundRoomSource(0x25e, FEName)
+SoundRoomSource(0x3dc, FEName)
+SoundRoomSource(0x24, FEName)
+SoundRoomSource(0x25, FEName)
+SoundRoomSource(0x26, FEName)
+SoundRoomSource(0x27, FEName)
+SoundRoomSource(0x28, FEName)
+SoundRoomSource(0x29, FEName)
+SoundRoomSource(0x2A, FEName)
+SoundRoomSource(0x2B, FEName)
+SoundRoomSource(0x2C, FEName)
+SoundRoomSource(0x2D, FEName)
+SoundRoomSource(0x2E, FEName)
+SoundRoomSource(0x2F, FEName)
+SoundRoomSource(0x30, FEName)
+SoundRoomSource(0x31, FEName)
+SoundRoomSource(0x32, FEName)
+SoundRoomSource(0x256, FEName)
+
+// TLP
+SoundRoomSource(0x1, TheLastPromiseName)
+SoundRoomSource(0xc0, TheLastPromiseName)
+SoundRoomSource(0xc1, TheLastPromiseName)
+SoundRoomSource(0xc2, TheLastPromiseName)
+SoundRoomSource(0xc3, TheLastPromiseName)
+SoundRoomSource(0xc4, TheLastPromiseName)
+SoundRoomSource(0x15d, TheLastPromiseName)
+SoundRoomSource(0xc5, TheLastPromiseName)
+SoundRoomSource(0x3ae, TheLastPromiseName)
+SoundRoomSource(0xc6, TheLastPromiseName)
+SoundRoomSource(0x5e, TheLastPromiseName)
+SoundRoomSource(0xe1, TheLastPromiseName)
+SoundRoomSource(0x65, TheLastPromiseName)
+SoundRoomSource(0x66, TheLastPromiseName)
+SoundRoomSource(0x144, TheLastPromiseName)
+SoundRoomSource(0x20, TheLastPromiseName)
+SoundRoomSource(0x18e, TheLastPromiseName)
+SoundRoomSource(0x19, TheLastPromiseName)
+SoundRoomSource(0x1a, TheLastPromiseName)
+SoundRoomSource(0x59, TheLastPromiseName)
+SoundRoomSource(0xae, TheLastPromiseName)
+SoundRoomSource(0x1b, TheLastPromiseName)
+SoundRoomSource(0x92, TheLastPromiseName)
+SoundRoomSource(0xe4, TheLastPromiseName)
+SoundRoomSource(0x118, TheLastPromiseName)
+SoundRoomSource(0x3cc, TheLastPromiseName)
+SoundRoomSource(0xe8, TheLastPromiseName)
+SoundRoomSource(0xDB, TheLastPromiseName)
+SoundRoomSource(0x09, TheLastPromiseName)
+SoundRoomSource(0xE0, TheLastPromiseName)
+SoundRoomSource(0x3C8, TheLastPromiseName)
+
+// Custom
+SoundRoomSource(0x3E2, CustomName)
+SoundRoomSource(0x152, CustomName)
+SoundRoomSource(0xEE, CustomName)
+
+// LHT
+SoundRoomSource(0x26d, LHTName)
+SoundRoomSource(0x3d7, LHTName)
+SoundRoomSource(0x3d9, LHTName)
+SoundRoomSource(0x3dd, LHTName)
+SoundRoomSource(0x3df, LHTName)
+SoundRoomSource(0x34, LHTName)
+SoundRoomSource(0x3D8, LHTName)
+SoundRoomSource(0x3DE, LHTName)
+SoundRoomSource(0x3E1, LHTName)
+SoundRoomSource(0x3E0, LHTName)
+SoundRoomSource(0x3CE, LHTName)
+
+// Ys
+SoundRoomSource(0x38, YsName)
+SoundRoomSource(0x37, YsName)
+SoundRoomSource(0x38, YsName)
+SoundRoomSource(0x38, YsName)
+SoundRoomSource(0x38, YsName)
+SoundRoomSource(0xd9, YsName)
+SoundRoomSource(0x148, YsName)
+SoundRoomSource(0x149, YsName)
+
+// Valkyrie Profile
+SoundRoomSource(0x64, ValkyrieProfileName)
+SoundRoomSource(0x206, ValkyrieProfileName)
+SoundRoomSource(0xF3, ValkyrieProfileName)
+SoundRoomSource(0xe9, ValkyrieProfileName)
+SoundRoomSource(0x104, ValkyrieProfileName)
+SoundRoomSource(0x105, ValkyrieProfileName)
+SoundRoomSource(0x58, ValkyrieProfileName)
+SoundRoomSource(0x10B, ValkyrieProfileName)
+SoundRoomSource(0xEC, ValkyrieProfileName)
+SoundRoomSource(0xDA, ValkyrieProfileName)
+SoundRoomSource(0x1b5, ValkyrieProfileName)
+
+// SOTF
+SoundRoomSource(0x5F, SOTFName)
+
+// Heroes of Mana
+SoundRoomSource(0x254, ManaName)
+SoundRoomSource(0x12F, ManaName)
+SoundRoomSource(0x2bb, ManaName)
+SoundRoomSource(0x13A, ManaName)
+SoundRoomSource(0x205, ManaName)
+SoundRoomSource(0x3AB, ManaName)
+SoundRoomSource(0x93, ManaName)
+SoundRoomSource(0x104, ManaName)
+SoundRoomSource(0x255, ManaName)
+SoundRoomSource(0x3da, ManaName)
+SoundRoomSource(0x3C1, ManaName)
+SoundRoomSource(0x3C5, ManaName)
+SoundRoomSource(0x3E4, ManaName)
+SoundRoomSource(0xBB, ManaName)
+SoundRoomSource(0xED, ManaName)
+SoundRoomSource(0xA9, ManaName)
+SoundRoomSource(0xAD, ManaName)
+SoundRoomSource(0x12E, ManaName)
+SoundRoomSource(0x12D, ManaName)
+SoundRoomSource(0x204, ManaName)
+SoundRoomSource(0x3da, ManaName)
+
+// Triangle Strategy
+SoundRoomSource(0x2EE, TriangleStrategyName)
+SoundRoomSource(0x3cd, TriangleStrategyName)
+SoundRoomSource(0x3cb, TriangleStrategyName)
+SoundRoomSource(0x153, TriangleStrategyName)
+
+// Final Fantasy
+SoundRoomSource(0x146, FinalFantasyName)
+
+// Cave Story
+SoundRoomSource(0x1B4, CaveStoryName)
+
+// Ace Attorney
+SoundRoomSource(0x106, AceAttorneyName)
+
+// Rudra no Hihou
+SoundRoomSource(0x96, RudraName)
+SoundRoomSource(0xB2, RudraName)
+
+// Octopath
+SoundRoomSource(0x107, OctopathName)
+SoundRoomSource(0x115, OctopathName)
+
+// Tales
+SoundRoomSource(0x116, TalesName)
+SoundRoomSource(0x5D, TalesName)
+SoundRoomSource(0x15C, TalesName)
+
+// Club Penguin
+SoundRoomSource(0x36, ClubPenguinName)
+SoundRoomSource(0x35, ClubPenguinName)
+
+// Chrono Trigger
+SoundRoomSource(0xA8, CTName)
+
+WORD 0 0 // term

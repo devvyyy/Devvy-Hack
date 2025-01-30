@@ -1,0 +1,2287 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	AnthemForAeteria_grp  voicegroup000
+	#define	AnthemForAeteria_pri  0
+	#define	AnthemForAeteria_rev  0xB0
+	#define	AnthemForAeteria_mvl  30
+	#define	AnthemForAeteria_key  0
+	#define	AnthemForAeteria_tbs  1
+	#define	AnthemForAeteria_exg  0
+	#define	AnthemForAeteria_cmp  1
+
+	// .rodata
+	//	AnthemForAeteria
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+AnthemForAeteria_1:
+	BYTE	KEYSH   AnthemForAeteria_key+0
+AnthemForAeteria_1_B1:
+// 000   ----------------------------------------
+	BYTE	TEMPO   125*AnthemForAeteria_tbs/2
+	BYTE		VOICE   49
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     114*AnthemForAeteria_mvl/mxv
+	BYTE		PAN     c_v-32
+	BYTE		TIE     En3   v076
+	BYTE		TIE     Gn3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     En3 
+	BYTE		        Gn3 
+	BYTE		        Cn4 
+	BYTE	W06
+// 004   ----------------------------------------
+AnthemForAeteria_1_004:
+	BYTE		TIE     Fn3   v076
+	BYTE		TIE     As3 
+	BYTE		TIE     Dn4 
+	BYTE	W96
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        As3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 008   ----------------------------------------
+	BYTE		TIE     En3 
+	BYTE		TIE     Gn3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     En3 
+	BYTE		        Gn3 
+	BYTE		        Cn4 
+	BYTE	W06
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_1_004
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        As3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 016   ----------------------------------------
+	BYTE		N72     An4   v076
+	BYTE	W72
+	BYTE		N24     Fn4 
+	BYTE	W24
+// 017   ----------------------------------------
+	BYTE		N48     Cn4 
+	BYTE	W48
+	BYTE		N72     An4 
+	BYTE	W48
+// 018   ----------------------------------------
+	BYTE	W24
+	BYTE		N24     As4 
+	BYTE	W24
+	BYTE		N90     Gn4 
+	BYTE	W48
+// 019   ----------------------------------------
+	BYTE	W48
+	BYTE		N24     Fn4 
+	BYTE	W24
+	BYTE		        Ds4 
+	BYTE	W24
+// 020   ----------------------------------------
+	BYTE		N72     Dn4 
+	BYTE	W72
+	BYTE		N24     En4 
+	BYTE	W24
+// 021   ----------------------------------------
+	BYTE		N48     Fs4 
+	BYTE	W48
+	BYTE		N24     En4 
+	BYTE	W24
+	BYTE		        Dn4 
+	BYTE	W24
+// 022   ----------------------------------------
+	BYTE		N96     En4 
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE		N90     Gn4 
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE		N24     An4 
+	BYTE	W24
+	BYTE		N48     Cn4 
+	BYTE	W48
+	BYTE		N24     Fn4 
+	BYTE	W24
+// 025   ----------------------------------------
+	BYTE		        An4 
+	BYTE	W24
+	BYTE		        As4 
+	BYTE	W24
+	BYTE		        Cn5 
+	BYTE	W24
+	BYTE		TIE     Fn5 
+	BYTE	W24
+// 026   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 027   ----------------------------------------
+	BYTE		N48     Ds5 
+	BYTE	W48
+	BYTE		N24     Dn5 
+	BYTE	W24
+	BYTE		N12     Cn5 
+	BYTE	W12
+	BYTE		        As4 
+	BYTE	W12
+// 028   ----------------------------------------
+	BYTE		N48     An4 
+	BYTE	W48
+	BYTE		        Gn4 
+	BYTE	W48
+// 029   ----------------------------------------
+	BYTE		        Fs4 
+	BYTE	W48
+	BYTE		        Dn4 
+	BYTE	W48
+// 030   ----------------------------------------
+	BYTE		N24     En4 
+	BYTE	W24
+	BYTE		        Fn4 
+	BYTE	W24
+	BYTE		        Gn4 
+	BYTE	W24
+	BYTE		        An4 
+	BYTE	W24
+// 031   ----------------------------------------
+	BYTE		        As4 
+	BYTE	W24
+	BYTE		        Cn5 
+	BYTE	W24
+	BYTE		        Dn5 
+	BYTE	W24
+	BYTE		N20     En5 
+	BYTE	W24
+// 032   ----------------------------------------
+	BYTE		TIE     Fn5 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 034   ----------------------------------------
+	BYTE		TIE     Dn5 
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 036   ----------------------------------------
+	BYTE		TIE     En5 
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 038   ----------------------------------------
+	BYTE		TIE     As4 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 040   ----------------------------------------
+	BYTE		TIE     Fn5 
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 042   ----------------------------------------
+	BYTE		TIE     Dn5 
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 044   ----------------------------------------
+	BYTE		TIE     En5 
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 046   ----------------------------------------
+	BYTE		N96     As4 
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE		N90     Bn4 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	AnthemForAeteria_1_B1
+AnthemForAeteria_1_B2:
+// 048   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+AnthemForAeteria_2:
+	BYTE	KEYSH   AnthemForAeteria_key+0
+AnthemForAeteria_2_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   60
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     124*AnthemForAeteria_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W24
+	BYTE		N24     Cn3   v127
+	BYTE	W24
+	BYTE		        En3 
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE	W24
+// 001   ----------------------------------------
+	BYTE		N48     En3 
+	BYTE	W48
+	BYTE		        Dn3 
+	BYTE	W48
+// 002   ----------------------------------------
+	BYTE		N96     Cn3 
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE		N48     En3 
+	BYTE	W48
+	BYTE		N24     Dn3 
+	BYTE	W24
+	BYTE		        Cn3 
+	BYTE	W24
+// 004   ----------------------------------------
+	BYTE		N72     Dn3 
+	BYTE	W72
+	BYTE		N24     En3 
+	BYTE	W24
+// 005   ----------------------------------------
+	BYTE		TIE     Fn3 
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 008   ----------------------------------------
+	BYTE	W24
+	BYTE		N24     Cn3 
+	BYTE	W24
+	BYTE		        En3 
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE	W24
+// 009   ----------------------------------------
+	BYTE		N48     En3 
+	BYTE	W48
+	BYTE		        Dn3 
+	BYTE	W48
+// 010   ----------------------------------------
+	BYTE		N96     Cn3 
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE		N48     Gn3 
+	BYTE	W48
+	BYTE		N24     Fn3 
+	BYTE	W24
+	BYTE		        En3 
+	BYTE	W24
+// 012   ----------------------------------------
+	BYTE		N72     Dn3 
+	BYTE	W72
+	BYTE		N24     Fn3 
+	BYTE	W24
+// 013   ----------------------------------------
+	BYTE		TIE     As3 
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE		N48     Fn3 
+	BYTE	W48
+	BYTE		        An3 
+	BYTE	W48
+// 041   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W48
+	BYTE		        Fn3 
+	BYTE	W48
+// 042   ----------------------------------------
+	BYTE		        Dn3 
+	BYTE	W48
+	BYTE		        Fs3 
+	BYTE	W48
+// 043   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W48
+	BYTE		        Cn4 
+	BYTE	W48
+// 044   ----------------------------------------
+	BYTE		        As3 
+	BYTE	W48
+	BYTE		        Gn3 
+	BYTE	W48
+// 045   ----------------------------------------
+	BYTE		        En3 
+	BYTE	W48
+	BYTE		        Gn3 
+	BYTE	W48
+// 046   ----------------------------------------
+	BYTE		N96     As3 
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE		N90     Bn3 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	AnthemForAeteria_2_B1
+AnthemForAeteria_2_B2:
+// 048   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+AnthemForAeteria_3:
+	BYTE	KEYSH   AnthemForAeteria_key+0
+AnthemForAeteria_3_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   52
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     105*AnthemForAeteria_mvl/mxv
+	BYTE		PAN     c_v+32
+	BYTE		TIE     En3   v076
+	BYTE		TIE     Gn3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     En3 
+	BYTE		        Gn3 
+	BYTE		        Cn4 
+// 004   ----------------------------------------
+AnthemForAeteria_3_004:
+	BYTE		TIE     Fn3   v076
+	BYTE		TIE     As3 
+	BYTE		TIE     Dn4 
+	BYTE	W96
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        Gn3 
+	BYTE		        As3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 008   ----------------------------------------
+	BYTE		TIE     En3 
+	BYTE		TIE     Gn3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     En3 
+	BYTE		        Gn3 
+	BYTE		        Cn4 
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_3_004
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE		TIE     Gn3   v076
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        Gn3 
+	BYTE		        As3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 016   ----------------------------------------
+AnthemForAeteria_3_016:
+	BYTE		TIE     Fn3   v076
+	BYTE		TIE     An3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+	BYTE	PEND
+// 017   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        An3 
+	BYTE	W06
+// 018   ----------------------------------------
+AnthemForAeteria_3_018:
+	BYTE		TIE     Ds3   v076
+	BYTE		TIE     Gn3 
+	BYTE	W96
+	BYTE	PEND
+// 019   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Ds3 
+	BYTE		        Gn3 
+	BYTE		        Cn4 
+// 020   ----------------------------------------
+AnthemForAeteria_3_020:
+	BYTE		TIE     Fs3   v076
+	BYTE		TIE     An3 
+	BYTE		TIE     Dn4 
+	BYTE	W96
+	BYTE	PEND
+// 021   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 022   ----------------------------------------
+AnthemForAeteria_3_022:
+	BYTE		TIE     Gn3   v076
+	BYTE		TIE     As3 
+	BYTE		TIE     En4 
+	BYTE	W96
+	BYTE	PEND
+// 023   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        As3 
+	BYTE		        En4 
+	BYTE	W06
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_3_016
+// 025   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        An3 
+	BYTE	W06
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_3_018
+// 027   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Ds3 
+	BYTE		        Gn3 
+	BYTE		        Cn4 
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_3_020
+// 029   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_3_022
+// 031   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        As3 
+	BYTE		        En4 
+	BYTE	W06
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_3_016
+// 033   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Fn3 
+	BYTE		        An3 
+	BYTE		        Cn4 
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_3_020
+// 035   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+	BYTE		        Dn4 
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_3_022
+// 037   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        En4 
+	BYTE	W06
+// 038   ----------------------------------------
+	BYTE		TIE     Fn3   v076
+	BYTE		TIE     Dn4 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     As3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 040   ----------------------------------------
+	BYTE		TIE     An3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Fn3 
+	BYTE		        An3 
+	BYTE		        Cn4 
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_3_020
+// 043   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+	BYTE		        Dn4 
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_3_022
+// 045   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        En4 
+	BYTE	W06
+// 046   ----------------------------------------
+	BYTE		N96     Fn3   v076
+	BYTE		N96     Dn4 
+	BYTE	W96
+	BYTE		EOT     As3 
+// 047   ----------------------------------------
+	BYTE		N90     Fn3 
+	BYTE		N90     Bn3 
+	BYTE		N90     Dn4 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	AnthemForAeteria_3_B1
+AnthemForAeteria_3_B2:
+// 048   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+AnthemForAeteria_4:
+	BYTE	KEYSH   AnthemForAeteria_key+0
+AnthemForAeteria_4_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   50
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     112*AnthemForAeteria_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		TIE     En3   v076
+	BYTE		TIE     Gn3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     En3 
+	BYTE		        Gn3 
+	BYTE		        Cn4 
+// 004   ----------------------------------------
+AnthemForAeteria_4_004:
+	BYTE		TIE     Fn3   v076
+	BYTE		TIE     As3 
+	BYTE		TIE     Dn4 
+	BYTE	W96
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        Gn3 
+	BYTE		        As3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 008   ----------------------------------------
+	BYTE		TIE     En3 
+	BYTE		TIE     Gn3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     En3 
+	BYTE		        Gn3 
+	BYTE		        Cn4 
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_4_004
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE		TIE     Gn3   v076
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE		PAN     c_v+0
+	BYTE	W01
+	BYTE		        c_v-1
+	BYTE	W02
+	BYTE		        c_v-2
+	BYTE	W01
+	BYTE		        c_v-3
+	BYTE	W02
+	BYTE		        c_v-4
+	BYTE	W01
+	BYTE		        c_v-5
+	BYTE	W02
+	BYTE		        c_v-6
+	BYTE	W01
+	BYTE		        c_v-7
+	BYTE	W02
+	BYTE		        c_v-8
+	BYTE	W01
+	BYTE		        c_v-9
+	BYTE	W02
+	BYTE		        c_v-10
+	BYTE	W01
+	BYTE		        c_v-11
+	BYTE	W02
+	BYTE		        c_v-12
+	BYTE	W01
+	BYTE		        c_v-13
+	BYTE	W02
+	BYTE		        c_v-14
+	BYTE	W01
+	BYTE		        c_v-15
+	BYTE	W02
+	BYTE		        c_v-16
+	BYTE	W01
+	BYTE		        c_v-17
+	BYTE	W02
+	BYTE		        c_v-18
+	BYTE	W01
+	BYTE		        c_v-19
+	BYTE	W02
+	BYTE		        c_v-20
+	BYTE	W01
+	BYTE		        c_v-21
+	BYTE	W02
+	BYTE		        c_v-22
+	BYTE	W01
+	BYTE		        c_v-23
+	BYTE	W02
+	BYTE		        c_v-24
+	BYTE	W01
+	BYTE		        c_v-25
+	BYTE	W02
+	BYTE		        c_v-26
+	BYTE	W01
+	BYTE		        c_v-27
+	BYTE	W02
+	BYTE		        c_v-28
+	BYTE	W01
+	BYTE		        c_v-29
+	BYTE	W02
+	BYTE		        c_v-30
+	BYTE	W01
+	BYTE		        c_v-31
+	BYTE	W02
+	BYTE		        c_v-32
+	BYTE	W01
+	BYTE		        c_v-33
+	BYTE	W02
+	BYTE		        c_v-34
+	BYTE	W01
+	BYTE		        c_v-35
+	BYTE	W02
+	BYTE		        c_v-36
+	BYTE	W01
+	BYTE		        c_v-37
+	BYTE	W02
+	BYTE		        c_v-38
+	BYTE	W01
+	BYTE		        c_v-39
+	BYTE	W02
+	BYTE		        c_v-40
+	BYTE	W01
+	BYTE		        c_v-41
+	BYTE	W02
+	BYTE		        c_v-42
+	BYTE	W01
+	BYTE		        c_v-43
+	BYTE	W02
+	BYTE		        c_v-44
+	BYTE	W01
+	BYTE		        c_v-45
+	BYTE	W02
+	BYTE		        c_v-46
+	BYTE	W01
+	BYTE		        c_v-47
+	BYTE	W02
+	BYTE		        c_v-48
+	BYTE	W01
+	BYTE		        c_v-49
+	BYTE	W02
+	BYTE		        c_v-50
+	BYTE	W01
+	BYTE		        c_v-51
+	BYTE	W02
+	BYTE		        c_v-52
+	BYTE	W01
+	BYTE		        c_v-53
+	BYTE	W02
+	BYTE		        c_v-54
+	BYTE	W01
+	BYTE		        c_v-55
+	BYTE	W02
+	BYTE		        c_v-56
+	BYTE	W01
+	BYTE		        c_v-57
+	BYTE	W02
+	BYTE		        c_v-58
+	BYTE	W01
+	BYTE		        c_v-59
+	BYTE	W02
+	BYTE		EOT     Fn3 
+	BYTE		        Gn3 
+	BYTE		        As3 
+	BYTE		        Dn4 
+	BYTE		PAN     c_v-60
+	BYTE	W01
+	BYTE		        c_v-61
+	BYTE	W02
+	BYTE		        c_v-62
+	BYTE	W01
+	BYTE		        c_v-63
+	BYTE	W02
+// 016   ----------------------------------------
+	BYTE		        c_v-64
+	BYTE		TIE     Fn3 
+	BYTE		TIE     An3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        An3 
+	BYTE	W06
+// 018   ----------------------------------------
+AnthemForAeteria_4_018:
+	BYTE		TIE     Ds3   v076
+	BYTE		TIE     Gn3 
+	BYTE	W96
+	BYTE	PEND
+// 019   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Ds3 
+	BYTE		        Gn3 
+	BYTE		        Cn4 
+// 020   ----------------------------------------
+AnthemForAeteria_4_020:
+	BYTE		TIE     Fs3   v076
+	BYTE		TIE     An3 
+	BYTE		TIE     Dn4 
+	BYTE	W96
+	BYTE	PEND
+// 021   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 022   ----------------------------------------
+AnthemForAeteria_4_022:
+	BYTE		TIE     Gn3   v076
+	BYTE		TIE     As3 
+	BYTE		TIE     En4 
+	BYTE	W96
+	BYTE	PEND
+// 023   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        As3 
+	BYTE		        En4 
+	BYTE	W06
+// 024   ----------------------------------------
+AnthemForAeteria_4_024:
+	BYTE		TIE     Fn3   v076
+	BYTE		TIE     An3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+	BYTE	PEND
+// 025   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        An3 
+	BYTE	W06
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_4_018
+// 027   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Ds3 
+	BYTE		        Gn3 
+	BYTE		        Cn4 
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_4_020
+// 029   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_4_022
+// 031   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        As3 
+	BYTE		        En4 
+	BYTE	W06
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_4_024
+// 033   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Fn3 
+	BYTE		        An3 
+	BYTE		        Cn4 
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_4_020
+// 035   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+	BYTE		        Dn4 
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_4_022
+// 037   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        En4 
+	BYTE	W06
+// 038   ----------------------------------------
+	BYTE		TIE     Fn3   v076
+	BYTE		TIE     Dn4 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     As3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 040   ----------------------------------------
+	BYTE		TIE     An3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Fn3 
+	BYTE		        An3 
+	BYTE		        Cn4 
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_4_020
+// 043   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+	BYTE		        Dn4 
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_4_022
+// 045   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        En4 
+	BYTE	W06
+// 046   ----------------------------------------
+	BYTE		N96     Fn3   v076
+	BYTE		N96     Dn4 
+	BYTE	W96
+	BYTE		EOT     As3 
+// 047   ----------------------------------------
+	BYTE		PAN     c_v-64
+	BYTE		N90     Fn3 
+	BYTE		N90     Bn3 
+	BYTE		N90     Dn4 
+	BYTE	W01
+	BYTE		PAN     c_v-63
+	BYTE	W02
+	BYTE		        c_v-62
+	BYTE	W01
+	BYTE		        c_v-61
+	BYTE	W02
+	BYTE		        c_v-60
+	BYTE	W01
+	BYTE		        c_v-59
+	BYTE	W02
+	BYTE		        c_v-58
+	BYTE	W01
+	BYTE		        c_v-57
+	BYTE	W02
+	BYTE		        c_v-56
+	BYTE	W01
+	BYTE		        c_v-55
+	BYTE	W02
+	BYTE		        c_v-54
+	BYTE	W01
+	BYTE		        c_v-53
+	BYTE	W02
+	BYTE		        c_v-52
+	BYTE	W01
+	BYTE		        c_v-51
+	BYTE	W02
+	BYTE		        c_v-50
+	BYTE	W01
+	BYTE		        c_v-49
+	BYTE	W02
+	BYTE		        c_v-48
+	BYTE	W01
+	BYTE		        c_v-47
+	BYTE	W02
+	BYTE		        c_v-46
+	BYTE	W01
+	BYTE		        c_v-45
+	BYTE	W02
+	BYTE		        c_v-44
+	BYTE	W01
+	BYTE		        c_v-43
+	BYTE	W02
+	BYTE		        c_v-42
+	BYTE	W01
+	BYTE		        c_v-41
+	BYTE	W02
+	BYTE		        c_v-40
+	BYTE	W01
+	BYTE		        c_v-39
+	BYTE	W02
+	BYTE		        c_v-38
+	BYTE	W01
+	BYTE		        c_v-37
+	BYTE	W02
+	BYTE		        c_v-36
+	BYTE	W01
+	BYTE		        c_v-35
+	BYTE	W02
+	BYTE		        c_v-34
+	BYTE	W01
+	BYTE		        c_v-33
+	BYTE	W02
+	BYTE		        c_v-32
+	BYTE	W01
+	BYTE		        c_v-31
+	BYTE	W02
+	BYTE		        c_v-30
+	BYTE	W01
+	BYTE		        c_v-29
+	BYTE	W02
+	BYTE		        c_v-28
+	BYTE	W01
+	BYTE		        c_v-27
+	BYTE	W02
+	BYTE		        c_v-26
+	BYTE	W01
+	BYTE		        c_v-25
+	BYTE	W02
+	BYTE		        c_v-24
+	BYTE	W01
+	BYTE		        c_v-23
+	BYTE	W02
+	BYTE		        c_v-22
+	BYTE	W01
+	BYTE		        c_v-21
+	BYTE	W02
+	BYTE		        c_v-20
+	BYTE	W01
+	BYTE		        c_v-19
+	BYTE	W02
+	BYTE		        c_v-18
+	BYTE	W01
+	BYTE		        c_v-17
+	BYTE	W02
+	BYTE		        c_v-16
+	BYTE	W01
+	BYTE		        c_v-15
+	BYTE	W02
+	BYTE		        c_v-14
+	BYTE	W01
+	BYTE		        c_v-13
+	BYTE	W02
+	BYTE		        c_v-12
+	BYTE	W01
+	BYTE		        c_v-11
+	BYTE	W02
+	BYTE		        c_v-10
+	BYTE	W01
+	BYTE		        c_v-9
+	BYTE	W02
+	BYTE		        c_v-8
+	BYTE	W01
+	BYTE		        c_v-7
+	BYTE	W02
+	BYTE		        c_v-6
+	BYTE	W01
+	BYTE		        c_v-5
+	BYTE	W02
+	BYTE		        c_v-4
+	BYTE	W01
+	BYTE		        c_v-3
+	BYTE	W02
+	BYTE		        c_v-2
+	BYTE	W01
+	BYTE		        c_v-1
+	BYTE	W02
+	BYTE	GoTo
+	 POIN2	AnthemForAeteria_4_B1
+AnthemForAeteria_4_B2:
+// 048   ----------------------------------------
+	BYTE		PAN     c_v+0
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+AnthemForAeteria_5:
+	BYTE	KEYSH   AnthemForAeteria_key+0
+AnthemForAeteria_5_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   47
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*AnthemForAeteria_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N02     Cn2   v004
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v008
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v012
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+// 001   ----------------------------------------
+AnthemForAeteria_5_001:
+	BYTE		N02     Cn2   v012
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v016
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v020
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v024
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v028
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v032
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v036
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v040
+	BYTE	W03
+	BYTE	PEND
+// 002   ----------------------------------------
+AnthemForAeteria_5_002:
+	BYTE		N02     Cn2   v040
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v044
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v048
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v052
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v056
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v060
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v064
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v068
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v072
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v076
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE	PEND
+// 003   ----------------------------------------
+AnthemForAeteria_5_003:
+	BYTE		N02     Cn2   v080
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v084
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v088
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v092
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v096
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v100
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v104
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v108
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v112
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v116
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v120
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v124
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE	PEND
+// 004   ----------------------------------------
+AnthemForAeteria_5_004:
+	BYTE		N42     As1   v127
+	BYTE	W48
+	BYTE		        Fn1 
+	BYTE	W48
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_5_004
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_5_004
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_5_004
+// 008   ----------------------------------------
+	BYTE		N02     Cn2   v004
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v008
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        Cn2   v012
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_5_001
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_5_002
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_5_003
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_5_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_5_004
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_5_004
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_5_004
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE		N02     As1   v004
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v008
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v012
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v016
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v020
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v024
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v028
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v032
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v036
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+// 031   ----------------------------------------
+	BYTE		        As1   v040
+	BYTE	W03
+	BYTE		        As1   v044
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v048
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v052
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v056
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v060
+	BYTE	W03
+	BYTE		        As1   v064
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v068
+	BYTE	W03
+	BYTE		        As1   v072
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v076
+	BYTE	W03
+	BYTE		        As1   v080
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v084
+	BYTE	W03
+	BYTE		        As1   v088
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v092
+	BYTE	W03
+	BYTE		        As1   v096
+	BYTE	W03
+	BYTE		        As1   v100
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v104
+	BYTE	W03
+	BYTE		        As1   v108
+	BYTE	W03
+	BYTE		        As1   v112
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v116
+	BYTE	W03
+	BYTE		        As1   v120
+	BYTE	W03
+	BYTE		        As1   v124
+	BYTE	W03
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	AnthemForAeteria_5_B1
+AnthemForAeteria_5_B2:
+// 048   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.6) ****************//
+
+AnthemForAeteria_6:
+	BYTE	KEYSH   AnthemForAeteria_key+0
+AnthemForAeteria_6_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   127
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*AnthemForAeteria_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N90     An1   v127
+	BYTE		N90     Bn1 
+	BYTE		N90     Cn2 
+	BYTE		N90     Dn2 
+	BYTE		N90     An2 
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+AnthemForAeteria_6_004:
+	BYTE		N90     An1   v127
+	BYTE		N90     Bn1 
+	BYTE		N90     Cn2 
+	BYTE		N90     Dn2 
+	BYTE		N90     An2 
+	BYTE	W96
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_004
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_004
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_004
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_004
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_004
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+AnthemForAeteria_6_032:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		        Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     Gs1 
+	BYTE	W12
+	BYTE	PEND
+// 033   ----------------------------------------
+AnthemForAeteria_6_033:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE	PEND
+// 034   ----------------------------------------
+AnthemForAeteria_6_034:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		        Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     Gs1 
+	BYTE	W12
+	BYTE	PEND
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_033
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_034
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_033
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_034
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_033
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_032
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_033
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_034
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_033
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_034
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_033
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_034
+// 047   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemForAeteria_6_033
+	BYTE	GoTo
+	 POIN2	AnthemForAeteria_6_B1
+AnthemForAeteria_6_B2:
+// 048   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 7 (Midi-Chn.7) ****************//
+
+AnthemForAeteria_7:
+	BYTE	KEYSH   AnthemForAeteria_key+0
+AnthemForAeteria_7_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   48
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     117*AnthemForAeteria_mvl/mxv
+	BYTE		PAN     c_v-10
+	BYTE		TIE     Cn2   v127
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 004   ----------------------------------------
+	BYTE		TIE     As1 
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 008   ----------------------------------------
+	BYTE		TIE     Cn2 
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 012   ----------------------------------------
+	BYTE		TIE     As1 
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 016   ----------------------------------------
+	BYTE		TIE     Fn1 
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 018   ----------------------------------------
+	BYTE		TIE     Cn2 
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 020   ----------------------------------------
+	BYTE		TIE     An1 
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 022   ----------------------------------------
+	BYTE		TIE     Gn1 
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 024   ----------------------------------------
+	BYTE		TIE     Fn1 
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 026   ----------------------------------------
+	BYTE		TIE     Cn2 
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 028   ----------------------------------------
+	BYTE		TIE     An1 
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 030   ----------------------------------------
+	BYTE		TIE     Gn1 
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 032   ----------------------------------------
+	BYTE		TIE     Fn1 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 034   ----------------------------------------
+	BYTE		N96     Dn1 
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE		        Fs1 
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE		        En1 
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE		        Gn1 
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE		TIE     As1 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 040   ----------------------------------------
+	BYTE		TIE     Fn1 
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 042   ----------------------------------------
+	BYTE		N96     Dn1 
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE		        Fs1 
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE		        En1 
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE		        Gn1 
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE		        As1 
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE		N90     Bn1 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	AnthemForAeteria_7_B1
+AnthemForAeteria_7_B2:
+// 048   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 8 (Midi-Chn.8) ****************//
+
+AnthemForAeteria_8:
+	BYTE	KEYSH   AnthemForAeteria_key+0
+AnthemForAeteria_8_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   81
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     119*AnthemForAeteria_mvl/mxv
+	BYTE		PAN     c_v+5
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE		N48     Gn4   v127
+	BYTE	W48
+	BYTE		N24     An4 
+	BYTE	W24
+	BYTE		        As4 
+	BYTE	W24
+// 016   ----------------------------------------
+	BYTE		N72     An4 
+	BYTE	W72
+	BYTE		N24     Fn4 
+	BYTE	W24
+// 017   ----------------------------------------
+	BYTE		N48     Cn4 
+	BYTE	W48
+	BYTE		        An4 
+	BYTE	W48
+// 018   ----------------------------------------
+	BYTE		N24   
+	BYTE	W24
+	BYTE		        As4 
+	BYTE	W24
+	BYTE		N90     Gn4 
+	BYTE	W48
+// 019   ----------------------------------------
+	BYTE	W48
+	BYTE		N24     Fn4 
+	BYTE	W24
+	BYTE		        Ds4 
+	BYTE	W24
+// 020   ----------------------------------------
+	BYTE		N72     Dn4 
+	BYTE	W72
+	BYTE		N24     En4 
+	BYTE	W24
+// 021   ----------------------------------------
+	BYTE		N48     Fs4 
+	BYTE	W48
+	BYTE		N24     En4 
+	BYTE	W24
+	BYTE		        Dn4 
+	BYTE	W24
+// 022   ----------------------------------------
+	BYTE		N96     En4 
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE		N90     Gn4 
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE		N24     An4 
+	BYTE	W24
+	BYTE		        Cn4 
+	BYTE	W24
+	BYTE		N24   
+	BYTE	W24
+	BYTE		        Fn4 
+	BYTE	W24
+// 025   ----------------------------------------
+	BYTE		        An4 
+	BYTE	W24
+	BYTE		        As4 
+	BYTE	W24
+	BYTE		        Cn5 
+	BYTE	W24
+	BYTE		        Fn5 
+	BYTE	W24
+// 026   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE		N48     Ds5 
+	BYTE	W48
+	BYTE		N24     Dn5 
+	BYTE	W24
+	BYTE		N12     Cn5 
+	BYTE	W12
+	BYTE		        As4 
+	BYTE	W12
+// 028   ----------------------------------------
+	BYTE		N48     An4 
+	BYTE	W48
+	BYTE		        Gn4 
+	BYTE	W48
+// 029   ----------------------------------------
+	BYTE		        Fs4 
+	BYTE	W48
+	BYTE		        Dn4 
+	BYTE	W48
+// 030   ----------------------------------------
+	BYTE		N24     En4 
+	BYTE	W24
+	BYTE		        Fn4 
+	BYTE	W24
+	BYTE		        Gn4 
+	BYTE	W24
+	BYTE		        An4 
+	BYTE	W24
+// 031   ----------------------------------------
+	BYTE		        As4 
+	BYTE	W24
+	BYTE		        Cn5 
+	BYTE	W24
+	BYTE		        Dn5 
+	BYTE	W24
+	BYTE		N20     En5 
+	BYTE	W24
+// 032   ----------------------------------------
+	BYTE		TIE     Fn5 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 034   ----------------------------------------
+	BYTE		TIE     Dn5 
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 036   ----------------------------------------
+	BYTE		TIE     En5 
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 038   ----------------------------------------
+	BYTE		TIE     As4 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 040   ----------------------------------------
+	BYTE		TIE     Fn5 
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 042   ----------------------------------------
+	BYTE		TIE     Dn5 
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 044   ----------------------------------------
+	BYTE		TIE     En5 
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 046   ----------------------------------------
+	BYTE		N96     As4 
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE		N90     Bn4 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	AnthemForAeteria_8_B1
+AnthemForAeteria_8_B2:
+// 048   ----------------------------------------
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+AnthemForAeteria:
+	BYTE	8	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	AnthemForAeteria_pri	// Priority
+	BYTE	AnthemForAeteria_rev	// Reverb.
+
+	POIN2	AnthemForAeteria_grp
+
+	POIN2	AnthemForAeteria_1
+	POIN2	AnthemForAeteria_2
+	POIN2	AnthemForAeteria_3
+	POIN2	AnthemForAeteria_4
+	POIN2	AnthemForAeteria_5
+	POIN2	AnthemForAeteria_6
+	POIN2	AnthemForAeteria_7
+	POIN2	AnthemForAeteria_8
+
+	

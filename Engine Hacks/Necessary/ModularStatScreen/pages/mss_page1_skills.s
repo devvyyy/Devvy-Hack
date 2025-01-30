@@ -81,13 +81,13 @@ ldr		r0,[r0,#4]		@str growth getter
 draw_growth_at 19, 6
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#8]		@skl growth getter
-draw_growth_at 27, 8
+draw_growth_at 27, 6
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#12]		@spd growth getter
 draw_growth_at 19, 8
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#16]		@luk growth getter
-draw_growth_at 27, 6
+draw_growth_at 27, 8
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#20]		@def growth getter
 draw_growth_at 19, 10
@@ -105,9 +105,9 @@ b		literalJump2
 ShowStats2: @things in this section are only drawn when not in growths mode
 
 draw_str_bar_at 16, 6                                                                                                             
-draw_skl_bar_at 24, 8                                                     
+draw_skl_bar_at 24, 6                                                    
 draw_spd_bar_at 16, 8                                                        
-draw_luck_bar_at 24, 6                                                       
+draw_luck_bar_at 24, 8                                                       
 draw_def_bar_at 16, 10                                                        
 draw_res_bar_at 24, 10                                                         
 draw_textID_at 13, 12, 0x4f6 @move

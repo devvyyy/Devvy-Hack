@@ -241,11 +241,22 @@ BeginningScene:
 	LOAD1 0x1 TentUnitGaming
 	//LOAD1 0x1 LesNewRecruits
 HardUnits(LunaticUnits,LesNewRecruits)
+
+	BG(0x3e)
+	Text(Ch25Opening1)
+
+	BG(0x3e)
+	Text(Ch25Opening2)
 	ENUN
 	GotoPrepScreen
 	ENDA
 
 EndingScene:
+	BG(0x3e)
+	Text(Ch25Ending1)
+	BG(0x3e)
+	Text(Ch25Ending2)
+
 	MNC2 0xA //2-6
 	NoFade
 	ENDA
