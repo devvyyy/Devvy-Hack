@@ -467,6 +467,7 @@ SVAL 0x1 0x00030000 // sets ai to [0x0,0x3,0x0,0x0]
 CHAI [12,9] // changes the ai of this coordinate
 SVAL 0x1 0x00060400 // sets ai to [0x0,0x6,0x4,0x0]
 CHAI [4,5] // changes the ai of this coordinate
+SetFlag(0x4) //BGM flag
 NoFade
 ENDA
 

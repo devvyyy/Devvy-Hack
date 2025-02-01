@@ -138,29 +138,66 @@ UNIT Aeteria WyvRider 0x1 Level(10, Enemy, 1)     [2,17] 0b 0x0 0x0 0x0 [ShortAx
 	UNIT
 	
 WellingtonRecruit:
+
+CHECK_EVENTID 0x92
+BEQ 0x9000 0xC 0x0
+
 MUSS 0x30
 STAL 33
 Text(Placeholder1)
 MURE 0x2
 CUSA Wellington
+
+REMA
+GOTO 0x9001
+LABEL 0x9000
+
+
+Text(Placeholder2)
+
+LABEL 0x9001
 NoFade
 ENDA
 
 OpalRecruit:
+CHECK_EVENTID 0x92
+BEQ 0x9000 0xC 0x0
+
 MUSS 0x30
 STAL 33
 Text(Placeholder1)
 MURE 0x2
 CUSA Opal
+
+REMA
+GOTO 0x9001
+LABEL 0x9000
+
+
+Text(Placeholder2)
+
+LABEL 0x9001
 NoFade
 ENDA
 
 MesselRecruit:
+CHECK_EVENTID 0x92
+BEQ 0x9000 0xC 0x0
+
 MUSS 0x30
 STAL 33
-Text(Placeholder2)
+Text(Placeholder1)
 MURE 0x2
 CUSA Messel
+
+REMA
+GOTO 0x9001
+LABEL 0x9000
+
+
+Text(Placeholder2)
+
+LABEL 0x9001
 NoFade
 ENDA
 

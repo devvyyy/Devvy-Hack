@@ -44,26 +44,26 @@ ENDA
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0xA, RecruitKatsuGeneric, Katsu, 0x0)
-CharacterEventBothWays(0xA, RecruitKatsuChiff, Chiffon, Katsu)
+CharacterEventBothWays(0xA, RecruitEdithChiff, Chiffon, Edith)
+CharacterEventBothWays(0xB, RecruitEdithJaye, Edith, Jaye)
 //CharacterEventBothWays(0xA, RecruitYufkaVelius, Chiffon, Wulfric)
 	END_MAIN
 	
-RecruitKatsuChiff:
+RecruitEdithChiff:
 MUSS 0x30
 STAL 33
-Text(Placeholder1)
+//Text(ChiffonEdithTalk)
 MURE 0x2
-TurnAlly(Katsu)
+TurnAlly(Edith)
 NoFade
 ENDA
 
-RecruitKatsuGeneric:
+RecruitEdithJaye:
 MUSS 0x30
 STAL 33
-Text(Placeholder1)
+//Text(JayeEdithTalk)
 MURE 0x2
-TurnAlly(Katsu)
+TurnAlly(Edith)
 NoFade
 ENDA
 

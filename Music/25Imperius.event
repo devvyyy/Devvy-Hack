@@ -1,0 +1,2438 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	Imperius_grp  voicegroup000
+	#define	Imperius_pri  0
+	#define	Imperius_rev  176
+	#define	Imperius_mvl  26
+	#define	Imperius_key  0
+	#define	Imperius_tbs  1
+	#define	Imperius_exg  0
+	#define	Imperius_cmp  1
+
+	// .rodata
+	//	Imperius
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+Imperius_1:
+	BYTE	KEYSH   Imperius_key+0
+Imperius_1_B1:
+// 000   ----------------------------------------
+	BYTE	TEMPO   140*Imperius_tbs/2
+	BYTE		VOICE   52
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*Imperius_mvl/mxv
+	BYTE		PAN     c_v-22
+	BYTE		TIE     An3   v076
+	BYTE		TIE     Dn4 
+	BYTE		TIE     Fn4 
+	BYTE		N48     Dn5 
+	BYTE	W48
+	BYTE		        Cn5 
+	BYTE	W48
+// 001   ----------------------------------------
+	BYTE		        As4 
+	BYTE	W48
+	BYTE		        An4 
+	BYTE	W42
+	BYTE		EOT     An3 
+	BYTE	W06
+// 002   ----------------------------------------
+	BYTE		N90     As3 
+	BYTE		N48     As4 
+	BYTE	W48
+	BYTE		        An4 
+	BYTE	W48
+// 003   ----------------------------------------
+	BYTE		N90     Bn3 
+	BYTE		N48     Gn4 
+	BYTE	W48
+	BYTE		EOT     Fn4 
+	BYTE		N42   
+	BYTE	W42
+	BYTE		EOT     Dn4 
+	BYTE	W06
+// 004   ----------------------------------------
+Imperius_1_004:
+	BYTE		N06     Cn4   v076
+	BYTE		N06     En4 
+	BYTE		N06     Gn4 
+	BYTE	W18
+	BYTE		        Cn4 
+	BYTE		N06     En4 
+	BYTE		N06     Gn4 
+	BYTE	W18
+	BYTE		N54     Cn4 
+	BYTE		N54     En4 
+	BYTE		N54     Gn4 
+	BYTE	W60
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_1_004
+// 006   ----------------------------------------
+Imperius_1_006:
+	BYTE		N06     As3   v076
+	BYTE		N06     Dn4 
+	BYTE		N06     Fn4 
+	BYTE		N06     Gn4 
+	BYTE	W18
+	BYTE		        As3 
+	BYTE		N06     Dn4 
+	BYTE		N06     Fn4 
+	BYTE		N06     Gn4 
+	BYTE	W18
+	BYTE		N54     As3 
+	BYTE		N54     Dn4 
+	BYTE		N54     Fn4 
+	BYTE		N54     Gn4 
+	BYTE	W60
+	BYTE	PEND
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_1_006
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_1_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_1_004
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_1_006
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_1_006
+// 012   ----------------------------------------
+	BYTE		N90     Bn3   v076
+	BYTE		N90     Dn4 
+	BYTE		N24     Gn4 
+	BYTE	W24
+	BYTE		        Bn4 
+	BYTE	W24
+	BYTE		        Dn5 
+	BYTE	W24
+	BYTE		        En5 
+	BYTE	W24
+// 013   ----------------------------------------
+	BYTE		N90     An3 
+	BYTE		N90     Dn4 
+	BYTE		N36     Dn5 
+	BYTE	W36
+	BYTE		N12     An4 
+	BYTE	W12
+	BYTE		N48   
+	BYTE	W48
+// 014   ----------------------------------------
+	BYTE		N90     An3 
+	BYTE		N90     Cn4 
+	BYTE		N24     Fn4 
+	BYTE	W24
+	BYTE		        An4 
+	BYTE	W24
+	BYTE		        Bn4 
+	BYTE	W24
+	BYTE		        Cn5 
+	BYTE	W24
+// 015   ----------------------------------------
+	BYTE		N90     Bn3 
+	BYTE		N90     Dn4 
+	BYTE		N36     Bn4 
+	BYTE	W36
+	BYTE		N12     En4 
+	BYTE	W12
+	BYTE		N42   
+	BYTE	W48
+// 016   ----------------------------------------
+	BYTE		N06     Cn4 
+	BYTE		N06     En4 
+	BYTE		N06     Gn4 
+	BYTE	W18
+	BYTE		        Cn4 
+	BYTE		N06     En4 
+	BYTE		N06     Gn4 
+	BYTE	W18
+	BYTE		N54     An3 
+	BYTE		N54     Dn4 
+	BYTE		N54     Fs4 
+	BYTE	W60
+// 017   ----------------------------------------
+	BYTE		N06     Dn4 
+	BYTE		N06     Fn4 
+	BYTE		N06     An4 
+	BYTE	W18
+	BYTE		        Dn4 
+	BYTE		N06     Fn4 
+	BYTE		N06     An4 
+	BYTE	W18
+	BYTE		N54     Bn3 
+	BYTE		N54     En4 
+	BYTE		N54     Gn4 
+	BYTE	W60
+// 018   ----------------------------------------
+	BYTE		TIE     An3 
+	BYTE		TIE     Dn4 
+	BYTE		N90     En4 
+	BYTE		N90     Gn4 
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE		        Fs4 
+	BYTE	W90
+	BYTE		EOT     An3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 020   ----------------------------------------
+	BYTE		N06   
+	BYTE		N06     Fn4 
+	BYTE		N06     Gn4 
+	BYTE		N06     An4 
+	BYTE	W18
+	BYTE		        Dn4 
+	BYTE		N06     Fn4 
+	BYTE		N06     Gn4 
+	BYTE		N06     An4 
+	BYTE	W18
+	BYTE		N54     Dn4 
+	BYTE		N54     Fn4 
+	BYTE		N54     Gn4 
+	BYTE		N54     An4 
+	BYTE	W60
+// 021   ----------------------------------------
+	BYTE		N06     Cn4 
+	BYTE		N06     En4 
+	BYTE		N06     Gn4 
+	BYTE		N06     As4 
+	BYTE	W18
+	BYTE		        Cn4 
+	BYTE		N06     En4 
+	BYTE		N06     Gn4 
+	BYTE		N06     As4 
+	BYTE	W18
+	BYTE		N54     Cn4 
+	BYTE		N54     En4 
+	BYTE		N54     Gn4 
+	BYTE		N54     As4 
+	BYTE	W60
+// 022   ----------------------------------------
+	BYTE		N42     Dn4 
+	BYTE		N42     Fn4 
+	BYTE		N42     As4 
+	BYTE	W48
+	BYTE		        En4 
+	BYTE		N42     Gn4 
+	BYTE		TIE     Cn5 
+	BYTE	W48
+// 023   ----------------------------------------
+	BYTE		N42     Fn4 
+	BYTE		N90     An4 
+	BYTE	W48
+	BYTE		N42     En4 
+	BYTE	W42
+	BYTE		EOT     Cn5 
+	BYTE	W06
+// 024   ----------------------------------------
+	BYTE		N06     Dn4 
+	BYTE		N06     Fn4 
+	BYTE		N06     Gn4 
+	BYTE		N06     An4 
+	BYTE	W18
+	BYTE		        Dn4 
+	BYTE		N06     Fn4 
+	BYTE		N06     Gn4 
+	BYTE		N06     An4 
+	BYTE	W18
+	BYTE		N54     Cn4 
+	BYTE		N54     En4 
+	BYTE		N54     Gn4 
+	BYTE		N54     As4 
+	BYTE	W60
+// 025   ----------------------------------------
+	BYTE		N06     Cn4 
+	BYTE		N06     Dn4 
+	BYTE		N06     Fn4 
+	BYTE		N06     As4 
+	BYTE	W18
+	BYTE		        Cn4 
+	BYTE		N06     Dn4 
+	BYTE		N06     Fn4 
+	BYTE		N06     As4 
+	BYTE	W18
+	BYTE		N54     Cn4 
+	BYTE		N54     Dn4 
+	BYTE		N54     Fn4 
+	BYTE		N54     An4 
+	BYTE	W60
+// 026   ----------------------------------------
+	BYTE		N90     Dn4 
+	BYTE		N90     Fn4 
+	BYTE		N90     As4 
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE		        Dn4 
+	BYTE		N90     Fn4 
+	BYTE		N90     Gn4 
+	BYTE		N90     Bn4 
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE		TIE     En4 
+	BYTE		TIE     Gn4 
+	BYTE		N48     Cn5 
+	BYTE	W48
+	BYTE		        Dn5 
+	BYTE	W48
+// 029   ----------------------------------------
+	BYTE		        En5 
+	BYTE	W48
+	BYTE		N42     Gn5 
+	BYTE	W42
+	BYTE		EOT     En4 
+	BYTE	W06
+// 030   ----------------------------------------
+	BYTE		TIE     Dn4 
+	BYTE		N42     Bn4 
+	BYTE	W48
+	BYTE		        Cn5 
+	BYTE	W48
+// 031   ----------------------------------------
+	BYTE		        Dn5 
+	BYTE	W48
+	BYTE		        En5 
+	BYTE	W42
+	BYTE		EOT     Dn4 
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE	GoTo
+	 POIN2	Imperius_1_B1
+Imperius_1_B2:
+// 032   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+Imperius_2:
+	BYTE	KEYSH   Imperius_key+0
+Imperius_2_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   19
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     122*Imperius_mvl/mxv
+	BYTE		PAN     c_v+6
+	BYTE		N17     Dn2   v127
+	BYTE	W18
+	BYTE		        An1 
+	BYTE	W18
+	BYTE		N20     Dn2 
+	BYTE	W24
+	BYTE		N11     En2 
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        En2 
+	BYTE	W12
+// 001   ----------------------------------------
+	BYTE		N17     Dn2 
+	BYTE	W18
+	BYTE		        An1 
+	BYTE	W18
+	BYTE		N20     Dn2 
+	BYTE	W24
+	BYTE		N11     En2 
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        En2 
+	BYTE	W12
+// 002   ----------------------------------------
+	BYTE		N17     Dn2 
+	BYTE	W18
+	BYTE		        As1 
+	BYTE	W18
+	BYTE		N20     Dn2 
+	BYTE	W24
+	BYTE		N11     En2 
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        En2 
+	BYTE	W12
+// 003   ----------------------------------------
+	BYTE		N17     Dn2 
+	BYTE	W18
+	BYTE		        Bn1 
+	BYTE	W18
+	BYTE		N32     Dn2 
+	BYTE	W36
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        Bn1 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		        Gn1 
+	BYTE	W06
+// 004   ----------------------------------------
+Imperius_2_004:
+	BYTE		N20     Cn2   v127
+	BYTE	W24
+	BYTE		N11     Gn1 
+	BYTE	W12
+	BYTE		        Cn2 
+	BYTE	W36
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_2_004
+// 006   ----------------------------------------
+Imperius_2_006:
+	BYTE		N20     As1   v127
+	BYTE	W24
+	BYTE		N11     Fn1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W36
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE	PEND
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_2_006
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_2_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_2_004
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_2_006
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_2_006
+// 012   ----------------------------------------
+	BYTE		N15     Gn1   v127
+	BYTE	W16
+	BYTE		        Dn1 
+	BYTE	W16
+	BYTE		        Gn1 
+	BYTE	W16
+	BYTE		        Bn1 
+	BYTE	W16
+	BYTE		        An1 
+	BYTE	W16
+	BYTE		        Gn1 
+	BYTE	W16
+// 013   ----------------------------------------
+	BYTE		        Fs1 
+	BYTE	W16
+	BYTE		        Dn1 
+	BYTE	W16
+	BYTE		        Fs1 
+	BYTE	W16
+	BYTE		        An1 
+	BYTE	W16
+	BYTE		        Gn1 
+	BYTE	W16
+	BYTE		        Fs1 
+	BYTE	W16
+// 014   ----------------------------------------
+	BYTE		        Fn1 
+	BYTE	W16
+	BYTE		        Cn2 
+	BYTE	W16
+	BYTE		        An1 
+	BYTE	W16
+	BYTE		        Fn1 
+	BYTE	W16
+	BYTE		        Gn1 
+	BYTE	W16
+	BYTE		        An1 
+	BYTE	W16
+// 015   ----------------------------------------
+	BYTE		        Gn1 
+	BYTE	W16
+	BYTE		        En1 
+	BYTE	W16
+	BYTE		        Gn1 
+	BYTE	W16
+	BYTE		        Bn1 
+	BYTE	W16
+	BYTE		        Cn2 
+	BYTE	W16
+	BYTE		        Dn2 
+	BYTE	W16
+// 016   ----------------------------------------
+	BYTE		        Gn2 
+	BYTE	W16
+	BYTE		        Fs2 
+	BYTE	W16
+	BYTE		        En2 
+	BYTE	W16
+	BYTE		        Dn2 
+	BYTE	W16
+	BYTE		        Bn1 
+	BYTE	W16
+	BYTE		        An1 
+	BYTE	W16
+// 017   ----------------------------------------
+	BYTE		        Fn1 
+	BYTE	W16
+	BYTE		        Gn1 
+	BYTE	W16
+	BYTE		        An1 
+	BYTE	W16
+	BYTE		        Cn2 
+	BYTE	W16
+	BYTE		        Dn2 
+	BYTE	W16
+	BYTE		        Fn2 
+	BYTE	W16
+// 018   ----------------------------------------
+Imperius_2_018:
+	BYTE		N20     Dn2   v127
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        Dn2 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+	BYTE	PEND
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_2_018
+// 020   ----------------------------------------
+	BYTE		N05     An1   v127
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE		        Fn2 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE		        Fn2 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE		        Fn2 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE		        Fn2 
+	BYTE	W06
+// 021   ----------------------------------------
+	BYTE		        Gn1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE		        Gn1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE		        Gn1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE		        Gn1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+// 022   ----------------------------------------
+	BYTE		N15     As1 
+	BYTE	W16
+	BYTE		        Fn1 
+	BYTE	W16
+	BYTE		        As1 
+	BYTE	W16
+	BYTE		        Cn2 
+	BYTE	W16
+	BYTE		        An1 
+	BYTE	W16
+	BYTE		        Cn2 
+	BYTE	W16
+// 023   ----------------------------------------
+	BYTE		N05     Fn1 
+	BYTE	W06
+	BYTE		        Gn1 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        Fn1 
+	BYTE	W06
+	BYTE		        Gn1 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+// 024   ----------------------------------------
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		        Gn1 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		        Gn1 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE	W06
+	BYTE		        Fn1 
+	BYTE	W06
+	BYTE		        Gn1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+// 025   ----------------------------------------
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Fn1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE	W06
+	BYTE		        Fn1 
+	BYTE	W06
+	BYTE		        Gn1 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE		        Fn2 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		        Fn1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE	W06
+	BYTE		        Fn1 
+	BYTE	W06
+// 026   ----------------------------------------
+	BYTE		N15     As1 
+	BYTE	W16
+	BYTE		        Fn1 
+	BYTE	W16
+	BYTE		        Dn1 
+	BYTE	W16
+	BYTE		        Fn1 
+	BYTE	W16
+	BYTE		        As1 
+	BYTE	W16
+	BYTE		        Dn2 
+	BYTE	W16
+// 027   ----------------------------------------
+	BYTE		        Bn1 
+	BYTE	W16
+	BYTE		        Fn1 
+	BYTE	W16
+	BYTE		        Dn1 
+	BYTE	W16
+	BYTE		        Fn1 
+	BYTE	W16
+	BYTE		        Bn1 
+	BYTE	W16
+	BYTE		        Dn2 
+	BYTE	W16
+// 028   ----------------------------------------
+Imperius_2_028:
+	BYTE		N17     Cn2   v127
+	BYTE	W18
+	BYTE		        Gn1 
+	BYTE	W18
+	BYTE		N20     Cn2 
+	BYTE	W24
+	BYTE		N11     Dn2 
+	BYTE	W12
+	BYTE		        En2 
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W12
+	BYTE	PEND
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_2_028
+// 030   ----------------------------------------
+Imperius_2_030:
+	BYTE		N17     Bn1   v127
+	BYTE	W18
+	BYTE		        Gn1 
+	BYTE	W18
+	BYTE		N20     Bn1 
+	BYTE	W24
+	BYTE		N11     Cn2 
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W12
+	BYTE		        Cn2 
+	BYTE	W12
+	BYTE	PEND
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_2_030
+	BYTE	GoTo
+	 POIN2	Imperius_2_B1
+Imperius_2_B2:
+// 032   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+Imperius_3:
+	BYTE	KEYSH   Imperius_key+0
+Imperius_3_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   61
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*Imperius_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+Imperius_3_004:
+	BYTE	W12
+	BYTE		N04     Cn4   v127
+	BYTE	W12
+	BYTE		        En4 
+	BYTE	W12
+	BYTE		        Fn4 
+	BYTE	W12
+	BYTE		N15     En4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		        As3 
+	BYTE	W16
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE		N42     Cn4 
+	BYTE	W48
+	BYTE		N15     En4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+// 006   ----------------------------------------
+	BYTE		N32     Dn4 
+	BYTE	W36
+	BYTE		N11     En4 
+	BYTE	W12
+	BYTE		TIE     Fn4 
+	BYTE	W48
+// 007   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_3_004
+// 009   ----------------------------------------
+	BYTE		N42     Cn4   v127
+	BYTE	W48
+	BYTE		N15     Gn4 
+	BYTE	W16
+	BYTE		        Fn4 
+	BYTE	W16
+	BYTE		        En4 
+	BYTE	W16
+// 010   ----------------------------------------
+	BYTE		N32     Dn4 
+	BYTE	W36
+	BYTE		N11     Fn4 
+	BYTE	W12
+	BYTE		N90     As4 
+	BYTE	W48
+// 011   ----------------------------------------
+	BYTE	W48
+	BYTE		N15     Gn4 
+	BYTE	W16
+	BYTE		        An4 
+	BYTE	W16
+	BYTE		        As4 
+	BYTE	W16
+// 012   ----------------------------------------
+	BYTE		N32     Gn4 
+	BYTE	W36
+	BYTE		        Dn4 
+	BYTE	W36
+	BYTE		N20     Gn4 
+	BYTE	W24
+// 013   ----------------------------------------
+	BYTE		N15     Fs4 
+	BYTE	W16
+	BYTE		        Gn4 
+	BYTE	W16
+	BYTE		        An4 
+	BYTE	W16
+	BYTE		N15   
+	BYTE	W16
+	BYTE		        Gn4 
+	BYTE	W16
+	BYTE		        Fs4 
+	BYTE	W16
+// 014   ----------------------------------------
+	BYTE		N32     Fn4 
+	BYTE	W36
+	BYTE		        Cn4 
+	BYTE	W36
+	BYTE		N20     Fn4 
+	BYTE	W24
+// 015   ----------------------------------------
+	BYTE		N15     En4 
+	BYTE	W16
+	BYTE		        Fn4 
+	BYTE	W16
+	BYTE		        Gn4 
+	BYTE	W16
+	BYTE		N15   
+	BYTE	W16
+	BYTE		        Fn4 
+	BYTE	W16
+	BYTE		        En4 
+	BYTE	W16
+// 016   ----------------------------------------
+	BYTE		N15   
+	BYTE	W16
+	BYTE		        Fs4 
+	BYTE	W16
+	BYTE		        Gn4 
+	BYTE	W16
+	BYTE		        Fs4 
+	BYTE	W16
+	BYTE		        Gn4 
+	BYTE	W16
+	BYTE		        An4 
+	BYTE	W16
+// 017   ----------------------------------------
+	BYTE		        Cn5 
+	BYTE	W16
+	BYTE		        Bn4 
+	BYTE	W16
+	BYTE		        An4 
+	BYTE	W16
+	BYTE		        Gn4 
+	BYTE	W16
+	BYTE		        Fn4 
+	BYTE	W16
+	BYTE		        En4 
+	BYTE	W16
+// 018   ----------------------------------------
+	BYTE		TIE     Dn4 
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 020   ----------------------------------------
+	BYTE		PAN     c_v+32
+	BYTE		N06     Dn3   v056
+	BYTE		N06     Fn3 
+	BYTE		N06     Gn3 
+	BYTE		N06     An3 
+	BYTE	W18
+	BYTE		        Dn3 
+	BYTE		N06     Fn3 
+	BYTE		N06     Gn3 
+	BYTE		N06     An3 
+	BYTE	W18
+	BYTE		N54     Dn3 
+	BYTE		N54     Fn3 
+	BYTE		N54     Gn3 
+	BYTE		N54     An3 
+	BYTE	W60
+// 021   ----------------------------------------
+	BYTE		N06     Cn3 
+	BYTE		N06     En3 
+	BYTE		N06     Gn3 
+	BYTE		N06     As3 
+	BYTE	W18
+	BYTE		        Cn3 
+	BYTE		N06     En3 
+	BYTE		N06     Gn3 
+	BYTE		N06     As3 
+	BYTE	W18
+	BYTE		N54     Cn3 
+	BYTE		N54     En3 
+	BYTE		N54     Gn3 
+	BYTE		N54     As3 
+	BYTE	W60
+// 022   ----------------------------------------
+	BYTE		N42     Dn3 
+	BYTE		N42     Fn3 
+	BYTE		N42     As3 
+	BYTE	W48
+	BYTE		        En3 
+	BYTE		N42     Gn3 
+	BYTE		TIE     Cn4 
+	BYTE	W48
+// 023   ----------------------------------------
+	BYTE		N42     Fn3 
+	BYTE		N90     An3 
+	BYTE	W48
+	BYTE		N42     En3 
+	BYTE	W42
+	BYTE		EOT     Cn4 
+	BYTE	W06
+// 024   ----------------------------------------
+	BYTE		N06     Dn3 
+	BYTE		N06     Fn3 
+	BYTE		N06     Gn3 
+	BYTE		N06     An3 
+	BYTE	W18
+	BYTE		        Dn3 
+	BYTE		N06     Fn3 
+	BYTE		N06     Gn3 
+	BYTE		N06     An3 
+	BYTE	W18
+	BYTE		N54     Cn3 
+	BYTE		N54     En3 
+	BYTE		N54     Gn3 
+	BYTE		N54     As3 
+	BYTE	W60
+// 025   ----------------------------------------
+	BYTE		N06     Cn3 
+	BYTE		N06     Dn3 
+	BYTE		N06     Fn3 
+	BYTE		N06     As3 
+	BYTE	W18
+	BYTE		        Cn3 
+	BYTE		N06     Dn3 
+	BYTE		N06     Fn3 
+	BYTE		N06     As3 
+	BYTE	W18
+	BYTE		N54     Cn3 
+	BYTE		N54     Dn3 
+	BYTE		N54     Fn3 
+	BYTE		N54     An3 
+	BYTE	W60
+// 026   ----------------------------------------
+	BYTE		N90     Dn3 
+	BYTE		N90     Fn3 
+	BYTE		N90     As3 
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE		        Dn3 
+	BYTE		N90     Fn3 
+	BYTE		N90     Gn3 
+	BYTE		N90     Bn3 
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	Imperius_3_B1
+Imperius_3_B2:
+// 032   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+Imperius_4:
+	BYTE	KEYSH   Imperius_key+0
+Imperius_4_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   81
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-19
+	BYTE		VOL     117*Imperius_mvl/mxv
+	BYTE		N05     Fn3   v076
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+// 001   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+// 002   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+// 003   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+// 004   ----------------------------------------
+Imperius_4_004:
+	BYTE		N05     Gn3   v076
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_4_004
+// 006   ----------------------------------------
+Imperius_4_006:
+	BYTE		N05     Fn3   v076
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE	PEND
+// 007   ----------------------------------------
+Imperius_4_007:
+	BYTE		N05     Fn3   v076
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_4_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_4_004
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_4_006
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_4_007
+// 012   ----------------------------------------
+	BYTE		N05     Gn3   v076
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+// 013   ----------------------------------------
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+// 014   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+// 015   ----------------------------------------
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+// 016   ----------------------------------------
+	BYTE		N06     Cn3 
+	BYTE		N06     En3 
+	BYTE		N06     Gn3 
+	BYTE	W18
+	BYTE		        Cn3 
+	BYTE		N06     En3 
+	BYTE		N06     Gn3 
+	BYTE	W18
+	BYTE		N54     An2 
+	BYTE		N54     Dn3 
+	BYTE		N54     Fs3 
+	BYTE	W60
+// 017   ----------------------------------------
+	BYTE		N06     Dn3 
+	BYTE		N06     Fn3 
+	BYTE		N06     An3 
+	BYTE	W18
+	BYTE		        Dn3 
+	BYTE		N06     Fn3 
+	BYTE		N06     An3 
+	BYTE	W18
+	BYTE		N54     Bn2 
+	BYTE		N54     En3 
+	BYTE		N54     Gn3 
+	BYTE	W60
+// 018   ----------------------------------------
+	BYTE		TIE     An2 
+	BYTE		TIE     Dn3 
+	BYTE		N90     En3 
+	BYTE		N90     Gn3 
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE		        Fs3 
+	BYTE	W90
+	BYTE		EOT     An2 
+	BYTE		        Dn3 
+	BYTE	W06
+// 020   ----------------------------------------
+	BYTE		N42     Dn5   v127
+	BYTE	W48
+	BYTE		N15     Fn5 
+	BYTE	W16
+	BYTE		        En5 
+	BYTE	W16
+	BYTE		        Dn5 
+	BYTE	W16
+// 021   ----------------------------------------
+	BYTE		N05     Cn5 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		N15     En5 
+	BYTE	W16
+	BYTE		        Dn5 
+	BYTE	W16
+	BYTE		        Cn5 
+	BYTE	W16
+// 022   ----------------------------------------
+	BYTE		        As4 
+	BYTE	W16
+	BYTE		        Cn5 
+	BYTE	W16
+	BYTE		        Dn5 
+	BYTE	W16
+	BYTE		        Cn5 
+	BYTE	W16
+	BYTE		        Dn5 
+	BYTE	W16
+	BYTE		        En5 
+	BYTE	W16
+// 023   ----------------------------------------
+	BYTE		N05     Fn5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Fn5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        En5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+// 024   ----------------------------------------
+	BYTE		N15     Dn5 
+	BYTE	W16
+	BYTE		        En5 
+	BYTE	W16
+	BYTE		        Fn5 
+	BYTE	W16
+	BYTE		N42     Cn5 
+	BYTE	W48
+// 025   ----------------------------------------
+	BYTE		N15     As4 
+	BYTE	W16
+	BYTE		        Cn5 
+	BYTE	W16
+	BYTE		        Dn5 
+	BYTE	W16
+	BYTE		N42     An4 
+	BYTE	W48
+// 026   ----------------------------------------
+	BYTE		N20     As4 
+	BYTE	W24
+	BYTE		        Dn5 
+	BYTE	W24
+	BYTE		        Fn5 
+	BYTE	W24
+	BYTE		        Dn5 
+	BYTE	W24
+// 027   ----------------------------------------
+	BYTE		        Bn4 
+	BYTE	W24
+	BYTE		        Dn5 
+	BYTE	W24
+	BYTE		        Fn5 
+	BYTE	W24
+	BYTE		N05     Dn5 
+	BYTE	W06
+	BYTE		        Bn4   v116
+	BYTE	W06
+	BYTE		        Gn4   v100
+	BYTE	W06
+	BYTE		        Dn4   v088
+	BYTE	W06
+// 028   ----------------------------------------
+Imperius_4_028:
+	BYTE		N05     Cn4   v076
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE	PEND
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_4_028
+// 030   ----------------------------------------
+Imperius_4_030:
+	BYTE		N05     Bn3   v076
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE	PEND
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_4_030
+	BYTE	GoTo
+	 POIN2	Imperius_4_B1
+Imperius_4_B2:
+// 032   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+Imperius_5:
+	BYTE	KEYSH   Imperius_key+0
+Imperius_5_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   127
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*Imperius_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+// 001   ----------------------------------------
+Imperius_5_001:
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_001
+// 003   ----------------------------------------
+Imperius_5_003:
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fn1 
+	BYTE		N05     Dn2 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gn1 
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE		N05     Bn1 
+	BYTE	W06
+	BYTE		        Gn1 
+	BYTE		N05     An1 
+	BYTE	W06
+	BYTE	PEND
+// 004   ----------------------------------------
+Imperius_5_004:
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 005   ----------------------------------------
+Imperius_5_005:
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_004
+// 007   ----------------------------------------
+Imperius_5_007:
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gn1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE		N05     Bn1 
+	BYTE	W06
+	BYTE		        Gn1 
+	BYTE		N05     An1 
+	BYTE	W06
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_005
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_004
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_007
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_005
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_005
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_005
+// 016   ----------------------------------------
+Imperius_5_016:
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE		N05     Bn1 
+	BYTE	W06
+	BYTE		        Gn1 
+	BYTE		N05     An1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE		N05     Bn1 
+	BYTE	W06
+	BYTE		        Gn1 
+	BYTE		N05     An1 
+	BYTE	W06
+	BYTE	PEND
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_016
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_004
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_007
+// 020   ----------------------------------------
+Imperius_5_020:
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE	PEND
+// 021   ----------------------------------------
+Imperius_5_021:
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE	PEND
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_021
+// 023   ----------------------------------------
+Imperius_5_023:
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE	PEND
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_020
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_021
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_021
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_023
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_001
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_001
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_001
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_5_003
+	BYTE	GoTo
+	 POIN2	Imperius_5_B1
+Imperius_5_B2:
+// 032   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.6) ****************//
+
+Imperius_6:
+	BYTE	KEYSH   Imperius_key+0
+Imperius_6_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   47
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+31
+	BYTE		VOL     127*Imperius_mvl/mxv
+	BYTE		N24     As2   v084
+	BYTE	W72
+	BYTE		N12   
+	BYTE	W12
+	BYTE		N12   
+	BYTE	W12
+// 001   ----------------------------------------
+Imperius_6_001:
+	BYTE		N24     As2   v084
+	BYTE	W24
+	BYTE		N24   
+	BYTE	W72
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE	W72
+	BYTE		N24   
+	BYTE	W24
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_001
+// 004   ----------------------------------------
+Imperius_6_004:
+	BYTE		N24     As2   v084
+	BYTE	W72
+	BYTE		N12   
+	BYTE	W12
+	BYTE		N12   
+	BYTE	W12
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_001
+// 006   ----------------------------------------
+	BYTE	W72
+	BYTE		N24     As2   v084
+	BYTE	W24
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_001
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_001
+// 010   ----------------------------------------
+	BYTE	W72
+	BYTE		N24     As2   v084
+	BYTE	W24
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_001
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_001
+// 014   ----------------------------------------
+	BYTE	W72
+	BYTE		N24     As2   v084
+	BYTE	W24
+// 015   ----------------------------------------
+	BYTE		N12     As2   v072
+	BYTE	W12
+	BYTE		        Gs2 
+	BYTE	W12
+	BYTE		        As2   v060
+	BYTE	W12
+	BYTE		        Gs2   v048
+	BYTE	W24
+	BYTE		        As2   v060
+	BYTE	W12
+	BYTE		        As2   v072
+	BYTE	W12
+	BYTE		        As2   v084
+	BYTE	W12
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_004
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_001
+// 018   ----------------------------------------
+	BYTE	W72
+	BYTE		N24     As2   v084
+	BYTE	W24
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_001
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_004
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_001
+// 022   ----------------------------------------
+	BYTE	W72
+	BYTE		N24     As2   v084
+	BYTE	W24
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_001
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_004
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_001
+// 026   ----------------------------------------
+	BYTE	W72
+	BYTE		N24     As2   v084
+	BYTE	W24
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_001
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_004
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	Imperius_6_001
+// 030   ----------------------------------------
+	BYTE	W72
+	BYTE		N24     As2   v084
+	BYTE	W24
+// 031   ----------------------------------------
+	BYTE		N12   
+	BYTE	W12
+	BYTE		        Gs2   v072
+	BYTE	W12
+	BYTE		        As2   v060
+	BYTE	W12
+	BYTE		        Gs2   v048
+	BYTE	W24
+	BYTE		        As2   v060
+	BYTE	W12
+	BYTE		        As2   v072
+	BYTE	W12
+	BYTE		        As2   v084
+	BYTE	W12
+	BYTE	GoTo
+	 POIN2	Imperius_6_B1
+Imperius_6_B2:
+// 032   ----------------------------------------
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+Imperius:
+	BYTE	6	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	Imperius_pri	// Priority
+	BYTE	Imperius_rev	// Reverb.
+
+	POIN2	Imperius_grp
+
+	POIN2	Imperius_1
+	POIN2	Imperius_2
+	POIN2	Imperius_3
+	POIN2	Imperius_4
+	POIN2	Imperius_5
+	POIN2	Imperius_6
+
+	

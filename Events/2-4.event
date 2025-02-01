@@ -41,10 +41,28 @@ ENDA
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0xA, RecruitEdithChiff, Chiffon, Edith)
-CharacterEventBothWays(0xB, RecruitEdithJaye, Edith, Jaye)
+CharacterEventBothWays(0xA, RecruitKatsuGeneric, Katsu, 0x0)
+CharacterEventBothWays(0xA, RecruitKatsuChiff, Chiffon, Katsu)
 //CharacterEventBothWays(0xC, RecruitMooseChiff, Chiffon, Moose)
 	END_MAIN
+	
+RecruitKatsuChiff:
+MUSS 0x30
+STAL 33
+Text(Placeholder1)
+MURE 0x2
+TurnAlly(Katsu)
+NoFade
+ENDA
+
+RecruitKatsuGeneric:
+MUSS 0x30
+STAL 33
+Text(Placeholder1)
+MURE 0x2
+TurnAlly(Katsu)
+NoFade
+ENDA
 	
 RecruitMooseChiff:
 MUSS 0x30
@@ -52,24 +70,6 @@ STAL 33
 //Text(ChiffonMooseTalk)
 MURE 0x2
 TurnAlly(Moose)
-NoFade
-ENDA
-	
-RecruitEdithChiff:
-MUSS 0x30
-STAL 33
-//Text(ChiffonEdithTalk)
-MURE 0x2
-TurnAlly(Edith)
-NoFade
-ENDA
-
-RecruitEdithJaye:
-MUSS 0x30
-STAL 33
-//Text(JayeEdithTalk)
-MURE 0x2
-TurnAlly(Edith)
 NoFade
 ENDA
 
@@ -212,6 +212,10 @@ UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [22,0] 0 0 1 REDA22R0 [0xf0,Pain,
 
 EnemyUnits: //InfantrySoul, CavSoul, FlierSoul, ArmorSoul, MagSoul, PromoSoul, StealSoul
 
+UNIT 0xCF PegRider 0x1 Level(9, Enemy, 1)     [15,21] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
+UNIT 0xCF PegRider 0x1 Level(9, Enemy, 1)     [15,21] 0b 0x0 0x0 0x0 [IronLance] StallOneTurnAI
+UNIT 0x2 PegRider 0x1 Level(9, Enemy, 1)     [15,21] 0b 0x0 0x0 0x0 [SapphireLance] StallOneTurnAI
+
 UNIT Aeteria Fighter 0x1 Level(9, Enemy, 1)     [10,17] 0b 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
 UNIT Aeteria Archer 0x1 Level(9, Enemy, 1)     [6,8] 0b 0x0 0x0 0x0 [IronBow] AttackInRangeAI
 UNIT Aeteria Archer 0x1 Level(10, Enemy, 1)     [6,19] 0b 0x0 0x0 0x0 [ShortBow] BossAI
@@ -239,7 +243,6 @@ UNIT Aeteria Soldier 0x1 Level(9, Enemy, 1)     [10,13] 0b 0x0 0x0 0x0 [IronLanc
 UNIT Aeteria Fighter 0x1 Level(9, Enemy, 1)     [22,8] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
 UNIT Aeteria Soldier 0x1 Level(9, Enemy, 1)     [16,19] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
 UNIT Aeteria SCav 0x1 Level(9, Enemy, 1)     [17,22] 0b 0x0 0x0 0x0 [IronSword] StallOneTurnAI
-UNIT Aeteria PegRider 0x1 Level(9, Enemy, 1)     [15,21] 0b 0x0 0x0 0x0 [SapphireLance] StallOneTurnAI
 UNIT Aeteria Thaumaturge 0x1 Level(10, Enemy, 1)     [18,17] 0b 0x0 0x0 0x0 [Thunder] ChargeAI
 UNIT Aeteria Hero 0x1 Level(4, Enemy, 1)     [19,20] 0b 0x0 0x0 0x0 [SteelSword,IronAxe] AttackInRangeAI
 UNIT Aeteria Halberdier 0x1 Level(5, Enemy, 1)     [22,20] DropItem 0x0 0x0 0x0 [Spear,Halberd,Elixir] BossAI

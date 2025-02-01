@@ -1,0 +1,1698 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	SnowfallEnemy_grp  voicegroup000
+	#define	SnowfallEnemy_pri  0
+	#define	SnowfallEnemy_rev  30
+	#define	SnowfallEnemy_mvl  28
+	#define	SnowfallEnemy_key  0
+	#define	SnowfallEnemy_tbs  1
+	#define	SnowfallEnemy_exg  0
+	#define	SnowfallEnemy_cmp  1
+
+	// .rodata
+	//	SnowfallEnemy
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+SnowfallEnemy_1:
+	BYTE	KEYSH   SnowfallEnemy_key+0
+SnowfallEnemy_1_B1:
+// 000   ----------------------------------------
+	BYTE	TEMPO   165*SnowfallEnemy_tbs/2
+	BYTE		VOICE   81
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*SnowfallEnemy_mvl/mxv
+	BYTE		PAN     c_v-10
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+SnowfallEnemy_1_008:
+	BYTE		N32     Ds3   v127
+	BYTE	W36
+	BYTE		        As2 
+	BYTE	W36
+	BYTE		N20     Ds3 
+	BYTE	W24
+	BYTE	PEND
+// 009   ----------------------------------------
+SnowfallEnemy_1_009:
+	BYTE		N32     Ds3   v127
+	BYTE	W36
+	BYTE		N05     Fn3 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		N15     Dn3 
+	BYTE	W16
+	BYTE		        Cn3 
+	BYTE	W16
+	BYTE		        As2 
+	BYTE	W16
+	BYTE	PEND
+// 010   ----------------------------------------
+SnowfallEnemy_1_010:
+	BYTE		N32     Cs3   v127
+	BYTE	W36
+	BYTE		        Gs2 
+	BYTE	W36
+	BYTE		N20     Cs3 
+	BYTE	W24
+	BYTE	PEND
+// 011   ----------------------------------------
+SnowfallEnemy_1_011:
+	BYTE		N32     Cn3   v127
+	BYTE	W36
+	BYTE		N11     Gn2 
+	BYTE	W12
+	BYTE		N42   
+	BYTE	W48
+	BYTE	PEND
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_1_008
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_1_009
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_1_010
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_1_011
+// 016   ----------------------------------------
+	BYTE	W72
+// 017   ----------------------------------------
+	BYTE	W72
+// 018   ----------------------------------------
+	BYTE	W72
+// 019   ----------------------------------------
+	BYTE	W72
+// 020   ----------------------------------------
+	BYTE	W72
+// 021   ----------------------------------------
+	BYTE	W72
+// 022   ----------------------------------------
+	BYTE	W72
+// 023   ----------------------------------------
+	BYTE	W72
+// 024   ----------------------------------------
+	BYTE	W72
+// 025   ----------------------------------------
+	BYTE	W72
+// 026   ----------------------------------------
+	BYTE	W72
+// 027   ----------------------------------------
+	BYTE	W72
+// 028   ----------------------------------------
+	BYTE	W72
+// 029   ----------------------------------------
+	BYTE	W72
+// 030   ----------------------------------------
+	BYTE	W72
+// 031   ----------------------------------------
+	BYTE	W72
+// 032   ----------------------------------------
+	BYTE		N16     Gs2   v127
+	BYTE	W16
+	BYTE		        Cn3 
+	BYTE	W16
+	BYTE		        Dn3 
+	BYTE	W16
+	BYTE		        Ds3 
+	BYTE	W16
+	BYTE		        Dn3 
+	BYTE	W16
+	BYTE		N15     Cn3 
+	BYTE	W16
+// 033   ----------------------------------------
+	BYTE		N32     As2 
+	BYTE	W36
+	BYTE		N11     Gs2 
+	BYTE	W12
+	BYTE		N42   
+	BYTE	W48
+// 034   ----------------------------------------
+	BYTE		N16     Ds2 
+	BYTE	W16
+	BYTE		        Gn2 
+	BYTE	W16
+	BYTE		        Gs2 
+	BYTE	W16
+	BYTE		        Cn3 
+	BYTE	W16
+	BYTE		        As2 
+	BYTE	W16
+	BYTE		N15     Gs2 
+	BYTE	W16
+// 035   ----------------------------------------
+	BYTE		N32     Fn2 
+	BYTE	W36
+	BYTE		N11     Cn2 
+	BYTE	W12
+	BYTE		N42   
+	BYTE	W48
+// 036   ----------------------------------------
+	BYTE		N16     Cs2 
+	BYTE	W16
+	BYTE		        Fn2 
+	BYTE	W16
+	BYTE		        Gn2 
+	BYTE	W16
+	BYTE		N42     Gs2 
+	BYTE	W48
+// 037   ----------------------------------------
+	BYTE		N16     Gn2 
+	BYTE	W16
+	BYTE		        Cn3 
+	BYTE	W16
+	BYTE		        Dn3 
+	BYTE	W16
+	BYTE		N42     Ds3 
+	BYTE	W48
+// 038   ----------------------------------------
+	BYTE		N16     Cs3 
+	BYTE	W16
+	BYTE		        As2 
+	BYTE	W16
+	BYTE		N15   
+	BYTE	W16
+	BYTE		N16     Gs2 
+	BYTE	W16
+	BYTE		        Fn2 
+	BYTE	W16
+	BYTE		N15   
+	BYTE	W16
+// 039   ----------------------------------------
+	BYTE		N16     Dn2 
+	BYTE	W16
+	BYTE		        Fn2 
+	BYTE	W16
+	BYTE		        Gs2 
+	BYTE	W16
+	BYTE		        As2 
+	BYTE	W16
+	BYTE		        Cn3 
+	BYTE	W16
+	BYTE		        Dn3 
+	BYTE	W16
+// 040   ----------------------------------------
+	BYTE		TIE     Ds3 
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	GoTo
+	 POIN2	SnowfallEnemy_1_B1
+SnowfallEnemy_1_B2:
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+SnowfallEnemy_2:
+	BYTE	KEYSH   SnowfallEnemy_key+0
+SnowfallEnemy_2_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   55
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*SnowfallEnemy_mvl/mxv
+	BYTE		PAN     c_v+10
+	BYTE		N16     Gs3   v127
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		        Ds4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		N15     Cn4 
+	BYTE	W16
+// 001   ----------------------------------------
+SnowfallEnemy_2_001:
+	BYTE		N32     As3   v127
+	BYTE	W36
+	BYTE		N11     Gs3 
+	BYTE	W12
+	BYTE		N42   
+	BYTE	W48
+	BYTE	PEND
+// 002   ----------------------------------------
+SnowfallEnemy_2_002:
+	BYTE		N16     Ds3   v127
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+	BYTE		        Gs3 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		        As3 
+	BYTE	W16
+	BYTE		N15     Gs3 
+	BYTE	W16
+	BYTE	PEND
+// 003   ----------------------------------------
+SnowfallEnemy_2_003:
+	BYTE		N32     Fn3   v127
+	BYTE	W36
+	BYTE		N11     Cn3 
+	BYTE	W12
+	BYTE		N42   
+	BYTE	W48
+	BYTE	PEND
+// 004   ----------------------------------------
+SnowfallEnemy_2_004:
+	BYTE		N16     Cs3   v127
+	BYTE	W16
+	BYTE		        Fn3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+	BYTE		N42     Gs3 
+	BYTE	W48
+	BYTE	PEND
+// 005   ----------------------------------------
+SnowfallEnemy_2_005:
+	BYTE		N16     Gn3   v127
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		N42     Ds4 
+	BYTE	W48
+	BYTE	PEND
+// 006   ----------------------------------------
+SnowfallEnemy_2_006:
+	BYTE		N16     Cs4   v127
+	BYTE	W16
+	BYTE		        As3 
+	BYTE	W16
+	BYTE		N15   
+	BYTE	W16
+	BYTE		N16     Gs3 
+	BYTE	W16
+	BYTE		        Fn3 
+	BYTE	W16
+	BYTE		N15   
+	BYTE	W16
+	BYTE	PEND
+// 007   ----------------------------------------
+SnowfallEnemy_2_007:
+	BYTE		N16     Dn3   v127
+	BYTE	W16
+	BYTE		        Fn3 
+	BYTE	W16
+	BYTE		        Gs3 
+	BYTE	W16
+	BYTE		        As3 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE		N90     Ds4 
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W72
+// 017   ----------------------------------------
+	BYTE	W72
+// 018   ----------------------------------------
+	BYTE	W72
+// 019   ----------------------------------------
+	BYTE	W72
+// 020   ----------------------------------------
+	BYTE	W72
+// 021   ----------------------------------------
+	BYTE	W72
+// 022   ----------------------------------------
+	BYTE	W72
+// 023   ----------------------------------------
+	BYTE	W72
+// 024   ----------------------------------------
+	BYTE	W72
+// 025   ----------------------------------------
+	BYTE	W72
+// 026   ----------------------------------------
+	BYTE	W72
+// 027   ----------------------------------------
+	BYTE	W72
+// 028   ----------------------------------------
+	BYTE	W72
+// 029   ----------------------------------------
+	BYTE	W72
+// 030   ----------------------------------------
+	BYTE	W72
+// 031   ----------------------------------------
+	BYTE	W72
+// 032   ----------------------------------------
+	BYTE		N16     Gs3 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		        Ds4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		N15     Cn4 
+	BYTE	W16
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_2_001
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_2_002
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_2_003
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_2_004
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_2_005
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_2_006
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_2_007
+// 040   ----------------------------------------
+	BYTE		TIE     Ds4   v127
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	GoTo
+	 POIN2	SnowfallEnemy_2_B1
+SnowfallEnemy_2_B2:
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+SnowfallEnemy_3:
+	BYTE	KEYSH   SnowfallEnemy_key+0
+SnowfallEnemy_3_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   52
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     119*SnowfallEnemy_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N96     Gs1   v127
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE		        Fn1 
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE		        Ds1 
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE		        Dn1 
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE		        Cs1 
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE		        Ds1 
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE		        Fn1 
+	BYTE	W96
+// 007   ----------------------------------------
+SnowfallEnemy_3_007:
+	BYTE		N48     Gs1   v127
+	BYTE	W48
+	BYTE		N24     Gn1 
+	BYTE	W24
+	BYTE		        Fn1 
+	BYTE	W24
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE		N96     Ds1 
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE		        As1 
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE		        Gs1 
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE		N72     Gn1 
+	BYTE	W72
+	BYTE		N24     Fn1 
+	BYTE	W24
+// 012   ----------------------------------------
+	BYTE		N96     Ds1 
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE		        As1 
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE		        Gs1 
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE		N90     Gn1 
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE		N72     Fn1 
+	BYTE	W72
+// 017   ----------------------------------------
+	BYTE		        An1 
+	BYTE	W72
+// 018   ----------------------------------------
+	BYTE		        Gn1 
+	BYTE	W72
+// 019   ----------------------------------------
+	BYTE		        Fn1 
+	BYTE	W72
+// 020   ----------------------------------------
+	BYTE		        Ds1 
+	BYTE	W72
+// 021   ----------------------------------------
+	BYTE		        Fn1 
+	BYTE	W72
+// 022   ----------------------------------------
+	BYTE		        Gn1 
+	BYTE	W72
+// 023   ----------------------------------------
+	BYTE		N48     An1 
+	BYTE	W48
+	BYTE		N24     Gn1 
+	BYTE	W24
+// 024   ----------------------------------------
+	BYTE		N72     Fn1 
+	BYTE	W72
+// 025   ----------------------------------------
+	BYTE		        An1 
+	BYTE	W72
+// 026   ----------------------------------------
+	BYTE		        Gn1 
+	BYTE	W72
+// 027   ----------------------------------------
+	BYTE		        Fn1 
+	BYTE	W72
+// 028   ----------------------------------------
+	BYTE		        Ds1 
+	BYTE	W72
+// 029   ----------------------------------------
+	BYTE		        Gn1 
+	BYTE	W72
+// 030   ----------------------------------------
+	BYTE		        Gs1 
+	BYTE	W72
+// 031   ----------------------------------------
+	BYTE		N66     As1 
+	BYTE	W72
+// 032   ----------------------------------------
+	BYTE		N96     Gs1 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE		        Fn1 
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE		        Ds1 
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE		        Dn1 
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE		        Cs1 
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE		        Ds1 
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE		        Fn1 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_3_007
+// 040   ----------------------------------------
+	BYTE		TIE     Ds1   v127
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	GoTo
+	 POIN2	SnowfallEnemy_3_B1
+SnowfallEnemy_3_B2:
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+SnowfallEnemy_4:
+	BYTE	KEYSH   SnowfallEnemy_key+0
+SnowfallEnemy_4_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   54
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     117*SnowfallEnemy_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		TIE     Gs2   v056
+	BYTE		TIE     Cn3 
+	BYTE		N96     Ds3 
+	BYTE		TIE     Gs3 
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE		N96     Fn3 
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE		        Ds3 
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE		        Dn3 
+	BYTE		N96     Fn3 
+	BYTE	W96
+	BYTE		EOT     Gs2 
+	BYTE		        Cn3 
+	BYTE		        Gs3 
+// 004   ----------------------------------------
+SnowfallEnemy_4_004:
+	BYTE		N96     Gs2   v056
+	BYTE		N96     Cs3 
+	BYTE		N96     Fn3 
+	BYTE		N96     Gs3 
+	BYTE	W96
+	BYTE	PEND
+// 005   ----------------------------------------
+SnowfallEnemy_4_005:
+	BYTE		N96     Gn2   v056
+	BYTE		N96     Cn3 
+	BYTE		N96     Ds3 
+	BYTE		N96     Gn3 
+	BYTE	W96
+	BYTE	PEND
+// 006   ----------------------------------------
+	BYTE		        As2 
+	BYTE		N96     Cs3 
+	BYTE		N96     Fn3 
+	BYTE		N96     Gs3 
+	BYTE		N96     As3 
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE		        As2 
+	BYTE		N96     Dn3 
+	BYTE		N96     Fn3 
+	BYTE		N96     Gs3 
+	BYTE		N96     As3 
+	BYTE	W96
+// 008   ----------------------------------------
+SnowfallEnemy_4_008:
+	BYTE		TIE     As2   v056
+	BYTE		N96     Ds3 
+	BYTE		N96     Gn3 
+	BYTE		TIE     As3 
+	BYTE	W96
+	BYTE	PEND
+// 009   ----------------------------------------
+	BYTE		N96     Dn3 
+	BYTE		N96     Fn3 
+	BYTE	W96
+	BYTE		EOT     As2 
+	BYTE		        As3 
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_4_004
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_4_005
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_4_008
+// 013   ----------------------------------------
+	BYTE		N96     Dn3   v056
+	BYTE		N96     Fn3 
+	BYTE	W96
+	BYTE		EOT     As2 
+	BYTE		        As3 
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_4_004
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_4_005
+// 016   ----------------------------------------
+	BYTE		N24     Dn4   v127
+	BYTE	W24
+	BYTE		        Ds4 
+	BYTE	W24
+	BYTE		        Fn4 
+	BYTE	W24
+// 017   ----------------------------------------
+	BYTE		N48     Cn4 
+	BYTE	W48
+	BYTE		N12     Dn4 
+	BYTE	W12
+	BYTE		        Ds4 
+	BYTE	W12
+// 018   ----------------------------------------
+	BYTE		N36     Dn4 
+	BYTE	W36
+	BYTE		N12     Cn4 
+	BYTE	W12
+	BYTE		N24     As3 
+	BYTE	W24
+// 019   ----------------------------------------
+	BYTE		        Cn4 
+	BYTE	W24
+	BYTE		        Dn4 
+	BYTE	W24
+	BYTE		        Ds4 
+	BYTE	W24
+// 020   ----------------------------------------
+	BYTE		N48     As3 
+	BYTE	W48
+	BYTE		N24     Gn3 
+	BYTE	W24
+// 021   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE	W24
+	BYTE		        As3 
+	BYTE	W24
+	BYTE		        Dn4 
+	BYTE	W24
+// 022   ----------------------------------------
+	BYTE		N48   
+	BYTE	W48
+	BYTE		N12     Ds4 
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+// 023   ----------------------------------------
+	BYTE		N66     Cn4 
+	BYTE	W72
+// 024   ----------------------------------------
+	BYTE		N36     As3 
+	BYTE	W36
+	BYTE		N12     Cn4 
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+	BYTE		        Ds4 
+	BYTE	W12
+// 025   ----------------------------------------
+SnowfallEnemy_4_025:
+	BYTE		N48     Dn4   v127
+	BYTE	W48
+	BYTE		N24     Cn4 
+	BYTE	W24
+	BYTE	PEND
+// 026   ----------------------------------------
+	BYTE		N72     As3 
+	BYTE	W72
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_4_025
+// 028   ----------------------------------------
+	BYTE		N48     As3   v127
+	BYTE	W48
+	BYTE		N12     Cn4 
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+// 029   ----------------------------------------
+	BYTE		N66     Cn4 
+	BYTE	W72
+// 030   ----------------------------------------
+	BYTE		N48     Gs3 
+	BYTE	W48
+	BYTE		N12     As3 
+	BYTE	W12
+	BYTE		        Cn4 
+	BYTE	W12
+// 031   ----------------------------------------
+	BYTE		N66     Dn4 
+	BYTE	W72
+// 032   ----------------------------------------
+	BYTE		N16     Gs3 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		        Ds4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		N15     Cn4 
+	BYTE	W16
+// 033   ----------------------------------------
+	BYTE		N32     As3 
+	BYTE	W36
+	BYTE		N11     Gs3 
+	BYTE	W12
+	BYTE		N42   
+	BYTE	W48
+// 034   ----------------------------------------
+	BYTE		N16     Ds3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+	BYTE		        Gs3 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		        As3 
+	BYTE	W16
+	BYTE		N15     Gs3 
+	BYTE	W16
+// 035   ----------------------------------------
+	BYTE		N32     Fn3 
+	BYTE	W36
+	BYTE		N11     Cn3 
+	BYTE	W12
+	BYTE		N42   
+	BYTE	W48
+// 036   ----------------------------------------
+	BYTE		N16     Cs3 
+	BYTE	W16
+	BYTE		        Fn3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+	BYTE		N42     Gs3 
+	BYTE	W48
+// 037   ----------------------------------------
+	BYTE		N16     Gn3 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		N42     Ds4 
+	BYTE	W48
+// 038   ----------------------------------------
+	BYTE		N16     Cs4 
+	BYTE	W16
+	BYTE		        As3 
+	BYTE	W16
+	BYTE		N15   
+	BYTE	W16
+	BYTE		N16     Gs3 
+	BYTE	W16
+	BYTE		        Fn3 
+	BYTE	W16
+	BYTE		N15   
+	BYTE	W16
+// 039   ----------------------------------------
+	BYTE		N16     Dn3 
+	BYTE	W16
+	BYTE		        Fn3 
+	BYTE	W16
+	BYTE		        Gs3 
+	BYTE	W16
+	BYTE		        As3 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+// 040   ----------------------------------------
+	BYTE		TIE     Ds4 
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	GoTo
+	 POIN2	SnowfallEnemy_4_B1
+SnowfallEnemy_4_B2:
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+SnowfallEnemy_5:
+	BYTE	KEYSH   SnowfallEnemy_key+0
+SnowfallEnemy_5_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   30
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     103*SnowfallEnemy_mvl/mxv
+	BYTE		PAN     c_v-32
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+SnowfallEnemy_5_007:
+	BYTE		N96     As2   v056
+	BYTE		N96     Dn3 
+	BYTE		N96     Fn3 
+	BYTE		N96     Gs3 
+	BYTE		N96     As3 
+	BYTE	W96
+	BYTE	PEND
+// 008   ----------------------------------------
+SnowfallEnemy_5_008:
+	BYTE		TIE     As2   v056
+	BYTE		N96     Ds3 
+	BYTE		N96     Gn3 
+	BYTE		TIE     As3 
+	BYTE	W96
+	BYTE	PEND
+// 009   ----------------------------------------
+	BYTE		N96     Dn3 
+	BYTE		N96     Fn3 
+	BYTE	W96
+	BYTE		EOT     As2 
+	BYTE		        As3 
+// 010   ----------------------------------------
+SnowfallEnemy_5_010:
+	BYTE		N96     Gs2   v056
+	BYTE		N96     Cs3 
+	BYTE		N96     Fn3 
+	BYTE		N96     Gs3 
+	BYTE	W96
+	BYTE	PEND
+// 011   ----------------------------------------
+SnowfallEnemy_5_011:
+	BYTE		N96     Gn2   v056
+	BYTE		N96     Cn3 
+	BYTE		N96     Ds3 
+	BYTE		N96     Gn3 
+	BYTE	W96
+	BYTE	PEND
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_5_008
+// 013   ----------------------------------------
+	BYTE		N96     Dn3   v056
+	BYTE		N96     Fn3 
+	BYTE	W96
+	BYTE		EOT     As2 
+	BYTE		        As3 
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_5_010
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_5_011
+// 016   ----------------------------------------
+SnowfallEnemy_5_016:
+	BYTE		N72     As2   v056
+	BYTE		N72     Dn3 
+	BYTE		N72     Fn3 
+	BYTE		N72     As3 
+	BYTE	W72
+	BYTE	PEND
+// 017   ----------------------------------------
+SnowfallEnemy_5_017:
+	BYTE		N72     An2   v056
+	BYTE		N72     Cn3 
+	BYTE		N72     Fn3 
+	BYTE		N72     An3 
+	BYTE	W72
+	BYTE	PEND
+// 018   ----------------------------------------
+SnowfallEnemy_5_018:
+	BYTE		N72     As2   v056
+	BYTE		N72     Dn3 
+	BYTE		N72     Gn3 
+	BYTE		N72     As3 
+	BYTE	W72
+	BYTE	PEND
+// 019   ----------------------------------------
+SnowfallEnemy_5_019:
+	BYTE		N72     Gs2   v056
+	BYTE		N72     Dn3 
+	BYTE		N72     Fn3 
+	BYTE		N72     Gs3 
+	BYTE	W72
+	BYTE	PEND
+// 020   ----------------------------------------
+	BYTE		        Gn2 
+	BYTE		N72     As2 
+	BYTE		N72     Ds3 
+	BYTE		N72     Gn3 
+	BYTE	W72
+// 021   ----------------------------------------
+	BYTE		        Fn2 
+	BYTE		N72     As2 
+	BYTE		N72     Dn3 
+	BYTE		N72     Fn3 
+	BYTE	W72
+// 022   ----------------------------------------
+	BYTE		        Gn2 
+	BYTE		N72     As2 
+	BYTE		N72     Dn3 
+	BYTE		N72     Gn3 
+	BYTE	W72
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_5_017
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_5_016
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_5_017
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_5_018
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_5_019
+// 028   ----------------------------------------
+	BYTE		N72     Gn2   v056
+	BYTE		N72     As2 
+	BYTE		TIE     Ds3 
+	BYTE		TIE     Gn3 
+	BYTE	W72
+// 029   ----------------------------------------
+	BYTE		        Cn3 
+	BYTE		TIE     Cn4 
+	BYTE	W72
+	BYTE		EOT     Gn3 
+// 030   ----------------------------------------
+	BYTE		TIE     Fn3 
+	BYTE		N72     Gs3 
+	BYTE	W72
+	BYTE		EOT     Cn3 
+	BYTE		        Ds3 
+	BYTE		        Cn4 
+// 031   ----------------------------------------
+	BYTE		N66     As2 
+	BYTE		N66     Dn3 
+	BYTE		N66     As3 
+	BYTE	W66
+	BYTE		EOT     Fn3 
+	BYTE	W06
+// 032   ----------------------------------------
+	BYTE		TIE     Gs2 
+	BYTE		TIE     Cn3 
+	BYTE		N96     Ds3 
+	BYTE		TIE     Gs3 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE		N96     Fn3 
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE		        Ds3 
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE		        Dn3 
+	BYTE		N96     Fn3 
+	BYTE	W96
+	BYTE		EOT     Gs2 
+	BYTE		        Cn3 
+	BYTE		        Gs3 
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_5_010
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_5_011
+// 038   ----------------------------------------
+	BYTE		N96     As2   v056
+	BYTE		N96     Cs3 
+	BYTE		N96     Fn3 
+	BYTE		N96     Gs3 
+	BYTE		N96     As3 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_5_007
+// 040   ----------------------------------------
+	BYTE		TIE     Cn3   v056
+	BYTE		TIE     Ds3 
+	BYTE		TIE     Gn3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Cn3 
+	BYTE		        Ds3 
+	BYTE		        Gn3 
+	BYTE		        Cn4 
+	BYTE	GoTo
+	 POIN2	SnowfallEnemy_5_B1
+SnowfallEnemy_5_B2:
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.8) ****************//
+
+SnowfallEnemy_6:
+	BYTE	KEYSH   SnowfallEnemy_key+0
+SnowfallEnemy_6_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   127
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*SnowfallEnemy_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Bn1 
+	BYTE		N11     Cn2 
+	BYTE		N11     Dn2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+// 001   ----------------------------------------
+SnowfallEnemy_6_001:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_001
+// 003   ----------------------------------------
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Bn1 
+	BYTE		N11     Cn2 
+	BYTE		N11     Dn2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Bn1 
+	BYTE		N11     Cn2 
+	BYTE		N11     Dn2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+// 004   ----------------------------------------
+SnowfallEnemy_6_004:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Bn1 
+	BYTE		N11     Cn2 
+	BYTE		N11     Dn2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_001
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_001
+// 007   ----------------------------------------
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Bn1 
+	BYTE		N11     Cn2 
+	BYTE		N11     Dn2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Bn1 
+	BYTE		N11     Cn2 
+	BYTE		N11     Dn2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+// 008   ----------------------------------------
+SnowfallEnemy_6_008:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Bn1 
+	BYTE		N11     Cn2 
+	BYTE		N11     Dn2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE	PEND
+// 009   ----------------------------------------
+SnowfallEnemy_6_009:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE	PEND
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_009
+// 011   ----------------------------------------
+SnowfallEnemy_6_011:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Bn1 
+	BYTE		N11     Cn2 
+	BYTE		N11     Dn2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Bn1 
+	BYTE		N11     Cn2 
+	BYTE		N11     Dn2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE	PEND
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_008
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_009
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_009
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_011
+// 016   ----------------------------------------
+SnowfallEnemy_6_016:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Cn2 
+	BYTE		N11     Dn2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE	PEND
+// 017   ----------------------------------------
+SnowfallEnemy_6_017:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE	PEND
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_017
+// 019   ----------------------------------------
+SnowfallEnemy_6_019:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE	PEND
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_016
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_017
+// 022   ----------------------------------------
+SnowfallEnemy_6_022:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Bn1 
+	BYTE		N11     Cn2 
+	BYTE		N11     Dn2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE	PEND
+// 023   ----------------------------------------
+	BYTE		N11     Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Bn1 
+	BYTE		N11     Cn2 
+	BYTE		N11     Dn2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_016
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_017
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_017
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_019
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_016
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_017
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_022
+// 031   ----------------------------------------
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Bn1 
+	BYTE		N11     Cn2 
+	BYTE		N11     Dn2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_008
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_009
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_009
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_011
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_008
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_009
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_009
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_011
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnowfallEnemy_6_004
+// 041   ----------------------------------------
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Bn1 
+	BYTE		N11     Cn2 
+	BYTE		N11     Dn2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N42     Bn0 
+	BYTE		N42     Cn1 
+	BYTE		N42     An1 
+	BYTE		N42     Bn1 
+	BYTE		N42     Cn2 
+	BYTE		N42     Dn2 
+	BYTE		N42     An2 
+	BYTE	W42
+	BYTE	GoTo
+	 POIN2	SnowfallEnemy_6_B1
+SnowfallEnemy_6_B2:
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+SnowfallEnemy:
+	BYTE	6	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	SnowfallEnemy_pri	// Priority
+	BYTE	SnowfallEnemy_rev	// Reverb.
+
+	POIN2	SnowfallEnemy_grp
+
+	POIN2	SnowfallEnemy_1
+	POIN2	SnowfallEnemy_2
+	POIN2	SnowfallEnemy_3
+	POIN2	SnowfallEnemy_4
+	POIN2	SnowfallEnemy_5
+	POIN2	SnowfallEnemy_6
+
+	
