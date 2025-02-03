@@ -54,7 +54,7 @@ beq	End
 @ heal amount
 mov r3, #0x14 @this is str/mag
 ldrb 	r3, [r4, r3]
-add r3, #10
+add r3, #5
 
 ldr r6, =0x0202BE4C
 ldr r4, =#0x85 * 0x48 @Player+Enemy+NPC

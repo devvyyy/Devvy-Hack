@@ -905,7 +905,9 @@ We need to evacuate immediately.[AN][ClearFace]
 [R][MoveRight]
 Their forces are thinning[,] but so are we[Beat]![AN]
 [CloseEyes]How?![.6] How could we be so helpless in the[N]
-face of their endless army?![AN][OpenEyes]
+face of their endless army?![AN][OpenEyes][C]
+Every exit is blocked off by hordes[N]
+of Imperial forces![AN]
 
 [ML][LoadAffoSwitch]
 We have no other choice.[.6] Run through the[N]
@@ -924,7 +926,7 @@ Allow me to lead the way![AN]
 [FL][LoadGorlois][L][LoadKing]
 
 [FFR][LoadSelwyn][MoveMidRight]
-Victory is ours![.6] Now[,] surrender--[.4][N]
+Victory is ours.[.6] Now[,] surrender--[.4][N]
 your life is forfeit.[AN]
 
 [FL][MoveFarLeft]
@@ -942,8 +944,8 @@ You.[.6] Kneel.[AN][ClearFace]
 [MR][LoadKing]
 Why do you persist[,][N]
 Duke Omios?[AN]
-You know Wreyvine is not[N]
-responsible.[AN][ClearFace]
+You know Wreyvine bears[N]
+no responsibility.[AN][ClearFace]
 
 [ML][LoadSelwyn]
 Silence.[.6] I have heard enough[n]
@@ -986,7 +988,7 @@ Hear this[,] stragglers of Wreyvine![.6][N]
 Retreat if you must.[.6] We will not pursue.[AN]
 Yet we will return[,] and we will leave[N]
 none of your kingdom behind.[.6N]
-[ToggleSmile]For the glory of Aeteria![AN]
+[ToggleSmile]For the glory of Aeteria![AN][CF]
 [X]
 
 ## AffoInterrupt
@@ -996,113 +998,6 @@ none of your kingdom behind.[.6N]
 [OpenRight][LoadUlrich]
 This has escalated far beyond[N]
 what I could have imagined[Beat][AN][ClearFace][X]
-
-## BreveInterrupt
-[OpenLeft][LoadBreve]
-A successful attack on the palace[Beat][N]
-This is a call for war.[AN][ClearFace][X]
-
-## HildrInterrupt
-[OpenRight][LoadHildr]
-Shadow warriors[Beat][.6] The Aeterian that[N]
-came up with that must be nuts![AN][ClearFace][X]
-
-## AnsgarInterrupt
-[OpenLeft][LoadAnsgar]
-[Pause]See what I mean?[.6] Magic,[.4] the[N]
-root of our problems[Beat][AN][ClearFace][X]
-
-## NoraInterrupt
-[OpenRight][LoadNora]
-I can't believe they got away with the[N]
-tome[Beat][.6] Where do we go from here?[AN][ClearFace][X]
-
-## SequinInterrupt
-[OpenLeft][LoadSequin]
-Jeez,[.4] I wish I could snatch[N]
-stuff as easily as she did[Beat][AN][ClearFace][X]
-
-## BrudetInterrupt
-[OpenRight][LoadBrudet]
-The one the Aeterians followed[Beat][N]
-She's of Aeteria's Trinity.[AN][ClearFace][X]
-
-## StrogyInterrupt
-[OpenLeft][LoadStroganoff]
-Attacked the King,[.4] snatched the Eye.[.6][N]
-They basically declared war![AN][ClearFace][X]
-
-## DoppioInterrupt
-[OpenRight][LoadDoppio]
-I can't believe my eyes[Beat] Are we[N]
-truly this incompetent?[AN][ClearFace][X]
-
-## EisInterrupt
-[OpenLeft][LoadEis]
-Those dastards are about to get[N]
-what's coming to them.[AN][ClearFace][X]
-
-## MochaInterrupt
-[OpenRight][LoadMocha]
-Oh,[.4] gosh[Beat] This is terrible[Beat] We[N]
-must try and catch them at once![AN][ClearFace][X]
-
-## PandoroInterrupt
-[OpenLeft][LoadPandoro]
-Must Ideon's two deities continue[N]
-to fight?[AN][ClearFace][X]
-
-## RinaInterrupt
-[OpenRight][LoadRina]
-[Pause]It seems that I can't escape,[.4][N]
-no matter where I go[Beat][AN][ClearFace][X]
-
-## NoelInterrupt
-[OpenLeft][LoadNoel]
-Stop complaining,[.4] and chase[N]
-them already![AN][ClearFace][X]
-
-## FlorisInterrupt
-[OpenRight][LoadFloris]
-We've been blind this entire time[Beat][N]
-Come on,[.4] let us take it back![AN][ClearFace][X]
-
-## YoryInterrupt
-[OpenLeft][LoadYory]
-I h-[.4]have an idea[Beat] Why don't[N]
-we just let them have it[Beat]?[AN][ClearFace][X]
-
-## ThereseInterrupt
-[OpenRight][LoadTherese]
-Gah![.6] At least no one is harmed,[.4][N]
-right[Beat]?[AN][ClearFace][X]
-
-## LennardInterrupt
-[OpenRight][LoadLennard]
-It doesn't look like we suffered[N]
-many casualties[Beat][AN][ClearFace][X]
-
-## IrisInterrupt
-[OpenLeft][LoadIris]
-They cannot hide or run for long.[.6][N]
-It is only a matter of time.[AN][ClearFace][X]
-
-## KaneInterrupt
-[OpenRight][LoadKane]
-[Pause]Huh.[.6] Ain't that a[N]
-bummer?[.6] Too bad.[AN][ClearFace][X]
-
-## GorloisContinue
-[OpenFarLeft][BoopPitch][0xD]
-All these questions and none[N]
-of the answers[Beat][AN][MoveMidLeft]
-Your Majesty[Beat]?[.6][N]
-We need to act quickly.[AN]
-
-[OpenFarRight][MoveMidRight]
-[Beat][AN]
-I will think of our next course of[N]
-action.[.6] Keep your guard up.[AN][X]
 
 ## Ch6Ending2
 [OpenMidRight][LoadGorlois][OpenFarFarLeft][LoadKing]
@@ -1568,14 +1463,19 @@ We refuse to fall.[A][X]
 
 ## SelAffoBossQ2
 [OpenMidLeft][LoadSelwyn]
+Strike me with all[N]
+your might.[AN]
+But understand this[,][N]
+soldier of Wreyvine:[AN]
+I have no intent to waver[N]
+in my convictions.[AN]
 Allow me to demonstrate why[N]
 Aeteria's sorcery has no equal.[AN]
 [X]
 
 ## AffogatoP1C7Convo
 [OpenMidRight][LoadAffogato]
-[ToggleMouthMove](Another one. Even their ghost[N]
-soldiers are fearsome.)[AN][ToggleMouthMove]
+[ToggleMouthMove](Another one...)[AN][ToggleMouthMove]
 [X]
 
 ## BreveP1C7Convo
@@ -1913,3 +1813,430 @@ to say,[.4] I suggest you bugger off.[AN][ClearFace]
 [OpenMidLeft]
 Wait,[.4] Strog[Beat]anoff[Beat][AN][X]
 
+## ChFinalSelwynMoment
+[ML][Selwyn][3L]
+[Smile]
+This is the decisive battle for Aeteria![6N]
+I pray that you will all stand by me[N]
+for one final battle.[AN]
+[X]
+
+## ChFinalEndingSussy
+[3L]
+[FL][Gorlois][L][Stroganoff][R][Brudet][FR][Ulrich]
+
+[L][MoveLeft]
+How in the blazes did we end up like this?![6N]
+Wreyvine got all the damned walls and[N]
+guards![.6] What could've gone wrong?![AN]
+
+[FL]
+Had Lord Matthias been present;[.4] with his[N]
+tactical mind[,] we would've been able to hold[N]
+the northern front[Beat][AN][C]
+His Majesty would still be with us![AN]
+
+[R]
+Right.[.6] [Pause]And if Captain Ragnar wasn't killed[N]
+on his way to the castle[,] I would say we[N]
+could have turned the tides.[AN]
+[Pause]Even Lord Reinier was a stroke of fate.[6N]
+Had we not intervened[,] he would have lost[N]
+his life[,] too.[AN]
+
+[FR]
+Fate[,] huh?[.6] It feels like Fate turned her[N]
+back on us.[.6] Every single misstep[,] each[N]
+ruin felt out of our control.[AN]
+
+[FL]
+It[Beat] It feels a lot more than just bad luck.[.6][N]
+In a way it almost feels[Beat] orchestrated.[.6][N]
+Planned by someone in our own army.[AN]
+
+[L]
+Whole thing feels mighty suspicious[,] ain't it?[6N]
+The siege[,] the abandoned fort[,] the whole[N]
+nine damned yards![AN]
+
+[FL]
+In every way[Beat] How would the empire know[N]
+so much of our terrain?[.6] Our military[N]
+strategems[Beat] Our intelligence.[AN]
+Our messenger paths and escape routes.[6N][N]
+Our terrain.[.6] Knowledge simply impossible to[N]
+ascertain without having a mole.[AN]
+Not only did they target our cities[,] even[N]
+the inner workings of Castle Wreyvine[N]
+were figured out.[AN][C][MoveFarLeft]
+Everything about the kingdom[Beat][N]
+Down to the location of the throne room![AN]
+
+[R]
+The Imperial army paid sellswords to turn[N]
+against us.[.6] Do you ascertain that[N]
+perhaps we have a traitor?[AN]
+
+[FL]
+Of some sort.[.6] There has to be.[6N]
+I cannot think of any other explanation![AN]
+
+[FR]
+Let's not jump to conclusions.[.6][N]
+Wreyvine is without a king.[.6] It would[N]
+do us no good to sow discord now.[AN][C]
+We must remain calm[Beat][AN]
+
+[FL]
+Remain calm?![.6] Our king was assassinated![6N]
+Someone in OUR army is responsible for[N]
+letting the Duke get this far[Beat]![AN]
+
+[L][ClearFace][Ogrim]
+Pardon me[Beat] You there.[AN]
+
+[FR]
+Huh?[.6] Father Ogrim[Beat]?[AN]
+
+[L]
+Please step forward.[AN][CSS]
+
+[FR][MoveRight]
+
+[L]
+I am not accusing you.[.6] But I want an[N]
+explanation.[.6] One of Wreyvine's greatest[,][N]
+thought to have been lost decades ago.[AN]
+Where were you all this time[Beat]?[6N]
+I understand it sudden[,] and I mean this with[N]
+full respect[,] but please explain[,] Sir Ulrich.[AN]
+
+[R][Beat][AN]
+
+[FL]
+[Beat]Sir Ulrich.[AN]
+
+[R][CloseEyes][Mouth]..........[Mouth][AN]
+
+[FL][CF][Klavdia]
+[FL]
+Explain yourself.[.6] His Majesty is dead.[6N]
+I do not want to believe you are anyone[N]
+other than the man I knew.[AN]
+
+[R][OpenEyes][MoveRight][OpenEyes][Beat][OpenEyes]I[Beat][OpenEyes] You[OpenEyes] don't understand![AN]
+
+[L]
+Please[,] I only--[AN][CSS]
+
+[FL][MoveLeft]
+I demand an explanation![AN]
+
+[R]
+After the battle on the bridge[,] I ran.[6N]
+I hid in a quiet[,] hidden village[Beat][N]
+Off the wastes.[AN]
+
+[L]
+Carry on.[.6] Who were your allies?[6N]
+Who nursed you back to health?[6N]
+Why didn't you return sooner?[AN]
+
+[R]
+[Beat]I had no choice.[AN]
+
+[L]
+No choice?![.6] Twenty years is a long[N]
+time[,] Captain.[.6] After such a grievous[,][N]
+harrowing battle, what happened?![AN]
+Please[Beat] none of us here want to believe[N]
+in such hogwash that such a knightly ideal[N]
+has betrayed his kingdom![AN]
+
+[FFR][Event]
+Sir Ulrich is no traitor.[AN][CSS]
+
+[R]
+Huh[Beat]?[AN][CSS]
+
+[FR][CF][LoadAffogato][.6][MoveRight]
+You have no right to continue inquisiting.[AN]
+
+[L]
+You dare?[.6] After such a travesty[,] you have[N]
+the gall to make such a statement?![6N]
+There is a traitor in this army![AN]
+
+[R]
+With His Majesty's death[,] his royal knights[N]
+fight among themselves[Beat] This schism[N]
+is what the empire covets.[AN][CSS][MoveRight]
+Sir Ulrich is a noble knight.[.6] As my[N]
+commander[,] he fought and bled for[N]
+this country.[AN][N][C]
+It is inexcusable to accuse him of[N]
+such a matter.[.6] There is absolutely[N]
+no way Sir Ulrich is a traitor.[AN]
+
+[L][CF][Stroganoff]
+The hell 're we trustin' him for?[6N]
+What do ya know?[AN]
+
+[R]
+I know that Sir Ulrich isn't the one[N]
+you're looking for.[AN]
+
+[FL][CF][Wegman]
+[Pause]Please go on[,] kid.[AN]
+
+[FR]
+Wait[Beat][AN][CSS]
+
+[FL][CF][Brudet][MoveLeft]
+[Pause]Affogato[,] correct?[AN]
+
+[R]
+Yes[,] Captain.[.6] Of the 7th Platoon.[AN]
+
+[L]
+What do you intend by such a statement?[AN][CSS][.6][.6]
+
+[R][AffoSad][.6][CloseEyes][.6][.6][.6]
+[CloseEyes][.6][Mouth].........................[Mouth][AN][CSS][.6][OpenEyes][.4][.6]
+[OpenEyes]I[OpenEyes] was[OpenEyes] sent by the empire.[AN][Event][.6]
+
+[FR]
+Affogato[Beat][AN]
+
+[L]
+[Beat]I see.[AN][CF]
+
+[FL]
+Hah![.6] You expect us to believe somethin'[N]
+like that?![AN][CF]
+
+[R]
+I speak only the truth.[.6][N]
+I am an Imperial spy.[AN]
+
+[X]
+
+## BreveInterrupt
+[ML][LoadBreve][3L]
+Affogato[Beat] You're screwing with us[,] right?[AN]
+
+[R]
+No[,] Sir Breve.[.6] I'm not lying.[AN]
+
+[ML]
+[Pause]So you really were one of them?[6N]
+I guess I was right to be suspicious[,][N]
+but[Beat] I can't[Beat][AN]
+[CF]
+[X]
+
+## HildrInterrupt
+[ML][LoadHildr][3L]
+How[Beat] How could you[,] 'Gato?![6N]
+Tell me this is some sick joke![6N]
+Was everything you did for us a lie?![AN]
+
+[R]
+Every battle I remember was for[N]
+the kingdom[,] Ser.[AN]
+
+[ML]
+I don't wanna believe you're a traitor[Beat][6N]
+That you're someone I would've cut down[Beat][AN][CF]
+
+[X]
+
+## AnsgarInterrupt
+[ML][LoadAnsgar][3L]
+Damn it[,] rookie[Beat] I trusted you.[6N]
+I trusted you[,] man[Beat] I mean[,] this[N]
+is a damn poor time to kid around[Beat][AN]
+
+[R]
+You have no reason to doubt me.[AN]
+
+[ML]
+I got plenty[Beat] Our scout[,] betrayin' us?[6N]
+We followed yer lead[,] and now yer sayin'[N]
+yer with the empire?![AN][CF]
+
+[X]
+
+## NoraInterrupt
+[ML][LoadNora][3L]
+[Beat]Why[Beat]?[AN][ClearFace][X]
+
+## SequinInterrupt
+[ML][LoadSequin][3L]
+Are you serious?![.6] When[Beat][N]
+Why did it have to be you?![AN][CF]
+
+[X]
+
+## BrudetInterrupt
+# unused
+
+[X]
+
+## StrogyInterrupt
+# unused
+[X]
+
+## DoppioInterrupt
+[ML][LoadDoppio][3L]
+You were one of us[Beat] You fought[N]
+with us[Beat] I can't believe this[Beat][AN][CF]
+[X]
+
+## EisInterrupt
+[ML][LoadEis][3L]
+[Beat]What do we do with you now?[AN][ClearFace][X]
+
+## MochaInterrupt
+[ML][LoadMocha][3L]
+Oh,[.4] Gods[Beat] This is terrible[Beat][N]
+And I thought[Beat][AN][ClearFace][X]
+
+## LevainInterrupt
+[ML][LoadLevain][3L]
+[Beat][Beat][AN][ClearFace][X]
+
+## PandoroInterrupt
+[OpenLeft][LoadPandoro]
+[AN][ClearFace][X]
+
+## RinaInterrupt
+[OpenRight][LoadRina]
+[Beat][AN][ClearFace][X]
+
+## NoelInterrupt
+[ML][LoadNoel][3L]
+You disgust me![.6] Treacherous curs like you[N]
+should be cut down where you stand!![AN]
+[ClearFace][X]
+
+## FlorisInterrupt
+[ML][LoadFloris][3L]
+Ah[,] it finally comes out.[.6] I had my eye[N]
+on you from the beginning[,] but I wasn't[N]
+expecting something so brash.
+[AN][ClearFace][X]
+
+## YoryInterrupt
+[ML][LoadYory][3L]
+What the hell[,] mate?![.6] I 'spose[N]
+I shoulda known you quiet[,] lurky types[N]
+were the kind to stab us in the back![AN]
+[ClearFace][X]
+
+## ThereseInterrupt
+[ML][LoadTherese][3L]
+Your hands are stained with the[N]
+blood of those around you[Beat][6N]
+Yet you helped me save my father[Beat][AN][C]
+I am truly sorry it has come to this.[AN]
+[ClearFace][X]
+
+## LennardInterrupt
+[ML][LoadLennard][3L]
+Sheesh[,] and right when I thought it can't[N]
+get worse than this![AN][ClearFace][X]
+
+## IrisInterrupt
+[ML][LoadIris][3L]
+There is only one question:[.4] will you atone?[AN]
+[ClearFace][X]
+
+## WegmanInterrupt
+[ML][LoadWegman][3L]
+This is[Beat] unfortunate[,] Affogato.[6N]
+But I still believe in you.[.6] There must[6N]
+be more to this.[AN][C]
+You spoke up to protect Ulrich.[.6][N]
+I doubt you wanted this either.[AN]
+
+[ClearFace][X]
+
+## KlavInterrupt
+[ML][LoadKlavdia][3L]
+Wreyvian law speaks of only one punishment[N]
+for traitors:[.4] the sentence is death.[AN]
+[ClearFace][X]
+
+## GerolfInterrupt
+[ML][LoadGerolf][3L]
+I don't mean to help the traitor[,][N]
+but I'd run if I were you[Beat][6N]
+Right here[,] right now.[AN]
+[ClearFace][X]
+
+## OgrimInterrupt
+[ML][LoadOgrim][3L]
+By the Hearthbringer[Beat]
+[AN][ClearFace][X]
+
+## KaneInterrupt
+[ML][LoadKane][3L]
+[Pause]Gods[,] and to think we followed[N]
+your lead[Beat][AN][ClearFace][X]
+
+## GorloisContinue
+[OpenFarLeft][BoopPitch][0xD]
+[AN]
+
+[OpenFarRight][MoveMidRight]
+[Beat][AN]
+I will think of our next course of[N]
+action.[.6] Keep your guard up.[AN][X]
+
+## ChFinalEndingSussy2
+[3L]
+[ML][CF][Gorlois]
+
+[R]
+Allow me to explain.[AN]
+
+[ML]
+No[Beat] You will find no forgiveness[Beat][N]
+His Majesty's death is on your hands[Beat][AN]
+
+[FR][MoveFarRight]
+Everyone[,] what's[Beat] Why are you all like this?![.6][N]
+Think![.6] Would he have told us if[N]
+he wasn't on our side?![AN]
+If he was still loyal to the empire[,][N]
+he would've let me taken the fall.[6N]
+You would all be dead![AN]
+
+[R]
+Your trust wasn't misplaced.[.6] I fought[N]
+for Wreyvine in the end.[.6] I came here[N]
+as a spy before I lost my memory.[AN]
+
+[ML]
+Memory loss?[.6] Who here's gonna believe[N]
+such obvious fabrication from a blackguard?[6N]
+How many lives have you taken?[AN]
+Even if you fight for us now[,] you[N]
+still aided the empire[,] did you not?[6N]
+You are a traitor[,] not a royal knight![AN]
+
+[R]
+I speak no falsehoods.[.6] For all I remember[,][N]
+I fought as a knight of Wreyvine.[.6][N]
+If you would allow me to[Beat][AN]
+
+[ML]
+No[Beat] Get out[,] Imperial soldier.[6N]
+You are not welcome here.[6N]
+You never were.[AN]
+
+[R]
+[Mouth].........................[Mouth][6N]
+I will leave.[AN]
+[X]

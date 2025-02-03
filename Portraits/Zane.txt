@@ -900,6 +900,11 @@ AffogatoSil_Mug:
 #incext PortraitFormatter "silhouettegato.png"
 setMugEntry(0xF4, AffogatoSil_Mug, 3, 5, 3, 3)
 
+ALIGN 16 //lol
+AffoSadMug:
+#incext PortraitFormatter "AffoLookingDown.png"
+setMugEntryExtend(0xFD, AffoSadMug, 3, 5, 3, 3, 10, 4, 10, 2)
+
 // Lol
 ALIGN 16 //lol
 ItHim:

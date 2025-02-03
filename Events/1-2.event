@@ -507,6 +507,10 @@ NoFade
 ENDA
 
 BoatRein:
+CameraCursor(Affogato)
+Text(AffogatoHurry)
+SetFlag(0x4) //bgm flag
+STAL 5
 SpawnReinforcements(BoatEnemies)
 NoFade
 ENDA
@@ -523,10 +527,6 @@ NoFade
 ENDA
 
 EastRein:
-CameraCursor(Affogato)
-Text(AffogatoHurry)
-SetFlag(0x4) //bgm flag
-STAL 5
 CHECK_EVENTID 0xA
 BNE 1 0x0 0xC
 
