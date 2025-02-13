@@ -42,7 +42,7 @@ InvLoop:
 
 NoItem:
 	mov r1,#250
-	lsl r1,#2
+	lsl r1,#3
 	cmp r7,r1
 	blt NoBonus
 	mov r0,r7

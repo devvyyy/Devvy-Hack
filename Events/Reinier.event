@@ -358,7 +358,7 @@ PartTwoers:
 //these 2 leave to stairs after player gets close
 UNIT Graham Valkyrie 0x1 Level(8, Enemy, 1)   [8,12] DropItem 0x0 0x0 0x0 [Sleep,LightTome2,0xAE,] BossAI
 UNIT Yufka Shaman_F 0x1 Level(6, Enemy, 1)   [9,13] DropItem 0x0 0x0 0x0 [Moonfall,DarkTome2,] BossAI
-UNIT Gus Assassin 0x1 Level(3, Enemy, 1)   [8,14] DropItem 0x0 0x0 0x0 [Rapier,GoldGem] BossAI
+UNIT Gus Thief 0x1 Level(3, Enemy, 1)   [8,14] DropItem 0x0 0x0 0x0 [Rapier,GoldGem] BossAI
 	UNIT
 
 Traps1:
@@ -452,6 +452,15 @@ REMU 0x62
 BG(0x3c)
 Music(0x63)
 CHECK_ALIVE Therese; BEQ 1 0x0 0xC; TEXTSTART; TEXTSHOW ChReinierEnding1Therese; TEXTEND; MUSC 0x106; TEXTCONT; TEXTEND; REMA; GOTO 2; LABEL 1; Text(ChReinierEnding1); LABEL 2
+	SetBackground(0x44)
+	Music(0x27e)
+	STAL 5
+BROWNBOXTEXT TwentyfourYearsAgo [8,8]
+STAL 15
+BROWNBOXTEXT ValeText [8,8]
+STAL 15
+	Text(Ch2FlashbackExtra)
+	
 	MNC2 0xF
 	NoFade
 	ENDA

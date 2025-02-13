@@ -35,6 +35,20 @@ ldrb r2, [r5, #0x17] @def
 add  r0, r2
 strh r0, [r4,r1]
 
+ldrb r0, [r5, #0x15] @attacker spd
+ldrb r1, [r4, #0x15] @defender spd
+mov r2, #0x5
+add r1, r2
+cmp r0, r1
+ble End @skip if res is less or equal than foes res
+
+mov r0,r4
+add r0,#0x4C @item ability word
+ldr r1,[r0]
+mov r2,#0x20 @brave flag
+orr r1,r2
+str r1,[r0]
+
 End:
 pop {r4-r7, r15}
 .align

@@ -1,0 +1,62 @@
+{
+EventPointerTable(7,MyEvents)
+PUSH; ORG 0x8B091C; BYTE 0x0; POP       // Seize objective.
+
+MyEvents:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapDataHard
+POIN PlayerUnits PlayerUnitsHard
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents: CharacterBasedEvents: MiscBasedEvents: Dunno: Tutorial: TrapData: TrapDataHard:
+END_MAIN
+
+PlayerUnits: PlayerUnitsHard:
+UNIT Affogato EirikaLord Affogato Level(1,Ally,0) [0,0] 0 0 0 0 [Rapier, Elixir] NoAI
+UNIT
+
+BeginningScene:
+LOAD1 0 PlayerUnits
+ENUN
+MUSCSLOW 0x2C
+FADU 8
+SOLOTEXTBOXSTART
+TEXTSHOW 0xB4D
+TEXTEND
+REMA
+FADI 8
+SetBackground(0x38)
+CGTEXTSTART
+TEXTSHOW 0xB4D
+TEXTEND
+REMA
+FADI 8
+STAL 5
+FADU 8
+CGTEXTSTART
+TEXTSHOW 0xC22
+TEXTEND
+REMA
+FADI 8
+SetBackground(0x39)
+TEXTSTART
+TEXTSHOW 0x98B
+TEXTEND
+REMA
+FADI 8
+ENDA
+
+LocationBasedEvents:
+Seize(0,0)
+END_MAIN
+
+EndingScene:
+MNCH 0x3
+ENDA
+}

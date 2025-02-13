@@ -68,7 +68,9 @@ in trouble[Beat][A][CloseEyes][X]
 I've met my fair number of[N]
 planned escapees.[AN]
 None of them have ever[N]
-made it this far.[AN][X]
+made it this far.[AN]
+I'm impressed[,] but your[N]
+road ends here.[AN][X]
 
 ## P2Ch1DeathQ
 [OpenMidLeft][LoadFace][0x56][0x1]
@@ -209,6 +211,18 @@ Aeteria hasn't had a successful[N]
 rebellion for fifty years.[AN]
 Pack it up.[.6] I don't have[N]
 time to deal with rebels.[AN][X]
+
+## OpalReaction
+[OpenMidLeft][LoadOpal]
+How unjust[Beat] I suppose[N]
+I was wrong about them.[AN]
+[X]
+
+## MesselReaction
+[OpenMidLeft][LoadMessel]
+[Beat]Bastards.[.6] I expected too[N]
+much from the rebels.[AN]
+[X]
 
 ## MesselEnemyBoss2
 [OpenMidLeft][LoadMessel]
@@ -671,14 +685,155 @@ us about the overuse of ether[Beat][AN]
 
 [X]
 
-## Ch7ChiffonBossQ
+## PrologueJayeBossQ
+# lefse
+[MR][Jaye]
+[Smile]Woohoo![.6] Who's next?[6N]
+Who wants some of this?[AN][Smile][CF]
+
+[OpenMidLeft][LoadFace][0x34][0x1]
+Judging by the char marks[N]
+on the doors and walls,[AN]
+I suppose you are the[N]
+source of the commotion?[AN][CF]
+
+[MR][Jaye]
+You like my handiwork?[AN]
+Mama always said I knew[6N]
+how to put on a good show.[AN][CF]
+
+[OpenMidLeft][LoadFace][0x34][0x1]
+I will applaud you for[N]
+your raw talent[Beat]
+But the novelty's run its[N]
+course.[.6] Stand down or die.[AN][CF]
+
+[MR][Jaye]
+Stand down?[.6] Stand down?![6N]
+Sorry to burst your bubble,[AN]
+but I tore that word out of[N]
+my lexicon ages ago![AN]
+Nothing's gonna stop me[,][N]
+especially not you![AN][CF]
 
 [X]
 
-## Ch7GrahamBossQ
+## PrologueVeliusBossQ
+[MR][Velius]
+[Beat][AN][CF]
+
+[OpenMidLeft][LoadFace][0x34][0x1]
+You[,] the quiet one[Beat][AN]
+I was not told of what[N]
+crimes you committed.[AN][CF]
+
+[MR][Velius]
+I was locked away for[N]
+speaking the truth.[AN]
+Do you not see that[N]
+our leaders' actions[AN]
+have cursed Ideon?[AN][CF]
+
+[OpenMidLeft][LoadFace][0x34][0x1]
+Cursed?[.6] Lord Selwyn has[N]
+been nothing but a boon![AN]
+He's brought Aeteria what[N]
+she'd been yearning for[AN]
+since her founding![AN]
+Thanks to Wreyvine's[N]
+capture[,] we've prospered--[AN][CF]
+
+[MR][Velius]
+[Beat]You close your eyes to[N]
+the tide that comes.[AN]
+Do not call to us when[N]
+the ocean engulfs you.[AN][CF]
+
+[OpenMidLeft][LoadFace][0x34][0x1]
+Preach to me no further.[6N]
+It will not change my mind.[AN]
+By order of the imperial family[,][N]
+I will put you in your place.[AN][CF]
 
 [X]
 
+## PrologueFryeBossQ
+[MR][Frye]
+I remember you.[.6] You gave[N]
+me an extra portion of food[AN]
+the night I was ill[Beat][AN]
+Shame it's come to this.[AN][CF]
+
+[OpenMidLeft][LoadFace][0x34][0x1]
+What manner of monster[N]
+are you[,] sellsword?[AN]
+I knew I'd sensed some kind[N]
+of arcane force within you[Beat][AN]
+But the way you tear armor[N]
+asunder like it's wax[Beat][AN][CF]
+
+[MR][Frye]
+That's a secret for me to keep[N]
+and for you to worry about.[AN]
+You don't seem half bad, so[N]
+I feel a bit guilty for this.[AN]
+Maybe in the next life we can[N]
+share a drink together, eh?[AN][CF]
+[X]
+
+## PrologueChiffonBossQ
+[OpenMidLeft][LoadFace][0x34][0x1]
+Major Hayes warned me[N]
+to be wary about you[Beat]
+It seems his fears were[N]
+not unfounded.[AN][CF]
+
+[MR][Chiffon]
+Did you say Hayes?[6N]
+Tell me[,] where is he?![AN][CF]
+
+[OpenMidLeft][LoadFace][0x34][0x1]
+You have more pressing[N]
+matters to worry about.[AN]
+Do not brush me aside like[N]
+I am a common soldier![AN]
+My magic will be more than[N]
+enough to keep you at bay![AN][CF]
+
+[MR][Chiffon]
+[Smile]Keep dreaming[,] pal.[AN]
+I won't let the likes of you[N]
+trap me in a place like this.[AN][CF]
+
+
+[X]
+
+## PrologueCortadoBossQ
+[MR][Cortado]
+Hmph[,] it's you.[.6] Pity.[AN][CF]
+
+[OpenMidLeft][LoadFace][0x34][0x1]
+You[,] prisoner[Beat] what are you[N]
+doing outside your cell?[AN][CF]
+
+[MR][Cortado]
+Getting a bit of comeuppance[N]
+for how you lot treated me.[AN]
+You were one of the good[N]
+ones[,] so I'll make it quick.[AN][CF]
+
+[X]
+
+## PrologueGenericBossQ
+[OpenMidLeft][LoadFace][0x34][0x1]
+How did these invaders get[N]
+so far into the prison?![AN]
+What in the world is Warden[N]
+Alair's group doing?![AN]
+[Beat]It doesn't matter.[6N]
+I'll stop you all here![AN]
+
+[X]
 
 ## PrologueChiffonWall
 [OpenMidLeft][LoadChiffon]
@@ -711,11 +866,11 @@ chest key...?[AN]
 
 ## MidConvo1
 # CHAPTER 1/7 STARTS HERE
-[OpenMidLeft][LoadBard][OpenMidRight][LoadVerna]
+[OpenMidRight][LoadVerna]
 Placeholder Cutscene![X]
 
 ## MidConvo2
-[OpenMidLeft][LoadBard][OpenMidRight][LoadVerna]
+[OpenMidRight][LoadVerna]
 Placeholder Cutscene![AN][X]
 
 ## Ch7RecruitmentConvo

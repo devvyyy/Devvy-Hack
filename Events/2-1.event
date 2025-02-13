@@ -21,6 +21,7 @@ TURN 0x0 GoodbyeDespair [14,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
+CharacterEventBothWays(0xC, RecruitGus, 0x0, Gus)
 //CharacterEventBothWays(0x9,ChiffonGrahamTalk, Chiffon, Graham)
 //CharacterEventBothWays(0xA,ChiffonFryeTalk, Chiffon, Frye)
 //CharacterEventBothWays(0xB,ChiffonCortadoTalk, Chiffon, Cortado)
@@ -28,6 +29,15 @@ CharacterBasedEvents:
 //CharacterEventBothWays(0xD,ChiffonJayeTalk, Chiffon, Jaye)
 //CharacterEventBothWays(0xE,FryeCortadoTalk, Cortado, Frye)
 	END_MAIN
+	
+RecruitGus:
+MUSS 0x30
+STAL 33
+Text(Placeholder1)
+MURE 0x2
+TurnAlly(Gus)
+NoFade
+ENDA
 
 MiscBasedEvents:
 	CauseGameOverIfLordDies
@@ -90,7 +100,7 @@ Tutorial:
 
 Units1:
 UNIT Chiffon 0x10 0x1 Level(2, Ally, 0)   [3,2] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
-UNIT Graham Priest 0x1 Level(10, Ally, 0)   [3,1] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [3,1] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Jaye Mage_F 0x1 Level(3, Ally, 0)   [2,1] 0b 0x0 0x0 0x0 [Thunder,Bolting,Vulnerary] [0x0,0x0,0x0,0x0]
 UNIT Frye Mercenary 0x1 Level(6, Ally, 0)   [2,3] 0b 0x0 0x0 0x0 [Flamberge,SteelSword,Vulnerary] [0x0,0x0,0x0,0x0]
 UNIT Wulfric Shaman 0x1 Level(4, Ally, 0)   [2,2] 0b 0x0 0x0 0x0 [Flux,PureWater,0xf4] [0x0,0x0,0x0,0x0]
@@ -102,7 +112,7 @@ UNIT Chiffon 0x10 0x1 Level(2, Ally, 0)   [4,3] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Eli
 	
 CutsceneUnits2: //chiffon has to be the first loaded in
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [0,0] 0 0 1 REDA3R2 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
-UNIT Graham Priest 0x1 Level(10, Ally, 0)   [0,1] 0 0 1 REDA3R1 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [0,1] 0 0 1 REDA3R1 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
 	UNIT	
 	
 CutsceneUnits:
@@ -115,7 +125,7 @@ UNIT Cortado 0x60 0x1 Level(5, Ally, 0)   [1,2] 0b 0x0 0x0 0x0 [KillerLance,Shor
 	
 DuskwaveMainChars:
 UNIT Chiffon 0x10 0x1 Level(2, Ally, 0)     [8,6] 0b 0x0 0x0 0x0 [SteelBlade] [0x0,0x0,0x0,0x0]
-UNIT Graham Priest 0x1 Level(10, Ally, 0)     [7,5] 0b 0x0 0x0 0x0 [SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)     [7,5] 0b 0x0 0x0 0x0 [SteelBlade] [0x0,0x0,0x0,0x0]
 	UNIT
 	
 DuskwaveCutsceneOthers:
@@ -128,7 +138,7 @@ UNIT Verna Occultist 0x1 Level(2, Ally, 0)     [10,13] 0b 0x0 0x0 0x0 [SteelBlad
 	
 EndingCutsceneUnits:
 UNIT Chiffon 0x10 0x1 Level(2, Ally, 0)     [6,16] 0b 0x0 0x0 0x0 [SteelBlade] [0x0,0x0,0x0,0x0]
-UNIT Graham Priest 0x1 Level(10, Ally, 0)     [7,16] 0b 0x0 0x0 0x0 [SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)     [7,16] 0b 0x0 0x0 0x0 [SteelBlade] [0x0,0x0,0x0,0x0]
 UNIT Frye Mercenary 0x1 Level(2, Ally, 0)     [8,16] 0b 0x0 0x0 0x0 [SteelBlade] [0x0,0x0,0x0,0x0]
 UNIT Wilken Shaman 0x1 Level(2, Ally, 0)     [9,16] 0b 0x0 0x0 0x0 [SteelBlade] [0x0,0x0,0x0,0x0]
 UNIT Jaye Mage_F 0x1 Level(2, Ally, 0)     [6,17] 0b 0x0 0x0 0x0 [SteelBlade] [0x0,0x0,0x0,0x0]
@@ -137,6 +147,9 @@ UNIT Verna Occultist 0x1 Level(2, Ally, 0)     [8,17] 0b 0x0 0x0 0x0 [SteelBlade
 	UNIT
 
 EnemyUnits: //Aeteria and AeteriaStealable
+
+//UNIT Gus Assassin 0x1 Level(3, Enemy, 1)   [6,6] DropItem 0x0 0x0 0x0 [Rapier,RedGem] BossAI
+
 UNIT Aeteria Mercenary 0x1 Level(2, Enemy, 1)     [5,4] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
 UNIT AeteriaStealable Soldier 0x1 Level(3, Enemy, 1)     [1,10] 0b 0x0 0x0 0x0 [IronLance,EnergyRing] BossAI
 UNIT Aeteria Mercenary 0x1 Level(2, Enemy, 1)     [13,6] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
@@ -177,41 +190,51 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+Music(0x3e2)
 HardUnits(LunaticUnits,LesBardo)
 	CUSN Verna
 	LOAD1 0x1 EnemyUnits
 ENUN
-Music(0x93)
-SetBackground(0x18)
+FADU 30
+STAL 30
+CameraCursor(Verna)
+STAL 50
+SetBackground(0x27)
 STAL 5
 BROWNBOXTEXT HallText [8,8]
 STAL 15
 //TextCont(Ch7Opening0,0x3DE)
 Text(TwoOneOpening1)
+FADI 60
+ClearBackground
+FADU 60
+STAL 30
+MOVE 0xF Verna [7,11]
+STAL 45
 Text(TwoOneOpening1Point5)
+MOVE 0xF Verna [8,10]
+STAL 15
 FADI 60
 CLEAN
-SetBackground(0x35) //black
+FADU 60
+STAL 15
+LOAD1 0x1 CutsceneUnits2
+ENUN
 STAL 5
+CameraCursor(Chiffon)
 SetBackground(0x15)
-Music(0x3CD)
+Music(0x92)
 Text(TwoOneOpening2)
 FADI 60
 CLEAN
 SetBackground(0x35) //black
-Music(0x48)
-SetBackground(0x40)
+Music(0x2e)
+SetBackground(0x11)
 STAL 5
 //BROWNBOXTEXT PalaceText [8,8]
 STAL 15
+CameraCursor(0x50)
 Text(TwoOneOpening3)
-FADI 60
-CLEAN
-FADU 60
-STAL 10
-LOAD1 0x1 CutsceneUnits2
-ENUN
-CameraCursor(Chiffon)
 STAL 15
 	GotoPrepScreen
 NoFade
@@ -278,7 +301,9 @@ SetBackground(0x2B) //dawn
 TextCont(Ch7Ending5,0x104) //hel
 */
 
-Text(TwoOneEnding1)
+SetBackground(0x27)
+Music(0x278)
+TextCont(TwoOneEnding1,0x283)
 MNC2 0xB //2-2
 //MNTS 0x1 //return to title screen
 	NoFade

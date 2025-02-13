@@ -1,5 +1,7 @@
 EventPointerTable(0x5E, PointerList)
 
+#define Raya 0x2F
+
 PointerList:
 	POIN TurnBasedEvents
 	POIN CharacterBasedEvents
@@ -13,14 +15,24 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TurnEventEnemy(0,ChangeTime,3)
+TurnEventEnemy(0,HayeThingy,1)
+//TurnEventEnemy(0,ChangeTime,3)
 	END_MAIN
-	
+
+HayeThingy:
+CameraCursor(Gheb)
+STAL 5
+Text(Ch27OpeningEnemyPhase)
+
+NoFade
+ENDA
+
 ChangeTime:
 FADI 25
 SVAL 0xB 0x40008 //change map
 LOMA 0x14
 FADU 15
+NoFade
 ENDA
 
 ALIGN 32
@@ -36,6 +48,8 @@ DefeatAll(EndingScene)
 	
 SussyMoment:
 
+CameraCursor(Gheb)
+Text(Ch27OpeningOilSpill)
 
 MUSCSLOW 0x7FFF
 CAM1 [9,19]
@@ -59,7 +73,7 @@ STAL 10
 EARTHQUAKE_END
 STAL 3
 CameraCursor(Chiffon)
-Text(Placeholder1)
+Text(Ch27OpeningOilSpill2)
 NoFade
 	ENDA
 
@@ -154,6 +168,12 @@ UNIT Aeteria Archer 0x1 Level(10, Enemy, 1)     [9,4] 0b 0x0 0x0 0x0 [SteelBow] 
 
 	UNIT
 
+CutsceneUnits:
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [8,33] 0 0 1 REDA9R27 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [9,33] 0 0 1 REDA8R28 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [10,33] 0 0 1 REDA10R28 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT	
+
 Traps1:
 BLST [9,4] IronBallista
 	ENDTRAP
@@ -164,12 +184,56 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-	LOAD1 0x1 EnemyUnits
-	ENUN
+LOAD1 0x1 EnemyUnits
+ENUN
+Music(0x47)
+SetBackground(0xB)
+TextCont(Ch27Opening1, 0xEC)
+STAL 5
+FADI 16
+CLEAN
+FADU 16
+STAL 10
+LOAD2 0x1 CutsceneUnits
+ENUN
+STAL 30
+CameraCursor(Chiffon)
+Text(Ch27Opening2)
+STAL 15
+
+Music(0x27a)
+CameraCursor(Gheb)
+Text(Ch27Opening2Point5)
+
+CameraCursor(Raya)
+Text(Ch27Opening3)
+
 	GotoPrepScreen
 	ENDA
 
 EndingScene:
-	MNC2 0x23
+Music(0x27B)
+SetBackground(0x2b)
+CHECK_EVENTID 0x92
+BNE 0x9000 0xC 0x0
+
+//MUSS 0x30
+STAL 33
+Text(Ch27OpeningEnding1Alternate)
+MURE 0x2
+MNC2 0x23 //enter gaiden duel
+
+REMA
+GOTO 0x9001
+LABEL 0x9000
+
+//haye dies
+//MUSS 0x30
+Text(Ch27OpeningEnding1)
+ClearBackground
+Text(Ch27OpeningEnding1Point5)
+
+LABEL 0x9001
+	MNC2 0x2b
 	NoFade
 	ENDA

@@ -140,7 +140,7 @@ UNIT Aeteria WyvRider 0x1 Level(10, Enemy, 1)     [2,17] 0b 0x0 0x0 0x0 [ShortAx
 WellingtonRecruit:
 
 CHECK_EVENTID 0x92
-BEQ 0x9000 0xC 0x0
+BNE 0x9000 0xC 0x0
 
 MUSS 0x30
 STAL 33
@@ -161,7 +161,7 @@ ENDA
 
 OpalRecruit:
 CHECK_EVENTID 0x92
-BEQ 0x9000 0xC 0x0
+BNE 0x9000 0xC 0x0
 
 MUSS 0x30
 STAL 33
@@ -182,7 +182,7 @@ ENDA
 
 MesselRecruit:
 CHECK_EVENTID 0x92
-BEQ 0x9000 0xC 0x0
+BNE 0x9000 0xC 0x0
 
 MUSS 0x30
 STAL 33
@@ -216,16 +216,26 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+//Music(0x1)
+//Background(0x1)
+//Text(Placeholder1)
+//STAL 15
+
+
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 EnemyUnitsButAgain
 	LOAD1 0x1 EnemyUnitsButLast
 	ENUN
-	GotoPrepScreen
+	CALL $591FD8 //prep screen
+	FADU 60
+	CameraCursor(Chiffon)
+	Text(Ch27Opening3)
+	NoFade
 	ENDA
 
 EndingScene:
 SetFlag(0xF)
-ASMC 0x8026629
+//ASMC 0x8026629
 
 
 UnsetFlag(0x12B) //PART 2 FLAG THAT CHANGES COLOR

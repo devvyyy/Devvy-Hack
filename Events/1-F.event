@@ -325,7 +325,7 @@ UNIT Selwyn 0x31 0x1 Level(10, Enemy, 0)     [8,6] 0 0x0 0x0 0x0 [0xFE,SteelBlad
 	UNIT
 	
 LesCutscenes:
-UNIT 0x5C KingClass 0x1 Level(15, NPC, 0)     [8,3] 0b 0x0 0x0 0x0 [SteelBlade,SteelGlaive,SteelLabrys,0xD2] BossAI
+UNIT 0x5C KingClass 0x1 Level(15, NPC, 0)     [8,3] 0b 0x0 0x0 0x0 [MageSword,SteelGlaive,SteelLabrys,0xD2] BossAI
 UNIT Gorlois Parson 0x1 Level(7, NPC, 0)     [8,4] 0b 0x0 0x0 0x0 [0x40,0xA0, Elixir] BossAI
 UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [11,6] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
 UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [10,5] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
@@ -822,6 +822,7 @@ CharacterConditionalDialog(Stroganoff,AnsgarThereseTalk,AnsgarThereseTalkAlt)
 	ENDA
 
 EndingScene:
+EVBIT_MODIFY 4
 UnsetFlag(0x12C) //ring disclaimer/staniel stuff
 
 UnsetFlag(0x7B)
@@ -902,12 +903,17 @@ CALL UnusedEpicPartyGamers
 UnusedEpicPartyGamers:
 FADI 4
 MUSC 0x3B4
-SVAL 0x2 0x34
+SVAL 0x2 0x2b
 CALL 0x9EE2E8
 
 //Music(0x3b4)
 //BACKGROUND_CHANGE 0x34 1 10
 //Background(0x34)
+
+BROWNBOXTEXT FewHoursLaterText [8,8]
+STAL 15
+BROWNBOXTEXT PalaceOutskirtsText [8,8]
+STAL 15
 
 TEXTSTART; TEXTSHOW ChFinalEndingSussy; TEXTEND; MUSCFAST 0x7FFF; TEXTCONT; TEXTEND; TEXTEND; MUSC 0x281; TEXTCONT; TEXTEND
 
@@ -1014,6 +1020,12 @@ LABEL 0x26
 
 TEXTSHOW ChFinalEndingSussy2
 TEXTEND; REMA
+STAL 5
+MUSI
+SetBackground(0x47)
+STAL 500
+//CGTEXTSTART; TEXTSHOW AftermathFinal1; TEXTEND
+STAL 350
 
 /*
 STAL 20
@@ -1063,6 +1075,7 @@ CALL ResetParty
 	
 ResetParty:
 // reset the party for part 2
+FADI 5
 QuickRemu(Affogato,1)
 QuickRemu(Ulrich,2)
 QuickRemu(Evelyn,3)

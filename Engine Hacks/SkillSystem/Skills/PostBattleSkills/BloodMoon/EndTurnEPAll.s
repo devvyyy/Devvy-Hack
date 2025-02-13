@@ -23,7 +23,7 @@ beq    End
 @Get enemy units in range
 mov  r0, r4
 mov  r1, #0x2 @enemies
-mov  r2, #0x3 @range
+mov  r2, #0x4 @range
 bl   GetUnitsInRange
 cmp  r0, #0x0 @End if null pointer is returned
 beq  End

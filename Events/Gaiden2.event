@@ -82,6 +82,7 @@ ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0xA,OttoUlrichConvo,0xCA,0xCB)
 CharacterEventBothWays(0xB,OgrimUlrichConvo,0xCA,0xCD)
+CharacterEventBothWays(0xC,OgrimOttoConvo,0xCB,0xCD)
 	END_MAIN
 	
 OttoUlrichConvo:
@@ -99,6 +100,15 @@ OgrimUlrichConvo:
 	MURE 2
 	NoFade
 	ENDA
+	
+	OgrimOttoConvo:
+	MUSI
+	Text(OttoOgrimTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+	
 
 MiscBasedEvents:
 AREA 0x0 ReinforcementEventLMAO [0,0] [8,18]

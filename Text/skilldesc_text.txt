@@ -989,9 +989,9 @@ Arm Wrestler: Grants +3 Atk/AS against[N]
 bosses, doubled if they have Shove/Smite.[X]
 
 ## SD_Moxie
-Eye of the Occult[N]
-- Grants Anton Atk/AS = 25% of[N]
-foe's Res.[N]
+The Undefeated[N]
+- Grants Anton Atk/AS = 25% of foe's[N]
+Res + both sides' missing HP.[N]
 - If foe doesn't use magic, follow-up[N]
 and foe can't.[X]
 
@@ -1008,7 +1008,8 @@ foe cannot.[X]
 ## SD_ResolutePyre
 Resolute Pyre[N]
 - Grants Aoife Atk/Crit = 50% of[N]
-both sides' missing HP.[N]
+both sides' missing HP at start[N]
+of combat.[N]
 - Immune to status staves.[X]
 
 ## SD_EustacePersonal
@@ -1075,7 +1076,7 @@ Maestro[N]
 - Ilse's Rifles have unique properties:[N]
 Hit +30, grants Atk = 25% of Skill.[N]
 - Rifles also deal bonus damage = 50%[N]
-of foe's missing HP.[X]
+of foe's missing HP at start of combat.[X]
 
 ## SD_OldManSkill
 Borrowed Time: Grants Avoid +25 for[N]
@@ -1103,7 +1104,7 @@ missing HP.[X]
 Fractured Soul[N]
 - Gorlois deals bonus damage and[N]
 reduces damage taken = 50% of foe's[N]
-missing HP.[X]
+missing HP at start of combat.[X]
 
 ## SD_SkiesDescend2
 The Skies Descend[N]
@@ -1182,8 +1183,8 @@ cavalry ally, unit takes -2 damage.[X]
 ## SD_Galestorm
 # Pursuer
 Dirty Fighting[N]
-- If foe can't counter, Dira deals bonus[N]
-damage = 3 + 50% of foe's missing HP.[N]
+- If foe can't counter, grants Dira Atk[N]
+= 3 + 50% of foe's missing HP.[N]
 - Inflicts Rooted on foe for 1 turn[N]
 after combat.[X]
 
@@ -1375,7 +1376,7 @@ War Cry[N]
 until the start of next turn.[X]
 
 ## SD_Graaaagh
-# Stroganoff, Lennard, Cortado, Raial
+# Stroganoff, Lennard, Cortado, Raial, Pandoro
 Rage[N]
 - Grants Crit = unit's missing HP.[X]
 
@@ -1506,7 +1507,9 @@ Ruptured Heaven: Deals bonus damage[N]
 ## SD_Lunatic
 Lunatic[N]
 - If foe's HP is full, Pandoro ignores[N]
-foe's Def and weapon triangle disadvantage.[X]
+Def and weapon triangle disadvantage,[N]
+and also, if Spd > foe's Spd +3, counter[N]
+first and strike x2 consecutively.[X]
 
 ## SD_FinalBoss
 Eye of the King: Deals damage =[N]
@@ -1554,8 +1557,8 @@ deals bonus magical damage = Spd.[X]
 Essence Reaper[N]
 - Yvonne's offensive staves use 1.25x[N]
 Eth, deal bonus damage = 25% of foe's[N]
-current HP, and restore HP = 25% of[N]
-damage dealt on-hit.[X]
+current HP at start of combat, and[N]
+restore HP = 25% of damage dealt.[X]
 
 ## SD_Defeatist
 Defeatist[N]
@@ -1649,8 +1652,8 @@ Str/Spd +5, Move +2.[X]
 ## SD_ColdFlare
 Cold Flare[N]
 - If Akatsuki's HP isn't full, grants[N]
-bonus Atk/AS = 25% of Res and deals[N]
-+10 bonus magical damage.[X]
+bonus Atk/AS = 25% of Res, deals 10[N]
+bonus magical damage.[X]
 
 ## SD_ColdFlare2
 Cold Flare: If foe is physical, grants Atk +3.[N]
@@ -2163,8 +2166,9 @@ when on open terrain.[X]
 ## SD_NaturalCover
 Surprise Attack![N]
 - If Solum or foe's terrain has bonuses,[N]
-grants Atk/AS +4, always hit, and deal[N]
-bonus damage = foe's missing HP.[X]
+grants Atk/AS +4, always hit, and deals[N]
+bonus damage = foe's missing HP at[N]
+start of combat.[X]
 
 ## SD_SealStr
 Disarm: Inflicts Str/Eth -5 on foe after[N]
@@ -2552,7 +2556,7 @@ adjacent enemies.[X]
 
 ## SD_Barricade
 Steady Bearing[N]
-- Alicot reduces damage taken from[N]
+- Alicoth reduces damage taken from[N]
 the 2nd attack onwards by 50%.[N]
 - Immune to critical hits.[X]
 
@@ -2861,11 +2865,11 @@ Negates enemy hit bonus from[N]
 weapon triangle advantage.[X]
 
 ## SD_BlueFlame
-Vigil to the Blood Moon[N]
-- Grants Yufka and adjacent allies[N]
-Atk/Prt = 25% of both sides' missing HP.[N]
-- If foe initiates, counter first and ends[N]
-the actions of foes within 3 spaces.[X]
+Ill Omen[N]
+- Yufka inflicts Atk -4, Avoid -40[N]
+on foes within 4 spaces.[N]
+- If foe initiates, ends the actions of[N]
+foes within 4 spaces after combat.[X]
 
 ## SD_YufkaNew
 Apotheosis[N]

@@ -241,20 +241,44 @@ BeginningScene:
 	LOAD1 0x1 TentUnitGaming
 	//LOAD1 0x1 LesNewRecruits
 HardUnits(LunaticUnits,LesNewRecruits)
-
-	BG(0x3e)
+ENUN
+	Music(0x28)
+	BG(0x33)
+	STAL 5
+	BROWNBOXTEXT OmiosOutskirtsText [8,8]
+	STAL 15
 	Text(Ch25Opening1)
-
-	BG(0x3e)
+	STAL 15
+	Music(0x25)
+	BG(0x36)
 	Text(Ch25Opening2)
-	ENUN
+	
 	GotoPrepScreen
 	ENDA
 
 EndingScene:
+	Music(0x27a)
+	BG(0x36)
+	
+	
+CHECK_EVENTID 0x92
+BNE 0x9000 0xC 0x0
+
+Text(Ch25Ending1)
+
+GOTO 0x9001
+LABEL 0x9000
+
+Text(Ch25Ending2Alternate)
+
+LABEL 0x9001
+	
+	STAL 15
+	Music(0x47)
 	BG(0x3e)
-	Text(Ch25Ending1)
-	BG(0x3e)
+	STAL 5
+	BROWNBOXTEXT AeteriaCapitalText [8,8]
+	STAL 15
 	Text(Ch25Ending2)
 
 	MNC2 0xA //2-6

@@ -74,8 +74,13 @@ ASMC 0x8026629
 	SET_HP Beran
 	CALL $591FD8
 FADU 60
+Music(0x4E)
+STAL 150
+CameraCursor(Haye)
+Text(ChCh27xOpening1)
+
 CameraCursor(Chiffon)
-Text(Placeholder1)
+Text(ChCh27xOpening2)
 SOUN 0x119 //bolting sparks
 ENUT 0x24
 ENUT 0x5
@@ -88,6 +93,9 @@ CALL EndingScene
 	ENDA
 
 EndingScene:
+	Music(0x26e)
+	SetBackground(0x2b)
+	Text(ChCh27xEnding1)
 	MNC2 0x23
 	NoFade
 	ENDA

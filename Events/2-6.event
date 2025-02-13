@@ -335,27 +335,36 @@ BeginningScene:
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 DontKillTheseGuys
 	ENUN
-	Background(0x1)
+	Music(0x26e)
+	SetBackground(0x34)
+	STAL 5
+	BROWNBOXTEXT IdeonBorderText [8,8]
+	STAL 15
 	Text(Ch26Opening1)
 	ClearBackground
 	STAL 15
 	CameraCursor(0x51)
-	Background(0x1)
+	STAL 10
+	Music(0x18e)
+	SetBackground(0x2d)
 	Text(Ch26Opening2)
 	CALL $591FD8 //prep screen
 	FADU 60
 	CameraCursor(Chiffon)
 	Text(Ch26Opening3)
-	CenterTextbox(P2PlaceholderCh6)
+	//CenterTextbox(P2PlaceholderCh6)
 	NoFade
 	ENDA
 
 EndingScene:
+	Music(0x31)
+	SetBackground(0x2d)
 	Text(Ch26Ending1)
 	STAL 15
-	Background(0x1)
+	Music(0xAD)
+	SetBackground(0x44)
 	Text(Ch26Ending2)
-	//MNC2 0x14 //2-7
-	MNC2 0x3A //2-7 but DAY
+	MNC2 0x14 //2-7
+	//MNC2 0x3A //2-7 but DAY
 	NoFade
 	ENDA

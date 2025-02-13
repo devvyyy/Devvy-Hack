@@ -19,7 +19,7 @@ TURN 0x0 HayeLeaves [3,255] 0x0
 TurnEventEnemy(0,RealEnemy4,1)
 TURN 0x0 BrigandSpawnTime [4,0] 0x0
 TURN 0x0 BossChargeWarning [5,0] 0x0
-TURN 0x0 BossCharge [6,0] 0x0
+//TURN 0x0 BossCharge [6,0] 0x0
 TURN 0x0 RealEnemy3 [7,0] 0x0
 TURN 0x0 RealEnemy2 [8,0] 0x0
 TURN 0x0 LastBatch [7,0] 0x0
@@ -38,7 +38,7 @@ CharacterEventBothWays(0xA,LesTeamRecruit, 0x0, Irene)
 LesTeamRecruit:
 MUSS 0x30
 STAL 33
-Text(Placeholder1)
+Text(Ch22Recruit)
 MURE 0x2
 CUSA Radcliff
 CUSA Ilse
@@ -98,7 +98,7 @@ UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [17,11] 0b 0x0 0x0 0x0 [IronAxe,0xE9,]
 	UNIT
 	
 HayeSpawn:
-UNIT Gheb 0x64 0x1 Level(10, Enemy, 1)     [9,2] 0b 0x0 0x0 0x0 [Siegmund] RangeAI
+UNIT 0x5A 0x64 0x1 Level(10, Enemy, 1)     [9,2] 0b 0x0 0x0 0x0 [Siegmund] RangeAI
 	UNIT
 
 EnemyUnits: //tlp ghosts?! :scream:
@@ -143,7 +143,7 @@ UNIT Ilse Ranger 0x1 Level(3, NPC, 0)     [0,7] 0b 0x0 0x0 0x0 [0xDB,SteelDagger
 UNIT Pandoro Pirate 0x1 Level(7, NPC, 0)   [1,6] 0b 0x0 0x0 0x0 [IronLabrys,EmeraldAxe,PureWater] [0x0,0x3,0x0,0x20]
 UNIT Irene Myrmidon_F 0x1 Level(7, NPC, 0)   [1,8] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] [0x0,0x3,0x0,0x20]
 
-UNIT Gus Assassin 0x1 Level(4, Ally, 0)   [16,6] 0b 0x0 0x0 0x0 [Rapier,RedGem] RangeAI
+UNIT Gus Thief 0x1 Level(4, Ally, 0)   [16,6] 0b 0x0 0x0 0x0 [Rapier,RedGem] RangeAI
 	UNIT
 	
 LunaticUnits:
@@ -152,11 +152,11 @@ UNIT Ilse Ranger 0x1 Level(3, NPC, 1)     [0,7] 0b 0x0 0x0 0x0 [0xDB,Longbow,Rap
 UNIT Pandoro Pirate 0x1 Level(7, NPC, 1)   [1,6] 0b 0x0 0x0 0x0 [IronLabrys,EmeraldAxe,Swordreaver,PureWater] [0x0,0x3,0x0,0x20]
 UNIT Irene Myrmidon_F 0x1 Level(7, NPC, 1)   [1,8] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,0xB8,Vulnerary] [0x0,0x3,0x0,0x20]
 
-UNIT Gus Assassin 0x1 Level(4, Ally, 1)   [16,6] 0b 0x0 0x0 0x0 [Rapier,WhiteGem] RangeAI
+UNIT Gus Thief 0x1 Level(4, Ally, 1)   [16,6] 0b 0x0 0x0 0x0 [Rapier,WhiteGem] RangeAI
 	UNIT
 	
 HolyCrapItHim: //spawn from village idk?
-UNIT 0x54 Ranger 0x1 Level(4, Enemy, 0)     [0,13] DropItem 0 1 REDA4R13 [ShortBow, Mace] BossAI
+UNIT 0x54 Ranger 0x1 Level(4, Enemy, 0)     [0,13] DropItem 0 1 REDA4R13 [ShortBow, Mace, Torch] BossAI
 UNIT Levain MageKnight 0x1 Level(3, Enemy, 1)   [0,14] DropItem 0 1 REDA5R14 [Iceberg,Elixir] BossAI
 	UNIT
 	
@@ -223,6 +223,7 @@ NoFade
 ENDA
 	
 EnemyPhaseEventScream:
+CameraCursor(Raial)
 Text(Ch10ReinSpawnTime)
 NoFade
 ENDA
@@ -304,14 +305,14 @@ HayeLeaves:
 CHECK_ALIVE 0x54 //solum
 BNE 1 0x0 0xC
 
-CHECK_ALIVE Haye
+CHECK_ALIVE 0x5A
 BEQ 1 0x0 0xC
 
-CameraCursor(Haye)
+CameraCursor(0x5A)
 Text(Ch22Opening8)
-MOVE 0xF Haye [0,14]
+MOVE 0xF 0x5A [0,14]
 ENUN
-DISA_IF Haye
+DISA_IF 0x5A
 
 LABEL 1
 NoFade
@@ -324,16 +325,17 @@ DISA Pandoro
 	LOAD1 0x1 EnemyUnits
 	//LOAD1 0x1 GreenUnits
 HardUnits(LunaticUnits,GreenUnits)
+ENUN
 MUSC 0x3cd
 BG(0xC)
-Text(Ch22Opening1)
+TextCont(Ch22Opening1, 0x26)
 ClearBackground
 Text(Ch22Opening2) //verna flies back
 STAL 15
 CameraCursor(Radcliff)
+MUSC 0x58
+BG(0xd)
 Text(Ch22Opening3)
-
-	ENUN
 	CALL $591FD8 //prep screen
 	FADU 60
 	VCWF 4
@@ -344,19 +346,24 @@ Text(Ch22Opening3)
 	ENDA
 
 EndingScene:
-	MUSC 0x1
-	BG(0x1)
+DoAllThree
+	MUSC 0x115
+	BG(0xC)
 	Text(Ch22Ending1)
-ClearBackground
+	BG(0x35)
 	FADI 60
+	VCWF 0
+	CLEAN
 	SVAL 0xB 0x50008
 	LOMA 0x3D
 	FADU 60
 STAL 10
 BROWNBOXTEXT ArmaVillageText [8,8]
 STAL 5
+MUSC 0x20
 	BG(0x31)
 	Text(Ch22Ending2)
-	MNC2 0x22 //2-3
+	//MNC2 0x22 //2-3
+	MNC2 0x3D //Interlude 1
 	NoFade
 	ENDA
