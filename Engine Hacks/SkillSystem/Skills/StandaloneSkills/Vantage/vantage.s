@@ -26,12 +26,12 @@ beq Normal
 @check for Vantage, Vantage+, Eye For An Eye
 
 @ is spd higher than foes spd + 3?
-ldrb r0, [r5, #0x15] @attacker res
-ldrb r1, [r4, #0x15] @defender res
-mov r2, #0x5
+ldrb r0, [r4, #0x15] @attacker spd
+ldrb r1, [r5, #0x15] @defender spd
+mov r2, #0x3
 add r1, r2
 cmp r0, r1
-ble NextSkill @skip if res is less or equal than foes res
+ble NextSkill @skip if spd is less or equal than foes spd
 
 ldr r0, SkillTester
 mov lr, r0

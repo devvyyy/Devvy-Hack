@@ -165,12 +165,31 @@ ALIGN 4
 SongTable(0x28B,ChasingLeavesNoIntro,1)
 #include "4ChasingLeavesNoIntro.event"
 
+ALIGN 4
+SongTable(0x28C,NorthernWinds,1)
+#include "29NorthernWinds.event"
+
+ALIGN 4
+SongTable(0x28D,IlluminationSong,1)
+#include "30Illumination.event"
+
+ALIGN 4
+SongTable(0x28E,GoldenEyes,1)
+#include "31GoldenEyes.event"
+
+ALIGN 4
+SongTable(0x28F,SovereignSong,1)
+#include "32Sovereign.event"
+
 
 //ALIGN 4
 // Bard Gaming
-//SongTable(0x02D6,song02D6,7)
-//#include "BardSound.event"
+SongTable(0x02D6,song02D6,7)
+#include "BardSound.event"
 //this replaces.... the sacred stone breaking sound???? tf
+
+SongTable(0x02D4,BardRefreshUlt,7)
+#include "BardRefresh_FINAL.event"
 
 //LHT Music by Runa
 ALIGN 4

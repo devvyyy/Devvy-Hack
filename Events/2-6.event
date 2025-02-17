@@ -17,31 +17,31 @@ TURN 0x0 TopRein [4,0] 0x0
 TURN 0x0 MountRein [6,0] 0x0
 TURN 0x0 MountRein2 [9,0] 0x0
 TURN 0x0 MountRein3 [11,0] 0x0
-TurnEventEnemy(0,OMGMyHeroAGAIN,6)
+//TurnEventEnemy(0,OMGMyHeroAGAIN,6)
 	END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x8,KatsuRecruit, Chiffon, Levain)
-CharacterEventBothWays(0x8,KatsuRecruitGeneric, 0x0, Levain)
+CharacterEventBothWays(0xA, RecruitEdithChiff, Chiffon, Edith)
+CharacterEventBothWays(0xA, RecruitEdithJaye, Edith, Jaye)
 //CharacterEventBothWays(0x9,FlanRecruit, Chiffon, Flan)
 	END_MAIN
-
-KatsuRecruit:
+	
+RecruitEdithChiff:
 MUSS 0x30
 STAL 33
-Text(Placeholder1)
-MURE Levain
-CUSA Levain
+//Text(ChiffonEdithTalk)
+MURE 0x2
+TurnAlly(Edith)
 NoFade
 ENDA
 
-KatsuRecruitGeneric:
+RecruitEdithJaye:
 MUSS 0x30
 STAL 33
-Text(Placeholder2)
-MURE Levain
-CUSA Levain
+//Text(JayeEdithTalk)
+MURE 0x2
+TurnAlly(Edith)
 NoFade
 ENDA
 
@@ -67,7 +67,7 @@ CameraCursor(0x51)
 	STAL 15
 	MOVE 0x50 0x51 [14,6] //frames char coords
 	ENUN
-	Text(Placeholder2)
+	Text(Ch26DudeMoveMoment2)
 NoFade
 ENDA
 
@@ -76,7 +76,8 @@ LocationBasedEvents:
 //Escape(22,6)
 //Escape(22,7)
 LOCA 0x0 SussyEvent [14,5] 0x11
-DurabilityChest(0xBC,LunaID,19,4) //luna
+//DurabilityChest(0xBC,LunaID,19,4) //luna
+Chest(0xf5,19,4) //runic ring
 Door(21,11)
 Door(22,11)
 Door(17,4)
@@ -100,7 +101,7 @@ GOTO 2
 
 LABEL 1
 
-Text(Placeholder1)
+Text(CantSeizeCh26)
 
 LABEL 2
 NoFade
@@ -120,6 +121,8 @@ CAM1 [20,6]
 TILEREVERT 0x4 //the door
 
 SetFlag(0xE)
+CameraCursor(Chiffon)
+Text(EveryoneDoneCh26)
 
 LABEL 0x9000
 
@@ -164,14 +167,15 @@ UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [5,4] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [
 
 DontKillTheseGuys:
 //new recruits
-UNIT 0xCE Soldier 0x1 Level(1, Enemy, 0)     [7,15] 0b 0x0 0x0 0x0 [IronLance] DoNothingAI
-UNIT 0xCE Soldier 0x1 Level(1, Enemy, 0)     [15,11] 0b 0x0 0x0 0x0 [IronLance] DoNothingAI
-UNIT 0xCE 0x3E 0x1 Level(1, Enemy, 0)     [14,0] 0b 0x0 0x0 0x0 [Fire] DoNothingAI
-UNIT 0xCE 0x3E 0x1 Level(1, Enemy, 0)     [3,13] 0b 0x0 0x0 0x0 [Fire] DoNothingAI
-UNIT 0xCE 0x3E 0x1 Level(1, Enemy, 0)     [11,16] 0b 0x0 0x0 0x0 [Fire] DoNothingAI
+UNIT 0xCE Soldier 0x1 Level(1, Enemy, 0)     [7,15] DropItem 0x0 0x0 0x0 [IronLance, 0x7D] DoNothingAI
+UNIT 0xCE Soldier 0x1 Level(1, Enemy, 0)     [15,11] DropItem 0x0 0x0 0x0 [IronLance,0x5F] DoNothingAI
+UNIT 0xCE 0x3E 0x1 Level(1, Enemy, 0)     [14,0] DropItem 0x0 0x0 0x0 [Fire, 0xCE] DoNothingAI
+UNIT 0xCE 0x3E 0x1 Level(1, Enemy, 0)     [3,13] DropItem 0x0 0x0 0x0 [Fire, 0xF5] DoNothingAI
+UNIT 0xCE 0x3E 0x1 Level(1, Enemy, 0)     [11,16] DropItem 0x0 0x0 0x0 [Flare] DoNothingAI
 	UNIT
 
 EnemyUnits:
+UNIT Edith General 0x1 Level(3, Ally, 1)     [14,13] 0b 0x0 0x0 0x0 [SteelRifle,0x67,Elixir] BossAI
 UNIT 0x51 0x73 0x1 Level(1, Enemy, 1)     [14,5] DropItem 0x0 0x0 0x0 [0x9,MasterSeal] [0x6,0x3,0x4,0x20]
 UNIT Aeteria General 0x1 Level(5, Enemy, 1)     [10,1] 0b 0x0 0x0 0x0 [Longbow,Skypiercer] BossAI
 UNIT Aeteria Mercenary 0x1 Level(9, Enemy, 1)     [8,2] 0b 0x0 0x0 0x0 [IronSword] AttackInRangeAI
@@ -217,7 +221,6 @@ UNIT 0xc4 APal 0x1 Level(13, Enemy, 0)     [13,6] 0b 0x0 0x0 0x0 [KillerAxe,Shor
 UNIT 0xc3 GreatKnight 0x1 Level(12, Enemy, 0)     [15,6] 0b 0x0 0x0 0x0 [LightBrand,BluntGlaive,ShortAxe,0xA7] BossAI
 UNIT Aeteria ACav 0x1 Level(9, Enemy, 1)     [18,0] DropItem 0x0 0x0 0x0 [SteelAxe] TwoActionAI
 UNIT AeteriaStealable Shaman 0x1 Level(9, Enemy, 1)     [19,16] 0b 0x0 0x0 0x0 [Flux,RedGem] TwoActionAI
-UNIT Levain MageKnight 0x1 Level(3, Enemy, 1)   [4,10] 0b 0x0 0x0 0x0 [Iceberg,Elixir] BossAI
 	UNIT
 
 Rein1:
@@ -253,7 +256,7 @@ BEQ 0x776 0x0 0xC
 CAM1 0xC4
 STAL 20
 FlashCursor(0xC4,60)
-Text(Placeholder1)
+Text(AggroOpalCh26)
 ENUT 0x19
 LABEL 0x776
 NoFade
@@ -275,7 +278,7 @@ BEQ 0x776 0x0 0xC
 CAM1 0xC3
 STAL 20
 FlashCursor(0xC3,60)
-Text(Placeholder2)
+Text(AggroWulfricCh26)
 STAL 5
 ENUT 0xA
 LABEL 0x776
@@ -335,6 +338,7 @@ BeginningScene:
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 DontKillTheseGuys
 	ENUN
+	TurnEnemy(Edith)
 	Music(0x26e)
 	SetBackground(0x34)
 	STAL 5

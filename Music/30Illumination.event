@@ -1,0 +1,2136 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	IlluminationSong_grp  voicegroup000
+	#define	IlluminationSong_pri  0
+	#define	IlluminationSong_rev  0
+	#define	IlluminationSong_mvl  35
+	#define	IlluminationSong_key  0
+	#define	IlluminationSong_tbs  1
+	#define	IlluminationSong_exg  0
+	#define	IlluminationSong_cmp  1
+
+	// .rodata
+	//	IlluminationSong
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+IlluminationSong_1:
+	BYTE	KEYSH   IlluminationSong_key+0
+IlluminationSong_1_B1:
+// 000   ----------------------------------------
+	BYTE	TEMPO   100*IlluminationSong_tbs/2
+	BYTE		VOICE   46
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     109*IlluminationSong_mvl/mxv
+	BYTE		PAN     c_v-25
+	BYTE		N05     Fn4   v127
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fn5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+// 001   ----------------------------------------
+IlluminationSong_1_001:
+	BYTE		N05     An4   v127
+	BYTE	W06
+	BYTE		        Fn5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE	PEND
+// 002   ----------------------------------------
+IlluminationSong_1_002:
+	BYTE		N05     Fn4   v127
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fn5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE	PEND
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_001
+// 004   ----------------------------------------
+IlluminationSong_1_004:
+	BYTE		N05     Fn4   v127
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE	PEND
+// 005   ----------------------------------------
+IlluminationSong_1_005:
+	BYTE		N05     Dn4   v127
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        Gn5 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE	PEND
+// 006   ----------------------------------------
+IlluminationSong_1_006:
+	BYTE		N05     As4   v127
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        Gn5 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fn5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE	PEND
+// 007   ----------------------------------------
+IlluminationSong_1_007:
+	BYTE		N05     An4   v127
+	BYTE	W06
+	BYTE		        Fn5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE	PEND
+// 008   ----------------------------------------
+IlluminationSong_1_008:
+	BYTE		N05     En4   v127
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fn5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE	PEND
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_001
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_002
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_001
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_005
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_006
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_007
+// 016   ----------------------------------------
+	BYTE		N05     En4   v127
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+// 017   ----------------------------------------
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Ds4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Ds5 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Ds4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+// 018   ----------------------------------------
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Ds5 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Ds5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+// 019   ----------------------------------------
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Ds5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        Gn5 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+// 020   ----------------------------------------
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        Gn5 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        Ds4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Ds5 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Ds4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+// 021   ----------------------------------------
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Ds5 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Fn5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+// 022   ----------------------------------------
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Fn5 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+// 023   ----------------------------------------
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_008
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_001
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_002
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_001
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_004
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_005
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_006
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_007
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_008
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_001
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_002
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_001
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_004
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_005
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_006
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_007
+// 040   ----------------------------------------
+	BYTE		N05     En4   v127
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Cn5 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+// 041   ----------------------------------------
+IlluminationSong_1_041:
+	BYTE		N05     Fn4   v127
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE	PEND
+// 042   ----------------------------------------
+IlluminationSong_1_042:
+	BYTE		N05     Fn4   v127
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE	PEND
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_041
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_042
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_041
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_1_042
+// 047   ----------------------------------------
+	BYTE		N05     Fn4   v127
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		        Dn5 
+	BYTE	W06
+	BYTE		        As4 
+	BYTE	W06
+	BYTE		N42     Dn4 
+	BYTE		N42     Gn4 
+	BYTE		N42     As4 
+	BYTE	W24
+// 048   ----------------------------------------
+	BYTE	W18
+	BYTE	GoTo
+	 POIN2	IlluminationSong_1_B1
+IlluminationSong_1_B2:
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+IlluminationSong_2:
+	BYTE	KEYSH   IlluminationSong_key+0
+IlluminationSong_2_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   50
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     119*IlluminationSong_mvl/mxv
+	BYTE		PAN     c_v-19
+	BYTE		N20     Gn2   v127
+	BYTE	W24
+	BYTE		N66     Fn2 
+	BYTE	W72
+// 001   ----------------------------------------
+IlluminationSong_2_001:
+	BYTE		N20     Cn2   v127
+	BYTE	W24
+	BYTE		N66     Dn2 
+	BYTE	W72
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE		N20     Gn2 
+	BYTE	W24
+	BYTE		N66     Fn2 
+	BYTE	W72
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_001
+// 004   ----------------------------------------
+	BYTE		N20     Cn2   v127
+	BYTE	W24
+	BYTE		N66     As1 
+	BYTE	W72
+// 005   ----------------------------------------
+	BYTE		N20     Dn2 
+	BYTE	W24
+	BYTE		N66     Gn2 
+	BYTE	W72
+// 006   ----------------------------------------
+	BYTE		N20     Dn2 
+	BYTE	W24
+	BYTE		N66     Fn2 
+	BYTE	W72
+// 007   ----------------------------------------
+	BYTE		N20     Gn2 
+	BYTE	W24
+	BYTE		N66     En2 
+	BYTE	W72
+// 008   ----------------------------------------
+	BYTE		N20     Gn2 
+	BYTE	W24
+	BYTE		N17     Fn2 
+	BYTE	W18
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		N11     Fn1 
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W24
+	BYTE		        Cn2 
+	BYTE	W12
+// 009   ----------------------------------------
+IlluminationSong_2_009:
+	BYTE		N11     Fn1   v127
+	BYTE	W12
+	BYTE		        Cn2 
+	BYTE	W12
+	BYTE		N17     Dn2 
+	BYTE	W18
+	BYTE		N05     An1 
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W12
+	BYTE	PEND
+// 010   ----------------------------------------
+IlluminationSong_2_010:
+	BYTE		N11     Dn1   v127
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W12
+	BYTE		N17     Fn2 
+	BYTE	W18
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		N11     Fn1 
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W24
+	BYTE		        Cn2 
+	BYTE	W12
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_009
+// 012   ----------------------------------------
+IlluminationSong_2_012:
+	BYTE		N11     Dn1   v127
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W12
+	BYTE		N17     As1 
+	BYTE	W18
+	BYTE		N05     Fn1 
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W24
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE	PEND
+// 013   ----------------------------------------
+IlluminationSong_2_013:
+	BYTE		N11     Dn1   v127
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		N17     Gn1 
+	BYTE	W18
+	BYTE		N05     Dn1 
+	BYTE	W06
+	BYTE		N11     As0 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE		        Dn1 
+	BYTE	W12
+	BYTE	PEND
+// 014   ----------------------------------------
+IlluminationSong_2_014:
+	BYTE		N11     As0   v127
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		N17     An1 
+	BYTE	W18
+	BYTE		N05     Gn1 
+	BYTE	W06
+	BYTE		N11     Fn1 
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE	PEND
+// 015   ----------------------------------------
+IlluminationSong_2_015:
+	BYTE		N11     Fn1   v127
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		N17     Cn2 
+	BYTE	W18
+	BYTE		N05     Gn1 
+	BYTE	W06
+	BYTE		N11     En1 
+	BYTE	W12
+	BYTE		        Cn2 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE	PEND
+// 016   ----------------------------------------
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		        Cn2 
+	BYTE	W12
+	BYTE		N17     As1 
+	BYTE	W18
+	BYTE		N05     Fn1 
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W24
+	BYTE		        Fn1 
+	BYTE	W12
+// 017   ----------------------------------------
+	BYTE		        Dn1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		N17   
+	BYTE	W18
+	BYTE		N05     Gn1 
+	BYTE	W06
+	BYTE		N11     Ds1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W12
+// 018   ----------------------------------------
+IlluminationSong_2_018:
+	BYTE		N11     Ds1   v127
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		N17     An1 
+	BYTE	W18
+	BYTE		N05     Gn1 
+	BYTE	W06
+	BYTE		N11     Fn1 
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE	PEND
+// 019   ----------------------------------------
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		N17     Gn1 
+	BYTE	W18
+	BYTE		N05     Dn1 
+	BYTE	W06
+	BYTE		N11     As0 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE		        Dn1 
+	BYTE	W12
+// 020   ----------------------------------------
+	BYTE		        As0 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		N17     As1 
+	BYTE	W18
+	BYTE		N05     Gn1 
+	BYTE	W06
+	BYTE		N11     Ds1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W12
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_018
+// 022   ----------------------------------------
+	BYTE		N11     Fn1   v127
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		N17     As1 
+	BYTE	W18
+	BYTE		N05     Fn1 
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W24
+	BYTE		        Fn1 
+	BYTE	W12
+// 023   ----------------------------------------
+	BYTE		        Dn1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		N17     Cn2 
+	BYTE	W18
+	BYTE		N05     Gn1 
+	BYTE	W06
+	BYTE		N11     En1 
+	BYTE	W12
+	BYTE		        Cn2 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W12
+// 024   ----------------------------------------
+IlluminationSong_2_024:
+	BYTE		N11     En1   v127
+	BYTE	W12
+	BYTE		        Cn2 
+	BYTE	W12
+	BYTE		N17     Fn2 
+	BYTE	W18
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		N11     Fn1 
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W24
+	BYTE		        Cn2 
+	BYTE	W12
+	BYTE	PEND
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_009
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_010
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_009
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_012
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_013
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_014
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_015
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_024
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_009
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_010
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_009
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_012
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_013
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_014
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_015
+// 040   ----------------------------------------
+	BYTE		N11     En1   v127
+	BYTE	W12
+	BYTE		        Cn2 
+	BYTE	W12
+	BYTE		N66     Dn2 
+	BYTE	W72
+// 041   ----------------------------------------
+IlluminationSong_2_041:
+	BYTE		N20     An1   v127
+	BYTE	W24
+	BYTE		N66     As1 
+	BYTE	W72
+	BYTE	PEND
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_001
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_041
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_001
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_041
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_2_001
+// 047   ----------------------------------------
+	BYTE		N20     An1   v127
+	BYTE	W24
+	BYTE		N90     As1 
+	BYTE	W72
+// 048   ----------------------------------------
+	BYTE	W18
+	BYTE	GoTo
+	 POIN2	IlluminationSong_2_B1
+IlluminationSong_2_B2:
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+IlluminationSong_3:
+	BYTE	KEYSH   IlluminationSong_key+0
+IlluminationSong_3_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   81
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+17
+	BYTE		VOL     127*IlluminationSong_mvl/mxv
+	BYTE		N20     Dn4   v127
+	BYTE	W24
+	BYTE		N66     An3 
+	BYTE	W72
+// 001   ----------------------------------------
+IlluminationSong_3_001:
+	BYTE		N11     Fn3   v127
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		        An3 
+	BYTE	W12
+	BYTE		N05     As3 
+	BYTE	W06
+	BYTE		N17     An3 
+	BYTE	W18
+	BYTE		N11     Gn3 
+	BYTE	W12
+	BYTE		N20     Fn3 
+	BYTE	W24
+	BYTE	PEND
+// 002   ----------------------------------------
+IlluminationSong_3_002:
+	BYTE		N20     Dn4   v127
+	BYTE	W24
+	BYTE		N66     An3 
+	BYTE	W72
+	BYTE	PEND
+// 003   ----------------------------------------
+IlluminationSong_3_003:
+	BYTE		N11     As3   v127
+	BYTE	W12
+	BYTE		        Cn4 
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+	BYTE		N05     En4 
+	BYTE	W06
+	BYTE		N17     Fn4 
+	BYTE	W18
+	BYTE		N11     En4 
+	BYTE	W12
+	BYTE		N20     Dn4 
+	BYTE	W24
+	BYTE	PEND
+// 004   ----------------------------------------
+IlluminationSong_3_004:
+	BYTE		N20     Cn4   v127
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N05     As3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		N42     As3 
+	BYTE	W48
+	BYTE	PEND
+// 005   ----------------------------------------
+IlluminationSong_3_005:
+	BYTE		N20     An3   v127
+	BYTE	W24
+	BYTE		N11     Gn3 
+	BYTE	W12
+	BYTE		N05     An3 
+	BYTE	W06
+	BYTE		N17     As3 
+	BYTE	W18
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		N20     Gn3 
+	BYTE	W24
+	BYTE	PEND
+// 006   ----------------------------------------
+IlluminationSong_3_006:
+	BYTE		N11     Fn3   v127
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		N32     An3 
+	BYTE	W36
+	BYTE		N05     Fn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		N20     As3 
+	BYTE	W12
+	BYTE	PEND
+// 007   ----------------------------------------
+IlluminationSong_3_007:
+	BYTE	W12
+	BYTE		N11     An3   v127
+	BYTE	W12
+	BYTE		N66     Gn3 
+	BYTE	W72
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_002
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_001
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_002
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_003
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_005
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_006
+// 015   ----------------------------------------
+	BYTE	W12
+	BYTE		N11     An3   v127
+	BYTE	W12
+	BYTE		N90     Gn3 
+	BYTE	W72
+// 016   ----------------------------------------
+	BYTE	W24
+	BYTE		N05     Fn4 
+	BYTE	W06
+	BYTE		        Ds4 
+	BYTE	W06
+	BYTE		N44     Dn4 
+	BYTE	W48
+	BYTE		N11     As3 
+	BYTE	W12
+// 017   ----------------------------------------
+	BYTE		        Cn4 
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+	BYTE		N20     Ds4 
+	BYTE	W24
+	BYTE		N11     Dn4 
+	BYTE	W12
+	BYTE		N32     Cn4 
+	BYTE	W36
+// 018   ----------------------------------------
+	BYTE		N20     Ds4 
+	BYTE	W24
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		N44     Cn4 
+	BYTE	W48
+	BYTE		N11     An3 
+	BYTE	W12
+// 019   ----------------------------------------
+	BYTE		        As3 
+	BYTE	W12
+	BYTE		        Cn4 
+	BYTE	W12
+	BYTE		N20     Dn4 
+	BYTE	W24
+	BYTE		N11     Cn4 
+	BYTE	W12
+	BYTE		N32     As3 
+	BYTE	W36
+// 020   ----------------------------------------
+	BYTE		N20     Gn3 
+	BYTE	W24
+	BYTE		N05     Ds3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		N44     Gn3 
+	BYTE	W48
+	BYTE		N11   
+	BYTE	W12
+// 021   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W12
+	BYTE		        As3 
+	BYTE	W12
+	BYTE		N20     An3 
+	BYTE	W24
+	BYTE		N11     As3 
+	BYTE	W12
+	BYTE		N32     Cn4 
+	BYTE	W36
+// 022   ----------------------------------------
+	BYTE		N20     An3 
+	BYTE	W24
+	BYTE		N42     As3 
+	BYTE	W48
+	BYTE		        An3 
+	BYTE	W24
+// 023   ----------------------------------------
+	BYTE	W24
+	BYTE		N66     Gn3 
+	BYTE	W72
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_002
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_001
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_002
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_003
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_004
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_005
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_006
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_007
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_002
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_001
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_002
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_003
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_004
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_005
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_006
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_3_007
+// 040   ----------------------------------------
+	BYTE		N11     Fn3   v127
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		TIE     Fn3 
+	BYTE	W72
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE	W18
+	BYTE		EOT   
+	BYTE	GoTo
+	 POIN2	IlluminationSong_3_B1
+IlluminationSong_3_B2:
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+IlluminationSong_4:
+	BYTE	KEYSH   IlluminationSong_key+0
+IlluminationSong_4_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   51
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     105*IlluminationSong_mvl/mxv
+	BYTE		PAN     c_v+18
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+IlluminationSong_4_008:
+	BYTE	W24
+	BYTE		N96     An2   v076
+	BYTE		N96     Cn3 
+	BYTE		N96     Fn3 
+	BYTE	W72
+	BYTE	PEND
+// 009   ----------------------------------------
+IlluminationSong_4_009:
+	BYTE	W24
+	BYTE		N96     An2   v076
+	BYTE		N96     Dn3 
+	BYTE		N96     Fn3 
+	BYTE	W72
+	BYTE	PEND
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_008
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_009
+// 012   ----------------------------------------
+IlluminationSong_4_012:
+	BYTE	W24
+	BYTE		N96     As2   v076
+	BYTE		N96     Dn3 
+	BYTE		N96     Fn3 
+	BYTE	W72
+	BYTE	PEND
+// 013   ----------------------------------------
+IlluminationSong_4_013:
+	BYTE	W24
+	BYTE		N96     As2   v076
+	BYTE		N96     Dn3 
+	BYTE		N96     Gn3 
+	BYTE	W72
+	BYTE	PEND
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_008
+// 015   ----------------------------------------
+IlluminationSong_4_015:
+	BYTE	W24
+	BYTE		N90     Gn2   v076
+	BYTE		N90     Cn3 
+	BYTE		N90     En3 
+	BYTE	W72
+	BYTE	PEND
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_012
+// 017   ----------------------------------------
+	BYTE	W24
+	BYTE		N96     Gn2   v076
+	BYTE		N96     As2 
+	BYTE		N96     Ds3 
+	BYTE	W72
+// 018   ----------------------------------------
+	BYTE	W24
+	BYTE		        An2 
+	BYTE		N96     Cn3 
+	BYTE		N96     Ds3 
+	BYTE		N96     Fn3 
+	BYTE	W72
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_013
+// 020   ----------------------------------------
+	BYTE	W24
+	BYTE		N96     As2   v076
+	BYTE		N96     Ds3 
+	BYTE		N96     Gn3 
+	BYTE	W72
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_008
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_012
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_015
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_008
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_009
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_008
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_009
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_012
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_013
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_008
+// 031   ----------------------------------------
+	BYTE	W24
+	BYTE		N96     Gn2   v076
+	BYTE		N96     Cn3 
+	BYTE		N96     En3 
+	BYTE	W72
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_008
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_009
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_008
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_009
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_012
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_013
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_008
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_015
+// 040   ----------------------------------------
+IlluminationSong_4_040:
+	BYTE	W24
+	BYTE		N96     Fn2   v076
+	BYTE		N96     An2 
+	BYTE		N96     Dn3 
+	BYTE	W72
+	BYTE	PEND
+// 041   ----------------------------------------
+IlluminationSong_4_041:
+	BYTE	W24
+	BYTE		N96     Gn2   v076
+	BYTE		N96     As2 
+	BYTE		N96     Dn3 
+	BYTE	W72
+	BYTE	PEND
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_040
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_041
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_040
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_041
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_4_040
+// 047   ----------------------------------------
+	BYTE	W24
+	BYTE		N90     Gn2   v076
+	BYTE		N90     As2 
+	BYTE		N90     Dn3 
+	BYTE	W72
+// 048   ----------------------------------------
+	BYTE	W18
+	BYTE	GoTo
+	 POIN2	IlluminationSong_4_B1
+IlluminationSong_4_B2:
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+IlluminationSong_5:
+	BYTE	KEYSH   IlluminationSong_key+0
+IlluminationSong_5_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   121
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     90*IlluminationSong_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W24
+	BYTE		N15     Cn1   v127
+	BYTE	W16
+	BYTE		N15   
+	BYTE	W16
+	BYTE		N15   
+	BYTE	W16
+	BYTE		N20   
+	BYTE	W24
+// 009   ----------------------------------------
+IlluminationSong_5_009:
+	BYTE		N20     Cs1   v127
+	BYTE	W24
+	BYTE		N15     Cn1 
+	BYTE	W16
+	BYTE		N15   
+	BYTE	W16
+	BYTE		N15   
+	BYTE	W16
+	BYTE		N20   
+	BYTE	W24
+	BYTE	PEND
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_009
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_009
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_009
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_009
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_009
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_009
+// 016   ----------------------------------------
+	BYTE		N11     En1   v127
+	BYTE	W12
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+// 017   ----------------------------------------
+IlluminationSong_5_017:
+	BYTE		N05     Dn1   v127
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE	PEND
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 024   ----------------------------------------
+IlluminationSong_5_024:
+	BYTE		N05     Dn1   v127
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE	PEND
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_024
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 040   ----------------------------------------
+	BYTE		N05     Dn1   v127
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+// 041   ----------------------------------------
+IlluminationSong_5_041:
+	BYTE		N05     Gs1   v127
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE	PEND
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_041
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_041
+// 044   ----------------------------------------
+	BYTE		N05     Gs1   v127
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IlluminationSong_5_017
+// 047   ----------------------------------------
+	BYTE		N05     Dn1   v127
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		N15     Cn1 
+	BYTE	W16
+	BYTE		N15   
+	BYTE	W16
+	BYTE		N15   
+	BYTE	W16
+	BYTE		N20   
+	BYTE	W24
+// 048   ----------------------------------------
+	BYTE	W18
+	BYTE	GoTo
+	 POIN2	IlluminationSong_5_B1
+IlluminationSong_5_B2:
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+IlluminationSong:
+	BYTE	5	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	IlluminationSong_pri	// Priority
+	BYTE	IlluminationSong_rev	// Reverb.
+
+	POIN2	IlluminationSong_grp
+
+	POIN2	IlluminationSong_1
+	POIN2	IlluminationSong_2
+	POIN2	IlluminationSong_3
+	POIN2	IlluminationSong_4
+	POIN2	IlluminationSong_5
+
+	

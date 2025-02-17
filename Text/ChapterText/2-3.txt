@@ -76,7 +76,7 @@ and I must continue to pursue the rebels.[AN]
 [ML]
 For Aeteria.[.6] May moonlight guide us.[AN][CSS][CF]
 
-[R][CF][FR][CF]
+[R][CF][FR][CF][Event]
 
 [ML][LoadWellington][MR][LoadOpal]
 
@@ -106,7 +106,7 @@ to stir[Beat] Will the rebels truly hold to[N]
 the ideals they preach?[AN]
 The empire is in a fragile[,] susceptible state.[6N]
 Will they put a stop to the rampant thievery?[.6][N]
-Protect the people?[AN]
+Prove they will protect the people?[AN]
 Will they show mercy in the face of[N]
 helplessness?[.6] What will the rebellion[N]
 demonstrate in these flames of war?[AN]
@@ -189,9 +189,11 @@ that we are in fact capable of doing[N]
 so[,] leader?[AN]
 
 [ML]
-It has to be too risky[,] right?[.6] The consequences[N]
+It has to be too risky[,] right?[.6] The risk[N]
 of failure greatly outweigh the benefits.[.6][N]
-Even if we defeat them in battle,[AN]
+It's a hard case to alert the generals.[AN]
+I mean[,] think about it:[.4] we provoke[N]
+them[,] and if we defeat them in battle,[4N]
 I doubt they'd lay down and just fall.[AN]
 
 [FR]
@@ -201,8 +203,8 @@ the fire of the rebellion.[AN]
 
 [R]
 And[Beat] Chiffon.[.6] We aren't savages like the[N]
-brutes from the kingdom.[.6] I can tell even the[N]
-Generals' faith is wavering.[AN][C]
+rimebacks from the north.[.6] I can tell even[N]
+the Generals' faith is wavering.[AN][C]
 Hell[,] if we can convince them that we[N]
 have the same goals[,] then--[AN]
 
@@ -239,9 +241,10 @@ General.[.6] The rebels have been spotted down[N]
 south of the city streets.[AN]
 
 [MR]
-Then the battle begins here.[.6] Keeping sure the denizens[N]
-remain safe must be our utmost priority.[.6][N]
-Remain wary and act defensively.[AN][C]
+Then the battle begins here.[.6] Keeping sure[N]
+the denizens remain safe must be[N]
+our utmost priority.[AN]
+Remain wary and act defensively.[6N]
 Only move as a team if the rebels[N]
 approach our position![AN]
 
@@ -251,10 +254,7 @@ Yes[,] General.[.6] May moonlight guide us.[AN]
 
 ## Ch23InBattle3
 # camera moves to wulfric
-[ML][LoadOldWoman][3L]
-[ML]
-Thieves![.6] There's thieves![.6][N]
-Someone help us![AN]
+[3L]
 
 [MR][LoadWellington]
 Cursed vermin taking advantage of these[N]
@@ -270,11 +270,33 @@ rebels approach[Beat] It may seem foolhardy[,][N]
 but the Emperor's orders are absolute.[AN]
 [X]
 
+## Ch23OpalMoment
+[3L]
+[ML][LoadSoldier2][MR][LoadOpal]
+
+[ML]
+It seems these kinds of wronging[N]
+never end here[Beat][AN]
+
+[MR]
+How curious[Beat] How will the rebels respond?[6N]
+[ToggleRed]Now is an opportunity to prove your ideals.[ToggleRed][AN]
+[X]
+
 ## ThiefObjectiveFail
 [3L]
 [ML][Chiffon]
 Blast[Beat] We couldn't catch the[N]
 thieves in time[Beat][AN]
+[X]
+
+## ThiefObjectiveFail2
+# 0x6c is the fail sound effect
+[3L]
+[MR][Opal]
+How unfortunate.[.6] I suppose I should[N]
+have expected no less from a crowd of[N]
+sellswords and zealots.[AN][0x80][0x2D][0x8C][0x86][0x80][0x80][.6]
 [X]
 
 ## Ch23InBattle4
@@ -356,7 +378,7 @@ those thieves.[AN]
 
 [L]
 Oh?[.6] Graham cares about stopping random[N]
-thieves now.[AN]
+thieves now.[.6] How heartwarming.[AN]
 
 [FL]
 Do not misconstrue my words[,] Captain.[6N]
@@ -551,4 +573,29 @@ to such hostile territory?[AN]
 The golden-eyed mercenary and the Liberation Army.[6N]
 I will draw closer.[.6][N]
 I will exact justice.[AN]
+[X]
+
+## AggroWulfricCh23
+[MR][Wulfric][3L]
+The rebels are here.[.6] Get ready to[N]
+move into position![AN]
+[X]
+
+## AggroOpalCh23
+[MR][Opal][3L]
+Follow my command.[.6] This will be[N]
+a swift maneuver.[AN]
+[X]
+
+## Ch23ThiefHouse
+[MR][GingerWoman][3L]
+Aaaaaah![.6] There's[Beat] I'm being robbed![6N]
+Someone help![AN]
+
+[X]
+
+## Ch23ThiefHouse2
+[MR][Moneyman][3L]
+Thieves![.6] There's thieves![.6][N]
+How could you?![AN]
 [X]

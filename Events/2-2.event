@@ -59,11 +59,11 @@ Village(0x9,Village2,8,14)
 	END_MAIN
 	
 Village1:
-VillageEventItem(Placeholder1, 0x1, 0x68) //hexlock shield
+VillageEventItem(Ch22TopHouse, 0x1, 0x68) //hexlock shield
 ENDA
 
 Village2:
-VillageEventItem(Placeholder2, 0x1, 0x8A) //arcane rifle
+VillageEventItem(Ch22BottomHouse, 0x1, 0x8A) //arcane rifle
 ENDA
 
 Dunno1:
@@ -147,10 +147,10 @@ UNIT Gus Thief 0x1 Level(4, Ally, 0)   [16,6] 0b 0x0 0x0 0x0 [Rapier,RedGem] Ran
 	UNIT
 	
 LunaticUnits:
-UNIT Radcliff Warrior 0x1 Level(5, NPC, 1)     [2,7] 0b 0x0 0x0 0x0 [Tomahawk,BodkinRifle,0xFC,Elixir] [0x0,0x3,0x0,0x20]
+UNIT Radcliff Warrior 0x1 Level(5, NPC, 1)     [2,7] 0b 0x0 0x0 0x0 [Tomahawk,BodkinRifle,Elixir] [0x0,0x3,0x0,0x20]
 UNIT Ilse Ranger 0x1 Level(3, NPC, 1)     [0,7] 0b 0x0 0x0 0x0 [0xDB,Longbow,Rapier,Elixir] [0x0,0x3,0x0,0x20]
-UNIT Pandoro Pirate 0x1 Level(7, NPC, 1)   [1,6] 0b 0x0 0x0 0x0 [IronLabrys,EmeraldAxe,Swordreaver,PureWater] [0x0,0x3,0x0,0x20]
-UNIT Irene Myrmidon_F 0x1 Level(7, NPC, 1)   [1,8] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,0xB8,Vulnerary] [0x0,0x3,0x0,0x20]
+UNIT Pandoro Pirate 0x1 Level(7, NPC, 1)   [1,6] 0b 0x0 0x0 0x0 [IronLabrys,EmeraldAxe,PureWater] [0x0,0x3,0x0,0x20]
+UNIT Irene Myrmidon_F 0x1 Level(7, NPC, 1)   [1,8] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] [0x0,0x3,0x0,0x20]
 
 UNIT Gus Thief 0x1 Level(4, Ally, 1)   [16,6] 0b 0x0 0x0 0x0 [Rapier,WhiteGem] RangeAI
 	UNIT
@@ -346,9 +346,11 @@ Text(Ch22Opening3)
 	ENDA
 
 EndingScene:
-DoAllThree
+	FADI 60
+	DoAllThree
 	MUSC 0x115
 	BG(0xC)
+	FADU 30
 	Text(Ch22Ending1)
 	BG(0x35)
 	FADI 60

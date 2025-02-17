@@ -1,0 +1,216 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	BardRefreshUlt_grp  voicegroup000
+	#define	BardRefreshUlt_pri  0
+	#define	BardRefreshUlt_rev  0
+	#define	BardRefreshUlt_mvl  35
+	#define	BardRefreshUlt_key  0
+	#define	BardRefreshUlt_tbs  1
+	#define	BardRefreshUlt_exg  0
+	#define	BardRefreshUlt_cmp  1
+
+	// .rodata
+	//	BardRefreshUlt
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+BardRefreshUlt_1:
+	BYTE	KEYSH   BardRefreshUlt_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   45
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-19
+	BYTE		VOL     127*BardRefreshUlt_mvl/mxv
+	BYTE		TIE     Gn2   v100
+	BYTE		N90     Cn3 
+	BYTE		N90     En3 
+	BYTE		TIE     Gn3 
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE		N96     Bn2 
+	BYTE		N96     Dn3 
+	BYTE	W96
+	BYTE		EOT     Gn2 
+	BYTE		        Gn3 
+// 002   ----------------------------------------
+	BYTE		TIE     Fn2 
+	BYTE		TIE     An2 
+	BYTE		TIE     Cn3 
+	BYTE		TIE     Fn3 
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn2 
+	BYTE		        An2 
+	BYTE		        Cn3 
+	BYTE		        Fn3 
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+BardRefreshUlt_2:
+	BYTE	KEYSH   BardRefreshUlt_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   45
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+18
+	BYTE		VOL     127*BardRefreshUlt_mvl/mxv
+	BYTE		N42     Cn4   v127
+	BYTE	W42
+	BYTE		N21     Dn4 
+	BYTE	W21
+	BYTE		        En4 
+	BYTE	W21
+	BYTE		N12     Fn4 
+	BYTE	W12
+// 001   ----------------------------------------
+	BYTE		N84     En4 
+	BYTE	W84
+	BYTE		N12     Dn4 
+	BYTE	W12
+// 002   ----------------------------------------
+	BYTE		N96     Cn4 
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE		N90     An3 
+	BYTE	W90
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+BardRefreshUlt_3:
+	BYTE	KEYSH   BardRefreshUlt_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   53
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     58*BardRefreshUlt_mvl/mxv
+	BYTE		PAN     c_v-1
+	BYTE		N42     Cn4   v127
+	BYTE	W42
+	BYTE		N21     Dn4 
+	BYTE	W21
+	BYTE		        En4 
+	BYTE	W21
+	BYTE		N12     Fn4 
+	BYTE	W12
+// 001   ----------------------------------------
+	BYTE		N84     En4 
+	BYTE	W84
+	BYTE		N12     Dn4 
+	BYTE	W12
+// 002   ----------------------------------------
+	BYTE		N96     Cn4 
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE		N90     An3 
+	BYTE	W90
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+BardRefreshUlt_4:
+	BYTE	KEYSH   BardRefreshUlt_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   54
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     39*BardRefreshUlt_mvl/mxv
+	BYTE		PAN     c_v-1
+	BYTE		TIE     Gn2   v100
+	BYTE		N90     Cn3 
+	BYTE		N90     En3 
+	BYTE		TIE     Gn3 
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE		N96     Bn2 
+	BYTE		N96     Dn3 
+	BYTE	W96
+	BYTE		EOT     Gn2 
+	BYTE		        Gn3 
+// 002   ----------------------------------------
+	BYTE		TIE     Fn2 
+	BYTE		TIE     An2 
+	BYTE		TIE     Cn3 
+	BYTE		TIE     Fn3 
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn2 
+	BYTE		        An2 
+	BYTE		        Cn3 
+	BYTE		        Fn3 
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+BardRefreshUlt_5:
+	BYTE	KEYSH   BardRefreshUlt_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   48
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-13
+	BYTE		VOL     78*BardRefreshUlt_mvl/mxv
+	BYTE		TIE     Gn2   v100
+	BYTE		N90     Cn3 
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Gn2 
+// 002   ----------------------------------------
+	BYTE		TIE     Fn2 
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.6) ****************//
+
+BardRefreshUlt_6:
+	BYTE	KEYSH   BardRefreshUlt_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   49
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+12
+	BYTE		VOL     58*BardRefreshUlt_mvl/mxv
+	BYTE		N90     En3   v100
+	BYTE		TIE     Gn3 
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE		N96     Dn3 
+	BYTE	W96
+	BYTE		EOT     Gn3 
+// 002   ----------------------------------------
+	BYTE		TIE     Fn3 
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+BardRefreshUlt:
+	BYTE	6	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	BardRefreshUlt_pri	// Priority
+	BYTE	BardRefreshUlt_rev	// Reverb.
+
+	POIN2	BardRefreshUlt_grp
+
+	POIN2	BardRefreshUlt_1
+	POIN2	BardRefreshUlt_2
+	POIN2	BardRefreshUlt_3
+	POIN2	BardRefreshUlt_4
+	POIN2	BardRefreshUlt_5
+	POIN2	BardRefreshUlt_6
+
+	

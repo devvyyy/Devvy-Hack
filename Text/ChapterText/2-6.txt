@@ -124,41 +124,45 @@ Yes[,] Your Excellency[Beat][AN]
 ## Ch26Opening3
 [3L]
 
-[FR][Graham][R][Raial][MR][Chiffon]
+[ML][Graham][R][Raial][FR][Chiffon]
 
-[MR]
-That soldier is shaking[Beat][AN]
+[FR]
+That soldier is shaking[Beat] Spear form's[N]
+pretty bad[,] too.[AN]
 
 [R]
 Looks like a new recruit.[.6] What is this[,][N]
 a school?[.6] Tell 'em to get out[,] this[N]
 warzone ain't a playground![AN]
 
-[FL]
+[ML]
 There seems to be many.[.6] Imperial cannon fodder[,][N]
 it seems.[.6] Hone your powers[,] leader.[6N]
-Take their lives to further the cause.[AN]
+[ToggleRed]Take their lives to further the cause.[ToggleRed][AN][CSS]
 
-[MR]
+[FR][MoveRight]
+[R]
 Wait[,] I can't[Beat][AN]
 
-[FL]
-[Beat][AN]
+[ML]
+[Beat]Ser.[AN]
 
-[L]
+[FR]
 Nah[,] they won't do us any harm.[.6][N]
 They're hardly worthy enemies.[.6] I'm betting[N]
 they won't even approach us out of fear.[AN]
 
-[ML]
+[R]
 I will not take the lives of someone who[N]
 can hardly fend for themselves.[6N]
 But[Beat] Even so[Beat][AN]
 
-[L]
-Leader[Beat]?[AN]
+[FR]
+Leader[Beat]?[.6] The [ToggleRed]Generals wouldn't like[N]
+that one bit[ToggleRed]![.6] We're trying to get them[N]
+on our side[,] here![AN]
 
-[FL]
+[ML]
 You must get stronger[,] Chiffon.[6N]
 By any means necessary.[.6] Strike as[N]
 your heart desires.[AN]
@@ -170,6 +174,13 @@ your heart desires.[AN]
 Aaaah!![.6] The enemies are inside the castle![6N]
 You fools couldn't hold them back?![6N]
 I must move to a safer position[Beat]![AN]
+[X]
+
+## Ch26DudeMoveMoment2
+[3L][LoadFace][0x32][0x1]
+That[Beat] That is better[Beat] Now do[N]
+your job and defend me![.6] If I fall[,][N]
+Aeteria herself weeps![AN]
 [X]
 
 ## Ch26Ending1
@@ -276,5 +287,138 @@ Sigh[Beat] Sure.[.6] I'll take off for the border.[AN]
 You must head with haste[,] General.[6N]
 Allow me to lead the way.[.6] Under no[N]
 circumstance can the rebels break through.[AN]
+
+[X]
+
+## RaialKianRecruit
+[3L]
+[ML][Katsu][MR][Raial][3L]
+[ML][CloseEyes]So be it[Beat] I lose my life to[N]
+the terrors of the empire[Beat][AN]
+
+[MR]
+Stand up[,] kid.[.6] You just gonna[N]
+lay down and die?[AN]
+
+[ML]
+[Pause]Huh[Beat]?[.6] You're Captain Raial[Beat][N]
+I've heard[Beat] so much about you.[AN]
+
+[MR]
+Hah![.6] All bad things[,] I assume.[6N]
+Now step aside.[.6] Go[,] run away.[AN]
+
+[ML]
+No[,] actually.[.6] You're a hero[,] a warrior[N]
+of legends who save those in need.[6N]
+I cannot find myself to fight you.[AN]
+
+[MR]
+Then why don't you come with us?[AN]
+
+[ML]
+To help the people of the rebellion[Beat][N]
+I'd be fouling General Messel's name.[6][N]
+I'm afraid I cannot betray him.[AN]
+
+[MR]
+If I get my way--[.4]and I always get[N]
+my way[,] kid[,] I'll get the General[N]
+on my side.[AN]
+
+[ML]
+I see[Beat] He did tell me of his indecision.[6N]
+Very well[,] if you will help General Messel[,][N]
+then I will protect you.[AN][C]
+Only the moon may judge me now.[AN]
+
+[MR]
+Alright[,] kid.[.6] Follow my lead![AN]
+
+[X]
+
+## KianRecruit
+[3L]
+[ML][Katsu][MR][Chiffon][3L]
+Ah[Beat] the golden-eyed mercenary[Beat][N][CloseEyes]
+I cannot find any will to fight[N]
+anymore[Beat] Take me.[AN]
+
+[MR]
+No.[.6] I will not take the life of[N]
+one who lays down his arms.[6N]
+What's your name?[AN]
+
+[ML]
+[OpenEyes]
+My name[Beat]? How quaint a question.[6N]
+I am Kian of the Imperial messengers.[6N]
+Captain Messel is my commander.[AN]
+
+[MR]
+Kian.[.6] The Emperor's road is toward ruin.[6N]
+The people of Aeteria suffer in silence[Beat][N]
+Why not aid us?[AN]
+
+[ML]
+To help the people of the rebellion[Beat][N]
+I'd be fouling General Messel's name.[6][N]
+I'm afraid I cannot betray him.[AN]
+
+[MR]
+Is that so?[.6] I don't want to harm the[N]
+General either.[.6] I can tell his heart[,][N]
+too[,] is ambivalent.[AN] 
+
+[ML]
+I see[Beat] He did tell me of his indecision.[6N]
+Very well[,] if you will help General Messel[,][N]
+then I will protect you.[AN][C]
+Only the moon may judge me now.[AN]
+
+[MR]
+Thank you[,] Kian.[.6] Your trust will[N]
+not be misplaced.[AN]
+
+
+[X]
+
+## KianRecruitGeneric
+[3L]
+[ML][Katsu][MR][CurrentPortrait][3L]
+[ML]
+Ah[Beat] A fighter of the rebellion[Beat][N]
+I cannot find any will to fight[N]
+anymore[Beat] Take me.[AN]
+[Pause]You won't take my life?[6N]
+How quaint.[.6] Very well[,] if you intend on[N]
+saving Aeteria[,] allow me to join you.[AN]
+[X]
+
+## CantSeizeCh26
+[MR][Chiffon][3L]
+[Mouth](Can't take the throne unless[N]
+there's no one to stop me.)[AN][Mouth]
+[X]
+
+## EveryoneDoneCh26
+[ML][Chiffon][3L]
+Alright[,] everyone's out of the way.[6N]
+All we gotta do is take over.[AN]
+
+[X]
+
+## AggroOpalCh26
+[MR][Opal][3L]
+I cannot overlook such foolishness.[6N]
+Here I come.[.6] Do not resist.[AN]
+
+[X]
+
+## AggroWulfricCh26
+[MR][Wulfric][3L]
+I disagree with the idiot[,] but it[N]
+is my duty to fight for the empire.[6N]
+Run if you must.[AN]
 
 [X]

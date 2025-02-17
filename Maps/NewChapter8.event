@@ -10,6 +10,7 @@ Map:
 MapChanges:
 TileMap(0,7,13,1,1,LeftDoor)
 TileMap(1,18,8,1,1,RightDoor)
+TileMap(4,18,13,1,1,RighterDoor)
 TileMap(2,3,9,1,1,Chest)
 TileMap(3,9,15,3,2,GATE)
 TileMapEnd
@@ -19,6 +20,10 @@ SHORT 0x80
 ALIGN 4
 
 RightDoor:
+SHORT 0x80 
+ALIGN 4
+
+RighterDoor:
 SHORT 0x80 
 ALIGN 4
 

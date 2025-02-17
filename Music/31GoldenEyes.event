@@ -1,0 +1,1419 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	GoldenEyes_grp  voicegroup000
+	#define	GoldenEyes_pri  0
+	#define	GoldenEyes_rev  0
+	#define	GoldenEyes_mvl  35
+	#define	GoldenEyes_key  0
+	#define	GoldenEyes_tbs  1
+	#define	GoldenEyes_exg  0
+	#define	GoldenEyes_cmp  1
+
+	// .rodata
+	//	GoldenEyes
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+GoldenEyes_1:
+	BYTE	KEYSH   GoldenEyes_key+0
+GoldenEyes_1_B1:
+// 000   ----------------------------------------
+	BYTE	TEMPO   90*GoldenEyes_tbs/2
+	BYTE		VOICE   50
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     114*GoldenEyes_mvl/mxv
+	BYTE		PAN     c_v+23
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W72
+	BYTE		N20     Dn4   v127
+	BYTE	W24
+// 005   ----------------------------------------
+GoldenEyes_1_005:
+	BYTE		N66     An3   v127
+	BYTE	W72
+	BYTE		N11     Fn3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE	PEND
+// 006   ----------------------------------------
+GoldenEyes_1_006:
+	BYTE		N11     An3   v127
+	BYTE	W12
+	BYTE		N05     As3 
+	BYTE	W06
+	BYTE		N17     An3 
+	BYTE	W18
+	BYTE		N11     Gn3 
+	BYTE	W12
+	BYTE		N20     Fn3 
+	BYTE	W24
+	BYTE		        Dn4 
+	BYTE	W24
+	BYTE	PEND
+// 007   ----------------------------------------
+GoldenEyes_1_007:
+	BYTE		N66     An3   v127
+	BYTE	W72
+	BYTE		N11     As3 
+	BYTE	W12
+	BYTE		        Cn4 
+	BYTE	W12
+	BYTE	PEND
+// 008   ----------------------------------------
+GoldenEyes_1_008:
+	BYTE		N11     Dn4   v127
+	BYTE	W12
+	BYTE		N05     En4 
+	BYTE	W06
+	BYTE		N17     Fn4 
+	BYTE	W18
+	BYTE		N11     En4 
+	BYTE	W12
+	BYTE		N20     Dn4 
+	BYTE	W24
+	BYTE		        Cn4 
+	BYTE	W24
+	BYTE	PEND
+// 009   ----------------------------------------
+GoldenEyes_1_009:
+	BYTE		N11     Cn4   v127
+	BYTE	W12
+	BYTE		N05     As3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		N42     As3 
+	BYTE	W48
+	BYTE		N20     An3 
+	BYTE	W24
+	BYTE	PEND
+// 010   ----------------------------------------
+GoldenEyes_1_010:
+	BYTE		N11     Gn3   v127
+	BYTE	W12
+	BYTE		N05     An3 
+	BYTE	W06
+	BYTE		N17     As3 
+	BYTE	W18
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		N20     Gn3 
+	BYTE	W24
+	BYTE		N11     Fn3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE	PEND
+// 011   ----------------------------------------
+GoldenEyes_1_011:
+	BYTE		N32     An3   v127
+	BYTE	W36
+	BYTE		N05     Fn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		N20     As3 
+	BYTE	W24
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE	PEND
+// 012   ----------------------------------------
+GoldenEyes_1_012:
+	BYTE		N66     Gn3   v127
+	BYTE	W72
+	BYTE		N20     Dn4 
+	BYTE	W24
+	BYTE	PEND
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_005
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_006
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_007
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_008
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_009
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_010
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_011
+// 020   ----------------------------------------
+	BYTE		N90     Gn3   v127
+	BYTE	W96
+// 021   ----------------------------------------
+GoldenEyes_1_021:
+	BYTE		N05     Fn4   v127
+	BYTE	W06
+	BYTE		        Ds4 
+	BYTE	W06
+	BYTE		N44     Dn4 
+	BYTE	W48
+	BYTE		N11     As3 
+	BYTE	W12
+	BYTE		        Cn4 
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+	BYTE	PEND
+// 022   ----------------------------------------
+GoldenEyes_1_022:
+	BYTE		N20     Ds4   v127
+	BYTE	W24
+	BYTE		N11     Dn4 
+	BYTE	W12
+	BYTE		N32     Cn4 
+	BYTE	W36
+	BYTE		N20     Ds4 
+	BYTE	W24
+	BYTE	PEND
+// 023   ----------------------------------------
+GoldenEyes_1_023:
+	BYTE		N05     Ds4   v127
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		N44     Cn4 
+	BYTE	W48
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        As3 
+	BYTE	W12
+	BYTE		        Cn4 
+	BYTE	W12
+	BYTE	PEND
+// 024   ----------------------------------------
+GoldenEyes_1_024:
+	BYTE		N20     Dn4   v127
+	BYTE	W24
+	BYTE		N11     Cn4 
+	BYTE	W12
+	BYTE		N32     As3 
+	BYTE	W36
+	BYTE		N20     Gn3 
+	BYTE	W24
+	BYTE	PEND
+// 025   ----------------------------------------
+GoldenEyes_1_025:
+	BYTE		N05     Ds3   v127
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		N44     Gn3 
+	BYTE	W48
+	BYTE		N11   
+	BYTE	W12
+	BYTE		        An3 
+	BYTE	W12
+	BYTE		        As3 
+	BYTE	W12
+	BYTE	PEND
+// 026   ----------------------------------------
+GoldenEyes_1_026:
+	BYTE		N20     An3   v127
+	BYTE	W24
+	BYTE		N11     As3 
+	BYTE	W12
+	BYTE		N32     Cn4 
+	BYTE	W36
+	BYTE		N20     An3 
+	BYTE	W24
+	BYTE	PEND
+// 027   ----------------------------------------
+GoldenEyes_1_027:
+	BYTE		N42     As3   v127
+	BYTE	W48
+	BYTE		        An3 
+	BYTE	W48
+	BYTE	PEND
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_012
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_005
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_006
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_007
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_008
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_009
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_010
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_011
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_012
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_005
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_006
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_007
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_008
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_009
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_010
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_011
+// 044   ----------------------------------------
+	BYTE		N90     Gn3   v127
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_021
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_022
+// 047   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_023
+// 048   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_024
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_025
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_026
+// 051   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_1_027
+// 052   ----------------------------------------
+	BYTE		N66     Gn3   v127
+	BYTE	W72
+	BYTE		N11     Fn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+// 053   ----------------------------------------
+	BYTE		TIE     Fn3 
+	BYTE	W96
+// 054   ----------------------------------------
+	BYTE	W96
+// 055   ----------------------------------------
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	GoTo
+	 POIN2	GoldenEyes_1_B1
+GoldenEyes_1_B2:
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+GoldenEyes_2:
+	BYTE	KEYSH   GoldenEyes_key+0
+GoldenEyes_2_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   48
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     112*GoldenEyes_mvl/mxv
+	BYTE		PAN     c_v-11
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+GoldenEyes_2_005:
+	BYTE		N96     An2   v076
+	BYTE		N96     Cn3 
+	BYTE		N96     Fn3 
+	BYTE	W96
+	BYTE	PEND
+// 006   ----------------------------------------
+GoldenEyes_2_006:
+	BYTE		N96     An2   v076
+	BYTE		N96     Dn3 
+	BYTE		N96     Fn3 
+	BYTE	W96
+	BYTE	PEND
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_005
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_006
+// 009   ----------------------------------------
+GoldenEyes_2_009:
+	BYTE		N96     As2   v076
+	BYTE		N96     Dn3 
+	BYTE		N96     Fn3 
+	BYTE	W96
+	BYTE	PEND
+// 010   ----------------------------------------
+GoldenEyes_2_010:
+	BYTE		N96     As2   v076
+	BYTE		N96     Dn3 
+	BYTE		N96     Gn3 
+	BYTE	W96
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_005
+// 012   ----------------------------------------
+GoldenEyes_2_012:
+	BYTE		N96     Gn2   v076
+	BYTE		N96     Cn3 
+	BYTE		N96     En3 
+	BYTE	W96
+	BYTE	PEND
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_005
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_006
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_005
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_006
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_009
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_010
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_005
+// 020   ----------------------------------------
+GoldenEyes_2_020:
+	BYTE		N90     Gn2   v076
+	BYTE		N90     Cn3 
+	BYTE		N90     En3 
+	BYTE	W96
+	BYTE	PEND
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_009
+// 022   ----------------------------------------
+GoldenEyes_2_022:
+	BYTE		N96     Gn2   v076
+	BYTE		N96     As2 
+	BYTE		N96     Ds3 
+	BYTE	W96
+	BYTE	PEND
+// 023   ----------------------------------------
+GoldenEyes_2_023:
+	BYTE		N96     An2   v076
+	BYTE		N96     Cn3 
+	BYTE		N96     Ds3 
+	BYTE		N96     Fn3 
+	BYTE	W96
+	BYTE	PEND
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_010
+// 025   ----------------------------------------
+GoldenEyes_2_025:
+	BYTE		N96     As2   v076
+	BYTE		N96     Ds3 
+	BYTE		N96     Gn3 
+	BYTE	W96
+	BYTE	PEND
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_005
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_009
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_020
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_005
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_006
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_005
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_006
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_009
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_010
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_005
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_012
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_005
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_006
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_005
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_006
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_009
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_010
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_005
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_012
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_009
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_022
+// 047   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_023
+// 048   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_010
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_025
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_005
+// 051   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_009
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_2_020
+// 053   ----------------------------------------
+	BYTE		N96     Fn2   v076
+	BYTE		N96     An2 
+	BYTE		N96     Dn3 
+	BYTE	W96
+// 054   ----------------------------------------
+	BYTE		        Gn2 
+	BYTE		N96     As2 
+	BYTE		N96     Dn3 
+	BYTE	W96
+// 055   ----------------------------------------
+	BYTE		TIE     Fn2 
+	BYTE		TIE     An2 
+	BYTE		TIE     Dn3 
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn2 
+	BYTE		        An2 
+	BYTE		        Dn3 
+	BYTE	GoTo
+	 POIN2	GoldenEyes_2_B1
+GoldenEyes_2_B2:
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+GoldenEyes_3:
+	BYTE	KEYSH   GoldenEyes_key+0
+GoldenEyes_3_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   0
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*GoldenEyes_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N11     Fn2   v100
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		N20   
+	BYTE		N20     Cn3 
+	BYTE	W24
+	BYTE		N20   
+	BYTE		N20     Fn3 
+	BYTE	W24
+	BYTE		        An2 
+	BYTE		N20     Cn3 
+	BYTE	W24
+// 001   ----------------------------------------
+	BYTE		N20   
+	BYTE		N20     En3 
+	BYTE	W24
+	BYTE		N42     As2 
+	BYTE		N42     Dn3 
+	BYTE	W48
+	BYTE		N20     Gn2 
+	BYTE		N20     Cn3 
+	BYTE	W24
+// 002   ----------------------------------------
+	BYTE		N11     As2 
+	BYTE		N11     Dn3 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE		N11     Dn3 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE		N11     En3 
+	BYTE	W12
+	BYTE		N20     Dn3 
+	BYTE		N20     Fn3 
+	BYTE	W24
+	BYTE		        As2 
+	BYTE		N20     Dn3 
+	BYTE	W24
+// 003   ----------------------------------------
+	BYTE		N90     Cn3 
+	BYTE		N90     En3 
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE		        Cn2 
+	BYTE	W96
+// 005   ----------------------------------------
+GoldenEyes_3_005:
+	BYTE		N11     An2   v100
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE	PEND
+// 006   ----------------------------------------
+GoldenEyes_3_006:
+	BYTE		N11     An2   v100
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE	PEND
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_005
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_006
+// 009   ----------------------------------------
+GoldenEyes_3_009:
+	BYTE		N11     As2   v100
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE	PEND
+// 010   ----------------------------------------
+GoldenEyes_3_010:
+	BYTE		N11     As2   v100
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_005
+// 012   ----------------------------------------
+GoldenEyes_3_012:
+	BYTE		N11     Gn2   v100
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE	PEND
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_005
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_006
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_005
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_006
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_009
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_010
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_005
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_012
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_009
+// 022   ----------------------------------------
+GoldenEyes_3_022:
+	BYTE		N11     As2   v100
+	BYTE	W12
+	BYTE		        Ds3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		        Ds3 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE	W12
+	BYTE		        Ds3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		        Ds3 
+	BYTE	W12
+	BYTE	PEND
+// 023   ----------------------------------------
+GoldenEyes_3_023:
+	BYTE		N11     Cn3   v100
+	BYTE	W12
+	BYTE		        Ds3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		        Ds3 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        Ds3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		        Ds3 
+	BYTE	W12
+	BYTE	PEND
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_010
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_022
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_005
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_009
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_012
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_005
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_006
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_005
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_006
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_009
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_010
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_005
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_012
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_005
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_006
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_005
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_006
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_009
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_010
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_005
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_012
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_009
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_022
+// 047   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_023
+// 048   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_010
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_022
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_005
+// 051   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_009
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_012
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_006
+// 054   ----------------------------------------
+	BYTE		N11     Gn2   v100
+	BYTE	W12
+	BYTE		        As2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        As2 
+	BYTE	W12
+// 055   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_3_006
+// 056   ----------------------------------------
+	BYTE		N02     Fn2   v100
+	BYTE	W03
+	BYTE		N02   
+	BYTE		N02     An2 
+	BYTE	W03
+	BYTE		        Fn2 
+	BYTE		N02     An2 
+	BYTE		N02     Dn3 
+	BYTE	W03
+	BYTE		N80     Fn2 
+	BYTE		N80     An2 
+	BYTE		N80     Dn3 
+	BYTE		N80     Fn3 
+	BYTE	W80
+	BYTE	W01
+	BYTE	GoTo
+	 POIN2	GoldenEyes_3_B1
+GoldenEyes_3_B2:
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+GoldenEyes_4:
+	BYTE	KEYSH   GoldenEyes_key+0
+GoldenEyes_4_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   51
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     112*GoldenEyes_mvl/mxv
+	BYTE		PAN     c_v-23
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W72
+	BYTE		N24     Dn4   v127
+	BYTE	W24
+// 029   ----------------------------------------
+GoldenEyes_4_029:
+	BYTE		N72     An3   v127
+	BYTE	W72
+	BYTE		N12     Fn3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE	PEND
+// 030   ----------------------------------------
+GoldenEyes_4_030:
+	BYTE		N12     An3   v127
+	BYTE	W12
+	BYTE		N06     As3 
+	BYTE	W06
+	BYTE		N18     An3 
+	BYTE	W18
+	BYTE		N12     Gn3 
+	BYTE	W12
+	BYTE		N24     Fn3 
+	BYTE	W24
+	BYTE		        Dn4 
+	BYTE	W24
+	BYTE	PEND
+// 031   ----------------------------------------
+GoldenEyes_4_031:
+	BYTE		N72     An3   v127
+	BYTE	W72
+	BYTE		N12     As3 
+	BYTE	W12
+	BYTE		        Cn4 
+	BYTE	W12
+	BYTE	PEND
+// 032   ----------------------------------------
+GoldenEyes_4_032:
+	BYTE		N12     Dn4   v127
+	BYTE	W12
+	BYTE		N06     En4 
+	BYTE	W06
+	BYTE		N18     Fn4 
+	BYTE	W18
+	BYTE		N12     En4 
+	BYTE	W12
+	BYTE		N24     Dn4 
+	BYTE	W24
+	BYTE		        Cn4 
+	BYTE	W24
+	BYTE	PEND
+// 033   ----------------------------------------
+GoldenEyes_4_033:
+	BYTE		N12     Cn4   v127
+	BYTE	W12
+	BYTE		N06     As3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		N48     As3 
+	BYTE	W48
+	BYTE		N24     An3 
+	BYTE	W24
+	BYTE	PEND
+// 034   ----------------------------------------
+GoldenEyes_4_034:
+	BYTE		N12     Gn3   v127
+	BYTE	W12
+	BYTE		N06     An3 
+	BYTE	W06
+	BYTE		N18     As3 
+	BYTE	W18
+	BYTE		N12     An3 
+	BYTE	W12
+	BYTE		N24     Gn3 
+	BYTE	W24
+	BYTE		N12     Fn3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE	PEND
+// 035   ----------------------------------------
+GoldenEyes_4_035:
+	BYTE		N36     An3   v127
+	BYTE	W36
+	BYTE		N06     Fn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		N12     An3 
+	BYTE	W12
+	BYTE		N24     As3 
+	BYTE	W24
+	BYTE		N12     An3 
+	BYTE	W12
+	BYTE	PEND
+// 036   ----------------------------------------
+	BYTE		N72     Gn3 
+	BYTE	W72
+	BYTE		N24     Dn4 
+	BYTE	W24
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_4_029
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_4_030
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_4_031
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_4_032
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_4_033
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_4_034
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_4_035
+// 044   ----------------------------------------
+	BYTE		N96     Gn3   v127
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE		N06     Fn4 
+	BYTE	W06
+	BYTE		        Ds4 
+	BYTE	W06
+	BYTE		N48     Dn4 
+	BYTE	W48
+	BYTE		N12     As3 
+	BYTE	W12
+	BYTE		        Cn4 
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+// 046   ----------------------------------------
+	BYTE		N24     Ds4 
+	BYTE	W24
+	BYTE		N12     Dn4 
+	BYTE	W12
+	BYTE		N36     Cn4 
+	BYTE	W36
+	BYTE		N24     Ds4 
+	BYTE	W24
+// 047   ----------------------------------------
+	BYTE		N06   
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		N48     Cn4 
+	BYTE	W48
+	BYTE		N12     An3 
+	BYTE	W12
+	BYTE		        As3 
+	BYTE	W12
+	BYTE		        Cn4 
+	BYTE	W12
+// 048   ----------------------------------------
+	BYTE		N24     Dn4 
+	BYTE	W24
+	BYTE		N12     Cn4 
+	BYTE	W12
+	BYTE		N36     As3 
+	BYTE	W36
+	BYTE		N24     Gn3 
+	BYTE	W24
+// 049   ----------------------------------------
+	BYTE		N06     Ds3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		N48     Gn3 
+	BYTE	W48
+	BYTE		N12   
+	BYTE	W12
+	BYTE		        An3 
+	BYTE	W12
+	BYTE		        As3 
+	BYTE	W12
+// 050   ----------------------------------------
+	BYTE		N24     An3 
+	BYTE	W24
+	BYTE		N12     As3 
+	BYTE	W12
+	BYTE		N36     Cn4 
+	BYTE	W36
+	BYTE		N24     An3 
+	BYTE	W24
+// 051   ----------------------------------------
+	BYTE		N48     As3 
+	BYTE	W48
+	BYTE		        An3 
+	BYTE	W48
+// 052   ----------------------------------------
+	BYTE		N72     Gn3 
+	BYTE	W72
+	BYTE		N12     Fn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+// 053   ----------------------------------------
+	BYTE		TIE     Fn3 
+	BYTE	W96
+// 054   ----------------------------------------
+	BYTE	W96
+// 055   ----------------------------------------
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	GoTo
+	 POIN2	GoldenEyes_4_B1
+GoldenEyes_4_B2:
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+GoldenEyes_5:
+	BYTE	KEYSH   GoldenEyes_key+0
+GoldenEyes_5_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   14
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     112*GoldenEyes_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE		N20     Dn3   v127
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE	W24
+	BYTE		N42     As3 
+	BYTE	W48
+// 046   ----------------------------------------
+	BYTE		N20     Ds3 
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE	W24
+	BYTE		N42     As3 
+	BYTE	W48
+// 047   ----------------------------------------
+GoldenEyes_5_047:
+	BYTE		N20     Cn3   v127
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE	W24
+	BYTE		N42     An3 
+	BYTE	W48
+	BYTE	PEND
+// 048   ----------------------------------------
+	BYTE		N20     As2 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE	W24
+	BYTE		N42     Gn3 
+	BYTE	W48
+// 049   ----------------------------------------
+	BYTE		N20     As2 
+	BYTE	W24
+	BYTE		        Ds3 
+	BYTE	W24
+	BYTE		N42     Gn3 
+	BYTE	W48
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_5_047
+// 051   ----------------------------------------
+	BYTE		N20     As2   v127
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE	W24
+	BYTE		N42     Fn3 
+	BYTE	W48
+// 052   ----------------------------------------
+	BYTE		N20     Cn3 
+	BYTE	W24
+	BYTE		        En3 
+	BYTE	W24
+	BYTE		N42     Gn3 
+	BYTE	W48
+// 053   ----------------------------------------
+GoldenEyes_5_053:
+	BYTE		N11     Fn3   v127
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE	PEND
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_5_053
+// 055   ----------------------------------------
+	BYTE	PATT
+	 POIN2	GoldenEyes_5_053
+// 056   ----------------------------------------
+	BYTE		N90     An2   v127
+	BYTE		N90     Dn3 
+	BYTE		N90     Fn3 
+	BYTE	W90
+	BYTE	GoTo
+	 POIN2	GoldenEyes_5_B1
+GoldenEyes_5_B2:
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+GoldenEyes:
+	BYTE	5	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	GoldenEyes_pri	// Priority
+	BYTE	GoldenEyes_rev	// Reverb.
+
+	POIN2	GoldenEyes_grp
+
+	POIN2	GoldenEyes_1
+	POIN2	GoldenEyes_2
+	POIN2	GoldenEyes_3
+	POIN2	GoldenEyes_4
+	POIN2	GoldenEyes_5
+
+	

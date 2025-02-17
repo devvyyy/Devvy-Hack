@@ -32,7 +32,7 @@ mov r1, #0xC0 @skill flag
 lsl r1, #8 @0xC000
 add r1, #0x2 @miss @@@@OR BRAVE??????
 tst r0, r1
-bne End
+@bne End @commented out so missing still procs it
 @if another skill already activated, don't do anything
 
 @check for Astra proc

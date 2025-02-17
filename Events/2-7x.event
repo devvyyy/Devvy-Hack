@@ -53,7 +53,7 @@ UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [11,10] 0b 0x0 0x0 0x0 [IronAxe,0xE9,]
 	UNIT
 
 EnemyUnits:
-UNIT Beran 0x64 0x1 Level(10, Enemy, 0)     [11,2] 0b 0x0 0x0 0x0 [Siegmund] StallOneTurnAI
+UNIT Beran 0x64 0x1 Level(10, Enemy, 0)     [11,2] DropItem 0x0 0x0 0x0 [Siegmund, BlackGem] StallOneTurnAI
 	UNIT
 
 Traps1:
@@ -86,6 +86,7 @@ ENUT 0x24
 ENUT 0x5
 STAL 0x50
 SOUN 0x82 //sleep staff sound
+NoFade
 	ENDA
 	
 ChiffonDuelLose:

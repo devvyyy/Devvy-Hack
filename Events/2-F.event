@@ -139,7 +139,7 @@ UNIT Aeteria WyvRider 0x1 Level(10, Enemy, 1)     [2,17] 0b 0x0 0x0 0x0 [ShortAx
 	
 WellingtonRecruit:
 
-CHECK_EVENTID 0x92
+CHECK_EVENTID 0x93
 BNE 0x9000 0xC 0x0
 
 MUSS 0x30
@@ -181,7 +181,7 @@ NoFade
 ENDA
 
 MesselRecruit:
-CHECK_EVENTID 0x92
+CHECK_EVENTID 0x94
 BNE 0x9000 0xC 0x0
 
 MUSS 0x30
@@ -229,7 +229,7 @@ BeginningScene:
 	CALL $591FD8 //prep screen
 	FADU 60
 	CameraCursor(Chiffon)
-	Text(Ch27Opening3)
+	//Text(Ch27Opening3)
 	NoFade
 	ENDA
 

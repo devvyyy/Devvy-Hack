@@ -41,7 +41,7 @@ CharacterBasedEvents:
 	END_MAIN
 
 MiscBasedEvents:
-AREA 0x13 SussyMoment [0,0] [19,10]
+AREA 0x13 SussyMoment [0,0] [19,17]
 DefeatAll(EndingScene)
 	CauseGameOverIfLordDies
 	END_MAIN
@@ -172,7 +172,14 @@ CutsceneUnits:
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [8,33] 0 0 1 REDA9R27 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [9,33] 0 0 1 REDA8R28 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [10,33] 0 0 1 REDA10R28 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
-	UNIT	
+	UNIT
+	
+EndCutsceneUnits:
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [11,7] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Beran 0x64 0x1 Level(10, Enemy, 0)     [11,5] DropItem 0x0 0x0 0x0 [Siegmund, BlackGem] StallOneTurnAI
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [10,8] 0 0 1 REDA8R28 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [12,8] 0 0 1 REDA10R28 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT
 
 Traps1:
 BLST [9,4] IronBallista
@@ -213,27 +220,48 @@ Text(Ch27Opening3)
 
 EndingScene:
 Music(0x27B)
+FADI 60
+DoAllThree
+LOMA 0x2B
+LOAD2 0x1 EndCutsceneUnits
+FADU 15
+STAL 20
+CameraCursor(Chiffon)
+
 SetBackground(0x2b)
-CHECK_EVENTID 0x92
+
+CHECK_EVENTID 0x92 //opal
+BNE 0x9000 0xC 0x0
+CHECK_EVENTID 0x93 //wulfric
+BNE 0x9000 0xC 0x0
+CHECK_EVENTID 0x94 //messel
 BNE 0x9000 0xC 0x0
 
-//MUSS 0x30
-STAL 33
-Text(Ch27OpeningEnding1Alternate)
-MURE 0x2
-MNC2 0x23 //enter gaiden duel
 
-REMA
+Text(Ch27OpeningEnding1)
+ClearBackground
+STAL 15
+FAWI 16
+SOUN 0xCF
+STAL 5
+SOUN 0xD5
+STAL 15
+SOUN 0xD6
+FADU 16
+SET_SOMETHING 0x5A
+STAL 30
+Text(Ch27OpeningEnding1Point5)
+
+MNC2 0x23
 GOTO 0x9001
 LABEL 0x9000
 
-//haye dies
-//MUSS 0x30
-Text(Ch27OpeningEnding1)
-ClearBackground
-Text(Ch27OpeningEnding1Point5)
-
+STAL 33
+Text(Ch27OpeningEnding1Alternate)
+MURE 0x2
+REMA
+MNC2 0x2B //enter gaiden duel
 LABEL 0x9001
-	MNC2 0x2b
+
 	NoFade
 	ENDA
