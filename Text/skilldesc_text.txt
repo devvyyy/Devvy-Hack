@@ -312,7 +312,7 @@ of turn, restores 30% HP. Speed mode: +2 move.[X]
 Ferromancy[N]
 - Wulfric can toggle between granting[N]
 unmounted allies within 2 spaces:[N]
-Gallop:[_SP][_A][_S][_SP]=[_SP]25%[_SP][_o][_f][_SP][_a]ll[_y]'[_s][_SP][_D][_e][_f][_SP][_a][_n][_d][_SP][_C][_a][_n][_t][_o].[N]
+Gallop:[_SP][_C][_a][_n][_t][_o][_SP][_a][_n][_d][_SP][_A][_S][_SP]=[_SP]25%[_SP][_o][_f][_SP][_a]ll[_y]'[_s][_SP][_D][_e][_f].[N]
 Reinforce:[_SP][_A][_t][_k]/[_P][_r][_t]/[_R][_s]l[_SP]=[_SP]50%[_SP][_o][_f][_SP][_f][_o][_e]'[_s][_SP][_D][_e][_f].[X]
 
 ## SD_Boomerang
@@ -836,10 +836,10 @@ counter first.[N]
 ## SD_Potent
 # Out for Blood; Axe to Grind; Imminent/Certain Death; Pursuer; Domineer???!!
 Imminent Death[N]
-- Haye's follow-ups trigger twice and[N]
+- Hayes' follow-ups trigger twice and[N]
 foe's follow-ups deal 30 less damage.[N]
-- Whichever side has higher Spd[N]
-follow-ups and other side can't.[X]
+- Whichever side with higher Spd will[N]
+follow-up and other side can't.[X]
 
 ## SD_Immovable
 Immovable[N]
@@ -1183,10 +1183,17 @@ cavalry ally, unit takes -2 damage.[X]
 ## SD_Galestorm
 # Pursuer
 Dirty Fighting[N]
-- If foe can't counter, grants Dira Atk[N]
-= 3 + 50% of foe's missing HP.[N]
+- If foe can't counter, grants Dira[N]
+Atk = 3 + 50% of foe's missing HP.[N]
 - Inflicts Rooted on foe for 1 turn[N]
 after combat.[X]
+
+## SD_Galestorm2
+Dira lacerates the enemy, dealing[N]
+bonus damage = X% of foe's missing HP.[N]
+(If at 1 range, X = 200%; if 2+,[N]
+X = 100%; can't follow-up.)[N]
+[X]
 
 ## SD_Sanctuary
 # Sanctuary; Tenacity; (WT disadvantage, dark magic, etc.), (rescue, staves, equippable rings, etc.); - If foe can attack 2+ times, first attack strikes x2 consecutively
@@ -1588,8 +1595,7 @@ foe's Res.[X]
 
 ## SD_Blackfire
 Ravenous Vortex[N]
-- Penny inflicts Atk/AS -5 on[N]
-adjacent foes.[N]
+- Penny inflicts Atk -5 on adjacent foes.[N]
 - If tome is equipped, grants WTA and[N]
 triples WT effects for both sides.[X]
 
@@ -2851,7 +2857,7 @@ Foe cannot land critical hits.[X]
 Duelist[N]
 - If Rina initiates at 1 range,[N]
 follow-ups occur before counter, and if[N]
-foe is also defeated, Canto 2 spaces[N]
+foe is also defeated, Canto 5 spaces[N]
 and restores 25% max HP after combat.[X]
 
 ## SD_ArcaneBlade

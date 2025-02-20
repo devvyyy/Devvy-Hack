@@ -78,26 +78,26 @@ ShowGrowths: @things in this section are only drawn when in growths mode
 
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#4]		@str growth getter
-draw_growth_at 19, 6
+draw_growth_at 18, 6
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#8]		@skl growth getter
-draw_growth_at 27, 6
+draw_growth_at 26, 6
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#12]		@spd growth getter
-draw_growth_at 19, 8
+draw_growth_at 18, 8
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#16]		@luk growth getter
-draw_growth_at 27, 8
+draw_growth_at 26, 8
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#20]		@def growth getter
-draw_growth_at 19, 10
+draw_growth_at 18, 10
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#24]		@res growth getter
-draw_growth_at 27, 10
+draw_growth_at 26, 10
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0]			@hp growth getter (not displaying because there's no room atm)
-draw_growth_at 19, 12
-draw_textID_at 13, 12, textID=0x4E9, growth_func=1 @hp name
+draw_growth_at 18, 12
+draw_textID_at 12, 12, textID=0x4E9, growth_func=1 @hp name
 
 b		literalJump2
 .ltorg

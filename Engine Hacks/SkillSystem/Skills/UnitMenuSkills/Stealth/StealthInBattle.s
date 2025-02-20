@@ -10,7 +10,13 @@ ldr   r2,SkillTester
 mov   r14,r2
 .short  0xF800
 cmp   r0,#0x0
-beq   End
+beq End
+
+@affogato??
+ldr  r0, [r4] @r0 = character data pointer
+ldrb r0, [r0, #0x4] @r0 = character ID
+cmp r0, #0x7
+bne End
 
 @check if flag 0x25 set; if set, doubles to canto 4
 ldr r0,=#0x8083da8 @CheckEventId

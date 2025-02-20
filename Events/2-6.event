@@ -23,14 +23,14 @@ TURN 0x0 MountRein3 [11,0] 0x0
 ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0xA, RecruitEdithChiff, Chiffon, Edith)
-CharacterEventBothWays(0xA, RecruitEdithJaye, Edith, Jaye)
+//CharacterEventBothWays(0xA, RecruitEdithJaye, Edith, Jaye)
 //CharacterEventBothWays(0x9,FlanRecruit, Chiffon, Flan)
 	END_MAIN
 	
 RecruitEdithChiff:
 MUSS 0x30
 STAL 33
-//Text(ChiffonEdithTalk)
+Text(ChiffonEdithTalk)
 MURE 0x2
 TurnAlly(Edith)
 NoFade
@@ -80,6 +80,8 @@ LOCA 0x0 SussyEvent [14,5] 0x11
 Chest(0xf5,19,4) //runic ring
 Door(21,11)
 Door(22,11)
+Door(18,16)
+Door(18,17)
 Door(17,4)
 Stairs(1,16,19,20,12)
 Stairs(2,17,19,20,13)
@@ -268,8 +270,8 @@ BNE 0x776 0x0 0xC
 CHECK_EVENTID 0xB
 BEQ 0x776 0xC 0x0 //If Flag 0x10 is on, continue. Otherwise, skip to 0x776
 	
-CAM1 [20,6]
-TILEREVERT 0x4 //les door
+//CAM1 [20,6]
+//TILEREVERT 0x4 //les door
 	
 	SVAL 0x1 0x00040000
 	CHAI 0xC3
@@ -286,7 +288,8 @@ NoFade
 ENDA
 	
 AkatsukiOMG:
-UNIT Akatsuki Drifter 0x1 Level(5, Enemy, 0)     [20,12] 0 0 1 REDA21R12  [0xC2] ThiefAI
+UNIT KeyThief Thief 0x1 Level(5, Enemy, 0)     [20,12] 0 0 1 REDA21R12  [SteelDagger] ThiefAI
+//UNIT Akatsuki Drifter 0x1 Level(5, Enemy, 0)     [20,12] 0 0 1 REDA21R12  [0xC2] ThiefAI
 	UNIT
 	
 TopRein:
@@ -310,13 +313,15 @@ NoFade
 ENDA
 	
 OMGMyHeroAGAIN:
+CamOn
 CAM1 [20,9]
 LOAD1 0x1 AkatsukiOMG
 ENUN
-Text(Placeholder1)
+//Text(Placeholder1)
 Sound(0xb1)
 TILECHANGE 0x2
 STAL 0x1
+CamOff
 NoFade
 ENDA
 

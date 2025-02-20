@@ -197,10 +197,11 @@ Tsch[,] we don't have time for this.[6N]
 If this is where the rebels are hiding[,][N]
 then I got an idea.[AN][C]
 I say we just light up the damn place[N]
-and scram.[AN]
+and scram.[AN][Event]
 
-[FFR]
-Now what is this I hear about lighting up?[AN]
+[FFL]
+Now what is this I hear about[N]
+lighting up?[AN]
 [X]
 
 ## Ch22Opening6
@@ -229,7 +230,7 @@ Uh[Beat] G-[.4]General Messel[Beat] told us to[N]
 f-[.4]find them[,] no matter the cost![AN]
 
 [FR]
-You see[,] Major Hayes[Beat] Opal and Wellington[N]
+You see[,] Major Hayes[Beat] Opali and Wellington[N]
 are on a fortifying mission at the crown city.[6N]
 We've been tasked to take care of the[AN]
 rebels ourselves.[AN]
@@ -256,13 +257,22 @@ gets messy[Beat][AN][MoveFarFarRight]
 Edvin[,] you[Beat] You coward![AN]
 
 [L]
-Solum, toss aside the torch.[.6] Lower your bow.[AN]
+Ser Solum[,] toss aside the torch.[.6][N]
+Lower your bow.[AN]
 
 [R][MoveRight][.4][MoveFarRight]
 H-Hell no![.6] If I can get rid of you[,] then[Beat][AN]
 
 [L][MoveRight]
 [0x80][0x2D][0x8E][0x8C][0x80][0x80][Pause]Stand down.[AN]
+[X]
+
+## Ch22OpeningSus
+[L][LoadHaye][MR][LoadSolum][3L]
+[L]
+And today[Beat] I shall add yet another[N]
+notch to Aeteria's finest spear.[AN]
+
 [X]
 
 ## Ch22Opening8
@@ -518,7 +528,7 @@ for you to bond with your rescuees.[AN]
 
 ## Ch22BottomHouse
 [3L]
-[OpenMidLeft][LoadFace][0x5F][0xFF]
+[OpenMidLeft][LoadFace][0x5F][0x1]
 [MidRight][LoadFace][0xFF][0xFF]
 [OpenMidLeft]
 My daughter left for the capital city[N]
@@ -535,7 +545,7 @@ I've no use for it now.[AN]
 
 ## Ch22TopHouse
 [3L]
-[OpenMidLeft][LoadFace][0x61][0xFF]
+[OpenMidLeft][LoadFace][0x61][0x1]
 [MidRight][LoadFace][0xFF][0xFF]
 [OpenMidLeft]
 You fightin' with the captain?[.6][N]

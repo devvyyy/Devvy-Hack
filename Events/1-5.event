@@ -289,7 +289,8 @@ CLEAN
 FADU 30
 CHECK_HARD; BEQ 0x727 0xC 0x0; LOAD1 0x1 CutsceneUnits2Lunatic; GOTO 0x726; LABEL 0x727; LOAD1 0x1 CutsceneUnits2; LABEL 0x726
 STAL 25
-Music(0x24)
+//Music(0x24)
+Music(0x28C)
 SetBackground(0x33)
 TEXTSTART
 TEXTSHOW Ch5Opening2

@@ -156,12 +156,12 @@ UNIT Gus Thief 0x1 Level(4, Ally, 1)   [16,6] 0b 0x0 0x0 0x0 [Rapier,WhiteGem] R
 	UNIT
 	
 HolyCrapItHim: //spawn from village idk?
-UNIT 0x54 Ranger 0x1 Level(4, Enemy, 0)     [0,13] DropItem 0 1 REDA4R13 [ShortBow, Mace, Torch] BossAI
+UNIT 0x54 Ranger 0x1 Level(4, Enemy, 0)     [0,13] DropItem 0 1 REDA4R13 [ShortBow, Longbow, Torch] BossAI
 UNIT Levain MageKnight 0x1 Level(3, Enemy, 1)   [0,14] DropItem 0 1 REDA5R14 [Iceberg,Elixir] BossAI
 	UNIT
 	
 HolyCrapItHim2: //spawn from village idk?
-UNIT Beran 0x64 0x1 Level(10, Enemy, 0)     [0,13] DropItem 0 1 REDA3R13 [Siegmund] BossAI
+UNIT 0x5a 0x64 0x1 Level(10, Enemy, 0)     [0,13] DropItem 0 1 REDA3R13 [Siegmund,Spear] BossAI
 	UNIT
 	
 BrigandGuy: //in caves wtf :scream:
@@ -206,7 +206,7 @@ UNIT Aeteria WyvernRider 0x1 Level(4, Enemy, 1)     [0,19] 0 0 1 REDA0R18 [IronA
 	UNIT	
 	
 ActualEnemies6: //all charge ai
-UNIT Aeteria Thaumaturge 0x1 Level(4, Enemy, 1)     [4,9] 0 0 1 REDA4R18 [Wind] ChargeAI
+UNIT Aeteria Thaumaturge 0x1 Level(4, Enemy, 1)     [4,19] 0 0 1 REDA4R18 [Wind] ChargeAI
 UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [5,19] 0 0 1 REDA5R18 [DarkTome2] ChargeAI
 	UNIT	
 	
@@ -245,18 +245,25 @@ NoFade
 ENDA
 
 RealEnemy4:
+CamOn
 SpawnReinforcements(HolyCrapItHim)
 CameraCursor(0x54)
 CameraCursor(Levain)
-Text(Ch22Opening5)
+TextCont(Ch22Opening5, 0x7FFF)
 STAL 5
 SpawnReinforcements(HolyCrapItHim2)
-CameraCursor(Beran)
+CameraCursor(0x5A)
+Music(0x27a)
 Text(Ch22Opening6)
 MOVE 0xF Edvin [0,14]
 ENUN
 DISA_IF Edvin
 Text(Ch22Opening7)
+TurnNPC(0x5A)
+MOVE 0xF 0x5A [4,14]
+CameraCursor(0x5A)
+Text(Ch22OpeningSus)
+CamOff
 NoFade
 ENDA
 
@@ -309,6 +316,7 @@ CHECK_ALIVE 0x5A
 BEQ 1 0x0 0xC
 
 CameraCursor(0x5A)
+TurnEnemy(0x5A)
 Text(Ch22Opening8)
 MOVE 0xF 0x5A [0,14]
 ENUN
@@ -348,7 +356,8 @@ Text(Ch22Opening3)
 EndingScene:
 	FADI 60
 	DoAllThree
-	MUSC 0x115
+	//MUSC 0x115
+	MUSC 0x28f
 	BG(0xC)
 	FADU 30
 	Text(Ch22Ending1)

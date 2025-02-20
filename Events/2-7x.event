@@ -24,9 +24,15 @@ CharacterBasedEvents:
 MiscBasedEvents:
 //AREA 0x13 SussyMoment [0,0] [19,10]
 DefeatAll(EndingScene)
-	CauseGameOverIfLordDies
+	//CauseGameOverIfLordDies
+	AFEV 0x0 CheckNoUnits 0x3
 	END_MAIN
-	
+
+CheckNoUnits:
+CUSA Chiffon
+CALL EndingScene
+NoFade
+ENDA
 
 LocationBasedEvents:
 
@@ -54,6 +60,11 @@ UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [11,10] 0b 0x0 0x0 0x0 [IronAxe,0xE9,]
 
 EnemyUnits:
 UNIT Beran 0x64 0x1 Level(10, Enemy, 0)     [11,2] DropItem 0x0 0x0 0x0 [Siegmund, BlackGem] StallOneTurnAI
+	UNIT
+	
+CutsceneUnits:
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [10,6] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Beran 0x64 0x1 Level(10, Enemy, 0)     [12,6] DropItem 0x0 0x0 0x0 [Siegmund, BlackGem] StallOneTurnAI
 	UNIT
 
 Traps1:
@@ -90,10 +101,23 @@ NoFade
 	ENDA
 	
 ChiffonDuelLose:
-CALL EndingScene
+	FADI 60
+	DoAllThree
+	LOAD2 0x1 CutsceneUnits
+	FADU 15
+	STAL 15
+	Music(0x26e)
+	SetBackground(0x2b)
+	Text(Placeholder1)
+	NoFade
 	ENDA
 
 EndingScene:
+	FADI 60
+	DoAllThree
+	LOAD2 0x1 CutsceneUnits
+	FADU 15
+	STAL 15
 	Music(0x26e)
 	SetBackground(0x2b)
 	Text(ChCh27xEnding1)

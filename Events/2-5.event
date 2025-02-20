@@ -74,12 +74,12 @@ Escape(4,0)
 	END_MAIN
 	
 SussyHouse1:
-VillageEventItem(Placeholder1, SnowVillageBG, Bolting)
+VillageEventItem(Ch25BottomHouse, 0x1, 0xC)
 NoFade
 ENDA
 
 SussyHouse2:
-VillageEventItem(Placeholder2, SnowVillageBG, 0x9)
+VillageEventItem(Ch25TopHouse, 0x1, BlueGem)
 NoFade
 ENDA
 
@@ -119,7 +119,7 @@ UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [21,23] 0b 0x0 0x0 0x0 [IronAxe,0xE9,]
 	UNIT
 
 EnemyUnits:
-UNIT 0x53 MageKnight 0x1 Level(5, Enemy, 0)     [4,15] DropItem 0x0 0x0 0x0 [0x3b,0x63] AttackInRangeAI
+UNIT 0x53 MageKnight 0x1 Level(5, Enemy, 0)     [9,3] DropItem 0x0 0x0 0x0 [0x3b,Bolting,0x63] AttackInRangeAI
 
 UNIT Levain MageKnight 0x1 Level(3, Enemy, 1)   [3,17] 0b 0x0 0x0 0x0 [Iceberg,Bolting] BossAI
 UNIT Aeteria SCav 0x1 Level(8, Enemy, 1)     [19,13] 0b 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
@@ -244,7 +244,7 @@ EndingScene:
 	Music(0x27a)
 	BG(0x36)
 	
-CHECK_EVENTID 0x94
+CHECK_EVENTID 0x95
 BNE 0x9000 0xC 0x0
 
 Text(Ch25Ending1)

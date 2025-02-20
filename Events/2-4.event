@@ -43,8 +43,18 @@ ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0xA, RecruitKatsuRaial, Katsu, Raial)
 CharacterEventBothWays(0xA, RecruitKatsuChiff, Chiffon, Katsu)
+CharacterEventBothWays(0xA, RecruitKatsuGeneric, 0x0, Katsu)
 //CharacterEventBothWays(0xC, RecruitMooseChiff, Chiffon, Moose)
 	END_MAIN
+	
+RecruitKatsuGeneric:
+MUSS 0x30
+STAL 33
+Text(KianRecruitGeneric)
+MURE 0x2
+TurnAlly(Katsu)
+NoFade
+ENDA
 	
 RecruitKatsuChiff:
 MUSS 0x30

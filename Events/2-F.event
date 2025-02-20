@@ -90,7 +90,7 @@ UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [20,10] 0b 0x0 0x0 0x0 [DarkTome
 UNIT Aeteria General 0x1 Level(5, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [0x68,SteelBlade,Spear] BossAI
 UNIT Aeteria Halberdier 0x1 Level(5, Enemy, 1)     [32,9] DropItem 0x0 0x0 0x0 [SilverLance,Stopwatch] RangeAI
 UNIT Aeteria Sage 0x1 Level(3, Enemy, 1)     [13,8] 0b 0x0 0x0 0x0 [Bolting,Thunder] BossAI
-UNIT AeteriaStealable Sage 0x1 Level(3, Enemy, 1)     [14,10] 0b 0x0 0x0 0x0 [Wind,0x89] BossAI
+UNIT AeteriaStealable Sage 0x1 Level(3, Enemy, 1)     [14,10] 0b 0x0 0x0 0x0 [Wind,GoddessIcon] BossAI
 UNIT Aeteria Druid 0x1 Level(4, Enemy, 1)     [11,9] DropItem 0x0 0x0 0x0 [DarkTome3,Silence] BossAI
 
 UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [23,7] 0b 0x0 0x0 0x0 [SilverLance] RangeAI
@@ -183,6 +183,8 @@ ENDA
 MesselRecruit:
 CHECK_EVENTID 0x94
 BNE 0x9000 0xC 0x0
+//CHECK_EVENTID 0x95 //tents
+//BNE 0x9000 0xC 0x0
 
 MUSS 0x30
 STAL 33
