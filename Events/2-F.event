@@ -137,20 +137,38 @@ UNIT Aeteria LCav 0x1 Level(10, Enemy, 1)     [4,15] 0b 0x0 0x0 0x0 [SilverLance
 UNIT Aeteria WyvRider 0x1 Level(10, Enemy, 1)     [2,17] 0b 0x0 0x0 0x0 [ShortAxe,SteelAxe] TwoActionAI
 	UNIT
 	
+CutsceneUnits:
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [6,9] 0b 0x0 0x0 0x0 [Naglfar] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [7,8] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [7,10] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT
+	
+CutsceneUnits2:
+UNIT Aoife Sage_F 0x1 Level(15, Enemy, 0)     [5,9] 0b 0x0 0x0 0x0 [0xEA,] BossAI
+UNIT 0x84 Shaman 0x1 Level(1, Enemy, 1)     [4,6] 0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
+UNIT 0x85 Occultist 0x1 Level(1, Enemy, 1)     [3,8] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
+UNIT Aeteria Soldier 0x1 Level(1, Enemy, 1)     [3,12] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
+UNIT 0x87 Merc 0x1 Level(1, Enemy, 1)     [4,11] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
+UNIT 0x88 LCav 0x1 Level(1, Enemy, 1)     [3,4] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+//UNIT 0x89 Mercenary 0x1 Level(1, Enemy, 1)     [5,5] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+	UNIT
+	
 WellingtonRecruit:
 
 CHECK_EVENTID 0x93
 BNE 0x9000 0xC 0x0
 
-MUSS 0x30
 STAL 33
-Text(Placeholder1)
+TextCont(WulfricRecruitText, 0x30)
 MURE 0x2
 CUSA Wellington
 
 REMA
 GOTO 0x9001
 LABEL 0x9000
+
+
+Text(WulfricRecruitTextFAIL)
 
 
 Text(Placeholder2)
@@ -163,9 +181,8 @@ OpalRecruit:
 CHECK_EVENTID 0x92
 BNE 0x9000 0xC 0x0
 
-MUSS 0x30
 STAL 33
-Text(Placeholder1)
+TextCont(OpalRecruitText, 0x30)
 MURE 0x2
 CUSA Opal
 
@@ -174,7 +191,7 @@ GOTO 0x9001
 LABEL 0x9000
 
 
-Text(Placeholder2)
+Text(OpalRecruitFAIL)
 
 LABEL 0x9001
 NoFade
@@ -186,9 +203,8 @@ BNE 0x9000 0xC 0x0
 //CHECK_EVENTID 0x95 //tents
 //BNE 0x9000 0xC 0x0
 
-MUSS 0x30
 STAL 33
-Text(Placeholder1)
+TextCont(MesselRecruitText, 0x30)
 MURE 0x2
 CUSA Messel
 
@@ -197,7 +213,7 @@ GOTO 0x9001
 LABEL 0x9000
 
 
-Text(Placeholder2)
+Text(MesselRecruitTextFAIL)
 
 LABEL 0x9001
 NoFade
@@ -218,6 +234,7 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+SetFlag(0xD)
 //Music(0x1)
 //Background(0x1)
 //Text(Placeholder1)
@@ -228,20 +245,181 @@ BeginningScene:
 	LOAD1 0x1 EnemyUnitsButAgain
 	LOAD1 0x1 EnemyUnitsButLast
 	ENUN
+	Music(0x47)
+	SetBackground(0x2B)
+	Text(ChP2FinaleOpening1)
+	ClearBackground
+	Music(0xA9)
+	SetBackground(0xB)
+	Text(ChP2FinaleOpening2)
+	Music(0x272)
+	Text(ChP2FinaleOpening3)
 	CALL $591FD8 //prep screen
 	FADU 60
+	STAL 25
 	CameraCursor(Chiffon)
-	//Text(Ch27Opening3)
+	MUSI
+	
+CHECK_EVENTID 0x92 //opal
+BNE 0x9000 0xC 0x0
+CHECK_EVENTID 0x93 //wulfric
+BNE 0x9000 0xC 0x0
+CHECK_EVENTID 0x94 //messel
+BNE 0x9000 0xC 0x0
+CHECK_EVENTID 0x95 //did you fight hayes?
+BNE 0x9000 0xC 0x0
+
+
+Text(ChP2FinalePostPrepsAlt)
+
+GOTO 0x9001
+LABEL 0x9000
+
+Text(ChP2FinalePostPreps)
+
+LABEL 0x9001
+
+	MUNO
 	NoFade
 	ENDA
 
 EndingScene:
-SetFlag(0xF)
-//ASMC 0x8026629
+ENUT 0x5
+ENUF 0xD
+ENUT 0xEE
+ENUT 0xF
+ENUT 0x84
+FADI 60
+CLEA 0x0
+CLEN 0x0
+CLEE 0x0
+LOAD2 0x1 CutsceneUnits
+LOAD2 0x1 CutsceneUnits2
+FADU 15
+STAL 15
+CAM1 0x2F
+STAL 20
+CUMO 0x2F
+STAL 60
+CURE
+MUSC 0x47
+SVAL 0x2 0x2B
+CALL 0x9EE2E8
+TEXTSTART
+TEXTSHOW ChP2FinaleEnding1
+TEXTEND
+REMA
+FADI 16
+CLEAN
+FADU 16
+STAL 15
+EVBIT_T 0x9
+MUSC 0x287
+MOVE 0x10 0x84 [1,7]
+MOVE 0x10 0x1 [3,7]
+ENUN
 
+StartBattle
+CriticalHit(0,57)
+SetScriptedBattle(100,99,100,0,0,0)
+FIG1 Chiffon 0x84 Naglfar
+SET_SOMETHING 0x84
+MOVE 0x10 0x85 [3,9]
+WORD 0x3C2F49 0x850001
+ENUN
+StartBattle
+CriticalHit(0,57)
+SetScriptedBattle(100,99,100,0,0,0)
+FIG1 Chiffon 0x85 Naglfar
+SET_SOMETHING 0x85
+STAL 10
+CAM1 0x2F
+MOVE 0x3C 0x2F [6,10]
+STAL 20
+CUMO 0x2F
+STAL 60
+CURE
+TEXTSTART
+TEXTSHOW ChP2FinaleEnding2
+TEXTEND
+REMA
+STAL 15
+CAM1 0x34
+CUMO 0x34
+STAL 60
+CURE
+MUSC 0xA9
+TEXTSTART
+TEXTSHOW ChP2FinaleEnding3
+TEXTEND
+REMA
+CameraCursor(Chiffon)
+MOVE 0x10 Chiffon [4,8]
+ENUN
+STAL 5
+SOUN 0x2ec
+FAWI 20
+SOUN 0x101
+STAL 150
+FAWU 15
+STAL 20
+//MOVE 0x10 0x87 [0,7]
+SET_SOMETHING 0x87
+//MOVE 0x10 0x88 [0,7]
+SET_SOMETHING 0x88
+//MOVE 0x10 0x81 [0,7]
+//ENUN
+SET_SOMETHING 0x81
+STAL 20
+MUSC 0x1A
+WORD 0x3C2F49 0x340001
+ENUN
+StartBattle
+NormalDamage(0,23)
+SetScriptedBattle(100,23,0,87,53,26)
+FIG1 Chiffon 0x34 Naglfar
+TEXTSTART
+TEXTSHOW ChP2FinaleEnding4
+TEXTEND
+REMA
 
-UnsetFlag(0x12B) //PART 2 FLAG THAT CHANGES COLOR
-	//MNC2 0x13 //planned 3-Prologue?!
-	MNTS 0x1 //return to title screen
+StartBattle
+CriticalHit(0,53)
+SetScriptedBattle(87,53,26,100,23,0)
+FIG1 0x34 Chiffon 0xEA
+
+TEXTSTART
+TEXTSHOW ChP2FinaleEnding6
+TEXTEND
+REMA
+MOVEONTO 0xF 0x34 0x1
+ENUN
+SVAL 0x2 0x34
+CALL 0x9EE51C
+SVAL 0x2 0x1
+CALL 0x9EE51C
+STAL 50
+CameraCursor(Raial)
+CameraCursor(Graham)
+STAL 15
+MUSC 0x4d
+SetBackground(0x2b)
+
+CHECK_EVENTID 0x95 //hayes fight
+BNE 0x9000 0xC 0x0
+
+TextCont(ChP2FinaleEnding7, 0x63)
+
+GOTO 0x9001
+LABEL 0x9000
+
+TextCont(ChP2FinaleEnding7Alt, 0x63) //alt
+
+LABEL 0x9001
+
+REMA
+STAL 150
+ENUF 0x12B
+MNTS 0x1
 	NoFade
 	ENDA

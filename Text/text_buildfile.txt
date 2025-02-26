@@ -384,15 +384,16 @@ Chests, Optional Boss[N]
 2-2: Survive; Villages,[N]
 Chests[N]
 2-3: Escape; Houses, Thieves,[N]
-Optional Bosses
+Optional Bosses[N]
 2-4: Escape; Houses,[N]
 Chests, Optional Boss[N]
 2-5: Escape; Tents,[N]
 Houses[N]
 2-6: Defeat Bosses+Seize;[N]
 Chests[N]
-2-7: Defeat Boss[N]
-2-7x (???): Defeat Boss[N]
+2-7: Rout the enemy[N]
+2-7x (Graham route): Duel[N]
+2-7: Rout the enemy[N]
  [N]
 [X]
 
@@ -476,7 +477,7 @@ A waning Aeterian general of the imperial[N]
 court. He's lost to his magical pursuits.[X]
 
 # 0x19A
-Interlude I: Moonlight[X]
+Interlude I: Under Moonlight[X]
 
 # 0x39b
 Hunting Rifle[X]
@@ -1235,6 +1236,9 @@ Both sides can't counter.[X]
 # 0x377
 Blunt Glaive[X]
 
+# 0x3BC
+Rays of Light[X]
+
 # 0x427
 Shove 1 space. Unit can't follow-up.[N]
 Both sides can't counter.[X]
@@ -1809,8 +1813,6 @@ Learned  [X]
 
 #include "statscreen_text.txt"
 
-#include "unitmenu_text.txt"
-
 #0xd4c LikesText
 Likes:[X]
 
@@ -1924,3 +1926,5 @@ Cannot use.[X]
 #include "soundroom.txt"
 
 #include "unitinfo_text.txt"
+
+#include "unitmenu_text.txt"

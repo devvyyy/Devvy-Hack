@@ -98,8 +98,16 @@ SongTable(0x27A,TheSerpent,1)
 #include "14TheSerpent.event"
 
 ALIGN 4
+SongTable(0x290,HayesThemeAlt,1)
+#include "14HayesThemeAlt.event"
+
+ALIGN 4
 SongTable(0x27B,SerpentsFangs,1)
 #include "15SerpentsFangs.event"
+
+ALIGN 4
+SongTable(0x292,CagedBirdSong,1)
+#include "33CagedBird.event"
 
 ALIGN 4 //WHY??? this replaces sacred weapons theme
 SongTable(0x1f,SerpentsFangs,1)
@@ -185,11 +193,12 @@ SongTable(0x28F,SovereignSong,1)
 #include "32Sovereign.event"
 
 
-//ALIGN 4
+ALIGN 4
 // Bard Gaming
-SongTable(0x02D6,song02D6,7)
+//SongTable(0x02D6,song02D6,7)
+SongTable(0x0207,song02D6,7)
 #include "BardSound.event"
-//this replaces.... the sacred stone breaking sound???? tf
+//this replaces.... the sacred stone breaking sound???? tf used by soulbreak
 
 SongTable(0x02D4,BardRefreshUlt,7)
 #include "BardRefresh_FINAL.event"
@@ -729,6 +738,11 @@ ALIGN 4
 //And Thus Fate Becomes Cruel (Variant)
 SongTable(0x3c5,FateCruelVariant,1)
 #include "FateCruelVARIANT.event"
+
+ALIGN 4
+//And Thus Fate Becomes Cruel (Variant; sound room no fire ver.)
+SongTable(0x291,FateCruelVariantNoFire,1)
+#include "FateCruelVARIANTNoFire.event"
 
 ALIGN 4
 //Corridors of Time

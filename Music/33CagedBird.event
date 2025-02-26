@@ -1,0 +1,1003 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	CagedBirdSong_grp  voicegroup000
+	#define	CagedBirdSong_pri  0
+	#define	CagedBirdSong_rev  94
+	#define	CagedBirdSong_mvl  33
+	#define	CagedBirdSong_key  0
+	#define	CagedBirdSong_tbs  1
+	#define	CagedBirdSong_exg  0
+	#define	CagedBirdSong_cmp  1
+
+	// .rodata
+	//	CagedBirdSong
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+CagedBirdSong_1:
+	BYTE	KEYSH   CagedBirdSong_key+0
+CagedBirdSong_1_B1:
+// 000   ----------------------------------------
+	BYTE	TEMPO   60*CagedBirdSong_tbs/2
+	BYTE		VOICE   0
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     122*CagedBirdSong_mvl/mxv
+	BYTE		PAN     c_v-19
+	BYTE		N20     Cn3   v100
+	BYTE		N20     Ds3 
+	BYTE		N20     Fn3 
+	BYTE	W24
+	BYTE		        Cn3 
+	BYTE		N20     Ds3 
+	BYTE		N20     Fn3 
+	BYTE	W24
+	BYTE		        Cn3 
+	BYTE		N20     Ds3 
+	BYTE	W24
+	BYTE		        Cn3 
+	BYTE		N20     Ds3 
+	BYTE	W24
+// 001   ----------------------------------------
+CagedBirdSong_1_001:
+	BYTE		N20     Cn3   v100
+	BYTE		N20     Dn3 
+	BYTE	W24
+	BYTE		        Cn3 
+	BYTE		N20     Dn3 
+	BYTE	W24
+	BYTE		        Cn3 
+	BYTE		N20     Ds3 
+	BYTE	W24
+	BYTE		        Cn3 
+	BYTE		N20     Ds3 
+	BYTE	W24
+	BYTE	PEND
+// 002   ----------------------------------------
+CagedBirdSong_1_002:
+	BYTE		N20     Cn3   v100
+	BYTE		N20     Ds3 
+	BYTE		N20     Fn3 
+	BYTE	W24
+	BYTE		        Cn3 
+	BYTE		N20     Ds3 
+	BYTE		N20     Fn3 
+	BYTE	W24
+	BYTE		        Cn3 
+	BYTE		N20     Ds3 
+	BYTE	W24
+	BYTE		        Cn3 
+	BYTE		N20     Ds3 
+	BYTE	W24
+	BYTE	PEND
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_1_001
+// 004   ----------------------------------------
+CagedBirdSong_1_004:
+	BYTE		N20     As2   v100
+	BYTE		N20     Dn3 
+	BYTE		N20     Fn3 
+	BYTE	W24
+	BYTE		        As2 
+	BYTE		N20     Dn3 
+	BYTE		N20     Fn3 
+	BYTE	W24
+	BYTE		        As2 
+	BYTE		N20     Dn3 
+	BYTE		N20     Ds3 
+	BYTE	W24
+	BYTE		        As2 
+	BYTE		N20     Dn3 
+	BYTE		N20     Ds3 
+	BYTE	W24
+	BYTE	PEND
+// 005   ----------------------------------------
+CagedBirdSong_1_005:
+	BYTE		N20     As2   v100
+	BYTE		N20     Dn3 
+	BYTE	W24
+	BYTE		        As2 
+	BYTE		N20     Dn3 
+	BYTE	W24
+	BYTE		        As2 
+	BYTE		N20     Dn3 
+	BYTE		N20     Ds3 
+	BYTE	W24
+	BYTE		        As2 
+	BYTE		N20     Dn3 
+	BYTE		N20     Ds3 
+	BYTE	W24
+	BYTE	PEND
+// 006   ----------------------------------------
+CagedBirdSong_1_006:
+	BYTE		N20     Bn2   v100
+	BYTE		N20     Dn3 
+	BYTE		N20     Gs3 
+	BYTE	W24
+	BYTE		        Bn2 
+	BYTE		N20     Dn3 
+	BYTE		N20     Gs3 
+	BYTE	W24
+	BYTE		        Bn2 
+	BYTE		N20     Dn3 
+	BYTE		N20     Gn3 
+	BYTE	W24
+	BYTE		        Bn2 
+	BYTE		N20     Dn3 
+	BYTE		N20     Gn3 
+	BYTE	W24
+	BYTE	PEND
+// 007   ----------------------------------------
+CagedBirdSong_1_007:
+	BYTE		N20     Bn2   v100
+	BYTE		N20     Dn3 
+	BYTE		N20     Fn3 
+	BYTE	W24
+	BYTE		        Bn2 
+	BYTE		N20     Dn3 
+	BYTE		N20     Fn3 
+	BYTE	W24
+	BYTE		        Bn2 
+	BYTE		N20     Dn3 
+	BYTE		N20     Gn3 
+	BYTE	W24
+	BYTE		        Bn2 
+	BYTE		N20     Dn3 
+	BYTE		N20     Gn3 
+	BYTE	W24
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_1_002
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_1_001
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_1_002
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_1_001
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_1_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_1_005
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_1_006
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_1_007
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_1_002
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_1_001
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_1_002
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_1_001
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_1_004
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_1_005
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_1_006
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_1_007
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W90
+	BYTE	GoTo
+	 POIN2	CagedBirdSong_1_B1
+CagedBirdSong_1_B2:
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+CagedBirdSong_2:
+	BYTE	KEYSH   CagedBirdSong_key+0
+CagedBirdSong_2_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   46
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     112*CagedBirdSong_mvl/mxv
+	BYTE		PAN     c_v+6
+	BYTE		N05     Cn3   v100
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+// 001   ----------------------------------------
+CagedBirdSong_2_001:
+	BYTE		N05     Cn3   v100
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE	PEND
+// 002   ----------------------------------------
+CagedBirdSong_2_002:
+	BYTE		N05     Cn3   v100
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE		        Ds3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        Cn4 
+	BYTE	W06
+	BYTE	PEND
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_002
+// 004   ----------------------------------------
+CagedBirdSong_2_004:
+	BYTE		N05     As2   v100
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        As2 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        As2 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        As2 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_004
+// 006   ----------------------------------------
+CagedBirdSong_2_006:
+	BYTE		N05     Bn2   v100
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE	PEND
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_006
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_001
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_001
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_002
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_002
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_004
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_006
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_006
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_001
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_001
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_002
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_002
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_004
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_004
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_006
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_2_006
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W90
+	BYTE	GoTo
+	 POIN2	CagedBirdSong_2_B1
+CagedBirdSong_2_B2:
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+CagedBirdSong_3:
+	BYTE	KEYSH   CagedBirdSong_key+0
+CagedBirdSong_3_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   48
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+17
+	BYTE		VOL     127*CagedBirdSong_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE		N66     Cn3   v100
+	BYTE	W72
+	BYTE		N20     Dn3 
+	BYTE	W24
+// 009   ----------------------------------------
+	BYTE		        Ds3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE	W24
+	BYTE		        Cn3 
+	BYTE	W24
+	BYTE		        As2 
+	BYTE	W24
+// 010   ----------------------------------------
+	BYTE		N66     Gs2 
+	BYTE	W72
+	BYTE		N20     As2 
+	BYTE	W24
+// 011   ----------------------------------------
+	BYTE		N90     Cn3 
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE		N66     As2 
+	BYTE	W72
+	BYTE		N20     Cn3 
+	BYTE	W24
+// 013   ----------------------------------------
+	BYTE		        Dn3 
+	BYTE	W24
+	BYTE		        Cn3 
+	BYTE	W24
+	BYTE		        As2 
+	BYTE	W24
+	BYTE		        Cn3 
+	BYTE	W24
+// 014   ----------------------------------------
+	BYTE		        Bn2 
+	BYTE	W24
+	BYTE		        Gn2 
+	BYTE	W24
+	BYTE		        Bn2 
+	BYTE	W24
+	BYTE		        Cn3 
+	BYTE	W24
+// 015   ----------------------------------------
+	BYTE		N90     Dn3 
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE		N66     Ds3 
+	BYTE	W72
+	BYTE		N20     Fn3 
+	BYTE	W24
+// 017   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W24
+	BYTE		        Ds3 
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE	W24
+	BYTE		        As3 
+	BYTE	W24
+// 018   ----------------------------------------
+	BYTE		N42     Gs3 
+	BYTE	W48
+	BYTE		N20     Gn3 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE	W24
+// 019   ----------------------------------------
+	BYTE		N42     Fn3 
+	BYTE	W48
+	BYTE		        Ds3 
+	BYTE	W48
+// 020   ----------------------------------------
+	BYTE		N66     Dn3 
+	BYTE	W72
+	BYTE		N20     Ds3 
+	BYTE	W24
+// 021   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE	W24
+// 022   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE	W24
+// 023   ----------------------------------------
+	BYTE		N90     Gn3 
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE		TIE   
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE		N90     Bn3 
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE		        As3 
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE		        Bn3 
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE		        As3 
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        Cn4 
+	BYTE	GoTo
+	 POIN2	CagedBirdSong_3_B1
+CagedBirdSong_3_B2:
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+CagedBirdSong_4:
+	BYTE	KEYSH   CagedBirdSong_key+0
+CagedBirdSong_4_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   71
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-16
+	BYTE		VOL     127*CagedBirdSong_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W24
+	BYTE		N20     Dn3   v100
+	BYTE	W24
+	BYTE		        Ds3 
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE	W24
+// 028   ----------------------------------------
+	BYTE		TIE     Gn3 
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W20
+	BYTE		EOT   
+	BYTE	W04
+	BYTE		N20     Ds3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE	W24
+	BYTE		        Ds3 
+	BYTE	W24
+// 030   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	GoTo
+	 POIN2	CagedBirdSong_4_B1
+CagedBirdSong_4_B2:
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+CagedBirdSong_5:
+	BYTE	KEYSH   CagedBirdSong_key+0
+CagedBirdSong_5_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   50
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*CagedBirdSong_mvl/mxv
+	BYTE		PAN     c_v+9
+	BYTE		N20     Gn2   v127
+	BYTE	W24
+	BYTE		N66     Fn2 
+	BYTE	W72
+// 001   ----------------------------------------
+CagedBirdSong_5_001:
+	BYTE		N20     Cn2   v127
+	BYTE	W24
+	BYTE		N66     Dn2 
+	BYTE	W72
+	BYTE	PEND
+// 002   ----------------------------------------
+CagedBirdSong_5_002:
+	BYTE		N20     Gn2   v127
+	BYTE	W24
+	BYTE		N66     Fn2 
+	BYTE	W72
+	BYTE	PEND
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_5_001
+// 004   ----------------------------------------
+CagedBirdSong_5_004:
+	BYTE		N20     Cn2   v127
+	BYTE	W24
+	BYTE		N66     As1 
+	BYTE	W72
+	BYTE	PEND
+// 005   ----------------------------------------
+CagedBirdSong_5_005:
+	BYTE		N20     Dn2   v127
+	BYTE	W24
+	BYTE		N66     Gn2 
+	BYTE	W72
+	BYTE	PEND
+// 006   ----------------------------------------
+CagedBirdSong_5_006:
+	BYTE		N20     Dn2   v127
+	BYTE	W24
+	BYTE		N66     Fn2 
+	BYTE	W72
+	BYTE	PEND
+// 007   ----------------------------------------
+CagedBirdSong_5_007:
+	BYTE		N20     Gn2   v127
+	BYTE	W24
+	BYTE		N66     En2 
+	BYTE	W72
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE		VOL     127*CagedBirdSong_mvl/mxv
+	BYTE		PAN     c_v+9
+	BYTE		N20     Gn2 
+	BYTE	W24
+	BYTE		N66     Fn2 
+	BYTE	W72
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_5_001
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_5_002
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_5_001
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_5_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_5_005
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_5_006
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	CagedBirdSong_5_007
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W90
+	BYTE	GoTo
+	 POIN2	CagedBirdSong_5_B1
+CagedBirdSong_5_B2:
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.6) ****************//
+
+CagedBirdSong_6:
+	BYTE	KEYSH   CagedBirdSong_key+0
+CagedBirdSong_6_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   73
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     95*CagedBirdSong_mvl/mxv
+	BYTE		PAN     c_v-10
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE		N66     Ds4   v100
+	BYTE	W72
+	BYTE		N20     Fn4 
+	BYTE	W24
+// 017   ----------------------------------------
+	BYTE		        Gn4 
+	BYTE	W24
+	BYTE		        Ds4 
+	BYTE	W24
+	BYTE		        Gn4 
+	BYTE	W24
+	BYTE		        As4 
+	BYTE	W24
+// 018   ----------------------------------------
+	BYTE		N42     Gs4 
+	BYTE	W48
+	BYTE		N20     Gn4 
+	BYTE	W24
+	BYTE		        Gs4 
+	BYTE	W24
+// 019   ----------------------------------------
+	BYTE		N42     Fn4 
+	BYTE	W48
+	BYTE		        Ds4 
+	BYTE	W48
+// 020   ----------------------------------------
+	BYTE		N66     Dn4 
+	BYTE	W72
+	BYTE		N20     Ds4 
+	BYTE	W24
+// 021   ----------------------------------------
+	BYTE		        Fn4 
+	BYTE	W24
+	BYTE		        Gn4 
+	BYTE	W24
+	BYTE		        Gs4 
+	BYTE	W24
+	BYTE		        Fn4 
+	BYTE	W24
+// 022   ----------------------------------------
+	BYTE		        Gn4 
+	BYTE	W24
+	BYTE		        Fn4 
+	BYTE	W24
+	BYTE		        Gn4 
+	BYTE	W24
+	BYTE		        Gs4 
+	BYTE	W24
+// 023   ----------------------------------------
+	BYTE		N90     Gn4 
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE		TIE   
+	BYTE		TIE     Cn5 
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE		N90     Bn4 
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE		        As4 
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE		        An4 
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE		        Bn4 
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE		        As4 
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE		        An4 
+	BYTE	W90
+	BYTE		EOT     Gn4 
+	BYTE		        Cn5 
+	BYTE	GoTo
+	 POIN2	CagedBirdSong_6_B1
+CagedBirdSong_6_B2:
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+CagedBirdSong:
+	BYTE	6	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	CagedBirdSong_pri	// Priority
+	BYTE	CagedBirdSong_rev	// Reverb.
+
+	POIN2	CagedBirdSong_grp
+
+	POIN2	CagedBirdSong_1
+	POIN2	CagedBirdSong_2
+	POIN2	CagedBirdSong_3
+	POIN2	CagedBirdSong_4
+	POIN2	CagedBirdSong_5
+	POIN2	CagedBirdSong_6
+
+	

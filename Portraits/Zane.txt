@@ -26,7 +26,7 @@ setMugEntry(0x5, Frye_Mug, 3, 4, 3, 2)
 
 ALIGN 16 //Bronson edited by BuskHusker
 Bronson_Mug:
-#incext PortraitFormatter "Bronson.png"
+#incext PortraitFormatter "BronsonWithNoBrim.png"
 setMugEntry(0x6, Bronson_Mug, 3, 5, 2, 3)
 
 ALIGN 16 //Wustenhoff edited by Lenh
@@ -182,6 +182,11 @@ Chiffon_Mug:
 #incext PortraitFormatter "Chiffon.png"
 setMugEntry(0x1, Chiffon_Mug, 3, 5, 3, 3)
 
+ALIGN 16
+ChiffonBerserk_Mug:
+#incext PortraitFormatter "ChiffonBerserk.png"
+setMugEntry(0xFE, ChiffonBerserk_Mug, 3, 5, 3, 3)
+
 //ALIGN 16
 //Chiffon_MugHood:
 //#incext PortraitFormatter "ChiffonPrologue.png"
@@ -200,7 +205,7 @@ setMugEntry(0x1B, Nora_Mug, 3, 5, 3, 3)
 ALIGN 16 //Irene by Laurent Lacroix
 Irene_Mug:
 #incext PortraitFormatter "Irene.png"
-setMugEntry(0x1C, Irene_Mug, 3, 6, 3, 4)
+setMugEntry(0x1C, Irene_Mug, 3, 5, 3, 3)
 
 ALIGN 16
 Floris_Mug:

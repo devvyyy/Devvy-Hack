@@ -30,7 +30,40 @@ DefeatAll(EndingScene)
 
 CheckNoUnits:
 CUSA Chiffon
-CALL EndingScene
+FADI 60
+	DoAllThree
+	LOAD2 0x1 CutsceneUnits
+	FADU 15
+	STAL 15
+	Music(0x282)
+	SetBackground(0x2b)
+	Text(Ch27DuelEndingLose1)
+	ClearBackground
+	
+CameraCursor(Chiffon)
+SOUN 0x119 //bolting sparks
+ENUT 0x24
+ENUT 0x5
+STAL 0x50
+SOUN 0x82 //sleep staff sound
+STAL 10
+
+CameraCursor(Beran)
+Text(Ch27DuelEndingLose2)
+STAL 15
+
+Text(Ch27DuelEndingLose3)
+STAL 5
+SOUN 0x2ec
+FAWI 20
+SOUN 0xFE
+STAL 150
+FAWU 15
+STAL 5
+SetBackground(0x2b)
+Text(Ch27DuelEndingLose4)
+	MNC2 0x23
+	NoFade
 NoFade
 ENDA
 
@@ -59,12 +92,12 @@ UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [11,10] 0b 0x0 0x0 0x0 [IronAxe,0xE9,]
 	UNIT
 
 EnemyUnits:
-UNIT Beran 0x64 0x1 Level(10, Enemy, 0)     [11,2] DropItem 0x0 0x0 0x0 [Siegmund, BlackGem] StallOneTurnAI
+UNIT Beran 0x64 0x1 Level(10, Enemy, 0)     [11,2] DropItem 0x0 0x0 0x0 [Siegmund, 0x63] StallOneTurnAI
 	UNIT
 	
 CutsceneUnits:
-UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [10,6] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
-UNIT Beran 0x64 0x1 Level(10, Enemy, 0)     [12,6] DropItem 0x0 0x0 0x0 [Siegmund, BlackGem] StallOneTurnAI
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [12,6] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Beran 0x64 0x1 Level(10, Enemy, 0)     [10,6] DropItem 0x0 0x0 0x0 [Siegmund, BlackGem] StallOneTurnAI
 	UNIT
 
 Traps1:
@@ -78,17 +111,30 @@ Traps2:
 
 BeginningScene:
 SetFlag(0xF)
+SetFlag(0x95) //global hayes flag
 ASMC 0x8026629
 	LOAD1 0x1 EnemyUnits
 	ENUN
-	SVAL 0x1 0x1A //26
+	SVAL 0x1 0x1D //29
 	SET_HP Beran
 	CALL $591FD8
 FADU 60
 Music(0x4E)
 STAL 150
-CameraCursor(Haye)
+CameraCursor(0x5B)
 Text(ChCh27xOpening1)
+
+STAL 15
+FAWI 16
+SOUN 0xCF
+STAL 30
+SOUN 0xf0
+SetBackground(0x48)
+STAL 10
+ClearBackground
+STAL 15
+
+SET_SOMETHING 0x5B
 
 CameraCursor(Chiffon)
 Text(ChCh27xOpening2)
@@ -118,7 +164,7 @@ EndingScene:
 	LOAD2 0x1 CutsceneUnits
 	FADU 15
 	STAL 15
-	Music(0x26e)
+	Music(0x290)
 	SetBackground(0x2b)
 	Text(ChCh27xEnding1)
 	MNC2 0x23

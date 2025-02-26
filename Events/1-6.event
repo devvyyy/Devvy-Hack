@@ -745,6 +745,7 @@ UNIT Supplies2 0x79 0x1 Level(1, NPC, 0)     [21,4] 0b 0x0 0x0 0x0 [MageBow] [0,
 UNIT Supplies3 0x79 0x1 Level(1, NPC, 0)     [9,9] 0b 0x0 0x0 0x0 [ArmsScroll] [0,3,0,32]
 UNIT Supplies4 0x79 0x1 Level(1, NPC, 0)     [21,9] 0b 0x0 0x0 0x0 [MasterSeal] [0,3,0,32]
 
+UNIT 0x62 SergeantClass 0x1 Level(12, NPC, 0)   [15,2] 0b 0x0 0x0 0x0 [SilverSword,SilverLance] BossAI
 	UNIT
 	
 NPCUnitsLunatic:
@@ -767,6 +768,8 @@ UNIT Supplies1 0x79 0x1 Level(1, NPC, 0)     [9,4] 0b 0x0 0x0 0x0 [EnergyRing] [
 UNIT Supplies2 0x79 0x1 Level(1, NPC, 0)     [21,4] 0b 0x0 0x0 0x0 [BraveBow] [0,3,0,32]
 UNIT Supplies3 0x79 0x1 Level(1, NPC, 0)     [9,9] 0b 0x0 0x0 0x0 [ArmsScroll] [0,3,0,32]
 UNIT Supplies4 0x79 0x1 Level(1, NPC, 0)     [21,9] 0b 0x0 0x0 0x0 [MasterSeal] [0,3,0,32]
+
+UNIT 0x62 SergeantClass 0x1 Level(12, NPC, 1)   [15,2] 0b 0x0 0x0 0x0 [SilverSword,SilverLance] BossAI
 
 	UNIT
 
@@ -1152,14 +1155,14 @@ FADI 60
 	STAL 120
 
 //Music(0x27) //reunion
-Music(0x27d)
+Music(0x288)
 SetBackground(0x30)
-	Text(ChBonusOpening3)
+	TextCont(ChBonusOpening3, 0x27) //reunion
 	
 	FADI 60
 	SVAL 0xB 0x08015 //change map
 	LOMA 0xF
-	Music(0x3de) //Greatmother
+	Music(0x27d) //knight circle
 	SetBackground(0x29) //throne room
 	
 	TextCont(ChBonusOpening4,0x10B) //coming fury
@@ -1233,7 +1236,8 @@ CAM1 [15,16]
 
 CameraCursor(Selwyn)
 Music(0x26) //raid!!
-	TextCont(ChBonusEnding1,0x1) //do an event here like KELIK THEME HOL Y SHI t
+	//TextCont(ChBonusEnding1,0x1) //do an event here like KELIK THEME HOL Y SHI t
+	TextCont(ChBonusEnding1,0x3ce) //do an event here like KELIK THEME HOL Y SHI t
 
 CameraCursor(Affogato)
 Text(ChBonusEnding1Point5)

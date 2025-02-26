@@ -17,6 +17,13 @@ Proc_PotentReal:
 POIN SkillTester
 WORD PotentID
 
+ALIGN 4
+Proc_Snaring:
+#incbin "Adept/AffoPRF.dmp"
+POIN SkillTester
+//WORD CloseCallID
+WORD Dark5ID
+
 Proc_Volley:
 #incbin "Adept/Volley.dmp"
 POIN SkillTester

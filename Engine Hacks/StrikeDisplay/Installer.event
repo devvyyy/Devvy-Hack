@@ -1,0 +1,17 @@
+#include "StrikeDisplay.lyn.event"
+#define iconsInSheet 3
+
+PUSH
+    ORG 0x36F4C
+    jumpToHack(PutBattleForecastMultipliers)
+
+    ORG 0x36E08
+    POIN StrikeGFX
+
+    ORG 0x36DAE
+    BYTE iconsInSheet*2
+POP
+
+ALIGN 4
+StrikeGFX:
+#incbin "StrikeDisplay.lz77"

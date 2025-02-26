@@ -25,7 +25,11 @@ TURN 0x0 Rein2 [6,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-
+CharacterEventBothWays(0x20,ChiffonGrahamTalk, Chiffon, Graham)
+CharacterEventBothWays(0x21,ChiffonYufkaTalk, Chiffon, Yufka)
+CharacterEventBothWays(0x22,ChiffonJayeTalk, Chiffon, Jaye)
+CharacterEventBothWays(0x23,ChiffonPollyTalk, Chiffon, Polly)
+CharacterEventBothWays(0x1F,ChiffonYvonneTalk, Chiffon, Yvonne)
 	END_MAIN
 
 MiscBasedEvents: //completion flag then trigger flag
@@ -37,6 +41,49 @@ MiscBasedEvents: //completion flag then trigger flag
 	AREA 0xA RecruitDoor3 [5,8] [7,10]
 	CauseGameOverIfLordDies
 	END_MAIN
+	
+ChiffonGrahamTalk:
+	MUSI
+	Text(PrologueChiffonGrahamTalk)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
+
+ChiffonYufkaTalk:
+	MUSI
+	Text(PrologueChiffonYufkaTalk)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
+
+ChiffonYvonneTalk:
+	MUSI
+	Text(PrologueChiffonYvonneTalk)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
+
+
+ChiffonPollyTalk:
+	MUSI
+	Text(PrologueChiffonPennyTalk)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
+
+
+ChiffonJayeTalk:
+	MUSI
+	Text(PrologueChiffonJayeTalk)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
+
 
 LocationBasedEvents:
 Chest(BlueGem,11,8)
@@ -59,6 +106,8 @@ EpicEntrance:
 CameraCursor(Chiffon)
 UnsetFlag(0x8)
 Text(PrologueCharging)
+STAL 3
+CenterTextbox(PrologueChiffonExplanation)
 NoFade
 ENDA
 	
@@ -266,15 +315,15 @@ UNIT 0x38 Raider 0x1 Level(2, NPC, 1)     [14,9] 0b 0x0 0x0 0x0 [Lancereaver,Kil
 	UNIT
 	
 LunaticUnits: //tile change out
-UNIT Chiffon 0x10 0x1 Level(1, Ally, 1)   [2,2] 0b 0x0 0x0 0x0	[KillerBow,0xDB,0xE9,DoorKey] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 1)   [2,2] 0b 0x0 0x0 0x0	[IronRifle,0xE9,Elixir,DoorKey] [0x0,0x0,0x0,0x0]
 UNIT Graham Valkyrie 0x1 Level(10, Ally, 1)   [0,5] 0 0 1 REDA2R5 [0xf0,Physic,Sleep,0xAE,] [0x0,0x0,0x0,0x0]
-UNIT Polly MageRider 0x1 Level(1, Ally, 1)   [1,5] 0b 0x0 0x0 0x0 [Wind,PoisonSword,0xB1,0x7F] [0x0,0x0,0x0,0x0]
+UNIT Polly MageRider 0x1 Level(1, Ally, 1)   [1,5] 0b 0x0 0x0 0x0 [Wind,PoisonSword,0xB1] [0x0,0x0,0x0,0x0]
 UNIT Yvonne Cleric 0x1 Level(1, Ally, 1)   [1,6] 0b 0x0 0x0 0x0 [0x7A,0xD4,Pain,LifeRing] [0x0,0x0,0x0,0x0]
-UNIT Jaye Mage_F 0x1 Level(3, Ally, 1)   [3,5] 0b 0x0 0x0 0x0 [Thunder,Bolting,0x98,Vulnerary] [0x0,0x0,0x0,0x0]
+UNIT Jaye Mage_F 0x1 Level(3, Ally, 1)   [3,5] 0b 0x0 0x0 0x0 [Thunder,Bolting,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Frye Mercenary 0x1 Level(6, Ally, 1)   [10,2] 0b 0x0 0x0 0x0 [] [0x0,0x0,0x0,0x0]
 UNIT Wulfric Shaman 0x1 Level(4, Ally, 1)   [14,2] 0b 0x0 0x0 0x0 [] [0x0,0x0,0x0,0x0]
 UNIT Cortado 0x60 0x1 Level(5, Ally, 1)   [6,9] 0b 0x0 0x0 0x0 [ChestKey] BossAI
-UNIT Yufka Shaman_F 0x1 Level(8, Ally, 1)   [3,6] 0b 0x0 0x0 0x0 [DarkTome2,0xA2,0xFC,0x97] [0x0,0x0,0x0,0x0]
+UNIT Yufka Shaman_F 0x1 Level(8, Ally, 1)   [3,6] 0b 0x0 0x0 0x0 [DarkTome4,0xA2,0xFC,0x97] [0x0,0x0,0x0,0x0]
 
 UNIT 0x38 Brigand 0x1 Level(2, NPC, 1)     [10,9] 0b 0x0 0x0 0x0 [SilverLabrys,KillerAxe] WallAI
 UNIT 0x38 Raider 0x1 Level(2, NPC, 1)     [14,9] 0b 0x0 0x0 0x0 [Lancereaver,KillingEdge] ChargeAI
@@ -364,6 +413,7 @@ Text(PrologueTest2)
 	Text(PrologueTest3)
 	ClearBackground
 	STAL 5
+	CameraCursor(Chiffon)
 	NoFade
 	ENDA
 	

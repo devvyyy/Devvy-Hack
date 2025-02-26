@@ -45,7 +45,25 @@ CharacterEventBothWays(0xA, RecruitKatsuRaial, Katsu, Raial)
 CharacterEventBothWays(0xA, RecruitKatsuChiff, Chiffon, Katsu)
 CharacterEventBothWays(0xA, RecruitKatsuGeneric, 0x0, Katsu)
 //CharacterEventBothWays(0xC, RecruitMooseChiff, Chiffon, Moose)
+CharacterEventBothWays(0x20,ChiffonGrahamTalk, Chiffon, Graham)
+CharacterEventBothWays(0x21,ChiffonRaialTalk, Chiffon, Raial)
 	END_MAIN
+	
+ChiffonGrahamTalk:
+	MUSI
+	Text(ChiffonGrahamTalk24)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
+
+ChiffonRaialTalk:
+	MUSI
+	Text(ChiffonRaialTalk24)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
 	
 RecruitKatsuGeneric:
 MUSS 0x30
@@ -325,7 +343,7 @@ UNIT BardUnit Bard 0x1 Level(1, Ally, 0)   [18,8] 0 0 1 REDA18R9 [LifeRing,Elixi
 	UNIT
 	
 LunaticZopf:
-UNIT BardUnit Bard 0x1 Level(1, Ally, 1)   [18,8] 0 0 1 REDA18R9 [LifeRing,Elixir,Antitoxin,PureWater] [0x0,0x0,0x0,0x0]
+UNIT BardUnit Bard 0x1 Level(1, Ally, 1)   [18,8] 0 0 1 REDA18R9 [LifeRing,Elixir,Antitoxin,Stopwatch] [0x0,0x0,0x0,0x0]
 	UNIT
 	
 AkatsukiOMG:
@@ -378,6 +396,7 @@ UNIT Aeteria Hero 0x1 Level(4, Enemy, 1)     [19,20] 0b 0x0 0x0 0x0 [SteelSword,
 UNIT Aeteria Halberdier 0x1 Level(5, Enemy, 1)     [22,20] DropItem 0x0 0x0 0x0 [Spear,Halberd,Elixir] BossAI
 UNIT Aeteria LArmor 0x1 Level(9, Enemy, 1)     [22,21] 0b 0x0 0x0 0x0 [IronGlaive,ShortSpear] BossAI
 UNIT Aeteria SArmor 0x1 Level(9, Enemy, 1)     [15,18] DropItem 0x0 0x0 0x0 [LightBrand] BossAI
+UNIT AeteriaStealable LArmor 0x1 Level(10, Enemy, 1)     [7,13] 0b 0x0 0x0 0x0 [Spear,PureWater] BossAI
 UNIT Aeteria LPal 0x1 Level(3, Enemy, 1)     [14,20] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
 
 UNIT Aeteria Shaman 0x1 Level(9, Enemy, 1)     [16,7] DropItem 0x0 0x0 0x0 [Flux,Elixir] GroupOneAI

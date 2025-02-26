@@ -44,8 +44,26 @@ ENDA
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0xA, RecruitYufkaVelius, 0x0, Levain)
+//CharacterEventBothWays(0xA, RecruitYufkaVelius, 0x0, Levain)
+CharacterEventBothWays(0x20,ChiffonGrahamTalk, Chiffon, Graham)
+CharacterEventBothWays(0x21,ChiffonRaialTalk, Chiffon, Raial)
 	END_MAIN
+	
+ChiffonGrahamTalk:
+	MUSI
+	Text(ChiffonGrahamTalk25)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
+
+ChiffonRaialTalk:
+	MUSI
+	Text(ChiffonRaialTalk25)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
 
 RecruitYufkaVelius:
 MUSS 0x30
@@ -172,7 +190,7 @@ UNIT 0x2 PegRider 0x1 Level(9, Enemy, 1)     [6,12] 0b 0x0 0x0 0x0 [SapphireLanc
 	UNIT
 	
 LunaticUnits: //the imperial court people
-UNIT 0x2 PegRider 0x1 Level(9, Enemy, 1)     [6,12] 0b 0x0 0x0 0x0 [SapphireLance,CurtainCall,Elixir] BossAI
+UNIT 0x2 PegRider 0x1 Level(9, Enemy, 1)     [6,12] 0b 0x0 0x0 0x0 [SapphireLance,CurtainCall,PureWater] BossAI
 	UNIT
 	
 EscortUnit: //escort/escape map
