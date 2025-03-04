@@ -1,0 +1,336 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	AnthemPiano_FINAL_grp  voicegroup000
+	#define	AnthemPiano_FINAL_pri  0
+	#define	AnthemPiano_FINAL_rev  200
+	#define	AnthemPiano_FINAL_mvl  45
+	#define	AnthemPiano_FINAL_key  0
+	#define	AnthemPiano_FINAL_tbs  1
+	#define	AnthemPiano_FINAL_exg  0
+	#define	AnthemPiano_FINAL_cmp  1
+
+	// .rodata
+	//	AnthemPiano_FINAL
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+AnthemPiano_FINAL_1:
+	BYTE	KEYSH   AnthemPiano_FINAL_key+0
+AnthemPiano_FINAL_1_B1:
+// 000   ----------------------------------------
+	BYTE	TEMPO   80*AnthemPiano_FINAL_tbs/2
+	BYTE		VOICE   0
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-22
+	BYTE		VOL     127*AnthemPiano_FINAL_mvl/mxv
+	BYTE		N48     Gn4   v127
+	BYTE	W02
+	BYTE	TEMPO   81*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   82*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   83*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   84*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   85*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   86*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   87*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   88*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   89*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   90*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   91*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   92*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   93*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   94*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   95*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   96*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   97*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   98*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   99*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   100*AnthemPiano_FINAL_tbs/2
+	BYTE		N24     An4 
+	BYTE	W02
+	BYTE	TEMPO   101*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   102*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   103*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   104*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   105*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   106*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   107*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   108*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   109*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   110*AnthemPiano_FINAL_tbs/2
+	BYTE		        As4 
+	BYTE	W02
+	BYTE	TEMPO   111*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   112*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   113*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   114*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   115*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   116*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   117*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   118*AnthemPiano_FINAL_tbs/2
+	BYTE	W02
+	BYTE	TEMPO   119*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+// 001   ----------------------------------------
+	BYTE	TEMPO   120*AnthemPiano_FINAL_tbs/2
+	BYTE		N72     Fn4 
+	BYTE		N66     An4 
+	BYTE	W72
+	BYTE		N24     Fn4 
+	BYTE	W24
+// 002   ----------------------------------------
+	BYTE		N48     An3 
+	BYTE		N48     Cn4 
+	BYTE	W48
+	BYTE		        Fn4 
+	BYTE		N48     An4 
+	BYTE	W48
+// 003   ----------------------------------------
+	BYTE		N90     Ds4 
+	BYTE		N24     An4 
+	BYTE	W24
+	BYTE		        As4 
+	BYTE	W24
+	BYTE		N96     Gn4 
+	BYTE	W48
+// 004   ----------------------------------------
+	BYTE		N90     As3 
+	BYTE	W48
+	BYTE		N24     Fn4 
+	BYTE	W24
+	BYTE		        Ds4 
+	BYTE	W24
+// 005   ----------------------------------------
+	BYTE		N90     An3 
+	BYTE		N72     Dn4 
+	BYTE	W72
+	BYTE		N24     En4 
+	BYTE	W24
+// 006   ----------------------------------------
+	BYTE		N72     Dn4 
+	BYTE		N48     Fs4 
+	BYTE	W48
+	BYTE		N24     En4 
+	BYTE	W24
+	BYTE		N18     Dn4 
+	BYTE	W24
+// 007   ----------------------------------------
+	BYTE	TEMPO   120*AnthemPiano_FINAL_tbs/2
+	BYTE		N96     As3 
+	BYTE		N96     En4 
+	BYTE	W03
+	BYTE	TEMPO   119*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   118*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   117*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   116*AnthemPiano_FINAL_tbs/2
+	BYTE	W04
+	BYTE	TEMPO   115*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   114*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   113*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   112*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   111*AnthemPiano_FINAL_tbs/2
+	BYTE	W04
+	BYTE	TEMPO   110*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   109*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   108*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   107*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   106*AnthemPiano_FINAL_tbs/2
+	BYTE	W04
+	BYTE	TEMPO   105*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   104*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   103*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   102*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   101*AnthemPiano_FINAL_tbs/2
+	BYTE	W04
+	BYTE	TEMPO   100*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   99*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   98*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   97*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   96*AnthemPiano_FINAL_tbs/2
+	BYTE	W04
+	BYTE	TEMPO   95*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   94*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   93*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   92*AnthemPiano_FINAL_tbs/2
+	BYTE	W03
+	BYTE	TEMPO   91*AnthemPiano_FINAL_tbs/2
+	BYTE	W04
+// 008   ----------------------------------------
+	BYTE	TEMPO   90*AnthemPiano_FINAL_tbs/2
+	BYTE		        Dn4 
+	BYTE		N96     Gn4 
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE		N90     Fn3 
+	BYTE		N90     An3 
+	BYTE		N90     Dn4 
+	BYTE		N90     Fn4 
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W90
+	BYTE	GoTo
+	 POIN2	AnthemPiano_FINAL_1_B1
+AnthemPiano_FINAL_1_B2:
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+AnthemPiano_FINAL_2:
+	BYTE	KEYSH   AnthemPiano_FINAL_key+0
+AnthemPiano_FINAL_2_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   1
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+21
+	BYTE		VOL     127*AnthemPiano_FINAL_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+AnthemPiano_FINAL_2_001:
+	BYTE		N72     An1   v076
+	BYTE	W24
+	BYTE		N48     Cn2 
+	BYTE	W24
+	BYTE		N24     Fn2 
+	BYTE	W24
+	BYTE		        Fn1 
+	BYTE	W24
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemPiano_FINAL_2_001
+// 003   ----------------------------------------
+AnthemPiano_FINAL_2_003:
+	BYTE		N72     Gn1   v076
+	BYTE	W24
+	BYTE		N48     As1 
+	BYTE	W24
+	BYTE		N24     Ds2 
+	BYTE	W24
+	BYTE		        Ds1 
+	BYTE	W24
+	BYTE	PEND
+// 004   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemPiano_FINAL_2_003
+// 005   ----------------------------------------
+AnthemPiano_FINAL_2_005:
+	BYTE		N72     Fs1   v076
+	BYTE	W24
+	BYTE		N48     An1 
+	BYTE	W24
+	BYTE		N24     Dn2 
+	BYTE	W24
+	BYTE		        Dn1 
+	BYTE	W24
+	BYTE	PEND
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemPiano_FINAL_2_005
+// 007   ----------------------------------------
+AnthemPiano_FINAL_2_007:
+	BYTE		N72     Gn1   v076
+	BYTE	W24
+	BYTE		N48     As1 
+	BYTE	W24
+	BYTE		N24     Dn2 
+	BYTE	W24
+	BYTE		        Dn1 
+	BYTE	W24
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	AnthemPiano_FINAL_2_007
+// 009   ----------------------------------------
+	BYTE		N90     Fn1   v076
+	BYTE		N90     An1 
+	BYTE		N90     Dn2 
+	BYTE		N90     Fn2 
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE		TIE     Dn1 
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	GoTo
+	 POIN2	AnthemPiano_FINAL_2_B1
+AnthemPiano_FINAL_2_B2:
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+AnthemPiano_FINAL:
+	BYTE	2	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	AnthemPiano_FINAL_pri	// Priority
+	BYTE	AnthemPiano_FINAL_rev	// Reverb.
+
+	POIN2	AnthemPiano_FINAL_grp
+
+	POIN2	AnthemPiano_FINAL_1
+	POIN2	AnthemPiano_FINAL_2
+
+	

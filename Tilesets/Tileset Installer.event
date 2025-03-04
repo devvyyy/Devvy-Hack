@@ -13,6 +13,10 @@ ALIGN 4
     SnowFieldsPalette:
     #incbin "SnowFields/SnowFieldsPalette.bin"
 	
+	ALIGN 4
+    AshenFieldsPalette:
+    #incbin "SnowFields/AshenFields_pal.dmp"
+	
 	//ALIGN 4
     //SnowFieldsMapConfig:
     //#incext compress "SnowFields/SnowFields.mapchip_config"
@@ -20,6 +24,7 @@ ALIGN 4
 	ALIGN 4
 	//EventPointerTable(0x1, SnowFieldsImage)
     EventPointerTable(0x2, SnowFieldsPalette)
+    EventPointerTable(0x4C, AshenFieldsPalette)
 	//EventPointerTable(0x3, SnowFieldsMapConfig)
 	
 	//Snow Fields (FE6) by N426

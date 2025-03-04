@@ -1,0 +1,1726 @@
+	.include "MPlayDef.s"
+
+	.equ	EchoesofAnother_FINAL_grp, voicegroup000
+	.equ	EchoesofAnother_FINAL_pri, 0
+	.equ	EchoesofAnother_FINAL_rev, 0
+	.equ	EchoesofAnother_FINAL_mvl, 30
+	.equ	EchoesofAnother_FINAL_key, 0
+	.equ	EchoesofAnother_FINAL_tbs, 1
+	.equ	EchoesofAnother_FINAL_exg, 0
+	.equ	EchoesofAnother_FINAL_cmp, 1
+
+	.section .rodata
+	.global	EchoesofAnother_FINAL
+	.align	2
+
+@**************** Track 1 (Midi-Chn.1) ****************@
+
+EchoesofAnother_FINAL_1:
+	.byte	KEYSH , EchoesofAnother_FINAL_key+0
+EchoesofAnother_FINAL_1_B1:
+@ 000   ----------------------------------------
+	.byte		VOICE , 11
+	.byte		MODT  , 0
+	.byte		LFOS  , 44
+	.byte		VOL   , 127*EchoesofAnother_FINAL_mvl/mxv
+	.byte		PAN   , c_v-10
+	.byte		N11   , Fn2 , v100
+	.byte		N11   , Fn3 
+	.byte	W12
+	.byte		        Gn3 
+	.byte	W12
+	.byte		        An3 
+	.byte	W12
+	.byte		N54   , Fn3 
+	.byte		N54   , An3 
+	.byte		N54   , Cn4 
+	.byte	W60
+@ 001   ----------------------------------------
+EchoesofAnother_FINAL_1_001:
+	.byte		N11   , En2 , v100
+	.byte		N11   , En3 
+	.byte	W12
+	.byte		        Fn3 
+	.byte	W12
+	.byte		        Gn3 
+	.byte	W12
+	.byte		N54   , En3 
+	.byte		N54   , Gn3 
+	.byte		N54   , Bn3 
+	.byte	W60
+	.byte	PEND
+@ 002   ----------------------------------------
+EchoesofAnother_FINAL_1_002:
+	.byte		N11   , Fn2 , v100
+	.byte		N11   , Fn3 
+	.byte	W12
+	.byte		        Gn3 
+	.byte	W12
+	.byte		        An3 
+	.byte	W12
+	.byte		N54   , Fn3 
+	.byte		N54   , An3 
+	.byte		N54   , Cn4 
+	.byte	W60
+	.byte	PEND
+@ 003   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_001
+@ 004   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_002
+@ 005   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_001
+@ 006   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_002
+@ 007   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_001
+@ 008   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_002
+@ 009   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_001
+@ 010   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_002
+@ 011   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_001
+@ 012   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_002
+@ 013   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_001
+@ 014   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_002
+@ 015   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_001
+@ 016   ----------------------------------------
+EchoesofAnother_FINAL_1_016:
+	.byte		N11   , En2 , v100
+	.byte		N11   , En3 
+	.byte	W12
+	.byte		        Fn3 
+	.byte	W12
+	.byte		        Gn3 
+	.byte	W12
+	.byte		N54   , En3 
+	.byte		N54   , Gn3 
+	.byte		N54   , As3 
+	.byte	W60
+	.byte	PEND
+@ 017   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_016
+@ 018   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_002
+@ 019   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_002
+@ 020   ----------------------------------------
+EchoesofAnother_FINAL_1_020:
+	.byte		N11   , Fn2 , v100
+	.byte		N11   , Fn3 
+	.byte	W12
+	.byte		        Gn3 
+	.byte	W12
+	.byte		        An3 
+	.byte	W12
+	.byte		N54   , Fn3 
+	.byte		N54   , An3 
+	.byte		N54   , Dn4 
+	.byte	W60
+	.byte	PEND
+@ 021   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_020
+@ 022   ----------------------------------------
+EchoesofAnother_FINAL_1_022:
+	.byte		N11   , Gn3 , v100
+	.byte	W12
+	.byte		        An3 
+	.byte	W12
+	.byte		        Bn3 
+	.byte	W12
+	.byte		N54   , Gn3 
+	.byte		N54   , Bn3 
+	.byte		N54   , Dn4 
+	.byte	W60
+	.byte	PEND
+@ 023   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_022
+@ 024   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_002
+@ 025   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_001
+@ 026   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_002
+@ 027   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_001
+@ 028   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_002
+@ 029   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_001
+@ 030   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_002
+@ 031   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_001
+@ 032   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_016
+@ 033   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_016
+@ 034   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_002
+@ 035   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_002
+@ 036   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_020
+@ 037   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_020
+@ 038   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_022
+@ 039   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_1_022
+@ 040   ----------------------------------------
+	.byte	W96
+@ 041   ----------------------------------------
+	.byte	W96
+@ 042   ----------------------------------------
+	.byte	W96
+@ 043   ----------------------------------------
+	.byte	W96
+@ 044   ----------------------------------------
+	.byte	W96
+@ 045   ----------------------------------------
+	.byte	W96
+@ 046   ----------------------------------------
+	.byte	W96
+@ 047   ----------------------------------------
+	.byte	W96
+@ 048   ----------------------------------------
+	.byte	W96
+@ 049   ----------------------------------------
+	.byte	W96
+@ 050   ----------------------------------------
+	.byte	W96
+@ 051   ----------------------------------------
+	.byte	W96
+@ 052   ----------------------------------------
+	.byte	W96
+@ 053   ----------------------------------------
+	.byte	W96
+@ 054   ----------------------------------------
+	.byte	W96
+@ 055   ----------------------------------------
+	.byte	W90
+	.byte	GOTO
+	 .word	EchoesofAnother_FINAL_1_B1
+EchoesofAnother_FINAL_1_B2:
+	.byte	FINE
+
+@**************** Track 2 (Midi-Chn.2) ****************@
+
+EchoesofAnother_FINAL_2:
+	.byte	KEYSH , EchoesofAnother_FINAL_key+0
+EchoesofAnother_FINAL_2_B1:
+@ 000   ----------------------------------------
+	.byte		VOICE , 98
+	.byte		MODT  , 0
+	.byte		LFOS  , 44
+	.byte		VOL   , 127*EchoesofAnother_FINAL_mvl/mxv
+	.byte		PAN   , c_v+10
+	.byte		N11   , Fn2 , v100
+	.byte		N11   , Fn3 
+	.byte	W12
+	.byte		        Gn3 
+	.byte	W12
+	.byte		        An3 
+	.byte	W12
+	.byte		N54   , Fn3 
+	.byte		N54   , An3 
+	.byte		N54   , Cn4 
+	.byte	W60
+@ 001   ----------------------------------------
+EchoesofAnother_FINAL_2_001:
+	.byte		N11   , En2 , v100
+	.byte		N11   , En3 
+	.byte	W12
+	.byte		        Fn3 
+	.byte	W12
+	.byte		        Gn3 
+	.byte	W12
+	.byte		N54   , En3 
+	.byte		N54   , Gn3 
+	.byte		N54   , Bn3 
+	.byte	W60
+	.byte	PEND
+@ 002   ----------------------------------------
+EchoesofAnother_FINAL_2_002:
+	.byte		N11   , Fn2 , v100
+	.byte		N11   , Fn3 
+	.byte	W12
+	.byte		        Gn3 
+	.byte	W12
+	.byte		        An3 
+	.byte	W12
+	.byte		N54   , Fn3 
+	.byte		N54   , An3 
+	.byte		N54   , Cn4 
+	.byte	W60
+	.byte	PEND
+@ 003   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_001
+@ 004   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_002
+@ 005   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_001
+@ 006   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_002
+@ 007   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_001
+@ 008   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_002
+@ 009   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_001
+@ 010   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_002
+@ 011   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_001
+@ 012   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_002
+@ 013   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_001
+@ 014   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_002
+@ 015   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_001
+@ 016   ----------------------------------------
+EchoesofAnother_FINAL_2_016:
+	.byte		N11   , En2 , v100
+	.byte		N11   , En3 
+	.byte	W12
+	.byte		        Fn3 
+	.byte	W12
+	.byte		        Gn3 
+	.byte	W12
+	.byte		N54   , En3 
+	.byte		N54   , Gn3 
+	.byte		N54   , As3 
+	.byte	W60
+	.byte	PEND
+@ 017   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_016
+@ 018   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_002
+@ 019   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_002
+@ 020   ----------------------------------------
+EchoesofAnother_FINAL_2_020:
+	.byte		N11   , Fn2 , v100
+	.byte		N11   , Fn3 
+	.byte	W12
+	.byte		        Gn3 
+	.byte	W12
+	.byte		        An3 
+	.byte	W12
+	.byte		N54   , Fn3 
+	.byte		N54   , An3 
+	.byte		N54   , Dn4 
+	.byte	W60
+	.byte	PEND
+@ 021   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_020
+@ 022   ----------------------------------------
+EchoesofAnother_FINAL_2_022:
+	.byte		N11   , Gn3 , v100
+	.byte	W12
+	.byte		        An3 
+	.byte	W12
+	.byte		        Bn3 
+	.byte	W12
+	.byte		N54   , Gn3 
+	.byte		N54   , Bn3 
+	.byte		N54   , Dn4 
+	.byte	W60
+	.byte	PEND
+@ 023   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_022
+@ 024   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_002
+@ 025   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_001
+@ 026   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_002
+@ 027   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_001
+@ 028   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_002
+@ 029   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_001
+@ 030   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_002
+@ 031   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_001
+@ 032   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_016
+@ 033   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_016
+@ 034   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_002
+@ 035   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_002
+@ 036   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_020
+@ 037   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_020
+@ 038   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_022
+@ 039   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_2_022
+@ 040   ----------------------------------------
+	.byte	W96
+@ 041   ----------------------------------------
+	.byte	W96
+@ 042   ----------------------------------------
+	.byte	W96
+@ 043   ----------------------------------------
+	.byte	W96
+@ 044   ----------------------------------------
+	.byte	W96
+@ 045   ----------------------------------------
+	.byte	W96
+@ 046   ----------------------------------------
+	.byte	W96
+@ 047   ----------------------------------------
+	.byte	W96
+@ 048   ----------------------------------------
+	.byte	W96
+@ 049   ----------------------------------------
+	.byte	W96
+@ 050   ----------------------------------------
+	.byte	W96
+@ 051   ----------------------------------------
+	.byte	W96
+@ 052   ----------------------------------------
+	.byte	W96
+@ 053   ----------------------------------------
+	.byte	W96
+@ 054   ----------------------------------------
+	.byte	W96
+@ 055   ----------------------------------------
+	.byte	W90
+	.byte	GOTO
+	 .word	EchoesofAnother_FINAL_2_B1
+EchoesofAnother_FINAL_2_B2:
+	.byte	FINE
+
+@**************** Track 3 (Midi-Chn.3) ****************@
+
+EchoesofAnother_FINAL_3:
+	.byte	KEYSH , EchoesofAnother_FINAL_key+0
+EchoesofAnother_FINAL_3_B1:
+@ 000   ----------------------------------------
+	.byte		VOICE , 52
+	.byte		MODT  , 0
+	.byte		LFOS  , 44
+	.byte		PAN   , c_v-22
+	.byte		VOL   , 127*EchoesofAnother_FINAL_mvl/mxv
+	.byte	W96
+@ 001   ----------------------------------------
+	.byte	W96
+@ 002   ----------------------------------------
+	.byte	W96
+@ 003   ----------------------------------------
+	.byte	W96
+@ 004   ----------------------------------------
+EchoesofAnother_FINAL_3_004:
+	.byte		N06   , Fn3 , v004
+	.byte		N20   , An3 
+	.byte		N20   , Cn4 
+	.byte	W24
+	.byte		N06   , Fn3 , v012
+	.byte		N20   , An3 
+	.byte		N20   , Cn4 
+	.byte	W24
+	.byte		N06   , Fn3 , v028
+	.byte		N20   , An3 
+	.byte		N20   , Cn4 
+	.byte	W24
+	.byte		N06   , Fn3 , v044
+	.byte		N20   , An3 
+	.byte		N20   , Cn4 
+	.byte	W24
+	.byte	PEND
+@ 005   ----------------------------------------
+EchoesofAnother_FINAL_3_005:
+	.byte		N06   , En3 , v068
+	.byte		N06   , Gn3 
+	.byte		N06   , Bn3 
+	.byte	W24
+	.byte		        En3 , v096
+	.byte		N06   , Gn3 
+	.byte		N06   , Bn3 
+	.byte	W24
+	.byte		        En3 , v127
+	.byte		N06   , Gn3 
+	.byte		N06   , Bn3 
+	.byte	W24
+	.byte		        En3 , v100
+	.byte		N06   , Gn3 
+	.byte		N06   , Bn3 
+	.byte	W24
+	.byte	PEND
+@ 006   ----------------------------------------
+EchoesofAnother_FINAL_3_006:
+	.byte		N06   , Fn3 , v072
+	.byte		N20   , An3 
+	.byte		N20   , Cn4 
+	.byte	W24
+	.byte		N06   , Fn3 , v048
+	.byte		N20   , An3 
+	.byte		N20   , Cn4 
+	.byte	W24
+	.byte		N06   , Fn3 , v028
+	.byte		N20   , An3 
+	.byte		N20   , Cn4 
+	.byte	W24
+	.byte		N06   , Fn3 , v012
+	.byte		N20   , An3 
+	.byte		N20   , Cn4 
+	.byte	W24
+	.byte	PEND
+@ 007   ----------------------------------------
+	.byte	W96
+@ 008   ----------------------------------------
+	.byte	W96
+@ 009   ----------------------------------------
+	.byte	W96
+@ 010   ----------------------------------------
+	.byte	W96
+@ 011   ----------------------------------------
+	.byte	W96
+@ 012   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_3_004
+@ 013   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_3_005
+@ 014   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_3_006
+@ 015   ----------------------------------------
+	.byte	W96
+@ 016   ----------------------------------------
+	.byte	W96
+@ 017   ----------------------------------------
+	.byte	W96
+@ 018   ----------------------------------------
+	.byte	W96
+@ 019   ----------------------------------------
+	.byte	W96
+@ 020   ----------------------------------------
+EchoesofAnother_FINAL_3_020:
+	.byte		N06   , Fn3 , v004
+	.byte		N06   , An3 
+	.byte		N06   , Dn4 
+	.byte	W24
+	.byte		        Fn3 , v012
+	.byte		N06   , An3 
+	.byte		N06   , Dn4 
+	.byte	W24
+	.byte		        Fn3 , v028
+	.byte		N06   , An3 
+	.byte		N06   , Dn4 
+	.byte	W24
+	.byte		        Fn3 , v044
+	.byte		N06   , An3 
+	.byte		N06   , Dn4 
+	.byte	W24
+	.byte	PEND
+@ 021   ----------------------------------------
+EchoesofAnother_FINAL_3_021:
+	.byte		N06   , Fn3 , v068
+	.byte		N06   , An3 
+	.byte		N06   , Dn4 
+	.byte	W24
+	.byte		        Fn3 , v096
+	.byte		N06   , An3 
+	.byte		N06   , Dn4 
+	.byte	W24
+	.byte		        Fn3 , v127
+	.byte		N06   , An3 
+	.byte		N06   , Dn4 
+	.byte	W24
+	.byte		        Fn3 , v100
+	.byte		N06   , An3 
+	.byte		N06   , Dn4 
+	.byte	W24
+	.byte	PEND
+@ 022   ----------------------------------------
+EchoesofAnother_FINAL_3_022:
+	.byte		N06   , Gn3 , v072
+	.byte		N06   , Bn3 
+	.byte		N06   , Dn4 
+	.byte	W24
+	.byte		        Gn3 , v048
+	.byte		N06   , Bn3 
+	.byte		N06   , Dn4 
+	.byte	W24
+	.byte		        Gn3 , v028
+	.byte		N06   , Bn3 
+	.byte		N06   , Dn4 
+	.byte	W24
+	.byte		        Gn3 , v012
+	.byte		N06   , Bn3 
+	.byte		N06   , Dn4 
+	.byte	W24
+	.byte	PEND
+@ 023   ----------------------------------------
+	.byte	W96
+@ 024   ----------------------------------------
+	.byte	W96
+@ 025   ----------------------------------------
+	.byte	W96
+@ 026   ----------------------------------------
+	.byte	W96
+@ 027   ----------------------------------------
+	.byte	W96
+@ 028   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_3_004
+@ 029   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_3_005
+@ 030   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_3_006
+@ 031   ----------------------------------------
+	.byte	W96
+@ 032   ----------------------------------------
+	.byte	W96
+@ 033   ----------------------------------------
+	.byte	W96
+@ 034   ----------------------------------------
+	.byte	W96
+@ 035   ----------------------------------------
+	.byte	W96
+@ 036   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_3_020
+@ 037   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_3_021
+@ 038   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_3_022
+@ 039   ----------------------------------------
+	.byte	W96
+@ 040   ----------------------------------------
+	.byte		N48   , Cn4 , v127
+	.byte	W48
+	.byte		        Ds4 
+	.byte	W48
+@ 041   ----------------------------------------
+	.byte		N24   , Dn4 
+	.byte	W24
+	.byte		        Cn4 
+	.byte	W24
+	.byte		        As3 
+	.byte	W24
+	.byte		        Gn3 
+	.byte	W24
+@ 042   ----------------------------------------
+	.byte		N48   , Gs3 
+	.byte	W48
+	.byte		        Cn4 
+	.byte	W48
+@ 043   ----------------------------------------
+	.byte		N96   , As3 
+	.byte	W96
+@ 044   ----------------------------------------
+	.byte		N48   , Gs3 
+	.byte	W48
+	.byte		        Gn3 
+	.byte	W48
+@ 045   ----------------------------------------
+	.byte		        Fn3 
+	.byte	W48
+	.byte		N24   , Ds3 
+	.byte	W24
+	.byte		        Fn3 
+	.byte	W24
+@ 046   ----------------------------------------
+	.byte		N48   , Gn3 
+	.byte	W48
+	.byte		        Gs3 
+	.byte	W48
+@ 047   ----------------------------------------
+	.byte		N96   , Gn3 
+	.byte	W96
+@ 048   ----------------------------------------
+	.byte		N48   , Ds4 
+	.byte	W48
+	.byte		        Dn4 
+	.byte	W48
+@ 049   ----------------------------------------
+	.byte		        Cn4 
+	.byte	W48
+	.byte		N24   , Dn4 
+	.byte	W24
+	.byte		        Ds4 
+	.byte	W24
+@ 050   ----------------------------------------
+	.byte		N48   , Fn4 
+	.byte	W48
+	.byte		        Ds4 
+	.byte	W48
+@ 051   ----------------------------------------
+	.byte		        Dn4 
+	.byte	W48
+	.byte		N24   , Cn4 
+	.byte	W24
+	.byte		        As3 
+	.byte	W24
+@ 052   ----------------------------------------
+	.byte		TIE   , Cn4 
+	.byte	W96
+@ 053   ----------------------------------------
+	.byte	W90
+	.byte		EOT   
+	.byte	W06
+@ 054   ----------------------------------------
+	.byte	W96
+@ 055   ----------------------------------------
+	.byte	W90
+	.byte	GOTO
+	 .word	EchoesofAnother_FINAL_3_B1
+EchoesofAnother_FINAL_3_B2:
+	.byte	FINE
+
+@**************** Track 4 (Midi-Chn.4) ****************@
+
+EchoesofAnother_FINAL_4:
+	.byte	KEYSH , EchoesofAnother_FINAL_key+0
+EchoesofAnother_FINAL_4_B1:
+@ 000   ----------------------------------------
+	.byte		VOICE , 73
+	.byte		MODT  , 0
+	.byte		LFOS  , 44
+	.byte		PAN   , c_v+18
+	.byte		VOL   , 127*EchoesofAnother_FINAL_mvl/mxv
+	.byte	W96
+@ 001   ----------------------------------------
+	.byte	W96
+@ 002   ----------------------------------------
+	.byte	W96
+@ 003   ----------------------------------------
+	.byte	W96
+@ 004   ----------------------------------------
+	.byte	W96
+@ 005   ----------------------------------------
+	.byte	W96
+@ 006   ----------------------------------------
+	.byte	W96
+@ 007   ----------------------------------------
+	.byte	W72
+	.byte		N20   , Gn4 , v100
+	.byte	W24
+@ 008   ----------------------------------------
+EchoesofAnother_FINAL_4_008:
+	.byte		N42   , Gn4 , v100
+	.byte	W48
+	.byte		        Fn4 
+	.byte	W48
+	.byte	PEND
+@ 009   ----------------------------------------
+EchoesofAnother_FINAL_4_009:
+	.byte		N42   , En4 , v100
+	.byte	W48
+	.byte		N20   , Dn4 
+	.byte	W24
+	.byte		        Cn4 
+	.byte	W24
+	.byte	PEND
+@ 010   ----------------------------------------
+EchoesofAnother_FINAL_4_010:
+	.byte		N80   , An3 , v100
+	.byte	W84
+	.byte		N05   , Bn3 
+	.byte	W06
+	.byte		        An3 
+	.byte	W06
+	.byte	PEND
+@ 011   ----------------------------------------
+EchoesofAnother_FINAL_4_011:
+	.byte		N66   , Gn3 , v100
+	.byte	W72
+	.byte		N20   , Gn4 
+	.byte	W24
+	.byte	PEND
+@ 012   ----------------------------------------
+EchoesofAnother_FINAL_4_012:
+	.byte		N42   , An4 , v100
+	.byte	W48
+	.byte		        Bn4 
+	.byte	W48
+	.byte	PEND
+@ 013   ----------------------------------------
+EchoesofAnother_FINAL_4_013:
+	.byte		N42   , Cn5 , v100
+	.byte	W48
+	.byte		N20   , Bn4 
+	.byte	W24
+	.byte		        Gn4 
+	.byte	W24
+	.byte	PEND
+@ 014   ----------------------------------------
+EchoesofAnother_FINAL_4_014:
+	.byte		N42   , Fn4 , v100
+	.byte	W48
+	.byte		N20   , Dn4 
+	.byte	W24
+	.byte		        Fn4 
+	.byte	W24
+	.byte	PEND
+@ 015   ----------------------------------------
+EchoesofAnother_FINAL_4_015:
+	.byte		N66   , En4 , v100
+	.byte	W72
+	.byte		N20   
+	.byte	W24
+	.byte	PEND
+@ 016   ----------------------------------------
+EchoesofAnother_FINAL_4_016:
+	.byte		N42   , En4 , v100
+	.byte	W48
+	.byte		        Dn4 
+	.byte	W48
+	.byte	PEND
+@ 017   ----------------------------------------
+EchoesofAnother_FINAL_4_017:
+	.byte		N42   , Cn4 , v100
+	.byte	W48
+	.byte		N20   , Dn4 
+	.byte	W24
+	.byte		        En4 
+	.byte	W24
+	.byte	PEND
+@ 018   ----------------------------------------
+EchoesofAnother_FINAL_4_018:
+	.byte		N42   , Fn4 , v100
+	.byte	W48
+	.byte		        En4 
+	.byte	W48
+	.byte	PEND
+@ 019   ----------------------------------------
+EchoesofAnother_FINAL_4_019:
+	.byte		N42   , Dn4 , v100
+	.byte	W48
+	.byte		        Cn4 
+	.byte	W48
+	.byte	PEND
+@ 020   ----------------------------------------
+EchoesofAnother_FINAL_4_020:
+	.byte		N42   , Dn4 , v100
+	.byte	W48
+	.byte		        En4 
+	.byte	W48
+	.byte	PEND
+@ 021   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_4_014
+@ 022   ----------------------------------------
+EchoesofAnother_FINAL_4_022:
+	.byte		N20   , Gn4 , v100
+	.byte	W24
+	.byte		        Fn4 
+	.byte	W24
+	.byte		        En4 
+	.byte	W24
+	.byte		N11   , Dn4 
+	.byte	W12
+	.byte		        Cn4 
+	.byte	W12
+	.byte	PEND
+@ 023   ----------------------------------------
+	.byte		N66   , Dn4 
+	.byte	W72
+	.byte		N20   , Gn4 
+	.byte	W24
+@ 024   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_4_008
+@ 025   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_4_009
+@ 026   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_4_010
+@ 027   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_4_011
+@ 028   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_4_012
+@ 029   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_4_013
+@ 030   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_4_014
+@ 031   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_4_015
+@ 032   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_4_016
+@ 033   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_4_017
+@ 034   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_4_018
+@ 035   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_4_019
+@ 036   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_4_020
+@ 037   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_4_014
+@ 038   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_4_022
+@ 039   ----------------------------------------
+	.byte		N90   , Dn4 , v100
+	.byte	W96
+@ 040   ----------------------------------------
+	.byte	W96
+@ 041   ----------------------------------------
+	.byte	W96
+@ 042   ----------------------------------------
+	.byte	W96
+@ 043   ----------------------------------------
+	.byte	W96
+@ 044   ----------------------------------------
+	.byte	W96
+@ 045   ----------------------------------------
+	.byte	W96
+@ 046   ----------------------------------------
+	.byte	W96
+@ 047   ----------------------------------------
+	.byte	W96
+@ 048   ----------------------------------------
+	.byte	W96
+@ 049   ----------------------------------------
+	.byte	W96
+@ 050   ----------------------------------------
+	.byte	W96
+@ 051   ----------------------------------------
+	.byte	W96
+@ 052   ----------------------------------------
+	.byte	W96
+@ 053   ----------------------------------------
+	.byte	W96
+@ 054   ----------------------------------------
+	.byte	W96
+@ 055   ----------------------------------------
+	.byte	W90
+	.byte	GOTO
+	 .word	EchoesofAnother_FINAL_4_B1
+EchoesofAnother_FINAL_4_B2:
+	.byte	FINE
+
+@**************** Track 5 (Midi-Chn.5) ****************@
+
+EchoesofAnother_FINAL_5:
+	.byte	KEYSH , EchoesofAnother_FINAL_key+0
+EchoesofAnother_FINAL_5_B1:
+@ 000   ----------------------------------------
+	.byte		VOICE , 48
+	.byte		MODT  , 0
+	.byte		LFOS  , 44
+	.byte		VOL   , 127*EchoesofAnother_FINAL_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte		N96   , Fn2 , v100
+	.byte	W96
+@ 001   ----------------------------------------
+	.byte		        En2 
+	.byte	W96
+@ 002   ----------------------------------------
+	.byte		        Dn2 
+	.byte	W96
+@ 003   ----------------------------------------
+	.byte		        En2 
+	.byte	W96
+@ 004   ----------------------------------------
+	.byte		        Fn2 
+	.byte	W96
+@ 005   ----------------------------------------
+	.byte		        En2 
+	.byte	W96
+@ 006   ----------------------------------------
+	.byte		        Dn2 
+	.byte	W96
+@ 007   ----------------------------------------
+	.byte		        En2 
+	.byte	W96
+@ 008   ----------------------------------------
+	.byte		        Fn2 
+	.byte	W96
+@ 009   ----------------------------------------
+	.byte		        En2 
+	.byte	W96
+@ 010   ----------------------------------------
+	.byte		        Dn2 
+	.byte	W96
+@ 011   ----------------------------------------
+	.byte		        En2 
+	.byte	W96
+@ 012   ----------------------------------------
+	.byte		        Fn2 
+	.byte	W96
+@ 013   ----------------------------------------
+	.byte		        En2 
+	.byte	W96
+@ 014   ----------------------------------------
+	.byte		        Dn2 
+	.byte	W96
+@ 015   ----------------------------------------
+	.byte		        En2 
+	.byte	W96
+@ 016   ----------------------------------------
+EchoesofAnother_FINAL_5_016:
+	.byte		TIE   , En2 , v100
+	.byte		TIE   , Gn2 
+	.byte		TIE   , As2 
+	.byte	W96
+	.byte	PEND
+@ 017   ----------------------------------------
+	.byte	W96
+	.byte		EOT   , En2 
+	.byte		        Gn2 
+	.byte		        As2 
+@ 018   ----------------------------------------
+EchoesofAnother_FINAL_5_018:
+	.byte		TIE   , Cn2 , v100
+	.byte		TIE   , Fn2 
+	.byte		TIE   , An2 
+	.byte	W96
+	.byte	PEND
+@ 019   ----------------------------------------
+	.byte	W96
+	.byte		EOT   , Cn2 
+	.byte		        Fn2 
+	.byte		        An2 
+@ 020   ----------------------------------------
+EchoesofAnother_FINAL_5_020:
+	.byte		TIE   , Dn2 , v100
+	.byte		TIE   , Fn2 
+	.byte		TIE   , An2 
+	.byte	W96
+	.byte	PEND
+@ 021   ----------------------------------------
+	.byte	W96
+	.byte		EOT   , Dn2 
+	.byte		        Fn2 
+	.byte		        An2 
+@ 022   ----------------------------------------
+EchoesofAnother_FINAL_5_022:
+	.byte		TIE   , Dn2 , v100
+	.byte		TIE   , Gn2 
+	.byte		TIE   , Bn2 
+	.byte	W96
+	.byte	PEND
+@ 023   ----------------------------------------
+	.byte	W96
+	.byte		EOT   , Dn2 
+	.byte		        Gn2 
+	.byte		        Bn2 
+@ 024   ----------------------------------------
+EchoesofAnother_FINAL_5_024:
+	.byte		N96   , Cn2 , v100
+	.byte		N96   , Fn2 
+	.byte		N96   , An2 
+	.byte	W96
+	.byte	PEND
+@ 025   ----------------------------------------
+EchoesofAnother_FINAL_5_025:
+	.byte		N96   , Bn1 , v100
+	.byte		N96   , En2 
+	.byte		N96   , Gn2 
+	.byte	W96
+	.byte	PEND
+@ 026   ----------------------------------------
+EchoesofAnother_FINAL_5_026:
+	.byte		N96   , An1 , v100
+	.byte		N96   , Dn2 
+	.byte		N96   , Fn2 
+	.byte	W96
+	.byte	PEND
+@ 027   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_5_025
+@ 028   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_5_024
+@ 029   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_5_025
+@ 030   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_5_026
+@ 031   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_5_025
+@ 032   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_5_016
+@ 033   ----------------------------------------
+	.byte	W96
+	.byte		EOT   , En2 
+	.byte		        Gn2 
+	.byte		        As2 
+@ 034   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_5_018
+@ 035   ----------------------------------------
+	.byte	W96
+	.byte		EOT   , Cn2 
+	.byte		        Fn2 
+	.byte		        An2 
+@ 036   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_5_020
+@ 037   ----------------------------------------
+	.byte	W96
+	.byte		EOT   , Dn2 
+	.byte		        Fn2 
+	.byte		        An2 
+@ 038   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_5_022
+@ 039   ----------------------------------------
+	.byte	W90
+	.byte		EOT   , Dn2 
+	.byte		        Gn2 
+	.byte		        Bn2 
+	.byte	W06
+@ 040   ----------------------------------------
+EchoesofAnother_FINAL_5_040:
+	.byte		N96   , Gn4 , v100
+	.byte		N96   , Cn5 
+	.byte		N96   , Ds5 
+	.byte		N96   , Gn5 
+	.byte	W96
+	.byte	PEND
+@ 041   ----------------------------------------
+EchoesofAnother_FINAL_5_041:
+	.byte		N96   , Gn4 , v100
+	.byte		N96   , As4 
+	.byte		N96   , Dn5 
+	.byte		N96   , Fn5 
+	.byte	W96
+	.byte	PEND
+@ 042   ----------------------------------------
+EchoesofAnother_FINAL_5_042:
+	.byte		N96   , Ds4 , v100
+	.byte		N96   , Gs4 
+	.byte		N96   , Cn5 
+	.byte		N96   , Ds5 
+	.byte	W96
+	.byte	PEND
+@ 043   ----------------------------------------
+EchoesofAnother_FINAL_5_043:
+	.byte		N96   , Ds4 , v100
+	.byte		N96   , Gn4 
+	.byte		N96   , As4 
+	.byte		N96   , Ds5 
+	.byte	W96
+	.byte	PEND
+@ 044   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_5_042
+@ 045   ----------------------------------------
+EchoesofAnother_FINAL_5_045:
+	.byte		N96   , Fn4 , v100
+	.byte		N96   , Gs4 
+	.byte		N96   , Cn5 
+	.byte		N96   , Fn5 
+	.byte	W96
+	.byte	PEND
+@ 046   ----------------------------------------
+	.byte		        Ds4 
+	.byte		N96   , Gn4 
+	.byte		N96   , Cn5 
+	.byte		N96   , Ds5 
+	.byte	W96
+@ 047   ----------------------------------------
+	.byte		        Dn4 
+	.byte		N96   , Gn4 
+	.byte		N96   , Bn4 
+	.byte		N96   , Dn5 
+	.byte	W96
+@ 048   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_5_043
+@ 049   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_5_040
+@ 050   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_5_045
+@ 051   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_5_041
+@ 052   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_5_042
+@ 053   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_5_045
+@ 054   ----------------------------------------
+	.byte		N96   , Dn4 , v100
+	.byte		N96   , Gn4 
+	.byte		N96   , Cn5 
+	.byte		N96   , Dn5 
+	.byte	W96
+@ 055   ----------------------------------------
+	.byte		N90   , Dn4 
+	.byte		N90   , Gn4 
+	.byte		N90   , Bn4 
+	.byte		N90   , Dn5 
+	.byte	W90
+	.byte	GOTO
+	 .word	EchoesofAnother_FINAL_5_B1
+EchoesofAnother_FINAL_5_B2:
+	.byte	FINE
+
+@**************** Track 6 (Midi-Chn.6) ****************@
+
+EchoesofAnother_FINAL_6:
+	.byte	KEYSH , EchoesofAnother_FINAL_key+0
+EchoesofAnother_FINAL_6_B1:
+@ 000   ----------------------------------------
+	.byte		VOICE , 47
+	.byte		MODT  , 0
+	.byte		LFOS  , 44
+	.byte		VOL   , 127*EchoesofAnother_FINAL_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte	W96
+@ 001   ----------------------------------------
+	.byte	W96
+@ 002   ----------------------------------------
+	.byte	W96
+@ 003   ----------------------------------------
+	.byte	W96
+@ 004   ----------------------------------------
+	.byte	W96
+@ 005   ----------------------------------------
+	.byte	W96
+@ 006   ----------------------------------------
+	.byte	W96
+@ 007   ----------------------------------------
+	.byte	W96
+@ 008   ----------------------------------------
+	.byte	W96
+@ 009   ----------------------------------------
+	.byte	W96
+@ 010   ----------------------------------------
+	.byte	W96
+@ 011   ----------------------------------------
+	.byte	W96
+@ 012   ----------------------------------------
+	.byte	W96
+@ 013   ----------------------------------------
+	.byte	W96
+@ 014   ----------------------------------------
+	.byte	W96
+@ 015   ----------------------------------------
+	.byte	W96
+@ 016   ----------------------------------------
+	.byte	W96
+@ 017   ----------------------------------------
+	.byte	W96
+@ 018   ----------------------------------------
+	.byte	W96
+@ 019   ----------------------------------------
+	.byte	W96
+@ 020   ----------------------------------------
+	.byte	W96
+@ 021   ----------------------------------------
+	.byte	W96
+@ 022   ----------------------------------------
+	.byte	W96
+@ 023   ----------------------------------------
+	.byte	W96
+@ 024   ----------------------------------------
+EchoesofAnother_FINAL_6_024:
+	.byte		N20   , Fn2 , v127
+	.byte	W24
+	.byte		N20   
+	.byte	W72
+	.byte	PEND
+@ 025   ----------------------------------------
+EchoesofAnother_FINAL_6_025:
+	.byte		N20   , En2 , v127
+	.byte	W24
+	.byte		N20   
+	.byte	W72
+	.byte	PEND
+@ 026   ----------------------------------------
+EchoesofAnother_FINAL_6_026:
+	.byte		N20   , Dn2 , v127
+	.byte	W24
+	.byte		N20   
+	.byte	W72
+	.byte	PEND
+@ 027   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_025
+@ 028   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_024
+@ 029   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_025
+@ 030   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_026
+@ 031   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_025
+@ 032   ----------------------------------------
+EchoesofAnother_FINAL_6_032:
+	.byte		N20   , As1 , v127
+	.byte	W24
+	.byte		N20   
+	.byte	W24
+	.byte		N11   
+	.byte	W12
+	.byte		N11   
+	.byte	W12
+	.byte		N11   
+	.byte	W12
+	.byte		N11   
+	.byte	W12
+	.byte	PEND
+@ 033   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_032
+@ 034   ----------------------------------------
+EchoesofAnother_FINAL_6_034:
+	.byte		N20   , Cn2 , v127
+	.byte	W24
+	.byte		N20   
+	.byte	W24
+	.byte		N11   
+	.byte	W12
+	.byte		N11   
+	.byte	W12
+	.byte		N11   
+	.byte	W12
+	.byte		N11   
+	.byte	W12
+	.byte	PEND
+@ 035   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_034
+@ 036   ----------------------------------------
+EchoesofAnother_FINAL_6_036:
+	.byte		N20   , Dn2 , v127
+	.byte	W24
+	.byte		N20   
+	.byte	W24
+	.byte		N11   
+	.byte	W12
+	.byte		N11   
+	.byte	W12
+	.byte		N11   
+	.byte	W12
+	.byte		N11   
+	.byte	W12
+	.byte	PEND
+@ 037   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_036
+@ 038   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_036
+@ 039   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_036
+@ 040   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_034
+@ 041   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_036
+@ 042   ----------------------------------------
+EchoesofAnother_FINAL_6_042:
+	.byte		N20   , En2 , v127
+	.byte	W24
+	.byte		N20   
+	.byte	W24
+	.byte		N11   
+	.byte	W12
+	.byte		N11   
+	.byte	W12
+	.byte		N11   
+	.byte	W12
+	.byte		N11   
+	.byte	W12
+	.byte	PEND
+@ 043   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_042
+@ 044   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_034
+@ 045   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_034
+@ 046   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_034
+@ 047   ----------------------------------------
+	.byte		N20   , Bn1 , v127
+	.byte	W24
+	.byte		N20   
+	.byte	W24
+	.byte		N11   
+	.byte	W12
+	.byte		N11   
+	.byte	W12
+	.byte		N11   
+	.byte	W12
+	.byte		N11   
+	.byte	W12
+@ 048   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_042
+@ 049   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_034
+@ 050   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_034
+@ 051   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_6_036
+@ 052   ----------------------------------------
+	.byte		N20   , Cn2 , v127
+	.byte	W24
+	.byte		        Cn2 , v116
+	.byte	W24
+	.byte		N11   , Cn2 , v108
+	.byte	W12
+	.byte		        Cn2 , v100
+	.byte	W12
+	.byte		        Cn2 , v096
+	.byte	W12
+	.byte		        Cn2 , v092
+	.byte	W12
+@ 053   ----------------------------------------
+	.byte		N20   , Cn2 , v088
+	.byte	W24
+	.byte		        Cn2 , v080
+	.byte	W24
+	.byte		N11   , Cn2 , v068
+	.byte	W12
+	.byte		        Cn2 , v064
+	.byte	W12
+	.byte		        Cn2 , v060
+	.byte	W12
+	.byte		        Cn2 , v056
+	.byte	W12
+@ 054   ----------------------------------------
+	.byte		N20   , Cn2 , v052
+	.byte	W24
+	.byte		        Cn2 , v044
+	.byte	W24
+	.byte		N11   , Cn2 , v036
+	.byte	W12
+	.byte		        Cn2 , v032
+	.byte	W12
+	.byte		        Cn2 , v028
+	.byte	W12
+	.byte		        Cn2 , v024
+	.byte	W12
+@ 055   ----------------------------------------
+	.byte		N20   , Bn1 , v020
+	.byte	W24
+	.byte		        Bn1 , v016
+	.byte	W24
+	.byte		N42   , Bn1 , v012
+	.byte	W42
+	.byte	GOTO
+	 .word	EchoesofAnother_FINAL_6_B1
+EchoesofAnother_FINAL_6_B2:
+	.byte	FINE
+
+@**************** Track 7 (Midi-Chn.7) ****************@
+
+EchoesofAnother_FINAL_7:
+	.byte	KEYSH , EchoesofAnother_FINAL_key+0
+EchoesofAnother_FINAL_7_B1:
+@ 000   ----------------------------------------
+	.byte		VOICE , 127
+	.byte		MODT  , 0
+	.byte		LFOS  , 44
+	.byte		VOL   , 127*EchoesofAnother_FINAL_mvl/mxv
+	.byte		PAN   , c_v+0
+	.byte	W96
+@ 001   ----------------------------------------
+	.byte	W96
+@ 002   ----------------------------------------
+	.byte	W96
+@ 003   ----------------------------------------
+	.byte	W96
+@ 004   ----------------------------------------
+	.byte	W96
+@ 005   ----------------------------------------
+	.byte	W96
+@ 006   ----------------------------------------
+	.byte	W96
+@ 007   ----------------------------------------
+	.byte	W96
+@ 008   ----------------------------------------
+	.byte	W96
+@ 009   ----------------------------------------
+	.byte	W96
+@ 010   ----------------------------------------
+	.byte	W96
+@ 011   ----------------------------------------
+	.byte	W96
+@ 012   ----------------------------------------
+	.byte	W96
+@ 013   ----------------------------------------
+	.byte	W96
+@ 014   ----------------------------------------
+	.byte	W96
+@ 015   ----------------------------------------
+	.byte	W96
+@ 016   ----------------------------------------
+	.byte	W96
+@ 017   ----------------------------------------
+	.byte	W96
+@ 018   ----------------------------------------
+	.byte	W96
+@ 019   ----------------------------------------
+	.byte	W96
+@ 020   ----------------------------------------
+	.byte	W96
+@ 021   ----------------------------------------
+	.byte	W96
+@ 022   ----------------------------------------
+	.byte	W96
+@ 023   ----------------------------------------
+	.byte	W96
+@ 024   ----------------------------------------
+EchoesofAnother_FINAL_7_024:
+	.byte		N20   , Bn0 , v127
+	.byte		N20   , Cn1 
+	.byte		N20   , Dn2 
+	.byte	W24
+	.byte		        Bn0 
+	.byte		N20   , Cn1 
+	.byte		N20   , Dn2 
+	.byte	W72
+	.byte	PEND
+@ 025   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 026   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 027   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 028   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 029   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 030   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 031   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 032   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 033   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 034   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 035   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 036   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 037   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 038   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 039   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 040   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 041   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 042   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 043   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 044   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 045   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 046   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 047   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 048   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 049   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 050   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 051   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 052   ----------------------------------------
+	.byte	PATT
+	 .word	EchoesofAnother_FINAL_7_024
+@ 053   ----------------------------------------
+	.byte		N20   , Bn0 , v100
+	.byte		N20   , Cn1 
+	.byte		N20   , Cn2 
+	.byte	W24
+	.byte		        Bn0 
+	.byte		N20   , Cn1 
+	.byte		N20   , Cn2 
+	.byte	W72
+@ 054   ----------------------------------------
+	.byte		        Bn0 , v056
+	.byte		N20   , Cn1 
+	.byte		N20   , Bn1 
+	.byte	W24
+	.byte		        Bn0 
+	.byte		N20   , Cn1 
+	.byte		N20   , Bn1 
+	.byte	W72
+@ 055   ----------------------------------------
+	.byte		        Bn0 , v036
+	.byte		N20   , Cn1 
+	.byte		N20   , An1 
+	.byte	W24
+	.byte		        Bn0 
+	.byte		N20   , Cn1 
+	.byte		N20   , An1 
+	.byte	W66
+	.byte	GOTO
+	 .word	EchoesofAnother_FINAL_7_B1
+EchoesofAnother_FINAL_7_B2:
+	.byte	FINE
+
+@******************************************************@
+	.align	2
+
+EchoesofAnother_FINAL:
+	.byte	7	@ NumTrks
+	.byte	0	@ NumBlks
+	.byte	EchoesofAnother_FINAL_pri	@ Priority
+	.byte	EchoesofAnother_FINAL_rev	@ Reverb.
+
+	.word	EchoesofAnother_FINAL_grp
+
+	.word	EchoesofAnother_FINAL_1
+	.word	EchoesofAnother_FINAL_2
+	.word	EchoesofAnother_FINAL_3
+	.word	EchoesofAnother_FINAL_4
+	.word	EchoesofAnother_FINAL_5
+	.word	EchoesofAnother_FINAL_6
+	.word	EchoesofAnother_FINAL_7
+
+	.end

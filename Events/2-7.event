@@ -124,7 +124,7 @@ UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [11,29] 0b 0x0 0x0 0x0 [IronAxe,0xE9,]
 EnemyUnits:
 UNIT Gheb 0x64 0x1 Level(10, Enemy, 1)     [9,2] 0b 0x0 0x0 0x0 [Siegmund] RangeAI
 
-UNIT Aeteria Druid 0x1 Level(3, Enemy, 1)     [9,19] 0b 0x0 0x0 0x0 [Moonfall] BossAI
+UNIT AeteriaStealable Druid 0x1 Level(3, Enemy, 1)     [9,19] 0b 0x0 0x0 0x0 [Moonfall,SecretBook] BossAI
 UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [7,18] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT Aeteria Merc 0x1 Level(10, Enemy, 1)     [5,20] 0b 0x0 0x0 0x0 [Zanbato] TwoActionAI
 UNIT Aeteria Druid 0x1 Level(2, Enemy, 1)     [11,25] 0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
@@ -136,17 +136,17 @@ UNIT Aeteria Sage 0x1 Level(2, Enemy, 1)     [9,13] 0b 0x0 0x0 0x0 [Bolting] Bos
 UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [5,16] 0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
 UNIT Aeteria ACav 0x1 Level(10, Enemy, 1)     [18,14] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
 UNIT Aeteria Mage 0x1 Level(10, Enemy, 1)     [2,12] 0b 0x0 0x0 0x0 [Thunder] TwoActionAI
-UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [1,16] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT Aeteria AeteriaStealable 0x1 Level(10, Enemy, 1)     [2,16] 0b 0x0 0x0 0x0 [SteelLance,GoddessIcon] TwoActionAI
 UNIT Aeteria Merc 0x1 Level(10, Enemy, 1)     [2,19] 0b 0x0 0x0 0x0 [SteelBlade] TwoActionAI
 UNIT Aeteria SArmor 0x1 Level(10, Enemy, 1)     [3,23] 0b 0x0 0x0 0x0 [Flamberge] RangeAI
-UNIT Aeteria Auspex 0x1 Level(3, Enemy, 1)     [16,10] 0b 0x0 0x0 0x0 [DarkTome2, LightTome2] StallOneTurnAI
+UNIT Aeteria Auspex 0x1 Level(3, Enemy, 1)     [16,10] DropItem 0x0 0x0 0x0 [DarkTome2, LightTome2] StallOneTurnAI
 UNIT Aeteria LCav 0x1 Level(10, Enemy, 1)     [5,11] 0b 0x0 0x0 0x0 [Horseslayer] TwoActionAI
 UNIT Aeteria Myrmidon 0x1 Level(10, Enemy, 1)     [15,22] 0b 0x0 0x0 0x0 [KillingEdge] TwoActionAI
 UNIT Aeteria Halberdier 0x1 Level(5, Enemy, 1)     [8,4] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT Aeteria Hero 0x1 Level(5, Enemy, 1)     [10,4] 0b 0x0 0x0 0x0 [SteelBlade, HandAxe] TwoActionAI
-UNIT Aeteria General 0x1 Level(5, Enemy, 1)     [9,5] 0b 0x0 0x0 0x0 [0x7C,Spear] TwoActionAI
+UNIT AeteriaStealable General 0x1 Level(5, Enemy, 1)     [9,5] 0b 0x0 0x0 0x0 [0x7C,Spear,Elixir] TwoActionAI
 UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [7,8] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT Aeteria Sage 0x1 Level(4, Enemy, 1)     [10,9] 0b 0x0 0x0 0x0 [Wind] TwoActionAI
+UNIT Aeteria Sage 0x1 Level(4, Enemy, 1)     [10,9] DropItem 0x0 0x0 0x0 [Wind,0x9D] TwoActionAI
 UNIT Aeteria Archer 0x1 Level(10, Enemy, 1)     [8,10] 0b 0x0 0x0 0x0 [SteelBow] RangeAI
 UNIT Aeteria Archer 0x1 Level(10, Enemy, 1)     [18,19] 0b 0x0 0x0 0x0 [SteelBow] ChargeAI
 UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [10,11] 0b 0x0 0x0 0x0 [Flux] TwoActionAI

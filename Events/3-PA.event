@@ -1,0 +1,105 @@
+EventPointerTable(0x75, PointerList)
+
+PointerList:
+	POIN TurnBasedEvents
+	POIN CharacterBasedEvents
+	POIN LocationBasedEvents
+	POIN MiscBasedEvents
+	POIN Dunno1 Dunno2 Dunno3 Tutorial
+	POIN Traps1 Traps2
+	POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+	POIN $0 $0 $0
+	POIN $0 $0 $0
+	POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+
+	END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+
+	END_MAIN
+
+MiscBasedEvents:
+	CauseGameOverIfLordDies
+	END_MAIN
+
+LocationBasedEvents:
+
+	END_MAIN
+
+Dunno1:
+
+	END_MAIN
+
+Dunno2:
+
+	END_MAIN
+
+Dunno3:
+
+	END_MAIN
+
+Tutorial:
+
+	END_MAIN
+
+Units1:
+LoadUnit(10,23)
+LoadUnit(11,23)
+LoadUnit(12,23)
+LoadUnit(13,23)
+LoadUnit(14,23)
+LoadUnit(15,23)
+	UNIT
+
+EnemyUnits:
+
+	UNIT
+
+Traps1:
+	ENDTRAP
+	ALIGN 4
+
+Traps2:
+	ENDTRAP
+	ALIGN 4
+
+BeginningScene:
+QuickRemu(Chiffon,1)
+QuickRemu(Graham,2)
+QuickRemu(Yufka,3)
+QuickRemu(Jaye,4)
+QuickRemu(Polly,5)
+QuickRemu(Yvonne,6)
+QuickRemu(Frye,7)
+QuickRemu(Cortado,8)
+QuickRemu(Velius,9)
+QuickRemu(Raial,10)
+QuickRemu(Ilse,11)
+QuickRemu(Rina,12)
+QuickRemu(Moose,13)
+QuickRemu(Gus,14)
+QuickRemu(Dira,15)
+QuickRemu(Katsu,16)
+QuickRemu(Zopf,17)
+QuickRemu(Staniel,18)
+QuickRemu(Opal,19)
+QuickRemu(Wulfric,20)
+QuickRemu(Messel,21)
+QuickRemu(Edvin,22)
+QuickRemu(Edith,23)
+QuickRemu(Verna,24)
+
+	REVEAL Ulrich
+	LOAD1 0x1 EnemyUnits
+	ENUN
+	GotoPrepScreen
+	ENDA
+
+EndingScene:
+	//MNC2 next_chapter
+	MNTS 0x1
+	NoFade
+	ENDA

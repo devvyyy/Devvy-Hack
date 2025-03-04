@@ -22,7 +22,7 @@ TURN 0x0 ReinEvent5 [4,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x12,ReinierThereseConvo, 0x62, Therese)
+CharacterEventBothWays(0x10,ReinierThereseConvo, 0x62, Therese)
 CharacterEventBothWays(0x10,ReinierBrudetConvo, 0x62, Brudet)
 CharacterEventBothWays(0x10,ReinierStroganoffConvo, 0x62, Stroganoff)
 CharacterEventBothWays(0x10,ReinierUlrichConvo, 0x62, Ulrich)
@@ -103,9 +103,16 @@ PlayerRangeCheck
 CameraCursor(Graham)
 	Text(ChReinierGrahamLeaves)
 	STAL 15
+	CHECK_ALIVE Graham; BEQ 1 0x0 0xC;
 	MOVE 0x50 Graham [11,18] //frames char coords
+	LABEL 1
+
+	CHECK_ALIVE Yufka; BEQ 2 0x0 0xC;
 	MOVE 0x50 Yufka [11,18] //frames char coords
+	LABEL 2
+	CHECK_ALIVE Yufka; BEQ 3 0x0 0xC;
 	MOVE 0x50 Gus [11,18] //frames char coords
+	LABEL 3
 	DISA_IF Graham
 	DISA_IF Yufka
 	DISA_IF Gus
@@ -272,8 +279,8 @@ UNIT Wreyvine Fighter 0x1 Level(8, NPC, 1)     [12,1] 0b 0x0 0x0 0x0 [MageAxe,Sh
 	UNIT
 
 Rein1:
-UNIT Aeteria MageRider 0x1 Level(9, Enemy, 1)     [10,25] 0b 0x0 0x0 0x0 [ShortAxe] ChargeAI
-UNIT Aeteria LCav 0x1 Level(9, Enemy, 1)     [10,25] 0 0 1 REDA11R24 [ShortAxe] ChargeAI
+UNIT Aeteria MageRider 0x1 Level(9, Enemy, 1)     [10,25] 0b 0x0 0x0 0x0 [Thunder] ChargeAI
+UNIT Aeteria LCav 0x1 Level(9, Enemy, 1)     [10,25] 0 0 1 REDA11R24 [SteelLance] ChargeAI
 	UNIT
 	
 Rein2:

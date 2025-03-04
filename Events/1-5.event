@@ -95,9 +95,7 @@ Armory(ShopAwesome,6,12)
 	
 AffoUlrichConvoCh5:
 	MUSI
-	Text(Ch5AffoUlrichTalk) //uhhh they talk about insert past here/remembered shit idk bro!!1
-	MUNO
-	MURE 2
+
 CHECK_EVENTID 0x79 //skips to normal ending if 3 wasnt completed
 BEQ 1 0x0 0xC
 CHECK_EVENTID 0x7A //skips to normal ending if 3 wasnt completed
@@ -110,8 +108,15 @@ CHECK_EVENTID 0x7B //skips to normal ending if 3 wasnt completed
 BEQ 1 0x0 0xC
 CHECK_EVENTID 0x7D //skips to normal ending if 3 wasnt completed
 BEQ 1 0x0 0xC
+	Text(Ch5AffoUlrichTalk) //uhhh they talk about insert past here/remembered shit idk bro!!1
 	SOUN 0x60
+	GOTO 2
 LABEL 0x1
+	Text(Ch5AffoUlrichTalkAlt) //uhhh they talk about insert past here/remembered shit idk bro!!1
+
+	LABEL 2
+	MUNO
+	MURE 2
 	NoFade
 	ENDA
 
@@ -258,24 +263,26 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+
 //talk only exists if previous talks were fulfilled
 CHECK_EVENTID 0x78 //affo talk 1
-BNE 1 0x0 0xC
+BEQ 1 0x0 0xC
 CHECK_EVENTID 0x79 //affo talk 2
-BNE 1 0x0 0xC
+BEQ 1 0x0 0xC
 CHECK_EVENTID 0x7A //affo talk 3
-BNE 1 0x0 0xC
+BEQ 1 0x0 0xC
 CHECK_EVENTID 0x7B //affo talk 4
-BNE 1 0x0 0xC
+BEQ 1 0x0 0xC
 CHECK_EVENTID 0x7C //affo talk 5
-BNE 1 0x0 0xC
+BEQ 1 0x0 0xC
 CHECK_EVENTID 0x7D //affo talk 6
-BNE 1 0x0 0xC
+BEQ 1 0x0 0xC
 
 GOTO 2
 
 LABEL 1
-SetFlag(0xC) //prevents talk if previous 2 werent done
+//SetFlag(0xC) //prevents talk if previous 2 werent done
+UnsetFlag(0xC) //guarantees talk will pop up
 
 LABEL 2
 
@@ -319,7 +326,7 @@ STAL 10
 CameraCursor(Affogato)
 CameraCursor(Ulrich)
 STAL 10
-MUSCSLOW VictoryBGM
+MUSCSLOW 0x283
 SetBackground(0x33)
 STAL 5
 	CHECK_ALIVE Ulrich

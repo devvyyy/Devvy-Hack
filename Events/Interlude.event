@@ -37,6 +37,7 @@ CharacterEventBothWays(0xD, FryeConvo, Chiffon, Frye)
 CharacterEventBothWays(0xA, ChesterConvo, Chiffon, Chester)
 CharacterEventBothWays(0xB, DiraConvo, Chiffon, Dira)
 CharacterEventBothWays(0xC, CortadoConvo, Chiffon, Cortado)
+CharacterEventBothWays(0xF, VernaConvo, Chiffon, Verna)
 CharacterEventBothWays(0x0, EndTheMapLOL, Chiffon, Graham)
 CharacterEventBothWays(0x0, Villager2Convo, 0x0, 0xf4)
 CharacterEventBothWays(0x0, Villager7Convo, 0x0, 0xf5)
@@ -409,6 +410,16 @@ CortadoConvo:
 	MUNO
 	MURE 2
 	//GiveItem(GreenGem,Chiffon)
+	NoFade
+NoFade
+ENDA
+
+VernaConvo:
+	MUSI
+	Text(InterludeChiffonVerna)
+	MUNO
+	MURE 2
+	GiveItem(0x6F,Chiffon)
 	NoFade
 NoFade
 ENDA

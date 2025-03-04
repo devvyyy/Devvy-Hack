@@ -49,8 +49,8 @@ additional strike after first attack.[X]
 Loaf Off[N]
 - If Svana Waits without acting, restores[N]
 50% of Max HP.[N]
-- If initiating, grants Atk/AS = (10 -[N]
-number of movement used).[X]
+- If initiating after moving 4 spaces[N]
+or less, grants Atk/AS +5.[X]
 
 ## SD_Overachiever
 Overachiever[N]
@@ -99,9 +99,9 @@ unit ends the actions of all foes within[N]
 ## SD_SuppressiveFire
 Suppressive Fire[N]
 - If unit initiates combat, after combat,[N]
-after all post-combat effects trigger,[N]
-ends the actions of all foes within 3[N]
-spaces of target.[X]
+deals 20% of foe's max HP damage and ends[N]
+the actions of foes within 3 spaces[N]
+of target.[X]
 
 ## SD_FalseAlarm
 False Alarm[N]
@@ -136,8 +136,8 @@ closest foes within 4 spaces of target.[X]
 Hallowed Radiance[N]
 - Iris neutralizes Mt of foe's magic.[N]
 - Grants Rsl +5, (50% ally Str/Eth)[N]
-bonus magical damage, and Sol to allies[N]
-within 3 spaces.[X]
+bonus magical damage, and enables Sol[N]
+to allies within 3 spaces.[X]
 
 ## SD_Miracle
 Miracle[N]
@@ -1705,8 +1705,8 @@ when using Rescue.[X]
 
 ## SD_Adept
 Wreyvian Heart[N]
-- Wegman's Wreyvian allies within 3[N]
-spaces can use Twin Suns.[N]
+- Wegman's enables Twin Suns to[N]
+Wreyvian allies within 3 spaces.[N]
 - Grants Atk/Prt +1 to all allies,[N]
 increased to +3 if Wreyvian.[X]
 
@@ -2703,7 +2703,7 @@ Coeur Allum[0xE9][N]
 - If Selwyn's HP is 50% or less,[N]
 multiplies Eth/Skill/Spd by 1.5x.[N]
 - Grants Atk +5 to allies within[N]
-5 spaces.[X]
+5 spaces.[.6] Negates Eff: [FlierIcon].[X]
 
 ## SD_Foresight
 Foresight[X]
@@ -2900,7 +2900,7 @@ Apotheosis[N]
 - If Yufka's HP is 25% or less after combat,[N]
 ends opposing turn and restores all HP.[N]
 (Once per map; doesn't trigger if dead.)
-- Magic allies can use Blood Moon.[X]
+- Enables Blood Moon to magic allies.[X]
 
 ## SD_DoubleLion
 Double Lion: All weapons[N]

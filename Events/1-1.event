@@ -312,7 +312,7 @@ GiveItem(Torch,Ulrich)
 GiveItem(Vulnerary,Ansgar)
 GOTO 6
 LABEL 5
-Text(Ch1Ending3)
+TextCont(Ch1Ending3,0x293)
 STAL 10
 CHECK_HARD; BEQ 0x720 0xC 0x0
 GiveItem(Reginleif,Affogato)
@@ -320,7 +320,7 @@ GOTO 0x721
 LABEL 0x720
 GiveItem(SnaringRifle,Affogato)
 LABEL 0x721
-Music(0x4A) //Night Ambience
+//Music(0x4A) //Night Ambience
 Text(Ch1Ending3Point5)
 
 LABEL 6 //end
@@ -332,7 +332,7 @@ LABEL 0x42
 
 CHECK_ALIVE Evelyn
 BEQ 7 0x0 0xC
-
+Music(0x4A) //Night Ambience
 TEXTSTART
 TEXTSHOW Ch1Ending4
 TEXTEND

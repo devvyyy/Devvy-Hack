@@ -270,7 +270,7 @@ UNIT Aeteria LArmor 0x1 Level(2, Enemy, 1)     [6,12] DropItem 0x0 0x0 0x0 [Shor
 UNIT Aeteria Fighter 0x1 Level(1, Enemy, 1)     [9,12] 0b 0x0 0x0 0x0 [IronAxe,] TwoActionAI
 UNIT Aeteria Mage 0x1 Level(1, Enemy, 1)     [13,14] DropItem 0x0 0x0 0x0 [Wind,] TwoActionAI
 UNIT Aeteria Soldier 0x1 Level(1, Enemy, 1)     [11,13] 0b 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
-UNIT Aeteria SArmor 0x1 Level(2, Enemy, 1)     [14,12] DropItem 0x0 0x0 0x0 [Flamberge,RedGem] BossAI
+UNIT Aeteria SArmor 0x1 Level(2, Enemy, 1)     [14,12] DropItem 0x0 0x0 0x0 [Flamberge,BlueGem] BossAI
 UNIT AeteriaStealable Fighter 0x1 Level(2, Enemy, 1)     [16,13] 0b 0x0 0x0 0x0 [IronAxe,AngelicRobe] TwoActionAI
 UNIT Aeteria Soldier 0x1 Level(1, Enemy, 1)     [18,12] 0b 0x0 0x0 0x0 [IronLance,] AttackInRangeAI
 UNIT Aeteria Mercenary 0x1 Level(1, Enemy, 1)     [17,9] 0b 0x0 0x0 0x0 [IronSword,] StallOneTurnAI
@@ -358,12 +358,20 @@ BROWNBOXTEXT SevenMonthsLater [8,8]
 STAL 5
 
 Text(PrologueFlashback1)
-MOVE 0x5 Chiffon [12,29]
-MOVE 0x5 Haye [13,29]
+MOVE 0x3 Chiffon [12,29]
+MOVE 0x3 Haye [13,29]
 ENUN
 
 FADI 15
 SOUN 0x313
+
+STAL 15
+SOUN 0xf0
+SetBackground(0x48)
+STAL 10
+FADI 150
+CLEAN
+
 DoAllThree
 SVAL 0xB 0x60004
 LOMA 0xC
@@ -377,7 +385,7 @@ TurnNPC(Cortado)
 CameraCursor(Chiffon)
 
 Music(0x47)
-SetBackground(0x10)
+SetBackground(0x35)
 Text(PrologueTest1)
 ClearBackground
 STAL 10
