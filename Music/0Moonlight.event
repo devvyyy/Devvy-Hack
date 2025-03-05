@@ -1,0 +1,1393 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	MOONLIGHTGUIDEUS_grp  voicegroup000
+	#define	MOONLIGHTGUIDEUS_pri  0
+	#define	MOONLIGHTGUIDEUS_rev  0xB0
+	#define	MOONLIGHTGUIDEUS_mvl  34
+	#define	MOONLIGHTGUIDEUS_key  0
+	#define	MOONLIGHTGUIDEUS_tbs  1
+	#define	MOONLIGHTGUIDEUS_exg  0
+	#define	MOONLIGHTGUIDEUS_cmp  1
+
+	// .rodata
+	//	MOONLIGHTGUIDEUS
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+MOONLIGHTGUIDEUS_1:
+	BYTE	KEYSH   MOONLIGHTGUIDEUS_key+0
+MOONLIGHTGUIDEUS_1_B1:
+// 000   ----------------------------------------
+	BYTE	TEMPO   100*MOONLIGHTGUIDEUS_tbs/2
+	BYTE		VOICE   0
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     117*MOONLIGHTGUIDEUS_mvl/mxv
+	BYTE		PAN     c_v-32
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE		N72     An3   v076
+	BYTE	W72
+	BYTE		N24     Fn3 
+	BYTE	W24
+// 002   ----------------------------------------
+	BYTE		N48     Cn3 
+	BYTE	W48
+	BYTE		N72     An3 
+	BYTE	W48
+// 003   ----------------------------------------
+	BYTE	W24
+	BYTE		N24     As3 
+	BYTE	W24
+	BYTE		N90     Gn3 
+	BYTE	W48
+// 004   ----------------------------------------
+	BYTE	W48
+	BYTE		N24     Fn3 
+	BYTE	W24
+	BYTE		        Ds3 
+	BYTE	W24
+// 005   ----------------------------------------
+	BYTE		N72     Dn3 
+	BYTE	W72
+	BYTE		N24     En3 
+	BYTE	W24
+// 006   ----------------------------------------
+	BYTE		N48     Fs3 
+	BYTE	W48
+	BYTE		N24     En3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE	W24
+// 007   ----------------------------------------
+	BYTE		N96     En3 
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE		N90     Gn3 
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE		N24     An3 
+	BYTE	W24
+	BYTE		N48     Cn3 
+	BYTE	W48
+	BYTE		N24     Fn3 
+	BYTE	W24
+// 010   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W24
+	BYTE		        As3 
+	BYTE	W24
+	BYTE		        Cn4 
+	BYTE	W24
+	BYTE		TIE     Fn4 
+	BYTE	W24
+// 011   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 012   ----------------------------------------
+	BYTE		N48     Ds4 
+	BYTE	W48
+	BYTE		N24     Dn4 
+	BYTE	W24
+	BYTE		N12     Cn4 
+	BYTE	W12
+	BYTE		        As3 
+	BYTE	W12
+// 013   ----------------------------------------
+	BYTE		N48     An3 
+	BYTE	W48
+	BYTE		        Gn3 
+	BYTE	W48
+// 014   ----------------------------------------
+	BYTE		        Fs3 
+	BYTE	W48
+	BYTE		        Dn3 
+	BYTE	W48
+// 015   ----------------------------------------
+	BYTE		N24     En3 
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE	W24
+	BYTE		        An3 
+	BYTE	W24
+// 016   ----------------------------------------
+	BYTE		        As3 
+	BYTE	W24
+	BYTE		        Cn4 
+	BYTE	W24
+	BYTE		        Dn4 
+	BYTE	W24
+	BYTE		N20     En4 
+	BYTE	W24
+// 017   ----------------------------------------
+	BYTE		TIE     Fn4 
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 019   ----------------------------------------
+	BYTE		TIE     Dn4 
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 021   ----------------------------------------
+	BYTE		TIE     En4 
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 023   ----------------------------------------
+	BYTE		TIE     As3 
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 025   ----------------------------------------
+	BYTE		TIE     Fn4 
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 027   ----------------------------------------
+	BYTE		TIE     Dn4 
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 029   ----------------------------------------
+	BYTE		TIE     En4 
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 031   ----------------------------------------
+	BYTE		N96     As3 
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE		N90     Bn3 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	MOONLIGHTGUIDEUS_1_B1
+MOONLIGHTGUIDEUS_1_B2:
+// 033   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+MOONLIGHTGUIDEUS_2:
+	BYTE	KEYSH   MOONLIGHTGUIDEUS_key+0
+MOONLIGHTGUIDEUS_2_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   1
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+26
+	BYTE		VOL     122*MOONLIGHTGUIDEUS_mvl/mxv
+	BYTE		N48     Gn4   v127
+	BYTE	W48
+	BYTE		N24     An4 
+	BYTE	W24
+	BYTE		        As4 
+	BYTE	W24
+// 001   ----------------------------------------
+	BYTE		N72     An4 
+	BYTE	W72
+	BYTE		N24     Fn4 
+	BYTE	W24
+// 002   ----------------------------------------
+	BYTE		N48     Cn4 
+	BYTE	W48
+	BYTE		        An4 
+	BYTE	W48
+// 003   ----------------------------------------
+	BYTE		N24   
+	BYTE	W24
+	BYTE		        As4 
+	BYTE	W24
+	BYTE		N90     Gn4 
+	BYTE	W48
+// 004   ----------------------------------------
+	BYTE	W48
+	BYTE		N24     Fn4 
+	BYTE	W24
+	BYTE		        Ds4 
+	BYTE	W24
+// 005   ----------------------------------------
+	BYTE		N72     Dn4 
+	BYTE	W72
+	BYTE		N24     En4 
+	BYTE	W24
+// 006   ----------------------------------------
+	BYTE		N48     Fs4 
+	BYTE	W48
+	BYTE		N24     En4 
+	BYTE	W24
+	BYTE		        Dn4 
+	BYTE	W24
+// 007   ----------------------------------------
+	BYTE		N96     En4 
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE		N90     Gn4 
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE		N24     An4 
+	BYTE	W24
+	BYTE		        Cn4 
+	BYTE	W24
+	BYTE		N24   
+	BYTE	W24
+	BYTE		        Fn4 
+	BYTE	W24
+// 010   ----------------------------------------
+	BYTE		        An4 
+	BYTE	W24
+	BYTE		        As4 
+	BYTE	W24
+	BYTE		        Cn5 
+	BYTE	W24
+	BYTE		        Fn5 
+	BYTE	W24
+// 011   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE		N48     Ds5 
+	BYTE	W48
+	BYTE		N24     Dn5 
+	BYTE	W24
+	BYTE		N12     Cn5 
+	BYTE	W12
+	BYTE		        As4 
+	BYTE	W12
+// 013   ----------------------------------------
+	BYTE		N48     An4 
+	BYTE	W48
+	BYTE		        Gn4 
+	BYTE	W48
+// 014   ----------------------------------------
+	BYTE		        Fs4 
+	BYTE	W48
+	BYTE		        Dn4 
+	BYTE	W48
+// 015   ----------------------------------------
+	BYTE		N24     En4 
+	BYTE	W24
+	BYTE		        Fn4 
+	BYTE	W24
+	BYTE		        Gn4 
+	BYTE	W24
+	BYTE		        An4 
+	BYTE	W24
+// 016   ----------------------------------------
+	BYTE		        As4 
+	BYTE	W24
+	BYTE		        Cn5 
+	BYTE	W24
+	BYTE		        Dn5 
+	BYTE	W24
+	BYTE		N20     En5 
+	BYTE	W24
+// 017   ----------------------------------------
+	BYTE		TIE     Fn5 
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 019   ----------------------------------------
+	BYTE		TIE     Dn5 
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 021   ----------------------------------------
+	BYTE		TIE     En5 
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 023   ----------------------------------------
+	BYTE		TIE     As4 
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 025   ----------------------------------------
+	BYTE		TIE     Fn5 
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 027   ----------------------------------------
+	BYTE		TIE     Dn5 
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 029   ----------------------------------------
+	BYTE		TIE     En5 
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 031   ----------------------------------------
+	BYTE		N96     As4 
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE		N90     Bn4 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	MOONLIGHTGUIDEUS_2_B1
+MOONLIGHTGUIDEUS_2_B2:
+// 033   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+MOONLIGHTGUIDEUS_3:
+	BYTE	KEYSH   MOONLIGHTGUIDEUS_key+0
+MOONLIGHTGUIDEUS_3_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   54
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     105*MOONLIGHTGUIDEUS_mvl/mxv
+	BYTE		PAN     c_v+32
+	BYTE	W96
+// 001   ----------------------------------------
+MOONLIGHTGUIDEUS_3_001:
+	BYTE		TIE     Fn3   v076
+	BYTE		TIE     An3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        An3 
+	BYTE	W06
+// 003   ----------------------------------------
+MOONLIGHTGUIDEUS_3_003:
+	BYTE		TIE     Ds3   v076
+	BYTE		TIE     Gn3 
+	BYTE	W96
+	BYTE	PEND
+// 004   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Ds3 
+	BYTE		        Gn3 
+	BYTE		        Cn4 
+// 005   ----------------------------------------
+MOONLIGHTGUIDEUS_3_005:
+	BYTE		TIE     Fs3   v076
+	BYTE		TIE     An3 
+	BYTE		TIE     Dn4 
+	BYTE	W96
+	BYTE	PEND
+// 006   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 007   ----------------------------------------
+MOONLIGHTGUIDEUS_3_007:
+	BYTE		TIE     Gn3   v076
+	BYTE		TIE     As3 
+	BYTE		TIE     En4 
+	BYTE	W96
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        As3 
+	BYTE		        En4 
+	BYTE	W06
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MOONLIGHTGUIDEUS_3_001
+// 010   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        An3 
+	BYTE	W06
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MOONLIGHTGUIDEUS_3_003
+// 012   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Ds3 
+	BYTE		        Gn3 
+	BYTE		        Cn4 
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MOONLIGHTGUIDEUS_3_005
+// 014   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MOONLIGHTGUIDEUS_3_007
+// 016   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        As3 
+	BYTE		        En4 
+	BYTE	W06
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MOONLIGHTGUIDEUS_3_001
+// 018   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Fn3 
+	BYTE		        An3 
+	BYTE		        Cn4 
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MOONLIGHTGUIDEUS_3_005
+// 020   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+	BYTE		        Dn4 
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MOONLIGHTGUIDEUS_3_007
+// 022   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        En4 
+	BYTE	W06
+// 023   ----------------------------------------
+	BYTE		TIE     Fn3   v076
+	BYTE		TIE     Dn4 
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     As3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 025   ----------------------------------------
+	BYTE		TIE     An3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Fn3 
+	BYTE		        An3 
+	BYTE		        Cn4 
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MOONLIGHTGUIDEUS_3_005
+// 028   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+	BYTE		        Dn4 
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MOONLIGHTGUIDEUS_3_007
+// 030   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        En4 
+	BYTE	W06
+// 031   ----------------------------------------
+	BYTE		N96     Fn3   v076
+	BYTE		N96     Dn4 
+	BYTE	W96
+	BYTE		EOT     As3 
+// 032   ----------------------------------------
+	BYTE		N90     Fn3 
+	BYTE		N90     Bn3 
+	BYTE		N90     Dn4 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	MOONLIGHTGUIDEUS_3_B1
+MOONLIGHTGUIDEUS_3_B2:
+// 033   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+MOONLIGHTGUIDEUS_4:
+	BYTE	KEYSH   MOONLIGHTGUIDEUS_key+0
+MOONLIGHTGUIDEUS_4_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   50
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     112*MOONLIGHTGUIDEUS_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W01
+	BYTE		        c_v-1
+	BYTE	W02
+	BYTE		        c_v-2
+	BYTE	W01
+	BYTE		        c_v-3
+	BYTE	W02
+	BYTE		        c_v-4
+	BYTE	W01
+	BYTE		        c_v-5
+	BYTE	W02
+	BYTE		        c_v-6
+	BYTE	W01
+	BYTE		        c_v-7
+	BYTE	W02
+	BYTE		        c_v-8
+	BYTE	W01
+	BYTE		        c_v-9
+	BYTE	W02
+	BYTE		        c_v-10
+	BYTE	W01
+	BYTE		        c_v-11
+	BYTE	W02
+	BYTE		        c_v-12
+	BYTE	W01
+	BYTE		        c_v-13
+	BYTE	W02
+	BYTE		        c_v-14
+	BYTE	W01
+	BYTE		        c_v-15
+	BYTE	W02
+	BYTE		        c_v-16
+	BYTE	W01
+	BYTE		        c_v-17
+	BYTE	W02
+	BYTE		        c_v-18
+	BYTE	W01
+	BYTE		        c_v-19
+	BYTE	W02
+	BYTE		        c_v-20
+	BYTE	W01
+	BYTE		        c_v-21
+	BYTE	W02
+	BYTE		        c_v-22
+	BYTE	W01
+	BYTE		        c_v-23
+	BYTE	W02
+	BYTE		        c_v-24
+	BYTE	W01
+	BYTE		        c_v-25
+	BYTE	W02
+	BYTE		        c_v-26
+	BYTE	W01
+	BYTE		        c_v-27
+	BYTE	W02
+	BYTE		        c_v-28
+	BYTE	W01
+	BYTE		        c_v-29
+	BYTE	W02
+	BYTE		        c_v-30
+	BYTE	W01
+	BYTE		        c_v-31
+	BYTE	W02
+	BYTE		        c_v-32
+	BYTE	W01
+	BYTE		        c_v-33
+	BYTE	W02
+	BYTE		        c_v-34
+	BYTE	W01
+	BYTE		        c_v-35
+	BYTE	W02
+	BYTE		        c_v-36
+	BYTE	W01
+	BYTE		        c_v-37
+	BYTE	W02
+	BYTE		        c_v-38
+	BYTE	W01
+	BYTE		        c_v-39
+	BYTE	W02
+	BYTE		        c_v-40
+	BYTE	W01
+	BYTE		        c_v-41
+	BYTE	W02
+	BYTE		        c_v-42
+	BYTE	W01
+	BYTE		        c_v-43
+	BYTE	W02
+	BYTE		        c_v-44
+	BYTE	W01
+	BYTE		        c_v-45
+	BYTE	W02
+	BYTE		        c_v-46
+	BYTE	W01
+	BYTE		        c_v-47
+	BYTE	W02
+	BYTE		        c_v-48
+	BYTE	W01
+	BYTE		        c_v-49
+	BYTE	W02
+	BYTE		        c_v-50
+	BYTE	W01
+	BYTE		        c_v-51
+	BYTE	W02
+	BYTE		        c_v-52
+	BYTE	W01
+	BYTE		        c_v-53
+	BYTE	W02
+	BYTE		        c_v-54
+	BYTE	W01
+	BYTE		        c_v-55
+	BYTE	W02
+	BYTE		        c_v-56
+	BYTE	W01
+	BYTE		        c_v-57
+	BYTE	W02
+	BYTE		        c_v-58
+	BYTE	W01
+	BYTE		        c_v-59
+	BYTE	W02
+	BYTE		        c_v-60
+	BYTE	W01
+	BYTE		        c_v-61
+	BYTE	W02
+	BYTE		        c_v-62
+	BYTE	W01
+	BYTE		        c_v-63
+	BYTE	W02
+// 001   ----------------------------------------
+	BYTE		        c_v-64
+	BYTE		TIE     Fn3   v076
+	BYTE		TIE     An3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        An3 
+	BYTE	W06
+// 003   ----------------------------------------
+MOONLIGHTGUIDEUS_4_003:
+	BYTE		TIE     Ds3   v076
+	BYTE		TIE     Gn3 
+	BYTE	W96
+	BYTE	PEND
+// 004   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Ds3 
+	BYTE		        Gn3 
+	BYTE		        Cn4 
+// 005   ----------------------------------------
+MOONLIGHTGUIDEUS_4_005:
+	BYTE		TIE     Fs3   v076
+	BYTE		TIE     An3 
+	BYTE		TIE     Dn4 
+	BYTE	W96
+	BYTE	PEND
+// 006   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 007   ----------------------------------------
+MOONLIGHTGUIDEUS_4_007:
+	BYTE		TIE     Gn3   v076
+	BYTE		TIE     As3 
+	BYTE		TIE     En4 
+	BYTE	W96
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        As3 
+	BYTE		        En4 
+	BYTE	W06
+// 009   ----------------------------------------
+MOONLIGHTGUIDEUS_4_009:
+	BYTE		TIE     Fn3   v076
+	BYTE		TIE     An3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+	BYTE	PEND
+// 010   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        An3 
+	BYTE	W06
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MOONLIGHTGUIDEUS_4_003
+// 012   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Ds3 
+	BYTE		        Gn3 
+	BYTE		        Cn4 
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MOONLIGHTGUIDEUS_4_005
+// 014   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MOONLIGHTGUIDEUS_4_007
+// 016   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        As3 
+	BYTE		        En4 
+	BYTE	W06
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MOONLIGHTGUIDEUS_4_009
+// 018   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Fn3 
+	BYTE		        An3 
+	BYTE		        Cn4 
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MOONLIGHTGUIDEUS_4_005
+// 020   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+	BYTE		        Dn4 
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MOONLIGHTGUIDEUS_4_007
+// 022   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        En4 
+	BYTE	W06
+// 023   ----------------------------------------
+	BYTE		TIE     Fn3   v076
+	BYTE		TIE     Dn4 
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     As3 
+	BYTE		        Dn4 
+	BYTE	W06
+// 025   ----------------------------------------
+	BYTE		TIE     An3 
+	BYTE		TIE     Cn4 
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Fn3 
+	BYTE		        An3 
+	BYTE		        Cn4 
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MOONLIGHTGUIDEUS_4_005
+// 028   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Fs3 
+	BYTE		        An3 
+	BYTE		        Dn4 
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MOONLIGHTGUIDEUS_4_007
+// 030   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Gn3 
+	BYTE		        En4 
+	BYTE	W06
+// 031   ----------------------------------------
+	BYTE		N96     Fn3   v076
+	BYTE		N96     Dn4 
+	BYTE	W96
+	BYTE		EOT     As3 
+// 032   ----------------------------------------
+	BYTE		PAN     c_v-64
+	BYTE		N90     Fn3 
+	BYTE		N90     Bn3 
+	BYTE		N90     Dn4 
+	BYTE	W01
+	BYTE		PAN     c_v-63
+	BYTE	W02
+	BYTE		        c_v-62
+	BYTE	W01
+	BYTE		        c_v-61
+	BYTE	W02
+	BYTE		        c_v-60
+	BYTE	W01
+	BYTE		        c_v-59
+	BYTE	W02
+	BYTE		        c_v-58
+	BYTE	W01
+	BYTE		        c_v-57
+	BYTE	W02
+	BYTE		        c_v-56
+	BYTE	W01
+	BYTE		        c_v-55
+	BYTE	W02
+	BYTE		        c_v-54
+	BYTE	W01
+	BYTE		        c_v-53
+	BYTE	W02
+	BYTE		        c_v-52
+	BYTE	W01
+	BYTE		        c_v-51
+	BYTE	W02
+	BYTE		        c_v-50
+	BYTE	W01
+	BYTE		        c_v-49
+	BYTE	W02
+	BYTE		        c_v-48
+	BYTE	W01
+	BYTE		        c_v-47
+	BYTE	W02
+	BYTE		        c_v-46
+	BYTE	W01
+	BYTE		        c_v-45
+	BYTE	W02
+	BYTE		        c_v-44
+	BYTE	W01
+	BYTE		        c_v-43
+	BYTE	W02
+	BYTE		        c_v-42
+	BYTE	W01
+	BYTE		        c_v-41
+	BYTE	W02
+	BYTE		        c_v-40
+	BYTE	W01
+	BYTE		        c_v-39
+	BYTE	W02
+	BYTE		        c_v-38
+	BYTE	W01
+	BYTE		        c_v-37
+	BYTE	W02
+	BYTE		        c_v-36
+	BYTE	W01
+	BYTE		        c_v-35
+	BYTE	W02
+	BYTE		        c_v-34
+	BYTE	W01
+	BYTE		        c_v-33
+	BYTE	W02
+	BYTE		        c_v-32
+	BYTE	W01
+	BYTE		        c_v-31
+	BYTE	W02
+	BYTE		        c_v-30
+	BYTE	W01
+	BYTE		        c_v-29
+	BYTE	W02
+	BYTE		        c_v-28
+	BYTE	W01
+	BYTE		        c_v-27
+	BYTE	W02
+	BYTE		        c_v-26
+	BYTE	W01
+	BYTE		        c_v-25
+	BYTE	W02
+	BYTE		        c_v-24
+	BYTE	W01
+	BYTE		        c_v-23
+	BYTE	W02
+	BYTE		        c_v-22
+	BYTE	W01
+	BYTE		        c_v-21
+	BYTE	W02
+	BYTE		        c_v-20
+	BYTE	W01
+	BYTE		        c_v-19
+	BYTE	W02
+	BYTE		        c_v-18
+	BYTE	W01
+	BYTE		        c_v-17
+	BYTE	W02
+	BYTE		        c_v-16
+	BYTE	W01
+	BYTE		        c_v-15
+	BYTE	W02
+	BYTE		        c_v-14
+	BYTE	W01
+	BYTE		        c_v-13
+	BYTE	W02
+	BYTE		        c_v-12
+	BYTE	W01
+	BYTE		        c_v-11
+	BYTE	W02
+	BYTE		        c_v-10
+	BYTE	W01
+	BYTE		        c_v-9
+	BYTE	W02
+	BYTE		        c_v-8
+	BYTE	W01
+	BYTE		        c_v-7
+	BYTE	W02
+	BYTE		        c_v-6
+	BYTE	W01
+	BYTE		        c_v-5
+	BYTE	W02
+	BYTE		        c_v-4
+	BYTE	W01
+	BYTE		        c_v-3
+	BYTE	W02
+	BYTE		        c_v-2
+	BYTE	W01
+	BYTE		        c_v-1
+	BYTE	W02
+	BYTE	GoTo
+	 POIN2	MOONLIGHTGUIDEUS_4_B1
+MOONLIGHTGUIDEUS_4_B2:
+// 033   ----------------------------------------
+	BYTE		PAN     c_v+0
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+MOONLIGHTGUIDEUS_5:
+	BYTE	KEYSH   MOONLIGHTGUIDEUS_key+0
+MOONLIGHTGUIDEUS_5_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   0
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-20
+	BYTE		VOL     127*MOONLIGHTGUIDEUS_mvl/mxv
+	BYTE		N42     As1   v127
+	BYTE	W48
+	BYTE		        Fn1 
+	BYTE	W48
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE		N02     As1   v004
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v008
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v012
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v016
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v020
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v024
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v028
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v032
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v036
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+// 016   ----------------------------------------
+	BYTE		        As1   v040
+	BYTE	W03
+	BYTE		        As1   v044
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v048
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v052
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v056
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v060
+	BYTE	W03
+	BYTE		        As1   v064
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v068
+	BYTE	W03
+	BYTE		        As1   v072
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v076
+	BYTE	W03
+	BYTE		        As1   v080
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v084
+	BYTE	W03
+	BYTE		        As1   v088
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v092
+	BYTE	W03
+	BYTE		        As1   v096
+	BYTE	W03
+	BYTE		        As1   v100
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v104
+	BYTE	W03
+	BYTE		        As1   v108
+	BYTE	W03
+	BYTE		        As1   v112
+	BYTE	W03
+	BYTE		N02   
+	BYTE	W03
+	BYTE		        As1   v116
+	BYTE	W03
+	BYTE		        As1   v120
+	BYTE	W03
+	BYTE		        As1   v124
+	BYTE	W03
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	MOONLIGHTGUIDEUS_5_B1
+MOONLIGHTGUIDEUS_5_B2:
+// 033   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.6) ****************//
+
+MOONLIGHTGUIDEUS_6:
+	BYTE	KEYSH   MOONLIGHTGUIDEUS_key+0
+MOONLIGHTGUIDEUS_6_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   19
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     124*MOONLIGHTGUIDEUS_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE		N48     Fn3   v127
+	BYTE	W48
+	BYTE		        An3 
+	BYTE	W48
+// 026   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W48
+	BYTE		        Fn3 
+	BYTE	W48
+// 027   ----------------------------------------
+	BYTE		        Dn3 
+	BYTE	W48
+	BYTE		        Fs3 
+	BYTE	W48
+// 028   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W48
+	BYTE		        Cn4 
+	BYTE	W48
+// 029   ----------------------------------------
+	BYTE		        As3 
+	BYTE	W48
+	BYTE		        Gn3 
+	BYTE	W48
+// 030   ----------------------------------------
+	BYTE		        En3 
+	BYTE	W48
+	BYTE		        Gn3 
+	BYTE	W48
+// 031   ----------------------------------------
+	BYTE		N96     As3 
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE		N90     Bn3 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	MOONLIGHTGUIDEUS_6_B1
+MOONLIGHTGUIDEUS_6_B2:
+// 033   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 7 (Midi-Chn.7) ****************//
+
+MOONLIGHTGUIDEUS_7:
+	BYTE	KEYSH   MOONLIGHTGUIDEUS_key+0
+MOONLIGHTGUIDEUS_7_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   48
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     117*MOONLIGHTGUIDEUS_mvl/mxv
+	BYTE		PAN     c_v-10
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE		TIE     Fn1   v127
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 003   ----------------------------------------
+	BYTE		TIE     Cn2 
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 005   ----------------------------------------
+	BYTE		TIE     An1 
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 007   ----------------------------------------
+	BYTE		TIE     Gn1 
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 009   ----------------------------------------
+	BYTE		TIE     Fn1 
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 011   ----------------------------------------
+	BYTE		TIE     Cn2 
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 013   ----------------------------------------
+	BYTE		TIE     An1 
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 015   ----------------------------------------
+	BYTE		TIE     Gn1 
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 017   ----------------------------------------
+	BYTE		TIE     Fn1 
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 019   ----------------------------------------
+	BYTE		N96     Dn1 
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE		        Fs1 
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE		        En1 
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE		        Gn1 
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE		TIE     As1 
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 025   ----------------------------------------
+	BYTE		TIE     Fn1 
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 027   ----------------------------------------
+	BYTE		N96     Dn1 
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE		        Fs1 
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE		        En1 
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE		        Gn1 
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE		        As1 
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE		N90     Bn1 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	MOONLIGHTGUIDEUS_7_B1
+MOONLIGHTGUIDEUS_7_B2:
+// 033   ----------------------------------------
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+MOONLIGHTGUIDEUS:
+	BYTE	7	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	MOONLIGHTGUIDEUS_pri	// Priority
+	BYTE	MOONLIGHTGUIDEUS_rev	// Reverb.
+
+	POIN2	MOONLIGHTGUIDEUS_grp
+
+	POIN2	MOONLIGHTGUIDEUS_1
+	POIN2	MOONLIGHTGUIDEUS_2
+	POIN2	MOONLIGHTGUIDEUS_3
+	POIN2	MOONLIGHTGUIDEUS_4
+	POIN2	MOONLIGHTGUIDEUS_5
+	POIN2	MOONLIGHTGUIDEUS_6
+	POIN2	MOONLIGHTGUIDEUS_7
+
+	
