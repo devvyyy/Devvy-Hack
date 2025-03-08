@@ -104,19 +104,22 @@ CameraCursor(Graham)
 	Text(ChReinierGrahamLeaves)
 	STAL 15
 	CHECK_ALIVE Graham; BEQ 1 0x0 0xC;
-	MOVE 0x50 Graham [11,18] //frames char coords
+	MOVE 0x50 Graham [11,17] //frames char coords
+	ENUN
+	DISA_IF Graham
 	LABEL 1
 
 	CHECK_ALIVE Yufka; BEQ 2 0x0 0xC;
-	MOVE 0x50 Yufka [11,18] //frames char coords
-	LABEL 2
-	CHECK_ALIVE Yufka; BEQ 3 0x0 0xC;
-	MOVE 0x50 Gus [11,18] //frames char coords
-	LABEL 3
-	DISA_IF Graham
-	DISA_IF Yufka
-	DISA_IF Gus
+	MOVE 0x50 Yufka [11,17] //frames char coords
 	ENUN
+	DISA_IF Yufka
+	LABEL 2
+	CHECK_ALIVE Gus; BEQ 3 0x0 0xC;
+	MOVE 0x50 Gus [11,17] //frames char coords
+	ENUN
+	DISA_IF Gus
+	LABEL 3
+
 NoFade
 ENDA
 	

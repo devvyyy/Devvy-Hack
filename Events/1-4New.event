@@ -420,6 +420,9 @@ UNIT Therese SArmor 0x1 Level(5, Ally, 1)     [16,0] 0b 0x0 0x0 0x0 [SteelBlade,
 CutsceneUnits:
 UNIT Wreyvine Soldier 0x1 Level(7, NPC, 1)     [3,9] 0b 0x0 0x0 0x0 [MageLance,ShortSpear,Elixir] StallOneTurnAI
 UNIT Wreyvine LCav 0x1 Level(7, NPC, 1)     [4,10] 0b 0x0 0x0 0x0 [MageLance,ShortSpear,Elixir] StallOneTurnAI
+	UNIT
+
+CutsceneUnits4:
 UNIT Wreyvine 0x70 0x1 Level(1, NPC, 1)     [0,10] 0 0 1 REDA3R10 [Elixir,] BossAI
 UNIT Akatsuki 0x6F 0x1 Level(1, NPC, 1)     [0,10] 0 0 1 REDA3R10 [Elixir,] BossAI
 	UNIT
@@ -863,9 +866,13 @@ SetFlag(0x1B)
 //UnsetFlag(AllUnitsMustEscapeFlag)
 //SetFlag(LordMustEscapeLastFlag)
 Music(0x48)
-STAL 15
 LOAD1 0x1 CutsceneUnits
 ENUN
+FADU 80
+STAL 5
+LOAD1 0x1 CutsceneUnits4
+ENUN
+STAL 15
 BROWNBOXTEXT WreyvineCapitalCenterText [8,8]
 STAL 5
 SetBackground(0x3d)
@@ -913,7 +920,7 @@ MUSC 0xe9
 STAL 10
 CamOn
 LOAD2 0x1 CutsceneUnits2
-STAL 15
+STAL 60
 SetBackground(0x3d)
 Text(Ch4NewOpening5)
 	GotoPrepScreen
@@ -931,6 +938,17 @@ FADU 5
 
 STAL 150
 
+CHECK_EVENTID 0x78 //skips to normal ending if 3 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x79 //skips to normal ending if 1 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7A //skips to normal ending if 2 wasnt completed
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7B //skips to normal ending if affo never fought wulfric OR talked with ulrich is 2
+BEQ 1 0x0 0xC
+CHECK_EVENTID 0x7C //skips to normal ending if 4 wasnt completed
+BEQ 1 0x0 0xC
+
 //SetBackground(0x19)
 SetBackground(0x46)
 TEXTSTART
@@ -939,7 +957,17 @@ TEXTEND
 MUSC 0x3B4
 TEXTCONT
 TEXTEND
+GOTO 2
 
+LABEL 1
+TEXTSTART
+TEXTSHOW Ch4EndingNew1Alt
+TEXTEND
+MUSC 0x3B4
+TEXTCONT
+TEXTEND
+
+LABEL 2
 	MNC2 0x4
 	NoFade
 	ENDA

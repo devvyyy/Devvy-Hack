@@ -44,10 +44,7 @@ ldrh r0, [r4, r1] @Avoid
 add r0, #30
 strh r0, [r4,r1]
 
-mov r1, #0x66
-ldrh r0, [r4, r1] @Crit
-add r0, #30
-strh r0, [r4,r1]
+
 
 End:
 pop {r4-r7, r15}
