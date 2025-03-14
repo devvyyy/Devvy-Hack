@@ -15,6 +15,7 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TURN 0x0 MesselReinforcements [2,0] 0x0
 TurnEventEnemy(0,HayeThingy,1)
 //TurnEventEnemy(0,ChangeTime,3)
 	END_MAIN
@@ -136,7 +137,7 @@ UNIT Aeteria Sage 0x1 Level(2, Enemy, 1)     [9,13] 0b 0x0 0x0 0x0 [Bolting] Bos
 UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [5,16] 0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
 UNIT Aeteria ACav 0x1 Level(10, Enemy, 1)     [18,14] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
 UNIT Aeteria Mage 0x1 Level(10, Enemy, 1)     [2,12] 0b 0x0 0x0 0x0 [Thunder] TwoActionAI
-UNIT Aeteria AeteriaStealable 0x1 Level(10, Enemy, 1)     [2,16] 0b 0x0 0x0 0x0 [SteelLance,GoddessIcon] TwoActionAI
+UNIT AeteriaStealable LPal 0x1 Level(5, Enemy, 1)     [2,16] 0b 0x0 0x0 0x0 [SteelLance,GoddessIcon] TwoActionAI
 UNIT Aeteria Merc 0x1 Level(10, Enemy, 1)     [2,19] 0b 0x0 0x0 0x0 [SteelBlade] TwoActionAI
 UNIT Aeteria SArmor 0x1 Level(10, Enemy, 1)     [3,23] 0b 0x0 0x0 0x0 [Flamberge] RangeAI
 UNIT Aeteria Auspex 0x1 Level(3, Enemy, 1)     [16,10] DropItem 0x0 0x0 0x0 [DarkTome2, LightTome2] StallOneTurnAI
@@ -167,6 +168,65 @@ UNIT Aeteria Myrmidon 0x1 Level(10, Enemy, 1)     [14,15] 0b 0x0 0x0 0x0 [Flambe
 UNIT Aeteria Archer 0x1 Level(10, Enemy, 1)     [9,4] 0b 0x0 0x0 0x0 [SteelBow,Longbow] BossAI
 
 	UNIT
+	
+Rein1:
+UNIT Aeteria Falcoknight 0x1 Level(5, Enemy, 1)     [1,33] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
+UNIT Aeteria WyvernKnight 0x1 Level(5, Enemy, 1)     [2,33] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
+UNIT Aeteria Falcoknight 0x1 Level(5, Enemy, 1)     [3,33] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
+	UNIT
+	
+Rein2:
+UNIT Aeteria WyvernKnight 0x1 Level(5, Enemy, 1)     [15,33] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
+UNIT Aeteria Falcoknight 0x1 Level(5, Enemy, 1)     [16,33] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
+UNIT Aeteria WyvernKnight 0x1 Level(5, Enemy, 1)     [17,33] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
+	UNIT
+	
+Rein3:
+UNIT Aeteria WyvernKnight 0x1 Level(5, Enemy, 1)     [2,0] 0 0 1 REDA2R3 [SilverAxe] ChargeAI
+UNIT Aeteria Falcoknight 0x1 Level(5, Enemy, 1)     [3,0] 0 0 1 REDA3R3 [SilverLance] ChargeAI
+	UNIT
+	
+Rein4:
+UNIT Aeteria WyvernKnight 0x1 Level(5, Enemy, 1)     [15,0] 0 0 1 REDA15R3 [SilverAxe] ChargeAI
+UNIT Aeteria Falcoknight 0x1 Level(5, Enemy, 1)     [16,0] 0 0 1 REDA16R3 [SilverLance] ChargeAI
+	UNIT
+	
+Rein5:
+UNIT Aeteria Sage 0x1 Level(5, Enemy, 1)     [9,0] 0 0 1 REDA9R3 [Bolting] BossAI
+	UNIT
+	
+MesselReinforcements:
+CHECK_EVENTID 0x94 //messel
+BNE 0x9000 0xC 0x0
+
+SpawnReinforcements(Rein1)
+STAL 5
+SpawnReinforcements(Rein2)
+STAL 5
+CameraCursor(Chiffon)
+Text(ReinforcementsOMG)
+
+//spawn additional reinforcements per crime not committed
+CHECK_EVENTID 0x92 //opal
+BNE 0x9001 0xC 0x0
+STAL 5
+SpawnReinforcements(Rein3)
+
+LABEL 0x9001
+CHECK_EVENTID 0x94 //wulfric
+BNE 0x9002 0xC 0x0
+STAL 5
+SpawnReinforcements(Rein4)
+
+LABEL 0x9002
+CHECK_EVENTID 0x95 //hayes
+BNE 0x9000 0xC 0x0
+STAL 5
+SpawnReinforcements(Rein5)
+
+LABEL 0x9000
+NoFade
+ENDA
 
 CutsceneUnits:
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [8,33] 0 0 1 REDA9R27 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
@@ -177,8 +237,8 @@ UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [10,33] 0 0 1 REDA10R28 [0xf0,Pai
 EndCutsceneUnits:
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [11,7] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
 UNIT Beran 0x64 0x1 Level(10, Enemy, 0)     [11,5] DropItem 0x0 0x0 0x0 [Siegmund, BlackGem] StallOneTurnAI
-UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [10,8] 0 0 1 REDA8R28 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
-UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [12,8] 0 0 1 REDA10R28 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [10,15] 0 0 1 REDA10R9 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [12,15] 0 0 1 REDA12R9 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
 	UNIT
 
 Traps1:
@@ -195,6 +255,9 @@ LOAD1 0x1 EnemyUnits
 ENUN
 Music(0x47)
 SetBackground(0xB)
+	STAL 5
+	BROWNBOXTEXT BorderFortText [8,8]
+	STAL 15
 TextCont(Ch27Opening1, 0x28D)
 STAL 5
 FADI 16
@@ -252,7 +315,7 @@ STAL 10
 SOUN 0xD5
 ClearBackground
 STAL 30
-SET_SOMETHING 0x5A
+SET_SOMETHING 0x5B
 STAL 30
 Text(Ch27OpeningEnding1Point5)
 

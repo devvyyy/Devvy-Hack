@@ -27,8 +27,8 @@ TURN 0x0 GoodbyeDespair [14,0] 0x0
 EnemyPhaseEventScream2:
 CameraCursor(0xc4)
 Text(Ch23InBattle4)
-CameraCursor(0xc3)
-Text(Ch23InBattle3)
+//CameraCursor(0xc3)
+//Text(Ch23InBattle3)
 NoFade
 ENDA
 
@@ -133,8 +133,8 @@ Escape(11,0)
 
 Vendor(ArmoryDaggers,13,1)
 Vendor(ArmoryMagic,18,4)
-Village(0x8,SussyHouse1,4,11)
-Village(0x9,SussyHouse2,20,14)
+House(0x8,SussyHouse1,4,11)
+House(0x9,SussyHouse2,20,14)
 	END_MAIN
 	
 ArmoryMagic:
@@ -263,7 +263,7 @@ UNIT NoctumOrder Occultist 0x1 Level(7, NPC, 1)     [3,15] 0b 0x0 0x0 0x0 [Flux,
 LunaticUnits:
 UNIT Dira Assassin_F 0x1 Level(4, Ally, 1)     [1,2] 0b 0x0 0x0 0x0 [SilverDagger,0xB0,BlueGem] BossAI
 UNIT Moose WyvernRider 0x1 Level(7, Ally, 1)     [2,3] 0b 0x0 0x0 0x0 [KillerAxe, ShortAxe, 0x98] ChargeAI
-UNIT Zopf Hunter 0x1 Level(3, Ally, 1)   [0,3] 0b 0x0 0x0 0x0 [0xA9,0xDB,] [0x0,0x0,0x0,0x0]
+UNIT Zopf Hunter 0x1 Level(3, Ally, 1)   [0,3] 0b 0x0 0x0 0x0 [0xA9,0xAD,] [0x0,0x0,0x0,0x0]
 
 UNIT ResistanceFighter Merc 0x1 Level(8, NPC, 1)     [8,20] 0b 0x0 0x0 0x0 [SteelSword,LightBrand,Vulnerary] StallOneTurnAI
 UNIT ResistanceFighter Soldier 0x1 Level(10, NPC, 1)     [9,20] 0b 0x0 0x0 0x0 [SteelLance,BraveLance,Elixir] StallOneTurnAI
@@ -344,6 +344,7 @@ ENDA
 SussyHouse2: //auto activates on turn 4
 SetBackground(0x1)
 Text(Ch23ThiefHouse2)
+ClearBackground
 SpawnReinforcements(ThievesOMG2)
 NoFade
 ENDA
@@ -401,7 +402,7 @@ BROWNBOXTEXT AeteriaCapitalText [8,8]
 STAL 15
 Text(Ch23Opening1)
 Music(0x27a)
-TextCont(Ch23Opening2, 0x24)
+TextCont(Ch23Opening2, 0x297)
 STAL 15
 Music(0x92)
 BG(0x3b)

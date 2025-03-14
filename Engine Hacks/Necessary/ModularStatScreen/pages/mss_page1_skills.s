@@ -28,6 +28,19 @@ IsPlayerUnit:
 str r0,[sp,#0x14]
 
 @draw str or mag
+
+mov  r0, r8
+ldr  r0, [r0]
+ldrb r0, [r0, #0x4] @r0 = Unit character ID
+cmp  r0, #0x1
+bne  NotChar
+  
+    draw_textID_at 13, 6, textID=0x22C, growth_func=2
+    b       MagStrDone
+
+NotChar:
+@Do other thing not char
+
   mov r0, r8
   blh     MagCheck      @r0 = 1 if mag should show
   cmp     r0,#0x0       

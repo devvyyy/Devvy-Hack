@@ -957,7 +957,7 @@ UNIT Aeteria Sage 0x1 Level(3, Enemy, 1)     [17,19] DropItem 0 1 REDA16R20 [Bol
 	
 MidFortRein4:
 UNIT Aeteria Occultist 0x1 Level(11, Enemy, 1)     [17,19] 0 0 1 REDA17R17 [Flux,] StallOneTurnAI
-UNIT AeteriaStealable Druid 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R19 [DarkTome2,0xB4] ChargeAI
+UNIT Aeteria Druid 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R19 [DarkTome2] ChargeAI
 UNIT Aeteria Hero 0x1 Level(5, Enemy, 1)     [17,19] 0 0 1 REDA16R20 [SteelSword,SteelAxe] ChargeAI
 UNIT Aeteria Archer 0x1 Level(11, Enemy, 1)     [17,19] 0b 0x0 0x0 0x0 [SteelBow,] ChargeAI
 	UNIT
@@ -1193,7 +1193,8 @@ CALL $591FD8
 	Text(ChBonusAfterPreps1)
 	STAL 30
 	CameraCursor(Affogato)
-	Music(0x63)
+	//Music(0x63)
+	MUSC 0x298
 	Text(ChBonusAfterPreps2)
 	CenterTextbox(RewardsNotif)
 	CUSA Wegman
@@ -1235,7 +1236,8 @@ FADU 60
 CAM1 [15,16]
 
 CameraCursor(Selwyn)
-Music(0x26) //raid!!
+//Music(0x26) //raid!!
+Music(0x282)
 	//TextCont(ChBonusEnding1,0x1) //do an event here like KELIK THEME HOL Y SHI t
 	TextCont(ChBonusEnding1,0x3ce) //do an event here like KELIK THEME HOL Y SHI t
 

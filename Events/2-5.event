@@ -13,10 +13,10 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TURN 0x0 ReinEvent1 [4,0] 0x0
-TURN 0x0 ReinEvent2 [6,0] 0x0
-TURN 0x0 WarningWTF [7,0] 0x0
-TURN 0x0 ReinEvent3 [8,0] 0x0
+TURN 0x0 ReinEvent1 [3,0] 0x0
+TURN 0x0 ReinEvent2 [7,0] 0x0
+TURN 0x0 WarningWTF [4,0] 0x0
+TURN 0x0 ReinEvent3 [5,0] 0x0
 TURN 0x0 GoodbyeDespair [15,0] 0x0
 	END_MAIN
 	
@@ -44,9 +44,10 @@ ENDA
 
 ALIGN 32
 CharacterBasedEvents:
-//CharacterEventBothWays(0xA, RecruitYufkaVelius, 0x0, Levain)
+CharacterEventBothWays(0xA, RecruitEd, 0x0, Edvin)
 CharacterEventBothWays(0x20,ChiffonGrahamTalk, Chiffon, Graham)
 CharacterEventBothWays(0x21,ChiffonRaialTalk, Chiffon, Raial)
+CharacterEventBothWays(0x22,GrahamGusTalk, Gus, Graham)
 	END_MAIN
 	
 ChiffonGrahamTalk:
@@ -56,6 +57,15 @@ ChiffonGrahamTalk:
 	MURE 2
 	NoFade
 ENDA
+	
+GrahamGusTalk:
+	MUSI
+	Text(GusGrahamTalk25)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
+
 
 ChiffonRaialTalk:
 	MUSI
@@ -65,12 +75,12 @@ ChiffonRaialTalk:
 	NoFade
 ENDA
 
-RecruitYufkaVelius:
+RecruitEd:
 MUSS 0x30
 STAL 33
-Text(Ch25LevainMoment)
+Text(EdvinRecruit)
 MURE 0x2
-TurnAlly(Levain)
+TurnAlly(Edvin)
 NoFade
 ENDA
 
@@ -209,7 +219,7 @@ UNIT Aeteria ACav 0x1 Level(9, Enemy, 1)     [20,28] 0b 0x0 0x0 0x0 [ShortAxe] C
 	
 MesselMoment:
 UNIT Aeteria GriffonRider 0x1 Level(11, Enemy, 1)     [19,28] 0 0 1 REDA19R25 [SteelBow] ChargeAI
-UNIT 0xc5 Falcoknight 0x1 Level(5, Enemy, 1)     [4,6] 0b 0x0 0x0 0x0 [SilverLance,Spear,0x71] ChargeAI
+UNIT 0xc5 Falcoknight 0x1 Level(5, Enemy, 1)     [20,28] 0 0 1 REDA20R25 [SilverLance,Spear,0x71] ChargeAI
 UNIT Aeteria LCav 0x1 Level(12, Enemy, 1)     [21,28] 0 0 1 REDA21R25 [HeavySpear] ChargeAI
 	UNIT
 	
@@ -241,7 +251,7 @@ BeginningScene:
 	//LOAD1 0x1 LesNewRecruits
 //HardUnits(LunaticUnits,LesNewRecruits)
 ENUN
-	Music(0x28)
+	Music(0x28f)
 	BG(0x33)
 	STAL 5
 	BROWNBOXTEXT OmiosOutskirtsText [8,8]
@@ -255,7 +265,11 @@ ENUN
 	BG(0x36)
 	Text(Ch25Opening2)
 	
-	GotoPrepScreen
+CALL $591FD8 //prep screen
+	FADU 60
+	STAL 5
+	Text(OMGCouncilGuy)
+	MUNO
 	ENDA
 
 EndingScene:

@@ -36,23 +36,27 @@ prSkillFury:
 	
 prCriticalForce:
 rIfUnitHasNotSkill(SanctuaryID)
-  rIfUnitHasSkill(CriticalForceID)
-    rSubConst(2)
+	rIfUnitHasNotSkill(OverdriveID)
+		rIfUnitHasSkill(CriticalForceID)
+			rSubConst(2)
 	
 prCounter:
 rIfUnitHasNotSkill(SanctuaryID)
-  rIfUnitHasSkill(CounterID)
-    rSubConst(4)
+	rIfUnitHasNotSkill(OverdriveID)
+		rIfUnitHasSkill(CounterID)
+			rSubConst(4)
 	
 prDesperation:
 rIfUnitHasNotSkill(SanctuaryID)
-  rIfUnitHasSkill(DesperationID)
-    rSubConst(3)
+	rIfUnitHasNotSkill(OverdriveID)
+		rIfUnitHasSkill(DesperationID)
+			rSubConst(3)
 
 prBulwarkRingAtk:
 rIfUnitHasNotSkill(SanctuaryID)
-  rIfUnitHasSkill(BattleVeteranID)
-    rSubConst(5)
+	rIfUnitHasNotSkill(OverdriveID)
+		rIfUnitHasSkill(BattleVeteranID)
+			rSubConst(5)
 	
 prEmpowerEthCheck: //thief rush
 	rIfUnitHasState(0x400)
@@ -61,7 +65,8 @@ prEmpowerEthCheck: //thief rush
 			
 prTuskedHorn:
 rIfUnitHasStatus(0x5) //atk buff?
-	rAddConst(3)
+	rIfUnitHasNotSkill(OverdriveID)
+		rAddConst(3)
 
 prAddMoreIfWreyvian:
 rIfUnitHasStatus(0x5) //atk buff?
@@ -70,7 +75,8 @@ rIfUnitHasStatus(0x5) //atk buff?
 			
 prCritBuffAtk:
 	rIfUnitHasStatus(0x7)
-		rAddConst(3)
+		rIfUnitHasNotSkill(OverdriveID)
+			rAddConst(3)
 
 prFortressDefensePow:
 	_testSkill(FortressDefenseID,0,3)

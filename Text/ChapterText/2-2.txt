@@ -39,7 +39,7 @@ That just sounds like bunk to me.[.6][N]
 Are you sure it's not just another[N]
 Wreyvian folk tale?[AN]
 
-[L]
+[FL]
 Whatever it is[,] I hope it does not get[N]
 in our way.[.6] On to the topic at hand[,][N]
 Arma is just a few days to the east.[AN]
@@ -58,13 +58,23 @@ cover against the wyverns of the empire[,][N]
 and few maps have it etched.[AN]
 
 [FFR]
-Hey!![AN][CSS][Event]
+There's trouble at Arma!![AN][CSS][Event]
 
 [MR][MoveRight]
 
 [FFR][LoadGus][MoveFarRight]
 Minister[,] Reverend[Beat] You've made it back[N]
 in one piece![AN]
+
+[R][MoveRight]
+Hey![AN]
+
+[FR][MoveFarRight]
+Woah[,] kid![.6] Don't aim those at me![AN]
+
+[FL]
+Stand down[,] Ser[Beat] That is Gus.[.6] Despite[N]
+his mien[,] he is a confidant to the Order.[AN]
 
 [L]
 Gus[Beat] To think you would run to us in[N]
@@ -88,9 +98,9 @@ Come with me![AN]
 [FL][LoadGraham][L][LoadChiffon][FFR][LoadVerna][MoveFarRight][3L]
 
 [FR]
-I've located Captain Raial with her band[N]
-of the Resistance.[.6] We need to hurry[,][N]
-they look like they're in a pinch.[AN]
+I've located a torchlight over the peaks.[.6][N]
+That could be Raial's group.[.6] We need to[N]
+hurry[,] I bet they're in a pinch.[AN]
 
 [L]
 We'll help them out.[.6] C'mon![.6] Let's go[,][N]
@@ -136,7 +146,7 @@ so disquieting[Beat][AN]
 GRAAAAAAAAAAAARGH!![.6][N]
 I'LL TAKE YOU ALL ON!![AN]
 
-[FR][MoveRight]
+[FL][MoveFarLeft]
 Ah[,] Serpent's tail[Beat][N]
 Mind your step[,] Rina![AN]
 
@@ -145,10 +155,26 @@ I'm fine![.6] Why do you spend so much[N]
 time worrying?[.6] They'll never land[N]
 a single mark on me![AN]
 
+[FL]
+Captain[,] I don't like this one bit.[6N]
+You really think that Order spy[N]
+will be true to his word?[AN][C]
+He seemed awful eager to volunteer to[N]
+search for help[,] don't you think?[AN]
+
 [R]
-Quit the chatter![.6] You heard the noble girl:[.4][N]
-the sect is on their way![.6] We just[N]
-hafta live 'til then.[AN]
+What choice do we have?[.6] He knows[N]
+Graham better than we do.[.6] He can[N]
+find the others quicker than us.[AN]
+
+[FR]
+Hmph[,] to think we have to rely[N]
+on the damn nobles to bail us out.[AN]
+
+[R]
+I suppose it's time to test whether[N]
+the Order can keep their word.[.6] Now[N]
+quit the chatter and ready yourselves![AN]
 
 [X]
 
@@ -174,11 +200,11 @@ Come on[,] they're this way.[.6] Don't[N]
 get lost in the dark[,] chums![AN][CSS][MoveFarFarLeft][CF][.6]
 
 [R][LoadVerna][FR][LoadChiffon]
-[R]
+[FR]
 Those must be the fighters we're looking for.[6N]
 Alright[,] let's move in![AN]
 
-[FR]
+[R]
 We have to get to them before the monsters[N]
 do.[.6] I'll follow your lead[,] Ser.[.6][N]
 I place my faith in you.[AN]
@@ -225,7 +251,8 @@ But by the Serpent[Beat] It looks like I've[N]
 found myself a few strays.[AN]
 
 [FR]
-Huh?![.6] M-[.4]Major Hayes?![AN]
+Huh?![.6] M-[.4]Major Hayes?![.6] The god-damned Viper[N]
+is on our trail?![AN]
 
 [R]
 Hayes[,] you scoundrel![.6] What the hell are you[N]
@@ -275,13 +302,16 @@ Lower your bow.[AN]
 H-Hell no![.6] If I can get rid of you[,] then[Beat][AN]
 
 [L][MoveRight]
-[0x80][0x2D][0x8E][0x8C][0x80][0x80][Pause]Stand down.[AN]
+Stand down.[AN]
+
+[FR]N-[.4]Not a chance![AN]
+
 [X]
 
 ## Ch22OpeningSus
 [L][LoadHaye][MR][LoadSolum][3L]
 [L]
-And today[Beat] I shall add yet another[N]
+Then today[Beat][0x80][0x2D][0x8E][0x8C][0x80][0x80][Pause] I shall add yet another[N]
 notch to Aeteria's finest spear.[AN]
 
 [X]
@@ -299,28 +329,32 @@ will be delivered.[AN]
 
 ## Ch22InBattle1
 [R][LoadChiffon][3L]
-That man right there[Beat] That's the Viper.[AN]
+That man right there[Beat] That's the Viper.[6N]
+Argh[Beat] Now's my chance![AN]
 
 [FR][LoadGraham]
-Major General Haye of the imperial guard.[6N]
-Ser, if I recall[,] you have prior history[N]
+Major General Hayes of the Imperial guard.[6N]
+Ser[,] if I recall[,] you have prior history[N]
 with him on the battlefield.[AN]
 
 [R]
 Yeah[,] I lost to him.[.6] He tried to push[N]
 for my execution[,] but General Messel saw[N]
-me spared.[AN]
-Heh, I suppose I owe it to him that I'm[N]
-still here.[AN]
+me spared.[AN][C]
+Heh[,] I suppose I owe it to him that I'm[N]
+still here.[.6] Too bad for the empire.[AN]
 
 [FR][LoadGraham]
 What business could he possibly be here for?[N]
 If he located the village[,] then we would[N]
 best hurry.[AN]
+I suggest leaving your feud for later;[.4][N]
+having proper priorities will save us a lot[N]
+of headache[,] Ser Chiffon.[AN]
 
 [R]
 Let's go.[.6] I'll find my chance to get even[N]
-with Hayes later. Right now, we have to make sure[N]
+with Hayes later.[.6] Right now[,] we have to make sure[N]
 the rest of the liberation army is okay.[AN]
 [X]
 
@@ -371,7 +405,7 @@ For me to make so amateur a mistake.[6N]
 And I thought I had you sent to Sele.[AN]
 
 [MR]
-Come at me[,] Hayes![.6] Let me leave a few[N]
+Come at me[,] Viper![.6] Let me leave a few[N]
 scars on that scowl of yours.[AN]
 
 [ML]
@@ -379,14 +413,225 @@ You are not my priority.[.6] Problems like you[N]
 can be dealt with after.[AN]
 [X]
 
+## FryeRinaTalk
+[3L]
+[FL][Raial][L][Rina][MR][Frye]
+
+[L][MoveLeft]
+Frye![.6] Took you long enough[N]
+to show your face around here![AN]
+
+[MR]
+Hah[,] that's all you have to say?[6N]
+No [OpenQuote]Thank the Serpent that Frye[N]
+is here to save the day again"?[AN][C]
+Not even a little [OpenQuote]I'm glad[N]
+my brother is safe and sound"?[AN]
+
+[L]
+Oh[,] shut up![.6] We were doing[N]
+perfectly fine without you![6N]
+Heavens[,] I can't believe you[AN]
+got yourself captured out there![AN]
+
+[MR]
+How were we supposed to know that[N]
+General Opali was prowling around?[6N]
+Honestly[,] we were lucky it was her.[AN][C]
+We'd all surely be dead had it been[N]
+the Viper or one of the Trinity.[AN]
+
+[FL]
+Hey[,] I won't complain as long[N]
+as you're all still alive.[6N]
+Good to have you back[,] Frye.[AN]
+
+[MR]
+Good to be here[,] Captain.[.6] Man[,][N]
+you all sure are a sight for sore eyes.[AN]
+
+[L]
+I see your prison days have not[N]
+robbed you of your combat talent[Beat][AN]
+
+[MR]
+After all those days cramped up[N]
+in that dark cell[,] I won't say no to[N]
+stretching my legs a bit.[AN][C]
+Let's see if they can handle me![AN]
+
+[X]
+
+## CortadoPandoroTalk
+[3L]
+[FL][Raial][L][Pandoro][MR][Cortado]
+
+[L]
+Cortado[,] is that you?[6N]
+Does my eye deceive me?[AN]
+
+[MR]
+That still works?[.6] Could've fooled me.[6N]
+With how wildly you were swinging[,][N]
+I thought you were gonna hit me.[AN][C]
+You're even crazier than normal[N]
+today[,] old man.[AN]
+
+[L]
+Someone had to pick up the slack[N]
+without you and Frye around[,] right?[AN]
+
+[FL]
+Cortado[Beat] So the rescue operation[N]
+was a success.[.6] Good to see you safe.[AN]
+
+[MR]
+It was.[.6] What happened to Dira and[N]
+the rest?[.6] I don't see them out here.[AN]
+
+[FL]
+They're in the village[,] keeping an eye[N]
+out in case any of these freaks[N]
+try to slip by us.[AN]
+
+[MR]
+Smart move.[.6] Let's make their job easy.[6N]
+I don't know what these creatures are[,][N]
+but they reek of something arcane.[AN]
+
+[L]
+You said it[,] sister![.6] Let's grab a pint or[N]
+two tonight after we wipe 'em out[,] yeah?[AN]
+
+[MR]
+Count me in.[.6] I'll take anything over[N]
+another round of prison gruel.[AN]
+[X]
+
+## GusRaialTalk
+[3L]
+[ML][Raial][MR][Gus]
+
+[MR]
+Cavalry's arrived[,] Raial![6N]
+Hope we aren't too late.[AN]
+
+[ML]
+Really[,] Gus?[.6] Do we look like we[N]
+even need your help?[.6] Pssh![AN]
+
+[MR]
+Say that with such a straight face[N]
+and I might even believe you.[AN]
+
+[ML][MoveLeft][FL][Rina]
+[FL]
+Better late than never[,] I say.[6N]
+At least you didn't leave us[N]
+out to dry here.[AN]
+
+[MR]
+What[,] did you really think I'd[N]
+just run for the hills just to[N]
+save my own skin?[AN]
+
+[FL][CF][Ilse]
+[FL]
+Given your track record[,] Gus?[6N]
+Forgive me for entertaining the[N]
+possibility of that happening.[AN]
+
+[MR]
+Sheesh[,] tough crowd.[AN]
+
+[L][MoveLeft]
+We have other things to worry about right[N]
+now[,] everyone.[.6] Keep fighting![.6] Don't let[N]
+those creatures take a step into the village![AN]
+
+[X]
+
+## ChiffonnYufka21Talk
+[3L]
+[ML][Chiffon][MR][Yufka]
+
+[ML]
+Hey[,] I've got a question.[.6] One I don't[N]
+think the Reverend is going to give[N]
+me a straight answer to.[AN]
+
+[MR]
+What's on your mind[,] Ser?[AN]
+
+[ML]
+You Noctum Order members are[N]
+ex-Aeterian Court[,] right?[.6] Couldn't[N]
+you have stopped this mess?[AN]
+
+[MR]
+It's more complex than that.[.6] We of the[N]
+Noctum Order kept a close eye on[N]
+Emperor Selwyn during his invasion.[AN]
+We knew he was sharp and had[N]
+potential for a prosperous reign[,] but[N]
+his emotions easily swayed him.[AN]
+By the end of the invasion[,] it was clear[N]
+he was unfit to rule[,] but he caught[N]
+wind of our plans against him.[AN]
+He was the one who struck first.[6N]
+We were publicly branded traitors and[N]
+had no choice but to flee the court.[AN]
+
+[ML]
+Cast out of your own homes and labeled[N]
+enemies of the state[,] huh?[.6] Harsh[,][N]
+but given what I saw in that prison,[AN]
+I'm unsurprised.[AN]
+
+[MR]
+Selwyn believes he has achieved[N]
+his dreams--[.4]of avenging the late[N]
+Empress and uniting Ideon.[AN]
+Now he scrambles about like a[N]
+child trying to keep the pieces[N]
+from falling apart.[AN][C]
+He overreacts to anything he sees[N]
+as a threat to his great work.[AN]
+
+[ML]
+So he thinks he achieved something[N]
+and doesn't want to lose that.[.6] Huh.[6N]
+That makes a lot more sense.[AN]
+Still[,] with any luck it won't be long[N]
+before we can bring this country[N]
+to a better state than it is in now.[AN]
+Hopefully with you at the helm[N]
+in a position of responsibility[N]
+somewhere or another.[AN]
+
+[MR]
+Me?[.6] Er[Beat] why me[,] Ser?[an]
+
+[ML]
+Well[,] you've got a good head on[N]
+your shoulders.[.6] I'd trust you[N]
+with administrative work.[AN]
+And you strike me as the type[N]
+to be extremely diligent.[AN]
+
+[MR]
+Ah[Beat] You flatter me.[AN]
+
+[X]
+
 ## VeliusYvonneTalk
 Velius
-jumps up Aiieeeeeeee! ...What in the world are those... abominations? They seem like magical beings... I can almost sense something familiar from them...
+jumps up Aiieeeeeeee![.6] ...What in the world are those... abominations? They seem like magical beings... I can almost sense something familiar from them...
 
 Yvonne
 You're afraid of ghosts?
 So it's not just me. I wonder if they have souls to reap?
-Whatever these things are, they're the enemy. Let's go!
+Whatever these things are[,] they're the enemy. Let's go!
 
 
 [X]
@@ -521,12 +766,13 @@ Of course[,] Captain Raial.[.6] It's a pleasure[N]
 working with you.[AN]
 
 [R]
-Drop the 'Captain'[,] little pup.[.6] You're not even[N]
-part of my mercenaries.[AN]
+Drop the 'Captain'[,] little pup.[.6] That's[N]
+reserved for those I'd call family.[AN]
 
 [L]
 Uh[,] got it[,] Raial.[.6] You have my blade.[6N]
-You all do.[AN]
+And I hope to find myself within[N]
+that group in the days to come.[AN]
 
 [FR]
 I second Raial's notion.[.6] Many of those who[N]

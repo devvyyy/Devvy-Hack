@@ -27,11 +27,11 @@ ldrh	r1, [r4,r2]	@load hit
 add	r1, r0	@add 16 to hit
 strh	r1, [r4,r2]     @store
 
-@add to avoid
-mov	r2, #0x62
-ldrh	r1, [r4,r2]	@load hit
-add	r1, r0	@add 16 to hit
-strh	r1, [r4,r2]     @store
+@@add to avoid
+@mov	r2, #0x62
+@ldrh	r1, [r4,r2]	@load hit
+@add	r1, r0	@add 16 to hit
+@strh	r1, [r4,r2]     @store
 
 @add to crit
 mov	r2, #0x66
@@ -39,11 +39,11 @@ ldrh	r1, [r4,r2]	@load hit
 add	r1, r0	@add 16 to hit
 strh	r1, [r4,r2]     @store
 
-@add to cravoid
-mov	r2, #0x68
-ldrh	r1, [r4,r2]	@load hit
-add	r1, r0	@add 16 to hit
-strh	r1, [r4,r2]     @store
+@@add to cravoid
+@mov	r2, #0x68
+@ldrh	r1, [r4,r2]	@load hit
+@add	r1, r0	@add 16 to hit
+@strh	r1, [r4,r2]     @store
 
 End:
 pop	{r4-r5, r15}

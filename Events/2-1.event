@@ -23,11 +23,13 @@ ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0xC, RecruitGus, 0x0, Gus)
 CharacterEventBothWays(0x9,ChiffonGrahamTalk, Chiffon, Graham)
+CharacterEventBothWays(0xD,GrahamYufkaTalk, Yufka, Graham)
 CharacterEventBothWays(0xA,ChiffonFryeTalk, Chiffon, Frye)
 CharacterEventBothWays(0xB,ChiffonCortadoTalk, Chiffon, Cortado)
 CharacterEventBothWays(0xC,ChiffonWilkenTalk, Chiffon, Wilken)
 //CharacterEventBothWays(0xD,ChiffonJayeTalk, Chiffon, Jaye)
-//CharacterEventBothWays(0xE,FryeCortadoTalk, Cortado, Frye)
+CharacterEventBothWays(0xE,FryeVeliusTalk, Wilken, Frye)
+CharacterEventBothWays(0x1F,ChiffonYufkaTalk, Chiffon, Yufka)
 	END_MAIN
 	
 RecruitGus:
@@ -237,6 +239,9 @@ NoFade
 	ENDA
 
 EndingScene:
+CUSA Verna
+SVAL 0x2 Verna
+CALL 0x9EE4A0
 /*
 FADI 60
 DoAllThree
@@ -309,7 +314,17 @@ PrisonTalk1:
 CAM1 [7,11]
 MUSI
 SetBackground(0x41)
-Text(MidConvo1)
+Text(VernaMomento1)
+ClearBackground
+MUNO
+NoFade
+ENDA
+	
+PrisonTalk1:
+CAM1 [7,11]
+MUSI
+SetBackground(0x41)
+Text(VernaMomento1)
 ClearBackground
 MUNO
 NoFade
@@ -319,7 +334,7 @@ PrisonTalk2:
 CAM1 [7,11]
 MUSI
 SetBackground(0x41)
-Text(MidConvo2)
+Text(VernaMomento2)
 ClearBackground
 MUNO
 NoFade
@@ -338,6 +353,14 @@ ENDA
 ChiffonGrahamTalk:
 	MUSI
 	Text(Ch7ChiffonGrahamTalk)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
+
+GrahamYufkaTalk:
+	MUSI
+	Text(YufkaGraham21Talk)
 	MUNO
 	MURE 2
 	NoFade
@@ -366,6 +389,23 @@ ChiffonCortadoTalk:
 	MURE 2
 	NoFade
 ENDA
+
+FryeVeliusTalk:
+	MUSI
+	Text(Ch7FryeVeliusTalk)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
+
+ChiffonYufkaTalk:
+	MUSI
+	Text(ChiffonnYufka21Talk)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
+
 
 ChiffonWilkenTalk:
 	MUSI

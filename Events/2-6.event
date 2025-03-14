@@ -13,6 +13,7 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventEnemy(0,HelloEdithGamer,1)
 TURN 0x0 TopRein [4,0] 0x0
 TURN 0x0 MountRein [6,0] 0x0
 TURN 0x0 MountRein2 [9,0] 0x0
@@ -27,6 +28,13 @@ CharacterEventBothWays(0xA, RecruitEdithChiff, Chiffon, Edith)
 //CharacterEventBothWays(0x9,FlanRecruit, Chiffon, Flan)
 	END_MAIN
 	
+HelloEdithGamer:
+CameraCursor(Edith)
+Text(EdithGaming)
+NoFade
+ENDA
+
+
 RecruitEdithChiff:
 MUSS 0x30
 STAL 33
@@ -62,12 +70,15 @@ ENDA
 	
 MoveTheBoss:
 PlayerRangeCheck
+CHECK_ALIVE 0x51 //locro
+BEQ 1 0x0 0xC
 CameraCursor(0x51)
 	Text(Ch26DudeMoveMoment)
 	STAL 15
 	MOVE 0x50 0x51 [14,6] //frames char coords
 	ENUN
 	Text(Ch26DudeMoveMoment2)
+LABEL 1
 NoFade
 ENDA
 
@@ -80,8 +91,8 @@ LOCA 0x0 SussyEvent [14,5] 0x11
 Chest(0xf5,19,4) //runic ring
 Door(21,11)
 Door(22,11)
-Door(18,16)
-Door(18,17)
+//Door(18,6)
+//Door(18,7)
 Door(17,4)
 Stairs(1,16,19,20,12)
 Stairs(2,17,19,20,13)
@@ -339,7 +350,7 @@ Traps2:
 
 BeginningScene:
 	ENUT AllUnitsMustEscapeFlag
-	TILECHANGE 0x4
+	//TILECHANGE 0x4
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 DontKillTheseGuys
 	ENUN
@@ -349,7 +360,23 @@ BeginningScene:
 	STAL 5
 	BROWNBOXTEXT IdeonBorderText [8,8]
 	STAL 15
-	Text(Ch26Opening1)
+CHECK_EVENTID 0x92 //opal
+BNE 0x9000 0xC 0x0
+CHECK_EVENTID 0x93 //wulfric
+BNE 0x9000 0xC 0x0
+CHECK_EVENTID 0x94 //messel
+BNE 0x9000 0xC 0x0
+CHECK_EVENTID 0x95 //also messel; tents
+BNE 0x9000 0xC 0x0
+	
+Text(Ch26Opening1Alt)
+	
+GOTO 0x9001
+LABEL 0x9000
+
+Text(Ch26Opening1) //graham
+LABEL 0x9001
+	
 	ClearBackground
 	STAL 15
 	CameraCursor(0x51)
@@ -366,7 +393,7 @@ BeginningScene:
 	ENDA
 
 EndingScene:
-	Music(0x31)
+	Music(0x283)
 	SetBackground(0x2d)
 	Text(Ch26Ending1)
 	STAL 15

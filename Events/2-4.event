@@ -15,6 +15,7 @@ PointerList:
 TurnBasedEvents:
 //TurnEventEnemy(0,OMGMyHeroAGAIN,2)
 TURN 0x0 HelloZopf [1,0] 0x0
+TURN 0x0 LookAtTheKey [2,0] 0x0
 TurnEventEnemy(0,ThiefRein,1)
 TURN 0x0 LeftRein [5,0] 0x0
 TURN 0x0 TopLeftRein [6,0] 0x0
@@ -47,11 +48,29 @@ CharacterEventBothWays(0xA, RecruitKatsuGeneric, 0x0, Katsu)
 //CharacterEventBothWays(0xC, RecruitMooseChiff, Chiffon, Moose)
 CharacterEventBothWays(0x20,ChiffonGrahamTalk, Chiffon, Graham)
 CharacterEventBothWays(0x21,ChiffonRaialTalk, Chiffon, Raial)
+CharacterEventBothWays(0x1F,GrahamRaialTalk, Graham, Raial)
+CharacterEventBothWays(0x1E,IlseYufkaTalk, Ilse, Yufka)
 	END_MAIN
 	
 ChiffonGrahamTalk:
 	MUSI
 	Text(ChiffonGrahamTalk24)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
+
+GrahamRaialTalk:
+	MUSI
+	Text(GrahamRaialTalk24)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
+
+IlseYufkaTalk:
+	MUSI
+	Text(IlseYufkaTalk24)
 	MUNO
 	MURE 2
 	NoFade
@@ -108,6 +127,17 @@ AREA 0x0 ReinforcementEventLMAO [0,8] [0,8]
 	CauseGameOverIfLordDies
 	AFEV 0 EndingScene 0x3
 	END_MAIN
+
+LookAtTheKey:
+	STAL 5
+	CameraCursor(Chiffon)
+	MUSI
+	Text(Ch24Opening3)
+	CAM1[6,13]
+	CUMO[6,13]
+	STAL 60
+NoFade
+ENDA
 	
 ReinforcementEventLMAO:
 
@@ -358,9 +388,9 @@ UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [22,0] 0 0 1 REDA22R0 [0xf0,Pain,
 
 EnemyUnits: //InfantrySoul, CavSoul, FlierSoul, ArmorSoul, MagSoul, PromoSoul, StealSoul
 
-UNIT 0xCF PegRider 0x1 Level(4, Enemy, 1)     [9,6] DropItem 0x0 0x0 0x0 [Javelin, GoldGem] [0x0,0xC,0x4,0x0]
-UNIT 0xCF PegRider 0x1 Level(5, Enemy, 1)     [23,9] DropItem 0x0 0x0 0x0 [ShortSpear,Speedwing] [0x0,0xC,0x4,0x0]
-UNIT 0x2 PegRider 0x1 Level(3, Ally, 1)     [13,4] DropItem 0x0 0x0 0x0 [SapphireLance,PureWater] [0x0,0xC,0x4,0x0]
+UNIT 0xCF PegRider 0x1 Level(4, Enemy, 1)     [9,6] DropItem 0x0 0x0 0x0 [Javelin, GoldGem] [0x6,0xC,0x4,0x0]
+UNIT 0xCF PegRider 0x1 Level(5, Enemy, 1)     [23,9] DropItem 0x0 0x0 0x0 [ShortSpear,Speedwing] [0x6,0xC,0x4,0x0]
+UNIT 0x2 PegRider 0x1 Level(3, Ally, 1)     [13,4] DropItem 0x0 0x0 0x0 [SapphireLance,PureWater] [0x6,0xC,0x4,0x0]
 
 UNIT Aeteria Fighter 0x1 Level(9, Enemy, 1)     [10,17] 0b 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
 UNIT Aeteria Archer 0x1 Level(9, Enemy, 1)     [6,8] 0b 0x0 0x0 0x0 [IronBow] AttackInRangeAI
@@ -371,7 +401,7 @@ UNIT AeteriaStealable Soldier 0x1 Level(10, Enemy, 1)     [12,22] 0b 0x0 0x0 0x0
 UNIT Aeteria Mage 0x1 Level(10, Enemy, 1)     [12,18] 0b 0x0 0x0 0x0 [Fire] AttackInRangeAI
 UNIT Aeteria Mage 0x1 Level(9, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [Fire] TwoActionAI
 UNIT Aeteria Archer 0x1 Level(9, Enemy, 1)     [2,5] 0b 0x0 0x0 0x0 [SteelBow,Vulnerary] BossAI
-UNIT AeteriaStealable Archer 0x1 Level(9, Enemy, 1)     [19,10] 0b 0x0 0x0 0x0 [0xDF,Talisman] TwoActionAI
+UNIT AeteriaStealable Archer 0x1 Level(9, Enemy, 1)     [19,10] 0b 0x0 0x0 0x0 [0x8a,0x5C] TwoActionAI
 UNIT Aeteria Archer 0x1 Level(9, Enemy, 1)     [9,11] 0b 0x0 0x0 0x0 [IronBow] TwoActionAI
 UNIT Aeteria Archer 0x1 Level(9, Enemy, 1)     [10,17] 0b 0x0 0x0 0x0 [Longbow] BossAI
 UNIT Aeteria LArmor 0x1 Level(9, Enemy, 1)     [4,13] 0b 0x0 0x0 0x0 [IronLance,Javelin] BossAI
@@ -552,13 +582,6 @@ LABEL 0x9001
 	
 	CALL $591FD8 //prep screen
 	FADU 60
-	STAL 5
-	CameraCursor(Chiffon)
-	MUSI
-	Text(Ch24Opening3)
-	CAM1[6,13]
-	CUMO[6,13]
-	STAL 60
 	//CenterTextbox(P2PlaceholderCh4)
 	MUNO
 	NoFade
@@ -611,6 +634,7 @@ HelloZopf:
 CAM1 [10,8]
 FlashCursor(18,8,60)
 STAL 10
+Music(0x20)
 MUSI
 SetBackground(0x9)
 //Text(Ch8ZopfIntro)

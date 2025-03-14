@@ -205,7 +205,7 @@ setMugEntry(0x1B, Nora_Mug, 3, 5, 3, 3)
 ALIGN 16 //Irene by Laurent Lacroix
 Irene_Mug:
 #incext PortraitFormatter "Irene.png"
-setMugEntry(0x1C, Irene_Mug, 3, 5, 3, 3)
+setMugEntryExtend(0x1C, Irene_Mug, 3, 5, 3, 3, 10, 4, 0, 0)
 
 ALIGN 16
 Floris_Mug:

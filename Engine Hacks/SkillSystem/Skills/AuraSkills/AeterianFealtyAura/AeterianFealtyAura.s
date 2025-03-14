@@ -40,11 +40,11 @@ beq Done @skip if no female flag (aeterian flag)
 
 mov r1,#0x60 @hit
 ldrh r2, [r4, r1]
-add r2, #5
+add r2, #10
 strh r2, [r4,r1]
 add r1, #0x2 @avoid
 ldrh r2, [r4, r1]
-add r2, #5
+add r2, #10
 strh r2, [r4,r1]
 
 Done:

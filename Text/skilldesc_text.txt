@@ -788,7 +788,7 @@ Aeterian Fealty[N]
 - Graham's staves restore HP to self.[N]
 - If adjacent to Chiffon, Hit/Avoid +50.[N]
 - Grants Hit/Avoid +5 to all allies on[N]
-the map, doubled to +10 if Aeterian.[X]
+the map, increased to +15 if Aeterian.[X]
 
 ## SD_BornInDarkness
 Test of Faith: Marks adjacent enemies.[N]
@@ -1211,7 +1211,7 @@ Brutalizer[N]
 - Noel ignores stat penalties, reverses[N]
 weapon combat penalties, and deals bonus[N]
 damage = 25% of foe's max HP.[N]
-- Activate to deal 1.5x damage.[X]
+- Activate to deal (5 + 1.5x) damage.[X]
 
 ## AnotherNoelRework
 Martial Poise[N]
@@ -1864,11 +1864,12 @@ second strike negates defenses.[N]
 Cost: 5 Durability.[X]
 
 ## SD_Astra
+# (Granted actions take priority.)
 Lightslinger[N]
 - Activate to strike x2 consecutively.[N]
 (x2 Durability used; can follow-up).[N]
-- Can Canto 3 spaces after combat.[N]
-(Granted actions take priority.)[X]
+- Bows have minimum 1 range.[N]
+- Can Canto 3 spaces after combat.[X]
 
 ## SD_Astra2
 Lightslinger[N]
@@ -2085,7 +2086,7 @@ take -4 magical damage.[X]
 # edit this later in SkillSystem.event
 Nevermore[N]
 - Aohr neutralizes foe's effects that[N]
-"Deal bonus damage" or "Reduces[N]
+[OpenQuote]Deal bonus damage" or [OpenQuote]Reduces[N]
 damage taken".[X]
 
 ## SD_Nullify
@@ -2777,7 +2778,7 @@ Coeur Allum[0xE9][N]
 - If Selwyn's HP is 50% or less,[N]
 multiplies Eth/Skill/Spd by 1.5x.[N]
 - Grants Atk +5 to allies within[N]
-5 spaces.[.6] Negates Eff: [FlierIcon].[X]
+5 spaces. Negates Eff: [FlierIcon].[X]
 
 ## SD_Foresight
 Foresight[X]
@@ -2849,9 +2850,9 @@ or lower, gain +4 Resistance.[X]
 ## SD_Bargain
 The Right Incentive[N]
 - Gus reduces shop prices by 50%.[N]
-- Str/Spd/Def/Res +(total price of[N]
-inventory/1000).[N]
-- Hit/Avoid/Crit/Ddg +(Gold/2500).[X]
+- Grants bonus Str/Spd = (total Gold[N]
+price of inventory/1000).[N]
+- Grants Hit/Crit = (total Gold/2500).[X]
 
 ## SD_BusinessSense
 # While The Iron's Hot; also unit is a thief

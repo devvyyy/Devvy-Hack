@@ -5,7 +5,50 @@ mov r4, r0 @atkr
 mov r5, r1 @dfdr
 
 @ edit: wtf this is an abomination what the hell
+@ edit 2: making this more of an abomination by making this also reduce chiffons str to 0
 
+@ is chiffon
+ldr  r0, [r4] @r0 = character data pointer
+ldrb r0, [r0, #0x4] @r0 = character ID
+cmp r0, #0x1
+bne CheckDaggerStuff
+
+@sub atk = str LOL
+mov  r1, #0x5A
+ldrh r0, [r4, r1] @attack
+ldrb r2, [r4, #0x14] @str
+sub  r0, r2
+strh r0, [r4,r1]
+
+@ armor pen stat
+
+mov  r1, #0x5A
+ldrh r0, [r4, r1] @attack
+mov  r6, r0 @Save attack for later
+
+@Get pierce and muliply by 100
+mov  r1, #0x14 @str
+ldrb r0, [r4, r1]
+mov  r1, #100
+mul  r0, r1
+
+@Divide by 100
+mov  r1, #100
+swi  6
+
+@Multiply by enemy def
+ldrb r2, [r5, #0x17] @def
+mul  r0, r2
+
+@Divide by 100 for final value
+mov  r1, #100
+swi  6
+
+add  r0, r6
+mov  r1, #0x5A
+strh r0, [r4,r1]
+
+CheckDaggerStuff:
 @check weapon
 mov     r0, #0x4A      @Move to attackers's weapon (before battle)
 ldrb    r0, [r4, r0]   @Load attackers weap (before battle)
@@ -26,7 +69,7 @@ beq Crit25
 cmp     r0, #0x86         @Cinquedea
 beq Crit50
 cmp     r0, #0xE9         @Splitting Maul
-beq Crit50
+beq Crit50Special
 cmp     r0, #0xAE         @Arcane Knife
 beq Crit25
 cmp     r0, #0xAF         @Hook, Line...

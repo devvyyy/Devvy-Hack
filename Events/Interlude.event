@@ -131,14 +131,14 @@ BeginningScene:
 	ENUN
 	Music(0x4a)
 	SetBackground(0xE)
-	TextCont(InterludeOpening1, 0x63)
+	TextCont(InterludeOpening1, 0x29A)
 	FADI 60
 	LOAD2 0x1 CutsceneUnits
 	ClearBackground
 	STAL 15
 	CameraCursor(Chiffon)
 	STAL 5
-	Music(0x28D)
+	Music(0x29A)
 	Text(InterludeOpening1Point5)
 	STAL 5
 	GotoPrepScreen
@@ -147,6 +147,7 @@ BeginningScene:
 
 EndingScene:
 	Music(0x3E3)
+	//Music(0x28D)
 	SetBackground(0x31)
 	Text(InterludeEnding1)
 	MNC2 0x22

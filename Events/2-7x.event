@@ -115,7 +115,7 @@ SetFlag(0x95) //global hayes flag
 ASMC 0x8026629
 	LOAD1 0x1 EnemyUnits
 	ENUN
-	SVAL 0x1 0x1D //29
+	SVAL 0x1 0x1A //26
 	SET_HP Beran
 	CALL $591FD8
 FADU 60
@@ -133,8 +133,6 @@ SetBackground(0x48)
 STAL 10
 ClearBackground
 STAL 15
-
-SET_SOMETHING 0x5B
 
 CameraCursor(Chiffon)
 Text(ChCh27xOpening2)

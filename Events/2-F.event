@@ -18,9 +18,9 @@ TurnBasedEvents:
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0xA, WellingtonRecruit, 0x0, Wellington)
-CharacterEventBothWays(0xB, OpalRecruit, 0x0, Opal)
-CharacterEventBothWays(0xC, MesselRecruit, 0x0, Messel)
+CharacterEventBothWays(0xA, WellingtonRecruit, Chiffon, Wellington)
+CharacterEventBothWays(0xB, OpalRecruit, Chiffon, Opal)
+CharacterEventBothWays(0xC, MesselRecruit, Chiffon, Messel)
 	END_MAIN
 
 MiscBasedEvents:
@@ -171,8 +171,6 @@ LABEL 0x9000
 Text(WulfricRecruitTextFAIL)
 
 
-Text(Placeholder2)
-
 LABEL 0x9001
 NoFade
 ENDA
@@ -247,6 +245,9 @@ SetFlag(0xD)
 	ENUN
 	Music(0x47)
 	SetBackground(0x2B)
+		STAL 5
+BROWNBOXTEXT IdeonsBridgeText [8,8]
+STAL 15
 	Text(ChP2FinaleOpening1)
 	ClearBackground
 	Music(0xA9)
@@ -408,17 +409,19 @@ SetBackground(0x2b)
 CHECK_EVENTID 0x95 //hayes fight
 BNE 0x9000 0xC 0x0
 
-TextCont(ChP2FinaleEnding7, 0x63)
+TextCont(ChP2FinaleEnding7Alt, 0x292) //raial
+CenterTextbox(RaialRouteChosen)
 
 GOTO 0x9001
 LABEL 0x9000
 
-TextCont(ChP2FinaleEnding7Alt, 0x63) //alt
+TextCont(ChP2FinaleEnding7, 0x26F) //graham
+CenterTextbox(GrahamRouteChosen)
 
 LABEL 0x9001
 
 REMA
-STAL 150
+STAL 100
 ENUF 0x12B
 MNTS 0x1
 	NoFade

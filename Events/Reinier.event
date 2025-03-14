@@ -272,7 +272,7 @@ LoadUnit(15,24)
 	UNIT
 
 NewGuys:
-UNIT 0x62 SergeantClass 0x1 Level(12, NPC, 0)   [10,1] 0b 0x0 0x0 0x0 [SilverSword,SilverLance] BossAI
+UNIT 0x62 SergeantClass 0x1 Level(12, NPC, 0)   [10,1] 0b 0x0 0x0 0x0 [SilverSword,SilverLance, MasterSeal] BossAI
 UNIT Wreyvine Mercenary 0x1 Level(8, NPC, 1)     [8,1] 0b 0x0 0x0 0x0 [MageSword,ShortBrand] BossAI
 UNIT Wreyvine Halberdier 0x1 Level(1, NPC, 1)     [9,2] 0b 0x0 0x0 0x0 [ShortSpear,MageAxe] BossAI
 UNIT Wreyvine General 0x1 Level(3, NPC, 1)     [10,3] 0b 0x0 0x0 0x0 [Skypiercer,Elixir] BossAI
@@ -465,7 +465,7 @@ CHECK_ALIVE Therese; BEQ 1 0x0 0xC; TEXTSTART; TEXTSHOW ChReinierEnding1Therese;
 	SetBackground(0x44)
 	Music(0x27e)
 	STAL 5
-BROWNBOXTEXT TwentyfourYearsAgo [8,8]
+BROWNBOXTEXT YearsAgo [8,8]
 STAL 15
 BROWNBOXTEXT ValeText [8,8]
 STAL 15
