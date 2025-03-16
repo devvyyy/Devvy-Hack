@@ -55,10 +55,10 @@ FryeRinaConvo:
 MUSI
 Text(FryeRinaTalk)
 MURE 0x2
-CUSA Radcliff
-CUSA Ilse
-CUSA Pandoro
-CUSA Irene
+//CUSA Radcliff
+//CUSA Ilse
+//CUSA Pandoro
+//CUSA Irene
 NoFade
 ENDA
 
@@ -66,10 +66,10 @@ CortadoPandoroConvo:
 MUSI
 Text(CortadoPandoroTalk)
 MURE 0x2
-CUSA Radcliff
-CUSA Ilse
-CUSA Pandoro
-CUSA Irene
+//CUSA Radcliff
+//CUSA Ilse
+//CUSA Pandoro
+//CUSA Irene
 NoFade
 ENDA
 
@@ -77,10 +77,10 @@ GusRaialConvo:
 MUSI
 Text(GusRaialTalk)
 MURE 0x2
-CUSA Radcliff
-CUSA Ilse
-CUSA Pandoro
-CUSA Irene
+//CUSA Radcliff
+//CUSA Ilse
+//CUSA Pandoro
+//CUSA Irene
 NoFade
 ENDA
 
@@ -141,17 +141,17 @@ EnemyUnits: //tlp ghosts?! :scream:
 //InfantrySoul, CavSoul, FlierSoul, ArmorSoul, MagSoul, PromoSoul, StealSoul
 UNIT KeyThief Thief 0x1 Level(2, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [SilverDagger,BraveSword,ChestKey] ThiefAI
 UNIT MagSoul Mage 0x1 Level(6, Enemy, 1)     [5,12] 0b 0x0 0x0 0x0 [Fire] AttackInRangeAI
-UNIT InfantrySoul Soldier 0x1 Level(7, Enemy, 1)     [6,6] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
+UNIT InfantrySoul Soldier 0x1 Level(7, Enemy, 1)     [14,2] 0b 0x0 0x0 0x0 [Javelin] BossAI
 UNIT InfantrySoul Archer 0x1 Level(6, Enemy, 1)     [14,6] 0b 0x0 0x0 0x0 [SteelBow] AttackInRangeAI
 UNIT InfantrySoul Fighter 0x1 Level(6, Enemy, 1)     [6,15] 0b 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
-UNIT InfantrySoul Monk 0x1 Level(7, Enemy, 1)     [1,16] 0b 0x0 0x0 0x0 [LightTome1] WallAI
+UNIT MagSoul Monk 0x1 Level(7, Enemy, 1)     [1,16] 0b 0x0 0x0 0x0 [LightTome1] WallAI
 UNIT InfantrySoul Mercenary 0x1 Level(6, Enemy, 1)     [2,14] 0b 0x0 0x0 0x0 [IronSword] WallAI
 UNIT InfantrySoul Soldier 0x1 Level(6, Enemy, 1)     [4,17] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT MagSoul Mage 0x1 Level(6, Enemy, 1)     [14,15] 0b 0x0 0x0 0x0 [Fire] BossAI
 UNIT MagSoul SArmor 0x1 Level(8, Enemy, 1)     [13,17] 0b 0x0 0x0 0x0 [SteelBlade] BossAI
 UNIT InfantrySoul Myrmidon 0x1 Level(6, Enemy, 1)     [3,3] 0b 0x0 0x0 0x0 [IronSword] WallAI
 UNIT InfantrySoul Archer 0x1 Level(6, Enemy, 1)     [17,2] 0b 0x0 0x0 0x0 [SteelBow] RangeAI
-UNIT InfantrySoul Mercenary 0x1 Level(6, Enemy, 1)     [7,4] 0b 0x0 0x0 0x0 [SteelSword] ChargeAI
+UNIT InfantrySoul Soldier 0x1 Level(6, Enemy, 1)     [7,4] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
 UNIT CavSoul LCav 0x1 Level(7, Enemy, 1)     [8,17] DropItem 0x0 0x0 0x0 [SteelLance,Torch] AttackInRangeAI
 UNIT CavSoul SCav 0x1 Level(7, Enemy, 1)     [10,16] 0b 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
 UNIT CavSoul ACav 0x1 Level(6, Enemy, 1)     [14,19] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
@@ -159,8 +159,8 @@ UNIT ArmorSoul AArmor 0x1 Level(8, Enemy, 1)     [10,19] 0b 0x0 0x0 0x0 [ShortAx
 UNIT InfantrySoul Archer 0x1 Level(6, Enemy, 1)     [11,18] 0b 0x0 0x0 0x0 [Longbow] BossAI
 UNIT InfantrySoul Archer 0x1 Level(6, Enemy, 1)     [1,2] 0b 0x0 0x0 0x0 [Longbow] BossAI
 
-UNIT MagSoul Shaman 0x1 Level(7, Enemy, 1)     [8,1] 0b 0x0 0x0 0x0 [DarkTome2] StallOneTurnAI
-UNIT InfantrySoul Monk 0x1 Level(6, Enemy, 1)     [10,3] 0b 0x0 0x0 0x0 [LightTome2] StallOneTurnAI
+UNIT MagSoul Shaman 0x1 Level(7, Enemy, 1)     [8,1] 0b 0x0 0x0 0x0 [DarkTome1] StallOneTurnAI
+UNIT MagSoul Monk 0x1 Level(6, Enemy, 1)     [10,3] 0b 0x0 0x0 0x0 [LightTome2] StallOneTurnAI
 UNIT ArmorSoul LArmor 0x1 Level(8, Enemy, 1)     [12,4] 0b 0x0 0x0 0x0 [SteelGlaive,ShortSpear] AttackInRangeAI
 UNIT InfantrySoul Soldier 0x1 Level(6, Enemy, 1)     [16,5] 0b 0x0 0x0 0x0 [SteelLance] WallAI
 UNIT InfantrySoul Myrmidon 0x1 Level(7, Enemy, 1)     [16,13] 0b 0x0 0x0 0x0 [KillingEdge] WallAI
@@ -176,7 +176,7 @@ UNIT MagSoul Occultist 0x1 Level(6, Enemy, 1)     [0,18] 0b 0x0 0x0 0x0 [DarkTom
 GreenUnits:
 UNIT Radcliff Warrior 0x1 Level(5, NPC, 0)     [2,7] 0b 0x0 0x0 0x0 [Tomahawk,BodkinRifle,Elixir] [0x0,0x3,0x0,0x20]
 UNIT Ilse Ranger 0x1 Level(3, NPC, 0)     [0,7] 0b 0x0 0x0 0x0 [0xDB,SteelDagger,Elixir] [0x0,0x3,0x0,0x20]
-UNIT Pandoro Pirate 0x1 Level(7, NPC, 0)   [1,6] 0b 0x0 0x0 0x0 [IronLabrys,EmeraldAxe,PureWater] [0x0,0x3,0x0,0x20]
+UNIT Pandoro Pirate 0x1 Level(7, NPC, 0)   [1,6] 0b 0x0 0x0 0x0 [EmeraldAxe,IronLabrys,PureWater] [0x0,0x3,0x0,0x20]
 UNIT Irene Myrmidon_F 0x1 Level(7, NPC, 0)   [1,8] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] [0x0,0x3,0x0,0x20]
 
 UNIT Gus Thief 0x1 Level(4, Ally, 0)   [16,6] 0b 0x0 0x0 0x0 [Rapier,WhiteGem] RangeAI
@@ -185,7 +185,7 @@ UNIT Gus Thief 0x1 Level(4, Ally, 0)   [16,6] 0b 0x0 0x0 0x0 [Rapier,WhiteGem] R
 LunaticUnits:
 UNIT Radcliff Warrior 0x1 Level(5, NPC, 1)     [2,7] 0b 0x0 0x0 0x0 [Tomahawk,BodkinRifle,Elixir] [0x0,0x3,0x0,0x20]
 UNIT Ilse Ranger 0x1 Level(3, NPC, 1)     [0,7] 0b 0x0 0x0 0x0 [0xDB,SteelRifle,Rapier,Elixir] [0x0,0x3,0x0,0x20]
-UNIT Pandoro Pirate 0x1 Level(7, NPC, 1)   [1,6] 0b 0x0 0x0 0x0 [IronLabrys,EmeraldAxe,ShortAxe,PureWater] [0x0,0x3,0x0,0x20]
+UNIT Pandoro Pirate 0x1 Level(7, NPC, 1)   [1,6] 0b 0x0 0x0 0x0 [EmeraldAxe,IronLabrys,ShortAxe,PureWater] [0x0,0x3,0x0,0x20]
 UNIT Irene Myrmidon_F 0x1 Level(7, NPC, 1)   [1,8] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] [0x0,0x3,0x0,0x20]
 
 UNIT Gus Thief 0x1 Level(4, Ally, 1)   [16,6] 0b 0x0 0x0 0x0 [Rapier,BlackGem] RangeAI
@@ -206,6 +206,7 @@ UNIT TorchBrigand Raider 0x1 Level(4, Enemy, 1)     [9,11] DropItem 0x0 0x0 0x0 
 
 ActualEnemies1: //these are actual aeterian soldiers, don't appear until turn 2 idk??
 UNIT Aeteria Mage 0x1 Level(4, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [Fire] ChargeAI
+UNIT Aeteria Mercenary 0x1 Level(4, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [SteelSword] ChargeAI
 UNIT Aeteria Soldier 0x1 Level(3, Enemy, 1)     [10,0] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
 	UNIT
 	
@@ -393,6 +394,10 @@ Text(Ch22Opening3)
 
 EndingScene:
 	FADI 60
+	CUSA Radcliff
+	CUSA Ilse
+	CUSA Pandoro
+	CUSA Irene
 	DoAllThree
 	//MUSC 0x115
 	MUSC 0x294
