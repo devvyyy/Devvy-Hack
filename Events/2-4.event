@@ -22,7 +22,7 @@ TURN 0x0 TopLeftRein [6,0] 0x0
 //TurnEventEnemy(0,SussyAppear,5)
 TURN 0x0 TopRightRein [4,0] 0x0
 TurnEventEnemy(0,SunnyEvent,7)
-TurnEventEnemy(0,HelloChat,8)
+TurnEventEnemy(0,HelloChat,10)
 TURN 0x0 TopLeftRein2 [9,0] 0x0
 TURN 0x0 GoodbyeDespair [21,0] 0x0
 
@@ -655,7 +655,7 @@ ENDA
 
 HelloChat:
 SetBackground(0x40)
-Text(Placeholder1)
+Text(HelloChatConvo)
 ClearBackground
 //SOUN 0xF2
 //WORD 0x52820 //fire weather

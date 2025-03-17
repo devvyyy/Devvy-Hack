@@ -208,19 +208,19 @@ Text(ReinforcementsOMG)
 
 //spawn additional reinforcements per crime not committed
 CHECK_EVENTID 0x92 //opal
-BNE 0x9001 0xC 0x0
+BEQ 0x9001 0xC 0x0
 STAL 5
 SpawnReinforcements(Rein3)
 
 LABEL 0x9001
-CHECK_EVENTID 0x94 //wulfric
-BNE 0x9002 0xC 0x0
+CHECK_EVENTID 0x93 //wulfric
+BEQ 0x9002 0xC 0x0
 STAL 5
 SpawnReinforcements(Rein4)
 
 LABEL 0x9002
 CHECK_EVENTID 0x95 //hayes
-BNE 0x9000 0xC 0x0
+BEQ 0x9000 0xC 0x0
 STAL 5
 SpawnReinforcements(Rein5)
 
