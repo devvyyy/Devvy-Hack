@@ -18,6 +18,15 @@ mov	lr, r3
 cmp	r0,#0x00
 beq	End
 
+@check if dead
+ldrb	r0, [r4,#0x13]
+cmp	r0, #0x00
+beq	End
+
+ldrb    r0, [r5,#0x13]
+cmp    r0, #0x00
+beq    End
+
 @ if target is self, somehow, end
 cmp	r4, r5
 beq	End
