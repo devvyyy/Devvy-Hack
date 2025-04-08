@@ -363,6 +363,11 @@ Ansgar_Mug: //Ansgar edited by L95
 #incext PortraitFormatter "AnsgarV2StatScreen.png"
 setMugEntryExtend(0x23, Ansgar_Mug, 3, 4, 3, 2, 12, 6, 12, 8)
 
+ALIGN 16
+AnsgarCampfire_Mug:
+#incext PortraitFormatter "AnsgarCampfire.png"
+setMugEntry(0x25, AnsgarCampfire_Mug, 3, 4, 3, 2)
+
 //ALIGN 16
 //AnsgarLeft_Mug:
 //#incext PortraitFormatter "AnsgarLeft.png"
@@ -387,11 +392,6 @@ ALIGN 16
 AffogatoAlt_Mug:
 #incext PortraitFormatter "AffoHairDown.png"
 setMugEntryExtend(0xC5, AffogatoAlt_Mug, 3, 5, 3, 3, 10, 4, 10, 2)
-
-ALIGN 16
-Velius_Mug:
-#incext PortraitFormatter "VeliusV2.png"
-setMugEntry(0x25, Velius_Mug, 5, 5, 5, 3)
 
 ALIGN 16
 Pandoro_Mug:
@@ -505,7 +505,7 @@ setMugEntry(0xCB, XavierAlt_Mug, 3, 5, 3, 3)
 
 ALIGN 16
 Quarrel_Mug:
-#incext PortraitFormatter "Quarrel.png"
+#incext PortraitFormatter "BrevePJs.png"
 setMugEntry(0x3C, Quarrel_Mug, 3, 5, 3, 3)
 
 ALIGN 16
@@ -621,8 +621,8 @@ setMugEntry(0xB0, Klav_Mug3Stacks, 3, 5, 3, 3)
 
 ALIGN 16
 Perival_Mug:
-#incext PortraitFormatter "Perival.png"
-setMugEntry(0x43, Perival_Mug, 3, 5, 3, 3)
+#incext PortraitFormatter "HildrPJs.png"
+setMugEntry(0x43, Perival_Mug, 4, 5, 3, 3)
 
 ALIGN 16
 Radcliffe_Mug:
@@ -793,7 +793,7 @@ setMugEntryExtend(0xED, TimeskipLevainHeadshot_Mug, 2, 5, 2, 3, 10, 4, 0, 0)
 ALIGN 16
 TimeskipStroganoff_Mug:
 #incext PortraitFormatter "TimeskipStroganoff.png"
-setMugEntryExtend(0xDC, TimeskipStroganoff_Mug, 2, 5, 2, 2, 0, 4, 10, 4)
+setMugEntryExtend(0xDC, TimeskipStroganoff_Mug, 2, 5, 2, 3, 0, 4, 10, 4)
 
 ALIGN 16
 TimeskipDoppio_Mug:

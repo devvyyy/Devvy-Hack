@@ -32,6 +32,7 @@ TURN 0x0 LeftReinWave3 [14,0] 0x0
 TURN 0x0 ReinWave5 [9,0] 0x0
 TURN 0x0 ReinWave6 [18,0] 0x0
 TURN 0x0 GoodbyeDespair [13,0] 0x0
+TURN 0x0 GoodbyeDespair [21,0] 0x0
 	END_MAIN
 	
 WhenTheChapterIsSussy:
@@ -65,6 +66,11 @@ FirstMove:
 GoodbyeDespair:
 CHECK_EVENTID 0xF
 BNE 0x776 0xC 0x0 //game over if second obj not met
+
+EARTHQUAKE_START 0x0
+SOUN 0x2f0
+STAL 150
+EARTHQUAKE_END
 GameOver
 
 LABEL 0x776

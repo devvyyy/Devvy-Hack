@@ -17,8 +17,15 @@ Command_Usability:
 	ldr  r3, EALiterals
 	_blr r3
 
+	cmp r0, #82 @thief basics/locktouch
+	beq unusable
+ 	cmp r0, #66 @stealth/guerilla warfare
+	beq unusable
+ 	cmp r0, #17 @astra/lightslinger
+	beq unusable
 	cmp r0, #0
 	beq unusable
+
 
 	mov r0, #1
 	b end

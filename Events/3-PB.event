@@ -1,0 +1,203 @@
+EventPointerTable(0x78, PointerList)
+
+PointerList:
+	POIN TurnBasedEvents
+	POIN CharacterBasedEvents
+	POIN LocationBasedEvents
+	POIN MiscBasedEvents
+	POIN Dunno1 Dunno2 Dunno3 Tutorial
+	POIN Traps1 Traps2
+	POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+	POIN $0 $0 $0
+	POIN $0 $0 $0
+	POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+
+	END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+
+	END_MAIN
+
+MiscBasedEvents:
+	CauseGameOverIfLordDies
+	END_MAIN
+
+LocationBasedEvents:
+
+	END_MAIN
+
+Dunno1:
+
+	END_MAIN
+
+Dunno2:
+
+	END_MAIN
+
+Dunno3:
+
+	END_MAIN
+
+Tutorial:
+
+	END_MAIN
+
+Units1:
+LoadUnit(22,1)
+LoadUnit(23,1)
+LoadUnit(24,1)
+LoadUnit(25,1)
+LoadUnit(26,1)
+LoadUnit(27,1)
+LoadUnit(22,2)
+LoadUnit(23,2)
+LoadUnit(24,2)
+LoadUnit(25,2)
+LoadUnit(26,2)
+LoadUnit(27,2)
+	UNIT
+
+EnemyUnits:
+UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [10,5] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [24,4] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT BadGuy Hunter 0x1 Level(10, Enemy, 1)     [25,7] 0b 0x0 0x0 0x0 [SteelRifle] RangeAI
+UNIT BadGuy Fighter 0x1 Level(10, Enemy, 1)     [24,9] 0b 0x0 0x0 0x0 [IronLabrys] TwoActionAI
+UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [28,6] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT BadGuy Archer 0x1 Level(10, Enemy, 1)     [20,8] 0b 0x0 0x0 0x0 [SilverBow] BossAI
+UNIT BadGuyStealable AArmor 0x1 Level(10, Enemy, 1)     [10,1] 0b 0x0 0x0 0x0 [IronLabrys,ShortAxe] BossAI
+UNIT BadGuy Brigand 0x1 Level(10, Enemy, 1)     [3,6] DropItem 0x0 0x0 0x0 [ShortAxe,DoorKey] BossAI
+UNIT BadGuy SCav 0x1 Level(10, Enemy, 1)     [1,9] 0b 0x0 0x0 0x0 [Armorslayer] RangeAI
+UNIT BadGuy LCav 0x1 Level(10, Enemy, 1)     [5,10] 0b 0x0 0x0 0x0 [Horseslayer] TwoActionAI
+UNIT BadGuy Fighter 0x1 Level(10, Enemy, 1)     [8,12] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [12,13] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT BadGuy Sniper 0x1 Level(10, Enemy, 1)     [8,15] 0b 0x0 0x0 0x0 [Longbow,SilverDagger] BossAI
+UNIT BadGuy Sniper 0x1 Level(10, Enemy, 1)     [3,17] 0b 0x0 0x0 0x0 [SilverBow,Longbow] RangeAI
+UNIT BadGuy ACav 0x1 Level(10, Enemy, 1)     [15,13] 0b 0x0 0x0 0x0 [ShortAxe] TwoActionAI
+UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [17,12] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT BadGuy Hunter 0x1 Level(10, Enemy, 1)     [22,14] 0b 0x0 0x0 0x0 [SteelBow] RangeAI
+UNIT BadGuy Hunter 0x1 Level(10, Enemy, 1)     [28,15] 0b 0x0 0x0 0x0 [SteelBow] TwoActionAI
+UNIT BadGuy SCav 0x1 Level(10, Enemy, 1)     [25,21] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+UNIT BadGuy Hunter 0x1 Level(10, Enemy, 1)     [21,12] 0b 0x0 0x0 0x0 [Longbow] RangeAI
+UNIT BadGuy Brigand 0x1 Level(10, Enemy, 1)     [24,14] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
+UNIT BadGuy Merc 0x1 Level(10, Enemy, 1)     [13,7] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+UNIT BadGuy Brigand 0x1 Level(10, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [SteelAxe] RangeAI
+UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [4,2] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT BadGuy SCav 0x1 Level(10, Enemy, 1)     [12,9] 0b 0x0 0x0 0x0 [IronSword] TwoActionAI
+UNIT BadGuy Fighter 0x1 Level(10, Enemy, 1)     [7,8] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
+UNIT BadGuy Merc 0x1 Level(10, Enemy, 1)     [26,17] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+UNIT BadGuy Hunter 0x1 Level(10, Enemy, 1)     [19,21] 0b 0x0 0x0 0x0 [SteelBow] TwoActionAI
+UNIT BadGuy Fighter 0x1 Level(10, Enemy, 1)     [23,18] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
+UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [27,23] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT BadGuy GriffonRider 0x1 Level(10, Enemy, 1)     [17,28] 0b 0x0 0x0 0x0 [IronBow] TwoActionAI
+UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [4,20] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
+UNIT BadGuy SCav 0x1 Level(10, Enemy, 1)     [2,22] 0b 0x0 0x0 0x0 [SteelSword] RangeAI
+UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [6,22] 0b 0x0 0x0 0x0 [ShortSpear] RangeAI
+UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [2,12] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
+UNIT BadGuy GriffonRider 0x1 Level(10, Enemy, 1)     [1,1] 0b 0x0 0x0 0x0 [SteelBow] TwoActionAI
+UNIT BadGuy SCav 0x1 Level(10, Enemy, 1)     [12,20] 0b 0x0 0x0 0x0 [ShortBrand] RangeAI
+UNIT BadGuy Fighter 0x1 Level(10, Enemy, 1)     [12,9] 0b 0x0 0x0 0x0 [SteelAxe] RangeAI
+UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [18,4] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
+	UNIT
+
+EnemiesPart2:
+UNIT BadGuy Hunter 0x1 Level(10, Enemy, 1)     [24,24] 0b 0x0 0x0 0x0 [SteelBow] RangeAI
+UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [27,22] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
+UNIT BadGuy GriffonRider 0x1 Level(10, Enemy, 1)     [5,16] 0b 0x0 0x0 0x0 [SteelBow] RangeAI
+UNIT BadGuy Hunter 0x1 Level(10, Enemy, 1)     [3,24] 0b 0x0 0x0 0x0 [Longbow] TwoActionAI
+UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [21,7] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
+UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [6,26] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
+UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [1,27] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [6,28] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
+UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [10,26] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
+UNIT BadGuy Myrm 0x1 Level(10, Enemy, 1)     [14,23] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [17,24] 0b 0x0 0x0 0x0 [ShortSpear] RangeAI
+UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [29,12] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
+UNIT BadGuy Hunter 0x1 Level(10, Enemy, 1)     [7,5] 0b 0x0 0x0 0x0 [SilverBow] BossAI
+UNIT BadGuy Hunter 0x1 Level(10, Enemy, 1)     [8,25] 0b 0x0 0x0 0x0 [Longbow] BossAI
+UNIT BadGuyStealable Raider 0x1 Level(6, Enemy, 1)     [19,25] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+UNIT BadGuyStealable Raider 0x1 Level(6, Enemy, 1)     [8,2] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+UNIT BadGuyStealable Raider 0x1 Level(6, Enemy, 1)     [19,3] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+UNIT BadGuyStealable Fighter 0x1 Level(6, Enemy, 1)     [4,8] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
+UNIT BadGuyStealable Raider 0x1 Level(6, Enemy, 1)     [14,2] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+UNIT BadGuyStealable Raider 0x1 Level(6, Enemy, 1)     [16,6] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+	UNIT
+
+
+Traps1:
+BlueSigil(4,14)
+BlueSigil(26,29)
+BlueSigil(27,29)
+BLST [28,4] IronBallista
+BLST [8,25] IronBallista
+BLST [7,5] IronBallista
+BLST [20,8] IronBallista
+	ENDTRAP
+	ALIGN 4
+
+Traps2:
+	ENDTRAP
+	ALIGN 4
+
+BeginningScene:
+QuickRemu(Ulrich,2)
+QuickRemu(Evelyn,3)
+QuickRemu(Sequin,4)
+QuickRemu(Breve,5)
+QuickRemu(Hildr,6)
+QuickRemu(Ansgar,7)
+QuickRemu(Latte,8)
+QuickRemu(Xavier,9)
+QuickRemu(Mocha,11)
+QuickRemu(Stroganoff,13)
+QuickRemu(Eiskaffee,14)
+QuickRemu(Doppio,15)
+QuickRemu(Floris,16)
+QuickRemu(Atheya,17)
+QuickRemu(Noel,18)
+QuickRemu(Therese,19)
+QuickRemu(Lennard,20)
+QuickRemu(Yory,21)
+QuickRemu(Lili,22)
+QuickRemu(Kane,23)
+QuickRemu(Wegman,24)
+QuickRemu(Klavdia,25)
+QuickRemu(Gerolf,26)
+QuickRemu(Ogrim,27)
+
+	REVEAL Raial
+	REVEAL Graham
+	REVEAL Yufka
+	REVEAL Jaye
+	REVEAL Yvonne
+	REVEAL Polly
+	REVEAL Wilken
+	REVEAL Frye
+	REVEAL Cortado
+	REVEAL Pandoro
+	REVEAL Rina
+	REVEAL Ilse
+	REVEAL Gus
+	REVEAL Katsu
+	REVEAL Staniel
+	REVEAL Edvin
+	REVEAL Edith
+	REVEAL Opal
+	REVEAL Wellington
+	REVEAL Messel
+	REVEAL Dira
+	REVEAL Moose
+	REVEAL Zopf
+	LOAD1 0x1 EnemyUnits
+	LOAD1 0x1 EnemiesPart2
+	ENUN
+	GotoPrepScreen
+	ENDA
+
+EndingScene:
+	//MNC2 next_chapter
+	MNTS 0x1
+	NoFade
+	ENDA

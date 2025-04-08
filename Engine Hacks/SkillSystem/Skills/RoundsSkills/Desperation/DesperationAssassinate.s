@@ -32,11 +32,11 @@ cmp r0,#1
 bne CheckDesperation @if youre not at 1 range you dont get assassinate anyways
 
 @ is hp full?
-ldr r3, [sp]
-ldrb r0, [r3, #0x12] @max hp
-ldrb r1, [r3, #0x13] @curr hp
-cmp r0, r1
-bne CheckAssasinate
+@ldr r3, [sp]
+@ldrb r0, [r3, #0x12] @max hp
+@ldrb r1, [r3, #0x13] @curr hp
+@cmp r0, r1
+@bne CheckAssasinate
 
 @ is enemy hp full?
 ldr r3, [sp]

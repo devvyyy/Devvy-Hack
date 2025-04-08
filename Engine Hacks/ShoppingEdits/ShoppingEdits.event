@@ -48,7 +48,7 @@ PriceDiscountFunctions:
 #ifdef USE_COUPONS
 	POIN CouponDiscount
 #endif
-POIN SilverCardDiscount
+POIN SilverCardDiscount BargainSkillDiscount
 WORD 0 //Terminator
 
 PriceFinalModifierFunctions:
@@ -65,7 +65,7 @@ BYTE 50 //this is a percent
 ALIGN 4
 
 PriceMaximumLink:
-WORD 65535 //(if you want a higher value, I think you'll have to edit other vanilla code?)
+WORD 65535 //(if you want a higher value, I think you'll have to edit other vanilla code? (in hexadecimal, this is 0xFFFF)
 
 PriceMinimumLink:
 WORD 0
@@ -81,6 +81,14 @@ ALIGN 4
 SilverCardInfoLink:
 //itemId, discountAmount (percent)
 BYTE SilverCard 50
+ALIGN 4
+
+#include "asm/BargainSkillDiscount.lyn.event"
+ALIGN 4
+
+BargainSkillInfoLink:
+//skillId, discountAmount (percent)
+BYTE BargainID 50
 ALIGN 4
 
 #ifdef USE_COUPONS

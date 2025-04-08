@@ -157,8 +157,8 @@ A wayward Wreyvian rider. She seems[N]
 to try her best[,] but...[X]
 
 ## PanDesc
-An Aeterian corsair who's blind faith[N]
-rivals with his thirst for battle.[N]
+An Aeterian corsair whose blind faith[N]
+rivals his thirst for battle.[N]
 Age: 46; Origin: Aeteria[X]
 
 ## AffoDesc
@@ -412,7 +412,7 @@ arrows rain down like hellfire.[X]
 ## RadcliffDesc
 # bruh shes just eyvel??!
 The valiant captain of the Resistance.[N]
-Her rough exterior sheathes a warm soul..[N]
+Her rough exterior sheathes a warm soul.[N]
 Age: 34; Origin: Aeteria[X]
 
 ## WulfricDesc
@@ -783,10 +783,72 @@ dark magic during combat.[X]
 A sorcerer's ring. Grants magic/staff[N]
 range +1. Sets Res = 0.[X]
 
-## TowerRingDesc
-A warrior's ring. Grants wearer Atk =[N]
-(20% of current HP at start of combat[N]
-+ 20% of max HP).[X]
+## ResonantRingDesc
+A witch's ring. Magic and staves deal[N]
+bonus damage = 25% of unit's current HP,[N]
+but take 5 damage after combat (can't kill).[X]
+
+## WeirdingRingDesc
+A trickster's ring. Wearer can use[N]
+Castle to swap spaces with any ally[N]
+within (Str/Eth, /3; min 5) spaces.[X]
+
+## BarrierRingDesc
+A hermit's ring. Wearer reduces damage[N]
+taken = 5 + difference between Res[N]
+stats (min difference; 0).[X]
+
+## AureateRingDesc
+A golden ring. After combat, if wearer's[N]
+HP < 25%, take -15 damage for 1 turn.[X]
+
+## FlareRingDesc
+A radiant ring. Wearer restores HP on-hit[N]
+= 25% of damage dealt.[N]
+(Doesn't stack with similar effects.)[X]
+
+## WrathRingDesc
+A fuming ring. Grants wearer Crit =[N]
+missing HP. Def/Res -4.[X]
+
+## AeteriaRingDesc
+# Serpent Ring
+An Imperial ring. Enables Lunar Flash[N]
+for wearer. Grants WTA against bows[N]
+and sidearms. Res/Luck +5.[X]
+
+## NewmoonRingDesc
+A glowing ring. If wearer uses magic,[N]
+strikes x2 consecutively. Str/Eth -50%.[X]
+
+## ElementalRingDesc
+A virtuoso's ring. If wearer uses magic:[N]
+Fire/Light: Follow-up and foe can't.[N]
+Thunder/Wind: Follow-ups trigger twice.[N]
+Ice/Dark: Bonus damage = diff. between Res.[X]
+
+## AttunedRingDesc
+An attuned ring. If both wearer and foe[N]
+use magic or staff, grants Atk +5 and[N]
+neutralizes foe's weapon Mt/Atk bonuses.[X]
+
+## HPRingDesc
+A mending ring. Wearer restores HP[N]
+equal to (Res x 2 + 10)% of max HP[N]
+at the start of turn.[X]
+
+## TemperedRingDesc
+A tempered ring. Restores 5 HP to[N]
+the wearer after combat.[N]
+(Doesn't stack with Shine II.)[X]
+
+## WingRingDesc
+A winged ring. Wearer can Canto 1 space[N]
+after any action. Move +1, Def/Res -4.[N]
+(Canto skills take priority.)[X]
+
+## WingRingName
+Stride Ring[X]
 
 ## BulwarkRingName
 Bulwark Ring[X]
@@ -826,11 +888,6 @@ during combat. Res/Luck -10.[X]
 A savant's ring. If wearer uses sword,[N]
 lance, or axe, converts all Crit to bonus[N]
 damage at a rate of 4 Crit/1 damage.[X]
-
-## HPRingDesc
-A mending ring. Wearer restores HP[N]
-equal to (Res x 2 + 10)% of max HP[N]
-at the start of turn.[X]
 
 ## HeavyRingName
 [_B][_e][_h][_e][_m][_o][_t][_h][_SP][_R][_i][_n][_g][X]
@@ -1084,14 +1141,6 @@ chance to not consume durability.[X]
 ## AffinityRingName
 Affinity Ring[X]
 
-## WingRingName
-Stride Ring[X]
-
-## WingRingDesc
-A winged ring. Wearer can Canto 1 space[N]
-after any action. Move +1, Def/Res -4.[N]
-(Canto skills take priority.)[X]
-
 ## CritRingName
 Critical Ring[X]
 
@@ -1215,11 +1264,6 @@ A sacred ring. Wearer negates all damage[N]
 during 1 round of combat (once per map, only[N]
 if [StaffIcon] equipped). Luck/Res +5.[X]
 
-## TemperedRingDesc
-A tempered ring. Restores 5 HP to[N]
-the wearer after combat.[N]
-(Doesn't stack with Shine II.)[X]
-
 ## MarkedDesc
 Follow the Hearthbringer's holy light.[N]
 Res +5. Restores (Nora's Eth + 5) HP[N]
@@ -1234,8 +1278,9 @@ Soulbreak[X]
 
 ## ShadowEyeDesc
 Soul is splintered in the night...[N]
-Soulbreak reduces max HP by 50%[N]
-and prevents Trade/Rescue.[X]
+Soulbreak reduces max HP by 50% and[N]
+prevents Trade/Rescue on player units;[N]
+Berserks non-player units instead.[X]
 
 ## WhirlwindName
 # GrimoireStatusName
@@ -1349,12 +1394,20 @@ in the thread please. or maybe you're[N]
 just using builder idk[X]
 
 ## CaptainAxeName
-Blackiron Ax[X]
+Sableiron Ax[X]
 
 ## CaptainAxeDesc
-A captain's war axe. Eff: [AnimaIcon][LightIcon][DarkIcon][N]
+Made for a captain. Eff: [AnimaIcon][LightIcon][DarkIcon][N]
 Neutralizes effectiveness. Res +10.[N]
 [_Lock]: Brudet, Stroganoff[X]
+
+## RaialAxeName
+Ax of Vintrus[X]
+
+## RaialAxeDesc
+Made for a captain. Grants another[N]
+action if foe is defeated.[N]
+[_Lock]: Raial[X]
 
 ## BrevePrfName
 Fulmination[X]

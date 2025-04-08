@@ -96,7 +96,7 @@ UNIT Aeteria Druid 0x1 Level(4, Enemy, 1)     [11,9] DropItem 0x0 0x0 0x0 [DarkT
 UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [23,7] 0b 0x0 0x0 0x0 [SilverLance] RangeAI
 UNIT Aeteria Archer 0x1 Level(10, Enemy, 1)     [24,9] 0b 0x0 0x0 0x0 [ShortBow,IronDagger] BossAI //ballista 1
 UNIT Aeteria Archer 0x1 Level(10, Enemy, 1)     [14,9] 0b 0x0 0x0 0x0 [ShortBow,SteelDagger] BossAI //ballista 2
-UNIT Aeteria Sniper 0x1 Level(3, Enemy, 1)     [9,10] 0b 0x0 0x0 0x0 [ShortBow,SilverDagger] BossAI //ballista 3
+UNIT Aeteria Sniper 0x1 Level(3, Enemy, 1)     [9,9] 0b 0x0 0x0 0x0 [ShortBow,SilverDagger] BossAI //ballista 3
 UNIT Aeteria Archer 0x1 Level(10, Enemy, 1)     [28,9] 0b 0x0 0x0 0x0 [ShortBow,IronDagger] BossAI //ballista 3
 	UNIT
 	
@@ -219,11 +219,11 @@ ENDA
 
 
 Traps1:
-BLST [9,4] IronBallista
+//BLST [9,4] IronBallista
 BLST [28,9] 0x35
 BLST [24,9] IronBallista
 BLST [14,9] IronBallista
-BLST [9,10] 0x35
+BLST [9,9] 0x35
 	ENDTRAP
 	ALIGN 4
 
@@ -412,16 +412,28 @@ BNE 0x9000 0xC 0x0
 TextCont(ChP2FinaleEnding7Alt, 0x292) //raial
 CenterTextbox(RaialRouteChosen)
 
+STAL 5
+MUSI
+SetBackground(0x49)
+STAL 500
+STAL 350
+
 GOTO 0x9001
 LABEL 0x9000
 
 TextCont(ChP2FinaleEnding7, 0x26F) //graham
 CenterTextbox(GrahamRouteChosen)
 
+STAL 5
+MUSI
+SetBackground(0x49)
+STAL 500
+STAL 350
+
 LABEL 0x9001
 
 REMA
-STAL 100
+FADI 20
 ENUF 0x12B
 MNTS 0x1
 	NoFade

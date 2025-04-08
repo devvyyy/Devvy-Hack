@@ -579,7 +579,9 @@ Opens a door within 10[N]
 spaces.[X]
 
 # 0x6C3
-Refresh an adjacent ally.[X]
+Grants another action to an[N]
+adjacent ally, and re-enables[N]
+Canto for that ally.[X]
 
 # 0x247
 Hayes[X]
@@ -615,38 +617,38 @@ This affects attack ability.[X]
 # 0x546
 Strength ([_A][_t][_k]). Calculates damage dealt[N]
 with physical weapons.[N]
-[_A][_t][_k][_SP]=[_SP]([_S][_t][_r][_SP]+[_SP][_W][_Dot][_SP][_M][_t][_Dot])[X]
+[_A][_t][_k][_SP]=[_SP]([_S][_t][_r][_SP]+[_SP][_W][_Dot][_SP][_M][_t])[X]
 
 # 0x547
 Ether ([_A][_t][_k]). Calculates damage dealt[N]
 with magical weapons and staff healing.[N]
-[_A][_t][_k][_SP]=[_SP]([_E][_t][_h][_SP]+[_SP][_SP][_W][_Dot][_SP][_SP][_M][_t][_Dot])[X]
+[_A][_t][_k][_SP]=[_SP]([_E][_t][_h][_SP]+[_SP][_SP][_W][_Dot][_SP][_SP][_M][_t])[X]
 
 # 0x548
 Dexterity. Affects hit and critical rate.[N]
-[_H][_i][_t][_SP][_r][_a][_t][_e][_SP]=[_SP]([_D][_e][_x][_SP][_x][_SP]2[_SP][_Plus][_SP][_L][_u][_c][_k][_Slash]2[_SP][_Plus][_SP][_W][_Dot][_SP][_H][_i][_t][_Dot])[N]
-[_C][_r][_i][_t][_i][_c][_a][_l][_SP][_H][_i][_t][_SP][_r][_a][_t][_e][_SP]=[_SP]([_D][_e][_x][_Slash]2[_SP][_Plus][_SP][_W][_Dot][_SP][_C][_r][_i][_t][_Dot])[X]
+[_H][_i][_t][_SP][_r][_a][_t][_e][_SP]=[_SP]([_D][_e][_x][_SP]x[_SP]2[_SP]+[_SP][_L][_u][_c][_k][_Slash]2[_SP]+[_SP][_W][_Dot][_SP][_H][_i][_t])[N]
+[_C][_r][_i][_t][_i][_c][_a][_l][_SP][_H][_i][_t][_SP][_r][_a][_t][_e][_SP]=[_SP]([_D][_e][_x][_Slash]2[_SP]+[_SP][_W][_Dot][_SP][_C][_r][_i][_t])[X]
 
 # 0x549
 Speed ([_A][_S]). Affects avoid, and if unit's[NL]
 AS > foe's AS + 4, unit can follow-up.[N]
-[_A][_v][_o][_i][_d][_SP]=[_SP]([_A][_S][_SP][_Plus][_SP][_L][_u][_c][_k][_Dot])[N]
-[_A][_S][_SP]=[_SP]([_S][_p][_d][_SP][_Minus][_SP][_W][_Dot][_SP][_W][_t][_SP][_p][_e][_n][_a][_l][_t][_y][_Dot])[X]
+[_A][_v][_o][_i][_d][_SP]=[_SP]([_A][_S][_SP]+[_SP][_L][_u][_c][_k])[N]
+[_A][_S][_SP]=[_SP]([_S][_p][_d][_SP]-[_SP][_W][_Dot][_SP][_W][_t][_SP][_p][_e][_n][_a][_l][_t][_y])[X]
 
 # 0x54A
 Luck. Affects hit rate, avoid,[NL]
 and critical hit avoid.[N]
-[_C][_r][_i][_t][_SP][_A][_v][_o][_i][_d][_SP]=[_SP]([_SP][_L][_u][_c][_k][_Dot])[X]
+[_C][_r][_i][_t][_SP][_A][_v][_o][_i][_d][_SP]=[_SP]([_SP][_L][_u][_c][_k])[X]
 
 # 0x54B
 Defense ([_P][_r][_t]). Reduces damage taken[NL]
 from physical weapons.[N]
-[_P][_r][_t][_SP]=[_SP]([_D][_e][_f][_SP][_Plus][_SP][_t][_e][_r][_r][_a][_i][_n][_SP][_b][_o][_n][_u][_s][_e][_s][_Dot])[X]
+[_P][_r][_t][_SP]=[_SP]([_D][_e][_f][_SP]+[_SP][_t][_e][_r][_r][_a][_i][_n][_SP][_b][_o][_n][_u][_s][_e][_s])[X]
 
 # 0x54C
 Resistance ([_R][_s][_l]). Reduces damage taken[NL]
 from magical weapons.[N]
-[_R][_s][_l][_SP]=[_SP]([_R][_e][_s][_SP][_Plus][_SP][_t][_e][_r][_r][_a][_i][_n][_SP][_b][_o][_n][_u][_s][_e][_s][_Dot])[X]
+[_R][_s][_l][_SP]=[_SP]([_R][_e][_s][_SP]+[_SP][_t][_e][_r][_r][_a][_i][_n][_SP][_b][_o][_n][_u][_s][_e][_s])[X]
 
 # 0x54E
 Constitution. Affects rescues and[N]
@@ -1138,7 +1140,7 @@ Inflicts Str/Eth -5 on foe after combat[N]
 Pierce. Chiffon has no Str stat.[N]
 Instead, each point ignores 1%[N]
 of foe's Def.[N]
-[_A][_t][_k][_SP]=[_SP][_W][_Dot][_SP][_M][_t][_Dot][X]
+[_A][_t][_k][_SP]=[_SP]([_W][_Dot][_SP][_M][_t]+[_SP][_e][_x][_t][_e][_r][_n][_a][_l][_SP][_m][_o][_d][_i][_f][_i][_e][_r][_s])[X]
 
 # 0x375
 Xiuhcoatl[X]

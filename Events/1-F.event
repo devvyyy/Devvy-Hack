@@ -33,12 +33,12 @@ TURN 0x0 TriggerHappyHavoc [13,0] 0x0
 ALIGN 32
 CharacterBasedEvents:
 //CharacterEvent(0x0,YoryTurretCheck,Yory,0x3F)
-CharacterEventBothWays(0x10,AffoGorloisConvo, Affo, Gorlois)
-CharacterEventBothWays(0x11,IrisOgrimConvo, Lili, Ogrim)
-CharacterEventBothWays(0x12,IronRuneConvo, Gorlois, Stroganoff)
+CharacterEventBothWays(0x5,AffoGorloisConvo, Affo, Gorlois)
+CharacterEventBothWays(0x1,IrisOgrimConvo, Lili, Ogrim)
+CharacterEventBothWays(0x7,IronRuneConvo, Gorlois, Stroganoff)
 //CharacterEventBothWays(0x12,AnsgarThereseConvo, Ansgar, Therese)
 //CharacterEventBothWays(0x13,AffoKingConvo, Affo, King)
-CharacterEventBothWays(0x14,NoraKingConvo, Nora, King)
+CharacterEventBothWays(0x86,NoraKingConvo, Nora, King)
 //CharacterEventBothWays(0x15,StroganSeqConvo, Stroganoff, Sequin)
 //CharacterEventBothWays(0x16,BrudetMochaConvo, Brudet, Mocha)
 //CharacterEventBothWays(0x17,BreveFlorisConvo, Breve, Floris)
@@ -832,6 +832,7 @@ UnsetFlag(0x7B)
 UnsetFlag(0x91)
 UnsetFlag(0x92)
 UnsetFlag(0x93)
+UnsetFlag(0x86) //used in p2
 
 SetFlag(0x16) //disable king boss quote
 SetFlag(0x99) //disable selwyn boss quote

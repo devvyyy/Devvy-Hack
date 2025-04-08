@@ -87,7 +87,7 @@ ALIGN 4
     #incbin "FF2Town/FF2TownPal.dmp"
 	ALIGN 4
 	FF2TownConfig:
-    #incbin "FF2Town/FF2TownConfig.dmp"
+   #incext compress "FF2Town/FF2Town.mapchip_config"
 	
 	ALIGN 4
 	EventPointerTable(0x88, FF2TownObjects)

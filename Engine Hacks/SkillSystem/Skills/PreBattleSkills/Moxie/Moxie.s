@@ -28,7 +28,7 @@ beq GoBack
 mov  r1, #0x5E
 ldrh r0, [r5, r1] @speed
 ldrb r2, [r5, #0x18] @res
-lsr  r2, #2
+@lsr  r2, #2
 add  r0, r2
 strh r0, [r4,r1]
 
@@ -36,7 +36,7 @@ strh r0, [r4,r1]
 mov  r1, #0x5A
 ldrh r0, [r5, r1] @attack
 ldrb r2, [r5, #0x18] @res
-lsr  r2, #2
+@lsr  r2, #2
 add  r0, r2
 strh r0, [r4,r1]
 

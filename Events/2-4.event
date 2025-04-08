@@ -141,8 +141,13 @@ ENDA
 	
 ReinforcementEventLMAO:
 
-CHECK_ACTIVE
-SVAL 1 0xCF //flagbearer
+//CHECK_ACTIVE
+//SVAL 1 0xCF //flagbearer
+
+CHECK_CLASS 0xFFFF
+SVAL 1 0x48
+CHECK_ALLEGIANCE 0xFFFF
+SVAL 1 0x2 //ENEMY
 BNE 0x776 0xC 0x1
 //SVAL 1 0xcc
 //BNE 0x776 0xC 0x1
@@ -203,10 +208,10 @@ ENDA
 
 LocationBasedEvents:
 Chest(Flare,3,9)
-Village(0x8,HeavySpearVillage,18,13)
-Village(0x9,AbsorbVillage,18,8)
-Village(0xD,CaveStuff,7,13)
-Village(0x0,GetReinforcementsYay,12,3)
+House(0x8,HeavySpearVillage,18,13)
+House(0x9,AbsorbVillage,18,8)
+House(0xD,CaveStuff,7,13)
+House(0x0,GetReinforcementsYay,12,3)
 Vendor(ArmoryGaming,13,8)
 Escape(24,18)
 Escape(24,19)

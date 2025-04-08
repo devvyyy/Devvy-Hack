@@ -1000,8 +1000,7 @@ bosses, doubled if they have Shove/Smite.[X]
 
 ## SD_Moxie
 The Undefeated[N]
-- Grants Anton Atk/AS = 25% of foe's[N]
-Res + both sides' missing HP.[N]
+- Grants Anton Atk/AS = foe's Res.[N]
 - If foe doesn't use magic, follow-up[N]
 and foe can't.[X]
 
@@ -1084,9 +1083,9 @@ Spirit Cleave: Deals bonus damage =[N]
 ## SD_Maestro
 Maestro[N]
 - Ilse's Rifles have unique properties:[N]
-Hit +30, grants Atk = 25% of Skill.[N]
-- Rifles also deal bonus damage = 50%[N]
-of foe's missing HP at start of combat.[X]
+Hit +30, grants Atk = 25% of Dex,[N]
+and deals bonus damage = 50% of foe's[N]
+missing HP at start of combat.[X]
 
 ## SD_OldManSkill
 Borrowed Time: Grants Avoid +25 for[N]
@@ -1479,45 +1478,76 @@ Vigor[N]
 - Grants unit HP +5.[X]
 
 ## SD_IronHelm
-# END OF RUNES, START OF EQUIPMENT
+# END OF RUNES, START OF EQUIPMENT; 1-1 interlude
 Iron Helm[N]
-- Grants Def +3.[X]
+(Def +3)[N]
+- Reduces damage taken by 20% of Def.[X]
 
 ## SD_WingedHelm
+# 1-6? can check for non-mounted with stat getters
 Snow Boots[N]
-- Grants Move +1.[X]
+(Move +1 to non-[HorseIcon][FlierIcon])[N]
+- Canto 1 space after any action.[N]
+(Canto skills take priority.)[X]
 
 ## SD_HolyCloak
-Shroud[N]
-- Grants Res +5.[X]
-
-## SD_SweatBand
-Power Sash[N]
-- Grants Str/Eth +2.[X]
+# 1-1 interlude
+Royal Pin[N]
+(Luck +3)[N]
+- Transfers damage penalties inflicted[N]
+by tier I-V dark magic during[N]
+combat to its user.[X]
 
 ## SD_KnightsVow
+# part 3
 Unbreaking Pledge[N]
+(Luck +5)[N]
 - Grants +20% to all growth rates.[X]
 
 ## SD_WarBanner
+# 1-7; make this ID 1 or smth LOL
 War Banner[N]
+(Dex +2)[N]
 - Grants Atk +3 to allies within[N]
 2 spaces.[X]
 
-## SD_TAEquip
-Pennant[N]
-- Multiplies weapon triangle effects by 2.[N]
-(Doesn't stack with gem weapons or[N]
-Locus Ring.)[X]
-
 ## SD_GuardHelm
-Guard's Helm[N]
+# 1-3
+Aventail[N]
 - Immune to critical hits and takes[N]
 50% less damage from foe's attacks[N]
-after the first.[N]
-(Doesn't stack with Guard Ring.)[X]
+after the first.[X]
+
+## SD_ExecutionersHood
+# 1-3
+Sable Hood[N]
+(Luck -50%)[N]
+- Deals bonus damage = foe's missing HP[N]
+at start of combat.[X]
+
+## SD_Cuirass
+Cuirass[N]
+- Grants bonus Atk = X.[N]
+(If wielding a sword, lance, or axe,[N]
+X = 20% of unit's max HP; otherwise,[N]
+X = 20% of current HP at start of combat.)[X]
+
+## SD_Rondel
+# 1-1 interlude
+Rondel[N]
+(Def +1)[N]
+- If Def > foe's Def, inflicts penalty to[N]
+foe's AS = difference between stats.[X]
+
+## SD_StalwartItem
+# part 3
+Veteran Brooch[N]
+(Luck +10)
+- Grants 3 Prt/Rsl, 5 Avoid/Crit Avoid[N]
+per 10 levels (Promoted +20).[X]
 
 ## SD_ArmoredMarchEquip
+# 1-8
 Legionnaire's Banner[N]
 - Grants Move +2 to unit and adjacent [ArmorIcon][N]
 allies if adjacent to an [ArmorIcon] ally at[N]
@@ -1525,32 +1555,59 @@ start of turn.[N]
 (Doesn't stack with similar skills.)[X]
 
 ## SD_Gauntlets
-Daring Fists[N]
+Greaves[N]
+(Spd +2 to non-[HorseIcon][FlierIcon])[N]
 - If initiating, follow-ups occur[N]
-before foe can counterattack.[N]
-- Str/Eth/Dex/Luck -3.[X]
+before foe can counterattack.[X]
 
 ## SD_Hammers
-Forge Hammer[N]
+# ansgar talk
+Whetstone[N]
 - Neutralizes WTD and weapons have a[N]
 (Luck)% chance to not consume durability.[X]
 
-## SD_PrayerBeads
-Prayer Beads[N]
-- Survive the next lethal hit with 1 HP[N]
-if HP is 50% or more (at time of hit).[X]
+## SD_PrecisionRingLOL
+# part 3
+Steel Sigil[N]
+- If wielding a sword, lance, or axe,[N]
+converts all Crit to bonus damage[N]
+at a rate of 4 Crit/1 damage.[X]
+
+## SD_Thornmail
+# part 3
+Barbed Mail[N]
+(Def +5 to physical [ArmorIcon])[N]
+- Counters physical damage taken[N]
+at 1 range (can't kill).[X]
 
 ## SD_KnightBands
-Blackiron Gauntlets[N]
+Vambrace[N]
+(Con +2; Con +5 to physical [ArmorIcon])[N]
 - Grants bonus Hit/Avoid/Crit/Crit Avoid[N]
-equal to weapon Wt.[N]
-- Con +2.[X]
+equal to weapon Wt.[X]
 
-## SD_Rabadons
-Arcane Hat[N]
-- Grants magic/staff range +1,[N]
-but sets Res to 0.[N]
-(Doesn't stack with Runic Ring.)[X]
+## SD_KnightBands2
+# 1-1 interlude
+Gauntlets[N]
+(Str/Eth +2)[N]
+- Grants physical attacks Hit +10.[X]
+
+## SD_PeltMantle
+# 1-1 interlude
+Pelt Mantle[N]
+(HP +3)[N]
+- Grants Avoid +10.[X]
+
+## SD_RidingSpur
+Riding Spur[N]
+(Move +1 to [HorseIcon][FlierIcon])[N]
+- Grants Hit = spaces moved x 2.[X]
+
+## SD_Quiver
+Covert Quiver[N]
+(Dex +2)[N]
+- Grants bow range +1.[N]
+- Reduces enemy priority.[X]
 
 ## SD_Megalovania
 # Brave Bird??
@@ -1795,8 +1852,8 @@ strikes x2 consecutively at 50% Str.[X]
 
 ## SD_CantoPlus
 Canto[N]
-- Unit can use remaining[N]
-movement after any action.[X]
+- Unit can use remaining movement[N]
+after any action (once per turn).[X]
 
 ## SD_WaryFighter
 Wary Fighter: Unit cannot[N]
@@ -2480,7 +2537,7 @@ decide on a name or face.[X]
 #  After picking/stealing, grants Eth/Spd +4 for 1 turn and Canto 3 spaces.
 Wild Card[N]
 - Grants Sequin Eth/Spd +5 and Canto[N]
-for 1 turn after picking/stealing.[N]
+for 1 phase after picking/stealing.[N]
 - Can swap spaces with an ally within[N]
 (Eth/3; min 5) spaces during Canto.[X]
 
