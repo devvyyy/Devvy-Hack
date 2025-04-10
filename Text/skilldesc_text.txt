@@ -1477,60 +1477,54 @@ grants Atk +2.[X]
 Vigor[N]
 - Grants unit HP +5.[X]
 
-## SD_IronHelm
-# END OF RUNES, START OF EQUIPMENT; 1-1 interlude
+## SD_WindDisciple
+# END OF RUNES, START OF EQUIPMENT; 1-1 interlude, implemented
 Iron Helm[N]
-(Def +3)[N]
-- Reduces damage taken by 20% of Def.[X]
+(Def +2)[N]
+- Reduces damage taken by 25% of Def.[X]
 
-## SD_WingedHelm
-# 1-6? can check for non-mounted with stat getters
-Snow Boots[N]
-(Move +1 to non-[HorseIcon][FlierIcon])[N]
-- Canto 1 space after any action.[N]
-(Canto skills take priority.)[X]
+## SD_Insight
+# 1-1 interlude, implemented
+Gauntlets[N]
+(Str/Eth +2)[N]
+- Grants Hit +10.[X]
+
+## SD_Vigilance
+# 1-1 interlude, implemented
+Pelt Mantle[N]
+(Def +2)[N]
+- Grants Avoid +10.[X]
+
+## SD_Hauberk
+Hauberk[N]
+(Def +3, Spd -1)[N]
+- Grants Crit Avoid +20.[X]
+
+## SD_ElbowRoom
+# implemented
+Boarhide Vest[N]
+(Def +2)[N]
+- Grants Atk/Prt/Rsl +3 in terrain.[X]
 
 ## SD_HolyCloak
-# 1-1 interlude
-Royal Pin[N]
+# 1-1 interlude, implemented
+Tusked Pin[N]
 (Luck +3)[N]
 - Transfers damage penalties inflicted[N]
 by tier I-V dark magic during[N]
 combat to its user.[X]
 
-## SD_KnightsVow
-# part 3
-Unbreaking Pledge[N]
-(Luck +5)[N]
-- Grants +20% to all growth rates.[X]
+## SD_FairFight
+# implemented
+Riding Spur[N]
+(Move +1 to [HorseIcon][FlierIcon])[N]
+- If foe isn't mounted, grants AS +2.[X]
 
-## SD_WarBanner
-# 1-7; make this ID 1 or smth LOL
-War Banner[N]
-(Dex +2)[N]
-- Grants Atk +3 to allies within[N]
-2 spaces.[X]
-
-## SD_GuardHelm
-# 1-3
-Aventail[N]
-- Immune to critical hits and takes[N]
-50% less damage from foe's attacks[N]
-after the first.[X]
-
-## SD_ExecutionersHood
-# 1-3
-Sable Hood[N]
-(Luck -50%)[N]
-- Deals bonus damage = foe's missing HP[N]
-at start of combat.[X]
-
-## SD_Cuirass
-Cuirass[N]
-- Grants bonus Atk = X.[N]
-(If wielding a sword, lance, or axe,[N]
-X = 20% of unit's max HP; otherwise,[N]
-X = 20% of current HP at start of combat.)[X]
+## SD_Quiver
+# implemented
+Royal Quiver[N]
+(Dex +3)[N]
+- Grants bow range +1.[X]
 
 ## SD_Rondel
 # 1-1 interlude
@@ -1539,16 +1533,86 @@ Rondel[N]
 - If Def > foe's Def, inflicts penalty to[N]
 foe's AS = difference between stats.[X]
 
+## SD_WingedHelm
+# 1-6? can check for non-mounted with stat getters, implemented
+Snow Boots[N]
+(Move +1 to non-[HorseIcon][FlierIcon])[N]
+- Canto 1 space after any action.[N]
+(Canto skills take priority.)[X]
+
+## SD_Aptitude
+# part 3, implemented
+Unbreaking Pledge[N]
+(Luck +5)[N]
+- Grants +20% to all growth rates.[X]
+
+## SD_SpurStr
+# 1-7; implemented
+War Banner[N]
+(Dex +3)[N]
+- Grants Atk +3 to physical allies[N]
+within 2 spaces.[X]
+
+## SD_GuardHelm
+# 1-3, implemented
+Steel War-Plate[N]
+(Def +5, Spd -3)[N]
+- Reduces damage taken by 50%[N]
+for each of foe's attacks after[N]
+the first (resets after combat).[X]
+
+## SD_CriticalForce
+# implemented
+Razor's Edge[N]
+(Dex +5, Luck -50%)[N]
+- Grants Crit = Dex.[N]
+- Halves bonus damage from foe's[N]
+critical hits.[X]
+
+## SD_GrimRing
+# 1-3, implemented
+Sable Hood[N]
+(Luck -50%)[N]
+- Deals bonus damage = foe's missing HP[N]
+at start of combat.[N]
+- Reduces enemy priority.[X]
+
+## SD_Cuirass
+# idk
+Steel Sigil[N]
+(Luck +1; Luck +3 to Wreyvians)[N]
+- Grants bonus Atk = X.[N]
+- If Wreyvian, grants Atk +5.
+[X]
+
+## SD_QuickBurn
+Draco Fang[N]
+(Str/Eth +2 to [HorseIcon][FlierIcon])[N]
+- Grants +15 Hit and Avoid; this bonus[N]
+decreases by 1 each turn (min 0).[X]
+
+## SD_Flask
+# 1-3 strogy?
+Flask[N]
+- Restores 3 HP after combat.[N]
+(Doesn't stack with Dawn I).[X]
+
 ## SD_StalwartItem
 # part 3
 Veteran Brooch[N]
-(Luck +10)
+(Luck +10)[N]
 - Grants 3 Prt/Rsl, 5 Avoid/Crit Avoid[N]
 per 10 levels (Promoted +20).[X]
 
-## SD_ArmoredMarchEquip
+## SD_ArcaneEffect
+Serpine Amulet[N]
+- Deals 10 bonus magical damage.[N]
+(Doesn't stack with other Arcane[N]
+weapons or effects.)[X]
+
+## SD_ArmorMarch
 # 1-8
-Legionnaire's Banner[N]
+Legionnairis[N]
 - Grants Move +2 to unit and adjacent [ArmorIcon][N]
 allies if adjacent to an [ArmorIcon] ally at[N]
 start of turn.[N]
@@ -1567,8 +1631,8 @@ Whetstone[N]
 (Luck)% chance to not consume durability.[X]
 
 ## SD_PrecisionRingLOL
-# part 3
-Steel Sigil[N]
+# part 3, implemented
+Focus Grips[N]
 - If wielding a sword, lance, or axe,[N]
 converts all Crit to bonus damage[N]
 at a rate of 4 Crit/1 damage.[X]
@@ -1576,38 +1640,16 @@ at a rate of 4 Crit/1 damage.[X]
 ## SD_Thornmail
 # part 3
 Barbed Mail[N]
-(Def +5 to physical [ArmorIcon])[N]
+(Def +3 to physical [ArmorIcon])[N]
 - Counters physical damage taken[N]
 at 1 range (can't kill).[X]
 
 ## SD_KnightBands
-Vambrace[N]
-(Con +2; Con +5 to physical [ArmorIcon])[N]
+# implemented, 1-3 strogy?
+Ferric Heart[N]
+(Con +1; Con +2 to physical [ArmorIcon])[N]
 - Grants bonus Hit/Avoid/Crit/Crit Avoid[N]
 equal to weapon Wt.[X]
-
-## SD_KnightBands2
-# 1-1 interlude
-Gauntlets[N]
-(Str/Eth +2)[N]
-- Grants physical attacks Hit +10.[X]
-
-## SD_PeltMantle
-# 1-1 interlude
-Pelt Mantle[N]
-(HP +3)[N]
-- Grants Avoid +10.[X]
-
-## SD_RidingSpur
-Riding Spur[N]
-(Move +1 to [HorseIcon][FlierIcon])[N]
-- Grants Hit = spaces moved x 2.[X]
-
-## SD_Quiver
-Covert Quiver[N]
-(Dex +2)[N]
-- Grants bow range +1.[N]
-- Reduces enemy priority.[X]
 
 ## SD_Megalovania
 # Brave Bird??
@@ -1805,10 +1847,6 @@ bonus magical damage.[X]
 ## SD_ColdFlare2
 Cold Flare: If foe is physical, grants Atk +3.[N]
 If foe is magical, grants AS +3.[X]
-
-## SD_FairFight
-Fair Fight: If foe is not mounted,[N]
-grants Attack Speed +2.[X]
 
 ## SD_Intrepid
 # Dive-Bomb
@@ -2119,10 +2157,6 @@ Shadow Slide[N]
 - Verna can swap spaces with an ally[N]
 within (Eth/3; min 5) spaces during Canto.[X]
 
-## SD_SpurStr
-Spur Strength: Adjacent allies[N]
-deal +4 physical damage.[X]
-
 ## SD_SpurMag
 Spur Magic: Adjacent allies[N]
 deal +4 magical damage.[X]
@@ -2307,10 +2341,6 @@ Celerity: Movement +2.[X]
 Fiery Blood: If unit's HP is[N]
 not full, deal +2 damage.[X]
 
-## SD_ElbowRoom
-Elbow Room: +3 damage dealt[N]
-when on open terrain.[X]
-
 ## SD_NaturalCover
 Surprise Attack![N]
 - If Solum or foe's terrain has bonuses,[N]
@@ -2364,10 +2394,6 @@ bursting at the seams with development.[X]
 Quick Draw: +4 Damage[N]
 when initiating battle.[X]
 
-## SD_WindDisciple
-Wind Disciple: +10 Hit and[N]
-Avoid when HP is not at max.[X]
-
 ## SD_StrongRiposte
 Strong Riposte: When under[N]
 attack, damage +3. [X]
@@ -2383,10 +2409,6 @@ attack speed +2. [X]
 ## SD_KillingMachine
 Killing Machine: Total critical[N]
 rate is doubled.[X]
-
-## SD_CriticalForce
-Critical Force: Base critical is[N]
-Skl * 1.5.[X]
 
 ## SD_Chivalry
 Chivalry: When foe is at full HP,[N]
@@ -2449,10 +2471,6 @@ on odd numbered turns.[X]
 ## SD_EvenRhythm
 Even Rhythm: +10 Hit and Avoid[N]
 on even numbered turns.[X]
-
-## SD_QuickBurn
-Quick Burn: +15 Hit and Avoid.[N]
-This bonus decreases each turn.[X]
 
 ## SD_SlowBurn
 Slow Burn: +1 Hit and Avoid for[N]
@@ -2644,11 +2662,6 @@ Fallen Angel: Unit's Eye of Creation[N]
 cannot lose durability, and gets +Hit[N]
 equal to foe's Luck x 1.5.[X]
 
-## SD_ArmorMarch
-Armor March: At start of turn, if Wegman[N]
-is adjacent to an armored ally, grants[N]
-Move +1, also to adjacent armored allies.[X]
-
 ## SD_VigorDance
 Inspiring Tune[N]
 - If Staniel uses Play, grants target[N]
@@ -2820,10 +2833,6 @@ ally's Def (max; 20).[X]
 Blossom: 2x growth rates,[N]
 but 1/2 exp gain.[X]
 
-## SD_Aptitude
-Aptitude: +20% to[N]
-all growth rates.[X]
-
 ## SD_QuickRiposte
 Quick Riposte: If foe initiates and[N]
 unit's HP is 50% or more, unit can[N]
@@ -2839,12 +2848,6 @@ multiplies Eth/Skill/Spd by 1.5x.[N]
 
 ## SD_Foresight
 Foresight[X]
-
-## SD_Insight
-Insight: Hit +20.[X]
-
-## SD_Vigilance
-Vigilance: Avoid +20.[X]
 
 ## SD_Daunt
 Daunt[N]
@@ -3161,7 +3164,7 @@ Amische: This unit's religion prevents[N]
 them from using non-Iron weaponry.[X]
 
 ## SD_Glacies
-Glacies: Add unit's Resistance[N]
+Frost Moon: Add unit's Resistance[N]
 to damage dealt. (Skill % activation)[X]
 
 ## SD_Gridmaster

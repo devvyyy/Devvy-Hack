@@ -477,6 +477,18 @@ POIN SkillTester
 WORD VigorID
 
 ALIGN 4
+ResoRing:
+#incbin "ResoRing/Vigor.dmp"
+POIN SkillTester
+WORD FuryID
+
+ALIGN 4
+WardRing:
+#incbin "WardRing/WardRing.dmp"
+POIN SkillTester
+WORD DragonWallID
+
+ALIGN 4
 Defeatist:
 #incbin "Defeatist/Defeatist.dmp"
 POIN SkillTester
@@ -776,7 +788,7 @@ ALIGN 4
 Vigilance:
 #incbin "Vigilance/Vigilance.dmp"
 POIN SkillTester
-WORD CharismaID
+WORD VigilanceID
 
 ALIGN 4
 WindDisciple:
@@ -819,7 +831,7 @@ ALIGN 4
 DoubleLion:
 #incbin "DoubleLion/DoubleLion.dmp"
 POIN SkillTester
-WORD PassID
+WORD DoubleLionID
 
 #include "Cultured/Cultured.event"
 

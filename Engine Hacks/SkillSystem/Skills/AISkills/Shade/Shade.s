@@ -6,7 +6,7 @@
 @so we can do the same thing as provoke does pretty much for Shade Plus to get an almost-zero value
 
 .equ SkillTester,EALiterals+0
-.equ PassID,EALiterals+4
+.equ GrimRingID,EALiterals+4
 .equ gActiveBattleUnit,0x203A4EC
 .equ gDefendingBattleUnit,0x203A56C
 .equ gpAiBattleWeightFactorTable,0x30017D8
@@ -25,7 +25,7 @@ ShadeCheck:
 ldr r0,=gDefendingBattleUnit
 ldr r1,SkillTester
 mov r14,r1
-ldr r1,PassID
+ldr r1,GrimRingID
 .short 0xF800
 cmp r0,#0
 beq VanillaFunc

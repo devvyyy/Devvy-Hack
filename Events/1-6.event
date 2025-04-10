@@ -725,7 +725,7 @@ UNIT Xidorn GriffonKnight 0x1 Level(4, Ally, 1)   [23,0] 0 0 1 REDA15R4 [0xDB, 0
 	UNIT
 	
 NPCUnits:
-UNIT Wegman General 0x1 Level(10, Ally, 0)     [15,8] 0b 0x0 0x0 0x0 [0xF,SteelGlaive,SteelLabrys,SilverRifle] [0x0,0x0,0x0,0x0]
+UNIT Wegman General 0x1 Level(10, Ally, 0)     [15,8] 0b 0x0 0x0 0x0 [0xF,SteelGlaive,SteelLabrys,0xBC] [0x0,0x0,0x0,0x0]
 UNIT Gerolf SPal 0x1 Level(8, Ally, 0)     [16,7] 0b 0x0 0x0 0x0 [BraveSword,LightBrand,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Klavdia WyvernKnight 0x1 Level(9, Ally, 0)     [14,7] 0b 0x0 0x0 0x0 [MageAxe,0x5A,PureWater] [0x0,0x0,0x0,0x0]
 
@@ -740,7 +740,7 @@ UNIT Wreyvine WyvernRider 0x1 Level(8, NPC, 1)     [23,2] 0b 0x0 0x0 0x0 [MageAx
 UNIT Wreyvine Archer 0x1 Level(5, NPC, 1)     [11,4] 0b 0x0 0x0 0x0 [ShortBow,Vulnerary] [0,3,0,32]
 UNIT Wreyvine Archer 0x1 Level(5, NPC, 1)     [19,4] 0b 0x0 0x0 0x0 [ShortBow,Vulnerary] [0,3,0,32]
 
-UNIT Supplies1 0x79 0x1 Level(1, NPC, 0)     [9,4] 0b 0x0 0x0 0x0 [EnergyRing] [0,3,0,32] //tents
+UNIT Supplies1 0x79 0x1 Level(1, NPC, 0)     [9,4] 0b 0x0 0x0 0x0 [0xBC] [0,3,0,32] //tents
 UNIT Supplies2 0x79 0x1 Level(1, NPC, 0)     [21,4] 0b 0x0 0x0 0x0 [MageBow] [0,3,0,32]
 UNIT Supplies3 0x79 0x1 Level(1, NPC, 0)     [9,9] 0b 0x0 0x0 0x0 [ArmsScroll] [0,3,0,32]
 UNIT Supplies4 0x79 0x1 Level(1, NPC, 0)     [21,9] 0b 0x0 0x0 0x0 [MasterSeal] [0,3,0,32]
@@ -749,7 +749,7 @@ UNIT 0x62 SergeantClass 0x1 Level(12, NPC, 0)   [15,2] 0b 0x0 0x0 0x0 [SilverSwo
 	UNIT
 	
 NPCUnitsLunatic:
-UNIT Wegman General 0x1 Level(10, Ally, 0)     [15,8] 0b 0x0 0x0 0x0 [SilverBlade,SilverGlaive,SilverLabrys,SilverRifle] [0x0,0x0,0x0,0x0]
+UNIT Wegman General 0x1 Level(10, Ally, 0)     [15,8] 0b 0x0 0x0 0x0 [SilverBlade,SilverGlaive,SilverLabrys,0xBC] [0x0,0x0,0x0,0x0]
 UNIT Gerolf SPal 0x1 Level(8, Ally, 0)     [16,7] 0b 0x0 0x0 0x0 [BraveSword,LightBrand,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Klavdia WyvernKnight 0x1 Level(9, Ally, 0)     [14,7] 0b 0x0 0x0 0x0 [MageAxe,0x5A,PureWater] [0x0,0x0,0x0,0x0]
 
@@ -764,7 +764,7 @@ UNIT Wreyvine WyvernRider 0x1 Level(9, NPC, 1)     [23,2] 0b 0x0 0x0 0x0 [MageAx
 UNIT Wreyvine Archer 0x1 Level(7, NPC, 1)     [11,4] 0b 0x0 0x0 0x0 [ShortBow,Vulnerary] [0,3,0,32]
 UNIT Wreyvine Archer 0x1 Level(7, NPC, 1)     [19,4] 0b 0x0 0x0 0x0 [ShortBow,Vulnerary] [0,3,0,32]
 
-UNIT Supplies1 0x79 0x1 Level(1, NPC, 0)     [9,4] 0b 0x0 0x0 0x0 [EnergyRing] [0,3,0,32] //tents
+UNIT Supplies1 0x79 0x1 Level(1, NPC, 0)     [9,4] 0b 0x0 0x0 0x0 [0xBC] [0,3,0,32] //tents
 UNIT Supplies2 0x79 0x1 Level(1, NPC, 0)     [21,4] 0b 0x0 0x0 0x0 [BraveBow] [0,3,0,32]
 UNIT Supplies3 0x79 0x1 Level(1, NPC, 0)     [9,9] 0b 0x0 0x0 0x0 [ArmsScroll] [0,3,0,32]
 UNIT Supplies4 0x79 0x1 Level(1, NPC, 0)     [21,9] 0b 0x0 0x0 0x0 [MasterSeal] [0,3,0,32]
@@ -1180,6 +1180,7 @@ DoAllThree
 	CUSN Klavdia
 	CUSN Gerolf
 	SilentlyGiveItem(0x77, Wegman)
+	SetUnitItemDurability(Wegman, 3, ArmorMarchID) //boots
 
 CALL $591FD8
 	
@@ -1207,7 +1208,8 @@ EndingScene:
 
 	CHECK_ALIVE Supplies1
 	BEQ 0x1 0xC 0x0
-	GiveItem(EnergyRing,Affogato)
+	//GiveItem(EnergyRing,Affogato)
+	GiveItemWithDurability(0xBC,BarricadePlusID,Affogato)
 	LABEL 0x1
 	
 	CHECK_ALIVE Supplies2

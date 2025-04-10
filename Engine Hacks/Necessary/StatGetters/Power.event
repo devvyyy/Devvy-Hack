@@ -4,8 +4,8 @@
 #include "_Common.event"
 
 pPowerModifiers: // Power
-	POIN prAddUnitPower prHalveIfCapturing prDebuffStr prAddEquipPower prItemPassivePow prRallyStr prLifeAndDeathBonus prSkillFury prFortressDefensePow VigorDanceCheck prFortressResistancePow prResolve prHostileLoyalty prDefiantStr prPushStr
-	POIN prDesperation prCounter prBulwarkRingAtk prTuskedHorn prAddMoreIfWreyvian
+	POIN prAddUnitPower prHalveIfCapturing prDebuffStr prAddEquipPower prItemPassivePow prRallyStr prPowerFrenzyRing prLifeAndDeathBonus prFortressDefensePow VigorDanceCheck prFortressResistancePow prResolve prHostileLoyalty prDefiantStr prPushStr
+	POIN prSkillQuickBurn prSkillGauntlets prCounter prTuskedHorn prAddMoreIfWreyvian prPowerBraveRing
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -33,12 +33,30 @@ prLifeAndDeathBonus:
 prSkillFury:
   rIfUnitHasSkill(FuryID)
     rAddConst(2)
+
+prSkillGauntlets:
+  rIfUnitHasSkill(InsightID)
+    rAddConst(2)
+
+prSkillQuickBurn:
+  rIfUnitHasSkill(QuickBurnID)
+    rAddConst(2)
+
+prPowerFrenzyRing:
+  rIfUnitHasSkill(FrenzyID)
+    rAddConst(3)
 	
 prCriticalForce:
 rIfUnitHasNotSkill(SanctuaryID)
 	rIfUnitHasNotSkill(OverdriveID)
 		rIfUnitHasSkill(CriticalForceID)
 			rSubConst(2)
+
+prPowerBraveRing:
+rIfUnitHasNotSkill(SanctuaryID)
+	rIfUnitHasNotSkill(OverdriveID)
+		rIfUnitHasSkill(DoubleLionID)
+			rHalved
 	
 prCounter:
 rIfUnitHasNotSkill(SanctuaryID)

@@ -5,12 +5,6 @@ push {r4-r7, lr}
 mov r4, r0 @atkr
 mov r5, r1 @dfdr
 
-@hp not at full
-ldrb r0, [r4, #0x12] @max hp
-ldrb r1, [r4, #0x13] @curr hp
-cmp r0, r1
-ble End @skip if max hp <= curr hp
-
 @has Winddisciple
 ldr r0, SkillTester
 mov lr, r0
@@ -20,14 +14,17 @@ ldr r1, WinddiscipleID
 cmp r0, #0
 beq End
 
-@add 10 hit and avoid
-mov r1, #0x60
-ldrh r0, [r4, r1] @hit
-add r0, #10
-strh r0, [r4,r1]
-mov r1, #0x62
-ldrh r0, [r4, r1] @avoid
-add r0, #10
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq End
+
+@add def/4 defense
+mov  r1, #0x5C
+ldrh r0, [r4, r1] @attack
+ldrb r2, [r4, #0x17] @defense
+lsr  r2, #2 @divide this by 4
+add  r0, r2
 strh r0, [r4,r1]
 
 End:

@@ -15,6 +15,7 @@ ldr r1, SearingSwordID
 cmp r0, #0
 beq End
 
+b FireSwordEffect
 @ is spd higher than spd res?
 ldrb r0, [r4, #0x16] @attacker spd
 ldrb r1, [r5, #0x16] @defender spd

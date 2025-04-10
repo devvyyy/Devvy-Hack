@@ -17,6 +17,24 @@ Command_Usability:
 	ldr  r3, EALiterals
 	_blr r3
 
+	cmp r0, #122 @shove
+	beq unusable
+	cmp r0, #123 @smite
+	beq unusable
+	cmp r0, #136 @pivot
+	beq unusable
+	cmp r0, #137 @reposition
+	beq unusable
+	cmp r0, #138 @swap
+	beq unusable
+	cmp r0, #50 @swarp
+	beq unusable
+	cmp r0, #45 @summon
+	beq unusable
+	cmp r0, #75 @rally movement
+	beq unusable
+	cmp r0, #3 @canto (plus)
+	beq unusable
 	cmp r0, #82 @thief basics/locktouch
 	beq unusable
  	cmp r0, #66 @stealth/guerilla warfare

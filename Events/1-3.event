@@ -84,7 +84,7 @@ MiscBasedEvents:
 
 LocationBasedEvents:
 Seize(13,1)
-Armory(ShopBruh,13,13)
+Armory(P1Ch3Shop,13,13)
 Armory(ArmoryBruh,2,3)
 Village(0x8,SolVillage,2,6)
 Village(0x9,FlambergeVillage,14,7)
@@ -125,7 +125,7 @@ UNIT Selwyn 0x31 0x1 Level(10, Enemy, 0)     [17,0] DropItem 0x0 0x0 0x0 [SteelB
 	UNIT
 
 EnemyUnits:
-UNIT Alicot SArmor 0x1 Level(5, Enemy, 0)     [13,1] DropItem 0x0 0x0 0x0 [SteelBlade,Flamberge,Dracoshield] BossAI
+UNIT Alicot SArmor 0x1 Level(5, Enemy, 0)     [13,1] DropItem 0x0 0x0 0x0 [SteelBlade,Flamberge,0xBC] BossAI
 UNIT Aeteria Shaman 0x1 Level(3, Enemy, 1)     [16,2] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
 UNIT Aeteria SCav 0x1 Level(3, Enemy, 1)     [11,2] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
 UNIT Aeteria ACav 0x1 Level(3, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [IronAxe,] TwoActionAI
@@ -152,7 +152,7 @@ UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [Flux,] TwoA
 UNIT Aeteria Archer 0x1 Level(4, Enemy, 1)     [9,11] 0b 0x0 0x0 0x0 [Longbow] BossAI
 UNIT Aeteria ACav 0x1 Level(3, Enemy, 1)     [0,2] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
 
-UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [14,2] DropItem 0x0 0x0 0x0 [PureWater] [0,3,0,32]
+UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [14,2] DropItem 0x0 0x0 0x0 [0xBC] [0,3,0,32]
 UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [2,1] DropItem 0x0 0x0 0x0 [KillingEdge] [0,3,0,32]
 	UNIT
 	
@@ -190,7 +190,7 @@ UNIT Aeteria LArmor 0x1 Level(4, Enemy, 1)     [0,9] 0b 0x0 0x0 0x0 [SteelGlaive
 	UNIT
 
 YoItThem:
-UNIT Stroganoff AArmor 0x1 Level(6, Ally, 0)     [10,8] 0b 0x0 0x0 0x0 [SteelLabrys,Hammer,0x65,0xf1] [0x0,0x3,0x0,0x20]
+UNIT Stroganoff AArmor 0x1 Level(6, Ally, 0)     [10,8] 0b 0x0 0x0 0x0 [SteelLabrys,Hammer,0x65,0xBC] [0x0,0x3,0x0,0x20]
 UNIT Eiskaffee GriffonRider 0x1 Level(4, Ally, 0)     [11,9] 0b 0x0 0x0 0x0 [IronRifle,MageBow,PureWater] [0x0,0x3,0x0,0x20]
 UNIT Doppio Soldier 0x1 Level(5, Ally, 0)     [12,8] 0b 0x0 0x0 0x0 [MageLance, ShortSpear,Elixir] [0x0,0x3,0x0,0x20]
 UNIT Wreyvine Mercenary 0x1 Level(3, NPC, 1)     [9,9] 0b 0x0 0x0 0x0 [KillingEdge,Armorslayer] StallOneTurnAI
@@ -198,7 +198,7 @@ UNIT Wreyvine Soldier 0x1 Level(3, NPC, 1)     [13,9] 0b 0x0 0x0 0x0 [SapphireLa
 	UNIT
 	
 LunaticUnits:
-UNIT Stroganoff AArmor 0x1 Level(6, Ally, 1)     [10,8] 0b 0x0 0x0 0x0 [SilverLabrys,Hammer,0x65,0xf1] [0x0,0x3,0x0,0x20]
+UNIT Stroganoff AArmor 0x1 Level(6, Ally, 1)     [10,8] 0b 0x0 0x0 0x0 [SilverLabrys,Hammer,0x65,0xBC] [0x0,0x3,0x0,0x20]
 UNIT Eiskaffee GriffonRider 0x1 Level(4, Ally, 1)     [11,9] 0b 0x0 0x0 0x0 [MageBow,SteelRifle,PureWater] [0x0,0x3,0x0,0x20]
 UNIT Doppio Soldier 0x1 Level(5, Ally, 1)     [12,8] 0b 0x0 0x0 0x0 [MageLance, ShortSpear, Elixir] [0x0,0x3,0x0,0x20]
 UNIT Wreyvine Mercenary 0x1 Level(4, NPC, 1)     [9,9] 0b 0x0 0x0 0x0 [BraveSword,ShortBrand] StallOneTurnAI
@@ -258,6 +258,9 @@ SetFlag(0xB)
 SetFlag(0xD)
 	LOAD1 0x1 EnemyUnits
 HardUnits(LunaticUnits,YoItThem)
+SetUnitItemDurability(CratesUnit, 0, GrimRingID) //hood
+SetUnitItemDurability(Stroganoff, 3, Heal1ID) //flask
+SetUnitItemDurability(Alicot, 2, BarricadePlusID) //flask
 	CUSN Stroganoff
 	CUSN Doppio
 	CUSN Eiskaffee
@@ -527,7 +530,8 @@ NoFade
 ENDA
 
 SolVillage:
-VillageEventItem(LifeRingVillageText, 0x1, 0xCF)
+//VillageEventItem(LifeRingVillageText, 0x1, 0xCF)
+MUSI; SMOV 0x2 0x1; SMOV 0x3 LifeRingVillageText; CALL $9EE310; MUNO; GiveItemWithDurability(0xBC,22,0xFFFF); EVBIT_T 0x7; ENDA
 NoFade
 ENDA
 
@@ -558,6 +562,9 @@ NoFade
 ENDA
 
 ShopBruh:
+BYTE 0xBC 232 //Canto Scroll
+BYTE 0xBC 170 //Canto Scroll
+BYTE 0xBC 171 //Canto Scroll
 SHLI Mend Vulnerary PureWater Mine LightRune
 ALIGN 4
 

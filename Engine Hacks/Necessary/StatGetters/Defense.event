@@ -4,12 +4,12 @@
 #include "_Common.event"
 
 pDefenseModifiers: // Defense
-	POIN prAddUnitDefense prHalveIfCapturing prDebuffDef prAddEquipDefense prItemPassiveDefense prRallyDef prLifeAndDeathMinus VigorDanceCheck prSkillFury prFortressDefenseDef prDefiantDef prPushDef
+	POIN prAddUnitDefense prHalveIfCapturing prDebuffDef prAddEquipDefense prItemPassiveDefense prRallyDef prSkillMantle prLifeAndDeathMinus VigorDanceCheck prIronHelmet prBoarhide prFortressDefenseDef prDefiantDef prPushDef
 	POIN prSleepHalfDef prPoisonHalfDef
 //	POIN prAvoidBuffDef
 	POIN prAcrobatCheck
 	POIN prSergeantCheck
-	POIN prCantoRingDef prCounterDef prBulwarkRing prGrimRingDef
+	POIN prCounterDef prGrimRingDef
 //	POIN prTemperedFateDef
 	POIN prFlowStateCheckDef //last one so it halves correctly
 	#ifdef DEBUFFS_MIN_ZERO
@@ -55,12 +55,20 @@ rIfUnitHasNotSkill(SanctuaryID)
 		
 prGrimRingDef:
 rIfUnitHasNotSkill(SanctuaryID)
-	rIfUnitHasSkill(GrimRingID)
+	rIfUnitHasSkill(GonnaGoWildID)
 		rSubConst(4)
 		
 prBulwarkRing:
 rIfUnitHasSkill(BattleVeteranID)
 		rAddConst(7)
+
+prIronHelmet:
+rIfUnitHasSkill(WindDiscipleID)
+		rAddConst(2)
+
+prBoarhide:
+rIfUnitHasSkill(ElbowRoom)
+		rAddConst(2)
 	
 prSleepHalfDef:
 rIfUnitHasStatus(0x2)

@@ -798,7 +798,7 @@
 
 //Insight: Hit +20.
 //By Sme
-#define InsightID 255
+#define InsightID 171
 
 //Knight Aspirant: When above 75% health, +2 damage, +15% avoid.
 //By Datagne
@@ -874,12 +874,12 @@
 
 //Quick Riposte: If defending and HP is 50% or higher, unit doubles and attacker does not double.
 //By Sme
-#define QuickRiposteID 218 
+#define QuickRiposteID 218
 
 
 //Quick/Slow Burn: Hit and Avoid bonus increasing or decreasing each turn, maximum +15.
 //Author Unknown (Initial Commit)
-#define QuickBurnID 255
+#define QuickBurnID 234
 #define SlowBurnID 231
 
 //Short Shield: Gain 6 defense against attacks recieved in melee.
@@ -929,7 +929,7 @@
 
 //Thunderstorm: If weapon weight > enemy W. Weight, +2 dmg, +15% hit, +5% crit.
 //By Datagne
-#define ThunderstormID 196
+#define ThunderstormID 255
 
 //Tower Shield: Gain 6 defense against attacks recieved at range.
 //By Sme
@@ -958,11 +958,11 @@
 
 //Vigilance: Avoid +20.
 //By Sme
-#define VigilanceID 255
+#define VigilanceID 170
 
 //Wind Disciple: +10 Hit and Avoid when HP is not at max.
 //Author Unknown (Initial Commit)
-#define WindDiscipleID 255
+#define WindDiscipleID 232
 
 //Wrath: If HP < 50%, +20 critical rate.
 //Author Unknown (Initial Commit)
@@ -990,7 +990,7 @@
 
 //Double Lion: All weapons are treated as brave.
 //By Sme
-#define DoubleLionID 255
+#define DoubleLionID 196
 
 //Thighdeology: If a unit within 3 tiles has Nice Thighs, gain +2 Attack and +20 Hit.
 //By Sme
@@ -1151,7 +1151,7 @@
 
 //Glacies: Add unit's Resistance to damage dealt. (Skill % activation)
 //By Sme
-#define GlaciesID 255
+#define GlaciesID 233
 
 //Great Shield: Negate all damage. (Defense % activation)
 //By Sme
@@ -1208,18 +1208,22 @@
 
 //Execute Damage: 500% execute damage
 //Kelik Zenair
-#define ExecutorsID 230
+#define ExecutorsID 255
+
+//Dragon Wall: DR based on res diff
+//Kelik Zenair
+#define DragonWallID 230
 
 //Stat Modifier Skills
 
 //Defiant Skills: When HP is 25% or lower, gain +4 to the given stat.
 //By Sme
-#define DefiantStrID 233
+#define DefiantStrID 255
 #define DefiantMagID 255
 #define DefiantSklID 255
-#define DefiantSpdID 232
+#define DefiantSpdID 255
 #define DefiantLckID 255
-#define DefiantDefID 234
+#define DefiantDefID 255
 #define DefiantResID 235
 
 //Resolve: When HP < 50%, gain 1.5x Str, Skl, & Spd.
@@ -1228,11 +1232,11 @@
 
 //Fortress Defense: +5 Def, -3 Str/Mag
 //By Leonarth
-#define FortressDefenseID 170
+#define FortressDefenseID 255
 
 //Fortress Resistance: 5 Res, -3 Str/Mag
 //By Leonarth
-#define FortressResistanceID 171
+#define FortressResistanceID 255
 
 //Life and Death: Grants +5 Atk/Mag/Spd, -5 Def/Res.
 //By Leonarth

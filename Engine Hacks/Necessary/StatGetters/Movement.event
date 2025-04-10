@@ -4,7 +4,7 @@
 #include "_Common.event"
 ALIGN 4
 pMovModifiers: // Movement
-	POIN prAddUnitBaseMov prAddUnitMovBonus (prGetItemMovBonus-1) prItemPassiveMov prRallyMov prSkillCelerity prSkillUpgrade prArmorMarchCheck prStatusZephyrEnemyCheck
+	POIN prAddUnitBaseMov prAddUnitMovBonus (prGetItemMovBonus-1) prItemPassiveMov prRallyMov prSkillCelerity prRidingSpurCheck prSkillUpgrade prArmorMarchCheck prStatusZephyrEnemyCheck
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff-1
 	#endif
@@ -64,6 +64,7 @@ rIfUnitHasNotSkill(ShootTwiceID)
 		rAddConst(1)
 		
 prCantoRing:
+rIfUnitHasNotSkill(CantoPlusID)
 	rIfUnitHasSkill(CantoOneID)
 		rAddConst(1)
 		
@@ -85,6 +86,11 @@ CheckMyFlag:
   rForConstant(0x22)
     // CheckEventId
     rCallExternal(0x8083da8)
+
+prRidingSpurCheck:
+	rIfUnitHasSkill(CantoPlusID)
+		rIfUnitHasSkill(FairFightID)
+			rAddConst(1)
 			
 prPassCheck: //player thieves
 	rIfUnitHasState(0x400)

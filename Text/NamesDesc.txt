@@ -783,54 +783,88 @@ dark magic during combat.[X]
 A sorcerer's ring. Grants magic/staff[N]
 range +1. Sets Res = 0.[X]
 
+## ResonantRingName
+[_R][_e][_s][_o][_n][_a][_n][_t][_SP][_R][_i][_n][_g][X]
+
 ## ResonantRingDesc
 A witch's ring. Magic and staves deal[N]
-bonus damage = 25% of unit's current HP,[N]
-but take 5 damage after combat (can't kill).[X]
+bonus damage = 25% of unit's current[N]
+HP at start of combat, but take 5[N]
+damage after combat.[X]
+
+## WeirdingRingName
+[_W][_e][_i][_r][_d][_i][_n][_g][_SP][_R][_i][_n][_g][X]
 
 ## WeirdingRingDesc
-A trickster's ring. Wearer can use[N]
-Castle to swap spaces with any ally[N]
-within (Str/Eth, /3; min 5) spaces.[X]
+A trickster's ring. Wearer can use Castle[N]
+to swap spaces with any ally within[N]
+(Str/Eth, /3; min 5) spaces.[X]
+
+## BarrierRingName
+Ward Ring[X]
 
 ## BarrierRingDesc
 A hermit's ring. Wearer reduces damage[N]
-taken = 5 + difference between Res[N]
+taken = 3 + difference between Res[N]
 stats (min difference; 0).[X]
 
+## AureateRingName
+[_A][_u][_r][_e][_a][_t][_e][_SP][_R][_i][_n][_g][X]
+
 ## AureateRingDesc
-A golden ring. After combat, if wearer's[N]
-HP < 25%, take -15 damage for 1 turn.[X]
+A golden ring. Wearer reduces damage[N]
+taken at 1 range by 5. If HP < 25%,[N]
+take -15 damage for 1 turn.[X]
+
+## RimeRingName
+Rime Ring[X]
+
+## RimeRingDesc
+A ring cold to the touch. Enables[N]
+Frost Moon for wearer. Res +5.[X]
 
 ## FlareRingDesc
 A radiant ring. Wearer restores HP on-hit[N]
 = 25% of damage dealt.[N]
 (Doesn't stack with similar effects.)[X]
 
+## WrathRingName
+Wrath Ring[X]
+
 ## WrathRingDesc
 A fuming ring. Grants wearer Crit =[N]
 missing HP. Def/Res -4.[X]
 
 ## AeteriaRingDesc
+# part 3; after chiffon scene
 # Serpent Ring
 An Imperial ring. Enables Lunar Flash[N]
 for wearer. Grants WTA against bows[N]
 and sidearms. Res/Luck +5.[X]
 
+## NewmoonRingName
+# part 3
+Newmoon Ring[X]
+
 ## NewmoonRingDesc
+# part 3
 A glowing ring. If wearer uses magic,[N]
 strikes x2 consecutively. Str/Eth -50%.[X]
 
 ## ElementalRingDesc
+# part 3
 A virtuoso's ring. If wearer uses magic:[N]
 Fire/Light: Follow-up and foe can't.[N]
 Thunder/Wind: Follow-ups trigger twice.[N]
 Ice/Dark: Bonus damage = diff. between Res.[X]
 
+## AttunedRingName
+Raven Ring[X]
+
 ## AttunedRingDesc
-An attuned ring. If both wearer and foe[N]
-use magic or staff, grants Atk +5 and[N]
-neutralizes foe's weapon Mt/Atk bonuses.[X]
+# part 3
+An attuned ring. Grants wearer full WTA[N]
+against bows and sidearms.[X]
 
 ## HPRingDesc
 A mending ring. Wearer restores HP[N]
@@ -843,41 +877,48 @@ the wearer after combat.[N]
 (Doesn't stack with Shine II.)[X]
 
 ## WingRingDesc
-A winged ring. Wearer can Canto 1 space[N]
-after any action. Move +1, Def/Res -4.[N]
+A winged ring. Wearer can Canto 3[N]
+spaces after initiating combat.[N]
 (Canto skills take priority.)[X]
 
 ## WingRingName
 Stride Ring[X]
 
 ## BulwarkRingName
-Bulwark Ring[X]
+[_C][_e][_l][_e][_s][_t][_i][_a][_l][_SP][_R][_i][_n][_g][X]
 
 ## BulwarkRingDesc
-A ring of ages. Grants wearer 3 Prt/Rsl,[N]
-5 Avoid/Crit Avoid per 10 levels.[N]
-Def/Res +7, Str/Eth/Spd -5.[X]
+A ring of ages. Wearer dodges all[N]
+attacks on turn 1. Luck +10.[X]
 
 ## GrimRingDesc
 A headsman's ring. Wearer deals bonus[N]
 damage = foe's missing HP at start[N]
 of combat. Def/Res -4.[X]
 
+## FrenzyRingName
+[_S][_e][_e][_t][_h][_i][_n][_g][_SP][_R][_i][_n][_g][X]
+
+## FrenzyRingDesc
+A broken ring. Grants Wearer Atk =[N]
+25% of missing HP. Str/Eth +3.[X]
+
 ## CounterRingName
-Grit Ring[X]
+Hexed Ring[X]
 
 ## CounterRingDesc
-A pit fighter's ring. Wearer counters[N]
-physical damage upon hit at 1 range[N]
-(can't kill). Str/Eth/Dex/Def -4.[X]
+A spiteful ring. Foe's attacks against[N]
+wearer have a (foe's Luck - 30)% chance[N]
+to backfire.[X]
 
 ## CountermagicRingName
 Arcane Ring[X]
 
 ## CountermagicRingDesc
-A sorcerer's ring. Grants magic/staff[N]
-range +1. Multiplies Eth by 1.25x[N]
-during combat. Res/Luck -10.[X]
+A ring with a faint light. Wearer[N]
+deals 10 bonus magical damage.[N]
+(Doesn't stack with other Arcane[N]
+weapons.)[X]
 
 ## RagebladeRingName
 # Spellblade Ring
@@ -1154,8 +1195,7 @@ Daring Ring[X]
 
 ## DesperationRingDesc
 A bold ring. Wearer's follow-ups occur[N]
-before foe can counterattack.[N]
-Str/Eth/Dex/Luck -3.[X]
+before foe can counterattack.[X]
 
 ## LostSoulMagicDesc
 Ethereal lost souls created by dark arts,[N]

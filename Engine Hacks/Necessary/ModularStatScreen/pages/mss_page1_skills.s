@@ -101,9 +101,9 @@ draw_growth_at 18, 8
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#16]		@luk growth getter
 draw_growth_at 26, 8
-ldr		r0,[sp,#0xC]
-ldr		r0,[r0,#20]		@def growth getter
-draw_growth_at 18, 10
+@ldr		r0,[sp,#0xC]
+@ldr		r0,[r0,#20]		@def growth getter
+@draw_growth_at 18, 10
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#24]		@res growth getter
 draw_growth_at 26, 10
@@ -111,6 +111,14 @@ ldr		r0,[sp,#0xC]
 ldr		r0,[r0]			@hp growth getter (not displaying because there's no room atm)
 draw_growth_at 18, 12
 draw_textID_at 13, 12, textID=0x4E9, growth_func=1 @hp name
+
+@Unset growth colors bit
+mov        r0, #0x0
+str        r0, [sp,#0x14]
+
+ldr        r0,[sp,#0xC]
+ldr        r0,[r0,#20]        @def growth getter
+draw_growth_at 18, 10
 
 b		literalJump2
 .ltorg
@@ -171,7 +179,7 @@ startSkills:
 
 ldr r0,=SkillsTextIDLink
 ldrh r0, [r0]
-draw_textID_at 19, 2, colour=White, width=6 @skills
+draw_textID_at 15, 2, colour=White, width=20 @skills
 
 
 mov r0,r8

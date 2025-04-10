@@ -5,7 +5,7 @@
 .endm
 .equ FuryID, SkillTester+4
 .equ FuryEvent, FuryID+4
-.equ furydamage, 6
+.equ furydamage, 5
 .thumb
 push	{lr}
 @check if dead

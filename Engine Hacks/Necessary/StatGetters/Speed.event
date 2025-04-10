@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pSpeedModifiers: // Speed
-	POIN prAddUnitSpeed prHalveIfRescuing prHalveIfCapturing prDebuffSpd prAddEquipSpeed prItemPassiveSpeed prRallySpd prLifeAndDeathBonus prSkillFury prResolve prHostileLoyalty prDefiantSpd prPushSpd
+	POIN prAddUnitSpeed prHalveIfRescuing prHalveIfCapturing prDebuffSpd prAddEquipSpeed prItemPassiveSpeed prBarricadeSpd prRallySpd prLifeAndDeathBonus prDesperationSpd prResolve prHostileLoyalty prDefiantSpd prPushSpd
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -41,6 +41,15 @@ prBulwarkRingSpd:
 rIfUnitHasNotSkill(SanctuaryID)
   rIfUnitHasSkill(BattleVeteranID)
     rSubConst(5)
+
+prDesperationSpd:
+rIfUnitHasNotSkill(CantoPlusID)
+  rIfUnitHasSkill(DesperationID)
+    rAddConst(2)
+
+prBarricadeSpd:
+  rIfUnitHasSkill(BarricadePlusID)
+    rSubConst(3)
 			
 prTemperedFateSpd:
 rIfUnitHasStatus(0x13)

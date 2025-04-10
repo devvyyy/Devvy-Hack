@@ -58,7 +58,7 @@ AnsgarBreveConvo:
 	ENDA
 
 MiscBasedEvents:
-	AREA 0x14 DisclaimerEvent [12,12] [12,12]
+	//AREA 0x14 DisclaimerEvent [12,12] [12,12]
 	AREA 0x0 GaidenCh1 [15,1] [15,1]
 	CauseGameOverIfLordDies
 	AFEV 0 EndingScene 0x2
@@ -295,8 +295,8 @@ FADI 60
 CLEAN
 SetBackground(0x3A)
 MUSCSLOW 0x4A
-CHECK_ALIVE Ansgar
-BEQ 6 0x0 0xC
+//CHECK_ALIVE Ansgar
+//BEQ 6 0x0 0xC
 CHECK_ALIVE Breve
 BEQ 4 0x0 0xC
 CHECK_ALIVE Hildr
@@ -306,6 +306,11 @@ GOTO 5
 LABEL 4
 Text(Ch1Ending3Alt1)
 STAL 10
+
+GiveItemWithDurability(0xBC,171,Affogato)
+GiveItemWithDurability(0xBC,170,Affogato)
+GiveItemWithDurability(0xBC,232,Affogato)
+
 GiveItem(Reginleif,Affogato)
 TextCont(Ch1Ending3Point5Alt, 0x3b4)
 GiveItem(Torch,Ulrich)
@@ -322,6 +327,13 @@ GiveItem(SnaringRifle,Affogato)
 LABEL 0x721
 //Music(0x4A) //Night Ambience
 Text(Ch1Ending3Point5)
+
+GiveItemWithDurability(0xBC,171,Breve)
+GiveItemWithDurability(0xBC,170,Hildr)
+GiveItemWithDurability(0xBC,232,Ansgar)
+
+CenterTextbox(Ch1EndingEquipmentDesc)
+Text(Ch1EndingGiveItems)
 
 LABEL 6 //end
 
@@ -376,7 +388,7 @@ NoFade
 ENDA
 
 ZeriGaming:
-VillageEventItem(ArmsScrollHouseText, 0x3D, 0xEF)
+VillageEventItem(ArmsScrollHouseText, 0x3D, ArmsScroll)
 ENDA
 
 DisclaimerEvent:

@@ -114,7 +114,7 @@
     RMenu(ST_Aid,0,ST_Cond,0,164,128,SS_TalkRText)
 
   ST_Skills: //this is the text that says skills
-    RMenu(PersonalDataRText,ST_Skill1,ST_Name,ST_Str,150,15,SS_SkillsRText)
+    RMenu(PersonalDataRText,ST_Skill1,ST_Name,ST_Str,0x72,15,SS_SkillsRText)
 
 // RMenu(up,down,left,right,xcoord,ycoord,SlotID,Looper,Getter)
   ST_Skill1:
@@ -124,21 +124,22 @@
     RMenu(ST_Skills,ST_Str,ST_Skill1,ST_Skill3,135,30,1,RTextLoop,SkillDescGetter+4)
 
   ST_Skill3:
-    RMenu(ST_Skills,ST_Luck,ST_Skill2,ST_Skill4,160,30,2,RTextLoop,SkillDescGetter+8)
+    RMenu(ST_Skills,ST_Skl,ST_Skill2,ST_Skill4,160,30,2,RTextLoop,SkillDescGetter+8)
 
   ST_Skill4:
-    RMenu(ST_Skills,ST_Luck,ST_Skill3,ST_Skill5,185,30,3,RTextLoop,SkillDescGetter+12)
+    RMenu(ST_Skills,ST_Skl,ST_Skill3,ST_Skill5,185,30,3,RTextLoop,SkillDescGetter+12)
 
 //5th skill is at the bottom (so affo's off-hand stuff is centered)
 
   ST_Skill5:
-    RMenu(ST_Skills,ST_Luck,ST_Skill5,ST_Skill1,0xd6,0x88,5,RTextLoop,SkillDescGetter+20)
+    RMenu(ST_Skills,ST_Skl,ST_Skill4,ST_Skill1,210,30,4,RTextLoop,SkillDescGetter+16)
+
+  ST_Skill6:
+    RMenu(ST_Skills,ST_Skl,ST_Skill5,0,0xd6,0x88,5,RTextLoop,SkillDescGetter+20)
 	
 //prob not using anything after this? final boss has nevermore/fractured heart (add nullify)/fallen angel/king's mark
 
 //i forgot about skill manuals :sneezing_face:
-  ST_Skill6: //b7 is between 0xaf and 0xbf??
-    RMenu(ST_Skill3,ST_Skills,ST_Skill5,ST_Skill3,0xB7,0x8C,5,RTextLoop,SkillDescGetter+20)
 
   #ifdef PRESS_SELECT_TO_VIEW_GROWTHS
     PersonalDataRText:

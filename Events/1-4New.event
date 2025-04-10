@@ -396,8 +396,8 @@ UNIT AeteriaStealable WyvernRider 0x1 Level(4, Enemy, 1)     [10,5] 0b 0x0 0x0 0
 UNIT Aeteria Troubadour 0x1 Level(4, Enemy, 1)     [2,2] 0b 0x0 0x0 0x0 [Physic,Haze] HealAI
 UNIT AeteriaStealable LArmor 0x1 Level(4, Enemy, 1)     [4,5] 0b 0x0 0x0 0x0 [ShortSpear,Horseslayer,RedGem] BossAI
 
-UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [8,1] DropItem 0x0 0x0 0x0 [ShortAxe] [0,3,0,32]
 UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [0,6] DropItem 0x0 0x0 0x0 [GreenGem] [0,3,0,32]
+UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [8,1] DropItem 0x0 0x0 0x0 [ShortAxe] [0,3,0,32]
 UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [16,8] DropItem 0x0 0x0 0x0 [TorchStaff] [0,3,0,32]
 	UNIT
 	
@@ -408,7 +408,7 @@ UNIT 0x6A Thaumaturge 0x1 Level(10, Enemy, 0)     [1,0] 0 0 1 REDA3R3 [Bolting,F
 NewRecruits:
 UNIT Floris Priest 0x1 Level(4, Ally, 0)     [9,12] 0x0 0x0 0x0 0x0 [Mend,Restore,Haze] AttackInRangeAI
 UNIT Lennard Deserter 0x1 Level(3, Ally, 0)     [14,0] 0b 0x0 0x0 0x0 [KillerLance,HeavySpear,0x6B] [0x0,0x0,0x0,0x0]
-UNIT Therese SArmor 0x1 Level(5, Ally, 0)     [16,0] 0b 0x0 0x0 0x0 [MageSword,0x66,0xFD] [0x0,0x0,0x0,0x0]
+UNIT Therese SArmor 0x1 Level(5, Ally, 0)     [16,0] 0b 0x0 0x0 0x0 [MageSword,SteelBlade,0x66] [0x0,0x0,0x0,0x0]
 	//UNIT Wreyvine Soldier 0x1 Level(8, NPC, 1)     [15,0] 0b 0x0 0x0 0x0 [BraveLance,Vulnerary] [0x0,0x0,0x0,0x0]
 	//UNIT Wreyvine LArmor 0x1 Level(10, NPC, 1)     [15,0] 0 0 1 REDA15R2 [0x7C,ShortSpear,Elixir] BossAI
 		
@@ -416,8 +416,8 @@ UNIT Therese SArmor 0x1 Level(5, Ally, 0)     [16,0] 0b 0x0 0x0 0x0 [MageSword,0
 
 NewRecruitsLunatic:
 UNIT Floris Priest 0x1 Level(4, Ally, 1)     [9,12] 0x0 0x0 0x0 0x0 [Mend,Restore,Haze] AttackInRangeAI
-UNIT Lennard Deserter 0x1 Level(3, Ally, 1)     [14,0] 0b 0x0 0x0 0x0 [KillerLance,MageLance,0x6B,0x7E] [0x0,0x0,0x0,0x0]
-UNIT Therese SArmor 0x1 Level(5, Ally, 1)     [16,0] 0b 0x0 0x0 0x0 [SteelBlade,MageSword,0x66,0xFD] [0x0,0x0,0x0,0x0]
+UNIT Lennard Deserter 0x1 Level(3, Ally, 1)     [14,0] 0b 0x0 0x0 0x0 [KillerLance,MageLance,0x6B] [0x0,0x0,0x0,0x0]
+UNIT Therese SArmor 0x1 Level(5, Ally, 1)     [16,0] 0b 0x0 0x0 0x0 [SteelBlade,MageSword,0x66,] [0x0,0x0,0x0,0x0]
 	//UNIT Wreyvine Soldier 0x1 Level(10, NPC, 1)     [15,0] 0b 0x0 0x0 0x0 [BraveLance,Elixir] [0x0,0x0,0x0,0x0]
 	//UNIT Wreyvine LArmor 0x1 Level(12, NPC, 1)     [15,0] 0 0 1 REDA15R2 [0x7C,Spear,Elixir] BossAI
 		
@@ -621,7 +621,8 @@ CUMO 0xF4
 STAL 60
 CURE
 Text(LeftVillagerThanks)
-GiveItem(0x98,0xFFFF)
+//GiveItem(0x98,0xFFFF)
+GiveItemWithDurability(0xBC,FairFightID,0xFFFF)
 STAL 5
 MOVE 0xA 0xF4 [21,18]
 ENUN
@@ -929,6 +930,7 @@ LOAD2 0x1 CutsceneUnits2
 STAL 60
 SetBackground(0x3d)
 Text(Ch4NewOpening5)
+SetUnitItemDurability(CratesUnit, 0, ElbowRoomID) //hauberk
 	GotoPrepScreen
 	ENDA
 

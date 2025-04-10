@@ -74,7 +74,7 @@ continue:
 	.align
 
 TempText:
-	.asciz "Select which skill you wish to forget"
+	.asciz "Select which equipment you wish to remove"
 
 	.pool
 	.align

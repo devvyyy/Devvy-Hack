@@ -5,7 +5,7 @@
 
 pSkillModifiers: // Skill
 	POIN prAddUnitSkill prHalveIfRescuing prHalveIfCapturing prDebuffSkl prAddEquipSkill prItemPassiveSkl prRallySkl prResolve prDefiantSkl prPushSkl
-	POIN prDesperationSkill prCounterSkill prCriticalForceSkill
+	POIN prBannerskill prBowrangeskill prCounterSkill prCriticalForceSkill
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -38,6 +38,14 @@ rIfUnitHasNotSkill(SanctuaryID)
 prCriticalForceSkill:
 rIfUnitHasSkill(CriticalForceID)
 	rAddConst(5)
+	
+prBowrangeskill:
+rIfUnitHasSkill(BowRangeUpID)
+	rAddConst(3)
+
+prBannerskill:
+rIfUnitHasSkill(SpurStr)
+	rAddConst(3)
 	
 prCounterSkill:
 rIfUnitHasNotSkill(SanctuaryID)

@@ -23,6 +23,10 @@ prHexingRodEffect:
 prNullifyIfBroken:
 	rIfUnitHasStatus(0x14)
 		rHalved
+
+prSkillMantle:
+  rIfUnitHasSkill(VigilanceID)
+    rAddConst(2)
 		
 prFlowStateCheckHP:
 	rIfUnitHasSkill(FlowStateID)

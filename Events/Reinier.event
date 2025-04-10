@@ -202,7 +202,7 @@ ENDA
 
 LocationBasedEvents:
 Chest(0x53,10,11) //smite
-Chest(GoddessIcon,14,14)
+Chest(WhiteGem,14,14)
 Chest(0x68,13,16)
 
 Door(3,9)
@@ -272,7 +272,7 @@ LoadUnit(15,24)
 	UNIT
 
 NewGuys:
-UNIT 0x62 SergeantClass 0x1 Level(12, NPC, 0)   [10,1] 0b 0x0 0x0 0x0 [SilverSword,SilverLance, MasterSeal] BossAI
+UNIT 0x62 SergeantClass 0x1 Level(12, NPC, 0)   [10,1] 0b 0x0 0x0 0x0 [SilverSword,SilverLance, 0xBC,MasterSeal] BossAI
 UNIT Wreyvine Mercenary 0x1 Level(8, NPC, 1)     [8,1] 0b 0x0 0x0 0x0 [MageSword,ShortBrand] BossAI
 UNIT Wreyvine Halberdier 0x1 Level(1, NPC, 1)     [9,2] 0b 0x0 0x0 0x0 [ShortSpear,MageAxe] BossAI
 UNIT Wreyvine General 0x1 Level(3, NPC, 1)     [10,3] 0b 0x0 0x0 0x0 [Skypiercer,Elixir] BossAI
@@ -444,6 +444,7 @@ STAL  5
 Text(ChReinierOpening1)
 ClearBackground
 STAL 20
+SetUnitItemDurability(0x62, 3, SpurStrID) //banner
 CameraCursor(Graham)
 CameraCursor(Yufka)
 CameraCursor(Gus)

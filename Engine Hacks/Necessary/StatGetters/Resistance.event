@@ -4,13 +4,14 @@
 #include "_Common.event"
 
 pResistanceModifiers: // Resistance
-	POIN prAddUnitResistance prHalveIfCapturing prDebuffRes prAddEquipResistance prItemPassiveResistance prRallyRes prAddPureWaterBarrierMod prLifeAndDeathMinus prSkillFury prFortressResistanceRes prStatusZephyrEnemyCheckRes prDefiantRes prPushRes
+	POIN prAddUnitResistance prHalveIfCapturing prDebuffRes prAddEquipResistance prItemPassiveResistance prRallyRes prAddPureWaterBarrierMod prLifeAndDeathMinus prFortressResistanceRes prStatusZephyrEnemyCheckRes prDefiantRes prPushRes
 	POIN prMinZero
 	POIN prSleepHalfRes prPoisonHalfRes
 //	POIN prAvoidBuffRes
 	POIN prAcrobatCheckRes
-	POIN prCantoRingRes prBulwarkRingRes prGrimRingRes prUlrichRingRes
+	POIN prGrimRingRes prUlrichRingRes
 	//POIN prPaleRingRes prAshenRingRes
+	POIN prRimeRingRes
 //	POIN prTemperedFateRes
 	POIN prFlorisMarkedRes
 	POIN prFlowStateCheckRes
@@ -69,9 +70,13 @@ rIfUnitHasNotSkill(SanctuaryID)
 		
 prGrimRingRes:
 rIfUnitHasNotSkill(SanctuaryID)
-	rIfUnitHasSkill(GrimRingID)
+	rIfUnitHasSkill(GonnaGoWildID)
 		rSubConst(4)
 		
+prRimeRingRes:
+	rIfUnitHasSkill(GlaciesID)
+		rAddConst(5)
+
 prPaleRingRes:
 	rIfUnitHasSkill(GlowRingID)
 		rAddConst(5)
