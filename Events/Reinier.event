@@ -22,11 +22,11 @@ TURN 0x0 ReinEvent5 [4,0] 0x0
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x12,ReinierThereseConvo, 0x62, Therese)
 CharacterEventBothWays(0x10,ReinierBrudetConvo, 0x62, Brudet)
 CharacterEventBothWays(0x10,ReinierStroganoffConvo, 0x62, Stroganoff)
 CharacterEventBothWays(0x10,ReinierUlrichConvo, 0x62, Ulrich)
 CharacterEventBothWays(0x10,ReinierConvo, 0x62, 0x0)
+CharacterEventBothWays(0x12,ReinierThereseConvo, 0x62, Therese)
 CharacterEventBothWays(0x11,AffoUlrichConvo, Affogato, Ulrich)
 	END_MAIN
 	
@@ -53,6 +53,8 @@ STAL 30
 Text(Ch6BrudetReinierTalk)
 MURE 0x2
 CUSA 0x62
+STAL 5
+CenterTextbox(Ch6ReinierDisclaimer)
 NoFade
 ENDA
 
@@ -62,6 +64,8 @@ STAL 30
 Text(Ch6StroganoffReinierTalk)
 MURE 0x2
 CUSA 0x62
+STAL 5
+CenterTextbox(Ch6ReinierDisclaimer)
 NoFade
 ENDA
 
@@ -71,6 +75,8 @@ STAL 30
 Text(Ch6UlrichReinierTalk)
 MURE 0x2
 CUSA 0x62
+STAL 5
+CenterTextbox(Ch6ReinierDisclaimer)
 NoFade
 ENDA
 	
@@ -80,6 +86,8 @@ STAL 30
 Text(Ch6ReinierTalkGeneric)
 MURE 0x2
 CUSA 0x62
+STAL 5
+CenterTextbox(Ch6ReinierDisclaimer)
 NoFade
 ENDA
 
@@ -202,7 +210,7 @@ ENDA
 
 LocationBasedEvents:
 Chest(0x53,10,11) //smite
-Chest(WhiteGem,14,14)
+Chest(Talisman,14,14)
 Chest(0x68,13,16)
 
 Door(3,9)
@@ -311,9 +319,9 @@ UNIT Aeteria ACav 0x1 Level(9, Enemy, 1)     [23,10] 0 0 1 REDA22R10 [Hammer] St
 EnemyUnits:
 //treasure room dangerous move in range AIers (imperial court); group AI
 UNIT 0x9C Shaman 0x1 Level(9, Enemy, 1)     [9,11] 0b 0x0 0x0 0x0 [DarkTome2,] GroupOneAI
-UNIT 0x9C Druid 0x1 Level(3, Enemy, 1)     [13,15] DropItem 0x0 0x0 0x0 [Flux,SecretBook] GroupOneAI
-UNIT 0x9C MageRider 0x1 Level(9, Enemy, 1)     [9,15] DropItem 0x0 0x0 0x0 [Wind,0x63] GroupOneAI
-UNIT 0x9C Shaman 0x1 Level(9, Enemy, 1)     [13,12] 0b 0x0 0x0 0x0 [DarkTome2,] GroupOneAI
+UNIT 0x9C Druid 0x1 Level(3, Enemy, 1)     [13,15] DropItem 0x0 0x0 0x0 [Flux,EnergyRing] GroupOneAI
+UNIT 0x9C MageRider 0x1 Level(9, Enemy, 1)     [9,15] DropItem 0x0 0x0 0x0 [Wind,WhiteGem] GroupOneAI
+UNIT 0x9C Shaman 0x1 Level(9, Enemy, 1)     [13,12] 0b 0x0 0x0 0x0 [DarkTome3,] GroupOneAI
 UNIT 0x9C Shaman 0x1 Level(9, Enemy, 1)     [12,17] DropItem 0x0 0x0 0x0 [Moonlight,PureWater] GroupOneAI
 UNIT 0x9C Shaman 0x1 Level(9, Enemy, 1)     [14,10] 0b 0x0 0x0 0x0 [DarkTome2,] GroupOneAI
 
@@ -444,7 +452,7 @@ STAL  5
 Text(ChReinierOpening1)
 ClearBackground
 STAL 20
-SetUnitItemDurability(0x62, 3, SpurStrID) //banner
+SetUnitItemDurability(0x62, 2, SpurStrID) //banner
 CameraCursor(Graham)
 CameraCursor(Yufka)
 CameraCursor(Gus)

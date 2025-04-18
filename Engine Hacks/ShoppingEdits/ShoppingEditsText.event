@@ -12,12 +12,21 @@
 		#define BargainItemSoldOutSecret 0x0228
 		
 		setText(BargainItemSoldOut,BargainItemSoldOutText)
-		setText(BargainItemSoldOutVendor,BargainItemSoldOutText)
-		setText(BargainItemSoldOutSecret,BargainItemSoldOutText)
+		setText(BargainItemSoldOutVendor,BargainItemSoldOutText2)
+		setText(BargainItemSoldOutSecret,BargainItemSoldOutText3)
 		
 		BargainItemSoldOutText:
+		String("Too bad, mate. We're all out.")
+		BYTE 3 0 //[A][X]
+
+		BargainItemSoldOutText2:
 		String("Sorry, that's out of stock.")
 		BYTE 3 0 //[A][X]
+		
+		BargainItemSoldOutText3:
+		String("(Out of stock.)")
+		BYTE 3 0 //[A][X]
+		
 		
 		ALIGN 4
 

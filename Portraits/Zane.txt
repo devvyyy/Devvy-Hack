@@ -132,10 +132,15 @@ Wulfric_Mug:
 #incext PortraitFormatter "Wulfric.png"
 setMugEntry(0x11, Wulfric_Mug, 3, 5, 2, 3)
 
-ALIGN 16 //Zenair by Laurent Lacroix
-Zenair_Mug:
-#incext PortraitFormatter "Zenair.png"
-setMugEntry(0x12, Zenair_Mug, 3, 5, 3, 3)
+ALIGN 16 //Gamma mugs
+Massena_Mug:
+#incext PortraitFormatter "GAMMAmassena.png"
+setMugEntry(0x12, Massena_Mug, 3, 5, 3, 3)
+
+ALIGN 16
+Faye_Mug:
+#incext PortraitFormatter "GAMMAfaye.png"
+setMugEntry(0xFF, Faye_Mug, 3, 6, 3, 4)
 
 ALIGN 16 //Adele by Levin
 Adele_Mug:
@@ -230,7 +235,7 @@ setMugEntry(0xBC, Moose_Mug, 3, 5, 2, 3)
 ALIGN 16
 Irma_Mug:
 #incext PortraitFormatter "GAMMAirma.png"
-setMugEntry(0xBD, Irma_Mug, 3, 5, 2, 3)
+setMugEntry(0xBD, Irma_Mug, 3, 6, 3, 4)
 
 ALIGN 16
 Kane_Mug:
@@ -337,6 +342,21 @@ ALIGN 16
 Haye_Mug:
 #incext PortraitFormatter "Haye.png"
 setMugEntry(0x57, Haye_Mug, 3, 5, 3, 2)
+
+ALIGN 16
+AffogatoHoodPart3_Mug:
+#incext PortraitFormatter "AffoHood1.png"
+setMugEntryExtend(0xb6, AffogatoHoodPart3_Mug, 3, 5, 3, 3, 0, 4, 0, 0)
+
+ALIGN 16
+AffogatoHoodPart3Edgy_Mug:
+#incext PortraitFormatter "AffoHood2.png"
+setMugEntryExtend(0x100, AffogatoHoodPart3Edgy_Mug, 3, 5, 3, 3, 0, 4, 0, 0)
+
+ALIGN 16
+AffogatoHoodPart3Hidden_Mug:
+#incext PortraitFormatter "AffoHood3.png"
+setMugEntryExtend(0x101, AffogatoHoodPart3Hidden_Mug, 3, 5, 3, 3, 0, 4, 0, 0)
 
 ALIGN 16
 HayeDuel_Mug:
@@ -447,11 +467,6 @@ ALIGN 16
 Stroganoff_Mug:
 #incext PortraitFormatter "StroganoffV2.png"
 setMugEntryExtend(0x29, Stroganoff_Mug, 2, 5, 2, 2, 0, 4, 10, 4)
-
-ALIGN 16
-Strogy_Mug:
-#incext PortraitFormatter "imabarber.png"
-setMugEntryExtend(0xB6, Strogy_Mug, 2, 5, 2, 3, 0, 4, 10, 4)
 
 ALIGN 16
 Cortado_Mug: //by Laurent Lacroix

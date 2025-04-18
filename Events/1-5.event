@@ -154,7 +154,7 @@ LoadUnit(12,2)
 EnemyUnits:
 UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [6,2] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
 UNIT BadGuy LArmor 0x1 Level(7, Enemy, 1)     [11,5] 0b 0x0 0x0 0x0 [IronGlaive,ShortSpear] BossAI
-UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [7,7] 0b 0x0 0x0 0x0 [IronAxe,] ChargeAI
+UNIT BadGuyStealable Brigand 0x1 Level(6, Enemy, 1)     [7,7] 0b 0x0 0x0 0x0 [SteelAxe,AngelicRobe] ChargeAI
 UNIT BadGuy Mercenary 0x1 Level(6, Enemy, 1)     [5,4] 0b 0x0 0x0 0x0 [IronBlade,] AttackInRangeAI
 UNIT BadGuy Freelancer 0x1 Level(7, Enemy, 1)     [6,10] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
 UNIT BadGuy AxeCav 0x1 Level(6, Enemy, 1)     [0,11] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
@@ -165,7 +165,7 @@ UNIT BadGuy AxeArmor 0x1 Level(6, Enemy, 1)     [9,12] 0b 0x0 0x0 0x0 [Swordreav
 UNIT BadGuy Myrm 0x1 Level(6, Enemy, 1)     [8,15] 0b 0x0 0x0 0x0 [Zanbato] AttackInRangeAI
 UNIT BadGuy Brigand 0x1 Level(7, Enemy, 1)     [6,18] 0b 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
 UNIT BadGuyStealable SwordCav 0x1 Level(7, Enemy, 1)     [14,19] 0b 0x0 0x0 0x0 [IronSword,Vulnerary] ChargeAI
-UNIT BadGuy Raider 0x1 Level(6, Enemy, 1)     [9,4] 0b 0x0 0x0 0x0 [Sagitar] TwoActionAI
+UNIT BadGuyStealable Raider 0x1 Level(6, Enemy, 1)     [9,4] 0b 0x0 0x0 0x0 [Sagitar,0x60] TwoActionAI
 UNIT BadGuy Mercenary 0x1 Level(6, Enemy, 1)     [10,9] 0b 0x0 0x0 0x0 [IronSword,] AttackInRangeAI
 UNIT BadGuy Hunter 0x1 Level(6, Enemy, 1)     [0,19] 0b 0x0 0x0 0x0 [IronBow] AttackInRangeAI
 UNIT BadGuy Raider 0x1 Level(7, Enemy, 1)     [4,8] DropItem 0x0 0x0 0x0 [ShortBrand,] StallOneTurnAI
@@ -174,12 +174,12 @@ UNIT BadGuy Freelancer 0x1 Level(6, Enemy, 1)     [12,11] 0b 0x0 0x0 0x0 [SteelL
 UNIT BadGuy Brigand 0x1 Level(6, Enemy, 1)     [11,15] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
 UNIT BadGuy Thief 0x1 Level(7, Enemy, 1)     [12,18] DropItem 0x0 0x0 0x0 [SteelDagger] StallOneTurnAI
 UNIT BadGuy Brigand 0x1 Level(7, Enemy, 1)     [14,10] 0b 0x0 0x0 0x0 [HandAxe,] BossAI
-UNIT BadGuyStealable AxeCav 0x1 Level(6, Enemy, 1)     [14,12] 0b 0x0 0x0 0x0 [IronAxe,Vulnerary] TwoActionAI
+UNIT BadGuy AxeCav 0x1 Level(6, Enemy, 1)     [14,12] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
 UNIT BadGuy Hunter 0x1 Level(6, Enemy, 1)     [6,14] 0x0 0x0 0x0 0x0 [IronBow] TwoActionAI
 	UNIT
 
 NagitoKomaeda:
-UNIT Murray Deserter 0x1 Level(9, Enemy, 0)     [13,15] DropItem 0x0 0x0 0x0 [SapphireLance,ShortSpear,GoddessIcon] BossAI
+UNIT Murray Deserter 0x1 Level(9, Enemy, 0)     [13,15] DropItem 0x0 0x0 0x0 [SapphireLance,ShortSpear,Talisman] BossAI
 	UNIT
 	
 FlashbackUnits:

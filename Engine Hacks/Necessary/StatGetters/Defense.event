@@ -4,10 +4,10 @@
 #include "_Common.event"
 
 pDefenseModifiers: // Defense
-	POIN prAddUnitDefense prHalveIfCapturing prDebuffDef prAddEquipDefense prItemPassiveDefense prRallyDef prSkillMantle prLifeAndDeathMinus VigorDanceCheck prIronHelmet prBoarhide prFortressDefenseDef prDefiantDef prPushDef
+	POIN prAddUnitDefense prHalveIfCapturing prDebuffDef prAddEquipDefense prItemPassiveDefense prRallyDef prSkillMantle prLifeAndDeathMinus VigorDanceCheck prIronHelmet prPaviseHelm prBoarhide prFortressDefenseDef prDefiantDef prPushDef
 	POIN prSleepHalfDef prPoisonHalfDef
 //	POIN prAvoidBuffDef
-	POIN prAcrobatCheck
+//	POIN prAcrobatCheck
 	POIN prSergeantCheck
 	POIN prCounterDef prGrimRingDef
 //	POIN prTemperedFateDef
@@ -66,9 +66,13 @@ prIronHelmet:
 rIfUnitHasSkill(WindDiscipleID)
 		rAddConst(2)
 
+prPaviseHelm:
+rIfUnitHasSkill(PaviseID)
+		rAddConst(2)
+
 prBoarhide:
 rIfUnitHasSkill(ElbowRoom)
-		rAddConst(2)
+		rAddConst(1)
 	
 prSleepHalfDef:
 rIfUnitHasStatus(0x2)

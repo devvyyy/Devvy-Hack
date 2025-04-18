@@ -29,10 +29,10 @@ add r0, #3
 strh r0, [r4,r1]
 
 @ and defenses
-mov r1, #0x5c
-ldrh r0, [r4, r1] @atk
-add r0, #3
-strh r0, [r4,r1]
+@mov r1, #0x5c
+@ldrh r0, [r4, r1] @atk
+@add r0, #3
+@strh r0, [r4,r1]
 
 End:
 pop {r4-r7, r15}

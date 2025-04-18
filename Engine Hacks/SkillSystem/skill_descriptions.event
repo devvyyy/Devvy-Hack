@@ -5,7 +5,8 @@ ORG 2*0xFF+SkillDescTable
 
 #define SkillDescription(skillID,description) "PUSH; ORG 2*skillID+SkillDescTable; SHORT description; POP"
 
-SkillDescription(Heal1ID,SD_Flask)
+SkillDescription(RagebladeID,SD_PrecisionRingLOL)
+SkillDescription(ShiningRifleID,SD_ArcaneEffect)
 SkillDescription(CantoOneID,SD_WingedHelm)
 SkillDescription(GrimRingID,SD_GrimRing)
 SkillDescription(GlowRingID,SD_HolyCloak)

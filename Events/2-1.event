@@ -170,7 +170,7 @@ UNIT Aeteria Shaman 0x1 Level(3, Enemy, 1)     [11,3] DropItem 0x0 0x0 0x0 [Flux
 UNIT AeteriaStealable LCav 0x1 Level(2, Enemy, 1)     [9,6] 0b 0x0 0x0 0x0 [IronLance,Elixir] ChargeAI
 UNIT Aeteria Mage 0x1 Level(2, Enemy, 1)     [3,7] 0b 0x0 0x0 0x0 [Fire,] AttackInRangeAI
 UNIT Aeteria Shaman 0x1 Level(2, Enemy, 1)     [0,12] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
-UNIT Scone Thaumaturge 0x1 Level(3, Enemy, 1)     [8,16] 0b 0x0 0x0 0x0 [Thunder,SteelDagger] BossAI
+UNIT Scone Thaumaturge 0x1 Level(3, Enemy, 1)     [8,16] DropItem 0x0 0x0 0x0 [Thunder,SteelDagger,GoddessIcon] BossAI
 UNIT Aeteria Fighter 0x1 Level(2, Enemy, 1)     [11,15] 0b 0x0 0x0 0x0 [IronAxe,] AttackInRangeAI
 UNIT Aeteria Mage 0x1 Level(3, Enemy, 1)     [6,19] 0b 0x0 0x0 0x0 [Fire,] TwoActionAI
 	UNIT
@@ -309,16 +309,6 @@ MNC2 0xB //2-2
 //MNTS 0x1 //return to title screen
 	NoFade
 	ENDA
-	
-PrisonTalk1:
-CAM1 [7,11]
-MUSI
-SetBackground(0x41)
-Text(VernaMomento1)
-ClearBackground
-MUNO
-NoFade
-ENDA
 	
 PrisonTalk1:
 CAM1 [7,11]

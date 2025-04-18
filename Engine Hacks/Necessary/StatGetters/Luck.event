@@ -4,8 +4,8 @@
 #include "_Common.event"
 
 pLuckModifiers: // Luck
-	POIN prAddUnitLuck prHalveIfCapturing prDebuffLck prAddEquipLuck prItemPassiveLuck prRallyLck prZephyrLuck prDefiantLck prPinItemLuck prKnightsVowLuck
-	POIN prCriticalForceLuck prBulwarkRingLuck
+	POIN prAddUnitLuck prHalveIfCapturing prDebuffLck prAddEquipLuck prItemPassiveLuck prRallyLck prZephyrLuck prDefiantLck prIgnisLuck prKnightsVowLuck
+	POIN prCriticalForceLuck prBulwarkRingLuck prDarkHoodLuck
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -38,6 +38,11 @@ prCriticalForceLuck:
 rIfUnitHasNotSkill(SanctuaryID)
   rIfUnitHasSkill(CriticalForceID)
     rHalved
+
+prDarkHoodLuck:
+rIfUnitHasNotSkill(SanctuaryID)
+  rIfUnitHasSkill(GrimRingID)
+    rHalved
 	
 prDesperationLuck:
 rIfUnitHasNotSkill(SanctuaryID)
@@ -56,6 +61,11 @@ prKnightsVowLuck:
 		rIfUnitHasSkill(AptitudeID)
 			rAddConst(10)
 
+prIgnisLuck:
+	rIfUnitHasNotAttribute(CA_FEMALE)
+		rIfUnitHasSkill(IgnisID)
+			rAddConst(5)
+			
 prItemPassiveLuck:
 #ifndef DONT_STACK_BOOSTS
 	rPassiveStatBoostsStacking(STAT_LUCK)

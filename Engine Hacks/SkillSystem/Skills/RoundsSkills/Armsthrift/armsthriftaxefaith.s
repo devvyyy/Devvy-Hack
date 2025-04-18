@@ -41,7 +41,7 @@ NonMiss:
 	beq NonArmsthrift @ goto NonArmsthrift if zero (unit does not have armsthrift)
 
 	@ Getting Armsthrift proc chance (=luck)
-	ldrb r0, [r5, #0x19] @ BattleUnit.luck
+	ldrb r0, [r5, #0x15] @ BattleUnit.luck
 @	lsl  r0, #1          @ multiply by 2
 	mov r1, r5 @ get attacker for future checks
 

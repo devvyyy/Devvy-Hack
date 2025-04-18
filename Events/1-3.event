@@ -75,7 +75,7 @@ LABEL 0x1
 
 MiscBasedEvents:
 	CauseGameOverIfLordDies
-	AREA 0x14 DisclaimerEvent [2,6] [2,6]
+	//AREA 0x14 DisclaimerEvent [2,6] [2,6]
 	AREA 0xE FountainFunny [6,2] [8,3]
 	AREA 0xF DropThePlank [8,15] [8,15]
 	AREA 0x10 BarrelRoll [0,0] [3,1]
@@ -85,7 +85,7 @@ MiscBasedEvents:
 LocationBasedEvents:
 Seize(13,1)
 Armory(P1Ch3Shop,13,13)
-Armory(ArmoryBruh,2,3)
+Armory(P1Ch3Armory,2,3)
 Village(0x8,SolVillage,2,6)
 Village(0x9,FlambergeVillage,14,7)
 House(0x0,House1,16,7)
@@ -259,7 +259,7 @@ SetFlag(0xD)
 	LOAD1 0x1 EnemyUnits
 HardUnits(LunaticUnits,YoItThem)
 SetUnitItemDurability(CratesUnit, 0, GrimRingID) //hood
-SetUnitItemDurability(Stroganoff, 3, Heal1ID) //flask
+SetUnitItemDurability(Stroganoff, 3, CamaraderieID) //flask
 SetUnitItemDurability(Alicot, 2, BarricadePlusID) //flask
 	CUSN Stroganoff
 	CUSN Doppio

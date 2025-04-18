@@ -104,13 +104,13 @@ LoadUnit(10,12)
 	UNIT
 
 EnemyUnits:
-UNIT Hartmann Druid 0x1 Level(6, Enemy, 0)     [1,1] DropItem 0x0 0x0 0x0 [DarkTome5,AngelicRobe] BossAI
+UNIT Hartmann Druid 0x1 Level(6, Enemy, 0)     [1,1] DropItem 0x0 0x0 0x0 [DarkTome5,0xBC] BossAI
 UNIT Aeteria Thaumaturge 0x1 Level(4, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [Fire,] DefendAI
 UNIT Aeteria Shaman 0x1 Level(5, Enemy, 1)     [5,2] DropItem 0x0 0x0 0x0 [DarkTome2,DoorKey] BossAI
 UNIT Aeteria LArmor 0x1 Level(4, Enemy, 1)     [9,1] DropItem 0x0 0x0 0x0 [IronGlaive,ShortSpear,DoorKey] BossAI
 UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [11,2] 0b 0x0 0x0 0x0 [Flux,] DefendAI	
 UNIT FlyingMag Occultist 0x1 Level(4, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [Flux] TwoActionAI
-UNIT FlyingMagStealable Occultist 0x1 Level(5, Enemy, 1)     [9,5] 0b 0x0 0x0 0x0 [Flux,Talisman] StallOneTurnAI
+UNIT FlyingMagStealable Occultist 0x1 Level(5, Enemy, 1)     [9,5] 0b 0x0 0x0 0x0 [Flux,GoddessIcon] StallOneTurnAI
 UNIT UPirate Pirate 0x1 Level(4, Enemy, 1)     [15,0] 0b 0x0 0x0 0x0 [SteelAxe] StallOneTurnAI
 UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [14,8] 0b 0x0 0x0 0x0 [IronLance] DefendAI
 UNIT Aeteria Mercenary 0x1 Level(4, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [IronSword,] StallOneTurnAI
@@ -160,7 +160,7 @@ UNIT
 WaterRein:
 UNIT FlyingMag Seer 0x1 Level(4, Enemy, 1)     [13,0] DropItem 0x0 0x0 0x0[LightTome1] ChargeAI
 UNIT UPirate Pirate 0x1 Level(4, Enemy, 1)     [15,0] 0b 0x0 0x0 0x0 [IronAxe] DefendAI
-UNIT UPirate Pirate 0x1 Level(5, Enemy, 1)     [16,0] 0b 0x0 0x0 0x0 [SteelAxe] DefendAI
+UNIT UPirate Pirate 0x1 Level(5, Enemy, 1)     [16,0] DropItem 0x0 0x0 0x0 [SteelAxe, SecretBook] DefendAI
 UNIT
 
 WaterRein2:
@@ -295,6 +295,7 @@ CLEAN
 	LOAD1 0x1 EnemyUnits
 HardUnits(LunaticUnits,TankyHealerWTF)
 SilentlyGiveItem(0xD6, Yory)
+SetUnitItemDurability(Hartmann, 1, ShiningRifleID) //arcane thing
 	LOAD1 0x1 NPCEPIC
 	ENUN
 FADU 45

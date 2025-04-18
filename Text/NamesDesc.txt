@@ -53,18 +53,18 @@ Age: 26; Origin: Wreyvine[X]
 
 ## FlamurName
 # NPC and/or replacement unit for retreats
-Flamur[X]
+Erik[X]
 
 ## FlamurDesc
 # as NPC
 An opportunistic Wreyvian recruit.[N]
-His mind is heavy and weary.[X]
+His aims to avenge his late father.[X]
 
 ## FlamurDescPlayer
 # cav replacement if gerolf died
 An opportunistic Wreyvian recruit.[N]
-His mind is heavy and weary.[N]
-Age: 23; Origin: Wreyvine[X]
+His mind drifts to other ventures.[N]
+Age: 20; Origin: Wreyvine[X]
 
 ## MayaName
 # NPC and/or replacement unit for retreats
@@ -784,10 +784,10 @@ A sorcerer's ring. Grants magic/staff[N]
 range +1. Sets Res = 0.[X]
 
 ## ResonantRingName
-[_R][_e][_s][_o][_n][_a][_n][_t][_SP][_R][_i][_n][_g][X]
+Oath Ring[X]
 
 ## ResonantRingDesc
-A witch's ring. Magic and staves deal[N]
+A waning ring. Magic and staves deal[N]
 bonus damage = 25% of unit's current[N]
 HP at start of combat, but take 5[N]
 damage after combat.[X]
@@ -816,6 +816,10 @@ A golden ring. Wearer reduces damage[N]
 taken at 1 range by 5. If HP < 25%,[N]
 take -15 damage for 1 turn.[X]
 
+## AureateRingDescZhonyas
+A golden ring. If wearer's HP < 25%,[N]
+enters Stasis for 1 turn.[X]
+
 ## RimeRingName
 Rime Ring[X]
 
@@ -829,7 +833,7 @@ A radiant ring. Wearer restores HP on-hit[N]
 (Doesn't stack with similar effects.)[X]
 
 ## WrathRingName
-Wrath Ring[X]
+Serak Ring[X]
 
 ## WrathRingDesc
 A fuming ring. Grants wearer Crit =[N]
@@ -844,7 +848,7 @@ and sidearms. Res/Luck +5.[X]
 
 ## NewmoonRingName
 # part 3
-Newmoon Ring[X]
+[_N][_e][_w][_m][_o][_o][_n][_SP][_R][_i][_n][_g][X]
 
 ## NewmoonRingDesc
 # part 3
@@ -877,18 +881,18 @@ the wearer after combat.[N]
 (Doesn't stack with Shine II.)[X]
 
 ## WingRingDesc
-A winged ring. Wearer can Canto 3[N]
+A scaled ring. Wearer can Canto 3[N]
 spaces after initiating combat.[N]
 (Canto skills take priority.)[X]
 
 ## WingRingName
-Stride Ring[X]
+Slither Ring[X]
 
 ## BulwarkRingName
-[_C][_e][_l][_e][_s][_t][_i][_a][_l][_SP][_R][_i][_n][_g][X]
+Paleveil Ring[X]
 
 ## BulwarkRingDesc
-A ring of ages. Wearer dodges all[N]
+A celestial ring. Wearer dodges all[N]
 attacks on turn 1. Luck +10.[X]
 
 ## GrimRingDesc
@@ -897,17 +901,17 @@ damage = foe's missing HP at start[N]
 of combat. Def/Res -4.[X]
 
 ## FrenzyRingName
-[_S][_e][_e][_t][_h][_i][_n][_g][_SP][_R][_i][_n][_g][X]
+Vire Ring[X]
 
 ## FrenzyRingDesc
-A broken ring. Grants Wearer Atk =[N]
+A coiled ring. Grants Wearer Atk =[N]
 25% of missing HP. Str/Eth +3.[X]
 
 ## CounterRingName
-Hexed Ring[X]
+[_F][_a][_n][_g][_t][_u][_r][_n][_SP][_R][_i][_n][_g][X]
 
 ## CounterRingDesc
-A spiteful ring. Foe's attacks against[N]
+A hexed ring. Foe's attacks against[N]
 wearer have a (foe's Luck - 30)% chance[N]
 to backfire.[X]
 
@@ -1290,8 +1294,8 @@ bonus magical damage.[N]
 [_Lock]: Nora[X]
 
 ## KaynRingDesc
-An ephemeral ring. Wearer can traverse[N]
-impassible terrain at 2 cost. Def/Res -5.[X]
+A coiled ring. Wearer ignores all[N]
+terrain penalties.[X]
 
 ## MarchRingDesc
 A leader's ring. Grants Move +2 to[N]
@@ -1651,3 +1655,9 @@ A shifting ring. Wearer can can Canto[N]
 X spaces depending on action.[N]
 (If Attack/Staff, X = 8 spaces;[N]
 otherwise, X = 5.) Sets Move to 0.[X]
+
+## Interlude2Name
+Interlude I: Fellowship[X]
+
+## Interlude3Name
+Interlude III: Reunion[X]

@@ -194,8 +194,8 @@ UNIT 0xf4 0x70 0x1 Level(10, NPC, 1)     [1,8] 0b 0x0 0x0 0x0 [SteelBlade] Range
 	UNIT
 
 EnemyUnits:
-UNIT 0xc4 APal 0x1 Level(13, Enemy, 0)     [20,1] DropItem 0x0 0x0 0x0 [KillerAxe,0xB8] BossAI
-UNIT 0xc3 GreatKnight 0x1 Level(12, Enemy, 0)     [17,18] DropItem 0x0 0x0 0x0 [LightBrand,0xA7] BossAI
+UNIT 0xc4 APal 0x1 Level(13, Enemy, 0)     [20,1] DropItem 0x0 0x0 0x0 [KillerAxe,0x7F] BossAI
+UNIT 0xc3 GreatKnight 0x1 Level(12, Enemy, 0)     [17,18] DropItem 0x0 0x0 0x0 [0x7c,LightBrand] BossAI
 
 UNIT Aeteria Mercenary 0x1 Level(8, Enemy, 1)     [10,12] 0b 0x0 0x0 0x0 [IronSword,] ChargeAI
 UNIT Aeteria Fighter 0x1 Level(7, Enemy, 1)     [10,18] 0b 0x0 0x0 0x0 [SteelAxe,] AttackInRangeAI
@@ -218,7 +218,7 @@ UNIT Aeteria PegRider 0x1 Level(7, Enemy, 1)     [5,2] 0b 0x0 0x0 0x0 [IronLance
 UNIT Aeteria PegRider 0x1 Level(7, Enemy, 1)     [6,8] 0b 0x0 0x0 0x0 [IronLance,] RangeAI
 UNIT Aeteria PegRider 0x1 Level(8, Enemy, 1)     [24,10] 0b 0x0 0x0 0x0 [SapphireLance,] GroupThreeAI
 
-UNIT Aeteria Mage 0x1 Level(10, Enemy, 1)     [18,2] DropItem 0x0 0x0 0x0 [Bolting,Talisman] GroupTwoAI
+UNIT Aeteria Mage 0x1 Level(10, Enemy, 1)     [18,2] DropItem 0x0 0x0 0x0 [Bolting,GoddessIcon] GroupTwoAI
 UNIT Aeteria SArmor 0x1 Level(9, Enemy, 1)     [21,5] 0b 0x0 0x0 0x0 [SteelBlade,] RangeAI 
 UNIT Aeteria AArmor 0x1 Level(10, Enemy, 1)     [13,19] 0b 0x0 0x0 0x0 [ShortAxe,] GroupOneAI
 

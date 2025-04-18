@@ -212,7 +212,7 @@ House(0x8,HeavySpearVillage,18,13)
 House(0x9,AbsorbVillage,18,8)
 House(0xD,CaveStuff,7,13)
 House(0x0,GetReinforcementsYay,12,3)
-Vendor(ArmoryGaming,13,8)
+Vendor(P2Ch4Shop,13,8)
 Escape(24,18)
 Escape(24,19)
 Escape(24,20)
@@ -273,7 +273,7 @@ ENDA
 	ENDA
 	
 ArmoryGaming:
-SHLI SilverSword SilverLance SilverAxe SilverBow AnimaTome5 LightTome5 DarkTome5 SilverDagger Elixir
+SHLI SilverSword SilverLance SilverAxe SilverBow AnimaTome5 LightTome5 DarkTome5 SilverDagger 0xB4 0xA4 0xA7
 ALIGN 4
 
 CaveStuff:
@@ -434,9 +434,9 @@ UNIT Aeteria SArmor 0x1 Level(9, Enemy, 1)     [15,18] DropItem 0x0 0x0 0x0 [Lig
 UNIT AeteriaStealable LArmor 0x1 Level(10, Enemy, 1)     [7,13] 0b 0x0 0x0 0x0 [Spear,PureWater] BossAI
 UNIT Aeteria LPal 0x1 Level(3, Enemy, 1)     [14,20] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
 
-UNIT Aeteria Shaman 0x1 Level(9, Enemy, 1)     [16,7] DropItem 0x0 0x0 0x0 [Flux,Elixir] GroupOneAI
+UNIT Aeteria Shaman 0x1 Level(9, Enemy, 1)     [16,7] DropItem 0x0 0x0 0x0 [Flux,GoddessIcon] GroupOneAI
 UNIT Aeteria Halberdier 0x1 Level(3, Enemy, 1)     [21,7] 0b 0x0 0x0 0x0 [SteelLance,Javelin] GroupOneAI
-UNIT Aeteria Warrior 0x1 Level(3, Enemy, 1)     [16,11] 0b 0x0 0x0 0x0 [SteelAxe,IronBow] GroupOneAI
+UNIT AeteriaStealable Warrior 0x1 Level(3, Enemy, 1)     [16,11] 0b 0x0 0x0 0x0 [SteelAxe,IronBow,0x60] GroupOneAI
 UNIT Aeteria Soldier 0x1 Level(9, Enemy, 1)     [7,5] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
 UNIT Aeteria WyvernRider 0x1 Level(9, Enemy, 1)     [23,11] 0b 0x0 0x0 0x0 [Hammer] ChargeAI
 UNIT Aeteria WyvernRider 0x1 Level(10, Enemy, 1)     [17,15] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI

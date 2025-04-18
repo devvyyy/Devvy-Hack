@@ -198,7 +198,7 @@ UNIT Aeteria General 0x1 Level(6, Enemy, 1)     [14,3] 0b 0x0 0x0 0x0 [ShortBran
 UNIT Aeteria Mage 0x1 Level(9, Enemy, 1)     [5,7] 0b 0x0 0x0 0x0 [Thunder] BossAI
 UNIT Aeteria Mage 0x1 Level(9, Enemy, 1)     [20,2] 0b 0x0 0x0 0x0 [Bolting] BossAI
 UNIT Aeteria Hunter 0x1 Level(9, Enemy, 1)     [9,6] 0b 0x0 0x0 0x0 [IronBow] AttackInRangeAI
-UNIT Aeteria Shaman 0x1 Level(9, Enemy, 1)     [15,1] 0b 0x0 0x0 0x0 [Flux] AttackInRangeAI
+UNIT Aeteria Shaman 0x1 Level(9, Enemy, 1)     [15,1] 0b 0x0 0x0 0x0 [Flux,] AttackInRangeAI
 UNIT Aeteria LArmor 0x1 Level(10, Enemy, 1)     [4,9] 0b 0x0 0x0 0x0 [ShortSpear] BossAI
 UNIT Aeteria Hunter 0x1 Level(9, Enemy, 1)     [1,14] 0b 0x0 0x0 0x0 [Longbow] TwoActionAI
 UNIT Aeteria Myrm 0x1 Level(9, Enemy, 1)     [15,12] 0b 0x0 0x0 0x0 [Flamberge] AttackInRangeAI
@@ -223,15 +223,15 @@ UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [20,6] 0b 0x0 0x0 0x0 [SteelLan
 UNIT Aeteria Soldier 0x1 Level(9, Enemy, 1)     [2,8] 0b 0x0 0x0 0x0 [IronLance] ChargeAI
 UNIT Aeteria Mage 0x1 Level(9, Enemy, 1)     [9,0] 0b 0x0 0x0 0x0 [Thunder] RangeAI
 UNIT Aeteria Fighter 0x1 Level(9, Enemy, 1)     [5,12] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
-UNIT AeteriaStealable SArmor 0x1 Level(9, Enemy, 1)     [2,12] 0b 0x0 0x0 0x0 [IronBlade,Elixir] AttackInRangeAI
+UNIT AeteriaStealable SArmor 0x1 Level(9, Enemy, 1)     [2,12] 0b 0x0 0x0 0x0 [Flamberge,IronBlade,GoddessIcon] AttackInRangeAI
 UNIT Aeteria LCav 0x1 Level(9, Enemy, 1)     [11,18] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT Aeteria SArmor 0x1 Level(10, Enemy, 1)     [17,3] 0b 0x0 0x0 0x0 [SteelBlade,Flamberge] BossAI
-UNIT AeteriaStealable WyvernRider 0x1 Level(9, Enemy, 1)     [22,1] 0b 0x0 0x0 0x0 [Halberd,EnergyRing] StallOneTurnAI
+UNIT AeteriaStealable WyvernRider 0x1 Level(9, Enemy, 1)     [22,1] 0b 0x0 0x0 0x0 [Halberd,AngelicRobe] StallOneTurnAI
 UNIT Aeteria Myrmidon 0x1 Level(9, Enemy, 1)     [11,0] 0b 0x0 0x0 0x0 [KillingEdge] TwoActionAI
 UNIT Aeteria Hunter 0x1 Level(10, Enemy, 1)     [11,0] DropItem 0x0 0x0 0x0 [ShiningRifle] BossAI
-UNIT AeteriaStealable Druid 0x1 Level(4, Enemy, 1)     [14,7] 0b 0x0 0x0 0x0 [Moonfall,DarkTome5,Talisman] BossAI
-UNIT 0xc4 APal 0x1 Level(13, Enemy, 0)     [13,6] 0b 0x0 0x0 0x0 [KillerAxe,ShortAxe,0xb8] BossAI
-UNIT 0xc3 GreatKnight 0x1 Level(12, Enemy, 0)     [15,6] 0b 0x0 0x0 0x0 [LightBrand,BluntGlaive,ShortAxe,0xA7] BossAI
+UNIT AeteriaStealable Druid 0x1 Level(4, Enemy, 1)     [14,7] 0b 0x0 0x0 0x0 [Moonfall,DarkTome5,0x5C] BossAI
+UNIT 0xc4 APal 0x1 Level(13, Enemy, 0)     [13,6] 0b 0x0 0x0 0x0 [KillerAxe,ShortAxe,0x7f] BossAI
+UNIT 0xc3 GreatKnight 0x1 Level(12, Enemy, 0)     [15,6] 0b 0x0 0x0 0x0 [0x7c,LightBrand,BluntGlaive,ShortAxe] BossAI
 UNIT Aeteria ACav 0x1 Level(9, Enemy, 1)     [18,0] DropItem 0x0 0x0 0x0 [SteelAxe] TwoActionAI
 UNIT AeteriaStealable Shaman 0x1 Level(9, Enemy, 1)     [19,16] 0b 0x0 0x0 0x0 [Flux,RedGem] TwoActionAI
 	UNIT

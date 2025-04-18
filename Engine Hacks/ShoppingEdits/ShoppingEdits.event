@@ -212,10 +212,22 @@ SHLI IronSword IronBlade IronLance IronGlaive IronAxe IronLabrys IronBow IronRif
 ALIGN 4
 
 P1Ch3Shop:
-BYTE 0xBC 232 //Canto Scroll
-BYTE 0xBC 170 //Canto Scroll
-BYTE 0xBC 171 //Canto Scroll
+BYTE 0xBC ElbowRoomID //Trooper Hat
+BYTE 0xBC 170 //Pelt Mantle
 SHLI Mend Vulnerary PureWater Mine LightRune
+BYTE 0x0 0x0
+
+ALIGN 4
+P1Ch3Armory:
+BYTE 0xBC 232 //Iron Helm
+BYTE 0xBC 171 //Gauntlets
+SHLI SteelSword RubySword Sagitar SteelLance SapphireLance Javelin SteelAxe EmeraldAxe HandAxe SteelBow ShortBow
+BYTE 0x0 0x0
+
+ALIGN 4
+
+P2Ch4Shop:
+SHLI 0xB4 0xA4 0xA7 AnimaTome5 LightTome5 DarkTome5 SilverDagger SilverSword SilverLance SilverAxe SilverBow
 BYTE 0x0 0x0
 
 ALIGN 4
@@ -234,20 +246,40 @@ ALIGN 4
 	ShopBargainPairingList:
 	//POIN ShopListPointer BargainPointer
 	POIN P1Ch3Shop P1Ch3ShopBargains
+	POIN P1Ch3Armory P1Ch3ArmoryBargains
+	POIN P2Ch4Shop P2Ch4ShopBargains
 	POIN PrologueBattlePrepShop PrologueBattlePrepShopBargains
 	POIN Chapter4BattlePrepShop Chapter4BattlePrepShopBargains
 	WORD 0 //Terminator
 
 	P1Ch3ShopBargains:
-	BYTE 0xbc 232
-	SHORT 0x8 //flag
-	WORD 500
-	BYTE 0xbc 170
-	SHORT 0x8
-	WORD 1000
-	BYTE 0xbc 171
-	SHORT 0x8
+	BYTE 0xbc ElbowRoomID
+	SHORT 0x1b //flag
 	WORD 2000
+	BYTE 0xbc 170
+	SHORT 0x1c
+	WORD 1500
+	//Terminator
+	WORD 0
+
+	P1Ch3ArmoryBargains:
+	BYTE 0xbc 232
+	SHORT 0x1d
+	WORD 3500
+	BYTE 0xbc 171
+	SHORT 0x1e
+	WORD 4000
+	//Terminator
+	WORD 0
+
+	
+	P2Ch4ShopBargains:
+	SHORT 0xB4 0x1b
+	WORD 2500
+	SHORT 0xa4 0x1c
+	WORD 2500
+	SHORT 0xa7 0x1d
+	WORD 2500
 	//Terminator
 	WORD 0	
 	

@@ -10,8 +10,8 @@ set "source_rom=%~dp0FE8_clean.gba"
 
 set "main_event=%~dp0ROM Buildfile.event"
 
-set "target_rom=%~dp0SkillsTest.gba"
-set "target_ups=%~dp0SkillsTest.ups"
+set "target_rom=%~dp0EternalWinter.gba"
+set "target_ups=%~dp0EternalWinter.ups"
 
 @rem defining tools
 

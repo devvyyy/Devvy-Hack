@@ -112,9 +112,6 @@ Traps1:
 Traps2:
 	ENDTRAP
 	ALIGN 4
-	
-//#define Part1Enemy(character, itemid) "REVEAL character; SilentlyGiveItem(itemid, character); CUSE character" //so theyre real lol
-#define Part1Enemy(character, itemid) "REVEAL character; SilentlyGiveItem(itemid, character)" //so theyre real lol
 
 BeginningScene:
 Part1Enemy(Affogato, SilverDagger)

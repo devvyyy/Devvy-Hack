@@ -85,8 +85,10 @@ LoopStart:
 ldrb r1,[r0]
 cmp r1,#0
 beq LoopExit
-cmp r1,#0x3A @ ":"
+cmp r1, #0x3A
 beq FoundColon
+cmp r1, #1 @new addition
+beq FoundColon @new addition
 add r0,#1
 b LoopStart
 
@@ -160,8 +162,10 @@ LoopStart2:
 ldrb r1,[r0]
 cmp r1,#0
 beq LoopExit2
-cmp r1,#0x3A @ ":"
+cmp r1, #0x3A
 beq FoundColon2
+cmp r1, #1 @new addition
+beq FoundColon2 @new addition
 add r0,#1
 b LoopStart2
 
@@ -231,8 +235,10 @@ LoopStart3:
 ldrb r1,[r0]
 cmp r1,#0
 beq LoopExit3
-cmp r1,#0x3A @ ":"
+cmp r1, #0x3A
 beq FoundColon3
+cmp r1, #1 @new addition
+beq FoundColon3 @new addition
 add r0,#1
 b LoopStart3
 
@@ -370,8 +376,10 @@ LoopStartDelta:
 ldrb r1,[r0]
 cmp r1,#0
 beq SkipDoingColonTerminatonDelta
-cmp r1,#0x3A @ ":"
+cmp r1, #0x3A
 beq FoundColonDelta
+cmp r1, #1 @new addition
+beq FoundColonDelta @new addition
 add r0,#1
 b LoopStartDelta
 

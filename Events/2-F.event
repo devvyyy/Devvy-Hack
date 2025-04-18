@@ -77,8 +77,8 @@ EnemyUnits:
 UNIT Aoife Sage_F 0x1 Level(15, Enemy, 0)     [4,8] DropItem 0x0 0x0 0x0 [0xEA,MasterSeal] BossAI
 
 UNIT Messel Falcoknight 0x1 Level(10, Enemy, 1)     [12,9] 0b 0x0 0x0 0x0 [SilverLance,Axereaver,Elixir] BossAI
-UNIT Melya APal 0x1 Level(13, Enemy, 1)     [22,9] 0b 0x0 0x0 0x0 [KillerAxe,BraveAxe,0xB8] BossAI
-UNIT Wellington GreatKnight 0x1 Level(12, Enemy, 1)     [29,9] 0b 0x0 0x0 0x0 [Runesword,BluntGlaive,ShortAxe,0xB4] BossAI
+UNIT Melya APal 0x1 Level(13, Enemy, 1)     [22,9] 0b 0x0 0x0 0x0 [KillerAxe,BraveAxe,0x7f] BossAI
+UNIT Wellington GreatKnight 0x1 Level(12, Enemy, 1)     [29,9] 0b 0x0 0x0 0x0 [Runesword,BluntGlaive,ShortAxe,] BossAI
 
 UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [30,8] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT Aeteria Merc 0x1 Level(10, Enemy, 1)     [30,10] 0b 0x0 0x0 0x0 [SteelSword,ShortBrand] TwoActionAI
@@ -127,7 +127,7 @@ UNIT Aeteria SergeantClass 0x1 Level(5, Enemy, 1)     [2,7] DropItem 0x0 0x0 0x0
 
 EnemyUnitsButLast:
 UNIT Aeteria SCav 0x1 Level(10, Enemy, 1)     [5,7] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
-UNIT AeteriaStealable ACav 0x1 Level(10, Enemy, 1)     [7,8] 0b 0x0 0x0 0x0 [SteelAxe, Talisman] StallOneTurnAI
+UNIT AeteriaStealable ACav 0x1 Level(10, Enemy, 1)     [7,8] 0b 0x0 0x0 0x0 [SteelAxe, Speedwing] StallOneTurnAI
 UNIT Aeteria APal 0x1 Level(5, Enemy, 1)     [4,10] 0b 0x0 0x0 0x0 [IronAxe,HandAxe] RangeAI
 UNIT Aeteria LCav 0x1 Level(10, Enemy, 1)     [5,12] 0b 0x0 0x0 0x0 [HeavySpear,SteelLance] TwoActionAI
 UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [2,14] 0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI

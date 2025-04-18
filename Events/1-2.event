@@ -164,7 +164,7 @@ UNIT
 
 BoatEnemies:
 UNIT UPirate Pirate 0x1 Level(3, Enemy, 1)     [1,14] 0b 0x0 0x0 0x0 [IronAxe,] TwoActionAI
-UNIT UPirate Pirate 0x1 Level(3, Enemy, 1)     [3,18] 0b 0x0 0x0 0x0 [IronAxe,] TwoActionAI
+UNIT UPirate Pirate 0x1 Level(3, Enemy, 1)     [3,18] 0b 0x0 0x0 0x0 [SteelAxe,0x5d] ChargeAI
 UNIT
 
 MountainEnemies:
@@ -602,7 +602,7 @@ TILECHANGE 0x4
 	Text(Ch2OgrimAppear2)
 	TEXTEND
 BYTE 0x40 0x0D 0xC3 0xBC; POIN SilentGiveItem+1
-SetUnitItemDurability(0xC3, 3, CantoOneID) //boots
+SetUnitItemDurability(0xC3, 3, FairFightID) //boots
 ENUT 0x18
 NoFade
 ENDA

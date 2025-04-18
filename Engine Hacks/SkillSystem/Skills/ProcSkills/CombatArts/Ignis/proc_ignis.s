@@ -63,10 +63,10 @@ strb  r0, [r6,#4]
 @add def/2 and res/2 to damage dealt
 mov r0, r4
 blh 0x8019250 @def getter
-lsr r5, r0, #1 @save def/2
+@lsr r5, r0, #1 @save def/2
 mov r0, r4
-blh 0x8019270 @res getter
-lsr r0, #1 @res/2
+@blh 0x8019270 @res getter
+@lsr r0, #1 @res/2
 add r0, r5 @averaged defenses in r0
 
 ldr r2, [r6]

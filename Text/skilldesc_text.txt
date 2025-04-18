@@ -54,7 +54,7 @@ or less, grants Atk/AS +5.[X]
 
 ## SD_Overachiever
 Overachiever[N]
-- Flamur's follow-ups trigger twice;[N]
+- Erik's follow-ups trigger twice;[N]
 if unable to follow-up, grants an[N]
 additional attack after first attack.[X]
 
@@ -62,8 +62,8 @@ additional attack after first attack.[X]
 Guardian Angel[N]
 - Grants Maya another action after[N]
 using a staff (once per turn).[N]
-- If an ally's HP is below 75%,[N]
-grants Move +2.[X]
+- Grants Prt/Rsl +3 to all allies on[N]
+the map with HP < 75%.[X]
 
 ## SD_Domineer
 Domineer[N]
@@ -1410,7 +1410,7 @@ Perseverance[N]
 - Unit restores 3 HP after combat.[N]
 (Doesn't stack with Dawn I.)[X]
 
-## SD_HeavyStrikes
+## SD_HeavyStrikesOld
 # Stroganoff, Klavdia, Pandoro, Edith
 Heavy Strikes[N]
 - Grants unit Crit = Weapon Wt.[X]
@@ -1492,7 +1492,7 @@ Gauntlets[N]
 ## SD_Vigilance
 # 1-1 interlude, implemented
 Pelt Mantle[N]
-(Def +2)[N]
+(Def/Res +1)[N]
 - Grants Avoid +10.[X]
 
 ## SD_Hauberk
@@ -1501,15 +1501,31 @@ Hauberk[N]
 - Grants Crit Avoid +20.[X]
 
 ## SD_ElbowRoom
-# implemented
-Boarhide Vest[N]
+# implemented, Boarhide Vest
+Trooper Hat[N]
+(Def +1)[N]
+- Grants Atk +3 in terrain.[X]
+
+## SD_Pavise
+Armet[N]
 (Def +2)[N]
-- Grants Atk/Prt/Rsl +3 in terrain.[X]
+- Chance = Def to negate a[N]
+physical attack.[X]
+
+## SD_RallyStr
+Sergeant Whistle[N]
+- Use Rally to grant Str/Eth +4[N]
+to adjacent allies for 1 turn.[X]
+
+## SD_Acrobat
+Ice Cleats[N]
+(Move +1 to non-[HorseIcon][FlierIcon])[N]
+- Ignores terrain penalties.[X]
 
 ## SD_HolyCloak
 # 1-1 interlude, implemented
 Tusked Pin[N]
-(Luck +3)[N]
+(Res +3)[N]
 - Transfers damage penalties inflicted[N]
 by tier I-V dark magic during[N]
 combat to its user.[X]
@@ -1553,17 +1569,17 @@ War Banner[N]
 - Grants Atk +3 to physical allies[N]
 within 2 spaces.[X]
 
-## SD_GuardHelm
+## SD_BarricadePlus
 # 1-3, implemented
-Steel War-Plate[N]
+War-Plate[N]
 (Def +5, Spd -3)[N]
 - Reduces damage taken by 50%[N]
 for each of foe's attacks after[N]
 the first (resets after combat).[X]
 
 ## SD_CriticalForce
-# implemented
-Razor's Edge[N]
+# implemented, Razor's Edge
+Gambler's Cap[N]
 (Dex +5, Luck -50%)[N]
 - Grants Crit = Dex.[N]
 - Halves bonus damage from foe's[N]
@@ -1577,13 +1593,11 @@ Sable Hood[N]
 at start of combat.[N]
 - Reduces enemy priority.[X]
 
-## SD_Cuirass
-# idk
+## SD_Ignis
+# implemented
 Steel Sigil[N]
-(Luck +1; Luck +3 to Wreyvians)[N]
-- Grants bonus Atk = X.[N]
-- If Wreyvian, grants Atk +5.
-[X]
+(Luck +5 to Wreyvians)[N]
+- Enables Ignis (Adds Def to damage).[X]
 
 ## SD_QuickBurn
 Draco Fang[N]
@@ -1591,13 +1605,12 @@ Draco Fang[N]
 - Grants +15 Hit and Avoid; this bonus[N]
 decreases by 1 each turn (min 0).[X]
 
-## SD_Flask
+## SD_Camaraderie
 # 1-3 strogy?
 Flask[N]
-- Restores 3 HP after combat.[N]
-(Doesn't stack with Dawn I).[X]
+- At start of turn, restores 10% max HP.[X]
 
-## SD_StalwartItem
+## SD_BattleVeteran
 # part 3
 Veteran Brooch[N]
 (Luck +10)[N]
@@ -1605,7 +1618,7 @@ Veteran Brooch[N]
 per 10 levels (Promoted +20).[X]
 
 ## SD_ArcaneEffect
-Serpine Amulet[N]
+Serpi Amulet[N]
 - Deals 10 bonus magical damage.[N]
 (Doesn't stack with other Arcane[N]
 weapons or effects.)[X]
@@ -1613,13 +1626,14 @@ weapons or effects.)[X]
 ## SD_ArmorMarch
 # 1-8
 Legionnairis[N]
-- Grants Move +2 to unit and adjacent [ArmorIcon][N]
-allies if adjacent to an [ArmorIcon] ally at[N]
-start of turn.[N]
+- At start of turn, if adjacent to an [ArmorIcon][N]
+ally, grants Move +2 to unit and adjacent[N]
+[ArmorIcon] allies.[N]
 (Doesn't stack with similar skills.)[X]
 
-## SD_Gauntlets
-Greaves[N]
+## SD_Desperation
+# implemented
+Mercury Brace[N]
 (Spd +2 to non-[HorseIcon][FlierIcon])[N]
 - If initiating, follow-ups occur[N]
 before foe can counterattack.[X]
@@ -1627,8 +1641,9 @@ before foe can counterattack.[X]
 ## SD_Hammers
 # ansgar talk
 Whetstone[N]
+(Dex +3)[N]
 - Neutralizes WTD and weapons have a[N]
-(Luck)% chance to not consume durability.[X]
+(Dex)% chance to not consume durability.[X]
 
 ## SD_PrecisionRingLOL
 # part 3, implemented
@@ -1644,9 +1659,9 @@ Barbed Mail[N]
 - Counters physical damage taken[N]
 at 1 range (can't kill).[X]
 
-## SD_KnightBands
+## SD_HeavyStrikes
 # implemented, 1-3 strogy?
-Ferric Heart[N]
+Inner Hearth[N]
 (Con +1; Con +2 to physical [ArmorIcon])[N]
 - Grants bonus Hit/Avoid/Crit/Crit Avoid[N]
 equal to weapon Wt.[X]
@@ -1879,10 +1894,6 @@ Wreyvian allies within 3 spaces.[N]
 - Grants Atk/Prt +1 to all allies,[N]
 increased to +3 if Wreyvian.[X]
 
-## SD_Acrobat
-Shadow Step: Unit can traverse walls[N]
-at a cost of 2 movement per space.[X]
-
 ## SD_Pass
 Slipstream: Noel has less enemy priority,[N]
 can move through occupied spaces, and[N]
@@ -2007,10 +2018,6 @@ enemy has a tome equipped.[X]
 Aegis: Nullify a magic attack.[N]
 (Skill % activation)[X]
 
-## SD_Pavise
-Pavise: Nullify a physical attack.[N]
-(Skill % activation)[X]
-
 ## SD_DuelistsBlow
 Duelist's Blow: +20 Avo[N]
 when initiating battle.[X]
@@ -2038,10 +2045,6 @@ when initiating battle.[X]
 ## SD_Vantage
 Vantage: If unit's HP is 50% or less,[N]
 unit counters before foe's attack.[X]
-
-## SD_Desperation
-Desperation: If unit's HP is 50% or less,[N]
-follow-ups occur before counter.[X]
 
 ## SD_Wrath
 Wrath: If unit's HP is 50% or less,[N]
@@ -2198,11 +2201,6 @@ Impale: Deal 4x damage.[N]
 Colossus: Triples Strength.[N]
 (Skill % activation)[X]
 
-## SD_RallyStr
-Hoist the Flag[N]
-- Use Rally to grant Str/Eth +4[N]
-to adjacent allies for 1 turn.[X]
-
 ## SD_RallyMag
 Rally Magic: +4 Mag to[N]
 allies within 2 spaces.[X]
@@ -2254,11 +2252,6 @@ of staves is increased by 1.[X]
 Live to Serve: Restores HP to unit[N]
 = HP restored with a staff.[X]
 
-## SD_Ignis
-Ignis: Add Def/2 and Res/2[N]
-to damage dealt.[N]
-(Skill % activation)[X]
-
 ## SD_LifeAndDeath
 Life and Death: +10 to[N]
 damage dealt and taken.[X]
@@ -2269,6 +2262,16 @@ Thief Basics[N]
 disable traps, and Vault over allies.[N]
 - Grants +1 Sidearm range and +2[N]
 spaces of vision in fog/darkness.[X]
+
+## SD_ArmorKnight
+Armor [ArmorIcon][N]
+- Unit can Fling units.[N]
+- Ignores most terrain penalties[N]
+and all equipment penalties.[X]
+
+## SD_HorseUnit
+Cavalry [HorseIcon][N]
+- Canto.[X]
 
 ## SD_Lunge
 Steel Soul[N]
@@ -2294,11 +2297,6 @@ if the foe cannot counter.[X]
 ## SD_Trample
 Trample: +5 damage to[N]
 unmounted units.[X]
-
-## SD_Camaraderie
-Camaraderie: If unit is within 2 spaces[N]
-of an ally, restores 10% max HP[N]
-at the start of each turn.[X]
 
 ## SD_ForeignPrincess
 Foreign Princess: Foreign army units[N]
@@ -2721,10 +2719,6 @@ Steady Bearing[N]
 the 2nd attack onwards by 50%.[N]
 - Immune to critical hits.[X]
 
-## SD_BarricadePlus
-Barricade+: Damage taken is halved[N]
-each time unit is struck.[X]
-
 ## SD_PointBlank
 Point Blank: Minimum range of[N]
 equipped bows is set to 1.[X]
@@ -2736,10 +2730,6 @@ user's HP is at maximum.[X]
 ## SD_Puissance
 Puissance: +3 Damage when the user's[N]
 Strength is higher than the enemy's.[X]
-
-## SD_BattleVeteran
-Battle Veteran: Gain +1 damage and[N]
-+5% Hit per 10 levels unit has.[X]
 
 ## SD_HolyAura
 Holy Aura: Gain +1 damage, +5% hit,[N]

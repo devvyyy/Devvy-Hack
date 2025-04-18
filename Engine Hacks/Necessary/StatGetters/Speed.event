@@ -48,6 +48,7 @@ rIfUnitHasNotSkill(CantoPlusID)
     rAddConst(2)
 
 prBarricadeSpd:
+rIfUnitHasNotSkill(SanctuaryID)
   rIfUnitHasSkill(BarricadePlusID)
     rSubConst(3)
 			

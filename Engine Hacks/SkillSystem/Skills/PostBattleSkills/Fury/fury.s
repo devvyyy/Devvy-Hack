@@ -27,6 +27,29 @@ mov	lr, r3
 cmp	r0,#0x00
 beq	CheckDefender
 
+@Unit has skill, check to see if unit has magic equipped
+mov     r0, #0x50      @Move to the attacking unit weapon type.
+ldrb    r0, [r4, r0]   @Load the attacking unit weapon type.
+cmp     r0, #5         @Is it anima?
+beq     HasSkill        @If not, goto end
+
+mov     r0, #0x50      @Move to the attacking unit weapon type.
+ldrb    r0, [r4, r0]   @Load the attacking unit weapon type.
+cmp     r0, #6         @Is it anima?
+beq     HasSkill        @If not, goto end
+mov     r0, #0x50      @Move to the attacking unit weapon type.
+ldrb    r0, [r4, r0]   @Load the attacking unit weapon type.
+cmp     r0, #7         @Is it anima?
+beq     HasSkill        @If not, goto end
+
+@Unit has skill, check to see if unit has a staff equipped
+mov     r0, #0x50      @Move to the attacking unit weapon type.
+ldrb    r0, [r4, r0]   @Load the attacking unit weapon type.
+cmp     r0, #4         @Is it staff?
+beq     HasSkill        @If not, goto end
+b End
+
+HasSkill:
 @take 7 damage
 ldrb	r1, [r4,#0x12]	@r1=maxhp
 mov r0, #furydamage
@@ -65,6 +88,30 @@ mov lr, r3
 .short  0xf800
 cmp r0,#0x00
 beq End
+
+@Unit has skill, check to see if unit has magic equipped
+mov     r0, #0x50      @Move to the attacking unit weapon type.
+ldrb    r0, [r5, r0]   @Load the attacking unit weapon type.
+cmp     r0, #5         @Is it anima?
+beq     HasSkill2        @If not, goto end
+
+mov     r0, #0x50      @Move to the attacking unit weapon type.
+ldrb    r0, [r5, r0]   @Load the attacking unit weapon type.
+cmp     r0, #6         @Is it anima?
+beq     HasSkill2        @If not, goto end
+mov     r0, #0x50      @Move to the attacking unit weapon type.
+ldrb    r0, [r5, r0]   @Load the attacking unit weapon type.
+cmp     r0, #7         @Is it anima?
+beq     HasSkill2        @If not, goto end
+
+@Unit has skill, check to see if unit has a staff equipped
+mov     r0, #0x50      @Move to the attacking unit weapon type.
+ldrb    r0, [r5, r0]   @Load the attacking unit weapon type.
+cmp     r0, #4         @Is it staff?
+beq     HasSkill2        @If not, goto end
+b End
+
+HasSkill2:
 
 @take 7 damage
 ldrb  r1, [r5,#0x12]  @r1=maxhp

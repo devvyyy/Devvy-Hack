@@ -4,13 +4,13 @@
 #include "_Common.event"
 
 pResistanceModifiers: // Resistance
-	POIN prAddUnitResistance prHalveIfCapturing prDebuffRes prAddEquipResistance prItemPassiveResistance prRallyRes prAddPureWaterBarrierMod prLifeAndDeathMinus prFortressResistanceRes prStatusZephyrEnemyCheckRes prDefiantRes prPushRes
+	POIN prAddUnitResistance prHalveIfCapturing prDebuffRes prAddEquipResistance prItemPassiveResistance prRallyRes prAddPureWaterBarrierMod prLifeAndDeathMinus prFortressResistanceRes prStatusZephyrEnemyCheckRes prSkillMantle prDefiantRes prPushRes
 	POIN prMinZero
 	POIN prSleepHalfRes prPoisonHalfRes
 //	POIN prAvoidBuffRes
-	POIN prAcrobatCheckRes
-	POIN prGrimRingRes prUlrichRingRes
-	//POIN prPaleRingRes prAshenRingRes
+//	POIN prAcrobatCheckRes
+	POIN prGrimRingRes prUlrichRingRes prPaleRingRes
+	//POIN prAshenRingRes
 	POIN prRimeRingRes
 //	POIN prTemperedFateRes
 	POIN prFlorisMarkedRes
@@ -79,7 +79,7 @@ prRimeRingRes:
 
 prPaleRingRes:
 	rIfUnitHasSkill(GlowRingID)
-		rAddConst(5)
+		rAddConst(3)
 		
 prUlrichRingRes:
 	rIfUnitHasSkill(KeepsakeID)

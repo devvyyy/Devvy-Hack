@@ -196,7 +196,7 @@ Void: None[X]
 Off-Hand[X]
 
 # 0x623
-Equipment is an effect learned[N]
+Equipment is an effect added[N]
 from an Equipment Kit.[N]
 These effects are permanently[N]
 affixed to the unit and act as[N]
@@ -443,6 +443,14 @@ Switches between[N]
 2 classes. Note:[N]
 Ranks can be lost.[X]
 
+# 0x54f
+Aid. Can rescue units with lower Con.[N]
+Infantry/[ArmorIcon]: Aid = Con - 1.[N]
+[HorseIcon][FlierIcon]: Aid = 25 - Con.[N]
+(Only applies to mounted units.)
+[X]
+
+
 # 0x554
 Zzzz... Zzzzzzz.....[N]
 Sleep halves Def/Res and[N]
@@ -536,7 +544,7 @@ Affin[X]
 Equip[X]
 
 # 0x3f7
-Miracle Ring[X]
+[_S][_i][_l][_v][_e][_r][_l][_i][_g][_h][_t][_SP][_R][_i][_n][_g][X]
 
 # 0x4a8
 A sacred ring. Wearer survives the next[N]
@@ -922,11 +930,11 @@ strength or ether.[X]
 Ether increased.[X]
 
 # 0x3D6
-Wreyvian Trout[X]
+[_W][_r][_e][_y][_v][_i][_a][_n][_SP][_T][_r][_o][_u][_t][X]
 
 # 0x485
 Only the most skilled can reel one in.[N]
-Increases Dexterity by 1 when used.[X]
+Increases Dexterity by 2 when used.[X]
 
 # 0x4C3
 Raises dexterity.[X]
@@ -943,13 +951,13 @@ Raises speed.[X]
 
 # 0x487
 An idol to Aeteria's Silver Serpent.[N]
-Increases Luck by 1 point when used.[X]
+Increases Luck by 2 points when used.[X]
 
 # 0x4C5
 Raises luck.[X]
 
 # 0x488
-Bread that's hard as an anvil.[N]
+Bread that's hard as stone.[N]
 Increases Defense by 1 when used.[X]
 
 # 0x4C6
@@ -1762,7 +1770,7 @@ Put out fire.[X]
 Prologue III-A: Here We Are[X]
 
 # 0x17A
-Prologue III-B: Press On[X]
+Prologue III-B: Bargain[X]
 
 # 0x18b
 2-7x: Hour of Vengeance[X]
@@ -1819,7 +1827,7 @@ Prologue I: No Way Out[X]
 Prologue II: One Way Out[X]
 
 ## P3Ch4Name
-3-7: Maw of Ice[X]
+3-7: None Shall Stand[X]
 
 ## P3Ch5Name
 3-8: Absolution[X]
@@ -1834,7 +1842,28 @@ Prologue II: One Way Out[X]
 3-1: Guerrilla Warfare[X]
 
 ## ChIDKName4
-3-2: Eternal Hunt[X]
+3-2: Lines Crossed[X]
+
+## ChIDKName5
+3-3: Whispers Amidst Steel[X]
+
+## ChIDKName6
+3-4: Firelight[X]
+
+## ChIDKName7
+3-5: A Light Above, Descending[X]
+
+## ChIDKName8
+3-6: Through Fire and Ice[X]
+
+## ChIDKName9
+3-9: Eternal Winter[X]
+
+## ChIDKName10
+3-F: Eye of the Storm[X]
+
+## ChIDKName10
+Endgame: One Last Song[X]
 
 #0x3A LearnedSkillText
 Equipped  [X]
