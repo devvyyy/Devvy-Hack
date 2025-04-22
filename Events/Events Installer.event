@@ -106,10 +106,16 @@ ALIGN 4
   #include "3-1.event"
 }
 {
+  ALIGN 4
+  #include "3-2.event"
 }
 {
   ALIGN 4
-  #include "3-2.event"
+  #include "3-3.event"
+}
+{
+  ALIGN 4
+  #include "3-4.event"
 }
 {
   ALIGN 4
@@ -224,7 +230,7 @@ LABEL 0x9001
 EVBIT_T 0x7
 ENDA
 
-#define Part1DeathQuote(deathquote,character) "STAL 5; Text(deathquote);CUSA character; REMU character" //for death quotes
+#define Part1DeathQuote(deathquote,character) "STAL 5; Text(deathquote);FADI 60;CUSA character; REMU character; FADU 60" //for death quotes
 
 AffoPart2DeathQ:
 Part1DeathQuote(AffoRetreat2,Affogato)

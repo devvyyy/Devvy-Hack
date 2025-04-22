@@ -8,40 +8,40 @@ Map:
 #incbin "devvy_radiantdawn_data.dmp"
 
 MapChanges:
-TileMap(0,8,13,2,3,LeftWall)
-TileMap(1,16,22,2,4,BottomWall)
-TileMap(2,23,20,1,1,RightWall)
-TileMap(3,15,18,4,3,TWall)
-TileMap(4,24,13,2,2,RighterWall)
-TileMap(5,25,9,1,1,TopRightWall)
-TileMap(6,8,5,1,1,TopLeft)
+TileMap(0,8,13,2,3,Map_Change_0)
+TileMap(1,16,22,2,4,Map_Change_1)
+TileMap(2,23,20,1,1,Map_Change_2)
+TileMap(3,15,18,4,3,Map_Change_3)
+TileMap(4,24,13,2,2,Map_Change_4)
+TileMap(5,25,9,1,1,Map_Change_5)
+TileMap(6,8,5,1,1,Map_Change_6)
 TileMapEnd
 
-LeftWall:
+Map_Change_0:
 SHORT 0x9cc 0x2d0 0x188 0x398 0x208 0x288 
 ALIGN 4
 
-BottomWall:
+Map_Change_1:
 SHORT 0x398 0x644 0xce8 0x318 0xd68 0x398 0x218 0x218 
 ALIGN 4
 
-RightWall:
+Map_Change_2:
 SHORT 0x560 
 ALIGN 4
 
-TWall:
+Map_Change_3:
 SHORT 0x2d0 0x2d0 0x39c 0x208 0x2d0 0x2d0 0x294 0x62c 0x4b4 0x3a0 0x244 0x2d0 
 ALIGN 4
 
-RighterWall:
+Map_Change_4:
 SHORT 0xd28 0xf10 0xe70 0xe70 
 ALIGN 4
 
-TopRightWall:
+Map_Change_5:
 SHORT 0x45c 
 ALIGN 4
 
-TopLeft:
+Map_Change_6:
 SHORT 0x3d8 
 ALIGN 4
 

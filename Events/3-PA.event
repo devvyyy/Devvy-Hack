@@ -46,12 +46,11 @@ Tutorial:
 	END_MAIN
 
 Units1:
-LoadUnit(10,23)
-LoadUnit(11,23)
-LoadUnit(12,23)
-LoadUnit(13,23)
-LoadUnit(14,23)
-LoadUnit(15,23)
+LoadUnit(10,22)
+LoadUnit(11,22)
+LoadUnit(12,22)
+LoadUnit(13,22)
+
 	UNIT
 
 TempUnits:
@@ -59,6 +58,40 @@ UNIT 0x5E PegasusRider 0x1 Level(4, Ally, 0)     [19,12] 0b 0x0 0x0 0x0 [SteelLa
 UNIT 0x5D Deserter 0x1 Level(7, Ally, 0)     [19,12] 0b 0x0 0x0 0x0 [SteelLance] [0,3,0,32]
 UNIT 0x5F SCav 0x1 Level(3, Ally, 0)     [19,12] 0b 0x0 0x0 0x0 [Flamberge] [0,3,0,32]
 UNIT 0x60 Cleric 0x1 Level(9, Ally, 0)     [19,12] 0b 0x0 0x0 0x0 [Mend] [0,3,0,32]
+	UNIT
+
+CutsceneUnits:
+UNIT Ulrich LPal 0x1 Level(1, Ally, 0)     [12,24] 0 0 1 REDA10R22 [Vulnerary] [0,3,0,32]
+UNIT Breve SCav 0x1 Level(1, Ally, 0)     [13,24] 0 0 1 REDA11R22 [Vulnerary] [0,3,0,32]
+UNIT Hildr ACav 0x1 Level(1, Ally, 0)     [13,24] 0 0 1 REDA12R22 [Vulnerary] [0,3,0,32]
+UNIT Ansgar AArmor 0x1 Level(1, Ally, 0)     [14,24] 0 0 1 REDA13R22 [Vulnerary] [0,3,0,32]
+	UNIT
+
+BreveReplacement:
+UNIT Wreyvine SCav 0x1 Level(5, NPC, 1)     [6,8] 0x0 0x0 0x0 0x0 [IronSword,BraveSword,Elixir] ChargeAI
+	UNIT
+
+HildrReplacement:
+UNIT Wreyvine ACav 0x1 Level(5, NPC, 1)     [6,8] 0x0 0x0 0x0 0x0 [SteelAxe,KillerAxe,Elixir] ChargeAI
+	UNIT
+
+AnsgarReplacement:
+UNIT Wreyvine ACav 0x1 Level(5, NPC, 1)     [6,8] 0x0 0x0 0x0 0x0 [SteelGlaive,Spear,PureWater] ChargeAI
+	UNIT
+
+SequinReplacement:
+UNIT Wreyvine Myrmidon 0x1 Level(3, NPC, 1)     [6,8] 0x0 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] ChargeAI
+	UNIT
+
+NoraReplacement:
+UNIT Wreyvine Troubadour 0x1 Level(3, NPC, 1)     [6,8] 0x0 0x0 0x0 0x0 [Mend,Fear,Vulnerary] ChargeAI
+	UNIT
+
+LesGenericUnits:
+UNIT Wreyvine Soldier 0x1 Level(5, NPC, 1)     [10,23] 0x0 0x0 0x0 0x0 [MageLance,ShortSpear,Vulnerary] ChargeAI
+UNIT Wreyvine LCav 0x1 Level(5, NPC, 1)     [11,23] 0x0 0x0 0x0 0x0 [SteelLance,Javelin,Vulnerary] ChargeAI
+UNIT Wreyvine Fighter 0x1 Level(5, NPC, 1)     [12,23] 0x0 0x0 0x0 0x0 [MageAxe,ShortAxe,Vulnerary] ChargeAI
+UNIT Wreyvine Hunter 0x1 Level(5, NPC, 1)     [13,23] 0x0 0x0 0x0 0x0 [SteelBow,IronRifle,PureWater] ChargeAI
 	UNIT
 
 EnemyUnits:
@@ -109,48 +142,85 @@ Traps2:
 
 BeginningScene:
 ENUT 0xEF
-QuickRemu(Chiffon,1)
-QuickRemu(Graham,2)
-QuickRemu(Yufka,3)
-QuickRemu(Jaye,4)
-QuickRemu(Polly,5)
-QuickRemu(Yvonne,6)
-QuickRemu(Frye,7)
-QuickRemu(Cortado,8)
-QuickRemu(Velius,9)
-QuickRemu(Raial,10)
-QuickRemu(Ilse,11)
-QuickRemu(Rina,12)
-QuickRemu(Moose,13)
-QuickRemu(Gus,14)
-QuickRemu(Dira,15)
-QuickRemu(Katsu,16)
-QuickRemu(Zopf,17)
-QuickRemu(Staniel,18)
-QuickRemu(Opal,19)
-QuickRemu(Wulfric,20)
-QuickRemu(Messel,21)
-QuickRemu(Edvin,22)
-QuickRemu(Edith,23)
-QuickRemu(Verna,24)
-
 	REVEAL Ulrich
 	REVEAL Breve
 	REVEAL Hildr
 	REVEAL Ansgar
-	REVEAL Nora
-	REVEAL Sequin
-	REVEAL Doppio
-
-	LOAD1 0x1 TempUnits
+	LOAD1 0x1 LesGenericUnits
 	LOAD1 0x1 EnemyUnits
 	ENUN
+SetBackground(0x35)
+FADU 60
+STAL 5
+Text(Part3PrologueAOpening1)
+FADI 60
+CLEAN
+STAL 10
+SetBackground(0x3B)
+STAL 10
+BROWNBOXTEXT WreyvineText [8,8]
+STAL 15
+Text(Part3PrologueAOpening2)
+ClearBackground
+STAL 15
+	LOAD2 0x1 CutsceneUnits
+	CameraCursor(Ulrich)
+	STAL 5
+	Text(Part3PrologueAOpening3)
+	STAL 15
 	SetUnitItemDurability(Supplies4, 0, CantoOneID) //boots
-	GotoPrepScreen
+
+	CALL $591FD8 //prep screen
+	FADU 60
+	//change all NPCs to be blue
+
+SVAL 0xB 0x17000A
+CUSA 0xFFFE
+SVAL 0xB 0x17000B
+CUSA 0xFFFE
+SVAL 0xB 0x17000C
+CUSA 0xFFFE
+SVAL 0xB 0x17000D
+CUSA 0xFFFE
+
+	CenterTextbox(Part3PrologueDisclaimer)
+	NoFade
 	ENDA
 
 EndingScene:
-	//MNC2 next_chapter
-	MNTS 0x1
+FADI 60
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+DISA_IF 0x7f
+QuickRemu(Affogato,1)
+QuickRemu(Ulrich,2)
+QuickRemu(Evelyn,3)
+QuickRemu(Sequin,4)
+QuickRemu(Breve,5)
+QuickRemu(Hildr,6)
+QuickRemu(Ansgar,7)
+QuickRemu(Latte,8)
+QuickRemu(Xavier,9)
+//QuickRemu(Pandoro,10)
+QuickRemu(Mocha,11)
+QuickRemu(Tammy,12)
+QuickRemu(Stroganoff,13)
+QuickRemu(Eiskaffee,14)
+QuickRemu(Doppio,15)
+QuickRemu(Floris,16)
+QuickRemu(Atheya,17)
+QuickRemu(Noel,18)
+QuickRemu(Therese,19)
+QuickRemu(Lennard,20)
+QuickRemu(Yory,21)
+QuickRemu(Lili,22)
+QuickRemu(Kane,23)
+QuickRemu(Wegman,24)
+QuickRemu(Klavdia,25)
+QuickRemu(Gerolf,26)
+QuickRemu(Ogrim,27)
+	MNC2 0x1A
+	//MNTS 0x1
 	NoFade
 	ENDA

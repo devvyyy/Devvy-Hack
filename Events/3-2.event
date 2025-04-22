@@ -13,8 +13,12 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-
+TURN 0x0 GoodbyeDespair [16,0] 0x0
 	END_MAIN
+
+GoodbyeDespair:
+GameOver
+ENDA
 
 ALIGN 32
 CharacterBasedEvents:
@@ -80,7 +84,7 @@ UNIT Wreyvine Fighter 0x1 Level(10, Enemy, 1)     [13,5] 0b 0x0 0x0 0x0 [SilverA
 UNIT Wreyvine Fighter 0x1 Level(10, Enemy, 1)     [7,3] 0b 0x0 0x0 0x0 [SilverAxe,SteelLabrys] RangeAI
 
 
-UNIT Affogato Scout 0x1 Level(7, Enemy, 0)     [7,5] 0b 0x0 0x0 0x0 [SnaringRifle,0xB9,Elixir] StallOneTurnAI
+//UNIT Affogato Scout 0x1 Level(7, Enemy, 0)     [7,5] 0b 0x0 0x0 0x0 [SnaringRifle,0xB9,Elixir] StallOneTurnAI
 UNIT Breve SCav 0x1 Level(5, Enemy, 0)    [6,19] 0b 0x0 0x0 0x0 [IronSword,Sagitar,Vulnerary] RangeAI
 UNIT Ansgar LArmor 0x1 Level(10, Enemy, 0)   [10,12] 0b 0x0 0x0 0x0 [IronGlaive,Javelin,0x64,PureWater] BossAI
 UNIT Hildr 0x6 0x1 Level(4, Enemy, 0)    [13,20] 0b 0x0 0x0 0x0 [IronAxe,HandAxe,Vulnerary] [0x0,0x0,0x0,0x0]
@@ -146,6 +150,30 @@ CHAI Ulrich
 	ENDA
 
 EndingScene:
-	//MNC2 next_chapter
+	REVEAL Ulrich
+	REVEAL Breve
+	REVEAL Hildr
+	REVEAL Ansgar
+	REVEAL Nora
+	REVEAL Sequin
+	REVEAL Kane
+	REVEAL Mocha
+	REVEAL Latte
+	REVEAL Stroganoff
+	REVEAL Doppio
+	REVEAL Eisner
+	REVEAL Therese
+	REVEAL Lennard
+	REVEAL Floris
+	REVEAL Yory
+	REVEAL Wegman
+	REVEAL Klavdia
+	REVEAL Gerolf
+	REVEAL Xavier
+	REVEAL Ogrim
+	REVEAL Lili
+
+
+	MNC2 0x15
 	NoFade
 	ENDA

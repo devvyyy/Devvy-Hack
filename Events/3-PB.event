@@ -192,12 +192,20 @@ QuickRemu(Ogrim,27)
 	REVEAL Zopf
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 EnemiesPart2
+
+Music(0x29A)
+SetBackground(0x34)
+STAL 10
+BROWNBOXTEXT WreyvianOutskirtsText [8,8]
+STAL 15
+Text(Part3PrologueBOpening1)
+
 	ENUN
 	GotoPrepScreen
 	ENDA
 
 EndingScene:
-	//MNC2 next_chapter
-	MNTS 0x1
+	MNC2 0x11
+	//MNTS 0x1
 	NoFade
 	ENDA

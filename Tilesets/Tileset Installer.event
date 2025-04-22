@@ -144,6 +144,25 @@ ALIGN 4
     EventPointerTable(0xEA, DuskwavePalette)
 	EventPointerTable(0x10, SnowVillageMapConfig)
 	EventPointerTable(0x12, SnowVillageAnims)
+	
+	//Rivian snow thing (replaces mountainous)
+	
+	ALIGN 16
+    RivianTilesetImage:
+    #incext Png2Dmp "Rivian/Rivian.png" --lz77
+	
+	ALIGN 16
+    RivianPalette:
+    #incbin "Rivian/Rivian_pal.dmp"
+	
+	ALIGN 16
+    RivianMapConfig:
+    #incext compress "Rivian/Rivian.mapchip_config"
+
+	ALIGN 16
+	EventPointerTable(0xE6,  RivianTilesetImage)
+    EventPointerTable(0xA3,  RivianPalette)
+	EventPointerTable(0xCA,  RivianMapConfig)
 
 	//Snow Bern by Venno and ZoramineFae
 	
