@@ -113,6 +113,9 @@ UNIT FlierSoul GriffonRider 0x1 Level(6, Enemy, 1)     [27,4] 0b 0x0 0x0 0x0 [St
 	UNIT
 
 Traps1:
+TelliusTorchOn(9,17,3)
+TelliusTorchOn(9,6,3)
+TelliusTorchOn(9,1,3)
 BLST [14,16] IronBallista
 BLST [18,16] 0x35
 
@@ -193,7 +196,38 @@ QuickRemu(Pandoro,25)
 	REVEAL Ogrim
 	REVEAL Lili
 
+Music(0x293)
+SetBackground(0x39)
+STAL 10
+BROWNBOXTEXT FortArkstadText [8,8]
+STAL 15
+
+CHECK_ALIVE Ansgar
+BEQ 8 0x0 0xC
+CHECK_ALIVE Breve
+BEQ 8 0x0 0xC
+CHECK_ALIVE Hildr
+BEQ 8 0x0 0xC
+
+Text(Part3Chapter1Opening0)
+
+LABEL 8
+STAL 10
+
+Music(0x4d)
+SetBackground(0x34)
+
+TextCont(Part3Chapter1Opening1, 0x283)
+
+STAL 15
+FADI 60
+CLEAN
 	LOAD1 0x1 EnemyUnits
+	ENUN
+SetBackground(0x3C)
+
+Text(Part3Chapter1Opening2)
+
 	ENUN
 
 
@@ -201,7 +235,12 @@ QuickRemu(Pandoro,25)
 	ENDA
 
 EndingScene:
-QuickRemu(Affogato,1)
+
+Music(0x288)
+SetBackground(0x3C)
+TextCont(Part3Chapter1Ending1, 0x26E)
+
+FADI 20
 QuickRemu(Ulrich,2)
 QuickRemu(Evelyn,3)
 QuickRemu(Sequin,4)

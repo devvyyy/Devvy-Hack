@@ -224,11 +224,11 @@ UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [9,13] 0b 0x0 0x0 0x0 [SteelBlade,
 UNIT
 
 EndCutsceneUnits2:
-UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [11,5] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
-UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [11,1] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [2,1] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [3,1] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
 
-UNIT Selwyn 0x31 0x1 Level(10, Enemy, 0)     [6,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
-UNIT Sylveria Necromancer 0x1 Level(7, Enemy, 0)     [6,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Selwyn 0x31 0x1 Level(10, Enemy, 0)     [7,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Sylveria Necromancer 0x1 Level(7, Enemy, 0)     [7,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
 
 UNIT Aeteria SArmor 0x1 Level(1, Enemy, 0)     [4,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
 UNIT Aeteria LArmor 0x1 Level(1, Enemy, 0)     [4,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
@@ -242,6 +242,14 @@ UNIT Aeteria ACav 0x1 Level(1, Enemy, 0)     [0,8] 0 0x0 0x0 0x0 [SteelBlade,Ste
 UNIT Aeteria Thaumaturge 0x1 Level(1, Enemy, 0)     [0,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
 
 UNIT
+
+EndCutsceneUnits3:
+UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [3,8] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [3,1] 0b 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+
+UNIT Selwyn 0x31 0x1 Level(10, Enemy, 0)     [7,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Sylveria Necromancer 0x1 Level(7, Enemy, 0)     [7,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+	UNIT
 
 Traps1:
 BLST [12,12] Ballista
@@ -349,17 +357,21 @@ LOAD2 0x1 EndCutsceneUnits2
 
 VCWF 0
 
-Music(0x8E)
+Music(0x4e)
 
 FADU 16
 //BROWNBOXTEXT LaterThatNight [8,8] // box in the top right that's pretty cool for small text
 
-CAM1 [8,6]
+CAM1 [0,3]
+
+CameraCursor(Affogato)
+Text(Ch4AltBlahBlah)
+
 STAL 5
-SOUN 0xDD
+//SOUN 0xDD
 SetFlag(0x25)
 STAL 20
-MOVE 0xA Affogato [11,6]
+MOVE 0xA Affogato [0,5]
 ENUN
 STAL 15
 CameraCursor(Sylveria)
@@ -367,7 +379,7 @@ CameraCursor(Selwyn)
 STAL 5
 Music(0x272)
 STAL 15
-MOVE 0x3 Affogato [10,7]
+MOVE 0x3 Affogato [0,7]
 ENUN
 STAL 5
 Text(Ch4Ending2)
@@ -384,7 +396,20 @@ Sound(0x2E9)
 ClearBackground
 STAL 20
 Text(Ch4Ending2Point5)
+MOVE 0x3 Affogato [1,7]
+
+SOLOTEXTBOXSTART
+SVAL 0xB 0x640023
+TEXTSHOW 0x114A
+TEXTEND
+REMA
+SOLOTEXTBOXSTART
+SVAL 0xB 0xB6001B
+TEXTSHOW 0x114B
+TEXTEND
+REMA
 STAL 3
+MOVE 0x5 Affogato [3,7]
 FAWI 20
 Sound(0x2EB)
 MUSCSLOW 0x256
@@ -396,19 +421,44 @@ STAL 15
 MUNO
 Sound(0x84)
 STAL 3
-Music(0x8E)
-CamOn
+Music(0x4d)
+CAM1 [0,3]
 Text(Ch2Flashback4Point5)
-MOVE 0xA Ulrich [11,2]
+
+FADI 20
+DoAllThree
+LOAD2 0x1 EndCutsceneUnits3
+STAL 3
+SetBackground(0x3d)
+Text(Ch4Ending2PointAfter)
+ClearBackground
+STAL 150
+CamOn
+MOVE 0x8 Selwyn [4,8]
+Text(Ch4EndingAlt1)
+SOUN 0xCF
+SetBackground(0x35)
+//_0x2141 0x35 0x1 0x3C
+Text(Ch4EndingAlt2)
+FADI 60
+MOVE 0xA Affogato [1,4]
+ENUN
+CLEAN
+SetBackground(0x3D)
+Text(Ch4EndingAlt2AfterThat)
+ClearBackground
+
+STAL 10
+MOVE 0xA Ulrich [2,0]
 STAL 5
-MOVE 0xA Affogato [11,3]
+MOVE 0xA Affogato [1,0]
 UnsetFlag(0x25)
 ENUN
 CamOff
 
-Music(0x25)
+Music(0x298)
 SetBackground(0x3e)
-Text(Ch4Ending3)
+Text(Ch4EndingAlt3)
 
 //CharacterConditionalDialog(Doppio,Ch4Ending3,Ch4EndingAlt3)
 FADI 60

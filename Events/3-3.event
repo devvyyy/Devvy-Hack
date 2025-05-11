@@ -136,13 +136,45 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+Music(0x29A)
+SetBackground(0x3E)
+	Text(Part3Chapter3Opening1)
+
+FADI 60
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 EnemyUnits2
+SetBackground(0x3D)
+	Text(Part3Chapter3Opening2)
+
+SetBackground(0x3C)
+CameraCursor(Ulrich)
+	Text(Part3Chapter3Opening3)
+
+
+CameraCursor(Ulrich) //boss
+	Text(Part3Chapter3Opening4)
 	ENUN
 	GotoPrepScreen
 	ENDA
 
 EndingScene:
+	Text(Part3Chapter3Ending1)
+
+STAL 15
+SOUN 0xf0
+SetBackground(0x48)
+STAL 10
+FADI 100
+CLEAN
+
+//affo horse sound and arrows; load him too
+
+SOUN 0x1
+
+STAL 120
+
+	Text(Part3Chapter3Ending2)
+
 	MNC2 0x16
 	NoFade
 	ENDA

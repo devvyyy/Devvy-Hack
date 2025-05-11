@@ -1279,7 +1279,7 @@ First Blood[N]
 - On turn 1, if foe is defeated, grants[N]
 unit another action.[N]
 (Triggers once; if similar effect triggers,[N]
-this effect also triggers at same time.)[X]
+this effect also triggers at the same time.)[X]
 
 ## SD_Shrewd
 # Iris, Yufka, Velius
@@ -1513,6 +1513,7 @@ Armet[N]
 physical attack.[X]
 
 ## SD_RallyStr
+# Silver/Orator's Pin?
 Sergeant Whistle[N]
 - Use Rally to grant Str/Eth +4[N]
 to adjacent allies for 1 turn.[X]
@@ -1520,7 +1521,7 @@ to adjacent allies for 1 turn.[X]
 ## SD_Acrobat
 Ice Cleats[N]
 (Move +1 to non-[HorseIcon][FlierIcon])[N]
-- Ignores terrain penalties.[X]
+- Ignores terrain movement penalties.[X]
 
 ## SD_HolyCloak
 # 1-1 interlude, implemented
@@ -2835,6 +2836,20 @@ Coeur Allum[0xE9][N]
 multiplies Eth/Skill/Spd by 1.5x.[N]
 - Grants Atk +5 to allies within[N]
 5 spaces. Negates Eff: [FlierIcon].[X]
+
+## SD_PlotInvuln
+# horns? maybe just the serpent icon
+Chosen of the Serpent[N]
+- Immune to damage during combat.[N]
+(Excludes true damage, AoE damage,[N]
+and status effects.)[X]
+
+## SD_HoarfrostCrown
+Crown of Hoarfrost[N]
+- Deals bonus damage = difference[N]
+between Res stats (min 0; max 30;[N]
+if foe is under the effects of[N]
+Pure Water/Barrier, = 30.)[X]
 
 ## SD_Foresight
 Foresight[X]

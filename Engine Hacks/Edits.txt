@@ -1,6 +1,15 @@
 //Brownie recipe
 //2 tbsp melted butter, 1/4 tsp vanilla, 4 tbsp water, 2 tbsp cocoa powder, 4 tbsp sugar, 4 tbsp flour, microwave for 60-90 seconds.
 
+//move Lvl to the right in Level Up screen thanks Dragz
+//PUSH
+//ORG 0x73848 // case for battle animations on
+//BYTE 0xE8
+
+//ORG 0x9A3ED4 // case for battle animations off
+//BYTE 0x0A
+//POP
+
 //BARD SOUND EFFECT (MAP)
 PUSH
 ORG 0x813B4

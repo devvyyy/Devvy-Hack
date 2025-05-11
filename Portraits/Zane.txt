@@ -44,6 +44,11 @@ Selwyn_Mug:
 #incext PortraitFormatter "BuskMichalis.png"
 setMugEntry(0xBE, Selwyn_Mug, 3, 4, 3, 2)
 
+ALIGN 16 //TS Selwyn
+TSSelwyn_Mug:
+#incext PortraitFormatter "TimeskipSelwyn.png"
+setMugEntryExtend(0x107, TSSelwyn_Mug, 3, 4, 3, 2, 10, 4, 12, 8)
+
 ALIGN 16 //Sylveria by LEVIN !!!!!
 Sylveria_Mug:
 #incext PortraitFormatter "LevinArmor.png"
@@ -53,6 +58,22 @@ ALIGN 16 //Sylveria by LEVIN !!!!!
 SylveriaSicko_Mug:
 #incext PortraitFormatter "SylveriaSickoMode.png"
 setMugEntryExtend(0xC0, SylveriaSicko_Mug, 3, 5, 3, 3, 0, 4, 10, 4)
+
+ALIGN 16 //TS Sylveria
+TSSylveria_Mug:
+#incext PortraitFormatter "TimeskipSylveria.png"
+setMugEntryExtend(0x106, TSSylveria_Mug, 3, 5, 3, 3, 0, 0, 0, 0)
+
+ALIGN 16 //Selwyn by BuskerHuskerKalusker
+SelwynSil_Mug:
+#incext PortraitFormatter "SelwynSilhouette.png"
+setMugEntry(0x10D, SelwynSil_Mug, 3, 4, 3, 2)
+
+ALIGN 16 //Selwyn by BuskerHuskerKalusker
+SelwynWhite_Mug:
+#incext PortraitFormatter "SelwynWhite.png"
+setMugEntry(0x10E, SelwynWhite_Mug, 3, 4, 3, 2)
+
 
 ALIGN 16 //Messel by Vlak
 Messel_Mug:
@@ -181,6 +202,36 @@ ALIGN 16
 Hildr_Mug:
 #incext PortraitFormatter "HildrV2.png"
 setMugEntry(0x1A, Hildr_Mug, 4, 5, 3, 3)
+
+ALIGN 16
+ChiffonFlashback_Mug:
+#incext PortraitFormatter "YoungChiffon.png"
+setMugEntry(0x108, ChiffonFlashback_Mug, 3, 5, 3, 3)
+
+ALIGN 16
+LadyVida_Mug:
+#incext PortraitFormatter "LadyVida.png"
+setMugEntry(0x109, LadyVida_Mug, 3, 5, 3, 3)
+
+ALIGN 16
+LadyVidaKnife_Mug:
+#incext PortraitFormatter "LadyVidaKnife.png"
+setMugEntry(0x10A, LadyVidaKnife_Mug, 3, 5, 3, 3)
+
+ALIGN 16
+MaynardFlashback_Mug:
+#incext PortraitFormatter "MaynardFlashback.png"
+setMugEntry(0x10B, MaynardFlashback_Mug, 3, 4, 3, 2)
+
+ALIGN 16
+AffoSoldier_Mug:
+#incext PortraitFormatter "AffoSoldierNew.png"
+setMugEntry(0x10C, AffoSoldier_Mug, 3, 5, 3, 3)
+
+ALIGN 16
+AffoSoldier2_Mug:
+#incext PortraitFormatter "AffoSoldierWhite.png"
+setMugEntry(0x10F, AffoSoldier2_Mug, 3, 5, 3, 3)
 
 ALIGN 16
 Chiffon_Mug:

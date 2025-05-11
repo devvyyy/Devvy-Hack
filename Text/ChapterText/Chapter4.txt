@@ -311,11 +311,51 @@ move immediately.[AN]
 The King's life is in danger if we linger.[6N]
 The front of Northelm is the shortest[N]
 route there.[AN]
-We must bypass any side routes and head[N]
+We must bypass any mountain routes and head[N]
 directly to Castle Wreyvine through[N]
 the capital.[AN]
+Captain--[.4]take the others through the gate routes.[6N]
+Meet us at the Capital's western gate.[6N]
+We'll draw less attention this way.[AN]
+
+[ML]
+Roger that.[.6] Don't fall behind[,] Rick![AN][CSS][CF]
+
+[R]
+Sir.[AN]
+
+[ML]
+We won't find a better opening than this.[.6][N]
+Are you ready?[AN]
+
+[MR]
+Always.[AN]
 
 [X]
+
+## Ch4AltBlahBlah
+[3L]
+[FL][Ulrich][L][Affogato]
+
+[FL]
+I can hardly make them out from here.[AN]
+
+[L]
+The Duke stands to the left[,] and[N]
+the Apostle is beside him.[6N]
+I will go.[AN]
+
+[FL]
+One clean motion[,] right?[.6] Like a hot[N]
+knife through butter.[AN][CSS]
+
+[L][CF][.6][.4]
+[0x80][0x2D][0x8D][0x8D][0x80][0x80]
+[L][LoadFace][0x0C][0x2][MoveLeft][.4]
+Right[Beat][AN]
+
+[X]
+
 
 ## Ch4Ending2
 [R][LoadSelwyn][FR][LoadSylveria]
@@ -323,7 +363,7 @@ the capital.[AN]
 [R]
 [Pause]Truth be told[,] I cannot help but[N]
 feel a little high strung today[,] given the[N]
-events that occurred in our empire.[AN]
+events that transpired in our empire.[AN]
 My troops of the empire.[.6] As usual[,] you[N]
 all embody the principles of Aeteria.[.6][N]
 Thank you again for everything you do.[AN]
@@ -357,12 +397,15 @@ The skies today fortell yet another[N]
 victory in yet another war![AN]
 Proudly carry on the flag of our holy empire.[6N]
 May the Silver Serpent bless and protect our[N]
-troops[,] and may moonlight guide us.[AN]
+troops under the moonlight.[AN]
 [X]
 
 ## Ch4Ending2Point5
-[FFR][LoadAffoStealth][MoveFarRight]
-[Pause]![AN][ClearFace][.4]
+[FFL][LoadFace][0x0C][0x2][MoveFarLeft]
+[3L]
+[Pause]![AN][C]
+(What... was that?[N]
+Can't hesitate now.)[AN][CSS][ClearFace][.4]
 
 [R][LoadSelwyn][FR][LoadSylveria]
 [3l]
@@ -378,8 +421,261 @@ I ask:[.6] will you walk this path by my side?[AN]
 
 [ClearFace][FR][ClearFace]
 
-[MR][LoadAffoStealth]
-[Beat][AN][CloseSpeechSlow][MoveFarFarRight]
+[ML][LoadFace][0x0C][0x2]
+[Beat]What[Beat]?[6N][CloseEyes]
+No[,] it has to be now[Beat]![AN][CloseSpeechSlow]
+[X]
+
+## DukeSelwyn1
+All hail Duke Selwyn![6N]
+May he save the empire![A]
+[X]
+
+## DukeSelwyn2
+Avenge Empress Zoria![6N]
+Her blood is on Wreyvine's hands![A]
+[X]
+
+## Ch4Ending2PointAfter
+[R][Selwyn][FR][Sylveria][3L]
+
+[R][Smile]
+Rest tonight,[.6] soldiers of our great Aeteria.[.6][N]
+You stood with me when the kingdom[N]
+forfeited the peace.[AN]
+You rode to me upon my first calls[N]
+upon you[Beat] I could not be more[N]
+thankful to you all.[AN]
+And now you stand by my side.[6N]
+Tomorrow[,] we shall march again.[6N]
+Tomorrow[,] we triumph over this world![AN][.6][Smile]
+
+[FFL]
+Glory to the Duke![.6] Glory to the Empire![6N]
+Glory to the blood that binds us![AN]
+
+[FL]
+I love you[,] Duke Omios![AN]
+
+[FFL]
+The bridge stands because we will it![6N]
+The kingdom will pay for their[N]
+transgression against us![AN]
+
+[FL]
+Long live Aeteria![.6] May the Serpent bless[N]
+victory upon Her Excellency's son![AN]
+
+[FFL]
+Onwards to the palace![6N]
+We shall take the King's head![AN]
+
+[R]
+[Pause]This assembly is over.[6N]
+You are all hereby dismissed.[6N]
+May moonlight guide us.[AN]
+
+[X]
+
+## Ch4EndingAlt1
+# assassination
+[3L]
+[FL][LoadFace][0x0C][0x2][FFR][Selwyn][MoveRight]
+
+[R]
+You look pale under the helmet.[.6][N]
+Have you eaten today,[.4] soldier?[AN]
+
+[FL]
+[Mouth].....[Mouth][AN]
+
+[R]
+You needn't be afraid.[.6] If you wish to[N]
+return to the empire[,] I allow you to.[6N]
+A Consul can take you to safety.[AN][C]
+Rest is necessary for a successful[N]
+campaign[,] you know.[AN]
+
+[FL]
+[Mouth]..........[Mouth][AN]
+
+[R][MoveRight]
+Ah[,] and your uniform is mismatched[Beat][N]
+I understand the call was sudden[,] so[N]
+please allow me to correct this.[AN]
+
+[FL]
+[Mouth]..................[Mouth][AN]
+
+[R]
+Oh[,] where are my manners?[6N]
+Is everything alright with you[,] soldier?[6N]
+I understand that war is an ardu--[.6][N][CSS]
+
+[FL][MoveMidLeft]
+[Pause]You shouldn't have come here.[AN]
+
+[X]
+
+## Ch4EndingAlt2
+# assassination
+[3L]
+[MR][LoadFace][0x0E][0x2]
+[ML][LoadFace][0x0F][0x2]
+[.4]
+
+[0x80][0x2D][0x8B][0x8C][0x80][0x80]
+[ML][0x80][0x33][0x5]
+[0x80][0x2D][0x88][0x8D][0x80][0x80]
+[R][CF]
+[0x80][0x2D][0x8D][0x8D][0x80][0x80]
+
+[MR][LoadFace][0x0D][0x2]
+
+[.4]
+[MR][MoveFarRight]
+!!!..........I[Beat] I see[Beat] Ah[Beat] hah[Beat][N]
+He dares?![AN][CSS][MoveFarRight][CF]
+[X]
+
+## Ch4EndingAlt2AfterThat
+# assassination
+[3L]
+
+[L][Sylveria]
+Brother![.6] Gods[,] stay still![AN]
+
+[FR][Selwyn]
+Gah[Beat] It's[Beat] It's alright[Beat][N]
+It's not deep.[AN][CSS][MoveMidRight]
+
+[FFL]
+Aaaaaaaaaah![6N]
+Someone stop that traitor![.6][N]
+He's running away![AN]
+
+[FFR]
+An attempt on the Duke's life?![6N]
+How dreadful![AN]
+
+[FFL]
+Duke Omios[Beat][N]
+How could we have been so careless?[AN]
+
+[MR]
+Do not blame yourselves[,] I was merely[N]
+too[Beat] trusting on the battlefield.[6N]
+Please pardon my naivete.[AN]
+
+[L]
+You could have died![.6] That was meant to kill![6N]
+I am weak[Beat] I couldn't protect you.[AN][CSS]
+
+[FFL][Soldier][MoveFarLeft]
+My Duke Omios![.6][N]
+We will chase that ruffian--[.4][N]
+that rat at once![AN]
+
+[MR]
+No.[.6] Focus the army on the King.[.6][N]
+This does not change our course.[AN]
+
+[L]
+You were nearly slain[,] Sel[Beat][N]
+What would the people gain if[N]
+you were killed in your warpath?[AN]
+
+[MR]
+This wound is fleeting[,] but the throne is not.[6N]
+We are on the cusp of justice,[.6] Sister.[6N]
+The Serpent has protected me![AN]
+The Wreyvians think such will deter me?[6N]
+A little blood spilled will not halt me[N]
+nor what began with Mother's.[AN]
+
+[L]
+What if someone else aims for your life?[6N]
+I[Beat] cannot abide by this[Beat][AN]
+
+[MR][MoveMR]
+Hah![.6] If one does,[.4] I hope he'll do it with[N]
+steadier hands.[.6] And perhaps then,[.4] the[N]
+gods will make their judgment final.[AN]
+
+[FL]
+Sir,[.4] the plaza's cleared.[.6][N]
+We've recovered the speech notes[N]
+and moved the crowd away.[AN]
+
+[MR]
+Let them whisper and think me mortal[Beat][N]
+Today has shown that death kneels to me.[6N]
+What comes next will be truly divine.[AN][C]
+Let my blood sanctify this cause.[.6][N]
+We move before dawn.[AN]
+
+[FL]
+Orders received,[.6] my Duke.[.6][N]
+We'll advance within the hour.[AN]
+
+[MR]
+Good.[.6] Let the snow melt red[N]
+on the stones of Castle Wreyvine.[.6][N]
+Let the King know his hour has come![AN]
+
+[X]
+
+## Ch4EndingAlt3
+# assassination
+[3L]
+[MR][Ulrich][FFL][LoadFace][0x0C][0x2][MoveMidLeft]
+
+[MR]
+[Pause]Is it done?[6N]
+You were still.[AN]
+
+[ML]
+I'm hesitant to say so.[AN]
+
+[MR]
+Damn it all![.6] Then we have to move fast.[.6][N]
+Before the next sunrise[Beat] I'm sure[N]
+they're incited now.[AN]
+
+[ML]
+The Duke was surrounded by what looks like[N]
+hundreds of soldiers[,] and they're everywhere.[AN]
+The capital city is blocked off.[.6][N]
+Our main route to the palace is[N]
+crawling with enemy soldiers.[AN]
+
+[MR]
+[Beat]Hundreds?![.6] There's absolutely no chance[N]
+we can take all of those soldiers on.[.6N]
+Not without regrouping with the King's men.[AN]
+
+[ML]
+We need to find an alternate route to Castle[N]
+Wreyvine.[.6] Our current position is too perilous--[.4][N]
+it'd be unwise to risk it.[AN][2NL]
+I know a route.[.6] There's a back passage[N]
+towards the mountains.[AN]
+
+[MR]
+I know that.[.6] Affogato[,] tomorrow will be rough.[.6][N]
+Your orders are to continue sneaking[N]
+behind enemy lines.[AN]
+Send a messenger for Captain Brudet[N]
+to meet us at the back passage[N]
+towards the mountains.[AN]
+It's the fastest indirect route to Castle[N]
+Wreyvine.[.6] I'll inform Stroganoff of the[N]
+holdup[,] and[Beat][AN]
+
+[ML]
+[ToggleSmile]Then I'm counting on you.[.6][N][ToggleSmile]
+Meet you there.[AN]
+
 [X]
 
 ## Ch4Ending3
@@ -423,11 +719,6 @@ to Castle Wreyvine.[AN]
 [ML]
 [ToggleSmile]I'm counting on you.[.6][N][ToggleSmile]
 Meet you there.[AN]
-
-[X]
-
-## Ch4EndingAlt3
-[OpenFarLeft][LoadAffogato][OpenFarLeft][MoveLeft]
 
 [X]
 

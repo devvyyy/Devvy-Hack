@@ -123,11 +123,14 @@ UNIT BadGuyStealable Merc 0x1 Level(6, Enemy, 1)     [19,3] 0b 0x0 0x0 0x0 [Stee
 UNIT BadGuyStealable Fighter 0x1 Level(6, Enemy, 1)     [4,8] 0b 0x0 0x0 0x0 [SteelAxe,] TwoActionAI
 UNIT BadGuyStealable SCav 0x1 Level(6, Enemy, 1)     [14,2] 0b 0x0 0x0 0x0 [SteelBlade,PureWater] RangeAI
 UNIT BadGuyStealable AArmor 0x1 Level(6, Enemy, 1)     [16,6] 0b 0x0 0x0 0x0 [SteelSword,AngelicRobe] BossAI
+
+UNIT Stroganoff AArmor 0x1 Level(8, NPC, 0)     [17,12] 0b 0x0 0x0 0x0 [SteelLabrys,EmeraldAxe,0x65,0xf1] BossAI
+UNIT Brudet WyvernRider_F 0x1 Level(9, NPC, 1)     [18,14] 0x0 0x0 0x0 0x0 [IronLabrys,Halberd,Elixir,] BossAI
 	UNIT
 
 
 Traps1:
-BlueSigil(4,14)
+//BlueSigil(4,14)
 BlueSigil(26,29)
 BlueSigil(27,29)
 BLST [28,4] IronBallista
@@ -192,19 +195,34 @@ QuickRemu(Ogrim,27)
 	REVEAL Zopf
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 EnemiesPart2
+	ENUN
 
 Music(0x29A)
 SetBackground(0x34)
 STAL 10
 BROWNBOXTEXT WreyvianOutskirtsText [8,8]
 STAL 15
-Text(Part3PrologueBOpening1)
+Text(Part3PrologueBOpening1Alt)
 
-	ENUN
 	GotoPrepScreen
 	ENDA
 
 EndingScene:
+SetBackground(0x2D)
+Text(Part3PrologueBEnding1)
+
+FADI 60
+CLEAN
+SetBackground(0x35)
+STAL 30
+Music(0x292)
+Text(SylmeriaScene0)
+FAWI 20
+SOUN 0x2ec
+STAL 120
+FAWU 15
+Text(SylmeriaScene0Point5)
+
 	MNC2 0x11
 	//MNTS 0x1
 	NoFade
