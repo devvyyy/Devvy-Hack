@@ -126,6 +126,19 @@ UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [7,20] 0b 0x0 0x0 0x0 [IronLanc
 UNIT Aeteria Shaman 0x1 Level(10, Enemy, 1)     [15,22] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
 	UNIT
 
+CutsceneUnits:
+UNIT Gorlois Parson 0x1 Level(20, NPC, 1)     [14,19] 0b 0x0 0x0 0x0 [0xA0, Aura, Elixir] BossAI
+UNIT Ulrich LPal 0x1 Level(1, Ally, 0)   [14,26] 0 0 1 REDA14R23 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [15,26] 0 0 1 REDA14R25 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [13,26] 0 0 1 REDA12R26 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT
+
+CutsceneUnits2:
+UNIT Ulrich LPal 0x1 Level(1, Ally, 0)   [0,24] 0 0 1 REDA5R24 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [0,25] 0 0 1 REDA5R25 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [0,26] 0 0 1 REDA5R26 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT
+
 Traps1:
 BlueSigil(20,2)
 	ENDTRAP
@@ -136,6 +149,17 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+	FADI 10
+	DoAllThree
+	VCWF 0
+	LOMA 0x16
+	FADU 60
+
+CamOn
+	LOAD2 0x1 CutsceneUnits
+	CamOff
+	STAL 5
+	CameraCursor(Ulrich)
 Music(0x29A)
 SetBackground(0x3E)
 	Text(Part3Chapter3Opening1)
@@ -143,17 +167,25 @@ SetBackground(0x3E)
 FADI 60
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 EnemyUnits2
-SetBackground(0x3D)
+	ENUN
+SetBackground(0x18)
 	Text(Part3Chapter3Opening2)
 
-SetBackground(0x3C)
-CameraCursor(Ulrich)
+	FADI 10
+	VCWF 0
+	LOMA 0x15
+FADU 60
+STAL 15
+	CamOn
+	LOAD2 0x1 CutsceneUnits2
+	CamOff
+	CameraCursor(Ulrich)
 	Text(Part3Chapter3Opening3)
-
-
+	STAL 20
 CameraCursor(Ulrich) //boss
+SetBackground(0x2d)
 	Text(Part3Chapter3Opening4)
-	ENUN
+	ClearBackground
 	GotoPrepScreen
 	ENDA
 
