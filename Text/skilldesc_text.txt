@@ -1598,13 +1598,19 @@ at start of combat.[N]
 # implemented
 Steel Sigil[N]
 (Luck +5 to Wreyvians)[N]
-- Enables Ignis (Adds Def to damage).[X]
+- Enables Iron Bash (Adds Def to damage).[X]
 
 ## SD_QuickBurn
 Draco Fang[N]
 (Str/Eth +2 to [HorseIcon][FlierIcon])[N]
 - Grants +15 Hit and Avoid; this bonus[N]
 decreases by 1 each turn (min 0).[X]
+
+## SD_PegasusEquip
+Winged Bools[N]
+(Spd +2 to [HorseIcon][FlierIcon])[N]
+- If initiating, reduces damage taken[N]
+by 50% of Spd.[X]
 
 ## SD_Camaraderie
 # 1-3 strogy?
@@ -2016,8 +2022,9 @@ Tomebreaker: +50 Hit/Avo when[N]
 enemy has a tome equipped.[X]
 
 ## SD_Aegis
-Aegis: Nullify a magic attack.[N]
-(Skill % activation)[X]
+# selwyn invuln horns? maybe just the serpent icon
+Caesura[N]
+- Negates foe's attacks.[X]
 
 ## SD_DuelistsBlow
 Duelist's Blow: +20 Avo[N]
@@ -2410,8 +2417,11 @@ Killing Machine: Total critical[N]
 rate is doubled.[X]
 
 ## SD_Chivalry
-Chivalry: When foe is at full HP,[N]
-attack and def/res +2.[X]
+Chivalry[N]
+- If foe's HP is full, Eeva strikes[N]
+x2 consecutively, deals bonus damage[N]
+and reduces damage taken = 25% of foe's[N]
+max HP, and follow-up and foe can't.[X]
 
 ## SD_Pragmatic
 Pragmatic: When foe is not at full HP,[N]
@@ -2837,19 +2847,12 @@ multiplies Eth/Skill/Spd by 1.5x.[N]
 - Grants Atk +5 to allies within[N]
 5 spaces. Negates Eff: [FlierIcon].[X]
 
-## SD_PlotInvuln
-# horns? maybe just the serpent icon
-Chosen of the Serpent[N]
-- Immune to damage during combat.[N]
-(Excludes true damage, AoE damage,[N]
-and status effects.)[X]
-
 ## SD_HoarfrostCrown
 Crown of Hoarfrost[N]
 - Deals bonus damage = difference[N]
 between Res stats (min 0; max 30;[N]
 if foe is under the effects of[N]
-Pure Water/Barrier, = 30.)[X]
+Pure Water/Barrier, bonus damage = 30.)[X]
 
 ## SD_Foresight
 Foresight[X]

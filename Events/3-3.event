@@ -68,6 +68,8 @@ Unit(5,26)
 	UNIT
 
 EnemyUnits:
+UNIT 0x70 General 0x1 Level(16, Enemy, 1)     [20,2] DropItem 0x0 0x0 0x0 [MageSword, 0x8A, 0xBC] GroupTwoAI
+
 UNIT Aeteria Hero 0x1 Level(10, Enemy, 1)     [2,0] 0b 0x0 0x0 0x0 [Flamberge,SteelAxe] GroupTwoAI
 UNIT Aeteria Sage 0x1 Level(10, Enemy, 1)     [0,1] DropItem 0x0 0x0 0x0 [Bolting,Thunder] GroupTwoAI
 UNIT Aeteria GreatKnight 0x1 Level(10, Enemy, 1)     [9,1] 0b 0x0 0x0 0x0 [ShortAxe,SilverLance] GroupThreeAI
@@ -182,10 +184,11 @@ STAL 15
 	CameraCursor(Ulrich)
 	Text(Part3Chapter3Opening3)
 	STAL 20
-CameraCursor(Ulrich) //boss
+CameraCursor(0x70) //boss
 SetBackground(0x2d)
 	Text(Part3Chapter3Opening4)
 	ClearBackground
+	SetUnitItemDurability(0x70, 2, SpurStrID) //tusked pin
 	GotoPrepScreen
 	ENDA
 

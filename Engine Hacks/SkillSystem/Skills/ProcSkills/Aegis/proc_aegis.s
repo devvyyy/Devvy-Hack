@@ -21,13 +21,13 @@ tst r0, r1
 bne End
 @if another skill already activated, don't do anything
 
-@make sure attacker has magic weapon
-mov r0, r4
-mov r1, #0x4c    @Move to the attacker's weapon ability
-ldr r1, [r0,r1]
-mov r2, #0x42
-tst r1, r2
-beq     End @do nothing if magic bit not set
+@@make sure attacker has magic weapon
+@mov r0, r4
+@mov r1, #0x4c    @Move to the attacker's weapon ability
+@ldr r1, [r0,r1]
+@mov r2, #0x42
+@tst r1, r2
+@beq     End @do nothing if magic bit not set
 
 @also check for poison because it seems to nullify but actually still poisons?
 mov r0, #0x48

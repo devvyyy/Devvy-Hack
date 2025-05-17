@@ -61,6 +61,8 @@ LoadUnit(27,2)
 	UNIT
 
 EnemyUnits:
+UNIT 0x6F Hero 0x1 Level(12, Enemy, 1)     [4,14] DropItem 0x0 0x0 0x0 [Runesword, 0x7F] BossAI
+
 UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [10,5] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [24,4] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT BadGuy Hunter 0x1 Level(10, Enemy, 1)     [25,7] 0b 0x0 0x0 0x0 [SteelRifle] RangeAI

@@ -200,16 +200,36 @@ SHLI IronSword IronLance IronAxe IronBow Fire Flux Lightning Heal
 ALIGN 4
 
 WreyvinePrepShop:
-SHLI IronSword IronBlade IronLance IronGlaive IronAxe IronLabrys IronBow IronRifle Heal IronDagger Vulnerary 0x6b PureWater
+SHLI IronSword IronBlade IronLance IronGlaive IronAxe IronLabrys IronBow IronRifle Heal IronDagger Vulnerary 0x6b PureWater 0x5B 0x5D 0x61
 ALIGN 4
 
 AeteriaPrepShop:
-SHLI Fire Flux Lightning Heal Fear Slow 0x7B IronSword IronLance IronAxe IronBow Vulnerary Elixir
+SHLI Fire Flux Lightning Heal Fear Slow 0x7B IronSword IronLance IronAxe IronBow IronDagger Vulnerary Elixir 0x5C 0x5E 0x5F
 ALIGN 4
 
 CombinedPrepShop:
 SHLI IronSword IronBlade IronLance IronGlaive IronAxe IronLabrys IronBow IronRifle IronDagger Fire Flux Lightning Heal Fear Slow 0x7B Vulnerary Elixir
 ALIGN 4
+
+	WreyvinePrepShopBargains:
+	SHORT 0x5B 0x7F
+	WORD 1000
+	SHORT 0x5D 0x80
+	WORD 1000
+	SHORT 0x61 0x81
+	WORD 1000
+	//Terminator
+	WORD 0
+
+	AeteriaPrepShopBargains:
+	SHORT 0x5C 0x7F
+	WORD 1000
+	SHORT 0x5E 0x80
+	WORD 1000
+	SHORT 0x5F 0x81
+	WORD 1000
+	//Terminator
+	WORD 0	
 
 P1Ch3Shop:
 BYTE 0xBC ElbowRoomID //Trooper Hat
@@ -250,6 +270,8 @@ ALIGN 4
 	POIN P2Ch4Shop P2Ch4ShopBargains
 	POIN PrologueBattlePrepShop PrologueBattlePrepShopBargains
 	POIN Chapter4BattlePrepShop Chapter4BattlePrepShopBargains
+	POIN WreyvinePrepShop WreyvinePrepShopBargains
+	POIN AeteriaPrepShop AeteriaPrepShopBargains
 	WORD 0 //Terminator
 
 	P1Ch3ShopBargains:

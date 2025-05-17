@@ -107,6 +107,11 @@ UNIT Klavdia WyvernKnight 0x1 Level(13, Enemy, 0)     [13,8] 0b 0x0 0x0 0x0 [Mag
 
 	UNIT
 
+PrisonCutsceneUnits:
+UNIT Chiffon 0x10 0x1 Level(10, NPC, 1)     [9,9] 0b 0x0 0x0 0x0 [Javelin] RangeAI
+UNIT Sylveria 0x4f 0x1 Level(10, Enemy, 1)     [9,9] 0b 0x0 0x0 0x0 [Javelin] RangeAI
+	UNIT
+
 Traps1:
 TelliusTorchOn(9,17,3)
 TelliusTorchOn(9,6,3)
@@ -204,11 +209,19 @@ Text(Part3Chapter2Ending1) //merging, WIP
 
 FADI 60
 CLEAN
+	DoAllThree
+	VCWF 0
+	LOMA 0x46
+LOAD2 0x1 PrisonCutsceneUnits
+
 SetBackground(0x35)
 STAL 30
 Music(0x292)
 TextCont(SylmeriaScene1, 0x7FFF)
+ClearBackground
 Music(0x47) //wind
+STAL 300
+
 SetBackground(0x41)
 TextCont(SylmeriaScene2, 0x323)
 

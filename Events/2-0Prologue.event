@@ -346,6 +346,11 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+//reset prep shop
+ENUF 0x7F
+ENUF 0x80
+ENUF 0x81
+
 ENUT AllUnitsMustEscapeFlag
 
 SVAL 0xB 0x21000D

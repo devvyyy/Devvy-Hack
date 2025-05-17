@@ -126,7 +126,7 @@ UNIT Wreyvine Fighter 0x1 Level(15, NPC, 1)     [3,4] 0b 0x0 0x0 0x0 [MageAxe,Ir
 	UNIT
 
 SelwynGamerFightable:
-UNIT Selwyn Auspex 0x1 Level(1, Enemy, 0)   [14,26] 0b 0x0 0x0 0x0 [0xFE] BossAI
+UNIT Selwyn Auspex 0x1 Level(15, Enemy, 0)   [14,26] 0b 0x0 0x0 0x0 [0xFE] BossAI
 	UNIT
 
 CutsceneUnitsB:
@@ -142,7 +142,7 @@ UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [0,6] 0 0 1 REDA5R2 [0xf0,Pain,Me
 	UNIT
 
 SelwynGamer:
-UNIT Selwyn Auspex 0x1 Level(1, Enemy, 0)   [0,0] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Selwyn Auspex 0x1 Level(15, Enemy, 0)   [0,0] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 	UNIT
 
 AffoGamer:
@@ -181,6 +181,7 @@ LOAD2 0x1 CutsceneUnitsB
 	STAL 3
 	Text(Part3Chapter4Opening2)
 
+CamOff
 //selwyn appears
 
 STAL 50
@@ -189,6 +190,7 @@ LOAD1 0x1 SelwynGamerFightable //warp him in
 SVAL 0x2 0x44
 _WARP 0xFFFF 0xFFFD [14,19]
 CALL 0x9EE4F8
+CamOn
 	STAL 15
 	MOVE 0x5 Selwyn [13,17]
 	ENUN
@@ -200,9 +202,30 @@ CALL 0x9EE4F8
 
 //scripted battles
 
+ClearBackground
+WORD 0x3C2F49 0x440010 //move ulrich to selwyn
+ENUN
+
+SetFlag(0xEE)
+
+StartBattle
+CriticalHit(0,0)
+SetScriptedBattle(76,0,12,100,38,3)
+FIG1 Ulrich Selwyn SteelLance
+
 	Text(Part3Chapter4Opening3Point5)
 
 //scripted battles
+
+WORD 0x3C2F49 0x44002F //move raial to selwyn
+ENUN
+
+StartBattle
+CriticalHit(0,0)
+SetScriptedBattle(63,0,24,96,34,11)
+FIG1 Raial Selwyn SteelAxe
+
+UnsetFlag(0xEE)
 
 	Text(Part3Chapter4Opening4)
 

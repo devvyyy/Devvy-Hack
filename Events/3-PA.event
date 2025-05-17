@@ -100,6 +100,7 @@ UNIT Supplies2 0x79 0x1 Level(1, Enemy, 0)     [12,9] 0b 0x0 0x0 0x0 [SilverLanc
 UNIT Supplies3 0x79 0x1 Level(1, Enemy, 0)     [1,4] 0b 0x0 0x0 0x0 [DevilAxe] [0,3,0,32]
 UNIT Supplies4 0x79 0x1 Level(1, Enemy, 0)     [19,12] 0b 0x0 0x0 0x0 [0xBC] [0,3,0,32]
 
+UNIT 0x71 LanceCav 0x1 Level(11, Enemy, 1)     [0,5] DropItem 0x0 0x0 0x0 [BraveLance,0xBC] RangeAI
 UNIT Aeteria LanceCav 0x1 Level(10, Enemy, 1)     [14,20] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT Aeteria Mercenary 0x1 Level(10, Enemy, 1)     [15,17] 0b 0x0 0x0 0x0 [SteelSword] RangeAI
 UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [13,15] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
@@ -173,6 +174,7 @@ STAL 15
 
 	CALL $591FD8 //prep screen
 	FADU 60
+	SetUnitItemDurability(0x6F, 1, IgnisID) //silver pin
 	//change all NPCs to be blue
 
 SVAL 0xB 0x17000A
