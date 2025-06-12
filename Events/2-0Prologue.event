@@ -30,6 +30,7 @@ CharacterEventBothWays(0x21,ChiffonYufkaTalk, Chiffon, Yufka)
 CharacterEventBothWays(0x22,ChiffonJayeTalk, Chiffon, Jaye)
 CharacterEventBothWays(0x23,ChiffonPollyTalk, Chiffon, Polly)
 CharacterEventBothWays(0x1F,ChiffonYvonneTalk, Chiffon, Yvonne)
+CharacterEventBothWays(0x24,YvonnePennyTalk, Polly, Yvonne)
 	END_MAIN
 
 MiscBasedEvents: //completion flag then trigger flag
@@ -41,7 +42,15 @@ MiscBasedEvents: //completion flag then trigger flag
 	AREA 0xA RecruitDoor3 [5,8] [7,10]
 	CauseGameOverIfLordDies
 	END_MAIN
-	
+
+YvonnePennyTalk:
+	MUSI
+	Text(PrologueYvonnePennyTalk)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
+
 ChiffonGrahamTalk:
 	MUSI
 	Text(PrologueChiffonGrahamTalk)

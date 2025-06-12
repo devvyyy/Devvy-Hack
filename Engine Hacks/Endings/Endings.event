@@ -1,0 +1,194 @@
+PUSH
+ORG $B674C
+POIN NewEndingWithdrawalTable
+ORG $B6728
+POIN NewEndingTitleTable
+ORG $A3D1A8
+POIN NewEndingsTable
+ORG $A3D1AC
+POIN NewEndingsTable
+POP
+
+#define RetreatDesignationTrue 2
+#define RetreatDesignationFalse 0
+#define EndingRetreatTableEntry(charID) "BYTE charID RetreatDesignationTrue 0 0"
+#define EndingNoRetreatTableEntry(charID) "BYTE charID RetreatDesignationFalse 0 0"
+#define EndingWithrawalTableTerminator "BYTE 0 0 0 0"
+
+
+#define EndingTitleTableEntry(charID, textID) "BYTE charID 0 0 0; SHORT textID 0"
+#define EndingTitleTableTerminator "BYTE 0 0 0 0; SHORT 0 0"
+
+//ending text speed change
+//credit to catball
+PUSH
+ORG $b72c4
+ALIGN 4
+SHORT $4778 $46C0
+WORD $E59FC000 $E12FFF1C
+POIN EndingBattleInitText
+POP
+ALIGN 4
+PUSH
+ORG CURRENTOFFSET+$1;EndingBattleInitText:
+POP
+SHORT $B5F8 $46CE $4647 $4C21 $B580 $4D21 $6484 $6 $F000 $F853 $6430 $F000 $F850 $2100 $63F0 $4B1D $6CB0 $F000 $F849 $4B1C $2100 $6CB0 $F000 $F844 $4B1A $4699 $4B1A $4698 $4D1A $4F1B $20 $F000 $F83E $29 $20 $3408 $F000 $F838 $3580 $42BC $D1F4 $4B16 $2001 $F000 $F82F $6B32 $68D3 $75B $D50D $6813 $7918 $4B12 $F000 $F826 $6470 $2800 $D005 $BCC0 $46B9 $46B0 $BCF8 $BC01 $4700 $6AF3 $6858 $4B0C $F000 $F818 $6470 $E7F2
+BYTE $A0 $27 $0 $2 $95 $C $3 $8 $55 $3E $0 $8 $61 $3E $0 $8 $C9 $3D $0 $8 $71 $3E $0 $8 $2C $2E $2 $2 $C8 $27 $0 $2 $AD $1F $0 $8 $69 $67 $B $8 $41 $A2 $0 $8
+SHORT $4718 $4728 $4740 $4748
+
+
+#define SoloEnding 1
+#define PairedEnding 2
+#define PairedEndingTableEntry(charID1,charID2,textID) "BYTE PairedEnding charID1 charID2 0; SHORT textID 0"
+#define SoloEndingTableEntry(charID, textID) "BYTE SoloEnding charID 0 0; SHORT textID 0"
+#define SoloEndingFlagTableEntry(charID, textID, flag) "BYTE SoloEnding charID 0 flag; SHORT textID 0"
+#define EndingTableTerminator "BYTE 0 0 0 0; SHORT 0 0"
+
+NewEndingWithdrawalTable:
+
+EndingWithrawalTableTerminator
+
+NewEndingTitleTable:
+EndingTitleTableEntry(Affogato, AffogatoTitle)
+EndingTitleTableEntry(Ulrich, UlrichTitle)
+EndingTitleTableEntry(Breve, BreveTitle)
+EndingTitleTableEntry(Hildr, HildrTitle)
+EndingTitleTableEntry(Ansgar, AnsgarTitle)
+EndingTitleTableEntry(Sequin, SequinTitle)
+EndingTitleTableEntry(Nora, NoraTitle)
+EndingTitleTableEntry(Kane, KaneTitle)
+EndingTitleTableEntry(Mocha, MochaTitle)
+EndingTitleTableEntry(0x16, LevainTitle)
+EndingTitleTableEntry(Stroganoff, StroganoffTitle)
+EndingTitleTableEntry(Eisner, EisnerTitle)
+EndingTitleTableEntry(Doppio, DoppioTitle)
+EndingTitleTableEntry(Floris, FlorisTitle)
+EndingTitleTableEntry(Yory, YoryTitle)
+EndingTitleTableEntry(Noel, NoelTitle)
+EndingTitleTableEntry(Brudet, BrudetTitle)
+EndingTitleTableEntry(Therese, ThereseTitle)
+EndingTitleTableEntry(Lennard, LennardTitle)
+EndingTitleTableEntry(Wegman, WegmanTitle)
+EndingTitleTableEntry(Klavdia, KlavdiaTitle)
+EndingTitleTableEntry(Gerolf, GerolfTitle)
+EndingTitleTableEntry(Xavier, XavierTitle)
+EndingTitleTableEntry(Ogrim, OgrimTitle)
+EndingTitleTableEntry(Lili, IrisTitle)
+EndingTitleTableEntry(Chiffon, ChiffonTitle)
+EndingTitleTableEntry(Graham, GrahamTitle)
+EndingTitleTableEntry(Yufka, YufkaTitle)
+EndingTitleTableEntry(Jaye, JayeTitle)
+EndingTitleTableEntry(Penny, PennyTitle)
+EndingTitleTableEntry(Yvonne, YvonneTitle)
+EndingTitleTableEntry(Verna, VernaTitle)
+EndingTitleTableEntry(Frye, FryeTitle)
+EndingTitleTableEntry(Velius, VeliusTitle)
+EndingTitleTableEntry(Cortado, CortadoTitle)
+EndingTitleTableEntry(Gus, GusTitle)
+EndingTitleTableEntry(Raial, RaialTitle)
+EndingTitleTableEntry(Ilse, IlseTitle)
+EndingTitleTableEntry(Pandoro, PandoroTitle)
+EndingTitleTableEntry(Rina, RinaTitle)
+EndingTitleTableEntry(Staniel, StanielTitle)
+EndingTitleTableEntry(Dira, DiraTitle)
+EndingTitleTableEntry(Edith, EdithTitle)
+EndingTitleTableEntry(Moose, MooseTitle)
+EndingTitleTableEntry(Chester, ChesterTitle)
+EndingTitleTableEntry(Kian, KianTitle)
+EndingTitleTableEntry(Edvin, EdvinTitle)
+EndingTitleTableEntry(Opali, OpaliTitle)
+EndingTitleTableEntry(Wulfric, WulfricTitle)
+EndingTitleTableEntry(Messel, MesselTitle)
+
+EndingTitleTableTerminator
+
+ALIGN 4
+NewEndingsTable:
+SoloEndingTableEntry(Affogato, AffogatoSoloEnding)
+SoloEndingTableEntry(Ulrich, UlrichSoloEnding)
+SoloEndingTableEntry(Breve, BreveSoloEnding)
+SoloEndingTableEntry(Hildr, HildrSoloEnding)
+SoloEndingTableEntry(Ansgar, AnsgarSoloEnding)
+SoloEndingTableEntry(Sequin, SequinSoloEnding)
+SoloEndingTableEntry(Nora, NoraSoloEnding)
+SoloEndingTableEntry(Kane, KaneSoloEnding)
+SoloEndingTableEntry(Mocha, MochaSoloEnding)
+SoloEndingTableEntry(0x16, LevainSoloEnding)
+SoloEndingTableEntry(Stroganoff, StroganoffSoloEnding)
+SoloEndingTableEntry(Eisner, EisnerSoloEnding)
+SoloEndingTableEntry(Doppio, DoppioSoloEnding)
+SoloEndingTableEntry(Floris, FlorisSoloEnding)
+SoloEndingTableEntry(Yory, YorySoloEnding)
+SoloEndingTableEntry(Noel, NoelSoloEnding)
+SoloEndingTableEntry(Brudet, BrudetSoloEnding)
+SoloEndingTableEntry(Therese, ThereseSoloEnding)
+SoloEndingTableEntry(Lennard, LennardSoloEnding)
+SoloEndingTableEntry(Wegman, WegmanSoloEnding)
+SoloEndingTableEntry(Klavdia, KlavdiaSoloEnding)
+SoloEndingTableEntry(Gerolf, GerolfSoloEnding)
+SoloEndingTableEntry(Xavier, XavierSoloEnding)
+SoloEndingTableEntry(Ogrim, OgrimSoloEnding)
+SoloEndingTableEntry(Lili, IrisSoloEnding)
+SoloEndingTableEntry(Chiffon, ChiffonSoloEnding)
+SoloEndingTableEntry(Graham, GrahamSoloEnding)
+SoloEndingTableEntry(Yufka, YufkaSoloEnding)
+SoloEndingTableEntry(Jaye, JayeSoloEnding)
+SoloEndingTableEntry(Penny, PennySoloEnding)
+SoloEndingTableEntry(Yvonne, YvonneSoloEnding)
+SoloEndingTableEntry(Verna, VernaSoloEnding)
+SoloEndingTableEntry(Frye, FryeSoloEnding)
+SoloEndingTableEntry(Velius, VeliusSoloEnding)
+SoloEndingTableEntry(Cortado, CortadoSoloEnding)
+SoloEndingTableEntry(Gus, GusSoloEnding)
+SoloEndingTableEntry(Raial, RaialSoloEnding)
+SoloEndingTableEntry(Ilse, IlseSoloEnding)
+SoloEndingTableEntry(Pandoro, PandoroSoloEnding)
+SoloEndingTableEntry(Rina, RinaSoloEnding)
+SoloEndingTableEntry(Staniel, StanielSoloEnding)
+SoloEndingTableEntry(Dira, DiraSoloEnding)
+SoloEndingTableEntry(Edith, EdithSoloEnding)
+SoloEndingTableEntry(Moose, MooseSoloEnding)
+SoloEndingTableEntry(Chester, ChesterSoloEnding)
+SoloEndingTableEntry(Kian, KianSoloEnding)
+SoloEndingTableEntry(Edvin, EdvinSoloEnding)
+SoloEndingTableEntry(Opali, OpaliSoloEnding)
+SoloEndingTableEntry(Wulfric, WulfricSoloEnding)
+SoloEndingTableEntry(Messel, MesselSoloEnding)
+
+
+//paired endings
+PairedEndingTableEntry(Breve, Hildr, BreveHildrEnding)
+PairedEndingTableEntry(Affogato, Ansgar, AffogatoAnsgarEnding)
+PairedEndingTableEntry(Ulrich, Hildr, UlrichHildrEnding)
+PairedEndingTableEntry(Ulrich, Ogrim, UlrichOgrimEnding)
+PairedEndingTableEntry(Ulrich, Opali, UlrichOpaliEnding)
+PairedEndingTableEntry(Ulrich, Wegman, UlrichWegmanEnding)
+PairedEndingTableEntry(Sequin, Nora, SequinNoraEnding)
+PairedEndingTableEntry(Nora, Floris, NoraFlorisEnding)
+PairedEndingTableEntry(Ansgar, Breve, AnsgarBreveEnding)
+PairedEndingTableEntry(Ansgar, Wegman, AnsgarWegmanEnding)
+PairedEndingTableEntry(Ansgar, Kane, AnsgarKaneEnding)
+PairedEndingTableEntry(Stroganoff, Brudet, StroganoffBrudetEnding)
+PairedEndingTableEntry(Wegman, Stroganoff, WegmanStroganoffEnding)
+PairedEndingTableEntry(Doppio, Stroganoff, DoppioStroganoffEnding)
+PairedEndingTableEntry(Therese, Stroganoff, ThereseStroganoffEnding)
+PairedEndingTableEntry(Brudet, Noel, BrudetNoelEnding)
+PairedEndingTableEntry(Brudet, Mocha, BrudetMochaEnding)
+PairedEndingTableEntry(Brudet, Eisner, BrudetEisnerEnding)
+PairedEndingTableEntry(Brudet, Floris, BrudetFlorisEnding)
+PairedEndingTableEntry(Raial, Floris, RaialFlorisEnding)
+PairedEndingTableEntry(Raial, Ilse, RaialIlseEnding)
+PairedEndingTableEntry(Chiffon, Raial, ChiffonRaialEnding)
+PairedEndingTableEntry(Chiffon, Graham, ChiffonGrahamEnding)
+PairedEndingTableEntry(Yufka, Verna, YufkaVernaEnding)
+PairedEndingTableEntry(Yufka, Penny, YufkaPennyEnding)
+PairedEndingTableEntry(Yufka, Dira, YufkaDiraEnding)
+PairedEndingTableEntry(Frye, Rina, FryeRinaEnding)
+PairedEndingTableEntry(Graham, Yvonne, GrahamYvonneEnding)
+PairedEndingTableEntry(Penny, Yvonne, PennyYvonneEnding)
+PairedEndingTableEntry(Wulfric, Ogrim, WulfricOgrimEnding)
+PairedEndingTableEntry(Jaye, Sequin, JayeSequinEnding)
+PairedEndingTableEntry(Jaye, Verna, JayeVernaEnding)
+PairedEndingTableEntry(Lennard, Therese, LennardThereseEnding)
+
+EndingTableTerminator

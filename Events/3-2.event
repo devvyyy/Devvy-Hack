@@ -108,8 +108,8 @@ UNIT Klavdia WyvernKnight 0x1 Level(13, Enemy, 0)     [13,8] 0b 0x0 0x0 0x0 [Mag
 	UNIT
 
 PrisonCutsceneUnits:
-UNIT Chiffon 0x10 0x1 Level(10, NPC, 1)     [9,9] 0b 0x0 0x0 0x0 [Javelin] RangeAI
-UNIT Sylveria 0x4f 0x1 Level(10, Enemy, 1)     [9,9] 0b 0x0 0x0 0x0 [Javelin] RangeAI
+UNIT Chiffon 0x10 0x1 Level(10, NPC, 1)     [19,4] 0b 0x0 0x0 0x0 [Javelin] RangeAI
+UNIT Sylveria 0x4f 0x1 Level(10, Enemy, 1)     [18,11] 0b 0x0 0x0 0x0 [Javelin] RangeAI
 	UNIT
 
 Traps1:
@@ -213,7 +213,7 @@ CLEAN
 	VCWF 0
 	LOMA 0x46
 LOAD2 0x1 PrisonCutsceneUnits
-
+CAM1 [18,6]
 SetBackground(0x35)
 STAL 30
 Music(0x292)

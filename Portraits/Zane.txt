@@ -156,7 +156,7 @@ setMugEntry(0x11, Wulfric_Mug, 3, 5, 2, 3)
 ALIGN 16 //Gamma mugs
 Massena_Mug:
 #incext PortraitFormatter "GAMMAmassena.png"
-setMugEntry(0x12, Massena_Mug, 3, 5, 3, 3)
+setMugEntry(0x12, Massena_Mug, 2, 5, 2, 3)
 
 ALIGN 16
 Faye_Mug:
@@ -318,10 +318,10 @@ Sequin_Mug:
 #incext PortraitFormatter "SequinV2.png"
 setMugEntry(0x1F, Sequin_Mug, 4, 5, 3, 3)
 
-ALIGN 16
-Rosenfeld_Mug:
-#incext PortraitFormatter "Gus.png"
-setMugEntry(0x20, Rosenfeld_Mug, 3, 5, 1, 3)
+//ALIGN 16
+//Rosenfeld_Mug:
+//#incext PortraitFormatter "Gus.png"
+//setMugEntry(0x20, Rosenfeld_Mug, 3, 5, 1, 3)
 
 ALIGN 4
 Affogato_Mug: //Affogato edited by BuskHusker and Lenh
@@ -764,6 +764,11 @@ ALIGN 16
 Levain_Mug:
 #incext PortraitFormatter "Vlak2.png"
 setMugEntry(0xB7, Levain_Mug, 4, 5, 4, 3)
+
+ALIGN 16
+Edvin_Mug:
+#incext PortraitFormatter "Edvin.png"
+setMugEntry(0x20, Edvin_Mug, 3, 5, 3, 3)
 
 ALIGN 16 //Shon by autonima
 Shon_Mug:

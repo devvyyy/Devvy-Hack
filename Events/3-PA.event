@@ -174,7 +174,7 @@ STAL 15
 
 	CALL $591FD8 //prep screen
 	FADU 60
-	SetUnitItemDurability(0x6F, 1, IgnisID) //silver pin
+	SetUnitItemDurability(0x6F, 1, 80) //IgnisID, silver pin
 	//change all NPCs to be blue
 
 SVAL 0xB 0x17000A

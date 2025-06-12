@@ -48,8 +48,18 @@ CharacterEventBothWays(0xA, RecruitEd, 0x0, Edvin)
 CharacterEventBothWays(0x20,ChiffonGrahamTalk, Chiffon, Graham)
 CharacterEventBothWays(0x21,ChiffonRaialTalk, Chiffon, Raial)
 CharacterEventBothWays(0x22,GrahamGusTalk, Gus, Graham)
+CharacterEventBothWays(0x23,RaialYufkaTalk, Raial, Yufka)
 	END_MAIN
-	
+
+
+RaialYufkaTalk:
+	MUSI
+	Text(RaialYufkaTalk25)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
+
 ChiffonGrahamTalk:
 	MUSI
 	Text(ChiffonGrahamTalk25)

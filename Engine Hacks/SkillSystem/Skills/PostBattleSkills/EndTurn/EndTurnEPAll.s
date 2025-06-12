@@ -20,6 +20,15 @@ bl     SkillTester
 cmp    r0, #0x0
 beq    End
 
+@check if attacked this turn
+ldrb 	r0, [r6,#0x11]	@action taken this turn
+cmp	r0, #0x2 @attack
+bne	End
+@ldrb 	r0, [r6,#0x0C]	@allegiance byte of the current character taking action
+@ldrb	r1, [r4,#0x0B]	@allegiance byte of the character we are checking
+@cmp	r0, r1		@check if same character
+@bne	End
+
 @Get enemy units in range
 mov  r0, r4
 mov  r1, #0x2 @enemies
