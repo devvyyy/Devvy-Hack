@@ -141,6 +141,18 @@ UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [0,25] 0 0 1 REDA5R25 [0xf0,Pain,M
 UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [0,26] 0 0 1 REDA5R26 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
 	UNIT
 
+CutsceneUnitsEnd:
+UNIT Ulrich LPal 0x1 Level(1, Ally, 0)   [20,3] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [21,4] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [19,4] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+
+UNIT 0x70 General 0x1 Level(16, Enemy, 1)     [20,2] 0b 0x0 0x0 0x0 [MageSword, 0x8A, 0xBC] GroupTwoAI
+	UNIT
+
+AffoGamer:
+UNIT Affogato 0x3 0x1 Level(1, NPC, 0)   [6,0] 0 0 1 REDA6R2 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT
+
 Traps1:
 BlueSigil(20,2)
 	ENDTRAP
@@ -193,7 +205,17 @@ SetBackground(0x2d)
 	ENDA
 
 EndingScene:
-	Text(Part3Chapter3Ending1)
+
+FADI 60
+DoAllThree
+LOAD2 0x1 CutsceneUnits
+Music(0x283)
+FADU 30
+
+STAL 30
+	TextCont(Part3Chapter3Ending1, 0x63)
+
+MUSCSLOW 0x7FFF
 
 STAL 15
 SOUN 0xf0
@@ -202,13 +224,13 @@ STAL 10
 FADI 100
 CLEAN
 
-//affo horse sound and arrows; load him too
+LOAD2 0x1 AffoGamer
+ENUN
 
-SOUN 0x1
+FADU 20
+STAL 30
 
-STAL 120
-
-	Text(Part3Chapter3Ending2)
+TEXTSTART; TEXTSHOW Part3Chapter3Ending2; TEXTEND; SET_SOMETHING 0x70; STAL 15; TEXTCONT; TEXTEND; REMA
 
 	MNC2 0x16
 	NoFade
