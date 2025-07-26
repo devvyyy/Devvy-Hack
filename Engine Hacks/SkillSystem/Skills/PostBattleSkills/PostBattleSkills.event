@@ -73,6 +73,138 @@ WORD EndTurnID
 POIN EvilEyeEvent
 WORD CommanderID
 
+#define SetHP(char) "SVAL 0x1 0x1; SET_HP char"
+
+ALIGN 4
+CalamitySkill:
+#incbin "EndTurn/EndTurnEPAllInfinite.dmp"
+POIN SkillTester
+WORD CalamityID
+POIN CalamityEvent
+
+CalamityEvent:
+ENUT 0xA1 //flag 0xA1 is used in part 1 and unset in 1-1; in part 2 this is the "won against Warden" flag
+CAM1 0x72; STAL 20; FlashCursor(0x72,60)
+
+SOUN 0x2f7
+STAL 100
+
+EARTHQUAKE_START 0x0
+SOUN 0x2f0
+FAWI 3
+STAL 100
+SOUN 0x2f1
+
+SetHP(Affogato)
+SetHP(Ulrich)
+SetHP(Breve)
+SetHP(Hildr)
+SetHP(Ansgar)
+SetHP(Sequin)
+SetHP(Nora)
+SetHP(Kane)
+SetHP(Mocha)
+SetHP(Levain)
+SetHP(Stroganoff)
+SetHP(Eisner)
+SetHP(Doppio)
+SetHP(Floris)
+SetHP(Yory)
+SetHP(Noel)
+SetHP(Brudet)
+SetHP(Therese)
+SetHP(Lennard)
+SetHP(Wegman)
+SetHP(Klavdia)
+SetHP(Gerolf)
+SetHP(Xavier)
+SetHP(Ogrim)
+SetHP(Iris)
+SetHP(Chiffon)
+SetHP(Graham)
+SetHP(Yufka)
+SetHP(Jaye)
+SetHP(Penny)
+SetHP(Yvonne)
+SetHP(Verna)
+SetHP(Frye)
+SetHP(Velius)
+SetHP(Cortado)
+SetHP(Gus)
+SetHP(Raial)
+SetHP(Ilse)
+SetHP(Pandoro)
+SetHP(Rina)
+SetHP(Staniel)
+SetHP(Dira)
+SetHP(Edith)
+SetHP(Moose)
+SetHP(Chester)
+SetHP(Kian)
+SetHP(Edvin)
+SetHP(Opali)
+SetHP(Wulfric)
+SetHP(Messel)
+SET_ENDTURN Affogato
+SET_ENDTURN Ulrich
+SET_ENDTURN Breve
+SET_ENDTURN Hildr
+SET_ENDTURN Ansgar
+SET_ENDTURN Sequin
+SET_ENDTURN Nora
+SET_ENDTURN Kane
+SET_ENDTURN Mocha
+SET_ENDTURN Levain
+SET_ENDTURN Stroganoff
+SET_ENDTURN Eisner
+SET_ENDTURN Doppio
+SET_ENDTURN Floris
+SET_ENDTURN Yory
+SET_ENDTURN Noel
+SET_ENDTURN Brudet
+SET_ENDTURN Therese
+SET_ENDTURN Lennard
+SET_ENDTURN Wegman
+SET_ENDTURN Klavdia
+SET_ENDTURN Gerolf
+SET_ENDTURN Xavier
+SET_ENDTURN Ogrim
+SET_ENDTURN Iris
+SET_ENDTURN Chiffon
+SET_ENDTURN Graham
+SET_ENDTURN Yufka
+SET_ENDTURN Jaye
+SET_ENDTURN Penny
+SET_ENDTURN Yvonne
+SET_ENDTURN Verna
+SET_ENDTURN Frye
+SET_ENDTURN Velius
+SET_ENDTURN Cortado
+SET_ENDTURN Gus
+SET_ENDTURN Raial
+SET_ENDTURN Ilse
+SET_ENDTURN Pandoro
+SET_ENDTURN Rina
+SET_ENDTURN Staniel
+SET_ENDTURN Dira
+SET_ENDTURN Edith
+SET_ENDTURN Moose
+SET_ENDTURN Chester
+SET_ENDTURN Kian
+SET_ENDTURN Edvin
+SET_ENDTURN Opali
+SET_ENDTURN Wulfric
+SET_ENDTURN Messel
+
+STAL 100
+
+EARTHQUAKE_END
+FAWU 5
+//ASMC 0x225F9
+
+NoFade
+ENDA
+
 EvilEyeEvent:
 CAM1 0xFFFF
 //SOUN 0x314 //bling sound

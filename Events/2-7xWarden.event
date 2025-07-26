@@ -1,0 +1,348 @@
+EventPointerTable(0xA9, PointerList)
+
+PointerList:
+	POIN TurnBasedEvents
+	POIN CharacterBasedEvents
+	POIN LocationBasedEvents
+	POIN MiscBasedEvents
+	POIN Dunno1 Dunno2 Dunno3 Tutorial
+	POIN Traps1 Traps2
+	POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+	POIN $0 $0 $0
+	POIN $0 $0 $0
+	POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventEnemy(0,WardenCharges,3) //so you dont insta die
+	END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+
+	END_MAIN
+
+MiscBasedEvents:
+//AREA 0x13 SussyMoment [0,0] [19,10]
+DefeatAll(EndingScene)
+//AFEV 0x3 EndingScene 0xA1 //end the battle upon warden hitting 50% or less
+AREA 0x0 CheckWardenHP [0,0] [22,14]
+
+	//CauseGameOverIfLordDies
+	AFEV 0x0 CheckNoUnits 0x3
+	END_MAIN
+
+
+CheckWardenHP:
+
+CHECK_EVENTID 0xA1
+BEQ 0x776 0xC 0x0
+
+SetFlag(0x3)
+CALL EndingScene
+
+LABEL 0x776
+
+NoFade
+ENDA
+
+
+
+CheckNoUnits:
+CUSA Chiffon
+FADI 60
+	DoAllThree
+	LOAD2 0x1 CutsceneUnits
+
+	CAM1 [11,6]
+
+	STAL 50
+	FADU 15
+	STAL 15
+	Music(0x185)
+	SetBackground(0x2b)
+	Text(Ch27DuelEndingLose1Alt)
+	ClearBackground
+
+	STAL 100
+
+CHECK_EVENTID 0x95 //hayes fight
+BNE 0x9000 0xC 0x0
+
+MUSI
+MOVE 0x2 0x72 [11,6]
+FADI 0x6
+STAL 15
+ENUN
+
+SOUN 0xCF
+STAL 30
+SOUN 0x2BF
+STAL 30
+SOUN 0xcb
+SetBackground(0x48)
+STAL 20
+
+Text(Ch27DuelEndingLose1Alt2)
+
+FAWI 120
+
+//SOUN 0x313
+SOUN 0x2d2
+
+MOVE 0xA 0x72 [10,6]
+ENUN
+LOAD2 0x1 RaialMomentHello
+ENUN
+
+STAL 18
+//SOUN 0xf0
+SOUN 0x313
+
+CLEAN
+MUSCSLOW 0x7FFF
+FAWU 30
+
+STAL 150
+CameraCursor(Raial)
+STAL 5
+
+Music(0x197)
+MUNO
+
+TEXTSTART; TEXTSHOW Ch27DuelEndingLose1Alt3; TEXTEND
+
+MOVE 0x3 0x72 [11,14]
+ENUN
+REMU 0x72
+
+STAL 15; Music(0x4A); TEXTCONT; TEXTEND; REMA
+
+GOTO 0x9001
+LABEL 0x9000
+
+//graham route, lose
+
+MUSI
+MOVE 0x2 0x72 [11,6]
+FADI 0x6
+STAL 15
+ENUN
+
+SOUN 0xCF
+STAL 30
+SOUN 0x2BF
+STAL 30
+SOUN 0xcb
+SetBackground(0x48)
+STAL 10
+
+Text(Ch27DuelEndingLose1Alt2Graham)
+
+FADI 120
+
+SOUN 0xb4
+REMU Chiffon
+STAL 50
+
+SOUN 0xb5
+STAL 25
+
+MOVE 0xA 0x72 [11,5]
+ENUN
+
+LOAD2 0x1 GrahamMomentHello
+
+REVEAL Chiffon
+LOAD2 0x1 ChiffonNewEpic
+ENUN
+
+SOUN 0xd7
+STAL 10
+
+CLEAN
+MUSCSLOW 0x7FFF
+FADU 15
+
+STAL 150
+CameraCursor(Graham)
+STAL 5
+
+Music(0x196) //noctum order
+MUNO
+
+TEXTSTART; TEXTSHOW Ch27DuelEndingLose1Alt3Graham; TEXTEND
+
+MOVE 0x3 0x72 [11,14]
+ENUN
+REMU 0x72
+
+STAL 15; Music(0x4A); TEXTCONT; TEXTEND; REMA
+
+LABEL 0x9001
+
+	MNC2 0x23
+
+NoFade
+ENDA
+
+LocationBasedEvents:
+
+	END_MAIN
+
+Dunno1:
+
+	END_MAIN
+
+Dunno2:
+
+	END_MAIN
+
+Dunno3:
+
+	END_MAIN
+
+Tutorial:
+
+	END_MAIN
+
+Units1:
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [11,2] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+	UNIT
+
+EnemyUnits:
+UNIT 0x72 General 0x1 Level(20, Enemy, 0)     [11,10] DropItem 0x0 0x0 0x0 [WindSword, 0x63] BossAI
+	UNIT
+	
+CutsceneUnits:
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [12,6] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT 0x72 General 0x1 Level(20, Enemy, 0)     [10,6] DropItem 0x0 0x0 0x0 [Siegmund, BlackGem] BossAI
+	UNIT
+
+TheTwoHello:
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [10,6] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [12,5] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT
+
+RaialMomentHello:
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [11,6] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT
+
+GrahamMomentHello:
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [11,0] 0 0 1 REDA12R2 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT
+
+ChiffonNewEpic:
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [11,2] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+
+
+Traps1:
+//BLST [9,4] IronBallista
+	ENDTRAP
+	ALIGN 4
+
+Traps2:
+	ENDTRAP
+	ALIGN 4
+
+WardenCharges:
+SVAL 0x1 0x00040000
+CHAI 0x72
+NoFade
+ENDA
+
+BeginningScene:
+REVEAL Graham
+REVEAL Raial
+SetFlag(0xF)
+//SetFlag(0x95) //global hayes flag
+ASMC 0x8026629
+	LOAD1 0x1 EnemyUnits
+	ENUN
+	
+	CALL $591FD8
+	CAM1 [11,6]
+FADU 60
+Music(0x4E)
+STAL 150
+CameraCursor(0x72)
+
+CameraCursor(Chiffon)
+
+CHECK_EVENTID 0xA3 //hayes fight; check if ring was obtained? (0xA3)
+BNE 0x9000 0xC 0x0
+
+Text(ChCh27xOpening2Alt)
+
+GOTO 0x9001
+LABEL 0x9000
+
+Text(ChCh27xOpening2AltAlt)
+
+LABEL 0x9001
+
+SOUN 0x119 //bolting sparks
+ENUT 0x24
+ENUT 0x5
+STAL 0x50
+SOUN 0x82 //sleep staff sound
+NoFade
+	ENDA
+
+EndingScene: //can only win in graham route if ring was obtained
+	FADI 60
+	Music(0x185)
+	DoAllThree
+	LOAD2 0x1 CutsceneUnits
+	FADU 15
+	STAL 15
+
+CAM1 [11,6]
+
+MUNO
+
+TEXTSTART; TEXTSHOW Ch27DuelEndingWardenWin; TEXTEND
+
+MOVE 0x3 0x72 [11,14]
+ENUN
+REMU 0x72
+
+STAL 15; Music(0x4A); TEXTCONT; TEXTEND; REMA
+
+STAL 15
+FAWI 16
+SOUN 0xCF
+STAL 30
+MOVE 0xD Chiffon [11,6]
+ENUN
+	SVAL 0x1 0x1 //1 lol
+	SET_HP Chiffon
+SOUN 0x2BF
+STAL 30
+SOUN 0xf0
+SetBackground(0x48)
+STAL 10
+SOUN 0xD8
+STAL 50
+FADI 60
+CLEAN
+FADU 15
+STAL 30
+Text(Ch27DuelEndingWardenWin2)
+
+FADI 5
+LOAD2 0x1 TheTwoHello
+STAL 175
+
+FADU 8
+
+STAL 50
+
+Music(0x29a)
+SetBackground(0x2b)
+Text(Ch27DuelEndingWardenWin3)
+
+	STAL 30
+
+	MNC2 0x23
+	NoFade
+	ENDA

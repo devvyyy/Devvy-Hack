@@ -604,11 +604,11 @@ IdeonsFate_3:
 	BYTE	KEYSH   IdeonsFate_key+0
 IdeonsFate_3_B1:
 // 000   ----------------------------------------
-	BYTE		VOICE   49
+	BYTE		VOICE   54
 	BYTE		MODT    0
 	BYTE		LFOS    44
+	BYTE		PAN     c_v+12
 	BYTE		VOL     127*IdeonsFate_mvl/mxv
-	BYTE		PAN     c_v+32
 	BYTE	W96
 // 001   ----------------------------------------
 	BYTE	W96
@@ -762,11 +762,11 @@ IdeonsFate_4:
 	BYTE	KEYSH   IdeonsFate_key+0
 IdeonsFate_4_B1:
 // 000   ----------------------------------------
-	BYTE		VOICE   71
+	BYTE		VOICE   100
 	BYTE		MODT    0
 	BYTE		LFOS    44
-	BYTE		VOL     127*IdeonsFate_mvl/mxv
-	BYTE		PAN     c_v-63
+	BYTE		VOL     112*IdeonsFate_mvl/mxv
+	BYTE		PAN     c_v-1
 	BYTE	W96
 // 001   ----------------------------------------
 	BYTE	W96
@@ -1193,8 +1193,8 @@ IdeonsFate_6_B1:
 	BYTE		VOICE   73
 	BYTE		MODT    0
 	BYTE		LFOS    44
+	BYTE		PAN     c_v-64
 	BYTE		VOL     127*IdeonsFate_mvl/mxv
-	BYTE		PAN     c_v+0
 	BYTE	W96
 // 001   ----------------------------------------
 	BYTE	W96
@@ -1398,11 +1398,128 @@ IdeonsFate_6_B2:
 // 030   ----------------------------------------
 	BYTE	FINE
 
+//**************** Track 7 (Midi-Chn.7) ****************//
+
+IdeonsFate_7:
+	BYTE	KEYSH   IdeonsFate_key+0
+IdeonsFate_7_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   14
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+27
+	BYTE		VOL     127*IdeonsFate_mvl/mxv
+	BYTE		TIE     An2   v100
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+	BYTE	W24
+	BYTE		EOT   
+// 002   ----------------------------------------
+	BYTE		N96     Gn2 
+	BYTE	W96
+// 003   ----------------------------------------
+IdeonsFate_7_003:
+	BYTE		TIE     An2   v100
+	BYTE	W96
+	BYTE	W24
+	BYTE	PEND
+	BYTE		EOT   
+// 004   ----------------------------------------
+	BYTE	W72
+// 005   ----------------------------------------
+	BYTE	W72
+// 006   ----------------------------------------
+	BYTE	W72
+// 007   ----------------------------------------
+	BYTE	W72
+// 008   ----------------------------------------
+IdeonsFate_7_008:
+	BYTE		TIE     En2   v100
+	BYTE	W96
+	BYTE	W42
+	BYTE	PEND
+	BYTE		EOT   
+	BYTE	W06
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IdeonsFate_7_003
+	BYTE		EOT     An2 
+// 011   ----------------------------------------
+	BYTE		N96     Gn2   v100
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IdeonsFate_7_003
+	BYTE		EOT     An2 
+// 013   ----------------------------------------
+	BYTE	W72
+// 014   ----------------------------------------
+	BYTE	W72
+// 015   ----------------------------------------
+	BYTE	W72
+// 016   ----------------------------------------
+	BYTE	W72
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	IdeonsFate_7_008
+	BYTE		EOT     En2 
+	BYTE	W06
+// 018   ----------------------------------------
+	BYTE		TIE     Gn2   v100
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 020   ----------------------------------------
+	BYTE		TIE     An2 
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 022   ----------------------------------------
+	BYTE		TIE     Gn2 
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 024   ----------------------------------------
+	BYTE		N96     An2 
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE		N72     Fn2 
+	BYTE	W72
+	BYTE		        Dn2 
+	BYTE	W24
+// 026   ----------------------------------------
+	BYTE	W48
+	BYTE		        Fs2 
+	BYTE	W48
+// 027   ----------------------------------------
+	BYTE	W24
+	BYTE		TIE     Dn2 
+	BYTE	W72
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W18
+	BYTE		EOT   
+	BYTE	W09
+	BYTE	GoTo
+	 POIN2	IdeonsFate_7_B1
+IdeonsFate_7_B2:
+	BYTE	W68
+	BYTE	W01
+// 030   ----------------------------------------
+	BYTE	FINE
+
 //******************************************************//
 	ALIGN 4
 
 IdeonsFate:
-	BYTE	6	// NumTrks
+	BYTE	7	// NumTrks
 	BYTE	0	// NumBlks
 	BYTE	IdeonsFate_pri	// Priority
 	BYTE	IdeonsFate_rev	// Reverb.
@@ -1415,5 +1532,6 @@ IdeonsFate:
 	POIN2	IdeonsFate_4
 	POIN2	IdeonsFate_5
 	POIN2	IdeonsFate_6
+	POIN2	IdeonsFate_7
 
 	

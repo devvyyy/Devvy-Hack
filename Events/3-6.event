@@ -26,7 +26,8 @@ MiscBasedEvents:
 	END_MAIN
 
 LocationBasedEvents:
-
+Chest(0x80,10,7)
+Chest(BraveSword,18,17)
 	END_MAIN
 
 Dunno1:
@@ -50,7 +51,6 @@ Unit(9, 30)
 Unit(10, 30)
 Unit(11, 30)
 Unit(12, 30)
-Unit(12, 30)
 Unit(13, 30)
 Unit(9, 31)
 Unit(10, 31)
@@ -60,54 +60,77 @@ Unit(12, 31)
 Unit(13, 31)
 	UNIT
 
+WahooNewUnit: //vera vale
+UNIT 0x74 Rogue 0x1 Level(11, NPC, 1)     [11,15] 0 0 1 REDA12R14 [KillingEdge,0xE8, GoldGem] RangeAI
+	UNIT
+
 EnemyUnits:
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)      [3,4]     0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)      [6,4]     0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Mage 0x1 Level(10, Enemy, 1)         [9,4]     0b 0x0 0x0 0x0 [Fire] TwoActionAI
-UNIT BadGuy LCav 0x1 Level(10, Enemy, 1)         [12,4]    0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 
-UNIT BadGuy SCav 0x1 Level(10, Enemy, 1)         [4,7]     0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)      [7,7]     0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)      [10,7]    0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Mage 0x1 Level(10, Enemy, 1)         [13,6]    0b 0x0 0x0 0x0 [Fire] TwoActionAI
-UNIT BadGuy ACav 0x1 Level(10, Enemy, 1)         [16,5]    0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
+UNIT Aeteria Druid 0x1 Level(14, Enemy, 1)      [7,3]   0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
 
-UNIT BadGuy LCav 0x1 Level(10, Enemy, 1)         [1,14]     0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)      [6,14]     0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)      [5,20]    0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Mage 0x1 Level(10, Enemy, 1)         [15,9]    0b 0x0 0x0 0x0 [Fire] TwoActionAI
+UNIT Aeteria Druid 0x1 Level(14, Enemy, 1)      [3,4]     0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
+UNIT Aeteria Hero 0x1 Level(14, Enemy, 1)      [6,4]     0b 0x0 0x0 0x0 [SteelSword] RangeAI
+UNIT Aeteria Sage 0x1 Level(14, Enemy, 1)         [9,4]     0b 0x0 0x0 0x0 [Fire] TwoActionAI
+UNIT Aeteria LPal 0x1 Level(14, Enemy, 1)         [12,4]    0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 
-UNIT BadGuy ACav 0x1 Level(10, Enemy, 1)         [6,11]    0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
-UNIT BadGuy SCav 0x1 Level(10, Enemy, 1)         [9,12]    0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)      [13,12]   0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)      [17,12]   0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
+UNIT Aeteria SPal 0x1 Level(14, Enemy, 1)         [4,8]     0b 0x0 0x0 0x0 [SteelSword] RangeAI
+UNIT Aeteria Druid 0x1 Level(14, Enemy, 1)      [7,7]     0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
+UNIT Aeteria Halberdier 0x1 Level(14, Enemy, 1)      [9,8]    DropItem 0x0 0x0 0x0 [SteelLance, Elixir] TwoActionAI
+UNIT Aeteria Sage 0x1 Level(14, Enemy, 1)         [13,6]    0b 0x0 0x0 0x0 [Fire] TwoActionAI
+UNIT Aeteria APal 0x1 Level(14, Enemy, 1)         [16,5]    0b 0x0 0x0 0x0 [SteelAxe] RangeAI
 
-UNIT BadGuy Mage 0x1 Level(10, Enemy, 1)         [2,16]    0b 0x0 0x0 0x0 [Fire] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)      [19,8]    0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy LCav 0x1 Level(10, Enemy, 1)         [14,14]   0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy ACav 0x1 Level(10, Enemy, 1)         [16,15]   0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
+UNIT Aeteria LPal 0x1 Level(14, Enemy, 1)         [1,14]     0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT Aeteria Halberdier 0x1 Level(14, Enemy, 1)      [6,14]     0b 0x0 0x0 0x0 [SteelLance] RangeAI
+UNIT Aeteria Druid 0x1 Level(14, Enemy, 1)      [5,20]    0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
+UNIT Aeteria Sage 0x1 Level(14, Enemy, 1)         [15,9]    0b 0x0 0x0 0x0 [Fire] TwoActionAI
 
-UNIT BadGuy SCav 0x1 Level(10, Enemy, 1)         [3,19]    0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
-UNIT BadGuy Mage 0x1 Level(10, Enemy, 1)         [9,28]    0b 0x0 0x0 0x0 [Fire] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)      [11,19]   0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)      [6,17]   0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT AeteriaStealable APal 0x1 Level(14, Enemy, 1)         [6,11]    0b 0x0 0x0 0x0 [SteelAxe, 0x5B] RangeAI
+UNIT Aeteria SPal 0x1 Level(14, Enemy, 1)         [10,13]    0b 0x0 0x0 0x0 [SteelSword] RangeAI
+UNIT Aeteria Halberdier 0x1 Level(14, Enemy, 1)      [13,12]   0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT Aeteria Druid 0x1 Level(14, Enemy, 1)      [17,12]   0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
 
-UNIT BadGuy LCav 0x1 Level(10, Enemy, 1)         [5,23]    0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Mage 0x1 Level(10, Enemy, 1)         [9,23]    0b 0x0 0x0 0x0 [Fire] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)      [13,23]   0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)      [17,23]   0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT Aeteria Sage 0x1 Level(14, Enemy, 1)         [2,16]    0b 0x0 0x0 0x0 [Thunder] TwoActionAI
+UNIT Aeteria Hero 0x1 Level(14, Enemy, 1)      [19,8]    0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+UNIT Aeteria LPal 0x1 Level(14, Enemy, 1)         [14,14]   0b 0x0 0x0 0x0 [SteelLance] RangeAI
+UNIT AeteriaStealable APal 0x1 Level(14, Enemy, 1)         [16,15]   0b 0x0 0x0 0x0 [SteelAxe, BlueGem] RangeAI
 
-UNIT BadGuy ACav 0x1 Level(10, Enemy, 1)         [6,27]    0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)      [18,21]   0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Mage 0x1 Level(10, Enemy, 1)         [15,24]   0b 0x0 0x0 0x0 [Fire] TwoActionAI
+UNIT Aeteria SPal 0x1 Level(14, Enemy, 1)         [3,19]    0b 0x0 0x0 0x0 [SteelSword] RangeAI
+UNIT Aeteria Sage 0x1 Level(14, Enemy, 1)         [9,28]    DropItem 0x0 0x0 0x0 [Thunder, PureWater] TwoActionAI
+UNIT Aeteria Warrior 0x1 Level(14, Enemy, 1)      [6,17]   0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
 
-UNIT BadGuy SCav 0x1 Level(10, Enemy, 1)         [8,30]    0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)      [12,28]   0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)      [15,30]   0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)      [8,18]   0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)      [1,7]   0b 0x0 0x0 0x0 [SteelLance] BossAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)      [5,26]   0b 0x0 0x0 0x0 [SteelLance] BossAI
+UNIT Aeteria LPal 0x1 Level(14, Enemy, 1)         [5,23]    0b 0x0 0x0 0x0 [SteelLance] RangeAI
+UNIT Aeteria Sage 0x1 Level(14, Enemy, 1)         [9,23]    0b 0x0 0x0 0x0 [Thunder] RangeAI
+UNIT AeteriaStealable Druid 0x1 Level(14, Enemy, 1)      [13,22]   0b 0x0 0x0 0x0 [Moonfall, DarkTome3, 0x5C] TwoActionAI
+UNIT Aeteria Halberdier 0x1 Level(14, Enemy, 1)      [17,23]   0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 
+UNIT Aeteria APal 0x1 Level(14, Enemy, 1)         [6,27]    0b 0x0 0x0 0x0 [SteelAxe] RangeAI
+UNIT Aeteria General 0x1 Level(14, Enemy, 1)      [18,21]   DropItem 0x0 0x0 0x0 [Spear,DoorKey] BossAI
+UNIT Aeteria MageKnight 0x1 Level(14, Enemy, 1)         [15,24]   0b 0x0 0x0 0x0 [Fire] TwoActionAI
+
+UNIT Aeteria SPal 0x1 Level(14, Enemy, 1)         [12,24]    0b 0x0 0x0 0x0 [SteelSword] RangeAI
+UNIT Aeteria Druid 0x1 Level(14, Enemy, 1)      [12,28]   0b 0x0 0x0 0x0 [DarkTome2] RangeAI
+UNIT Aeteria Halberdier 0x1 Level(14, Enemy, 1)      [15,30]   0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT AeteriaStealable MageKnight 0x1 Level(14, Enemy, 1)      [8,18]   0b 0x0 0x0 0x0 [Thunder, 0x5F] RangeAI
+UNIT Aeteria General 0x1 Level(14, Enemy, 1)      [1,7]   0b 0x0 0x0 0x0 [SteelLance] BossAI
+UNIT Aeteria Sniper 0x1 Level(14, Enemy, 1)      [5,26]   0b 0x0 0x0 0x0 [SteelBow] BossAI
+
+	UNIT
+
+CutsceneUnits:
+UNIT Affogato 0x3 0x1 Level(1, Ally, 0)   [12,32] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [11,32] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+
+UNIT Ulrich LPal 0x1 Level(1, Ally, 0)   [10,33] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [11,33] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [12,33] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT
+
+WhenVeraValeIsReal:
+UNIT 0x74 Rogue 0x1 Level(11, NPC, 1)     [11,15] 0 0 1 REDA12R14 [SteelDagger] RangeAI
+	UNIT
+
+SylveriaJumpscare:
+UNIT Sylveria Necromancer 0x1 Level(20, Enemy, 0)     [16,15] 0b 0x0 0x0 0x0 [0xD1] BossAI
 	UNIT
 
 Traps1:
@@ -119,12 +142,97 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+Music(0x48)
+SetBackground(0x38)
+STAL 5
+BROWNBOXTEXT ValeguardKeep [8,8]
+STAL 15
+
+CHECK_EVENTID 0x95
+BEQ 1 0x0 0xC
+TextCont(Part3Chapter6Opening1, 0x196)
+GOTO 2
+LABEL 1
+TextCont(Part3Chapter6Opening1Raial, 0x197)
+LABEL 2
+
+STAL 25
+
+Music(0x298)
+Text(Part3Chapter6Opening2)
+STAL 5
+ClearBackground
+
+STAL 20
+
+Music(0x4d)
+Text(Part3Chapter6Opening3)
+
 	LOAD1 0x1 EnemyUnits
 	ENUN
 	GotoPrepScreen
 	ENDA
 
 EndingScene:
+FADI 60
+LOMA 0xD
+DoAllThree
+CamOn
+LOAD2 0x1 CutsceneUnits
+Music(0x1c8)
+CAM1 [12,30]
+FADU 60
+CamOff //just in case
+
+TEXTSTART; TEXTSHOW Part3Chapter6Ending1
+
+TEXTEND
+
+SOUN 0xDD
+STAL 5
+MOVE 0xD Affogato [25,23]
+ENUN
+
+STAL 5
+MUSCSLOW 0x7FFF
+
+TEXTCONT; TEXTEND; REMA
+
+
+LOAD2 0x1 SylveriaJumpscare
+ENUN
+SVAL 0x2 0x45
+_WARP 0xFFFF 0xFFFD [12,30]
+CALL 0x9EE4F8
+_WARP 0x0 0x45 [12,30]
+LOAD2 0x1 SylveriaJumpscare
+ENUN
+STAL 50
+
+TextCont(Part3Chapter6Ending1Point5, 0x28E)
+
+FADI 30
+STAL 5
+CLEAN
+Music(0x324)
+SetBackground(0x23)
+
+STAL 5
+BROWNBOXTEXT CastleVale [8,8]
+STAL 15
+STAL 5
+BROWNBOXTEXT TheBastion [8,8]
+STAL 15
+Text(Part3Chapter6Ending2)
+
+FADI 60
+CLEAN
+Music(0x323)
+SetBackground(0x33)
+
+Text(Part3Chapter6Ending3)
+
+
 	MNC2 0xD
 	NoFade
 	ENDA

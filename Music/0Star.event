@@ -1,0 +1,2800 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	ChiffonStarFullLoop_FINAL_grp  voicegroup000
+	#define	ChiffonStarFullLoop_FINAL_pri  0
+	#define	ChiffonStarFullLoop_FINAL_rev  0xC0
+	#define	ChiffonStarFullLoop_FINAL_mvl  30
+	#define	ChiffonStarFullLoop_FINAL_key  0
+	#define	ChiffonStarFullLoop_FINAL_tbs  1
+	#define	ChiffonStarFullLoop_FINAL_exg  0
+	#define	ChiffonStarFullLoop_FINAL_cmp  1
+
+	// .rodata
+	//	ChiffonStarFullLoop_FINAL
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+ChiffonStarFullLoop_FINAL_1:
+	BYTE	KEYSH   ChiffonStarFullLoop_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE	TEMPO   70*ChiffonStarFullLoop_FINAL_tbs/2
+	BYTE		VOICE   54
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+0
+	BYTE		VOL     127*ChiffonStarFullLoop_FINAL_mvl/mxv
+	BYTE		N90     An3   v100
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE		        As3 
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE		TIE     An3 
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 006   ----------------------------------------
+	BYTE		N90     Bn3 
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE		        As3 
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE		TIE     An3 
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 014   ----------------------------------------
+	BYTE		N90     Bn3 
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE		        As3 
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE		TIE     An3 
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 022   ----------------------------------------
+	BYTE		N90     Bn3 
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE		        As3 
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE		TIE     An3 
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 030   ----------------------------------------
+	BYTE		N90     Bn3 
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE		        As3 
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE		TIE     An3 
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 038   ----------------------------------------
+	BYTE		N90     Bn3 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+ChiffonStarFullLoop_FINAL_1_B1:
+// 040   ----------------------------------------
+	BYTE		N90     An3   v100
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE		        As3 
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE		TIE     An3 
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 046   ----------------------------------------
+	BYTE		N90     Bn3 
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 049   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 050   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+// 051   ----------------------------------------
+	BYTE		        As3 
+	BYTE	W96
+// 052   ----------------------------------------
+	BYTE		TIE     An3 
+	BYTE	W96
+// 053   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 054   ----------------------------------------
+	BYTE		N90     Bn3 
+	BYTE	W96
+// 055   ----------------------------------------
+	BYTE		TIE     An3 
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	GoTo
+	 POIN2	ChiffonStarFullLoop_FINAL_1_B1
+ChiffonStarFullLoop_FINAL_1_B2:
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+ChiffonStarFullLoop_FINAL_2:
+	BYTE	KEYSH   ChiffonStarFullLoop_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   52
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-28
+	BYTE		VOL     127*ChiffonStarFullLoop_FINAL_mvl/mxv
+	BYTE		N90     Fn3   v100
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE		        En3 
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE		TIE     Fn3 
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 005   ----------------------------------------
+	BYTE		N90     En3 
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE		        Fs3 
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE		        En3 
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE		TIE     Fn3 
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 013   ----------------------------------------
+	BYTE		N90     En3 
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE		        Fs3 
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE		        En3 
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE		TIE     Fn3 
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 021   ----------------------------------------
+	BYTE		N90     En3 
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE		        Fs3 
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE		        En3 
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE		TIE     Fn3 
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 029   ----------------------------------------
+	BYTE		N90     En3 
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE		        Fs3 
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE		        En3 
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE		TIE     Fn3 
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 037   ----------------------------------------
+	BYTE		N90     En3 
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE		        Fs3 
+	BYTE	W96
+ChiffonStarFullLoop_FINAL_2_B1:
+// 040   ----------------------------------------
+	BYTE		N90     Fn3   v100
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE		        En3 
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE		TIE     Fn3 
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 045   ----------------------------------------
+	BYTE		N90     En3 
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE		        Fs3 
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE	W96
+// 049   ----------------------------------------
+	BYTE		        En3 
+	BYTE	W96
+// 050   ----------------------------------------
+	BYTE		TIE     Fn3 
+	BYTE	W96
+// 051   ----------------------------------------
+	BYTE	W96
+// 052   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 053   ----------------------------------------
+	BYTE		N90     En3 
+	BYTE	W96
+// 054   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 055   ----------------------------------------
+	BYTE		TIE     Fs3 
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	GoTo
+	 POIN2	ChiffonStarFullLoop_FINAL_2_B1
+ChiffonStarFullLoop_FINAL_2_B2:
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+ChiffonStarFullLoop_FINAL_3:
+	BYTE	KEYSH   ChiffonStarFullLoop_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   53
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+27
+	BYTE		VOL     127*ChiffonStarFullLoop_FINAL_mvl/mxv
+	BYTE		N90     Dn3   v100
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 003   ----------------------------------------
+	BYTE		N90     Dn3 
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 006   ----------------------------------------
+	BYTE		TIE     Dn3 
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 008   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 011   ----------------------------------------
+	BYTE		N90     Dn3 
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 014   ----------------------------------------
+	BYTE		TIE     Dn3 
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 016   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 019   ----------------------------------------
+	BYTE		N90     Dn3 
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 022   ----------------------------------------
+	BYTE		TIE     Dn3 
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 024   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 027   ----------------------------------------
+	BYTE		N90     Dn3 
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 030   ----------------------------------------
+	BYTE		TIE     Dn3 
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 032   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 035   ----------------------------------------
+	BYTE		N90     Dn3 
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 038   ----------------------------------------
+	BYTE		TIE     Dn3 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+ChiffonStarFullLoop_FINAL_3_B1:
+// 040   ----------------------------------------
+	BYTE		N90     Dn3   v100
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 043   ----------------------------------------
+	BYTE		N90     Dn3 
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 046   ----------------------------------------
+	BYTE		TIE     Dn3 
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 048   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 049   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE	W96
+// 050   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 051   ----------------------------------------
+	BYTE		N90     Dn3 
+	BYTE	W96
+// 052   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE	W96
+// 053   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 054   ----------------------------------------
+	BYTE		TIE     Dn3 
+	BYTE	W96
+// 055   ----------------------------------------
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	GoTo
+	 POIN2	ChiffonStarFullLoop_FINAL_3_B1
+ChiffonStarFullLoop_FINAL_3_B2:
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+ChiffonStarFullLoop_FINAL_4:
+	BYTE	KEYSH   ChiffonStarFullLoop_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   0
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-25
+	BYTE		VOL     127*ChiffonStarFullLoop_FINAL_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+ChiffonStarFullLoop_FINAL_4_008:
+	BYTE		N11     Dn2   v100
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     An1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		N11     Dn2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     En2 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE	PEND
+// 009   ----------------------------------------
+ChiffonStarFullLoop_FINAL_4_009:
+	BYTE		N11     Cn2   v100
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Gn1 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		N11     Cn2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE	PEND
+// 010   ----------------------------------------
+ChiffonStarFullLoop_FINAL_4_010:
+	BYTE		N11     Fn2   v100
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE		N11     Fn2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE	PEND
+// 011   ----------------------------------------
+ChiffonStarFullLoop_FINAL_4_011:
+	BYTE		N11     As1   v100
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE	PEND
+// 012   ----------------------------------------
+ChiffonStarFullLoop_FINAL_4_012:
+	BYTE		N11     Fn2   v100
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE		N11     Fn2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE	PEND
+// 013   ----------------------------------------
+ChiffonStarFullLoop_FINAL_4_013:
+	BYTE		N11     En2   v100
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE		N11     En2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE	PEND
+// 014   ----------------------------------------
+ChiffonStarFullLoop_FINAL_4_014:
+	BYTE		N11     Dn2   v100
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Bn1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		N11     Dn2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE	PEND
+// 015   ----------------------------------------
+ChiffonStarFullLoop_FINAL_4_015:
+	BYTE		N11     Dn2   v100
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     An1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		N11     Dn2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W36
+	BYTE	PEND
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_008
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_009
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_010
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_011
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_012
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_013
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_014
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_015
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_008
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_009
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_010
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_011
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_012
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_013
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_014
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_015
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_008
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_009
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_010
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_011
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_012
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_013
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_014
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_015
+ChiffonStarFullLoop_FINAL_4_B1:
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_008
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_009
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_010
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_011
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_012
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_013
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_014
+// 047   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_015
+// 048   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_008
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_009
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_010
+// 051   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_011
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_012
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_013
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_014
+// 055   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_4_015
+// 056   ----------------------------------------
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W90
+	BYTE	GoTo
+	 POIN2	ChiffonStarFullLoop_FINAL_4_B1
+ChiffonStarFullLoop_FINAL_4_B2:
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+ChiffonStarFullLoop_FINAL_5:
+	BYTE	KEYSH   ChiffonStarFullLoop_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   4
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-16
+	BYTE		VOL     78*ChiffonStarFullLoop_FINAL_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+ChiffonStarFullLoop_FINAL_5_024:
+	BYTE		N11     Dn3   v100
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE		N11     Dn3 
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		N05     Gn3 
+	BYTE	W06
+	BYTE		        Fn3 
+	BYTE	W06
+	BYTE	PEND
+// 025   ----------------------------------------
+ChiffonStarFullLoop_FINAL_5_025:
+	BYTE		N11     En3   v100
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		N05     Gn2 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE		N11     En3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		N05     En3 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE	PEND
+// 026   ----------------------------------------
+ChiffonStarFullLoop_FINAL_5_026:
+	BYTE		N11     Fn3   v100
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE		N11     Fn3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		        An3 
+	BYTE	W12
+	BYTE		N05     Fn3 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE	PEND
+// 027   ----------------------------------------
+ChiffonStarFullLoop_FINAL_5_027:
+	BYTE		N11     As2   v100
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		N05     As2 
+	BYTE	W06
+	BYTE		        Fn2 
+	BYTE	W06
+	BYTE		N11     As2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		N05     En3 
+	BYTE	W06
+	BYTE		        Gn3 
+	BYTE	W06
+	BYTE	PEND
+// 028   ----------------------------------------
+ChiffonStarFullLoop_FINAL_5_028:
+	BYTE		N11     An3   v100
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		N05     Dn3 
+	BYTE	W06
+	BYTE		        Cn3 
+	BYTE	W06
+	BYTE		N11     Fn3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		        An3 
+	BYTE	W12
+	BYTE		N05     Fn3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE	PEND
+// 029   ----------------------------------------
+ChiffonStarFullLoop_FINAL_5_029:
+	BYTE		N11     Cn3   v100
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		N05     Cn3 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		N11     Cn3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		N05     Cn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE	PEND
+// 030   ----------------------------------------
+ChiffonStarFullLoop_FINAL_5_030:
+	BYTE		N11     Dn3   v100
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE		N05     Gn2 
+	BYTE	W06
+	BYTE		        Bn2 
+	BYTE	W06
+	BYTE		N11     Dn3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		        Bn3 
+	BYTE	W12
+	BYTE		N05     Gn3 
+	BYTE	W06
+	BYTE		        En3 
+	BYTE	W06
+	BYTE	PEND
+// 031   ----------------------------------------
+ChiffonStarFullLoop_FINAL_5_031:
+	BYTE		N11     Dn3   v100
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		        Fs3 
+	BYTE	W12
+	BYTE		N05     Dn3 
+	BYTE	W06
+	BYTE		        An2 
+	BYTE	W06
+	BYTE		N11     Fs3 
+	BYTE	W12
+	BYTE		        Gn3 
+	BYTE	W12
+	BYTE		        An3 
+	BYTE	W12
+	BYTE		        Fs3 
+	BYTE	W12
+	BYTE	PEND
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_024
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_025
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_026
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_027
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_028
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_029
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_030
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_031
+ChiffonStarFullLoop_FINAL_5_B1:
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_024
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_025
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_026
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_027
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_028
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_029
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_030
+// 047   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_031
+// 048   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_024
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_025
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_026
+// 051   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_027
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_028
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_029
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_030
+// 055   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_5_031
+// 056   ----------------------------------------
+	BYTE		N90     Dn3   v100
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W90
+	BYTE	GoTo
+	 POIN2	ChiffonStarFullLoop_FINAL_5_B1
+ChiffonStarFullLoop_FINAL_5_B2:
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.6) ****************//
+
+ChiffonStarFullLoop_FINAL_6:
+	BYTE	KEYSH   ChiffonStarFullLoop_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   48
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+17
+	BYTE		VOL     127*ChiffonStarFullLoop_FINAL_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W24
+	BYTE		N11     Dn2   v100
+	BYTE	W12
+	BYTE		        En2 
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        En2 
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+// 033   ----------------------------------------
+	BYTE		N32     En2 
+	BYTE	W36
+	BYTE		N11     Dn2 
+	BYTE	W12
+	BYTE		N42     Cn2 
+	BYTE	W48
+// 034   ----------------------------------------
+	BYTE	W24
+	BYTE		N11     Fn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+// 035   ----------------------------------------
+	BYTE		N32     As2 
+	BYTE	W36
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		N42     Gn2 
+	BYTE	W48
+// 036   ----------------------------------------
+	BYTE	W24
+	BYTE		N11     Fn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        Cn2 
+	BYTE	W12
+// 037   ----------------------------------------
+	BYTE		N32     En2 
+	BYTE	W36
+	BYTE		N11     Fn2 
+	BYTE	W12
+	BYTE		N42     Gn2 
+	BYTE	W48
+// 038   ----------------------------------------
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        En2 
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W12
+// 039   ----------------------------------------
+	BYTE		N32     Fs2 
+	BYTE	W36
+	BYTE		N11     Gn2 
+	BYTE	W12
+	BYTE		N42     An2 
+	BYTE	W48
+ChiffonStarFullLoop_FINAL_6_B1:
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE		N90     An4   v100
+	BYTE		N90     Dn5 
+	BYTE		N90     Fn5 
+	BYTE	W96
+// 049   ----------------------------------------
+	BYTE		        Gn4 
+	BYTE		N90     Cn5 
+	BYTE		N90     En5 
+	BYTE	W96
+// 050   ----------------------------------------
+ChiffonStarFullLoop_FINAL_6_050:
+	BYTE		N90     An4   v100
+	BYTE		N90     Cn5 
+	BYTE		N90     Fn5 
+	BYTE	W96
+	BYTE	PEND
+// 051   ----------------------------------------
+	BYTE		        As4 
+	BYTE		N90     Dn5 
+	BYTE		N90     Fn5 
+	BYTE	W96
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_6_050
+// 053   ----------------------------------------
+	BYTE		N90     An4   v100
+	BYTE		N90     Cn5 
+	BYTE		N90     En5 
+	BYTE	W96
+// 054   ----------------------------------------
+	BYTE		        Bn4 
+	BYTE		N90     Dn5 
+	BYTE		N90     Gn5 
+	BYTE	W96
+// 055   ----------------------------------------
+	BYTE		TIE     An4 
+	BYTE		TIE     Dn5 
+	BYTE		TIE     Fs5 
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     An4 
+	BYTE		        Dn5 
+	BYTE		        Fs5 
+	BYTE	GoTo
+	 POIN2	ChiffonStarFullLoop_FINAL_6_B1
+ChiffonStarFullLoop_FINAL_6_B2:
+	BYTE	FINE
+
+//**************** Track 7 (Midi-Chn.7) ****************//
+
+ChiffonStarFullLoop_FINAL_7:
+	BYTE	KEYSH   ChiffonStarFullLoop_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   30
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     98*ChiffonStarFullLoop_FINAL_mvl/mxv
+	BYTE		PAN     c_v-16
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE		N04     Dn2   v004
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		        Dn2   v008
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		        Dn2   v012
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		        Dn2   v016
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		        Dn2   v020
+	BYTE	W06
+	BYTE		        Dn2   v024
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		        Dn2   v028
+	BYTE	W06
+	BYTE		        Dn2   v032
+	BYTE	W06
+// 039   ----------------------------------------
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Dn2   v036
+	BYTE	W06
+	BYTE		        Dn2   v040
+	BYTE	W06
+	BYTE		        Dn2   v044
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Dn2   v048
+	BYTE	W06
+	BYTE		        Dn2   v052
+	BYTE	W06
+	BYTE		        Dn2   v056
+	BYTE	W06
+	BYTE		        Dn2   v060
+	BYTE	W06
+	BYTE		        Dn2   v064
+	BYTE	W06
+	BYTE		        Dn2   v068
+	BYTE	W06
+	BYTE		        Dn2   v072
+	BYTE	W06
+	BYTE		        Dn2   v076
+	BYTE	W06
+	BYTE		        Dn2   v080
+	BYTE	W06
+	BYTE		        Dn2   v088
+	BYTE	W06
+	BYTE		        Dn2   v092
+	BYTE	W06
+ChiffonStarFullLoop_FINAL_7_B1:
+// 040   ----------------------------------------
+ChiffonStarFullLoop_FINAL_7_040:
+	BYTE		N56     Dn2   v100
+	BYTE	W60
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W12
+	BYTE	PEND
+// 041   ----------------------------------------
+ChiffonStarFullLoop_FINAL_7_041:
+	BYTE		N56     Cn2   v100
+	BYTE	W60
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W12
+	BYTE	PEND
+// 042   ----------------------------------------
+ChiffonStarFullLoop_FINAL_7_042:
+	BYTE		N56     Fn2   v100
+	BYTE	W60
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W12
+	BYTE	PEND
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_7_040
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_7_041
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_7_041
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_7_040
+// 047   ----------------------------------------
+ChiffonStarFullLoop_FINAL_7_047:
+	BYTE		N05     Dn2   v100
+	BYTE	W06
+	BYTE		N04     An1 
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N04     An1 
+	BYTE	W06
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		N04     An1 
+	BYTE	W06
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		N04     An1 
+	BYTE	W06
+	BYTE		N04   
+	BYTE	W06
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N04     An1 
+	BYTE	W06
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		N04     An1 
+	BYTE	W06
+	BYTE	PEND
+// 048   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_7_040
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_7_041
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_7_042
+// 051   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_7_040
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_7_041
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_7_041
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_7_040
+// 055   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_7_047
+// 056   ----------------------------------------
+	BYTE		TIE     Dn2   v100
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	GoTo
+	 POIN2	ChiffonStarFullLoop_FINAL_7_B1
+ChiffonStarFullLoop_FINAL_7_B2:
+	BYTE	FINE
+
+//**************** Track 8 (Midi-Chn.8) ****************//
+
+ChiffonStarFullLoop_FINAL_8:
+	BYTE	KEYSH   ChiffonStarFullLoop_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   52
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     109*ChiffonStarFullLoop_FINAL_mvl/mxv
+	BYTE		PAN     c_v+30
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+ChiffonStarFullLoop_FINAL_8_B1:
+// 040   ----------------------------------------
+	BYTE		PAN     c_v+30
+	BYTE		VOL     109*ChiffonStarFullLoop_FINAL_mvl/mxv
+	BYTE	W24
+	BYTE		PAN     c_v+17
+	BYTE		VOL     127*ChiffonStarFullLoop_FINAL_mvl/mxv
+	BYTE		N20     Dn5   v127
+	BYTE	W24
+	BYTE		N66     An4 
+	BYTE	W48
+// 041   ----------------------------------------
+ChiffonStarFullLoop_FINAL_8_041:
+	BYTE	W24
+	BYTE		N11     Fn4   v127
+	BYTE	W12
+	BYTE		        Gn4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W12
+	BYTE		N05     As4 
+	BYTE	W06
+	BYTE		N17     An4 
+	BYTE	W18
+	BYTE		N11     Gn4 
+	BYTE	W12
+	BYTE	PEND
+// 042   ----------------------------------------
+ChiffonStarFullLoop_FINAL_8_042:
+	BYTE		N20     Fn4   v127
+	BYTE	W24
+	BYTE		        Dn5 
+	BYTE	W24
+	BYTE		N66     An4 
+	BYTE	W48
+	BYTE	PEND
+// 043   ----------------------------------------
+ChiffonStarFullLoop_FINAL_8_043:
+	BYTE	W24
+	BYTE		N11     As4   v127
+	BYTE	W12
+	BYTE		        Cn5 
+	BYTE	W12
+	BYTE		        Dn5 
+	BYTE	W12
+	BYTE		N05     En5 
+	BYTE	W06
+	BYTE		N17     Fn5 
+	BYTE	W18
+	BYTE		N11     En5 
+	BYTE	W12
+	BYTE	PEND
+// 044   ----------------------------------------
+ChiffonStarFullLoop_FINAL_8_044:
+	BYTE		N20     Dn5   v127
+	BYTE	W24
+	BYTE		        Cn5 
+	BYTE	W24
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N05     As4 
+	BYTE	W06
+	BYTE		        An4 
+	BYTE	W06
+	BYTE		N42     As4 
+	BYTE	W24
+	BYTE	PEND
+// 045   ----------------------------------------
+ChiffonStarFullLoop_FINAL_8_045:
+	BYTE	W24
+	BYTE		N20     An4   v127
+	BYTE	W24
+	BYTE		N11     Gn4 
+	BYTE	W12
+	BYTE		N05     An4 
+	BYTE	W06
+	BYTE		N17     As4 
+	BYTE	W18
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE	PEND
+// 046   ----------------------------------------
+ChiffonStarFullLoop_FINAL_8_046:
+	BYTE		N20     Gn4   v127
+	BYTE	W24
+	BYTE		N11     Fn4 
+	BYTE	W12
+	BYTE		        Gn4 
+	BYTE	W12
+	BYTE		N32     An4 
+	BYTE	W36
+	BYTE		N05     Fn4 
+	BYTE	W06
+	BYTE		        Gn4 
+	BYTE	W06
+	BYTE	PEND
+// 047   ----------------------------------------
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		N20     As4 
+	BYTE	W24
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		N66     Gn4 
+	BYTE	W48
+// 048   ----------------------------------------
+	BYTE	W24
+	BYTE		N20     Dn5 
+	BYTE	W24
+	BYTE		N66     An4 
+	BYTE	W48
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_8_041
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_8_042
+// 051   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_8_043
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_8_044
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_8_045
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_8_046
+// 055   ----------------------------------------
+	BYTE		N11     An4   v127
+	BYTE	W12
+	BYTE		N20     As4 
+	BYTE	W24
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		N96     Gn4 
+	BYTE	W48
+// 056   ----------------------------------------
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W90
+	BYTE	GoTo
+	 POIN2	ChiffonStarFullLoop_FINAL_8_B1
+ChiffonStarFullLoop_FINAL_8_B2:
+	BYTE	FINE
+
+//**************** Track 9 (Midi-Chn.9) ****************//
+
+ChiffonStarFullLoop_FINAL_9:
+	BYTE	KEYSH   ChiffonStarFullLoop_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   124
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*ChiffonStarFullLoop_FINAL_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+ChiffonStarFullLoop_FINAL_9_016:
+	BYTE		N20     As1   v100
+	BYTE		N20     Fs2 
+	BYTE	W24
+	BYTE		        As1 
+	BYTE		N20     Fs2 
+	BYTE	W24
+	BYTE		        As1 
+	BYTE		N20     Fs2 
+	BYTE	W24
+	BYTE		        As1 
+	BYTE		N20     Fs2 
+	BYTE	W24
+	BYTE	PEND
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_016
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_016
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_016
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_016
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_016
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_016
+// 023   ----------------------------------------
+	BYTE		N20     As1   v100
+	BYTE		N20     Fs2 
+	BYTE	W24
+	BYTE		        As1 
+	BYTE		N20     Fs2 
+	BYTE	W24
+	BYTE		N05     As1 
+	BYTE		N05     Dn2 
+	BYTE		N05     Fs2 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE		N05     Bn1 
+	BYTE		N05     Fs2 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W12
+// 024   ----------------------------------------
+ChiffonStarFullLoop_FINAL_9_024:
+	BYTE		N11     Bn0   v100
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		N11     Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE	PEND
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 031   ----------------------------------------
+	BYTE		N11     Bn0   v100
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE		N05     Dn2 
+	BYTE		N05     Fs2 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE		N05     Bn1 
+	BYTE		N05     Fs2 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W12
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 039   ----------------------------------------
+ChiffonStarFullLoop_FINAL_9_039:
+	BYTE		N11     Bn0   v100
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE		N05     Dn2 
+	BYTE		N05     Fs2 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		        Bn1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE		N05     Bn1 
+	BYTE		N05     Fs2 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     An1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     An1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE	W06
+	BYTE	PEND
+ChiffonStarFullLoop_FINAL_9_B1:
+// 040   ----------------------------------------
+	BYTE		N11     Bn0   v100
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		N11     Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_024
+// 047   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_039
+// 048   ----------------------------------------
+	BYTE		N11     Bn0   v100
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE		N05     Fs2 
+	BYTE		N05     Gn2 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gn2 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE		N05     Fs2 
+	BYTE		N05     Gn2 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE		N05     Gn2 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+// 049   ----------------------------------------
+ChiffonStarFullLoop_FINAL_9_049:
+	BYTE		N11     Bn0   v100
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE		N11     Gn2 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		N11     Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE		N11     Gn2 
+	BYTE	W12
+	BYTE		        Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE		N05     Gn2 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE	W06
+	BYTE		N02     Bn0 
+	BYTE		N02     Cn1 
+	BYTE		N02     Dn1 
+	BYTE		N02     En1 
+	BYTE	W03
+	BYTE		        Dn1 
+	BYTE		N02     En1 
+	BYTE	W03
+	BYTE	PEND
+// 050   ----------------------------------------
+	BYTE		N11     Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE		N11     Gn2 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		N11     Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+// 051   ----------------------------------------
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE		N05     Fs2 
+	BYTE		N05     Gn2 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gn2 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE		N05     Fs2 
+	BYTE		N05     Gn2 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE		N05     Gn2 
+	BYTE	W06
+	BYTE		N02     Bn0 
+	BYTE		N02     Cn1 
+	BYTE	W03
+	BYTE		        Bn0 
+	BYTE		N02     Cn1 
+	BYTE	W03
+	BYTE		N11     Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+// 052   ----------------------------------------
+	BYTE		N11     Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE		N11     Gn2 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE		N11     Fs2 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE		N05     Fs2 
+	BYTE		N05     Gn2 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gn2 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE		N05     Fs2 
+	BYTE		N05     Gn2 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE		N05     Gn2 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_049
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_049
+// 055   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_9_039
+// 056   ----------------------------------------
+	BYTE		N90     En2   v100
+	BYTE		N90     Gn2 
+	BYTE		N90     An2 
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W90
+	BYTE	GoTo
+	 POIN2	ChiffonStarFullLoop_FINAL_9_B1
+ChiffonStarFullLoop_FINAL_9_B2:
+	BYTE	FINE
+
+//**************** Track 10 (Midi-Chn.11) ****************//
+
+ChiffonStarFullLoop_FINAL_10:
+	BYTE	KEYSH   ChiffonStarFullLoop_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   16
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     69*ChiffonStarFullLoop_FINAL_mvl/mxv
+	BYTE		PAN     c_v-8
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+ChiffonStarFullLoop_FINAL_10_B1:
+// 040   ----------------------------------------
+ChiffonStarFullLoop_FINAL_10_040:
+	BYTE		N90     Dn3   v100
+	BYTE		N90     Fn3 
+	BYTE		N90     An3 
+	BYTE		N90     Dn4 
+	BYTE		N90     Fn4 
+	BYTE		N90     An4 
+	BYTE	W96
+	BYTE	PEND
+// 041   ----------------------------------------
+ChiffonStarFullLoop_FINAL_10_041:
+	BYTE		N90     Cn3   v100
+	BYTE		N90     En3 
+	BYTE		N90     Gn3 
+	BYTE		N90     Cn4 
+	BYTE		N90     En4 
+	BYTE		N90     Gn4 
+	BYTE	W96
+	BYTE	PEND
+// 042   ----------------------------------------
+ChiffonStarFullLoop_FINAL_10_042:
+	BYTE		N90     Cn3   v100
+	BYTE		N90     Fn3 
+	BYTE		N90     An3 
+	BYTE		N90     Cn4 
+	BYTE		N90     Fn4 
+	BYTE		N90     An4 
+	BYTE	W96
+	BYTE	PEND
+// 043   ----------------------------------------
+ChiffonStarFullLoop_FINAL_10_043:
+	BYTE		N90     Dn3   v100
+	BYTE		N90     Fn3 
+	BYTE		N90     As3 
+	BYTE		N90     Dn4 
+	BYTE		N90     Fn4 
+	BYTE		N90     As4 
+	BYTE	W96
+	BYTE	PEND
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_10_042
+// 045   ----------------------------------------
+ChiffonStarFullLoop_FINAL_10_045:
+	BYTE		N90     Cn3   v100
+	BYTE		N90     En3 
+	BYTE		N90     An3 
+	BYTE		N90     Cn4 
+	BYTE		N90     En4 
+	BYTE		N90     An4 
+	BYTE	W96
+	BYTE	PEND
+// 046   ----------------------------------------
+ChiffonStarFullLoop_FINAL_10_046:
+	BYTE		N90     Dn3   v100
+	BYTE		N90     Gn3 
+	BYTE		N90     Bn3 
+	BYTE		N90     Dn4 
+	BYTE		N90     Gn4 
+	BYTE		N90     Bn4 
+	BYTE	W96
+	BYTE	PEND
+// 047   ----------------------------------------
+	BYTE		        Dn3 
+	BYTE		N90     Fs3 
+	BYTE		N90     An3 
+	BYTE		N90     Dn4 
+	BYTE		N90     Fs4 
+	BYTE		N90     An4 
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_10_040
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_10_041
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_10_042
+// 051   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_10_043
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_10_042
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_10_045
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	ChiffonStarFullLoop_FINAL_10_046
+// 055   ----------------------------------------
+	BYTE		TIE     Dn3   v100
+	BYTE		TIE     Fs3 
+	BYTE		TIE     An3 
+	BYTE		TIE     Dn4 
+	BYTE		TIE     Fs4 
+	BYTE		TIE     An4 
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Dn3 
+	BYTE		        Fs3 
+	BYTE		        An3 
+	BYTE		        Dn4 
+	BYTE		        Fs4 
+	BYTE		        An4 
+	BYTE	GoTo
+	 POIN2	ChiffonStarFullLoop_FINAL_10_B1
+ChiffonStarFullLoop_FINAL_10_B2:
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+ChiffonStarFullLoop_FINAL:
+	BYTE	10	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	ChiffonStarFullLoop_FINAL_pri	// Priority
+	BYTE	ChiffonStarFullLoop_FINAL_rev	// Reverb.
+
+	POIN2	ChiffonStarFullLoop_FINAL_grp
+
+	POIN2	ChiffonStarFullLoop_FINAL_1
+	POIN2	ChiffonStarFullLoop_FINAL_2
+	POIN2	ChiffonStarFullLoop_FINAL_3
+	POIN2	ChiffonStarFullLoop_FINAL_4
+	POIN2	ChiffonStarFullLoop_FINAL_5
+	POIN2	ChiffonStarFullLoop_FINAL_6
+	POIN2	ChiffonStarFullLoop_FINAL_7
+	POIN2	ChiffonStarFullLoop_FINAL_8
+	POIN2	ChiffonStarFullLoop_FINAL_9
+	POIN2	ChiffonStarFullLoop_FINAL_10
+
+	

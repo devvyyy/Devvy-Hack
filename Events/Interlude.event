@@ -151,10 +151,12 @@ EndingScene:
 	SetBackground(0x31)
 	Text(InterludeEnding1)
 	STAL 5
-	FADI 60
+FADI 60
 CLEAN
+MUSCSLOW 0x7fff
+STAL 10
 SetBackground(0x35)
-STAL 50
+STAL 30
 Music(0x292)
 Text(SylmeriaScene0)
 FAWI 20
@@ -162,6 +164,7 @@ SOUN 0x2ec
 STAL 120
 FAWU 15
 Text(SylmeriaScene0Point5)
+
 	MNC2 0x22
 	NoFade
 	ENDA

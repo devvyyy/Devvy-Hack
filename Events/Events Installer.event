@@ -83,6 +83,10 @@ ALIGN 4
 }
 {
   ALIGN 4
+  #include "2-7xWarden.event"
+}
+{
+  ALIGN 4
   #include "2-F.event"
 }
 {
@@ -115,6 +119,10 @@ ALIGN 4
 }
 {
   ALIGN 4
+  #include "3-3x.event"
+}
+{
+  ALIGN 4
   #include "3-4.event"
 }
 {
@@ -132,6 +140,18 @@ ALIGN 4
 {
   ALIGN 4
   #include "3-8.event"
+}
+{
+  ALIGN 4
+  #include "3-9.event"
+}
+{
+  ALIGN 4
+  #include "3-F.event"
+}
+{
+  ALIGN 4
+  #include "Endgame.event"
 }
 {
   ALIGN 4
@@ -201,6 +221,16 @@ STAL 5
 MUSCSLOW 0x7FFF
 STAL 30
 Text(ChiffonDeathQDuel)
+STAL 3
+ENDA
+
+
+ChifDuelEventAlt:
+CUSN Chiffon
+STAL 5
+MUSCSLOW 0x7FFF
+STAL 30
+Text(ChiffonDeathQDuelAlt)
 STAL 3
 ENDA
 

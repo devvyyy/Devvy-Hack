@@ -85,7 +85,7 @@ ChiffonRaialTalk:
 ENDA
 	
 RecruitKatsuGeneric:
-MUSS 0x30
+MUSS 0x297
 STAL 33
 Text(KianRecruitGeneric)
 MURE 0x2
@@ -94,7 +94,7 @@ NoFade
 ENDA
 	
 RecruitKatsuChiff:
-MUSS 0x30
+MUSS 0x297
 STAL 33
 Text(KianRecruit)
 MURE 0x2
@@ -103,7 +103,7 @@ NoFade
 ENDA
 
 RecruitKatsuRaial:
-MUSS 0x30
+MUSS 0x297
 STAL 33
 Text(RaialKianRecruit)
 MURE 0x2
@@ -112,7 +112,7 @@ NoFade
 ENDA
 	
 RecruitMooseChiff:
-MUSS 0x30
+MUSS 0x297
 STAL 33
 //Text(ChiffonMooseTalk)
 MURE 0x2
@@ -453,9 +453,7 @@ UNIT 0xc5 Falcoknight 0x1 Level(10, Enemy, 0)     [3,18] DropItem 0x0 0x0 0x0 [S
 	UNIT
 	
 TheResistanceGuysAgain:
-UNIT ResistanceFighter Merc 0x1 Level(8, NPC, 1)     [20,5] 0b 0x0 0x0 0x0 [KillingEdge,Elixir] StallOneTurnAI
-UNIT ResistanceFighter Soldier 0x1 Level(8, NPC, 1)     [21,5] 0b 0x0 0x0 0x0 [ShortSpear,Elixir] StallOneTurnAI
-UNIT ResistanceFighter Hunter 0x1 Level(9, NPC, 1)     [22,5] 0b 0x0 0x0 0x0 [SteelRifle,Elixir] StallOneTurnAI
+UNIT ResistanceFighter Soldier 0x1 Level(10, NPC, 1)     [21,5] 0b 0x0 0x0 0x0 [SteelLance,Elixir] StallOneTurnAI
 UNIT NoctumOrder Shaman 0x1 Level(10, NPC, 1)     [7,2] 0b 0x0 0x0 0x0 [Moonfall,Elixir] StallOneTurnAI
 UNIT NoctumOrder Occultist 0x1 Level(10, NPC, 1)     [8,2] 0b 0x0 0x0 0x0 [Moonshine,Elixir] StallOneTurnAI
 	UNIT
@@ -620,7 +618,7 @@ GameOver
 ENDA
 
 AbsorbVillage:
-Music(0x30)
+Music(0x297)
 SetBackground(0x9)
 //Text(Ch8ZopfRecruit)
 Text(Ch24BardRecruit)

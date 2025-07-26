@@ -1,0 +1,306 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	Phase2_FINAL_grp  voicegroup000
+	#define	Phase2_FINAL_pri  0
+	#define	Phase2_FINAL_rev  0x94
+	#define	Phase2_FINAL_mvl  30
+	#define	Phase2_FINAL_key  0
+	#define	Phase2_FINAL_tbs  1
+	#define	Phase2_FINAL_exg  0
+	#define	Phase2_FINAL_cmp  1
+
+	// .rodata
+	//	Phase2_FINAL
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+Phase2_FINAL_1:
+	BYTE	KEYSH   Phase2_FINAL_key+0
+Phase2_FINAL_1_B1:
+// 000   ----------------------------------------
+	BYTE	TEMPO   70*Phase2_FINAL_tbs/2
+	BYTE		VOICE   54
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+0
+	BYTE		VOL     127*Phase2_FINAL_mvl/mxv
+	BYTE		N90     An3   v100
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE		        As3 
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE		TIE     An3 
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 006   ----------------------------------------
+	BYTE		N90     Bn3 
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	Phase2_FINAL_1_B1
+Phase2_FINAL_1_B2:
+// 008   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+Phase2_FINAL_2:
+	BYTE	KEYSH   Phase2_FINAL_key+0
+Phase2_FINAL_2_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   52
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-28
+	BYTE		VOL     127*Phase2_FINAL_mvl/mxv
+	BYTE		N90     Fn3   v100
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE		        En3 
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE		TIE     Fn3 
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 005   ----------------------------------------
+	BYTE		N90     En3 
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE		        Fs3 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	Phase2_FINAL_2_B1
+Phase2_FINAL_2_B2:
+// 008   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+Phase2_FINAL_3:
+	BYTE	KEYSH   Phase2_FINAL_key+0
+Phase2_FINAL_3_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   53
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+27
+	BYTE		VOL     127*Phase2_FINAL_mvl/mxv
+	BYTE		N90     Dn3   v100
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 003   ----------------------------------------
+	BYTE		N90     Dn3 
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 006   ----------------------------------------
+	BYTE		TIE     Dn3 
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+	BYTE	GoTo
+	 POIN2	Phase2_FINAL_3_B1
+Phase2_FINAL_3_B2:
+// 008   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+Phase2_FINAL_4:
+	BYTE	KEYSH   Phase2_FINAL_key+0
+Phase2_FINAL_4_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   0
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-25
+	BYTE		VOL     127*Phase2_FINAL_mvl/mxv
+	BYTE		N11     Dn2   v100
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     An1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		N11     Dn2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     En2 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+// 001   ----------------------------------------
+	BYTE		N11     Cn2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Gn1 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		N11     Cn2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+// 002   ----------------------------------------
+	BYTE		N11     Fn2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE		N11     Fn2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+// 003   ----------------------------------------
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+// 004   ----------------------------------------
+	BYTE		N11     Fn2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+	BYTE		N11     Fn2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+// 005   ----------------------------------------
+	BYTE		N11     En2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        Dn2 
+	BYTE	W06
+	BYTE		N11     En2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+// 006   ----------------------------------------
+	BYTE		N11     Dn2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     Bn1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		N11     Dn2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        En2 
+	BYTE	W06
+// 007   ----------------------------------------
+	BYTE		N11     Dn2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W24
+	BYTE		N05     An1 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		N11     Dn2 
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W36
+	BYTE	GoTo
+	 POIN2	Phase2_FINAL_4_B1
+Phase2_FINAL_4_B2:
+// 008   ----------------------------------------
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+Phase2_FINAL:
+	BYTE	4	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	Phase2_FINAL_pri	// Priority
+	BYTE	Phase2_FINAL_rev	// Reverb.
+
+	POIN2	Phase2_FINAL_grp
+
+	POIN2	Phase2_FINAL_1
+	POIN2	Phase2_FINAL_2
+	POIN2	Phase2_FINAL_3
+	POIN2	Phase2_FINAL_4
+
+	

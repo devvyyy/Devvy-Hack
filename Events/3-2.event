@@ -108,7 +108,7 @@ UNIT Klavdia WyvernKnight 0x1 Level(13, Enemy, 0)     [13,8] 0b 0x0 0x0 0x0 [Mag
 	UNIT
 
 PrisonCutsceneUnits:
-UNIT Chiffon 0x10 0x1 Level(10, NPC, 1)     [19,4] 0b 0x0 0x0 0x0 [Javelin] RangeAI
+UNIT Chiffon 0x10 0x1 Level(10, Ally, 1)     [19,4] 0b 0x0 0x0 0x0 [Javelin] RangeAI
 UNIT Sylveria 0x4f 0x1 Level(10, Enemy, 1)     [18,11] 0b 0x0 0x0 0x0 [Javelin] RangeAI
 	UNIT
 
@@ -120,8 +120,8 @@ UNIT Wegman General 0x1 Level(1, Ally, 0)   [10,1] 0b 0x0 0x0 0x0 [IronAxe,0xE9,
 
 UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [8,3] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [9,3] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
-UNIT Stroganoff Warrior 0x1 Level(10, Ally, 0)   [11,3] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
-UNIT Brudet Warrior 0x1 Level(10, Ally, 0)   [10,3] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Stroganoff AArmor 0x1 Level(10, Ally, 0)   [11,3] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Brudet WyvernRider_F 0x1 Level(10, Ally, 0)   [10,3] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
 	UNIT
 
 Traps1:
@@ -137,16 +137,48 @@ Traps2:
 
 BeginningScene:
 
-Music(0x288)
+	REVEAL Raial
+	REVEAL Graham
+	REVEAL Yufka
+	REVEAL Jaye
+	REVEAL Yvonne
+	REVEAL Polly
+	REVEAL Wilken
+	REVEAL Frye
+	REVEAL Cortado
+	REVEAL Pandoro
+	REVEAL Rina
+	REVEAL Ilse
+	REVEAL Gus
+	REVEAL Katsu
+	REVEAL Staniel
+	REVEAL Edvin
+	REVEAL Edith
+	REVEAL Opal
+	REVEAL Wellington
+	REVEAL Messel
+	REVEAL Dira
+	REVEAL Moose
+	REVEAL Zopf
+
+Music(0x28F)
 SetBackground(0x34)
+
+STAL 10
+BROWNBOXTEXT FortArkstadText [8,8]
+STAL 15
+
 Text(Part3Chapter2Opening1)
 
+Music(0x28F)
 SetBackground(0x3C)
 Text(Part3Chapter2Opening2) //wreyvine
 
+Music(0x288)
 SetBackground(0x33)
 Text(Part3Chapter2Opening3) //aeteria
 
+MUSCSLOW 0x4A
 SetBackground(0x3C)
 Text(Part3Chapter2Opening4) //wreyvine
 
@@ -155,6 +187,8 @@ CLEAN
 LOAD1 0x1 EnemyUnits
 STAL 30
 FADU 15
+
+Music(0x1A2)
 
 Text(Part3Chapter2Opening5) //wreyvine
 
@@ -194,6 +228,31 @@ EndingScene:
 Text(Part3Chapter2Ending1)
 
 FADI 60
+
+	CUSA Ulrich
+	CUSA Breve
+	CUSA Hildr
+	CUSA Ansgar
+	CUSA Nora
+	CUSA Sequin
+	CUSA Kane
+	CUSA Mocha
+	CUSA Latte
+	CUSA Stroganoff
+	CUSA Doppio
+	CUSA Eisner
+	CUSA Therese
+	CUSA Lennard
+	CUSA Floris
+	CUSA Yory
+	CUSA Wegman
+	CUSA Klavdia
+	CUSA Gerolf
+	CUSA Xavier
+	CUSA Ogrim
+	CUSA Lili
+
+DoAllThree
 LOAD2 0x1 CutsceneUnits
 Music(0x29A)
 SetBackground(0x34)
@@ -203,7 +262,9 @@ CLEAN
 
 //units move over
 //camera pan
+CAM1 [9,5]
 
+Music(0x3E3)
 SetBackground(0x2b)
 Text(Part3Chapter2Ending3)
 ClearBackground
@@ -212,6 +273,11 @@ STAL 5
 CameraCursor(Ulrich)
 STAL 15
 Text(Part3Chapter2Ending4)
+
+STAL 15
+
+Music(0x26E)
+SetBackground(0x2b)
 Text(Part3Chapter2Ending5)
 
 	REVEAL Ulrich
@@ -254,7 +320,8 @@ Music(0x47) //wind
 STAL 300
 
 SetBackground(0x41)
-TextCont(SylmeriaScene2, 0x323)
+//TextCont(SylmeriaScene2, 0x323)
+TextCont(SylmeriaScene2, 0x28E)
 
 	MNC2 0x15
 	NoFade

@@ -98,6 +98,7 @@ UNIT Beran 0x64 0x1 Level(10, Enemy, 0)     [11,2] DropItem 0x0 0x0 0x0 [Siegmun
 CutsceneUnits:
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [12,6] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
 UNIT Beran 0x64 0x1 Level(10, Enemy, 0)     [10,6] DropItem 0x0 0x0 0x0 [Siegmund, BlackGem] StallOneTurnAI
+UNIT 0x72 General 0x1 Level(20, Enemy, 0)   [11,13] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
 	UNIT
 
 Traps1:
@@ -118,6 +119,7 @@ ASMC 0x8026629
 	SVAL 0x1 0x1A //26
 	SET_HP Beran
 	CALL $591FD8
+	CAM1 [11,6]
 FADU 60
 Music(0x4E)
 STAL 150
@@ -159,12 +161,64 @@ ChiffonDuelLose:
 EndingScene:
 	FADI 60
 	DoAllThree
+	CAM1 [11,6]
 	LOAD2 0x1 CutsceneUnits
+
+	SVAL 0x1 0x1 //1 lol
+	SET_HP Beran
+
 	FADU 15
-	STAL 15
+	STAL 30
 	Music(0x290)
-	SetBackground(0x2b)
-	Text(ChCh27xEnding1)
-	MNC2 0x23
+	//SetBackground(0x2b)
+	//Text(ChCh27xEnding1)
+
+TEXTSTART; TEXTSHOW ChCh27xEnding1; TEXTEND
+
+SET_SOMETHING Beran
+
+MUSCSLOW 0x7FFF; TEXTCONT; TEXTEND; REMA
+
+STAL 15
+FAWI 16
+SOUN 0xCF
+STAL 30
+MOVE 0xD Chiffon [11,6]
+ENUN
+SOUN 0x2BF
+STAL 30
+SOUN 0xf0
+SetBackground(0x48)
+STAL 10
+SOUN 0xD7
+ClearBackground
+STAL 30
+
+Text(ChCh27xEnding2)
+
+STAL 10
+SOUN 0xCE
+STAL 15
+
+Text(ChCh27xEnding3)
+
+STAL 30
+
+CAM1 [11,12]
+
+STAL 150
+
+TEXTSTART; TEXTSHOW ChCh27xEnding4; TEXTEND
+
+MOVE 0x3 0x72 [11,9]
+ENUN
+CAM1 [11,3]
+Music(0x184)
+STAL 30; TEXTCONT; TEXTEND; REMA
+
+	CamOn
+	MOVE 0x3 Chiffon [11,11]
+
+	MNC2 0x2c
 	NoFade
 	ENDA

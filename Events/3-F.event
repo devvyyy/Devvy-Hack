@@ -1,0 +1,203 @@
+EventPointerTable(0x81, PointerList)
+
+PointerList:
+	POIN TurnBasedEvents
+	POIN CharacterBasedEvents
+	POIN LocationBasedEvents
+	POIN MiscBasedEvents
+	POIN Dunno1 Dunno2 Dunno3 Tutorial
+	POIN Traps1 Traps2
+	POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+	POIN $0 $0 $0
+	POIN $0 $0 $0
+	POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+
+	END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+
+	END_MAIN
+
+MiscBasedEvents:
+
+	CauseGameOverIfLordDies
+	END_MAIN
+
+
+CheckSelwyn:
+CHECK_ENEMIES
+SVAL 0x7 0x1
+BNE 0x0 0xC 0x7
+
+CALL EndingScene
+
+LABEL 0x0
+NoFade
+ENDA
+
+LocationBasedEvents:
+
+	END_MAIN
+
+Dunno1:
+
+	END_MAIN
+
+Dunno2:
+
+	END_MAIN
+
+Dunno3:
+
+	END_MAIN
+
+Tutorial:
+
+	END_MAIN
+
+Units1:
+
+Unit(2, 16)
+Unit(3, 16)
+Unit(4, 16)
+Unit(2, 17)
+Unit(3, 17)
+Unit(4, 17)
+
+Unit(24, 15)
+Unit(25, 15)
+Unit(26, 15)
+Unit(24, 16)
+Unit(25, 16)
+Unit(26, 16)
+
+	UNIT
+
+EnemyUnits:
+
+UNIT Selwyn Auspex 0x1 Level(20, Enemy, 1)   [15,4] 0b 0x0 0x0 0x0 [0xFE] BossAI
+
+UNIT CavSoul APal 0x1 Level(17, Enemy, 1)     [18,18] 0b 0x0 0x0 0x0 [SilverAxe] TwoActionAI
+UNIT PromoSoul Warrior 0x1 Level(17, Enemy, 1)     [3,6] 0b 0x0 0x0 0x0 [SilverBow, SilverBow] RangeAI
+UNIT FlierSoul Falcoknight 0x1 Level(17, Enemy, 1)     [21,12] 0b 0x0 0x0 0x0 [SilverLance] RangeAI
+UNIT PromoSoul Sniper 0x1 Level(17, Enemy, 1)     [16,7] 0b 0x0 0x0 0x0 [SilverBow] RangeAI
+UNIT MagSoul MageKnight 0x1 Level(17, Enemy, 1)     [25,12] 0b 0x0 0x0 0x0 [Ragnarok] RangeAI
+UNIT ArmorSoul GreatKnight 0x1 Level(17, Enemy, 1)     [24,10] 0b 0x0 0x0 0x0 [SilverBlade, SilverGlaive, SilverLabrys] TwoActionAI
+UNIT PromoSoul Swordmaster 0x1 Level(17, Enemy, 1)     [13,9] 0b 0x0 0x0 0x0 [KillingEdge] TwoActionAI
+UNIT MagSoul Druid 0x1 Level(17, Enemy, 1)     [9,11] 0b 0x0 0x0 0x0 [DarkTome5] TwoActionAI
+UNIT MagSoul Bishop 0x1 Level(17, Enemy, 1)     [3,6] 0b 0x0 0x0 0x0 [LightTome5] TwoActionAI
+UNIT PromoSoul Hero 0x1 Level(17, Enemy, 1)     [24,4] 0b 0x0 0x0 0x0 [BraveSword] TwoActionAI
+UNIT CavSoul SPal 0x1 Level(17, Enemy, 1)     [10,4] 0b 0x0 0x0 0x0 [SilverSword] RangeAI
+UNIT PromoSoul Adventurer 0x1 Level(17, Enemy, 1)     [18,8] 0b 0x0 0x0 0x0 [Longbow] TwoActionAI
+UNIT CavSoul Ranger 0x1 Level(17, Enemy, 1)     [22,7] 0b 0x0 0x0 0x0 [SilverBow, Longbow] RangeAI
+UNIT FlierSoul WyvernKnight 0x1 Level(17, Enemy, 1)     [15,11] 0b 0x0 0x0 0x0 [SilverAxe] RangeAI
+UNIT CavSoul LPal 0x1 Level(17, Enemy, 1)     [18,11] 0b 0x0 0x0 0x0 [SilverLance] TwoActionAI
+UNIT FlierSoul GriffonKnight 0x1 Level(17, Enemy, 1)     [19,5] 0b 0x0 0x0 0x0 [SilverBow] RangeAI
+UNIT PromoSoul Halberdier 0x1 Level(17, Enemy, 1)     [11,8] 0b 0x0 0x0 0x0 [BraveLance, ShortSpear] TwoActionAI
+UNIT CavSoul APal 0x1 Level(17, Enemy, 1)     [12,11] 0b 0x0 0x0 0x0 [SilverAxe] RangeAI
+UNIT PromoSoul Warrior 0x1 Level(17, Enemy, 1)     [25,7] 0b 0x0 0x0 0x0 [SilverBow, SilverBow] TwoActionAI
+UNIT PromoSoul Sniper 0x1 Level(17, Enemy, 1)     [11,15] 0b 0x0 0x0 0x0 [SilverBow] RangeAI
+UNIT MagSoul Druid 0x1 Level(17, Enemy, 1)        [15,9] 0b 0x0 0x0 0x0 [DarkTome5] TwoActionAI
+UNIT CavSoul Ranger 0x1 Level(17, Enemy, 1)       [6,9] 0b 0x0 0x0 0x0 [Longbow] TwoActionAI
+UNIT MagSoul Sage 0x1 Level(17, Enemy, 1)         [22,4] 0b 0x0 0x0 0x0 [Bolting, Ragnarok] RangeAI
+UNIT PromoSoul Swordmaster 0x1 Level(17, Enemy, 1) [7,3] 0b 0x0 0x0 0x0 [KillingEdge] TwoActionAI
+UNIT FlierSoul GriffonKnight 0x1 Level(17, Enemy, 1) [18,16] 0b 0x0 0x0 0x0 [SilverBow] RangeAI
+UNIT ArmorSoul GreatKnight 0x1 Level(17, Enemy, 1) [9,7] 0b 0x0 0x0 0x0 [SilverBlade, SilverGlaive, SilverLabrys] TwoActionAI
+UNIT MagSoul Bishop 0x1 Level(17, Enemy, 1)       [9,17] 0b 0x0 0x0 0x0 [LightTome5] TwoActionAI
+UNIT FlierSoul Falcoknight 0x1 Level(17, Enemy, 1) [4,3] 0b 0x0 0x0 0x0 [SilverLance] RangeAI
+UNIT PromoSoul Hero 0x1 Level(17, Enemy, 1)       [7,12] 0b 0x0 0x0 0x0 [BraveSword] TwoActionAI
+UNIT MagSoul MageKnight 0x1 Level(17, Enemy, 1)   [8,5] 0b 0x0 0x0 0x0 [Iceberg] RangeAI
+UNIT PromoSoul Sniper 0x1 Level(17, Enemy, 1)     [16,10] 0b 0x0 0x0 0x0 [SilverBow] RangeAI
+UNIT MagSoul Druid 0x1 Level(17, Enemy, 1)        [13,7] 0b 0x0 0x0 0x0 [DarkTome5] TwoActionAI
+UNIT CavSoul SPal 0x1 Level(17, Enemy, 1)         [8,9] 0b 0x0 0x0 0x0 [SilverSword] TwoActionAI
+UNIT PromoSoul Swordmaster 0x1 Level(17, Enemy, 1) [5,11] 0b 0x0 0x0 0x0 [KillingEdge] TwoActionAI
+UNIT PromoSoul Halberdier 0x1 Level(17, Enemy, 1) [7,14] 0b 0x0 0x0 0x0 [Spear] TwoActionAI
+UNIT PromoSoul Warrior 0x1 Level(17, Enemy, 1)    [6,5] 0b 0x0 0x0 0x0 [SilverBow, SilverBow] TwoActionAI
+UNIT FlierSoul WyvernKnight 0x1 Level(17, Enemy, 1) [18,13] 0b 0x0 0x0 0x0 [SilverAxe] RangeAI
+UNIT CavSoul LPal 0x1 Level(17, Enemy, 1)         [12,14] 0b 0x0 0x0 0x0 [SilverLance] TwoActionAI
+UNIT MagSoul Sage 0x1 Level(17, Enemy, 1)       [8,19] 0b 0x0 0x0 0x0 [Iceberg] TwoActionAI
+UNIT ArmorSoul General 0x1 Level(17, Enemy, 1)    [22,15] 0b 0x0 0x0 0x0 [SilverBlade, SilverGlaive, SilverLabrys] TwoActionAI
+UNIT MagSoul MageKnight 0x1 Level(17, Enemy, 1)   [6,16] 0b 0x0 0x0 0x0 [Wind] TwoActionAI
+UNIT PromoSoul Hero 0x1 Level(17, Enemy, 1)       [21,17] 0b 0x0 0x0 0x0 [BraveSword] TwoActionAI
+UNIT PromoSoul Halberdier 0x1 Level(17, Enemy, 1) [22,9] 0b 0x0 0x0 0x0 [BraveLance] RangeAI
+UNIT CavSoul SPal 0x1 Level(17, Enemy, 1)         [12,18] 0b 0x0 0x0 0x0 [SilverSword] TwoActionAI
+UNIT ArmorSoul GreatKnight 0x1 Level(17, Enemy, 1) [3,9] 0b 0x0 0x0 0x0 [SilverBlade, SilverGlaive, SilverLabrys] RangeAI
+UNIT PromoSoul Adventurer 0x1 Level(17, Enemy, 1) [4,8] 0b 0x0 0x0 0x0 [SteelRifle] TwoActionAI
+UNIT FlierSoul GriffonKnight 0x1 Level(17, Enemy, 1) [11,19] 0b 0x0 0x0 0x0 [SilverBow] RangeAI
+UNIT CavSoul LPal 0x1 Level(17, Enemy, 1)         [19,15] 0b 0x0 0x0 0x0 [SilverLance] RangeAI
+UNIT MagSoul Sage 0x1 Level(17, Enemy, 1)         [15,6] 0b 0x0 0x0 0x0 [Ragnarok] BossAI
+
+	UNIT
+
+CutsceneUnits:
+UNIT Selwyn Auspex 0x1 Level(15, Enemy, 0)   [15,4] 0b 0x0 0x0 0x0 [0xFE] BossAI
+
+UNIT Affogato 0x3 0x1 Level(1, Ally, 0)   [15,7] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [15,6] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+
+UNIT Ulrich LPal 0x1 Level(1, Ally, 0)   [14,6] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [16,7] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [17,7] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT
+
+Traps1:
+	ENDTRAP
+	ALIGN 4
+
+Traps2:
+	ENDTRAP
+	ALIGN 4
+
+BeginningScene:
+	LOAD1 0x1 EnemyUnits
+	ENUN
+
+Music(0x324)
+SetBackground(0x44)
+STAL 5
+BROWNBOXTEXT TheBastion [8,8]
+STAL 15
+
+Text(Part3Chapter9Opening1)
+
+	GotoPrepScreen
+	ENDA
+
+EndingScene:
+FADI 60
+CAM1 [16,4]
+DoAllThree
+LOAD2 0x1 CutsceneUnits
+FADU 15
+
+STAL 50
+
+Music(0x292)
+SetBackground(0x2D)
+
+TextCont(Part3Chapter9Ending0, 0x4A)
+
+
+SOUN 0xDC
+EARTHQUAKE_START 0x0
+FADI 20
+CLEAN
+EARTHQUAKE_END
+_0x2141 0x35 0x1 0x3C
+
+MUSCSLOW 0x7FFF
+
+TextCont(Part3Chapter9ShadowRealm, 0x27E)
+
+ClearBackground
+
+TextCont(Part3Chapter9Ending1, 0x2c9)
+
+
+
+	MNC2 0x1C
+	NoFade
+	ENDA

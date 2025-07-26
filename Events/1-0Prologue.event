@@ -47,6 +47,7 @@ AffoBreveConvo:
 	Text(AffoBreveTalk)
 	MUNO
 	MURE 2
+
 	NoFade
 	ENDA
 	
@@ -110,11 +111,18 @@ LOCA 0x0 GamingPrologue [2,2] 0x11
 
 END_MAIN
 
+//SVAL 0x1 0x4 //ID
+///SVAL 0x2 0x0
+//SVAL 0xB 0xA0005 //X, Y coords
+//ASMC 0xE47195 //call draw ASM
+
+
 StealthConvo:
 CHECK_EVENTID 0x25
 BEQ 0x776 0xC 0x0
 CameraCursor(Affogato)
 Text(StealthTime)
+
 LABEL 0x776
 NoFade
 ENDA
@@ -228,7 +236,7 @@ TEXTEND
 MUSCSLOW 0x7FFF
 TEXTCONT
 TEXTEND
-MUSC 0x107
+MUSC 0x1CA
 TEXTCONT
 TEXTEND
 
@@ -326,7 +334,7 @@ ENUT 0xA1
 REMA
 LABEL 0x9000
 
-Music(0x32)
+Music(0x1C8)
 SetBackground(0x3C)
 GOTO 999 //fuck
 

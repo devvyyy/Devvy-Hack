@@ -41,6 +41,8 @@ Command_Usability:
 	beq unusable
  	cmp r0, #17 @astra/lightslinger
 	beq unusable
+	cmp r0, #150 @crown
+	beq unusable
 	cmp r0, #0
 	beq unusable
 

@@ -302,22 +302,93 @@ uses light magic.[X]
 Long-range moonlight blast.[N]
 Off-Hand: Mt +7.[X]
 
-# 0x21B
-Effective against armor.[N]
-[_O][_f][_f][_Dash][_H][_a][_n][_d][_Colon][_SP][_M][_t][_SP][_Plus][_5][_Dot][X]
+# 0x26E
+Off-Hand: Atk +1, Hit +5.[X]
 
-# 0x21C
+# 0x26F
+Off-Hand: Atk +2.[X]
+
+# 0x270
+Off-Hand: Atk +3.[X]
+
+# 0x271
+Poisons for 5 turns on-damage.[N]
+Off-Hand: If initiating, AS +2.[X]
+
+# 0x272
+Off-Hand: Hit +10 at 1 range.[X]
+
+# 0x273
+Off-Hand: Crit +10.[X]
+
+# 0x274
+Strikes x2 consecutively.[N]
+Off-Hand: If initiating and Spd > foe's[N]
+Spd +10, strikes x2 consecutively.[X]
+
+# 0x275
+Deals 10 bonus magical damage.[N]
+Off-Hand: Deals 5 bonus magical[N]
+damage.[X]
+
+# 0x276
+Extended attack range.[N]
+Off-Hand: Atk +1.[X]
+
+# 0x277
+Extended attack range.[N]
+Off-Hand: Atk +2.[X]
+
+# 0x278
+Extended attack range.[N]
+Off-Hand: Atk +3.[X]
+
+# 0x279
+Extended attack range.[N]
+Off-Hand: Atk +4.[X]
+
+# 0x28A
+Multiplies total Crit by x2.[N]
+Off-Hand: Crit +10.[X]
+
+# 0x28B
+Extended attack range.[N]
+Off-Hand: Hit +15.[X]
+
+# 0x28C
+When attacking at 4 range, Crit +30.[N]
+Off-Hand: Crit +5 at 2 range, Crit +15[N]
+at 3 range.[X]
+
+# 0x28D
+Grants +5 Prt at 1 range. After combat,[N]
+if HP < 25%, take -15 damage for 1 turn.[N]
+Off-Hand: Take -3 damage at 1 range.[X]
+
+# 0x28E
+Effective against magic. Res +5.[N]
+Off-Hand: Rsl +3.[X]
+
+# 0x28F
+Effective against armor.[N]
+Off-Hand: Atk +2.[X]
+
+# 0x280
 Effective against cavalry.[N]
-[_O][_f][_f][_Dash][_H][_a][_n][_d][_Colon][_SP][_M][_t][_SP][_Plus][_4][_Dot][X]
+Off-Hand: Atk +2.[X]
+
+# 0x281
+A powerful magnum rifle.[N]
+Off-Hand: Atk +5.[X]
+
+# 0x282
+Extended attack range.[N]
+Off-Hand: Hit +15 at 2+ range.[X]
 
 # 0x21D
 Ashen Rider's oblivion; return to nothing.[N]
 Res +5. Maxes Flow after combat.[N]
 [_O][_f][_f][_Dash][_H][_a][_n][_d][_Colon][_SP][_M][_t][_SP][_Plus][_3][_Dot][X]
-
-# 0x21F
-A powerful magnum rifle.
-[_O][_f][_f][_Dash][_H][_a][_n][_d][_Colon][_SP][_M][_t][_SP][_Plus][_5][_Dot][X]
 
 # 0x5d1
 Scouting[X]
@@ -400,7 +471,7 @@ Houses[N]
 2-6: Defeat Bosses+Seize;[N]
 Chests[N]
 2-7: Rout the enemy[N]
-2-7x (Graham route): Duel[N]
+2-7x: ???[N]
 2-F: Rout the enemy[N]
  [N]
 [X]
@@ -622,6 +693,13 @@ Sellsword[X]
 # 0x2AB
 A mercenary for-hire employed[N]
 to fight.[X]
+
+# 0x368
+Last Sword[X]
+
+# 0x418
+Winds of finality. Ignores Str. Negates damage[N]
+taken from Ice/Wind magic. [_Lock]: Warden[X]
 
 # 0x15
 Dexterity increased.[X]
@@ -1464,6 +1542,21 @@ Reverses and doubles Weapon Triangle.[X]
 Resets the status of an ally[N]
 on the map.[X]
 
+# 0x39A
+[_S][_t][_a][_r][_s][_SP][_o][_f][_SP][_L][_i][_g][_h][_t][X]
+
+# 0x44A
+Deals % current HP damage (If foe is[N]
+Norlis, X = 50%; otherwise X = 25%)[X]
+
+# 0x3c0
+[_A][_b][_s][_o][_l][_u][_t][_e][_SP][_Z][_e][_r][_o][X]
+
+# 0x46F
+The white eclipse; the final hour.[N]
+Neutralizes Weapon Triangle. Deals[N]
+bonus damage = 25% of foe's max HP.[X]
+
 # 0x2ef
 Mystic[X]
 
@@ -1484,7 +1577,7 @@ Apsiel[X]
 
 # 0x2A7
 A former soldier of both realms,[N]
-now on his own road to retribution.[X]
+now on his own road to absolution.[X]
 
 # 0x236
 Sylmeria[X]
@@ -1748,10 +1841,10 @@ Academics honing their magic with[N]
 lofty aspirations. Equip: [AnimaIcon].[X]
 
 # 0x24e LostSoulName
-Celestian[X]
+Norlis[X]
 
 # 0x2aa LostSoulMeleeDesc
-Ethereal lost souls created by dark arts,[N]
+Ethereal lost souls shaped by light,[N]
 devoid of being. Well-rounded infantry.[X]
 
 # 0x1b0
@@ -1795,13 +1888,19 @@ Prologue III-A: Here We Are[X]
 Prologue III-B: Bargaining Chip[X]
 
 # 0x18b
-2-7x: Hour of Vengeance[X]
+2-7x: Measure of Steel[X]
+
+# 0x3AC
+Noctum Ring[X]
 
 # 0x182
 2-3: Fugitives[X]
 
 # 0x183
 2-F: The Bridge[X]
+
+# 0x199
+3-3x: Waltz[X]
 
 # 0x177
 3-5: A Light Above, Descending[X]
@@ -1814,6 +1913,25 @@ Prologue III-B: Bargaining Chip[X]
 
 # 0x176
 3-4: Fire to the Fuse[X]
+
+# 0x17E
+3-9: Eye of the Storm[X]
+
+# 0x17D
+3-F: Imperius[X]
+
+# 0x17C
+Endgame: One Last Song[X]
+
+# 0x1B4
+Defeat the Warden.[X]
+
+# 0x1B2
+Defeat the Apostle[N]
+and thaw Ideon.[X]
+
+# 0x19E
+Finish This[X]
 
 # 0x173
 1-4: Ashes and Dust[X]

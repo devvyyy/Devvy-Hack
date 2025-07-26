@@ -80,6 +80,7 @@ bool IsItemDagger(u16 item) {
    case 0x48: //4
    case 0x49: //5
    case 0x53: //smite
+   //case 0x53: //absolute zero
         return TRUE;
 
     default:
@@ -135,26 +136,68 @@ int SetupWeaponHelpText(u16 item) {
 int GetItemDescId(int item) {
     u16 itemDesc = GetItemData(GetItemIndex(item))->descTextId;
 
-    if (IsBattleReal() && SkillTester(&gBattleActor.unit, 102)) { //unit with PhaseID
+    if (IsBattleReal() && SkillTester(&gBattleActor.unit, 17)) { //unit with AstraID, not PhaseID; now on chif
         switch ((item & 0xFF)) {
-            case 0x45: // Dark I :)
-                itemDesc = 0x212;
-            case 0x46: //Miasma II :]
-                itemDesc = 0x213;
-            case 0x47: //Shade III :D
-                itemDesc = 0x214;
-            case 0x48: //Umbra IV >:0
-                itemDesc = 0x215;
-			case 0x49: //Blight V
-                itemDesc = 0x216;
-			case 0x4A: //Shadowpyre X
-                itemDesc = 0x217;
-			case 0x9C: //Moonshine B
-                itemDesc = 0x218;				
-			case 0x9F: //Moonlight R
-                itemDesc = 0x219;
-			case 0xA2: //Moonfall S
-                itemDesc = 0x21A;			
+            case 0x2D: // Iron Bow :)
+                itemDesc = 0x26E;
+                break;
+            case 0x2E: //Steel Bow :]
+                itemDesc = 0x26F;
+                break;
+            case 0x2F: //Silver Bow :D
+                itemDesc = 0x270;
+                break;
+            case 0x30: //Dart Rifle >:0
+                itemDesc = 0x271;
+                break;
+			case 0x31: //Killer Bow
+                itemDesc = 0x273;
+                break;
+			case 0x32: //Brave Bow
+                itemDesc = 0x274;
+                break;
+			case 0x33: //Shortbow
+                itemDesc = 0x272;	
+                break;		
+			case 0x34: //Longbow
+                itemDesc = 0x282;
+                break;
+			case 0xDF: //Etherbind Bow
+                itemDesc = 0x28E;
+                break;
+            case 0x84: //Magnum Rifle
+                itemDesc = 0x281;
+                break;
+            case 0x8A: //Arcane Rifle
+                itemDesc = 0x275;
+                break;
+            case 0xA9: //Hunting Rifle
+                itemDesc = 0x280;
+                break;
+            case 0xAD: //Bodkin Rifle
+                itemDesc = 0x28F;
+                break;
+            case 0xC3: //Iron Rifle
+                itemDesc = 0x276;
+                break;
+            case 0xC4: //Steel Rifle
+                itemDesc = 0x277;
+                break;
+            case 0xC5: //Silver Rifle
+                itemDesc = 0x278;
+                break;
+            case 0xD8: //Bloody Rifle
+                itemDesc = 0x28A;
+                break;
+            case 0xD9: //Lock-in Rifle
+                itemDesc = 0x28B;
+                break;
+            case 0xDA: //Sonic Rifle
+                itemDesc = 0x28C;
+                break;
+            case 0xDB: //Backshield Rifle
+                itemDesc = 0x28D;
+                break;
         }
 
 	}

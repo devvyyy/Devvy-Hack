@@ -348,7 +348,7 @@ NoFade
 ENDA
 
 StroganRecruit:
-MUSS 0x30
+MUSS 0x1AD
 STAL 33
 Text(StroganTalk)
 MURE 0x2
@@ -361,7 +361,7 @@ NoFade
 ENDA
 
 UlrichStroganRecruit:
-MUSS 0x30
+MUSS 0x1AD
 STAL 33
 Text(StroganUlrichRecruit)
 MURE 0x2
@@ -374,7 +374,7 @@ NoFade
 ENDA
 
 EisRecruit:
-MUSS 0x30
+MUSS 0x1AD
 STAL 33
 Text(EisTalk)
 MURE 0x2
@@ -387,7 +387,7 @@ NoFade
 ENDA
 
 MochaEisRecruit:
-MUSS 0x30
+MUSS 0x1AD
 STAL 33
 Text(EisMochaRecruitTalk)
 MURE 0x2
@@ -400,7 +400,7 @@ NoFade
 ENDA
 
 DoppioRecruit:
-MUSS 0x30
+MUSS 0x1AD
 STAL 33
 Text(DoppioTalk)
 MURE 0x2
@@ -462,6 +462,7 @@ CALL 0x9EE4F8
 _WARP 0x0 Selwyn [14,3]
 STAL 15
 
+Music(0x1CA)
 ChargeWarning(Alicot,Ch3ReinWarning)
 
 SVAL 0x2 Selwyn

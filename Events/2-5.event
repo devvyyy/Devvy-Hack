@@ -86,7 +86,7 @@ ChiffonRaialTalk:
 ENDA
 
 RecruitEd:
-MUSS 0x30
+MUSS 0x297
 STAL 33
 Text(EdvinRecruit)
 MURE 0x2
@@ -237,6 +237,9 @@ TentUnitGaming: //these are only on the left; destroy to get items?
 UNIT Supplies1 0x79 0x1 Level(1, Enemy, 1)     [7,16] DropItem 0x0 0x0 0x0 [EnergyRing] [0,3,0,32]
 UNIT Supplies2 0x79 0x1 Level(1, Enemy, 1)     [4,9] DropItem 0x0 0x0 0x0 [0xb8] [0,3,0,32]
 UNIT Supplies3 0x79 0x1 Level(1, Enemy, 1)     [6,19] DropItem 0x0 0x0 0x0 [0xd0] [0,3,0,32]
+
+UNIT 0x72 General 0x1 Level(20, Enemy, 0)     [11,2] 0b 0x0 0x0 0x0 [WindSword] StallOneTurnAI
+	UNIT
 	UNIT
 
 Traps1:
@@ -255,6 +258,7 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+SetFlag(0x84) //hides boss icons
 	ENUT AllUnitsMustEscapeFlag
 	LOAD1 0x1 EnemyUnits
 	LOAD1 0x1 TentUnitGaming
@@ -271,9 +275,18 @@ ENUN
 	STAL 5
 	CameraCursor(0x53)
 	STAL 15
-	Music(0x25)
+	Music(0x4e)
 	BG(0x36)
-	Text(Ch25Opening2)
+
+TEXTSTART; TEXTSHOW Ch25Opening2; TEXTEND
+
+MOVE 0x3 0x72 [3,0]
+ENUN
+REMU 0x72
+
+Music(0x58)
+STAL 10; TEXTCONT; TEXTEND; REMA
+UnsetFlag(0x84) //hides boss icons
 	
 CALL $591FD8 //prep screen
 	FADU 60

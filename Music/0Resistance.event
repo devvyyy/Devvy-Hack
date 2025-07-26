@@ -1,0 +1,1658 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	TheResistance_FINAL_grp  voicegroup000
+	#define	TheResistance_FINAL_pri  0
+	#define	TheResistance_FINAL_rev  0xA0
+	#define	TheResistance_FINAL_mvl  29
+	#define	TheResistance_FINAL_key  0
+	#define	TheResistance_FINAL_tbs  1
+	#define	TheResistance_FINAL_exg  0
+	#define	TheResistance_FINAL_cmp  1
+
+	// .rodata
+	//	TheResistance_FINAL
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+TheResistance_FINAL_1:
+	BYTE	KEYSH   TheResistance_FINAL_key+0
+TheResistance_FINAL_1_B1:
+// 000   ----------------------------------------
+	BYTE	TEMPO   100*TheResistance_FINAL_tbs/2
+	BYTE		VOICE   61
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     117*TheResistance_FINAL_mvl/mxv
+	BYTE		PAN     c_v-14
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+TheResistance_FINAL_1_004:
+	BYTE		N20     Fs1   v127
+	BYTE	W24
+	BYTE		N11     Cs1 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W36
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_1_004
+// 006   ----------------------------------------
+TheResistance_FINAL_1_006:
+	BYTE		N20     En1   v127
+	BYTE	W24
+	BYTE		N11     Bn0 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE	W36
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE	PEND
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_1_006
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_1_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_1_004
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_1_006
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_1_006
+// 012   ----------------------------------------
+	BYTE		N15     En1   v127
+	BYTE	W16
+	BYTE		        Bn0 
+	BYTE	W16
+	BYTE		        Gs0 
+	BYTE	W16
+	BYTE		        Bn0 
+	BYTE	W16
+	BYTE		        En1 
+	BYTE	W16
+	BYTE		        Gs1 
+	BYTE	W16
+// 013   ----------------------------------------
+	BYTE		        Fn1 
+	BYTE	W16
+	BYTE		        Bn0 
+	BYTE	W16
+	BYTE		        Gs0 
+	BYTE	W16
+	BYTE		        Bn0 
+	BYTE	W16
+	BYTE		        Fn1 
+	BYTE	W16
+	BYTE		        Gs1 
+	BYTE	W16
+// 014   ----------------------------------------
+TheResistance_FINAL_1_014:
+	BYTE		N17     Fs1   v127
+	BYTE	W18
+	BYTE		        Cs1 
+	BYTE	W18
+	BYTE		N20     Fs1 
+	BYTE	W24
+	BYTE		N11     Gs1 
+	BYTE	W12
+	BYTE		        As1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE	PEND
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_1_014
+// 016   ----------------------------------------
+TheResistance_FINAL_1_016:
+	BYTE		N17     Fn1   v127
+	BYTE	W18
+	BYTE		        Cs1 
+	BYTE	W18
+	BYTE		N20     Fn1 
+	BYTE	W24
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE	PEND
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_1_016
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_1_014
+// 019   ----------------------------------------
+	BYTE		N42     Dn2   v076
+	BYTE		N42     Fs2 
+	BYTE	W48
+	BYTE		        En2 
+	BYTE		N42     Gs2 
+	BYTE	W48
+// 020   ----------------------------------------
+	BYTE		N66     Dn2 
+	BYTE		N66     Fs2 
+	BYTE	W72
+// 021   ----------------------------------------
+	BYTE		        Dn2 
+	BYTE		N66     Fs2 
+	BYTE	W72
+// 022   ----------------------------------------
+	BYTE		        Dn2 
+	BYTE		N66     Fs2 
+	BYTE	W72
+// 023   ----------------------------------------
+	BYTE		        Dn2 
+	BYTE		N66     Fs2 
+	BYTE	W72
+// 024   ----------------------------------------
+	BYTE		        Cs2 
+	BYTE		N66     En2 
+	BYTE	W72
+// 025   ----------------------------------------
+	BYTE		        Cs2 
+	BYTE		N66     En2 
+	BYTE	W72
+// 026   ----------------------------------------
+	BYTE		        Cs2 
+	BYTE		N66     En2 
+	BYTE	W72
+// 027   ----------------------------------------
+	BYTE		        Cs2 
+	BYTE		N66     En2 
+	BYTE	W72
+// 028   ----------------------------------------
+	BYTE		        Dn2 
+	BYTE		N66     Fs2 
+	BYTE	W72
+// 029   ----------------------------------------
+	BYTE		        Dn2 
+	BYTE		N66     Fs2 
+	BYTE	W72
+// 030   ----------------------------------------
+	BYTE		        Dn2 
+	BYTE		N66     Fs2 
+	BYTE	W72
+// 031   ----------------------------------------
+	BYTE		        Dn2 
+	BYTE		N66     Fs2 
+	BYTE	W72
+// 032   ----------------------------------------
+	BYTE		        Cs2 
+	BYTE		N66     En2 
+	BYTE	W72
+// 033   ----------------------------------------
+	BYTE		        Cs2 
+	BYTE		N66     En2 
+	BYTE	W72
+// 034   ----------------------------------------
+	BYTE		        Cs2 
+	BYTE		N66     En2 
+	BYTE	W72
+// 035   ----------------------------------------
+	BYTE		        Cs2 
+	BYTE		N66     En2 
+	BYTE	W72
+// 036   ----------------------------------------
+	BYTE		N90     Dn2 
+	BYTE		N90     Fs2 
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE		        Bn1 
+	BYTE		N90     En2 
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE		        Bn1 
+	BYTE		N90     Dn2 
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE		        Cs2 
+	BYTE		N90     Fn2 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	TheResistance_FINAL_1_B1
+TheResistance_FINAL_1_B2:
+// 040   ----------------------------------------
+	BYTE	W24
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+TheResistance_FINAL_2:
+	BYTE	KEYSH   TheResistance_FINAL_key+0
+TheResistance_FINAL_2_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   50
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-33
+	BYTE		VOL     127*TheResistance_FINAL_mvl/mxv
+	BYTE		N42     An2   v076
+	BYTE		N42     Cs3 
+	BYTE		N42     Fs3 
+	BYTE	W48
+	BYTE		        Bn2 
+	BYTE		N42     Ds3 
+	BYTE		N42     Gs3 
+	BYTE	W48
+// 001   ----------------------------------------
+TheResistance_FINAL_2_001:
+	BYTE		N42     Cs3   v076
+	BYTE		N42     En3 
+	BYTE		N42     An3 
+	BYTE	W48
+	BYTE		        Fn3 
+	BYTE		N42     Gs3 
+	BYTE		N42     Bn3 
+	BYTE	W48
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE		        An2 
+	BYTE		N42     Cs3 
+	BYTE		N42     Fs3 
+	BYTE	W48
+	BYTE		        Bn2 
+	BYTE		N42     Ds3 
+	BYTE		N42     Gs3 
+	BYTE	W48
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_001
+// 004   ----------------------------------------
+TheResistance_FINAL_2_004:
+	BYTE		N90     Fs3   v076
+	BYTE		N90     An3 
+	BYTE		N90     Cs4 
+	BYTE	W96
+	BYTE	PEND
+// 005   ----------------------------------------
+TheResistance_FINAL_2_005:
+	BYTE		N90     Ds3   v076
+	BYTE		N90     Fs3 
+	BYTE		N90     An3 
+	BYTE		N90     Bn3 
+	BYTE	W96
+	BYTE	PEND
+// 006   ----------------------------------------
+TheResistance_FINAL_2_006:
+	BYTE		N42     En3   v076
+	BYTE		N42     Gs3 
+	BYTE		N42     Cs4 
+	BYTE	W48
+	BYTE		        Ds3 
+	BYTE		N42     Fs3 
+	BYTE		N42     Bn3 
+	BYTE	W48
+	BYTE	PEND
+// 007   ----------------------------------------
+TheResistance_FINAL_2_007:
+	BYTE		N42     Fs3   v076
+	BYTE		N90     Gs3 
+	BYTE		N90     Cs4 
+	BYTE	W48
+	BYTE		N42     Fn3 
+	BYTE	W48
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_005
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_006
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_007
+// 012   ----------------------------------------
+	BYTE		N90     Dn3   v076
+	BYTE		N90     Fs3 
+	BYTE		N90     An3 
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE		        Dn3 
+	BYTE		N90     Fs3 
+	BYTE		N90     Bn3 
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE		        Cs3 
+	BYTE		N90     Fs3 
+	BYTE		N42     Bn3 
+	BYTE	W48
+	BYTE		        An3 
+	BYTE	W48
+// 015   ----------------------------------------
+TheResistance_FINAL_2_015:
+	BYTE		N90     Bn2   v076
+	BYTE		N90     En3 
+	BYTE		N42     An3 
+	BYTE	W48
+	BYTE		        Gs3 
+	BYTE	W48
+	BYTE	PEND
+// 016   ----------------------------------------
+	BYTE		N90     As2 
+	BYTE		N90     Cs3 
+	BYTE		N90     Fs3 
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE		        Bn2 
+	BYTE		N90     Dn3 
+	BYTE		N90     Gs3 
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE		        Cs3 
+	BYTE		N90     En3 
+	BYTE		N42     An3 
+	BYTE	W48
+	BYTE		        Bn3 
+	BYTE	W48
+// 019   ----------------------------------------
+	BYTE		        Dn3 
+	BYTE		N42     Fs3 
+	BYTE		N42     Cs4 
+	BYTE	W48
+	BYTE		        En3 
+	BYTE		N42     Gs3 
+	BYTE		N42     Dn4 
+	BYTE	W48
+// 020   ----------------------------------------
+TheResistance_FINAL_2_020:
+	BYTE		N66     Dn3   v076
+	BYTE		N66     Fs3 
+	BYTE		N66     Cs4 
+	BYTE	W72
+	BYTE	PEND
+// 021   ----------------------------------------
+TheResistance_FINAL_2_021:
+	BYTE		N66     Dn3   v076
+	BYTE		N66     Fs3 
+	BYTE		N66     Bn3 
+	BYTE	W72
+	BYTE	PEND
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_020
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_021
+// 024   ----------------------------------------
+TheResistance_FINAL_2_024:
+	BYTE		N66     Cs3   v076
+	BYTE		N66     En3 
+	BYTE		N66     Bn3 
+	BYTE	W72
+	BYTE	PEND
+// 025   ----------------------------------------
+TheResistance_FINAL_2_025:
+	BYTE		N66     Cs3   v076
+	BYTE		N66     En3 
+	BYTE		N66     An3 
+	BYTE	W72
+	BYTE	PEND
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_024
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_025
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_020
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_021
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_020
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_021
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_024
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_025
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_024
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_025
+// 036   ----------------------------------------
+	BYTE		N90     Dn3   v076
+	BYTE		N90     Fs3 
+	BYTE		N42     Bn3 
+	BYTE	W48
+	BYTE		        An3 
+	BYTE	W48
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_2_015
+// 038   ----------------------------------------
+	BYTE		N90     Bn2   v076
+	BYTE		N90     Dn3 
+	BYTE		N42     Gs3 
+	BYTE	W48
+	BYTE		        Fs3 
+	BYTE	W48
+// 039   ----------------------------------------
+	BYTE		N90     Cs3 
+	BYTE		N90     Fn3 
+	BYTE		N90     Gs3 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	TheResistance_FINAL_2_B1
+TheResistance_FINAL_2_B2:
+// 040   ----------------------------------------
+	BYTE	W24
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+TheResistance_FINAL_3:
+	BYTE	KEYSH   TheResistance_FINAL_key+0
+TheResistance_FINAL_3_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   60
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+37
+	BYTE		VOL     117*TheResistance_FINAL_mvl/mxv
+	BYTE		N42     Fs2   v127
+	BYTE	W48
+	BYTE		        Gs2 
+	BYTE	W48
+// 001   ----------------------------------------
+	BYTE		        An2 
+	BYTE	W48
+	BYTE		        Bn2 
+	BYTE	W48
+// 002   ----------------------------------------
+	BYTE		        Fs2 
+	BYTE		N42     Fs3 
+	BYTE	W48
+	BYTE		        Gs2 
+	BYTE		N42     Gs3 
+	BYTE	W48
+// 003   ----------------------------------------
+	BYTE		        An2 
+	BYTE		N42     An3 
+	BYTE	W48
+	BYTE		        Bn2 
+	BYTE		N42     Bn3 
+	BYTE	W48
+// 004   ----------------------------------------
+	BYTE		N48     An3 
+	BYTE	W48
+	BYTE		N16     Cs4 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        Cs4 
+	BYTE	W16
+// 005   ----------------------------------------
+	BYTE		N48     Ds4 
+	BYTE	W48
+	BYTE		N16   
+	BYTE	W16
+	BYTE		        En4 
+	BYTE	W16
+	BYTE		        Fs4 
+	BYTE	W16
+// 006   ----------------------------------------
+	BYTE		        En4 
+	BYTE	W16
+	BYTE		        Cs4 
+	BYTE	W16
+	BYTE		        En4 
+	BYTE	W16
+	BYTE		        Ds4 
+	BYTE	W16
+	BYTE		        Cs4 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+// 007   ----------------------------------------
+	BYTE		N48     Cs4 
+	BYTE	W48
+	BYTE		N42     Gs3 
+	BYTE	W48
+// 008   ----------------------------------------
+	BYTE		N48     Cs4 
+	BYTE	W48
+	BYTE		N16     En4 
+	BYTE	W16
+	BYTE		        Ds4 
+	BYTE	W16
+	BYTE		        Cs4 
+	BYTE	W16
+// 009   ----------------------------------------
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        Fs3 
+	BYTE	W16
+	BYTE		        Gs3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+// 010   ----------------------------------------
+	BYTE		        Gs3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        Ds4 
+	BYTE	W16
+// 011   ----------------------------------------
+	BYTE		        En4 
+	BYTE	W16
+	BYTE		        Cs4 
+	BYTE	W16
+	BYTE		        En4 
+	BYTE	W16
+	BYTE		        Fn4 
+	BYTE	W16
+	BYTE		        Ds4 
+	BYTE	W16
+	BYTE		N15     Cs4 
+	BYTE	W16
+// 012   ----------------------------------------
+	BYTE		N16     An3 
+	BYTE	W16
+	BYTE		        Fs3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		        Cs4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+// 013   ----------------------------------------
+	BYTE		        Fs4 
+	BYTE	W16
+	BYTE		        En4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		N24     Bn3 
+	BYTE	W24
+	BYTE		N20     Fs3 
+	BYTE	W24
+// 014   ----------------------------------------
+	BYTE		N16     En4 
+	BYTE	W16
+	BYTE		        Fs4 
+	BYTE	W16
+	BYTE		        En4 
+	BYTE	W16
+	BYTE		        Cs4 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+// 015   ----------------------------------------
+	BYTE		N16   
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Gs3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		N15     Bn3 
+	BYTE	W16
+// 016   ----------------------------------------
+	BYTE		N05     Cs4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Ds4 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        As3 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Fn4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+// 017   ----------------------------------------
+	BYTE		        Gs4 
+	BYTE	W06
+	BYTE		        Fs4 
+	BYTE	W06
+	BYTE		        En4 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Cs4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		        An3 
+	BYTE	W06
+	BYTE		        Bn3 
+	BYTE	W06
+	BYTE		        Dn4 
+	BYTE	W06
+// 018   ----------------------------------------
+	BYTE		N16     En4 
+	BYTE	W16
+	BYTE		        Fs4 
+	BYTE	W16
+	BYTE		        En4 
+	BYTE	W16
+	BYTE		N42     Cs4 
+	BYTE	W48
+// 019   ----------------------------------------
+	BYTE		N15     An3 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        Cs4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		        Cs4 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+// 020   ----------------------------------------
+	BYTE		N24     Cs4 
+	BYTE	W24
+	BYTE		        Bn3 
+	BYTE	W24
+	BYTE		        Cs4 
+	BYTE	W24
+// 021   ----------------------------------------
+	BYTE		N72     Dn4 
+	BYTE	W72
+// 022   ----------------------------------------
+	BYTE		N24     En4 
+	BYTE	W24
+	BYTE		        Fs4 
+	BYTE	W24
+	BYTE		        En4 
+	BYTE	W24
+// 023   ----------------------------------------
+	BYTE		        Dn4 
+	BYTE	W24
+	BYTE		        Cs4 
+	BYTE	W24
+	BYTE		N20     Bn3 
+	BYTE	W24
+// 024   ----------------------------------------
+	BYTE		N24   
+	BYTE	W24
+	BYTE		        An3 
+	BYTE	W24
+	BYTE		        Bn3 
+	BYTE	W24
+// 025   ----------------------------------------
+	BYTE		N72     Cs4 
+	BYTE	W72
+// 026   ----------------------------------------
+	BYTE		N24     Bn3 
+	BYTE	W24
+	BYTE		        An3 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE	W24
+// 027   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W24
+	BYTE		        Bn3 
+	BYTE	W24
+	BYTE		N20     Cs4 
+	BYTE	W24
+// 028   ----------------------------------------
+	BYTE		N24     Fs4 
+	BYTE	W24
+	BYTE		        En4 
+	BYTE	W24
+	BYTE		        Fs4 
+	BYTE	W24
+// 029   ----------------------------------------
+	BYTE		N66     An4 
+	BYTE	W72
+// 030   ----------------------------------------
+	BYTE		N24     Fs4 
+	BYTE	W24
+	BYTE		        En4 
+	BYTE	W24
+	BYTE		        Dn4 
+	BYTE	W24
+// 031   ----------------------------------------
+	BYTE		        Bn3 
+	BYTE	W24
+	BYTE		        Cs4 
+	BYTE	W24
+	BYTE		N20     Dn4 
+	BYTE	W24
+// 032   ----------------------------------------
+	BYTE		N72     Cs4 
+	BYTE	W72
+// 033   ----------------------------------------
+	BYTE		        Dn4 
+	BYTE	W72
+// 034   ----------------------------------------
+	BYTE		N48     Cs4 
+	BYTE	W48
+	BYTE		N24     Bn3 
+	BYTE	W24
+// 035   ----------------------------------------
+	BYTE		N66     An3 
+	BYTE	W72
+// 036   ----------------------------------------
+	BYTE		N42     Bn3 
+	BYTE	W48
+	BYTE		        An3 
+	BYTE	W48
+// 037   ----------------------------------------
+	BYTE		N42   
+	BYTE	W48
+	BYTE		        Gs3 
+	BYTE	W48
+// 038   ----------------------------------------
+	BYTE		N42   
+	BYTE	W48
+	BYTE		        Fs3 
+	BYTE	W48
+// 039   ----------------------------------------
+	BYTE		N90     Fn3 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	TheResistance_FINAL_3_B1
+TheResistance_FINAL_3_B2:
+// 040   ----------------------------------------
+	BYTE	W24
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.5) ****************//
+
+TheResistance_FINAL_4:
+	BYTE	KEYSH   TheResistance_FINAL_key+0
+TheResistance_FINAL_4_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   33
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+17
+	BYTE		VOL     127*TheResistance_FINAL_mvl/mxv
+	BYTE		N42     Fs1   v127
+	BYTE	W48
+	BYTE		        Gs1 
+	BYTE	W48
+// 001   ----------------------------------------
+TheResistance_FINAL_4_001:
+	BYTE		N42     An1   v127
+	BYTE	W48
+	BYTE		        Bn1 
+	BYTE	W48
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE		        Fs1 
+	BYTE	W48
+	BYTE		        Gs1 
+	BYTE	W48
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_001
+// 004   ----------------------------------------
+TheResistance_FINAL_4_004:
+	BYTE		N20     Fs1   v127
+	BYTE	W24
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		N05     Cs2 
+	BYTE	W06
+	BYTE		N04     Fs2 
+	BYTE	W12
+	BYTE		N04   
+	BYTE	W06
+	BYTE		N05     Cs2 
+	BYTE	W06
+	BYTE		N04     Fs2 
+	BYTE	W12
+	BYTE		N04   
+	BYTE	W06
+	BYTE	PEND
+// 005   ----------------------------------------
+TheResistance_FINAL_4_005:
+	BYTE		N20     Fs1   v127
+	BYTE	W24
+	BYTE		N11     Bn1 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		N05     Ds2 
+	BYTE	W06
+	BYTE		N04     Fs2 
+	BYTE	W12
+	BYTE		N04   
+	BYTE	W06
+	BYTE		N05     Ds2 
+	BYTE	W06
+	BYTE		N04     Fs2 
+	BYTE	W12
+	BYTE		N04   
+	BYTE	W06
+	BYTE	PEND
+// 006   ----------------------------------------
+TheResistance_FINAL_4_006:
+	BYTE		N20     Gs1   v127
+	BYTE	W24
+	BYTE		N11     Cs2 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N04     Ds1 
+	BYTE	W12
+	BYTE		N04   
+	BYTE	W06
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		N04     Ds1 
+	BYTE	W12
+	BYTE		N04   
+	BYTE	W06
+	BYTE	PEND
+// 007   ----------------------------------------
+TheResistance_FINAL_4_007:
+	BYTE		N11     Fs1   v127
+	BYTE	W12
+	BYTE		        Cs1 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE		        Cs1 
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_005
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_006
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_007
+// 012   ----------------------------------------
+	BYTE		N20     Fs1   v127
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		N04     Fs2 
+	BYTE	W12
+	BYTE		N04   
+	BYTE	W06
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		N04     Fs2 
+	BYTE	W12
+	BYTE		N04   
+	BYTE	W06
+// 013   ----------------------------------------
+	BYTE		N20     Fs1 
+	BYTE	W24
+	BYTE		        Bn1 
+	BYTE	W24
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		N04     Fs2 
+	BYTE	W12
+	BYTE		N04   
+	BYTE	W06
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		N04     Fs2 
+	BYTE	W12
+	BYTE		N04   
+	BYTE	W06
+// 014   ----------------------------------------
+	BYTE		N11     Cs2 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		        Cs2 
+	BYTE	W12
+	BYTE		        Fs2 
+	BYTE	W12
+	BYTE		        Cs2 
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		        Cs2 
+	BYTE	W12
+// 015   ----------------------------------------
+	BYTE		        Bn1 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W12
+	BYTE		        En2 
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W12
+// 016   ----------------------------------------
+	BYTE		N20     As1 
+	BYTE	W24
+	BYTE		        Fs1 
+	BYTE	W24
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		N04     Cs2 
+	BYTE	W12
+	BYTE		N04   
+	BYTE	W06
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		N04     Cs2 
+	BYTE	W12
+	BYTE		N04   
+	BYTE	W06
+// 017   ----------------------------------------
+	BYTE		N20     Bn1 
+	BYTE	W24
+	BYTE		        Gs1 
+	BYTE	W24
+	BYTE		N05     Bn1 
+	BYTE	W06
+	BYTE		N04     Dn2 
+	BYTE	W12
+	BYTE		N04   
+	BYTE	W06
+	BYTE		N05     Bn1 
+	BYTE	W06
+	BYTE		N04     Dn2 
+	BYTE	W12
+	BYTE		N04   
+	BYTE	W06
+// 018   ----------------------------------------
+	BYTE		N11     Cs2 
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W12
+	BYTE		        Cs2 
+	BYTE	W12
+	BYTE		        En2 
+	BYTE	W12
+	BYTE		        Cs2 
+	BYTE	W12
+// 019   ----------------------------------------
+	BYTE		N04     Fs2 
+	BYTE	W12
+	BYTE		        Cs2 
+	BYTE	W12
+	BYTE		        Fs2 
+	BYTE	W12
+	BYTE		        Cs2 
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+// 020   ----------------------------------------
+TheResistance_FINAL_4_020:
+	BYTE		N04     Dn1   v127
+	BYTE	W12
+	BYTE		N04   
+	BYTE	W12
+	BYTE		N06     Fs1 
+	BYTE	W18
+	BYTE		N06   
+	BYTE	W18
+	BYTE		N04     An1 
+	BYTE	W12
+	BYTE	PEND
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_020
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_020
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_020
+// 024   ----------------------------------------
+TheResistance_FINAL_4_024:
+	BYTE		N04     Cs1   v127
+	BYTE	W12
+	BYTE		N04   
+	BYTE	W12
+	BYTE		N06     En1 
+	BYTE	W18
+	BYTE		N06   
+	BYTE	W18
+	BYTE		N04     An1 
+	BYTE	W12
+	BYTE	PEND
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_024
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_024
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_024
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_020
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_020
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_020
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_020
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_024
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_024
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_024
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_4_024
+// 036   ----------------------------------------
+	BYTE		N04     Fs1   v127
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE	W12
+	BYTE		        Fs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE	W12
+// 037   ----------------------------------------
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE	W12
+// 038   ----------------------------------------
+	BYTE		        Dn1 
+	BYTE	W12
+	BYTE		        Bn0 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE	W12
+	BYTE		        Bn0 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE	W12
+	BYTE		        Bn0 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE	W12
+	BYTE		        Bn0 
+	BYTE	W12
+// 039   ----------------------------------------
+	BYTE		        Cs1 
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE		        Cs1 
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE		        Cs1 
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE		        Cs1 
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE	GoTo
+	 POIN2	TheResistance_FINAL_4_B1
+TheResistance_FINAL_4_B2:
+// 040   ----------------------------------------
+	BYTE	W24
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.6) ****************//
+
+TheResistance_FINAL_5:
+	BYTE	KEYSH   TheResistance_FINAL_key+0
+TheResistance_FINAL_5_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   127
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*TheResistance_FINAL_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N20     Cn1   v127
+	BYTE		N20     En1 
+	BYTE		N20     An2 
+	BYTE	W24
+	BYTE		N07     En1 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N20     Cn1 
+	BYTE		N20     En1 
+	BYTE		N20     An2 
+	BYTE	W24
+	BYTE		N07     En1 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+// 001   ----------------------------------------
+	BYTE		N20     Cn1 
+	BYTE		N20     En1 
+	BYTE		N20     An2 
+	BYTE	W24
+	BYTE		N15     En1 
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE		N07     En1 
+	BYTE		N07     An2 
+	BYTE	W08
+	BYTE		        En1 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE		N07     En1 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+// 002   ----------------------------------------
+	BYTE		N20     Cn1 
+	BYTE		N20     En1 
+	BYTE		N20     An2 
+	BYTE	W24
+	BYTE		N07     En1 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N20     Cn1 
+	BYTE		N20     En1 
+	BYTE		N20     An2 
+	BYTE	W24
+	BYTE		N07     En1 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+// 003   ----------------------------------------
+	BYTE		N20     Cn1 
+	BYTE		N20     En1 
+	BYTE		N20     An2 
+	BYTE	W24
+	BYTE		N15     En1 
+	BYTE	W16
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE		N07     En1 
+	BYTE		N07     Dn2 
+	BYTE		N07     An2 
+	BYTE	W08
+	BYTE		        En1 
+	BYTE		N07     Dn2 
+	BYTE	W08
+	BYTE		        En1 
+	BYTE		N07     Cn2 
+	BYTE	W08
+	BYTE		        Cn1 
+	BYTE		N07     En1 
+	BYTE		N07     Bn1 
+	BYTE	W08
+	BYTE		        En1 
+	BYTE		N07     Bn1 
+	BYTE	W08
+	BYTE		        En1 
+	BYTE		N07     An1 
+	BYTE	W08
+// 004   ----------------------------------------
+TheResistance_FINAL_5_004:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE	PEND
+// 005   ----------------------------------------
+TheResistance_FINAL_5_005:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE	PEND
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_005
+// 007   ----------------------------------------
+TheResistance_FINAL_5_007:
+	BYTE		N11     Bn0   v127
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		        Gs1 
+	BYTE	W12
+	BYTE		        Bn0 
+	BYTE		N11     Cn1 
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Dn1 
+	BYTE		N05     En1 
+	BYTE	W06
+	BYTE		N11     Dn1 
+	BYTE		N11     En1 
+	BYTE		N11     As1 
+	BYTE	W12
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE	W06
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_005
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_005
+// 011   ----------------------------------------
+TheResistance_FINAL_5_011:
+	BYTE		N11     En1   v127
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		        Cn1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		        Cn1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		        Cn1 
+	BYTE	W12
+	BYTE		N05     En1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE	PEND
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_005
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_005
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_007
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_004
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_005
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_005
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_011
+// 020   ----------------------------------------
+TheResistance_FINAL_5_020:
+	BYTE		N11     Cn1   v127
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		        Cn1 
+	BYTE	W12
+	BYTE		N17     En1 
+	BYTE	W18
+	BYTE		N17   
+	BYTE	W18
+	BYTE		N11     Cn1 
+	BYTE	W12
+	BYTE	PEND
+// 021   ----------------------------------------
+TheResistance_FINAL_5_021:
+	BYTE		N11     Cn1   v127
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N17     En1 
+	BYTE	W18
+	BYTE		N17   
+	BYTE	W18
+	BYTE		N11     Cn1 
+	BYTE	W12
+	BYTE	PEND
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_021
+// 023   ----------------------------------------
+TheResistance_FINAL_5_023:
+	BYTE		N11     Cn1   v127
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N17     En1 
+	BYTE	W18
+	BYTE		N11   
+	BYTE	W06
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N05     Bn1 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE	PEND
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_020
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_021
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_021
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_023
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_020
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_021
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_021
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_023
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_020
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_021
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_021
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_023
+// 036   ----------------------------------------
+TheResistance_FINAL_5_036:
+	BYTE		N11     En1   v127
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		        Cn1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		        Cn1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		        Cn1 
+	BYTE	W12
+	BYTE		        En1 
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		        Cn1 
+	BYTE	W12
+	BYTE	PEND
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_036
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_036
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	TheResistance_FINAL_5_011
+	BYTE	GoTo
+	 POIN2	TheResistance_FINAL_5_B1
+TheResistance_FINAL_5_B2:
+// 040   ----------------------------------------
+	BYTE	W24
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+TheResistance_FINAL:
+	BYTE	5	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	TheResistance_FINAL_pri	// Priority
+	BYTE	TheResistance_FINAL_rev	// Reverb.
+
+	POIN2	TheResistance_FINAL_grp
+
+	POIN2	TheResistance_FINAL_1
+	POIN2	TheResistance_FINAL_2
+	POIN2	TheResistance_FINAL_3
+	POIN2	TheResistance_FINAL_4
+	POIN2	TheResistance_FINAL_5
+
+	

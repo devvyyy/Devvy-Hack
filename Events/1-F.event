@@ -255,8 +255,8 @@ UNIT ArmorSoul GoldKnight 0x1 Level(5, Enemy, 1)     [20,19] 0b 0x0 0x0 0x0 [Ste
 	
 HolyFuckWhy1:
 UNIT InfantrySoul Soldier 0x1 Level(12, Enemy, 1)     [20,19] 0 0 1 REDA21R16 [IronLance] AttackInRangeAI
-UNIT MagSoul Thaumaturge 0x1 Level(11, Enemy, 1)     [20,19] 0 0 1 REDA22R18 [Fire,] StallOneTurnAI
-UNIT MagSoul Druid 0x1 Level(3, Enemy, 1)     [20,19] DropItem 0 1 REDA21R20 [Flux, Elixir] BossAI
+UNIT MagSoul Thaumaturge 0x1 Level(11, Enemy, 1)     [20,19] 0 0 1 REDA22R18 [Thunder,] StallOneTurnAI
+UNIT MagSoul Druid 0x1 Level(3, Enemy, 1)     [20,19] DropItem 0 1 REDA21R20 [DarkTome2, Elixir] BossAI
 UNIT InfantrySoul Mercenary 0x1 Level(12, Enemy, 1)     [20,19] 0 0 1 REDA19R19 [SteelSword,] AttackInRangeAI
 	UNIT
 
@@ -828,6 +828,7 @@ EndingScene:
 EVBIT_MODIFY 4
 UnsetFlag(0x12C) //ring disclaimer/staniel stuff
 
+UnsetFlag(0xA2) //1-1x gaiden chapter flag
 UnsetFlag(0x7B)
 UnsetFlag(0x91)
 UnsetFlag(0x92)

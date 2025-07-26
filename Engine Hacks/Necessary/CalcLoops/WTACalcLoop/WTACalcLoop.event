@@ -9,10 +9,13 @@ WTACalcFunctions:
 POIN Poise //sets wta but neutralizes it vs setting it to positive lol
 POIN Sanctuary //put this first since it sets WT dmg/hit
 POIN FrostbiteWT //ALSO SETS WT DMG/HIT
-POIN TriangleAdept
+POIN TriangleAdept //multiplies here
 POIN Ravenous
 POIN LunaticWTA
 POIN PykeUltWTA
+
+POIN SylTomeEffect //last one, deletes all effects (sorry penny)
+
 #ifdef REAVER_SPLIT
 	POIN DoubleWeaponTriangle
 #endif // REAVER_SPLIT

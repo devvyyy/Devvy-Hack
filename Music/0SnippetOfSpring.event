@@ -1,0 +1,779 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	SnippetOfSpring_FINAL_grp  voicegroup000
+	#define	SnippetOfSpring_FINAL_pri  0
+	#define	SnippetOfSpring_FINAL_rev  0x94
+	#define	SnippetOfSpring_FINAL_mvl  30
+	#define	SnippetOfSpring_FINAL_key  0
+	#define	SnippetOfSpring_FINAL_tbs  1
+	#define	SnippetOfSpring_FINAL_exg  0
+	#define	SnippetOfSpring_FINAL_cmp  1
+
+	// .rodata
+	//	SnippetOfSpring_FINAL
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.2) ****************//
+
+SnippetOfSpring_FINAL_1:
+	BYTE	KEYSH   SnippetOfSpring_FINAL_key+0
+SnippetOfSpring_FINAL_1_B1:
+// 000   ----------------------------------------
+	BYTE	TEMPO   100*SnippetOfSpring_FINAL_tbs/2
+	BYTE		VOICE   52
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*SnippetOfSpring_FINAL_mvl/mxv
+	BYTE		PAN     c_v+16
+	BYTE	W24
+	BYTE		TIE     An2   v056
+	BYTE		N96     Dn3 
+	BYTE		N96     Fs3 
+	BYTE	W72
+// 001   ----------------------------------------
+SnippetOfSpring_FINAL_1_001:
+	BYTE	W24
+	BYTE		N96     Cs3   v056
+	BYTE		N96     En3 
+	BYTE	W72
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE	W24
+	BYTE		EOT     An2 
+	BYTE		N96     Gn2 
+	BYTE		N96     Bn2 
+	BYTE		N96     Dn3 
+	BYTE		N96     Fs3 
+	BYTE	W72
+// 003   ----------------------------------------
+SnippetOfSpring_FINAL_1_003:
+	BYTE	W24
+	BYTE		N96     An2   v056
+	BYTE		N96     Cs3 
+	BYTE		N96     En3 
+	BYTE		N96     Gn3 
+	BYTE	W72
+	BYTE	PEND
+// 004   ----------------------------------------
+SnippetOfSpring_FINAL_1_004:
+	BYTE	W24
+	BYTE		N96     Bn2   v056
+	BYTE		N96     Dn3 
+	BYTE		TIE     Fs3 
+	BYTE	W72
+	BYTE	PEND
+// 005   ----------------------------------------
+SnippetOfSpring_FINAL_1_005:
+	BYTE	W24
+	BYTE		N96     An2   v056
+	BYTE		N96     Cs3 
+	BYTE		TIE     Dn3 
+	BYTE	W72
+	BYTE	PEND
+// 006   ----------------------------------------
+	BYTE	W24
+	BYTE		EOT     Fs3 
+	BYTE		N96     Bn2 
+	BYTE		TIE     En3 
+	BYTE		N96     Gs3 
+	BYTE	W72
+// 007   ----------------------------------------
+	BYTE	W24
+	BYTE		EOT     Dn3 
+	BYTE		N90     An2 
+	BYTE		N90     Cs3 
+	BYTE		N48     An3 
+	BYTE	W48
+	BYTE		        Gn3 
+	BYTE	W24
+// 008   ----------------------------------------
+	BYTE	W18
+	BYTE		EOT     En3 
+	BYTE	W06
+	BYTE		TIE     An2 
+	BYTE		N96     Dn3 
+	BYTE		N96     Fs3 
+	BYTE	W72
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_1_001
+// 010   ----------------------------------------
+	BYTE	W24
+	BYTE		EOT     An2 
+	BYTE		N96     Gn2   v056
+	BYTE		N96     Bn2 
+	BYTE		N96     Dn3 
+	BYTE		N96     Fs3 
+	BYTE	W72
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_1_003
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_1_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_1_005
+// 014   ----------------------------------------
+	BYTE	W24
+	BYTE		EOT     Fs3 
+	BYTE		N96     Bn2   v056
+	BYTE		TIE     En3 
+	BYTE		N96     Gs3 
+	BYTE	W72
+// 015   ----------------------------------------
+	BYTE	W24
+	BYTE		EOT     Dn3 
+	BYTE		N66     An2 
+	BYTE		N66     Cs3 
+	BYTE		N66     An3 
+	BYTE	W66
+	BYTE		EOT     En3 
+	BYTE	W06
+	BYTE	GoTo
+	 POIN2	SnippetOfSpring_FINAL_1_B1
+SnippetOfSpring_FINAL_1_B2:
+// 016   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.3) ****************//
+
+SnippetOfSpring_FINAL_2:
+	BYTE	KEYSH   SnippetOfSpring_FINAL_key+0
+SnippetOfSpring_FINAL_2_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   33
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*SnippetOfSpring_FINAL_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N05     An1   v127
+	BYTE	W06
+	BYTE		        Bn1 
+	BYTE	W06
+	BYTE		        Cs2 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		N17     Dn2 
+	BYTE	W18
+	BYTE		N17   
+	BYTE	W18
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		N20     Dn2 
+	BYTE	W24
+// 001   ----------------------------------------
+SnippetOfSpring_FINAL_2_001:
+	BYTE	W24
+	BYTE		N17     An1   v127
+	BYTE	W18
+	BYTE		N17   
+	BYTE	W18
+	BYTE		N11     En1 
+	BYTE	W12
+	BYTE		N20     An1 
+	BYTE	W24
+	BYTE	PEND
+// 002   ----------------------------------------
+SnippetOfSpring_FINAL_2_002:
+	BYTE	W24
+	BYTE		N17     Gn1   v127
+	BYTE	W18
+	BYTE		N17   
+	BYTE	W18
+	BYTE		N11     Dn1 
+	BYTE	W12
+	BYTE		N20     Gn1 
+	BYTE	W24
+	BYTE	PEND
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_2_001
+// 004   ----------------------------------------
+SnippetOfSpring_FINAL_2_004:
+	BYTE	W24
+	BYTE		N17     Bn1   v127
+	BYTE	W18
+	BYTE		N17   
+	BYTE	W18
+	BYTE		N11     Fs1 
+	BYTE	W12
+	BYTE		N20     Bn1 
+	BYTE	W24
+	BYTE	PEND
+// 005   ----------------------------------------
+SnippetOfSpring_FINAL_2_005:
+	BYTE	W24
+	BYTE		N17     Dn2   v127
+	BYTE	W18
+	BYTE		N17   
+	BYTE	W18
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		N20     Dn2 
+	BYTE	W24
+	BYTE	PEND
+// 006   ----------------------------------------
+SnippetOfSpring_FINAL_2_006:
+	BYTE	W24
+	BYTE		N17     En2   v127
+	BYTE	W18
+	BYTE		N17   
+	BYTE	W18
+	BYTE		N11     Bn1 
+	BYTE	W12
+	BYTE		N20     En2 
+	BYTE	W24
+	BYTE	PEND
+// 007   ----------------------------------------
+	BYTE	W24
+	BYTE		N17   
+	BYTE	W18
+	BYTE		N17   
+	BYTE	W18
+	BYTE		N11     Cs2 
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W12
+// 008   ----------------------------------------
+	BYTE		        Cs2 
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		N17     Dn2 
+	BYTE	W18
+	BYTE		N17   
+	BYTE	W18
+	BYTE		N11     An1 
+	BYTE	W12
+	BYTE		N20     Dn2 
+	BYTE	W24
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_2_001
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_2_002
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_2_001
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_2_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_2_005
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_2_006
+// 015   ----------------------------------------
+	BYTE	W24
+	BYTE		N17     En2   v127
+	BYTE	W18
+	BYTE		N17   
+	BYTE	W18
+	BYTE		N11     Cs2 
+	BYTE	W12
+	BYTE		N20     An1 
+	BYTE	W24
+	BYTE	GoTo
+	 POIN2	SnippetOfSpring_FINAL_2_B1
+SnippetOfSpring_FINAL_2_B2:
+// 016   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.4) ****************//
+
+SnippetOfSpring_FINAL_3:
+	BYTE	KEYSH   SnippetOfSpring_FINAL_key+0
+SnippetOfSpring_FINAL_3_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   1
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+22
+	BYTE		VOL     127*SnippetOfSpring_FINAL_mvl/mxv
+	BYTE	W24
+	BYTE		TIE     An2   v127
+	BYTE		N96     Dn3 
+	BYTE		N96     Fs3 
+	BYTE		TIE     An4 
+	BYTE	W72
+// 001   ----------------------------------------
+SnippetOfSpring_FINAL_3_001:
+	BYTE	W24
+	BYTE		N90     Cs3   v127
+	BYTE		N90     En3 
+	BYTE	W36
+	BYTE	PEND
+	BYTE		EOT     An4 
+	BYTE		N11     Dn5 
+	BYTE	W12
+	BYTE		N20     Cs5 
+	BYTE	W24
+// 002   ----------------------------------------
+	BYTE		N11     Dn5 
+	BYTE	W12
+	BYTE		N48     An4 
+	BYTE	W06
+	BYTE		EOT     An2 
+	BYTE	W06
+	BYTE		N90     Gn2 
+	BYTE		N90     Bn2 
+	BYTE		N90     Dn3 
+	BYTE		N90     Fs3 
+	BYTE	W36
+	BYTE		N11     Gn4 
+	BYTE	W12
+	BYTE		N20     Bn4 
+	BYTE	W24
+// 003   ----------------------------------------
+	BYTE		N11     Dn5 
+	BYTE	W12
+	BYTE		N60     Cs5 
+	BYTE	W12
+	BYTE		N90     An2 
+	BYTE		N90     Cs3 
+	BYTE		N90     En3 
+	BYTE		N90     Gn3 
+	BYTE	W48
+	BYTE		N42     Bn4 
+	BYTE	W24
+// 004   ----------------------------------------
+SnippetOfSpring_FINAL_3_004:
+	BYTE	W24
+	BYTE		N96     Bn2   v127
+	BYTE		TIE     Dn3 
+	BYTE		TIE     Fs3 
+	BYTE		TIE     An4 
+	BYTE	W72
+	BYTE	PEND
+// 005   ----------------------------------------
+SnippetOfSpring_FINAL_3_005:
+	BYTE	W24
+	BYTE		N90     An2   v127
+	BYTE		N90     Cs3 
+	BYTE	W36
+	BYTE	PEND
+	BYTE		EOT     An4 
+	BYTE		N12     Dn5 
+	BYTE	W12
+	BYTE		N24     Cs5 
+	BYTE	W24
+// 006   ----------------------------------------
+SnippetOfSpring_FINAL_3_006:
+	BYTE		N12     Dn5   v127
+	BYTE	W12
+	BYTE		N48     En5 
+	BYTE	W06
+	BYTE	PEND
+	BYTE		EOT     Fs3 
+	BYTE	W06
+	BYTE		N90     Bn2 
+	BYTE		TIE     En3 
+	BYTE		N90     Gs3 
+	BYTE	W36
+	BYTE		N12     Dn5 
+	BYTE	W12
+	BYTE		N24     Bn4 
+	BYTE	W24
+// 007   ----------------------------------------
+	BYTE		N12     Dn5 
+	BYTE	W12
+	BYTE		N60     Cs5 
+	BYTE	W06
+	BYTE		EOT     Dn3 
+	BYTE	W06
+	BYTE		N90     An2 
+	BYTE		N90     Cs3 
+	BYTE		N48     An3 
+	BYTE	W48
+	BYTE		        Gn3 
+	BYTE		N48     Bn4 
+	BYTE	W24
+// 008   ----------------------------------------
+	BYTE	W18
+	BYTE		EOT     En3 
+	BYTE	W06
+	BYTE		TIE     An2 
+	BYTE		N96     Dn3 
+	BYTE		N96     Fs3 
+	BYTE		TIE     An4 
+	BYTE	W72
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_3_001
+	BYTE		EOT     An4 
+	BYTE		N12     Dn5   v127
+	BYTE	W12
+	BYTE		N24     Cs5 
+	BYTE	W24
+// 010   ----------------------------------------
+	BYTE		N12     Dn5 
+	BYTE	W12
+	BYTE		N48     An4 
+	BYTE	W06
+	BYTE		EOT     An2 
+	BYTE	W06
+	BYTE		N90     Gn2 
+	BYTE		N90     Bn2 
+	BYTE		N90     Dn3 
+	BYTE		N90     Fs3 
+	BYTE	W36
+	BYTE		N12     Gn4 
+	BYTE	W12
+	BYTE		N24     Bn4 
+	BYTE	W24
+// 011   ----------------------------------------
+	BYTE		N12     Dn5 
+	BYTE	W12
+	BYTE		N60     Cs5 
+	BYTE	W12
+	BYTE		N90     An2 
+	BYTE		N90     Cs3 
+	BYTE		N90     En3 
+	BYTE		N90     Gn3 
+	BYTE	W48
+	BYTE		N48     Bn4 
+	BYTE	W24
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_3_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_3_005
+	BYTE		EOT     An4 
+	BYTE		N12     Dn5   v127
+	BYTE	W12
+	BYTE		N24     Cs5 
+	BYTE	W24
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_3_006
+	BYTE		EOT     Fs3 
+	BYTE	W06
+	BYTE		N90     Bn2   v127
+	BYTE		TIE     En3 
+	BYTE		N90     Gs3 
+	BYTE	W36
+	BYTE		N12     Dn5 
+	BYTE	W12
+	BYTE		N24     Bn4 
+	BYTE	W24
+// 015   ----------------------------------------
+	BYTE		N12     Dn5 
+	BYTE	W12
+	BYTE		N78     Cs5 
+	BYTE	W06
+	BYTE		EOT     Dn3 
+	BYTE	W06
+	BYTE		N66     An2 
+	BYTE		N66     Cs3 
+	BYTE		N66     An3 
+	BYTE	W66
+	BYTE		EOT     En3 
+	BYTE	W06
+	BYTE	GoTo
+	 POIN2	SnippetOfSpring_FINAL_3_B1
+SnippetOfSpring_FINAL_3_B2:
+// 016   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.5) ****************//
+
+SnippetOfSpring_FINAL_4:
+	BYTE	KEYSH   SnippetOfSpring_FINAL_key+0
+SnippetOfSpring_FINAL_4_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   48
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-14
+	BYTE		VOL     127*SnippetOfSpring_FINAL_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W24
+	BYTE		N36     Dn3   v127
+	BYTE	W36
+	BYTE		N06     Fs3 
+	BYTE	W06
+	BYTE		        Dn3 
+	BYTE	W06
+	BYTE		N16     An3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W08
+// 009   ----------------------------------------
+	BYTE	W08
+	BYTE		        Fs3 
+	BYTE	W16
+	BYTE		N32     En3 
+	BYTE	W36
+	BYTE		N11     Cs3 
+	BYTE	W12
+	BYTE		N16     En3 
+	BYTE	W16
+	BYTE		        Fs3 
+	BYTE	W08
+// 010   ----------------------------------------
+	BYTE	W08
+	BYTE		        Gn3 
+	BYTE	W16
+	BYTE		N36     Fs3 
+	BYTE	W36
+	BYTE		N06     En3 
+	BYTE	W06
+	BYTE		        Fs3 
+	BYTE	W06
+	BYTE		N16     Dn3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE	W08
+// 011   ----------------------------------------
+	BYTE	W08
+	BYTE		        Fs3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+	BYTE		        Fs3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+	BYTE		N48     En3 
+	BYTE	W24
+// 012   ----------------------------------------
+	BYTE	W24
+	BYTE		N36     Fs3 
+	BYTE	W36
+	BYTE		N12     Bn3 
+	BYTE	W12
+	BYTE		N16   
+	BYTE	W16
+	BYTE		        Cs4 
+	BYTE	W08
+// 013   ----------------------------------------
+	BYTE	W08
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		        Cs4 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        Cs4 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W08
+// 014   ----------------------------------------
+	BYTE	W08
+	BYTE		        Fs3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE	W16
+	BYTE		        Gs3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W08
+// 015   ----------------------------------------
+	BYTE	W08
+	BYTE		        Gs3 
+	BYTE	W16
+	BYTE		N66     An3 
+	BYTE	W72
+	BYTE	GoTo
+	 POIN2	SnippetOfSpring_FINAL_4_B1
+SnippetOfSpring_FINAL_4_B2:
+// 016   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.6) ****************//
+
+SnippetOfSpring_FINAL_5:
+	BYTE	KEYSH   SnippetOfSpring_FINAL_key+0
+SnippetOfSpring_FINAL_5_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   122
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*SnippetOfSpring_FINAL_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N05     Dn2   v127
+	BYTE	W06
+	BYTE		        Cn2 
+	BYTE	W06
+	BYTE		        Bn1 
+	BYTE	W06
+	BYTE		        An1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+// 001   ----------------------------------------
+SnippetOfSpring_FINAL_5_001:
+	BYTE		N05     As1   v127
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_5_001
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_5_001
+// 004   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_5_001
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_5_001
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_5_001
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_5_001
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_5_001
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_5_001
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_5_001
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_5_001
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_5_001
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_5_001
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SnippetOfSpring_FINAL_5_001
+// 015   ----------------------------------------
+	BYTE		N05     As1   v127
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N20   
+	BYTE	W24
+	BYTE	GoTo
+	 POIN2	SnippetOfSpring_FINAL_5_B1
+SnippetOfSpring_FINAL_5_B2:
+// 016   ----------------------------------------
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+SnippetOfSpring_FINAL:
+	BYTE	5	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	SnippetOfSpring_FINAL_pri	// Priority
+	BYTE	SnippetOfSpring_FINAL_rev	// Reverb.
+
+	POIN2	SnippetOfSpring_FINAL_grp
+
+	POIN2	SnippetOfSpring_FINAL_1
+	POIN2	SnippetOfSpring_FINAL_2
+	POIN2	SnippetOfSpring_FINAL_3
+	POIN2	SnippetOfSpring_FINAL_4
+	POIN2	SnippetOfSpring_FINAL_5
+
+	

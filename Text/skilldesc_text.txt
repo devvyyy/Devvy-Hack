@@ -1598,7 +1598,8 @@ at start of combat.[N]
 # implemented
 Steel Sigil[N]
 (Luck +5 to Wreyvians)[N]
-- Enables Iron Bash (Adds Def to damage).[X]
+- Enables Iron Bash.[N]
+(Adds Def x 3 to damage.)[X]
 
 ## SD_QuickBurn
 Draco Fang[N]
@@ -1666,6 +1667,20 @@ Barbed Mail[N]
 - Counters physical damage taken[N]
 at 1 range (can't kill).[X]
 
+## SD_StaffSavant
+# part 3
+Savant Robes[N]
+(Res +4)[N]
+- Grants Staff range +1.[X]
+
+## SD_AuroraShard
+# part 3; dropped by warden
+Aurora Shard[N]
+(Str/Eth +8)[N]
+- Ice/Wind magic deals +10 damage.[N]
+- Foe's Ice/Wind magic deals[N]
+-10 damage.[X]
+
 ## SD_HeavyStrikes
 # implemented, 1-3 strogy?
 Inner Hearth[N]
@@ -1673,12 +1688,32 @@ Inner Hearth[N]
 - Grants bonus Hit/Avoid/Crit/Crit Avoid[N]
 equal to weapon Wt.[X]
 
+## SD_HoarfrostCrown
+Crown of Hoarfrost[N]
+- Deals bonus damage = difference[N]
+between Res stats (min 0; max 30;[N]
+if foe is under the effects of[N]
+Pure Water/Barrier, bonus damage = 30.)[X]
+
+## SD_HeirtoAeteria
+# Imperius, Lucent
+Heir to Aeteria[N]
+- (Move +1, Pierce/Luck +10)[N]
+- When Overdrive is active, deals[N]
+10 bonus magical damage.[X]
+
 ## SD_Megalovania
 # Brave Bird??
 Tenacity[N]
 - If Biscotti's current HP < foe's[N]
 current HP, grants Atk/AS +10 and[N]
 strikes x2 consecutively.[X]
+
+## SD_Bookworm
+Bookworm[N]
+- Unit deal bonus damage and reduces damage[N]
+taken = 10, x number of lines in foe's[N]
+Personal Skill.[X]
 
 ## SD_Forlorn
 Forlorn: If unit is not adjacent to[N]
@@ -1774,9 +1809,18 @@ restore HP = 25% of damage dealt.[X]
 
 ## SD_LadyVida
 Sweeping Edge[N]
-- Vida deals bonus damage = 20% of Spd,
-- idk man[X]
+- Vida deals bonus damage = 20% of Spd,[N]
+reduces damage taken from foe's first[N]
+attack by 70%, and her next attack deals[N]
+bonus damage = damage reduced.[X]
 
+## SD_Warden
+# after all post-combat effects trigger,[N]
+Calamity[N]
+- If foe initiates combat, after combat,[N]
+if the Warden's HP is 50% or less, deals[N]
+99 true damage to all foes (can't kill)[N]
+and ends Player Phase immediately.[X]
 
 ## SD_Antonius
 Reaper's Toll[N]
@@ -1928,11 +1972,6 @@ Wreyvian allies within 3 spaces.[N]
 - Grants Atk/Prt +1 to all allies,[N]
 increased to +3 if Wreyvian.[X]
 
-## SD_Pass
-Slipstream: Noel has less enemy priority,[N]
-can move through occupied spaces, and[N]
-strikes x2 consecutively at 50% Str.[X]
-
 ## SD_CantoPlus
 Canto[N]
 - Unit can use remaining movement[N]
@@ -2008,8 +2047,8 @@ Cost: 5 Durability.[X]
 Lightslinger[N]
 - Activate to strike x2 consecutively.[N]
 (x2 Durability used; can follow-up).[N]
-- Bows have minimum 1 range.[N]
-- Can Canto 3 spaces after combat.[X]
+- Bows have minimum 1 range and have[N]
+Off-Hand (inventory 2nd slot) effects.[X]
 
 ## SD_Astra2
 Lightslinger[N]
@@ -2279,10 +2318,6 @@ to adjacent allies for 1 turn.[X]
 Bow Range +1: Maximum range[N]
 of equipped bows is increased.[X]
 
-## SD_StaffSavant
-Staff Savant: Maximum range[N]
-of staves is increased by 1.[X]
-
 ## SD_LiveToServe
 Live to Serve: Restores HP to unit[N]
 = HP restored with a staff.[X]
@@ -2450,6 +2485,44 @@ x2 consecutively, deals bonus damage[N]
 and reduces damage taken = 25% of foe's[N]
 max HP, and follow-up and foe can't.[X]
 
+## SD_TrueChivalry
+# part 3 boss skills
+True Chivalry[N]
+- For Eeva and all unpromoted allies on the[N]
+map, if foe's HP is full, strikes x2[N]
+consecutively and deals bonus damage = 25%[N]
+of foe's max HP.[X]
+
+## SD_TruePragmatic
+Pragmatic[N]
+- If either side's HP isn't full,[N]
+grants Alvard Atk/AS/Prt +5 and follow-up[N]
+and foe can't, and if initiating, also[N]
+grants Crit +100.[X]
+
+## SD_TrueBeacon
+Beacon[N]
+- Vilhelm's Light magic has unique properties:[N]
+Atk/AS -5, Range +5, deals bonus damage =[N]
+25% of foe's current HP at start of combat,[N]
+and if foe initiates, Prt/Rsl +10.[X]
+
+## SD_Pass
+# adventurer
+Slipstream[N]
+- Weylan has less enemy priority.[N]
+- Strikes x2 consecutively at 50% Str.[N]
+- Reduces damage taken = difference[N]
+between Spd stats (min; 0).[X]
+
+## SD_Dazzle
+# rogue
+Overwhelm[N]
+- If Vera Vale's Str > foe's Str, follow-up[N]
+and foe can't follow-up or counterattack.[N]
+(If foe uses Eth, foe's Str = 0.)[N]
+- Inflicts Avoid -20 on adjacent foes.[X]
+
 ## SD_Pragmatic
 Pragmatic: When foe is not at full HP,[N]
 attack +3 and def/res+1.[X]
@@ -2553,13 +2626,6 @@ allies' max HP to allies within[N]
 ## SD_Fury
 Fury: +2 Atk/Spd/Def/Res. Unit[N]
 takes 6 damage after combat.[X]
-
-## SD_Dazzle
-Overwhelm[N]
-- If Noel's Str > foe's Str, follow-up[N]
-and foe can't follow-up or counterattack.[N]
-(If foe uses Eth, foe's Str = 0.)[N]
-- Inflicts Avoid -20 on adjacent foes.[X]
 
 ## SD_TriAdept
 Triangle Adept: Doubles weapon[N]
@@ -2873,13 +2939,6 @@ Coeur Allum[0xE9][N]
 multiplies Eth/Skill/Spd by 1.5x.[N]
 - Grants Atk +5 to allies within[N]
 5 spaces. Negates Eff: [FlierIcon].[X]
-
-## SD_HoarfrostCrown
-Crown of Hoarfrost[N]
-- Deals bonus damage = difference[N]
-between Res stats (min 0; max 30;[N]
-if foe is under the effects of[N]
-Pure Water/Barrier, bonus damage = 30.)[X]
 
 ## SD_Foresight
 Foresight[X]

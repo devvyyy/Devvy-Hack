@@ -13,8 +13,39 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-
+//TurnEventEnemy(0,WardenAuraFarm,3)
 	END_MAIN
+
+
+WardenAuraFarm:
+
+CAM1 [4,2]
+CamOn
+LOAD1 0x1 WardenTheGamerBattle
+CamOff
+STAL 50
+
+CameraCursor(Affogato)
+Text(Part3Chapter5WardenJumpscare)
+STAL 5
+
+CameraCursor(0x73)
+
+TEXTSTART; TEXTSHOW Part3Chapter5WardenJumpscare2
+
+TEXTEND
+
+MOVE 0xD 0x73 [0,16]
+ENUN
+DISA_IF 0x73
+
+STAL 5
+MUSCSLOW 0x7FFF
+
+TEXTCONT; TEXTEND; REMA
+
+NoFade
+ENDA
 
 ALIGN 32
 CharacterBasedEvents:
@@ -22,6 +53,7 @@ CharacterBasedEvents:
 	END_MAIN
 
 MiscBasedEvents:
+AREA 0x8 WardenAuraFarm [0,0] [22,21]
 	CauseGameOverIfLordDies
 	END_MAIN
 
@@ -60,57 +92,96 @@ Unit(41, 11)
 Unit(42, 11)
 	UNIT
 
-EnemyUnits:
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [12,15] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy ACav 0x1 Level(10, Enemy, 1)     [27,15] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [9,11] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [31,8] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [13,4] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy SCav 0x1 Level(10, Enemy, 1)     [23,11] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
-UNIT BadGuy SCav 0x1 Level(10, Enemy, 1)     [23,12] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
-UNIT BadGuy Mage 0x1 Level(10, Enemy, 1)     [5,9] 0b 0x0 0x0 0x0 [Fire] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [24,6] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [15,10] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy LCav 0x1 Level(10, Enemy, 1)     [26,9] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [16,12] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [12,6] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Mage 0x1 Level(10, Enemy, 1)     [8,17] 0b 0x0 0x0 0x0 [Fire] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [33,7] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [37,7] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy PegRider 0x1 Level(10, Enemy, 1)     [18,4] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
-UNIT BadGuy SCav 0x1 Level(10, Enemy, 1)     [19,12] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [7,10] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [35,7] 0b 0x0 0x0 0x0 [DarkTome1] RangeAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [2,3] 0b 0x0 0x0 0x0 [DarkTome1] RangeAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [35,8] 0b 0x0 0x0 0x0 [DarkTome1] RangeAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [11,9] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Mage 0x1 Level(10, Enemy, 1)     [14,13] 0b 0x0 0x0 0x0 [Fire] TwoActionAI
-UNIT BadGuy LCav 0x1 Level(10, Enemy, 1)     [10,7] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [2,7] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [27,5] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [20,11] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [4,5] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [10,16] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [5,13] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [24,13] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [14,9] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy PegRider 0x1 Level(10, Enemy, 1)     [11,19] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [11,13] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [29,7] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [7,15] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [3,11] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [27,11] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [4,16] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [13,11] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [7,8] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [6,2] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [5,6] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy Shaman 0x1 Level(10, Enemy, 1)     [31,8] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
-UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [17,10] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+EnemyUnits: //InfantrySoul, CavSoul, FlierSoul, ArmorSoul, MagSoul, PromoSoul, StealSoul
+UNIT MagSoul Shaman  0x1 Level(13, Enemy, 1) [12,15] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
+UNIT CavSoul APal 0x1 Level(13, Enemy, 1) [27,15] 0b 0x0 0x0 0x0 [SteelAxe] RangeAI
+UNIT InfantrySoul Soldier  0x1 Level(13, Enemy, 1) [9,11]  0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT MagSoul Shaman 0x1 Level(13, Enemy, 1) [31,8]  0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
+UNIT MagSoul Druid  0x1 Level(5,  Enemy, 1) [13,4]  0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
+UNIT CavSoul SPal 0x1 Level(13, Enemy, 1) [23,11] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+UNIT CavSoul LPal 0x1 Level(13, Enemy, 1) [23,12] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
+UNIT MagSoul Mage 0x1 Level(13, Enemy, 1) [5,9] 0b 0x0 0x0 0x0 [Fire] TwoActionAI
+UNIT InfantrySoul Soldier  0x1 Level(13, Enemy, 1) [24,6]  0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT MagSoul Mage 0x1 Level(13, Enemy, 1) [15,10] DropItem 0x0 0x0 0x0 [Iceberg] TwoActionAI
+UNIT CavSoul LPal 0x1 Level(13, Enemy, 1) [26,9]  0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT MagSoul Shaman 0x1 Level(13, Enemy, 1) [16,12] 0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
+UNIT PromoSoul Halberdier 0x1 Level(5,  Enemy, 1) [12,6]  0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT MagSoul Mage 0x1 Level(13, Enemy, 1) [8,17]  0b 0x0 0x0 0x0 [Iceberg] TwoActionAI
+UNIT StealSoul Rogue  0x1 Level(13, Enemy, 1) [33,7]  0b 0x0 0x0 0x0 [KillingEdge, 0x5E] TwoActionAI
+UNIT InfantrySoul Merc 0x1 Level(13, Enemy, 1) [37,7]  0b 0x0 0x0 0x0 [SteelSword] RangeAI
+UNIT FlierSoul WyvernKnight 0x1 Level(13, Enemy, 1) [18,4]  0b 0x0 0x0 0x0 [SteelAxe] StallOneTurnAI
+UNIT FlierSoul Falcoknight 0x1 Level(13, Enemy, 1) [20,21] DropItem 0x0 0x0 0x0 [Spear] StallOneTurnAI
+UNIT CavSoul SPal 0x1 Level(13, Enemy, 1) [19,12] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+UNIT FlierSoul WyvernRider 0x1 Level(13, Enemy, 1)  [39,18] 0b 0x0 0x0 0x0 [SteelAxe] StallOneTurnAI
+UNIT FlierSoul PegRider 0x1 Level(13, Enemy, 1) [38,20] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
+UNIT ArmorSoul General  0x1 Level(5,  Enemy, 1) [35,7]  DropItem 0x0 0x0 0x0 [Tomahawk,LightBrand] BossAI
+UNIT PromoSoul Halberdier 0x1 Level(5,  Enemy, 1) [2,3] 0b 0x0 0x0 0x0 [Spear,KillerLance] BossAI
+UNIT MagSoul Druid  0x1 Level(13, Enemy, 1) [35,8]  0b 0x0 0x0 0x0 [DarkTome3] RangeAI
+UNIT InfantrySoul Soldier  0x1 Level(13, Enemy, 1) [11,9]  0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT MagSoul Mage 0x1 Level(13, Enemy, 1) [14,13] 0b 0x0 0x0 0x0 [Wind] TwoActionAI
+UNIT CavSoul LPal 0x1 Level(13, Enemy, 1) [10,7]  0b 0x0 0x0 0x0 [ShortSpear] RangeAI
+UNIT InfantrySoul Soldier  0x1 Level(13, Enemy, 1) [2,7] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT MagSoul Sage 0x1 Level(13, Enemy, 1) [27,5]  0b 0x0 0x0 0x0 [Iceberg] TwoActionAI
+UNIT InfantrySoul Soldier  0x1 Level(13, Enemy, 1) [20,11] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT CavSoul APal 0x1 Level(13, Enemy, 1) [4,5] 0b 0x0 0x0 0x0 [SteelAxe] RangeAI
+UNIT FlierSoul WyvernRider 0x1 Level(13, Enemy, 1)  [10,16] 0b 0x0 0x0 0x0 [SteelAxe] RangeAI
+UNIT MagSoul Shaman 0x1 Level(13, Enemy, 1) [5,13]  0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
+UNIT InfantrySoul Soldier  0x1 Level(13, Enemy, 1) [24,13] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
+UNIT MagSoul Monk 0x1 Level(13, Enemy, 1) [14,9]  0b 0x0 0x0 0x0 [LightTome2] TwoActionAI
+UNIT FlierSoul Falcoknight 0x1 Level(13, Enemy, 1) [11,19] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
+UNIT MagSoul Mage 0x1 Level(13, Enemy, 1) [11,13] 0b 0x0 0x0 0x0 [Wind] TwoActionAI
+UNIT InfantrySoul Soldier  0x1 Level(13, Enemy, 1) [29,7]  0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT StealSoul Rogue 0x1 Level(13, Enemy, 1) [7,15]  0b 0x0 0x0 0x0 [SteelSword, 0x5D] RangeAI
+UNIT CavSoul APal 0x1 Level(13, Enemy, 1) [3,11]  0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
+UNIT MagSoul Occultist  0x1 Level(13, Enemy, 1) [27,11] 0b 0x0 0x0 0x0 [DarkTome2] RangeAI
+UNIT InfantrySoul Myrmidon 0x1 Level(13, Enemy, 1) [4,16]  0b 0x0 0x0 0x0 [KillingEdge] TwoActionAI
+UNIT InfantrySoul Archer 0x1 Level(13, Enemy, 1) [13,11] 0b 0x0 0x0 0x0 [SteelBow] RangeAI
+UNIT InfantrySoul Soldier  0x1 Level(13, Enemy, 1) [7,8] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT CavSoul LPal 0x1 Level(13, Enemy, 1) [6,2] 0b 0x0 0x0 0x0 [IronLance] RangeAI
+UNIT InfantrySoul Merc 0x1 Level(13, Enemy, 1) [5,6] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+UNIT MagSoul Shaman 0x1 Level(13, Enemy, 1) [31,8]  0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
+UNIT InfantrySoul Soldier  0x1 Level(13, Enemy, 1) [17,10] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+
+
+UNIT 0x73 Adventurer 0x1 Level(13, Enemy, 1) [39,6] 0b 0x0 0x0 0x0 [0x86,Elixir] ChargeAI
 
 	UNIT
 
+ChiffonTheGamer: //warps in
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0) [37,8] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+	UNIT
+
+WardenTheGamerBattle:
+UNIT 0x72 General 0x1 Level(20, Enemy, 0) [4,0] 0 0 1 REDA4R3 [WindSword, 0x63] StallOneTurnAI
+	UNIT
+
+WardenTheGamer:
+UNIT 0x72 General 0x1 Level(20, Enemy, 0) [5,8] 0b 0x0 0x0 0x0 [WindSword, 0x63] StallOneTurnAI
+	UNIT
+
+CutsceneUnitsOpening:
+UNIT Affogato 0x3 0x1 Level(1, Ally, 0) [44,10] 0 0 1 REDA40R9 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Ulrich LPal 0x1 Level(1, Ally, 0) [44,11] 0 0 1 REDA40R10 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0) [44,12] 0 0 1 REDA40R11 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0) [44,12] 0 0 1 REDA40R12 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT
+
+CutsceneUnits:
+UNIT 0x72 General 0x1 Level(20, Enemy, 0) [5,8] 0b 0x0 0x0 0x0 [WindSword, 0x63] StallOneTurnAI
+
+UNIT Affogato 0x3 0x1 Level(1, Ally, 0) [7,10] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Ulrich LPal 0x1 Level(1, Ally, 0) [8,9] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0) [9,10] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0) [8,11] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT
+
 Traps1:
+TelliusTorchOn(3,5,7)
+TelliusTorchOn(16,9,5)
+TelliusTorchOn(16,14,5)
+
+TelliusTorchOn(37,5,5)
+TelliusTorchOn(37,10,5)
 	ENDTRAP
 	ALIGN 4
 
@@ -119,15 +190,255 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-
-//Text(Part3Chapter5Opening1)
-
 	LOAD1 0x1 EnemyUnits
 	ENUN
-	GotoPrepScreen
+REVEAL Affogato
+RECLASS Affogato 0x3
+SetBackground(0xC)
+STAL 5
+BROWNBOXTEXT KeepOutskirts [8,8]
+STAL 15
+TextCont(Part3Chapter5Opening1, 0x27E)
+
+FAWI 60
+CLEAN
+STAL 30
+Music(0x296)
+SetBackground(0x23)
+
+STAL 5
+BROWNBOXTEXT CastleVale [8,8]
+STAL 15
+BROWNBOXTEXT TheBastion [8,8]
+STAL 15
+TextContCont(SylmeriaScene4, 0x323, 0x7FFF) //silence
+
+STAL 5
+
+FADI 60
+Music(0x1c8)
+SetBackground(0x3c)
+		STAL 5
+BROWNBOXTEXT KeepOutskirts [8,8]
+STAL 15
+Text(Part3Chapter5Opening2)
+
+ClearBackground
+
+CamOn
+LOAD2 0x1 CutsceneUnitsOpening
+
+STAL 5
+
+TEXTSTART
+TEXTSHOW Part3Chapter5Opening3
+TEXTEND
+
+FadeOutMusic
+TEXTCONT
+TEXTEND
+
+CameraCursor(0x73)
+CUSN 0x73
+MOVE 0xD 0x73 [39,7]
+ENUN
+Music(0x240)
+
+TEXTCONT
+TEXTEND
+
+CamOff
+CALL $591FD8 //prep screen
+	FADU 60
+
+VCWF 5 //fog until chiffon comes back
+
 	ENDA
 
 EndingScene:
+
+FADI 60
+Music(0x184)
+DoAllThree
+
+CAM1 [5,10]
+
+LOAD2 0x1 CutsceneUnits
+ENUN
+
+FADU 60
+
+STAL 5
+
+MOVE 0xA Affogato [0,16]
+ENUN
+REMU Affogato
+
+STAL 30
+TextCont(Part3Chapter5Ending1, 0x2f7)
+
+EARTHQUAKE_START 0x0
+SOUN 0x2f0
+FAWI 3
+STAL 100
+SOUN 0x2f1
+
+STAL 100
+
+EARTHQUAKE_END
+FAWU 5
+
+STAL 30
+
+Music(0xF3)
+Text(Part3Chapter5Ending2)
+
+STAL 15
+
+FAWI 30
+CLEAN
+MUSCSLOW 0x7FFF
+SetBackground(0x23)
+
+STAL 5
+BROWNBOXTEXT CastleVale [8,8]
+STAL 15
+BROWNBOXTEXT TheBastion [8,8]
+STAL 15
+//TextCont(SylmeriaScene5, 0x280) //awakening
+TextCont(SylmeriaScene5, 0x323)
+STAL 15
+SOUN 0xCA
+STAL 30
+
+LearnSkill(Chiffon,CrownID)
+SetFlag(0xA0) //ENUT 0xA0 is chiffon promoted portrait flag
+//Music(0x2EE) //combat destiny or awakening
+Music(0x280)
+Text(SylmeriaScene6)
+STAL 30
+SOUN 0x2ed
+FAWI 5
+
+CLEAN
+STAL 75
+
+STAL 75
+REVEAL Chiffon
+
+CamOff
+
+FAWU 20
+
+MUSI
+
+Text(Part3Chapter5Ending3) //the gang is like oh no its over!!
+
+SVAL 0x2 Chiffon
+
+//LOAD2 0x1 ChiffonTheGamer
+//ENUN
+//_WARP 0xFFFF 0xFFFD [5,10]
+//CALL 0x9EE4F8
+//_WARP 0x0 Chiffon [5,10]
+//LOAD2 0x1 ChiffonTheGamer
+//ENUN
+
+LOAD2 0x1 ChiffonTheGamer
+ENUN
+SVAL 0x2 Chiffon
+_WARP 0xFFFF 0xFFFD [12,13]
+CALL 0x9EE4F8
+_WARP 0x0 Chiffon [12,13]
+SET_ACTIVE Chiffon
+
+STAL 5
+//chiffon appears
+
+TEXTSTART; TEXTSHOW Part3Chapter5Ending4; TEXTEND
+
+MOVE 0xF Chiffon [6,10]
+ENUN
+
+CameraCursor(Chiffon)
+
+SOUN 0x2EC
+FAWI 30
+VCWF 0 //defog
+STAL 30
+FAWU 15
+
+STAL 5
+
+MUNO; TEXTCONT; TEXTEND; REMA
+
+//warden runs tf away
+MOVE 0x3 0x72 [4,0]
+ENUN
+REMU 0x72
+
+STAL 50
+
+MOVE 0x5 Chiffon [6,9]
+
+MUSCSLOW 0x747
+
+STAL 5
+
+//TextContCont(Part3Chapter5Ending5, 0x28D, 0x7FFF)
+
+TEXTSTART; TEXTSHOW Part3Chapter5Ending5; TEXTEND; Music(0x28D); TEXTCONT; TEXTEND; FadeOutMusic; TEXTCONT; TEXTEND; REMA
+
+STAL 5
+
+FADI 30
+
+STAL 15
+
+Music(0x1a2) //through steel and flame
+SetBackground(0xC)
+
+TEXTSTART
+TEXTSHOW Part3Chapter5Ending6
+TEXTEND
+
+Music(0x4d)
+
+TEXTCONT
+TEXTEND
+
+SOUN 0xDC
+FADI 20
+_0x2141 0x35 0x1 0x3C
+
+FadeOutMusic
+
+TEXTCONT
+TEXTEND
+REMA
+
+//TextCont(Part3Chapter5Ending6, 0x4D)
+
+SOUN 0xCF
+FADI 15
+STAL 20
+SOUN 0xCB
+REVEAL Affogato
+REVEAL Chiffon
+STAL 5
 	MNC2 0x1b
 	NoFade
 	ENDA
+
+
+ChiffonRealMoment:
+//she warps in afterwards
+
+SOUN 0x2ed
+FAWI 20
+
+
+FAWU 100
+
+NoFade
+ENDA

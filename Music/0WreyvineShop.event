@@ -1,0 +1,1660 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	WreyvineShop_grp  voicegroup000
+	#define	WreyvineShop_pri  0
+	#define	WreyvineShop_rev  0x94
+	#define	WreyvineShop_mvl  31
+	#define	WreyvineShop_key  0
+	#define	WreyvineShop_tbs  1
+	#define	WreyvineShop_exg  0
+	#define	WreyvineShop_cmp  1
+
+	// .rodata
+	//	WreyvineShop
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+WreyvineShop_1:
+	BYTE	KEYSH   WreyvineShop_key+0
+// 000   ----------------------------------------
+	BYTE	TEMPO   130*WreyvineShop_tbs/2
+	BYTE		VOICE   61
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     114*WreyvineShop_mvl/mxv
+	BYTE		PAN     c_v-32
+	BYTE	W96
+WreyvineShop_1_B1:
+// 001   ----------------------------------------
+	BYTE		N66     Cn4   v127
+	BYTE		N66     En4 
+	BYTE		N66     An4 
+	BYTE	W72
+	BYTE		N20     Gn3 
+	BYTE		N20     Bn3 
+	BYTE		N20     Dn4 
+	BYTE		N17     Fn4 
+	BYTE	W18
+	BYTE		N05     Gn4 
+	BYTE	W06
+// 002   ----------------------------------------
+	BYTE		N90     An3 
+	BYTE		N90     Cn4 
+	BYTE		N90     En4 
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE		N42     Gn3 
+	BYTE	W48
+	BYTE		        En4 
+	BYTE	W48
+// 004   ----------------------------------------
+	BYTE		        Bn3 
+	BYTE	W48
+	BYTE		        Gn3 
+	BYTE	W48
+// 005   ----------------------------------------
+	BYTE		N17     En3 
+	BYTE	W18
+	BYTE		N05     Dn3 
+	BYTE	W06
+	BYTE		N17     En3 
+	BYTE	W18
+	BYTE		N05     Fn3 
+	BYTE	W06
+	BYTE		N36     En3 
+	BYTE	W42
+	BYTE		N05     Dn3 
+	BYTE	W06
+// 006   ----------------------------------------
+	BYTE		N17     En3 
+	BYTE	W18
+	BYTE		N05     Dn3 
+	BYTE	W06
+	BYTE		N17     En3 
+	BYTE	W18
+	BYTE		N05     Fn3 
+	BYTE	W06
+	BYTE		N20     En3 
+	BYTE	W24
+	BYTE		N07     Fn3 
+	BYTE	W08
+	BYTE		        Gn3 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE	W08
+// 007   ----------------------------------------
+	BYTE		N42     Cn4 
+	BYTE	W48
+	BYTE		        An3 
+	BYTE	W48
+// 008   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE	W48
+	BYTE		        An2 
+	BYTE	W48
+// 009   ----------------------------------------
+	BYTE		N17     Dn3 
+	BYTE	W18
+	BYTE		N05     En3 
+	BYTE	W06
+	BYTE		N17     Fs3 
+	BYTE	W18
+	BYTE		N05     En3 
+	BYTE	W06
+	BYTE		N36     Fs3 
+	BYTE	W42
+	BYTE		N05     Dn3 
+	BYTE	W06
+// 010   ----------------------------------------
+	BYTE		N17     Gn3 
+	BYTE	W18
+	BYTE		N05     Dn3 
+	BYTE	W06
+	BYTE		N17     Gn3 
+	BYTE	W18
+	BYTE		N05     An3 
+	BYTE	W06
+	BYTE		N42     Bn3 
+	BYTE	W48
+// 011   ----------------------------------------
+	BYTE		N36     Cn4 
+	BYTE	W42
+	BYTE		N05     Gn3 
+	BYTE	W06
+	BYTE		N36     En3 
+	BYTE	W42
+	BYTE		N05     Cn4 
+	BYTE	W06
+// 012   ----------------------------------------
+	BYTE		N42     Bn3 
+	BYTE	W48
+	BYTE		        An3 
+	BYTE	W48
+// 013   ----------------------------------------
+	BYTE		N36     Fs3 
+	BYTE	W42
+	BYTE		N05     Gn3 
+	BYTE	W06
+	BYTE		N36     An3 
+	BYTE	W42
+	BYTE		N05     Dn4 
+	BYTE	W06
+// 014   ----------------------------------------
+	BYTE		N42     Cn4 
+	BYTE	W48
+	BYTE		        Bn3 
+	BYTE	W48
+// 015   ----------------------------------------
+	BYTE		N17     Cn4 
+	BYTE	W18
+	BYTE		N05     An3 
+	BYTE	W06
+	BYTE		N42     Gn3 
+	BYTE	W48
+	BYTE		N07     Cn3 
+	BYTE	W08
+	BYTE		        Dn3 
+	BYTE	W08
+	BYTE		        En3 
+	BYTE	W08
+// 016   ----------------------------------------
+	BYTE		N17     Fn3 
+	BYTE	W18
+	BYTE		N05     Gn3 
+	BYTE	W06
+	BYTE		N17     An3 
+	BYTE	W18
+	BYTE		N05     Fn3 
+	BYTE	W06
+	BYTE		N17     Gn3 
+	BYTE	W18
+	BYTE		N05     An3 
+	BYTE	W06
+	BYTE		N17     Bn3 
+	BYTE	W18
+	BYTE		N05     Dn4 
+	BYTE	W06
+// 017   ----------------------------------------
+	BYTE		N64     Cn4 
+	BYTE	W66
+	BYTE		N05     Bn3 
+	BYTE	W06
+	BYTE		N17     An3 
+	BYTE	W18
+	BYTE		N05     Bn3 
+	BYTE	W06
+// 018   ----------------------------------------
+	BYTE		N90     Cn4 
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W48
+	BYTE		N15   
+	BYTE		N15     En4 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE		N15     Dn4 
+	BYTE		N15     Fn4 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE		N15     En4 
+	BYTE		N15     Gn4 
+	BYTE	W16
+// 025   ----------------------------------------
+	BYTE		N78     An3 
+	BYTE		N66     Cn4 
+	BYTE		N78     Fn4 
+	BYTE	W72
+	BYTE		N07     Dn4 
+	BYTE	W08
+	BYTE		        Fn3 
+	BYTE		N07     An3 
+	BYTE		N07     Dn4 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE		N07     Dn4 
+	BYTE		N07     Fn4 
+	BYTE	W08
+// 026   ----------------------------------------
+	BYTE		N90     Bn3 
+	BYTE		N90     Dn4 
+	BYTE		N42     En4 
+	BYTE		N90     Gn4 
+	BYTE	W48
+	BYTE		N42     Fn4 
+	BYTE	W44
+	BYTE	W03
+	BYTE	GoTo
+	 POIN2	WreyvineShop_1_B1
+WreyvineShop_1_B2:
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+WreyvineShop_2:
+	BYTE	KEYSH   WreyvineShop_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   32
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-11
+	BYTE		VOL     117*WreyvineShop_mvl/mxv
+	BYTE	W96
+WreyvineShop_2_B1:
+// 001   ----------------------------------------
+	BYTE		N20     An1   v076
+	BYTE	W24
+	BYTE		        En1 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE		        Bn1 
+	BYTE	W24
+// 002   ----------------------------------------
+WreyvineShop_2_002:
+	BYTE		N20     An1   v076
+	BYTE	W24
+	BYTE		        En1 
+	BYTE	W24
+	BYTE		        Fn1 
+	BYTE	W24
+	BYTE		        En1 
+	BYTE	W24
+	BYTE	PEND
+// 003   ----------------------------------------
+	BYTE		        Cn2 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE		        En1 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W24
+// 004   ----------------------------------------
+	BYTE		        Bn1 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE		        En1 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W24
+// 005   ----------------------------------------
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        Cn2 
+	BYTE	W24
+	BYTE		        En2 
+	BYTE	W24
+	BYTE		        Cn2 
+	BYTE	W24
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_2_002
+// 007   ----------------------------------------
+	BYTE		N20     Fn1   v076
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        Cn2 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+// 008   ----------------------------------------
+	BYTE		        Fn1 
+	BYTE	W24
+	BYTE		        Dn1 
+	BYTE	W24
+	BYTE		        En1 
+	BYTE	W24
+	BYTE		        Dn1 
+	BYTE	W24
+// 009   ----------------------------------------
+	BYTE		        Fs1 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        Dn2 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+// 010   ----------------------------------------
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE		        Bn1 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W24
+// 011   ----------------------------------------
+	BYTE		        En1 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE		        Cn2 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W24
+// 012   ----------------------------------------
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        En1 
+	BYTE	W24
+	BYTE		        Cn1 
+	BYTE	W24
+	BYTE		        En1 
+	BYTE	W24
+// 013   ----------------------------------------
+	BYTE		        Dn1 
+	BYTE	W24
+	BYTE		        En1 
+	BYTE	W24
+	BYTE		        Fs1 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+// 014   ----------------------------------------
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE		        Fn1 
+	BYTE	W24
+	BYTE		        En1 
+	BYTE	W24
+	BYTE		        Dn1 
+	BYTE	W24
+// 015   ----------------------------------------
+	BYTE		        Cn1 
+	BYTE	W24
+	BYTE		        En1 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE		        Cn2 
+	BYTE	W24
+// 016   ----------------------------------------
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        Fn1 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE		        Bn1 
+	BYTE	W24
+// 017   ----------------------------------------
+	BYTE		        Cn2 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE		        Fn1 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+// 018   ----------------------------------------
+	BYTE		        Cn2 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE		        En1 
+	BYTE	W24
+	BYTE		        Cn1 
+	BYTE	W24
+// 019   ----------------------------------------
+	BYTE		        En1 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        Cn2 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+// 020   ----------------------------------------
+	BYTE		        En1 
+	BYTE	W24
+	BYTE		        Cn1 
+	BYTE	W24
+	BYTE		        En1 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+// 021   ----------------------------------------
+	BYTE		        Cn2 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        Fn1 
+	BYTE	W24
+	BYTE		        Cn1 
+	BYTE	W24
+// 022   ----------------------------------------
+	BYTE		        Dn1 
+	BYTE	W24
+	BYTE		        Fn1 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        Dn2 
+	BYTE	W24
+// 023   ----------------------------------------
+	BYTE		        Bn1 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE		        Dn1 
+	BYTE	W24
+// 024   ----------------------------------------
+	BYTE		        En1 
+	BYTE	W24
+	BYTE		        Fn1 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE		        Cn2 
+	BYTE	W24
+// 025   ----------------------------------------
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        Fn1 
+	BYTE	W24
+	BYTE		        Cn1 
+	BYTE	W24
+	BYTE		        Fn1 
+	BYTE	W24
+// 026   ----------------------------------------
+	BYTE		        Gn1 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W24
+	BYTE		        Bn1 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W23
+	BYTE	GoTo
+	 POIN2	WreyvineShop_2_B1
+WreyvineShop_2_B2:
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+WreyvineShop_3:
+	BYTE	KEYSH   WreyvineShop_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   67
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+32
+	BYTE		VOL     127*WreyvineShop_mvl/mxv
+	BYTE	W96
+WreyvineShop_3_B1:
+// 001   ----------------------------------------
+	BYTE		PAN     c_v+32
+	BYTE		VOL     127*WreyvineShop_mvl/mxv
+	BYTE		N16     Cn3   v127
+	BYTE	W16
+	BYTE		        En3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+	BYTE		        Fn3 
+	BYTE	W16
+	BYTE		        Dn3 
+	BYTE	W16
+	BYTE		        Fn3 
+	BYTE	W16
+// 002   ----------------------------------------
+	BYTE		N66     En3 
+	BYTE	W72
+	BYTE		N07     En2 
+	BYTE	W08
+	BYTE		        Fn2 
+	BYTE	W08
+	BYTE		        Fs2 
+	BYTE	W08
+// 003   ----------------------------------------
+	BYTE		N42     Gn2 
+	BYTE	W48
+	BYTE		        En3 
+	BYTE	W48
+// 004   ----------------------------------------
+	BYTE		        Bn2 
+	BYTE	W48
+	BYTE		        Gn2 
+	BYTE	W48
+// 005   ----------------------------------------
+	BYTE		N17     En2 
+	BYTE	W18
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		N17     En2 
+	BYTE	W18
+	BYTE		N05     Fn2 
+	BYTE	W06
+	BYTE		N36     En2 
+	BYTE	W42
+	BYTE		N05     Dn2 
+	BYTE	W06
+// 006   ----------------------------------------
+	BYTE		N17     En2 
+	BYTE	W18
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		N17     En2 
+	BYTE	W18
+	BYTE		N05     Fn2 
+	BYTE	W06
+	BYTE		N20     En2 
+	BYTE	W24
+	BYTE		N07     Fn2 
+	BYTE	W08
+	BYTE		        Gn2 
+	BYTE	W08
+	BYTE		        An2 
+	BYTE	W08
+// 007   ----------------------------------------
+	BYTE		N42     Cn3 
+	BYTE	W48
+	BYTE		        An2 
+	BYTE	W48
+// 008   ----------------------------------------
+	BYTE		        Fn2 
+	BYTE	W48
+	BYTE		        An1 
+	BYTE	W48
+// 009   ----------------------------------------
+	BYTE		N17     Dn2 
+	BYTE	W18
+	BYTE		N05     En2 
+	BYTE	W06
+	BYTE		N17     Fs2 
+	BYTE	W18
+	BYTE		N05     En2 
+	BYTE	W06
+	BYTE		N36     Fs2 
+	BYTE	W42
+	BYTE		N05     Dn2 
+	BYTE	W06
+// 010   ----------------------------------------
+	BYTE		N17     Gn2 
+	BYTE	W18
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		N17     Gn2 
+	BYTE	W18
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		N42     Bn2 
+	BYTE	W48
+// 011   ----------------------------------------
+	BYTE		N36     Cn3 
+	BYTE	W42
+	BYTE		N05     Gn2 
+	BYTE	W06
+	BYTE		N36     En2 
+	BYTE	W42
+	BYTE		N05     Cn3 
+	BYTE	W06
+// 012   ----------------------------------------
+	BYTE		N42     Bn2 
+	BYTE	W48
+	BYTE		        An2 
+	BYTE	W48
+// 013   ----------------------------------------
+	BYTE		N36     Fs2 
+	BYTE	W42
+	BYTE		N05     Gn2 
+	BYTE	W06
+	BYTE		N36     An2 
+	BYTE	W42
+	BYTE		N05     Dn3 
+	BYTE	W06
+// 014   ----------------------------------------
+	BYTE		N42     Cn3 
+	BYTE	W48
+	BYTE		        Bn2 
+	BYTE	W48
+// 015   ----------------------------------------
+	BYTE		N17     Cn3 
+	BYTE	W18
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		N42     Gn2 
+	BYTE	W48
+	BYTE		N07     Cn2 
+	BYTE	W08
+	BYTE		        Dn2 
+	BYTE	W08
+	BYTE		        En2 
+	BYTE	W08
+// 016   ----------------------------------------
+	BYTE		VOL     112*WreyvineShop_mvl/mxv
+	BYTE		PAN     c_v+15
+	BYTE		N36     Fn3 
+	BYTE	W36
+	BYTE		N05     Gn3 
+	BYTE	W06
+	BYTE		        Gs3 
+	BYTE	W06
+	BYTE		N32     Ds3 
+	BYTE	W36
+	BYTE		N05   
+	BYTE	W06
+	BYTE		        Cs3 
+	BYTE	W06
+// 017   ----------------------------------------
+	BYTE		N72     Cn3 
+	BYTE	W16
+	BYTE		N15     As2 
+	BYTE	W16
+	BYTE		        Gs2 
+	BYTE	W40
+	BYTE		N06     Bn2 
+	BYTE	W06
+	BYTE		N12     An2 
+	BYTE	W12
+	BYTE		N06     Bn2 
+	BYTE	W06
+// 018   ----------------------------------------
+	BYTE		N90     Cn3 
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE		N20     Fn2 
+	BYTE	W24
+	BYTE		        Gn2 
+	BYTE	W24
+	BYTE		        An2 
+	BYTE	W24
+	BYTE		        Cn3 
+	BYTE	W24
+// 026   ----------------------------------------
+	BYTE		        Gn2 
+	BYTE	W24
+	BYTE		        An2 
+	BYTE	W24
+	BYTE		        Bn2 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE	W23
+	BYTE	GoTo
+	 POIN2	WreyvineShop_3_B1
+WreyvineShop_3_B2:
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+WreyvineShop_4:
+	BYTE	KEYSH   WreyvineShop_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   0
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-20
+	BYTE		VOL     112*WreyvineShop_mvl/mxv
+	BYTE	W96
+WreyvineShop_4_B1:
+// 001   ----------------------------------------
+	BYTE		N07     Cn4   v076
+	BYTE		N07     En4 
+	BYTE		N07     Gn4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE		N07     En4 
+	BYTE		N07     An4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE		N07     En4 
+	BYTE		N07     An4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE		N07     En4 
+	BYTE		N07     Gn4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE		N07     En4 
+	BYTE		N07     An4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE		N07     En4 
+	BYTE		N07     An4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE		N07     En4 
+	BYTE		N07     Gn4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE		N07     En4 
+	BYTE		N07     An4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE		N07     En4 
+	BYTE		N07     An4 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE		N07     Dn4 
+	BYTE		N07     Gn4 
+	BYTE	W08
+	BYTE		        Bn3 
+	BYTE		N07     Dn4 
+	BYTE		N07     Fn4 
+	BYTE	W08
+	BYTE		        Dn4 
+	BYTE		N07     Gn4 
+	BYTE		N07     Bn4 
+	BYTE	W08
+// 002   ----------------------------------------
+	BYTE		        Cn4 
+	BYTE		N07     En4 
+	BYTE		N07     Gn4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE		N07     En4 
+	BYTE		N07     An4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE		N07     En4 
+	BYTE		N07     An4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE		N07     En4 
+	BYTE		N07     Gn4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE		N07     En4 
+	BYTE		N07     An4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE		N07     En4 
+	BYTE		N07     An4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE		N07     En4 
+	BYTE		N07     Gn4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE		N07     En4 
+	BYTE		N07     An4 
+	BYTE	W08
+	BYTE		        Cn4 
+	BYTE		N07     En4 
+	BYTE		N07     An4 
+	BYTE	W08
+	BYTE		N01     Cn5 
+	BYTE	W01
+	BYTE		        Bn4 
+	BYTE	W02
+	BYTE		        An4 
+	BYTE	W01
+	BYTE		        Gn4 
+	BYTE	W02
+	BYTE		        Fn4 
+	BYTE	W01
+	BYTE		        En4 
+	BYTE	W02
+	BYTE		        Dn4 
+	BYTE	W01
+	BYTE		        Cn4 
+	BYTE	W02
+	BYTE		        Bn3 
+	BYTE	W01
+	BYTE		        An3 
+	BYTE	W02
+	BYTE		        Gn3 
+	BYTE	W01
+	BYTE		        Fn3 
+	BYTE	W02
+	BYTE		        En3 
+	BYTE	W01
+	BYTE		        Dn3 
+	BYTE	W02
+	BYTE		N02     Cn3 
+	BYTE	W03
+// 003   ----------------------------------------
+	BYTE	W18
+	BYTE		N04   
+	BYTE		N04     En3 
+	BYTE		N04     Gn3 
+	BYTE	W30
+	BYTE		N42     Cn3 
+	BYTE		N42     En3 
+	BYTE		N42     Gn3 
+	BYTE	W48
+// 004   ----------------------------------------
+	BYTE	W18
+	BYTE		N04     Bn2 
+	BYTE		N04     Cn3 
+	BYTE		N04     En3 
+	BYTE		N04     Gn3 
+	BYTE	W30
+	BYTE		N42     Bn2 
+	BYTE		N42     Cn3 
+	BYTE		N42     En3 
+	BYTE		N42     Gn3 
+	BYTE	W48
+// 005   ----------------------------------------
+	BYTE	W18
+	BYTE		N04     Cn3 
+	BYTE		N04     En3 
+	BYTE		N04     An3 
+	BYTE	W30
+	BYTE		N42     Cn3 
+	BYTE		N42     En3 
+	BYTE		N42     An3 
+	BYTE	W48
+// 006   ----------------------------------------
+WreyvineShop_4_006:
+	BYTE	W18
+	BYTE		N04     Cn3   v076
+	BYTE		N04     En3 
+	BYTE		N04     Fn3 
+	BYTE		N04     An3 
+	BYTE	W30
+	BYTE		N42     Cn3 
+	BYTE		N42     En3 
+	BYTE		N42     An3 
+	BYTE	W48
+	BYTE	PEND
+// 007   ----------------------------------------
+	BYTE	W18
+	BYTE		N04     Cn3 
+	BYTE		N04     Fn3 
+	BYTE		N04     An3 
+	BYTE	W30
+	BYTE		N42     Cn3 
+	BYTE		N42     Fn3 
+	BYTE		N42     An3 
+	BYTE	W48
+// 008   ----------------------------------------
+	BYTE	W18
+	BYTE		N04     Dn3 
+	BYTE		N04     En3 
+	BYTE		N04     Fn3 
+	BYTE		N04     An3 
+	BYTE	W30
+	BYTE		N42     Dn3 
+	BYTE		N42     Fn3 
+	BYTE		N42     An3 
+	BYTE	W48
+// 009   ----------------------------------------
+	BYTE	W18
+	BYTE		N04     Dn3 
+	BYTE		N04     Fs3 
+	BYTE		N04     An3 
+	BYTE	W30
+	BYTE		N42     Dn3 
+	BYTE		N42     Fs3 
+	BYTE		N42     An3 
+	BYTE	W48
+// 010   ----------------------------------------
+	BYTE	W18
+	BYTE		N04     Bn2 
+	BYTE		N04     Dn3 
+	BYTE		N04     Gn3 
+	BYTE		N04     An3 
+	BYTE	W30
+	BYTE		N42     Bn2 
+	BYTE		N42     Dn3 
+	BYTE		N42     Gn3 
+	BYTE	W48
+// 011   ----------------------------------------
+WreyvineShop_4_011:
+	BYTE	W18
+	BYTE		N05     Cn3   v076
+	BYTE		N05     En3 
+	BYTE		N05     Gn3 
+	BYTE	W30
+	BYTE		N42     Cn3 
+	BYTE		N42     En3 
+	BYTE		N42     Gn3 
+	BYTE	W48
+	BYTE	PEND
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_4_006
+// 013   ----------------------------------------
+	BYTE	W18
+	BYTE		N04     Dn3   v076
+	BYTE		N04     En3 
+	BYTE		N04     Fs3 
+	BYTE		N04     An3 
+	BYTE	W30
+	BYTE		N42     Dn3 
+	BYTE		N42     Fs3 
+	BYTE		N42     An3 
+	BYTE	W48
+// 014   ----------------------------------------
+	BYTE	W18
+	BYTE		N04     Dn3 
+	BYTE		N04     Fn3 
+	BYTE		N04     Gn3 
+	BYTE		N04     An3 
+	BYTE		N04     Bn3 
+	BYTE	W30
+	BYTE		N42     Dn3 
+	BYTE		N42     Fn3 
+	BYTE		N42     Gn3 
+	BYTE		N42     Bn3 
+	BYTE	W48
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_4_011
+// 016   ----------------------------------------
+	BYTE	W18
+	BYTE		N04     Cn3   v076
+	BYTE		N04     Fn3 
+	BYTE		N04     An3 
+	BYTE	W30
+	BYTE		N42     Dn3 
+	BYTE		N42     Gn3 
+	BYTE		N42     Bn3 
+	BYTE	W48
+// 017   ----------------------------------------
+	BYTE	W18
+	BYTE		N05     Cn3 
+	BYTE		N05     En3 
+	BYTE		N05     Gn3 
+	BYTE	W30
+	BYTE		N42     Cn3 
+	BYTE		N42     Fn3 
+	BYTE		N42     An3 
+	BYTE	W48
+// 018   ----------------------------------------
+	BYTE		N15     Cn3 
+	BYTE		N15     En3 
+	BYTE		N15     Gn3 
+	BYTE	W16
+	BYTE		        Cn3 
+	BYTE		N15     En3 
+	BYTE		N15     Gn3 
+	BYTE	W16
+	BYTE		        Cn3 
+	BYTE		N15     En3 
+	BYTE		N15     Gn3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE		N15     Gn3 
+	BYTE		N15     Bn3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE		N15     Gn3 
+	BYTE		N15     Bn3 
+	BYTE	W16
+	BYTE		        En3 
+	BYTE		N15     Gn3 
+	BYTE		N15     Bn3 
+	BYTE	W16
+// 019   ----------------------------------------
+WreyvineShop_4_019:
+	BYTE		N07     En3   v076
+	BYTE		N07     An3 
+	BYTE		N07     Cn4 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE		N07     Cn4 
+	BYTE		N07     En4 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE		N07     Cn4 
+	BYTE		N07     En4 
+	BYTE	W08
+	BYTE		        En3 
+	BYTE		N07     An3 
+	BYTE		N07     Cn4 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE		N07     Cn4 
+	BYTE		N07     En4 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE		N07     Cn4 
+	BYTE		N07     En4 
+	BYTE	W08
+	BYTE		N15     An3 
+	BYTE		N15     Cn4 
+	BYTE		N15     En4 
+	BYTE		N15     Gn4 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE		N15     Cn4 
+	BYTE		N15     Dn4 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE		N15     Cn4 
+	BYTE		N15     Fn4 
+	BYTE	W16
+	BYTE	PEND
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_4_019
+// 021   ----------------------------------------
+	BYTE		N07     Fn3   v076
+	BYTE		N07     An3 
+	BYTE		N07     Cn4 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE		N07     Cn4 
+	BYTE		N07     Fn4 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE		N07     Cn4 
+	BYTE		N07     Fn4 
+	BYTE	W08
+	BYTE		        Fn3 
+	BYTE		N07     An3 
+	BYTE		N07     Cn4 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE		N07     Cn4 
+	BYTE		N07     Fn4 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE		N07     Cn4 
+	BYTE		N07     Fn4 
+	BYTE	W08
+	BYTE		N15     Cn4 
+	BYTE		N15     Fn4 
+	BYTE		N15     An4 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE		N15     Cn4 
+	BYTE		N15     Fn4 
+	BYTE		N15     Gn4 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE		N15     Fn4 
+	BYTE		N15     Bn4 
+	BYTE	W16
+// 022   ----------------------------------------
+	BYTE		N07     Fn3 
+	BYTE		N07     An3 
+	BYTE		N07     Dn4 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE		N07     Dn4 
+	BYTE		N07     Fn4 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE		N07     Dn4 
+	BYTE		N07     Fn4 
+	BYTE	W08
+	BYTE		        Fn3 
+	BYTE		N07     An3 
+	BYTE		N07     Dn4 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE		N07     Dn4 
+	BYTE		N07     Fn4 
+	BYTE	W08
+	BYTE		        An3 
+	BYTE		N07     Dn4 
+	BYTE		N07     Fn4 
+	BYTE	W08
+	BYTE		N15     An3 
+	BYTE		N15     Dn4 
+	BYTE		N15     Gn4 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE		N15     Dn4 
+	BYTE		N15     Fn4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE		N15     Fn4 
+	BYTE		N15     An4 
+	BYTE	W16
+// 023   ----------------------------------------
+	BYTE		        Bn3 
+	BYTE		N15     Dn4 
+	BYTE		N15     Gn4 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE		N15     Bn3 
+	BYTE		N15     Dn4 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE		N15     Dn4 
+	BYTE		N15     Gn4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE		N15     Gn4 
+	BYTE		N15     Bn4 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE		N15     Bn3 
+	BYTE		N15     Dn4 
+	BYTE		N15     Gn4 
+	BYTE		N15     An4 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE		N15     Bn3 
+	BYTE		N15     Dn4 
+	BYTE		N15     Gn4 
+	BYTE	W16
+// 024   ----------------------------------------
+	BYTE		        Cn4 
+	BYTE		N15     En4 
+	BYTE		N15     Gn4 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE		N15     Cn4 
+	BYTE		N15     En4 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE		N15     En4 
+	BYTE		N15     Gn4 
+	BYTE	W16
+	BYTE		        En4 
+	BYTE		N15     Gn4 
+	BYTE		N15     Cn5 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE		N15     En4 
+	BYTE		N15     Gn4 
+	BYTE		N15     Bn4 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE		N15     Cn4 
+	BYTE		N15     En4 
+	BYTE		N15     Gn4 
+	BYTE		N15     An4 
+	BYTE	W16
+// 025   ----------------------------------------
+	BYTE		        Cn4 
+	BYTE		N15     Fn4 
+	BYTE		N15     An4 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE		N15     Cn4 
+	BYTE		N15     Fn4 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE		N15     Fn4 
+	BYTE		N15     An4 
+	BYTE	W16
+	BYTE		        Fn4 
+	BYTE		N15     An4 
+	BYTE		N15     Cn5 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE		N15     Fn4 
+	BYTE		N15     Bn4 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE		N15     Cn4 
+	BYTE		N15     Fn4 
+	BYTE		N15     An4 
+	BYTE	W16
+// 026   ----------------------------------------
+	BYTE		N07     Gn3 
+	BYTE	W08
+	BYTE		        Dn3 
+	BYTE	W08
+	BYTE		        Gn3 
+	BYTE	W08
+	BYTE		N07   
+	BYTE		N07     Bn3 
+	BYTE	W08
+	BYTE		        Dn3 
+	BYTE		N07     Gn3 
+	BYTE	W08
+	BYTE		N07   
+	BYTE		N07     Bn3 
+	BYTE	W08
+	BYTE		        Gn3 
+	BYTE		N07     Bn3 
+	BYTE		N07     Dn4 
+	BYTE	W08
+	BYTE		        Dn3 
+	BYTE		N07     Gn3 
+	BYTE		N07     Bn3 
+	BYTE	W08
+	BYTE		        Gn3 
+	BYTE		N07     Bn3 
+	BYTE		N07     Dn4 
+	BYTE	W08
+	BYTE		        Gn3 
+	BYTE		N07     Bn3 
+	BYTE		N07     Dn4 
+	BYTE		N07     Fn4 
+	BYTE	W08
+	BYTE		        Dn3 
+	BYTE		N07     Gn3 
+	BYTE		N07     Bn3 
+	BYTE		N07     Dn4 
+	BYTE	W08
+	BYTE		        Gn3 
+	BYTE		N07     Bn3 
+	BYTE		N07     Dn4 
+	BYTE		N07     Fn4 
+	BYTE	W07
+	BYTE	GoTo
+	 POIN2	WreyvineShop_4_B1
+WreyvineShop_4_B2:
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+WreyvineShop_5:
+	BYTE	KEYSH   WreyvineShop_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   60
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+8
+	BYTE		VOL     117*WreyvineShop_mvl/mxv
+	BYTE	W96
+WreyvineShop_5_B1:
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE		N17     An3   v127
+	BYTE	W18
+	BYTE		N05     Bn3 
+	BYTE	W06
+	BYTE		N17     Cn4 
+	BYTE	W18
+	BYTE		N05     Bn3 
+	BYTE	W06
+	BYTE		N36     An3 
+	BYTE	W42
+	BYTE		N05     En3 
+	BYTE	W06
+// 020   ----------------------------------------
+	BYTE		N42     An3 
+	BYTE	W48
+	BYTE		        Gn3 
+	BYTE	W48
+// 021   ----------------------------------------
+	BYTE		N17     Fn3 
+	BYTE	W18
+	BYTE		N05     Gn3 
+	BYTE	W06
+	BYTE		N17     An3 
+	BYTE	W18
+	BYTE		N05     Gn3 
+	BYTE	W06
+	BYTE		N36     Fn3 
+	BYTE	W42
+	BYTE		N05     Cn3 
+	BYTE	W06
+// 022   ----------------------------------------
+	BYTE		N42     En3 
+	BYTE	W48
+	BYTE		        Dn3 
+	BYTE	W48
+// 023   ----------------------------------------
+	BYTE		N17     Gn3 
+	BYTE	W18
+	BYTE		N05     An3 
+	BYTE	W06
+	BYTE		N17     Bn3 
+	BYTE	W18
+	BYTE		N05     Cn4 
+	BYTE	W06
+	BYTE		N20     Dn4 
+	BYTE	W24
+	BYTE		        Gn3 
+	BYTE	W24
+// 024   ----------------------------------------
+	BYTE		N42     Cn4 
+	BYTE	W48
+	BYTE		N17     Bn3 
+	BYTE	W18
+	BYTE		N05     An3 
+	BYTE	W06
+	BYTE		N20     Gn3 
+	BYTE	W24
+// 025   ----------------------------------------
+	BYTE		N17     Fn3 
+	BYTE	W18
+	BYTE		N05     Gn3 
+	BYTE	W06
+	BYTE		N17     An3 
+	BYTE	W18
+	BYTE		N05     Bn3 
+	BYTE	W06
+	BYTE		N20     Cn4 
+	BYTE	W24
+	BYTE		        An3 
+	BYTE	W24
+// 026   ----------------------------------------
+	BYTE		N17     Gn3 
+	BYTE	W18
+	BYTE		N05     Fn3 
+	BYTE	W06
+	BYTE		N17     Gn3 
+	BYTE	W18
+	BYTE		N05     An3 
+	BYTE	W06
+	BYTE		N20     Bn3 
+	BYTE	W24
+	BYTE		N17     An3 
+	BYTE	W18
+	BYTE		N05     Gn3 
+	BYTE	W05
+	BYTE	GoTo
+	 POIN2	WreyvineShop_5_B1
+WreyvineShop_5_B2:
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.6) ****************//
+
+WreyvineShop_6:
+	BYTE	KEYSH   WreyvineShop_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   122
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     95*WreyvineShop_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N07     Dn2   v127
+	BYTE		N07     An2 
+	BYTE	W08
+	BYTE		        Dn2 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        Cn2 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        En1 
+	BYTE		N07     Bn1 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+	BYTE		        En1 
+	BYTE		N07     Bn1 
+	BYTE	W08
+	BYTE		        An1 
+	BYTE	W08
+	BYTE		        En1 
+	BYTE		N07     An1 
+	BYTE	W08
+	BYTE		N07   
+	BYTE	W08
+WreyvineShop_6_B1:
+// 001   ----------------------------------------
+WreyvineShop_6_001:
+	BYTE		N17     Cn1   v127
+	BYTE		N17     An2 
+	BYTE	W18
+	BYTE		N05     Cn1 
+	BYTE	W06
+	BYTE		N17     En1 
+	BYTE	W18
+	BYTE		N05   
+	BYTE	W06
+	BYTE		N17     An2 
+	BYTE	W18
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		N07     Cn2 
+	BYTE	W08
+	BYTE		        Bn1 
+	BYTE	W08
+	BYTE		        An1 
+	BYTE	W08
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_001
+// 003   ----------------------------------------
+WreyvineShop_6_003:
+	BYTE		N20     Cn1   v127
+	BYTE		N20     As1 
+	BYTE		N20     An2 
+	BYTE	W24
+	BYTE		N17     Cs1 
+	BYTE	W18
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		N20     Cn1 
+	BYTE		N20     As1 
+	BYTE	W24
+	BYTE		N17     Cs1 
+	BYTE	W18
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE	PEND
+// 004   ----------------------------------------
+WreyvineShop_6_004:
+	BYTE		N20     Cn1   v127
+	BYTE		N20     As1 
+	BYTE	W24
+	BYTE		N17     Cs1 
+	BYTE	W18
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		N20     Cn1 
+	BYTE		N20     As1 
+	BYTE	W24
+	BYTE		N17     Cs1 
+	BYTE	W18
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_004
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_004
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_004
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_004
+// 010   ----------------------------------------
+WreyvineShop_6_010:
+	BYTE		N20     Cn1   v127
+	BYTE		N20     As1 
+	BYTE	W24
+	BYTE		N17     Cs1 
+	BYTE	W18
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		N20     Cn1 
+	BYTE		N20     As1 
+	BYTE	W24
+	BYTE		N17     Cs1 
+	BYTE	W18
+	BYTE		N05     En1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_003
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_004
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_004
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_004
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_004
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_004
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_010
+// 019   ----------------------------------------
+	BYTE		N20     Cn1   v127
+	BYTE		N20     As1 
+	BYTE		N20     An2 
+	BYTE		N20     Bn2 
+	BYTE	W24
+	BYTE		N17     Cs1 
+	BYTE		N20     En1 
+	BYTE		N20     Bn2 
+	BYTE	W18
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		N20     Cn1 
+	BYTE		N20     As1 
+	BYTE		N20     Bn2 
+	BYTE	W24
+	BYTE		N17     Cs1 
+	BYTE		N20     En1 
+	BYTE		N20     Bn2 
+	BYTE	W18
+	BYTE		N05     As1 
+	BYTE	W06
+// 020   ----------------------------------------
+WreyvineShop_6_020:
+	BYTE		N20     Cn1   v127
+	BYTE		N20     As1 
+	BYTE		N20     Bn2 
+	BYTE	W24
+	BYTE		N17     Cs1 
+	BYTE		N20     En1 
+	BYTE		N20     Bn2 
+	BYTE	W18
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		N20     Cn1 
+	BYTE		N20     As1 
+	BYTE		N20     Bn2 
+	BYTE	W24
+	BYTE		N17     Cs1 
+	BYTE		N20     En1 
+	BYTE		N20     Bn2 
+	BYTE	W18
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE	PEND
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_020
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_020
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_020
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_020
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	WreyvineShop_6_020
+// 026   ----------------------------------------
+	BYTE		N20     Cn1   v127
+	BYTE		N20     As1 
+	BYTE		N20     Bn2 
+	BYTE	W24
+	BYTE		N17     Cs1 
+	BYTE		N20     En1 
+	BYTE		N20     Bn2 
+	BYTE	W18
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		N17     Cn1 
+	BYTE		N17     As1 
+	BYTE		N17     Bn2 
+	BYTE	W18
+	BYTE		N05     En1 
+	BYTE	W06
+	BYTE		N07   
+	BYTE		N07     An2 
+	BYTE	W08
+	BYTE		        En1 
+	BYTE	W08
+	BYTE		N07   
+	BYTE		N07     An2 
+	BYTE	W07
+	BYTE	GoTo
+	 POIN2	WreyvineShop_6_B1
+WreyvineShop_6_B2:
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+WreyvineShop:
+	BYTE	6	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	WreyvineShop_pri	// Priority
+	BYTE	WreyvineShop_rev	// Reverb.
+
+	POIN2	WreyvineShop_grp
+
+	POIN2	WreyvineShop_1
+	POIN2	WreyvineShop_2
+	POIN2	WreyvineShop_3
+	POIN2	WreyvineShop_4
+	POIN2	WreyvineShop_5
+	POIN2	WreyvineShop_6
+
+	

@@ -2,7 +2,7 @@
 
 #include eastdlib.event
 
-SetChapterData(0x1A,0x6C,0,0x6D,0x6E,0x76,Map,0x0,0,0x77)
+SetChapterData(0x1A,0x6C,0,0x6D,0x6E,0x76,Map,0x0,0,0x77) //no tile anims
 EventPointerTable(0x77, MapChanges)
 Map:
 #incbin "3-PB_data.dmp"
@@ -10,6 +10,8 @@ Map:
 MapChanges:
 TileMap(0,2,7,2,1,TopDoor)
 TileMap(1,2,18,2,1,BotDoor)
+TileMap(2,10,12,2,3,WeirdDoor)
+TileMap(3,15,12,2,3,WeirdDoor2)
 TileMapEnd
 
 TopDoor:
@@ -18,5 +20,13 @@ ALIGN 4
 
 BotDoor:
 SHORT 0x3dc 0x3d4 
+ALIGN 4
+
+WeirdDoor:
+SHORT 0xd24 0x3d8 0xbd8 0x3dc 0xc58 0x3dc 
+ALIGN 4
+
+WeirdDoor2:
+SHORT 0xd24 0x3dc 0xbd8 0x3dc 0xc58 0x3dc 
 ALIGN 4
 

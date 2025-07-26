@@ -13,17 +13,43 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-
+TurnEventEnemy(0,TurnOneJumpscare,1)
+TurnEventPlayer(0,TurnTwoJumpscare,2)
+TurnEventEnemy(0,TurnThreeJumpscare,3)
 	END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
-
+CharacterEventBothWays(0xB,UlrichWeylanConvo, 0x73, Ulrich)
+CharacterEventBothWays(0xA,BreveWeylanConvo, Breve, 0x73)
+CharacterEventBothWays(0xC,AnsgarWeylanConvo, Ansgar, 0x73)
+CharacterEventBothWays(0xD,HildrWeylanConvo, Hildr, 0x73)
 	END_MAIN
 
 MiscBasedEvents:
+AFEV 0x0 CheckIfWinHugeW 0x0
 	CauseGameOverIfLordDies
 	END_MAIN
+
+CheckIfWinHugeW:
+
+CHECK_EVENTID 0xA
+BEQ 0x1 0xC 0x0
+CHECK_EVENTID 0xB
+BEQ 0x1 0xC 0x0
+CHECK_EVENTID 0xC
+BEQ 0x1 0xC 0x0
+CHECK_EVENTID 0xD
+BEQ 0x1 0xC 0x0
+ENUT 0x3
+
+ENUT 0x3
+CALL EndingScene
+
+LABEL 0x1
+
+NoFade
+ENDA
 
 LocationBasedEvents:
 
@@ -100,7 +126,7 @@ UNIT Supplies2 0x79 0x1 Level(1, Enemy, 0)     [12,9] 0b 0x0 0x0 0x0 [SilverLanc
 UNIT Supplies3 0x79 0x1 Level(1, Enemy, 0)     [1,4] 0b 0x0 0x0 0x0 [DevilAxe] [0,3,0,32]
 UNIT Supplies4 0x79 0x1 Level(1, Enemy, 0)     [19,12] 0b 0x0 0x0 0x0 [0xBC] [0,3,0,32]
 
-UNIT 0x71 LanceCav 0x1 Level(11, Enemy, 1)     [0,5] DropItem 0x0 0x0 0x0 [BraveLance,0xBC] RangeAI
+UNIT 0x70 LanceCav 0x1 Level(11, Enemy, 1)     [0,5] DropItem 0x0 0x0 0x0 [BraveLance,0xBC] RangeAI
 UNIT Aeteria LanceCav 0x1 Level(10, Enemy, 1)     [14,20] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT Aeteria Mercenary 0x1 Level(10, Enemy, 1)     [15,17] 0b 0x0 0x0 0x0 [SteelSword] RangeAI
 UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [13,15] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
@@ -131,6 +157,17 @@ UNIT Aeteria SArmor 0x1 Level(6, Enemy, 1)     [19,4] 0b 0x0 0x0 0x0 [SteelBlade
 UNIT AeteriaStealable LCav 0x1 Level(6, Enemy, 1)     [16,7] 0b 0x0 0x0 0x0 [Horseslayer,GoddessIcon] TwoActionAI
 UNIT AeteriaStealable Mage 0x1 Level(6, Enemy, 1)     [18,20] 0b 0x0 0x0 0x0 [Wind,PureWater] RangeAI
 UNIT AeteriaStealable Thaumaturge 0x1 Level(6, Enemy, 1)     [5,12] 0b 0x0 0x0 0x0 [Thunder,BlueGem] TwoActionAI
+	UNIT
+
+WeylanisReal:
+UNIT 0x73 Adventurer 0x1 Level(13, NPC, 1)     [13,24] 0 0 1 REDA14R22 [0x30,0x86,Elixir] ChargeAI
+	UNIT
+
+WeylansGang:
+UNIT BadGuy Brigand 0x1 Level(10, NPC, 1)     [15,24] 0 0 1 REDA15R24 [IronLabrys,] ChargeAI
+UNIT BadGuy Deserter 0x1 Level(10, NPC, 1)     [16,24] 0 0 1 REDA16R23 [KillerLance,] ChargeAI
+UNIT BadGuy Raider 0x1 Level(10, NPC, 1)     [18,24] 0 0 1 REDA18R22 [ShortBrand,] ChargeAI
+UNIT BadGuy Deserter 0x1 Level(10, NPC, 1)     [19,24] 0 0 1 REDA19R23 [ShortSpear,] ChargeAI
 	UNIT
 
 Traps1:
@@ -171,6 +208,7 @@ STAL 15
 	Text(Part3PrologueAOpening3)
 	STAL 15
 	SetUnitItemDurability(Supplies4, 0, CantoOneID) //boots
+	SetUnitItemDurability(0x70, 1, 22) //tusked pin
 
 	CALL $591FD8 //prep screen
 	FADU 60
@@ -190,8 +228,74 @@ CUSA 0xFFFE
 	NoFade
 	ENDA
 
+TurnOneJumpscare: //enemy phase
+ChargeWarning(0x70, Part3PrologueATurn1)
+
+NoFade
+ENDA
+
+TurnThreeJumpscare:
+ChargeWarning(0x70, Part3PrologueATurn2Scene4)
+
+NoFade
+ENDA
+
+TurnTwoJumpscare: //player phase
+
+CamOn
+
+CameraCursor(Ulrich)
+TextCont(Part3PrologueATurn2,0x7FFF)
+
+LOAD1 0x1 WeylanisReal
+
+TextCont(Part3PrologueATurn2Scene2,0x240)
+
+LOAD1 0x1 WeylansGang
+
+Text(Part3PrologueATurn2Scene3)
+
+CamOff
+
+NoFade
+ENDA
+
+
+UlrichWeylanConvo:
+	MUSI
+	Text(UlrichWeylanTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+
+HildrWeylanConvo:
+	MUSI
+	Text(HildrWeylanTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+
+BreveWeylanConvo:
+	MUSI
+	Text(BreveWeylanTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+
+AnsgarWeylanConvo:
+	MUSI
+	Text(AnsgarWeylanTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+
+
 EndingScene:
-Music(0x29A)
+Music(0x1A2)
 SetBackground(0x3B)
 Text(Part3PrologueAEnding1)
 GiveItem(Dracoshield,Ulrich)

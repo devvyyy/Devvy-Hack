@@ -13,6 +13,7 @@ ldr	r1, SlowBurnID
 cmp	r0, #0
 beq	End
 
+ActualSkill:
 @get turn
 ldr	r5,=#0x202BCF0
 ldrh	r5, [r5,#0x10]
@@ -38,6 +39,10 @@ mov	r0, #0x5E
 ldrh	r1, [r4,r0]	@load as
 add	r1, r5		@add turn to as (max 15)
 strh	r1, [r4,r0]     @store
+
+
+
+
 
 End:
 pop	{r4-r5, r15}

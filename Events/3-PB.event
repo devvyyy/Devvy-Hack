@@ -13,20 +13,136 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-
+TurnEventNPC(0,PrisonTalk1,1,1)
+TURN 0x0 CaptainsMoment [2,0] 0x0
 	END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
-
+CharacterEventBothWays(0x10,BossChange, 0x6F, 0x0)
 	END_MAIN
 
+
+PrisonTalk1:
+CAM1 [18,13]
+MUSI
+SetBackground(0x41)
+Text(Part3PrologueBPrisonStuff)
+ClearBackground
+MUNO
+NoFade
+ENDA
+
+CaptainsMoment:
+
+	LOAD1 0x1 WahooNewUnit
+	ENUN
+
+	CameraCursor(0x74)
+
+Music(0x294)
+Text(ThiefIsReal)
+STAL 5
+
+MOVE 0xD 0x74 [14,13]
+
+Text(ThiefIsReal2)
+
+SOUN 0xb1
+TILEREVERT 0x3
+
+MOVE 0x5 0x74 [16,13]
+
+SetBackground(0x41)
+TextCont(ThiefSavesCaptains, 0x1AD)
+ClearBackground
+
+CUSA Stroganoff
+CUSA Brudet
+
+CameraCursor(0x6f)
+
+Text(Part3PrologueBPrisonStuff2)
+
+CAM1 [18,13]
+
+TILECHANGE 0x2
+
+CameraCursor(Brudet)
+CameraCursor(Stroganoff)
+Text(Part3PrologueBPrisonStuff3)
+
+NoFade
+ENDA
+
+
+WeAreDead:
+
+SVAL 1 Brudet
+BEQ 0x1 0xC 0x1
+SVAL 1 Stroganoff
+BEQ 0x1 0xC 0x1
+
+UnsetFlag(0x8)
+
+GOTO 0x2
+LABEL 0x1
+
+CameraCursor(0x72)
+Text(ThiefGirlLeaves)
+MOVE 0xD 0x74 [14,12]
+DISA 0x74
+
+STAL 15
+
+TILEREVERT 0x2
+CAM1 [4,14]
+
+Text(Part3PrologueBPrisonStuff4)
+
+LABEL 0x2
+
+NoFade
+ENDA
+
+BossChange:
+MUSI
+STAL 30
+Text(Part3PrologueBKillBoss)
+MURE 0x2
+CUSN 0x6F
+STAL 5
+CenterTextbox(Part3PrologueBKillBossExplain)
+MUNO
+NoFade
+ENDA
+
+
 MiscBasedEvents:
+AREA 0x0 WEWIN [26,29] [27,29]
+
+AREA 0x8 WeAreDead [11,0] [15,10]
+AREA 0x8 WeAreDead [10,18] [15,29]
+
 	CauseGameOverIfLordDies
 	END_MAIN
 
-LocationBasedEvents:
+WEWIN:
+CHECK_ACTIVE
+SVAL 1 0x6F
+BEQ 0x1 0xC 0x1
+GOTO 0x2
+LABEL 0x1
+Text(Placeholder1)
+ENUF 0x3
+CALL EndingScene
+LABEL 0x2
+NoFade
+ENDA
 
+LocationBasedEvents:
+Stairs(11,5,12,20,1)
+Stairs(14,12,14,9,0)
 	END_MAIN
 
 Dunno1:
@@ -70,22 +186,22 @@ UNIT BadGuy Fighter 0x1 Level(10, Enemy, 1)     [24,9] 0b 0x0 0x0 0x0 [IronLabry
 UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [28,6] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT BadGuy Archer 0x1 Level(10, Enemy, 1)     [20,8] 0b 0x0 0x0 0x0 [SilverBow] BossAI
 UNIT BadGuyStealable AArmor 0x1 Level(10, Enemy, 1)     [10,1] 0b 0x0 0x0 0x0 [IronLabrys,ShortAxe] BossAI
-UNIT BadGuy Brigand 0x1 Level(10, Enemy, 1)     [3,6] DropItem 0x0 0x0 0x0 [ShortAxe,DoorKey] BossAI
+UNIT BadGuy SArmor 0x1 Level(10, Enemy, 1)     [3,6] DropItem 0x0 0x0 0x0 [Flamberge,DoorKey] BossAI
 UNIT BadGuy SCav 0x1 Level(10, Enemy, 1)     [1,9] 0b 0x0 0x0 0x0 [Armorslayer] RangeAI
 UNIT BadGuy LCav 0x1 Level(10, Enemy, 1)     [5,10] 0b 0x0 0x0 0x0 [Horseslayer] TwoActionAI
-UNIT BadGuy Fighter 0x1 Level(10, Enemy, 1)     [8,12] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [12,13] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT BadGuy Fighter 0x1 Level(10, Enemy, 1)     [8,12] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
+UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [10,22] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT BadGuy Sniper 0x1 Level(10, Enemy, 1)     [8,15] 0b 0x0 0x0 0x0 [Longbow,SilverDagger] BossAI
 UNIT BadGuy Sniper 0x1 Level(10, Enemy, 1)     [3,17] DropItem 0x0 0x0 0x0 [SilverBow,Longbow] RangeAI
-UNIT BadGuy ACav 0x1 Level(10, Enemy, 1)     [15,13] 0b 0x0 0x0 0x0 [ShortAxe] TwoActionAI
-UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [17,12] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT BadGuy ACav 0x1 Level(10, Enemy, 1)     [23,25] 0b 0x0 0x0 0x0 [ShortAxe] TwoActionAI
+UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [26,18] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
 UNIT BadGuy Hunter 0x1 Level(10, Enemy, 1)     [22,14] 0b 0x0 0x0 0x0 [SteelBow] RangeAI
 UNIT BadGuy Hunter 0x1 Level(10, Enemy, 1)     [28,15] 0b 0x0 0x0 0x0 [SteelBow] RangeAI
 UNIT BadGuy SCav 0x1 Level(10, Enemy, 1)     [25,21] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
 UNIT BadGuy Hunter 0x1 Level(10, Enemy, 1)     [21,12] 0b 0x0 0x0 0x0 [Longbow] RangeAI
-UNIT BadGuy Brigand 0x1 Level(10, Enemy, 1)     [24,14] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
+UNIT BadGuy PegRider 0x1 Level(10, Enemy, 1)     [26,13] 0b 0x0 0x0 0x0 [SteelAxe] StallOneTurnAI
 UNIT BadGuy Merc 0x1 Level(10, Enemy, 1)     [13,7] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
-UNIT BadGuy Brigand 0x1 Level(10, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [SteelAxe] RangeAI
+UNIT BadGuy PegRider 0x1 Level(10, Enemy, 1)     [5,0] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
 UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [4,2] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
 UNIT BadGuy SCav 0x1 Level(10, Enemy, 1)     [12,9] 0b 0x0 0x0 0x0 [IronSword] RangeAI
 UNIT BadGuy Fighter 0x1 Level(10, Enemy, 1)     [7,8] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
@@ -116,7 +232,7 @@ UNIT BadGuy Archer 0x1 Level(10, Enemy, 1)     [6,28] 0b 0x0 0x0 0x0 [SteelBow] 
 UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [10,26] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
 UNIT BadGuy Myrm 0x1 Level(10, Enemy, 1)     [14,23] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
 UNIT BadGuy Soldier 0x1 Level(10, Enemy, 1)     [17,24] 0b 0x0 0x0 0x0 [ShortSpear] RangeAI
-UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [29,12] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
+UNIT BadGuy LanceCav 0x1 Level(10, Enemy, 1)     [29,12] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
 UNIT BadGuy Hunter 0x1 Level(10, Enemy, 1)     [7,5] 0b 0x0 0x0 0x0 [SilverBow] BossAI
 UNIT BadGuy Hunter 0x1 Level(10, Enemy, 1)     [8,25] 0b 0x0 0x0 0x0 [Longbow] BossAI
 UNIT BadGuyStealable Raider 0x1 Level(6, Enemy, 1)     [19,25] 0b 0x0 0x0 0x0 [SteelSword,SecretBook] TwoActionAI
@@ -130,6 +246,9 @@ UNIT Stroganoff AArmor 0x1 Level(8, NPC, 0)     [17,12] 0b 0x0 0x0 0x0 [SteelLab
 UNIT Brudet WyvernRider_F 0x1 Level(9, NPC, 1)     [18,14] 0x0 0x0 0x0 0x0 [IronLabrys,Halberd,Elixir,] BossAI
 	UNIT
 
+WahooNewUnit: //vera vale
+UNIT 0x74 Rogue 0x1 Level(11, NPC, 1)     [11,15] 0 0 1 REDA12R14 [KillingEdge,0xE8, GoldGem] RangeAI
+	UNIT
 
 Traps1:
 //BlueSigil(4,14)
@@ -147,6 +266,9 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+
+TILECHANGE 0x3
+
 QuickRemu(Ulrich,2)
 QuickRemu(Evelyn,3)
 QuickRemu(Sequin,4)
@@ -206,24 +328,26 @@ BROWNBOXTEXT WreyvianOutskirtsText [8,8]
 STAL 15
 Text(Part3PrologueBOpening1Alt)
 
-	GotoPrepScreen
+CALL $591FD8 //prep screen
+	FADU 60
+
+	CenterTextbox(Part3PrologueBDisclaimer)
+
 	ENDA
 
 EndingScene:
+
+Music(0x283)
 SetBackground(0x2D)
 Text(Part3PrologueBEnding1)
 
 FADI 60
+STAL 15
 CLEAN
-SetBackground(0x35)
-STAL 30
-Music(0x292)
-Text(SylmeriaScene0)
-FAWI 20
-SOUN 0x2ec
-STAL 120
-FAWU 15
-Text(SylmeriaScene0Point5)
+
+Music(0x288)
+SetBackground(0x3C)
+Text(Part3PrologueBEnding2)
 
 	MNC2 0x11
 	//MNTS 0x1

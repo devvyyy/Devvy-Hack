@@ -3,6 +3,9 @@
 #define setMugEntryExtend(mugEntry, portraitData, minimugData, paletteData, mouthData, mouthX, mouthY, eyeX, eyeY, extend1X, extend1Y, extend2X, extend2Y) "PUSH; ORG PortraitTable+mugEntry*0x1C; POIN portraitData; POIN minimugData; POIN paletteData; POIN mouthData; BYTE extend1X extend1Y extend2X extend2Y; BYTE mouthX mouthY eyeX eyeY; BYTE 1 0 1 0; POP"
 #define setMugEntryExtend(mugEntry, mugLocation, mouthX, mouthY, eyeX, eyeY, extend1X, extend1Y, extend2X, extend2Y)"PUSH; ORG PortraitTable+mugEntry*0x1C; POIN mugLocation; POIN mugLocation+0x1624; POIN mugLocation+0x1604; POIN mugLocation+0x1004; BYTE extend1X extend1Y extend2X extend2Y; BYTE mouthX mouthY eyeX eyeY; BYTE 1 0 1 0; POP"
 
+#define setMugEntryExtendEyesClosed(mugEntry, mugLocation, mouthX, mouthY, eyeX, eyeY, extend1X, extend1Y, extend2X, extend2Y)"PUSH; ORG PortraitTable+mugEntry*0x1C; POIN mugLocation; POIN mugLocation+0x1624; POIN mugLocation+0x1604; POIN mugLocation+0x1004; BYTE extend1X extend1Y extend2X extend2Y; BYTE mouthX mouthY eyeX eyeY; BYTE 6 0 1 0; POP"
+
+
 // Player Characters
 ALIGN 16 //Zane by Lenh
 Zane_Mug:
@@ -140,8 +143,8 @@ setMugEntryExtend(0xBB, Wegman_Mug, Wegman_ShieldMini, Wegman_Palette, Wegman_Fr
 
 ALIGN 16 //Flan by ZessDynamite
 Flan_Mug:
-#incext PortraitFormatter "Flan.png"
-setMugEntry(0x0E, Flan_Mug, 4, 6, 4, 4)
+#incext PortraitFormatter "CapibaraInSpace F2U OC 11.png"
+setMugEntry(0x0E, Flan_Mug, 3, 5, 3, 3)
 
 ALIGN 16
 Jaye_Mug:
@@ -165,8 +168,8 @@ setMugEntry(0xFF, Faye_Mug, 3, 6, 3, 4)
 
 ALIGN 16 //Adele by Levin
 Adele_Mug:
-#incext PortraitFormatter "Adele.png"
-setMugEntry(0x13, Adele_Mug, 2, 5, 3, 3)
+#incext PortraitFormatter "LenhBoss.png"
+setMugEntry(0x13, Adele_Mug, 3, 5, 2, 3)
 
 ALIGN 16 //Aloys edited by Blade
 Aloys_Mug:
@@ -422,7 +425,22 @@ setMugEntryExtend(0xb6, AffogatoHoodPart3_Mug, 3, 5, 3, 3, 0, 4, 0, 0)
 ALIGN 16
 AffogatoHoodPart3Edgy_Mug:
 #incext PortraitFormatter "AffoHood2.png"
-setMugEntryExtend(0x110, AffogatoHoodPart3Edgy_Mug, 3, 5, 3, 3, 0, 4, 0, 0)
+setMugEntryExtend(0x115, AffogatoHoodPart3Edgy_Mug, 3, 5, 3, 3, 0, 4, 0, 0)
+
+ALIGN 16
+AffoSussy_Mug:
+#incext PortraitFormatter "AffogatoSus.png"
+setMugEntryExtend(0x116, AffoSussy_Mug, 3, 5, 3, 3, 0, 4, 0, 0)
+
+ALIGN 16
+Weylan_Mug:
+#incext PortraitFormatter "RayCrownslayer.png"
+setMugEntry(0x117, Weylan_Mug, 3, 5, 3, 3)
+
+ALIGN 16
+Cathy_Mug:
+#incext PortraitFormatter "RayCathy.png"
+setMugEntry(0x118, Cathy_Mug, 3, 6, 3, 4)
 
 ALIGN 16
 AffogatoHoodPart3Hidden_Mug:
@@ -722,8 +740,8 @@ setMugEntry(0x55, Iris_Mug, 3, 5, 3, 3)
 
 ALIGN 16
 Luitgard_Mug: //Luitgard by Laurent Lacroix
-#incext PortraitFormatter "Luitgard.png"
-setMugEntry(0x45, Luitgard_Mug, 3, 5, 3, 3)
+#incext PortraitFormatter "PretDude.png"
+setMugEntry(0x45, Luitgard_Mug, 2, 5, 2, 3)
 
 ALIGN 16
 ChiffonEpic_Mug:
@@ -980,6 +998,26 @@ ALIGN 16
 TimeskipKane_Mug:
 #incext PortraitFormatter "TimeskipKane.png"
 setMugEntry(0x110, TimeskipKane_Mug, 3, 5, 3, 3)
+
+ALIGN 16
+Warden_Mug:
+#incext PortraitFormatter "Warden.png"
+setMugEntryExtendEyesClosed(0x111, Warden_Mug, 10, 4, 8, 2, 12, 6, 12, 8)
+
+ALIGN 16
+WardenStatScreen_Mug:
+#incext PortraitFormatter "WardenStatScreen.png"
+setMugEntryExtend(0x112, WardenStatScreen_Mug, 3, 5, 3, 3, 12, 6, 12, 8)
+
+ALIGN 16
+WardenEyes_Mug:
+#incext PortraitFormatter "WardenFaceReveal.png"
+setMugEntryExtend(0x114, WardenEyes_Mug, 3, 5, 3, 3, 12, 6, 12, 8)
+
+ALIGN 16
+Antonius_Mug:
+#incext PortraitFormatter "Antonius.png"
+setMugEntry(0x113, Antonius_Mug, 3, 5, 3, 3)
 
 ALIGN 16
 AffogatoYoung_Mug:

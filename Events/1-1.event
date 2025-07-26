@@ -195,7 +195,7 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-Music(0x47)
+//Music(0x294)
 SetBackground(0x3C)
 Text(Ch1Opening0)
 FADI 20
@@ -245,7 +245,7 @@ FADI 30
 DoAllThree
 LOMA 0x48
 LOAD2 0x1 EndCutsceneUnits
-Music(VictoryBGM)
+Music(0x294)
 SetBackground(0x36)
 CHECK_ALIVE Sequin
 BEQ 1 0x0 0xC

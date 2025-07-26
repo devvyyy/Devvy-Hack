@@ -38,6 +38,8 @@
 	PortraitSelectionEntry(0xE9,0x19,TimeskipMugList,0xEEEA) //iris
 	PortraitSelectionEntry(0xEA,0x3,TimeskipMugList,0xEEEE) //ogrim
 	PortraitSelectionEntry(0x110,0x1E,TimeskipMugList,0xFAAA) //kane
+
+	PortraitSelectionEntry(0x102,0x1,ChiffonConditional,0xABCD) //chiffon
 	
 	PortraitSelectionEntry(0xBA,0x1D,FlorisMugList,0xACAC)
 	PortraitSelectionEntry(0xCB,0x30,XavierMugList,0xADAD)
@@ -51,6 +53,9 @@
 	
 	FlorisMugList:
 	BYTE 0xB1 True 0x0 0x0
+
+	ChiffonConditional:
+	BYTE 0xA0 True 0x0 0x0
 	
 	XavierMugList:
 	BYTE 0x22 True 0x0 0x0

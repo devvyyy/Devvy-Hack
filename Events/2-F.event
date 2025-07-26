@@ -159,7 +159,7 @@ CHECK_EVENTID 0x93
 BNE 0x9000 0xC 0x0
 
 STAL 33
-TextCont(WulfricRecruitText, 0x30)
+TextCont(WulfricRecruitText, 0x3B4)
 MURE 0x2
 CUSA Wellington
 
@@ -180,7 +180,7 @@ CHECK_EVENTID 0x92
 BNE 0x9000 0xC 0x0
 
 STAL 33
-TextCont(OpalRecruitText, 0x30)
+TextCont(OpalRecruitText, 0x3B4)
 MURE 0x2
 CUSA Opal
 
@@ -202,7 +202,7 @@ BNE 0x9000 0xC 0x0
 //BNE 0x9000 0xC 0x0
 
 STAL 33
-TextCont(MesselRecruitText, 0x30)
+TextCont(MesselRecruitText, 0x3B4)
 MURE 0x2
 CUSA Messel
 
@@ -270,13 +270,12 @@ BNE 0x9000 0xC 0x0
 CHECK_EVENTID 0x95 //did you fight hayes?
 BNE 0x9000 0xC 0x0
 
-
-Text(ChP2FinalePostPrepsAlt)
+TextCont(ChP2FinalePostPrepsAlt, 0x197)
 
 GOTO 0x9001
 LABEL 0x9000
 
-Text(ChP2FinalePostPreps)
+TextCont(ChP2FinalePostPreps, 0x196)
 
 LABEL 0x9001
 

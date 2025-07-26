@@ -22,7 +22,7 @@ CharacterBasedEvents:
 	END_MAIN
 
 MiscBasedEvents:
-AFEV 0x3 CheckIfWinHugeW 0x0
+//AFEV 0x3 CheckIfWinHugeW 0x0 //lol this is unused but apparently also never actually unset 0x3 so u insta won
 	CauseGameOverIfLordDies
 	END_MAIN
 
@@ -64,80 +64,94 @@ Tutorial:
 	END_MAIN
 
 Units1:
-UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [2,20] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+//UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [2,20] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [3,20] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [4,20] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [5,20] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [6,20] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [7,20] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [8,20] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
-UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [2,21] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+//UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [2,21] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [3,21] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [4,21] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [5,21] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [6,21] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [7,21] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
-UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [9,20] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+//UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [9,20] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [8,21] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
-UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [9,21] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+//UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [9,21] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 
 //other side
-UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [28,13] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
-UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [28,14] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
-UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [28,15] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+//UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [28,13] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+//UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [28,14] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+//UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [220,5] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 	UNIT
 	
 NewPlayables:
 
 	UNIT
 
-EnemyUnits:
+EnemyUnits: //InfantrySoul, CavSoul, FlierSoul, ArmorSoul, MagSoul, PromoSoul, StealSoul
 // bosses
-UNIT Aoife Sage_F 0x1 Level(15, Enemy, 0)     [15,5] DropItem 0x0 0x0 0x0 [0xEA,0xCF] BossAI
-UNIT Eustace Druid_F 0x1 Level(15, Enemy, 0)     [2,5] DropItem 0x0 0x0 0x0 [0xEC,0xA2] BossAI
-UNIT Maynard Bishop 0x1 Level(15, Enemy, 0)     [16,18] DropItem 0x0 0x0 0x0 [0xEB,0xE4,] BossAI
+//UNIT Aoife Sage_F 0x1 Level(15, Enemy, 0)     [15,5] DropItem 0x0 0x0 0x0 [0xEA,0xCF] BossAI
+//UNIT Eustace Druid_F 0x1 Level(15, Enemy, 0)     [2,5] DropItem 0x0 0x0 0x0 [0xEC,0xA2] BossAI
+//UNIT Maynard Bishop 0x1 Level(15, Enemy, 0)     [16,18] DropItem 0x0 0x0 0x0 [0xEB,0xE4,] BossAI
 
 
 // the lamer gamers
-UNIT Aeteria Mercenary 0x1 Level(16, Enemy, 1)     [5,16] 0b 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
-UNIT Aeteria Archer 0x1 Level(16, Enemy, 1)     [6,5] 0b 0x0 0x0 0x0 [SilverBow] TwoActionAI
-UNIT Aeteria Soldier 0x1 Level(16, Enemy, 1)     [3,13] 0b 0x0 0x0 0x0 [SilverLance] StallOneTurnAI
-UNIT Aeteria Mercenary 0x1 Level(16, Enemy, 1)     [5,10] 0b 0x0 0x0 0x0 [SilverSword] BossAI
-UNIT Aeteria LArmor 0x1 Level(16, Enemy, 1)     [6,9] 0b 0x0 0x0 0x0 [SilverLance] BossAI
-UNIT Aeteria Mercenary 0x1 Level(16, Enemy, 1)     [8,7] 0b 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
-UNIT Aeteria Halberdier 0x1 Level(16, Enemy, 1)     [10,8] 0b 0x0 0x0 0x0 [SilverLance] ChargeAI
-UNIT Aeteria Myrmidon 0x1 Level(16, Enemy, 1)     [18,3] 0b 0x0 0x0 0x0 [KillingEdge] TwoActionAI
-UNIT Aeteria Mercenary 0x1 Level(16, Enemy, 1)     [14,13] 0b 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
-UNIT Aeteria LArmor 0x1 Level(16, Enemy, 1)     [16,16] 0b 0x0 0x0 0x0 [SilverLance] BossAI
-UNIT Aeteria Warrior 0x1 Level(16, Enemy, 1)     [19,11] 0b 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
-UNIT Aeteria Shaman 0x1 Level(16, Enemy, 1)     [23,7] 0b 0x0 0x0 0x0 [DarkTome2] BossAI
-UNIT Aeteria Soldier 0x1 Level(16, Enemy, 1)     [5,3] 0b 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
-UNIT Aeteria Archer 0x1 Level(16, Enemy, 1)     [2,9] 0b 0x0 0x0 0x0 [Longbow] BossAI
-UNIT Aeteria AArmor 0x1 Level(16, Enemy, 1)     [1,12] 0b 0x0 0x0 0x0 [SteelLabrys] AttackInRangeAI
-UNIT Aeteria AxeArmor 0x1 Level(16, Enemy, 1)     [18,14] 0b 0x0 0x0 0x0 [SilverAxe, HandAxe] BossAI
-UNIT Aeteria Occultist 0x1 Level(16, Enemy, 1)     [12,6] 0b 0x0 0x0 0x0 [DarkTome3] StallOneTurnAI
-UNIT Aeteria ACav 0x1 Level(16, Enemy, 1)     [20,8] 0b 0x0 0x0 0x0 [SilverAxe] TwoActionAI
-UNIT Aeteria Soldier 0x1 Level(16, Enemy, 1)     [18,2] 0b 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
-UNIT Aeteria Mercenary 0x1 Level(16, Enemy, 1)     [13,4] 0b 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
-UNIT Aeteria Mage 0x1 Level(16, Enemy, 1)     [10,13] 0b 0x0 0x0 0x0 [Thunder] TwoActionAI
-UNIT Aeteria Priest 0x1 Level(16, Enemy, 1)     [6,14] 0b 0x0 0x0 0x0 [Sleep] BossAI
-UNIT Aeteria Archer 0x1 Level(16, Enemy, 1)     [12,15] 0b 0x0 0x0 0x0 [SilverBow] TwoActionAI
-UNIT Aeteria Soldier 0x1 Level(16, Enemy, 1)     [16,12] 0b 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
-UNIT Aeteria SCav 0x1 Level(16, Enemy, 1)     [5,0] 0b 0x0 0x0 0x0 [SilverSword] ChargeAI
-UNIT Aeteria Thaumaturge 0x1 Level(16, Enemy, 1)     [8,15] 0b 0x0 0x0 0x0 [Thunder] TwoActionAI
-UNIT Aeteria Thaumaturge 0x1 Level(16, Enemy, 1)     [26,14] 0b 0x0 0x0 0x0 [Thunder] TwoActionAI
-UNIT Aeteria Archer 0x1 Level(16, Enemy, 1)     [22,13] 0b 0x0 0x0 0x0 [SilverBow] AttackInRangeAI
-UNIT Aeteria Sage 0x1 Level(16, Enemy, 1)     [18,19] 0b 0x0 0x0 0x0 [Bolting] BossAI
-UNIT Aeteria AArmor 0x1 Level(16, Enemy, 1)     [3,6] 0b 0x0 0x0 0x0 [HandAxe] BossAI
-UNIT Aeteria Thaumaturge 0x1 Level(16, Enemy, 1)     [1,6] 0b 0x0 0x0 0x0 [Wind] TwoActionAI
-UNIT Aeteria Archer 0x1 Level(16, Enemy, 1)     [22,13] 0b 0x0 0x0 0x0 [Longbow] BossAI
-UNIT Aeteria Sniper 0x1 Level(16, Enemy, 1)     [14,5] 0b 0x0 0x0 0x0 [SteelBow] BossAI
-UNIT Aeteria Archer 0x1 Level(16, Enemy, 1)     [16,5] 0b 0x0 0x0 0x0 [Longbow] AttackInRangeAI
-UNIT Aeteria LCav 0x1 Level(16, Enemy, 1)     [22,18] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
-UNIT Aeteria Seer 0x1 Level(16, Enemy, 1)     [15,18] 0b 0x0 0x0 0x0 [DarkTome5] BossAI
+UNIT PromoSoul Hero 0x1 Level(15, Enemy, 1)     [14,2] 0b 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
+UNIT PromoSoul Sniper 0x1 Level(15, Enemy, 1)     [6,5] 0b 0x0 0x0 0x0 [SteelBow] TwoActionAI
+UNIT CavSoul APal 0x1 Level(16, Enemy, 1)     [7,2] 0b 0x0 0x0 0x0 [SilverAxe] ChargeAI
+UNIT PromoSoul Hero 0x1 Level(15, Enemy, 1)     [5,10] DropItem 0x0 0x0 0x0 [SilverSword] StallOneTurnAI
+UNIT CavSoul LPal 0x1 Level(16, Enemy, 1)     [6,8] 0b 0x0 0x0 0x0 [SilverLance] ChargeAI
+UNIT ArmorSoul GreatKnight 0x1 Level(15, Enemy, 1)     [8,7] 0b 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
+UNIT PromoSoul Halberdier 0x1 Level(16, Enemy, 1)     [10,8] 0b 0x0 0x0 0x0 [SilverLance] ChargeAI
+UNIT PromoSoul Swordmaster 0x1 Level(15, Enemy, 1)     [18,3] 0b 0x0 0x0 0x0 [KillingEdge] TwoActionAI
+UNIT PromoSoul Hero 0x1 Level(15, Enemy, 1)     [14,13] 0b 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
+UNIT ArmorSoul General 0x1 Level(16, Enemy, 1)     [16,16] 0b 0x0 0x0 0x0 [Spear,SteelLabrys] BossAI
+UNIT PromoSoul Warrior 0x1 Level(15, Enemy, 1)     [19,11] 0b 0x0 0x0 0x0 [SilverAxe,SteelBow] AttackInRangeAI
+UNIT MagSoul Druid 0x1 Level(16, Enemy, 1)     [23,7] 0b 0x0 0x0 0x0 [DarkTome3] BossAI
+UNIT PromoSoul Halberdier 0x1 Level(15, Enemy, 1)     [5,3] DropItem 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
+UNIT PromoSoul Sniper 0x1 Level(15, Enemy, 1)     [2,9] 0b 0x0 0x0 0x0 [Longbow] BossAI
+UNIT ArmorSoul General 0x1 Level(16, Enemy, 1)     [1,12] 0b 0x0 0x0 0x0 [SteelLabrys] AttackInRangeAI
+UNIT ArmorSoul GreatKnight 0x1 Level(16, Enemy, 1)     [18,14] 0b 0x0 0x0 0x0 [SilverAxe, HandAxe] BossAI
+UNIT MagSoul Druid 0x1 Level(15, Enemy, 1)     [12,6] 0b 0x0 0x0 0x0 [DarkTome3] StallOneTurnAI
+UNIT CavSoul APal 0x1 Level(15, Enemy, 1)     [20,8] DropItem 0x0 0x0 0x0 [SilverAxe] TwoActionAI
+UNIT PromoSoul Halberdier 0x1 Level(15, Enemy, 1)     [18,2] 0b 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
+UNIT CavSoul SPal 0x1 Level(15, Enemy, 1)     [13,4] 0b 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
+UNIT MagSoul Sage 0x1 Level(16, Enemy, 1)     [10,13] 0b 0x0 0x0 0x0 [Iceberg] TwoActionAI
+UNIT MagSoul Bishop 0x1 Level(15, Enemy, 1)     [15,6] DropItem 0x0 0x0 0x0 [Sleep,Ray] BossAI
+UNIT PromoSoul Sniper 0x1 Level(15, Enemy, 1)     [12,15] 0b 0x0 0x0 0x0 [SilverBow] TwoActionAI
+UNIT PromoSoul Halberdier 0x1 Level(15, Enemy, 1)     [16,12] 0b 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
+UNIT CavSoul SPal 0x1 Level(15, Enemy, 1)     [6,0] 0b 0x0 0x0 0x0 [SilverSword] ChargeAI
+UNIT MagSoul MageKnight 0x1 Level(15, Enemy, 1)     [20,5] 0b 0x0 0x0 0x0 [Iceberg] StallOneTurnAI
+UNIT MagSoul MageKnight 0x1 Level(16, Enemy, 1)     [15,6] 0b 0x0 0x0 0x0 [Wind] TwoActionAI
+UNIT PromoSoul Sniper 0x1 Level(15, Enemy, 1)     [22,13] DropItem 0x0 0x0 0x0 [SilverBow] AttackInRangeAI
+UNIT MagSoul Sage 0x1 Level(15, Enemy, 1)     [18,19] 0b 0x0 0x0 0x0 [Bolting] BossAI
+UNIT MagSoul Sage 0x1 Level(15, Enemy, 1)     [3,6] DropItem 0x0 0x0 0x0 [Iceberg] BossAI
+UNIT MagSoul MageKnight 0x1 Level(15, Enemy, 1)     [1,5] 0b 0x0 0x0 0x0 [Wind] TwoActionAI
+UNIT PromoSoul Sniper 0x1 Level(15, Enemy, 1)     [22,13] 0b 0x0 0x0 0x0 [Longbow] BossAI
+UNIT PromoSoul Sniper 0x1 Level(16, Enemy, 1)     [14,5] 0b 0x0 0x0 0x0 [SteelBow] ChargeAI
+UNIT PromoSoul Sniper 0x1 Level(15, Enemy, 1)     [3,3] 0b 0x0 0x0 0x0 [Longbow] AttackInRangeAI
+UNIT CavSoul LPal 0x1 Level(15, Enemy, 1)     [22,18] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
+UNIT MagSoul Druid 0x1 Level(16, Enemy, 1)     [15,2] 0b 0x0 0x0 0x0 [DarkTome5] RangeAI
 
-UNIT Aeteria Thief 0x1 Level(16, Enemy, 1)     [23,0] 0b 0x0 0x0 0x0 [IronDagger] ThiefAI
+UNIT Aeteria Thief 0x1 Level(15, Enemy, 1)     [23,0] 0b 0x0 0x0 0x0 [IronDagger] ThiefAI
 	UNIT
+
+CutsceneUnits:
+UNIT 0x72 General 0x1 Level(20, Enemy, 0)     [5,10] 0b 0x0 0x0 0x0 [WindSword, 0x63] StallOneTurnAI
+
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [4,20] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Affogato 0x3 0x1 Level(1, Ally, 0)   [5,21] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT
+
+CutsceneUnits2:
+UNIT Ulrich LPal 0x1 Level(1, Ally, 0)   [4,21] 0 0 1 REDA6R15 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [5,21] 0 0 1 REDA5R15 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [6,21] 0 0 1 REDA5R17 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT
+
 	
 
 Traps1:
@@ -149,13 +163,299 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+REVEAL Chiffon
+	Music(0x3E3)
+	LOAD2 0x1 CutsceneUnits
+	ENUN
+
+STAL 50
+
+CAM1 [4,17]
+
+FADU 15
+
+		STAL 5
+BROWNBOXTEXT CastleVale [8,8]
+STAL 15
+	STAL 5
+BROWNBOXTEXT TheBastion [8,8]
+STAL 15
+
+Music(0x4E)
+SetBackground(0x42)
+Text(Part3Chapter8ActualOpening1)
+ClearBackground
+
+STAL 5
+CAM1 [5,5]
+STAL 20
+
+CameraCursor(Chiffon)
+
+TEXTSTART; TEXTSHOW Part3Chapter8ActualOpening2; TEXTEND
+
+MOVE 0xA Chiffon [5,12]
+ENUN
+
+CAM1 [5,15]
+Music(0x184)
+STAL 30
+
+TEXTCONT
+TEXTEND; MOVE 0xF Chiffon [5,11]
+ENUN; TEXTCONT; TEXTEND; REMA
+
+//summons stuff, units move back
+
+FAWI 30
 	LOAD1 0x1 EnemyUnits
 	ENUN
-	GotoPrepScreen
+
+SOUN 0xB4
+STAL 5
+SOUN 0xB4
+STAL 5
+SOUN 0xB4
+STAL 5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+
+
+MOVE 0xF Chiffon [5,14]
+MOVE 0xF Affogato [6,14]
+ENUN
+STAL 3
+MOVE 0xA 0x72 [5,6]
+ENUN
+
+FAWU 15
+
+STAL 5
+CameraCursor(Affogato)
+Text(Part3Chapter8ActualOpeningAffo)
+
+CamOn
+LOAD2 0x1 CutsceneUnits2 //ulrich stuff
+ENUN
+CamOff
+
+Text(Part3Chapter8ActualOpening3)
+
+CameraCursor(0x72)
+Text(Part3Chapter8ActualOpening4)
+
+CameraCursor(Chiffon)
+Text(Part3Chapter8ActualOpening5)
+
+
+CALL $591FD8 //prep screen
+MUSCSLOW 0x7FFF
+
+CAM1 [7,19]
+	FADU 60
+
+STAL 20
+ENUT 0xA1 //flag 0xA1 is used in part 1 and unset in 1-1; in part 2 this is the "won against Warden" flag
+CAM1 0x72; STAL 20; FlashCursor(0x72,60)
+
+Text(Part3Chapter8Warden2)
+
+STAL 5
+
+SOUN 0x2f7
+STAL 100
+
+EARTHQUAKE_START 0x0
+SOUN 0x2f0
+FAWI 3
+STAL 100
+SOUN 0x2f1
+
+SetHP(Affogato)
+SetHP(Ulrich)
+SetHP(Breve)
+SetHP(Hildr)
+SetHP(Ansgar)
+SetHP(Sequin)
+SetHP(Nora)
+SetHP(Kane)
+SetHP(Mocha)
+SetHP(Levain)
+SetHP(Stroganoff)
+SetHP(Eisner)
+SetHP(Doppio)
+SetHP(Floris)
+SetHP(Yory)
+SetHP(Noel)
+SetHP(Brudet)
+SetHP(Therese)
+SetHP(Lennard)
+SetHP(Wegman)
+SetHP(Klavdia)
+SetHP(Gerolf)
+SetHP(Xavier)
+SetHP(Ogrim)
+SetHP(Iris)
+SetHP(Chiffon)
+SetHP(Graham)
+SetHP(Yufka)
+SetHP(Jaye)
+SetHP(Penny)
+SetHP(Yvonne)
+SetHP(Verna)
+SetHP(Frye)
+SetHP(Velius)
+SetHP(Cortado)
+SetHP(Gus)
+SetHP(Raial)
+SetHP(Ilse)
+SetHP(Pandoro)
+SetHP(Rina)
+SetHP(Staniel)
+SetHP(Dira)
+SetHP(Edith)
+SetHP(Moose)
+SetHP(Chester)
+SetHP(Kian)
+SetHP(Edvin)
+SetHP(Opali)
+SetHP(Wulfric)
+SetHP(Messel)
+SET_ENDTURN Affogato
+SET_ENDTURN Ulrich
+SET_ENDTURN Breve
+SET_ENDTURN Hildr
+SET_ENDTURN Ansgar
+SET_ENDTURN Sequin
+SET_ENDTURN Nora
+SET_ENDTURN Kane
+SET_ENDTURN Mocha
+SET_ENDTURN Levain
+SET_ENDTURN Stroganoff
+SET_ENDTURN Eisner
+SET_ENDTURN Doppio
+SET_ENDTURN Floris
+SET_ENDTURN Yory
+SET_ENDTURN Noel
+SET_ENDTURN Brudet
+SET_ENDTURN Therese
+SET_ENDTURN Lennard
+SET_ENDTURN Wegman
+SET_ENDTURN Klavdia
+SET_ENDTURN Gerolf
+SET_ENDTURN Xavier
+SET_ENDTURN Ogrim
+SET_ENDTURN Iris
+SET_ENDTURN Chiffon
+SET_ENDTURN Graham
+SET_ENDTURN Yufka
+SET_ENDTURN Jaye
+SET_ENDTURN Penny
+SET_ENDTURN Yvonne
+SET_ENDTURN Verna
+SET_ENDTURN Frye
+SET_ENDTURN Velius
+SET_ENDTURN Cortado
+SET_ENDTURN Gus
+SET_ENDTURN Raial
+SET_ENDTURN Ilse
+SET_ENDTURN Pandoro
+SET_ENDTURN Rina
+SET_ENDTURN Staniel
+SET_ENDTURN Dira
+SET_ENDTURN Edith
+SET_ENDTURN Moose
+SET_ENDTURN Chester
+SET_ENDTURN Kian
+SET_ENDTURN Edvin
+SET_ENDTURN Opali
+SET_ENDTURN Wulfric
+SET_ENDTURN Messel
+
+STAL 100
+CAM1 [7,19]
+EARTHQUAKE_END
+FAWU 5
+
+STAL 5
+
+
+CameraCursor(Chiffon)
+
+TEXTSTART
+TEXTSHOW Part3Chapter8ActualOpeningChiffon
+TEXTEND
+
+CameraCursor(0x72)
+STAL 5
+
+MOVE 0x3 0x72 [5,0]
+ENUN
+REMU 0x72
+
+TEXTCONT
+TEXTEND
+REMA
+
+//Text(Part3Chapter8ActualOpeningChiffon)
+
+	NoFade
 	ENDA
 
 EndingScene:
-	//MNC2 0xF
-	MNTS 0x1 //return to title screen
+
+Music(0x2A2)
+SetBackground(0x44)
+
+TEXTSTART; TEXTSHOW Part3Chapter8ActualEnding1; TEXTEND; SOUN 0x11D; TEXTCONT;TEXTEND; SOUN 0x11D; TEXTCONT; TEXTEND; REMA
+
+
+Text(Part3Chapter8ActualEnding2)
+
+	MNC2 0x1E
+	//MNTS 0x1 //return to title screen
 	NoFade
 	ENDA

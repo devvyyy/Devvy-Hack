@@ -73,7 +73,9 @@
 #define SilentlyGiveItem(item, unit) "BYTE 0x40 0x0D unit item; POIN SilentGiveItem+1"
 #define TalkConvo(id) "MUSI; Text(id); MUNO; MURE 2; NoFade"
 #define TextCont(id,music) "TEXTSTART; TEXTSHOW id; TEXTEND; MUSC music; TEXTCONT; TEXTEND; REMA"
-#define TextContCont(id,music,music2) "TEXTSTART; TEXTSHOW id; TEXTEND; MUSC music; TEXTCONT; TEXTEND;TEXTEND; MUSC music; TEXTCONT; TEXTEND; REMA"
+#define TextContCont(id,music,music2) "TEXTSTART; TEXTSHOW id; TEXTEND; MUSC music; TEXTCONT; TEXTEND; MUSC music2; TEXTCONT; TEXTEND; REMA"
+
 #define ContinueIfIDMatch(UnitID) "SVAL 0x2 UnitID; CALL 0x9EE19C"
 #define ContinueIfFactionMatch(AllegianceID) "SVAL 0x2 AllegianceID; CALL 0x9EE1B8"
 #define BG(background) "SVAL 2 background; CALL $9EE2E8" //EVBIT 0x8 = fade in?
+#define LearnSkill(charID,skillID) "SVAL 1 skillID; SVAL 2 charID; ASMC ASMC_LearnNewSkill|1"

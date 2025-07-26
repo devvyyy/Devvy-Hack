@@ -71,26 +71,26 @@ UNIT MagSoul Monk 0x1 Level(7, Enemy, 1)     [29,15] 0b 0x0 0x0 0x0 [LightTome1]
 UNIT InfantrySoul Mercenary 0x1 Level(6, Enemy, 1)     [2,14] 0b 0x0 0x0 0x0 [IronSword] StallOneTurnAI
 UNIT InfantrySoul Soldier 0x1 Level(6, Enemy, 1)     [4,17] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT MagSoul Mage 0x1 Level(6, Enemy, 1)     [13,29] 0b 0x0 0x0 0x0 [Fire] StallOneTurnAI
-UNIT MagSoul SArmor 0x1 Level(8, Enemy, 1)     [6,21] 0b 0x0 0x0 0x0 [SteelBlade] StallOneTurnAI
+UNIT ArmorSoul SArmor 0x1 Level(8, Enemy, 1)     [6,21] 0b 0x0 0x0 0x0 [SteelBlade] StallOneTurnAI
 UNIT CavSoul ACav 0x1 Level(6, Enemy, 1)     [30,20] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
 UNIT InfantrySoul Archer 0x1 Level(6, Enemy, 1)     [20,28] 0b 0x0 0x0 0x0 [SteelBow] RangeAI
 UNIT InfantrySoul Soldier 0x1 Level(6, Enemy, 1)     [7,28] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
 UNIT CavSoul LCav 0x1 Level(7, Enemy, 1)     [22,27] DropItem 0x0 0x0 0x0 [SteelLance,Torch] StallOneTurnAI
 UNIT MagSoul Monk 0x1 Level(7, Enemy, 1)     [12,26] 0b 0x0 0x0 0x0 [LightTome2] StallOneTurnAI
 UNIT CavSoul SCav 0x1 Level(7, Enemy, 1)     [1,17] 0b 0x0 0x0 0x0 [SteelSword] ChargeAI
-UNIT MagSoul Mage 0x1 Level(7, Enemy, 1)     [0,12] 0b 0x0 0x0 0x0 [Fire] StallOneTurnAI
-UNIT CavSoul LCav 0x1 Level(7, Enemy, 1)     [3,22] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
+UNIT MagSoul Mage 0x1 Level(7, Enemy, 1)     [0,12] DropItem 0x0 0x0 0x0 [Fire, RedGem] StallOneTurnAI
+UNIT CavSoul LCav 0x1 Level(7, Enemy, 1)     [2,22] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
 UNIT MagSoul Mage 0x1 Level(7, Enemy, 1)     [25,29] 0b 0x0 0x0 0x0 [Thunder] StallOneTurnAI
 UNIT MagSoul Thaumaturge 0x1 Level(7, Enemy, 1)     [21,31] 0b 0x0 0x0 0x0 [Fire] StallOneTurnAI
 UNIT FlierSoul PegRider 0x1 Level(7, Enemy, 1)     [28,29] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
 UNIT FlierSoul PegRider 0x1 Level(7, Enemy, 1)     [32,4] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
-UNIT FlierSoul WyvernRider 0x1 Level(7, Enemy, 1)     [0,5] 0b 0x0 0x0 0x0 [SteelAxe] StallOneTurnAI
-UNIT FlierSoul WyvernRider 0x1 Level(7, Enemy, 1)     [28,8] 0b 0x0 0x0 0x0 [SteelAxe] StallOneTurnAI
+UNIT FlierSoul WyvernRider 0x1 Level(7, Enemy, 1)     [0,5] 0b 0x0 0x0 0x0 [IronAxe] StallOneTurnAI
+UNIT FlierSoul WyvernRider 0x1 Level(7, Enemy, 1)     [28,8] DropItem 0x0 0x0 0x0 [SteelAxe, 0x5B] StallOneTurnAI
 UNIT FlierSoul WyvernRider 0x1 Level(7, Enemy, 1)     [9,26] 0b 0x0 0x0 0x0 [SteelAxe] StallOneTurnAI
 UNIT CavSoul SCav 0x1 Level(7, Enemy, 1)     [26,21] 0b 0x0 0x0 0x0 [SteelSword] StallOneTurnAI
 UNIT CavSoul LCav 0x1 Level(7, Enemy, 1)     [29,5] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
 UNIT InfantrySoul Soldier 0x1 Level(7, Enemy, 1)     [31,30] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
-UNIT InfantrySoul Soldier 0x1 Level(7, Enemy, 1)     [5,25] 0b 0x0 0x0 0x0 [SteelSword] StallOneTurnAI
+UNIT InfantrySoul Soldier 0x1 Level(7, Enemy, 1)     [5,25] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
 UNIT MagSoul Mage 0x1 Level(7, Enemy, 1)     [16,27] 0b 0x0 0x0 0x0 [Fire] StallOneTurnAI
 UNIT CavSoul SCav 0x1 Level(7, Enemy, 1)     [27,23] 0b 0x0 0x0 0x0 [SteelSword] StallOneTurnAI
 UNIT InfantrySoul Soldier 0x1 Level(7, Enemy, 1)     [31,25] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
@@ -99,13 +99,13 @@ UNIT CavSoul SCav 0x1 Level(7, Enemy, 1)     [26,30] 0b 0x0 0x0 0x0 [SteelSword]
 UNIT InfantrySoul Fighter 0x1 Level(7, Enemy, 1)     [23,25] 0b 0x0 0x0 0x0 [SteelAxe] StallOneTurnAI
 UNIT CavSoul SCav 0x1 Level(7, Enemy, 1)     [9,30] 0b 0x0 0x0 0x0 [SteelSword] StallOneTurnAI
 UNIT CavSoul ACav 0x1 Level(6, Enemy, 1)     [3,20] 0b 0x0 0x0 0x0 [IronAxe] ChargeAI
-UNIT ArmorSoul AArmor 0x1 Level(8, Enemy, 1)     [11,28] 0b 0x0 0x0 0x0 [ShortAxe] StallOneTurnAI
+UNIT ArmorSoul AArmor 0x1 Level(8, Enemy, 1)     [11,28] DropItem 0x0 0x0 0x0 [ShortAxe, 0x60] StallOneTurnAI
 UNIT InfantrySoul Archer 0x1 Level(6, Enemy, 1)     [28,19] 0b 0x0 0x0 0x0 [SteelBow] StallOneTurnAI
 UNIT FlierSoul Occultist 0x1 Level(6, Enemy, 1)     [30,9] 0b 0x0 0x0 0x0 [DarkTome1] StallOneTurnAI
 UNIT FlierSoul Occultist 0x1 Level(6, Enemy, 1)     [2,5] 0b 0x0 0x0 0x0 [DarkTome2] StallOneTurnAI
 UNIT ArmorSoul AArmor 0x1 Level(6, Enemy, 1)     [3,8] 0b 0x0 0x0 0x0 [ShortAxe] StallOneTurnAI
-UNIT ArmorSoul SArmor 0x1 Level(6, Enemy, 1)     [28,8] 0b 0x0 0x0 0x0 [Flamberge] StallOneTurnAI
-UNIT CavSoul ACav 0x1 Level(6, Enemy, 1)     [3,3] 0b 0x0 0x0 0x0 [Flamberge] StallOneTurnAI
+UNIT ArmorSoul SArmor 0x1 Level(6, Enemy, 1)     [28,8] 0b 0x0 0x0 0x0 [ShortBrand] StallOneTurnAI
+UNIT CavSoul ACav 0x1 Level(6, Enemy, 1)     [3,3] DropItem 0x0 0x0 0x0 [Flamberge] StallOneTurnAI
 
 UNIT FlierSoul GriffonRider 0x1 Level(6, Enemy, 1)     [15,30] 0b 0x0 0x0 0x0 [SteelBow] StallOneTurnAI
 UNIT FlierSoul GriffonRider 0x1 Level(6, Enemy, 1)     [31,2] 0b 0x0 0x0 0x0 [SteelBow] StallOneTurnAI
@@ -217,18 +217,18 @@ STAL 10
 Music(0x4d)
 SetBackground(0x34)
 
-TextCont(Part3Chapter1Opening1, 0x283)
+TextCont(Part3Chapter1Opening1, 0x1c9)
 
 STAL 15
 FADI 60
 CLEAN
 	LOAD1 0x1 EnemyUnits
 	ENUN
+
+//Music()
 SetBackground(0x3C)
 
 Text(Part3Chapter1Opening2)
-
-	ENUN
 
 
 	GotoPrepScreen

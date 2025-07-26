@@ -2,7 +2,7 @@
 
 	.equ	History_FINAL_grp, voicegroup000
 	.equ	History_FINAL_pri, 0
-	.equ	History_FINAL_rev, 0
+	.equ	History_FINAL_rev, 176
 	.equ	History_FINAL_mvl, 30
 	.equ	History_FINAL_key, 0
 	.equ	History_FINAL_tbs, 1
@@ -603,11 +603,11 @@ History_FINAL_3:
 	.byte	KEYSH , History_FINAL_key+0
 History_FINAL_3_B1:
 @ 000   ----------------------------------------
-	.byte		VOICE , 49
+	.byte		VOICE , 54
 	.byte		MODT  , 0
 	.byte		LFOS  , 44
+	.byte		PAN   , c_v+12
 	.byte		VOL   , 127*History_FINAL_mvl/mxv
-	.byte		PAN   , c_v+32
 	.byte	W96
 @ 001   ----------------------------------------
 	.byte	W96
@@ -761,11 +761,11 @@ History_FINAL_4:
 	.byte	KEYSH , History_FINAL_key+0
 History_FINAL_4_B1:
 @ 000   ----------------------------------------
-	.byte		VOICE , 71
+	.byte		VOICE , 100
 	.byte		MODT  , 0
 	.byte		LFOS  , 44
-	.byte		VOL   , 127*History_FINAL_mvl/mxv
-	.byte		PAN   , c_v-63
+	.byte		VOL   , 112*History_FINAL_mvl/mxv
+	.byte		PAN   , c_v-1
 	.byte	W96
 @ 001   ----------------------------------------
 	.byte	W96
@@ -1192,8 +1192,8 @@ History_FINAL_6_B1:
 	.byte		VOICE , 73
 	.byte		MODT  , 0
 	.byte		LFOS  , 44
+	.byte		PAN   , c_v-64
 	.byte		VOL   , 127*History_FINAL_mvl/mxv
-	.byte		PAN   , c_v+0
 	.byte	W96
 @ 001   ----------------------------------------
 	.byte	W96
@@ -1397,11 +1397,128 @@ History_FINAL_6_B2:
 @ 030   ----------------------------------------
 	.byte	FINE
 
+@**************** Track 7 (Midi-Chn.7) ****************@
+
+History_FINAL_7:
+	.byte	KEYSH , History_FINAL_key+0
+History_FINAL_7_B1:
+@ 000   ----------------------------------------
+	.byte		VOICE , 14
+	.byte		MODT  , 0
+	.byte		LFOS  , 44
+	.byte		PAN   , c_v+27
+	.byte		VOL   , 127*History_FINAL_mvl/mxv
+	.byte		TIE   , An2 , v100
+	.byte	W96
+@ 001   ----------------------------------------
+	.byte	W96
+	.byte	W24
+	.byte		EOT   
+@ 002   ----------------------------------------
+	.byte		N96   , Gn2 
+	.byte	W96
+@ 003   ----------------------------------------
+History_FINAL_7_003:
+	.byte		TIE   , An2 , v100
+	.byte	W96
+	.byte	W24
+	.byte	PEND
+	.byte		EOT   
+@ 004   ----------------------------------------
+	.byte	W72
+@ 005   ----------------------------------------
+	.byte	W72
+@ 006   ----------------------------------------
+	.byte	W72
+@ 007   ----------------------------------------
+	.byte	W72
+@ 008   ----------------------------------------
+History_FINAL_7_008:
+	.byte		TIE   , En2 , v100
+	.byte	W96
+	.byte	W42
+	.byte	PEND
+	.byte		EOT   
+	.byte	W06
+@ 009   ----------------------------------------
+	.byte	W96
+@ 010   ----------------------------------------
+	.byte	PATT
+	 .word	History_FINAL_7_003
+	.byte		EOT   , An2 
+@ 011   ----------------------------------------
+	.byte		N96   , Gn2 , v100
+	.byte	W96
+@ 012   ----------------------------------------
+	.byte	PATT
+	 .word	History_FINAL_7_003
+	.byte		EOT   , An2 
+@ 013   ----------------------------------------
+	.byte	W72
+@ 014   ----------------------------------------
+	.byte	W72
+@ 015   ----------------------------------------
+	.byte	W72
+@ 016   ----------------------------------------
+	.byte	W72
+@ 017   ----------------------------------------
+	.byte	PATT
+	 .word	History_FINAL_7_008
+	.byte		EOT   , En2 
+	.byte	W06
+@ 018   ----------------------------------------
+	.byte		TIE   , Gn2 , v100
+	.byte	W96
+@ 019   ----------------------------------------
+	.byte	W96
+	.byte		EOT   
+@ 020   ----------------------------------------
+	.byte		TIE   , An2 
+	.byte	W96
+@ 021   ----------------------------------------
+	.byte	W96
+	.byte		EOT   
+@ 022   ----------------------------------------
+	.byte		TIE   , Gn2 
+	.byte	W96
+@ 023   ----------------------------------------
+	.byte	W96
+	.byte		EOT   
+@ 024   ----------------------------------------
+	.byte		N96   , An2 
+	.byte	W96
+@ 025   ----------------------------------------
+	.byte		N72   , Fn2 
+	.byte	W72
+	.byte		        Dn2 
+	.byte	W24
+@ 026   ----------------------------------------
+	.byte	W48
+	.byte		        Fs2 
+	.byte	W48
+@ 027   ----------------------------------------
+	.byte	W24
+	.byte		TIE   , Dn2 
+	.byte	W72
+@ 028   ----------------------------------------
+	.byte	W96
+@ 029   ----------------------------------------
+	.byte	W18
+	.byte		EOT   
+	.byte	W09
+	.byte	GOTO
+	 .word	History_FINAL_7_B1
+History_FINAL_7_B2:
+	.byte	W68
+	.byte	W01
+@ 030   ----------------------------------------
+	.byte	FINE
+
 @******************************************************@
 	.align	2
 
 History_FINAL:
-	.byte	6	@ NumTrks
+	.byte	7	@ NumTrks
 	.byte	0	@ NumBlks
 	.byte	History_FINAL_pri	@ Priority
 	.byte	History_FINAL_rev	@ Reverb.
@@ -1414,5 +1531,6 @@ History_FINAL:
 	.word	History_FINAL_4
 	.word	History_FINAL_5
 	.word	History_FINAL_6
+	.word	History_FINAL_7
 
 	.end

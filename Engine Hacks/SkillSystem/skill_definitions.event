@@ -323,7 +323,10 @@
 
 //Keep Up: At start of turn, if unit is within 3 spaces of an ally with Canto or Canto+, unit gains +2 Mov.
 //By Sme
-#define KeepUpID 251
+#define KeepUpID 255
+
+//Calamity: end turn set all foes hp to 1 lolll!
+#define CalamityID 251
 
 //Indoor March: At start of turn, if unit is on indoor terrain, unit gains +2 Mov.
 //By Sme
@@ -601,7 +604,8 @@
 
 //Charge+: Charge+: If unit has used up all movement, gain brave effect.
 //By Sme
-#define ChargePlusID 43
+#define ChargePlusID 255 //breve has normal charge
+#define NoctumRingID 43
 
 //Critical Force: Base critical is Skl * 1.5.
 //Author Unknown (Initial Commit)
@@ -1240,7 +1244,10 @@
 
 //Life and Death: Grants +5 Atk/Mag/Spd, -5 Def/Res.
 //By Leonarth
-#define HeroesLifeAndDeathID 150
+#define HeroesLifeAndDeathID 255
+
+//Crown: chiffon moment yay
+#define CrownID 150
 
 //Push Skills: When HP is full, gain +5 to the given stat.
 //By Sme

@@ -1,0 +1,5 @@
+#define csvmacro000(arg000,arg001, arg002, arg006, arg003,arg004,arg005) "SHORT arg000; SHORT arg001; BYTE arg002 arg006; BYTE arg003 arg004; SHORT arg005 0x00; "
+// old name text id, new name text id, char id, class id, mapid, route, flag
+ChangeStatusBGEachChapter_Table:
+csvmacro000(ChiffonName,SylmeriaName,0x00,0x00,0xFF,0xFF,0xFF)
+csvmacro000(0x00,0x00,0x00,0x00,0x00,0x00,0x00)  // term

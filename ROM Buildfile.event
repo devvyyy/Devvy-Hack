@@ -1,4 +1,6 @@
     PROTECT 0xC00000 //start of anim table?
+//	PROTECT 0x8b0890 (0x8b0890 + (0x4D*148))
+//	PROTECT 0x8b0890 + (0x4D*148)
 //	PROTECT 0x8B10A8
 //	PROTECT 0xF69828 //some boon/chtext thing
 	//PROTECT 0x95F5A4 //summon table
@@ -96,6 +98,7 @@ ALIGN 4
 //	#include "Engine Hacks/DeleteItem/PATCH_EVENTSCRIPT_COND_item_find.txt//" //by 7743
 	#include "Engine Hacks/RingRework/Installer.event" //by 7743
 	#include "Engine Hacks/ChangeUnitDesc/Installer.event" //by 7743
+	//#include "Engine Hacks/DynamicTextSwap/Installer.event" //by epicer
 	#include "Engine Hacks/CantoBugFix/Installer.event" //by Contro
 	#include "Engine Hacks/Draw/Installer.event" //by Vesly
 	#include "Engine Hacks/AllegiancePalette/Installer.event" //by Vesly
@@ -103,8 +106,10 @@ ALIGN 4
 	#include "Engine Hacks/ResTerrainWindow/Installer.event" //by Contro
 	#include "Engine Hacks/FancyRText/RTextType.lyn.event" //by Contro
 	#include "Engine Hacks/FancyRText/WarpEvent.lyn.event" //by Contro
+	#include "Engine Hacks/ChangeChapterSong/Installer.event" //by 7743
 	#include "Engine Hacks/CloudFix/Installer.event" //by RandomWizard/Tequila
 	#include "Engine Hacks/IconDisplay/Installer.event" //by Vesly
+	#include "Engine Hacks\SetUnitStatus\SetStatusInstaller.event" //by Vesly
 	#include "Engine Hacks/GenericPortraitFixes/Installer.event" //by Vesly
 	#include "Engine Hacks/MovementCalcLoop/Installer.event" //by Vesly
 	#include "Engine Hacks/GroupAI/Installer.event" //by PhantomSentine

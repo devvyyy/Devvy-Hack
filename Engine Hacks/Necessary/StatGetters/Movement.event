@@ -19,6 +19,7 @@ pMovModifiers: // Movement
 //	POIN prEmpowerCheck prStaticCheck prGalestormCheck
 	POIN prCantoRing
 	POIN prFlowStateCheck
+	POIN ChiffonCrownCheck
 	//POIN prFlorisMarked
 	POIN prStatusOverdriveMovCheck
 	POIN prAvoidBuffMove
@@ -35,6 +36,10 @@ prAddUnitMovBonus:
 prSkillCelerity:
 	rIfUnitHasSkill(CelerityID)
 		rAddConst(2)
+
+ChiffonCrownCheck:
+	rIfUnitHasSkill(CrownID)
+		rAddConst(1)
 		
 prSkillUpgrade:
 	rIfUnitHasSkill(UpgradeID)

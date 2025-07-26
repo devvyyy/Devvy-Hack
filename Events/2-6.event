@@ -36,7 +36,7 @@ ENDA
 
 
 RecruitEdithChiff:
-MUSS 0x30
+MUSS 0x297
 STAL 33
 Text(ChiffonEdithTalk)
 MURE 0x2
@@ -45,7 +45,7 @@ NoFade
 ENDA
 
 RecruitEdithJaye:
-MUSS 0x30
+MUSS 0x297
 STAL 33
 //Text(JayeEdithTalk)
 MURE 0x2
@@ -395,7 +395,24 @@ LABEL 0x9001
 EndingScene:
 	Music(0x283)
 	SetBackground(0x2d)
-	Text(Ch26Ending1)
+
+CHECK_EVENTID 0x92 //opal
+BNE 0x9000 0xC 0x0
+CHECK_EVENTID 0x93 //wulfric
+BNE 0x9000 0xC 0x0
+CHECK_EVENTID 0x94 //messel
+BNE 0x9000 0xC 0x0
+CHECK_EVENTID 0x95 //also messel; tents
+BNE 0x9000 0xC 0x0
+	
+Text(Ch26Ending1)
+	
+GOTO 0x9001
+LABEL 0x9000
+
+Text(Ch26Ending1Alt) //graham
+LABEL 0x9001
+
 	STAL 15
 	Music(0xAD)
 	SetBackground(0x44)

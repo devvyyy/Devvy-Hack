@@ -170,7 +170,7 @@ ALIGN 4
 Phase:
 #incbin "Phase/Phase.dmp"
 POIN SkillTester
-WORD PhaseID
+WORD AstraID
 
 ALIGN 4
 Hijack:
@@ -801,6 +801,18 @@ WindDisciple:
 #incbin "WindDisciple/Winddisciple.dmp"
 POIN SkillTester
 WORD WindDiscipleID
+
+ALIGN 4
+CrownEffect:
+#incbin "WindDisciple/Crown.dmp"
+POIN SkillTester
+WORD CrownID
+
+ALIGN 4
+NoctumRingEffect:
+#incbin "WindDisciple/NoctumRing.dmp"
+POIN SkillTester
+WORD NoctumRingID
 
 ALIGN 4
 ShadowEye:

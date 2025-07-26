@@ -1,0 +1,42 @@
+
+#ifdef _FE8_
+
+#include "EAstdlib.event"
+#include "Extensions/Hack Installation.txt"
+#endif
+
+#ifndef TextTable
+#define TextTable 0x8015D48C
+#endif
+
+
+
+    
+    PUSH
+    ORG $A240
+    jumpToHack(ChangeText)
+    
+    POP
+	
+	
+	ALIGN 4    
+    ChangeText:
+    #incbin "ChangeText.dmp"
+    POIN ChangeText_Table
+    POIN TextTable
+
+ALIGN 4
+ChangeText_Table:
+#include "ChangeText_Table.event"
+//@struct ChangeUnitDesc_Table
+//@{
+//@     short   old_text_id;
+//@	short	new_text_id;				require
+//@	byte	unit_id;				00=ANY
+//@	byte	class_id;				00=ANY or FF=any
+//@	byte	map_id;		章			FF=ANY
+//@	byte	editon		編			FF=ANY
+//@	ushort	flag_id;	Flag		00=ANY
+//@}//sizeof(16bytes)
+
+    

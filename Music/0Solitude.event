@@ -1,0 +1,1778 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	SolitudeNotesCut_FINAL_grp  voicegroup000
+	#define	SolitudeNotesCut_FINAL_pri  0
+	#define	SolitudeNotesCut_FINAL_rev  0xA0
+	#define	SolitudeNotesCut_FINAL_mvl  30
+	#define	SolitudeNotesCut_FINAL_key  0
+	#define	SolitudeNotesCut_FINAL_tbs  1
+	#define	SolitudeNotesCut_FINAL_exg  0
+	#define	SolitudeNotesCut_FINAL_cmp  1
+
+	// .rodata
+	//	SolitudeNotesCut_FINAL
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+SolitudeNotesCut_FINAL_1:
+	BYTE	KEYSH   SolitudeNotesCut_FINAL_key+0
+SolitudeNotesCut_FINAL_1_B1:
+// 000   ----------------------------------------
+	BYTE	TEMPO   90*SolitudeNotesCut_FINAL_tbs/2
+	BYTE		VOICE   48
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*SolitudeNotesCut_FINAL_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N90     Cn3   v056
+	BYTE		N90     En3 
+	BYTE		N90     Gn3 
+	BYTE		N90     Bn3 
+	BYTE	W96
+// 001   ----------------------------------------
+SolitudeNotesCut_FINAL_1_001:
+	BYTE		N90     Cn3   v056
+	BYTE		N90     Dn3 
+	BYTE		N90     En3 
+	BYTE		N90     An3 
+	BYTE	W96
+	BYTE	PEND
+// 002   ----------------------------------------
+SolitudeNotesCut_FINAL_1_002:
+	BYTE		N90     Cn3   v056
+	BYTE		N90     En3 
+	BYTE		N90     Gn3 
+	BYTE		N90     Bn3 
+	BYTE	W96
+	BYTE	PEND
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_001
+// 004   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_002
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_001
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_002
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_001
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_002
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_001
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_002
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_001
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_002
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_001
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_002
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_001
+// 016   ----------------------------------------
+SolitudeNotesCut_FINAL_1_016:
+	BYTE		N90     Cn3   v056
+	BYTE		N90     Fn3 
+	BYTE		N90     Gn3 
+	BYTE		N90     An3 
+	BYTE	W96
+	BYTE	PEND
+// 017   ----------------------------------------
+SolitudeNotesCut_FINAL_1_017:
+	BYTE		N90     Cn3   v056
+	BYTE		N90     Dn3 
+	BYTE		N90     Fn3 
+	BYTE		N90     An3 
+	BYTE	W96
+	BYTE	PEND
+// 018   ----------------------------------------
+SolitudeNotesCut_FINAL_1_018:
+	BYTE		N90     Dn3   v056
+	BYTE		N90     Fn3 
+	BYTE		N90     Gn3 
+	BYTE		N90     Bn3 
+	BYTE	W96
+	BYTE	PEND
+// 019   ----------------------------------------
+SolitudeNotesCut_FINAL_1_019:
+	BYTE		N90     Dn3   v056
+	BYTE		N42     En3 
+	BYTE		N42     Gn3 
+	BYTE		N42     Cn4 
+	BYTE	W48
+	BYTE		        Fn3 
+	BYTE		N42     Gn3 
+	BYTE		N42     Bn3 
+	BYTE	W48
+	BYTE	PEND
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_016
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_017
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_018
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_019
+// 024   ----------------------------------------
+SolitudeNotesCut_FINAL_1_024:
+	BYTE		N42     Dn3   v056
+	BYTE		N42     Fs3 
+	BYTE	W48
+	BYTE		        Cs3 
+	BYTE		N42     En3 
+	BYTE	W48
+	BYTE	PEND
+// 025   ----------------------------------------
+SolitudeNotesCut_FINAL_1_025:
+	BYTE		N42     Dn3   v056
+	BYTE		N42     Fs3 
+	BYTE	W48
+	BYTE		        Dn3 
+	BYTE		N42     En3 
+	BYTE	W48
+	BYTE	PEND
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_024
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_1_025
+// 028   ----------------------------------------
+	BYTE		N42     Gn3   v056
+	BYTE		N42     Bn3 
+	BYTE	W48
+	BYTE		        Fs3 
+	BYTE		N42     An3 
+	BYTE	W48
+// 029   ----------------------------------------
+	BYTE		        En3 
+	BYTE		N42     Gn3 
+	BYTE	W48
+	BYTE		        Dn3 
+	BYTE		N42     Fn3 
+	BYTE	W48
+// 030   ----------------------------------------
+	BYTE		        Dn3 
+	BYTE		N42     Gn3 
+	BYTE	W48
+	BYTE		        Fn3 
+	BYTE		N42     An3 
+	BYTE	W48
+// 031   ----------------------------------------
+	BYTE		N90     Dn3 
+	BYTE		N90     Gn3 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	SolitudeNotesCut_FINAL_1_B1
+SolitudeNotesCut_FINAL_1_B2:
+// 032   ----------------------------------------
+	BYTE	W24
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+SolitudeNotesCut_FINAL_2:
+	BYTE	KEYSH   SolitudeNotesCut_FINAL_key+0
+SolitudeNotesCut_FINAL_2_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   4
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     108*SolitudeNotesCut_FINAL_mvl/mxv
+	BYTE		PAN     c_v-32
+	BYTE		N11     Cn3   v076
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Cn3   v068
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Cn3   v056
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Cn3   v048
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Cn3   v040
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Cn3   v032
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Cn3   v024
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Cn3   v020
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+// 001   ----------------------------------------
+SolitudeNotesCut_FINAL_2_001:
+	BYTE		N11     Cn3   v076
+	BYTE		N11     Dn3 
+	BYTE		N11     En3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v068
+	BYTE		N11     Dn3 
+	BYTE		N11     En3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v056
+	BYTE		N11     Dn3 
+	BYTE		N11     En3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v048
+	BYTE		N11     Dn3 
+	BYTE		N11     En3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v040
+	BYTE		N11     Dn3 
+	BYTE		N11     En3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v032
+	BYTE		N11     Dn3 
+	BYTE		N11     En3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v024
+	BYTE		N11     Dn3 
+	BYTE		N11     En3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v020
+	BYTE		N11     Dn3 
+	BYTE		N11     En3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE	PEND
+// 002   ----------------------------------------
+SolitudeNotesCut_FINAL_2_002:
+	BYTE		N11     Cn3   v076
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Cn3   v068
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Cn3   v056
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Cn3   v048
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Cn3   v040
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Cn3   v032
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Cn3   v024
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Cn3   v020
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE	PEND
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_001
+// 004   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_002
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_001
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_002
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_001
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_002
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_001
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_002
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_001
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_002
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_001
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_002
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_001
+// 016   ----------------------------------------
+SolitudeNotesCut_FINAL_2_016:
+	BYTE		N11     Cn3   v076
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v068
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v056
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v048
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v040
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v032
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v024
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v020
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE	PEND
+// 017   ----------------------------------------
+SolitudeNotesCut_FINAL_2_017:
+	BYTE		N11     Cn3   v076
+	BYTE		N11     Dn3 
+	BYTE		N11     Fn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v068
+	BYTE		N11     Dn3 
+	BYTE		N11     Fn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v056
+	BYTE		N11     Dn3 
+	BYTE		N11     Fn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v048
+	BYTE		N11     Dn3 
+	BYTE		N11     Fn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v040
+	BYTE		N11     Dn3 
+	BYTE		N11     Fn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v032
+	BYTE		N11     Dn3 
+	BYTE		N11     Fn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v024
+	BYTE		N11     Dn3 
+	BYTE		N11     Fn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE		        Cn3   v020
+	BYTE		N11     Dn3 
+	BYTE		N11     Fn3 
+	BYTE		N11     An3 
+	BYTE	W12
+	BYTE	PEND
+// 018   ----------------------------------------
+SolitudeNotesCut_FINAL_2_018:
+	BYTE		N11     Dn3   v076
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Dn3   v068
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Dn3   v056
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Dn3   v048
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Dn3   v040
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Dn3   v032
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Dn3   v024
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Dn3   v020
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE	PEND
+// 019   ----------------------------------------
+SolitudeNotesCut_FINAL_2_019:
+	BYTE		N11     Dn3   v076
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Cn4 
+	BYTE	W12
+	BYTE		        Dn3   v056
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Cn4 
+	BYTE	W12
+	BYTE		        Dn3   v040
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Cn4 
+	BYTE	W12
+	BYTE		        Dn3   v024
+	BYTE		N11     En3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Cn4 
+	BYTE	W12
+	BYTE		        Dn3   v076
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Dn3   v056
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Dn3   v040
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE		        Dn3   v024
+	BYTE		N11     Fn3 
+	BYTE		N11     Gn3 
+	BYTE		N11     Bn3 
+	BYTE	W12
+	BYTE	PEND
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_016
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_017
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_018
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_019
+// 024   ----------------------------------------
+SolitudeNotesCut_FINAL_2_024:
+	BYTE		N42     Fs3   v076
+	BYTE		N90     An3 
+	BYTE	W48
+	BYTE		N42     En3 
+	BYTE	W48
+	BYTE	PEND
+// 025   ----------------------------------------
+SolitudeNotesCut_FINAL_2_025:
+	BYTE		N42     Fs3   v076
+	BYTE		N42     Bn3 
+	BYTE	W48
+	BYTE		        Gn3 
+	BYTE		N42     Cn4 
+	BYTE	W48
+	BYTE	PEND
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_024
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_2_025
+// 028   ----------------------------------------
+	BYTE		N42     Bn3   v076
+	BYTE		N90     Dn4 
+	BYTE	W48
+	BYTE		N42     An3 
+	BYTE	W48
+// 029   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE		N42     Bn3 
+	BYTE	W48
+	BYTE		        An3 
+	BYTE		N42     Cn4 
+	BYTE	W48
+// 030   ----------------------------------------
+	BYTE		        Bn3 
+	BYTE		N42     Dn4 
+	BYTE	W48
+	BYTE		        An3 
+	BYTE		N42     Cn4 
+	BYTE	W48
+// 031   ----------------------------------------
+	BYTE		N42   
+	BYTE		N42     En4 
+	BYTE	W48
+	BYTE		        Bn3 
+	BYTE		N42     Dn4 
+	BYTE	W48
+	BYTE	GoTo
+	 POIN2	SolitudeNotesCut_FINAL_2_B1
+SolitudeNotesCut_FINAL_2_B2:
+// 032   ----------------------------------------
+	BYTE	W24
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+SolitudeNotesCut_FINAL_3:
+	BYTE	KEYSH   SolitudeNotesCut_FINAL_key+0
+SolitudeNotesCut_FINAL_3_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   100
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     117*SolitudeNotesCut_FINAL_mvl/mxv
+	BYTE		PAN     c_v+32
+	BYTE		N11     En2   v076
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		N54     En3 
+	BYTE	W60
+// 001   ----------------------------------------
+SolitudeNotesCut_FINAL_3_001:
+	BYTE		N11     En2   v076
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		N54     En3 
+	BYTE	W60
+	BYTE	PEND
+// 002   ----------------------------------------
+SolitudeNotesCut_FINAL_3_002:
+	BYTE		N11     En2   v076
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		N54     En3 
+	BYTE	W60
+	BYTE	PEND
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_001
+// 004   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_002
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_001
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_002
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_001
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_002
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_001
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_002
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_001
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_002
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_001
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_002
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_001
+// 016   ----------------------------------------
+SolitudeNotesCut_FINAL_3_016:
+	BYTE		N11     Fn2   v076
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		N54     En3 
+	BYTE	W60
+	BYTE	PEND
+// 017   ----------------------------------------
+SolitudeNotesCut_FINAL_3_017:
+	BYTE		N11     Dn2   v076
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE		        An2 
+	BYTE	W12
+	BYTE		N54     Cn3 
+	BYTE	W60
+	BYTE	PEND
+// 018   ----------------------------------------
+SolitudeNotesCut_FINAL_3_018:
+	BYTE		N11     Gn2   v076
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		N54     Fn3 
+	BYTE	W60
+	BYTE	PEND
+// 019   ----------------------------------------
+SolitudeNotesCut_FINAL_3_019:
+	BYTE		N11     En2   v076
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Dn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE	PEND
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_016
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_017
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_018
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_019
+// 024   ----------------------------------------
+	BYTE		N90     An2   v076
+	BYTE	W96
+// 025   ----------------------------------------
+SolitudeNotesCut_FINAL_3_025:
+	BYTE		N42     Bn2   v076
+	BYTE	W48
+	BYTE		        Cn3 
+	BYTE	W48
+	BYTE	PEND
+// 026   ----------------------------------------
+	BYTE		N90     An2 
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_025
+// 028   ----------------------------------------
+	BYTE		N90     Dn3   v076
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_3_025
+// 030   ----------------------------------------
+	BYTE		N42     Dn3   v076
+	BYTE	W48
+	BYTE		        Cn3 
+	BYTE	W48
+// 031   ----------------------------------------
+	BYTE		        En3 
+	BYTE	W48
+	BYTE		        Dn3 
+	BYTE	W48
+	BYTE	GoTo
+	 POIN2	SolitudeNotesCut_FINAL_3_B1
+SolitudeNotesCut_FINAL_3_B2:
+// 032   ----------------------------------------
+	BYTE	W24
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+SolitudeNotesCut_FINAL_4:
+	BYTE	KEYSH   SolitudeNotesCut_FINAL_key+0
+SolitudeNotesCut_FINAL_4_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   33
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-16
+	BYTE		VOL     108*SolitudeNotesCut_FINAL_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+SolitudeNotesCut_FINAL_4_004:
+	BYTE		N42     Bn1   v127
+	BYTE	W48
+	BYTE		        Gn1 
+	BYTE	W48
+	BYTE	PEND
+// 005   ----------------------------------------
+SolitudeNotesCut_FINAL_4_005:
+	BYTE		N42     En1   v127
+	BYTE	W48
+	BYTE		        Cn1 
+	BYTE	W48
+	BYTE	PEND
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_4_004
+// 007   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_4_005
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_4_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_4_005
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_4_004
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_4_005
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_4_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_4_005
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_4_004
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_4_005
+// 016   ----------------------------------------
+SolitudeNotesCut_FINAL_4_016:
+	BYTE		N42     Cn2   v127
+	BYTE	W48
+	BYTE		        An1 
+	BYTE	W48
+	BYTE	PEND
+// 017   ----------------------------------------
+SolitudeNotesCut_FINAL_4_017:
+	BYTE		N42     Fn1   v127
+	BYTE	W48
+	BYTE		        Dn1 
+	BYTE	W48
+	BYTE	PEND
+// 018   ----------------------------------------
+SolitudeNotesCut_FINAL_4_018:
+	BYTE		N42     Gn1   v127
+	BYTE	W48
+	BYTE		        Fn1 
+	BYTE	W48
+	BYTE	PEND
+// 019   ----------------------------------------
+SolitudeNotesCut_FINAL_4_019:
+	BYTE		N42     En1   v127
+	BYTE	W48
+	BYTE		N20     Gn1 
+	BYTE	W24
+	BYTE		        Bn1 
+	BYTE	W24
+	BYTE	PEND
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_4_016
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_4_017
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_4_018
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_4_019
+// 024   ----------------------------------------
+SolitudeNotesCut_FINAL_4_024:
+	BYTE		N42     Dn2   v127
+	BYTE	W48
+	BYTE		        An1 
+	BYTE	W48
+	BYTE	PEND
+// 025   ----------------------------------------
+SolitudeNotesCut_FINAL_4_025:
+	BYTE		N42     Bn1   v127
+	BYTE	W48
+	BYTE		        Cn2 
+	BYTE	W48
+	BYTE	PEND
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_4_024
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_4_025
+// 028   ----------------------------------------
+	BYTE		N42     Gn1   v127
+	BYTE	W48
+	BYTE		        Dn2 
+	BYTE	W48
+// 029   ----------------------------------------
+	BYTE		        En2 
+	BYTE	W48
+	BYTE		        Fn2 
+	BYTE	W48
+// 030   ----------------------------------------
+	BYTE		        Gn2 
+	BYTE	W48
+	BYTE		        Fn2 
+	BYTE	W48
+// 031   ----------------------------------------
+	BYTE		N11     Dn2 
+	BYTE	W12
+	BYTE		        Cn2 
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		N42     Gn1 
+	BYTE	W48
+	BYTE	GoTo
+	 POIN2	SolitudeNotesCut_FINAL_4_B1
+SolitudeNotesCut_FINAL_4_B2:
+// 032   ----------------------------------------
+	BYTE	W24
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.6) ****************//
+
+SolitudeNotesCut_FINAL_5:
+	BYTE	KEYSH   SolitudeNotesCut_FINAL_key+0
+SolitudeNotesCut_FINAL_5_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   30
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-25
+	BYTE		VOL     109*SolitudeNotesCut_FINAL_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W72
+	BYTE		N11     Bn2   v100
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+// 008   ----------------------------------------
+SolitudeNotesCut_FINAL_5_008:
+	BYTE		N11     Bn2   v100
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		N42     En2 
+	BYTE	W48
+	BYTE		N11   
+	BYTE	W12
+	BYTE		        Fn2 
+	BYTE	W12
+	BYTE	PEND
+// 009   ----------------------------------------
+SolitudeNotesCut_FINAL_5_009:
+	BYTE		N11     En2   v100
+	BYTE	W12
+	BYTE		        Cn2 
+	BYTE	W12
+	BYTE		N32   
+	BYTE	W36
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE	PEND
+// 010   ----------------------------------------
+SolitudeNotesCut_FINAL_5_010:
+	BYTE		N11     Bn2   v100
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		N32     En2 
+	BYTE	W36
+	BYTE		N11     Dn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE	PEND
+// 011   ----------------------------------------
+SolitudeNotesCut_FINAL_5_011:
+	BYTE		N11     En3   v100
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		N32   
+	BYTE	W36
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE	PEND
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_5_008
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_5_009
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_5_010
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_5_011
+// 016   ----------------------------------------
+SolitudeNotesCut_FINAL_5_016:
+	BYTE		N11     En3   v100
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		N20     Dn3 
+	BYTE	W24
+	BYTE		N11     Cn3 
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE	PEND
+// 017   ----------------------------------------
+SolitudeNotesCut_FINAL_5_017:
+	BYTE		N66     Dn3   v100
+	BYTE	W72
+	BYTE		N11     An2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE	PEND
+// 018   ----------------------------------------
+SolitudeNotesCut_FINAL_5_018:
+	BYTE		N11     En3   v100
+	BYTE	W12
+	BYTE		        Fn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		N20     Dn3 
+	BYTE	W24
+	BYTE		N11     Fn3 
+	BYTE	W12
+	BYTE		        En3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE	PEND
+// 019   ----------------------------------------
+SolitudeNotesCut_FINAL_5_019:
+	BYTE		N11     Cn3   v100
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Cn3 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE		        Gn2 
+	BYTE	W12
+	BYTE		        Bn2 
+	BYTE	W12
+	BYTE		        Dn3 
+	BYTE	W12
+	BYTE	PEND
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_5_016
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_5_017
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_5_018
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_5_019
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE		N15     Bn3   v100
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        Cn4 
+	BYTE	W16
+// 029   ----------------------------------------
+	BYTE		        Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+	BYTE		N20     An3 
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE	W24
+// 030   ----------------------------------------
+	BYTE		N15     Bn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+	BYTE		        An3 
+	BYTE	W16
+	BYTE		        Gn3 
+	BYTE	W16
+	BYTE		        Fn3 
+	BYTE	W16
+// 031   ----------------------------------------
+	BYTE		N90     Gn3 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	SolitudeNotesCut_FINAL_5_B1
+SolitudeNotesCut_FINAL_5_B2:
+// 032   ----------------------------------------
+	BYTE	W24
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.7) ****************//
+
+SolitudeNotesCut_FINAL_6:
+	BYTE	KEYSH   SolitudeNotesCut_FINAL_key+0
+SolitudeNotesCut_FINAL_6_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   73
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+21
+	BYTE		VOL     112*SolitudeNotesCut_FINAL_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE		N15     Fs4   v127
+	BYTE	W16
+	BYTE		        Gn4 
+	BYTE	W16
+	BYTE		        An4 
+	BYTE	W16
+	BYTE		        En4 
+	BYTE	W16
+	BYTE		        Fs4 
+	BYTE	W16
+	BYTE		        Gn4 
+	BYTE	W16
+// 025   ----------------------------------------
+	BYTE		        Fs4 
+	BYTE	W16
+	BYTE		        En4 
+	BYTE	W16
+	BYTE		        Dn4 
+	BYTE	W16
+	BYTE		N20     En4 
+	BYTE	W24
+	BYTE		        Cn4 
+	BYTE	W24
+// 026   ----------------------------------------
+	BYTE		N15     Dn4 
+	BYTE	W16
+	BYTE		        En4 
+	BYTE	W16
+	BYTE		        Fs4 
+	BYTE	W16
+	BYTE		        Gn4 
+	BYTE	W16
+	BYTE		        Fs4 
+	BYTE	W16
+	BYTE		        En4 
+	BYTE	W16
+// 027   ----------------------------------------
+	BYTE		N11     Fs4 
+	BYTE	W12
+	BYTE		        Gn4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W12
+	BYTE		        Dn5 
+	BYTE	W12
+	BYTE		N42     Cn5 
+	BYTE	W48
+// 028   ----------------------------------------
+	BYTE		N15     Bn4 
+	BYTE	W16
+	BYTE		        Cn5 
+	BYTE	W16
+	BYTE		        Dn5 
+	BYTE	W16
+	BYTE		        An4 
+	BYTE	W16
+	BYTE		        Bn4 
+	BYTE	W16
+	BYTE		        Cn5 
+	BYTE	W16
+// 029   ----------------------------------------
+	BYTE		        Bn4 
+	BYTE	W16
+	BYTE		        An4 
+	BYTE	W16
+	BYTE		        Gn4 
+	BYTE	W16
+	BYTE		N20     An4 
+	BYTE	W24
+	BYTE		        Fn4 
+	BYTE	W24
+// 030   ----------------------------------------
+	BYTE		N15     Bn4 
+	BYTE	W16
+	BYTE		        An4 
+	BYTE	W16
+	BYTE		        Gn4 
+	BYTE	W16
+	BYTE		        An4 
+	BYTE	W16
+	BYTE		        Gn4 
+	BYTE	W16
+	BYTE		        Fn4 
+	BYTE	W16
+// 031   ----------------------------------------
+	BYTE		N90     Gn4 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	SolitudeNotesCut_FINAL_6_B1
+SolitudeNotesCut_FINAL_6_B2:
+// 032   ----------------------------------------
+	BYTE	W24
+	BYTE	FINE
+
+//**************** Track 7 (Midi-Chn.8) ****************//
+
+SolitudeNotesCut_FINAL_7:
+	BYTE	KEYSH   SolitudeNotesCut_FINAL_key+0
+SolitudeNotesCut_FINAL_7_B1:
+// 000   ----------------------------------------
+	BYTE		VOICE   124
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     98*SolitudeNotesCut_FINAL_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N05     Fs1   v127
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+// 001   ----------------------------------------
+SolitudeNotesCut_FINAL_7_001:
+	BYTE		N05     Fs1   v127
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_001
+// 003   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_001
+// 004   ----------------------------------------
+SolitudeNotesCut_FINAL_7_004:
+	BYTE		N05     Cn1   v127
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_004
+// 006   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_004
+// 007   ----------------------------------------
+SolitudeNotesCut_FINAL_7_007:
+	BYTE		N05     Cn1   v127
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Cn1 
+	BYTE		N05     Fs1 
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE		N05     Dn2 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE		N05     Cn2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE		N05     Fs1 
+	BYTE		N05     Bn1 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE		N05     Gs1 
+	BYTE		N05     Bn1 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE		N05     An1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 008   ----------------------------------------
+SolitudeNotesCut_FINAL_7_008:
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 009   ----------------------------------------
+SolitudeNotesCut_FINAL_7_009:
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 010   ----------------------------------------
+SolitudeNotesCut_FINAL_7_010:
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_009
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_010
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_009
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_010
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_009
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_008
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_009
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_010
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_009
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_010
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_009
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_010
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_009
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_001
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_001
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_001
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_007
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_008
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_009
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SolitudeNotesCut_FINAL_7_010
+// 031   ----------------------------------------
+	BYTE		N05     Bn0   v127
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        Dn1 
+	BYTE		N05     En1 
+	BYTE		N05     Fs1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Gs1 
+	BYTE	W06
+	BYTE		        Bn0 
+	BYTE		N05     Cn1 
+	BYTE		N05     Fs1 
+	BYTE		N05     An2 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		        As1 
+	BYTE	W06
+	BYTE		        Gs1 
+	BYTE	W06
+	BYTE		N20     Fs1 
+	BYTE	W24
+	BYTE	GoTo
+	 POIN2	SolitudeNotesCut_FINAL_7_B1
+SolitudeNotesCut_FINAL_7_B2:
+// 032   ----------------------------------------
+	BYTE	W24
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+SolitudeNotesCut_FINAL:
+	BYTE	7	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	SolitudeNotesCut_FINAL_pri	// Priority
+	BYTE	SolitudeNotesCut_FINAL_rev	// Reverb.
+
+	POIN2	SolitudeNotesCut_FINAL_grp
+
+	POIN2	SolitudeNotesCut_FINAL_1
+	POIN2	SolitudeNotesCut_FINAL_2
+	POIN2	SolitudeNotesCut_FINAL_3
+	POIN2	SolitudeNotesCut_FINAL_4
+	POIN2	SolitudeNotesCut_FINAL_5
+	POIN2	SolitudeNotesCut_FINAL_6
+	POIN2	SolitudeNotesCut_FINAL_7
+
+	

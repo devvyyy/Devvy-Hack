@@ -1,0 +1,393 @@
+EventPointerTable(0xC8, PointerList)
+
+PointerList:
+	POIN TurnBasedEvents
+	POIN CharacterBasedEvents
+	POIN LocationBasedEvents
+	POIN MiscBasedEvents
+	POIN Dunno1 Dunno2 Dunno3 Tutorial
+	POIN Traps1 Traps2
+	POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+	POIN $0 $0 $0
+	POIN $0 $0 $0
+	POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+//TURN 0x0 ChangeMusicBasedOffFlag [1,255] 0x0
+//TurnEventEnemy(0,WardenCharges,3) //so you dont insta die
+	END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+
+	END_MAIN
+
+MiscBasedEvents:
+//AREA 0x13 SussyMoment [0,0] [19,10]
+DefeatAll(EndingScene)
+//AFEV 0x3 EndingScene 0xA1 //end the battle upon warden hitting 50% or less
+//AREA 0x0 CheckWardenHP [0,0] [22,14]
+AREA 0x0 TheBigRangeEvent [0,0] [12,15] //also disables overdrive?
+
+	//CauseGameOverIfLordDies
+	AFEV 0x0 CheckNoUnits 0x3
+	END_MAIN
+
+ChangeMusicBasedOffFlag:
+
+CHECK_EVENTID 0xF //make it not play any events after 4 times
+BNE 0x5 0xC 0x0
+
+CHECK_EVENTID 0xD //idk what thrice but 4 is called lol
+BNE 0x4 0xC 0x0
+
+CHECK_EVENTID 0xC //thrice
+BNE 0x3 0xC 0x0
+
+CHECK_EVENTID 0xB //twice
+BNE 0x2 0xC 0x0
+
+CHECK_EVENTID 0xA //after attacking once
+BNE 0x1 0xC 0x0
+
+GOTO 0x5 //so it doesnt play turn 1 when not attacking
+
+LABEL 0x1
+
+Music(0x29D)
+
+GOTO 0x5 //end
+
+LABEL 0x2
+
+Music(0x29E)
+
+GOTO 0x5 //end
+
+LABEL 0x3
+
+Music(0x29F)
+
+GOTO 0x5 //end
+
+LABEL 0x4
+
+LABEL 0x5
+
+NoFade
+ENDA
+
+CheckWardenHP:
+
+CHECK_EVENTID 0xA1
+BEQ 0x776 0xC 0x0
+
+SetFlag(0x3)
+CALL EndingScene
+
+LABEL 0x776
+
+NoFade
+ENDA
+
+CheckNoUnits:
+CUSA Chiffon
+FADI 60
+	DoAllThree
+	LOAD2 0x1 CutsceneUnits
+
+	CAM1 [11,6]
+
+	STAL 50
+	FADU 15
+	STAL 15
+	Music(0x185)
+	SetBackground(0x2b)
+	Text(Ch27DuelEndingLose1Alt)
+	ClearBackground
+
+	STAL 100
+
+NoFade
+ENDA
+
+LocationBasedEvents:
+
+	END_MAIN
+
+Dunno1:
+
+	END_MAIN
+
+Dunno2:
+
+	END_MAIN
+
+Dunno3:
+
+	END_MAIN
+
+Tutorial:
+
+	END_MAIN
+
+Units1:
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [6,11] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+	UNIT
+
+EnemyUnits:
+UNIT Sylveria Necromancer 0x1 Level(20, Enemy, 1)     [6,4] 0b 0x0 0x0 0x0 [0xAB] [6,3,0,32]
+	UNIT
+	
+CutsceneUnits:
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 1)   [6,5] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Sylveria Necromancer 0x1 Level(20, Enemy, 0)     [6,7] 0b 0x0 0x0 0x0 [0xAB] [6,3,0,32]
+	UNIT
+
+
+ChiffonNewEpic:
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [6,11] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT
+
+Traps1:
+//BLST [9,4] IronBallista
+	ENDTRAP
+	ALIGN 4
+
+Traps2:
+	ENDTRAP
+	ALIGN 4
+
+TheBigRangeEvent: //fight should end in like 5 turns?
+
+//sylveria needs the selwyn flag skill to dodge all attacks that aren't from beam of light
+
+//reverse order so it wont just play the first one over and over again
+
+CHECK_EVENTID 0xF //make it not play any events after 4 times
+BNE 0x5 0xC 0x0
+
+CHECK_EVENTID 0xD //idk what thrice but 4 is called lol
+BNE 0x4 0xC 0x0
+
+CHECK_EVENTID 0xC //thrice
+BNE 0x3 0xC 0x0
+
+CHECK_EVENTID 0xB //twice
+BNE 0x2 0xC 0x0
+
+CHECK_EVENTID 0xA //after attacking once
+BNE 0x1 0xC 0x0
+
+GOTO 0x5 //so it doesnt play turn 1 when not attacking
+
+LABEL 0x1
+
+CHECK_EVENTID 0x1A //so it doesnt repeat
+BNE 0x5 0xC 0x0 //end if repeating
+
+Text(SylmeriaTurn1)
+
+DISA_IF Sylveria
+LOAD2 0x1 EnemyUnits
+ENUN
+SVAL 0x2 Sylveria
+_WARP 0xFFFF 0xFFFD [12,13]
+CALL 0x9EE4F8
+_WARP 0x0 Sylveria [12,13]
+SET_ACTIVE Chiffon
+ASMC 0x225F9
+
+UnsetFlag(0x23)
+UnsetFlag(0x24)
+UnsetFlag(0x25)
+UnsetFlag(0x5)
+
+SetFlag(0x1A)
+
+SVAL 0x1 0x29D
+SVAL 0x2 0x29D
+SVAL 0x3 0x29D
+SVAL 0x4 0x1
+ASMC SetChapterSong|1
+
+ASMC 0x80160D1
+
+GOTO 0x5 //end
+
+LABEL 0x2
+
+CHECK_EVENTID 0x1B //so it doesnt repeat
+BNE 0x5 0xC 0x0 //end if repeating
+
+Text(SylmeriaTurn2)
+
+DISA_IF Sylveria
+LOAD2 0x1 EnemyUnits
+ENUN
+SVAL 0x2 Sylveria
+_WARP 0xFFFF 0xFFFD [8,3]
+CALL 0x9EE4F8
+_WARP 0x0 Sylveria [8,3]
+SET_ACTIVE Chiffon
+ASMC 0x225F9
+
+UnsetFlag(0x23)
+UnsetFlag(0x24)
+UnsetFlag(0x25)
+UnsetFlag(0x5)
+
+SetFlag(0x1B)
+
+SVAL 0x1 0x29E
+SVAL 0x2 0x29E
+SVAL 0x3 0x29E
+SVAL 0x4 0x1
+ASMC SetChapterSong|1
+
+ASMC 0x80160D1
+
+GOTO 0x5 //end
+
+LABEL 0x3
+
+CHECK_EVENTID 0x1C //so it doesnt repeat
+BNE 0x5 0xC 0x0 //end if repeating
+
+Text(SylmeriaTurn3)
+
+DISA_IF Sylveria
+LOAD2 0x1 EnemyUnits
+ENUN
+SVAL 0x2 Sylveria
+_WARP 0xFFFF 0xFFFD [6,12]
+CALL 0x9EE4F8
+_WARP 0x0 Sylveria [6,12]
+SET_ACTIVE Chiffon
+ASMC 0x225F9
+
+UnsetFlag(0x23)
+UnsetFlag(0x24)
+UnsetFlag(0x25)
+UnsetFlag(0x5)
+
+SetFlag(0x1C)
+
+SVAL 0x1 0x29F
+SVAL 0x2 0x29F
+SVAL 0x3 0x29F
+SVAL 0x4 0x1
+ASMC SetChapterSong|1
+
+ASMC 0x80160D1
+
+GOTO 0x5 //end
+
+LABEL 0x4
+
+STAL 15
+CameraCursor(Sylveria)
+Text(SylmeriaDuelMiddlePre)
+
+STAL 3
+
+DISA_IF Sylveria
+LOAD2 0x1 EnemyUnits
+ENUN
+SVAL 0x2 Sylveria
+_WARP 0xFFFF 0xFFFD [6,4]
+CALL 0x9EE4F8
+_WARP 0x0 Sylveria [6,4]
+SET_ACTIVE Chiffon
+
+STAL 100
+
+Music(0x2a0)
+
+STAL 15
+
+TEXTSTART
+TEXTSHOW SylmeriaDuelMiddle
+TEXTEND
+SOUN 0x2eb
+FAWI 60
+STAL 45
+FAWU 15
+
+TEXTCONT
+TEXTEND
+REMA
+
+STAL 5
+GiveItem(0xA8,Chiffon)
+
+STAL 5
+CameraCursor(Chiffon)
+
+SOUN 0x119 //bolting sparks
+ENUT 0x24
+ENUT 0x5
+STAL 0x50
+SOUN 0x82 //sleep staff sound
+
+SetFlag(0xF)
+SetFlag(0x4) //second bgm
+ASMC 0x225F9
+
+ASMC 0x80160D1
+
+LABEL 0x5
+
+NoFade
+ENDA
+
+WardenCharges:
+SVAL 0x1 0x00040000
+CHAI 0x72
+NoFade
+ENDA
+
+BeginningScene:
+REVEAL Chiffon
+LOAD1 0x1 ChiffonNewEpic
+REVEAL Chiffon
+LOAD1 0x1 EnemyUnits
+
+SetFlag(0x84) //hides boss icons
+SetFlag(0xEE) //disables damage numbers and adds current hp damage and stuff
+
+	ENUN
+
+SetBackground(0x43)
+Text(SylmeriaDuelOpening)
+
+
+	CALL $591FD8
+	FADU 60
+
+STAL 5
+
+CameraCursor(Chiffon)
+
+Text(SylmeriaDuelLeStart)
+
+NoFade
+	ENDA
+
+EndingScene: //can only win in graham route if ring was obtained
+	FADI 60
+	REMU Chiffon
+	UnsetFlag(0xEE)
+	Music(0x299)
+	DoAllThree
+	LOAD2 0x1 CutsceneUnits
+	FADU 15
+	STAL 30
+
+	Text(SylmeriaDuelEnding)
+
+	FADI 60
+	UnsetFlag(0x84) //hides boss icons
+	MNC2 0x16
+	NoFade
+	ENDA
