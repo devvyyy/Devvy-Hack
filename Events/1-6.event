@@ -743,7 +743,7 @@ UNIT Wreyvine Archer 0x1 Level(5, NPC, 1)     [19,4] 0b 0x0 0x0 0x0 [ShortBow,Vu
 UNIT Supplies1 0x79 0x1 Level(1, NPC, 0)     [9,4] 0b 0x0 0x0 0x0 [0xBC] [0,3,0,32] //tents
 UNIT Supplies2 0x79 0x1 Level(1, NPC, 0)     [21,4] 0b 0x0 0x0 0x0 [MageBow] [0,3,0,32]
 UNIT Supplies3 0x79 0x1 Level(1, NPC, 0)     [9,9] 0b 0x0 0x0 0x0 [ArmsScroll] [0,3,0,32]
-UNIT Supplies4 0x79 0x1 Level(1, NPC, 0)     [21,9] 0b 0x0 0x0 0x0 [MasterSeal] [0,3,0,32]
+UNIT Supplies4 0x79 0x1 Level(1, NPC, 0)     [21,9] 0b 0x0 0x0 0x0 [0xBC] [0,3,0,32]
 
 UNIT 0x62 SergeantClass 0x1 Level(12, NPC, 0)   [15,2] 0b 0x0 0x0 0x0 [SilverSword,SilverLance] BossAI
 	UNIT
@@ -767,7 +767,7 @@ UNIT Wreyvine Archer 0x1 Level(7, NPC, 1)     [19,4] 0b 0x0 0x0 0x0 [ShortBow,Vu
 UNIT Supplies1 0x79 0x1 Level(1, NPC, 0)     [9,4] 0b 0x0 0x0 0x0 [0xBC] [0,3,0,32] //tents
 UNIT Supplies2 0x79 0x1 Level(1, NPC, 0)     [21,4] 0b 0x0 0x0 0x0 [BraveBow] [0,3,0,32]
 UNIT Supplies3 0x79 0x1 Level(1, NPC, 0)     [9,9] 0b 0x0 0x0 0x0 [ArmsScroll] [0,3,0,32]
-UNIT Supplies4 0x79 0x1 Level(1, NPC, 0)     [21,9] 0b 0x0 0x0 0x0 [MasterSeal] [0,3,0,32]
+UNIT Supplies4 0x79 0x1 Level(1, NPC, 0)     [21,9] 0b 0x0 0x0 0x0 [0xBC] [0,3,0,32]
 
 UNIT 0x62 SergeantClass 0x1 Level(12, NPC, 1)   [15,2] 0b 0x0 0x0 0x0 [SilverSword,SilverLance] BossAI
 
@@ -840,7 +840,7 @@ UNIT Aeteria Ranger 0x1 Level(8, Enemy, 1)     [16,23] 0 0 1 REDA16R23 [DarkTome
 
 EnemyUnits:
 //make these actual bosses
-UNIT Selwyn 0x31 0x1 Level(10, Enemy, 0)     [7,18] DropItem 0x0 0x0 0x0 [0xFE,MasterSeal] BossAI
+UNIT Selwyn 0x31 0x1 Level(10, Enemy, 0)     [7,18] DropItem 0x0 0x0 0x0 [0xFE,0x5F] BossAI
 UNIT Sylveria Necromancer 0x1 Level(7, Enemy, 0)     [6,19] DropItem 0x0 0x0 0x0 [0xD1,Silence] BossAI
 
 //thieves
@@ -1224,7 +1224,8 @@ EndingScene:
 	
 	CHECK_ALIVE Supplies4
 	BEQ 0x4 0xC 0x0
-	GiveItem(MasterSeal,Affogato)
+	//GiveItem(MasterSeal,Affogato)
+	GiveItemWithDurability(0xBC,IgnisID,Affogato)
 	LABEL 0x4
 
 FADI 60

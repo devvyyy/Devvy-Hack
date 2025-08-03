@@ -249,6 +249,14 @@ PROMOTE, 0x4040, 8, -game:FE8 -indexMode:8
 	Class, 4, 2
 	Item, 6, 2
 
+#Set the bits in memory slot 1 to the unit's condition word (+0xC in unit struct)
+SET_CONDITION, 0x3427, 4, -game:FE8 -indexMode:8
+	Character, 2, 2
+
+#Unset the bits in memory slot 1 to the unit's condition word (+0xC in unit struct)	
+UNSET_CONDITION, 0x3429, 4, -game:FE8 -indexMode:8
+	Character, 2, 2
+
 # ======================
 # = COMPATIBILITY RAWS =
 # ======================

@@ -40,6 +40,7 @@ BattleAnimListByCharTable:
 BYTE Affogato Scout 0 0; POIN AffoHunterAnimList
 BYTE Affogato Adventurer 0 0; POIN AffoAdventurerAnimList
 BYTE Gorlois Parson 0 0; POIN GorloisParsonAnimList
+BYTE 0x72 General 0 0; POIN WardenAnimList
 WORD 0 //Terminator
 
 AffoHunterAnimList:
@@ -56,4 +57,9 @@ GorloisParsonAnimList:
 BYTE 6 1; SHORT 0xBB //light
 BYTE 4 1; SHORT 0xBB //staves
 BYTE 9 1; SHORT 0xBB //unarmed
+WORD 0 //terminator
+
+WardenAnimList:
+BYTE 0 1; SHORT 0xC1 //swords
+BYTE 9 1; SHORT 0xC1 //unarmed
 WORD 0 //terminator

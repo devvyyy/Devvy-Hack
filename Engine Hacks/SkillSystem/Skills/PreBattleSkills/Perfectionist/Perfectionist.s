@@ -23,11 +23,31 @@ beq End
 @add 15 hit and avoid
 mov r1, #0x60
 ldrh r0, [r4, r1] @hit
-add r0, #15
+add r0, #200
 strh r0, [r4,r1]
 mov r1, #0x62
 ldrh r0, [r4, r1] @avoid
-add r0, #15
+add r0, #200
+strh r0, [r4,r1]
+
+@ is spd higher than spd res?
+ldrb r0, [r4, #0x16] @attacker spd
+ldrb r1, [r5, #0x16] @defender spd
+cmp r0, r1
+ble End @skip if spd is less or equal than foes spd
+
+@add units spd as defense
+mov  r1, #0x5C
+ldrh r0, [r4, r1] @load unit
+ldrb r2, [r4, #0x16] @unit spd
+add  r0, r2
+strh r0, [r4,r1]
+
+@subtract foes spd as defense
+mov  r1, #0x5C
+ldrh r0, [r4, r1] @load unit
+ldrb r2, [r5, #0x16] @enemy spd
+sub  r0, r2
 strh r0, [r4,r1]
 
 End:

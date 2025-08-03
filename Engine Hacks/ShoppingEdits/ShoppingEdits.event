@@ -130,53 +130,53 @@ POIN CombinedPrepShop //0x11
 POIN CombinedPrepShop //0x12
 POIN WreyvinePrepShop
 POIN AeteriaPrepShop //0x14; 2-7
-POIN StandardBattlePrepShop
-WORD 0
-POIN StandardBattlePrepShop
+POIN CombinedPrepShop
+WORD CombinedPrepShop
+POIN CombinedPrepShop
 POIN WreyvinePrepShop //0x18; 1-7
 POIN WreyvinePrepShop //Prologue III-A
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
 
 //0x20 - 0x2F
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
 POIN AeteriaPrepShop //0x22
 POIN AeteriaPrepShop
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
 POIN AeteriaPrepShop // 2-7x
-WORD 0
-WORD 0
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
+WORD AeteriaPrepShop
+WORD CombinedPrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
 
 //0x30 - 0x3F
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
-WORD 0
-POIN StandardBattlePrepShop
-WORD 0
-WORD 0
-WORD 0
-POIN StandardBattlePrepShop
-POIN StandardBattlePrepShop
-WORD 0
+POIN CombinedPrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
+WORD CombinedPrepShop
+POIN ChifShop
+WORD CombinedPrepShop
+WORD CombinedPrepShop
+WORD CombinedPrepShop
+POIN CombinedPrepShop
+POIN CombinedPrepShop
+WORD CombinedPrepShop
 
 //0x40 - 0x4E
 WORD 0
@@ -211,6 +211,10 @@ CombinedPrepShop:
 SHLI IronSword IronBlade IronLance IronGlaive IronAxe IronLabrys IronBow IronRifle IronDagger Fire Flux Lightning Heal Fear Slow 0x7B Vulnerary Elixir
 ALIGN 4
 
+ChifShop:
+SHLI IronBow SteelBow SilverBow KillerBow ShiningRifle Wind Iceberg Elixir
+ALIGN 4
+
 	WreyvinePrepShopBargains:
 	SHORT 0x5B 0x7F
 	WORD 1000
@@ -231,6 +235,7 @@ ALIGN 4
 	//Terminator
 	WORD 0	
 
+ALIGN 4
 P1Ch3Shop:
 BYTE 0xBC ElbowRoomID //Trooper Hat
 BYTE 0xBC 170 //Pelt Mantle
@@ -242,6 +247,13 @@ P1Ch3Armory:
 BYTE 0xBC 232 //Iron Helm
 BYTE 0xBC 171 //Gauntlets
 SHLI SteelSword RubySword Sagitar SteelLance SapphireLance Javelin SteelAxe EmeraldAxe HandAxe SteelBow ShortBow
+BYTE 0x0 0x0
+
+ALIGN 4
+P1Ch6Armory:
+BYTE 0xBC DeathBlowID //Valhelm
+BYTE 0xBC DuelistsBlowID //Winged Bools
+SHLI SteelSword IronBlade SteelLance IronGlaive SteelAxe IronLabrys Mend Elixir PureWater
 BYTE 0x0 0x0
 
 ALIGN 4
@@ -267,6 +279,7 @@ ALIGN 4
 	//POIN ShopListPointer BargainPointer
 	POIN P1Ch3Shop P1Ch3ShopBargains
 	POIN P1Ch3Armory P1Ch3ArmoryBargains
+	POIN P1Ch6Armory P1Ch6ArmoryBargains
 	POIN P2Ch4Shop P2Ch4ShopBargains
 	POIN PrologueBattlePrepShop PrologueBattlePrepShopBargains
 	POIN Chapter4BattlePrepShop Chapter4BattlePrepShopBargains
@@ -277,7 +290,7 @@ ALIGN 4
 	P1Ch3ShopBargains:
 	BYTE 0xbc ElbowRoomID
 	SHORT 0x1b //flag
-	WORD 2000
+	WORD 1750
 	BYTE 0xbc 170
 	SHORT 0x1c
 	WORD 1500
@@ -287,13 +300,22 @@ ALIGN 4
 	P1Ch3ArmoryBargains:
 	BYTE 0xbc 232
 	SHORT 0x1d
-	WORD 3500
+	WORD 2500
 	BYTE 0xbc 171
 	SHORT 0x1e
-	WORD 4000
+	WORD 3000
 	//Terminator
 	WORD 0
 
+	P1Ch6ArmoryBargains:
+	BYTE 0xbc DeathBlowID
+	SHORT 0x1d
+	WORD 3000
+	BYTE 0xbc DuelistsBlowID
+	SHORT 0x1e
+	WORD 2500
+	//Terminator
+	WORD 0
 	
 	P2Ch4ShopBargains:
 	SHORT 0xB4 0x1b

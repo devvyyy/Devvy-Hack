@@ -21,13 +21,44 @@ ldrb r3, [r3]
 cmp r3, #4
 beq End
 
-@add enemy atk/4 attack
-mov  r1, #0x5A
-ldrh r0, [r4, r1] @attack
-ldrb r2, [r5, #0x14] @atk
-lsr  r2, #2
-add  r0, r2
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq End
+
+mov     r0, #0x4A      @Move to attackers's weapon (before battle)
+ldrb    r0, [r4, r0]   @Load attackers weap (before battle)
+cmp     r0, #0x3a         @tempest iii
+beq AddDamage
+cmp     r0, #0x3c         @glaciate iii
+beq AddDamage
+b CheckEnemyDamage
+
+AddDamage:
+
+@add 4 damage
+mov r1, #0x5a
+ldrh r0, [r4, r1] @atk
+add r0, #10
 strh r0, [r4,r1]
+
+CheckEnemyDamage:
+mov     r0, #0x4A      @Move to attackers's weapon (before battle)
+ldrb    r0, [r5, r0]   @Load attackers weap (before battle)
+cmp     r0, #0x3a         @tempest iii
+beq NegateDamage
+cmp     r0, #0x3c         @glaciate iii
+beq NegateDamage
+b End
+
+NegateDamage:
+
+@add 4 damage
+mov r1, #0x5c
+ldrh r0, [r4, r1] @atk
+add r0, #10
+strh r0, [r4,r1]
+
 
 End:
 pop {r4-r7, r15}

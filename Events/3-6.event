@@ -22,11 +22,83 @@ CharacterBasedEvents:
 	END_MAIN
 
 MiscBasedEvents:
+AFEV 0x0 OpenTheDoor 0x0
+AFEV 0x0 EndingScene 0x3
 	CauseGameOverIfLordDies
 	END_MAIN
 
+OpenTheDoor:
+CHECK_EVENTID 0xA
+BEQ 0x776 0xC 0x0
+CHECK_EVENTID 0xB
+BEQ 0x776 0xC 0x0
+CHECK_EVENTID 0xC
+BEQ 0x776 0xC 0x0
+CHECK_EVENTID 0xD
+BEQ 0x776 0xC 0x0
+
+SetFlag(0x3)
+CALL EndingScene
+
+LABEL 0x776
+NoFade
+ENDA
+
 LocationBasedEvents:
+Seize(4,0)
+Seize(5,0)
+Seize(6,0)
+Seize(7,0)
+Seize(8,0)
+Seize(9,0)
+Seize(10,0)
+
+Door(5,15)
+Door(5,16)
+Door(6,15)
+Door(6,16)
+Door(7,15)
+Door(7,16)
+
+Door(17,19)
+Door(17,20)
+Door(18,19)
+Door(18,20)
+Door(19,19)
+Door(19,20)
+
+Door(2,22)
+Door(2,23)
+
+Door(0,6)
+Door(1,6)
+
+Door(6,9)
+Door(7,9)
+
+Door(18,10)
+Door(19,10)
+
+Door(4,24)
+Door(4,25)
+Door(5,24)
+Door(5,25)
+Door(6,24)
+Door(6,25)
+
+Door(12,26)
+Door(12,27)
+Door(13,26)
+Door(13,27)
+
+Door(2,22)
+Door(12,12)
+Door(7,22)
+Door(14,7)
+
+
 Chest(0x80,10,7)
+Chest(MasterSeal,0,32)
 Chest(BraveSword,18,17)
 	END_MAIN
 
@@ -47,6 +119,7 @@ Tutorial:
 	END_MAIN
 
 Units1:
+Unit(11, 29)
 Unit(9, 30)
 Unit(10, 30)
 Unit(11, 30)
@@ -84,11 +157,13 @@ UNIT Aeteria Halberdier 0x1 Level(14, Enemy, 1)      [6,14]     0b 0x0 0x0 0x0 [
 UNIT Aeteria Druid 0x1 Level(14, Enemy, 1)      [5,20]    0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
 UNIT Aeteria Sage 0x1 Level(14, Enemy, 1)         [15,9]    0b 0x0 0x0 0x0 [Fire] TwoActionAI
 
-UNIT AeteriaStealable APal 0x1 Level(14, Enemy, 1)         [6,11]    0b 0x0 0x0 0x0 [SteelAxe, 0x5B] RangeAI
+UNIT AeteriaStealable Bishop 0x1 Level(14, Enemy, 1)         [6,11]    0b 0x0 0x0 0x0 [LightTome4, 0x5B] RangeAI
 UNIT Aeteria SPal 0x1 Level(14, Enemy, 1)         [10,13]    0b 0x0 0x0 0x0 [SteelSword] RangeAI
 UNIT Aeteria Halberdier 0x1 Level(14, Enemy, 1)      [13,12]   0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT Aeteria Druid 0x1 Level(14, Enemy, 1)      [17,12]   0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
+	UNIT
 
+EnemyUnits2:
 UNIT Aeteria Sage 0x1 Level(14, Enemy, 1)         [2,16]    0b 0x0 0x0 0x0 [Thunder] TwoActionAI
 UNIT Aeteria Hero 0x1 Level(14, Enemy, 1)      [19,8]    0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
 UNIT Aeteria LPal 0x1 Level(14, Enemy, 1)         [14,14]   0b 0x0 0x0 0x0 [SteelLance] RangeAI
@@ -108,7 +183,7 @@ UNIT Aeteria General 0x1 Level(14, Enemy, 1)      [18,21]   DropItem 0x0 0x0 0x0
 UNIT Aeteria MageKnight 0x1 Level(14, Enemy, 1)         [15,24]   0b 0x0 0x0 0x0 [Fire] TwoActionAI
 
 UNIT Aeteria SPal 0x1 Level(14, Enemy, 1)         [12,24]    0b 0x0 0x0 0x0 [SteelSword] RangeAI
-UNIT Aeteria Druid 0x1 Level(14, Enemy, 1)      [12,28]   0b 0x0 0x0 0x0 [DarkTome2] RangeAI
+UNIT Aeteria Bishop 0x1 Level(14, Enemy, 1)      [12,28]   0b 0x0 0x0 0x0 [LightTome2] RangeAI
 UNIT Aeteria Halberdier 0x1 Level(14, Enemy, 1)      [15,30]   0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT AeteriaStealable MageKnight 0x1 Level(14, Enemy, 1)      [8,18]   0b 0x0 0x0 0x0 [Thunder, 0x5F] RangeAI
 UNIT Aeteria General 0x1 Level(14, Enemy, 1)      [1,7]   0b 0x0 0x0 0x0 [SteelLance] BossAI
@@ -134,6 +209,13 @@ UNIT Sylveria Necromancer 0x1 Level(20, Enemy, 0)     [16,15] 0b 0x0 0x0 0x0 [0x
 	UNIT
 
 Traps1:
+BlueSigil(4,0)
+BlueSigil(5,0)
+BlueSigil(6,0)
+BlueSigil(7,0)
+BlueSigil(8,0)
+BlueSigil(9,0)
+BlueSigil(10,0)
 	ENDTRAP
 	ALIGN 4
 
@@ -161,6 +243,7 @@ STAL 25
 Music(0x298)
 Text(Part3Chapter6Opening2)
 STAL 5
+CAM1 [11,33]
 ClearBackground
 
 STAL 20
@@ -168,20 +251,28 @@ STAL 20
 Music(0x4d)
 Text(Part3Chapter6Opening3)
 
+
+	FADI 60
 	LOAD1 0x1 EnemyUnits
+	LOAD1 0x1 EnemyUnits2
 	ENUN
 	GotoPrepScreen
 	ENDA
 
 EndingScene:
-FADI 60
+
+Text(Part3Chapter6Ending0)
+
+SOUN 0x2ED
+FAWI 15
 LOMA 0xD
 DoAllThree
+STAL 50
 CamOn
 LOAD2 0x1 CutsceneUnits
 Music(0x1c8)
 CAM1 [12,30]
-FADU 60
+FAWU 12
 CamOff //just in case
 
 TEXTSTART; TEXTSHOW Part3Chapter6Ending1
@@ -209,7 +300,9 @@ LOAD2 0x1 SylveriaJumpscare
 ENUN
 STAL 50
 
-TextCont(Part3Chapter6Ending1Point5, 0x28E)
+MUSC 0x4F
+//TextCont(Part3Chapter6Ending1Point5, 0x28E)
+Text(Part3Chapter6Ending1Point5)
 
 FADI 30
 STAL 5

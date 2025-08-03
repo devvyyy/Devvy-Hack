@@ -331,7 +331,7 @@ BEQ 1 0x0 0xC
 
 CHECK_ALIVE Mocha //if mocha/ulrich alive and flags are set, do gaiden ending
 BEQ 2 0x0 0xC
-MusicChange(VictoryBGM)
+MusicChange(0x31f)
 SetBackground(0x3F)
 TEXTSTART
 TEXTSHOW Ch2Ending2ButGaiden
@@ -346,7 +346,7 @@ LABEL 1
 
 CHECK_ALIVE Mocha
 BEQ 2 0x0 0xC
-MusicChange(VictoryBGM)
+MusicChange(0x31f)
 SetBackground(0x3F)
 Text(Ch2Ending2)
 

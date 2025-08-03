@@ -355,6 +355,12 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+
+UnsetFlag(0x94) //ace in the hole/levain flag is also used for messel
+UnsetFlag(0x92) //just in case
+UnsetFlag(0x93)
+UnsetFlag(0x95)
+
 //reset prep shop
 ENUF 0x7F
 ENUF 0x80
@@ -452,6 +458,10 @@ NoFade
 ENDA
 
 EndingScene:
+CUSA Frye
+CUSA Cortado
+CUSA Velius
+
 Music(0x196)
 BG(0x11)
 Text(PrologueTestEnding1)

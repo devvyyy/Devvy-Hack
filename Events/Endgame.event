@@ -22,6 +22,7 @@ CharacterBasedEvents:
 	END_MAIN
 
 MiscBasedEvents:
+	AFEV 0 EndingScene 0x2
 	CauseGameOverIfLordDies
 	END_MAIN
 
@@ -62,6 +63,9 @@ Unit(2, 28)
 Unit(3, 28)
 Unit(4, 28)
 Unit(5, 28)
+Unit(6, 26)
+Unit(6, 27)
+Unit(6, 28)
 
 
 	UNIT
@@ -69,9 +73,9 @@ Unit(5, 28)
 EnemyUnits:
 UNIT Sylveria Necromancer 0x1 Level(20, Enemy, 0)     [14,5] 0b 0x0 0x0 0x0 [0xD1] BossAI
 
-UNIT Aoife Sage_F 0x1 Level(12, Enemy, 1)     [4,19] 0b 0x0 0x0 0x0 [Agneya] BossAI
-UNIT Maynard Bishop 0x1 Level(12, Enemy, 1)     [15,29] 0b 0x0 0x0 0x0 [Longinus] BossAI
-UNIT Eustace Druid_F 0x1 Level(12, Enemy, 1)     [22,8] 0b 0x0 0x0 0x0 [Malchut] BossAI
+UNIT Aoife Sage_F 0x1 Level(20, Enemy, 1)     [4,19] 0b 0x0 0x0 0x0 [Agneya] BossAI
+UNIT Maynard Bishop 0x1 Level(20, Enemy, 1)     [15,29] 0b 0x0 0x0 0x0 [Longinus] BossAI
+UNIT Eustace Druid_F 0x1 Level(20, Enemy, 1)     [22,8] 0b 0x0 0x0 0x0 [Malchut] BossAI
 
 UNIT 0x43 0x4 0x1 Level(15, Enemy, 1)     [14,7] 0b 0x0 0x0 0x0 [Flamberge] BossAI
 UNIT 0x40 SPal 0x1 Level(15, Enemy, 1)     [13,6] 0b 0x0 0x0 0x0 [BraveSword] BossAI
@@ -98,6 +102,9 @@ UNIT PromoSoul Halberdier 0x1 Level(15, Enemy, 1)    [17,16] 0b 0x0 0x0 0x0 [Sil
 UNIT CavSoul SPal 0x1 Level(15, Enemy, 1)       [7,13] 0b 0x0 0x0 0x0 [SilverSword] TwoActionAI
 UNIT MagSoul Auspex 0x1 Level(15, Enemy, 1)       [4,14] 0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
 UNIT CavSoul SPal 0x1 Level(15, Enemy, 1)       [23,21] 0b 0x0 0x0 0x0 [SilverSword] TwoActionAI
+	UNIT
+
+EnemyUnits2:
 UNIT PromoSoul Hero 0x1 Level(15, Enemy, 1)    [3,18] 0b 0x0 0x0 0x0 [SilverSword] TwoActionAI
 UNIT CavSoul LPal 0x1 Level(15, Enemy, 1)       [4,17] 0b 0x0 0x0 0x0 [SilverLance] TwoActionAI
 UNIT MagSoul Bishop 0x1 Level(15, Enemy, 1)       [8,5] 0b 0x0 0x0 0x0 [LightTome2] TwoActionAI
@@ -130,6 +137,16 @@ UNIT MagSoul Sage 0x1 Level(15, Enemy, 1)       [20,9] 0b 0x0 0x0 0x0 [Wind] Two
 
 	UNIT
 
+CutsceneUnits:
+UNIT Sylveria Necromancer 0x1 Level(20, Enemy, 0)     [14,5] 0b 0x0 0x0 0x0 [WindSword, 0xBC] StallOneTurnAI
+
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [14,7] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Affogato 0x3 0x1 Level(1, Ally, 0)   [15,7] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Ulrich LPal 0x1 Level(1, Ally, 0)   [12,6] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [16,5] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [16,6] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT
+
 Traps1:
 	ENDTRAP
 	ALIGN 4
@@ -140,6 +157,7 @@ Traps2:
 
 BeginningScene:
 	LOAD1 0x1 EnemyUnits
+	LOAD1 0x1 EnemyUnits2
 	ENUN
 
 
@@ -151,10 +169,108 @@ STAL 15
 
 Text(Part3FINALEOpening1)
 
-	GotoPrepScreen
+FADI 60
+CLEAN
+SetUnitStatus(Sylveria,CurrentHP,80)
+SetUnitStatus(Sylveria,Strength,30)
+SetUnitStatus(Sylveria,Skill,26)
+SetUnitStatus(Sylveria,LuckStat,30)
+SetUnitStatus(Sylveria,Speed,24)
+SetUnitStatus(Sylveria,DefenseStat,30)
+SetUnitStatus(Sylveria,Resistance,30)
+
+CALL $591FD8 //prep screen
+
+FADU 30
+MUSC 0x4e
+
+CameraCursor(Chiffon)
+Text(Part3FINALEOpening2)
+
+NoFade
 	ENDA
 
 EndingScene:
-	MNC2 0x0
+
+FADI 60
+DoAllThree
+CAM1 [14,6]
+LOAD2 0x1 CutsceneUnits //le gamers
+ENUN
+FADU 15
+
+STAL 50
+
+MUSC 0x29C
+SetBackground(0x2D)
+Text(Part3FINALEEnding1)
+ClearBackground
+
+STAL 5
+
+MUSC 0x7fff
+
+STAL 15
+
+EARTHQUAKE_START 0x0
+SOUN 0x2f0
+FAWI 3
+STAL 100
+SOUN 0x2f1
+
+STAL 100
+
+EARTHQUAKE_END
+FAWU 5
+
+STAL 30
+
+MUSC 0x282
+Text(Part3FINALEEnding2)
+
+EARTHQUAKE_START 0x0
+SOUN 0x2f0
+FAWI 3
+STAL 100
+SOUN 0x2f1
+
+STAL 100
+
+EARTHQUAKE_END
+FAWU 5
+
+STAL 30
+
+
+MUSI
+Text(Part3FINALEEnding2Again)
+
+STAL 5
+
+MOVE 0xF Chiffon [14,6]
+MOVE 0xF Affogato [15,5]
+ENUN
+
+SetBackground(0x2D)
+
+TEXTSTART
+TEXTSHOW Part3FINALEEnding3
+TEXTEND
+
+SOUN 0xDC
+FADI 20
+_0x2141 0x35 0x1 0x3C
+
+FadeOutMusic
+
+TEXTCONT
+TEXTEND
+REMA
+
+SOUN 0x2E9
+FAWI 3
+
+	MNC2 0x3A
+	//MNTS 0x1 //return to title screen
 	NoFade
 	ENDA

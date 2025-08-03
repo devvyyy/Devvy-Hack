@@ -74,11 +74,11 @@ UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [39,11] 0b 0x0 0x0 0x0 [IronAxe,0xE9,]
 	UNIT
 
 EnemyUnits:
-UNIT Aoife Sage_F 0x1 Level(15, Enemy, 0)     [4,8] DropItem 0x0 0x0 0x0 [0xEA,MasterSeal] BossAI
+UNIT Aoife Sage_F 0x1 Level(15, Enemy, 0)     [4,8] DropItem 0x0 0x0 0x0 [0xEA,0xB8] BossAI
 
-UNIT Messel Falcoknight 0x1 Level(10, Enemy, 1)     [12,9] 0b 0x0 0x0 0x0 [SilverLance,Axereaver,Elixir] BossAI
-UNIT Melya APal 0x1 Level(13, Enemy, 1)     [22,9] 0b 0x0 0x0 0x0 [KillerAxe,BraveAxe,0x7f] BossAI
-UNIT Wellington GreatKnight 0x1 Level(12, Enemy, 1)     [29,9] 0b 0x0 0x0 0x0 [Runesword,BluntGlaive,ShortAxe,] BossAI
+UNIT Messel Falcoknight 0x1 Level(10, Enemy, 0)     [12,9] 0b 0x0 0x0 0x0 [SilverLance,Axereaver,Elixir] BossAI
+UNIT Melya APal 0x1 Level(13, Enemy, 0)     [22,9] 0b 0x0 0x0 0x0 [KillerAxe,BraveAxe,0x7f] BossAI
+UNIT Wellington GreatKnight 0x1 Level(12, Enemy, 0)     [29,9] 0b 0x0 0x0 0x0 [Runesword,BluntGlaive,ShortAxe,] BossAI
 
 UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [30,8] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT Aeteria Merc 0x1 Level(10, Enemy, 1)     [30,10] 0b 0x0 0x0 0x0 [SteelSword,ShortBrand] TwoActionAI
@@ -358,6 +358,7 @@ MOVE 0x10 Chiffon [4,8]
 ENUN
 STAL 5
 SOUN 0x2ec
+//SOUN 0x269
 FAWI 20
 SOUN 0x101
 STAL 150

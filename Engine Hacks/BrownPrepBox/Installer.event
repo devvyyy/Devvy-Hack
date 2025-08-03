@@ -1,0 +1,20 @@
+#include "Extensions/Hack Installation.txt"
+
+#define Pal_SysBrownBox 0x8a1b154
+
+PUSH
+ORG 0x9DA52
+SHORT 0x4C60
+callHack_r0(DisplaySupplyBrownBox)
+B(0x809DA74)
+POP
+
+#include "BrownBox.lyn.event"
+
+ALIGN 4
+Img_SysBrownBox:
+#incbin "BrownBoxTiles.4bpp.lz77"
+
+ALIGN 4
+gSupplyBrownBoxTSA:
+#incbin "BrownBox.tsa"

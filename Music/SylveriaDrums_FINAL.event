@@ -1,0 +1,1576 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	SylveriaDrums_FINAL_grp  voicegroup000
+	#define	SylveriaDrums_FINAL_pri  0
+	#define	SylveriaDrums_FINAL_rev  0xC0
+	#define	SylveriaDrums_FINAL_mvl  30
+	#define	SylveriaDrums_FINAL_key  0
+	#define	SylveriaDrums_FINAL_tbs  1
+	#define	SylveriaDrums_FINAL_exg  0
+	#define	SylveriaDrums_FINAL_cmp  1
+
+	// .rodata
+	//	SylveriaDrums_FINAL
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+SylveriaDrums_FINAL_1:
+	BYTE	KEYSH   SylveriaDrums_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE	TEMPO   69*SylveriaDrums_FINAL_tbs/2
+	BYTE		VOICE   0
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*SylveriaDrums_FINAL_mvl/mxv
+	BYTE		PAN     c_v+32
+	BYTE		N36     En5   v127
+	BYTE	W36
+	BYTE		        Cn5 
+	BYTE	W36
+	BYTE		N24     Dn5 
+	BYTE	W24
+// 001   ----------------------------------------
+SylveriaDrums_FINAL_1_001:
+	BYTE		N12     En5   v127
+	BYTE	W12
+	BYTE		        Fn5 
+	BYTE	W12
+	BYTE		        En5 
+	BYTE	W12
+	BYTE		N24     Dn5 
+	BYTE	W24
+	BYTE		N12     Cn5 
+	BYTE	W12
+	BYTE		        Bn4 
+	BYTE	W12
+	BYTE		        Cn5 
+	BYTE	W12
+	BYTE	PEND
+// 002   ----------------------------------------
+SylveriaDrums_FINAL_1_002:
+	BYTE		N36     Dn5   v127
+	BYTE	W36
+	BYTE		        Gn4 
+	BYTE	W36
+	BYTE		N24     Cn5 
+	BYTE	W24
+	BYTE	PEND
+// 003   ----------------------------------------
+SylveriaDrums_FINAL_1_003:
+	BYTE		N48     Bn4   v127
+	BYTE	W48
+	BYTE		        Gn4 
+	BYTE	W48
+	BYTE	PEND
+// 004   ----------------------------------------
+SylveriaDrums_FINAL_1_004:
+	BYTE		N12     An4   v127
+	BYTE	W12
+	BYTE		        Gn4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W12
+	BYTE		N60     Cn5 
+	BYTE	W60
+	BYTE	PEND
+// 005   ----------------------------------------
+SylveriaDrums_FINAL_1_005:
+	BYTE		N12     Dn5   v127
+	BYTE	W12
+	BYTE		        Bn4 
+	BYTE	W12
+	BYTE		        Dn5 
+	BYTE	W12
+	BYTE		N24     Fn5 
+	BYTE	W24
+	BYTE		N12   
+	BYTE	W12
+	BYTE		        En5 
+	BYTE	W12
+	BYTE		        Dn5 
+	BYTE	W12
+	BYTE	PEND
+// 006   ----------------------------------------
+	BYTE		TIE     En5 
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+SylveriaDrums_FINAL_1_B1:
+// 008   ----------------------------------------
+	BYTE		VOL     127*SylveriaDrums_FINAL_mvl/mxv
+	BYTE		PAN     c_v+32
+	BYTE		N36     En5   v127
+	BYTE	W36
+	BYTE		        Cn5 
+	BYTE	W36
+	BYTE		N24     Dn5 
+	BYTE	W24
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_1_001
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_1_002
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_1_003
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_1_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_1_005
+// 014   ----------------------------------------
+	BYTE		TIE     En5   v127
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 016   ----------------------------------------
+	BYTE		N42     An4 
+	BYTE	W48
+	BYTE		N11     En5 
+	BYTE	W12
+	BYTE		        Dn5 
+	BYTE	W12
+	BYTE		        Cn5 
+	BYTE	W12
+	BYTE		N54     Dn5 
+	BYTE	W12
+// 017   ----------------------------------------
+	BYTE	W48
+	BYTE		N11     Bn4 
+	BYTE	W12
+	BYTE		        Cn5 
+	BYTE	W12
+	BYTE		        Dn5 
+	BYTE	W12
+	BYTE		        Gn5 
+	BYTE	W12
+// 018   ----------------------------------------
+	BYTE		N42     En5 
+	BYTE	W48
+	BYTE		N11     Cn5 
+	BYTE	W12
+	BYTE		        Bn4 
+	BYTE	W12
+	BYTE		        Cn5 
+	BYTE	W12
+	BYTE		N54     Dn5 
+	BYTE	W12
+// 019   ----------------------------------------
+	BYTE	W48
+	BYTE		N42     En5 
+	BYTE	W48
+// 020   ----------------------------------------
+	BYTE		        Cn5 
+	BYTE	W48
+	BYTE		N11   
+	BYTE	W12
+	BYTE		        Bn4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W12
+	BYTE		N54     Bn4 
+	BYTE	W12
+// 021   ----------------------------------------
+	BYTE	W48
+	BYTE		N42     Cn5 
+	BYTE	W48
+// 022   ----------------------------------------
+	BYTE		        An4 
+	BYTE	W48
+	BYTE		TIE     En4 
+	BYTE	W48
+// 023   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 024   ----------------------------------------
+SylveriaDrums_FINAL_1_024:
+	BYTE		N48     Cn5   v127
+	BYTE	W48
+	BYTE		N24     En5 
+	BYTE	W24
+	BYTE		        Cn5 
+	BYTE	W24
+	BYTE	PEND
+// 025   ----------------------------------------
+SylveriaDrums_FINAL_1_025:
+	BYTE		N48     Bn4   v127
+	BYTE	W48
+	BYTE		N24     Fn5 
+	BYTE	W24
+	BYTE		        En5 
+	BYTE	W24
+	BYTE	PEND
+// 026   ----------------------------------------
+SylveriaDrums_FINAL_1_026:
+	BYTE		N48     Dn5   v127
+	BYTE	W48
+	BYTE		N24     An4 
+	BYTE	W24
+	BYTE		        Dn5 
+	BYTE	W24
+	BYTE	PEND
+// 027   ----------------------------------------
+SylveriaDrums_FINAL_1_027:
+	BYTE		N36     En5   v127
+	BYTE	W36
+	BYTE		N12     Dn5 
+	BYTE	W12
+	BYTE		N48   
+	BYTE	W48
+	BYTE	PEND
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_1_024
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_1_025
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_1_026
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_1_027
+// 032   ----------------------------------------
+	BYTE		N96     Bn4   v127
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE		N90     Gn4 
+	BYTE	W90
+	BYTE	GoTo
+	 POIN2	SylveriaDrums_FINAL_1_B1
+SylveriaDrums_FINAL_1_B2:
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+SylveriaDrums_FINAL_2:
+	BYTE	KEYSH   SylveriaDrums_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   1
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-25
+	BYTE		VOL     98*SylveriaDrums_FINAL_mvl/mxv
+	BYTE		PAN     c_v+6
+	BYTE		VOL     100*SylveriaDrums_FINAL_mvl/mxv
+	BYTE		N96     Fn3   v127
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE		        Gn3 
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE		N96   
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE		        An3 
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE		N96   
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE		        Bn3 
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE		        Cn4 
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+SylveriaDrums_FINAL_2_B1:
+// 008   ----------------------------------------
+	BYTE		PAN     c_v-25
+	BYTE		N96     An2   v127
+	BYTE		N96     Cn3 
+	BYTE		N96     Fn3 
+	BYTE	W96
+// 009   ----------------------------------------
+SylveriaDrums_FINAL_2_009:
+	BYTE		N96     Bn2   v127
+	BYTE		N96     Dn3 
+	BYTE		N96     Gn3 
+	BYTE	W96
+	BYTE	PEND
+// 010   ----------------------------------------
+SylveriaDrums_FINAL_2_010:
+	BYTE		N96     Cn3   v127
+	BYTE		N96     En3 
+	BYTE		N96     Gn3 
+	BYTE	W96
+	BYTE	PEND
+// 011   ----------------------------------------
+SylveriaDrums_FINAL_2_011:
+	BYTE		N96     Cn3   v127
+	BYTE		N96     En3 
+	BYTE		N96     An3 
+	BYTE	W96
+	BYTE	PEND
+// 012   ----------------------------------------
+SylveriaDrums_FINAL_2_012:
+	BYTE		N96     Cn3   v127
+	BYTE		N96     Fn3 
+	BYTE		N96     An3 
+	BYTE	W96
+	BYTE	PEND
+// 013   ----------------------------------------
+SylveriaDrums_FINAL_2_013:
+	BYTE		N96     Dn3   v127
+	BYTE		N96     Gn3 
+	BYTE		N96     Bn3 
+	BYTE	W96
+	BYTE	PEND
+// 014   ----------------------------------------
+	BYTE		        En3 
+	BYTE		N96     Gn3 
+	BYTE		N96     Cn4 
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE		N90     Cs3 
+	BYTE		N90     En3 
+	BYTE		N90     An3 
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE		N96     An2 
+	BYTE		N96     Cn3 
+	BYTE		N96     Fn3 
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_2_009
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_2_010
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_2_011
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_2_012
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_2_013
+// 022   ----------------------------------------
+SylveriaDrums_FINAL_2_022:
+	BYTE		N24     En3   v127
+	BYTE		N24     Gn3 
+	BYTE		N24     Cn4 
+	BYTE	W24
+	BYTE		        En3 
+	BYTE		N24     Gn3 
+	BYTE		N24     Cn4 
+	BYTE	W24
+	BYTE		        En3 
+	BYTE		N24     Gn3 
+	BYTE		N24     Cn4 
+	BYTE	W24
+	BYTE		        En3 
+	BYTE		N24     Gn3 
+	BYTE		N24     Cn4 
+	BYTE	W24
+	BYTE	PEND
+// 023   ----------------------------------------
+	BYTE		        Fn3 
+	BYTE		N24     Gn3 
+	BYTE		N24     Cn4 
+	BYTE	W24
+	BYTE		        Fn3 
+	BYTE		N24     Gn3 
+	BYTE		N24     Cn4 
+	BYTE	W24
+	BYTE		        En3 
+	BYTE		N24     Gn3 
+	BYTE		N24     Cn4 
+	BYTE	W24
+	BYTE		N20     En3 
+	BYTE		N20     Gn3 
+	BYTE		N20     Cn4 
+	BYTE	W24
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_2_022
+// 025   ----------------------------------------
+SylveriaDrums_FINAL_2_025:
+	BYTE		N24     Dn3   v127
+	BYTE		N24     Gn3 
+	BYTE		N24     Bn3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE		N24     Gn3 
+	BYTE		N24     Bn3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE		N24     Gn3 
+	BYTE		N24     Bn3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE		N24     Gn3 
+	BYTE		N24     Bn3 
+	BYTE	W24
+	BYTE	PEND
+// 026   ----------------------------------------
+SylveriaDrums_FINAL_2_026:
+	BYTE		N24     Dn3   v127
+	BYTE		N24     Fn3 
+	BYTE		N24     An3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE		N24     Fn3 
+	BYTE		N24     An3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE		N24     Fn3 
+	BYTE		N24     An3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE		N24     Fn3 
+	BYTE		N24     An3 
+	BYTE	W24
+	BYTE	PEND
+// 027   ----------------------------------------
+	BYTE		        Dn3 
+	BYTE		N24     Gn3 
+	BYTE		N24     Bn3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE		N24     Gn3 
+	BYTE		N24     Bn3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE		N24     Fn3 
+	BYTE		N24     Bn3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE		N24     Fn3 
+	BYTE		N24     Bn3 
+	BYTE	W24
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_2_022
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_2_025
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_2_026
+// 031   ----------------------------------------
+	BYTE		N24     Dn3   v127
+	BYTE		N24     Gn3 
+	BYTE		N24     Bn3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE		N24     Gn3 
+	BYTE		N24     Bn3 
+	BYTE	W24
+	BYTE		        Dn3 
+	BYTE		N24     Fn3 
+	BYTE		N24     Bn3 
+	BYTE	W24
+	BYTE		TIE     Dn3 
+	BYTE		TIE     Fn3 
+	BYTE		TIE     Bn3 
+	BYTE	W24
+// 032   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     Dn3 
+	BYTE		        Fn3 
+	BYTE		        Bn3 
+// 033   ----------------------------------------
+	BYTE		N90     Gn2 
+	BYTE	W90
+	BYTE	GoTo
+	 POIN2	SylveriaDrums_FINAL_2_B1
+SylveriaDrums_FINAL_2_B2:
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+SylveriaDrums_FINAL_3:
+	BYTE	KEYSH   SylveriaDrums_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   48
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     98*SylveriaDrums_FINAL_mvl/mxv
+	BYTE		PAN     c_v+6
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W72
+	BYTE		VOL     114*SylveriaDrums_FINAL_mvl/mxv
+	BYTE		PAN     c_v-14
+	BYTE	W24
+SylveriaDrums_FINAL_3_B1:
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W24
+	BYTE		N24     An2   v056
+	BYTE	W24
+	BYTE		        Bn2 
+	BYTE	W24
+	BYTE		        Cs3 
+	BYTE	W24
+// 016   ----------------------------------------
+	BYTE		N96     Fn2 
+	BYTE		N96     An2 
+	BYTE		N96     Cn3 
+	BYTE		N96     En3 
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE		TIE     Gn2 
+	BYTE		N96     Bn2 
+	BYTE		N96     Dn3 
+	BYTE		N96     Fn3 
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE		TIE     Cn3 
+	BYTE		TIE     En3 
+	BYTE		N96     Gn3 
+	BYTE	W96
+	BYTE		EOT     Gn2 
+// 019   ----------------------------------------
+	BYTE		N96     An2 
+	BYTE		TIE     An3 
+	BYTE	W96
+	BYTE		EOT     En3 
+// 020   ----------------------------------------
+	BYTE		N96     Fn3 
+	BYTE		N96     Cn4 
+	BYTE	W96
+	BYTE		EOT     Cn3 
+	BYTE		        An3 
+// 021   ----------------------------------------
+	BYTE		N96     Bn2 
+	BYTE		N96     Dn3 
+	BYTE		N96     Gn3 
+	BYTE		N96     Bn3 
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE		TIE     Gn2 
+	BYTE		TIE     Cn3 
+	BYTE		N96     En3 
+	BYTE		N48     An3 
+	BYTE	W48
+	BYTE		TIE     Gn3 
+	BYTE	W48
+// 023   ----------------------------------------
+	BYTE		N48     Fn3 
+	BYTE	W48
+	BYTE		N42     En3 
+	BYTE	W42
+	BYTE		EOT     Gn2 
+	BYTE		        Cn3 
+	BYTE		        Gn3 
+	BYTE	W06
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE		N90     En3 
+	BYTE		N90     Gn3 
+	BYTE		N90     Cn4 
+	BYTE		N48     Cn5 
+	BYTE	W48
+	BYTE		        Dn5 
+	BYTE	W48
+// 029   ----------------------------------------
+	BYTE		N90     Dn3 
+	BYTE		N90     Fn3 
+	BYTE		N90     Bn3 
+	BYTE		N48     En5 
+	BYTE	W48
+	BYTE		        Fn5 
+	BYTE	W48
+// 030   ----------------------------------------
+	BYTE		        Cn3 
+	BYTE		N48     En3 
+	BYTE		N90     An3 
+	BYTE		TIE     Gn5 
+	BYTE	W48
+	BYTE		N48     Cn3 
+	BYTE		N48     Fn3 
+	BYTE	W48
+// 031   ----------------------------------------
+	BYTE		TIE     Dn3 
+	BYTE		TIE     Gn3 
+	BYTE		TIE     Bn3 
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W20
+	BYTE		EOT     Dn3 
+	BYTE		        Gn3 
+	BYTE		        Bn3 
+	BYTE		        Gn5 
+	BYTE	W76
+// 033   ----------------------------------------
+	BYTE	W90
+	BYTE	GoTo
+	 POIN2	SylveriaDrums_FINAL_3_B1
+SylveriaDrums_FINAL_3_B2:
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+SylveriaDrums_FINAL_4:
+	BYTE	KEYSH   SylveriaDrums_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   49
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v-4
+	BYTE		VOL     98*SylveriaDrums_FINAL_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W72
+	BYTE		        98*SylveriaDrums_FINAL_mvl/mxv
+	BYTE	W24
+SylveriaDrums_FINAL_4_B1:
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W72
+	BYTE		N05     Cs2   v127
+	BYTE	W06
+	BYTE		N04     An1 
+	BYTE	W12
+	BYTE		N05   
+	BYTE	W06
+// 016   ----------------------------------------
+SylveriaDrums_FINAL_4_016:
+	BYTE		N04     Fn1   v127
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		N11     Cn2 
+	BYTE	W12
+	BYTE		N04     Fn1 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		N11     Cn2 
+	BYTE	W12
+	BYTE		N04     Fn1 
+	BYTE	W12
+	BYTE	PEND
+// 017   ----------------------------------------
+SylveriaDrums_FINAL_4_017:
+	BYTE		N04     Gn1   v127
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W12
+	BYTE		N11     Dn2 
+	BYTE	W12
+	BYTE		N04     Gn1 
+	BYTE	W24
+	BYTE		        Bn1 
+	BYTE	W12
+	BYTE		N11     Dn2 
+	BYTE	W12
+	BYTE		N04     Gn1 
+	BYTE	W12
+	BYTE	PEND
+// 018   ----------------------------------------
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		N11     Cn2 
+	BYTE	W12
+	BYTE		N04     En1 
+	BYTE	W24
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		N11     Cn2 
+	BYTE	W12
+	BYTE		N04     En1 
+	BYTE	W12
+// 019   ----------------------------------------
+	BYTE		N04   
+	BYTE	W12
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		N11     Cn2 
+	BYTE	W12
+	BYTE		N04     En1 
+	BYTE	W24
+	BYTE		        An1 
+	BYTE	W12
+	BYTE		N11     Cn2 
+	BYTE	W12
+	BYTE		N04     En1 
+	BYTE	W12
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_4_016
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_4_017
+// 022   ----------------------------------------
+	BYTE		N04     Cn1   v127
+	BYTE	W12
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		N11     Gn1 
+	BYTE	W12
+	BYTE		N04     Cn1 
+	BYTE	W24
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		N11     Gn1 
+	BYTE	W12
+	BYTE		N04     Cn1 
+	BYTE	W12
+// 023   ----------------------------------------
+	BYTE		N04   
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE		N11     Gn1 
+	BYTE	W12
+	BYTE		N04     Cn1 
+	BYTE	W24
+	BYTE		        En1 
+	BYTE	W12
+	BYTE		N11     Gn1 
+	BYTE	W12
+	BYTE		N04     Cn1 
+	BYTE	W12
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE		        Cn2 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		N11     En1 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		N04     Cn2 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		N11     En1 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+// 029   ----------------------------------------
+	BYTE		N04     Bn1 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		N11     Dn1 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		N04     Bn1 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+	BYTE		N11     Dn1 
+	BYTE	W12
+	BYTE		        Gn1 
+	BYTE	W12
+// 030   ----------------------------------------
+	BYTE		N04     An1 
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE		N11     Cn1 
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE		N04     An1 
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+	BYTE		N11     Cn1 
+	BYTE	W12
+	BYTE		        Fn1 
+	BYTE	W12
+// 031   ----------------------------------------
+	BYTE		N04     Gn1 
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W12
+	BYTE		N11     Dn2 
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W12
+	BYTE		N04     Gn1 
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W12
+	BYTE		N11     Dn2 
+	BYTE	W12
+	BYTE		        Bn1 
+	BYTE	W12
+// 032   ----------------------------------------
+	BYTE		N90     Gn1 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W90
+	BYTE	GoTo
+	 POIN2	SylveriaDrums_FINAL_4_B1
+SylveriaDrums_FINAL_4_B2:
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+SylveriaDrums_FINAL_5:
+	BYTE	KEYSH   SylveriaDrums_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   124
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     98*SylveriaDrums_FINAL_mvl/mxv
+	BYTE		PAN     c_v+6
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+SylveriaDrums_FINAL_5_B1:
+// 008   ----------------------------------------
+	BYTE		VOL     112*SylveriaDrums_FINAL_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N11     Ds2   v100
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W12
+	BYTE		        Fs2 
+	BYTE	W12
+	BYTE		N08     Ds2 
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W12
+	BYTE		        Fs2 
+	BYTE	W12
+	BYTE		        Ds2 
+	BYTE	W12
+// 009   ----------------------------------------
+SylveriaDrums_FINAL_5_009:
+	BYTE		N11     Ds2   v100
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W12
+	BYTE		        Fs2 
+	BYTE	W12
+	BYTE		N08     Ds2 
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N11   
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W12
+	BYTE		        Fs2 
+	BYTE	W12
+	BYTE		        Ds2 
+	BYTE	W12
+	BYTE	PEND
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 015   ----------------------------------------
+	BYTE		N11     Ds2   v100
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W12
+	BYTE		        Fs2 
+	BYTE	W12
+	BYTE		N08     Ds2 
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N11   
+	BYTE	W48
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 023   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_5_009
+// 033   ----------------------------------------
+	BYTE		N11     Ds2   v100
+	BYTE	W12
+	BYTE		N11   
+	BYTE	W12
+	BYTE		        Fs2 
+	BYTE	W12
+	BYTE		N08     Ds2 
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N11   
+	BYTE	W42
+	BYTE	GoTo
+	 POIN2	SylveriaDrums_FINAL_5_B1
+SylveriaDrums_FINAL_5_B2:
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.6) ****************//
+
+SylveriaDrums_FINAL_6:
+	BYTE	KEYSH   SylveriaDrums_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   122
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     98*SylveriaDrums_FINAL_mvl/mxv
+	BYTE		PAN     c_v+6
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+SylveriaDrums_FINAL_6_B1:
+// 008   ----------------------------------------
+	BYTE		VOL     108*SylveriaDrums_FINAL_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N08     Fs1   v100
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N08   
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N08     Ds1 
+	BYTE		N08     Gs1 
+	BYTE	W09
+	BYTE		N02     Fs1 
+	BYTE	W03
+	BYTE		N08   
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N08   
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     As1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     Ds1 
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     As1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+// 009   ----------------------------------------
+SylveriaDrums_FINAL_6_009:
+	BYTE		N08     Fs1   v100
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N08   
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N08     Ds1 
+	BYTE		N08     Gs1 
+	BYTE	W09
+	BYTE		N02     Fs1 
+	BYTE	W03
+	BYTE		N08   
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N08   
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     As1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     Ds1 
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     As1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE	PEND
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_6_009
+// 011   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_6_009
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_6_009
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_6_009
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_6_009
+// 015   ----------------------------------------
+	BYTE		N08     Fs1   v100
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N08   
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N08     Ds1 
+	BYTE		N08     Gs1 
+	BYTE	W09
+	BYTE		N02     Fs1 
+	BYTE	W03
+	BYTE		N08   
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N20   
+	BYTE	W24
+	BYTE		N08     En1 
+	BYTE		N08     Dn2 
+	BYTE	W09
+	BYTE		N02     Cn2 
+	BYTE	W03
+	BYTE		N08     En1 
+	BYTE		N08     Bn1 
+	BYTE	W09
+	BYTE		N02     En1 
+	BYTE		N02     An1 
+	BYTE	W03
+// 016   ----------------------------------------
+SylveriaDrums_FINAL_6_016:
+	BYTE		N08     Cn1   v100
+	BYTE		N08     Fs1 
+	BYTE		N08     An2 
+	BYTE	W09
+	BYTE		N02     Fs1 
+	BYTE	W03
+	BYTE		N08     Cn1 
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N08     Ds1 
+	BYTE		N08     Gs1 
+	BYTE	W09
+	BYTE		N02     Fs1 
+	BYTE	W03
+	BYTE		N08   
+	BYTE	W09
+	BYTE		N02     Cn1 
+	BYTE		N02     Fs1 
+	BYTE	W03
+	BYTE		N08     Cn1 
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     Cn1 
+	BYTE		N08     As1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     Ds1 
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     Cn1 
+	BYTE		N08     As1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE	PEND
+// 017   ----------------------------------------
+SylveriaDrums_FINAL_6_017:
+	BYTE		N08     Cn1   v100
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N08     Cn1 
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N08     Ds1 
+	BYTE		N08     Gs1 
+	BYTE	W09
+	BYTE		N02     Fs1 
+	BYTE	W03
+	BYTE		N08   
+	BYTE	W09
+	BYTE		N02     Cn1 
+	BYTE		N02     Fs1 
+	BYTE	W03
+	BYTE		N08     Cn1 
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     Cn1 
+	BYTE		N08     As1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     Ds1 
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     Cn1 
+	BYTE		N08     As1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE	PEND
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_6_017
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_6_017
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_6_017
+// 021   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_6_017
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_6_017
+// 023   ----------------------------------------
+	BYTE		N08     Cn1   v100
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N08     Cn1 
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N08     Ds1 
+	BYTE		N08     Gs1 
+	BYTE	W09
+	BYTE		N02     Fs1 
+	BYTE	W03
+	BYTE		N08   
+	BYTE	W09
+	BYTE		N02     Cn1 
+	BYTE		N02     Fs1 
+	BYTE	W03
+	BYTE		N08     Cn1 
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     Cn1 
+	BYTE		N08     As1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     Ds1 
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02     Ds1 
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     Cn1 
+	BYTE		N08     Ds1 
+	BYTE		N08     As1 
+	BYTE	W09
+	BYTE		N02     Ds1 
+	BYTE		N02     Gs1 
+	BYTE	W03
+// 024   ----------------------------------------
+	BYTE		N08     Fs1 
+	BYTE		N08     An2 
+	BYTE	W09
+	BYTE		N02     Fs1 
+	BYTE	W03
+	BYTE		N08   
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N08     Ds1 
+	BYTE		N08     Gs1 
+	BYTE	W09
+	BYTE		N02     Fs1 
+	BYTE	W03
+	BYTE		N08   
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N08   
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     As1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     Ds1 
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     As1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_6_009
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_6_009
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_6_009
+// 028   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_6_016
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_6_017
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	SylveriaDrums_FINAL_6_017
+// 031   ----------------------------------------
+	BYTE		N08     Cn1   v100
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N08     Cn1 
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02   
+	BYTE	W03
+	BYTE		N08     Ds1 
+	BYTE		N08     Gs1 
+	BYTE	W09
+	BYTE		N02     Fs1 
+	BYTE	W03
+	BYTE		N08   
+	BYTE	W09
+	BYTE		N02     Cn1 
+	BYTE		N02     Fs1 
+	BYTE	W03
+	BYTE		N08     Cn1 
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     Cn1 
+	BYTE		N08     As1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     Ds1 
+	BYTE		N08     Fs1 
+	BYTE	W09
+	BYTE		N02     Gs1 
+	BYTE	W03
+	BYTE		N08     Cn1 
+	BYTE		N08     Ds1 
+	BYTE		N08     As1 
+	BYTE	W09
+	BYTE		N02     Ds1 
+	BYTE		N02     Gs1 
+	BYTE	W03
+// 032   ----------------------------------------
+	BYTE		N90     Cn1 
+	BYTE		N90     En1 
+	BYTE		N90     An2 
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W90
+	BYTE	GoTo
+	 POIN2	SylveriaDrums_FINAL_6_B1
+SylveriaDrums_FINAL_6_B2:
+	BYTE	FINE
+
+//**************** Track 7 (Midi-Chn.7) ****************//
+
+SylveriaDrums_FINAL_7:
+	BYTE	KEYSH   SylveriaDrums_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   10
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+21
+	BYTE		VOL     127*SylveriaDrums_FINAL_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE		        98*SylveriaDrums_FINAL_mvl/mxv
+	BYTE		PAN     c_v+6
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+SylveriaDrums_FINAL_7_B1:
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W24
+	BYTE		N24     An2   v056
+	BYTE	W24
+	BYTE		        Bn2 
+	BYTE	W24
+	BYTE		        Cs3 
+	BYTE	W24
+// 016   ----------------------------------------
+	BYTE		N96     En3 
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE		        Cn4 
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE		        Bn3 
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE		N48     An3 
+	BYTE	W48
+	BYTE		TIE     Gn3 
+	BYTE	W48
+// 023   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT   
+	BYTE	W06
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE		N48     Cn5 
+	BYTE	W48
+	BYTE		        Dn5 
+	BYTE	W48
+// 029   ----------------------------------------
+	BYTE		        En5 
+	BYTE	W48
+	BYTE		        Fn5 
+	BYTE	W48
+// 030   ----------------------------------------
+	BYTE		TIE     Gn5 
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+// 032   ----------------------------------------
+	BYTE	W20
+	BYTE		EOT   
+	BYTE	W76
+// 033   ----------------------------------------
+	BYTE	W90
+	BYTE	GoTo
+	 POIN2	SylveriaDrums_FINAL_7_B1
+SylveriaDrums_FINAL_7_B2:
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+SylveriaDrums_FINAL:
+	BYTE	7	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	SylveriaDrums_FINAL_pri	// Priority
+	BYTE	SylveriaDrums_FINAL_rev	// Reverb.
+
+	POIN2	SylveriaDrums_FINAL_grp
+
+	POIN2	SylveriaDrums_FINAL_1
+	POIN2	SylveriaDrums_FINAL_2
+	POIN2	SylveriaDrums_FINAL_3
+	POIN2	SylveriaDrums_FINAL_4
+	POIN2	SylveriaDrums_FINAL_5
+	POIN2	SylveriaDrums_FINAL_6
+	POIN2	SylveriaDrums_FINAL_7
+
+	

@@ -22,11 +22,26 @@ CharacterBasedEvents:
 	END_MAIN
 
 MiscBasedEvents:
+AFEV 0x0 CheckSelwyn 0x0
 //AFEV 0x3 CheckIfWinHugeW 0x0 //lol this is unused but apparently also never actually unset 0x3 so u insta won
+	DefeatAll(EndingScene)
+	AFEV 0 EndingScene 0x6
 	CauseGameOverIfLordDies
 	END_MAIN
 
+CheckSelwyn:
+CHECK_ENEMIES
+SVAL 0x7 0x1
+BNE 0x0 0xC 0x7
+
+CALL EndingScene
+
+LABEL 0x0
+NoFade
+ENDA
+
 LocationBasedEvents:
+Door(23,5)
 Chest(0xE8,2,3)
 Chest(MasterSeal,23,3)
 	END_MAIN
@@ -116,6 +131,9 @@ UNIT PromoSoul Sniper 0x1 Level(15, Enemy, 1)     [2,9] 0b 0x0 0x0 0x0 [Longbow]
 UNIT ArmorSoul General 0x1 Level(16, Enemy, 1)     [1,12] 0b 0x0 0x0 0x0 [SteelLabrys] AttackInRangeAI
 UNIT ArmorSoul GreatKnight 0x1 Level(16, Enemy, 1)     [18,14] 0b 0x0 0x0 0x0 [SilverAxe, HandAxe] BossAI
 UNIT MagSoul Druid 0x1 Level(15, Enemy, 1)     [12,6] 0b 0x0 0x0 0x0 [DarkTome3] StallOneTurnAI
+	UNIT
+
+EnemyUnits2:
 UNIT CavSoul APal 0x1 Level(15, Enemy, 1)     [20,8] DropItem 0x0 0x0 0x0 [SilverAxe] TwoActionAI
 UNIT PromoSoul Halberdier 0x1 Level(15, Enemy, 1)     [18,2] 0b 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
 UNIT CavSoul SPal 0x1 Level(15, Enemy, 1)     [13,4] 0b 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
@@ -136,11 +154,11 @@ UNIT PromoSoul Sniper 0x1 Level(15, Enemy, 1)     [3,3] 0b 0x0 0x0 0x0 [Longbow]
 UNIT CavSoul LPal 0x1 Level(15, Enemy, 1)     [22,18] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
 UNIT MagSoul Druid 0x1 Level(16, Enemy, 1)     [15,2] 0b 0x0 0x0 0x0 [DarkTome5] RangeAI
 
-UNIT Aeteria Thief 0x1 Level(15, Enemy, 1)     [23,0] 0b 0x0 0x0 0x0 [IronDagger] ThiefAI
+//UNIT Aeteria Thief 0x1 Level(15, Enemy, 1)     [23,0] 0b 0x0 0x0 0x0 [IronDagger] ThiefAI
 	UNIT
 
 CutsceneUnits:
-UNIT 0x72 General 0x1 Level(20, Enemy, 0)     [5,10] 0b 0x0 0x0 0x0 [WindSword, 0x63] StallOneTurnAI
+UNIT 0x72 General 0x1 Level(20, Enemy, 0)     [5,10] 0b 0x0 0x0 0x0 [WindSword, 0xBC] StallOneTurnAI
 
 UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [4,20] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
 UNIT Affogato 0x3 0x1 Level(1, Ally, 0)   [5,21] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
@@ -209,6 +227,7 @@ ENUN; TEXTCONT; TEXTEND; REMA
 
 FAWI 30
 	LOAD1 0x1 EnemyUnits
+	LOAD1 0x1 EnemyUnits2
 	ENUN
 
 SOUN 0xB4
@@ -290,6 +309,8 @@ Text(Part3Chapter8ActualOpening4)
 CameraCursor(Chiffon)
 Text(Part3Chapter8ActualOpening5)
 
+FADI 60
+SetUnitItemDurability(0x72, 1, RupturedSkyID) //aurora shard
 
 CALL $591FD8 //prep screen
 MUSCSLOW 0x7FFF
@@ -454,6 +475,8 @@ TEXTSTART; TEXTSHOW Part3Chapter8ActualEnding1; TEXTEND; SOUN 0x11D; TEXTCONT;TE
 
 
 Text(Part3Chapter8ActualEnding2)
+
+//GiveItem(Latona,Chiffon)
 
 	MNC2 0x1E
 	//MNTS 0x1 //return to title screen

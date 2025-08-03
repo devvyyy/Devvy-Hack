@@ -19,6 +19,8 @@ TileMap(6,17,15,3,2,BrokenWall)
 TileMap(7,17,15,2,2,RightDoor2)
 TileMap(8,6,9,2,2,LeftDoor2)
 TileMap(9,0,6,2,2,LeftDoor3)
+TileMap(10,10,7,1,1,TopChest)
+TileMap(11,18,17,1,1,BotChest)
 TileMapEnd
 
 ExplodeTop:
@@ -63,5 +65,13 @@ ALIGN 4
 
 LeftDoor3:
 SHORT 0x680 0x684 0x684 0x684 
+ALIGN 4
+
+TopChest:
+SHORT 0x4 
+ALIGN 4
+
+BotChest:
+SHORT 0x4 
 ALIGN 4
 

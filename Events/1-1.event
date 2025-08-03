@@ -195,7 +195,7 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-//Music(0x294)
+Music(0x28F)
 SetBackground(0x3C)
 Text(Ch1Opening0)
 FADI 20
@@ -230,6 +230,7 @@ NoFade
 	ENDA
 
 EndingScene:
+SetFlag(0xEE)
 CHECK_TURNS //gaiden turn requirement (clear prologue/ch1 within 7 turns each to unlock)
 SVAL 0x7 0x7 //within 7 turns
 BGT 0x9000 0xC 0x7
@@ -245,7 +246,7 @@ FADI 30
 DoAllThree
 LOMA 0x48
 LOAD2 0x1 EndCutsceneUnits
-Music(0x294)
+Music(0x1a2)
 SetBackground(0x36)
 CHECK_ALIVE Sequin
 BEQ 1 0x0 0xC
@@ -335,6 +336,8 @@ GiveItemWithDurability(0xBC,232,Ansgar)
 CenterTextbox(Ch1EndingEquipmentDesc)
 Text(Ch1EndingGiveItems)
 
+UnsetFlag(0xEE)
+
 LABEL 6 //end
 
 CHECK_EVENTID 0xA2
@@ -376,6 +379,7 @@ LABEL 8
 STAL 10
 MNC2 0x2
 LABEL 9
+
 NoFade
 ENDA
 

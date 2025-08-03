@@ -19,10 +19,12 @@ TurnBasedEvents:
 
 WardenAuraFarm:
 
+SetFlag(0x4)
 CAM1 [4,2]
 CamOn
 LOAD1 0x1 WardenTheGamerBattle
 CamOff
+SetUnitItemDurability(0x72, 1, RupturedSkyID) //aurora shard
 STAL 50
 
 CameraCursor(Affogato)
@@ -44,6 +46,8 @@ MUSCSLOW 0x7FFF
 
 TEXTCONT; TEXTEND; REMA
 
+ASMC 0x225F9
+
 NoFade
 ENDA
 
@@ -54,8 +58,26 @@ CharacterBasedEvents:
 
 MiscBasedEvents:
 AREA 0x8 WardenAuraFarm [0,0] [22,21]
+AFEV 0x0 OpenTheDoor 0x0
 	CauseGameOverIfLordDies
 	END_MAIN
+
+OpenTheDoor:
+CHECK_EVENTID 0xA
+BEQ 0x776 0xC 0x0
+CHECK_EVENTID 0xB
+BEQ 0x776 0xC 0x0
+CHECK_EVENTID 0xC
+BEQ 0x776 0xC 0x0
+CHECK_EVENTID 0xD
+BEQ 0x776 0xC 0x0
+
+SetFlag(0x3)
+CALL EndingScene
+
+LABEL 0x776
+NoFade
+ENDA
 
 LocationBasedEvents:
 
@@ -103,7 +125,7 @@ UNIT CavSoul LPal 0x1 Level(13, Enemy, 1) [23,12] 0b 0x0 0x0 0x0 [SteelLance] Ra
 UNIT MagSoul Mage 0x1 Level(13, Enemy, 1) [5,9] 0b 0x0 0x0 0x0 [Fire] TwoActionAI
 UNIT InfantrySoul Soldier  0x1 Level(13, Enemy, 1) [24,6]  0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT MagSoul Mage 0x1 Level(13, Enemy, 1) [15,10] DropItem 0x0 0x0 0x0 [Iceberg] TwoActionAI
-UNIT CavSoul LPal 0x1 Level(13, Enemy, 1) [26,9]  0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
+UNIT CavSoul Ranger 0x1 Level(13, Enemy, 1) [26,9]  0b 0x0 0x0 0x0 [SteelBow] TwoActionAI
 UNIT MagSoul Shaman 0x1 Level(13, Enemy, 1) [16,12] 0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
 UNIT PromoSoul Halberdier 0x1 Level(5,  Enemy, 1) [12,6]  0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT MagSoul Mage 0x1 Level(13, Enemy, 1) [8,17]  0b 0x0 0x0 0x0 [Iceberg] TwoActionAI
@@ -111,7 +133,7 @@ UNIT StealSoul Rogue  0x1 Level(13, Enemy, 1) [33,7]  0b 0x0 0x0 0x0 [KillingEdg
 UNIT InfantrySoul Merc 0x1 Level(13, Enemy, 1) [37,7]  0b 0x0 0x0 0x0 [SteelSword] RangeAI
 UNIT FlierSoul WyvernKnight 0x1 Level(13, Enemy, 1) [18,4]  0b 0x0 0x0 0x0 [SteelAxe] StallOneTurnAI
 UNIT FlierSoul Falcoknight 0x1 Level(13, Enemy, 1) [20,21] DropItem 0x0 0x0 0x0 [Spear] StallOneTurnAI
-UNIT CavSoul SPal 0x1 Level(13, Enemy, 1) [19,12] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+UNIT MagSoul Bishop 0x1 Level(13, Enemy, 1) [19,12] DropItem 0x0 0x0 0x0 [LightTome4] TwoActionAI
 UNIT FlierSoul WyvernRider 0x1 Level(13, Enemy, 1)  [39,18] 0b 0x0 0x0 0x0 [SteelAxe] StallOneTurnAI
 UNIT FlierSoul PegRider 0x1 Level(13, Enemy, 1) [38,20] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
 UNIT ArmorSoul General  0x1 Level(5,  Enemy, 1) [35,7]  DropItem 0x0 0x0 0x0 [Tomahawk,LightBrand] BossAI
@@ -122,6 +144,9 @@ UNIT MagSoul Mage 0x1 Level(13, Enemy, 1) [14,13] 0b 0x0 0x0 0x0 [Wind] TwoActio
 UNIT CavSoul LPal 0x1 Level(13, Enemy, 1) [10,7]  0b 0x0 0x0 0x0 [ShortSpear] RangeAI
 UNIT InfantrySoul Soldier  0x1 Level(13, Enemy, 1) [2,7] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT MagSoul Sage 0x1 Level(13, Enemy, 1) [27,5]  0b 0x0 0x0 0x0 [Iceberg] TwoActionAI
+	UNIT
+
+EnemyUnits2:
 UNIT InfantrySoul Soldier  0x1 Level(13, Enemy, 1) [20,11] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT CavSoul APal 0x1 Level(13, Enemy, 1) [4,5] 0b 0x0 0x0 0x0 [SteelAxe] RangeAI
 UNIT FlierSoul WyvernRider 0x1 Level(13, Enemy, 1)  [10,16] 0b 0x0 0x0 0x0 [SteelAxe] RangeAI
@@ -152,11 +177,15 @@ UNIT Chiffon 0x10 0x1 Level(1, Ally, 0) [37,8] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0
 	UNIT
 
 WardenTheGamerBattle:
-UNIT 0x72 General 0x1 Level(20, Enemy, 0) [4,0] 0 0 1 REDA4R3 [WindSword, 0x63] StallOneTurnAI
+UNIT 0x72 General 0x1 Level(20, Enemy, 0) [4,0] DropItem 0 1 REDA4R3 [WindSword, 0xBC] BossAI
 	UNIT
 
 WardenTheGamer:
-UNIT 0x72 General 0x1 Level(20, Enemy, 0) [5,8] 0b 0x0 0x0 0x0 [WindSword, 0x63] StallOneTurnAI
+UNIT 0x72 General 0x1 Level(20, Enemy, 0) [5,8] 0b 0x0 0x0 0x0 [WindSword, 0xBC] BossAI
+	UNIT
+
+BrandNewGraham:
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [0,0] 0b 0x0 0x0 0x0 [0xD5,Pain,Mend,Dracoshield] [0x0,0x0,0x0,0x0]
 	UNIT
 
 CutsceneUnitsOpening:
@@ -167,12 +196,12 @@ UNIT Graham Valkyrie 0x1 Level(10, Ally, 0) [44,12] 0 0 1 REDA40R12 [0xf0,Pain,M
 	UNIT
 
 CutsceneUnits:
-UNIT 0x72 General 0x1 Level(20, Enemy, 0) [5,8] 0b 0x0 0x0 0x0 [WindSword, 0x63] StallOneTurnAI
+UNIT 0x72 General 0x1 Level(20, Enemy, 0) [5,9] 0b 0x0 0x0 0x0 [WindSword, 0x63] StallOneTurnAI
 
 UNIT Affogato 0x3 0x1 Level(1, Ally, 0) [7,10] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Ulrich LPal 0x1 Level(1, Ally, 0) [8,9] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Graham Valkyrie 0x1 Level(10, Ally, 0) [9,10] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
-UNIT Radcliff Warrior 0x1 Level(10, Ally, 0) [8,11] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0) [7,11] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
 	UNIT
 
 Traps1:
@@ -191,9 +220,28 @@ Traps2:
 
 BeginningScene:
 	LOAD1 0x1 EnemyUnits
+	LOAD1 0x1 EnemyUnits2
 	ENUN
+	//SetUnitItemDurability(0x72, 1, RupturedSkyID) //aurora shard
 REVEAL Affogato
 RECLASS Affogato 0x3
+
+AddUnitStatus(Affogato,MaxHP,4)
+AddUnitStatus(Affogato,Strength,2)
+AddUnitStatus(Affogato,Speed,2)
+AddUnitStatus(Affogato,DefenseStat,1)
+AddUnitStatus(Affogato,Resistance,2)
+
+//unkill units required
+SETVAL 0x1 0x4
+UNSET_CONDITION Ulrich
+
+SETVAL 0x1 0x4
+UNSET_CONDITION Raial
+
+SETVAL 0x1 0x4
+UNSET_CONDITION Graham
+
 SetBackground(0xC)
 STAL 5
 BROWNBOXTEXT KeepOutskirts [8,8]
@@ -224,6 +272,8 @@ STAL 15
 Text(Part3Chapter5Opening2)
 
 ClearBackground
+
+//LOAD1 0x1 BrandNewGraham
 
 CamOn
 LOAD2 0x1 CutsceneUnitsOpening
@@ -306,7 +356,7 @@ STAL 15
 BROWNBOXTEXT TheBastion [8,8]
 STAL 15
 //TextCont(SylmeriaScene5, 0x280) //awakening
-TextCont(SylmeriaScene5, 0x323)
+TextCont(SylmeriaScene5, 0x28E)
 STAL 15
 SOUN 0xCA
 STAL 30
@@ -363,6 +413,7 @@ ENUN
 CameraCursor(Chiffon)
 
 SOUN 0x2EC
+//SOUN 0x269
 FAWI 30
 VCWF 0 //defog
 STAL 30
@@ -387,6 +438,8 @@ STAL 5
 
 //TextContCont(Part3Chapter5Ending5, 0x28D, 0x7FFF)
 
+MOVE 0x5 Chiffon [6,10]
+
 TEXTSTART; TEXTSHOW Part3Chapter5Ending5; TEXTEND; Music(0x28D); TEXTCONT; TEXTEND; FadeOutMusic; TEXTCONT; TEXTEND; REMA
 
 STAL 5
@@ -402,7 +455,13 @@ TEXTSTART
 TEXTSHOW Part3Chapter5Ending6
 TEXTEND
 
+MUSI
+
+TEXTCONT
+TEXTEND
+
 Music(0x4d)
+MUNO
 
 TEXTCONT
 TEXTEND

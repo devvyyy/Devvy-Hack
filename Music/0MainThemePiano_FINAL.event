@@ -1,0 +1,181 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	feb20250802211041_grp  voicegroup000
+	#define	feb20250802211041_pri  0
+	#define	feb20250802211041_rev  0xa0
+	#define	feb20250802211041_mvl  35
+	#define	feb20250802211041_key  0
+	#define	feb20250802211041_tbs  1
+	#define	feb20250802211041_exg  0
+	#define	feb20250802211041_cmp  1
+
+	// .rodata
+	//	feb20250802211041
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+feb20250802211041_1:
+	BYTE	KEYSH   feb20250802211041_key+0
+feb20250802211041_1_B1:
+// 000   ----------------------------------------
+	BYTE	TEMPO   64*feb20250802211041_tbs/2
+	BYTE		VOICE   0
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		VOL     127*feb20250802211041_mvl/mxv
+	BYTE		PAN     c_v-32
+	BYTE		N42     An3   v127
+	BYTE		N42     Cn4 
+	BYTE		N32     Cn5 
+	BYTE	W36
+	BYTE		N11     En5 
+	BYTE	W12
+	BYTE		N42     Gn3 
+	BYTE		N42     Bn3 
+	BYTE		N20     Bn4 
+	BYTE	W24
+	BYTE		N11     Cn5 
+	BYTE	W12
+	BYTE		        Dn5 
+	BYTE	W12
+// 001   ----------------------------------------
+	BYTE		N42     Fn3 
+	BYTE		N42     An3 
+	BYTE		N32     Cn5 
+	BYTE	W36
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		N42     Dn3 
+	BYTE		N42     Fn3 
+	BYTE		N11     Fn4 
+	BYTE	W12
+	BYTE		        Gn4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W12
+	BYTE		        Cn5 
+	BYTE	W12
+// 002   ----------------------------------------
+	BYTE		N42     En3 
+	BYTE		N42     Gn3 
+	BYTE		N32     Bn4 
+	BYTE	W36
+	BYTE		N11     An4 
+	BYTE	W12
+	BYTE		N42     Fs3 
+	BYTE		N42     An3 
+	BYTE		N20     Gn4 
+	BYTE	W24
+	BYTE		        Fs4 
+	BYTE	W24
+// 003   ----------------------------------------
+	BYTE		N42     En3 
+	BYTE		N42     Bn3 
+	BYTE		N11     En4 
+	BYTE	W12
+	BYTE		        Dn4 
+	BYTE	W12
+	BYTE		        En4 
+	BYTE	W12
+	BYTE		        Gn4 
+	BYTE	W12
+	BYTE		N42     Fn3 
+	BYTE		N42     Bn3 
+	BYTE		N11     Fn4 
+	BYTE	W12
+	BYTE		        Gn4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W12
+	BYTE		        Bn4 
+	BYTE	W12
+// 004   ----------------------------------------
+	BYTE		N42     An3 
+	BYTE		N42     Cn4 
+	BYTE		N11     Cn5 
+	BYTE	W12
+	BYTE		        Bn4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W12
+	BYTE		        Gn4 
+	BYTE	W12
+	BYTE		N42     Gn3 
+	BYTE		N42     Bn3 
+	BYTE		N20     Bn4 
+	BYTE	W24
+	BYTE		N11     Cn5 
+	BYTE	W12
+	BYTE		        Dn5 
+	BYTE	W12
+// 005   ----------------------------------------
+	BYTE		N42     Fn3 
+	BYTE		N42     An3 
+	BYTE		N20     Cn5 
+	BYTE	W24
+	BYTE		        An4 
+	BYTE	W24
+	BYTE		N42     Dn3 
+	BYTE		N42     Fn3 
+	BYTE		N11     Fn4 
+	BYTE	W12
+	BYTE		        Gn4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W12
+	BYTE		        Fn4 
+	BYTE	W12
+// 006   ----------------------------------------
+	BYTE		N42     En3 
+	BYTE		N42     Gn3 
+	BYTE		N20     En4 
+	BYTE	W24
+	BYTE		        Gn4 
+	BYTE	W24
+	BYTE		N42     Fs3 
+	BYTE		N42     An3 
+	BYTE		N11     Fs4 
+	BYTE	W12
+	BYTE		        Gn4 
+	BYTE	W12
+	BYTE		        An4 
+	BYTE	W12
+	BYTE		        Cn5 
+	BYTE	W12
+// 007   ----------------------------------------
+	BYTE		N42     En3 
+	BYTE		N42     Bn3 
+	BYTE		N20     Bn4 
+	BYTE	W24
+	BYTE		        Cn5 
+	BYTE	W24
+	BYTE		TIE     Fn3 
+	BYTE		TIE     Bn3 
+	BYTE		TIE     Dn5 
+	BYTE	W48
+// 008   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Fn3 
+	BYTE		        Bn3 
+	BYTE		        Dn5 
+	BYTE	GoTo
+	 POIN2	feb20250802211041_1_B1
+feb20250802211041_1_B2:
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+feb20250802211041:
+	BYTE	1	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	feb20250802211041_pri	// Priority
+	BYTE	feb20250802211041_rev	// Reverb.
+
+	POIN2	feb20250802211041_grp
+
+	POIN2	feb20250802211041_1
+
+	

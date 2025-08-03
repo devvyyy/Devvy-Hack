@@ -67,20 +67,22 @@ CharacterBasedEvents:
 	END_MAIN
 
 MiscBasedEvents:
-
-
+AFEV 0 EndingScene 0x2
 AREA 0x0 AreaSussyEvent [5,0] [25,15]
 
 	CauseGameOverIfLordDies
 	END_MAIN
 
 LocationBasedEvents:
+Door(13,20)
+Door(17,20)
+
 Chest(MasterSeal,13,17)
 Chest(0x7F,17,17)
 Chest(Hammerne,18,14)
 Chest(Flare,5,1)
 Chest(0x82,6,3)
-Chest(0x42,13,2)
+Chest(SilverBow,13,2)
 Seize(20,2)
 	END_MAIN
 
@@ -117,7 +119,7 @@ Unit(5,26)
 	UNIT
 
 EnemyUnits:
-UNIT 0x71 General 0x1 Level(16, Enemy, 1)     [20,2] DropItem 0x0 0x0 0x0 [MageSword, 0x8A, 0xBC] GroupTwoAI
+UNIT 0x71 GreatKnight 0x1 Level(16, Enemy, 1)     [20,2] DropItem 0x0 0x0 0x0 [MageSword, Spear, BraveAxe,0xBC] BossAI
 
 UNIT Aeteria Hero 0x1 Level(11, Enemy, 1)     [2,0] 0b 0x0 0x0 0x0 [Flamberge,SteelAxe] GroupTwoAI
 UNIT Aeteria Sage 0x1 Level(11, Enemy, 1)     [0,1] DropItem 0x0 0x0 0x0 [Bolting,Thunder] GroupTwoAI
@@ -135,10 +137,10 @@ UNIT Aeteria Mage 0x1 Level(11, Enemy, 1)     [13,14] 0b 0x0 0x0 0x0 [Wind] Boss
 UNIT Aeteria Soldier 0x1 Level(11, Enemy, 1)     [17,7] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT Aeteria Shaman 0x1 Level(11, Enemy, 1)     [7,7] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
 UNIT Aeteria SCav 0x1 Level(11, Enemy, 1)     [23,7] 0b 0x0 0x0 0x0 [SteelSword] RangeAI
-UNIT Aeteria Shaman 0x1 Level(11, Enemy, 1)     [14,26] DropItem 0x0 0x0 0x0 [DarkTome1,Vulnerary] TwoActionAI
+UNIT Aeteria Shaman 0x1 Level(11, Enemy, 1)     [14,26] DropItem 0x0 0x0 0x0 [DarkTome2,MasterSeal] TwoActionAI
 UNIT Aeteria ACav 0x1 Level(11, Enemy, 1)     [13,8] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
 UNIT Aeteria Occultist 0x1 Level(11, Enemy, 1)     [20,8] 0b 0x0 0x0 0x0 [DarkTome1] RangeAI
-UNIT Aeteria General 0x1 Level(11, Enemy, 1)     [10,3] 0b 0x0 0x0 0x0 [DarkTome2] GroupThreeAI
+UNIT AeteriaStealable General 0x1 Level(11, Enemy, 1)     [10,3] 0b 0x0 0x0 0x0 [Tomahawk, MasterSeal] GroupThreeAI
 UNIT Aeteria Soldier 0x1 Level(11, Enemy, 1)     [6,9] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT Aeteria Shaman 0x1 Level(11, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
 UNIT Aeteria LCav 0x1 Level(11, Enemy, 1)     [25,9] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
@@ -148,14 +150,14 @@ UNIT Aeteria Soldier 0x1 Level(11, Enemy, 1)     [11,10] 0b 0x0 0x0 0x0 [SteelLa
 UNIT Aeteria Mage 0x1 Level(11, Enemy, 1)     [18,10] 0b 0x0 0x0 0x0 [Thunder] RangeAI
 UNIT AeteriaStealable SArmor 0x1 Level(11, Enemy, 1)     [8,11] 0b 0x0 0x0 0x0 [ShortBrand,Elixir] RangeAI
 UNIT Aeteria Shaman 0x1 Level(11, Enemy, 1)     [22,11] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
+	UNIT
+
+EnemyUnits2:
 UNIT Aeteria Archer 0x1 Level(11, Enemy, 1)     [10,22] 0b 0x0 0x0 0x0 [SteelBow] RangeAI
 UNIT Aeteria Druid 0x1 Level(11, Enemy, 1)     [1,12] 0b 0x0 0x0 0x0 [DarkTome2] GroupOneAI
 UNIT Aeteria Shaman 0x1 Level(11, Enemy, 1)     [24,22] 0b 0x0 0x0 0x0 [DarkTome1] TwoActionAI
 UNIT Aeteria SCav 0x1 Level(11, Enemy, 1)     [9,19] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
 UNIT Aeteria Occultist 0x1 Level(11, Enemy, 1)     [21,25] 0b 0x0 0x0 0x0 [DarkTome1] RangeAI
-	UNIT
-
-EnemyUnits2:
 UNIT Aeteria Soldier 0x1 Level(11, Enemy, 1)     [10,14] 0b 0x0 0x0 0x0 [SteelLance] RangeAI
 UNIT Aeteria Shaman 0x1 Level(11, Enemy, 1)     [24,14] 0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
 UNIT Aeteria Ranger 0x1 Level(11, Enemy, 1)     [4,15] 0b 0x0 0x0 0x0 [SteelBow] GroupOneAI
@@ -201,7 +203,7 @@ UNIT Ulrich LPal 0x1 Level(1, Ally, 0)   [20,3] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Eli
 UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [21,4] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [19,4] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
 
-UNIT 0x71 General 0x1 Level(16, Enemy, 1)     [20,2] 0b 0x0 0x0 0x0 [MageSword, 0x8A, 0xBC] GroupTwoAI
+UNIT 0x71 GreatKnight 0x1 Level(16, Enemy, 1)     [20,2] 0b 0x0 0x0 0x0 [MageSword, 0x8A, 0xBC] GroupTwoAI
 	UNIT
 
 AffoGamer:
@@ -267,7 +269,7 @@ Music(0x1c8)
 SetBackground(0x2d)
 	Text(Part3Chapter3Opening4)
 	ClearBackground
-	SetUnitItemDurability(0x71, 2, BattleVeteranID) //veteran woo
+	SetUnitItemDurability(0x71, 3, BattleVeteranID) //veteran woo
 	GotoPrepScreen
 	ENDA
 

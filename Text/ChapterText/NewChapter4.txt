@@ -41,8 +41,8 @@ What was that[Beat]?[AN]
 [3L]
 [FL][LoadYouth][L][LoadOldWoman][R][LoadWreyvineSoldier4][FR][LoadWreyvineSoldier2]
 
-[L]
-[Pause]I[Beat][AN][ClearFace][0x80][0x2D][0x86][0x8D][0x80][0x80][.4]
+[L][MoveLeft][MidBlink]
+[Pause]I[Beat][AN][CloseEyes][ClearFace][0x80][0x2D][0x86][0x8D][0x80][0x80][.4]
 
 [FL]
 Ah![AN][MoveML]
@@ -83,8 +83,9 @@ Sir![.6] What seems to be a small platoon of[N]
 Wreyvian royal guards are approaching.[AN]
 
 [MR]
-Man[,] ashboots NOW?[.6] Things can't just be easy[N]
-these days.[.6] Gimme a sec to think here[Beat][AN]
+Man[,] ashboots NOW?[.6] Things can't just[N]
+be easy these days.[.6] Gimme a sec to[N]
+think here[Beat][AN]
 
 [L]
 Would it not be wise to retreat?[.6] They[N]
@@ -140,7 +141,7 @@ Well met[,] Sir Ulrich.[AN]
 
 [FR]
 Yo[,] what's up?[.6] Super excited to finally[N]
-get to meet you[,] bro![AN]
+get to meet you[,] man![AN]
 
 [R]
 Sir Lennard[Beat] Please maintain a baseline level[N]
@@ -204,7 +205,7 @@ burning and ransacking civilians?![AN][Clear]
 How could Aeteria[Beat] How[Beat]?[AN]
 
 [FFR][LoadOldWoman][MoveFarRight]
-K-[.4]Knights of Wreyvine![.6] Thank the Bringer![AN][MoveMidRight]
+K-[.4]Knights of Wreyvine![.6] Thank the Bringer![AN][CSS][MoveMidRight]
 Please[Beat] There's still people trapped in[N]
 their own homes by the redslicks![AN][CloseSpeechSlow][MoveFFL][Clear]
 
@@ -218,7 +219,7 @@ Our time looks to be limited.[AN][CloseSpeechSlow]
 
 [FL][MoveL][L]
 [Pause]We have to try to get them out before the[N]
-blaze reaches them[Beat] It doesn't[Beat][AN]
+blaze reaches them[Beat] It doesn't[Beat][N]
 I can't think of a viable way[Beat][AN]
 
 [MR][LoadStroganoff]
@@ -271,7 +272,7 @@ to lose!![AN]
 [R][ClearFace][FR][ClearFace]
 
 [ML][MoveLeft]
-Hey[,] scout guy![.6] Can you guide us through[N]
+Hey[,] scout kid![.6] Can you guide us through[N]
 the fire[,] or is that too tall a task?[AN]
 
 [FFR][LoadAffogato][MoveMR]
@@ -821,7 +822,7 @@ But maybe we still have one chance.[AN]
 Then give me the order.[AN]
 
 [ML]
-I already have.[.6] Duke Selwyn must fall![6N]
+I already have.[.6] [MoveML]Duke Selwyn must fall![6N]
 One act that might slow this madness[N]
 before it all spirals past us![AN]
 
@@ -1105,4 +1106,9 @@ I can't believe this all happened[Beat][AN]
 ## ArriveDescription
 # after objective is done (either through dead villagers or escorted)
 All player units must [ToggleRed]Escape[ToggleRed] at those[N]
+spaces to end the map.[A][X]
+
+## ArriveDescription2
+# after objective is done (either through dead villagers or escorted)
+Any player unit must [ToggleRed]Arrive[ToggleRed] at those[N]
 spaces to end the map.[A][X]

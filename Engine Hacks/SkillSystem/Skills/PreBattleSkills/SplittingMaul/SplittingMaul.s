@@ -9,12 +9,67 @@ mov r5, r1 @dfdr
 @sylveria final boss tome
 @sylveria 3-3x stuff
 
+@check weapon for epic sussy moment
+mov     r0, #0x4A      @Move to attackers's weapon (before battle)
+ldrb    r0, [r4, r0]   @Load attackers weap (before battle)
+cmp     r0, #0xA1         @stars
+beq FinalSwordEffectLOL
+b STARSAREREAL
+
+FinalSwordEffectLOL:
+
+mov     r0, #0x4A      @Move to attackers's weapon (before battle)
+ldrb    r0, [r5, r0]   @Load attackers weap (before battle)
+cmp     r0, #0x3a         @tempest iii
+beq NegateDamage
+cmp     r0, #0x3c         @glaciate iii
+beq NegateDamage
+b STARSAREREAL
+
+NegateDamage:
+@set defender attack to 0
+mov r0, r5
+add r0,#0x5A
+mov r3,#0
+strh r3,[r0]
+
+STARSAREREAL:
+@check weapon for STARS OF LIGHT
+mov     r0, #0x4A      @Move to attackers's weapon (before battle)
+ldrb    r0, [r4, r0]   @Load attackers weap (before battle)
+cmp     r0, #0xA8         @stars
+beq StarsEffectLOL
+b CheckEternalWinterReal
+
+StarsEffectLOL:
+
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq NextOne
+
+@set attacker attack to 0
+mov r0, r4
+add r0,#0x5A
+mov r3,#0
+strh r3,[r0]
+
+@add enemys curr hp/4 damage
+mov  r1, #0x5A
+ldrh r0, [r4, r1] @strength
+ldrb r2, [r5, #0x13] @curr hp
+lsr  r2, #2
+add  r0, r2
+strh r0, [r4,r1]
+
+CheckEternalWinterReal:
+
 @check weapon for absolute zero
 mov     r0, #0x4A      @Move to attackers's weapon (before battle)
 ldrb    r0, [r4, r0]   @Load attackers weap (before battle)
 cmp     r0, #0xAB         @eternal winter
 beq SkillEffectLOL
-B NextOne
+b NextOne
 
 SkillEffectLOL:
 
@@ -77,13 +132,13 @@ mov r14,r0
 mov r0,#0x0F
 .short 0xF800
 cmp r0,#1
-beq NextOne @if 0xF isnt on, all attacks that arent light arrows will miss
+beq MaxHPDamageStuff @if 0xF isnt on, all attacks that arent light arrows will miss
 
 @check weapon for splitting maul
-mov     r0, #0x4A      @Move to attackers's weapon (before battle)
-ldrb    r0, [r5, r0]   @Load attackers weap (before battle)
-cmp     r0, #0xA8         @Demon Light/arrows of light etc
-beq NextOne
+@mov     r0, #0x4A      @Move to attackers's weapon (before battle)
+@ldrb    r0, [r5, r0]   @Load attackers weap (before battle)
+@cmp     r0, #0xA8         @Demon Light/arrows of light etc
+@beq NextOne
 
 @ if chiffon not using chif blast, set avoid to 255
 
@@ -93,6 +148,18 @@ add r0, #255
 strh r0, [r4,r1]
 
 b NextOne
+
+MaxHPDamageStuff:
+@ give chiffon 255 hit and 10 bonus damage after song peaks
+mov r1, #0x60
+ldrh r0, [r5, r1] @hit
+add r0, #255
+strh r0, [r5,r1]
+
+mov r1, #0x5A
+ldrh r0, [r5, r1] @atk
+add r0, #10
+strh r0, [r5,r1]
 
 NormalEffects:
 

@@ -22,10 +22,9 @@ CharacterBasedEvents:
 	END_MAIN
 
 MiscBasedEvents:
-
+AFEV 0x0 CheckSelwyn 0x0
 	CauseGameOverIfLordDies
 	END_MAIN
-
 
 CheckSelwyn:
 CHECK_ENEMIES
@@ -39,7 +38,15 @@ NoFade
 ENDA
 
 LocationBasedEvents:
+Door(13,8)
+Door(14,8)
+Door(15,8)
 
+Door(23,12)
+Door(24,12)
+
+Door(3,16)
+Door(4,16)
 	END_MAIN
 
 Dunno1:
@@ -81,7 +88,7 @@ EnemyUnits:
 UNIT Selwyn Auspex 0x1 Level(20, Enemy, 1)   [15,4] 0b 0x0 0x0 0x0 [0xFE] BossAI
 
 UNIT CavSoul APal 0x1 Level(17, Enemy, 1)     [18,18] 0b 0x0 0x0 0x0 [SilverAxe] TwoActionAI
-UNIT PromoSoul Warrior 0x1 Level(17, Enemy, 1)     [3,6] 0b 0x0 0x0 0x0 [SilverBow, SilverBow] RangeAI
+UNIT PromoSoul Warrior 0x1 Level(17, Enemy, 1)     [3,6] 0b 0x0 0x0 0x0 [SilverAxe, SilverBow] RangeAI
 UNIT FlierSoul Falcoknight 0x1 Level(17, Enemy, 1)     [21,12] 0b 0x0 0x0 0x0 [SilverLance] RangeAI
 UNIT PromoSoul Sniper 0x1 Level(17, Enemy, 1)     [16,7] 0b 0x0 0x0 0x0 [SilverBow] RangeAI
 UNIT MagSoul MageKnight 0x1 Level(17, Enemy, 1)     [25,12] 0b 0x0 0x0 0x0 [Ragnarok] RangeAI
@@ -98,10 +105,13 @@ UNIT CavSoul LPal 0x1 Level(17, Enemy, 1)     [18,11] 0b 0x0 0x0 0x0 [SilverLanc
 UNIT FlierSoul GriffonKnight 0x1 Level(17, Enemy, 1)     [19,5] 0b 0x0 0x0 0x0 [SilverBow] RangeAI
 UNIT PromoSoul Halberdier 0x1 Level(17, Enemy, 1)     [11,8] 0b 0x0 0x0 0x0 [BraveLance, ShortSpear] TwoActionAI
 UNIT CavSoul APal 0x1 Level(17, Enemy, 1)     [12,11] 0b 0x0 0x0 0x0 [SilverAxe] RangeAI
-UNIT PromoSoul Warrior 0x1 Level(17, Enemy, 1)     [25,7] 0b 0x0 0x0 0x0 [SilverBow, SilverBow] TwoActionAI
+UNIT PromoSoul Warrior 0x1 Level(17, Enemy, 1)     [25,7] 0b 0x0 0x0 0x0 [SilverBow, SilverAxe] TwoActionAI
 UNIT PromoSoul Sniper 0x1 Level(17, Enemy, 1)     [11,15] 0b 0x0 0x0 0x0 [SilverBow] RangeAI
 UNIT MagSoul Druid 0x1 Level(17, Enemy, 1)        [15,9] 0b 0x0 0x0 0x0 [DarkTome5] TwoActionAI
 UNIT CavSoul Ranger 0x1 Level(17, Enemy, 1)       [6,9] 0b 0x0 0x0 0x0 [Longbow] TwoActionAI
+	UNIT
+
+EnemyUnits2:
 UNIT MagSoul Sage 0x1 Level(17, Enemy, 1)         [22,4] 0b 0x0 0x0 0x0 [Bolting, Ragnarok] RangeAI
 UNIT PromoSoul Swordmaster 0x1 Level(17, Enemy, 1) [7,3] 0b 0x0 0x0 0x0 [KillingEdge] TwoActionAI
 UNIT FlierSoul GriffonKnight 0x1 Level(17, Enemy, 1) [18,16] 0b 0x0 0x0 0x0 [SilverBow] RangeAI
@@ -153,7 +163,17 @@ Traps2:
 
 BeginningScene:
 	LOAD1 0x1 EnemyUnits
+	LOAD1 0x1 EnemyUnits2
 	ENUN
+
+SetUnitStatus(Selwyn,CurrentHP,80)
+SetUnitStatus(Selwyn,Strength,27)
+SetUnitStatus(Selwyn,Skill,27)
+SetUnitStatus(Selwyn,LuckStat,30)
+SetUnitStatus(Selwyn,Speed,26)
+SetUnitStatus(Selwyn,DefenseStat,22)
+SetUnitStatus(Selwyn,Resistance,28)
+
 
 Music(0x324)
 SetBackground(0x44)

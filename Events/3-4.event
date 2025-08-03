@@ -22,16 +22,23 @@ CharacterBasedEvents:
 	END_MAIN
 
 MiscBasedEvents:
-AFEV 0x0 OpenTheDoor 0x0
+AFEV 0x0 EndingScene 0x3
 AFEV 0x0 TopDemolish 0xA
 AFEV 0x0 LeftDemolish 0xB
 AFEV 0x0 RightDemolish 0xC
+AFEV 0x0 OpenTheDoor 0x0
+
 	CauseGameOverIfLordDies
 	END_MAIN
 
 LocationBasedEvents:
-Chest(SilverBow,1,17)
-Chest(Latona,2,18)
+Door(2,14)
+Arrive(26,5)
+Arrive(26,6)
+Arrive(26,7)
+Arrive(26,8)
+Chest(0x7c,1,17)
+Chest(SilverBow,2,18)
 	END_MAIN
 
 Dunno1:
@@ -74,7 +81,7 @@ UNIT Supplies3 Crates 0x1 Level(1, Enemy, 0)     [20,20] 0b 0x0 0x0 0x0 [0x0] [0
 
 UNIT Aeteria Shaman 0x1 Level(12, Enemy, 1)     [9,9]     0b 0x0 0x0 0x0 [DarkTome1] RangeAI
 UNIT Aeteria Soldier 0x1 Level(12, Enemy, 1)     [13,7]    0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT Aeteria LCav 0x1 Level(12, Enemy, 1)        [11,8]    0b 0x0 0x0 0x0 [SteelLance] RangeAI
+UNIT Aeteria LCav 0x1 Level(12, Enemy, 1)        [11,8]    DropItem 0x0 0x0 0x0 [ShortSpear,MasterSeal] RangeAI
 UNIT Aeteria LCav 0x1 Level(12, Enemy, 1)        [4,21]    0b 0x0 0x0 0x0 [SteelLance] RangeAI
 UNIT Aeteria Mage 0x1 Level(12, Enemy, 1)        [19,3]    0b 0x0 0x0 0x0 [Fire] RangeAI
 UNIT Aeteria Shaman 0x1 Level(12, Enemy, 1)     [17,9]    0b 0x0 0x0 0x0 [DarkTome2] RangeAI
@@ -90,17 +97,20 @@ UNIT Aeteria Soldier 0x1 Level(12, Enemy, 1)     [2,13]   0b 0x0 0x0 0x0 [Spear]
 UNIT Aeteria Mage 0x1 Level(12, Enemy, 1)        [22,13]   0b 0x0 0x0 0x0 [Fire] TwoActionAI
 UNIT Aeteria LPal 0x1 Level(12, Enemy, 1)     [9,15]    0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
 UNIT Aeteria PegRider 0x1 Level(12, Enemy, 1)     [23,21]    DropItem 0x0 0x0 0x0 [SapphireLance, 0x5E] StallOneTurnAI
+	UNIT
+
+EnemyUnits2:
 UNIT Aeteria LCav 0x1 Level(12, Enemy, 1)        [4,12]   0b 0x0 0x0 0x0 [SteelLance] RangeAI
 UNIT Aeteria Merc 0x1 Level(12, Enemy, 1)     [17,15]   0b 0x0 0x0 0x0 [SteelSword] RangeAI
 UNIT Aeteria SCav 0x1 Level(12, Enemy, 1)        [21,15]   0b 0x0 0x0 0x0 [SteelSword] RangeAI
 UNIT Aeteria Mage 0x1 Level(12, Enemy, 1)        [10,17]   0b 0x0 0x0 0x0 [Fire] RangeAI
 UNIT Aeteria Soldier 0x1 Level(12, Enemy, 1)     [7,7]   0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
-UNIT Aeteria Shaman 0x1 Level(12, Enemy, 1)     [24,12]   0b 0x0 0x0 0x0 [DarkTome2] RangeAI
+UNIT AeteriaStealable Shaman 0x1 Level(12, Enemy, 1)     [24,12]   0b 0x0 0x0 0x0 [DarkTome2,0x5F] RangeAI
 UNIT Aeteria Soldier 0x1 Level(12, Enemy, 1)     [6,20]   0b 0x0 0x0 0x0 [SteelLance] RangeAI
 UNIT Aeteria ACav 0x1 Level(12, Enemy, 1)        [19,17]   0b 0x0 0x0 0x0 [SteelAxe] RangeAI
 UNIT Aeteria Sage 0x1 Level(12, Enemy, 1)     [3,9]   0b 0x0 0x0 0x0 [Wind] BossAI
 UNIT Aeteria SCav 0x1 Level(12, Enemy, 1)        [16,19]   0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
-UNIT Aeteria Shaman 0x1 Level(12, Enemy, 1)     [7,18]   DropItem 0x0 0x0 0x0 [DarkTome3, 0x5C] RangeAI
+UNIT AeteriaStealable Shaman 0x1 Level(12, Enemy, 1)     [7,18]   DropItem 0x0 0x0 0x0 [DarkTome3, 0x5C] RangeAI
 UNIT Aeteria Shaman 0x1 Level(12, Enemy, 1)     [5,6]   0b 0x0 0x0 0x0 [DarkTome1] RangeAI
 UNIT Aeteria Mage 0x1 Level(12, Enemy, 1)        [22,19]   0b 0x0 0x0 0x0 [Fire] RangeAI
 UNIT Aeteria LCav 0x1 Level(12, Enemy, 1)        [24,16]    0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
@@ -119,10 +129,10 @@ UNIT Aeteria Thaumaturge 0x1 Level(12, Enemy, 1)        [15,19]    0b 0x0 0x0 0x
 	UNIT
 
 WreyvineGuys:
-UNIT Gorlois Parson 0x1 Level(20, NPC, 1)     [12,11] 0b 0x0 0x0 0x0 [0xA0, Aura, Elixir, 0x61] BossAI
+UNIT Gorlois Parson 0x1 Level(20, NPC, 1)     [12,11] 0b 0x0 0x0 0x0 [Aura, 0xA0, Elixir, 0x61] BossAI
 UNIT 0x3A Cleric 0x1 Level(12, NPC, 1)     [2,3] 0b 0x0 0x0 0x0 [Fear,Physic,PureWater, 0x61] HealAI
-UNIT Wreyvine Soldier 0x1 Level(15, NPC, 1)     [4,3] 0b 0x0 0x0 0x0 [MageLance,ShortSpear,Vulnerary] BossAI
-UNIT Wreyvine Fighter 0x1 Level(15, NPC, 1)     [3,4] 0b 0x0 0x0 0x0 [MageAxe,IronLabrys,Vulnerary] BossAI
+UNIT Wreyvine Soldier 0x1 Level(15, NPC, 1)     [4,3] 0b 0x0 0x0 0x0 [MageLance,ShortSpear,Vulnerary] RangeAI
+UNIT Wreyvine Fighter 0x1 Level(15, NPC, 1)     [3,4] 0b 0x0 0x0 0x0 [MageAxe,IronLabrys,Vulnerary] RangeAI
 	UNIT
 
 SelwynGamerFightable:
@@ -172,6 +182,7 @@ Traps2:
 
 BeginningScene:
 	LOAD1 0x1 EnemyUnits
+	LOAD1 0x1 EnemyUnits2
 	LOAD1 0x1 WreyvineGuys
 	TILECHANGE 0x5
 	FADU 15
@@ -219,6 +230,14 @@ CamOn
 	SetBackground(0x3E)
 	Text(Part3Chapter4Opening3)
 
+SetUnitStatus(Selwyn,CurrentHP,80)
+SetUnitStatus(Selwyn,Strength,27)
+SetUnitStatus(Selwyn,Skill,27)
+SetUnitStatus(Selwyn,LuckStat,30)
+SetUnitStatus(Selwyn,Speed,26)
+SetUnitStatus(Selwyn,DefenseStat,22)
+SetUnitStatus(Selwyn,Resistance,28)
+
 //scripted battles
 
 ClearBackground
@@ -261,8 +280,12 @@ EndingScene:
 
 	CameraCursor(Gorlois)
 	Text(Part3Chapter4Ending0)
-
+	STAL 5
+	SOUN 0xB3
+	//SOUN 0x269 //ringing torch sound (use for light somewhere?)
+	STAL 15
 	FAWI 10
+	STAL 20
 	SOUN 0x3b0
 	DoAllThree
 	VCWF 0
@@ -318,7 +341,7 @@ CALL 0x9EE4F8
 	CameraCursor(Affogato)
 
 	//Text(Part3Chapter4Ending4)
-	TEXTSTART; TEXTSHOW Part3Chapter4Ending4; TEXTEND; MOVE 0xF Ulrich [15,5]; MOVE 0xF Raial [15,5]; MOVE 0xF Graham [15,5]; ENUN; STAL 5; MOVE 0xA Selwyn [8,2]; ENUN; TEXTCONT; TEXTEND; DISA_IF Affogato; TEXTCONT; TEXTEND; REMA
+	TEXTSTART; TEXTSHOW Part3Chapter4Ending4; TEXTEND; MOVE 0xF Ulrich [15,5]; MOVE 0xF Raial [15,5]; MOVE 0xF Graham [15,5]; ENUN; STAL 5; MOVE 0xA Selwyn [8,2]; ENUN; TEXTCONT; TEXTEND; CUSA Affogato; REMU Affogato; TEXTCONT; TEXTEND; REMA
 	
 	STAL 10
 
@@ -347,6 +370,9 @@ CALL 0x9EE4F8
 
 TopDemolish:
 
+CHECK_EVENTID 0x8
+BNE 0x776 0xC 0x0
+
 CHECK_EVENTID 0xA
 BEQ 0x776 0xC 0x0
 
@@ -366,6 +392,7 @@ SOUN 0x2f0
 RemoveTrapAtCoords(12,1)
 EARTHQUAKE_END
 STAL 3
+SetFlag(0x8)
 
 LABEL 0x776
 
@@ -373,6 +400,9 @@ NoFade
 ENDA
 
 LeftDemolish:
+
+CHECK_EVENTID 0x9
+BNE 0x776 0xC 0x0
 
 CHECK_EVENTID 0xB
 BEQ 0x776 0xC 0x0
@@ -393,12 +423,18 @@ SOUN 0x2f0
 RemoveTrapAtCoords(10,20)
 EARTHQUAKE_END
 STAL 3
+
+SetFlag(0x9)
+
 LABEL 0x776
 
 NoFade
 ENDA
 
 RightDemolish:
+
+CHECK_EVENTID 0x10
+BNE 0x776 0xC 0x0
 
 CHECK_EVENTID 0xC
 BEQ 0x776 0xC 0x0
@@ -419,6 +455,9 @@ SOUN 0x2f0
 RemoveTrapAtCoords(19,20)
 EARTHQUAKE_END
 STAL 3
+
+SetFlag(0x10)
+
 LABEL 0x776
 
 NoFade
@@ -457,7 +496,7 @@ Text(Placeholder1)
 ClearBackground
 
 STAL 5
-CenterTextbox(ArriveDescription)
+CenterTextbox(ArriveDescription2)
 
 LABEL 0x776
 NoFade

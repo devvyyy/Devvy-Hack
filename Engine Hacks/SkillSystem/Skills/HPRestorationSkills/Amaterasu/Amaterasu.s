@@ -23,7 +23,7 @@ mov r3, #2 @range
 cmp r0, #0
 beq GoBack
 
-add r5, #50 @heal 20% hp
+add r5, #30 @heal 20% hp
 
 GoBack:
 mov r0,r5

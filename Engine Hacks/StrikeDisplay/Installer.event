@@ -1,5 +1,5 @@
 #include "StrikeDisplay.lyn.event"
-#define iconsInSheet 3
+#define iconsInSheet 6
 
 PUSH
     ORG 0x36F4C
@@ -14,4 +14,5 @@ POP
 
 ALIGN 4
 StrikeGFX:
-#incbin "StrikeDisplay.lz77"
+#incbin "StrikeNumbers.lz77"
+

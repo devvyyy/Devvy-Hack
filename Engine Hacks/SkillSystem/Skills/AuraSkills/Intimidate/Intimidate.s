@@ -25,6 +25,11 @@ ldrh    r3,[r0]     @Load the attacker's avoid into r3.
 sub     r3,#20    @subtract 10 from the defender's avoid
 strh    r3,[r0]     @Store defender avoid
 
+mov r0, r4
+add     r0,#0x60    @Move to the defender's avoid.
+ldrh    r3,[r0]     @Load the attacker's avoid into r3.
+sub     r3,#20    @subtract 10 from the defender's avoid
+strh    r3,[r0]     @Store defender avoid
 Done:
 pop {r4-r7}
 pop {r0}

@@ -40,6 +40,10 @@ SongTable(0x31C,song0318,0)
 SongTable(0x31D,song0318,0)
 SongTable(0x31E,song0318,0)
 
+ALIGN 4
+SongTable(0x31F,VictoryThemeYay,0)
+#include "0Victory_FINAL.event"
+
 //Custom music by Seth Brown aka Squaretex :D
 ALIGN 4
 SongTable(0x43,EternalWinter,0)
@@ -649,6 +653,36 @@ ALIGN 4
 //Conversation 1
 SongTable(0x2a6,Conversation1,0)
 #include "Conversation.event"
+
+ALIGN 4
+//Endgame 2 songs
+SongTable(0x2a8,MemoryBrother_FINAL,0)
+#include "MemoryBrother_FINAL.event"
+
+ALIGN 4
+//Endgame 2 songs
+SongTable(0x2a9,MemoryMariya_FINAL,0)
+#include "MemoryMariya_FINAL.event"
+
+ALIGN 4
+//Endgame 2 songs
+SongTable(0x2aa,MemoryMother_FINAL,0)
+#include "MemoryMother_FINAL.event"
+
+ALIGN 4
+//Endgame 2 songs
+SongTable(0x2ab,Endgame2Test_FINAL,0)
+#include "Endgame2Test_FINAL.event"
+
+ALIGN 4
+//Endgame 2 songs
+SongTable(0x2ac,SylveriaDrums_FINAL,0)
+#include "SylveriaDrums_FINAL.event"
+
+ALIGN 4
+//Endgame 2 songs
+SongTable(0x2ad,feb20250802211041,0)
+#include "0MainThemePiano_FINAL.event"
 
 ALIGN 4
 //Ice Ridge of Noltia (Intro on Turn 1 before using Map BGM Change)

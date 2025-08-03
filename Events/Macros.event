@@ -26,6 +26,7 @@
 #define SetAI(x,y,ai1,ai2) "SVAL 0x1 ai1|(ai2<<8); CHAI [x,y]"
 #define DoorFlag(flag,doorx,doory) "DOOR flag [doorx,doory] 0x12"
 #define CenterTextbox(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND"
+#define CenterTextBox(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND" //dude
 #define SetHP(number,x,y) "SVAL 0x1 number; SVAL 0xB Coords(x,y); SET_HP 0xFFFE"
 #define CharacterConditionalDialog(character,alivetext,deadtext) "CHECK_ALIVE character; BEQ 1 0x0 0xC; Text(alivetext); GOTO 2; LABEL 1; Text(deadtext); LABEL 2"
 #define FlagConditionalDialog(flag,alivetext,deadtext) "CHECK_EVENTID flag; BEQ 1 0x0 0xC; Text(alivetext); GOTO 2; LABEL 1; Text(deadtext); LABEL 2"

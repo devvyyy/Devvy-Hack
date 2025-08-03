@@ -47,10 +47,23 @@ the kingdom.[AN]
 Lord Gorlois' routing is incredible[,] huh?[6N]
 It's like he has eyes everywhere[Beat][AN]
 
+[L]
+When I first saw him all those months ago[,][N]
+I didn't think he had the mettle to hoist[N]
+up the flag in His Majesty's place.[AN]
+But it's thanks to those eyes of his that[N]
+what's left of Wreyvine hasn't crumbled.[6N]
+I must say[,] I've found new respect for him.[AN]
+
+[FL][MoveFL]
+You better![.6] It's all thanks to Lord Gorlois's[N]
+abilities that we've been able to avoid[N]
+Imperial detection for so long.[AN]
+
 [R]
-And Consul Aoife is en route to the central[N]
-castles where the palace used to be.[6N]
-This is our only chance.[AN]
+And the spies say Consul Aoife has turned[N]
+her sights back towards the central border.[6N]
+Her eyes gaze elsewhere.[.6] This is our chance.[AN]
 
 [L]
 Bastards.[.6] They think they own this land?[AN]
@@ -81,7 +94,7 @@ Ansgar[Beat] Sigh[Beat][AN]
 [X]
 
 ## Part3PrologueDisclaimer
-Ulrich's death will result[N]
+Ulrich's death will now result[N]
 in a Game Over.[AN]
 Additionally[,] generic units will[N]
 leave the party after this chapter.[A]
@@ -89,7 +102,7 @@ leave the party after this chapter.[A]
 
 ## Part3PrologueBDisclaimer
 Raial or Graham's deaths will[N]
-result in a Game Over.[AN]
+now result in a Game Over.[AN]
 [X]
 
 ## Part3PrologueAOpening3
@@ -140,13 +153,16 @@ we can from these[Beat][AN]
 
 [X]
 
-## Part3PrologueATurn1
+## Part3Chapter1DeathQ
+[ML][Flan]
+Tsch[Beat] Kingdom dogs[Beat][N]
+Guess my luck's finally out[Beat][AN]
+[X]
 
-[3L]
-[FL][Flan]
+## EevaUlrichBossQ
+
+[ML][Flan]
 You Kingdom dogs again[Beat]![.6] Still barking I see![6N]
-I thought after that other platoon[,][N]
-none else was gonna come here.[AN][C]
 Even with a slain king[,] his royal army dares[N]
 to dare to crawl from the ashes?[AN]
 
@@ -154,9 +170,8 @@ to dare to crawl from the ashes?[AN]
 A lot's happened[,] you know?[6N]
 I'd love to continue chatting[,] but we have[N]
 to wipe out a group of pests on our land.[AN]
-[CSS]
+[CF]
 
-[FL][MoveLeft]
 With such a[Beat] dwindling army?[.6][N]
 Your bravery is naught but idiocy here.[6N]
 I'll turn this grey red in the Emperor's memory.[AN]
@@ -165,6 +180,39 @@ I'll turn this grey red in the Emperor's memory.[AN]
 Heh.[.6] You'll try.[.6] Just make sure someone's left[N]
 to tell your new Emperor how you died:[4N]
 unknown in the ashen coasts.[AN]
+
+[X]
+
+## Part3PrologueATurn1
+
+[3L]
+[ML][Flan][R][Soldier][FR][Soldier2]
+
+[FR][MoveFR]
+Enemies approaching![6N]
+It's the kingdom's dogs![AN]
+
+[ML]
+So much for a dead-end post.[6N]
+How many of them are there?[AN]
+
+[R]
+Only looks like a scouting group.[6N]
+Don't see much more than[Beat] eight.[AN]
+
+[ML]
+And it'll be zero soon.[6N][MoveFR]
+To arms[,] everyone![AN]
+
+[FR][MoveFR]
+To arms![AN]
+[CSS]
+[R][CF][FR][CF]
+
+[ML][MoveLeft][CloseEyes]
+The moment I saw King Anatolius fall[,][N]
+I knew there was only one way forward.[6N]
+The Aeterian way[Beat] The Velvet way.[AN]
 
 [X]
 
@@ -222,8 +270,6 @@ Are you lost or just stupid?[AN]
 
 [L]
 Identify yourself.[AN]
-
-[Event]
 
 [MR]
 The name's Weylan.[.6] And[,] ahem[Beat][N]
@@ -352,18 +398,36 @@ Now what do you want?[AN]
 # zoom to boss
 
 [3L]
-[FR][Flan][MR][Soldier2]
+[ML][Flan][R][Soldier2]
 
-[MR]
+[MR][MoveMR]
 There's more of them[,] Ser![AN]
 
-Sheesh[,] now instead of being outnumbered eight[N]
-to thirty[,] it's twelve to thirty.[6N]
-C'mon[,] we still got this in the bag.[AN]
+[FR][Soldier]
+I knew something was off[Beat] Don't tell[N]
+me you're leading us into a[N]
+trap[,] ashboot.[AN]
+Some may have forgotten that[N]
+you stood with the Kingdom[,][N][MoveFR]
+but I have not![AN][C]
+This is all a ruse to get us killed[,][N]
+isn't it[,] Ser Eeva?[AN]
+[CSS]
+
+[ML][MoveLeft]
+Months of serving by your side[,] and[N]
+yet you still look at me with[N]
+such distrust?[AN]
+After I raised steel against those I once[N]
+called kinsmen in your emperor's name?[6N][MoveLeft]
+Pah![AN][C]
+If I must prove myself once more[,][N]
+so be it.[.6] Steel yourselves[,] everyone![AN] 
 
 [X]
 
 ## UlrichWeylanTalk
+[3L]
 
 [ML][Ulrich][MR][Weylan]
 
@@ -424,6 +488,7 @@ Keep up[,] Weylan.[AN]
 [X]
 
 ## BreveWeylanTalk
+[3L]
 
 [ML][Breve][MR][Weylan]
 
@@ -511,6 +576,7 @@ Now you're speaking my language![.6] For Wreyvine![AN]
 [X]
 
 ## AnsgarWeylanTalk
+[3L]
 
 [ML][Ansgar][MR][Weylan]
 
@@ -541,6 +607,16 @@ You're a better man than I am[,] Ansgar.[AN]
 [ML]
 Wouldn't say that.[.6] Just stay behind me.[AN]
 
+[MR]
+Hey[,] then why don't you take this?[6N]
+Sign of good faith[,] ehhh?[AN]
+
+[ML]
+Sure you don't need it?[AN]
+
+[MR]
+That's what I mean![.6] Just take it.[AN]
+
 [X]
 
 
@@ -558,6 +634,9 @@ anytime soon.[.6] We got 'em![AN][CSS]
 [FR][Breve]
 Look at that smoke rise[Beat] It's almost like[N]
 a beacon or something.[.6] Or a warning[Beat][AN]
+[CSS]
+
+[FL][CF]
 
 [FL][Ansgar]
 Looks like we still got it[,] eh?[.6] But[Beat][N]
@@ -778,9 +857,145 @@ The empire must have them hostage.[AN]
 
 [X]
 
+## Part3PrologueAExtraEndingAlt
+# if eis is dead
+
+[3L]
+[L][Ulrich][FFR][WreyvineSoldier2][MoveMR]
+
+[MR]
+Commander Ulrich! There you are![6N]
+Urgent news! Lord Reinier is in danger![AN]
+
+[L]
+Reinier was leading the Third Division…
+Did something go wrong with the
+attack on Fort Storus?
+
+[MR]
+Eustace of the Magi Trinity was there.[6N]
+He subdued them easily and took the[N]
+whole Third Division captive![AN]
+
+[L]
+Hm[,] so even Lord Reinier and General Klavdia[N]
+weren’t enough to stand up to a single[N]
+damn Velvet.[AN]
+
+[MR]
+Eustace ain’t no average Velvet.[6N]
+His magic subdued all of ‘em like[N]
+they were nothing.[AN]
+Lord Reinier surrendered to them,[4N]
+and the survivors were taken captive[N]
+inside the fort.[AN]
+
+[L]
+Lord Reinier made the right choice.[6N]
+Eustace’s casting style is especially[N]
+effective at tearing through wings.[AN]
+And Reinier’s group had most of our[N]
+fliers, too. Had a fight broken out,[4N]
+casualties would’ve been inevitable.[AN][C]
+Chances are, he surrendered in hopes[N]
+that they’d spare the lives of the rest.[AN]
+
+[MR]
+Commander, this is really bad![6N]
+What are we going to do?![AN]
+
+[L]
+If they’ve taken some of ours captive,[4N]
+we need to regroup and figure out how[N]
+to get them back as soon as we can.[AN]
+They may have taken Reinier alive, but[N]
+who knows how long that’ll be the case for.[6N]
+Let’s go find Lord Gorlois, and fast.[AN]
+
+[X]
+
+## Part3PrologueAExtraEnding
+# if eis is alive
+[3L]
+
+[L][Ulrich][FFR][Eisner][MoveMR]
+
+[MR]
+There you are, Commander.[N]
+And not a moment too soon.[6N]
+Urgent news.[AN]
+
+[L]
+Eisner? What's the matter?[6N]
+Did something happen on the[N]
+Second Division's end?[AN]
+
+[MR]
+Not quite. But the Third Division was[N]
+captured[Beat] Their maneuver on Fort[N]
+Storus was a complete bust.[AN]
+[CSS]
+[FL][Breve][MoveFL]
+The Third Division?! But Lord Reinier[N]
+and General Klavdia were leading them![6N]
+What manner of force could fell them?[AN]
+
+[MR]
+I saw it all from afar. Lord Reinier[N]
+had the upper hand until Eustace of[N]
+the Magi Trinity arrived on the fray.[AN]
+He caught them off guard, and his[N]
+magic prowess subdued them easily.[AN]
+Lord Reinier surrendered to them,[4N]
+and the survivors were taken captive[N]
+inside the fort.[AN]
+[CSS]
+
+[FL][Ansgar][MoveFL]
+Eustace, eh? Shoulda known that[N]
+hoser had been too quiet lately.[AN][C]
+But I can't imagine that Klavdia[N]
+goin' down without a fight,[4N]
+scary magic or not.[AN]
+
+[MR]
+She didn't. But Eustace sapped her[N]
+strength with a staff, and it didn't[N]
+take much for them to capture her.[AN]
+
+[L]
+Lord Reinier made the right choice.[6N]
+Eustace's casting style is especially[N]
+effective at tearing through wings.[AN]
+And Reinier's group had most of our[N]
+fliers, too. Had a fight broken out,[4N]
+casualties would've been inevitable.[AN]
+
+[MR]
+Aye, I'm not disagreeing. He probably[N]
+surrendered in hopes of sparing the[N]
+lives of the rest of the division.[AN]
+Hell, it's a miracle I managed to slip[N]
+out unscathed myself.[AN]
+
+[L]
+If they've taken some of ours captive,[4N]
+we need to regroup and figure out how[N]
+to get them back as soon as we can.[AN]
+They may have taken Reinier alive, but[N]
+who knows how long that'll be the[N]
+case for.[AN]
+
+[MR]
+Glad we're on the same page.[6N]
+Lord Gorlois wants us all to regroup.[6N]
+No time to waste, now. Let's go.[AN]
+
+[X]
+
 
 ## Part3PrologueBOpening1
-# back to part 2; prologue B stuff
+# raial route; back to part 2; prologue B stuff
 [3L]
 [ML][Raial][MR][Graham]
 [MR]
@@ -792,14 +1007,18 @@ Our leader's gone[,] and this is where[N]
 your mind spaces?[AN]
 
 [MR]
+With the power awakened within her[,][N]
+she will survive all they hurl at her.[6N]
+But it is her image that we must retain.[AN]
 The mercenary girl with radiant magic who[N]
 stood up to the Empire that she was fated[N]
 to rule[Beat] The legend must survive.[AN]
 
 [ML]
-Tsch.[.6] She was never just some symbol[N]
-for you to utilize.[.6] We need to find[N]
-her--[.4]and fast.[AN]
+Tsch.[.6] It disgusts me hearing you speak[N]
+speak of her like that.[.6] Like a tool.[6N]
+But you're not the one in command.[AN][C]
+We're finding her[,] with or without you.[AN]
 
 [MR]
 I thought we went over this already[,] Raial.[6N]
@@ -807,184 +1026,134 @@ We survive now[,] and an opportune for her[N]
 return will present itself.[AN]
 
 [ML]
-Any ideas for how we'll do that first part[,][N]
-Malcolm?[.6] In the meantime[,] all we can do is[N]
-wait for the noble's response.[AN]
+I want to do far more than [OQ]survive".[6N]
+And for that[,] I have an idea in mind.[AN]
 
 [MR]
-Yes[,] I am sure he will welcome your army[N]
-with open arms.[AN]
+As do I. But do tell.
+
+There's no way Aeteria managed to
+snuff out every ounce of Wreyvian
+pride in these lands[,] right?
+There's all kinds of rumors abound of
+an underground resistance[,] made up
+of remnants of the royal army[Beat]
+The Trinity have been trying to track
+them down for months[,] to no avail.
+If we can wrangle together enough
+support from the other side to push back
+into Aeteria[,] towards Chiffon[Beat]
+
+You think the kingdom will simply join us?
+Without the golden-eyed demon as our
+figurehead[,] asking nicely will not work here.
+If we are to join hands[,] we must give them
+reason to do so that they cannot refuse.
+
+We have one. A mutual cause.
+
+But will that be enough to--
+
 
 [FFL][Ilse]
 Captain Raial![AN][CSS]
 
 [ML][MoveLeft]
 [FFL][MoveFarLeft]
-Lord Reinier wants nothing to do with our[N]
-forces[,] even after passing the letter.[6N]
-He thinks us almost the Imperial army[,] I see.[AN][CF]
 
 [L]
-Damn it![AN]
+So the scouting party has returned?[6N]
+What's ahead on the road?[AN]
 
-[MR]
-What an unwise decision.[AN]
+[FL]
+There's a border fortress up ahead,
+all prettied up with Imperial soldiers.
+[CSS]
+[MR][MoveFarRight]
 
-[L]
-We're quickly running out of options[Beat][N]
-I know.[.6] We send off a few scouts and[N]
-uncover the royal army's location.[AN][MML]
-After that[,] we'll have them receive a message[N]
-to form an alliance.[.6] They're desperate:[.4][N]
-they can't say no here.[AN]
+[R][Verna]
+That's not all. I spotted Wreyvian
+knights in the fortress[,] too.
+The empire has prisoners.
 
-[MR]
-Is that not what the first attempt was?[6N]
-To repeat an option with a known result[N]
-is the definition of foolishness.[AN]
-You think the kingdom will simply join us?[6N]
-Without the golden-eyed demon as our[N]
-figurehead[,] asking nicely will not work here.[AN]
+What a serendipitous boon for us.
 
-[ML]
-Hell[,] just say it.[.6] What do you propose we do?[6N]
-Because you've obviously been trying to[N]
-lead us into asking about your plan.[AN]
+If I overheard right from the patrol,
+they're sentenced to the gallows soon.
 
-[MR]
-The Wreyvian army will not join us without[N]
-a catalyst.[.6] They have little reason to trust[N]
-us[,] Raial.[.6] We must give them one.[AN]
+[R]
+Didn't need to hear it from the patrol.
+I think the yawping from that loud
+buffoon was enough to get the gist.
+[CSS][CF]
 
-[ML]
-[Pause]What are you saying?[6N]
-Quit your games![AN]
+[Beat][AN]
 
-[MR]
-We take a noble of the Kingdom hostage.[6N]
-That aforementioned Reinier sounds like a[N]
-good start[,] wouldn't you agree?[AN]
-We offer him in exchange for a formal[N]
-meeting with the Wreyvians.[6N]
-From there[,] diplomacy can resume.[AN]
+I don't like the look in your eyes[,] Malcolm.[6N]
+[Beat]Hey[,] you still with us?[.6] You're[N]
+frozen stiff.[AN]
 
-[ML]
-You want to blackmail them into a peace talk?[6N]
-This is insanity[,] Graham.[AN]
+We cannot let this chance slip by[,] Raial.[.6N]
+This is the turn of fate we need.[AN][C]
+With hostages in our hands[,] the kingdom's[N]
+remnants would have the perfect incentive[N]
+to step out of the shadows and seek us out.[AN]
 
-[MR]
-It is the only way[,] Raial.[.6][N]
-There stands no chance of them parleying[N]
-with us otherwise.[AN]
+[OQ]Hostages"? You mean to capture the[N]
+prisoners and use them as leverage?[6N]
+Do you WANT to make them hate us?[AN]
 
-[ML]
-Kidnapping one of their own isn't[N]
-going to have them trust us.[6N]
-They'll hate us.[AN]
+Do you truly think that men of Wreyvine[N]
+would willingly choose to join hands with
+those beneath the Aeterian flag?
+The same Aeteria whose emperor
+stomped them underfoot[,] and reduced
+their proud kingdom into this wreck?
 
-[MR]
-Trust?[.6] They need us and do not know it.[.6][N]
-Their forces crumble apart.[.6] Their king is dead.[6N]
-Their spirits are fractured.[AN]
-We do not need to break the kingdom;[6N]
-it has been broken for us.[.6] All we have[N]
-to do is show them our worth,[AN]
-and proceed to direct the pieces.[AN]
+But we are different from the emperor.
+If they have little reason to trust us,
+then we must prove that to them.
 
-[ML]
-You talk like you're playing with a puzzle.[.6][N]
-This hostage scheme isn't some grand[N]
-strategy[,] Graham.[.6] It's desperation[Beat][AN]
+Makes sense[Beat]
+So what's our move[,] Captain?
 
-[MR]
-We find ourselves in a position similar to[N]
-the royal army.[.6] We are on borrowed time.[AN]
+We provide them with an act of goodwill,
+by rescuing and returning their lost men.
+Once they see how we've treated them
+while they were among our ranks[Beat]
+that will open the way to an alliance.
 
-[ML]
-Graham[Beat] You always talked about a new[N]
-Aeteria--[.4]one with mercy[,] with honor.[.6][N]
-Was that just another lie you fed to her?[AN]
-To all of us?[AN]
+[R][Verna]
+Reverend,[....] the guards are sweeping the bridge
+to the south.[......] If we move now,[....] we can
+slip through the hills and get inside.[A]
+Whatever we do[,] we must do it fast.
+The executions will likely begin soon.
 
-[MR]
-Princess Sylmeria was our star[,] yes.[6N]
-But a star alone cannot burn away a[N]
-tyrant's shadow.[AN]
-The people need to see more than hope now.[6N]
-They need to see results.[AN]
+[Beat]Very well. We do it your way[,] Raial.
 
-[ML]
-So you'll risk all-out war with the kingdom?![6N]
-Throw a lit match on a powder keg just[N]
-just so you can drag them to the table?![AN]
+I[Beat] huh? You're actually on my side?
 
-[MR]
-Raial.[.6] I would rather a scorched road than[N]
-no road at all.[AN]
+Time is of the essence. We can
+decide what to do with the Wreyvians
+after the fortress is secured.
+But for this to work[,] we need to lock their
+guards' sights on us. Let them believe we
+are sellswords reaching for their treasury.
+Then[,] we cut through like a knife.
+[Clear]They will have no chance to intercept.
+Raial[,] I trust you at the vanguard.
 
-[ML]
-You think they'll stand behind you when you[N]
-start using nobles as bargaining chips?[AN]
+That so? That's the most flattering thing
+you've ever said to me[,] Malcolm.
+Let's go[,] everyone! We got some
+royal mutts to save!
 
-[MR]
-They will when they see it works.[.6][N]
-They will when we[,] a unified force[,][N]
-finally push the empire back.[AN]
-
-[ML]
-Tell me[,] what happens if this Reinier dies in[N]
-our custody?[.6] What happens when Wreyvine sends[N]
-tons of knights to avenge them?[AN][C]
-What happens when blood spills and there's[N]
-no turning back?[AN]
-
-[MR]
-First of all:[.4] Wreyvine has no knights to spare[N]
-for some fantastical revenge plot.[.6][N]
-Second:[.4] then we adapt.[AN][C]
-As we always have[,] Raial.[AN]
-
-[FFR][LoadVerna]
-[Pause]I see we are back to this stage of[N]
-the Liberation Army.[AN][CSS]
-
-[MR][MoveRight]
-[FFR][MoveFarRight]
-Reverend[,] the guards are sweeping the bridge[N]
-to the south.[.6] If we move now[,] we can[N]
-slip through the hills and get the noble.[AN]
-Reinier lays guarded in that castle.[6N]
-Should be an easy catch[,] that old oaf[Beat][N]
-We'll move at your order.[AN]
-
-[ML]
-You've already--[.4]you're going to drag this lord[N]
-out in chains[,] and expect that to spark[N]
-an alliance?![AN]
-
-[MR]
-Not an alliance[,] Raial.[.6] A negotiation.[6N]
-Once they hear our terms[,] they will[N]
-have no choice but to listen.[AN]
-And Lady Verna.[.6] We need them to see us.[6N]
-Let them believe we aim for their treasury[,][N]
-and cut through like a knife.[AN]
-They will have no chance to intercept.[6N]
-Raial[,] I beg you to place your faith[N]
-in me.[.6] For this rebellion.[6N]
-
-[ML]
-We're really doing this[,] huh?[6N]
-As terrible an idea as it is[Beat][N]
-Urgh[,] damn you[,] Malcolm.[AN]
-
-[MR]
-Now let us proceed onwards.[AN]
 
 [X]
 
 ## Part3PrologueBOpening1Alt
-# back to part 2; prologue B stuff
+# graham route; back to part 2; prologue B stuff
 [3L]
 [ML][Raial][MR][Graham]
 [MR]
@@ -1351,7 +1520,8 @@ Haha![.6] Yeah?[.6] Hey[,] what's yer name[,] lass?[AN]
 
 [ML]
 Oh[,] uh.[.6] John--[.4]Jane.[.6] I mean[,] my name is[Beat][N]
-Vera Vale.[AN]
+Vera Vale[Beat] from Vale.[.6] Like the[N]
+Aeterian province?[AN]
 
 [FR]
 Complete bullshit.[.6] Let's go.[AN]
@@ -1481,7 +1651,7 @@ What?![.6] How?![.6] After them![AN]
 [X]
 
 ## Part3PrologueBKillBoss
-# kill boss, fade to bg, this scene, then he respawns on throne as green ooooor just make it a talk with raial/graham
+# kill boss[,] fade to bg[,] this scene[,] then he respawns on throne as green ooooor just make it a talk with raial/graham
 [3L]
 [ML][Vilhelm]
 You[Beat] I surrender.[AN]
@@ -1490,10 +1660,10 @@ You[Beat] I surrender.[AN]
 
 ## Part3PrologueBKillBossExplain
 # if he dies blahblah; do flag stuff for death event
-Now, bring Vilhelm over to the[N]
+Now[,] bring Vilhelm over to the[N]
 marked spaces on the map in order[N]
 to finish this chapter.[A][C]
-If Vilhelm dies, it's a[N]
+If Vilhelm dies[,] it's a[N]
 [Red]Game Over[Red].[A]
 
 [X]
@@ -2123,14 +2293,13 @@ Of course not.[.6] I sense[Beat] trepidation.[6N]
 It would do you no good to remain in[N]
 such a state at the palace.[AN]
 
-
-
 [ML]
-Treat this as a real battle[,] sister.[6N]
-Let your heart guide your light.[AN]
+Treat this as you would a real battle[,][N]
+sister.[.6] Allow your heart to guide[N]
+your light.[.6] Show me your star.[AN]
 
 [MR]
-...Fine.[.6] But you asked for it.[AN]
+[Pause]Fine.[.6] But you asked for it.[AN]
 
 [X]
 
@@ -2163,7 +2332,7 @@ It is as if these stray shots fear what[N]
 arrives after release.[AN]
 
 [MR]
-I'm[Beat] No[,] I'm not![.6] I just don't know why[N]
+I'm[Beat] [MoveMR]No[,] I'm not![.6] I just don't know why[N]
 my hands shake when I try to aim![AN]
 
 [ML]
@@ -2217,7 +2386,7 @@ clarity is not stillness alone.[.6] It[N]
 requires intention[,] as well.[AN]
 Focus your light[,] Sylmeria.[.6] Like a ray of[N]
 hope that guides the people in the darkness.[6N]
-That is all.[AN]
+A star in the night sky[Beat] That is all.[AN]
 
 [MR]
 A lot easier than it sounds[,] honestly.[6N]
@@ -2332,6 +2501,8 @@ The barrage is precisely the[N]
 problem[,] dear sister.[AN]
 When you dodge one[,] the rest[N]
 soon follow predictably.[AN]
+Light sprinkles like fresh[N]
+snow[,] not rain.[AN]
 You are not yet ready like[N]
 this[,] sister.[AN]
 [CF]
@@ -2353,7 +2524,7 @@ in your armor?[AN]
 [CF]
 
 [ML][Sylveria2]
-Well down[,] Sylmeria[Beat][AN]
+Well done[,] Sylmeria[Beat][AN]
 
 [X]
 
@@ -2376,7 +2547,7 @@ Faith[,] sister.[AN]
 [X]
 
 ## SylmeriaDuelMiddlePre
-# after 4 attacks, battle temporarily stops, gets ray of light; plays full version of STAR, which loops from chiffon motif onward
+# after 4 attacks[,] battle temporarily stops[,] gets ray of light; plays full version of STAR[,] which loops from chiffon motif onward
 
 [3L]
 [ML][Sylveria2][MR][Chiffon][.6]
@@ -2386,7 +2557,7 @@ Enough[,] sister.[.6] Please hold still.[AN]
 [X]
 
 ## SylmeriaDuelLeStart
-# after 4 attacks, battle temporarily stops, gets ray of light; plays full version of STAR, which loops from chiffon motif onward
+# after 4 attacks[,] battle temporarily stops[,] gets ray of light; plays full version of STAR[,] which loops from chiffon motif onward
 
 [3L]
 [ML][Sylveria2][MR][Chiffon][.6]
@@ -2396,7 +2567,7 @@ Alright[,] here I come![AN]
 [X]
 
 ## SylmeriaDuelMiddle
-# after 4 attacks, battle temporarily stops, gets ray of light; plays full version of STAR, which loops from chiffon motif onward
+# after 4 attacks[,] battle temporarily stops[,] gets ray of light; plays full version of STAR[,] which loops from chiffon motif onward
 
 [3L]
 [ML][Sylveria2][MR][Chiffon][.6]
@@ -2496,7 +2667,8 @@ Then a third[,] and you'll find the shape[N]
 of your song."[AN]
 
 [MR]
-So[Beat] you want me to learn piano?[6N]
+So[Beat] you want me to learn piano and[N]
+listen to this guy's cheesy advice?[6N]
 Is that it?[AN]
 
 [ML]
@@ -2529,6 +2701,14 @@ Watch me.[AN]
 
 [X]
 
+## WahooLightslingerPre
+In Duels[,] Chiffon can use Lightslinger[N]
+to strike twice consecutively at[N]
+the cost of doubled durability.[A][X]
+
+## WahooLightslinger
+Chiffon can now use Lightslinger[N]
+in all battles.[A][X]
 
 ## SylmeriaDuelEnding
 # tada; she doesnt get her equipment here; also sylveria can use the same thing
@@ -2882,7 +3062,7 @@ I guess so.[.6] But what can we really[N]
 do about it[,] right?[AN]
 
 [ML]
-[Pause]Do you believe in Fate[,] sister?[AN]
+[Pause]Do you believe in Fate[,] sister?[6N]
 The sort that threads lives together through[N]
 small ripples like the beat of wings.[AN]
 
@@ -2900,15 +3080,15 @@ Yes.[.6] A single note off course[,] a soldier[N]
 surviving against all odds[Beat][N]
 And everything after turns anew.[AN]
 If you had never been taken from us[Beat][N]
-Would this war still blaze?[.6][N]
+Would this war still blaze like so?[.6][N]
 Would I have become Apostle?[AN]
 
 [MR]
 You never got a say in any of it[,][N]
 did you?[.6] You were kinda just born[N]
 into this role.[AN][C]
-Hell[,] even your songs were written[N]
-for you.[AN]
+I mean[,] hell[,] even your songs were[N]
+written for you.[AN]
 
 [ML]
 I never chose to be Apostle[,] or to[N]

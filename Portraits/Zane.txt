@@ -67,6 +67,11 @@ TSSylveria_Mug:
 #incext PortraitFormatter "TimeskipSylveria.png"
 setMugEntryExtend(0x106, TSSylveria_Mug, 3, 5, 3, 3, 0, 0, 0, 0)
 
+ALIGN 16 //TS Sylveria
+TSSylveria_MugSus:
+#incext PortraitFormatter "SylveriaBerserk.png"
+setMugEntryExtend(0x119, TSSylveria_MugSus, 3, 5, 3, 3, 0, 0, 0, 0)
+
 ALIGN 16 //Selwyn by BuskerHuskerKalusker
 SelwynSil_Mug:
 #incext PortraitFormatter "SelwynSilhouette.png"
@@ -80,8 +85,8 @@ setMugEntry(0x10E, SelwynWhite_Mug, 3, 4, 3, 2)
 
 ALIGN 16 //Messel by Vlak
 Messel_Mug:
-#incext PortraitFormatter "Vlak4.png"
-setMugEntry(0xC1, Messel_Mug, 3, 5, 3, 3)
+#incext PortraitFormatter "Messel.png"
+setMugEntry(0xC1, Messel_Mug, 3, 4, 3, 2)
 
 ALIGN 16
 Gerolf_Mug:
@@ -992,7 +997,7 @@ setMugEntry(0xE9, TimeskipIris_Mug, 3, 5, 3, 3)
 ALIGN 16
 TimeskipOgrim_Mug:
 #incext PortraitFormatter "TimeskipOgrim.png"
-setMugEntry(0xEA, TimeskipOgrim_Mug, 3, 5, 3, 3)
+setMugEntry(0xEA, TimeskipOgrim_Mug, 3, 4, 3, 3)
 
 ALIGN 16
 TimeskipKane_Mug:

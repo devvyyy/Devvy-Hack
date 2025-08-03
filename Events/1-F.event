@@ -60,7 +60,7 @@ AREA 0xC FortniteRight [20,19] [20,19]
 	END_MAIN
 
 LocationBasedEvents:
-Chest(MasterSeal,24,3)
+Chest(0x7C,24,3)
 Chest(0x74,14,8)
 Chest(0x5F,15,9)
 Door(16,10)
@@ -261,7 +261,7 @@ UNIT InfantrySoul Mercenary 0x1 Level(12, Enemy, 1)     [20,19] 0 0 1 REDA19R19 
 	UNIT
 
 HolyFuckWhy2:
-UNIT MagSoul Sage 0x1 Level(2, Enemy, 1)     [7,20] DropItem 0 1 REDA6R21 [Fire,MasterSeal] BossAI
+UNIT MagSoul Sage 0x1 Level(2, Enemy, 1)     [7,20] DropItem 0 1 REDA6R21 [Fire,0x63] BossAI
 UNIT CavSoul SwordCav 0x1 Level(11, Enemy, 1)     [7,20] 0 0 1 REDA6R19 [SteelSword] TwoActionAI
 UNIT CavSoul LanceCav 0x1 Level(11, Enemy, 1)     [7,20] 0 0 1 REDA5R20 [IronLance] ChargeAI
 UNIT FlierSoul PegRider 0x1 Level(11, Enemy, 1)     [7,20] 0 0 1 REDA7R17 [IronLance] TwoActionAI

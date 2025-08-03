@@ -50,6 +50,7 @@ ENDA
 CheckNoUnits:
 CUSA Chiffon
 FADI 60
+UnsetFlag(0xED)
 	DoAllThree
 	LOAD2 0x1 CutsceneUnits
 
@@ -100,6 +101,7 @@ SOUN 0x313
 
 CLEAN
 MUSCSLOW 0x7FFF
+MOVE 0x2 0x72 [9,6]
 FAWU 30
 
 STAL 150
@@ -210,7 +212,7 @@ UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [11,2] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] 
 	UNIT
 
 EnemyUnits:
-UNIT 0x72 General 0x1 Level(20, Enemy, 0)     [11,10] DropItem 0x0 0x0 0x0 [WindSword, 0x63] BossAI
+UNIT 0x72 General 0x1 Level(20, Enemy, 0)     [11,10] DropItem 0x0 0x0 0x0 [WindSword, 0xBC] BossAI
 	UNIT
 	
 CutsceneUnits:
@@ -258,6 +260,7 @@ SetFlag(0xF)
 ASMC 0x8026629
 	LOAD1 0x1 EnemyUnits
 	ENUN
+	SetUnitItemDurability(0x72, 1, RupturedSkyID) //aurora shard
 	
 	CALL $591FD8
 	CAM1 [11,6]
@@ -280,6 +283,13 @@ Text(ChCh27xOpening2AltAlt)
 
 LABEL 0x9001
 
+CHECK_EVENTID 0xED; BNE 0x776 0xC 0x0 //if dueled prior, dont show text again
+
+CenterTextbox(WahooLightslingerPre)
+
+LABEL 0x776
+
+SetFlag(0xED)
 SOUN 0x119 //bolting sparks
 ENUT 0x24
 ENUT 0x5
@@ -290,9 +300,16 @@ NoFade
 
 EndingScene: //can only win in graham route if ring was obtained
 	FADI 60
+	UnsetFlag(0xED)
 	Music(0x185)
 	DoAllThree
 	LOAD2 0x1 CutsceneUnits
+
+	SVAL 0x1 0x64 //80
+	SET_HP Graham
+	SVAL 0x1 0x64 //80
+	SET_HP Raial
+
 	FADU 15
 	STAL 15
 
@@ -308,24 +325,32 @@ REMU 0x72
 
 STAL 15; Music(0x4A); TEXTCONT; TEXTEND; REMA
 
+MOVE 0xD Chiffon [11,6]
+ENUN
+
 STAL 15
 FAWI 16
 SOUN 0xCF
-STAL 30
-MOVE 0xD Chiffon [11,6]
-ENUN
+STAL 20
+SOUN 0x2BF
+STAL 10
+SOUN 0x2c0
+SVAL 0x1 22 //ID
+SVAL 0x2 0x0
+SVAL 0xB 0x6000B //X, Y coords
+ASMC ASMC_Draw|1
+
 	SVAL 0x1 0x1 //1 lol
 	SET_HP Chiffon
-SOUN 0x2BF
+
 STAL 30
-SOUN 0xf0
-SetBackground(0x48)
-STAL 10
+
+FAWI 60
 SOUN 0xD8
+STAL 15
+FAWU 15
 STAL 50
-FADI 60
-CLEAN
-FADU 15
+
 STAL 30
 Text(Ch27DuelEndingWardenWin2)
 

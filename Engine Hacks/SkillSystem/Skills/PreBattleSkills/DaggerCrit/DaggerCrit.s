@@ -82,6 +82,8 @@ cmp     r0, #0xF7         @Oh the misery
 beq Crit100
 cmp     r0, #0x90         @Mace
 beq Crit100
+cmp     r0, #0xCB         @Black Knife
+beq DirkSpecial2
 cmp     r0, #0xFE         @Syzygy
 beq Crit50Special
 cmp     r0, #0xB9         @Dirk
@@ -193,6 +195,41 @@ beq End
 @set crit to 100 but real
 mov r1, #0x66
 mov r0, #255
+strh r0, [r4,r1]
+
+b End
+
+DirkSpecial2:
+
+mov r1, #0x62
+ldrh r0, [r4, r1] @avoid
+add r0, #20
+strh r0, [r4,r1]
+
+@reduce 99 crit
+mov r1, #0x66
+ldrh r0, [r4, r1] @crit
+sub r0, #99
+strh r0, [r4,r1]
+
+@check if flag 0x25 set; if set, doubles to canto 4
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0x25
+.short 0xF800
+cmp r0,#1
+bne End @if flag is not on, reduce crit as normal
+
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq End
+
+@add spd/2 attack
+mov  r1, #0x5A
+ldrh r0, [r4, r1] @attack
+ldrb r2, [r4, #0x12] @spd
+add  r0, r2
 strh r0, [r4,r1]
 
 b End

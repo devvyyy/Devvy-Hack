@@ -5,7 +5,7 @@
 
 pPowerModifiers: // Power
 	POIN prAddUnitPower prHalveIfCapturing prDebuffStr prAddEquipPower prItemPassivePow prRallyStr prPowerFrenzyRing prLifeAndDeathBonus prFortressDefensePow VigorDanceCheck prFortressResistancePow prResolve prHostileLoyalty prDefiantStr prPushStr ChiffonCrownCheckLuck
-	POIN prSkillQuickBurn prSkillGauntlets prCounter prTuskedHorn prAddMoreIfWreyvian prPowerBraveRing
+	POIN prSkillQuickBurn prSkillGauntlets prSkillAuroraShard prCounter prTuskedHorn prAddMoreIfWreyvian prPowerBraveRing
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -34,11 +34,16 @@ prSkillFury:
   rIfUnitHasSkill(FuryID)
     rAddConst(2)
 
+prSkillAuroraShard:
+  rIfUnitHasSkill(RupturedSkyID)
+    rAddConst(8)
+
 prSkillGauntlets:
   rIfUnitHasSkill(InsightID)
     rAddConst(2)
 
 prSkillQuickBurn:
+rIfUnitHasSkill(CantoPlusID)
   rIfUnitHasSkill(QuickBurnID)
     rAddConst(2)
 

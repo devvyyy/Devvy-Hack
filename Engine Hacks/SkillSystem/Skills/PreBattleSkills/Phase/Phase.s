@@ -126,11 +126,6 @@ strh r0, [r4,r1]
 b End
 
 SnaringAwesome:
-@add 2 damage
-mov r1, #0x5a
-ldrh r0, [r4, r1] @atk
-add r0, #2
-strh r0, [r4,r1]
 
 ldr r0,=#0x203A4EC @attacker struct
 cmp r0,r4
@@ -195,7 +190,7 @@ BackshieldAwesome:
 ldr r0,=#0x203A4D4 @battle stats
 ldrb r0,[r0,#2] @range
 cmp r0,#1
-bgt GoBack
+bgt End
 
 @apply def/res +3
 mov r0, r4
@@ -226,11 +221,6 @@ b End
 
 
 ShiningAwesome:
-@add 3 damage
-mov r1, #0x5a
-ldrh r0, [r4, r1] @atk
-add r0, #3
-strh r0, [r4,r1]
 
 @ bork: check enemy res
 mov r0, #5

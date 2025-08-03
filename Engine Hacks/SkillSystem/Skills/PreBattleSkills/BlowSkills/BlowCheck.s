@@ -150,11 +150,11 @@ bne SkillReturn
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
 add     r0,#0x5a    @Move to the attacker's dmg.
 ldrh    r3,[r0]     @Load the attacker's dmg into r3.
-add     r3,#2    @Add 2 to the attacker's dmg.
+add     r3,#0    @Add 2 to the attacker's dmg.
 strh    r3,[r0]     @Store attacker dmg.
 add     r0,#2    @Move to the attacker's def.
 ldrh    r3,[r0]     @Load the attacker's def into r3.
-add     r3,#2    @Add 2 to the attacker's def.
+add     r3,#0    @Add 2 to the attacker's def.
 strh    r3,[r0]     @Store attacker def.
 b       SkillReturn
 
@@ -167,12 +167,19 @@ beq SkillReturn
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
 add     r0,#0x5a    @Move to the attacker's dmg.
 ldrh    r3,[r0]     @Load the attacker's dmg into r3.
-add     r3,#3    @Add 3 to the attacker's dmg.
+add     r3,#5    @Add 3 to the attacker's dmg.
 strh    r3,[r0]     @Store attacker dmg.
 add     r0,#2    @Move to the attacker's def.
 ldrh    r3,[r0]     @Load the attacker's def into r3.
-add     r3,#1    @Add 1 to the attacker's def.
+add     r3,#5    @Add 1 to the attacker's def.
 strh    r3,[r0]     @Store attacker def.
+
+@set attacker AS to 99
+mov r0, r4
+add r0,#0x5E
+mov r3,#99
+strh r3,[r0]
+
 b       SkillReturn
 
 HeroesDeathSkill:

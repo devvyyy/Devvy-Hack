@@ -358,11 +358,16 @@ LOAD2 0x1 EndCutsceneUnits2
 VCWF 0
 
 Music(0x4e)
+SetFlag(0x84)
 
 FADU 16
 //BROWNBOXTEXT LaterThatNight [8,8] // box in the top right that's pretty cool for small text
 
 CAM1 [0,3]
+
+STAL 5
+BROWNBOXTEXT WreyvineCapitalText [8,8]
+STAL 15
 
 CameraCursor(Affogato)
 Text(Ch4AltBlahBlah)
@@ -434,7 +439,7 @@ Text(Ch4Ending2PointAfter)
 ClearBackground
 STAL 150
 CamOn
-MOVE 0x8 Selwyn [4,8]
+MOVE 0x4 Selwyn [4,8]
 Text(Ch4EndingAlt1)
 SOUN 0xCF
 SetBackground(0x35)
@@ -465,6 +470,7 @@ FADI 60
 CLEAN
 //BROWNBOXTEXT PalaceText [8,8] // box in the top right that's pretty cool for small text
 	Music(0x7FFF)
+	UnsetFlag(0x84)
 	MNC2 0x5
 	NoFade
 	ENDA

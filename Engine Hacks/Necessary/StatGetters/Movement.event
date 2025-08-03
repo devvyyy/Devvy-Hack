@@ -75,8 +75,9 @@ rIfUnitHasNotSkill(CantoPlusID)
 		
 prGaleforceCheck:
 	rIfUnitHasState(0x400)
-		rIfUnitHasSkill(GaleforceID)
-			rHalved
+		rIfUnitHasSkill(CantoPlusID) //sorry brudet
+			rIfUnitHasSkill(GaleforceID)
+				rHalved
 			
 prStatusZephyrEnemyCheck:
 	rIfUnitHasStatus(0xB)

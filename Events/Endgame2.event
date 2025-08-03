@@ -1,0 +1,82 @@
+EventPointerTable(0xCB, PointerList)
+
+PointerList:
+	POIN TurnBasedEvents
+	POIN CharacterBasedEvents
+	POIN LocationBasedEvents
+	POIN MiscBasedEvents
+	POIN Dunno1 Dunno2 Dunno3 Tutorial
+	POIN Traps1 Traps2
+	POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+	POIN $0 $0 $0
+	POIN $0 $0 $0
+	POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+
+	END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+
+	END_MAIN
+
+MiscBasedEvents:
+	CauseGameOverIfLordDies
+	END_MAIN
+
+LocationBasedEvents:
+
+	END_MAIN
+
+Dunno1:
+
+	END_MAIN
+
+Dunno2:
+
+	END_MAIN
+
+Dunno3:
+
+	END_MAIN
+
+Tutorial:
+
+	END_MAIN
+
+Units1:
+
+	UNIT
+
+EnemyUnits:
+UNIT Sylveria Necromancer 0x1 Level(20, Enemy, 0)     [14,5] 0b 0x0 0x0 0x0 [0xD1] BossAI
+	UNIT
+
+Traps1:
+	ENDTRAP
+	ALIGN 4
+
+Traps2:
+	ENDTRAP
+	ALIGN 4
+
+BeginningScene:
+
+Text(Endgame2Opening1)
+
+	LOAD1 0x1 EnemyUnits
+	ENUN
+	
+CALL $591FD8 //prep screen
+
+FADU 15
+CameraCursor(Sylveria)
+Text(Endgame2Opening2)
+
+	ENDA
+
+EndingScene:
+	MNC2 0x1
+	NoFade
+	ENDA

@@ -16,6 +16,7 @@ TurnBasedEvents:
 TurnEventEnemy(0,AyoTheyAreHere,1,1)
 TurnEventNPC(0,PrisonTalk1,1,1)
 TurnEventNPC(0,PrisonTalk2,2,1)
+TurnEventNPC(0,PrisonTalk3,3,1)
 TURN 0x0 GoodbyeDespair [14,0] 0x0
 	END_MAIN
 
@@ -326,6 +327,35 @@ MUSI
 SetBackground(0x41)
 Text(VernaMomento2)
 ClearBackground
+MUNO
+NoFade
+ENDA
+
+PrisonTalk3:
+CAM1 [7,11]
+MUSI
+SetBackground(0x41)
+Text(TwoOneKeyStuff)
+ClearBackground
+CUSA Verna
+MOVE 0xF Verna [8,9]
+ENUN
+SOUN 0xB1
+TILECHANGE 0x1
+GiveItem(0xF4, Verna)
+
+STAL 10
+
+MOVE 0xF Verna [9,10]
+ENUN
+SOUN 0xB1
+TILECHANGE 0x2
+GiveItem(0x9C, Verna)
+STAL 5
+CameraCursor(Verna)
+Text(TwoOneKeyStuff2)
+CUSN Verna
+
 MUNO
 NoFade
 ENDA

@@ -28,10 +28,17 @@ DefeatAll(EndingScene)
 //AFEV 0x3 EndingScene 0xA1 //end the battle upon warden hitting 50% or less
 //AREA 0x0 CheckWardenHP [0,0] [22,14]
 AREA 0x0 TheBigRangeEvent [0,0] [12,15] //also disables overdrive?
-
+//AREA 0x0 AreaSussyEvent [5,0] [25,15] //for the TP troll ?!
 	//CauseGameOverIfLordDies
 	AFEV 0x0 CheckNoUnits 0x3
 	END_MAIN
+
+AreaSussyEvent:
+
+//when flag C is on, and she reaches this area, proc event
+
+	NoFade
+	ENDA
 
 ChangeMusicBasedOffFlag:
 
@@ -309,7 +316,12 @@ STAL 15
 TEXTSTART
 TEXTSHOW SylmeriaDuelMiddle
 TEXTEND
-SOUN 0x2eb
+SOUN 0xFE
+FAWI 60
+STAL 20
+FAWU 15
+
+SOUN 0xFF
 FAWI 60
 STAL 45
 FAWU 15
@@ -318,8 +330,11 @@ TEXTCONT
 TEXTEND
 REMA
 
-STAL 5
-GiveItem(0xA8,Chiffon)
+//STAL 5
+//GiveItem(0xA8,Chiffon)
+SetFlag(0xED)
+
+CenterTextbox(WahooLightslinger)
 
 STAL 5
 CameraCursor(Chiffon)
@@ -353,6 +368,14 @@ LOAD1 0x1 ChiffonNewEpic
 REVEAL Chiffon
 LOAD1 0x1 EnemyUnits
 
+SetUnitStatus(Sylveria,CurrentHP,40)
+SetUnitStatus(Sylveria,Strength,30)
+SetUnitStatus(Sylveria,Skill,26)
+SetUnitStatus(Sylveria,LuckStat,30)
+SetUnitStatus(Sylveria,Speed,10)
+SetUnitStatus(Sylveria,DefenseStat,16)
+SetUnitStatus(Sylveria,Resistance,30)
+
 SetFlag(0x84) //hides boss icons
 SetFlag(0xEE) //disables damage numbers and adds current hp damage and stuff
 
@@ -376,6 +399,7 @@ NoFade
 
 EndingScene: //can only win in graham route if ring was obtained
 	FADI 60
+	SetFlag(0xED)
 	REMU Chiffon
 	UnsetFlag(0xEE)
 	Music(0x299)

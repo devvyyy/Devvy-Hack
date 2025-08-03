@@ -253,7 +253,7 @@ UNIT Aeteria Ranger 0x1 Level(15, Enemy, 1)     [19,20] 0b 0x0 0x0 0x0 [Longbow]
 UNIT Aeteria Warrior 0x1 Level(15, Enemy, 1)     [24,14] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
 UNIT ArmorSoul SArmor 0x1 Level(15, Enemy, 1)     [6,17] 0b 0x0 0x0 0x0 [LightBrand,0x66] BossAI
 UNIT InfantrySoul Sniper 0x1 Level(15, Enemy, 1)     [1,13] 0b 0x0 0x0 0x0 [SteelBow] AttackInRangeAI
-UNIT AeteriaStealable Ranger 0x1 Level(15, Enemy, 1)     [8,7] 0b 0x0 0x0 0x0 [SteelSword,IronBow, 0x5F] TwoActionAI
+UNIT AeteriaStealable Ranger 0x1 Level(15, Enemy, 1)     [8,7] 0b 0x0 0x0 0x0 [SteelBow, 0x5F] TwoActionAI
 UNIT Aeteria Soldier 0x1 Level(15, Enemy, 1)     [21,11] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
 UNIT Aeteria General 0x1 Level(15, Enemy, 1)     [13,15] 0b 0x0 0x0 0x0 [Javelin] BossAI
 UNIT Aeteria Hero 0x1 Level(15, Enemy, 1)     [6,4] 0b 0x0 0x0 0x0 [IronSword] AttackInRangeAI
@@ -284,14 +284,14 @@ UNIT Eustace Druid_F 0x1 Level(15, Enemy, 1)     [22,3] DropItem 0x0 0x0 0x0 [Ma
 //mountains
 UNIT Aeteria FalcoKnight 0x1 Level(15, Enemy, 1)     [13,24] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
 UNIT Aeteria WyvernKnight 0x1 Level(15, Enemy, 1)     [11,20] DropItem 0x0 0x0 0x0 [KillerAxe] AttackInRangeAI
-UNIT Aeteria FalcoKnight 0x1 Level(15, Enemy, 1)     [14,21] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
-UNIT FlierSoul FalcoKnight 0x1 Level(15, Enemy, 1)     [9,13] 0b 0x0 0x0 0x0 [Longbow] AttackInRangeAI
+UNIT FlierSoul FalcoKnight 0x1 Level(15, Enemy, 1)     [14,21] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
+UNIT AeteriaStealable FalcoKnight 0x1 Level(15, Enemy, 1)     [9,13] 0b 0x0 0x0 0x0 [SapphireLance,WhiteGem] AttackInRangeAI
 UNIT Aeteria FalcoKnight 0x1 Level(15, Enemy, 1)     [19,12] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
-UNIT Aeteria WyvernKnight 0x1 Level(15, Enemy, 1)     [16,10] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
+UNIT Aeteria WyvernKnight 0x1 Level(15, Enemy, 1)     [16,10] 0b 0x0 0x0 0x0 [EmeraldAxe] AttackInRangeAI
 UNIT Aeteria FalcoKnight 0x1 Level(15, Enemy, 1)     [25,17] DropItem 0x0 0x0 0x0 [SapphireLance, WhiteGem] AttackInRangeAI
 UNIT FlierSoul GriffonKnight 0x1 Level(15, Enemy, 1)     [25,2] 0b 0x0 0x0 0x0 [SteelBow] AttackInRangeAI
 UNIT Aeteria FalcoKnight 0x1 Level(15, Enemy, 1)     [2,33] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
-UNIT Aeteria FalcoKnight 0x1 Level(15, Enemy, 1)     [25,25] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
+UNIT Aeteria FalcoKnight 0x1 Level(15, Enemy, 1)     [25,25] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
 UNIT Aeteria WyvernKnight 0x1 Level(15, Enemy, 1)     [0,28] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
 	UNIT
 
@@ -306,9 +306,9 @@ UNIT InfantrySoul Soldier 0x1 Level(13, Enemy, 1)     [20,14] 0b 0x0 0x0 0x0 [St
 	UNIT
 	
 BotLeftMountainsRein:
-UNIT Aeteria FalcoKnight 0x1 Level(13, Enemy, 1)     [0,32] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
-UNIT Aeteria WyvernKnight 0x1 Level(13, Enemy, 1)     [15,34] 0b 0x0 0x0 0x0 [Spear] ChargeAI
-UNIT Aeteria FalcoKnight 0x1 Level(15, Enemy, 1)     [24,34] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
+UNIT Aeteria FalcoKnight 0x1 Level(13, Enemy, 1)     [0,32] 0b 0x0 0x0 0x0 [Spear] ChargeAI
+UNIT Aeteria WyvernKnight 0x1 Level(13, Enemy, 1)     [15,34] 0b 0x0 0x0 0x0 [Halberd] ChargeAI
+UNIT Aeteria FalcoKnight 0x1 Level(15, Enemy, 1)     [24,34] 0b 0x0 0x0 0x0 [Horseslayer] ChargeAI
 	UNIT
 	
 BrigandTopLeftRein:

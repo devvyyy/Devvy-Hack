@@ -112,6 +112,7 @@ Traps2:
 
 BeginningScene:
 SetFlag(0xF)
+SetFlag(0xED)
 SetFlag(0x95) //global hayes flag
 ASMC 0x8026629
 	LOAD1 0x1 EnemyUnits
@@ -138,6 +139,9 @@ STAL 15
 
 CameraCursor(Chiffon)
 Text(ChCh27xOpening2)
+
+CenterTextbox(WahooLightslingerPre)
+
 SOUN 0x119 //bolting sparks
 ENUT 0x24
 ENUT 0x5
@@ -176,23 +180,35 @@ EndingScene:
 TEXTSTART; TEXTSHOW ChCh27xEnding1; TEXTEND
 
 SET_SOMETHING Beran
+STAL 5
 
-MUSCSLOW 0x7FFF; TEXTCONT; TEXTEND; REMA
+MUSCSLOW 0x7FFF; STAL 15; TEXTCONT; TEXTEND; REMA
 
+SOUN 0xCF
 STAL 15
 FAWI 16
-SOUN 0xCF
 STAL 30
-MOVE 0xD Chiffon [11,6]
-ENUN
 SOUN 0x2BF
 STAL 30
 SOUN 0xf0
 SetBackground(0x48)
 STAL 10
+
+SOUN 0x2c0
+SVAL 0x1 22 //ID
+SVAL 0x2 0x0
+SVAL 0xB 0x5000B //X, Y coords
+ASMC ASMC_Draw|1
+
+FADI 60
+MOVE 0xD Chiffon [11,6]
+ENUN
+
 SOUN 0xD7
-ClearBackground
-STAL 30
+STAL 15
+
+CLEAN
+FADU 20
 
 Text(ChCh27xEnding2)
 

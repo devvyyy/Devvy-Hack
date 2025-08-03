@@ -31,6 +31,10 @@ ALIGN 4
 {
 #include "Epic/Unarmed/Installer.event"
 }
+ALIGN 4 //Black Knight by Nuramon
+{
+#include "BK/Sword Installer.event"
+}
 ALIGN 4 //Lloyd Repal Frenzy Shaky by Greentea, DerTheVaporeon, Itranc
 {
 #include "AkatsukiPromo/Sword/Installer.event"
@@ -584,6 +588,11 @@ ALIGN 4
 AkatAnim:
 SwordAnim(0x03)
 UnarmedAnim(0x04)
+WORD 0x0    // Seperator
+
+BKAnim:
+SwordAnim(0xC1)
+UnarmedAnim(0xC1)
 WORD 0x0    // Seperator
 
 AkatPromoAnim:

@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pDefenseModifiers: // Defense
-	POIN prAddUnitDefense prHalveIfCapturing prDebuffDef prAddEquipDefense prItemPassiveDefense prRallyDef prSkillMantle prLifeAndDeathMinus VigorDanceCheck prIronHelmet prWarplateItem prPaviseHelm prBoarhide prFortressDefenseDef prDefiantDef prPushDef
+	POIN prAddUnitDefense prHalveIfCapturing prDebuffDef prAddEquipDefense prItemPassiveDefense prRallyDef prSkillMantle prLifeAndDeathMinus VigorDanceCheck prIronHelmet prWarplateItem prPaviseHelm prBoarhide prValhelm prFortressDefenseDef prDefiantDef prPushDef
 	POIN prSleepHalfDef prPoisonHalfDef
 //	POIN prAvoidBuffDef
 //	POIN prAcrobatCheck
@@ -43,6 +43,11 @@ rIfUnitHasNotSkill(SanctuaryID)
 		rIfUnitHasSkill(AcrobatID)
 			rSubConst(5)
 			
+prValhelm:
+rIfUnitHasNotSkill(CantoPlusID)
+	rIfUnitHasSkill(DeathBlowID)
+		rAddConst(2)
+
 prCounterDef:
 rIfUnitHasNotSkill(SanctuaryID)
   rIfUnitHasSkill(CounterID)
