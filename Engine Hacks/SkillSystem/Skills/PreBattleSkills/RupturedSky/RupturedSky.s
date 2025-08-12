@@ -49,6 +49,8 @@ cmp     r0, #0x3a         @tempest iii
 beq NegateDamage
 cmp     r0, #0x3c         @glaciate iii
 beq NegateDamage
+cmp     r0, #0xAB         @eternal winter
+beq NegateDamage
 b End
 
 NegateDamage:

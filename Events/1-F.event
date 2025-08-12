@@ -1087,7 +1087,7 @@ CALL ResetParty
 ResetParty:
 // reset the party for part 2
 FADI 5
-RECLASS 0x7 0x3
+//RECLASS 0x7 0x3 //cant do this here or 1-Fx cutscene explodes
 QuickRemu(Affogato,1)
 QuickRemu(Ulrich,2)
 QuickRemu(Evelyn,3)

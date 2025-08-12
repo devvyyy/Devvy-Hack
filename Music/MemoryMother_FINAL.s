@@ -513,6 +513,147 @@ MemoryMother_FINAL_3:
 	.byte	KEYSH , MemoryMother_FINAL_key+0
 MemoryMother_FINAL_3_B1:
 @ 000   ----------------------------------------
+	.byte		VOICE , 52
+	.byte		MODT  , 0
+	.byte		LFOS  , 44
+	.byte		PAN   , c_v+8
+	.byte		VOL   , 127*MemoryMother_FINAL_mvl/mxv
+	.byte	W96
+@ 001   ----------------------------------------
+	.byte	W96
+@ 002   ----------------------------------------
+	.byte	W96
+@ 003   ----------------------------------------
+	.byte	W96
+@ 004   ----------------------------------------
+	.byte	W96
+@ 005   ----------------------------------------
+	.byte	W96
+@ 006   ----------------------------------------
+	.byte	W96
+@ 007   ----------------------------------------
+	.byte	W96
+@ 008   ----------------------------------------
+	.byte	W96
+@ 009   ----------------------------------------
+	.byte		N48   , Ds4 , v127
+	.byte	W48
+	.byte		N24   , Fn4 
+	.byte	W24
+	.byte		        Fs4 
+	.byte	W24
+@ 010   ----------------------------------------
+	.byte		N72   , Fn4 
+	.byte	W72
+	.byte		N24   , Cs4 
+	.byte	W24
+@ 011   ----------------------------------------
+	.byte		N48   , Gs3 
+	.byte	W48
+	.byte		        Fn4 
+	.byte	W48
+@ 012   ----------------------------------------
+	.byte		N24   
+	.byte	W24
+	.byte		        Fs4 
+	.byte	W24
+	.byte		N48   , Ds4 
+	.byte	W48
+@ 013   ----------------------------------------
+	.byte		N24   , Cs4 
+	.byte	W24
+	.byte		        Bn3 
+	.byte	W24
+	.byte		N48   , As3 
+	.byte	W48
+@ 014   ----------------------------------------
+	.byte		N24   , Cn4 
+	.byte	W24
+	.byte		N48   , Dn4 
+	.byte	W48
+	.byte		N24   , Cn4 
+	.byte	W24
+@ 015   ----------------------------------------
+	.byte		        As3 
+	.byte	W24
+	.byte		N72   , Cn4 
+	.byte	W72
+@ 016   ----------------------------------------
+	.byte		N90   , Ds4 
+	.byte	W96
+@ 017   ----------------------------------------
+	.byte		N24   , Fn4 
+	.byte	W24
+	.byte		        Gs3 
+	.byte	W24
+	.byte		N24   
+	.byte	W24
+	.byte		        Cs4 
+	.byte	W24
+@ 018   ----------------------------------------
+	.byte		        Fn4 
+	.byte	W24
+	.byte		        Fs4 
+	.byte	W24
+	.byte		        Gs4 
+	.byte	W24
+	.byte		        Cs5 
+	.byte	W24
+@ 019   ----------------------------------------
+	.byte		N90   
+	.byte	W96
+@ 020   ----------------------------------------
+	.byte		N48   , Bn4 
+	.byte	W48
+	.byte		N24   , As4 
+	.byte	W24
+	.byte		N12   , Gs4 
+	.byte	W12
+	.byte		        Fs4 
+	.byte	W12
+@ 021   ----------------------------------------
+	.byte		N48   , Fn4 
+	.byte	W48
+	.byte		        Ds4 
+	.byte	W48
+@ 022   ----------------------------------------
+	.byte		        Dn4 
+	.byte	W48
+	.byte		        As3 
+	.byte	W48
+@ 023   ----------------------------------------
+	.byte		N24   , Cn4 
+	.byte	W24
+	.byte		        Cs4 
+	.byte	W24
+	.byte		        Ds4 
+	.byte	W24
+	.byte		        Fn4 
+	.byte	W24
+@ 024   ----------------------------------------
+	.byte		        Fs4 
+	.byte	W24
+	.byte		        Gs4 
+	.byte	W24
+	.byte		        As4 
+	.byte	W24
+	.byte		N20   , Cn5 
+	.byte	W24
+@ 025   ----------------------------------------
+	.byte		N96   , Cs5 
+	.byte	W96
+	.byte	GOTO
+	 .word	MemoryMother_FINAL_3_B1
+MemoryMother_FINAL_3_B2:
+@ 026   ----------------------------------------
+	.byte	FINE
+
+@**************** Track 4 (Midi-Chn.4) ****************@
+
+MemoryMother_FINAL_4:
+	.byte	KEYSH , MemoryMother_FINAL_key+0
+MemoryMother_FINAL_4_B1:
+@ 000   ----------------------------------------
 	.byte		VOICE , 49
 	.byte		MODT  , 0
 	.byte		LFOS  , 44
@@ -714,118 +855,6 @@ MemoryMother_FINAL_3_B1:
 @ 025   ----------------------------------------
 	.byte	W90
 	.byte		EOT   
-	.byte	W06
-	.byte	GOTO
-	 .word	MemoryMother_FINAL_3_B1
-MemoryMother_FINAL_3_B2:
-@ 026   ----------------------------------------
-	.byte	FINE
-
-@**************** Track 4 (Midi-Chn.4) ****************@
-
-MemoryMother_FINAL_4:
-	.byte	KEYSH , MemoryMother_FINAL_key+0
-MemoryMother_FINAL_4_B1:
-@ 000   ----------------------------------------
-	.byte		VOICE , 14
-	.byte		MODT  , 0
-	.byte		LFOS  , 44
-	.byte		VOL   , 127*MemoryMother_FINAL_mvl/mxv
-	.byte		PAN   , c_v-63
-	.byte	W96
-@ 001   ----------------------------------------
-	.byte	W96
-@ 002   ----------------------------------------
-	.byte	W96
-@ 003   ----------------------------------------
-	.byte	W96
-@ 004   ----------------------------------------
-	.byte	W96
-@ 005   ----------------------------------------
-	.byte	W96
-@ 006   ----------------------------------------
-	.byte	W96
-@ 007   ----------------------------------------
-	.byte	W96
-@ 008   ----------------------------------------
-	.byte	W96
-@ 009   ----------------------------------------
-MemoryMother_FINAL_4_009:
-	.byte		N96   , Gn2 , v076
-	.byte		N96   , As2 
-	.byte		TIE   , Ds3 
-	.byte	W96
-	.byte	PEND
-@ 010   ----------------------------------------
-	.byte		        Gs2 
-	.byte		TIE   , Cn3 
-	.byte	W96
-	.byte		EOT   , Ds3 
-@ 011   ----------------------------------------
-	.byte		N96   , Fn3 
-	.byte	W48
-	.byte		EOT   , Cn3 
-	.byte		N48   , Dn3 
-	.byte	W48
-	.byte		EOT   , Gs2 
-@ 012   ----------------------------------------
-	.byte	PATT
-	 .word	MemoryMother_FINAL_4_009
-@ 013   ----------------------------------------
-	.byte		TIE   , Cn3 , v076
-	.byte		N96   , Gn3 
-	.byte	W96
-@ 014   ----------------------------------------
-	.byte		TIE   , Gs3 
-	.byte	W96
-	.byte		EOT   , Ds3 
-@ 015   ----------------------------------------
-	.byte		N96   , Fn3 
-	.byte	W48
-	.byte		EOT   , Cn3 
-	.byte		N48   , As2 
-	.byte		N48   , Dn3 
-	.byte	W48
-	.byte		EOT   , Gs3 
-@ 016   ----------------------------------------
-	.byte		N48   , Gs2 
-	.byte		N48   , Cn3 
-	.byte		N90   , Ds3 
-	.byte		N90   , Gn3 
-	.byte	W48
-	.byte		N42   , As2 
-	.byte	W48
-@ 017   ----------------------------------------
-	.byte	W96
-@ 018   ----------------------------------------
-	.byte	W96
-@ 019   ----------------------------------------
-	.byte	W96
-@ 020   ----------------------------------------
-	.byte	W96
-@ 021   ----------------------------------------
-	.byte		N96   
-	.byte		N96   , Dn3 
-	.byte		N96   , Fn3 
-	.byte	W96
-@ 022   ----------------------------------------
-	.byte		        Cn3 
-	.byte		N96   , Ds3 
-	.byte		N96   , Gn3 
-	.byte	W96
-@ 023   ----------------------------------------
-	.byte		TIE   , Dn3 
-	.byte		TIE   , Fn3 
-	.byte		N90   , Gs3 
-	.byte	W96
-@ 024   ----------------------------------------
-	.byte		TIE   , As3 
-	.byte	W96
-@ 025   ----------------------------------------
-	.byte	W90
-	.byte		EOT   , Dn3 
-	.byte		        Fn3 
-	.byte		        As3 
 	.byte	W06
 	.byte	GOTO
 	 .word	MemoryMother_FINAL_4_B1
@@ -1324,11 +1353,11 @@ MemoryMother_FINAL_8:
 	.byte	KEYSH , MemoryMother_FINAL_key+0
 MemoryMother_FINAL_8_B1:
 @ 000   ----------------------------------------
-	.byte		VOICE , 52
+	.byte		VOICE , 14
 	.byte		MODT  , 0
 	.byte		LFOS  , 44
-	.byte		PAN   , c_v+8
 	.byte		VOL   , 127*MemoryMother_FINAL_mvl/mxv
+	.byte		PAN   , c_v-63
 	.byte	W96
 @ 001   ----------------------------------------
 	.byte	W96
@@ -1347,112 +1376,83 @@ MemoryMother_FINAL_8_B1:
 @ 008   ----------------------------------------
 	.byte	W96
 @ 009   ----------------------------------------
-	.byte		N48   , Ds4 , v127
-	.byte	W48
-	.byte		N24   , Fn4 
-	.byte	W24
-	.byte		        Fs4 
-	.byte	W24
-@ 010   ----------------------------------------
-	.byte		N72   , Fn4 
-	.byte	W72
-	.byte		N24   , Cs4 
-	.byte	W24
-@ 011   ----------------------------------------
-	.byte		N48   , Gs3 
-	.byte	W48
-	.byte		        Fn4 
-	.byte	W48
-@ 012   ----------------------------------------
-	.byte		N24   
-	.byte	W24
-	.byte		        Fs4 
-	.byte	W24
-	.byte		N48   , Ds4 
-	.byte	W48
-@ 013   ----------------------------------------
-	.byte		N24   , Cs4 
-	.byte	W24
-	.byte		        Bn3 
-	.byte	W24
-	.byte		N48   , As3 
-	.byte	W48
-@ 014   ----------------------------------------
-	.byte		N24   , Cn4 
-	.byte	W24
-	.byte		N48   , Dn4 
-	.byte	W48
-	.byte		N24   , Cn4 
-	.byte	W24
-@ 015   ----------------------------------------
-	.byte		        As3 
-	.byte	W24
-	.byte		N72   , Cn4 
-	.byte	W72
-@ 016   ----------------------------------------
-	.byte		N90   , Ds4 
+MemoryMother_FINAL_8_009:
+	.byte		N96   , Gn2 , v076
+	.byte		N96   , As2 
+	.byte		TIE   , Ds3 
 	.byte	W96
+	.byte	PEND
+@ 010   ----------------------------------------
+	.byte		        Gs2 
+	.byte		TIE   , Cn3 
+	.byte	W96
+	.byte		EOT   , Ds3 
+@ 011   ----------------------------------------
+	.byte		N96   , Fn3 
+	.byte	W48
+	.byte		EOT   , Cn3 
+	.byte		N48   , Dn3 
+	.byte	W48
+	.byte		EOT   , Gs2 
+@ 012   ----------------------------------------
+	.byte	PATT
+	 .word	MemoryMother_FINAL_8_009
+@ 013   ----------------------------------------
+	.byte		TIE   , Cn3 , v076
+	.byte		N96   , Gn3 
+	.byte	W96
+@ 014   ----------------------------------------
+	.byte		TIE   , Gs3 
+	.byte	W96
+	.byte		EOT   , Ds3 
+@ 015   ----------------------------------------
+	.byte		N96   , Fn3 
+	.byte	W48
+	.byte		EOT   , Cn3 
+	.byte		N48   , As2 
+	.byte		N48   , Dn3 
+	.byte	W48
+	.byte		EOT   , Gs3 
+@ 016   ----------------------------------------
+	.byte		N48   , Gs2 
+	.byte		N48   , Cn3 
+	.byte		N90   , Ds3 
+	.byte		N90   , Gn3 
+	.byte	W48
+	.byte		N42   , As2 
+	.byte	W48
 @ 017   ----------------------------------------
-	.byte		N24   , Fn4 
-	.byte	W24
-	.byte		        Gs3 
-	.byte	W24
-	.byte		N24   
-	.byte	W24
-	.byte		        Cs4 
-	.byte	W24
+	.byte	W96
 @ 018   ----------------------------------------
-	.byte		        Fn4 
-	.byte	W24
-	.byte		        Fs4 
-	.byte	W24
-	.byte		        Gs4 
-	.byte	W24
-	.byte		        Cs5 
-	.byte	W24
+	.byte	W96
 @ 019   ----------------------------------------
-	.byte		N90   
 	.byte	W96
 @ 020   ----------------------------------------
-	.byte		N48   , Bn4 
-	.byte	W48
-	.byte		N24   , As4 
-	.byte	W24
-	.byte		N12   , Gs4 
-	.byte	W12
-	.byte		        Fs4 
-	.byte	W12
-@ 021   ----------------------------------------
-	.byte		N48   , Fn4 
-	.byte	W48
-	.byte		        Ds4 
-	.byte	W48
-@ 022   ----------------------------------------
-	.byte		        Dn4 
-	.byte	W48
-	.byte		        As3 
-	.byte	W48
-@ 023   ----------------------------------------
-	.byte		N24   , Cn4 
-	.byte	W24
-	.byte		        Cs4 
-	.byte	W24
-	.byte		        Ds4 
-	.byte	W24
-	.byte		        Fn4 
-	.byte	W24
-@ 024   ----------------------------------------
-	.byte		        Fs4 
-	.byte	W24
-	.byte		        Gs4 
-	.byte	W24
-	.byte		        As4 
-	.byte	W24
-	.byte		N20   , Cn5 
-	.byte	W24
-@ 025   ----------------------------------------
-	.byte		N96   , Cs5 
 	.byte	W96
+@ 021   ----------------------------------------
+	.byte		N96   
+	.byte		N96   , Dn3 
+	.byte		N96   , Fn3 
+	.byte	W96
+@ 022   ----------------------------------------
+	.byte		        Cn3 
+	.byte		N96   , Ds3 
+	.byte		N96   , Gn3 
+	.byte	W96
+@ 023   ----------------------------------------
+	.byte		TIE   , Dn3 
+	.byte		TIE   , Fn3 
+	.byte		N90   , Gs3 
+	.byte	W96
+@ 024   ----------------------------------------
+	.byte		TIE   , As3 
+	.byte	W96
+@ 025   ----------------------------------------
+	.byte	W90
+	.byte		EOT   , Dn3 
+	.byte		        Fn3 
+	.byte		        As3 
+	.byte	W06
 	.byte	GOTO
 	 .word	MemoryMother_FINAL_8_B1
 MemoryMother_FINAL_8_B2:

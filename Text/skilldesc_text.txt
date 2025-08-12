@@ -1638,7 +1638,8 @@ weapons or effects.)[X]
 
 ## SD_Deathcap
 Magic Hat[N]
-- Multiplies Eth by 1.5x.[X]
+- Multiplies Eth by 1.25x[N]
+during combat.[X]
 
 ## SD_ArmorMarch
 # 1-8
@@ -1696,6 +1697,17 @@ Inner Hearth[N]
 - Grants bonus Hit/Avoid/Crit/Crit Avoid[N]
 equal to weapon Wt.[X]
 
+## SD_Bookworm
+Bookmark[N]
+(Luck +1)[N]
+- If personal skill has 4 lines,[N]
+deals +1 damage, reduces damage[N]
+taken by 1, and grants AS +1.[X]
+
+## SD_Bayonet
+Staffonet[N]
+- Staves ignore damage penalty.[X]
+
 ## SD_HoarfrostCrown
 Crown of Hoarfrost[N]
 - Deals bonus damage = difference[N]
@@ -1716,12 +1728,6 @@ Tenacity[N]
 - If Biscotti's current HP < foe's[N]
 current HP, grants Atk/AS +10 and[N]
 strikes x2 consecutively.[X]
-
-## SD_Bookworm
-Bookworm[N]
-- Unit deal bonus damage and reduces damage[N]
-taken = 10, x number of lines in foe's[N]
-Personal Skill.[X]
 
 ## SD_Forlorn
 Forlorn: If unit is not adjacent to[N]
@@ -1812,8 +1818,8 @@ deals bonus magical damage = Spd.[X]
 ## SD_Vigor
 # Requiem: When using offensive staves, multiplies Eth by 1.25x and deals bonus damage equal to a quarter of foe's current HP.
 Essence Reaper[N]
-- Yvonne's offensive staves use 1.25x[N]
-Eth, deal bonus damage = 25% of foe's[N]
+- Yvonne's staves ignore damage penalty,[N]
+deal bonus damage = 25% of foe's[N]
 current HP at start of combat, and[N]
 restore HP = 25% of damage dealt.[X]
 
@@ -1910,7 +1916,7 @@ Moxie[N]
 taken = 5 + (Spd - foe's Spd; min 0).[X]
 
 ## SD_Outrider
-Outrider[N]
+Guile[N]
 - Grants Cortado Prt/Rsl = Move used[N]
 x 2.[N]
 - If all Move is used, always land[N]

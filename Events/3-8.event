@@ -127,7 +127,7 @@ UNIT ArmorSoul General 0x1 Level(16, Enemy, 1)     [16,16] 0b 0x0 0x0 0x0 [Spear
 UNIT PromoSoul Warrior 0x1 Level(15, Enemy, 1)     [19,11] 0b 0x0 0x0 0x0 [SilverAxe,SteelBow] AttackInRangeAI
 UNIT MagSoul Druid 0x1 Level(16, Enemy, 1)     [23,7] 0b 0x0 0x0 0x0 [DarkTome3] BossAI
 UNIT PromoSoul Halberdier 0x1 Level(15, Enemy, 1)     [5,3] DropItem 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
-UNIT PromoSoul Sniper 0x1 Level(15, Enemy, 1)     [2,9] 0b 0x0 0x0 0x0 [Longbow] BossAI
+UNIT StealSoul Rogue 0x1 Level(15, Enemy, 1)     [2,9] 0b 0x0 0x0 0x0 [Armorslayer,0xBC] TwoActionAI
 UNIT ArmorSoul General 0x1 Level(16, Enemy, 1)     [1,12] 0b 0x0 0x0 0x0 [SteelLabrys] AttackInRangeAI
 UNIT ArmorSoul GreatKnight 0x1 Level(16, Enemy, 1)     [18,14] 0b 0x0 0x0 0x0 [SilverAxe, HandAxe] BossAI
 UNIT MagSoul Druid 0x1 Level(15, Enemy, 1)     [12,6] 0b 0x0 0x0 0x0 [DarkTome3] StallOneTurnAI
@@ -311,6 +311,7 @@ Text(Part3Chapter8ActualOpening5)
 
 FADI 60
 SetUnitItemDurability(0x72, 1, RupturedSkyID) //aurora shard
+SetUnitItemDurability(StealSoul, 1, PaviseID) //armet
 
 CALL $591FD8 //prep screen
 MUSCSLOW 0x7FFF

@@ -76,7 +76,7 @@ UNIT MagSoul Mage 0x1 Level(9, Enemy, 1)     [13,29] 0b 0x0 0x0 0x0 [Wind] Stall
 UNIT ArmorSoul SArmor 0x1 Level(11, Enemy, 1)     [6,21] 0b 0x0 0x0 0x0 [SteelBlade] StallOneTurnAI
 UNIT CavSoul ACav 0x1 Level(9, Enemy, 1)     [30,20] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
 UNIT InfantrySoul Archer 0x1 Level(9, Enemy, 1)     [20,28] 0b 0x0 0x0 0x0 [SteelBow] RangeAI
-UNIT InfantrySoul Soldier 0x1 Level(9, Enemy, 1)     [7,28] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
+UNIT StealSoul Thief 0x1 Level(9, Enemy, 1)     [7,28] 0b 0x0 0x0 0x0 [KillingEdge,0xBC] ChargeAI
 UNIT CavSoul LCav 0x1 Level(10, Enemy, 1)     [22,27] DropItem 0x0 0x0 0x0 [SteelLance,Torch] StallOneTurnAI
 UNIT MagSoul Monk 0x1 Level(10, Enemy, 1)     [12,26] 0b 0x0 0x0 0x0 [LightTome2] StallOneTurnAI
 UNIT CavSoul SCav 0x1 Level(10, Enemy, 1)     [1,17] 0b 0x0 0x0 0x0 [SteelSword] ChargeAI
@@ -233,7 +233,7 @@ SetBackground(0x3C)
 
 Text(Part3Chapter1Opening2)
 
-
+SetUnitItemDurability(StealSoul, 0, 171) //hood
 	GotoPrepScreen
 	ENDA
 

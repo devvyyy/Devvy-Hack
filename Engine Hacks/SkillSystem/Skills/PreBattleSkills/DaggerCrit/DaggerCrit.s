@@ -230,6 +230,7 @@ mov  r1, #0x5A
 ldrh r0, [r4, r1] @attack
 ldrb r2, [r4, #0x12] @spd
 add  r0, r2
+add  r0, r2
 strh r0, [r4,r1]
 
 b End

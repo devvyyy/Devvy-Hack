@@ -80,7 +80,7 @@ bool IsItemDagger(u16 item) {
    case 0x48: //4
    case 0x49: //5
    case 0x53: //smite
-   case 0xAB: //black knife
+   case 0xCB: //black knife
         return TRUE;
 
     default:

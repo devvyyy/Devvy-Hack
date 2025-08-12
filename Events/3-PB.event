@@ -13,7 +13,8 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TurnEventNPC(0,PrisonTalk1,1,1)
+//TurnEventEnemy(0,PrisonTalk1,1,1)
+TurnEventEnemy(0,EustaceStuffIDK,1,1)
 TURN 0x0 CaptainsMoment [2,0] 0x0
 	END_MAIN
 
@@ -21,6 +22,42 @@ ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0x10,BossChange, 0x6F, 0x0)
 	END_MAIN
+
+EustaceStuffIDK:
+
+CAM1 [16,14]
+
+Text(Part3PrologueBOpening3)
+
+CameraCursor(Klavdia)
+Text(Part3PrologueBOpening4)
+
+CameraCursor(Eustace)
+Text(Part3PrologueBOpening5)
+
+//scripted battle shit
+
+Text(Part3PrologueBOpening6)
+
+//post scripted battle shit
+
+CameraCursor(Brudet)
+CameraCursor(Stroganoff)
+Text(Part3PrologueBOpening7)
+
+CameraCursor(Eustace)
+Text(Part3PrologueBOpening7Point5)
+
+//messenger comes in
+Text(Part3PrologueBOpening8)
+
+//eustace warps out, vilhelm moves back in
+
+MOVE 0xD 0x6F [4,14]
+ENUN
+
+NoFade
+ENDA
 
 
 PrisonTalk1:
@@ -191,6 +228,8 @@ LoadUnit(27,2)
 
 EnemyUnits:
 UNIT 0x6F Hero 0x1 Level(12, Enemy, 1)     [4,14] DropItem 0x0 0x0 0x0 [Runesword, 0x7F] BossAI
+UNIT Eustace Druid_F 0x1 Level(15, Enemy, 0)     [4,15] DropItem 0x0 0x0 0x0 [0xEC,0xA2] BossAI
+
 
 UNIT Aeteria Soldier 0x1 Level(10, Enemy, 1)     [10,5] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 UNIT Aeteria LanceCav 0x1 Level(10, Enemy, 1)     [24,4] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
@@ -286,6 +325,10 @@ UNSET_CONDITION Brudet
 SETVAL 0x1 0x4
 UNSET_CONDITION Stroganoff
 
+SETVAL 0x1 0x4
+UNSET_CONDITION Klavdia
+
+
 TILECHANGE 0x3
 
 QuickRemu(Ulrich,2)
@@ -346,10 +389,26 @@ SetBackground(0x34)
 STAL 10
 BROWNBOXTEXT WreyvianOutskirtsText [8,8]
 STAL 15
-Text(Part3PrologueBOpening1Alt)
+CHECK_EVENTID 0x95 //did you fight hayes?
+BNE 0x9000 0xC 0x0
+
+Text(Part3PrologueBOpening1) //resistance
+
+GOTO 0x9001
+LABEL 0x9000
+
+Text(Part3PrologueBOpening1Alt) //noctum
+
+LABEL 0x9001
+
+
+Text(Part3PrologueBOpening2) //eustace stuff
 
 CALL $591FD8 //prep screen
 	FADU 60
+
+//	CameraCursor(0x6F)
+//	Text(Part3PrologueBOpening2)
 
 	CenterTextbox(Part3PrologueBDisclaimer)
 

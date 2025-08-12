@@ -514,6 +514,147 @@ MemoryMother_FINAL_3:
 	BYTE	KEYSH   MemoryMother_FINAL_key+0
 MemoryMother_FINAL_3_B1:
 // 000   ----------------------------------------
+	BYTE		VOICE   52
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		PAN     c_v+8
+	BYTE		VOL     127*MemoryMother_FINAL_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE		N48     Ds4   v127
+	BYTE	W48
+	BYTE		N24     Fn4 
+	BYTE	W24
+	BYTE		        Fs4 
+	BYTE	W24
+// 010   ----------------------------------------
+	BYTE		N72     Fn4 
+	BYTE	W72
+	BYTE		N24     Cs4 
+	BYTE	W24
+// 011   ----------------------------------------
+	BYTE		N48     Gs3 
+	BYTE	W48
+	BYTE		        Fn4 
+	BYTE	W48
+// 012   ----------------------------------------
+	BYTE		N24   
+	BYTE	W24
+	BYTE		        Fs4 
+	BYTE	W24
+	BYTE		N48     Ds4 
+	BYTE	W48
+// 013   ----------------------------------------
+	BYTE		N24     Cs4 
+	BYTE	W24
+	BYTE		        Bn3 
+	BYTE	W24
+	BYTE		N48     As3 
+	BYTE	W48
+// 014   ----------------------------------------
+	BYTE		N24     Cn4 
+	BYTE	W24
+	BYTE		N48     Dn4 
+	BYTE	W48
+	BYTE		N24     Cn4 
+	BYTE	W24
+// 015   ----------------------------------------
+	BYTE		        As3 
+	BYTE	W24
+	BYTE		N72     Cn4 
+	BYTE	W72
+// 016   ----------------------------------------
+	BYTE		N90     Ds4 
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE		N24     Fn4 
+	BYTE	W24
+	BYTE		        Gs3 
+	BYTE	W24
+	BYTE		N24   
+	BYTE	W24
+	BYTE		        Cs4 
+	BYTE	W24
+// 018   ----------------------------------------
+	BYTE		        Fn4 
+	BYTE	W24
+	BYTE		        Fs4 
+	BYTE	W24
+	BYTE		        Gs4 
+	BYTE	W24
+	BYTE		        Cs5 
+	BYTE	W24
+// 019   ----------------------------------------
+	BYTE		N90   
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE		N48     Bn4 
+	BYTE	W48
+	BYTE		N24     As4 
+	BYTE	W24
+	BYTE		N12     Gs4 
+	BYTE	W12
+	BYTE		        Fs4 
+	BYTE	W12
+// 021   ----------------------------------------
+	BYTE		N48     Fn4 
+	BYTE	W48
+	BYTE		        Ds4 
+	BYTE	W48
+// 022   ----------------------------------------
+	BYTE		        Dn4 
+	BYTE	W48
+	BYTE		        As3 
+	BYTE	W48
+// 023   ----------------------------------------
+	BYTE		N24     Cn4 
+	BYTE	W24
+	BYTE		        Cs4 
+	BYTE	W24
+	BYTE		        Ds4 
+	BYTE	W24
+	BYTE		        Fn4 
+	BYTE	W24
+// 024   ----------------------------------------
+	BYTE		        Fs4 
+	BYTE	W24
+	BYTE		        Gs4 
+	BYTE	W24
+	BYTE		        As4 
+	BYTE	W24
+	BYTE		N20     Cn5 
+	BYTE	W24
+// 025   ----------------------------------------
+	BYTE		N96     Cs5 
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	MemoryMother_FINAL_3_B1
+MemoryMother_FINAL_3_B2:
+// 026   ----------------------------------------
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+MemoryMother_FINAL_4:
+	BYTE	KEYSH   MemoryMother_FINAL_key+0
+MemoryMother_FINAL_4_B1:
+// 000   ----------------------------------------
 	BYTE		VOICE   49
 	BYTE		MODT    0
 	BYTE		LFOS    44
@@ -715,118 +856,6 @@ MemoryMother_FINAL_3_B1:
 // 025   ----------------------------------------
 	BYTE	W90
 	BYTE		EOT   
-	BYTE	W06
-	BYTE	GoTo
-	 POIN2	MemoryMother_FINAL_3_B1
-MemoryMother_FINAL_3_B2:
-// 026   ----------------------------------------
-	BYTE	FINE
-
-//**************** Track 4 (Midi-Chn.4) ****************//
-
-MemoryMother_FINAL_4:
-	BYTE	KEYSH   MemoryMother_FINAL_key+0
-MemoryMother_FINAL_4_B1:
-// 000   ----------------------------------------
-	BYTE		VOICE   14
-	BYTE		MODT    0
-	BYTE		LFOS    44
-	BYTE		VOL     127*MemoryMother_FINAL_mvl/mxv
-	BYTE		PAN     c_v-63
-	BYTE	W96
-// 001   ----------------------------------------
-	BYTE	W96
-// 002   ----------------------------------------
-	BYTE	W96
-// 003   ----------------------------------------
-	BYTE	W96
-// 004   ----------------------------------------
-	BYTE	W96
-// 005   ----------------------------------------
-	BYTE	W96
-// 006   ----------------------------------------
-	BYTE	W96
-// 007   ----------------------------------------
-	BYTE	W96
-// 008   ----------------------------------------
-	BYTE	W96
-// 009   ----------------------------------------
-MemoryMother_FINAL_4_009:
-	BYTE		N96     Gn2   v076
-	BYTE		N96     As2 
-	BYTE		TIE     Ds3 
-	BYTE	W96
-	BYTE	PEND
-// 010   ----------------------------------------
-	BYTE		        Gs2 
-	BYTE		TIE     Cn3 
-	BYTE	W96
-	BYTE		EOT     Ds3 
-// 011   ----------------------------------------
-	BYTE		N96     Fn3 
-	BYTE	W48
-	BYTE		EOT     Cn3 
-	BYTE		N48     Dn3 
-	BYTE	W48
-	BYTE		EOT     Gs2 
-// 012   ----------------------------------------
-	BYTE	PATT
-	 POIN2	MemoryMother_FINAL_4_009
-// 013   ----------------------------------------
-	BYTE		TIE     Cn3   v076
-	BYTE		N96     Gn3 
-	BYTE	W96
-// 014   ----------------------------------------
-	BYTE		TIE     Gs3 
-	BYTE	W96
-	BYTE		EOT     Ds3 
-// 015   ----------------------------------------
-	BYTE		N96     Fn3 
-	BYTE	W48
-	BYTE		EOT     Cn3 
-	BYTE		N48     As2 
-	BYTE		N48     Dn3 
-	BYTE	W48
-	BYTE		EOT     Gs3 
-// 016   ----------------------------------------
-	BYTE		N48     Gs2 
-	BYTE		N48     Cn3 
-	BYTE		N90     Ds3 
-	BYTE		N90     Gn3 
-	BYTE	W48
-	BYTE		N42     As2 
-	BYTE	W48
-// 017   ----------------------------------------
-	BYTE	W96
-// 018   ----------------------------------------
-	BYTE	W96
-// 019   ----------------------------------------
-	BYTE	W96
-// 020   ----------------------------------------
-	BYTE	W96
-// 021   ----------------------------------------
-	BYTE		N96   
-	BYTE		N96     Dn3 
-	BYTE		N96     Fn3 
-	BYTE	W96
-// 022   ----------------------------------------
-	BYTE		        Cn3 
-	BYTE		N96     Ds3 
-	BYTE		N96     Gn3 
-	BYTE	W96
-// 023   ----------------------------------------
-	BYTE		TIE     Dn3 
-	BYTE		TIE     Fn3 
-	BYTE		N90     Gs3 
-	BYTE	W96
-// 024   ----------------------------------------
-	BYTE		TIE     As3 
-	BYTE	W96
-// 025   ----------------------------------------
-	BYTE	W90
-	BYTE		EOT     Dn3 
-	BYTE		        Fn3 
-	BYTE		        As3 
 	BYTE	W06
 	BYTE	GoTo
 	 POIN2	MemoryMother_FINAL_4_B1
@@ -1325,11 +1354,11 @@ MemoryMother_FINAL_8:
 	BYTE	KEYSH   MemoryMother_FINAL_key+0
 MemoryMother_FINAL_8_B1:
 // 000   ----------------------------------------
-	BYTE		VOICE   52
+	BYTE		VOICE   14
 	BYTE		MODT    0
 	BYTE		LFOS    44
-	BYTE		PAN     c_v+8
 	BYTE		VOL     127*MemoryMother_FINAL_mvl/mxv
+	BYTE		PAN     c_v-63
 	BYTE	W96
 // 001   ----------------------------------------
 	BYTE	W96
@@ -1348,112 +1377,83 @@ MemoryMother_FINAL_8_B1:
 // 008   ----------------------------------------
 	BYTE	W96
 // 009   ----------------------------------------
-	BYTE		N48     Ds4   v127
-	BYTE	W48
-	BYTE		N24     Fn4 
-	BYTE	W24
-	BYTE		        Fs4 
-	BYTE	W24
-// 010   ----------------------------------------
-	BYTE		N72     Fn4 
-	BYTE	W72
-	BYTE		N24     Cs4 
-	BYTE	W24
-// 011   ----------------------------------------
-	BYTE		N48     Gs3 
-	BYTE	W48
-	BYTE		        Fn4 
-	BYTE	W48
-// 012   ----------------------------------------
-	BYTE		N24   
-	BYTE	W24
-	BYTE		        Fs4 
-	BYTE	W24
-	BYTE		N48     Ds4 
-	BYTE	W48
-// 013   ----------------------------------------
-	BYTE		N24     Cs4 
-	BYTE	W24
-	BYTE		        Bn3 
-	BYTE	W24
-	BYTE		N48     As3 
-	BYTE	W48
-// 014   ----------------------------------------
-	BYTE		N24     Cn4 
-	BYTE	W24
-	BYTE		N48     Dn4 
-	BYTE	W48
-	BYTE		N24     Cn4 
-	BYTE	W24
-// 015   ----------------------------------------
-	BYTE		        As3 
-	BYTE	W24
-	BYTE		N72     Cn4 
-	BYTE	W72
-// 016   ----------------------------------------
-	BYTE		N90     Ds4 
+MemoryMother_FINAL_8_009:
+	BYTE		N96     Gn2   v076
+	BYTE		N96     As2 
+	BYTE		TIE     Ds3 
 	BYTE	W96
+	BYTE	PEND
+// 010   ----------------------------------------
+	BYTE		        Gs2 
+	BYTE		TIE     Cn3 
+	BYTE	W96
+	BYTE		EOT     Ds3 
+// 011   ----------------------------------------
+	BYTE		N96     Fn3 
+	BYTE	W48
+	BYTE		EOT     Cn3 
+	BYTE		N48     Dn3 
+	BYTE	W48
+	BYTE		EOT     Gs2 
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	MemoryMother_FINAL_8_009
+// 013   ----------------------------------------
+	BYTE		TIE     Cn3   v076
+	BYTE		N96     Gn3 
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE		TIE     Gs3 
+	BYTE	W96
+	BYTE		EOT     Ds3 
+// 015   ----------------------------------------
+	BYTE		N96     Fn3 
+	BYTE	W48
+	BYTE		EOT     Cn3 
+	BYTE		N48     As2 
+	BYTE		N48     Dn3 
+	BYTE	W48
+	BYTE		EOT     Gs3 
+// 016   ----------------------------------------
+	BYTE		N48     Gs2 
+	BYTE		N48     Cn3 
+	BYTE		N90     Ds3 
+	BYTE		N90     Gn3 
+	BYTE	W48
+	BYTE		N42     As2 
+	BYTE	W48
 // 017   ----------------------------------------
-	BYTE		N24     Fn4 
-	BYTE	W24
-	BYTE		        Gs3 
-	BYTE	W24
-	BYTE		N24   
-	BYTE	W24
-	BYTE		        Cs4 
-	BYTE	W24
+	BYTE	W96
 // 018   ----------------------------------------
-	BYTE		        Fn4 
-	BYTE	W24
-	BYTE		        Fs4 
-	BYTE	W24
-	BYTE		        Gs4 
-	BYTE	W24
-	BYTE		        Cs5 
-	BYTE	W24
+	BYTE	W96
 // 019   ----------------------------------------
-	BYTE		N90   
 	BYTE	W96
 // 020   ----------------------------------------
-	BYTE		N48     Bn4 
-	BYTE	W48
-	BYTE		N24     As4 
-	BYTE	W24
-	BYTE		N12     Gs4 
-	BYTE	W12
-	BYTE		        Fs4 
-	BYTE	W12
-// 021   ----------------------------------------
-	BYTE		N48     Fn4 
-	BYTE	W48
-	BYTE		        Ds4 
-	BYTE	W48
-// 022   ----------------------------------------
-	BYTE		        Dn4 
-	BYTE	W48
-	BYTE		        As3 
-	BYTE	W48
-// 023   ----------------------------------------
-	BYTE		N24     Cn4 
-	BYTE	W24
-	BYTE		        Cs4 
-	BYTE	W24
-	BYTE		        Ds4 
-	BYTE	W24
-	BYTE		        Fn4 
-	BYTE	W24
-// 024   ----------------------------------------
-	BYTE		        Fs4 
-	BYTE	W24
-	BYTE		        Gs4 
-	BYTE	W24
-	BYTE		        As4 
-	BYTE	W24
-	BYTE		N20     Cn5 
-	BYTE	W24
-// 025   ----------------------------------------
-	BYTE		N96     Cs5 
 	BYTE	W96
+// 021   ----------------------------------------
+	BYTE		N96   
+	BYTE		N96     Dn3 
+	BYTE		N96     Fn3 
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE		        Cn3 
+	BYTE		N96     Ds3 
+	BYTE		N96     Gn3 
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE		TIE     Dn3 
+	BYTE		TIE     Fn3 
+	BYTE		N90     Gs3 
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE		TIE     As3 
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W90
+	BYTE		EOT     Dn3 
+	BYTE		        Fn3 
+	BYTE		        As3 
+	BYTE	W06
 	BYTE	GoTo
 	 POIN2	MemoryMother_FINAL_8_B1
 MemoryMother_FINAL_8_B2:

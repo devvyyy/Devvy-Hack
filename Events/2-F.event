@@ -270,12 +270,12 @@ BNE 0x9000 0xC 0x0
 CHECK_EVENTID 0x95 //did you fight hayes?
 BNE 0x9000 0xC 0x0
 
-TextCont(ChP2FinalePostPrepsAlt, 0x197)
+TextCont(ChP2FinalePostPrepsAlt, 0x197) //resistance
 
 GOTO 0x9001
 LABEL 0x9000
 
-TextCont(ChP2FinalePostPreps, 0x196)
+TextCont(ChP2FinalePostPreps, 0x196) //noctum
 
 LABEL 0x9001
 

@@ -76,12 +76,12 @@ UNIT PromoSoul Sniper 0x1 Level(16, Enemy, 1)       [10,18] 0b 0x0 0x0 0x0 [Silv
 UNIT MagSoul Druid 0x1 Level(16, Enemy, 1)          [17,9] 0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
 UNIT CavSoul SPal 0x1 Level(16, Enemy, 1)           [7,11] 0b 0x0 0x0 0x0 [SilverSword] TwoActionAI
 UNIT PromoSoul Swordmaster 0x1 Level(16, Enemy, 1)  [10,21] 0b 0x0 0x0 0x0 [KillingEdge] TwoActionAI
-UNIT MagSoul MageKnight 0x1 Level(16, Enemy, 1)     [13,13] 0b 0x0 0x0 0x0 [Iceberg] RangeAI
+//UNIT MagSoul MageKnight 0x1 Level(16, Enemy, 1)     [13,13] 0b 0x0 0x0 0x0 [Iceberg] RangeAI
 UNIT ArmorSoul GreatKnight 0x1 Level(16, Enemy, 1)  [15,14] 0b 0x0 0x0 0x0 [SilverBlade, SilverGlaive, SilverLabrys] RangeAI
 UNIT FlierSoul GriffonKnight 0x1 Level(16, Enemy, 1)[3,15] 0b 0x0 0x0 0x0 [SilverBow] RangeAI
 UNIT CavSoul LPal 0x1 Level(16, Enemy, 1)           [6,16] 0b 0x0 0x0 0x0 [SilverLance] TwoActionAI
 UNIT PromoSoul Hero 0x1 Level(16, Enemy, 1)         [9,17] 0b 0x0 0x0 0x0 [BraveSword] TwoActionAI
-UNIT MagSoul Bishop 0x1 Level(16, Enemy, 1)         [12,18] 0b 0x0 0x0 0x0 [LightTome2,0x53] BossAI
+UNIT MagSoul Bishop 0x1 Level(16, Enemy, 1)         [12,18] DropItem 0x0 0x0 0x0 [LightTome2,Sleep] BossAI
 UNIT PromoSoul Halberdier 0x1 Level(16, Enemy, 1)   [15,19] 0b 0x0 0x0 0x0 [ShortSpear] TwoActionAI
 UNIT CavSoul Ranger 0x1 Level(16, Enemy, 1)         [17,20] 0b 0x0 0x0 0x0 [SilverBow] RangeAI
 UNIT FlierSoul Falcoknight 0x1 Level(16, Enemy, 1)  [1,19] 0b 0x0 0x0 0x0 [SilverLance] RangeAI
@@ -105,7 +105,7 @@ UNIT CavSoul Ranger 0x1 Level(16, Enemy, 1)         [16,11] 0b 0x0 0x0 0x0 [Long
 UNIT ArmorSoul GreatKnight 0x1 Level(16, Enemy, 1)      [3,21] 0b 0x0 0x0 0x0 [SilverBlade, SilverGlaive, SilverLabrys] RangeAI
 UNIT PromoSoul Warrior 0x1 Level(16, Enemy, 1)      [6,19] 0b 0x0 0x0 0x0 [SilverBow, SilverBow] TwoActionAI
 UNIT FlierSoul GriffonKnight 0x1 Level(16, Enemy, 1)[8,15] 0b 0x0 0x0 0x0 [SilverBow] RangeAI
-UNIT MagSoul Druid 0x1 Level(16, Enemy, 1)          [10,13] 0b 0x0 0x0 0x0 [DarkTome2] RangeAI
+UNIT StealSoul Rogue 0x1 Level(16, Enemy, 1)          [10,13] 0b 0x0 0x0 0x0 [Lancereaver,0x5F] TwoActionAI
 //UNIT PromoSoul Halberdier 0x1 Level(16, Enemy, 1)  [6,12] 0b 0x0 0x0 0x0 [SilverLance] RangeAI
 UNIT ArmorSoul GreatKnight 0x1 Level(16, Enemy, 1)  [16,7] 0b 0x0 0x0 0x0 [SilverBlade, SilverGlaive, SilverLabrys] TwoActionAI
 UNIT MagSoul MageKnight 0x1 Level(16, Enemy, 1)     [10,10] 0b 0x0 0x0 0x0 [Iceberg] RangeAI
