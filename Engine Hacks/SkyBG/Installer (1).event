@@ -1,0 +1,51 @@
+//08B80374
+#ifdef _FE8_
+	#include "Extensions/Hack Installation.txt"
+	#ifndef Free_Space
+	#define Free_Space 0xF3C600
+	#endif
+	
+	ORG Free_Space
+	
+	PUSH
+		ORG 0x306CC
+		jumpToHack(Sky)
+	POP
+	
+	ALIGN 4
+	Sky:
+	#incbin "Sky.dmp"
+	ALIGN 4
+	POIN SkyBGTable
+	
+	ALIGN 4
+	SkyBGTable: //each entry is comprised of 4 words
+	WORD 0x77BE	//the starting color, also brightest shade, a slighly less pure white here
+	WORD 0x0841	//gets darkened by this much every X pixels, it loses 1 red here
+				//0x0001 would darken red by 1, 0x0020 by 1 green, and 0x0400 by 1 blue
+				//Note the colors are 16 raw bit rgb values. be careful with underflows!
+	WORD 0x0018	//gets darkened every X pixels, every 15 pixels here
+				//do note you can underflow and loop colors if this is too small
+	
+	WORD 0x0009//Chapter ID this sky takes place in
+
+	WORD 0x77BE	//the starting color, also brightest shade, a slighly less pure white here
+	WORD 0x0841	//gets darkened by this much every X pixels, it loses 1 red here
+				//0x0001 would darken red by 1, 0x0020 by 1 green, and 0x0400 by 1 blue
+				//Note the colors are 16 raw bit rgb values. be careful with underflows!
+	WORD 0x0012	//gets darkened every X pixels, every 15 pixels here
+				//do note you can underflow and loop colors if this is too small
+	
+	WORD 0x000A//Chapter ID this sky takes place in
+
+	WORD 0x0000//Terminator
+	WORD 0x0000//Terminator
+	WORD 0xFFFF//Terminator
+	WORD 0x00FF//Terminator
+
+	
+#else
+	ERROR "You're not assembling FE8 events!"
+#endif
+
+
