@@ -241,27 +241,27 @@ UNIT Messel FalcoKnight 0x1 Level(11, Enemy, 0)   [14,32] 0b 0x0 0x0 0x0 [Silver
 
 EnemyUnits:
 //InfantrySoul, CavSoul, FlierSoul, ArmorSoul, MagSoul, PromoSoul, StealSoul
-UNIT InfantrySoul Hero 0x1 Level(15, Enemy, 1)     [10,27] 0b 0x0 0x0 0x0 [IronSword] AttackInRangeAI
+UNIT InfantrySoul Hero 0x1 Level(15, Enemy, 1)     [10,27] 0b 0x0 0x0 0x0 [SteelBlade] AttackInRangeAI
 UNIT Aeteria Warrior 0x1 Level(15, Enemy, 1)     [15,28] 0b 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
-UNIT MagSoul Mage 0x1 Level(15, Enemy, 1)     [7,25] 0b 0x0 0x0 0x0 [Thunder] AttackInRangeAI
-UNIT CavSoul SCav 0x1 Level(15, Enemy, 1)     [8,22] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
-UNIT Aeteria Soldier 0x1 Level(15, Enemy, 1)     [7,30] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
+UNIT MagSoul Sage 0x1 Level(15, Enemy, 1)     [7,25] 0b 0x0 0x0 0x0 [Thunder] AttackInRangeAI
+UNIT CavSoul SPal 0x1 Level(15, Enemy, 1)     [8,22] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
+UNIT Aeteria Halberdier 0x1 Level(15, Enemy, 1)     [7,30] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
 UNIT Aeteria Sniper 0x1 Level(15, Enemy, 1)     [4,29] 0b 0x0 0x0 0x0 [Longbow] AttackInRangeAI
-UNIT InfantrySoul Myrm 0x1 Level(15, Enemy, 1)     [2,26] 0b 0x0 0x0 0x0 [KillingEdge] AttackInRangeAI
-UNIT Aeteria Soldier 0x1 Level(15, Enemy, 1)     [5,23] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
+UNIT PromoSoul Swordmaster 0x1 Level(15, Enemy, 1)     [2,26] 0b 0x0 0x0 0x0 [KillingEdge] AttackInRangeAI
+UNIT Aeteria Halberdier 0x1 Level(15, Enemy, 1)     [5,23] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
 UNIT Aeteria Sniper 0x1 Level(15, Enemy, 1)     [5,20] 0b 0x0 0x0 0x0 [SteelBow] AttackInRangeAI
-UNIT Aeteria Hunter 0x1 Level(15, Enemy, 1)     [16,23] 0b 0x0 0x0 0x0 [SteelBow] TwoActionAI
+UNIT Aeteria Ranger 0x1 Level(15, Enemy, 1)     [16,23] 0b 0x0 0x0 0x0 [SteelBow] TwoActionAI
 UNIT Aeteria LPal 0x1 Level(15, Enemy, 1)     [19,25] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
-UNIT Aeteria AArmor 0x1 Level(15, Enemy, 1)     [21,18] 0b 0x0 0x0 0x0 [ShortAxe] BossAI
-UNIT Aeteria APal 0x1 Level(15, Enemy, 1)     [23,22] 0b 0x0 0x0 0x0 [IronAxe] TwoActionAI
-UNIT Aeteria Ranger 0x1 Level(15, Enemy, 1)     [19,20] 0b 0x0 0x0 0x0 [Longbow] AttackInRangeAI
+UNIT Aeteria General 0x1 Level(15, Enemy, 1)     [21,18] 0b 0x0 0x0 0x0 [ShortAxe] BossAI
+UNIT Aeteria APal 0x1 Level(15, Enemy, 1)     [23,22] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
+UNIT Aeteria Sniper 0x1 Level(15, Enemy, 1)     [19,20] 0b 0x0 0x0 0x0 [Longbow] AttackInRangeAI
 UNIT Aeteria Warrior 0x1 Level(15, Enemy, 1)     [24,14] 0b 0x0 0x0 0x0 [SteelAxe] TwoActionAI
 UNIT ArmorSoul SArmor 0x1 Level(15, Enemy, 1)     [6,17] 0b 0x0 0x0 0x0 [LightBrand,0x66] BossAI
 UNIT InfantrySoul Sniper 0x1 Level(15, Enemy, 1)     [1,13] 0b 0x0 0x0 0x0 [SteelBow] AttackInRangeAI
 UNIT AeteriaStealable Ranger 0x1 Level(15, Enemy, 1)     [8,7] 0b 0x0 0x0 0x0 [SteelBow, 0x5F] TwoActionAI
-UNIT Aeteria Soldier 0x1 Level(15, Enemy, 1)     [21,11] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
+UNIT Aeteria Halberdier 0x1 Level(15, Enemy, 1)     [21,11] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
 UNIT Aeteria General 0x1 Level(15, Enemy, 1)     [13,15] 0b 0x0 0x0 0x0 [Javelin] BossAI
-UNIT Aeteria Hero 0x1 Level(15, Enemy, 1)     [6,4] 0b 0x0 0x0 0x0 [IronSword] AttackInRangeAI
+UNIT Aeteria Hero 0x1 Level(15, Enemy, 1)     [6,4] 0b 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
 UNIT Aeteria General 0x1 Level(15, Enemy, 1)     [22,8] 0b 0x0 0x0 0x0 [ShortBrand,ShortSpear,ShortAxe] BossAI
 UNIT Aeteria SPal 0x1 Level(15, Enemy, 1)     [7,1] 0b 0x0 0x0 0x0 [SteelSword] TwoActionAI
 	UNIT
@@ -269,16 +269,16 @@ UNIT Aeteria SPal 0x1 Level(15, Enemy, 1)     [7,1] 0b 0x0 0x0 0x0 [SteelSword] 
 EnemyUnits2:
 UNIT PromoSoul Halberdier 0x1 Level(15, Enemy, 1)     [5,11] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
 UNIT PromoSoul Warrior 0x1 Level(15, Enemy, 1)     [4,14] 0b 0x0 0x0 0x0 [SteelAxe,IronBow] TwoActionAI
-UNIT Aeteria Soldier 0x1 Level(15, Enemy, 1)     [20,6] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
-UNIT Aeteria Sniper 0x1 Level(15, Enemy, 1)     [14,15] 0b 0x0 0x0 0x0 [IronBow] BossAI
+UNIT Aeteria Halberdier 0x1 Level(15, Enemy, 1)     [20,6] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
+UNIT Aeteria Sniper 0x1 Level(15, Enemy, 1)     [14,15] 0b 0x0 0x0 0x0 [Longbow] BossAI
 UNIT Aeteria Sniper 0x1 Level(15, Enemy, 1)     [17,7] 0b 0x0 0x0 0x0 [SteelBow] TwoActionAI
-UNIT AeteriaStealable Halberdier 0x1 Level(15, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [SteelLance, 0x5B] TwoActionAI
+UNIT AeteriaStealable SergeantClass 0x1 Level(15, Enemy, 1)     [15,4] 0b 0x0 0x0 0x0 [ShortSpear, 0x5B] TwoActionAI
 UNIT Aeteria Druid 0x1 Level(15, Enemy, 1)     [18,32] 0b 0x0 0x0 0x0 [DarkTome2] AttackInRangeAI
-UNIT Aeteria Druid 0x1 Level(15, Enemy, 1)     [4,7] 0b 0x0 0x0 0x0 [Flux] AttackInRangeAI
-UNIT Aeteria Soldier 0x1 Level(15, Enemy, 1)     [12,11] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
+UNIT Aeteria Druid 0x1 Level(15, Enemy, 1)     [4,7] 0b 0x0 0x0 0x0 [DarkTome3] AttackInRangeAI
+UNIT Aeteria Halberdier 0x1 Level(15, Enemy, 1)     [12,11] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
 UNIT ArmorSoul General 0x1 Level(15, Enemy, 1)     [2,21] DropItem 0x0 0x0 0x0 [SteelLance,0x64] AttackInRangeAI
-UNIT Aeteria Hero 0x1 Level(15, Enemy, 1)     [22,31] 0b 0x0 0x0 0x0 [SteelSword] BossAI
-UNIT Aeteria Deserter 0x1 Level(15, Enemy, 1)     [25,34] 0b 0x0 0x0 0x0 [KillerLance] BrigandAI
+UNIT Aeteria Hero 0x1 Level(15, Enemy, 1)     [22,31] 0b 0x0 0x0 0x0 [SteelSword,SteelAxe] BossAI
+UNIT Aeteria SergeantClass 0x1 Level(15, Enemy, 1)     [25,34] 0b 0x0 0x0 0x0 [KillerLance] BrigandAI
 UNIT Aeteria Swordmaster 0x1 Level(15, Enemy, 1)     [15,18] 0b 0x0 0x0 0x0 [Flamberge] AttackInRangeAI
 
 //bosses
@@ -307,7 +307,7 @@ UNIT Aeteria Druid 0x1 Level(13, Enemy, 1)     [20,14] 0b 0x0 0x0 0x0 [Flux] Att
 	
 RuinsRein2:
 UNIT CavSoul APal 0x1 Level(13, Enemy, 1)     [20,14] 0 0 1 REDA21R14 [SteelAxe] AttackInRangeAI
-UNIT InfantrySoul Soldier 0x1 Level(13, Enemy, 1)     [20,14] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
+UNIT InfantrySoul Halberdier 0x1 Level(13, Enemy, 1)     [20,14] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
 	UNIT
 	
 BotLeftMountainsRein:
@@ -425,53 +425,7 @@ BeginningScene:
 	LOAD1 0x1 EnemyUnits2
 	ENUN
 
-	Music(0xA9)
-	SetBackground(0x44)
-	//FADU 60
-	STAL 5
-BROWNBOXTEXT CastleVale [8,8]
-STAL 15
-	STAL 5
-BROWNBOXTEXT TheBastion [8,8]
-STAL 15
-	Text(Part3Chapter7Opening1)
-
-	FADI 60
-	SetUnitItemDurability(Maynard, 1, StaffSavantID) //savant robes
-	CLEAN
-	Music(0x26E)
-	SetBackground(0xF)
-
-STAL 5
-BROWNBOXTEXT TheTriarc [8,8]
-STAL 15
-
-	Text(Part3Chapter7Opening2)
-
-CALL $591FD8 //prep screen
-	FADU 60
-
-	MUSCSLOW 0x4e
-
-	STAL 15
-	CameraCursor(Maynard)
-	Text(MaynardTalks)
-
-	STAL 10
-
-	CameraCursor(Eustace)
-	Text(EustaceTalks)
-
-	STAL 10
-	CameraCursor(Aoife)
-	Text(AoifeTalks)
-
-	STAL 30
-
-	MUSCSLOW 0x7FFF
-	CameraCursor(Affogato)
-	CameraCursor(Chiffon)
-	Text(Part3Chapter7PostPreps)
+GotoPrepScreen
 
 	NoFade
 	ENDA
@@ -479,49 +433,8 @@ CALL $591FD8 //prep screen
 EndingScene:
 
 FADI 30
+MNTS 0x1 //return to title screen
 
-
-SVAL 0xB 0x10000D //coords
-LOMA 0x24 //then the map
-CAM1 [16,16]
-
-DoAllThree
-Music(0x4E)
-
-LOAD2 0x1 ChiffonTheGamer
-FADU 15
-
-STAL 15
-CameraCursor(Chiffon)
-STAL 10
-
-
-SetBackground(0x2F)
-
-CHECK_EVENTID 0x95 //graham route flag
-BNE 0x9000 0xC 0x0
-	
-TextCont(Part3Chapter7Ending2Raial, 0x26F)
-	
-GOTO 0x9001
-LABEL 0x9000
-
-TextCont(Part3Chapter7Ending2Graham, 0x26F) //graham
-LABEL 0x9001
-
-STAL 20
-
-ClearBackground
-
-MUSI
-STAL 70
-
-MOVE 0x1 Chiffon [16,15]
-ENUN
-STAL 30
-REMU Chiffon
-
-MUNO
 	MNC2 0xE
 	NoFade
 	ENDA

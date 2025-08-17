@@ -1,19 +1,14 @@
 //08B80374
 #ifdef _FE8_
 	#include "Extensions/Hack Installation.txt"
-	#ifndef Free_Space
-	#define Free_Space 0xF3C600
-	#endif
-	
-	ORG Free_Space
 	
 	PUSH
 		ORG 0x306CC
-		jumpToHack(Sky)
+		jumpToHack(SkyThing)
 	POP
 	
 	ALIGN 4
-	Sky:
+	SkyThing:
 	#incbin "Sky.dmp"
 	ALIGN 4
 	POIN SkyBGTable

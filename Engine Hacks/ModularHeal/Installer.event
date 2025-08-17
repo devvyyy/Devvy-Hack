@@ -1,0 +1,25 @@
+#define HealFunctionEntry(item, func) "PUSH; ORG HealFunctionTable + (item*4); POIN func; POP"
+
+ALIGN 4
+HealFunctionTable:
+FILL 255*4
+
+HealFunctionEntry(0x6b, 	HealFixedItemMt) //med/repair kit
+
+// examples of macro with vanilla healing items, uncomment if desired
+/*
+HealFunctionEntry(Vulnerary, 	HealFixedItemMt)
+HealFunctionEntry(Elixir,		HealFixedItemMt)
+HealFunctionEntry(Heal, 		HealItemMtPlusMag)
+HealFunctionEntry(Mend, 		HealItemMtPlusMag)
+HealFunctionEntry(Recover, 		HealItemMtPlusMag)
+HealFunctionEntry(Physic,		HealItemMtPlusHalfMag) // not vanilla but i needed examples for half mag
+HealFunctionEntry(Fortify,		HealItemMtPlusHalfMag)
+HealFunctionEntry(Latona, 		HealFixedItemMt)
+*/
+
+#ifdef USE_STRMAG_SPLIT
+	#include "UltimateModularItemHealingStrMagSplit.lyn.event"
+#else
+	#include "UltimateModularItemHealingNoSplit.lyn.event"
+#endif
