@@ -1,0 +1,49 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	Bflat_FINAL_grp  voicegroup000
+	#define	Bflat_FINAL_pri  0
+	#define	Bflat_FINAL_rev  0
+	#define	Bflat_FINAL_mvl  69
+	#define	Bflat_FINAL_key  0
+	#define	Bflat_FINAL_tbs  1
+	#define	Bflat_FINAL_exg  0
+	#define	Bflat_FINAL_cmp  1
+
+	// .rodata
+	//	Bflat_FINAL
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+Bflat_FINAL_1:
+	BYTE	KEYSH   Bflat_FINAL_key+0
+// 000   ----------------------------------------
+	BYTE	TEMPO   120*Bflat_FINAL_tbs/2
+	BYTE		VOICE   0
+	BYTE		MODT    0
+	BYTE		LFOS    44
+	BYTE		BENDR   12
+	BYTE		VOL     85*Bflat_FINAL_mvl/mxv
+	BYTE		PAN     c_v+0
+	BYTE		N11     An3   v060
+	BYTE		N11     As3 
+	BYTE		N11     Cn4 
+	BYTE		N11     Dn4 
+	BYTE	W11
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+Bflat_FINAL:
+	BYTE	1	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	Bflat_FINAL_pri	// Priority
+	BYTE	Bflat_FINAL_rev	// Reverb.
+
+	POIN2	Bflat_FINAL_grp
+
+	POIN2	Bflat_FINAL_1
+
+	

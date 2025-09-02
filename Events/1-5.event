@@ -32,6 +32,7 @@ CharacterEventBothWays(0xD, BrudetSequinConvo, Brudet, Sequin)
 //CharacterEventBothWays(0xD, SeqUlrichConvo, Sequin, Ulrich)
 CharacterEventBothWays(0xAC, EisDoppioConvo, Doppio, Eiskaffee)
 //CharacterEventBothWays(0x20, RecruitRecruitThief, 0x0, Noel)
+CharacterEventBothWays(0x20, FlorisAffoConvo, Affogato, Floris)
 	END_MAIN
 
 MiscBasedEvents:
@@ -440,6 +441,15 @@ EisDoppioConvo:
 MUSI
 Text(EisDoppioTalk)
 MUNO
+NoFade
+ENDA
+
+FlorisAffoConvo:
+MUSI
+Text(Ch5AffoFlorisTalk)
+MUNO
+GiveItemWithDurability(0xBC,StaffSavantID,Floris)
+GiveItem(Dracoshield,Affogato)
 NoFade
 ENDA
 	
