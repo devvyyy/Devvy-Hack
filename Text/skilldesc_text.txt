@@ -118,7 +118,7 @@ after combat.[N]
 
 ## SD_Radiance
 # shirt uses 0xB1, change order of marking/healing in calc loop so marking an ally missing hp with barrier also heals them?
-Encourage[N]
+Sanctuary[N]
 - Nora's staves Bless allies for the map.[N]
 (Clears status effects on ally, if any.)[N]
 - Restores (Eth + 3) HP to all Blessed[N]
@@ -671,7 +671,8 @@ inflicts Soulbreak for the map.[N]
 grants Hit +30.[X]
 
 ## SD_StaticPanic
-Volatile Sparks[N]
+# Volatile Sparks
+Fulmination!![N]
 - If Jaye initiates, deals bonus damage[N]
 = 50% of Spd, chaining to foes within[N]
 2 spaces of target; chains again with[N]
@@ -759,7 +760,7 @@ IDK: If weapon triangle matchup is neutral,[N]
 unit has Weapon Triangle advantage.[X]
 
 ## SD_DuckandCover
-# zopf personal?
+# zopf personal? Pursuer
 Pursuer[N]
 - If initiating, grants Chester range[N]
 = 50% of Move used and follow-ups[N]
@@ -1048,7 +1049,8 @@ Borrowed Time: After combat, Xidorn restores[N]
 5 HP and deals 5 damage to foe.[X]
 
 ## SD_RidersAxiom
-Wreyvian Axiom[N]
+# Wreyvian Axiom
+Opening Gambit[N]
 - On turns 1-3, Gerolf can follow-up[N]
 and foe can't, and if initiating,[N]
 deals bonus damage/reduces damage[N]
@@ -1098,7 +1100,7 @@ less HP.[X]
 
 ## SD_SearingSword
 # luna 50%, then reduce frye's damage by 50% enemy res; make this give swords 1-2?
-Searing Sword[N]
+Blazer[N]
 - Frye's physical swords deal damage[N]
 based off 50% of foe's Def/Res.[N]
 - If first attack hits, grants an[N]
@@ -1156,6 +1158,14 @@ Grounding[N]
 has a status effect, Doppio ignores foe's[N]
 terrain bonuses and deals bonus magical[N]
 damage = foe's Spd x 2.[X]
+
+## SD_SolumNew
+# Purging Arrow
+Dispersal[N]
+- If foe uses bow or magic, Solum[N]
+deals bonus damage = 20% of foe's[N]
+max HP, then repeats the same damage[N]
+after combat to foes within 3 spaces.[X]
 
 ## SD_ThunderClap2
 Phalanx[N]
@@ -1543,6 +1553,13 @@ Royal Quiver[N]
 (Dex +3)[N]
 - Grants bow range +1.[X]
 
+## SD_Quiver2
+# idk man
+Horn Nocks[N]
+(Dex +1)[N]
+- If initiating, deals bonus damage =[N]
+distance between user and target, x 3.[X]
+
 ## SD_Rondel
 # 1-1 interlude
 Rondel[N]
@@ -1592,7 +1609,7 @@ Sable Hood[N]
 (Luck -50%)[N]
 - Deals bonus damage = foe's missing HP[N]
 at start of combat.[N]
-- Reduces enemy priority.[X]
+- Reduces targetting priority.[X]
 
 ## SD_Ignis
 # implemented
@@ -1608,7 +1625,7 @@ Draco Fang[N]
 decreases by 1 each turn (min 0).[X]
 
 ## SD_DuelistsBlow
-Winged Bools[N]
+Winged Spur[N]
 (Spd +2 to [HorseIcon][FlierIcon])[N]
 - If initiating, grants Avoid +20.[X]
 
@@ -1622,6 +1639,11 @@ Valhelm[N]
 # 1-3 strogy?
 Flask[N]
 - At start of turn, restores 10% max HP.[X]
+
+## SD_Camaraderie2
+Mead Horn[N]
+- At start of turn, if HP is 50% or[N]
+less, restores 30% max HP.[X]
 
 ## SD_BattleVeteran
 # part 3
@@ -1637,9 +1659,24 @@ Serpi Amulet[N]
 weapons or effects.)[X]
 
 ## SD_Deathcap
-Magic Hat[N]
+# Holy fuck, that's a big ass magic hat
+"H.F.,T. a B.A.M.H."[N]
 - Multiplies Eth by 1.25x[N]
 during combat.[X]
+
+## SD_Hullbreaker
+# it's an axehead?
+Raiding Hull[N]
+(Spd +1)[N]
+- If initiating on turns 1-3,[N]
+grants AS +3, and if foe is[N]
+defeated, grants a Bullion.[X]
+
+## SD_Forager2
+Bearcloak[N]
+(Def +2)[N]
+- At start of turn, restores 20% max HP[N]
+if on a Plain, Forest or Mountain.[X]
 
 ## SD_ArmorMarch
 # 1-8
@@ -1651,7 +1688,7 @@ adjacent [ArmorIcon] allies.[N]
 
 ## SD_Desperation
 # implemented
-Mercury Brace[N]
+Gale Brace[N]
 (Spd +2 to non-[HorseIcon][FlierIcon])[N]
 - If initiating, follow-ups occur[N]
 before foe can counterattack.[X]
@@ -1665,7 +1702,7 @@ Whetstone[N]
 
 ## SD_PrecisionRingLOL
 # part 3, implemented
-Focus Grips[N]
+Crimson Grip[N]
 - If wielding a sword, lance, or axe,[N]
 converts all Crit to bonus damage[N]
 at a rate of 4 Crit/1 damage.[X]
@@ -1833,7 +1870,7 @@ bonus damage = damage reduced.[X]
 
 ## SD_Warden
 # after all post-combat effects trigger,[N]
-Calamity[N]
+Light That Sears Through Heaven[N]
 - If foe initiates combat, after combat,[N]
 if the Warden's HP is 50% or less, deals[N]
 99 true damage to all foes (can't kill)[N]
@@ -1917,7 +1954,7 @@ Moxie[N]
 taken = 5 + (Spd - foe's Spd; min 0).[X]
 
 ## SD_Outrider
-Guile[N]
+Joust[N]
 - Grants Cortado Prt/Rsl = Move used[N]
 x 2.[N]
 - If all Move is used, always land[N]
@@ -2192,7 +2229,7 @@ after attacking and defeating a foe.[X]
 
 ## SD_Galeforce
 # Stormsurge LMAOOOOO
-Galeforce[N]
+Harrier[N]
 - If Eisner defeats a foe, grants[N]
 another action with -50% Move.[N]
 (Once per turn, Canto disabled.)[X]
@@ -3106,7 +3143,7 @@ Foe cannot land critical hits.[X]
 
 ## SD_Assassinate
 # - If not adjacent to an ally, Atk +5.
-Duelist[N]
+Flashing Blade[N]
 - If Rina initiates at 1 range,[N]
 follow-ups occur before counter, and if[N]
 foe is also defeated, Canto 5 spaces[N]
