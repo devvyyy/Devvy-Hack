@@ -1747,11 +1747,11 @@ Staffonet[N]
 - Staves ignore damage penalty.[X]
 
 ## SD_HoarfrostCrown
+# absolute zero should deal current hp damage and ignore res?
 Crown of Hoarfrost[N]
-- Deals bonus damage = difference[N]
-between Res stats (min 0; max 30;[N]
-if foe is under the effects of[N]
-Pure Water/Barrier, bonus damage = 30.)[X]
+- If Res > foe's Res, grants AS and[N]
+inflicts AS on foe = difference[N]
+between Res stats.[X]
 
 ## SD_HeirtoAeteria
 # Imperius, Lucent
@@ -2100,7 +2100,9 @@ Cost: 5 Durability.[X]
 # (Granted actions take priority.)
 Phase[N]
 - Bows have minimum 1 range and have[N]
-Off-Hand (inventory 2nd slot) effects.[X]
+Off-Hand (inventory 2nd slot) effects.[N]
+- Can Canto 3 spaces after combat.[N]
+(Granted actions take priority.)[X]
 
 ## SD_Astra2
 Lightslinger[N]

@@ -48,8 +48,9 @@ ENDA
 
 
 CheckNoUnits:
-CUSA Chiffon
-FADI 60
+SETVAL 0x1 0x4
+UNSET_CONDITION Chiffon
+REVEAL Chiffon
 UnsetFlag(0xED)
 	DoAllThree
 	LOAD2 0x1 CutsceneUnits

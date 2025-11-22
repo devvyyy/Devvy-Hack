@@ -26,6 +26,12 @@ ORG 0x9EF18 //List menu tile width
 BYTE UnitNameTileWidth
 POP
 
+// Don't clear supports on death
+PUSH
+ORG 0x18422
+BYTE 0x00 0x00 0x00 0x00
+POP
+
 //BARD SOUND EFFECT (MAP)
 PUSH
 ORG 0x813B4
