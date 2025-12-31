@@ -39,7 +39,7 @@ ldrb r2,[r3]
 mov r1, #0x5C
 ldrh r0, [r4, r1]
 add r0, r2
-add r0, r2
+@add r0, r2 @ dont dupe this
 strh r0, [r4,r1]
 
 @get units move

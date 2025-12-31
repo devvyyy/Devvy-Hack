@@ -428,8 +428,25 @@ Music(0x288)
 SetBackground(0x3C)
 Text(Part3PrologueBEnding2)
 
+STAL 3
+FADI 20
+STAL 100
+FADU 30
+STAL 5
+TextCont(Part3PrologueBEnding2Point5, 0x7FFF)
+
+//klavdia flies off
+Sound(0xA6)
+
+STAL 5
+Music(0x47)
+Text(Part3PrologueBEnding2Point75)
+
+STAL 15
+
 FADI 60
 CLEAN
+Music(0x2A2)
 SetBackground(0x3C)
 Text(Part3PrologueBEnding3)
 

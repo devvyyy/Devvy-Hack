@@ -269,7 +269,7 @@ UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [11,7] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] 
 UNIT Beran 0x64 0x1 Level(10, Enemy, 0)     [11,5] DropItem 0x0 0x0 0x0 [Siegmund, BlackGem] StallOneTurnAI
 UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [10,15] 0 0 1 REDA10R9 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [12,15] 0 0 1 REDA12R9 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
-UNIT 0x72 General 0x1 Level(20, Enemy, 0)   [11,13] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT 0x72 General 0x1 Level(20, Enemy, 0)     [11,13] DropItem 0x0 0x0 0x0 [WindSword, 0xBC] BossAI
 	UNIT
 
 Traps1:
@@ -371,12 +371,9 @@ EndingScene:
 Music(0x27B)
 FADI 60
 DoAllThree
-LOMA 0x2B
-LOAD2 0x1 EndCutsceneUnits
-FADU 15
-STAL 20
-CAM1 [11,2]
-CameraCursor(Chiffon)
+
+RefreshSMS
+ASMC 0x8026629
 
 //SetBackground(0x2b)
 
@@ -390,6 +387,13 @@ CHECK_EVENTID 0x95 //also messel; tents
 BNE 0x9000 0xC 0x0
 
 STAL 30
+
+LOMA 0x2C
+LOAD2 0x1 EndCutsceneUnits
+FADU 15
+STAL 20
+CAM1 [11,2]
+CameraCursor(Chiffon)
 
 TEXTSTART; TEXTSHOW Ch27OpeningEnding1; TEXTEND
 
@@ -452,10 +456,44 @@ Music(0x184)
 STAL 30; TEXTCONT; TEXTEND; REMA
 
 //MNC2 0x23
-MNC2 0x2C
+//MNC2 0x2C
+
+	SetUnitItemDurability(0x72, 1, RupturedSkyID) //aurora shard
+
+	DISA_IF Haye
+	CALL $591FD8
+	CAM1 [11,6]
+FADU 60
+Music(0x4E)
+STAL 150
+CameraCursor(0x72)
+
+CameraCursor(Chiffon)
+
+Text(ChCh27xOpening2Alt)
+
+CenterTextbox(WahooLightslingerPre)
+
+SetFlag(0xED)
+SOUN 0x119 //bolting sparks
+ENUT 0x24
+ENUT 0x5
+STAL 0x50
+SOUN 0x82 //sleep staff sound
+NoFade
+
+Music(0x1E6)
+UnsetFlag(0x3) //so you dont insta win lol
 
 GOTO 0x9001
 LABEL 0x9000
+
+LOMA 0x2B
+LOAD2 0x1 EndCutsceneUnits
+FADU 15
+STAL 20
+CAM1 [11,2]
+CameraCursor(Chiffon)
 
 STAL 33
 SetBackground(0x2b)

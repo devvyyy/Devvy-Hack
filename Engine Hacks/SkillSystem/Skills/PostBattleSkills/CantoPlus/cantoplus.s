@@ -41,8 +41,35 @@ mov	r0, r4		@attacker
 .short	0xF800
 ldrb 	r1, [r6,#0x10]	@squares moved this turn
 cmp	r0,r1
-beq	End
+beq	CortadoCheck
+b NextThing
 
+CortadoCheck:
+
+@cortado?
+@ horrible hardcoding yes
+ldr  r0, [r5] @r0 = character data pointer
+ldrb r0, [r0, #0x4] @r0 = character ID
+cmp r0, #0x4
+bne NextThing
+
+ldr	r0,=#0x8019224	@mov getter
+mov	lr, r0
+mov	r0, r4		@attacker
+.short	0xF800
+sub r0, #5
+strb 	r0, [r6, #0x10]	@squares moved this turn
+
+ldr	r0, [r4,#0x0C]	@status bitfield
+mov	r1, #0x02
+mvn	r1, r1
+and	r0, r1		@unset bit 0x2
+mov	r1, #0x40	@set canto bit
+orr	r0, r1
+str	r0, [r4,#0x0C]
+
+b End
+NextThing:
 ldr	r1,=#0x8018BD8	@check if can move again
 mov	lr, r1
 .short	0xF800

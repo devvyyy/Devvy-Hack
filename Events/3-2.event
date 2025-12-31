@@ -13,8 +13,34 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventEnemy(0,EPTurn1,1,1)
 TURN 0x0 GoodbyeDespair [16,0] 0x0
 	END_MAIN
+
+EPTurn1:
+
+CHECK_EVENTID 0x95 //raial route
+BNE 0x9000 0xC 0x0
+
+CameraCursor(Ulrich)
+Text(Part3Chapter2Turn1EP)
+
+GOTO 0x9001
+LABEL 0x9000
+
+CameraCursor(Graham)
+Text(Part3Chapter2Turn1EPGraham)
+
+CameraCursor(Ulrich)
+Text(Part3Chapter2Turn1EPGraham2)
+
+CameraCursor(Graham)
+Text(Part3Chapter2Turn1EPGraham3)
+
+LABEL 0x9001
+
+NoFade
+ENDA
 
 GoodbyeDespair:
 GameOver
@@ -120,12 +146,26 @@ UNIT Ulrich LPal 0x1 Level(1, Ally, 0)   [9,2] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elix
 UNIT Gerolf SPal 0x1 Level(1, Ally, 0)   [8,1] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Klavdia WyvernKnight 0x1 Level(1, Ally, 0)   [9,1] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Wegman General 0x1 Level(1, Ally, 0)   [10,1] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Gorlois Parson 0x1 Level(20, NPC, 1)     [14,19] 0b 0x0 0x0 0x0 [0xA0, Aura, Elixir] BossAI
+
 
 UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [8,3] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [9,3] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Stroganoff AArmor 0x1 Level(10, Ally, 0)   [11,3] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Brudet WyvernRider_F 0x1 Level(10, Ally, 0)   [10,3] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
-	UNIT
+
+UNIT Aeteria SArmor 0x1 Level(1, NPC, 0)     [4,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria LArmor 0x1 Level(1, NPC, 0)     [4,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Soldier 0x1 Level(1, NPC, 0)     [3,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Druid 0x1 Level(1, NPC, 0)     [3,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Soldier 0x1 Level(1, NPC, 0)     [2,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Merc 0x1 Level(1, NPC, 0)     [2,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Fighter 0x1 Level(1, NPC, 0)     [1,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria Fighter 0x1 Level(1, NPC, 0)     [1,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria ACav 0x1 Level(1, NPC, 0)     [0,8] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+UNIT Aeteria SCav 0x1 Level(1, NPC, 0)     [0,9] 0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] BossAI
+
+UNIT
 
 Traps1:
 TelliusTorchOn(9,17,3)
@@ -174,13 +214,17 @@ STAL 15
 
 Text(Part3Chapter2Opening1)
 
+CHECK_EVENTID 0x95 //raial route
+BNE 0x9000 0xC 0x0
+
 Music(0x28C)
 SetBackground(0x3C)
-Text(Part3Chapter2Opening2) //wreyvine
+//Text(Part3Chapter2Opening2) //wreyvine
+CharacterConditionalDialog(Kian,Part3Chapter2Opening2KianRaial,Part3Chapter2Opening2Alt)
 
 Music(0x26e)
 SetBackground(0x33)
-Text(Part3Chapter2Opening3) //aeteria
+Text(Part3Chapter2Opening3New) //aeteria
 
 MUSCSLOW 0x4A
 SetBackground(0x3C)
@@ -194,9 +238,36 @@ FADU 15
 
 Music(0x1A2)
 
-Text(Part3Chapter2Opening5) //wreyvine
+Text(Part3Chapter2Opening5New) //wreyvine
 
-Text(Part3Chapter2Opening6) //aeteria
+//Text(Part3Chapter2Opening6) //aeteria
+
+GOTO 0x9001
+LABEL 0x9000 //graham route stuff
+
+CharacterConditionalDialog2(Kian,Part3Chapter2Opening2KianGraham,Part3Chapter2Opening2AltAlt)
+
+Music(0x26e)
+SetBackground(0x33)
+Text(Part3Chapter2Opening3NewAlt) //aeteria
+
+FADI 60
+CLEAN
+LOAD1 0x1 EnemyUnits
+STAL 30
+FADU 15
+
+STAL 20
+MUSCSLOW 0x4A
+SetBackground(0x3C)
+Text(Part3Chapter2Opening4NewAlt) //wreyvine
+
+Music(0x1A2)
+
+Text(Part3Chapter2Opening5NewAlt) //aeteria
+
+
+LABEL 0x9001
 
 Part1Enemy(Breve, SteelSword)
 Part1Enemy(Hildr, HandAxe)
@@ -226,6 +297,9 @@ CHAI Ulrich
 	FADU 60
 
 	VCWF 6
+
+	FlagConditionalDialogNew(0x95,Part3Chapter2Turn1PP,Part3Chapter2PostPrepsGraham,6,7)
+
 	ENDA
 
 EndingScene:
@@ -256,6 +330,9 @@ FADI 60
 	CUSA Ogrim
 	CUSA Lili
 
+CHECK_EVENTID 0x95 //raial route
+BNE 0x9000 0xC 0x0
+
 DoAllThree
 LOAD2 0x1 CutsceneUnits
 Music(0x29A)
@@ -284,6 +361,41 @@ Music(0x26E)
 SetBackground(0x2b)
 Text(Part3Chapter2Ending5)
 
+GOTO 0x9001
+LABEL 0x9000
+
+DoAllThree
+LOAD2 0x1 CutsceneUnits
+Music(0x29A)
+SetBackground(0x34)
+Text(Part3Chapter2Ending1Graham)
+FADI 60
+CLEAN
+
+//units move over
+//camera pan
+CAM1 [9,5]
+
+Music(0x3E3)
+SetBackground(0x2b)
+Text(Part3Chapter2Ending2Graham)
+ClearBackground
+
+STAL 5
+CameraCursor(Ulrich)
+STAL 15
+Text(Part3Chapter2Ending3Graham)
+
+STAL 15
+
+Music(0x26E)
+SetBackground(0x2b)
+Text(Part3Chapter2Ending4Graham)
+
+LABEL 0x9001
+
+FADI 60
+
 	REVEAL Ulrich
 	REVEAL Breve
 	REVEAL Hildr
@@ -307,8 +419,6 @@ Text(Part3Chapter2Ending5)
 	REVEAL Ogrim
 	REVEAL Lili
 
-
-FADI 60
 CLEAN
 	DoAllThree
 	VCWF 0
@@ -327,6 +437,6 @@ SetBackground(0x41)
 //TextCont(SylmeriaScene2, 0x323)
 TextCont(SylmeriaScene2, 0x28E)
 
-	MNC2 0x15
+	MNC2 0x2E
 	NoFade
 	ENDA

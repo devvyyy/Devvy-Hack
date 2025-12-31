@@ -13,8 +13,55 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TURN 0x0 Turn2Stuff [2,0] 0x0
+TURN 0x0 Turn3Stuff [3,0] 0x0
+TURN 0x0 Turn4Stuff [4,0] 0x0
+TURN 0x0 Turn5Stuff [5,0] 0x0
 TURN 0x3 EndingScene [8,0] 0x0
 	END_MAIN
+
+Turn2Stuff:
+
+ChargeWarningNew(Gerolf, Part3Chapter1Gerolf,1)
+ChargeWarningNew(Sequin, Part3Chapter1Sequin,2)
+ChargeWarningNew(Nora, Part3Chapter1Nora,3)
+ChargeWarningNew(Kane, Part3Chapter1Kane,4)
+
+NoFade
+ENDA
+
+Turn3Stuff:
+
+ChargeWarningNew(Floris, Part3Chapter1Floris,1)
+ChargeWarningNew(Mocha, Part3Chapter1Mocha,2)
+ChargeWarningNew(Latte, Part3Chapter1Levain,3)
+ChargeWarningNew(Eisner, Part3Chapter1Eisner,4)
+ChargeWarningNew(Doppio, Part3Chapter1Doppio,5)
+
+NoFade
+ENDA
+
+Turn4Stuff:
+
+ChargeWarningNew(Floris, Part3Chapter1Wegman,1)
+ChargeWarningNew(Mocha, Part3Chapter1Therese,2)
+ChargeWarningNew(Latte, Part3Chapter1Xavier,3)
+
+CHECK_ALIVE Lennard; BEQ 6 0x0 0xC;CAM1 Lennard;STAL 20; FlashCursor(Lennard,60); CharacterConditionalDialog(Therese,Part3Chapter1Lennard,Part3Chapter1LennardAlt); LABEL 6
+
+
+NoFade
+ENDA
+
+Turn5Stuff:
+
+ChargeWarningNew(Floris, Part3Chapter1Ogrim,1)
+ChargeWarningNew(Mocha, Part3Chapter1Noel,2)
+ChargeWarningNew(Latte, Part3Chapter1Yory,3)
+ChargeWarningNew(Eisner, Part3Chapter1Iris,4)
+
+NoFade
+ENDA
 
 ALIGN 32
 CharacterBasedEvents:
@@ -242,6 +289,25 @@ EndingScene:
 Music(0x288)
 SetBackground(0x3C)
 TextCont(Part3Chapter1Ending1, 0x26E)
+
+CHECK_EVENTID 0x95 //raial route
+BNE 0x9000 0xC 0x0
+
+Text(Part3Chapter1Ending2Raial) //raial
+
+GOTO 0x9001
+LABEL 0x9000
+
+Music(0x4d)
+SetBackground(0x2E)
+
+Text(Part3Chapter1Ending2Graham) //graham
+
+Music(0x92)
+
+Text(Part3Chapter1Ending2Graham2)
+
+LABEL 0x9001
 
 FADI 20
 QuickRemu(Ulrich,2)

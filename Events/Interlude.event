@@ -141,7 +141,9 @@ BeginningScene:
 	Music(0x29A)
 	Text(InterludeOpening1Point5)
 	STAL 5
-	GotoPrepScreen
+	FADI 60
+	CALL $591FD8 //prep screen
+	FADU 60
 	CenterTextbox(RecruitText)
 	ENDA
 
