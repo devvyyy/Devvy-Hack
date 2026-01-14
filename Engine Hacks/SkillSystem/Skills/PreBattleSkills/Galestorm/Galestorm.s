@@ -30,10 +30,10 @@ beq		GoBack
 @strh r3,[r0]
 
 @add 3 Atk
-mov r1, #0x5A
-ldrh r0, [r4, r1] @atk
-add r0, #3
-strh r0, [r4,r1]
+@mov r1, #0x5A
+@ldrh r0, [r4, r1] @atk
+@add r0, #3
+@strh r0, [r4,r1]
 
 @ldrb r0, [r4, #0x16] @attacker spd
 @ldrb r1, [r5, #0x16] @defender spd
@@ -49,15 +49,15 @@ strh r0, [r4,r1]
 @str r1,[r0]
 
 @add 200% of foes missing hp as damage
-ldrb  r0,[r5,#0x12] @defender max hp
-ldrb  r1,[r5,#0x13] @defender current hp
-sub   r0,r1
-lsr   r0,#0x1     @missing hp/2
-mov   r2,#0x5A
-ldrh  r1,[r4,r2]
+@ldrb  r0,[r5,#0x12] @defender max hp
+@ldrb  r1,[r5,#0x13] @defender current hp
+@sub   r0,r1
+@lsr   r0,#0x1     @missing hp/2
+@mov   r2,#0x5A
+@ldrh  r1,[r4,r2]
+@@add   r1,r0,r1
 @add   r1,r0,r1
-add   r1,r0,r1
-strh  r1,[r4,r2]
+@strh  r1,[r4,r2]
 
 GoBack:
 pop		{r4-r5}

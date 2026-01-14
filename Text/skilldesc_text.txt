@@ -1022,6 +1022,14 @@ both sides' missing HP at start[N]
 of combat.[N]
 - Immune to status staves.[X]
 
+## SD_PyricMenace
+# Grants Atk = 50% of both sides'Nmissing HP at start of combat.[X]
+Incinerate[N]
+- On turns 1-3, Aoife disables all[N]
+post-combat effects on the map.[N]
+- After any foe's combat, deals 5[N]
+true damage to that foe.[X]
+
 ## SD_EustacePersonal
 Hollow Front[N]
 - If Eustace's HP = 50% or more, grants[N]
@@ -1103,8 +1111,8 @@ less HP.[X]
 Blazer[N]
 - Frye's physical swords deal damage[N]
 based off 50% of foe's Def/Res.[N]
-- If first attack hits, grants an[N]
-additional strike after.[X]
+- If first attack hits, triggers[N]
+an additional strike after.[X]
 
 ## SD_CurtainCall
 Curtain Call: If foe's HP is below[N]
@@ -1200,10 +1208,10 @@ Promenade: If within 2 spaces of a[N]
 cavalry ally, unit takes -2 damage.[X]
 
 ## SD_Galestorm
-# Pursuer
+# Pursuer; grants DiraNAtk = 3 + 50% of foe's missing HP.[N]
 Dirty Fighting[N]
-- If foe can't counter, grants Dira[N]
-Atk = 3 + 50% of foe's missing HP.[N]
+- If foe can't counter, Dira's[N]
+follow-ups trigger 3 times.[N]
 - Inflicts Rooted on foe for 1 turn[N]
 after combat.[X]
 
@@ -1212,6 +1220,14 @@ Dira lacerates the enemy, dealing[N]
 bonus damage = X% of foe's missing HP.[N]
 (If at 1 range, X = 200%; if 2+,[N]
 X = 100%; can't follow-up.)[N]
+[X]
+
+## SD_Rebuttal
+Back at You[N]
+- Unit can prepare a Rebuttal.[N]
+- While active, reflect all damage[N]
+that would be dealt (for 1 combat;[N]
+status lasts 1 turn).
 [X]
 
 ## SD_Sanctuary
@@ -2667,7 +2683,7 @@ adjacent ally.[N]
 
 ## SD_BreathOfLife
 # Merciful Wings
-Wings of a Savior[N]
+Heaven's Wings[N]
 - If Messel initiates, grants Rsl +10[N]
 during combat and restores 33% of[N]
 allies' max HP to allies within[N]
