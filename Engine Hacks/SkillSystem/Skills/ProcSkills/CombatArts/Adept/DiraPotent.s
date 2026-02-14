@@ -67,8 +67,7 @@ bne End
     ldr r2, [r6]
     mov r0, #0x4 @ follow up
     tst r0, r2
-    bne End
-
+    beq End
 @and increase damage by 5!
 @ldrh r0,[r7,#4]
 @add r0, #5
@@ -89,7 +88,7 @@ strb r0, [r6,#4] @save the skill ID at byte #4
 mov r1, #0x38
 mov r2, sp
 ldr r0, [r2,r1] @location of number of rounds on the stack... hopefully
-add r0, #2
+add r0, #1
 str r0, [r2,r1]
 
 @and increase damage by 5!

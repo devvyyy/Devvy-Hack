@@ -160,6 +160,13 @@ POIN NewAuraSkillCheck
 WORD InspireID
 
 ALIGN 4
+AoifeAura:
+#incbin "AoifeSkill/BitterCold.dmp"
+POIN NewAuraSkillCheck
+POIN GetUnitsInRange
+WORD ResolutePyreID
+
+ALIGN 4
 BitterCold:
 #incbin "BitterCold/BitterCold.dmp"
 POIN NewAuraSkillCheck

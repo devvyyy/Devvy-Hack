@@ -743,7 +743,7 @@ grants another action (max 3; resets[N]
 only after reverting).[X]
 
 ## SD_Gaming
-# Flow, temp flags 0x26-0x28 (used to use 0x25 also) MAKE THIS 3 stacks now!!
+# Flow, temp flags 0x26-0x28 (used to use 0x25 also) MAKE THIS 3 stacks now!! Apex Predator
 Thrill of the Hunt[N]
 - Kills grant Klavdia a stack (max; 3).[N]
 - Stacks grant Atk +1, Hit +5 each.[N]
@@ -1016,19 +1016,19 @@ the next physical combat, and follow-up and[N]
 foe cannot.[X]
 
 ## SD_ResolutePyre
-Resolute Pyre[N]
-- Grants Aoife Atk/Crit = 50% of[N]
-both sides' missing HP at start[N]
-of combat.[N]
-- Immune to status staves.[X]
+Proper Etiquette[N]
+- On turns 1-3, Aoife disables all[N]
+post-action effects on the map.[N]
+- Inflicts Prt/Rsl -5 on all foes[N]
+adjacent to another foe.[X]
 
 ## SD_PyricMenace
-# Grants Atk = 50% of both sides'Nmissing HP at start of combat.[X]
-Incinerate[N]
+# Grants Atk = 50% of both sides'Nmissing HP at start of combat. Scorched Earth, uses flag 0x9B
+Proper Etiquette[N]
 - On turns 1-3, Aoife disables all[N]
-post-combat effects on the map.[N]
-- After any foe's combat, deals 5[N]
-true damage to that foe.[X]
+post-action effects on the map.[N]
+- Inflicts Prt/Rsl -5 on all foes[N]
+adjacent to another foe.[X]
 
 ## SD_EustacePersonal
 Hollow Front[N]
@@ -1075,7 +1075,7 @@ another action (once per turn).[X]
 
 ## SD_Lionheart
 # add vantage ?! Lionheart
-Adrenaline[N]
+Fight and Flight[N]
 - Grants Lennard +1 Avoid/Crit per[N]
 missing HP, upped to +3 below 50% HP.[N]
 - Take 4 damage after combat.[N]
@@ -1094,8 +1094,8 @@ Spirit Cleave: Deals bonus damage =[N]
 Maestro[N]
 - Ilse's Rifles have unique properties:[N]
 Hit +30, grants Atk = 25% of Dex,[N]
-and deals bonus damage = 50% of foe's[N]
-missing HP at start of combat.[X]
+and grants Crit = distance from foe,[N]
+x 10 (capped at 4 spaces).[X]
 
 ## SD_OldManSkill
 Borrowed Time: Grants Avoid +25 for[N]
@@ -1209,9 +1209,9 @@ cavalry ally, unit takes -2 damage.[X]
 
 ## SD_Galestorm
 # Pursuer; grants DiraNAtk = 3 + 50% of foe's missing HP.[N]
-Dirty Fighting[N]
+Cheap Shot[N]
 - If foe can't counter, Dira's[N]
-follow-ups trigger 3 times.[N]
+follow-ups trigger twice.[N]
 - Inflicts Rooted on foe for 1 turn[N]
 after combat.[X]
 
@@ -1886,7 +1886,8 @@ bonus damage = damage reduced.[X]
 
 ## SD_Warden
 # after all post-combat effects trigger,[N]
-Light That Sears Through Heaven[N]
+# Total Eclipse / And The Skies Descended
+Thus The Sun Went Cold[N]
 - If foe initiates combat, after combat,[N]
 if the Warden's HP is 50% or less, deals[N]
 99 true damage to all foes (can't kill)[N]
@@ -1940,7 +1941,8 @@ Warlock: Adjacent allies target[N]
 foe's Res.[X]
 
 ## SD_Blackfire
-Ravenous Vortex[N]
+# Ravenous Vortex
+Entropy[N]
 - Penny inflicts Atk -5 on adjacent foes.[N]
 - If tome is equipped, grants WTA and[N]
 triples WT effects for both sides.[X]
@@ -1970,7 +1972,8 @@ Moxie[N]
 taken = 5 + (Spd - foe's Spd; min 0).[X]
 
 ## SD_Outrider
-Joust[N]
+# Vae Victis
+Trample[N]
 - Grants Cortado Prt/Rsl = Move used.[N]
 - If all Move is used, always land[N]
 a critical hit, and Canto 5 spaces[N]
@@ -2013,7 +2016,7 @@ If foe is magical, grants AS +3.[X]
 
 ## SD_Intrepid
 # Dive-Bomb
-Dive-Bomb[N]
+Death From Above[N]
 - If Brudet initiates and foe's HP is full,[N]
 follow-up and foe can't, and if also at[N]
 1 range, follow-ups occur before foe[N]
@@ -3002,8 +3005,8 @@ unit's HP is 50% or more, unit can[N]
 make a follow-up and foe cannot.[X]
 
 ## SD_Resolve
-# Inner Flame
-Coeur Allum[0xE9][N]
+# Inner Flame, Allum[0xE9]
+Coeur Ardent[N]
 - If Selwyn's HP is 50% or less,[N]
 multiplies Eth/Skill/Spd by 1.5x.[N]
 - Grants Atk +5 to allies within[N]

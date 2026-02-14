@@ -15,7 +15,7 @@ PointerList:
 TurnBasedEvents:
 //TurnEventEnemy(0,PrisonTalk1,1,1)
 TurnEventEnemy(0,EustaceStuffIDK,1,1)
-TURN 0x0 CaptainsMoment [2,0] 0x0
+//TURN 0x0 CaptainsMoment [2,0] 0x0
 	END_MAIN
 
 ALIGN 32
@@ -295,6 +295,7 @@ UNIT AeteriaStealable AArmor 0x1 Level(6, Enemy, 1)     [16,6] 0b 0x0 0x0 0x0 [S
 
 UNIT Stroganoff AArmor 0x1 Level(8, NPC, 0)     [17,12] 0b 0x0 0x0 0x0 [SteelLabrys,EmeraldAxe,0x65,0xf1] BossAI
 UNIT Brudet WyvernRider_F 0x1 Level(9, NPC, 1)     [18,14] 0x0 0x0 0x0 0x0 [IronLabrys,Halberd,Elixir,] BossAI
+UNIT Klavdia WyvernKnight 0x1 Level(9, Ally, 0)     [17,15] 0b 0x0 0x0 0x0 [MageAxe,0x5A,PureWater] [0x0,0x0,0x0,0x0]
 	UNIT
 
 WahooNewUnit: //vera vale

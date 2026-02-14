@@ -13,7 +13,7 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-
+TURN 0x0 UnsetAoifePassive [4,0] 0x0
 	END_MAIN
 
 ALIGN 32
@@ -217,6 +217,10 @@ LABEL 0x9001
 NoFade
 ENDA
 
+UnsetAoifePassive:
+UnsetFlag(0x9B)
+NoFade
+ENDA
 
 Traps1:
 //BLST [9,4] IronBallista
@@ -255,6 +259,7 @@ STAL 15
 	Text(ChP2FinaleOpening2)
 	Music(0x272)
 	Text(ChP2FinaleOpening3)
+	SetFlag(0x9B)
 	CALL $591FD8 //prep screen
 	FADU 60
 	STAL 25
@@ -278,6 +283,14 @@ LABEL 0x9000
 TextCont(ChP2FinalePostPreps, 0x196) //noctum
 
 LABEL 0x9001
+
+STAL 10
+CameraCursor(Chiffon)
+SOUN 0x119 //bolting sparks
+ENUT 0x24
+ENUT 0x5
+STAL 0x50
+SOUN 0x82 //sleep staff sound
 
 	MUNO
 	NoFade

@@ -84,15 +84,56 @@ lsr  r2, #2 @divide this by 4
 add  r0, r2
 strh r0, [r4,r1]
 
-@add 50% of foes missing hp as damage
-ldrb  r0,[r5,#0x12] @defender max hp
-ldrb  r1,[r5,#0x13] @defender current hp
-sub   r0,r1
-lsr   r0,#0x1     @missing hp/2
-mov   r2,#0x5A
-ldrh  r1,[r4,r2]
-add   r1,r0,r1
-strh  r1,[r4,r2]
+@ max range?
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#2
+bne MaybeMore
+
+@add 5 crit
+mov r1, #0x66
+ldrh r0, [r4, r1] @crt
+add r0, #10
+strh r0, [r4,r1]
+b End
+
+@ lets try this again
+MaybeMore:
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#3
+bne MaybeMoreMore
+
+@add 15 crit
+mov r1, #0x66
+ldrh r0, [r4, r1] @crt
+add r0, #20
+strh r0, [r4,r1]
+b End
+MaybeMoreMore:
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#4
+bne MaybeMoreMoreMore
+
+@add 15 crit
+mov r1, #0x66
+ldrh r0, [r4, r1] @crt
+add r0, #30
+strh r0, [r4,r1]
+b End
+
+MaybeMoreMoreMore:
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#5
+bne End
+
+@add 15 crit
+mov r1, #0x66
+ldrh r0, [r4, r1] @crt
+add r0, #40
+strh r0, [r4,r1]
 
 End:
 pop {r4-r7, r15}

@@ -47,6 +47,21 @@ str	r0, [r4,#0x0C]
 
 @changes attacker and defender around for every routine call
 @(currently commented out because no skill makes use of it, but has been tested)
+
+AoifeSkill:
+@check if flag 0x9B set; if set, end
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0x9B
+.short 0xF800
+cmp r0,#1
+bne Loop @if flag is not on, go to loop
+@check if turn is bigger than 3
+ldr	r0,=#0x202BCF0
+ldrh	r0, [r0,#0x10]
+cmp	r0, #0x03
+bhi	Loop
+b End
 Loop:
 ldr	r3, [r7]	@load pointer to routine
 cmp	r3, #0x00	@if terminator, end
