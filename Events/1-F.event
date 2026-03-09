@@ -37,6 +37,7 @@ CharacterEventBothWays(0x5,AffoGorloisConvo, Affo, Gorlois)
 CharacterEventBothWays(0x1,IrisOgrimConvo, Lili, Ogrim)
 CharacterEventBothWays(0x7,IronRuneConvo, Gorlois, Stroganoff)
 //CharacterEventBothWays(0x12,AnsgarThereseConvo, Ansgar, Therese)
+CharacterEventBothWays(0x12,IrisSequinConvo, Sequin, Iris)
 //CharacterEventBothWays(0x13,AffoKingConvo, Affo, King)
 CharacterEventBothWays(0x86,NoraKingConvo, Nora, King)
 //CharacterEventBothWays(0x15,StroganSeqConvo, Stroganoff, Sequin)
@@ -580,6 +581,7 @@ LABEL 0x0
 CHECK_EVENTID 0xC
 BNE 0x1 0xC 0x0
 SpawnReinforcements(RightFortRein1)
+Text(ExtraReinDialogue)
 LABEL 0x1
 NoFade
 ENDA
@@ -652,7 +654,8 @@ BROWNBOXTEXT PalaceText [8,8]
 STAL 5
 BROWNBOXTEXT ThroneRoomText [8,8]
 STAL 15
-CharacterConditionalDialog(Klavdia,Ch6Opening1,Ch6OpeningAlt1)
+//CharacterConditionalDialog(Klavdia,Ch6Opening1,Ch6OpeningAlt1)
+Text(Ch6Opening1)
 
 FADI 60
 CLEAN
@@ -705,6 +708,14 @@ AffoGorloisConvo:
 IrisOgrimConvo:
 	MUSI
 	Text(IrisOgrimTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+
+IrisSequinConvo:
+	MUSI
+	Text(IrisSequinTalk)
 	MUNO
 	MURE 2
 	NoFade
@@ -1119,23 +1130,26 @@ MUSCMID 0x7FFF
 STAL 120
 EVBIT_F 0x2
 CLEAN
-CHECK_EVENTID 0x7E
-BEQ 0x9000 0xC 0x0
+//CHECK_EVENTID 0x7E
+//BEQ 0x9000 0xC 0x0
 
 //gaiden unlocked ending
 
-FADI 16
+//1-Fx mandatory version
 
 SVAL 0xB 0x10000C //change map
+
 LOMA 0x5
 SetFlag(0x84)
+
+CamOn
+LOAD2 0x1 CutsceneUnitsFlashback
+CamOff
+
 FADU 8
 STAL 40
 BROWNBOXTEXT OtherDayText [8,8]
 STAL 20
-CamOn
-LOAD2 0x1 CutsceneUnitsFlashback
-CamOff
 STAL 30
 CameraCursor(Ulrich)
 Text(Gaiden2Opening1)
@@ -1144,13 +1158,13 @@ STAL 10
 Text(Gaiden2Opening2)
 STAL 15
 MNC2 0x3E
-GOTO 0x9001
+//GOTO 0x9001
 
 //normal ending
-LABEL 0x9000
-SetBackground(0x35)
-MNC2 0xC //part 2 chapterrr
-LABEL 0x9001
+//LABEL 0x9000
+//SetBackground(0x35)
+//MNC2 0xC //part 2 chapterrr
+//LABEL 0x9001
 //MNTS 0x1 //return to title screen
 ENDA
 

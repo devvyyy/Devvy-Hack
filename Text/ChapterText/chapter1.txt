@@ -56,7 +56,7 @@ Where are they?[.6] I fear it has been hours[Beat][N]
 Shall we go in and check[,] Sequin?[AN]
 
 [FFR]
-Sequin![.6] Nora![.6] You members of the 8th platoon[N]
+Sequin![.6] Nora![.6] You members of the 8th Platoon[N]
 were supposed to stay at Castle Wreyvine.[AN][CloseSpeechSlow][MoveMidRight]
 
 [L]
@@ -436,7 +436,15 @@ by the way.[AN]
 Have you loosened up yet[,] Sir?[AN]
 
 [OpenMidLeft]
-Sir Ulrich![.6] Er[,] I[Beat] have a question[Beat][AN]
+Sir Ulrich![.6] Gah! You need to stop taking[N]
+me by surprise.[.6] It's annoying.[AN]
+
+[OpenMidRight]
+I'm not trying to.[AN]
+
+[OpenMidLeft]
+Hey[,] I[Beat] have a question[Beat][N]
+It's a quick one.[AN]
 
 [OpenMidRight]
 Alright[,] take your time.[.6] You've been acting[N]
@@ -485,6 +493,59 @@ nice banquet at my place![AN]
 
 [OpenMidRight]
 That sounds like a plan.[.6] Let's hope[Beat][AN]
+
+[X]
+
+## UlrichBreveA
+[3L]
+[MR]
+You keep your blade cleaner than anyone in the[N]
+platoon[,] Breve.[.6] A true professional.[AN]
+
+[ML]
+Thank you[,] sir.[.6] A clean blade is a reliable one.[6N]
+One less thing to worry about when everything[N]
+goes to hell.[AN]
+
+[MR]
+You worry a lot[,] don't you?[.6] About things going[N]
+to hell[,] getting out of this war alive.[AN]
+
+[ML]
+Well[Beat] Don't you, sir?[AN]
+
+[MR]
+Every day.[.6] Hell[,] I probably worry more than[N]
+you do.[.6] But my fight[Beat] it ends here[,][N]
+on this field.[AN]
+I've accepted that.[.6] You[,] though[Beat][N]
+you're still fighting for something after.[AN]
+It's that bakehouse[,] am I correct?[AN]
+
+[ML]
+[Beat]You think[Beat] It's a stupid dream for a[N]
+knight[,] isn't it?[AN]
+
+[MR]
+No[,] Sir.[.6] Honestly[,] it's the only kind of[N]
+dream worth having.[.6] Something that isn't[N]
+tied to slaughter.[AN]
+It's the kind of dream we're all supposed[N]
+to be fighting for.[.6] A nice[,] warm place[N]
+where a man can just[Beat] bake bread.[AN]
+
+[ML]
+I suppose so.[.6] If we make it[,] sir[Beat][N]
+Tsch.[.6] You're gonna be one of my[N]
+first patrons[,] right?[AN]
+
+[MR]
+Do you even need to ask?[.6] Now[Beat] let's make sure[N]
+you get the chance to start it.[.6] There's[N]
+an enemy approaching from the east.[AN]
+
+[ML]
+Yes[,] sir.[.6] My blade has never been readier.[AN]
 
 [X]
 
@@ -608,6 +669,66 @@ if you dare!![AN][Smile]
 
 [X]
 
+## HildrUlrichA
+[3L]
+[ML][LoadHildr][MR][LoadUlrich]
+
+[ML]
+Did you see that[,] sir?![.6] You saw it[,] right?![.6][N]
+I scampered around and outmaneuvered[N]
+three of 'em at once![AN][C]
+It was like a whirlwind of[Beat] GLORIOUS[.4][N]
+WREYVIAN[.4] STEEL!![AN]
+
+[MR]
+I saw.[.6] I also saw you almost take a sword[N]
+to the ribs because you were too busy[Beat][N]
+shouting about it.[AN]
+
+[ML]
+Details[,] details![.6] I'm a legend in the making![6N]
+That griffon boy and Mother are definitely[N]
+watching me now![AN]
+
+[MR]
+Hildr.[.6] That fire in you[Beat] it's a good thing.[6N]
+It's what keeps the rest of us going on[N]
+the bad days.[AN][C]
+But a fire without control can burn[N]
+the whole house down if it isn't careful.[AN]
+
+[ML]
+Whuuuuh?[.6] Your analogy doesn't even[N]
+make any sense![AN]
+
+[MR]
+Let me put it this way:[.4] you fight for glory.[6N]
+You fight to be seen.[.6]That's fine[,] whatever.[.6][N]
+But you're also fighting for the person[AN]
+next to you.[AN]
+For Breve[,] for Ansgar[,] and even for me.[6N]
+Your life[Beat] it's not just yours to throw[N]
+away anymore.[.6] We need you.[AN]
+
+[ML]
+Oh.[.6] I[Beat] never thought about it like that.[6N]
+I just wanted to be a hero.[AN]
+
+[MR]
+To us[,] you already are[,] Hildr.[.6] Just[Beat] try to be[N]
+a living one[,] alright?[.6] So you can hear[N]
+the songs bards sing of your moxie.[AN]
+
+[ML]
+Okay[,] sir.[.6] For the platoon.[.6] But I'm[N]
+still gonna be the most legendary[N]
+hero Ideon has ever seeeeeeeen![AN]
+
+[MR]
+Sigh[Beat][Smile] I'll always be there to drag you[N]
+out of trouble[,] okay?[AN]
+
+[X]
 
 ## SeqEvelTalk2
 [OpenMidLeft][LoadSequin]
@@ -649,7 +770,7 @@ but[Beat] That's impossible.[.6] It was[N]
 the only time I saw fear in his eyes.[AN]
 
 [ML]
-That's[Beat]How are you so calm saying that?![6N]
+That's[Beat] How are you so calm saying that?![6N]
 Don't you[Beat] hate them[,] Nora?![.6] You[N]
 act like it was just another day.[AN]
 Aeteria burned down my home[,] so I'll[N]
@@ -806,6 +927,7 @@ I can never read that guy[Beat][AN]
 [X]
 
 ## AnsgarAffoTalk3
+# C
 [OpenMidLeft][LoadAffo]
 [OpenMidRight][LoadAnsgarLeft]
 [3L]
@@ -880,6 +1002,109 @@ I don't mind listening.[AN]
 
 [OpenMidRight]
 [Smile]Really?[.6] I'd love to[,] buddy![AN][Smile]
+
+[X]
+
+## AnsgarAffoA
+# woo! proper formatting
+[OpenMidLeft][LoadAffo]
+[OpenMidRight][LoadAnsgarLeft]
+[3L]
+
+[OpenMidRight]
+Hey now,[.4] Sir.[.6] Ya seem a little[N]
+less tense than usual.[.6] Somethin' good[N]
+happen on yer end?[AN]
+
+[OpenMidLeft]
+I suppose so.[.6] I've been speaking with[N]
+the Lieutenant.[.6] Things are clearer now.[AN]
+
+[OpenMidRight]
+Aye,[.4] that's good to hear.[.6] Real good.[6N]
+Always helps to have a friend to talk to,[.4][N]
+eh?[.6] Especially one like the Lieutenant.[AN][C]
+He's a good man.[.6] Carries a heavy load,[.4][N]
+but his heart's in the right place.[AN]
+
+[OpenMidLeft]
+He is.[.6] He[Beat] reminds me of someone.[6N]
+Someone I can't quite place.[AN]
+
+[OpenMidRight]
+See?[.6] The fog's liftin' already![.6] Before ya[N]
+know it,[.4] you'll be rememberin' yer favorite[N]
+brand o' ale and complainin' 'bout taxes![AN][C]
+[Smile]Wahahaha![AN][Smile]
+
+[OpenMidLeft]
+[Beat]Sir Ansgar.[.6] Your family[Beat][6N]
+You said you fight for them.[AN]
+
+[OpenMidRight]
+Aye,[.4] every day.[.6] My wife,[.4] my kids[Beat][N]
+They're the reason I hoist this armor[N]
+on my back.[AN]
+I want 'em to grow up in a world where they[N]
+don't have to fear Imperial banners on the[N]
+horizon[,] ya know?[.6] A good world.[AN]
+
+[OpenMidLeft]
+A good world.[.6] Makes sense[,] I think I want[N]
+that too.[.6] I've never thought about[N]
+it much before.[AN]
+
+[OpenMidRight]
+Well,[.4] there ya go![.6] A goal for after the war.[6N]
+Find a nice[,] quiet spot,[.4] maybe try a[N]
+trade[,] eh?[.6] Learn to weld?[.6] I can teach ya.[AN]
+Not sure if yer built right for that[,][N]
+but[Beat] The world's gonna need good men[N]
+to rebuild it[,] like you.[AN]
+
+[OpenMidLeft]
+Something like that.[.6] Perhaps.[.6][N]
+After this war is over[Beat][6N]
+I've decided what I want to do.[AN]
+
+[OpenMidRight]
+Oh yeah?[.6] Don't keep a guy in suspense![AN]
+
+[OpenMidLeft]
+I want to learn how to use my powers[N]
+for something that can[Beat] maybe[N]
+restore instead of destroy.[AN]
+
+[OpenMidRight]
+[Beat]Well,[.4] I'll be.[.6] A builder,[.4] eh?[6N]
+That's a fine and noble craft.[.6] Takes a steady[N]
+hand and a good eye.[AN]
+
+[OpenMidLeft]
+My hands have only ever been steady for[N]
+war.[.6] I want to change that.[.6] I was wondering if[Beat][N]
+after[Beat] If you would teach me.[AN]
+
+[OpenMidRight]
+Teach ya?[.6] To smith?[.6] O Gato,[.4] I'd be honored![6N]
+We'll start ya on somethin' simple.[.4][N]
+Nails,[.4] maybe.[AN][C]
+Then hinges.[.6] Before ya know it,[.4] you'll[N]
+be forgin' doorframes and plowshares![AN]
+
+[OpenMidLeft]
+I'd like that.[AN]
+
+[OpenMidRight]
+When we get back home,[.4] you'll come to my forge.[6N]
+My wife makes a mean venison stew.[.6] The kids'll[N]
+love ya.[AN]
+I got a spot for ya at the dinner table[,][N]
+and I know we'll make a proper Wreyvian[N]
+outta ya yet![AN]
+
+[OpenMidLeft]
+[Smile]Home.[.6] Yes.[.6] I'd like that very much.[AN][Smile]
 
 [X]
 
@@ -1041,6 +1266,71 @@ with me![.6] Got it?[AN]
 
 [MR]
 [ToggleSmile]Sounds good to me.[AN]
+
+[X]
+
+## AnsgarBreveA
+[OpenMidLeft][LoadAnsgar][OpenMidRight][LoadBreve]
+[3L]
+
+[OpenMidLeft]
+Y'know,[.4] Breve.[.6] I was thinkin' 'bout what[N]
+ya said.[.6] 'Bout openin' that bakehouse.[AN]
+
+[OpenMidRight]
+What about it?[.6] Don't tell me you're gonna[N]
+make fun of me for it now.[AN]
+
+[OpenMidLeft]
+Make fun?[.6] Buddy,[.4] I think it's the best[N]
+idea you've ever had.[.6] Honest work,[.4] that is.[AN]
+Nothin' better than the smell o' fresh bread.[AN]
+
+[OpenMidRight]
+[Beat]Yeah,[.4] well.[.6] It's just a stupid dream.[6N]
+First[,] we've got a war to win.[AN]
+
+[OpenMidLeft]
+Aye,[.4] that we do.[.6] But after[Beat][N]
+I was thinkin'.[.6] A good baker needs a good oven.[6N]
+And a good oven needs a good smith.[AN]
+
+[OpenMidRight]
+[Pause]Wew.[.6] I don't think I like what[N]
+you're getting at,[.4] Gary[Beat][AN]
+
+[OpenMidLeft]
+I'm sayin' that when this is all over,[.4] and[N]
+you find a nice spot for yer shop[Beat][N]
+You'll come to me.[AN]
+I'll build ya the best damn brick oven this[N]
+side o' the bridge.[.6] Free o' charge.[AN]
+Gotta support local businesses,[.4] eh?[AN]
+
+[OpenMidRight]
+[Beat]You'd[Beat] do that?[.6] Bah[,] as if[Beat][N]
+Hm[,] I guess I do believe it.[AN]
+
+[OpenMidLeft]
+'Course I would.[.6] C'mon[,] I've known you since[N]
+we were lads[,] we're basically brothers![6N]
+You've never changed.[AN]
+
+[OpenMidRight]
+Heh[Beat] Is that so?[.6] You haven't really[N]
+changed either.[.6] The only difference is[N]
+you've shaved your head.[AN]
+
+[OpenMidLeft]
+[Smile]Wahahaha![Smile] Right?[AN]
+
+[ML]
+Hey[,] you know what?[.6] I'll give you a[N]
+lifetime of sourdough as payment.[AN]
+
+[MR]
+Hah![.6] The charity I'd expect from[N]
+Breve[,] the Prickly and Valiant![AN]
 
 [X]
 

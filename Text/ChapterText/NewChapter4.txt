@@ -37,7 +37,7 @@ What was that[Beat]?[AN]
 [X]
 
 ## Ch4NewOpening2
-# the kid gets out, but... then BOOM! bolting! then white flash then footstep sounds then enemies are here
+# the kid gets out,[.4] but... then BOOM! bolting! then white flash then footstep sounds then enemies are here
 [3L]
 [FL][LoadYouth][L][LoadOldWoman][R][LoadWreyvineSoldier4][FR][LoadWreyvineSoldier2]
 
@@ -139,28 +139,32 @@ My apologies for my tardiness.[.6] We were[N]
 on our way back from a rescue mission.[6N]
 Well met[,] Sir Ulrich.[AN]
 
-[FR]
-Yo[,] what's up?[.6] Super excited to finally[N]
-get to meet you[,] man![AN]
-
 [R]
-Sir Lennard[Beat] Please maintain a baseline level[N]
-of professionalism and respect[Beat] Especially to[N]
-one as renowned as Sir Ulrich.[AN]
+Apologies for the delay,[.4] sir.[.6] We were held up[N]
+on a rescue mission near the coast.[6N]
+It is an honor to meet you,[.4] Sir Ulrich.[AN]
 
 [FR]
-My bad.[.6] Lemme start over[Beat] My name[N]
-is Lennard.[.6] It is an honor to finally[N]
-meet you[,] sir.[AN]
+Hey,[.4] what's up.[.6] It's awesome to finally[N]
+be working with you all.[AN]
 
 [R]
-[MoveR][Smile]
-Bahahaha![.6] I take it back[Beat][.6] Please[N]
-go back to regular ol' Lennard[Beat][AN][Smile]
+Lennard. A little professionalism,[.4] please.[.6] You are[N]
+addressing the Lieutenant.[AN]
+
+[FR]
+Right,[.4] my bad.[.6] I mean... it's an honor to finally[N]
+meet you,[.4] sir.[AN]
+
+[CSS]
+[R][CF][Stroganoff][MoveR]
+[Smile]
+Bahahaha![.6] Nevermind,[.4] kid.[.6] Stick with what's[N]
+natural before you sprain something.[AN][Smile]
 
 [L]
-You have my thanks for accompanying us[N]
-when our army is so worn out.[AN]
+You have my thanks for accompanying us.[.6][N]
+Our forces are stretched thin as it is.[AN]
 
 [FR]
 Good soldiers[,] I tell ya![.6] Is there[N]
@@ -172,19 +176,56 @@ anythin' else ya need?[AN]
 That's[Beat] Smoke[Beat][AN]
 
 [FR]
-Huh?[.6] I gotcha--[.4] I never took a man of the[N]
-cloth like you to be a smok-[AN]
+Smoke?[.6] I didn't take a man of the cloth[N]
+to be one for--[AN]
 
 [L]
-T-[.4]There's smoke coming from the village![AN]
+No![.6] Look![.6] There's smoke coming from the village![AN]
 
 [FFR]
 Aaaaaieeeeeee!![.6] Someone[,] please[Beat]![AN]
 [0x80][0x2D][0x84][0x8F][0x80][0x80][.4][0x80][0x2D][0x85][0x8F][0x80][0x80]
 [.6][0x80][0x2D][0x88][0x8F][0x80][0x80]
 
-[L][ClearFace][LoadUlrich]
+[L]
+Civilians[Beat] they're under attack.[AN]
+
+[CSS]
+[L][CF][LoadUlrich]
 We must move at once.[.6] Follow me![AN]
+
+[FR][CF][LoadFloris]
+Wait[,] Lieutenant![.6] Our orders![.6] We are to[N]
+rendezvous with Captain Brudet at the[N]
+southern border![AN][C]
+This is a diversion![.6] We cannot afford[N]
+to be delayed![AN]
+
+[L]
+And we cannot afford to let innocent people[N]
+burn while we stand here arguing[N]
+about it.[AN]
+
+[FR]
+But the plan![.6] If we don't secure the border,[N]
+more Imperial forces could break through and[N]
+threaten the entire capital![AN][C]
+It is a hard choice,[.4] sir,[.4] but a necessary one![AN]
+
+[L]
+To hell with the plan.[.6] Look at that village.[.6][N]
+Those are our people[,] and I am not leaving[N]
+them to die.[6N]
+That's not a hard choice.[.6] It's the only choice.[6N]
+We save the villagers,[.4] and we deal with the[N]
+consequences after.[.6] Is that understood,[.4] Father?[AN]
+
+[FR]
+[Pause]May the Hearthbringer forgive our haste.[6N]
+Yes,[.4] Lieutenant.[.6] Lead the way.[AN]
+
+[L][MoveL]
+Everyone,[.4] on me![.6] We're moving out![AN]
 
 [X]
 
@@ -588,7 +629,7 @@ Sigh[Beat][AN]
 ## Ch4NewReinText
 # turn 1 enemy phase
 [3L]
-[FL][LoadSoldier][L][LoadSoldier3][MR][LoadEdvin]
+[FL][LoadSoldier][L][LoadSoldier3][MR][EdvinYoung]
 [MR]
 
 [FL]
@@ -814,9 +855,13 @@ deserves to have a knife in his heart.[6N]
 I know it's a tall order[,] Affogato[Beat][AN]
 But if he lives[,] this city will burn.[6N]
 And the next[Beat] And the next[Beat][N]
-until Wreyvine is fully aflame.[AN][C]
+until Wreyvine is fully aflame.[AN]
+Perhaps this is outside of my duties as[N]
+your captain[,] and it isn't my call to[N]
+make[,] but[Beat][AN]
+Maybe this is the key to finishing this.[6N]
 We lost Northelm,[.4] and we failed here.[6N]
-But maybe we still have one chance.[AN]
+But we could still have one chance.[AN]
 
 [MR]
 Then give me the order.[AN]
@@ -959,9 +1004,13 @@ deserves to have a knife in his heart.[6N]
 I know it's a tall order[,] Affogato[Beat][AN]
 But if he lives[,] this city will burn.[6N]
 And the next[Beat] And the next[Beat][N]
-until Wreyvine is fully aflame.[AN][C]
+until Wreyvine is fully aflame.[AN]
+Perhaps this is outside of my duties as[N]
+your captain[,] and it isn't my call to[N]
+make[,] but[Beat][AN]
+Maybe this is the key to finishing this.[6N]
 We lost Northelm,[.4] and we failed here.[6N]
-But maybe we still have one chance.[AN]
+But we could still have one chance.[AN]
 
 [MR]
 Then give me the order.[AN]

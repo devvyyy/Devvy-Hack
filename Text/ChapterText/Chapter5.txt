@@ -2,6 +2,7 @@
  Reinforce[X]
  
 ## UM_FerricDesc
+# why the FUCK is this here
 Wulfric's ferromancy creates armor[N]
 around nearby allies, granting[N]
 a boost to Atk/Prt/Rsl.[X]
@@ -43,29 +44,56 @@ They are hoping to get a drop on us.[6N]
 Inform the others.[.6] Stay on guard.[6N]
 What matters now is how we react.[AN]
 
-[MR][ClearFace][.6][LoadNoel]
-Captain Brudet.[.6] Are we facing[Beat] sellswords?[6N]
-What is the purpose of this axe[,] if not[N]
-to cut down invading Imperial scum?[AN]
+[MR]
+We can't waste time here,[.4] not[N]
+when the kingdom is in peril.[AN]
 
 [ML]
-You are talented[,] Noel.[.6] It is a shame you[N]
-can only find solace on the battlefield.[6N]
-Will you continue to fight with us?[AN]
+I was thinking the same.[AN][C]
+Let me rally my men,[.4] and I[N]
+will join you on the battlefield[N]
+when we engage the enemy.[AN]
 
 [MR]
-Of course.[.6] My loyalty lies only to Wreyvine.[6N]
-It is not through battle[,] but through[N]
-Wreyvian piety that consoles me.[AN][Clear]
-What are your orders[,] Captain?[AN]
+Of course.[.6] No time to waste.[AN]
+
+[MR][ClearFace]
 
 [ML]
-Get in position with the others[,] Noel.[6N]
-We cannot afford to waste our opportunity.[AN]
+Ser Noel.[.6] Are you ready?[AN]
+
+[.6][LoadNoel]
+Captain[,] what is this?[.6] Are we facing[Beat][N]
+sellswords?[.6] Pah.[.6] You should've left me[N]
+back in the city.[AN]
+My axe would've been better spent protecting[N]
+those who need saving,[.4] don't you think?[6N]
+It's too good for scum like this.[AN]
+
+[ML]
+Don't think I don't smell the venom on[N]
+your fangs,[.4] Noel.[.6] You'd rather be fighting[N]
+the Empire's dogs,[.4] wouldn't you?[AN]
 
 [MR]
-I will ready my blade at once[,] Captain Brudet.[.6][N]
-Glory to the Great Flame.[AN][ClearFace]
+I don't know how you stomach them tromping[N]
+around our home like they own[N]
+the damned place![AN]
+Imperials will never be welcome within our[N]
+lands,[.4] Captain.[.6] Can you blame me for[N]
+hesitating to turn my back towards evil?[AN]
+
+[ML]
+No,[.4] at ease.[.6] I understand your[N]
+feelings all too well.[.6] But that[N]
+makes this all the more vital.[AN]
+The sooner we return to Castle Wreyvine,[4N]
+the sooner we can expel the wretched[N]
+invaders from our home.[AN]
+
+[MR]
+That day couldn't come faster[,] Captain.[.6][N]
+What are your orders?[AN]
 
 [X]
 
@@ -82,19 +110,21 @@ The Empress[,] I mean.[AN]
 Was definitely an inside job.[6N]
 Ain't there a ton of squabblin' in[N]
 the Imperial courts?[AN]
+There was probably some royal[,] uh[,][N]
+coop the that[,] or whatever[Beat][N]
+And the Empress died 'cause of it.[AN]
 
 [FL]
-Nah[,] didn't ya hear Ritchie?[.6] He said he heard[N]
-of someone who calls 'imself the Crownslayer![6N]
-Said he took down the Empress.[AN]
+Pah[,] I doubt a coup d'etat happened.[6N]
+She probably slipped on a knife or something.[.6][N]
+Or maybe someone went rogue.[AN]
 
 [MR]
-Bullshit[,] no way some rando got her.[.6][N]
-I'm tellin' ya[,] it was some Imperial who[N]
-went rogue![AN]
-
-[FL]
-No way![.6] It was that Crownslayer guy--[AN]
+No shot![.6] A Consul or an Imperial bookworm[N]
+was sick of her[,] and blew her to imperial[N]
+smithereens with a magical stick.[AN][C]
+I mean[,] there's no way it was one
+of us--[AN]
 
 [FFR]
 Hey![AN]
@@ -274,7 +304,7 @@ wounds or pray for last rites.[AN]
 [X]
 
 ## Ch5AffoFlorisTalk
-# give hardtack, give savant robes
+# give hardtack,[.4] give savant robes
 [OpenMidLeft][Affogato][OpenMidRight][Floris]
 [3l]
 
@@ -406,7 +436,7 @@ This war seems impossible.[AN][Clear]
 tactics so clearly?[AN]
 
 [OpenMidRight]
-Observation and memorization.[AN]
+Observation and memorization[,] sir.[AN]
 
 [OpenMidLeft]
 If you say so.[.6] More importantly[,] are[N]
@@ -434,7 +464,7 @@ the battle is over.[AN]
 [3l]
 
 [OpenMidLeft]
-After you listened into the Duke's speech[,][N]
+When you listened into the Duke's speech[,][N]
 it looked like your mind was elsewhere.[6N]
 What was distracting you?[AN]
 
@@ -471,9 +501,9 @@ I'll make sure of it.[AN]
 [X]
 
 ## Ch5EndingGaiden
-# if all talks were done flag 0x7B, continue the dialogue; attacked by AKATSUKI?!?1/1 WTF
+# if all talks were done flag 0x7B,[.4] continue the dialogue; attacked by AKATSUKI?!?1/1 WTF
 [3L][BoopPitch][0xD]
-
+[ToggleMouthMove]
 [ML]
 You said you've been here a lot before.[6N]
 Before what?[AN]
@@ -514,8 +544,8 @@ scout around the king's court.[AN]
 I was supposed to regroup with the division[N]
 that was directly targetting the king[,][N]
 and march towards the castle.[AN][Clear]
-I wasn't supposed to be here[,] I was supposed[N]
-to be with Aeteria's 24th Division.[AN]
+I wasn't supposed to be fighting[N]
+alongside you all.[AN]
 
 [MR]
 I knew there was something strange about[N]
@@ -575,7 +605,7 @@ someone.[.6] That's the final core I can remember.[.6][N]
 But I know I need to fulfill it.[AN]
 
 [MR]
-How[Beat] falsified are your records?[AN]
+How[Beat] falsified are your records?[6N]
 Do you even remember your name?[AN]
 
 [ML]
@@ -624,7 +654,7 @@ Just goin' on my mornin' walk[Beat][N]
 Oh my gods![.6] What the heck is[N]
 all this crap?![AN][Clear]
 I'm a brigand![.6] Yup![.6] I'm with all[N]
-you guys! Aha[,] yup[Beat][AN][X]
+you guys![.6] Aha[,] yup[Beat][AN][X]
 
 ## NoelRecruit
 [MidLeft][LoadFace][0xFF][0xFF][OpenMidRight][LoadNoel]
@@ -908,13 +938,296 @@ while the bunch o' us knights get our[AN]
 boots and axes dirty?[AN]
 
 [MR]
-Enough[,] Captain. I've had enough of this[N]
+Enough[,] Captain.[.6] I've had enough of this[N]
 disrespectful conversation.[AN][ClearFace]
 
 [ML]
 Alright[,] Captain.[.6] Why don't you[N]
-prove your 'structure' crap?[.6] Can you[N]
+prove your [OQ]structure" crap?[.6] Can you[N]
 even hear me?[.6] Hey![AN]
+
+[X]
+
+## StroganoffBrudetA
+[3L]
+[ML][LoadStroganoff][MR][LoadBrudet]
+
+[ML]
+Still givin' me the silent treatment[,] eh[,] Ana?[AN]
+Thought we were past that after the[N]
+last dust-up.[AN]
+
+[MR]
+I am merely[Beat] processing.[.6] Your words on the[N]
+battlefield[Beat] they are often uncouth[,] Tauno[,][N]
+much like you.[AN][C]
+But they carry a strange resonance.[AN]
+
+[ML]
+Resonance?[.6] That's generous[,] I just call it[N]
+what it is:[.4] spittin' out bullshit.[AN]
+
+[MR]
+You despise the rigid adherence to what you[N]
+perceive as empty titles and outdated codes.[AN][C]
+Yet[Beat] you fight with unwavering[,] bull-headed[N]
+tenacity for this kingdom and her people.[6N]
+It almost seems senseless.[AN][C]
+Why[,] Captain Stroganoff?[.6] What drives you,[.4][N]
+if not duty or honor?[AN]
+
+[ML]
+Duty and honor are for blokes with somethin'[N]
+to lose.[.6] Me?[.6] I mean[,] I got nothin'.[6N]
+That means I got nothin' to surrender.[AN]
+Just my axe and my two feet,[.4] mate.[6N]
+And the Emperor ain't gonna take either[N]
+of 'em.[AN]
+
+[MR]
+[Pause]I see.[.6] In a way[,] you are an embodiment[N]
+of Wreyvine itself.[.6] Forged in hardship,[.4][N]
+defiant against all odds.[AN]
+I confess[,] Captain[,] I was perhaps wrong with[N]
+my initial judgements of you.[.6] You hold[N]
+honor[,] though not of the kind I was taught.[AN]
+
+[ML]
+Heh.[.6] Look at you[,] Ana.[.6] Gettin' all brittle.[.6][N]
+Thought you were too busy flyin' yer fancy[N]
+wyvern to pay attention to a lowlife like me.[AN]
+
+[MR]
+You are a Captain[,] Tauno.[.6] And a stubborn fool.[.6][N]
+But you are also undeniably Wreyvian[Beat] and thus[N]
+my comrade.[.6] That is enough for me.[AN]
+
+[ML]
+[Smile]Alright[,] then[,] Captain.[.6] Just try not to get[N]
+too bogged down in all that fancy talk![6N]
+Might miss the next big laugh.[AN][Smile]
+
+[MR]
+[Smile]Hm[,] I shall endeavor to[,] Tauno.[AN][Smile]
+
+[X]
+
+
+## AnsgarDiraC
+
+[3L]
+[ML][Dira][MR][Ansgar]
+
+[MR]
+Evening[,] eh[,] lass?[.6] Long day out there.[6N]
+Seems like you're still sharp[,] though.[AN]
+
+[ML]
+What do you want[,] bluescarf?[.6][N]
+Just passing through?[AN]
+
+[MR]
+Nah[,] just admiring your handiwork.[.6] That knife's[N]
+a real beauty.[.6] My wife[,] bless her[,][N]
+she'd say it's got a story in every glint.[AN]
+
+[ML]
+Sigh[Beat] It's just steel[,] big guy.[.6][N]
+It cuts what needs cutting[,] and nothing more.[AN]
+
+[MR]
+Aye[,] I get that.[.6] But you carry it quiet[,] eh?[.6][N]
+Ya got a stillness 'bout you.[AN]
+
+[ML]
+Yeah?[.6] I'd make for a preeeetty poor[N]
+infiltrator if I never shut up like[N]
+some bluescarves do.[AN]
+
+[MR]
+[Beat]Aye,[.4] I suppose so.[.6] Well[,] just wanted to say[N]
+it's good to have you with us[,] lass.[.6][N]
+You're a good hand to have in a fight.[AN][C]
+Keeps the little ones safer,[.4] eh?[AN]
+
+[ML]
+[Pause]Keep your virtues to yourself,[.4] big guy.[AN]
+
+[X]
+
+## AnsgarDiraB
+
+[3L]
+[ML][Dira][MR][Ansgar]
+[MR]
+Hey there[,] lass.[.6] Yer lookin' a bit tight[N]
+this time.[.6] Hard day's fightin'[,] eh?[AN]
+
+[ML]
+What is it this time[,] bluescarf?[.6][N]
+Should be minding your own business.[AN]
+
+[MR]
+Just checkin' in[,] lass.[.6] Saw ya out there.[6N]
+Quick as a viper[,] ya were[,] and still as[N]
+sharp as ever with that knife.[AN][C]
+Reminds me a bit of my boy[,] Ferron.[.6] Always[N]
+quick to jump into trouble[,] he is.[AN]
+
+[ML]
+I'm nothing like your son.[.6] Don't compare me to[N]
+your[Beat] happy little life.[AN]
+
+[MR]
+[Pause]Right.[.6] No offense meant,[.4] lass.[.6] Just[Beat] trying[N]
+to make conversation.[.6] We're all in this[N]
+together now.[AN][C]
+And you looked like you could use a warm meal.[N]
+Got some jerky[,] if you're hungry.[AN]
+
+[ML]
+I'm not hungry.[.6] Your kindness is wasted on me.[N]
+I only need to finish this.[AN]
+
+[MR]
+I've seen plenty of that.[.6] War's a[N]
+bitter cold comfort,[.4] eh?[.6][N]
+Feeds ya for a bit[,] yeah,[AN]
+but leaves ya hollow in the end.[AN]
+
+[ML]
+I don't need comfort from you,[.4] Wreyvian.[.6] I[N]
+need Selwyn to burn[,] and if you're not[N]
+gonna help with that,[.4] then get lost.[AN]
+
+[MR]
+Burning[,] eh?[.6] What about after the[N]
+burning[,] lass?[.6] What do ya build then?[AN]
+
+[ML]
+I don't know.[.6] I just want them to pay.[6N]
+I'll think about it after.[AN]
+
+[MR]
+It's vengeance you're after[,] lass?[AN]
+
+[ML]
+Right on the mark[,] big guy.[.6] Bravo.[AN]
+
+[MR]
+No[,] no[Beat] Lass[,] you're--[AN]
+
+[ML]
+Stop lecturing me.[.6] Do you know how[N]
+many times I've heard this story?[AN]
+
+[MR]
+I've seen this play out[,] lass.[6N]
+I hail from a small village.[.6] When the[N]
+old war[,] ended[,] I was a wee lad.[AN]
+Even the most charitable souls I knew[N]
+put down their shovels and take[N]
+up the spear.[AN]
+
+[ML]
+Okay[,] big guy.[.6][N]
+What did I just say about lectures--[AN]
+
+[MR]
+I know we can't forget our roots.[6N]
+But my forge teaches me.[.6] You can't just tear[N]
+down the old house and hope it works out.[AN]
+You clear the rubble[,] you lay new foundations[,][N]
+and you build something stronger[,] eh?[.6][N]
+For your little ones.[AN]
+Or for the next ones who come along.[6N]
+You want to make 'em pay?[.6] Build a better[N]
+Aeteria than they could ever dream of.[AN]
+
+[ML]
+[Pause]A better Aeteria?[.6] Sounds like a fairy
+tale,[.4] big guy.[.6] But sure.[.6][AN]
+
+[X]
+
+## AnsgarDiraA
+[3L]
+[ML][Dira][MR][Ansgar]
+
+[ML]
+Another castle[,] another pile of rubble.[.6] You know,[N]
+it always looks the same[,] big guy.[.6] No matter who's[N]
+doing the burning.[AN]
+
+[MR]
+[Beat]Aye[,] it does.[.6] But even from ash[,] new[N]
+things can grow.[.6] Look at that young sprout[N]
+pushin' through the cracked stone over[N]
+there[,] eh?[AN]
+It ain't much,[.4] but it's tryin'.[AN]
+
+[ML]
+Not sure what part of Ideon you crawled out[N]
+out of[,] but trying usually gets you crushed[N]
+or forgotten over here.[AN]
+
+[MR]
+Eh[,] maybe.[.6] But sometimes[,] just tryin' is[N]
+enough to light a spark in someone else.[.6][N]
+That's what Raial does for you,[.4] eh?[AN]
+
+[ML]
+[Beat]She just gave me a reason to fight.[6N]
+A purpose I don't think you get.[AN]
+
+[MR]
+Yeah[,] a good purpose.[.6] Like a new hearth[,]
+waitin' to be stoked.[.6] Here,[.4] lass.[.6][N]
+Why don'tcha hold onto this?[AN]
+It's just a lil' ol' thing from my home.[6N] 
+For luck[,] or for rememberin' what we're[N]
+fightin' for.[.6] Keeps the hand steady.[AN]
+
+[ML]
+[Pause]A[Beat] good-luck charm?[.6] I don't believe[N]
+in luck,[.4] big guy.[.6] I believe in cheap shots[N]
+and taking what I want.[AN]
+
+[MR]
+Maybe not.[.6] But you still believe in[N]
+hard work,[.4] eh?[.6] And that this war[N]
+needs to end.[AN]
+People need a home[,] a hearth[,] that's really[N]
+all this is.[.6] A piece of a home.[.6] I think[N]
+you really need to hear this[Beat][AN]
+
+[ML]
+Ugh[,] am I really going to listen to[N]
+this crap?[AN]
+
+[MR]
+I know you like bein'[Beat] edgy[,] turning[N]
+your back and fightin' dirty[,] but[Beat][N]
+You helped build this new Aeteria.[AN]
+You belong here too.[AN]
+
+[ML]
+Tsch.[.6] What a stupid statement.[6N]
+I[Beat] I don't know how to build,[.4] old man.[N]
+I only know how to tear down.[AN]
+
+[MR]
+Then learn[,] eh?[.6] My forge will always be[N]
+open.[.6] I'll teach you.[.6] You've got[N]
+plenty of strength[,] lass.[AN]
+Plenty to build a future with.[AN]
+
+[ML]
+[Pause]A future.[.6] [Smile]Hmph.[.6] Maybe this time[,][N]
+it'll turn out[Beat] fine.[AN]
+
+[MR]
+[Smile]It'll always be okay[,] lass.[AN]
 
 [X]
 
@@ -922,7 +1235,7 @@ even hear me?[.6] Hey![AN]
 [ML][LoadUlrich][MR][LoadOgrim][3L]
 
 [ML]
-[ToggleMouthMove](Shit... Ogrim is here...)[ToggleMouthMove][6N]
+[ToggleMouthMove](Damn... Ogrim is here...)[ToggleMouthMove][6N]
 F-[.4]Father Ogrim.[AN]
 
 [MR]
@@ -973,7 +1286,7 @@ only way to silence him.[AN]
 
 [MR]
 You came back to the army to take[N]
-on an act of revenge[Beat]? Do you[N]
+on an act of revenge[Beat]?[.6] Do you[N]
 think killing a general will be[AN]
 some sort of twisted remedy?[AN][Clear][MoveMidRight]
 An utter fool you are![AN]
@@ -1115,6 +1428,133 @@ I got some gold to spend.[AN][CloseSpeechSlow][MoveFarFarRight][ClearFace]
 
 [X]
 
+## WegmanStroganoffB
+[3L]
+[ML][LoadStroganoff][MR][LoadWegman]
+
+[ML]
+Wegster![.6] Still on that carrot cake kick?[AN]
+Heard you brought some to the mess hall.[.6][N]
+Didn't seem to last very long.[AN]
+
+[MR]
+I'm glad my efforts are appreciated.[.6][N]
+I hope it brought some comfort.[AN]
+
+[ML]
+Comfort's a strong word for grub that[N]
+tastes like dirt,[.4] mate.[.6] But hey,[.4][N]
+it's not dog's breath.[AN]
+
+[MR]
+[Pause]I recall the taste of it quite clearly.[6N]
+Just like the biting cold of that old winter[N]
+and the stench of burnt offerings.[AN]
+
+[ML]
+What're ye muckin' about?[AN]
+
+[MR]
+Indeed.[.6] That winter[Beat] that was when Oswald[N]
+was born.[.6] He was so small.[.6] The world felt[N]
+like it was ending outside our window.[AN][C]
+I swore then that I would fight to ensure[N]
+he never had to feel such cold.[AN]
+
+[ML]
+A god-damned cake's makin' you nostalgic?[AN][C]
+[Pause]Cold's just part of life,[.4] Wegster.[6N]
+You can't fight the weather[,] it's all[N]
+totally pointless.[AN]
+
+[MR]
+No,[.4] but you can build a fire.[.6] You can find[N]
+shelter.[.6] You can keep your kin warm[N]
+no matter how cold it gets.[AN][C]
+That's the choice we have,[.4] Tauno.[.6] We fight[N]
+not against the cold,[.4] but with the warmth.[AN]
+
+[ML]
+Sounds like a lotta bloody work to me.[.6][N]
+I'd rather just gamble on spring comin'.[AN]
+
+[MR]
+Perhaps.[.6] But sometimes,[.4] even a gambler[N]
+knows when to fold a bad hand and start[N]
+playing for something new.[AN]
+
+[ML]
+[Smile]Heh.[.6] You're a crafty one,[.4] Wegster.[6N]
+I'll try to add that to my list of[N]
+good life advice.[AN][Smile]
+
+[X]
+
+## WegmanStroganoffA
+[3L]
+[ML][LoadStroganoff][MR][LoadWegman]
+
+[MR]
+Captain.[.6] May I speak plainly?[AN]
+
+[ML]
+Always,[.4] Wegster.[.6] Never been one for a soft[N]
+touch,[.4] have ya?[AN]
+
+[MR]
+When this war began,[.4] and the King fell,[.4][N]
+I almost thought all hope was lost.[.6][N]
+My spirit was[Beat] broken.[AN]
+But seeing you fight[,] even with that reckless[N]
+abandon,[.4] that defiant joy[Beat] it reminded me[N]
+that Wreyvine still had fire left.[AN]
+You found a way to live[,] truly live[,] even when[N]
+the world was ending.[.6] You are a testament[N]
+to our kingdom's unbreakable spirit.[AN]
+
+[ML]
+[Beat]Woah[,] woah[,] WOAH.[.6] That's a lotta fancy[N]
+words for a bloke who just found a ten-gold[N]
+coin in his old breeches.[AN]
+But hell yeah![.6] I am a hero![6N]
+I'm the humble[,] handsome idol that all[N]
+the squires look up to![AN]
+
+[MR]
+I'm serious.[.6] You may call yourself a scoundrel,[.4][N]
+a gambler[,] a blockhead.[.6] And you could be[N]
+those things.[AN]
+But you are also a Captain who fights for[N]
+his people.[.6] And you care[,] Tauno.[.6] I see it in[N]
+you even when you pretend not to.[AN]
+
+[ML]
+[Pause]Tch.[.6] Well[,] I ain't gonna start singin'[N]
+hymns about it[,] mate.[.6] But I guess[Beat][N]
+I guess I saw that spark in yau too.[AN]
+You never gave up on me,[.4] for some reason[,][N]
+even when I gave you every reason to.[.6][N]
+Always just[Beat] there.[AN]
+Like the devil on my shoulder.[AN]
+
+[MR]
+That's what friends do[,] man.[AN]
+
+[ML]
+[Beat][.6] Yeah.[.6] Yeah,[.4] I guess so,[.4] Wegster.[6N]
+[Smile]So,[.4] how about it?[.6] Last man standing at the[N]
+tavern after this war wins the whole pot?[AN][Smile]
+
+[MR]
+[Smile]Only if you promise to bake a carrot cake[N]
+with me once a year.[AN][Smile]
+
+[ML]
+[Smile]Bwahahah![.6] You drive a hard bargain[,] brother.[.6][N]
+Deal![AN][Smile]
+
+[X]
+
 ## BrudetNoelTalk
 [3L]
 [ML][LoadBrudet][MR][LoadNoel]
@@ -1138,7 +1578,7 @@ to distance yourself from your ideals.[AN]
 
 [MR]
 I won't[,] Captain.[.6] Thanks.[.6] This[N]
-task[,] however, seems rather easy;[.4]
+task[,] however,[.4] seems rather easy;[.4]
 yet between it all,[AN]
 I don't want to lose myself[,] lest[N]
 Kenneth's sacrifice was for naught.[AN]
@@ -1169,6 +1609,144 @@ Let me sate my fervour.[AN][ClearFace]
 [ML]
 Is this truly where your sense[N]
 of duty leads you[,] Noel?[AN]
+[X]
+
+## BrudetNoelB
+
+[3L]
+[ML][LoadBrudet][MR][LoadNoel]
+
+[ML]
+Noel.[.6] Your discipline wavers.[.6] Your axe[N]
+swings with a frenzy unbecoming a knight.[AN]
+
+[MR]
+I am merely ensuring these redslicks pay for[N]
+their transgressions[,] Captain![.6][N][MoveMR]
+This is justice![AN]
+
+[ML]
+Justice is precise[,] Noel.[.6] It is not[N]
+such blind rage.[.6] This recklessness will[N]
+lead to your grave.[AN]
+And what honor would Kenneth find in that?[AN]
+
+[MR]
+[Beat]You speak of Kenneth,[.4] Captain?[.6][N]
+How would you know his honor?[.6][N]
+You didn't know him.[AN]
+
+[ML]
+[Pause]I[Beat] I did,[.4] Noel.[.6] From a distance.[.6][N]
+He was a promising young knight[,][N]
+full of fire.[AN]
+He served with distinction under my mother,[.4][N]
+before[Beat] Before that skirmish at the[N]
+Argent River Pass.[AN]
+
+[MR]
+The Imperial ambush.[.6] Where an Aeterian mage[N]
+struck him down from behind like a coward.[6N]
+That's how he died,[.4] Captain.[.6] Not gloriously.[AN]
+
+[ML]
+He fought bravely,[.4] Noel.[.6] Against impossible[N]
+odds.[.6] He stood firm,[.4] allowing his men[N]
+to retreat.[.6] He was a hero.[AN]
+
+[MR]
+[Beat]A hero?[.6] He was cornered,[.4] screaming[N]
+in pain![.6] I saw the reports.[.6] The Imperial was[N]
+laughing as he fell![AN]
+He suffered,[.4] Captain![.6] And you dare call[N]
+that glorious?[AN]
+
+[ML]
+Honor is not found in the manner of[N]
+death,[.4] Noel.[.6] But in the life lived,[.4][N]
+and the duty upheld.[AN]
+His life was honorable.[.6] Your vengeance will[N]
+not change his death.[.6] It will only[N]
+taint your axe and your life.[AN]
+
+[MR][MoveMR]
+Then let it taint me![.6] Let it consume me![.6][N]
+If that's the only way to truly honor him,[.4][N]
+then so be it![AN][C]
+You're just trying to stop me from doing[N]
+what's right[Beat] What he deserves![AN]
+
+[ML]
+He deserves to be remembered for his[N]
+courage,[.4] not your disdain.[.6][N]
+Think on that,[.4] Noel[,] or his[AN]
+sacrifice truly will be for naught.[AN]
+
+[X]
+
+## BrudetNoelA
+
+[3L]
+[ML][LoadBrudet][MR][LoadNoel]
+
+[ML]
+Excellent work[,] Noel.[.6] Your axe work was[N]
+efficient.[.6] Each slash was far cleaner[N]
+than the last.[AN]
+
+[MR]
+Cleaner?[.6] I suppose.[.6] But it still feels[N]
+the same.[.6] Another dead Imperial[,] just[N]
+another checkmark on the list.[AN][C]
+It doesn't[Beat] fix it.[.6] He's still gone[N]
+and the thorns in my heart is still there.[AN]
+
+[ML]
+It will always be there.[.6] Grief is not a[N]
+stain you can wash out with blood[,][N]
+especially now.[AN]
+My mother[Beat] she trained me until her[N]
+hands shook.[.6] She pushed me because she[N]
+knew she was running out of time.[AN]
+I was angry at her for leaving me.[.6][N]
+Angry at the illness.[.6] But anger alone[N]
+can't build a legacy.[AN]
+
+[MR]
+Then what does?[.6] If killing them doesn't[N]
+honor him,[.4] what am I supposed to do?[AN]
+
+[ML]
+You live.[.6] You fight to protect what he[N]
+loved.[.6] Wreyvine.[.6] Its people.[6N]
+The allies that still stand with you.[AN]
+Kenneth died holding the line so others[N]
+could escape.[.6] That was his choice[,][N]
+do you understand now?[AN][C]
+If you throw your life away in a blind[N]
+rage,[.4] you are undoing his sacrifice.[AN]
+
+[MR]
+[Beat]He always did try to save everyone.[6N]
+Even the stray dogs in the camp.[AN][C]
+I guess[Beat] I guess making sure no one[N]
+else has to die like that is what[N]
+he'd want.[AN]
+
+[ML]
+Precisely.[.6] Become the shield he was[,][N]
+not the tainted spells and blades that[N]
+ended him.[AN]
+I can teach you how to fly and soar,[.4][N]
+Noel.[.6] But you must leave those shackles[N]
+on the ground.[AN]
+
+[MR]
+[Pause]Teach me,[.4] Captain.[.6] I want to fly.[AN]
+
+[ML]
+Then look up at me.[.6] We begin at dawn.[AN]
+
 [X]
 
 ## BrudetEisnerTalk
@@ -1226,7 +1804,114 @@ We cannot control such feelings[,] Eisner.[6N]
 But we must not let it take over[,][N]
 especially not in battle.[AN][Clear]
 You never know when an arrow or[N]
-sword will find your back.[AN]
+blade will find your back.[AN]
+
+[X]
+
+## BrudetEisnerB
+
+[3L]
+[ML][LoadBrudet][MR][LoadEisner]
+
+[MR]
+Hey,[.4] Captain.[.6] Enjoying the view?[6N]
+Beats the stuffy war room,[.4] doesn't it?[AN]
+
+[ML]
+I am surveying the perimeter for enemy[N]
+movements.[.6] This is not leisure,[.4] Eisner.[AN]
+
+[MR]
+Sure,[.4] sure.[.6] But you can't tell me you don't[N]
+feel it[Beat] The wind and the open air.[6N]
+This is why we fly,[.4] isn't it?[AN]
+Not for the orders or the salutes[,][N]
+but for this freedom.[AN]
+
+[ML]
+A flier's duty is to be the eyes of the[N]
+army[,] to strike from above.[.6] It is tactical.[6N]
+Personal enjoyment is secondary.[AN]
+
+[MR]
+Secondary?[.6] Hah![.6] I've seen you up there.[6N]
+When you dive and twirl around with[N]
+those aerial maneuvers[Beat][AN]
+You're smiling,[.4] Captain.[6N]
+You can't hide it behind that face.[6N]
+You love it just as much as I do.[AN]
+
+[ML]
+I[Beat] I am merely satisfied with[N]
+the execution of a maneuver![6N]
+Do not project your lax attitude onto me.[AN]
+
+[MR]
+Whatever you say.[.6] But you know,[.4] my griff,[4N]
+Shrike?[.6] I think he likes you.[.6][N]
+Or just your wyvern,[.4] anyway.[AN][C]
+They got a better understanding than we do,[4N]
+I think.[.6] No ranks up in the sky.[AN]
+
+[ML]
+Perhaps.[.6] In the air,[.4] only skill matters.[6N]
+And[Beat] Your handling is adequate.[AN]
+
+[MR]
+[OQ]Adequate"?[.6] Coming from you,[.4] that's high[N]
+praise.[.6] Thanks[,] I'll take it.[AN]
+
+[X]
+
+## BrudetEisnerA
+[3L]
+[ML][LoadBrudet][MR][LoadEisner]
+
+[ML]
+Eisner.[.6] That formation earlier[Beat] You broke[N]
+pattern.[.6] You exposed your flank.[AN]
+
+[MR]
+And I soared and took out two archers who[N]
+were aiming for your wyvern's underbelly.[6N]
+You're welcome,[.4] by the way.[AN]
+
+[ML]
+I saw.[.6] It was reckless and horribly risky[,][N]
+but[Beat] it was an effective gambit.[6N]
+You have my thanks.[AN]
+
+[MR]
+Hah.[.6] Did Captain Brudet just say thanks?[6N]
+I must be hearing things.[.6] Or maybe[N]
+that arrow got me in the neck.[AN]
+
+[ML]
+Do not make me retract it.[.6] I have been[N]
+thinking about what you said.[6N]
+About my bloodline.[.6] My perfectionism.[AN][C]
+Perhaps relying on instinct is not[N]
+entirely without merit in the skies.[AN]
+
+[MR]
+See?[.6] I told you.[.6] Sometimes you gotta trust[N]
+your gut[,] not the manual.[.6] I mean[,] you're[N]
+the wings we bluescarves look to.[AN]
+You're a hell of a flier,[.4] Captain.[.6] Bloodline[N]
+or not[,] you earned those wings.[.6] So maybe[N]
+take a moment to be less by-the-books.[AN]
+
+[ML]
+And you are[Beat] effective.[.6] A scout who[N]
+can unleash death from above.[6N]
+Perhaps we even make a decent wing pair.[AN]
+
+[MR]
+Decent?[.6] We're the best in the sky,[.4] Captain.[6N]
+Try to keep up next time,[.4] yeah?[AN]
+
+[ML]
+Hmph.[.6] I should say the same to you.[AN]
 
 [X]
 
@@ -1353,6 +2038,76 @@ sure everybody else lives on.[AN]
 [ML]
 Very well[,] then.[.6] Fight with us[,][N]
 Father[,] until the end[Beat][AN]
+
+[X]
+
+## BrudetFlorisA
+
+[3L]
+[ML][LoadBrudet][MR][LoadFloris]
+
+[ML]
+Father.[.6] You are still standing.[AN]
+
+[MR]
+Of course[,] Captain.[.6] The Flame still[N]
+flickers.[.6] I have not been called home yet.[AN]
+
+[ML]
+I have been reading the texts you lent me.[6N]
+About the Hearthbringer[,] and of acceptance.[AN]
+
+[MR]
+Oho?[.6] Find anything useful for a soldier?[AN]
+
+[ML]
+[OQ]The fire consumes the wood to emit[N]
+warmth[,] and the steel endures the hammer[N]
+to become strong."[AN][C]
+My mother and Axel's death[Beat] your[N]
+illness[Beat] I always saw them as[N]
+if they were failures.[AN][C]
+But you speak of them as simply part of[N]
+the process.[.6] I[Beat][AN]
+
+[MR]
+We are all just fuel for the fire,[.4] Captain.[6N]
+Our lives burn to keep others warm and[N]
+to keep the darkness at bay.[AN]
+My brother burned bright and fast.[.6] I[Beat][N]
+I am a slow,[.4] smoldering ember.[6N]
+But we both serve the same purpose.[AN]
+
+[ML]
+And what is my purpose,[.4] Father?[.6] I am[N]
+neither bright nor smoldering.[.6] People[N]
+say I'm cold and rigid.[AN]
+
+[MR]
+You are the iron,[.4] Brudet.[.6] You hold the[N]
+shape when the rest of them turn to slush.[6N]
+You will outlast this war.[AN][C]
+You will outlast me.[.6] And you will carry[N]
+the memory of the fire forward.[AN]
+
+[ML]
+That sounds[Beat] solitary.[AN]
+
+[MR]
+It is.[.6] But it is necessary.[.6] Someone[N]
+must remember[,] for they must teach the[N]
+next generation how to light the flame.[AN]
+Will you do that for me[,] Captain?[.6][N]
+When I take my first steps upon the[N]
+ashen coast?[AN]
+
+[ML]
+I[Beat] Yes,[.4] Father.[.6] I will remember.[6N]
+I will be the iron.[AN]
+
+[MR]
+Then I can rest easy.[.6] My duty is[N]
+almost done.[.6] Yours is just beginning.[AN]
 
 [X]
 
@@ -1636,7 +2391,7 @@ if you weren't so lucky.[AN][ClearFace]
 
 [OpenMidRight][LoadBrudet]
 [CloseEyes]Doing so would mean[N]
-foresaking everything[AN]
+forsaking everything[AN]
 my mother and her mother[N]
 stood for[Beat][AN][OpenEyes]
 I shall die before I lend my[N]
@@ -1769,7 +2524,7 @@ and go into hiding[Beat][AN]
 
 You're the only one[,] Affogato.[.6][N]
 To have the guts to pry like that.[AN][CSS][.6]
-[Beat]Tell me[,] what do you know of the[AN]
+[Beat]Tell me[,] what do you know of the[N]
 battle of Ideon's Bridge?[AN]
 
 [OpenMidRight]
@@ -1791,15 +2546,17 @@ who they called Lieutenant Ulrich.[AN]
 
 [OpenMidRight]
 Then[Beat][AN]
+[CSS]
 
 [OpenFarLeft]
+[MoveLeft]
 [OpenQuote]Ulrich"[Beat] I'll never be the man[N]
 they all think I am.[AN]
 
 [OpenMidRight]
 [Beat][AN]
 
-[OpenFarLeft]
+[L]
 The lieutenant died on the bridge.[6N]
 But I was just a common soldier[,][6n]
 then[,] by the name of[Beat][an][X]

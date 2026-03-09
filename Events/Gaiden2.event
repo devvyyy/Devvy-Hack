@@ -588,9 +588,15 @@ SetBackground(0x34)
 FADU 15
 
 Text(Gaiden2Ending14)
+
+CHECK_EVENTID 0x7E
+BEQ 0x9000 0xC 0x0
+
 GiveItem(0xEE,Ulrich)
 GiveItem(0x8E,Ulrich)
 GiveItem(0xD0,Ulrich)
+
+LABEL 0x9000
 
 FADI 16
 UnsetFlag(0x65)

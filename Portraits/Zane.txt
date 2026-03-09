@@ -25,7 +25,7 @@ setMugEntry(0x4, Erik_Mug, 2, 6, 3, 4)
 ALIGN 16
 Frye_Mug: //Frye by Pi
 #incext PortraitFormatter "PiRandal.png"
-setMugEntry(0x5, Frye_Mug, 3, 5, 3, 3)
+setMugEntryExtend(0x5, Frye_Mug, 3, 5, 3, 3, 10, 2, 10, 4)
 
 ALIGN 16 //Bronson edited by BuskHusker
 Bronson_Mug:
@@ -299,7 +299,7 @@ setMugEntry(0x1B, Nora_Mug, 3, 5, 3, 3)
 ALIGN 16 //Irene by Laurent Lacroix
 Irene_Mug:
 #incext PortraitFormatter "Irene.png"
-setMugEntryExtend(0x1C, Irene_Mug, 3, 5, 3, 3, 10, 4, 0, 0)
+setMugEntryExtend(0x1C, Irene_Mug, 3, 5, 3, 3, 10, 2, 10, 4)
 
 ALIGN 16
 Floris_Mug:
@@ -510,7 +510,7 @@ setMugEntry(0x4F, BrigandBoss_Mug, 3, 5, 3, 3)
 ALIGN 16
 Zopf_Mug: //Zopf by Laurent, Levin
 #incext PortraitFormatter "Zopf2.png"
-setMugEntryExtend(0x24, Zopf_Mug, 3, 5, 2, 3, 0, 2, 0, 0)
+setMugEntryExtend(0x24, Zopf_Mug, 3, 5, 3, 3, 0, 2, 0, 0)
 
 ALIGN 16
 AffogatoAlt_Mug:

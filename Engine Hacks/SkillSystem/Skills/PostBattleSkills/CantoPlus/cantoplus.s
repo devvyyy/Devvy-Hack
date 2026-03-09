@@ -11,6 +11,15 @@ ldrb	r0, [r4,#0x13]
 cmp	r0, #0x00
 beq	End
 
+@check for skill
+mov	r0, r4
+ldr	r1, CantoPlusID
+ldr	r3, SkillTester
+mov	lr, r3
+.short	0xf800
+cmp	r0,#0x00
+beq	End
+
 @check if current chracter
 ldrb  r0, [r6,#0x11]  @action taken this turn
 cmp r0, #0x1E @check if found enemy in the fog
@@ -48,7 +57,7 @@ CortadoCheck:
 
 @cortado?
 @ horrible hardcoding yes
-ldr  r0, [r5] @r0 = character data pointer
+ldr  r0, [r4] @r0 = character data pointer
 ldrb r0, [r0, #0x4] @r0 = character ID
 cmp r0, #0x4
 bne NextThing
@@ -85,14 +94,7 @@ and	r0, r1
 cmp	r0, #0x00
 bne	End
 
-@check for skill
-mov	r0, r4
-ldr	r1, CantoPlusID
-ldr	r3, SkillTester
-mov	lr, r3
-.short	0xf800
-cmp	r0,#0x00
-beq	End
+# formerly skill check here
 
 @if canto, unset 0x2 and set 0x40
 ldr	r0, [r4,#0x0C]	@status bitfield
