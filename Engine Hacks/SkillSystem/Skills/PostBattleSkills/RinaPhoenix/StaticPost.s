@@ -3,77 +3,41 @@
   mov lr, \reg
   .short 0xf800
 .endm
-.equ AssassinateID, SkillTester+4
-.equ LifetakerEvent, AssassinateID+4
+.equ RinaPhoenixID, SkillTester+4
+.equ RinaEvent, RinaPhoenixID+4
+.equ heal10hp, 50
 .thumb
 push	{lr}
-@check range
-ldr r0,=#0x203A4D4 @battle stats
-ldrb r0,[r0,#2] @range
-cmp r0,#1
-bne End
-
-@check if dead
-ldrb	r0, [r4,#0x13]
-cmp	r0, #0x00
-beq	End
-
-@check if rina hp is 1
-ldrb	r0, [r4,#0x13]
-cmp	r0, #0x01
-bne	End
-
-@check if flag 0x7F set; if so, cant use (used already/procced phoenix)
-ldr r0,=#0x8083da8 @CheckEventId
-mov r14,r0
-mov r0,#0x7F
-.short 0xF800
-cmp r0,#0
-bne End
 
 @check if attacked this turn
 ldrb 	r0, [r6,#0x11]	@action taken this turn
 cmp	r0, #0x2 @attack
 bne	End
-ldrb 	r0, [r6,#0x0C]	@allegiance byte of the current character taking action
-ldrb	r1, [r4,#0x0B]	@allegiance byte of the character we are checking
-cmp	r0, r1		@check if same character
-bne	End
 
 @check for skill
 mov	r0, r4
-ldr	r1, AssassinateID
+ldr	r1, RinaPhoenixID
 ldr	r3, SkillTester
 mov	lr, r3
 .short	0xf800
 cmp	r0,#0x00
-beq	End
+beq	CheckDefender
 
-@killed enemy, then heal 25%hp
-mov	r0,r4
-ldr	r3,=#0x8019190	@max hp getter
-mov	lr,r3
-.short	0xF800
-mov	r1,r0
-push	{r1}
-mov	r0,r4
-ldr	r3,=#0x8019150	@current hp getter
-mov	lr,r3
-.short	0xF800
-mov	r2,r0
-pop	{r1}
-cmp	r1, r2		@check if hp is already max
-beq	End
+@check if HP = 1
+ldrb	r0, [r4,#0x13]
+cmp	r0, #0x01
+bne	End
 
-
-@this used to just add curHP to curHP and set that as new curHP
-@make r0 = 1/4 maxHP
-@lsr r0,r1,#2 @maxHP/4
-
+@take 7 damage
+ldrb	r1, [r4,#0x12]	@r1=maxhp
+mov r0, #heal10hp
+ldrb	r2, [r4,#0x13]	@r2=currhp
+@cmp	r1, r2		@check if hp is already max
+@beq	End
 add	r2, r0		@total healing
-cmp	r2, r1		@is the new hp higher than max?
-ble	StoreHP
-mov	r2, r1		@if so, set to max
+cmp r2, #1    @is new hp<1?
+bge	StoreHP
+mov	r2, #1		@if so, set to 1
 StoreHP:
 strb	r2, [r4,#0x13]
 
@@ -89,15 +53,53 @@ str	r3, [r1]
 
 ldr	r0,=#0x800D07C		@event engine thingy
 mov	lr, r0
-ldr	r0, LifetakerEvent	@this event is just "teleport animation on current character"
+ldr	r0, RinaEvent	@this event is just "play sound"
 mov	r1, #0x01		@0x01 = wait for events
 .short	0xF800
 
-@  set rina flag
-@ldr r0, =0x8083D80
-@mov r14, r0
-@mov r0, #0x7f
-@.short 0xF800
+CheckDefender:
+@check for skill
+mov r0, r5
+ldr r1, RinaPhoenixID
+ldr r3, SkillTester
+mov lr, r3
+.short  0xf800
+cmp r0,#0x00
+beq End
+
+@check if hp = 1
+ldrb	r0, [r5,#0x13]
+cmp	r0, #0x01
+bne	End
+
+@take 7 damage
+ldrb  r1, [r5,#0x12]  @r1=maxhp
+mov r0, #heal10hp
+ldrb  r2, [r5,#0x13]  @r2=currhp
+@cmp  r1, r2    @check if hp is already max
+@beq  End
+add r2, r0    @total healing
+cmp r2, #1    @is new hp<1?
+bge StoreHP2
+mov r2, #1    @if so, set to 1
+StoreHP2:
+strb  r2, [r5,#0x13]
+
+Event2:
+mov r3, #0x00
+ldrb  r0, [r5,#0x11]    @load y coordinate of character
+lsl r0, #0x10
+add r3, r0
+ldrb  r0, [r5,#0x10]    @load x coordinate of character
+add r3, r0
+ldr r1,=#0x30004E4    @and store them for the event engine
+str r3, [r1]
+
+ldr r0,=#0x800D07C    @event engine thingy
+mov lr, r0
+ldr r0, RinaEvent @this event is just "play sound"
+mov r1, #0x01   @0x01 = wait for events
+.short  0xF800
 
 End:
 pop	{r0}
@@ -106,5 +108,5 @@ bx	r0
 .align
 SkillTester:
 @POIN SkillTester
-@WORD AssassinateID
-@POIN LifetakerEvent
+@WORD RinaPhoenixID
+@POIN RinaEvent

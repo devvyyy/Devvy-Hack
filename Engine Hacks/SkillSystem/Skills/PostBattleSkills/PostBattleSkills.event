@@ -58,13 +58,6 @@ POIN GetUnitsInRange
 #include "StaticPostDies/StaticEventDies.event"
 
 ALIGN 4
-RinaPhoenix:
-#incbin "RinaPhoenix/StaticPost.dmp"
-POIN SkillTester
-WORD AssassinateID
-POIN GetUnitsInRange
-
-ALIGN 4
 Snaring:
 #incbin "Snaring/Snaring.dmp"
 POIN SkillTester
@@ -481,6 +474,24 @@ WORD Heal4ID
 POIN Heal1Event
 
 ALIGN 4
+RinaPhoenix:
+#incbin "RinaPhoenix/StaticPost.dmp"
+POIN SkillTester
+WORD RinaPhoenixID
+POIN RinaEvent
+
+RinaEvent:
+ENUT 0x7F //flag 0xA1 is used in part 1 and unset in 1-1; in part 2 this is the "won against Warden" flag
+CAM1 0x13; STAL 20; FlashCursor(0x72,60)
+
+SOUN 0xB3 //torch 1
+STAL 30
+SOUN 0x269 //torch 2
+STAL 50
+NoFade
+ENDA
+
+ALIGN 4
 #include "PoisonStrikeGrislyWound/PoisonStrikeGrislyWound.lyn.event"
 
 #ifdef RESIDUAL_DAMAGE_REQUIRES_BATTLE_DAMAGE
@@ -491,7 +502,7 @@ ALIGN 4
 PoisonStrikeIDLink:
 BYTE PoisonStrikeID
 GrislyWoundIDLink:
-//BYTE GrislyWoundID
+BYTE GrislyWoundID
 //disabled bc rina passive
 #include "PoisonStrikeGrislyWound/PSGWEvent.event"
 
