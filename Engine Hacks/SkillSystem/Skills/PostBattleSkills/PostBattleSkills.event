@@ -58,6 +58,13 @@ POIN GetUnitsInRange
 #include "StaticPostDies/StaticEventDies.event"
 
 ALIGN 4
+RinaPhoenix:
+#incbin "RinaPhoenix/StaticPost.dmp"
+POIN SkillTester
+WORD AssassinateID
+POIN GetUnitsInRange
+
+ALIGN 4
 Snaring:
 #incbin "Snaring/Snaring.dmp"
 POIN SkillTester
@@ -484,7 +491,8 @@ ALIGN 4
 PoisonStrikeIDLink:
 BYTE PoisonStrikeID
 GrislyWoundIDLink:
-BYTE GrislyWoundID
+//BYTE GrislyWoundID
+//disabled bc rina passive
 #include "PoisonStrikeGrislyWound/PSGWEvent.event"
 
 ALIGN 4

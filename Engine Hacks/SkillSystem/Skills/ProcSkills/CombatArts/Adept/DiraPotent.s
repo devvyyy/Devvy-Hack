@@ -4,7 +4,7 @@
   mov lr, \reg
   .short 0xf800
 .endm
-.equ GalestormID, SkillTester+4
+.equ AssassinateID, SkillTester+4
 .equ d100Result, 0x802a52c
 .equ recurse_round, 0x802b83c
 
@@ -34,7 +34,7 @@ bne End
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r4 @attacker data
-ldr r1, GalestormID
+ldr r1, AssassinateID
 .short 0xf800
 cmp r0, #0
 beq End
@@ -43,6 +43,16 @@ beq End
 @make sure this is the actual attacker kthx
 ldr r0,=#0x203A4EC
 cmp r0,r4
+bne End
+
+ldr r0,=#0x203A4EC @attacker struct
+cmp r0,r4
+bne End @if not attacker, dont do
+
+@check range
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#1
 bne End
 
 @ is spd higher than foes spd?
@@ -74,14 +84,14 @@ bne End
 @strh r0, [r7, #4] @final damage
 
 @if we proc, set the brave effect flag for the NEXT hit
-ldrb r1, GalestormID @first mark Adept active
+ldrb r1, AssassinateID @first mark Adept active
 strb r1, [r6,#4]
 
 add     r6, #8 @double width battle buffer   
 mov     r0, #0x40
 lsl     r0, #8  
 str     r0,[r6]                @ 0802B43A 6018  
-ldrb r0, GalestormID
+ldrb r0, AssassinateID
 strb r0, [r6,#4] @save the skill ID at byte #4
 
 @now add the number of rounds - 
@@ -104,4 +114,4 @@ pop {r15}
 .ltorg
 SkillTester:
 @POIN SkillTester
-@WORD GalestormID
+@WORD AssassinateID

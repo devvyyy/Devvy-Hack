@@ -43,6 +43,10 @@ Command_Usability:
 	beq unusable
 	cmp r0, #150 @crown
 	beq unusable
+	cmp r0, #2 @luna rina
+	beq unusable
+	cmp r0, #200 @grisly wound rina
+	beq unusable
 	cmp r0, #0
 	beq unusable
 
