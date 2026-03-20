@@ -9,8 +9,8 @@
   .short 0xf800
 .endm
 .equ DesperationID, SkillTester+4
-.equ AssassinateID, DesperationID+4
-.equ IntrepidID, AssassinateID+4
+.equ LionheartID, DesperationID+4
+.equ IntrepidID, LionheartID+4
 
 @is target opal?
 @ please dont do checks like this in the future holy fuck
@@ -59,7 +59,7 @@ CheckAssasinate: @now check if attacker has assassinate
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r5 @defender data
-ldr r1, AssassinateID
+ldr r1, LionheartID
 .short 0xf800
 cmp r0, #0
 beq CheckDesperation
@@ -187,4 +187,4 @@ bx r0
 SkillTester:
 @poin SkillTester
 @word DesperationID
-@word AssassinateID
+@word LionheartID

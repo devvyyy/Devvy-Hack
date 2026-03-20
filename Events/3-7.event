@@ -490,7 +490,7 @@ CALL $591FD8 //prep screen
 EndingScene:
 
 FADI 30
-
+ResetFlags
 
 SVAL 0xB 0x10000D //coords
 LOMA 0x24 //then the map

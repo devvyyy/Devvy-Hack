@@ -9,6 +9,7 @@
 .equ RinaFlagID, 0x7F
 .equ CheckEventId, 0x8083DA8
 .equ SetEventId,   0x8083D80
+.equ StrGetter,    0x80191b0
 
 @ r0 is attacker, r1 is defender, r2 is current buffer, r3 is battle data
 push {r4-r7,lr}
@@ -18,7 +19,7 @@ mov r6, r2 @battle buffer
 mov r7, r3 @battle data
 ldr     r0,[r2]           @r0 = battle buffer                @ 0802B40A 6800     
 lsl     r0,r0,#0xD                @ 0802B40C 0340     
-lsr     r0,r0,#0xD        @Without damage data                @ 0802B40E 0B40
+lsr     r0,r0,#0xD        @Without damage data                @ 0802B40E 0B40           
 mov r1, #0xC0 @skill flag
 lsl r1, #8 @0xC000
 add r1, #2 @miss
@@ -40,14 +41,14 @@ bne End
 @if we proc, set the offensive skill flag
 ldr     r2,[r6]    
 lsl     r1,r2,#0xD                @ 0802B42C 0351     
-lsr     r1,r1,#0xD                @ 0802B42E 0B49                   
+lsr     r1,r1,#0xD                @ 0802B42E 0B49                           
 mov     r0, #0x40
 lsl     r0, #8           @0x4000, attacker skill activated
 orr     r1, r0
 ldr     r0,=#0xFFF80000                @ 0802B434 4804     
 and     r0,r2                @ 0802B436 4010     
 orr     r0,r1                @ 0802B438 4308     
-str     r0,[r6]                @ 0802B43A 6018               
+str     r0,[r6]                @ 0802B43A 6018              
 
 ldrb  r0, LunaID
 strb  r0, [r6,#4] 
@@ -58,12 +59,26 @@ blh 0x8019210 @ Spd getter
 
 @ mult spd by 2
 lsl r0, r0, #1
+push {r0} @ so it doesnt get overwritten
 
-@ grab final mt which luna does by having it ignore def
+@ grab rina str to set  to 0
+mov r0, r4
+blh StrGetter
+
+@ grab final mt
 ldrh r1, [r7, #6] @ final mt
+pop {r2}
 
-@ add final mt + crit
-add r0, r1
+@ calc final damage
+add r1, r2
+sub r1, r0
+mov r0, r1
+    
+@ also prevent u from having negative damage lol
+cmp r0, #0
+bge PosDamage
+mov r0, #0     @ If damage was less than 0, cap it at 0
+PosDamage:
 
 @ crit?
 ldr r2, [r6]
@@ -71,8 +86,8 @@ mov r1, #1
 tst r1, r2
 beq NoCrit
 
-@if crit, multiply by 3
-lsl r1, r0, #1
+@ if crit, multiply by 1.5x instead of 3x
+lsr r1, r0, #1
 add r0, r1
 
 NoCrit: @damage cap of 127

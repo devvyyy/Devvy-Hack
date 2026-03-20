@@ -1,6 +1,13 @@
 SavingGraceEvent:
+
 CAM1 0xFFFF
 SOUN 0x10F
+CHECK_COORDS 0x1A
+SADD 0xCB
+SVAL 0x1 16 //ID for feather anim
+SVAL 0x2 0x0
+ASMC ASMC_Draw|1
+
 //STAL 0xc9 //wing or sword plunk sound effect
 STAL 0x8
 NoFade

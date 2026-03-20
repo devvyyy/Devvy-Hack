@@ -1,7 +1,14 @@
 GaleforceEvent:
+
 CAM1 0xFFFF
 STAL 0x3
 SOUN 0x3B5
+ASMC ASMC_GetBattleTarget|1
+SADD 0xCB
+SVAL 0x1 16 //ID for feather anim
+SVAL 0x2 0x0
+ASMC ASMC_Draw|1
+
 STAL 0x10
 NoFade
 ENDA

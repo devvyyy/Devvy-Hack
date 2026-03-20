@@ -1078,8 +1078,8 @@ another action (once per turn).[X]
 Fight and Flight[N]
 - Grants Lennard +1 Avoid/Crit per[N]
 missing HP, upped to +3 below 50% HP.[N]
-- Take 4 damage after combat.[N]
-(Post-combat damage can't kill.)[X]
+- Follow-ups occur before foe's counter.[N]
+- Take 4 damage after combat.[X]
 
 ## SD_DesolateBlade
 Desolate Blade: Attacks mark target for[N]
@@ -1835,7 +1835,7 @@ Lunatic[N]
 - If Pandoro's HP is below 25%, enter[N]
 Frenzy until end of map: ignore Def and[N]
 weapon triangle disadvantage, counter[N]
-first, and follow-ups occur before counter.[X]
+first, and strike x2 consecutively.[X]
 
 ## SD_FinalBoss
 Eye of the King: Deals damage =[N]
@@ -1952,9 +1952,10 @@ foe's Res.[X]
 ## SD_Blackfire
 # Ravenous Vortex
 Entropy[N]
-- Penny inflicts Atk -5 on adjacent foes.[N]
-- If tome is equipped, grants WTA and[N]
-triples WT effects for both sides.[X]
+- Penny's tomes inflict Atk penalty on[N]
+foe corresponding to tome tier, grants[N]
+weapon triangle advantage, and triples[N]
+WT effects for both sides.[X]
 
 ## SD_Whirlwind
 Thunderhead: If unit's HP is 75%[N]
@@ -2296,6 +2297,13 @@ Noctum Heart[N]
 - At start of turn, if within 2 spaces of[N]
 an ally, restores 50% HP to Verna and[N]
 30% HP to allies within 2 spaces.[X]
+
+## SD_NewVerna
+Noctum Heart[N]
+- Can toggle Phantom form, restoring[N]
+all HP to Verna and 30% HP to allies[N]
+within 2 spaces at start of turn.[N]
+- Disabled after combat.[X]
 
 ## SD_ShadowSlide
 Shadow Slide[N]
@@ -3181,8 +3189,10 @@ after combat.[N]
 ## SD_Luna
 # small icons, make f!myrm class skill
 Flashfire[N]
-- Activate to consume Blaze and deal[N]bonus true damage = 200% of Spd[N]
-and ignore Def.[X]
+- Activate to consume Blaze and[N]
+calculate damage using 200% of Spd[N]
+instead of Str, and ignore Def.[N]
+(Critical hits do 1.5x instead of 3x.)[X]
 
 ## UM_Luna
  Flashfire[X]
@@ -3192,7 +3202,7 @@ and ignore Def.[X]
 # (This is treated as a normal attack;
 # can follow-up, costs Blaze)
 Rina strikes with a flaming blow,[N]
-dealing bonus true damage = 200% of[N]
+calculating damage with 200% of[N]
 Spd and ignoring foe's Def.[N]
 (Consumes Blaze.)[X]
 
@@ -3202,7 +3212,25 @@ From the Ashes...[N]
 - If taking a lethal attack, consumes[N]
 Blaze to survive with 1 HP, and, after[N]
 combat, restores 50 HP (can overheal for[N]
-1 phase if triggered on enemy phase).[X]
+1 combat if triggered on enemy phase).[X]
+
+## RinaSkillProc1
+[3L]
+[R][Rina][Smile]
+Rising[Beat] from the ashes![AN][Smile]
+[X]
+
+## RinaSkillProc2
+[3L]
+[R][Rina][Smile]
+I[Beat] will not fall here![AN][Smile]
+[X]
+
+## RinaSkillProc3
+[3L]
+[R][Rina][Smile]
+Heh[Beat] Is that all you got![AN][Smile]
+[X]
 
 ## SD_ArcaneBlade
 Arcane Blade: When initiating battle[N]

@@ -72,7 +72,8 @@
 #define HouseExp(flag,background,text) "Text(background,text); CHECK_EVENTID flag; BNE 0x776 0xC 0x0; GiveExperience(0xFFFF,10); ENUT flag;LABEL 0x776; EVBIT_T 0x7"
 #define QuickRemu(unitID,labelID) "CHECK_EXISTS unitID; BEQ labelID 0xC 0x0; CHECK_ALIVE unitID; BEQ labelID 0xC 0x0; REMU unitID; LABEL labelID"
 #define QuickCheckFlag(flagID,labelID) "CHECK_EVENTID flagID; BEQ labelID 0xC 0x0;"
-#define DoAllThree "CLEA 0; CLEN 0; CLEE 0"
+#define DoAllThree "CLEA 0; CLEN 0; CLEE 0;"
+#define ResetFlags "ENUF 0x7F" //just rina for now
 #define PlayerRangeCheck "SVAL 0x2 0x0; CALL 0x9EE1B8"
 #define SilentlyGiveItem(item, unit) "BYTE 0x40 0x0D unit item; POIN SilentGiveItem+1"
 #define TalkConvo(id) "MUSI; Text(id); MUNO; MURE 2; NoFade"

@@ -1,5 +1,5 @@
 StaticEvent:
-CAM1 0xFFFF
+
 RANDOMNUMBER 0x2
 SVAL 0x7 0x0
 BEQ 0x1 0xC 0x7
@@ -17,6 +17,13 @@ GOTO 5
 LABEL 3
 SOUN 0x13E
 LABEL 5
+
+ASMC ASMC_GetBattleTarget|1
+SADD 0xCB
+SVAL 0x1 20 //ID for thunder anim
+SVAL 0x2 0x0
+ASMC ASMC_Draw|1
+
 STAL 0x8
 NoFade
 ENDA
