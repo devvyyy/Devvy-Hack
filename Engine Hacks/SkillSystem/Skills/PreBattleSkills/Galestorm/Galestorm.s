@@ -1,70 +1,134 @@
 .thumb
-.org 0x0
-.equ GalestormID, SkillTester+4
+.equ BlackfireID, SkillTester+4
 .equ gBattleData, 0x203A4D4
 
-push	{r4,r5,r14}
-mov		r4,r0
-mov		r5,r1
+push {r4-r7, lr}
+mov r4, r0 @atkr
+mov r5, r1 @dfdr
 
-ldr		r0,[r5,#0x4]
-cmp		r0,#0
-beq		GoBack
-mov		r0,#0x52
-ldrb	r0,[r5,r0]		@can unit counter
-cmp		r0,#0
-bne		GoBack
+@has skill?
+ldr r0, SkillTester
+mov lr, r0
+mov r0, r4 @attacker data
+ldr r1, BlackfireID
+.short 0xf800
+cmp r0, #0
+beq End
 
-mov		r0,r4
-ldr		r1,SkillTester
-mov		r14,r1
-ldr		r1, GalestormID
-.short  0xF800
-cmp		r0,#0x0
-beq		GoBack
+@make sure we're in combat (or combat prep)
+ldrb r3, =gBattleData
+ldrb r3, [r3]
+cmp r3, #4
+beq End
 
-@set attacker AS to 99
-@mov r0, r4
-@add r0,#0x5E
-@mov r3,#99
-@strh r3,[r0]
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq End
 
-@add 3 Atk
-@mov r1, #0x5A
-@ldrh r0, [r4, r1] @atk
-@add r0, #3
-@strh r0, [r4,r1]
+@check weapon
+mov     r0, #0x4A      @Move to attackers's weapon (before battle)
+ldrb    r0, [r4, r0]   @Load attackers weap (before battle)
+cmp     r0, #0x38         @Embers 1
+beq DarkIEff
+cmp     r0, #0x39         @Thunder II
+beq MiasmaIIEff
+cmp     r0, #0x3A         @Tempest III
+beq ShadeIIIEff
+cmp     r0, #0x3C         @Glaciate IV
+beq UmbraIVEff
+cmp     r0, #0x3B         @Ragnarok V
+beq BlightVEff
+b End
 
-@ldrb r0, [r4, #0x16] @attacker spd
-@ldrb r1, [r5, #0x16] @defender spd
-@cmp r0, r1
-@ble GoBack @skip if spd is less or equal
+DarkIEff:
 
-@ set brave flag
-@mov r0,r4
-@add r0,#0x4C @item ability word
-@ldr r1,[r0]
-@mov r2,#0x20 @brave flag
-@orr r1,r2
-@str r1,[r0]
+@check for 1 range?
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#1
+bne End
 
-@add 200% of foes missing hp as damage
-@ldrb  r0,[r5,#0x12] @defender max hp
-@ldrb  r1,[r5,#0x13] @defender current hp
-@sub   r0,r1
-@lsr   r0,#0x1     @missing hp/2
-@mov   r2,#0x5A
-@ldrh  r1,[r4,r2]
-@@add   r1,r0,r1
-@add   r1,r0,r1
-@strh  r1,[r4,r2]
 
-GoBack:
-pop		{r4-r5}
-pop		{r0}
-bx		r0
+@add 1 def to unit
+mov r1, #0x5C
+ldrh r0, [r4, r1] @def
+add r0, #1
+strh r0, [r4,r1]
+b End
 
+MiasmaIIEff:
+
+@check for 1 range?
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#1
+bne End
+
+@add 2 def to unit
+mov r1, #0x5C
+ldrh r0, [r4, r1] @def
+add r0, #2
+strh r0, [r4,r1]
+b End
+
+ShadeIIIEff:
+
+@check for 1 range?
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#1
+bne End
+
+@add 3 def to unit
+mov r1, #0x5C
+ldrh r0, [r4, r1] @def
+add r0, #3
+strh r0, [r4,r1]
+b End
+
+UmbraIVEff:
+
+@check for 1 range?
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#1
+bne End
+
+@add 4 def to unit
+mov r1, #0x5C
+ldrh r0, [r4, r1] @def
+add r0, #4
+strh r0, [r4,r1]
+b End
+
+BlightVEff:
+
+@check for 1 range?
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#1
+beq DoTheThing
+
+@check for 2 range?
+ldr r0,=#0x203A4D4 @battle stats
+ldrb r0,[r0,#2] @range
+cmp r0,#2
+bne End
+
+DoTheThing:
+
+@add 2 def to unit
+mov r1, #0x5C
+ldrh r0, [r4, r1] @def
+add r0, #5
+strh r0, [r4,r1]
+b End
+
+End:
+pop {r4-r7, r15}
 .align
+.ltorg
 SkillTester:
-@POIN SkillTester
-@WORD GalestormID
+@Poin SkillTester
+@WORD BlackfireID

@@ -46,7 +46,7 @@ is less than 100%, grants both sides an[N]
 additional strike after first attack.[X]
 
 ## SD_LoafOff
-Loaf Off[N]
+Work Smarter[N]
 - If Svana Waits without acting, restores[N]
 50% of Max HP.[N]
 - If initiating after moving 4 spaces[N]
@@ -314,6 +314,26 @@ Ferromancy[N]
 unmounted allies within 2 spaces:[N]
 Gallop: Grants Canto.[N]
 Reinforce: Grants Atk/Prt/Rsl +5.[X]
+
+## WulfricRework
+Ferromancy[N]
+- Wulfric can toggle between[N]
+Iron Steed and Aegis Shell forms[N]
+for different effects.[X]
+
+## WulfricRework1
+# this replaces canto; give great knights 6 move?
+Iron Steed[N]
+- Grant Move +1.[N]
+- Unit and allies within 2 spaces[N]
+can use remaining movement after[N]
+any action (once per turn).[X]
+
+## WulfricRework2
+Aegis Shell[N]
+- Grants Def/Res +5.[N]
+- Inflicts Def/Res -25% on foes within[N]
+3 spaces.[X]
 
 ## SD_Boomerang
 Shielderang[N]
@@ -667,8 +687,8 @@ damage after combat.[X]
 Shadow Eye[N]
 - If Edvin initiates, after combat,[N]
 inflicts Soulbreak for the map.[N]
-- If foe has any status effects,[N]
-grants Hit +30.[X]
+- If foe has any status, deals bonus[N]
+magical damage = foe's Spd x 2.[X]
 
 ## SD_StaticPanic
 # Volatile Sparks
@@ -1167,6 +1187,12 @@ has a status effect, Doppio ignores foe's[N]
 terrain bonuses and deals bonus magical[N]
 damage = foe's Spd x 2.[X]
 
+## DoppioRework
+Oblivious[N]
+- Doppio ignores stat penalties,[N]
+reverses weapon combat penalties,[N]
+and neutralizes foe's terrain bonuses.[X]
+
 ## SD_SolumNew
 # Purging Arrow
 Dispersal[N]
@@ -1238,11 +1264,21 @@ weapon combat penalties, and deals bonus[N]
 damage = 25% of foe's max HP.[N]
 - Activate to deal (5 + 1.5x) damage.[X]
 
+## OgrimRework
+# Ironclad Bastion
+Steel Soul[N]
+- If Ogrim initiates and Def > foe's[N]
+Str/Eth, strikes x2 consecutively.[N]
+- Can toggle an Artillery stance:[N]
+Grants tome range +5, Move = 0.[X]
+
 ## AnotherNoelRework
-Martial Poise[N]
-- Grants Noel and adjacent Wreyvian[N]
-allies +1 Move.[N]
-- Canto 2 spaces after combat.[X]
+# at 1 range, around noel; at 2+, around target; cleaving
+Sundering Blows[N]
+- Deals bonus damage = 25% of foe's[N]
+max HP; splashes to foes adjacent to[N]
+Noel at 1 range, or target at 2+ range.[N]
+- Activate to deal (1.5x + 5) damage.[X]
 
 ## SD_BullHeaded
 # - Reverses penalties (stats, WTD, etc.). ? The Best Defense... - Survive a lethal hit once per turn.
@@ -1952,10 +1988,10 @@ foe's Res.[X]
 ## SD_Blackfire
 # Ravenous Vortex
 Entropy[N]
-- Penny's tomes inflict Atk penalty on[N]
+- Penny's tomes inflicts Atk penalty on[N]
 foe corresponding to tome tier, grants[N]
 weapon triangle advantage, and triples[N]
-WT effects for both sides.[X]
+weapon triangle effects for both sides.[X]
 
 ## SD_Whirlwind
 Thunderhead: If unit's HP is 75%[N]
