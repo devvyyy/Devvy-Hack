@@ -28,10 +28,28 @@ cmp r0,#1
 bne Done
 
 @add attack to foe
-mov r1, #0x5A
-ldrh r0, [r5, r1] @atk
-add r0, #5
-strh r0, [r5,r1]
+@mov r1, #0x5A
+@ldrh r0, [r5, r1] @atk
+@add r0, #5
+@strh r0, [r5,r1]
+
+@obliterate terrain avoid
+mov r0, r4
+add r0,#0x57
+mov r3,#0
+strh r3,[r0]
+
+@obliterate terrain def
+mov r0, r4
+add r0,#0x56
+mov r3,#0
+strh r3,[r0]
+
+@obliterate terrain res
+mov r0, r4
+add r0,#0x58
+mov r3,#0
+strh r3,[r0]
 
 @add hit to foe
 mov r1, #0x60

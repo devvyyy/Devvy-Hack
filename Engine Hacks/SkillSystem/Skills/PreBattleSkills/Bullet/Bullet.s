@@ -31,7 +31,7 @@ strh r0, [r4,r1]
 @add 5 hit
 mov r1, #0x60
 ldrh r0, [r4, r1] @hit
-add r0, #5
+add r0, #10
 strh r0, [r4,r1]
 b End
 
@@ -54,7 +54,7 @@ strh r0, [r4,r1]
 @add 5 hit
 mov r1, #0x60
 ldrh r0, [r4, r1] @hit
-add r0, #10
+add r0, #20
 strh r0, [r4,r1]
 b End
 
@@ -76,7 +76,7 @@ strh r0, [r4,r1]
 @add 5 hit
 mov r1, #0x60
 ldrh r0, [r4, r1] @hit
-add r0, #15
+add r0, #30
 strh r0, [r4,r1]
 
 End:
