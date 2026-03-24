@@ -368,6 +368,14 @@ Prt/Rsl = 25% of ally's missing HP,[N]
 and Hit/Avoid = 50% of ally's missing[N]
 HP (calculated at start of combat).[X]
 
+## SD_RaialRework
+# Down But Not Out
+Stand Back Up[N]
+- Once per map, Raial blocks the first[N]
+lethal hit during an ally's combat.[X]
+- Use Rally to grant Str/Eth +4 to[N]
+adjacent allies for 1 turn.[X]
+
 ## SD_BadBloodAlt
 # for if im too lazy
 Bad Blood: If Gus' Lvl > foe's Lvl, foe can't[N]
@@ -766,9 +774,9 @@ only after reverting).[X]
 # Flow, temp flags 0x26-0x28 (used to use 0x25 also) MAKE THIS 3 stacks now!! Apex Predator
 Thrill of the Hunt[N]
 - Kills grant Klavdia a stack (max; 3).[N]
-- Stacks grant Atk +1, Hit +5 each.[N]
+- Stacks grant Atk +1, Hit +10 each.[N]
 - At max stacks, foes within 4 spaces[N]
-take +5 damage and can't dodge.[X]
+can't dodge or benefit from terrain.[X]
 
 ## SD_FlowGamingNew
 Bulwark: Combat grants 1 stack (max; 3).[N]
@@ -1193,6 +1201,22 @@ Oblivious[N]
 reverses weapon combat penalties,[N]
 and neutralizes foe's terrain bonuses.[X]
 
+## DoppioRework2
+# uses 3 flags: 
+Determination[N]
+- Combat grant Doppio 1 stack (max; 3).[N]
+- Stacks grant Hit/Avoid +10 each.[N]
+- At max stacks, enables Overrun.[N]
+(Always critical hit, Canto 5.)[X]
+
+## OverrunName
+ Overrun[X]
+
+## OverrunDesc
+Doppio lunges forward, consuming all[N]
+stacks to always land a critical hit[N]
+and Canto 5 spaces after combat.[X]
+
 ## SD_SolumNew
 # Purging Arrow
 Dispersal[N]
@@ -1275,9 +1299,9 @@ Grants tome range +5, Move = 0.[X]
 ## AnotherNoelRework
 # at 1 range, around noel; at 2+, around target; cleaving
 Sundering Blows[N]
-- Deals bonus damage = 25% of foe's[N]
-max HP; splashes to foes adjacent to[N]
-Noel at 1 range, or target at 2+ range.[N]
+- Noel deals bonus damage = 25% of foe's[N]
+max HP; after combat, this applies to[N]
+foes adjacent to target.[N]
 - Activate to deal (1.5x + 5) damage.[X]
 
 ## SD_BullHeaded
