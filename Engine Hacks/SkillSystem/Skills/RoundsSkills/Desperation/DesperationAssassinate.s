@@ -43,8 +43,19 @@ ldr r3, [sp]
 ldrb r0, [r2, #0x12] @max hp
 ldrb r1, [r2, #0x13] @curr hp
 cmp r0, r1
-bne CheckAssasinate
+beq DiveCheck
 
+@ OR is enemy unmounted?
+ldr		r0,[r5]
+ldr		r0,[r0,#0x28]
+ldr		r1,[r5,#0x4]
+ldr		r1,[r1,#0x28]
+orr		r0,r1
+mov		r1,#0x1			@is defender mounted
+tst		r0,r1
+bne		CheckAssasinate @foes hp isnt full AND foe is mounted
+
+DiveCheck:
 @ check if you have dive-bomb
 ldr r0, SkillTester
 mov lr, r0
