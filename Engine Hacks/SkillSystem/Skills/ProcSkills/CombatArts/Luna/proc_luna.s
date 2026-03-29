@@ -10,6 +10,7 @@
 .equ CheckEventId, 0x8083DA8
 .equ SetEventId,   0x8083D80
 .equ StrGetter,    0x80191b0
+.equ gBattleData, 0x203A4D4
 
 @ r0 is attacker, r1 is defender, r2 is current buffer, r3 is battle data
 push {r4-r7,lr}
@@ -98,6 +99,13 @@ mov r0, #0x7f
 NotCap:
 @ store final damage
 strh r0, [r7, #4]
+
+@make sure we're in combat (or combat prep)
+ldrb	r3, =gBattleData
+ldrb  r3, [r3]
+mov r0, #0x1
+tst r3, r0
+beq End @we check against 0 here
 
 @  set rina flag
 ldr r0, =SetEventId

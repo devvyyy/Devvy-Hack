@@ -27,6 +27,10 @@ Turn2OgrimGaming:
 CamOn
 CAM1 [5,3]
 LOAD1 0x1 OgrimGang
+SilentlyGiveItem(0xBC, 0xCD)
+SetUnitItemDurability(0xCD, 4, CantoOneID) //snow boots
+SilentlyGiveItem(0xBC, 0x80)
+SetUnitItemDurability(0x80, 3, SpurStrID) //snow boots
 Text(Gaiden2InBattle2)
 NoFade
 ENDA
@@ -412,6 +416,11 @@ Text(Gaiden2Opening4)
 STAL 15
 CenterTextbox(Gaiden2Notif)
 
+SilentlyGiveItem(0xBC, 0xCA)
+SetUnitItemDurability(0xCA, 4, BattleVeteranID) //lionet
+SilentlyGiveItem(0xBC, 0xCB)
+SetUnitItemDurability(0xCB, 4, VigilanceID) //lionet
+
 	ENUN
 	NoFade
 	ENDA
@@ -585,7 +594,6 @@ Text(Gaiden2Ending11)
 FADI 15
 MUSCSLOW 0x47
 SetBackground(0x34)
-FADU 15
 
 Text(Gaiden2Ending14)
 

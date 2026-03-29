@@ -44,7 +44,9 @@ ENDA
 
 ALIGN 32
 CharacterBasedEvents:
+CharacterEventBothWays(0xA, RecruitEdGraham, Graham, Edvin)
 CharacterEventBothWays(0xA, RecruitEd, 0x0, Edvin)
+CharacterEventBothWays(0xC, RaialDenial, Raial, Edvin)
 CharacterEventBothWays(0x20,ChiffonGrahamTalk, Chiffon, Graham)
 CharacterEventBothWays(0x21,ChiffonRaialTalk, Chiffon, Raial)
 CharacterEventBothWays(0x22,GrahamGusTalk, Gus, Graham)
@@ -91,6 +93,20 @@ STAL 33
 Text(EdvinRecruit)
 MURE 0x2
 TurnAlly(Edvin)
+NoFade
+ENDA
+
+RecruitEdGraham:
+MUSS 0x297
+STAL 33
+Text(EdvinRecruitGraham)
+MURE 0x2
+TurnAlly(Edvin)
+NoFade
+ENDA
+
+RaialDenial:
+Text(EdvinNoRecruitRaial)
 NoFade
 ENDA
 
@@ -260,6 +276,23 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+CHECK_EVENTID 0x92 //opal
+BNE 0x9000 0xC 0x0
+CHECK_EVENTID 0x93 //wulfric
+BNE 0x9000 0xC 0x0
+CHECK_EVENTID 0x94 //messel
+BNE 0x9000 0xC 0x0
+CHECK_EVENTID 0x95 //also messel; tents
+BNE 0x9000 0xC 0x0
+	
+SetFlag(0xA) //raial route, disables graham/generic talk
+	
+GOTO 0x9001
+LABEL 0x9000
+
+SetFlag(0xC) //graham route, disables raial talk
+LABEL 0x9001
+
 SetFlag(0x84) //hides boss icons
 	ENUT AllUnitsMustEscapeFlag
 	LOAD1 0x1 EnemyUnits

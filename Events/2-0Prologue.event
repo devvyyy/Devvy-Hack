@@ -416,6 +416,60 @@ STAL 5
 //Music(0xed)
 Music(0x28D)
 Text(PrologueTest2)
+
+//the big stuff
+FADI 6
+Music(0x279)
+STAL 150
+SetBackground(0x4a)
+
+Text(PrologueTestCG1)
+
+FADI 7
+CLEAN
+SetBackground(0x2c)
+STAL 10
+Text(PrologueTestCG2)
+
+FADI 7
+CLEAN
+SetBackground(0x4b)
+STAL 10
+Text(PrologueTestCG3)
+
+FADI 7
+CLEAN
+SetBackground(0x4c)
+STAL 10
+Text(PrologueTestCG4)
+
+//Text(PrologueTestCG5)
+
+//Text(PrologueTestCG6)
+
+FAWI 30
+STAL 5
+Sound(0x123)
+CLEAN
+SetBackground(0x4d)
+STAL 10
+Text(PrologueTestCG7)
+
+FADI 30
+CLEAN
+SetBackground(0x35)
+STAL 5
+Text(PrologueTestCG8)
+FADI 6
+CLEAN
+STAL 20
+FADU 12
+
+STAL 20
+Music(0x31f)
+Text(PrologueTestAfterCGs)
+
+STAL 5
 	MOVE 0x15 Chiffon [2,1]
 	ENUN
 	MOVE 0xD Jaye [2,6]

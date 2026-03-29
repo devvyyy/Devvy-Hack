@@ -372,7 +372,7 @@ HP (calculated at start of combat).[X]
 # Down But Not Out
 Stand Back Up[N]
 - Once per map, Raial blocks the first[N]
-lethal hit during an ally's combat.[X]
+lethal hit during an ally's combat.[N]
 - Use Rally to grant Str/Eth +4 to[N]
 adjacent allies for 1 turn.[X]
 
@@ -1692,7 +1692,7 @@ at start of combat.[N]
 Steel Sigil[N]
 (Luck +5 to Wreyvians)[N]
 - Enables Iron Bash.[N]
-(Adds Def x 3 to damage.)[X]
+(Adds Def to damage.)[X]
 
 ## SD_QuickBurn
 Draco Fang[N]
@@ -2089,8 +2089,8 @@ If foe is magical, grants AS +3.[X]
 Death From Above[N]
 - If Brudet initiates and foe's HP is full,[N]
 follow-up and foe can't, and if also at[N]
-1 range, follow-ups occur before foe[N]
-can counter.[X]
+1 range or foe isn't mounted, follow-ups[N]
+occur before foe can counter.[X]
 
 ## SD_InspireOld
 Inspire[N]
@@ -3251,7 +3251,7 @@ after combat.[N]
 Flashfire[N]
 - Activate to consume Blaze and[N]
 calculate damage using 200% of Spd[N]
-instead of Str, and ignore Def.[N]
+instead of Str, and deal true damage.[N]
 (Critical hits do 1.5x instead of 3x.)[X]
 
 ## UM_Luna
@@ -3263,14 +3263,14 @@ instead of Str, and ignore Def.[N]
 # can follow-up, costs Blaze)
 Rina strikes with a flaming blow,[N]
 calculating damage with 200% of[N]
-Spd and ignoring foe's Def.[N]
+Spd and ignoring foe's defenses.[N]
 (Consumes Blaze.)[X]
 
 ## SD_Grisly_Wound
 # small icons, make f!myrm class skill
 From the Ashes...[N]
 - If taking a lethal attack, consumes[N]
-Blaze to survive with 1 HP, and, after[N]
+Blaze to survive with 1 HP, and after[N]
 combat, restores 50 HP (can overheal for[N]
 1 combat if triggered on enemy phase).[X]
 
@@ -3283,7 +3283,7 @@ Rising[Beat] from the ashes![AN][Smile]
 ## RinaSkillProc2
 [3L]
 [R][Rina][Smile]
-I[Beat] will not fall here![AN][Smile]
+I[Beat] won't be snuffed out![AN][Smile]
 [X]
 
 ## RinaSkillProc3
