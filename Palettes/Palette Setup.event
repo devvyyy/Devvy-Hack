@@ -276,10 +276,6 @@
 	setPalette(0x5B,Wegman_General)
 	setCBSP(0x5B,0x2C,0x3,0x0B)
 
-// Selwyn_Auspex
-	setPalette(0x5C,Selwyn_Auspex)
-	setCBSP(0x5C,0x44,0x3,0x31)
-
 // Gerolf_Pal
 	setPalette(0x5F,Gerolf_Pal)
 	setCBSP(0x5F,0x32,0x3,0x7)
@@ -432,10 +428,6 @@
 	setPalette(0x7D,Haye_Sergeant)
 	setCBSP(0x7D,Gheb,0x3,0x64)
 
-// Aoife_Sage
-	setPalette(0x7E,Aoife_Sage)
-	setCBSP(0x7E,Aoife,0x3,0x28)
-
 // Gus_Thief
 	setPalette(0x7F,Gus_Thief)
 	setCBSP(0x7F,Gus,0x1,Thief)
@@ -460,9 +452,9 @@
 	setPalette(0x84,Reinier_Sergeant)
 	setCBSP(0x84,0x62,0x3,0x64)
 
-// Weylan
-	setPalette(0x85,Weylan)
-	setCBSP(0x85,0x73,0x3,Adventurer)
+// ChiffonCrazy
+	setPalette(0x85,ChiffonCrazy)
+	setCBSP(0x85,0xC0,0x1,0x10)
 
 // Cathy
 	setPalette(0x86,Cathy)
@@ -706,6 +698,10 @@
 	setGenericPalette(0xA6,Generic_Hunter)
 	setGenericPalette(0xA7,Generic_Hunter)
 
+// Generic_Grif
+	setGenericPalette(0x60,Generic_Grif)
+	setGenericPalette(0x61,Generic_Grif)
+
 // Generic_Cav
 	setGenericPalette(0x34,Generic_Cav)
 	setGenericPalette(0x35,Generic_Cav)
@@ -716,6 +712,13 @@
 	setGenericPalette(0xA1,Generic_Cav)
 	setGenericPalette(0xAC,Generic_Cav)
 	setGenericPalette(0xAD,Generic_Cav)
+
+// Generic_Pal
+	setGenericPalette(0x3A,Generic_Pal)
+	setGenericPalette(0x3B,Generic_Pal)
+	setGenericPalette(0xAA,Generic_Pal)
+	setGenericPalette(0xAB,Generic_Pal)
+	setGenericPalette(0x3C,Generic_Pal)
 
 // Generic_Armor
 	setGenericPalette(0x40,Generic_Armor)
@@ -752,6 +755,17 @@
 	setGenericPalette(0x66,Generic_Peg)
 	setGenericPalette(0x67,Generic_Peg)
 
+// Generic_Falco
+	setGenericPalette(0x69,Generic_Falco)
+	setGenericPalette(0x6a,Generic_Falco)
+
+// Generic_Monk
+	setGenericPalette(0x7D,Generic_Monk)
+
+// Generic_Bishop
+	setGenericPalette(0x81,Generic_Bishop)
+	setGenericPalette(0x82,Generic_Bishop)
+
 // Generic_Occultist
 	setGenericPalette(0xA3,Generic_Occultist)
 
@@ -759,6 +773,11 @@
 	setGenericPalette(0x19,Generic_Fighter)
 	setGenericPalette(0x1A,Generic_Fighter)
 	setGenericPalette(0x1B,Generic_Fighter)
+
+// Generic_Sergeant
+	setGenericPalette(0x53,Generic_Sergeant)
+	setGenericPalette(0x54,Generic_Sergeant)
+	setGenericPalette(0x55,Generic_Sergeant)
 
 // Generic_Mercenary
 	setGenericPalette(0x0B,Generic_Mercenary)
@@ -794,12 +813,8 @@
 // Generic_Seer
 	setGenericPalette(0xB0,Generic_Seer)
 
-// Generic_Druid0
-	setGenericPalette(0x77,Generic_Druid0)
-	setGenericPalette(0x78,Generic_Druid0)
-
 // Generic_Magician
-	setGenericPalette(0x6A,Generic_Magician)
+	setGenericPalette(0x68,Generic_Magician)
 	setGenericPalette(0x6B,Generic_Magician)
 
 // Generic_Valkyrie
@@ -814,6 +829,10 @@
 	setGenericPalette(0x72,Generic_MageKnight)
 	setGenericPalette(0x73,Generic_MageKnight)
 	setGenericPalette(0x74,Generic_MageKnight)
+
+// Generic_Thief
+	setGenericPalette(0x89,Generic_Thief)
+	setGenericPalette(0x8a,Generic_Thief)
 
 // Generic_Warrior
 	setGenericPalette(0x1C,Generic_Warrior)

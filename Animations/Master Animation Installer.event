@@ -231,14 +231,14 @@ ALIGN 4
 {
 #include "Sniper M/Unarmed/Installer.event"
 }
-ALIGN 4 //Sniper (Hat, M) by Nuramon
-{
-#include "HatSniper/Bow/Installer.event"
-}
-ALIGN 4
-{
-#include "HatSniper/Unarmed/Installer.event"
-}
+//ALIGN 4 //Sniper (Hat, M) by Nuramon
+//{
+//#include "HatSniper/Bow/Installer.event"
+//}
+//ALIGN 4
+//{
+//#include "HatSniper/Unarmed/Installer.event"
+//}
 ALIGN 4 //Sniper (F) by Nuramon
 {
 #include "Sniper F/Bow/Installer.event"
@@ -271,11 +271,17 @@ ALIGN 4
 {
 #include "Cavalier F/Lance/Lance Installer.event"
 }
+ALIGN 4 // Hildr by Leo
 {
-#include "Cavalier F/Axe/Axe Installer.event"
+#include "Hildr/Axe Installer.event"
 }
+ALIGN 4
 {
-#include "Cavalier F/Handaxe/Handaxe Installer.event"
+#include "Hildr/Handaxe Installer.event"
+}
+ALIGN 4
+{
+#include "Hildr/Unarmed Installer.event"
 }
 ALIGN 4
 {
@@ -369,18 +375,23 @@ ALIGN 4 //General by Nuramon
 {
 #include "General/Sword/Sword Installer.event"
 }
+ALIGN 4
 {
 #include "General/Lance/Lance Installer.event"
 }
+ALIGN 4
 {
 #include "General/Axe/Axe Installer.event"
 }
+ALIGN 4
 {
 #include "General/Handaxe/Handaxe Installer.event"
 }
+ALIGN 4
 {
 #include "General/Bow/Bow Installer.event"
 }
+ALIGN 4
 {
 #include "General/Unarmed/Unarmed Installer.event"
 }
@@ -391,6 +402,14 @@ ALIGN 4 //Paladin (M) by TEAM SALVAGED
 ALIGN 4
 {
 #include "Paladin M/Lance/Lance Installer.event"
+}
+ALIGN 4 //Ulrich by Leo
+{
+#include "Ulrich/Lance Installer.event"
+}
+ALIGN 4
+{
+#include "Ulrich/Unarmed Installer.event"
 }
 ALIGN 4
 {
@@ -448,6 +467,14 @@ ALIGN 4
 {
 #include "Raider/Unarmed/Installer.event"
 }
+ALIGN 4 //Leo Ranger
+{
+#include "Ranger/Bow Installer.event"
+}
+ALIGN 4
+{
+#include "Ranger/Unarmed Installer.event"
+}
 ALIGN 4 //Deserter by Alusq
 {
 #include "Deserter/Lance/Installer.event"
@@ -463,6 +490,22 @@ ALIGN 4 //Magician
 ALIGN 4
 {
 #include "Magician/Unarmed/Installer.event"
+}
+ALIGN 4 //Aoife Redbean Brunnya
+{
+#include "Aoife/Magic Installer.event"
+}
+ALIGN 4 //Selwyn
+{
+#include "Selwyn/Selwyn Installer.event"
+}
+ALIGN 4 //Sage F
+{
+#include "Sage F/Magic Installer.event"
+}
+ALIGN 4
+{
+#include "Sage F/Staff Installer.event"
 }
 ALIGN 4 //Mage Fighter by Obs
 {
@@ -492,6 +535,7 @@ ALIGN 4 //Mage Knight by Strudelmuffin
 {
 #include "MageKnight F/Magic/Magic Installer.event"
 }
+ALIGN 4
 {
 #include "MageKnight F/Staff/Installer.event"
 }
@@ -511,6 +555,7 @@ ALIGN 4 //Winter Priest
 {
 #include "Priest/Staff/Installer.event"
 }
+ALIGN 4
 {
 #include "Priest/Unarmed/Installer.event"
 }
@@ -546,6 +591,7 @@ ALIGN 4 //Bishop (F) by Mikey Seregon, EltritchAbomination
 {
 #include "Bishop F/Magic/Installer.event"
 }
+ALIGN 4
 {
 #include "Bishop F/Unarmed/Installer.event"
 }
@@ -565,6 +611,7 @@ ALIGN 4
 {
 #include "Sergeant/Unarmed/Unarmed Installer.event"
 }
+ALIGN 4
 {
 #include "Mystic/Staff/Staff Installer.event"
 }
@@ -753,7 +800,7 @@ UnarmedAnim(0x3C)
 WORD 0x0    // Seperator
 
 MagicianAnim:
-AnimaAnim(0x6A)
+AnimaAnim(0x68)
 UnarmedAnim(0x6B)
 WORD 0x0    // Seperator
 

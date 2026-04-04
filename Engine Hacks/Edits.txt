@@ -26,6 +26,18 @@ ORG 0x9EF18 //List menu tile width
 BYTE UnitNameTileWidth
 POP
 
+// Sacred Weapon BGM
+// For Chif Rays of Light cutscene stuff in 2-F
+PUSH
+ORG 0x58b12
+BYTE 0x8f
+POP
+
+PUSH
+ORG 0x58b16 //default is hayes weapon/siegmund
+BYTE 0x8f
+POP
+
 // Don't clear supports on death
 PUSH
 ORG 0x18422

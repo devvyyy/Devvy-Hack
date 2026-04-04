@@ -349,6 +349,7 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+	SetFlag(0xEC)
 	ENUT AllUnitsMustEscapeFlag
 	//TILECHANGE 0x4
 	LOAD1 0x1 EnemyUnits
@@ -394,6 +395,7 @@ LABEL 0x9001
 
 EndingScene:
 ResetFlags
+UnsetFlag(0xEC)
 	Music(0x283)
 	SetBackground(0x2d)
 

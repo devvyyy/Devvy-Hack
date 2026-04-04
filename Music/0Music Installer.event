@@ -146,7 +146,8 @@ SongTable(0x29A,LIBERATION_FINAL,1)
 #include "0LIBERATION.event"
 
 ALIGN 4 //WHY??? this replaces sacred weapons theme
-SongTable(0x1f,SerpentsFangs,1)
+SongTable(0x1f,ImperiusChif_FINAL,1)
+#include "0ImperiusChif.event"
 
 ALIGN 4
 SongTable(0x27C,Summit,1)
@@ -309,6 +310,14 @@ SongTable(0x185,ToProtectYou_FINAL,1)
 ALIGN 4
 SongTable(0x1E6,RelentlessWarden_FINAL,1)
 #include "0RELENTLESS.event"
+
+ALIGN 4
+SongTable(0x22C,HeartFlameSong,1)
+#include "0HeartAflame_FINAL.event"
+
+ALIGN 4
+SongTable(0x22D,ToniSong,1)
+#include "0LordMariya_FINAL.event"
 
 ALIGN 4
 SongTable(0x196,NoctumOrder_FINAL,0)

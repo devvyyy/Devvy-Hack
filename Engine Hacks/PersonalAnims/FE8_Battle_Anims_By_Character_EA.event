@@ -39,8 +39,12 @@ ALIGN 4
 BattleAnimListByCharTable:
 BYTE Affogato Scout 0 0; POIN AffoHunterAnimList
 BYTE Affogato Adventurer 0 0; POIN AffoAdventurerAnimList
+BYTE Hildr 0x6 0 0; POIN HildrAnimList
+BYTE Ulrich LPal 0 0; POIN UlrichAnimList
 BYTE Gorlois Parson 0 0; POIN GorloisParsonAnimList
 BYTE 0x72 General 0 0; POIN WardenAnimList
+BYTE Aoife Sage_F 0 0; POIN AoifeAnimList
+BYTE Selwyn Summoner 0 0; POIN SelwynAnimList
 WORD 0 //Terminator
 
 AffoHunterAnimList:
@@ -53,6 +57,17 @@ BYTE 3 1; SHORT 0xBF //bows
 BYTE 9 1; SHORT 0xC0 //unarmed
 WORD 0 //terminator
 
+UlrichAnimList:
+BYTE 1 1; SHORT 0x56 //lance
+BYTE 9 1; SHORT 0x57 //unarmed
+WORD 0 //terminator
+
+HildrAnimList:
+BYTE 2 1; SHORT 0xAC //axe
+BYTE HandAxe 0x00 ; SHORT 0xAD ; BYTE Tomahawk 0x00 ; SHORT 0xAD ; BYTE ShortAxe 0x00 ; SHORT 0xAD
+BYTE 9 1; SHORT 0xC0 //unarmed
+WORD 0 //terminator
+
 GorloisParsonAnimList:
 BYTE 6 1; SHORT 0xBB //light
 BYTE 4 1; SHORT 0xBB //staves
@@ -62,4 +77,18 @@ WORD 0 //terminator
 WardenAnimList:
 BYTE 0 1; SHORT 0xC1 //swords
 BYTE 9 1; SHORT 0xC1 //unarmed
+WORD 0 //terminator
+
+AoifeAnimList:
+BYTE 5 1; SHORT 0xBD //anima
+BYTE 4 1; SHORT 0xBD //staves
+BYTE 9 1; SHORT 0xBD //unarmed
+WORD 0 //terminator
+
+SelwynAnimList:
+BYTE 5 1; SHORT 0xBF //anima
+BYTE 6 1; SHORT 0xBF //light
+BYTE 7 1; SHORT 0xBF //dark
+BYTE 4 1; SHORT 0xBF //staves
+BYTE 9 1; SHORT 0xBF //unarmed
 WORD 0 //terminator

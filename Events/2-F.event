@@ -138,7 +138,7 @@ UNIT Aeteria WyvRider 0x1 Level(10, Enemy, 1)     [2,17] 0b 0x0 0x0 0x0 [ShortAx
 	UNIT
 	
 CutsceneUnits:
-UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [6,9] 0b 0x0 0x0 0x0 [Naglfar] [0x0,0x0,0x0,0x0]
+UNIT 0xc0 0x10 0x1 Level(1, Ally, 0)   [6,9] 0b 0x0 0x0 0x0 [Naglfar, Naglfar, 0xE9, 0xE9] [0x0,0x0,0x0,0x0]
 UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [7,8] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
 UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [7,10] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
 	UNIT
@@ -323,28 +323,30 @@ TEXTSTART
 TEXTSHOW ChP2FinaleEnding1
 TEXTEND
 REMA
+MUSC 0x1F
 FADI 16
 CLEAN
-FADU 16
+STAL 5
+FADU 12
 STAL 15
 EVBIT_T 0x9
-MUSC 0x287
+STAL 7
 MOVE 0x10 0x84 [1,7]
-MOVE 0x10 0x1 [3,7]
+MOVE 0x10 0xc0 [3,7]
 ENUN
 
 StartBattle
 CriticalHit(0,57)
 SetScriptedBattle(100,99,100,0,0,0)
-FIG1 Chiffon 0x84 Naglfar
+FIG1 0xc0 0x84 Naglfar
 SET_SOMETHING 0x84
 MOVE 0x10 0x85 [3,9]
-WORD 0x3C2F49 0x850001
+WORD 0x3C2F49 0x8500C0
 ENUN
 StartBattle
 CriticalHit(0,57)
 SetScriptedBattle(100,99,100,0,0,0)
-FIG1 Chiffon 0x85 Naglfar
+FIG1 0xc0 0x85 Naglfar
 SET_SOMETHING 0x85
 STAL 10
 CAM1 0x2F
@@ -353,6 +355,7 @@ STAL 20
 CUMO 0x2F
 STAL 60
 CURE
+STAL 10
 TEXTSTART
 TEXTSHOW ChP2FinaleEnding2
 TEXTEND
@@ -367,8 +370,9 @@ TEXTSTART
 TEXTSHOW ChP2FinaleEnding3
 TEXTEND
 REMA
-CameraCursor(Chiffon)
-MOVE 0x10 Chiffon [4,8]
+MUSC 0x1F
+CameraCursor(0xc0)
+MOVE 0x10 0xc0 [4,8]
 ENUN
 STAL 5
 SOUN 0x2ec
@@ -386,13 +390,12 @@ SET_SOMETHING 0x88
 //ENUN
 SET_SOMETHING 0x81
 STAL 20
-MUSC 0x1A
-WORD 0x3C2F49 0x340001
+WORD 0x3C2F49 0x3400C0
 ENUN
 StartBattle
 NormalDamage(0,23)
 SetScriptedBattle(100,23,0,87,53,26)
-FIG1 Chiffon 0x34 Naglfar
+FIG1 0xc0 0x34 Naglfar
 TEXTSTART
 TEXTSHOW ChP2FinaleEnding4
 TEXTEND
@@ -401,19 +404,23 @@ REMA
 StartBattle
 CriticalHit(0,53)
 SetScriptedBattle(87,53,26,100,23,0)
-FIG1 0x34 Chiffon 0xEA
+FIG1 0x34 0xc0 0xEA
 
 TEXTSTART
 TEXTSHOW ChP2FinaleEnding6
 TEXTEND
 REMA
-MOVEONTO 0xF 0x34 0x1
+MOVEONTO 0xF 0x34 0xc0
 ENUN
 SVAL 0x2 0x34
 CALL 0x9EE51C
-SVAL 0x2 0x1
+SVAL 0x2 0xc0
 CALL 0x9EE51C
 STAL 50
+
+MOVE 0xB Raial [7,9]
+ENUN
+STAL 5
 CameraCursor(Raial)
 CameraCursor(Graham)
 STAL 15
