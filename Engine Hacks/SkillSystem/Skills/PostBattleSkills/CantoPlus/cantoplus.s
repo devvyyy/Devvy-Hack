@@ -69,6 +69,15 @@ mov	r0, r4		@attacker
 sub r0, #5
 strb 	r0, [r6, #0x10]	@squares moved this turn
 
+@check if attacked this turn
+ldrb 	r0, [r6,#0x11]	@action taken this turn
+cmp	r0, #0x2 @attack
+bne	End
+ldrb 	r0, [r6,#0x0C]	@allegiance byte of the current character taking action
+ldrb	r1, [r4,#0x0B]	@allegiance byte of the character we are checking
+cmp	r0, r1		@check if same character
+bne	End
+
 ldr	r0, [r4,#0x0C]	@status bitfield
 mov	r1, #0x02
 mvn	r1, r1
