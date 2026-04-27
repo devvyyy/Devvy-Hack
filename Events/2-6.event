@@ -25,8 +25,17 @@ ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0xA, RecruitEdithChiff, Chiffon, Edith)
 //CharacterEventBothWays(0xA, RecruitEdithJaye, Edith, Jaye)
-//CharacterEventBothWays(0x9,FlanRecruit, Chiffon, Flan)
+CharacterEventBothWays(0x9,RinaIlseConvo, Rina, Ilse)
+CharacterEventBothWays(0xC,CortadoFryeTalk, Cortado, Frye)
 	END_MAIN
+
+CortadoFryeTalk:
+MUSS 0x297
+STAL 33
+Text(FryeCortadoB)
+MURE 0x2
+NoFade
+ENDA
 	
 HelloEdithGamer:
 CameraCursor(Edith)
@@ -34,6 +43,13 @@ Text(EdithGaming)
 NoFade
 ENDA
 
+RinaIlseConvo:
+	MUSI
+	Text(Ch26RinaIlseTalk)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
 
 RecruitEdithChiff:
 MUSS 0x297

@@ -21,7 +21,7 @@ mov r1, #0xC0 @skill flag
 lsl r1, #8 @0xC000
 add r1, #2 @miss @@@@OR BRAVE??????
 tst r0, r1
-bne End
+@bne End
 @if another skill already activated, don't do anything
 
 @check if we're already in astra

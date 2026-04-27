@@ -1,6 +1,6 @@
 #define Haye Beran
 #define Edvin Levain
-#define Raial 0x2f
+#define Raial 0x2F
 EventPointerTable(Ch12AEvent, PointerList)
 
 PointerList:
@@ -31,6 +31,10 @@ CharacterEventBothWays(0x22,ChiffonJayeTalk, Chiffon, Jaye)
 CharacterEventBothWays(0x23,ChiffonPollyTalk, Chiffon, Polly)
 CharacterEventBothWays(0x1F,ChiffonYvonneTalk, Chiffon, Yvonne)
 CharacterEventBothWays(0x24,YvonnePennyTalk, Polly, Yvonne)
+
+CharacterEventBothWays(0xB,AfterDoor1, Chiffon, Frye)
+CharacterEventBothWays(0xC,AfterDoor2, Chiffon, RealVelius)
+CharacterEventBothWays(0xD,AfterDoor3, Chiffon, Cortado)
 	END_MAIN
 
 MiscBasedEvents: //completion flag then trigger flag
@@ -40,8 +44,14 @@ MiscBasedEvents: //completion flag then trigger flag
 	AFEV 0xC AfterDoor2 0x9
 	AFEV 0xD AfterDoor3 0xA
 	AREA 0xA RecruitDoor3 [5,8] [7,10]
+	AREA 0x16 RandomThingy [17,1] [19,3]
 	CauseGameOverIfLordDies
 	END_MAIN
+
+RandomThingy:
+GiveItem(0x6B,0xFFFF)
+NoFade
+ENDA
 
 YvonnePennyTalk:
 	MUSI
@@ -518,7 +528,7 @@ CUSA Velius
 
 Music(0x196)
 BG(0x11)
-Text(PrologueTestEnding1)
+TextContCont(PrologueTestEnding1, 0x1c8, 0x196)
 Music(0x27a)
 BG(0xB)
 STAL 5

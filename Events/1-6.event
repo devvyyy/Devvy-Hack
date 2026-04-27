@@ -99,7 +99,16 @@ ENDA
 ALIGN 32
 CharacterBasedEvents:
 //CharacterEvent(0x0,YoryTurretCheck,Yory,0x3F)
+CharacterEventBothWays(0x16, AnsgarBreveConvo, Ansgar, Breve)
 	END_MAIN
+
+AnsgarBreveConvo:
+	MUSI
+	Text(AnsgarBreveTalk3)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
 
 MiscBasedEvents:
 AREA 0x0 WeAreDead [13,0] [17,1]

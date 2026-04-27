@@ -34,9 +34,9 @@ cmp     r0, #0xD8         @Bloody Rifle ID
 beq YesThereIsSkill
 cmp     r0, #0xD9         @Lock-in Rifle ID
 beq YesThereIsSkill
-cmp     r0, #0xE1         @Sonic Rifle ID
+cmp     r0, #0xDA         @Sonic Rifle ID
 beq YesThereIsSkill
-cmp     r0, #0xE2         @Backshield Rifle ID
+cmp     r0, #0xDB         @Backshield Rifle ID
 beq YesThereIsSkill
 cmp     r0, #0xA9         @Hunting Rifle ID
 beq YesThereIsSkill
@@ -58,32 +58,6 @@ ldrh r0, [r4, r1] @hit
 add r0, #10
 strh r0, [r4,r1]
 
-@get crit in r6
-mov		r1,#0x66
-ldrh	r6,[r4,r1]
-lsr		r6,#2
-mov r0,#0
-strh	r0,[r4,r1]
-
-@do the thing
-mov r1, #0x5a
-ldrh r0, [r4, r1]
-add r0, r6
-strh r0, [r4,r1]
-
-@not at stat screen
-ldr r1, [r5,#4] @class data ptr
-cmp r1, #0 @if 0, this is stat screen
-beq End
-
-@add skill/4 attack
-mov  r1, #0x5A
-ldrh r0, [r4, r1] @attack
-ldrb r2, [r4, #0x15] @skill
-lsr  r2, #2 @divide this by 4
-add  r0, r2
-strh r0, [r4,r1]
-
 @ max range?
 ldr r0,=#0x203A4D4 @battle stats
 ldrb r0,[r0,#2] @range
@@ -95,7 +69,7 @@ mov r1, #0x66
 ldrh r0, [r4, r1] @crt
 add r0, #10
 strh r0, [r4,r1]
-b End
+b AttackBuffYay
 
 @ lets try this again
 MaybeMore:
@@ -109,7 +83,7 @@ mov r1, #0x66
 ldrh r0, [r4, r1] @crt
 add r0, #20
 strh r0, [r4,r1]
-b End
+b AttackBuffYay
 MaybeMoreMore:
 ldr r0,=#0x203A4D4 @battle stats
 ldrb r0,[r0,#2] @range
@@ -121,18 +95,32 @@ mov r1, #0x66
 ldrh r0, [r4, r1] @crt
 add r0, #30
 strh r0, [r4,r1]
-b End
+b AttackBuffYay
 
 MaybeMoreMoreMore:
 ldr r0,=#0x203A4D4 @battle stats
 ldrb r0,[r0,#2] @range
 cmp r0,#5
-bne End
+bne AttackBuffYay
 
 @add 15 crit
 mov r1, #0x66
 ldrh r0, [r4, r1] @crt
 add r0, #40
+strh r0, [r4,r1]
+
+AttackBuffYay:
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq End
+
+@add skill/4 attack
+mov  r1, #0x5A
+ldrh r0, [r4, r1] @attack
+ldrb r2, [r4, #0x15] @skill
+lsr  r2, #2 @divide this by 4
+add  r0, r2
 strh r0, [r4,r1]
 
 End:

@@ -140,7 +140,7 @@ BeginningScene:
 	CameraCursor(Chiffon)
 	STAL 5
 	Music(0x29A)
-	Text(InterludeOpening1Point5)
+	TextCont(InterludeOpening1Point5, 0x28d)
 	STAL 5
 	FADI 60
 	CALL $591FD8 //prep screen
@@ -159,9 +159,9 @@ CLEAN
 MUSCSLOW 0x7fff
 STAL 10
 SetBackground(0x35)
-STAL 30
+STAL 50
 Music(0x292)
-STAL 15
+STAL 25
 Text(SylmeriaScene0)
 FAWI 20
 SOUN 0x2ec

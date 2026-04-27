@@ -43,9 +43,10 @@ ENDA
 ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0xA, RecruitKatsuRaial, Katsu, Raial)
+CharacterEventBothWays(0xA, RecruitKatsuMoose, Katsu, Moose)
 CharacterEventBothWays(0xA, RecruitKatsuChiff, Chiffon, Katsu)
 CharacterEventBothWays(0xA, RecruitKatsuGeneric, 0x0, Katsu)
-//CharacterEventBothWays(0xC, RecruitMooseChiff, Chiffon, Moose)
+CharacterEventBothWays(0xC, RaialVernaTalk, Raial, Verna)
 CharacterEventBothWays(0x20,ChiffonGrahamTalk, Chiffon, Graham)
 CharacterEventBothWays(0x21,ChiffonRaialTalk, Chiffon, Raial)
 CharacterEventBothWays(0x1F,GrahamRaialTalk, Graham, Raial)
@@ -83,7 +84,24 @@ ChiffonRaialTalk:
 	MURE 2
 	NoFade
 ENDA
+
+RaialVernaTalk:
+	MUSI
+	Text(Ch24RaialVernaTalk)
+	MUNO
+	MURE 2
+	NoFade
+ENDA
 	
+RecruitKatsuMoose:
+MUSS 0x297
+STAL 33
+Text(MooseRecruitKian)
+MURE 0x2
+TurnAlly(Katsu)
+NoFade
+ENDA
+
 RecruitKatsuGeneric:
 MUSS 0x297
 STAL 33
@@ -635,14 +653,14 @@ VillageEventItem(HeavySpearVillageText, 0x1, HeavySpear)
 ENDA
 
 HelloZopf:
+FadeOutMusic
 CAM1 [10,8]
 FlashCursor(18,8,60)
 STAL 10
-Music(0x20)
 MUSI
 SetBackground(0x9)
 //Text(Ch8ZopfIntro)
-Text(Ch24BardMoment)
+TextCont(Ch24BardMoment, 0x20)
 ClearBackground
 RefreshSMS
 MUNO

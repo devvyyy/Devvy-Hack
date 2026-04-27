@@ -20,8 +20,7 @@ of Ideon, caught up in the war.[X]
 # 0x551
 Elemental affinity. Determines the[N]
 bonuses granted with supports.[N]
-Press R on an important character's[N]
-affinity for detail on bonuses.[X]
+Press R on affinities for details.[X]
 
 # 0x61F
 The weapon triangle is[N]
@@ -424,14 +423,15 @@ Shaman, Shaman, Mercenary,[N]
 Lance Rider[N]
 2-1: Occultist[N]
 2-2: Thief, Warrior,[N]
-Ranger, Pirate,[N]
-Swordsman[N]
-2-3: Wyvern Rider,[N]
+Ranger[N]
+2-3: Pirate, Swordsman,[N]
+Sergeant (temp.)[N]
+2-4: Wyvern Rider,[N]
 Assassin, Hunter[N]
-2-4: Bard, Pegasus Rider[N]
-2-5: Mage Knight[N]
-2-6: General[N]
-2-7: none[N]
+2-5: Bard, Pegasus Rider[N]
+2-6: Mage Knight[N]
+2-7: General[N]
+2-8: none[N]
 2-F: ???[X]
 
 # 0x602
@@ -439,41 +439,30 @@ Objectives[X]
 
 # 0x63A
 ACT 1:[N]
-Prologue: Seize; Chest[N]
-1-1: Defeat boss; Chest, Village[N]
-1-1x (Clear Prologue/1-1 within[N]
-7 turns each): Rout; Thieves[N]
-1-2: Escape; Chest, Village,[N]
-Optional Boss[N]
-1-3: Seize; Houses, Crates,[N]
-1-4: Escort+Arrive; Village,[N]
-Crates[N]
-1-5: Defeat Boss/Defend points;[N]
-Chests[N]
-1-6: Defeat Boss; Villages[N]
-1-7: Escort; Mines[N]
-1-8: Survive; Protect Tents,[N]
-Defend Gate, Thieves, Chest[N]
-1-F: Defend unit/Secure[N]
-fortresses, Chests[N]
-1-Fx (???): Survive[N]
+Prologue: Seize[N]
+1-1: Defeat boss[N]
+1-1x (Clear Prologue/1-1[N]
+within 7 turns each): Rout[N]
+1-2: Escape[N]
+1-3: Seize[N]
+1-4: Escort+Arrive[N]
+1-5: Defeat Boss/Defend points[N]
+1-6: Defeat Boss[N]
+1-7: Escort[N]
+1-8: Defend Gate[N]
+1-F: Defend Unit/Secure[N]
+fortresses[N]
  [N]
 ACT 2:[N]
-Prologue II: Rescue+Escape;[N]
-Chests, Optional Boss[N]
-2-1: Rout+Rescue; Chests[N]
-2-2: Survive; Villages,[N]
-Chests[N]
-2-3: Escape; Houses, Thieves,[N]
-Optional Bosses[N]
-2-4: Escape; Houses,[N]
-Chests, Optional Boss[N]
-2-5: Escape; Tents,[N]
-Houses[N]
-2-6: Defeat Bosses+Seize;[N]
-Chests[N]
-2-7: Rout the enemy[N]
-2-7x: ???[N]
+Prologue II: Rescue+Escape[N]
+2-1: Rout+Rescue[N]
+2-2: Survive[N]
+2-3: Rout the enemy[N]
+2-4: Escape[N]
+2-5: Escape[N]
+2-6: Escape[N]
+2-7: Defeat Bosses+Seize[N]
+2-8: Rout the enemy[N]
 2-F: Rout the enemy[N]
  [N]
 [X]
@@ -708,8 +697,9 @@ damage taken from Ice/Wind magic.[N]
 Dexterity increased.[X]
 
 # 0x6EA
-Strength or ether power.[N]
-This affects attack ability.[X]
+Strength or Ether.[N]
+Calculates damage dealt with[N]
+physical or magical weapons.[X]
 
 # 0x546
 Strength ([_A][_t][_k]). Calculates damage dealt[N]
@@ -729,8 +719,7 @@ Dexterity. Affects hit and critical rate.[N]
 # 0x549
 Speed ([_A][_S]). Affects avoid, and if unit's[NL]
 AS > foe's AS + 4, unit can follow-up.[N]
-[_A][_v][_o][_i][_d][_SP]=[_SP]([_A][_S][_SP]+[_SP][_L][_u][_c][_k])[N]
-[_A][_S][_SP]=[_SP]([_S][_p][_d][_SP]-[_SP][_W][_Dot][_SP][_W][_t][_SP][_p][_e][_n][_a][_l][_t][_y])[X]
+[_A][_v][_o][_i][_d][_SP]=[_SP]([_A][_S][_SP]+[_SP][_L][_u][_c][_k]) [_A][_S][_SP]=[_SP]([_S][_p][_d][_SP]-[_SP][_W][_Dot][_SP][_W][_t][_SP][_p][_e][_n][_a][_l][_t][_y])[X]
 
 # 0x54A
 Luck. Affects hit rate, avoid,[NL]
@@ -1140,7 +1129,7 @@ Bearded Axe[X]
 1-Fx: From Twilight Skies[X]
 
 # 0x174
-2-7: First Light[X]
+2-8: First Light[X]
 
 # 0x2b9
 A dutiful Aeterian rider. She's a fair,[N]
@@ -1247,7 +1236,8 @@ Xiuhcoatl[X]
 
 # 0x425
 Ataraxia; a fair fight to the end.[N]
-[_Lock]: Hayes[X]
+Negates both sides' non-Obelisk %[N]
+damage reduction. [_Lock]: Hayes[X]
 
 # 0x47D
 Restores an adjacent ally's chosen[N]
@@ -1494,7 +1484,7 @@ Avoid +10. Unit moves adjacent to[N]
 target. Poisons for 5 turns on-damage.[X]
 
 # 0x3a2
-'Goodbye'[X]
+[OQ]Goodbye"[X]
 
 # 0x452
 Avoid +10. Move back 1 space. Poisons[N]
@@ -1600,8 +1590,8 @@ Captain Axe[X]
 
 # 0x438
 Grants another action if foe is[N]
-defeated (once per turn per unit).[N]
-[_Lock]: Raial, Brudet, Stroganoff[X]
+defeated (once per turn).[N]
+[_Lock]: Raial[X]
 
 # 0x581
 Save any changes.[N]
@@ -1897,13 +1887,13 @@ Prologue III-A: Here We Are[X]
 Prologue III-B: Bargaining Chip[X]
 
 # 0x18b
-2-7x: Measure of Steel[X]
+2-8x: Measure of Steel[X]
 
 # 0x3AC
 Noctum Ring[X]
 
 # 0x182
-2-3: Fugitives[X]
+2-4: Fugitives[X]
 
 # 0x183
 2-F: The Bridge[X]
@@ -1919,6 +1909,9 @@ Noctum Ring[X]
 
 # 0x175
 3-3: Whispers Amidst Steel[X]
+
+# 0x186
+2-3: Enemy[X]
 
 # 0x176
 3-4: Fire to the Fuse[X]
@@ -1976,10 +1969,10 @@ Prologue I: No Way Out[X]
 1-1x: Gold Rush[X]
 
 ## Ch9Name
-2-4: The Gates of Omios[X]
+2-5: The Gates of Omios[X]
 
 ## Ch10Name
-2-6: By The Crescent's Edge[X]
+2-7: By The Crescent's Edge[X]
 
 ## Ch11Name
 2-2: Blood Hunt[X]
@@ -1997,7 +1990,7 @@ Prologue II: One Way Out[X]
 1-8: Incoming Onslaught[X]
 
 ## ChIDKName2
-2-5: On The Run[X]
+2-6: On The Run[X]
 
 ## ChIDKName3
 3-1: Guerrilla Warfare[X]

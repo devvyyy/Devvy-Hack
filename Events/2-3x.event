@@ -1,0 +1,680 @@
+EventPointerTable(0x93, PointerList)
+
+PointerList:
+	POIN TurnBasedEvents
+	POIN CharacterBasedEvents
+	POIN LocationBasedEvents
+	POIN MiscBasedEvents
+	POIN Dunno1 Dunno2 Dunno3 Tutorial
+	POIN Traps1 Traps2
+	POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+	POIN $0 $0 $0
+	POIN $0 $0 $0
+	POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+//TurnEventNPC(0,EnemyPhaseEventScream,2)
+//TURN 0x0 RealEnemy1 [2,0] 0x0
+//TURN 0x0 HayeLeaves [3,255] 0x0
+//TurnEventEnemy(0,RealEnemy4,1)
+//TURN 0x0 BrigandSpawnTime [4,0] 0x0
+//TURN 0x0 BossChargeWarning [5,0] 0x0
+//TURN 0x0 BossCharge [6,0] 0x0
+//TURN 0x0 RealEnemy3 [7,0] 0x0
+//TURN 0x0 RealEnemy2 [8,0] 0x0
+//TURN 0x0 LastBatch [7,0] 0x0
+//TURN 0x0 LastBatchButReal [10,0] 0x0
+//TURN 0x3 EndingScene [9,0] 0x0
+	END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+CharacterEventBothWays(0xA,LesTeamRecruitRaial, Raial, Irene)
+CharacterEventBothWays(0xA,LesTeamRecruitIlse, Ilse, Pandoro)
+CharacterEventBothWays(0xA,LesTeamRecruitIlse, Ilse, Irene)
+CharacterEventBothWays(0xA,LesTeamRecruitRaial, Raial, Pandoro)
+CharacterEventBothWays(0xA,LesTeamRecruit, 0x0, Irene)
+CharacterEventBothWays(0xA,LesTeamRecruit, 0x0, Pandoro)
+CharacterEventBothWays(0xB,FryeRinaConvo, Frye, Irene)
+CharacterEventBothWays(0x9,ChifHayesConvo, Chiffon, Hayes)
+CharacterEventBothWays(0x10,RaialHayesConvo, Raial, Hayes)
+CharacterEventBothWays(0x11,GrahamHayesConvo, Graham, Hayes)
+CharacterEventBothWays(0x12,YvonneHayesConvo, Yvonne, Hayes)
+CharacterEventBothWays(0x13,GusHayesConvo, Gus, Hayes)
+CharacterEventBothWays(0xC,CortadoPandoroConvo, Cortado, Pandoro)
+CharacterEventBothWays(0xD,CortadoFryeTalk, Cortado, Frye)
+	END_MAIN
+
+CortadoFryeTalk:
+MUSS 0x297
+STAL 33
+Text(FryeCortadoC)
+MURE 0x2
+NoFade
+ENDA
+
+LesTeamRecruitRaial:
+MUSS 0x297
+STAL 33
+Text(RecruitRaialPandoroRina)
+MURE 0x2
+CUSA Pandoro
+CUSA Irene
+NoFade
+ENDA
+
+LesTeamRecruitIlse:
+MUSS 0x297
+STAL 33
+Text(RecruitRinaPandoroIlse)
+MURE 0x2
+CUSA Pandoro
+CUSA Irene
+NoFade
+ENDA
+	
+LesTeamRecruit:
+MUSS 0x297
+STAL 33
+Text(RecruitPandoroRinaGeneric)
+MURE 0x2
+CUSA Pandoro
+CUSA Irene
+NoFade
+ENDA
+
+ChifHayesConvo:
+MUSI
+Text(Ch22xChiffonHayesTalk)
+MURE 0x2
+NoFade
+ENDA
+
+RaialHayesConvo:
+MUSI
+Text(Ch22xInBattleRaialHayes)
+MURE 0x2
+NoFade
+ENDA
+
+GrahamHayesConvo:
+MUSI
+Text(Ch22xInBattleGrahamHayes)
+MURE 0x2
+NoFade
+ENDA
+
+GusHayesConvo:
+MUSI
+Text(Ch22xInBattleGusHayes)
+MURE 0x2
+NoFade
+ENDA
+
+YvonneHayesConvo:
+MUSI
+Text(Ch22xInBattleYvonneHayes)
+MURE 0x2
+NoFade
+ENDA
+
+FryeRinaConvo:
+MUSI
+Text(FryeRinaTalk)
+MURE 0x2
+//CUSA Radcliff
+//CUSA Ilse
+//CUSA Pandoro
+//CUSA Irene
+NoFade
+ENDA
+
+CortadoPandoroConvo:
+MUSI
+Text(CortadoPandoroTalk)
+MURE 0x2
+//CUSA Radcliff
+//CUSA Ilse
+//CUSA Pandoro
+//CUSA Irene
+NoFade
+ENDA
+
+GusRaialConvo:
+MUSI
+Text(GusRaialTalk)
+MURE 0x2
+//CUSA Radcliff
+//CUSA Ilse
+//CUSA Pandoro
+//CUSA Irene
+NoFade
+ENDA
+
+MiscBasedEvents:
+DefeatAll(EndingScene)
+	CauseGameOverIfLordDies
+	END_MAIN
+
+LocationBasedEvents:
+//Chest(0xCE,16,1)
+//Village(0x8,Village1,12,2)
+//Village(0x9,Village2,8,14)
+	END_MAIN
+	
+Village1:
+VillageEventItem(Ch22TopHouse, 0x1, 0x68) //hexlock shield
+ENDA
+
+Village2:
+VillageEventItem(Ch22BottomHouse, 0x1, 0x8A) //arcane rifle
+ENDA
+
+Dunno1:
+
+	END_MAIN
+
+Dunno2:
+
+	END_MAIN
+
+Dunno3:
+
+	END_MAIN
+
+Tutorial:
+
+	END_MAIN
+
+Units1:
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [3,1] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [3,2] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [4,1] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [4,2] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [6,1] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [6,2] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [7,1] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [7,2] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [12,1] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [12,2] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [13,1] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [13,2] 0b 0x0 0x0 0x0 [IronAxe,0xE9,] [0x0,0x0,0x0,0x0]
+	UNIT
+	
+HayeSpawn:
+UNIT 0x5A 0x64 0x1 Level(10, Enemy, 1)     [0,17] 0b 0x0 0x0 0x0 [Siegmund] RangeAI
+	UNIT
+
+EnemyUnits: //tlp ghosts?! :scream:
+//InfantrySoul, CavSoul, FlierSoul, ArmorSoul, MagSoul, PromoSoul, StealSoul
+UNIT MagSoul Mage 0x1 Level(7, Enemy, 1)     [4,6] 0b 0x0 0x0 0x0 [Fire] AttackInRangeAI
+UNIT InfantrySoul Myrmidon 0x1 Level(8, Enemy, 1)    [8,13] 0b 0x0 0x0 0x0 [SteelSword] ChargeAI
+UNIT MagSoul Shaman 0x1 Level(7, Enemy, 1)     [5,12] 0b 0x0 0x0 0x0 [DarkTome2] AttackInRangeAI
+//UNIT MagSoul Monk 0x1 Level(6, Enemy, 1)     [3,8] 0b 0x0 0x0 0x0 [LightTome1] ChargeAI
+
+UNIT InfantrySoul Fighter 0x1 Level(7, Enemy, 1)     [8,8] 0b 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
+UNIT MagSoul Mage 0x1 Level(7, Enemy, 1)     [7,11] 0b 0x0 0x0 0x0 [Thunder] AttackInRangeAI
+//UNIT MagSoul Mage 0x1 Level(6, Enemy, 1)     [9,12] 0b 0x0 0x0 0x0 [Fire] AttackInRangeAI
+UNIT InfantrySoul Merc 0x1 Level(7, Enemy, 1)     [6,7] DropItem 0x0 0x0 0x0 [SteelSword,Torch] AttackInRangeAI
+UNIT InfantrySoul Soldier 0x1 Level(6, Enemy, 1)     [5,10] 0b 0x0 0x0 0x0 [Javelin] AttackInRangeAI
+
+UNIT MagSoul Mage 0x1 Level(7, Enemy, 1)     [13,13] 0b 0x0 0x0 0x0 [Fire] BossAI
+UNIT ArmorSoul LArmor 0x1 Level(8, Enemy, 1)     [11,14] DropItem 0x0 0x0 0x0 [Spear] AttackInRangeAI
+UNIT ArmorSoul AArmor 0x1 Level(8, Enemy, 1)     [10,11] 0b 0x0 0x0 0x0 [ShortAxe] AttackInRangeAI
+UNIT CavSoul LCav 0x1 Level(6, Enemy, 1)     [10,16] 0b 0x0 0x0 0x0 [IronLance] TwoActionAI
+//UNIT MagSoul Mage 0x1 Level(7, Enemy, 1)     [12,15] 0b 0x0 0x0 0x0 [Thunder] AttackInRangeAI
+
+UNIT InfantrySoul Archer 0x1 Level(7, Enemy, 1)     [15,6] 0b 0x0 0x0 0x0 [SteelBow] RangeAI
+UNIT InfantrySoul Archer 0x1 Level(7, Enemy, 1)     [9,4] 0b 0x0 0x0 0x0 [SteelBow] RangeAI
+UNIT InfantrySoul Soldier 0x1 Level(8, Enemy, 1)     [14,5] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
+UNIT InfantrySoul Myrmidon 0x1 Level(7, Enemy, 1)     [11,7] 0b 0x0 0x0 0x0 [KillingEdge] AttackInRangeAI
+UNIT MagSoul Shaman 0x1 Level(6, Enemy, 1)     [14,9] 0b 0x0 0x0 0x0 [DarkTome1] AttackInRangeAI
+
+UNIT MagSoul Occultist 0x1 Level(8, Enemy, 1)     [16,8] 0b 0x0 0x0 0x0 [Flux] BossAI
+UNIT FlierSoul PegRider 0x1 Level(9, Enemy, 1)     [11,9] 0b 0x0 0x0 0x0 [SapphireLance] AttackInRangeAI
+//UNIT KeyThief Thief 0x1 Level(2, Enemy, 1)     [16,19] 0b 0x0 0x0 0x0 [SilverDagger,ChestKey] ThiefAI
+UNIT MagSoul Mage 0x1 Level(8, Enemy, 1)     [2,11] 0b 0x0 0x0 0x0 [Elfire] AttackInRangeAI
+
+//UNIT FlierSoul PegRider 0x1 Level(7, Enemy, 1)     [1,1] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
+UNIT MagSoul Shaman 0x1 Level(8, Enemy, 1)     [1,15] 0b 0x0 0x0 0x0 [DarkTome1] RangeAI
+//UNIT FlierSoul WyvernRider 0x1 Level(8, Enemy, 1)     [8,21] 0b 0x0 0x0 0x0 [HandAxe] AttackInRangeAI
+UNIT CavSoul LCav 0x1 Level(6, Enemy, 1)     [1,4] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
+
+UNIT CavSoul ACav 0x1 Level(6, Enemy, 1)      [2,14] 0b 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
+UNIT InfantrySoul Myrmidon 0x1 Level(6, Enemy, 1)      [4,16] 0b 0x0 0x0 0x0 [IronSword] TwoActionAI
+//UNIT MagSoul Shaman 0x1 Level(8, Enemy, 1)     [8,1] 0b 0x0 0x0 0x0 [DarkTome2] StallOneTurnAI
+//UNIT MagSoul Monk 0x1 Level(7, Enemy, 1)     [10,3] 0b 0x0 0x0 0x0 [LightTome2] StallOneTurnAI
+UNIT ArmorSoul LArmor 0x1 Level(9, Enemy, 1)     [12,4] 0b 0x0 0x0 0x0 [SteelGlaive,ShortSpear] AttackInRangeAI
+
+	UNIT
+	
+GreenUnits:
+UNIT Irene Myrmidon_F 0x1 Level(7, NPC, 0)   [5,17] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] BossAI
+UNIT Pandoro Pirate 0x1 Level(7, NPC, 0)   [9,18] 0b 0x0 0x0 0x0 [EmeraldAxe,IronLabrys,Elixir] BossAI
+
+	UNIT
+	
+LunaticUnits:
+UNIT Irene Myrmidon_F 0x1 Level(7, NPC, 1)   [5,17] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] BossAI
+UNIT Pandoro Pirate 0x1 Level(7, NPC, 1)   [9,18] 0b 0x0 0x0 0x0 [EmeraldAxe,ShortAxe,Elixir] BossAI
+	UNIT
+	
+HolyCrapItHim: //spawn from village idk?
+UNIT 0x54 Ranger 0x1 Level(4, Enemy, 0)     [0,13] 0 0 1 REDA4R13 [ShortBow, Longbow, Torch] BossAI
+UNIT Levain MageKnight 0x1 Level(3, Enemy, 1)   [0,14] DropItem 0 1 REDA5R14 [Iceberg,Elixir] BossAI
+	UNIT
+	
+HolyCrapItHim2: //spawn from village idk?
+UNIT 0x5a 0x64 0x1 Level(10, Enemy, 0)     [0,17] DropItem 0 1 REDA8R18 [Siegmund,Spear] BossAI
+	UNIT
+	
+BrigandGuy: //in caves wtf :scream:
+UNIT TorchBrigand Raider 0x1 Level(4, Enemy, 1)     [9,11] DropItem 0x0 0x0 0x0 [KillingEdge,RedGem] BrigandAI
+	UNIT
+
+ActualEnemies1: //these are actual aeterian soldiers, don't appear until turn 2 idk??
+UNIT MagSoul Mage 0x1 Level(4, Enemy, 1)     [6,0] 0b 0x0 0x0 0x0 [Thunder] ChargeAI
+UNIT InfantrySoul Merc 0x1 Level(4, Enemy, 1)     [0,4] 0b 0x0 0x0 0x0 [SteelSword] ChargeAI
+UNIT CavSoul LCav 0x1 Level(3, Enemy, 1)     [0,5] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
+	UNIT
+	
+ActualEnemies2: 
+UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [0,14] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
+UNIT Aeteria Mercenary 0x1 Level(4, Enemy, 1)     [0,15] 0b 0x0 0x0 0x0 [SteelSword] ChargeAI
+UNIT Aeteria Archer 0x1 Level(3, Enemy, 1)     [0,3] 0b 0x0 0x0 0x0 [SteelBow] ChargeAI
+	UNIT
+	
+ActualEnemies3: //top
+UNIT Aeteria PegRider 0x1 Level(4, Enemy, 1)     [4,0] 0b 0x0 0x0 0x0 [SteelLance] StallOneTurnAI
+UNIT Aeteria WyvernRider 0x1 Level(3, Enemy, 1)     [0,0] 0b 0x0 0x0 0x0 [Swordreaver] ChargeAI
+	UNIT
+	
+ActualEnemiesBonus:
+UNIT Aeteria Mercenary 0x1 Level(4, Enemy, 1)     [10,0] 0b 0x0 0x0 0x0 [ShortBrand] ChargeAI
+UNIT Aeteria Soldier 0x1 Level(4, Enemy, 1)     [14,0] 0b 0x0 0x0 0x0 [SteelLance] ChargeAI
+	UNIT
+	
+ActualEnemiesBonus2:
+UNIT Aeteria LCav 0x1 Level(4, Enemy, 1)     [17,5] 0b 0x0 0x0 0x0 [ShortSpear] ChargeAI
+UNIT Aeteria ACav 0x1 Level(4, Enemy, 1)     [17,12] 0b 0x0 0x0 0x0 [SteelAxe] ChargeAI
+	UNIT
+	
+ActualEnemies4: //boss spawn + bot
+UNIT Aeteria Mage 0x1 Level(3, Enemy, 1)     [3,19] 0b 0x0 0x0 0x0 [Thunder] ChargeAI
+UNIT Aeteria SCav 0x1 Level(4, Enemy, 1)     [4,19] 0b 0x0 0x0 0x0 [Zanbato,SteelSword] ChargeAI
+UNIT Aeteria Thaumaturge 0x1 Level(4, Enemy, 1)     [8,19] 0b 0x0 0x0 0x0 [Fire] ChargeAI
+	UNIT
+	
+ActualEnemies5: //all charge ai
+UNIT Aeteria WyvernRider 0x1 Level(4, Enemy, 1)     [17,19] 0 0 1 REDA16R17 [SteelAxe] ChargeAI
+UNIT Aeteria WyvernRider 0x1 Level(4, Enemy, 1)     [0,19] 0 0 1 REDA0R18 [IronAxe] ChargeAI
+	UNIT	
+	
+ActualEnemies6: //all charge ai
+UNIT Aeteria Thaumaturge 0x1 Level(4, Enemy, 1)     [4,19] 0 0 1 REDA4R18 [Wind] ChargeAI
+UNIT Aeteria Shaman 0x1 Level(4, Enemy, 1)     [5,19] 0 0 1 REDA5R18 [DarkTome2] ChargeAI
+	UNIT	
+	
+ScaryBossMan: //maybe he charges like turn 9 idk?
+//UNIT 0x52 Halberdier 0x1 Level(5, Enemy, 0)     [9,19] 0 0 1 REDA9R18 [BraveLance,SilverGlaive] BossAI
+UNIT 0x54 Ranger 0x1 Level(4, Enemy, 0)     [6,19] DropItem 0 1 REDA6R16 [SilverBow, Mace] RangeAI
+	UNIT
+
+CutsceneUnitsSilas:
+UNIT 0xf4 0x6f 0x1 Level(1, NPC, 1)     [8,21] 0b 0x0 0x0 0x0 [GoddessIcon] BossAI
+	UNIT
+
+CutsceneUnits:
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [0,6] 0 0 1 REDA3R9 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [0,4] 0 0 1 REDA1R9 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [0,5] 0 0 1 REDA2R8 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT	
+
+EndCutsceneUnitsRest: //second half
+UNIT 0x5A 0x64 0x1 Level(10, Enemy, 1)     [5,17] 0b 0x0 0x0 0x0 [Siegmund] RangeAI
+
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [6,18] 0b 0x0 0x0 0x0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [5,19] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [7,18] 0b 0x0 0x0 0x0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT
+
+EndCutsceneUnitsStart:
+UNIT 0x5A 0x64 0x1 Level(10, NPC, 1)     [5,16] 0b 0x0 0x0 0x0 [Siegmund] RangeAI
+
+UNIT Irene Myrmidon_F 0x1 Level(7, NPC, 0)   [7,19] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] BossAI
+UNIT Pandoro Pirate 0x1 Level(7, NPC, 0)   [8,18] 0b 0x0 0x0 0x0 [EmeraldAxe,IronLabrys,Elixir] BossAI
+
+	UNIT	
+
+CutsceneEnemies:
+UNIT InfantrySoul Soldier 0x1 Level(8, Enemy, 1)     [5,15] 0b 0x0 0x0 0x0 [KillerLance] AttackInRangeAI
+//UNIT MagSoul Shaman 0x1 Level(7, Enemy, 1)     [12,17] 0b 0x0 0x0 0x0 [DarkTome3] AttackInRangeAI
+	UNIT
+
+CutsceneEnemies2: //ambush ones
+UNIT CavSoul LCav 0x1 Level(8, Enemy, 1)     [6,9] 0b 0x0 0x0 0x0 [SapphireLance] AttackInRangeAI
+UNIT FlierSoul WyvernRider 0x1 Level(7, Enemy, 1)     [12,12] 0b 0x0 0x0 0x0 [KillerAxe] AttackInRangeAI
+	UNIT
+	
+BrigandSpawnTime:
+//SpawnReinforcements(BrigandGuy)
+//STAL 10
+SpawnReinforcements(ActualEnemiesBonus2)
+NoFade
+ENDA
+	
+EnemyPhaseEventScream:
+CameraCursor(Raial)
+Text(Ch10ReinSpawnTime)
+NoFade
+ENDA
+	
+RealEnemy1:
+SpawnReinforcements(ActualEnemies1)
+CameraCursor(Chiffon)
+Text(Ch22InBattle1)
+NoFade
+ENDA
+
+RealEnemy2:
+SpawnReinforcements(ActualEnemies2)
+Text(Ch10ReinSpawnBruh)
+NoFade
+ENDA
+
+RealEnemy3:
+SpawnReinforcements(ActualEnemies3)
+NoFade
+ENDA
+
+RealEnemy4:
+CamOn
+SpawnReinforcements(HolyCrapItHim)
+CameraCursor(0x54)
+CameraCursor(Levain)
+TextCont(Ch22Opening5, 0x7FFF)
+STAL 5
+SpawnReinforcements(HolyCrapItHim2)
+CameraCursor(0x5A)
+Music(0x27a)
+Text(Ch22Opening6)
+MOVE 0xF Edvin [0,14]
+ENUN
+DISA_IF Edvin
+Text(Ch22Opening7)
+TurnNPC(0x5A)
+MOVE 0xF 0x5A [4,14]
+CameraCursor(0x5A)
+Text(Ch22OpeningSus)
+CamOff
+NoFade
+ENDA
+
+BossChargeWarning: //turn 6
+SpawnReinforcements(ActualEnemies4)
+STAL 10
+SpawnReinforcements(ActualEnemiesBonus)
+STAL 10
+//ChargeWarning(0x54,Placeholder1)
+NoFade
+ENDA
+
+BossCharge: //turn 7
+//SVAL 0x1 0x00040000
+//CHAI 0x54
+//ChargeWarning(0x54,Placeholder2)
+NoFade
+ENDA
+
+LastBatch:
+SpawnReinforcements(ActualEnemies5)
+STAL 10
+SpawnReinforcements(ActualEnemies6)
+NoFade
+ENDA
+
+LastBatchButReal:
+SpawnReinforcements(ActualEnemies6)
+NoFade
+ENDA
+
+Traps1:
+//BLST [2,8] 0x37
+TelliusTorchOn(5,18,5)
+TelliusTorchOn(7,8,5)
+//TelliusTorchOn(1,7,5)
+	ENDTRAP
+	ALIGN 4
+
+Traps2:
+	ENDTRAP
+	ALIGN 4
+	
+HayeLeaves:
+
+CHECK_ALIVE 0x54 //solum
+BNE 1 0x0 0xC
+
+CHECK_ALIVE 0x5A
+BEQ 1 0x0 0xC
+
+CameraCursor(0x5A)
+TurnEnemy(0x5A)
+Text(Ch22Opening8)
+MOVE 0xF 0x5A [0,14]
+ENUN
+DISA_IF 0x5A
+
+LABEL 1
+NoFade
+ENDA
+
+
+BeginningScene:
+//MUSC 0x287
+//MUSC 0x1A
+SetFlag(0xEE)
+STAL 10
+SOUN 0xCA
+STAL 16
+SOUN 0xD8
+STAL 30
+MUSC 0x18e
+	LOAD2 0x1 CutsceneEnemies2
+	LOAD2 0x1 CutsceneEnemies
+	LOAD1 0x1 EnemyUnits
+	//LOAD1 0x1 GreenUnits
+HardUnits(LunaticUnits,GreenUnits)
+ENUN
+FADU 60
+
+//BG(0xC)
+
+STAL 5
+BROWNBOXTEXT ArmaOutskirtsText [8,8]
+STAL 15
+
+CameraCursor(Rina)
+CameraCursor(Pandoro)
+Text(Ch22xOpening1)
+
+//ClearBackground
+
+SVAL 0xB 0xF0005
+MOVE 0x19 0xFFFE [5,16]
+SVAL 0xB 0x11000C
+MOVE 0x19 0xFFFE [10,18]
+ENUN
+
+//rina vs soldier
+StartBattle
+CriticalHit(0,54)
+SetScriptedBattle(78,18,34,84,19,0)
+FIG1 0x13 0x8F KillingEdge
+
+SVAL 0xB 0x100005
+SET_SOMETHING 0xFFFE
+ASMC 0x80160D1 // Return to map BGM
+
+STAL 10
+MOVE 0xA 0x13 [6,17]
+MOVE 0xA 0x15 [8,18]
+ENUN
+Text(Ch22xOpening2)
+
+// ambush guys
+SVAL 0xB 0x90006
+MOVE 0x14 0xFFFE [5,17]
+SVAL 0xB 0xC000C
+MOVE 0x14 0xFFFE [9,18]
+ENUN
+SVAL 0xD 0x0
+SVAL 0x1 0x800 //0x700 is 7 damage
+SAVETOQUEUE
+FIG2 0x90 0x13 0xE6
+SVAL 0xD 0x0
+SVAL 0x1 0x600
+SAVETOQUEUE
+FIG2 0x95 0x15 0x24
+
+FadeOutMusic
+STAL 15
+MOVE 0xA 0x13 [6,19]
+MOVE 0xA 0x15 [8,19]
+ENUN
+STAL 5
+Text(Ch22xOpening2Point5)
+
+//SOUN 0x313
+
+FAWI 16
+SOUN 0xCF
+STAL 30
+SOUN 0xf0
+SetBackground(0x48)
+STAL 10
+FADI 100
+CLEAN
+
+SpawnReinforcements(HolyCrapItHim2)
+
+STAL 7
+SOUN 0xCB
+STAL 14
+SOUN 0xD8
+
+STAL 46
+SOUN 0xCA
+STAL 18
+SOUN 0xD8
+STAL 10
+
+FADU 20
+MOVE 0x6 Hayes [7,18]
+ENUN
+
+STAL 5
+
+SVAL 0xB 0x110005
+SET_SOMETHING 0xFFFE
+SVAL 0xB 0x120009
+SET_SOMETHING 0xFFFE
+
+STAL 25
+
+CameraCursor(Hayes)
+
+Music(0x27A)
+Text(Ch22xOpening3) //hayes moment
+STAL 15
+CUSN Hayes
+STAL 25
+
+CamOn
+LOAD2 0x1 CutsceneUnits
+ENUN
+CamOff
+STAL 50
+CameraCursor(Chiffon)
+
+MUSC 0x92
+BG(0x3f)
+Text(Ch22xOpening4)
+
+EVBIT_F 0x2
+SVAL 0xB 0x110005
+DISA_IF 0xFFFE
+SVAL 0xB 0x120009
+DISA_IF 0xFFFE
+
+	CALL $591FD8 //prep screen
+	FADU 60
+	VCWF 4
+	STAL 10
+	//CameraCursor(Raial)
+	//Text(Ch23xMercStuff)
+	UnsetFlag(0xEE)
+	NoFade
+	ENDA
+
+EndingScene:
+FADI 32
+STAL 0x30
+ENUT 0x3
+	ResetFlags
+	CUSA Pandoro
+	CUSA Irene
+	DoAllThree
+	LOAD2 0x1 EndCutsceneUnitsStart
+	SOUN 0x50
+	STAL 40
+	CAM1 [7,18]
+	FADU 60
+	STAL 50
+	CameraCursor(Hayes)
+	//MUSC 0x115
+	//MUSC 0x294
+	MUSC 0x197
+	BG(0x40)
+	TEXTSTART; TEXTSHOW Ch22xEnding1; TEXTEND; FadeOutMusic; TEXTCONT; TEXTEND; REMA
+	FADI 60
+	CLEAN
+	DoAllThree; LOAD2 0x1 EndCutsceneUnitsRest
+	FADU 16
+	STAL 30
+
+Music(0x4e)
+TEXTSTART; TEXTSHOW Ch22xEndingNew; TEXTEND
+
+MOVE 0x7 Hayes [0,6]
+ENUN
+CAM1 [5,20]
+STAL 30; TEXTCONT; TEXTEND; REMA
+
+	STAL 5
+	LOAD2 0x1 CutsceneUnitsSilas
+	MOVE 0xF 0xf4 [7,19]
+	// guy shows up
+	Music(0x28d)
+	Text(Ch22xEnding3)
+
+	//arma stuff
+	BG(0x35)
+	FADI 60
+	DoAllThree
+	VCWF 0
+	CLEAN
+	SVAL 0xB 0x50008
+	LOMA 0x3D
+	FADU 60
+STAL 10
+BROWNBOXTEXT ArmaVillageText [8,8]
+STAL 5
+//MUSC 0x20
+MUSC 0x299
+	BG(0x31)
+	Text(Ch22Ending2)
+	//MNC2 0x22 //2-3
+	MNC2 0x3D //Interlude 1
+	NoFade
+	ENDA

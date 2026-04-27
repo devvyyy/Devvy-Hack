@@ -34,8 +34,8 @@ CharacterEventBothWays(0xA,LesTeamRecruit, 0x0, Ilse)
 CharacterEventBothWays(0xA,LesTeamRecruit, 0x0, Pandoro)
 CharacterEventBothWays(0xA,LesTeamRecruit, 0x0, Irene)
 
-CharacterEventBothWays(0xB,FryeRinaConvo, Frye, Irene)
-CharacterEventBothWays(0xC,CortadoPandoroConvo, Cortado, Pandoro)
+//CharacterEventBothWays(0xB,FryeRinaConvo, Frye, Irene)
+//CharacterEventBothWays(0xC,CortadoPandoroConvo, Cortado, Pandoro)
 CharacterEventBothWays(0xD,GusRaialConvo, Gus, Raial)
 	END_MAIN
 	
@@ -46,8 +46,8 @@ Text(Ch22Recruit)
 MURE 0x2
 CUSA Radcliff
 CUSA Ilse
-CUSA Pandoro
-CUSA Irene
+//CUSA Pandoro
+//CUSA Irene
 NoFade
 ENDA
 
@@ -176,8 +176,10 @@ UNIT MagSoul Occultist 0x1 Level(6, Enemy, 1)     [0,18] 0b 0x0 0x0 0x0 [DarkTom
 GreenUnits:
 UNIT Radcliff Warrior 0x1 Level(5, NPC, 0)     [2,7] 0b 0x0 0x0 0x0 [0x93,BodkinRifle,Elixir,AngelicRobe] [0x0,0x3,0x0,0x20]
 UNIT Ilse Ranger_F 0x1 Level(3, NPC, 0)     [0,7] 0b 0x0 0x0 0x0 [0xDB,SteelDagger,Elixir] [0x0,0x3,0x0,0x20]
-UNIT Pandoro Pirate 0x1 Level(7, NPC, 0)   [1,6] 0b 0x0 0x0 0x0 [EmeraldAxe,IronLabrys,PureWater] [0x0,0x3,0x0,0x20]
-UNIT Irene Myrmidon_F 0x1 Level(7, NPC, 0)   [1,8] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] [0x0,0x3,0x0,0x20]
+UNIT ResistanceFighter Merc 0x1 Level(10, NPC, 1)     [1,6] 0b 0x0 0x0 0x0 [SteelSword,Elixir] [0x0,0x3,0x0,0x20]
+UNIT ResistanceFighter Archer 0x1 Level(10, NPC, 1)     [1,8] 0b 0x0 0x0 0x0 [SteelBow,Elixir] [0x0,0x3,0x0,0x20]
+//UNIT Pandoro Pirate 0x1 Level(7, NPC, 0)   [1,6] 0b 0x0 0x0 0x0 [EmeraldAxe,IronLabrys,PureWater] [0x0,0x3,0x0,0x20]
+//UNIT Irene Myrmidon_F 0x1 Level(7, NPC, 0)   [1,8] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] [0x0,0x3,0x0,0x20]
 
 UNIT Gus Thief 0x1 Level(4, Ally, 0)   [16,6] 0b 0x0 0x0 0x0 [Rapier,WhiteGem] RangeAI
 	UNIT
@@ -185,8 +187,11 @@ UNIT Gus Thief 0x1 Level(4, Ally, 0)   [16,6] 0b 0x0 0x0 0x0 [Rapier,WhiteGem] R
 LunaticUnits:
 UNIT Radcliff Warrior 0x1 Level(5, NPC, 1)     [2,7] 0b 0x0 0x0 0x0 [0x93,BodkinRifle,Elixir,AngelicRobe] [0x0,0x3,0x0,0x20]
 UNIT Ilse Ranger_F 0x1 Level(3, NPC, 1)     [0,7] 0b 0x0 0x0 0x0 [0xDB,SteelRifle,Rapier,Elixir] [0x0,0x3,0x0,0x20]
-UNIT Pandoro Pirate 0x1 Level(7, NPC, 1)   [1,6] 0b 0x0 0x0 0x0 [EmeraldAxe,ShortAxe,PureWater] [0x0,0x3,0x0,0x20]
-UNIT Irene Myrmidon_F 0x1 Level(7, NPC, 1)   [1,8] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] [0x0,0x3,0x0,0x20]
+UNIT ResistanceFighter Merc 0x1 Level(15, NPC, 1)     [1,6] 0b 0x0 0x0 0x0 [SteelSword,Elixir] [0x0,0x3,0x0,0x20]
+UNIT ResistanceFighter Archer 0x1 Level(15, NPC, 1)     [1,8] 0b 0x0 0x0 0x0 [SteelBow,Elixir] [0x0,0x3,0x0,0x20]
+
+//UNIT Pandoro Pirate 0x1 Level(7, NPC, 1)   [1,6] 0b 0x0 0x0 0x0 [EmeraldAxe,ShortAxe,PureWater] [0x0,0x3,0x0,0x20]
+//UNIT Irene Myrmidon_F 0x1 Level(7, NPC, 1)   [1,8] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] [0x0,0x3,0x0,0x20]
 
 UNIT Gus Thief 0x1 Level(4, Ally, 1)   [16,6] 0b 0x0 0x0 0x0 [Rapier,BlackGem] RangeAI
 	UNIT
@@ -251,6 +256,12 @@ ScaryBossMan: //maybe he charges like turn 9 idk?
 //UNIT 0x52 Halberdier 0x1 Level(5, Enemy, 0)     [9,19] 0 0 1 REDA9R18 [BraveLance,SilverGlaive] BossAI
 UNIT 0x54 Ranger 0x1 Level(4, Enemy, 0)     [6,19] DropItem 0 1 REDA6R16 [SilverBow, Mace] RangeAI
 	UNIT
+
+CutsceneUnits:
+UNIT Chiffon 0x10 0x1 Level(1, Ally, 0)   [20,0] 0 0 1 REDA20R0 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [21,0] 0 0 1 REDA21R1 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [22,0] 0 0 1 REDA22R0 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+	UNIT	
 	
 BrigandSpawnTime:
 SpawnReinforcements(BrigandGuy)
@@ -375,7 +386,10 @@ HardUnits(LunaticUnits,GreenUnits)
 ENUN
 MUSC 0x3cd
 BG(0xC)
-TextCont(Ch22Opening1, 0x26)
+STAL 5
+BROWNBOXTEXT ArmaOutskirtsText [8,8]
+STAL 15
+TextCont(Ch22Opening1, 0x32d)
 ClearBackground
 Text(Ch22Opening2) //verna flies back
 STAL 15
@@ -397,8 +411,6 @@ EndingScene:
 	ResetFlags
 	CUSA Radcliff
 	CUSA Ilse
-	CUSA Pandoro
-	CUSA Irene
 	DoAllThree
 	//MUSC 0x115
 	//MUSC 0x294
@@ -406,21 +418,7 @@ EndingScene:
 	BG(0xC)
 	
 	Text(Ch22Ending1)
-	BG(0x35)
 	FADI 60
-	VCWF 0
-	CLEAN
-	SVAL 0xB 0x50008
-	LOMA 0x3D
-	FADU 60
-STAL 10
-BROWNBOXTEXT ArmaVillageText [8,8]
-STAL 5
-//MUSC 0x20
-MUSC 0x299
-	BG(0x31)
-	Text(Ch22Ending2)
-	//MNC2 0x22 //2-3
-	MNC2 0x3D //Interlude 1
+	MNC2 0x26 //2-3 NEW
 	NoFade
 	ENDA

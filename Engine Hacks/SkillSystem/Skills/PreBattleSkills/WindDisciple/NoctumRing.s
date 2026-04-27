@@ -19,7 +19,7 @@ beq End
 ldr  r0, [r5] @r0 = character data pointer
 ldrb r0, [r0, #0x4] @r0 = character ID
 cmp r0, #0x72
-beq HasSkill
+beq WardenProc
 
 @ check for the other jobbers
 cmp r0, #0x8d
@@ -45,15 +45,27 @@ beq End
 @add r0, #50
 @strh r0, [r4,r1]
 
+@add enemys curr hp damage
+mov  r1, #0x5A
+ldrh r0, [r4, r1] @strength
+ldrb r2, [r5, #0x13] @curr hp
+add  r0, r2
+strh r0, [r4,r1]
+b End
+
+WardenProc:
+
 @not at stat screen
 ldr r1, [r5,#4] @class data ptr
 cmp r1, #0 @if 0, this is stat screen
 beq End
 
+@ if its the warden only add HALF
 @add enemys curr hp damage
 mov  r1, #0x5A
 ldrh r0, [r4, r1] @strength
 ldrb r2, [r5, #0x13] @curr hp
+lsr  r2, #1 @divide this by 2
 add  r0, r2
 strh r0, [r4,r1]
 

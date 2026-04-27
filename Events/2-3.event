@@ -92,8 +92,26 @@ ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0x20,ChiffonGrahamTalk, Chiffon, Graham)
 CharacterEventBothWays(0x21,ChiffonRaialTalk, Chiffon, Raial)
+CharacterEventBothWays(0xD,JayeYvonneTalk, Jaye, Yvonne)
+CharacterEventBothWays(0xE,FryeCortadoTalk, Frye, Cortado)
 	END_MAIN
-	
+
+JayeYvonneTalk:
+	MUSI
+	Text(Ch23JayeYvonneTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+
+FryeCortadoTalk:
+	MUSI
+	Text(Ch23CortadoFryeTalk)
+	MUNO
+	MURE 2
+	NoFade
+	ENDA
+
 ChiffonGrahamTalk:
 	MUSI
 	Text(ChiffonGrahamTalk23)
@@ -331,6 +349,8 @@ NoFade
 ENDA
 
 SussyHouse1: //auto activates on turn 2
+UnsetFlag(0x20)
+UnsetFlag(0x21)
 SetBackground(0x0)
 Text(Ch23ThiefHouse)
 ClearBackground
@@ -420,6 +440,8 @@ Text(Ch23Opening3)
 	CameraCursor(Chiffon)
 	Text(Ch23InBattle1)
 	MUNO
+	SetFlag(0x20) //prevs talks from enabling until after thief stuff happens
+	SetFlag(0x21)
 	NoFade
 	ENDA
 
