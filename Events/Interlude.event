@@ -40,6 +40,8 @@ CharacterEventBothWays(0xC, CortadoConvo, Chiffon, Cortado)
 CharacterEventBothWays(0xF, VernaConvo, Chiffon, Verna)
 CharacterEventBothWays(0x0, EndTheMapLOL, Chiffon, Graham)
 CharacterEventBothWays(0xE, SilasConvo, Chiffon, 0xf7)
+CharacterEventBothWays(0x1A, VeliusCortadoConvo, RealVelius, Cortado)
+CharacterEventBothWays(0x1B, YufkaVernaConvo, Yufka, Verna)
 CharacterEventBothWays(0x0, Villager2Convo, 0x0, 0xf4)
 CharacterEventBothWays(0x0, Villager7Convo, 0x0, 0xf5)
 CharacterEventBothWays(0x0, Villager3Convo, 0x0, 0xf6)
@@ -55,7 +57,7 @@ END_MAIN
 
 LocationBasedEvents:
 Vendor(EpicGamerShop,7,10)
-Vendor(EpicerGamerShop,11,9)
+Vendor(InterludeShop,11,9)
 	END_MAIN
 
 Dunno1:
@@ -146,6 +148,7 @@ BeginningScene:
 	CALL $591FD8 //prep screen
 	FADU 60
 	CenterTextbox(RecruitText)
+	NoFade
 	ENDA
 
 EndingScene:
@@ -219,6 +222,22 @@ ENDA
 
 TentVillage: //graham says stuff and gives item
 VillageEventItem(Placeholder2, 0xE, 0x76)
+ENDA
+
+VeliusCortadoConvo:
+	MUSI  
+	Text(VeliusCortadoC)  
+	MUNO  
+	MURE 2  
+NoFade  
+ENDA
+
+YufkaVernaConvo:
+	MUSI  
+	Text(YufkaVernaC)  
+	MUNO  
+	MURE 2  
+NoFade  
 ENDA
 
 Villager1Convo:  
@@ -344,6 +363,7 @@ GusConvo:
 	MUNO
 	MURE 2
 	//GiveItem(GreenGem,Chiffon)
+	GiveGold(3000)
 	NoFade
 NoFade
 ENDA

@@ -46,7 +46,6 @@ CharacterEventBothWays(0xD,CortadoFryeTalk, Cortado, Frye)
 	END_MAIN
 
 CortadoFryeTalk:
-MUSS 0x297
 STAL 33
 Text(FryeCortadoC)
 MURE 0x2
@@ -230,7 +229,7 @@ UNIT InfantrySoul Soldier 0x1 Level(8, Enemy, 1)     [14,5] 0b 0x0 0x0 0x0 [Stee
 UNIT InfantrySoul Myrmidon 0x1 Level(7, Enemy, 1)     [11,7] 0b 0x0 0x0 0x0 [KillingEdge] AttackInRangeAI
 UNIT MagSoul Shaman 0x1 Level(6, Enemy, 1)     [14,9] 0b 0x0 0x0 0x0 [DarkTome1] AttackInRangeAI
 
-UNIT MagSoul Occultist 0x1 Level(8, Enemy, 1)     [16,8] 0b 0x0 0x0 0x0 [Flux] BossAI
+UNIT MagSoul Occultist 0x1 Level(8, Enemy, 1)     [16,8] 0b 0x0 0x0 0x0 [Flux] RangeAI
 UNIT FlierSoul PegRider 0x1 Level(9, Enemy, 1)     [11,9] 0b 0x0 0x0 0x0 [SapphireLance] AttackInRangeAI
 //UNIT KeyThief Thief 0x1 Level(2, Enemy, 1)     [16,19] 0b 0x0 0x0 0x0 [SilverDagger,ChestKey] ThiefAI
 UNIT MagSoul Mage 0x1 Level(8, Enemy, 1)     [2,11] 0b 0x0 0x0 0x0 [Elfire] AttackInRangeAI
@@ -249,14 +248,14 @@ UNIT ArmorSoul LArmor 0x1 Level(9, Enemy, 1)     [12,4] 0b 0x0 0x0 0x0 [SteelGla
 	UNIT
 	
 GreenUnits:
-UNIT Irene Myrmidon_F 0x1 Level(7, NPC, 0)   [5,17] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] BossAI
-UNIT Pandoro Pirate 0x1 Level(7, NPC, 0)   [9,18] 0b 0x0 0x0 0x0 [EmeraldAxe,IronLabrys,Elixir] BossAI
+UNIT Irene Myrmidon_F 0x1 Level(7, Ally, 0)   [5,17] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] BossAI
+UNIT Pandoro Pirate 0x1 Level(7, Ally, 0)   [9,18] 0b 0x0 0x0 0x0 [EmeraldAxe,IronLabrys,Elixir] BossAI
 
 	UNIT
 	
 LunaticUnits:
-UNIT Irene Myrmidon_F 0x1 Level(7, NPC, 1)   [5,17] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] BossAI
-UNIT Pandoro Pirate 0x1 Level(7, NPC, 1)   [9,18] 0b 0x0 0x0 0x0 [EmeraldAxe,ShortAxe,Elixir] BossAI
+UNIT Irene Myrmidon_F 0x1 Level(7, Ally, 1)   [5,17] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] BossAI
+UNIT Pandoro Pirate 0x1 Level(7, Ally, 1)   [9,18] 0b 0x0 0x0 0x0 [EmeraldAxe,ShortAxe,Elixir] BossAI
 	UNIT
 	
 HolyCrapItHim: //spawn from village idk?
@@ -341,19 +340,19 @@ UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [7,18] 0b 0x0 0x0 0x0 [0xf0,Pain,
 EndCutsceneUnitsStart:
 UNIT 0x5A 0x64 0x1 Level(10, NPC, 1)     [5,16] 0b 0x0 0x0 0x0 [Siegmund] RangeAI
 
-UNIT Irene Myrmidon_F 0x1 Level(7, NPC, 0)   [7,19] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] BossAI
-UNIT Pandoro Pirate 0x1 Level(7, NPC, 0)   [8,18] 0b 0x0 0x0 0x0 [EmeraldAxe,IronLabrys,Elixir] BossAI
+UNIT Irene Myrmidon_F 0x1 Level(7, Ally, 0)   [7,19] 0b 0x0 0x0 0x0 [KillingEdge,Flamberge,Vulnerary] BossAI
+UNIT Pandoro Pirate 0x1 Level(7, Ally, 0)   [8,18] 0b 0x0 0x0 0x0 [EmeraldAxe,IronLabrys,Elixir] BossAI
 
 	UNIT	
 
 CutsceneEnemies:
-UNIT InfantrySoul Soldier 0x1 Level(8, Enemy, 1)     [5,15] 0b 0x0 0x0 0x0 [KillerLance] AttackInRangeAI
-//UNIT MagSoul Shaman 0x1 Level(7, Enemy, 1)     [12,17] 0b 0x0 0x0 0x0 [DarkTome3] AttackInRangeAI
+UNIT InfantrySoul Soldier 0x1 Level(8, Enemy, 1)     [5,15] 0b 0x0 0x0 0x0 [KillerLance] BossAI
+//UNIT MagSoul Shaman 0x1 Level(7, Enemy, 1)     [12,17] 0b 0x0 0x0 0x0 [DarkTome3] BossAI
 	UNIT
 
 CutsceneEnemies2: //ambush ones
-UNIT CavSoul LCav 0x1 Level(8, Enemy, 1)     [6,9] 0b 0x0 0x0 0x0 [SapphireLance] AttackInRangeAI
-UNIT FlierSoul WyvernRider 0x1 Level(7, Enemy, 1)     [12,12] 0b 0x0 0x0 0x0 [KillerAxe] AttackInRangeAI
+UNIT CavSoul LCav 0x1 Level(8, Enemy, 1)     [6,9] 0b 0x0 0x0 0x0 [SapphireLance] BossAI
+UNIT FlierSoul WyvernRider 0x1 Level(7, Enemy, 1)     [12,12] 0b 0x0 0x0 0x0 [KillerAxe] BossAI
 	UNIT
 	
 BrigandSpawnTime:
@@ -486,6 +485,8 @@ MUSC 0x18e
 	//LOAD1 0x1 GreenUnits
 HardUnits(LunaticUnits,GreenUnits)
 ENUN
+	CUSN Pandoro
+	CUSN Irene
 FADU 60
 
 //BG(0xC)
@@ -606,6 +607,10 @@ SVAL 0xB 0x110005
 DISA_IF 0xFFFE
 SVAL 0xB 0x120009
 DISA_IF 0xFFFE
+SVAL 0xB 0xF0005
+DISA_IF 0xFFFE
+SVAL 0xB 0x100005
+DISA_IF 0xFFFE
 
 	CALL $591FD8 //prep screen
 	FADU 60
@@ -618,7 +623,7 @@ DISA_IF 0xFFFE
 	ENDA
 
 EndingScene:
-FADI 32
+FADI 30
 STAL 0x30
 ENUT 0x3
 	ResetFlags
@@ -629,7 +634,7 @@ ENUT 0x3
 	SOUN 0x50
 	STAL 40
 	CAM1 [7,18]
-	FADU 60
+	FADU 9
 	STAL 50
 	CameraCursor(Hayes)
 	//MUSC 0x115

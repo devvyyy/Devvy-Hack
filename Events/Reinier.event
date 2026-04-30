@@ -28,8 +28,18 @@ CharacterEventBothWays(0x10,ReinierUlrichConvo, 0x62, Ulrich)
 CharacterEventBothWays(0x10,ReinierConvo, 0x62, 0x0)
 CharacterEventBothWays(0x12,ReinierThereseConvo, 0x62, Therese)
 CharacterEventBothWays(0x11,AffoUlrichConvo, Affogato, Ulrich)
+CharacterEventBothWays(0x17,MochaBrudetConvo, Mocha, Brudet)
 	END_MAIN
-	
+
+
+MochaBrudetConvo:
+	MUSI
+	Text(MochaBrudetTalk)
+	MUNO
+	MURE 2
+NoFade
+ENDA
+
 AffoUlrichConvo:
 	MUSI
 	Text(Ch6AffoUlrichTalk) //uhhh they talk about insert past here/remembered shit idk bro!!1

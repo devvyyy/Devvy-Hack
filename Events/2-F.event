@@ -26,7 +26,17 @@ CharacterEventBothWays(0xC, MesselRecruit, Chiffon, Messel)
 MiscBasedEvents:
 	CauseGameOverIfLordDies
 DefeatAll(EndingScene)
+// uses chif flag but it should be okay since its auto set
+AREA 0x5 AoifeWarning [28,4] [40,18]
 	END_MAIN
+
+AoifeWarning:
+PlayerRangeCheck
+CameraCursor(Chiffon)
+	Text(P2FinaleWarning)
+	STAL 5
+NoFade
+ENDA
 
 LocationBasedEvents:
 
@@ -300,6 +310,7 @@ SOUN 0x82 //sleep staff sound
 
 EndingScene:
 ResetFlags
+SetFlag(0x4)
 ENUT 0x5
 ENUF 0xD
 ENUT 0xEE

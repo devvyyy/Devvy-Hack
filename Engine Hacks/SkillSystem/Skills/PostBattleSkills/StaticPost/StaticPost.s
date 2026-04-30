@@ -32,46 +32,55 @@ cmp	r0,#0x00
 beq	End
 
 @Check if there are enemies in 2 spaces
+mov	r7, r5		@ oops need to save the defender struct pointer to r7
+@ bc r5 gets overwritten (for the event thing)
 ldr	r0, GetUnitsInRange
 mov	lr, r0
 mov	r0, r5		@defender
-mov	r1, #0x00   @can trade
+mov	r1, #0x00	@can trade
 mov	r2, #0x02	@range
 .short	0xf800
 
 SavageBlowDamage:
-mov	r5, r0		@start of buffer
+mov	r5, r0		@start of buffer (r5 is buffer not defender!!!!1)
 mov	r6, #0x00	@counter
 cmp	r0, #0x00
 beq	End
-@if not 0 go through the buffer in r1
 
 CheckEventLoop:		@check if all units in range are dead (or have 1 hp) and if so do not play sound
 ldrb	r0, [r5,r6]
-cmp r0, #0x00
-beq End
-add	r6,#1
-ldr	r2,=#0x8019430
+cmp	r0, #0x00
+beq	End
+add	r6, #1
+ldr	r2, =#0x8019430
 mov	lr, r2
 .short	0xf800
-ldrb	r0,[r0,#0x13]	@current hp
-mov	r1,#1
-cmp	r0,r1
-bhi	Event
+ldrb	r0, [r0,#0x13]	@current hp
+mov	r1, #1
+cmp	r0, r1
+bhi	DefenderCheck	@ jump to defender check instead of le event playing
 b	CheckEventLoop
 
+DefenderCheck:
+@ dont play effect if target enemy is DEAD
+ldrb	r0, [r7,#0x13]	@ check defender hp = 0 (r7 instead of r5 bc above)
+cmp	r0, #0x00
+beq	SkipEvent	@ if dead skip event instead of skipping the dmg
+
 Event:
-mov	r6, #0x00		@reset counter
-ldr	r0,=#0x800D07C		@event engine thingy
+ldr	r0, =#0x800D07C	@event engine thingy
 mov	lr, r0
 ldr	r0, StaticEvent	@this event is just "play some sound effects"
-mov	r1, #0x01		@0x01 = wait for events
+mov	r1, #0x01	@0x01 = wait for events
 .short	0xF800
+
+SkipEvent:
+mov	r6, #0x00	@reset counter bc savage loop starts from 1st unit
 
 Savage_loop:
 ldrb	r0, [r5,r6]
-cmp r0, #0x00
-beq End
+cmp	r0, #0x00
+beq	End
 ldr	r2,=#0x8019430
 mov	lr, r2
 .short	0xf800

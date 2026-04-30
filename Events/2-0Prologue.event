@@ -376,6 +376,11 @@ ENUF 0x7F
 ENUF 0x80
 ENUF 0x81
 
+// note: in part 2, 0x7F flag is used
+// for rina's personal, so instead
+// flag 0x82 (fought with deamon king)
+//is used for top item
+
 ENUT AllUnitsMustEscapeFlag
 
 SVAL 0xB 0x21000D
@@ -524,7 +529,7 @@ ENDA
 EndingScene:
 CUSA Frye
 CUSA Cortado
-CUSA Velius
+CUSA RealVelius
 
 Music(0x196)
 BG(0x11)

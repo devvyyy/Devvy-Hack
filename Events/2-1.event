@@ -161,7 +161,7 @@ UNIT Aeteria Archer 0x1 Level(2, Enemy, 1)     [15,11] DropItem 0x0 0x0 0x0 [Lon
 UNIT Aeteria Archer 0x1 Level(3, Enemy, 1)     [15,9] 0b 0x0 0x0 0x0 [Longbow,] BossAI
 UNIT Aeteria Archer 0x1 Level(2, Enemy, 1)     [7,3] 0b 0x0 0x0 0x0 [Longbow,] ChargeAI
 UNIT Aeteria LArmor 0x1 Level(3, Enemy, 1)     [7,14] DropItem 0x0 0x0 0x0 [IronGlaive,ShortSpear,DoorKey] BossAI
-UNIT Aeteria AArmor 0x1 Level(2, Enemy, 1)     [12,9] 0b 0x0 0x0 0x0 [Halberd,] BossAI
+UNIT AeteriaStealable AArmor 0x1 Level(2, Enemy, 1)     [12,9] 0b 0x0 0x0 0x0 [Halberd,BlueGem] BossAI
 UNIT Aeteria SArmor 0x1 Level(3, Enemy, 1)     [8,14] 0b 0x0 0x0 0x0 [IronBlade,ShortBrand] BossAI
 UNIT Aeteria LCav 0x1 Level(2, Enemy, 1)     [7,17] 0b 0x0 0x0 0x0 [IronLance,] TwoActionAI
 UNIT Aeteria Soldier 0x1 Level(3, Enemy, 1)     [14,16] 0b 0x0 0x0 0x0 [IronLance,] TwoActionAI
@@ -332,6 +332,9 @@ NoFade
 ENDA
 
 PrisonTalk3:
+CHECK_EVENTID 0x8 //if door already opened
+BNE 0x9000 0xC 0x0 //end if flag set
+
 CAM1 [7,11]
 MUSI
 SetBackground(0x41)
@@ -357,6 +360,8 @@ Text(TwoOneKeyStuff2)
 CUSN Verna
 
 MUNO
+
+LABEL 0x9000
 NoFade
 ENDA
 

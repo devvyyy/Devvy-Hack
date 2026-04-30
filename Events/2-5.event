@@ -51,8 +51,25 @@ CharacterEventBothWays(0x20,ChiffonGrahamTalk, Chiffon, Graham)
 CharacterEventBothWays(0x21,ChiffonRaialTalk, Chiffon, Raial)
 CharacterEventBothWays(0x22,GrahamGusTalk, Gus, Graham)
 CharacterEventBothWays(0x23,RaialYufkaTalk, Raial, Yufka)
+CharacterEventBothWays(0x1A,VeliusCortadoConvo, Velius, Cortado)
+CharacterEventBothWays(0x1B,YufkaVernaConvo, Verna, Yufka)
 	END_MAIN
 
+YufkaVernaConvo:
+	MUSI  
+	Text(YufkaVernaB)  
+	MUNO  
+	MURE 2  
+NoFade  
+ENDA
+
+VeliusCortadoConvo:
+	MUSI  
+	Text(VeliusCortadoB)  
+	MUNO  
+	MURE 2  
+NoFade  
+ENDA  
 
 RaialYufkaTalk:
 	MUSI

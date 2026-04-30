@@ -248,8 +248,8 @@ UNIT Aeteria Hunter 0x1 Level(10, Enemy, 1)     [11,0] DropItem 0x0 0x0 0x0 [Shi
 UNIT AeteriaStealable Druid 0x1 Level(4, Enemy, 1)     [14,7] 0b 0x0 0x0 0x0 [Moonfall,DarkTome5,0x5C] BossAI
 UNIT 0xc4 APal 0x1 Level(13, Enemy, 0)     [13,6] 0b 0x0 0x0 0x0 [KillerAxe,ShortAxe,0x7f] BossAI
 UNIT 0xc3 GreatKnight 0x1 Level(12, Enemy, 0)     [15,6] 0b 0x0 0x0 0x0 [0x7c,LightBrand,BluntGlaive,ShortAxe] BossAI
-UNIT Aeteria ACav 0x1 Level(9, Enemy, 1)     [18,0] DropItem 0x0 0x0 0x0 [SteelAxe] TwoActionAI
-UNIT AeteriaStealable Shaman 0x1 Level(9, Enemy, 1)     [19,16] 0b 0x0 0x0 0x0 [Flux,RedGem] TwoActionAI
+UNIT Aeteria ACav 0x1 Level(9, Enemy, 1)     [18,0] DropItem 0x0 0x0 0x0 [SteelAxe, RedGem] TwoActionAI
+UNIT AeteriaStealable Shaman 0x1 Level(9, Enemy, 1)     [19,16] 0b 0x0 0x0 0x0 [Flux,GreenGem] TwoActionAI
 	UNIT
 
 Rein1:
@@ -308,6 +308,9 @@ CAM1 0xC3
 STAL 20
 FlashCursor(0xC3,60)
 Text(AggroWulfricCh26)
+
+SetFlag(0xEC) //back to horse mode
+
 STAL 5
 ENUT 0xA
 LABEL 0x776
@@ -365,7 +368,7 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-	SetFlag(0xEC)
+	SetFlag(0xEC) //wulfric armor mode
 	ENUT AllUnitsMustEscapeFlag
 	//TILECHANGE 0x4
 	LOAD1 0x1 EnemyUnits
