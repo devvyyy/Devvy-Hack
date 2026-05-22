@@ -64,6 +64,13 @@ strb	r1, [r0]
 add	r0, #0x01
 strb	r2, [r0]
 
+@bandaid fix to prevent anybody else from proccing the vfx which
+@ moves camera on eisner
+ldr  r0, [r5] @r0 = character data pointer
+ldrb r0, [r0, #0x4] @r0 = character ID
+cmp r0, #0x1a @ eisner
+bne End
+
 Event:
 ldr	r0,=#0x800D07C		@event engine thingy
 mov	lr, r0
