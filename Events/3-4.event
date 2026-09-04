@@ -136,7 +136,11 @@ UNIT Wreyvine Fighter 0x1 Level(15, NPC, 1)     [3,4] 0b 0x0 0x0 0x0 [MageAxe,Ir
 	UNIT
 
 SelwynGamerFightable:
-UNIT Selwyn Auspex 0x1 Level(20, Enemy, 1)   [14,26] 0b 0x0 0x0 0x0 [0xFE] BossAI
+UNIT Selwyn Auspex 0x1 Level(20, Enemy, 1)   [14,26] DropItem 0x0 0x0 0x0 [0xFE] BossAI
+	UNIT
+
+TheEustaceGamer:
+UNIT Eustace Druid_F 0x1 Level(15, Enemy, 1)     [15,18] DropItem 0x0 0x0 0x0 [Malchut, 0xF4] BossAI
 	UNIT
 
 CutsceneUnitsB:
@@ -147,8 +151,12 @@ UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [13,26] 0 0 1 REDA12R16 [0xf0,Pai
 
 CutsceneUnits:
 UNIT Ulrich LPal 0x1 Level(1, Ally, 0)   [0,5] 0 0 1 REDA7R2 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
-UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [0,5] 0 0 1 REDA6R2 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
-UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [0,6] 0 0 1 REDA5R2 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Graham Valkyrie 0x1 Level(10, Ally, 0)   [0,6] 0 0 1 REDA6R3 [0xf0,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Radcliff Warrior 0x1 Level(10, Ally, 0)   [0,5] 0 0 1 REDA5R3 [SteelAxe,Pain,Mend,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Gerolf SPal 0x1 Level(1, Ally, 0)   [0,5] 0 0 1 REDA6R3 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Klavdia WyvernKnight 0x1 Level(1, Ally, 0)   [0,6] 0 0 1 REDA5R2 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+UNIT Wegman General 0x1 Level(1, Ally, 0)   [0,6] 0 0 1 REDA7R3 [IronAxe,0xE9,Elixir] [0x0,0x0,0x0,0x0]
+
 	UNIT
 
 SelwynGamer:
@@ -181,15 +189,20 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
-	LOAD1 0x1 EnemyUnits
-	LOAD1 0x1 EnemyUnits2
 	LOAD1 0x1 WreyvineGuys
 	TILECHANGE 0x5
-	FADU 15
-Music(0x32D)
+Music(0x47)
+	SetBackground(0x25)
+	Text(Part3Chapter4Opening0)
+	FADI 60
+	CLEAN
 
+Music(0x32D)
+FADU 60
 CamOn
 LOAD2 0x1 CutsceneUnitsB
+	ENUN
+	STAL 15
 	Text(Part3Chapter4Opening1)
 
 	CameraCursor(Gorlois)
@@ -227,8 +240,15 @@ CamOn
 	CameraCursor(Selwyn)
 	Music(0x324)
 	STAL 5
+
 	SetBackground(0x3E)
-	Text(Part3Chapter4Opening3)
+	TEXTSTART; TEXTSHOW Part3Chapter4Opening3; TEXTEND
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+	
+	TEXTCONT; TEXTEND; REMA
+	FADI 60
 
 SetUnitStatus(Selwyn,CurrentHP,80)
 SetUnitStatus(Selwyn,Strength,27)
@@ -237,10 +257,13 @@ SetUnitStatus(Selwyn,LuckStat,30)
 SetUnitStatus(Selwyn,Speed,26)
 SetUnitStatus(Selwyn,DefenseStat,22)
 SetUnitStatus(Selwyn,Resistance,28)
+LOAD1 0x1 TheEustaceGamer //warp him in
 
 //scripted battles
 
-ClearBackground
+CLEAN
+FADU 12
+STAL 30
 WORD 0x3C2F49 0x440010 //move ulrich to selwyn
 ENUN
 
@@ -270,6 +293,44 @@ UnsetFlag(0xEE)
 	FADI 60
 	MOVE 0x5 Gorlois [12,11]
 	MOVE 0x5 Selwyn [14,20]
+	FAWI 16
+	SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+SOUN 0xB5
+SOUN 0xB4
+STAL 5
+	LOAD1 0x1 EnemyUnits
+	LOAD1 0x1 EnemyUnits2
+	STAL 30
+	FAWU 8
+	STAL 60
 	CALL $591FD8 //prep screen
 	FADU 60
 
@@ -315,10 +376,35 @@ CALL 0x9EE4F8
 	SetBackground(0x34)
 
 	//the double textcont
-	TEXTSTART; TEXTSHOW Part3Chapter4Ending2; TEXTEND; FadeOutMusic; TEXTCONT; TEXTEND; Music(0x324); TEXTCONT; TEXTEND; REMA
-	//Text(Part3Chapter4Ending2)
+	//TEXTSTART; TEXTSHOW Part3Chapter4Ending2; TEXTEND; FadeOutMusic; TEXTCONT; TEXTEND; Music(0x324); TEXTCONT; TEXTEND; REMA
+	Text(Part3Chapter4Ending2)
+	FADI 60
+	CLEAN
+	FADU 60
 
 	STAL 5
+	//selwyn walks closer to KLAVDIA
+	WORD 0x3C2F49 0x0F0044
+	ENUN
+
+	Text(Part3Chapter4Ending2Point5Raial)
+	//raial/klavdia swap
+	MOVE 0x3C 0x2F [5,2]
+	MOVE 0x3C 0xF [5,3]
+	ENUN
+
+	// battle here
+
+	SetFlag(0xEE)
+	
+	StartBattle
+	NormalDamage(0,26)
+	SetScriptedBattle(100,26,9,67,12,2)
+	FIG1 Selwyn Raial 0xFE
+
+	STAL 5
+
+	TEXTSTART; TEXTSHOW Part3Chapter4Ending2Point5RaialTransition; TEXTEND; FadeOutMusic; TEXTCONT; TEXTEND; Music(0x324); TEXTCONT; TEXTEND; REMA
 
 	CLEAN
 	FAWI 30
@@ -341,11 +427,32 @@ CALL 0x9EE4F8
 	CameraCursor(Affogato)
 
 	//Text(Part3Chapter4Ending4)
-	TEXTSTART; TEXTSHOW Part3Chapter4Ending4; TEXTEND; MOVE 0xF Ulrich [15,5]; MOVE 0xF Raial [15,5]; MOVE 0xF Graham [15,5]; ENUN; STAL 5; MOVE 0xA Selwyn [8,2]; ENUN; TEXTCONT; TEXTEND; CUSA Affogato; REMU Affogato; TEXTCONT; TEXTEND; REMA
+	TEXTSTART
+	TEXTSHOW Part3Chapter4Ending4
+	TEXTEND
+	CamOff
+	MOVE 0xF Ulrich [15,5]
+	MOVE 0xF Raial [15,5]
+	MOVE 0xF Graham [15,5]
+	MOVE 0xF Gerolf [15,5]
+	MOVE 0xF Wegman [15,5]
+	MOVE 0xF Klavdia [15,5]
+	ENUN
+	CLEA 0
+	STAL 5
+	MOVE 0xA Selwyn [8,2]
+	ENUN
+	TEXTCONT
+	TEXTEND
+	CUSA Affogato
+	REMU Affogato
+	TEXTCONT
+	TEXTEND
+	REMA
 	
 	STAL 10
 
-	CamOff
+	//CamOff
 	LOAD2 0x1 TheRandos
 	ENUN
 	SetBackground(0x34)
@@ -459,7 +566,7 @@ STAL 3
 SetFlag(0x10)
 
 LABEL 0x776
-
+UnsetFlag(0xEE)
 NoFade
 ENDA
 

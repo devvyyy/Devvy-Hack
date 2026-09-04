@@ -124,6 +124,13 @@ Sanctuary[N]
 - Restores (Eth + 3) HP to all Blessed[N]
 allies on the map after action.[X]
 
+## SD_Radiance2
+Wreyvian Hearth[N]
+- Nora's staves Bless allies for the map.[N]
+(Clears status effects on ally, if any.)[N]
+- Restores (Eth + 10) HP to all Blessed[N]
+allies on the map after action.[X]
+
 ## SD_Fom
 # Glare? Pressure? Intimidate? Domineer?
 Evil Eye[N]
@@ -132,6 +139,14 @@ after all post-combat effects trigger,[N]
 Fears target and ends the actions of[N]
 closest foes within 4 spaces of target.[X]
 
+## SD_Fom2
+Last Rites[N]
+- After combat, after all post-combat[N]
+effects trigger, Floris Fears target and[N]
+ends the actions of closest foes within[N]
+4 spaces of target.[X]
+
+
 ## SD_DriveRes
 # Hallowed Radiance
 The Vow Holds[N]
@@ -139,6 +154,13 @@ The Vow Holds[N]
 - Grants Rsl +5, (50% ally Str/Eth)[N]
 bonus magical damage, and enables Sol[N]
 to allies within 3 spaces.[X]
+
+## SD_DriveRes2
+Hallowed Radiance[N]
+- Iris neutralizes Mt of foe's magic.[N]
+- Grants Rsl +10, (50% ally Str/Eth)[N]
+bonus magical damage, and enables Sol[N]
+to allies within 4 spaces.[X]
 
 ## SD_Miracle
 Miracle[N]
@@ -779,6 +801,13 @@ Thrill of the Hunt[N]
 - At max stacks, foes within 4 spaces[N]
 can't dodge or benefit from terrain.[X]
 
+## SD_Gaming2
+Apex Predator[N]
+- Kills grant Klavdia a stack (max; 3).[N]
+- Stacks grant Atk +2, Hit +15 each.[N]
+- At max stacks, foes within 4 spaces[N]
+can't dodge or benefit from terrain.[X]
+
 ## SD_FlowGamingNew
 Bulwark: Combat grants 1 stack (max; 3).[N]
 Each stack grants 3 Prt/Rsl. At max stacks,[N]
@@ -856,6 +885,13 @@ Momentum[N]
 = 50% of (Spd - foe's Spd; min 0), and if[N]
 Spd > foe's Spd +8, foe can't counter.[X]
 
+## SD_Alacrity2
+Can't Keep Up?[N]
+- If Mocha initiates, deals bonus damage[N]
+= (Spd - foe's Spd; min 0, max 15), and if[N]
+Spd > foe's Spd, follow-ups trigger twice[N]
+and foe can't counter.[X]
+
 ## SD_AlacrityREAL
 Alacrity[N]
 - If Mocha's Spd > foe's Spd -10, perform an[N]
@@ -877,6 +913,12 @@ Imminent Death[N]
 foe's follow-ups deal 30 less damage.[N]
 - Whichever side with higher Spd will[N]
 follow-up and other side can't.[X]
+
+## SD_Potent2
+Certain Death[N]
+- The Legionnaire can follow-up and foe[N]
+can't, and follow-ups trigger twice.[N]
+- Deals bonus damage = 30 - foe's Spd.[X]
 
 ## SD_Immovable
 Immovable[N]
@@ -1154,6 +1196,28 @@ Fractured Soul[N]
 reduces damage taken = 50% of foe's[N]
 missing HP at start of combat.[X]
 
+## SD_Nihil
+# edit this later in SkillSystem.event
+Nevermore[N]
+- Aohr neutralizes foe's effects that[N]
+[OpenQuote]Deal bonus damage" or [OpenQuote]Reduces[N]
+damage taken".[X]
+
+## SD_GorloisPassive1
+# he's a real unit, need a real passive
+Under One Sun[N]
+- Gorlois can toggle an Artillery stance:[N]
+Sets Move to 0, grants Range +5, deals[N]
+bonus damage = 25% of Res, but take 5[N]
+damage after combat.[X]
+
+## SD_GorloisPassive2
+# he's a real unit, need a real passive
+Nevermore[N]
+- Aohr executes foes below (foe's Luck) HP.[N]
+- If foe is defeated, restores 50% HP and[N]
+Canto 2 spaces after combat.[X]
+
 ## SD_SkiesDescend2
 The Skies Descend[N]
 - Gorlois' first hit deals bonus true[N]
@@ -1314,6 +1378,13 @@ taken from foe's last attack this combat[N]
 and restore HP = 25% of damage dealt.[X]
 
 ## SD_BullHeaded2
+The Best Defense...[N]
+- Stroganoff strikes x2 consecutively.[N]
+- Attack last, but counters deal bonus[N]
+damage = damage taken from last attack[N]
+this combat and gain 25% Lifesteal.[X]
+
+## SD_BullHeadedAlt
 The Best Defense...[N]
 - Stroganoff can War Cry on turn 1.[N]
 - Attack last, but counters deal bonus[N]
@@ -1614,9 +1685,8 @@ Ice Cleats[N]
 # 1-1 interlude, implemented
 Tusked Pin[N]
 (Res +3)[N]
-- Transfers damage penalties inflicted[N]
-by tier I-V dark magic during[N]
-combat to its user.[X]
+- Transfers dark magic Atk penalties[N]
+to foe during combat.[X]
 
 ## SD_FairFight
 # implemented
@@ -1668,24 +1738,29 @@ within 2 spaces.[X]
 # 1-3, implemented
 War-Plate[N]
 (Def +5, Spd -3)[N]
-- Reduces damage taken by 50%[N]
-for each of foe's attacks after[N]
-the first (resets after combat).[X]
+- Reduces damage taken by 50% per[N]
+foe's attack (resets after combat).[X]
 
 ## SD_CriticalForce
-# implemented, Razor's Edge
+# implemented, Razor's Edge; Foe's criticals only do 1.5x.
 Gambler's Cap[N]
 (Dex +5, Luck -50%)[N]
 - Grants Crit = Dex.[N]
-- Halves bonus damage from foe's[N]
-critical hits.[X]
+- Foe's critical hits do 67% damage.[X]
 
-## SD_GrimRing
+## SD_GrimRingOld
 # 1-3, implemented
 Sable Hood[N]
 (Luck -50%)[N]
 - Deals bonus damage = foe's missing HP[N]
 at start of combat.[N]
+- Reduces targetting priority.[X]
+
+## SD_GrimRing
+# 1-3, implemented
+Sable Hood[N]
+(Luck -50%)[N]
+- Grants Atk = foe's missing HP.[N]
 - Reduces targetting priority.[X]
 
 ## SD_Ignis
@@ -1760,19 +1835,17 @@ if on a Plain, Forest or Mountain.[X]
 Legionnairis[N]
 - At start of turn, if adjacent to an[N]
 [ArmorIcon] ally, grants Move +2 to unit and[N]
-adjacent [ArmorIcon] allies.[N]
-(Doesn't stack with similar skills.)[X]
+adjacent [ArmorIcon] allies (doesn't stack).[X]
 
 ## SD_Desperation
 # implemented
 Gale Brace[N]
 (Spd +2 to non-[HorseIcon][FlierIcon])[N]
-- If initiating, follow-ups occur[N]
-before foe can counterattack, but[N]
-disables non-x2 additional attacks.[X]
+- Follow-ups occur before foe can[N]
+counterattack (disables bonus follow-ups).[X]
 
-## SD_Hammers
-# ansgar talk
+## SD_Poise
+# ansgar talk OR lunatic
 Whetstone[N]
 (Dex +3)[N]
 - Neutralizes WTD and weapons have a[N]
@@ -1818,7 +1891,6 @@ Bookmark[N]
 - If personal skill has 4 lines,[N]
 deals +1 damage, reduces damage[N]
 taken by 1, and grants AS +1.[X]
-
 
 ## SD_Bayonet
 Staffonet[N]
@@ -1907,6 +1979,14 @@ foe's Max HP/4.[X]
 Sidestep[N]
 - Affogato can Canto 2 spaces after[N]
 any action while not in Stealth.[N]
+- Vaulting, if not in Stealth, enters[N]
+Stealth and grants another action.[X]
+
+## SD_CloseCall2
+# After dashing, if not in Stealth, enter Stealth and grants another action.
+Shadow Step[N]
+- Affogato can Canto remaining spaces[N]
+while not in Stealth (min; 2).[N]
 - Vaulting, if not in Stealth, enters[N]
 Stealth and grants another action.[X]
 
@@ -2035,12 +2115,26 @@ Stampede[N]
 - If all Move is used, strikes[N]
 x2 consecutively.[X]
 
+## SD_Charge2
+Tunnel Vision[N]
+- Grants Breve Atk = Move used.[N]
+- If all Move is used, strikes[N]
+x2 consecutively and negates foe's[N]
+defensive effects.[X]
+
 ## SD_Steadfast
 # Eager Rush; Hyper Crash; Moxie; Audacity; Daring; Hyperactive; Make Up Your Mind omg EDIT: can we do all of these at once lol
 Moxie[N]
 - Grants Hildr AS = Move used.[N]
 - If all Move is used, reduces damage[N]
 taken = 5 + (Spd - foe's Spd; min 0).[X]
+
+## SD_Steadfast2
+Audacity[N]
+- Grants Hildr AS = Move used.[N]
+- If all Move is used, negates damage[N]
+taken from foe's first attack and[N]
+follow-ups trigger twice.[X]
 
 ## SD_Outrider
 # Vae Victis
@@ -2116,6 +2210,13 @@ Wreyvian allies within 3 spaces.[N]
 - Grants Atk/Prt +1 to all allies,[N]
 increased to +3 if Wreyvian.[X]
 
+## SD_Adept2
+Under One Sun[N]
+- Wegman enables Twin Suns to[N]
+Wreyvian allies within 3 spaces.[N]
+- Grants Atk/Prt +2 to all allies,[N]
+increased to +4 if Wreyvian.[X]
+
 ## SD_CantoPlus
 Canto[N]
 - Unit can use remaining movement[N]
@@ -2130,6 +2231,14 @@ double or be doubled.[X]
 Ace in the Hole[N]
 - Levain readies next hits to Headshot.[N]
 - Headshots have +5 range, always hit,[N]
+converts 4 Crit to 1 damage, and deals[N]
+bonus damage = foe's missing HP on-hit.[X]
+
+## SD_SureShot2
+# uses flag 0x94; also messel flag
+Deadeye[N]
+- Levain readies next hits to Headshot.[N]
+- Headshots have +10 range, always hit,[N]
 converts 4 Crit to 1 damage, and deals[N]
 bonus damage = foe's missing HP on-hit.[X]
 
@@ -2387,13 +2496,6 @@ take -4 physical damage.[X]
 Savant Robes[N]
 (Res +2)[N]
 - Grants Rsl +2 to adjacent allies.[X]
-
-## SD_Nihil
-# edit this later in SkillSystem.event
-Nevermore[N]
-- Aohr neutralizes foe's effects that[N]
-[OpenQuote]Deal bonus damage" or [OpenQuote]Reduces[N]
-damage taken".[X]
 
 ## SD_Nullify
 # final boss skill, also add a post battle hp restore
@@ -2806,6 +2908,13 @@ decide on a name or face.[X]
 Wild Card[N]
 - Grants Sequin Eth/Spd +5 and Canto[N]
 for 1 phase after picking/stealing.[N]
+- Can swap spaces with an ally within[N]
+(Eth/3; min 5) spaces during Canto.[X]
+
+## SD_Charisma2
+Ace Up My Sleeve[N]
+- Sequin can Canto 2 spaces.[N]
+- If initiating, grants Atk/AS +5.[N]
 - Can swap spaces with an ally within[N]
 (Eth/3; min 5) spaces during Canto.[X]
 
@@ -3304,11 +3413,6 @@ Heh[Beat] Is that all you got![AN][Smile]
 Arcane Blade: When initiating battle[N]
 at 1 range: Add 3+(Mag/2) to Hit[N]
 and Crit.[X]
-
-## SD_Poise
-Poise: +1 Move.[N]
-Negates enemy hit bonus from[N]
-weapon triangle advantage.[X]
 
 ## SD_BlueFlame
 Ill Omen[N]

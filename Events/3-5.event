@@ -168,7 +168,7 @@ UNIT MagSoul Shaman 0x1 Level(13, Enemy, 1) [31,8]  0b 0x0 0x0 0x0 [DarkTome1] T
 UNIT InfantrySoul Soldier  0x1 Level(13, Enemy, 1) [17,10] 0b 0x0 0x0 0x0 [SteelLance] TwoActionAI
 
 
-UNIT 0x73 Adventurer 0x1 Level(13, Enemy, 1) [39,6] 0b 0x0 0x0 0x0 [0x86,Elixir] ChargeAI
+//UNIT 0x73 Adventurer 0x1 Level(13, Enemy, 1) [39,6] 0b 0x0 0x0 0x0 [0x86,Elixir] ChargeAI
 
 	UNIT
 
@@ -303,7 +303,7 @@ CALL $591FD8 //prep screen
 
 VCWF 5 //fog until chiffon comes back
 
-	ENDA
+ENDA
 
 EndingScene:
 ResetFlags
@@ -487,7 +487,7 @@ REVEAL Chiffon
 STAL 5
 	MNC2 0x1b
 	NoFade
-	ENDA
+ENDA
 
 
 ChiffonRealMoment:
