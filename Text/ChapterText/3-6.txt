@@ -883,7 +883,7 @@ Then[Beat] This is it.
 
 [X]
 
-## Part3Chapter6EndingNEW0 (Raial Route)
+## Part3Chapter6EndingNEW0Raial
 # the gang corners maynard
 [3L]
 [ML][LoadChiffon]
@@ -964,7 +964,7 @@ Chiffon,[.4] no![.6] Take him alive--[.4][AN]
 
 [X]
 
-## Part3Chapter6EndingNEW0 (Graham Route)
+## Part3Chapter6EndingNEW0Graham
 # the gang corners maynard
 [3L]
 [ML][LoadChiffon]
@@ -1040,16 +1040,17 @@ anyone away from me again![AN]
 I alone decide life and death![N]
 And today,[.4] I choose[Beat][N]
 to end your life,[.4] here and now![AN]
+[CSS][MoveLeft]
 
 [MR]
 [CloseEyes][Beat]
 So this is my penance.[N]
 Very well.[.6] I--[.4][AN]
 
-[L][LoadGraham]
+[FL][LoadGraham]
 
-[L]
-Your Highness,[.4] be wary.[N]
+[FL]
+Your Highness,[.4] be wary.[6N]
 He may still have a trick--[.4][AN]
 
 # Chiffon rushes forwards; Sylveria teleports in the way; scripted fight of Chiffon attacking and missing
@@ -1061,29 +1062,34 @@ He may still have a trick--[.4][AN]
 [3L]
 [L][LoadChiffon]
 [R][LoadMaynard]
-[FR][LoadSylveria]
+[FR][LoadSylveria2]
 
 [L]
 Wha--[.4]Apostle--[.4][AN]
+[CSS]
 
 [FR]
-Just in time,[.4] it seems.[N]
-I was struck by a premonition[Beat] that[N]
+Just in time,[.4] it seems.[AN]
+[CSS]
+[FR][MoveR]
+I[Beat] saw a premonition[Beat] I saw that[N]
 one precious to me was in danger.[AN]
 
-[R]
+[FR][CloseEyes]
 I[Beat] Apostle Sylveria,[.4] I[Beat][N]
 I do not deserve[Beat][N]
-This is not--[.4][AN]
+This is not[Beat][AN]
 
-[FR]
-No,[.4] Consul Maynard.[.6] I will not[N]
-allow you to die here.[N]
-I have already lost enough.[AN]
+[R]
+No,[.4] Consul.[.6] I will not allow[N]
+you to die here.[.6] I have already[N]
+lost enough.[AN]
 
 [L][CF]
 [R][CF]
 [FR][CF]
+
+[Event]
 
 [FL][LoadUlrich]
 [L][LoadGorlois]
@@ -1092,31 +1098,29 @@ I have already lost enough.[AN]
 
 [FL]
 It's her[Beat] So she finally shows[N]
-her face again,[.4] after all this time?[N]
+her face again,[.4] after all this time?[6N]
 Lord Gorlois,[.4] did you--[.4][AN]
 
 [L]
-She is wreathed in the Serpent's power.[N]
-A glow so fierce,[.4] it burns the eyes.[N]
+She is wreathed in the Serpent's power.[6N]
+A glow so fierce,[.4] it burns the eyes.[6N]
 Aohr was blind to her approach[Beat][AN]
 
 [FR]
-If she's got the same magic trick[N]
-as Selwyn does[Beat] how the hell are[N]
+If she's got the same magic tricks[N]
+Selwyn does[Beat] How the hell are[N]
 we going to hurt her?[AN]
 
 [R]
 Peace,[.4] my companions.[.6] This is the[N]
-moment we have been awaiting.[N]
+moment we have been awaiting.[6N]
 Trust in Princess Sylmeria.[AN]
 
 [L]
 [CloseEyes][Beat]
 If that is our only option.[.6] But[N]
 you,[.4] Reverend,[.4] have reminded me[N]
-of the importance of failsafes.[AN]
-
-[L]
+of the importance of failsafes.[AN][C]
 [Beat]I am going to try something.[AN]
 
 [FL][CF]
@@ -1124,11 +1128,13 @@ of the importance of failsafes.[AN]
 [FR][CF]
 [R][CF]
 
+[Event]
+
 [L][LoadChiffon]
-[R][LoadSylveria]
+[R][LoadSylveria2]
 
 [L]
-What now,[.4] Sis?[N]
+What now,[.4] Sis?[6N]
 Are you here to try to[N]
 take me back again?[AN]
 
@@ -1138,13 +1144,13 @@ lose anyone again,[.4] Sylmeria.[N]
 Not like Mother[Beat] Not like you.[AN]
 
 [L]
-Is that really what you think?[N]
-That you've [OQ]lost[0x1E] me?[N]
+Is that really what you think?[6N]
+That you've [OQ]lost" me?[6N]
 Did you ever really find me,[.4] though?[AN]
 
 [R]
-I did.[.6] I found my sister,[.4] born anew,[N]
-and I lost her[Beat] days later.[AN]
+I did.[.6] I found my sister,[.4] born anew,[4N]
+and I lost her[Beat] merely days later.[AN]
 
 [L]
 [Beat][AN]
@@ -1155,19 +1161,18 @@ the key to ending the winter,[.4] Sylmeria.[N]
 You are the answer to all of this.[AN]
 
 [L]
-Again with all of this stuff?[.6] Really?[AN]
+Again with all of this stuff?[.6][N]
+Really?[AN]
 
 [R]
 The Norlis,[.4] the suffocating cold[Beat][N]
-All of it would fade away.[N]
-We would finally be able to[AN]
-
-[R]
-see our first spring together.[N]
+All of it would fade away.[AN][C]
+We would finally be able to[N]
+see our first spring together.[6N]
 Like a real family would.[AN]
 
 [L]
-A real family,[.4] huh[Beat] Wait.[N]
+A real family,[.4] huh[Beat] Wait.[6N]
 Now that I think on it again,[.4][N]
 this doesn't add up,[.4] does it?[AN]
 
@@ -1201,38 +1206,36 @@ But I don't get how you would--[.4][AN]
 Stop.[AN]
 
 [L]
-Tell me what I'm misunderstanding.[N]
+Tell me what I'm misunderstanding.[6N]
 Will fixing your family really end this--[.4][AN]
+[CSS]
 
-[R]
+[R][MoveRight]
 [CloseEyes][Beat]
 STOP!![AN]
+[CSS]
+[X]
 
+## Part3Chapter6EndingNEW1After
 # howling wind sfx; flash of white
-
-[L]
+[3L]
+[L][Chiffon][R][Sylveria2]
+[L][MoveML]
 Wh--[.4]!!![N]
 That power[Beat][AN]
 
 [R]
 The day Anatolius fell[Beat][N]
 The day I first called the Norlis[Beat][N]
-It was like a lock had been torn[AN]
-
-[R]
-away from a closed door.[N]
-All my grief suddenly poured out,[.4][N]
-out the gap where my mother[AN]
-
-[R]
-once was in my life.[N]
+I never felt so strong.[AN]
+It was as if a lock had been torn[AN]
+away from a closed door[,][N]
+and[Beat] it all took form.[AN]
 I lost myself[Beat] and I have yet[N]
-to find her again.[.6] But that is[AN]
-
-[R]
+to find her again.[.6] But that is[N]
 why I need you,[.4] Sylmeria.[AN]
 
-[L]
+[ML]
 [Beat][AN]
 
 [R]
@@ -1247,17 +1250,18 @@ Of course she wants us to be whole![AN]
 
 [R]
 And you[Beat] You are going to be[Beat][AN]
+[CSS]
 
 [FL][LoadRaial]
 
 [FL]
-What is she talking about--[.4][N]
+What the hell's she talking about--[.4][N]
 Wait,[.4] she's about to attack![N]
 Chiffon,[.4] get down![AN]
 
 [FR][LoadGorlois]
 
-[FR]
+[FR][MoveFR]
 Now,[.4] Aohr![AN]
 
 # scripted battle: Gorlois steps forward and hits Sylveria with a Purge
@@ -1266,25 +1270,25 @@ Now,[.4] Aohr![AN]
 
 ## Part3Chapter6EndingNEW2
 [3L]
-[R][LoadSylveria]
-[FR][LoadGorlois]
-[L][LoadGraham]
+[R][LoadSylveria2]
+[L][LoadGorlois]
+[FL][LoadGraham]
 
-[R]
+[R][MoveRight]
 Rrgh!![.6] Cough,[.4] cough--[.4][AN]
+[CSS]
+[R][MoveMR]
 
-[L]
+[FL]
 That ether[Beat] It actually managed to[N]
 pierce the Serpent's blessing?[AN]
 
-[R]
+[MR]
 [Beat]I had believed you were keeping[N]
-your distance because you were wise.[N]
-I had thought my brother would have[AN]
-
-[R]
+your distance because you were wise.[AN]
+I had thought my brother would have[N]
 taught you the difference in ability[N]
-between us and you.[N]
+between us and you.[AN][C]
 It seems I believed wrong.[AN]
 
 # Sylveria warps over and brutally strikes down Gorlois
@@ -1293,16 +1297,17 @@ It seems I believed wrong.[AN]
 
 ## Part3Chapter6EndingNEW3
 [3L]
-[FR][LoadGorlois]
-[R][LoadSylveria]
-[L][LoadRaial]
-
-[FR]
-[CloseEyes][Beat]
-Nngh![.6] Tch[Beat] That's[Beat] It hurts[Beat][AN]
+[L][LoadGorlois]
+[R][LoadSylveria2]
+[FL][LoadRaial]
 
 [L]
-Get away from him![AN]
+[CloseEyes][Beat]
+Nngh![.6] Tch[Beat] That's[Beat][AN]
+[CSS]
+
+[FL][MoveLeft]
+Get away from him![AN][MoveLeft]
 
 # Raial tries to attack Sylveria and bounces off
 
@@ -1312,14 +1317,13 @@ Get away from him![AN]
 [3L]
 [FL][LoadGraham]
 [L][LoadRaial]
-[R][LoadSylveria]
-[FR][LoadGorlois]
+[R][LoadSylveria2]
 
 [FL]
 Raial,[.4] get back![AN]
 
 [L]
-It's no use--[.4]aaah![AN]
+It's no use--[MoveLeft][.4]Gaah![AN]
 
 # Sylveria blasts Raial back; she turns her attention to Gorlois once more
 
@@ -1327,13 +1331,13 @@ It's no use--[.4]aaah![AN]
 
 ## Part3Chapter6EndingNEW5
 [3L]
-[R][LoadSylveria]
-[FR][LoadGorlois]
+[R][LoadSylveria2]
+[ML][LoadGorlois]
 
 [R]
-But this wound[Beat] Why am I in pain?[N]
-Why am I bleeding?[N]
-You.[.6] What have you done to me?[AN]
+But this wound[Beat] Why am I[Beat][6N]
+How am I bleeding?[.6] You.[.6][N]
+What have you done to me?[AN]
 
 # Sylveria starts choking Gorlois; he flinches in her grip
 
@@ -1341,41 +1345,30 @@ You.[.6] What have you done to me?[AN]
 
 ## Part3Chapter6EndingNEW6
 [3L]
-[FR][LoadGorlois]
-[R][LoadSylveria]
+[ML][LoadGorlois]
+[R][LoadSylveria2]
 
-[FR]
-My[Beat] My constitution has always[N]
-been weak,[.4] Apostle[Beat] I have[N]
-never been the sturdiest of men.[AN]
-
-[FR]
-But I[Beat] One hit was all we needed[N]
+[ML]
+Gah[Beat] One hit was all we needed[N]
 to prove you could be toppled[Beat][N]
 To prove you were not[Beat][AN]
-
-[FR]
-invulnerable[Beat][AN]
 
 [R]
 How[Beat] How did you do it?[N]
 Ah[Beat] Why[Beat] why does your bird[N]
 hold the Serpent's power?[AN]
-
-[R]
 Did you[Beat] No,[.4] you stole it,[.4] didn't[N]
 you?[.6] You stole it from my mother.[N]
 You tore it off her corpse[Beat][AN]
 
-[FR]
+[ML]
 Ngh[Beat] Can't[Beat] breathe[Beat][AN]
+[CSS][MoveFL]
 
-[R]
+[R][MoveR]
 After you watched the life spill[N]
 out from her body![N]
 What do you have to say for yourself,[.4][AN]
-
-[R]
 you murderer?![.6] You lunatic--[.4][AN]
 
 [L][LoadChiffon]
@@ -1390,51 +1383,40 @@ Get your hands off him![AN]
 ## Part3Chapter6EndingNEW7
 [3L]
 [L][LoadChiffon]
-[R][LoadSylveria]
+[R][LoadSylveria2]
 
 [R]
 Sis[Beat] Sister[Beat]?[N]
 What have you[Beat][AN]
 
 [L]
-I shot you,[.4] Apostle.[N]
+I shot you,[.4] Apostle.[6N]
 And I'll do it again,[.4] if you[N]
-don't step away from that man.[AN]
+don't step away from him.[AN]
 
 [R]
 He is the reason why Mother[N]
 is gone![.6] And you would[Beat][N]
 You'd side with him?![AN]
-
-[R]
 Over your own flesh and blood?![AN]
 
 [L]
 Of course I'd side with the[N]
-ones who made a dream[N]
-into reality,[.4] Apostle.[AN]
-
-[L]
+ones who made a dream into[N]
+reality,[.4] Apostle.[AN]
 Don't you see it?[.6] Blue colors,[.4][N]
 side by side with velvet?[N]
 I've done it.[AN]
-
-[L]
-I grasped Empress Zoria's dream.[N]
-I did what you and Selwyn[N]
-always hoped to accomplish,[.4][AN]
-
-[L]
-but never truly did.[AN]
+I grasped Empress Zoria's dream.[6N]
+I did what you and Selwyn always[N]
+hoped to accomplish.[AN]
 
 [R]
-No[Beat] no,[.4] no,[.4] no,[.4] no.[N]
+No[Beat] no,[.4] no,[.4] no,[.4] no.[6N]
 You merely wish to undo what[N]
-my brother accomplished![AN]
-
-[R]
-We[Beat] we made Wreyvine ours,[.4][N]
-as penance for its crimes![N]
+we accomplished together![AN]
+We[Beat] We made Wreyvine ours,[.4][N]
+as penance for its crimes![6N][MoveR]
 It was only justice![AN]
 
 [FL][LoadAffogato]
@@ -1452,7 +1434,7 @@ the kingdom is the culprit?[AN]
 ## Part3Chapter6EndingNEW8
 [3L]
 [FR][LoadMaynard]
-[R][LoadSylveria]
+[R][LoadSylveria2]
 
 [FR]
 Back,[.4] you fiend![.6] You will[Beat][N]
@@ -1504,36 +1486,28 @@ These wounds have sunk deep.[AN]
 
 [L]
 Consider it done.[AN]
+[X]
 
-# Affogato leaves; all portraits clear, framing settles on Chiffon
+## Part3Chapter6EndingNEW10
+[3L]
 
-[L][CF]
-[FL][CF]
+[FL][LoadChiffon]
+[MoveML]
 
-[L][LoadChiffon]
-
-[L]
+[ML]
 [CloseEyes][Beat]
 Sister,[.4] what happened to you?[N]
 Your voice was drenched in such[N]
 a deep sorrow[Beat][AN]
-
-[L]
 No,[.4] wait[Beat] When we spoke,[.4] you[N]
 wanted me to rejoin the family[Beat][N]
 That's the solution you settled for.[AN]
-
-[L]
 Just like Selwyn's solution to[N]
 his loss was to name a perpetrator[N]
 and crush them beneath his heel.[AN]
-
-[L]
 [Beat][N]
 Neither of those will solve[N]
 any of the real problems at hand.[AN]
-
-[L]
 But if not that[Beat][AN]
 
 [X]

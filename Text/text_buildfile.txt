@@ -88,7 +88,7 @@ Some exceptions:[N]
 Thieves can Vault,[N]
 Parsons and Hierophants[N]
 get Castle, and Bards[N]
-and Technicians get Smite.[N]
+and Artificers get Smite.[N]
  [N]
 Movement skills on mounted[N]
 units can be used[N]
@@ -291,6 +291,12 @@ Off-Hand: Mt +8; +16 if foe uses magic.[X]
 Strikes x2 consecutively.[N]
 Off-Hand: Mt +5, +10 AS on initiation.[X]
 
+# 0x2DE
+Reiver[X]
+
+# 0x2c4
+Colossus[X]
+
 # 0x51C
 Lifeline[X]
 
@@ -409,9 +415,9 @@ Rider[N]
 Griffon Rider[N]
 1-4: Priest, Sword Armor,[N]
 Freelancer[N]
-1-5: Technician[N]
+1-5: Artificer[N]
 1-6: Wyvern Rider, Fighter[N]
-1-7: Sergeant (temp.)[N]
+1-7: Champion (temp.)[N]
 1-8: General, Wyvern Knight,[N]
 Sword Paladin,[N]
 Griffon Knight[N]
@@ -424,8 +430,8 @@ Lance Rider[N]
 2-1: Occultist[N]
 2-2: Thief, Warrior,[N]
 Ranger[N]
-2-3: Pirate, Swordsman,[N]
-Sergeant (temp.)[N]
+2-3: Pirate, Duelist,[N]
+Champion (temp.)[N]
 2-4: Wyvern Rider,[N]
 Assassin, Hunter[N]
 2-5: Bard, Pegasus Rider[N]
@@ -519,19 +525,23 @@ Sleep halves Def/Res and[N]
 prevents moving and acting.[X]
 
 # 0x326
-Devilish thieves with high movement,[N]
-speed, and utility. Equip: [SwordIcon][X]
+Master infiltrators whose silent steps[N]
+bypass locked gates and alert sentries[N]
+to seize what was thought untouchable.[N] Equip: [SwordIcon][X]
 
 # 0x316
-Lethal slayers whose disquiet steps[N]
-mask their blades made to kill. Equip: [SwordIcon][X]
+Lethal phantoms of the battlefield,[N]
+trained to end wars with a single,[N]
+whisper-quiet strike to the heart.[N]
+Equip: [SwordIcon][X]
 
 # 0x302
-Sergeant[X]
+Champion[X]
 
 # 0x34E
-Commanders with great power who lead[N]
-the charge in battle. Equip: [LanceIcon][SwordIcon][X]
+Seasoned infantry commanders who lead[N]
+from the front, breaking enemy lines[N]
+with an adaptable martial repertoire.[N]Equip: [LanceIcon][SwordIcon][X]
 
 # 0x242
 Locro[X]
@@ -617,8 +627,9 @@ or more (at time of hit).[X]
 [_S][_t][_a][_t][X]
  
 # 0x319
-Free-moving archers on horseback[N]
-with immense reach. Equip: Bow[X]
+Swift outriders who command the field[N]
+from the saddle, raining deadly volleys[N]
+before fading back into the distance.[N]Equip: Bow[X]
 
 # 0x4EE
 [_L][_u][_c][_k][X]
@@ -779,8 +790,10 @@ Fear prevents counters and movement[N]
 and grants attackers Crit +30.[X]
 
 # 0x31F
-Dauntless riders with mastery over[N]
-spells and movement. Equip: [AnimaIcon][StaffIcon][X]
+High-mobility battlefield scholars[N]
+capable of breaking enemy ranks with[N]
+sudden squalls or mending allies.[N]
+Equip: [AnimaIcon][StaffIcon][X]
 
 # 0x331
 Whimsical musicians whose melodies let[N]
@@ -800,7 +813,7 @@ who has yet to[N]
 change class.[X]
 
 # 0x2ff
-Technician[X]
+Artificer[X]
 
 # 0x34B
 Crafty engineers that make the most[N]
@@ -838,8 +851,10 @@ Rune Sword[X]
 Auspex[X]
 
 # 0x32E
-Flying arcanists who bind light and[N]
-shadow in coalescence. Equip: [LightIcon][DarkIcon][X]
+Mystics elevated above the fray,[N]
+weaving celestial light and abyssal[N]
+shadows into seamless coalescence.[N]
+Equip: [LightIcon][DarkIcon][X]
 
 # 0x3a4
 [_M][_a][_g][_n][_u]m [_B][_l][_a][_d][_e][X]
@@ -1142,18 +1157,18 @@ Age: 19; Origin: Wreyvine[X]
 
 # 0x443
 Long-range weapon. No WEXP.[N]
-[_Lock]: Infantry [BowIcon], Technician[X]
+[_Lock]: Infantry [BowIcon], Artificer[X]
 
 # 0x444
 Very long-range weapon. No WEXP.[N]
-[_Lock]: Infantry [BowIcon], Technician[X]
+[_Lock]: Infantry [BowIcon], Artificer[X]
 
 # 0x395
 [_R][_a][_p][_i][_d][_SP][_B][_a][_l][_l][_i][_s][_t][_a][X]
 
 # 0x445
 Strikes x2 consecutively. No WEXP.[N]
-[_Lock]: Infantry [BowIcon], Technician[X]
+[_Lock]: Infantry [BowIcon], Artificer[X]
  
 # 0x35B
 [_P][_o][_i][_s][_o][_n][_SP][_D][_a][_g][_g][_e][_r][X]
@@ -1201,16 +1216,16 @@ Embers I[X]
 Lightning II[X]
 
 # 0x3b0
-Dawn I[X]
+Gleam I[X]
 
 # 0x3b1
-Daylight II[X]
+Lucent II[X]
 
 # 0x3b2
-Sunshine III[X]
+Solaris III[X]
 
 # 0x3b3
-Solaris IV[X]
+Zenith IV[X]
 
 # 0x3b4
 Daybreak V[X]
@@ -1256,10 +1271,10 @@ The blade of a king, lost in the stars.[N]
 Strikes x2 consecutively. Def +5.[X]
 
 # 0x376
-Meriasyl[X]
+Isenbrand[X]
 
 # 0x426
-The mighty spear of the old, lost land.[N]
+A mighty Wreyvian spear.[N]
 Halves damage taken after first[N]
 being struck. Def +5.[X]
 
@@ -1315,8 +1330,10 @@ Tundra[X]
 Cataphract[X]
 
 # 0x32B
-Majestic armored knights with[N]
-shimmering mounts. Equip: [SwordIcon][LanceIcon][AxeIcon][X]
+Armored riders who wield ferromancy[N]
+to bend raw steel, crushing enemy[N]
+formations beneath barded warhorses.[N]
+Equip: [SwordIcon][LanceIcon][AxeIcon][X]
 
 # 0x378
 [_P][_i][_e][_r][_c][_i][_n][_g][_SP][_S][_p][_e][_a][_r][X]
@@ -1328,7 +1345,7 @@ Dart Rifle[X]
 Blunt Blade[X]
 
 # 0x2C0
-Sovereign[X]
+Iron Crown[X]
 
 # 0x411
 Shove 1 space. Unit can't follow-up.[N]
@@ -1424,7 +1441,7 @@ Radiance X[X]
 A powerful magnum ray. Eff: [AnimaIcon][LightIcon][DarkIcon][X]
 
 # 0x3BB
-Shadowpyre X[X]
+Penumbra X[X]
 
 # 0x46A
 A powerful magnum flux. Eff: [AnimaIcon][LightIcon][DarkIcon][X]
@@ -1546,7 +1563,7 @@ Deals % current HP damage (If foe is[N]
 Norlis, X = 50%; otherwise X = 25%)[X]
 
 # 0x3c0
-[_A][_b][_s][_o][_l][_u][_t][_e][_SP][_Z][_e][_r][_o][X]
+[_L][_e][_SP][_G][_l][_a][_s][_SP][_B][_l][_a][_n][_c][X]
 
 # 0x46F
 The white eclipse; the final hour.[N]
@@ -1557,8 +1574,10 @@ bonus damage = 25% of foe's max HP.[X]
 Mystic[X]
 
 # 0x33b
-Armored vessels of faith of which infinite[N]
-ether slumbers within. Equip: [AnimaIcon][LightIcon][DarkIcon][StaffIcon][X]
+The sacred conduit of the Serpent,[N]
+bearing an empire's frozen sorrow[N]
+amidst an ocean of waking ether.[N]
+Equip: [AnimaIcon][LightIcon][DarkIcon][StaffIcon][X]
 
 # 0x432
 Grants bonus Hit = unit's missing HP x 2.[N]
@@ -1632,7 +1651,8 @@ Scout[X]
 
 # 0x34d
 Wayfarers who recon and lead their[N]
-allies through combat. Equip: [BowIcon][N]
+allies through the battlefield.[N]
+Equip: [BowIcon][N]
 [_P][_r][_o][_m][_o][_t][_i][_o][_n][_Colon] Maverick (+[HorseIcon])[X]
 
 # 0x57A
@@ -1837,7 +1857,29 @@ Anything else I can do for you?[X]
 
 # 0x325
 Academics honing their magic with[N]
-lofty aspirations. Equip: [AnimaIcon].[X]
+lofty aspirations.[N]
+Equip: [AnimaIcon].[X]
+
+# 0x2DC
+Huskarl[X]
+
+# 0x2C6
+Vanguard[X]
+
+# 0x2E1
+Acolyte[X]
+
+# 0x2E2
+Arcanist[X]
+
+# 0x2E4
+Friar[X]
+
+# 0x2D4
+Flamen[X]
+
+# 0x2D2
+Magister[X]
 
 # 0x24e LostSoulName
 Norlis[X]
@@ -1896,7 +1938,7 @@ Noctum Ring[X]
 2-4: Fugitives[X]
 
 # 0x183
-2-F: Burning Stars[X]
+2-F: Stars Set Alight[X]
 
 # 0x199
 3-3x: Waltz[X]

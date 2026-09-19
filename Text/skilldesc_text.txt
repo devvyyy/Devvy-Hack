@@ -394,8 +394,8 @@ HP (calculated at start of combat).[X]
 ## SD_RaialRework
 # Down But Not Out
 Stand Back Up[N]
-- Once per map, Raial blocks the first[N]
-lethal hit during an ally's combat.[N]
+- Once per map, Raial blocks all[N]
+lethal hits during an ally's combat.[N]
 - Use Rally to grant Str/Eth +4 to[N]
 adjacent allies for 1 turn.[X]
 
@@ -948,9 +948,9 @@ weapon Mt.[X]
 ## SD_HappyHour
 Happy Hour[N]
 - After using a consumable item,[N]
-restores HP to allies within 3 spaces[N]
-= (ally's Luck x 2) and grants Kane[N]
-another action.[X]
+grants Kane another action and restores[N]
+HP to allies within 3 spaces =[N]
+(ally's Luck x 2).
 
 ## SD_CorneredWolf
 Cornered Wolf[N]
@@ -1071,7 +1071,7 @@ Arm Wrestler: Grants +3 Atk/AS against[N]
 bosses, doubled if they have Shove/Smite.[X]
 
 ## SD_Moxie
-The Undefeated[N]
+Clearly Superior[N]
 - Grants Anton Atk/AS = foe's Res.[N]
 - If foe doesn't use magic, follow-up[N]
 and foe can't.[X]
@@ -1191,7 +1191,8 @@ Curtain Call: If foe's HP is below[N]
 missing HP.[X]
 
 ## SD_Nevermore
-Fractured Soul[N]
+# add lifetaker like swain?
+Pragmatic[N]
 - Gorlois deals bonus damage and[N]
 reduces damage taken = 50% of foe's[N]
 missing HP at start of combat.[X]
@@ -1252,6 +1253,14 @@ King's Mark[N]
 - If HP of foes within 4 spaces of[N]
 the marked is 75% or less, sets[N]
 their Crit/Avoid to 0.[X]
+
+## SD_KingMarkTrue
+# uses temp flags LOL!
+Under One Sun[N]
+- On turns 2, 6, 8, and 10, Anatolius[N]
+empowers next attack to gain +10 range,[N]
+deal bonus damage = 50% of foe's max HP,[N]
+and grants EXP to the King's Battallion.[X]
 
 ## SD_ThunderClap
 Grounding[N]
@@ -1970,6 +1979,13 @@ Frenzy until end of map: ignore Def and[N]
 weapon triangle disadvantage, counter[N]
 first, and strike x2 consecutively.[X]
 
+## SD_PandoroNew2
+# uses flag 0x80
+Heaven-Sent[N]
+- Pandoro readies next hit to Smite.[N]
+- Smites have +5 range, deal bonus magical[N]
+damage = Spd, and [X]
+
 ## SD_FinalBoss
 Eye of the King: Deals damage =[N]
 foe's Max HP/4.[X]
@@ -2290,7 +2306,7 @@ second strike negates defenses.[N]
 Cost: 5 Durability.[X]
 
 ## SD_Astra
-# (Granted actions take priority.)
+# (Granted actions take priority.); Phase
 Phase[N]
 - Bows have minimum 1 range and have[N]
 Off-Hand (inventory 2nd slot) effects.[N]
@@ -3487,6 +3503,12 @@ Stand United[N]
 an ally with Fling, grants Atk +5 and[N]
 strikes x2 consecutively, and if adjacent,[N]
 grants another action (once per turn).[X]
+
+## SD_Therese2
+Martial Poise[N]
+- Grants Therese AS = difference between[N]
+Def stats (min 0).[N]
+[X]
 
 ## SD_LullStr
 Lull Str: Negates the effects of[N]

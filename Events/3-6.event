@@ -269,73 +269,185 @@ Text(Part3Chapter6Opening3)
 	STAL 5
 	ENDA
 
+EndingSceneUnits:
+UNIT Maynard    Bishop      0x0 Level(15, Enemy, 0) [11, 26] 0b 0x0 0x0 0x0 [Purge] NoAI
+UNIT Chiffon    0x10        0x1 Level(12, Ally,  0) [11,30] 0b 0x0 0x0 0x0 [0xe9]   NoAI
+UNIT Graham     Valkyrie    0x1 Level(10, Ally,  0) [12, 30] 0b 0x0 0x0 0x0 [SteelBlade]     NoAI
+UNIT Raial      Warrior     0x1 Level(12, Ally,  0) [10, 30] 0b 0x0 0x0 0x0 [SilverAxe, SilverBow]  NoAI
+UNIT Ulrich     LPal        0x1 Level(12, Ally,  0) [10, 31] 0b 0x0 0x0 0x0 [SilverLance, 0x8E] NoAI
+UNIT Gorlois    Parson        0x1 Level(10, Ally,  0) [12, 31] 0b 0x0 0x0 0x0 [Purge, Aura]       NoAI
+UNIT Affogato   0x3         0x1 Level(12, Ally,  0) [11, 32] 0b 0x0 0x0 0x0 [SteelBow]    NoAI
+UNIT
+
+SylveriaWarpUnit:
+UNIT Sylveria   0x4F        0x0 Level(20, Enemy, 1) [12,13] 0b 0x0 0x0 0x0 [0xAB] NoAI
+UNIT
+
 EndingScene:
 ResetFlags
+SetFlag(0xEE)
 Text(Part3Chapter6Ending0)
-
-SOUN 0x2ED
-FAWI 15
-LOMA 0xD
-DoAllThree
-STAL 50
-CamOn
-LOAD2 0x1 CutsceneUnits
-Music(0x1c8)
-CAM1 [12,30]
-FAWU 12
-CamOff //just in case
-
-TEXTSTART; TEXTSHOW Part3Chapter6Ending1
-
-TEXTEND
-
-SOUN 0xDD
 STAL 5
-MOVE 0xD Affogato [25,23]
-ENUN
+    FADI 15
+	WORD 0x02820 //clear weather!!
+    DoAllThree
+    LOMA 0xD //outside map
+    STAL 20
 
-STAL 5
-MUSCSLOW 0x7FFF
+    CamOn
+    LOAD2 0x1 EndingSceneUnits
+    ENUN
+    CAM1 [11, 28]
+    FADU 12
+    CamOff
 
-TEXTCONT; TEXTEND; REMA
+    //chif counters maynard and starts yapping
+    Music(0x1C8)
+    Text(Part3Chapter6EndingNEW0Graham)
 
+	MOVE 0x5 Chiffon [11,29]
 
-LOAD2 0x1 SylveriaJumpscare
-ENUN
-SVAL 0x2 0x45
-_WARP 0xFFFF 0xFFFD [12,30]
-CALL 0x9EE4F8
-_WARP 0x0 0x45 [12,30]
-LOAD2 0x1 SylveriaJumpscare
-ENUN
-STAL 50
+	// warp moment
+    LOAD2 0x1 SylveriaWarpUnit
+    ENUN
+    SVAL 0x2 0x45
+    _WARP 0xFFFF 0xFFFD [12, 27]
+    CALL 0x9EE4F8
+    _WARP 0x0 0x45 [12, 27]
+    STAL 20
 
-MUSC 0x4F
-//TextCont(Part3Chapter6Ending1Point5, 0x28E)
-Text(Part3Chapter6Ending1Point5)
+    // chif strikes and bounces off
+    StartBattle
+    MissedAttack(0, 0)
+    SetScriptedBattle(87, 0, 0, 89, 23, 0)
+    FIG1 Chiffon Sylveria 0xe9
 
-FADI 30
-STAL 5
-CLEAN
-Music(0x324)
-SetBackground(0x23)
+	STAL 15
+	CameraCursor(Chiffon)
+	TEXTSTART; TEXTSHOW Part3Chapter6EndingNEW1; TEXTEND; CameraCursor(Ulrich); TEXTCONT; TEXTEND; CameraCursor(Chiffon); TEXTCONT; TEXTEND; REMA
 
-STAL 5
-BROWNBOXTEXT CastleVale [8,8]
-STAL 15
-STAL 5
-BROWNBOXTEXT TheBastion [8,8]
-STAL 15
-Text(Part3Chapter6Ending2)
+    // white flash/blizzard stuff
+    SOUN 0x122 // fimbul wind
+    FAWI 4
+    STAL 10
+	WORD 0x22820 //winter weather after event stuff happens!!
+    FAWU 4
+    STAL 20
 
-FADI 60
-CLEAN
-Music(0x323)
-SetBackground(0x33)
+	CameraCursor(Chiffon)
+	SetBackground(0x33)
+	Text(Part3Chapter6EndingNEW1After)
+	ClearBackground
+    // gorlois moves and purges
+    MoveCoords(12, 31, 12, 29)
+    ENUN
+    StartBattle
+    NormalDamage(0, 14) //he does damage because...... uh
+    SetScriptedBattle(100, 14, 0, 100, 22, 6)
+    FIG1 Gorlois Sylveria Purge
 
-Text(Part3Chapter6Ending3)
+    // syl tanks hit, counters
+    Text(Part3Chapter6EndingNEW2)
 
+    // syl crits gorlois lol
+    MoveCoords(11, 27, 12, 28)
+    ENUN
+    StartBattle
+    CriticalHit(0, 22)
+    SetScriptedBattle(100, 22, 6, 0, 0, 0)
+    FIG1 Sylveria Gorlois 0xAB
 
-	MNC2 0xD
-	NoFade
-	ENDA
+    SetHP(1, 12, 29) //gorlois
+
+    //raial comes in to protect gorlois
+    Text(Part3Chapter6EndingNEW3)
+
+    // raial tinks syl
+    MoveCoords(10, 30, 11, 28)
+    ENUN
+    StartBattle
+    NormalDamage(0, 0)
+    SetScriptedBattle(70, 0, 0, 100, 38, 7)
+    FIG1 Raial Sylveria SilverAxe
+
+    //raial blasts raial then chokes gorlois???
+    Text(Part3Chapter6EndingNEW4)
+
+    // knock back raial
+    SOUN 0x2F3 //vine boom idk
+    MoveCoords(11, 28, 10,30)
+    ENUN
+    STAL 15
+
+    // syl and gorlois
+    Text(Part3Chapter6EndingNEW5)
+    STAL 10
+
+	CameraCursor(Sylveria)
+	SetBackground(0x33)
+    // Sylveria interrogates Gorlois
+    Text(Part3Chapter6EndingNEW6)
+	ClearBackground
+
+    // chif shoots syl
+    StartBattle
+    NormalDamage(0, 12)
+    SetScriptedBattle(100, 12, 0, 89, 23, 0)
+    FIG1 Chiffon Sylveria 0xe9
+
+    //affo vs maynard
+    Text(Part3Chapter6EndingNEW7)
+
+	MOVE 0x5 Chiffon [10,29]
+    // maynard jumps in front as chif charges
+    MoveCoords(11, 26, 11, 28)
+    // then affo moves
+    MoveCoords(11, 32, 11, 29)
+    ENUN
+
+    // affo crits maynard
+    StartBattle
+    CriticalHit(0, 28)
+    SetScriptedBattle(100, 28, 100, 0, 0, 0)
+    FIG1 Affogato Maynard 0xCB
+
+    //maynard
+    SetHP(3, 11, 28)                // unsure if needed
+
+    // warp
+    Text(Part3Chapter6EndingNEW8)
+
+    // they fuck off
+    SOUN 0x2F5
+    SVAL 0x2 0x45
+    _WARP 0xFFFF 0xFFFD [12, 28]
+    CALL 0x9EE4F8
+    DISA Sylveria
+
+    SVAL 0x2 Maynard
+    _WARP 0xFFFF 0xFFFD [11, 28]
+    CALL 0x9EE4F8
+    DISA Maynard
+    STAL 25
+
+	CameraCursor(Affogato)
+    Text(Part3Chapter6EndingNEW9)
+
+    // affo runs away
+    MoveCoords(11, 29, 11, 35)
+    ENUN
+    DISA Affogato
+    STAL 15
+
+    // chif monologue
+	CameraCursor(Chiffon)
+	SetBackground(0x33)
+	Text(Part3Chapter6EndingNEW10)
+    // Fade out scene and progress to next chapter
+    FADI 30
+    STAL 10
+    DoAllThree
+	UnsetFlag(0xEE)
+    MNC2 0xD //3-7 i think
+    NoFade
+    ENDA

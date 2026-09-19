@@ -310,6 +310,7 @@ SOUN 0x82 //sleep staff sound
 
 EndingScene:
 ResetFlags
+UnsetFlag(0x9B) //in case you somehow beat this map before turn 3 LOL
 SetFlag(0x4)
 ENUT 0x5
 ENUF 0xD
