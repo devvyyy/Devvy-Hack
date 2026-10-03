@@ -8,14 +8,14 @@ push {r4-r7,lr}
 mov r4, r0
 mov r5, r1
 
-@below 75% hp
-ldrb r0, [r4, #0x12]
-lsr r0, #2 @max hp/2
-mov r1,#0x3
-mul r0, r1
-ldrb r1, [r4, #0x13] @currhp
-cmp r0, r1
-blt Done
+@@below 75% hp
+@ldrb r0, [r4, #0x12]
+@lsr r0, #2 @max hp/2
+@mov r1,#0x3
+@mul r0, r1
+@ldrb r1, [r4, #0x13] @currhp
+@cmp r0, r1
+@blt Done
 
 @now check for the skill
 ldr r0, AuraSkillCheck

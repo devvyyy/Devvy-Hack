@@ -1152,6 +1152,20 @@ missing HP, upped to +3 below 50% HP.[N]
 - Follow-ups occur before foe's counter.[N]
 - Take 4 damage after combat.[X]
 
+## SD_LionheartEPIC
+Strong-Arm[N]
+- If Lennard's Str > foe's Str, grants[N]
+AS = difference between stats.[N]
+- Follow-ups occur before foe's counter.[X]
+
+## SD_LennardNew
+# work smart; easy does it
+Heave-Ho![N]
+- Lennard can Canto X spaces after[N]
+any action (X = spaces moved; min 2).[N]
+- Can use Shove, Vault, and Fling[N]
+during Canto.[X]
+
 ## SD_DesolateBlade
 Desolate Blade: Attacks mark target for[N]
 1 turn/combat. Marked foes take 25%[N]
@@ -1164,7 +1178,7 @@ Spirit Cleave: Deals bonus damage =[N]
 ## SD_Maestro
 Maestro[N]
 - Ilse's Rifles have unique properties:[N]
-Hit +30, grants Atk = 25% of Dex,[N]
+Hit +30, follow-ups occur immediately,[N]
 and grants Crit = distance from foe,[N]
 x 10 (capped at 4 spaces).[X]
 
@@ -1200,9 +1214,10 @@ missing HP at start of combat.[X]
 ## SD_Nihil
 # edit this later in SkillSystem.event
 Nevermore[N]
-- Aohr neutralizes foe's effects that[N]
-[OpenQuote]Deal bonus damage" or [OpenQuote]Reduces[N]
-damage taken".[X]
+- Aohr prevents foe from restoring[N]
+HP during combat.[N]
+- If foe is defeated, restores[N]
+25% of max HP.[X]
 
 ## SD_GorloisPassive1
 # he's a real unit, need a real passive
@@ -1249,10 +1264,9 @@ Gift of the Fallen: During the first[N]
 turn, Yufka dodges all enemy attacks.[X]
 
 ## SD_KingMark
-King's Mark[N]
-- If HP of foes within 4 spaces of[N]
-the marked is 75% or less, sets[N]
-their Crit/Avoid to 0.[X]
+Iron Decree[N]
+- Foes within 5 spaces of Anatolius[N]
+have no Crit/Avoid.[X]
 
 ## SD_KingMarkTrue
 # uses temp flags LOL!
@@ -1965,11 +1979,26 @@ Aurorashard[N]
 - Take -10 damage from Ice/Wind magic.[X]
 
 ## SD_Lunatic
+# and weapon triangle disadvantage, spd vantage
 Lunatic[N]
-- If foe's HP is full, Pandoro ignores[N]
-Def and weapon triangle disadvantage,[N]
-and also, if Spd > foe's Spd +3, counter[N]
-first and strike x2 consecutively.[X]
+- Pandoro ignores foe's Def and[N]
+weapon triangle disadvantage.[N]
+- Hold L while selecting a target to[N]
+strike x2 consecutively with Hit -50.[X]
+
+## SD_HoldLGimmick1
+Skill Name[N]
+- Grants unit Atk = 25% of Spd.[N]
+- Hold L while selecting a target to[N]
+dodge all attacks and deal bonus damage[N]
+= Spd (once per map; refresh on-kill).[X]
+
+## SD_HoldGimmick2
+
+- Doppio ignores foe's terrain bonuses.[N]
+- Hold L while selecting a target to[N]
+
+[X]
 
 ## SD_PandoroNew
 # uses flag 0x80
@@ -1985,6 +2014,13 @@ Heaven-Sent[N]
 - Pandoro readies next hit to Smite.[N]
 - Smites have +5 range, deal bonus magical[N]
 damage = Spd, and [X]
+
+## SD_PandoroNew3
+Heaven-Sent[N]
+- For Pandoro and magic allies within[N]
+3 spaces: Hold L while selecting a[N]
+target to strike x2 consecutively,[N]
+but with Str/Eth -25% and Hit -30.[X]
 
 ## SD_FinalBoss
 Eye of the King: Deals damage =[N]

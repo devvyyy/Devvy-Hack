@@ -110,6 +110,8 @@ add r0, #40
 strh r0, [r4,r1]
 
 AttackBuffYay:
+b End @ lol this got replaced by the desperation effect
+
 @not at stat screen
 ldr r1, [r5,#4] @class data ptr
 cmp r1, #0 @if 0, this is stat screen

@@ -113,6 +113,24 @@ prSlideCommand_Usability:
 	POIN (_prSwarp_MakeTargetList+1)
 	POIN (prSlideCommand_Availability+1)
 
+ALIGN 4
+prCantoShoveCommand_Usability:
+	#incbin "asm/TargetCommandUsability.bin"
+	POIN (_prShove_MakeTargetList+1)
+	POIN (prCantoShoveCommand_Availability+1)
+
+ALIGN 4
+prCantoRepositionCommand_Usability:
+	#incbin "asm/TargetCommandUsability.bin"
+	POIN (_prReposition_MakeTargetList+1)
+	POIN (prCantoRepositionCommand_Availability+1)
+
+ALIGN 4
+prCantoPivotCommand_Usability:
+	#incbin "asm/TargetCommandUsability.bin"
+	POIN (_prPivot_MakeTargetList+1)
+	POIN (prCantoPivotCommand_Availability+1)
+
 
 // PIVOT STUFF
 // -----------

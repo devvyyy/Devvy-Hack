@@ -464,7 +464,7 @@ ALIGN 4
 Lifetaker:
 #incbin "Lifetaker/lifetaker.dmp"
 POIN SkillTester
-WORD AssassinateID
+WORD NevermoreID
 POIN LifetakerEvent
 #include "Lifetaker/LifetakerEvent.event"
 
@@ -768,6 +768,12 @@ CantoTwo:
 #incbin "CantoTwo/CantoTwo.dmp"
 POIN SkillTester
 WORD CantoTwoID
+
+ALIGN 4
+LennardCanto:
+#incbin "CantoTwo/LennardCanto.dmp"
+POIN SkillTester
+WORD LennardID
 
 ALIGN 4
 Lightslinger:

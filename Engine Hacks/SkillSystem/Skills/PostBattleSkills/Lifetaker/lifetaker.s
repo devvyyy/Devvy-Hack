@@ -3,33 +3,15 @@
   mov lr, \reg
   .short 0xf800
 .endm
-.equ AssassinateID, SkillTester+4
-.equ LifetakerEvent, AssassinateID+4
+.equ NevermoreID, SkillTester+4
+.equ LifetakerEvent, NevermoreID+4
 .thumb
 push	{lr}
-@check range
-ldr r0,=#0x203A4D4 @battle stats
-ldrb r0,[r0,#2] @range
-cmp r0,#1
-bne End
 
 @check if dead
 ldrb	r0, [r4,#0x13]
 cmp	r0, #0x00
 beq	End
-
-@check if rina hp is 1
-ldrb	r0, [r4,#0x13]
-cmp	r0, #0x01
-bne	End
-
-@check if flag 0x7F set; if so, cant use (used already/procced phoenix)
-ldr r0,=#0x8083da8 @CheckEventId
-mov r14,r0
-mov r0,#0x7F
-.short 0xF800
-cmp r0,#0
-bne End
 
 @check if attacked this turn
 ldrb 	r0, [r6,#0x11]	@action taken this turn
@@ -42,7 +24,7 @@ bne	End
 
 @check for skill
 mov	r0, r4
-ldr	r1, AssassinateID
+ldr	r1, NevermoreID
 ldr	r3, SkillTester
 mov	lr, r3
 .short	0xf800
@@ -64,7 +46,6 @@ mov	r2,r0
 pop	{r1}
 cmp	r1, r2		@check if hp is already max
 beq	End
-
 
 @this used to just add curHP to curHP and set that as new curHP
 @make r0 = 1/4 maxHP
@@ -106,5 +87,5 @@ bx	r0
 .align
 SkillTester:
 @POIN SkillTester
-@WORD AssassinateID
+@WORD NevermoreID
 @POIN LifetakerEvent

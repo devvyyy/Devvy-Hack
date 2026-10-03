@@ -65,6 +65,24 @@ prSlideCommand_Availability:
 		rIfUnitHasState(US_CANTOING)
 			rWithConstant(CharismaID)
 				rCallExternal(SkillTester)
+
+prCantoShoveCommand_Availability:
+	rGetWrapper
+		rIfUnitHasState(US_CANTOING)
+			rWithConstant(LennardID)
+				rCallExternal(SkillTester)
+
+prCantoRepositionCommand_Availability:
+	rGetWrapper
+		rIfUnitHasState(US_CANTOING)
+			rWithConstant(LennardID)
+				rCallExternal(SkillTester)
+
+prCantoPivotCommand_Availability:
+	rGetWrapper
+		rIfUnitHasState(US_CANTOING)
+			rWithConstant(LennardID)
+				rCallExternal(SkillTester)
 				
 #else // HEROES_MOVEMENT_SKILL_REQUIRED
 ALIGN 4

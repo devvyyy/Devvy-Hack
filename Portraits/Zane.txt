@@ -565,7 +565,7 @@ setMugEntry(0x3A, Noel_Mug, 3, 5, 3, 3)
 ALIGN 16
 Lennard_Mug:
 #incext PortraitFormatter "Lennard.png"
-setMugEntry(0x3B, Lennard_Mug, 3, 5, 3, 2)
+setMugEntryExtend(0x3B, Lennard_Mug, 3, 3, 3, 1, 4, 254, 6, 254)
 
 ALIGN 16 //Edited by L95, needs a fixed palette so the eye gimmick works
 Gorlois_Mug:
@@ -670,7 +670,7 @@ setMugEntryExtend(0xF9, WellingtonArmor_Mug, 3, 5, 3, 2, 12, 6, 12, 8)
 ALIGN 16
 Opal_Mug:
 #incext PortraitFormatter "LevinCav.png"
-setMugEntry(0xC3, Opal_Mug, 2, 5, 3, 3)
+setMugEntry(0xC3, Opal_Mug, 3, 5, 3, 3)
 
 ALIGN 16
 YoungOpal_Mug:
@@ -721,7 +721,7 @@ setMugEntry(0x37, Hartmann_Mug, 3, 5, 3, 3)
 ALIGN 16 //King
 King_Mug:
 #incext PortraitFormatter "King.png"
-setMugEntryExtend(0x38, King_Mug, 4, 4, 4, 1, 0, 4, 10, 4)
+setMugEntryExtend(0x38, King_Mug, 3, 5, 4, 3, 10, 4, 12, 8)
 
 ALIGN 16
 Verna_Mug: //by Ray

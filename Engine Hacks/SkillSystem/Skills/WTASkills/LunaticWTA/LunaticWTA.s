@@ -21,10 +21,10 @@ cmp r1,#0
 ble WhenTheImpostorIsSus
 
 @enemy hp not at full
-ldrb r0, [r4, #0x12] @max hp
-ldrb r1, [r4, #0x13] @curr hp
-cmp r0, r1
-bne End @skip if not max hp
+@ldrb r0, [r4, #0x12] @max hp
+@ldrb r1, [r4, #0x13] @curr hp
+@cmp r0, r1
+@bne End @skip if not max hp
 
 @ kill everything epically
 mov        r0,#0x53 @wt hit
@@ -53,10 +53,10 @@ cmp r1,#0
 ble End
 
 @enemy hp not at full
-ldrb r0, [r5, #0x12] @max hp
-ldrb r1, [r5, #0x13] @curr hp
-cmp r0, r1
-bne End @skip if not max hp
+@ldrb r0, [r5, #0x12] @max hp
+@ldrb r1, [r5, #0x13] @curr hp
+@cmp r0, r1
+@bne End @skip if not max hp
 
 @ kill everything epically (again)
 mov        r0,#0x53
