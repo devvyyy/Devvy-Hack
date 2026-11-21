@@ -267,7 +267,7 @@ ALIGN 4
 ShadowEyeMark:
 #incbin "FallenStar/FallenStar.dmp"
 POIN SkillTester
-WORD ShadowEyeID
+WORD SealResID
 WORD CommanderID
 POIN SoulbreakEvent
 
@@ -623,6 +623,15 @@ WORD BreathOfLifeID
 POIN BreathOfLifeEvent
 POIN GetUnitsInRange
 #include "BreathOfLife/BreathOfLifeEvent.event"
+
+ALIGN 4
+RaialHeal:
+#incbin "BreathOfLife/Raial.dmp"
+POIN SkillTester
+WORD EyeForAnEyeID
+POIN Heal1Event
+POIN GetUnitsInRange
+#include "Heal1/Heal1.event"
 
 ALIGN 4
 HappyHour:

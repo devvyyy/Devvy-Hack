@@ -28,9 +28,9 @@ CharacterBasedEvents:
 CharacterEventBothWays(0x20,ChiffonGrahamTalk, Chiffon, Graham)
 CharacterEventBothWays(0x21,ChiffonYufkaTalk, Chiffon, Yufka)
 CharacterEventBothWays(0x22,ChiffonJayeTalk, Chiffon, Jaye)
-CharacterEventBothWays(0x23,ChiffonPollyTalk, Chiffon, Polly)
+CharacterEventBothWays(0x17,ChiffonPollyTalk, Chiffon, Polly)
 CharacterEventBothWays(0x1F,ChiffonYvonneTalk, Chiffon, Yvonne)
-CharacterEventBothWays(0x24,YvonnePennyTalk, Polly, Yvonne)
+CharacterEventBothWays(0x18,YvonnePennyTalk, Polly, Yvonne)
 
 CharacterEventBothWays(0xB,AfterDoor1, Chiffon, Frye)
 CharacterEventBothWays(0xC,AfterDoor2, Chiffon, RealVelius)
@@ -40,6 +40,7 @@ CharacterEventBothWays(0xD,AfterDoor3, Chiffon, Cortado)
 MiscBasedEvents: //completion flag then trigger flag
 	AFEV 0x0 CheckNoUnits 0x0
 	AFEV 0x0 OpenRoofs 0x0
+	AFEV 0x19 ChifReact 0x5
 	AFEV 0xB AfterDoor1 0xF
 	AFEV 0xC AfterDoor2 0x9
 	AFEV 0xD AfterDoor3 0xA
@@ -247,6 +248,12 @@ SetFlag(0xE)
 
 LABEL 0x9000
 
+NoFade
+ENDA
+
+ChifReact:
+CameraCursor(Graham)
+Text(ChiffonReaction)
 NoFade
 ENDA
 

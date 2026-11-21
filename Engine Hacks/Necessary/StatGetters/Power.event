@@ -89,12 +89,12 @@ prEmpowerEthCheck: //thief rush
 prTuskedHorn:
 rIfUnitHasStatus(0x5) //atk buff?
 	rIfUnitHasNotSkill(OverdriveID)
-		rAddConst(3)
+		rAddConst(4)
 
 prAddMoreIfWreyvian:
 rIfUnitHasStatus(0x5) //atk buff?
 	rIfUnitHasNotAttribute(CA_FEMALE)
-		rAddConst(3)
+		rAddConst(4)
 			
 prCritBuffAtk:
 	rIfUnitHasStatus(0x7)

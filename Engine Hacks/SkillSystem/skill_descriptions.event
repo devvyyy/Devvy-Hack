@@ -5,6 +5,7 @@ ORG 2*0xFF+SkillDescTable
 
 #define SkillDescription(skillID,description) "PUSH; ORG 2*skillID+SkillDescTable; SHORT description; POP"
 
+SkillDescription(WTAFlipID,SD_WTAFlip)
 SkillDescription(CrownID,SD_HeirtoAeteria)
 SkillDescription(CalamityID,SD_Warden)
 SkillDescription(RagebladeID,SD_PrecisionRingLOL)
@@ -13,6 +14,7 @@ SkillDescription(CantoOneID,SD_WingedHelm)
 SkillDescription(GrimRingID,SD_GrimRing)
 SkillDescription(GlowRingID,SD_HolyCloak)
 SkillDescription(Dark5ID,SD_SnaringRifle) //skill display
+SkillDescription(Dark4ID,SD_Isenbrand) //skill display
 SkillDescription(BullHeadedID,SD_BullHeaded)
 SkillDescription(PotentID,SD_Potent)
 SkillDescription(EndTurnID,SD_Fom)
@@ -206,7 +208,7 @@ SkillDescription(SealSklID,SD_SealSkl)
 SkillDescription(SealSpdID,SD_SealSpd)
 SkillDescription(SealLukID,SD_SealLuk)
 SkillDescription(SealDefID,SD_SealDef)
-SkillDescription(SealResID,SD_SealRes)
+SkillDescription(SealResID,SD_ShadowEye)
 SkillDescription(DragonsBloodID,SD_DragonsBlood)
 SkillDescription(GambleID,SD_Gamble)
 SkillDescription(PersonalityID,SD_Personality)

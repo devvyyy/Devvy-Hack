@@ -2,13 +2,46 @@
 If enemies cross the threshold,[N]
 they'll spawn reinforcements.[A][X]
 
+## PostPrepsGaiden2
+# post "preps"; should mirror 1-8
+[OpenLeft][LoadOtto][OpenMidRight][LoadLtUlrich]
+[3l]
+
+[OpenLeft]
+There's[Beat] so many of them[Beat][N]
+I can hardly count their numbers[Beat][AN]
+
+[MR]
+Keep your head up[,] boy.[6N]
+We can't let them get past the bridge.[6N]
+You hear me[,] soldier?[AN]
+
+[L]
+[Beat][AN]
+
+[MR]
+It's now or never.[6N]
+Look at everybody around you.[6N]
+If you're having second thoughts[Beat][AN]
+
+[L][MoveL]
+No![.6] I wouldn't.[.6] I[Beat] can't.[AN]
+
+[MR]
+As I expected.[.6] Alright[,] then.[6N]
+Fight like your life depends on it[Beat][N][MoveMR]
+because it damn well does![AN]
+
+[X]
+
 ## Gaiden2Opening3
 # this is AFTER it transitions to the map
 [OpenMidLeft][LoadLtUlrich][OpenFarFarRight][LoadOtto]
 [3l]
 
-[ML]
+[ML][MoveML]
 Otto![.6] Are the barricades all ready an' up?[AN]
+[CSS]
 
 [FFR][MoveMidRight]
 Yeah[,] they're all set up.[.6] These things[N]
@@ -24,13 +57,12 @@ much of a fortified position[,] but[Beat][AN]
 Any idea when the Aeterians will get here?[AN]
 
 [ML]
-Not for a while.[.6] We have a moment[N]
-of peace.[.6] Just a moment.[AN]
+Not for a while.[.6] Enjoy the silence while we've[N]
+got it.[.6] Won't last long.[AN]
 
 [MR]
-In that case[Beat] Lieutenant Ulrich[,][N]
-there's something I've been meaning[N]
-to ask you.[AN][Clear]
+In that case[Beat] Lieutenant[,] there's something[N]
+I've been meaning to ask you.[AN][Clear]
 We've been fighting side by side[N]
 for months now[,] but[Beat][AN]
 
@@ -42,15 +74,16 @@ Otto.[.6] This might be our last chance.[AN]
 [MR]
 Lieutenant.[.6] Why are you risking your life[N]
 out here instead of just[Beat] giving up[N]
-and running away?[AN][Clear]
-I mean[,] Wreyvine's victory in this war[N]
+and running away?[AN]
+I mean[,] I don't want to seem defeatist[,][N]
+but Wreyvine's victory in this war[N]
 seems impossible[Beat][AN]
 
 [ML]
-That's unusually defeatist of you![.6] I[N]
-could ask the same[,] I suppose.[.6] You left[N]
-Aeteria to fight for Wreyvine[Beat][AN]
-That makes you a traitor to their empress.[6N]
+That's pretty rich coming from you.[6N]
+I could ask the same thing.[.6] Who the[N]
+hell defects from the Empire?[AN]
+You put a massive target on your back.[6N]
 There must be some reason for that[,][N]
 Cruel Fate be damned.[AN]
 
@@ -76,7 +109,7 @@ your own people[,] I presume.[AN]
 Yessir.[AN]
 
 [ML]
-[OpenQuote]Yessir".[.6] The river is where Bertrand[,] my[N]
+[OpenQuote]Yessir."[.6] The river is where Bertrand[,] my[N]
 younger brother[,] was killed in combat.[.6] He didn't[N]
 stand a damned chance to redslicks.[AN][C]
 To answer your question[,] Otto[Beat][N]
@@ -100,10 +133,10 @@ Lieutenant[,] uhm[Beat] I'm sorry.[.6] For fighting[N]
 in the army that hurt you[,] and[Beat][N]
 For all that's happened to us both.[AN]
 
-[ML]
+[ML][MoveML]
 Rise[,] Otto[,] and stand by my side.[.6] There's[N]
 nothing to apologize for except defeat![6N]
-Let's fight and live another day.[AN][Event]
+Let's make sure we see tomorrow.[AN][Event]
 
 [FarFarRight]
 L-[.4]Lieutenant Ulrich![.6] The Velvets![6N]
@@ -140,8 +173,8 @@ Sound the call of the Iron Tusks![AN]
 [3l]
 
 [FL]
-Corporal Opali.[.6] We are ready to march onto[N]
-the Wreyvian mainland.[AN]
+Corporal Opali.[.6] The crossing is clear for[N]
+our advance.[AN]
 
 [MR]
 Really?[.6] That tiny pack of ashboot[N]
@@ -355,30 +388,30 @@ And at their vanguard[Beat][AN]
 [OpenFarLeft][LoadYoungOgrim][OpenLeft][LoadOtto][OpenMidRight][LoadLtUlrich]
 [3l]
 
-[OpenFarLeft]
-The Empress of Aeteria[,] and her[N]
-imperial guard![AN]
+[OpenFarLeft][MoveFL]
+It's the Empress herself.[.6][N]
+Her personal troops are leading the charge![AN]
 
 [OpenLeft]
-I stood behind just one of the imperial guard[N]
+I stood behind just one of the Imperial guard[N]
 at Sgabeon River.[.6] Even our elites were[N]
 like trainees before them[Beat][AN]
 
 [OpenMidRight]
-Otto.[.6] Ogrim.[.6] Evacuate our surviving forces to[N]
-the south.[.6] I will buy you time.[.6] The[N]
-kingdom must not be allowed to fall today.[AN]
+Otto.[.6] Ogrim.[.6] Pull the surviving wounded back[N]
+across the southern crossing.[.6] I'll hold the[N]
+chokepoint and buy you time.[AN]
 
 [OpenLeft]
-Lieutenant?[AN]
+Lieutenant?[.6] No[,] that's[Beat][AN]
 
 [OpenMidRight]
-You are faithful bluescarves of Wreyvine.[.6][N]
+You took an oath to this Kingdom.[.6][N]
 Now[,] follow your orders![AN]
 
 [OpenFarLeft]
-[Pause]Let's go[,] then.[.6] We must get everyone[N]
-to safety.[AN]
+[Pause]On your feet[,] Otto.[.6] We're bluescarves.[6N]
+We must evacuate everyone to safety.[AN]
 
 [X]
 
@@ -386,12 +419,12 @@ to safety.[AN]
 [MR][LoadYoungOpal][3L]
 
 [MR]
-My Empress.[AN]
+Bridgehead secured,[.4] my Empress.[AN]
 
 [FFR]
-The Wreyvians here managed to hold out[N]
-for this long[,] against such forces[Beat]?[6N]
-I must say[,] I am impressed.[AN]
+Impressive that these Wreyvian stragglers[N]
+held out this long against our army.[6N]
+They have grit,[.4] if nothing else.[AN]
 But this is enough.[.6] Ideon's Bridge[N]
 is ours.[.6] The Empire of Aeteria will[N]
 usher in a new grand age![AN]
@@ -399,9 +432,10 @@ usher in a new grand age![AN]
 [MidRight]
 There's stragglers[,] Your Majesty.[6N]
 And here I was worried there'd be[N]
-no training left today.[AN][Clear]
-Remind me why the bridge stands.[6N]
-Make this fun for me[,] would you?[AN]
+no training left today.[AN]
+Clear the path?[.6] With pleasure.[6N][MoveMR]
+Remind me why the bridge stands![6N]
+Make this fun for me[,] bluescarves![AN]
 [X]
 
 ## Gaiden2Ending4
@@ -418,8 +452,8 @@ Your blood will crust my axe.[AN]
 ## Gaiden2Ending5
 [ML][LoadOttoScar][MR][LoadYoungOpal][3L]
 [3L]
-[ML]
-You dastards[Beat]![A][ClearFace]
+[ML][MoveML]
+Agh![.6][MoveFarLeft]You[Beat]![A][ClearFace]
 [X]
 
 ## Gaiden2Ending5After
@@ -428,7 +462,7 @@ You dastards[Beat]![A][ClearFace]
 Hardly worth the effort.[AN]
 
 [FL][LoadLtUlrich]
-Otto[Beat]![AN]
+Otto![AN]
 
 [X]
 
@@ -436,23 +470,25 @@ Otto[Beat]![AN]
 [ML][LoadLtUlrich][MR][LoadYoungOpal][3L]
 
 [MR][MoveRight]
-And you.[.6] Their leader.[.6] Face me![AN]
+And you.[.6] Their leader[Beat][AN]
 
 [ML]
-[Beat]If I must.[AN]
+[Beat]Come get some.[AN]
 [X]
 
 ## Gaiden2Ending7
 # in battle
 [ML][LoadYoungOpal]
-You rank highly among[N]
-the Wreyvians.[AN]
-Very well[,] then![AN]
+You look like you actually[N]
+know how to hold a spear.[AN]
+Very well[,] then.[6N]
+Don't disappoint me![AN]
 My honor--[.4]my axe--will[N]
 cleave you in two.[AN][ClearFace]
 
 [MR][LoadLtUlrich]
-[Beat][AN]
+Bring it on,[.4] Corporal.[6N]
+Face me![AN]
 [X]
 
 ## Gaiden2Ending8
@@ -463,29 +499,29 @@ cleave you in two.[AN][ClearFace]
 
 [MR]
 You're just as skilled as I expected.[6N]
-But this ends now.[AN]
+[Pause]But playtime's over.[AN]
 [X]
 
 ## Gaiden2Ending9
 [ML][LoadLtUlrichScar][3L]
 [ML]
-I[Beat] Grgh[Beat][N]
-Bastard[Beat][AN]
+I[Beat] Grgh[Beat][N][MoveML]
+Bastards[Beat][AN]
 [X]
 
 ## Gaiden2Ending10
 [MR][LoadYoungOpal]
 [3L]
 And their vanguard falls.[6N]
-My Empress?[AN]
+Orders,[.4] Your Majesty?[AN]
 
 [FFR]
 A grand display of your might and[N]
 talent[,] Corporal Opali.[6N]
 Perhaps a promotion is in order.[AN]
 The rest are retreating.[.6] Onwards.[6N]
-We must link up with the forces[N]
-from the ship.[AN]
+Link up with our naval division at the[N]
+docks immediately.[AN]
 [X]
 
 ## Gaiden2Ending11
@@ -493,21 +529,26 @@ from the ship.[AN]
 
 [MR]
 Otto[Beat]?[AN]
+[CSS]
 
 [FFL][MoveMidLeft]
-[ML]
-Lieutenant![AN]
+[ML][MoveML]
+L-[.4]Lieutenant![AN]
 
-[MR]
+[MR][MoveMR]
 I[Beat] I told you[Beat] to run![.6] Get out[N]
 of this horrid place[Beat]![AN]
 
 [ML]
-I-[.4]I'll drag you to safety[,] Ulrich![6N]
-L-[.4]Lieutenant Ulrich![AN]
+I-[.4]I'll drag you to safety[,] Ulrich![6N][MoveML]
+Grab my arm![.4] Hang on![AN]
+
+[MR]
+[Beat]You[Beat][AN]
 
 [ML]
-Please[,] sir[Beat] Come on[Beat][AN]
+Please[,] sir[Beat] Come on[Beat][N]
+I can carry you to the healers[Beat][AN]
 
 [MR]
 Otto[Beat] Stop[Beat] Let it be[Beat][AN]
@@ -516,21 +557,26 @@ Otto[Beat] Stop[Beat] Let it be[Beat][AN]
 I[Beat][AN]
 
 [MR]
-Just leave it be.[.6] You're naive if you[N]
-think I can recover.[.6] The war is over:[6N]
-Wreyvine is lost to Aeteria.[AN]
+Just leave it be.[.6] Otto[Beat] look at me.[AN]
 
 [ML]
-But[Beat][AN]
+But[Beat] No[,] I'm not leaving you--[AN]
 
-[MR]
-Just leave it be[Beat]![AN]
+[MR][MoveMR]
+Look[Beat] at me.[.6] The war is lost,[.4] kid.[6N]
+Just[Beat] leave it be[Beat][AN]
+
+[ML]
+Lieutenant[Beat][AN]
+
+[MR][MoveMR][MidBlink]
+S-[.4]Save yourself[Beat] That's[Beat] an order![AN]
 
 [ML]
 [Beat][AN]
 
-[MR]
-[Pause][ToggleSmile]Leave[Beat] it[Beat][A][CloseEyes][N][ClearFace]
+[MR][CloseEyes]
+[Pause][ToggleSmile]Just[Beat] live[Beat][A][N][ClearFace]
 
 [X]
 
@@ -540,22 +586,22 @@ Just leave it be[Beat]![AN]
 [3l]
 
 [OpenMidLeft]
-[Pause]I ran away.[.6] From my duties[,] from[N]
-my commander[,] from everything I ever[N]
-knew.[.6] It's gone.[AN]
+[Pause]I ran.[.6] I grabbed his spear,[.4] took his armor,[.4][N]
+and bolted.[.6] Everything I was supposed to[N]
+defend burned behind me.[AN]
 
 [OpenMidRight]
-And you've pretended to be Ulrich[N]
-all this time.[AN]
+And you've been living under his name[N]
+ever since.[AN]
 
 [OpenMidLeft]
-I retreated to quiet villages as a vagrant[N]
-traveling the lands.[.6] This secret's haunted[N]
-me for the past twenty-four years.[AN]
-That's the whole truth.[.6] Ulrich of Wreyvine[,][n]
-the [OpenQuote]noble" knight[,] breathed his last[N]
-in the old war. Forgotten.[AN]
-I'm just his pale imitation.[.6] His ghost.[6N]
+Drifting between backwater towns as a hired[N]
+mercenary.[.6] Carrying this dead man's title[N]
+for twenty-four years.[AN]
+That's the whole truth.[.6] Ulrich[,] the[n]
+[OpenQuote]noble" knight[,] the [OQ]Sun of Wreyvine"[,][N]
+died in the mud.[.6] Forgotten.[AN]
+No matter what happens in the end[Beat][N]
 I'm nothing but a craven who hides behind[N]
 a charlatan's title and rank.[AN]
 
@@ -566,16 +612,22 @@ Ul-[.4]no[,] Otto[Beat] You'll still be Lieutenant Ulrich.[AN]
 Even now?[.6] I knew nothing of the lieutenant.[6N]
 Our mannerisms differ[Beat] Hell[,] I never truly[N]
 knew him in the end.[AN]
-It's only a matter of time before Wreyvine's[N]
-seasoned soldiers find out and I'm[Beat][N]
-Well[,] I don't know what would happen.[AN]
+It's only a matter of time before someone[N]
+from the old guard spots the inconsistencies[N]
+and calls me out.[AN]
 
 [OpenMidRight]
-Your secret is safe.[.6] Twenty-four years is[N]
-a long time.[.6] People change.[.6] They move[N]
-on[,] and they forget[Beat][AN][Clear]
-You survived these battles.[.6] Now we just have[N]
-to go on.[AN]
+Nobody's looking that closely.[.6] Twenty-four[N]
+years is a long time.[.6] People change.[.6][N]
+Memories distort[,] and they forget[Beat][AN]
+
+[OpenMidLeft]
+You'd certainly know.[AN]
+
+[OpenMidRight]
+They moved on.[.6] You survived these battles.[.6][N]
+Now we just have to go on.[.6][n]
+That's what matters right now.[AN]
 
 [OpenMidLeft]
 Go on[,] huh?[.6] If only[Beat] But that might be[N]
@@ -599,16 +651,16 @@ Sir Ulrich.[AN]
 [OpenMidLeft]
 [Pause]My sincere apologies.[.6] I'm so sorry.[6N]
 I musn't let my emotions cloud my[N]
-leadership further[Beat][AN]
+leadership any further[Beat][AN]
 And I understand that it's irrational to[N]
 seek retribution for[Beat] someone[N]
 elses' sake.[AN]
 If you don't want to fight against your[N]
-own people[,] well[Beat] I just don't[N]
-see another conclusion to the war.[AN]
+own people[,] well[Beat] I won't stop you[N]
+from walking away.[AN]
 
 [OpenMidRight]
-No[,] it's alright.[AN]
+I'm not walking away.[AN]
 
 [OpenMidLeft]
 [Pause]Huh?[AN]
@@ -617,13 +669,13 @@ No[,] it's alright.[AN]
 I'll aid you.[.6] I'll help you deliver your[N]
 justice.[.6] After all[,] we're fighting for[N]
 the same cause now.[AN]
-We're both traitors to the imperial crown.[6N]
+We're both traitors to the Imperial crown.[6N]
 There's no way out other than to see this[N]
 war through to the end.[AN]
 
 [OpenMidLeft]
-Hah[Beat] Cruel Fate always finds its way[,][N]
-huh?[.6] You're right[,] [OpenQuote]Affogato".[6N]
+Hah[Beat] Cruel Fate's got a sick sense of humor[,][N]
+doesn't she?[.6] You're right[,] [OpenQuote]Affogato".[6N]
 Let's go[Beat] They're waiting for us.[AN]
 
 [X]
@@ -755,7 +807,7 @@ company is routed.[AN]
 [OpenFarFarRight][LoadOtto][MoveMidRight]
 
 [MR]
-Hah[Beat] Hahh[Beat] Finally![.6] I've caught up to you![AN]
+Hah[Beat] Hahh[Beat] [MoveMR]Finally![.6] I've caught up to you![AN]
 
 [ML][OpenEyes]
 An Aeterian uniform.[.6] You're far from[N]
@@ -790,6 +842,7 @@ man who sneaks up on an enemy commander[N]
 during a retreat?[AN][C]
 Give me one good reason why I shouldn't[N]
 cut you down right now.[AN]
+[CSS]
 
 [MR][MoveMR]
 Because I have nowhere else to go![.6][N]
@@ -809,6 +862,7 @@ Please[,] Lieutenant.[.6] Please.[AN]
 You speak of your homeland with much[N]
 venom[,] lad.[.6] But desperation breeds[N]
 convincing lies.[AN]
+[CSS]
 
 [MR][MoveMR]
 It's the truth![.6] Let me prove it[,] please.[.6][N]
@@ -822,24 +876,26 @@ to my squadron[,] under my direct command.[AN]
 Make one wrong move[,] give me one reason[N]
 to doubt[,] and I will end you myself.[.6][N]
 Is that clear?[AN]
+[CSS]
 
-[MR]
+[MR][MoveRight]
 Y-[.4]Yes[,] sir![.6] I won't disappoint you,[N]
 I swear it on my life![AN]
 
 [CSS]
 [ML][MoveLeft][ToggleSmile]
 [Beat][AN]
+[CSS]
 
 [MR][MoveRight]
-[Pause]A[Beat] handshake?[.6] I-[.4]I guess[Beat][AN][ToggleSmile]
+[Pause]Uh[,] a[Beat] handshake?[.6] I-[.4]I guess[Beat][AN][ToggleSmile]
 
 [L]
 Welcome to the bluescarves.[.6][N]
 What is your name[,] soldier?[AN]
 
 [R]
-It's[Beat][AN]
+O-Oh[Beat] I[.4]t[.4]'[.6]s[Beat][AN]
 [X]
 
 ## AfterTheFlashback
@@ -848,7 +904,7 @@ It's[Beat][AN]
 
 [FFR][Pause]Ulrich?[AN]
 
-[MR]
+[MR][CloseEyes]
 [Pause]Again you plague me[Beat] Will Fate[N]
 ever let me go[Beat]?[AN]
 
@@ -856,7 +912,7 @@ ever let me go[Beat]?[AN]
 Sir Ulrich![.6] Is something amiss?[6N]
 We're awaiting orders![AN]
 
-[MR]
+[MR][OpenEyes]
 My apologies.[.6] Give me a moment[Beat][AN]
 
 [X]
@@ -974,7 +1030,7 @@ lost for us?[A][CloseEyes][N]
 
 ## YoungOgrimDeathQ
 [OpenMidRight][LoadYoungOgrim]
-A-[.4]Ah[,] heck[Beat]![.6] I[N]
+A-[.4]Ah[,] hell[Beat]![.6] I[N]
 must pull back![A][N]
 [X]
 

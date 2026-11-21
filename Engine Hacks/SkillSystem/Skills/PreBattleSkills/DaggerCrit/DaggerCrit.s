@@ -80,6 +80,8 @@ cmp     r0, #0xB1         @'Goodbye' Knife
 beq Crit50
 cmp     r0, #0xF7         @Oh the misery
 beq Crit100
+cmp     r0, #0x22         @Hearthbreaker, S rank axe
+beq Crit100NoAvoid
 cmp     r0, #0x90         @Mace
 beq Crit100
 cmp     r0, #0xCB         @Black Knife

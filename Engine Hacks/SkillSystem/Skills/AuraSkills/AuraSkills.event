@@ -223,6 +223,12 @@ POIN NewAuraSkillCheck
 WORD AnathemaID
 
 ALIGN 4
+AnathemaEnemy:
+#incbin "Anathema/AnathemaEnemy.dmp"
+POIN NewAuraSkillCheck
+WORD AnathemaID
+
+ALIGN 4
 #include "Hex/Hex.lyn.event"
 HexIDLink:
 BYTE HexID

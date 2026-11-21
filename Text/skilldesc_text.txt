@@ -167,10 +167,17 @@ Miracle[N]
 - If unit's HP is 50% or more, survives[N]
 the next lethal attack.[X]
 
+## SD_Aphelios2
+Elementalist[N]
+- Apsia has an Equip and Off-Hand[N]
+(2nd inventory slot) effect per tome type.[N]
+- Can use Light and Dark magic.[N]
+- Can't add Equipment.[X]
+
 ## SD_Bruh
 # has 3 separate gamble-esque menus inside a combat art menu
 Visionary[N]
-Unit has access to a Spell-Mixing menu with[N]
+- Apsia has access to a Spell-Mixing menu with[N]
 Devastation, Salvation, and Purgation; casting[N]
 each interact with Equipped weapon slot.[N]
 (Can't follow-up; costs durability.)[X]
@@ -386,18 +393,18 @@ Grants units within 3 spaces Crit/Avoid +20.[X]
 ## SD_EyeForAnEye
 # Down But Not Out
 Stand Back Up[N]
-- Raial grants allies within 3 spaces[N]
-Prt/Rsl = 25% of ally's missing HP,[N]
-and Hit/Avoid = 50% of ally's missing[N]
-HP (calculated at start of combat).[X]
+- Raial's allies within 3 spaces deal[N]
+bonus damage = 50% of foe's attack[N]
+damage and restore 5 HP after combat.[N]
+- If adjacent to Chiffon, Hit +50.[X]
 
 ## SD_RaialRework
 # Down But Not Out
 Stand Back Up[N]
-- Once per map, Raial blocks all[N]
-lethal hits during an ally's combat.[N]
-- Use Rally to grant Str/Eth +4 to[N]
-adjacent allies for 1 turn.[X]
+- Raial grants allies within 3 spaces[N]
+Prt/Rsl = 25% of ally's missing HP,[N]
+and Hit/Avoid = 50% of ally's missing[N]
+HP (calculated at start of combat).[X]
 
 ## SD_BadBloodAlt
 # for if im too lazy
@@ -718,8 +725,8 @@ damage after combat.[X]
 Shadow Eye[N]
 - If Edvin initiates, after combat,[N]
 inflicts Soulbreak for the map.[N]
-- If foe has any status, deals bonus[N]
-magical damage = foe's Spd x 2.[X]
+- Inflicts Res -5 on foe after combat[N]
+(recovers 1 per turn).[X]
 
 ## SD_StaticPanic
 # Volatile Sparks
@@ -728,6 +735,29 @@ Fulmination!![N]
 = 50% of Spd, chaining to foes within[N]
 2 spaces of target; chains again with[N]
 100% Spd within 4 spaces if target died.[X]
+
+## HeedeSkill
+Nail in the Coffin[N]
+- If Heede would deal over 25% of foe's max[N]
+HP on attack, executes foe (excludes bosses).[N]
+- If Hit is 75% or more, always hit.[N]
+- If Crit is 30% or more, always crit.
+[X]
+
+## HeedeSkill2
+Nail in the Coffin[N]
+- Heede's follow-up threshold is 1 and[N]
+follow-ups add foe's missing HP to damage.[N]
+- If foe is defeated, ends the actions of[N]
+all foes within 5 spaces of target.[X]
+
+## HeedeSkill3
+Nail in the Coffin[N]
+- If Heede would deal over 25% of foe's max[N]
+HP on attack, executes foe (excludes bosses).[N]
+- If foe is defeated, ends the actions of[N]
+all foes within 5 spaces of target.[X]
+[X]
 
 ## SD_SideHustle
 Side Hustle: After ending an action on[N]
@@ -824,6 +854,13 @@ Pursuer[N]
 = 50% of Move used and follow-ups[N]
 trigger twice.[X]
 
+## SD_Chester2
+Spray and Pray[N]
+- If Chester initiates, grants range[N]
+= 50% of Move used.[N]
+- If range = 4+, reduces follow-up threshold[N]
+to 1 and follow-ups trigger twice.[X]
+
 ## SD_FunnyTime
 I Make The Rules: If unit's Spd < foe's Spd,[N]
 unit follow-ups and foe cannot.[X]
@@ -845,9 +882,9 @@ dummy[X]
 ## SD_AeterianFealty
 Aeterian Fealty[N]
 - Graham's healing staves also heal self.[N]
-- If adjacent to Chiffon, Hit/Avoid +50.[N]
 - Grants Hit/Avoid +5 to all allies on[N]
-the map, increased to +15 if Aeterian.[X]
+the map, increased to +15 if Aeterian.[N]
+- If adjacent to Chiffon, Avoid +50.[X]
 
 ## SD_BornInDarkness
 Test of Faith: Marks adjacent enemies.[N]
@@ -920,6 +957,11 @@ Certain Death[N]
 can't, and follow-ups trigger twice.[N]
 - Deals bonus damage = 30 - foe's Spd.[X]
 
+## SD_Potent3
+Certain Death[N]
+- Reduces foe's follow-up threshold to 1,
+[X]
+
 ## SD_Immovable
 Immovable[N]
 - Unit attacks last and can't dodge.[N]
@@ -948,9 +990,9 @@ weapon Mt.[X]
 ## SD_HappyHour
 Happy Hour[N]
 - After using a consumable item,[N]
-grants Kane another action and restores[N]
+grants Ansel another action and restores[N]
 HP to allies within 3 spaces =[N]
-(ally's Luck x 2).
+(ally's Luck x 2).[X]
 
 ## SD_CorneredWolf
 Cornered Wolf[N]
@@ -969,6 +1011,9 @@ restored for every 25% below max HP).[X]
 
 ## SD_SnaringRifle
 [OpenQuote]Ol' Reliable"[X]
+
+## SD_Isenbrand
+Isenbrand[X]
 
 ## SD_AnakinSkill
 Motivating Presence[N]
@@ -1071,10 +1116,10 @@ Arm Wrestler: Grants +3 Atk/AS against[N]
 bosses, doubled if they have Shove/Smite.[X]
 
 ## SD_Moxie
-Clearly Superior[N]
-- Grants Anton Atk/AS = foe's Res.[N]
-- If foe doesn't use magic, follow-up[N]
-and foe can't.[X]
+It's Really Simple, Actually[N]
+- Anton deals c bonus damage;[N]
+solve for c using Pythagorean Theorem,[N]
+where a = foe's Dex and b = foe's Luck.[X]
 
 ## SD_SolLance
 Solar Thrust: Deals (10 - foe's Res) bonus damage[N]
@@ -1100,6 +1145,14 @@ Proper Etiquette[N]
 post-action effects on the map.[N]
 - Inflicts Prt/Rsl -5 on all foes[N]
 adjacent to another foe.[X]
+
+## SD_EustaceNewPersonal
+# reduces follow-up threshold for both sides to 1
+Soul Ignition[N]
+- Eustace restores HP = damage dealt,[N]
+ignores foe's Res, and reduces foe's[N]
+base damage to a cap of 25% of max HP,[N]
+but takes 5 damage after combat.[X]
 
 ## SD_EustacePersonal
 Hollow Front[N]
@@ -1178,7 +1231,7 @@ Spirit Cleave: Deals bonus damage =[N]
 ## SD_Maestro
 Maestro[N]
 - Ilse's Rifles have unique properties:[N]
-Hit +30, follow-ups occur immediately,[N]
+Hit +30, follow-up threshold = 1,[N]
 and grants Crit = distance from foe,[N]
 x 10 (capped at 4 spaces).[X]
 
@@ -1205,11 +1258,12 @@ Curtain Call: If foe's HP is below[N]
 missing HP.[X]
 
 ## SD_Nevermore
-# add lifetaker like swain?
-Pragmatic[N]
-- Gorlois deals bonus damage and[N]
-reduces damage taken = 50% of foe's[N]
-missing HP at start of combat.[X]
+# add lifetaker like swain? Ravenous
+Unkindness[N]
+- Gorlois has WTA against non-WT foes.[N]
+- If initiating and Res > foe's Str/Eth,[N]
+reduces follow-up threshold to 1 and[N]
+increases foe's threshold to 10.[X]
 
 ## SD_Nihil
 # edit this later in SkillSystem.event
@@ -1265,8 +1319,9 @@ turn, Yufka dodges all enemy attacks.[X]
 
 ## SD_KingMark
 Iron Decree[N]
-- Foes within 5 spaces of Anatolius[N]
-have no Crit/Avoid.[X]
+- Anatolius can use Swords/Lances.[N]
+- Foes within 5 spaces have Crit/Avoid[N]
+negated and can't follow-up.[X]
 
 ## SD_KingMarkTrue
 # uses temp flags LOL!
@@ -1279,7 +1334,7 @@ and grants EXP to the King's Battallion.[X]
 ## SD_ThunderClap
 Grounding[N]
 - If foe's terrain has bonuses or if foe[N]
-has a status effect, Doppio ignores foe's[N]
+has a status effect, Dagne ignores foe's[N]
 terrain bonuses and deals bonus magical[N]
 damage = foe's Spd x 2.[X]
 
@@ -1515,11 +1570,18 @@ Lone Wolf[N]
 - If unit is not adjacent to[N]
 an ally, grants Crit +15.[X]
 
-## SD_Anathema
+## SD_AnathemaOLD
 # Floris, Noel, Graham, Yvonne
 Stare[N]
 - Unit inflicts -5 Hit/Avoid[N]
 to foes within 2 spaces.[X]
+
+## SD_Anathema
+Tailwind[N]
+- Messel reduces follow-up threshold for[N]
+allies within 2 spaces to 1.[N]
+- Increases follow-up threshold for[N]
+foes within 2 spaces to 10.[X]
 
 ## SD_GatheringStorm
 # Velius, Graham
@@ -1933,6 +1995,12 @@ Heir to Aeteria[N]
 - Enables Lightslinger.[N]
 (Strikes x2 consecutively.)[X]
 
+## SD_ConsulStuff
+Imperius[N]
+- Grants magic range +3.[N]
+- Deals bonus damage = number of[N]
+foes within 3 spaces of target, x 5.[X]
+
 ## SD_Megalovania
 # Brave Bird??
 Tenacity[N]
@@ -1982,7 +2050,7 @@ Aurorashard[N]
 # and weapon triangle disadvantage, spd vantage
 Lunatic[N]
 - Pandoro ignores foe's Def and[N]
-weapon triangle disadvantage.[N]
+follow-ups occur immediately.[N]
 - Hold L while selecting a target to[N]
 strike x2 consecutively with Hit -50.[X]
 
@@ -2191,7 +2259,7 @@ follow-ups trigger twice.[X]
 ## SD_Outrider
 # Vae Victis
 Trample[N]
-- Grants Cortado Prt/Rsl = Move used.[N]
+- Grants Signe Prt/Rsl = Move used.[N]
 - If all Move is used, always land[N]
 a critical hit, and Canto 5 spaces[N]
 after combat.[X]
@@ -2247,9 +2315,9 @@ allies on the map with HP > 50% or more.[X]
 ## SD_BitterCold
 Bitter Cold[N]
 - Tiberius inflicts Rsl -3 to all foes on[N]
-the map with < 100% HP, doubled to -6 to[N]
-all foes with < 50% HP.[N]
-(Rsl can go below 0.)[X]
+the map with < 100% HP; if below 50%[N]
+HP, inflicts -6 and increases foe's[N]
+follow-up threshold to 6.[X]
 
 ## SD_Savior
 Savior: Nullifies penalties[N]
@@ -2477,7 +2545,7 @@ after attacking and defeating a foe.[X]
 ## SD_Galeforce
 # Stormsurge LMAOOOOO
 Harrier[N]
-- If Eisner defeats a foe, grants[N]
+- If Einar defeats a foe, grants[N]
 another action with -50% Move.[N]
 (Once per turn, Canto disabled.)[X]
 
@@ -3169,6 +3237,13 @@ enemies, grants +50% Str, inflicts[N]
 -50% Str/Eth to foe, and both sides[N]
 can't dodge attacks.[X]
 
+## SD_WTAFlip
+Master of Arms[N]
+-[_SP][_I][_f][_SP][_f][_o][_e][_SP][_i][_n][_i][_t][_i][_a][_t][_e][_s],[_SP][_E][_d][_i][_t][_h][_SP][_c][_o][_u][_n][_t][_e][_r][_s][_SP][_f][_i][_r][_s][_t],[_SP][_a][_n][_d][_SP][_i][_f][N]
+[_i][_n][_v][_e][_n][_t][_o][_r][_y][_SP][_h][_a][_s][_SP][_a][_n][_SP][_a][_p][_p][_l][_i][_c][_a][_b][_l][_e][_SP][_w][_e][_a][_p][_o][_n],[_SP][_g][_r][_a][_n][_t][_s][_SP][_W][_T][_A].[N]
+- Hold L while selecting a target to[N]
+flip the weapon triangle.[X]
+
 ## SD_Vanity
 Vanity: Gain +2 Damage and +10 Hit[N]
 when fighting enemy at 2 range.[X]
@@ -3176,7 +3251,8 @@ when fighting enemy at 2 range.[X]
 ## SD_MageSlayer
 Arcane Superiority[N]
 - If foe uses magic, grants Severin[N]
-Atk +5, Hit/Avoid +30.[X]
+Atk +3, Hit/Avoid +30 and neutralizes[N]
+weapon triangle disadvantage.[X]
 
 ## SD_Watchful
 Watchful: This unit cannot be[N]
@@ -3237,8 +3313,8 @@ make a follow-up and foe cannot.[X]
 # Inner Flame, Allum[0xE9]
 Coeur Ardent[N]
 - If Selwyn's HP is 50% or less,[N]
-multiplies Eth/Skill/Spd by 1.5x.[N]
-- Grants Atk +5 to allies within[N]
+multiplies Eth/Dex/Spd by 1.5x.[N]
+- Grants Atk/AS +5 to allies within[N]
 5 spaces.[X]
 
 ## SD_Foresight
@@ -3262,9 +3338,10 @@ Night Tide: Def and Res +5[N]
 to adjacent allies.[X]
 
 ## SD_Prescience
-Intuition[N]
-- If Alair initiates, grants Hit/Avo +30,[N]
-doubled to +60 if using a Sidearm.[X]
+Crowd Control[N]
+- Grants Sabrina magic range +1.[N]
+- Deals bonus damage = number of[N]
+foes within 3 spaces of target x 5.[X]
 
 ## SD_DefiantAvo
 Defiant Avoid: When HP is 25%[N]

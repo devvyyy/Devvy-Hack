@@ -151,15 +151,15 @@ UNIT Wreyvine LArmor 0x1 Level(10, NPC, 1)     [5,9] 0x0 0x0 0x0 0x0 [SteelGlaiv
 UNIT Wreyvine SArmor 0x1 Level(10, NPC, 1)     [9,8] 0x0 0x0 0x0 0x0 [SteelBlade,ShortBrand,0x65,Elixir] ChargeAI
 UNIT Wreyvine AArmor 0x1 Level(10, NPC, 1)     [9,10] 0x0 0x0 0x0 0x0 [SteelLabrys,ShortAxe,0x65,Elixir] ChargeAI
 UNIT Wreyvine Archer 0x1 Level(5, NPC, 1)     [6,9] 0x0 0x0 0x0 0x0 [IronRifle,0xdb,Vulnerary] ChargeAI
-UNIT Wreyvine Archer 0x1 Level(3, NPC, 1)     [6,6] 0x0 0x0 0x0 0x0 [ShortBow,IronDagger,Vulnerary] ChargeAI
+UNIT Wreyvine Archer 0x1 Level(3, NPC, 1)     [6,6] 0x0 0x0 0x0 0x0 [0xDB,IronDagger,Vulnerary] ChargeAI
 UNIT Wreyvine Archer 0x1 Level(3, NPC, 1)     [6,12] 0x0 0x0 0x0 0x0 [SteelBow,0x30,Vulnerary] ChargeAI
 UNIT Wreyvine GriffonRider 0x1 Level(4, NPC, 1)     [5,7] 0x0 0x0 0x0 0x0 [IronRifle,HuntingRifle,PureWater] ChargeAI
 UNIT Wreyvine GriffonRider 0x1 Level(4, NPC, 1)     [5,11] 0x0 0x0 0x0 0x0 [Longbow,BodkinRifle,PureWater] ChargeAI
 	UNIT
 
 OgrimGang:
-UNIT 0xCD Priest 0x1 Level(3, Ally, 0)     [5,0] 0 0 1 REDA6R4 [Mend,Rescue,Pain,0xCF] ChargeAI
-UNIT 0x80 Parson 0x1 Level(9, Ally, 1)     [4,0] 0 0 1 REDA5R4 [Physic,Fortify,Smog] ChargeAI
+UNIT 0xCD Priest 0x1 Level(3, Ally, 0)     [5,0] 0 0 1 REDA6R4 [Mend,Rescue,Pain] ChargeAI
+UNIT 0x80 Parson 0x1 Level(9, Ally, 1)     [4,0] 0 0 1 REDA5R4 [Physic,Mend,Smog] ChargeAI
 	UNIT
 
 EnemyUnits:
@@ -180,11 +180,11 @@ UNIT 0x9b Mage 0x1 Level(13, Enemy, 1)     [27,7] 0b 0x0 0x0 0x0 [Thunder,] Char
 UNIT 0x9b Mage 0x1 Level(13, Enemy, 1)     [28,9] 0b 0x0 0x0 0x0 [Wind,] TwoActionAI
 UNIT 0x9b Soldier 0x1 Level(13, Enemy, 1)     [26,11] 0b 0x0 0x0 0x0 [SteelLance,] TwoActionAI
 UNIT 0x9b Druid 0x1 Level(6, Enemy, 1)     [29,9] 0b 0x0 0x0 0x0 [Moonfall,] BossAI
-UNIT 0x9b SCav 0x1 Level(13, Enemy, 1)     [31,10] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
-UNIT 0x9b PegRider 0x1 Level(13, Enemy, 1)     [38,2] 0b 0x0 0x0 0x0 [IronLance,] StallOneTurnAI
+UNIT 0x9b SCav 0x1 Level(13, Enemy, 1)     [31,10] 0b 0x0 0x0 0x0 [SilverSword,] ChargeAI
+UNIT 0x9b PegRider 0x1 Level(13, Enemy, 1)     [38,2] 0b 0x0 0x0 0x0 [SapphireLance,] StallOneTurnAI
 UNIT 0x9b PegRider 0x1 Level(13, Enemy, 1)     [38,14] 0b 0x0 0x0 0x0 [Javelin,] StallOneTurnAI
-UNIT 0x9b ACav 0x1 Level(14, Enemy, 1)     [32,8] 0b 0x0 0x0 0x0 [SteelAxe,] RangeAI
-UNIT 0x9b Soldier 0x1 Level(14, Enemy, 1)     [34,11] 0b 0x0 0x0 0x0 [IronLance,] RangeAI
+UNIT 0x9b ACav 0x1 Level(14, Enemy, 1)     [32,8] 0b 0x0 0x0 0x0 [SilverAxe,] RangeAI
+UNIT 0x9b Soldier 0x1 Level(14, Enemy, 1)     [34,11] 0b 0x0 0x0 0x0 [SilverLance,] RangeAI
 UNIT 0x9b General 0x1 Level(7, Enemy, 1)     [35,9] 0b 0x0 0x0 0x0 [0x65,SilverBow] RangeAI
 UNIT 0x9b LArmor 0x1 Level(14, Enemy, 1)     [36,11] 0b 0x0 0x0 0x0 [SteelLance,ShortSpear] RangeAI
 UNIT 0x9b Shaman 0x1 Level(14, Enemy, 1)     [39,8] 0b 0x0 0x0 0x0 [DarkTome2,] RangeAI
@@ -217,9 +217,9 @@ UNIT 0x9b APal 0x1 Level(15, Enemy, 1)     [15,10] 0 0 1 REDA12R10 [SilverAxe,] 
 	UNIT
 	
 RandomBatch1:
-UNIT 0x9b SCav 0x1 Level(15, Enemy, 1)     [40,8] 0b 0x0 0x0 0x0 [SteelSword,] ChargeAI
-UNIT 0x9b LCav 0x1 Level(15, Enemy, 1)     [40,9] 0b 0x0 0x0 0x0 [SteelLance,] ChargeAI
-UNIT 0x9b ACav 0x1 Level(15, Enemy, 1)     [40,10] 0b 0x0 0x0 0x0 [SteelAxe,] ChargeAI
+UNIT 0x9b SCav 0x1 Level(15, Enemy, 1)     [40,8] 0b 0x0 0x0 0x0 [SilverSword,] ChargeAI
+UNIT 0x9b LCav 0x1 Level(15, Enemy, 1)     [40,9] 0b 0x0 0x0 0x0 [SilverLance,] ChargeAI
+UNIT 0x9b ACav 0x1 Level(15, Enemy, 1)     [40,10] 0b 0x0 0x0 0x0 [SilverAxe,] ChargeAI
 	UNIT
 	
 RandomBatch2:
@@ -316,8 +316,8 @@ ENDA
 
 
 Traps1:
-BLST [6,6] IronBallista
-BLST [6,12] KillerBallista
+BLST [1,4] IronBallista
+BLST [1,9] KillerBallista
 RedSigil(8,7)
 RedSigil(8,8)
 RedSigil(8,9)
@@ -412,6 +412,11 @@ FADU 30
 STAL 10
 CameraCursor(0xcc)
 Text(Gaiden2Opening4)
+
+STAL 15
+
+CameraCursor(0xCA)
+Text(PostPrepsGaiden2)
 
 STAL 15
 CenterTextbox(Gaiden2Notif)

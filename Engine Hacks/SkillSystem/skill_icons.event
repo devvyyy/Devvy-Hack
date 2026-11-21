@@ -4,6 +4,9 @@ SkillIcons:
 //Icon graphics are uncompressed
 #define SkillIcon(skillID) "128*skillID+SkillIcons"
 
+ORG SkillIcon(WTAFlipID)
+#incbin "SkillIcons/WTAFlip.dmp"
+
 ORG SkillIcon(CrownID)
 #incbin "SkillIcons/Crown.dmp"
 
@@ -30,6 +33,9 @@ ORG SkillIcon(CantoOneID)
 
 ORG SkillIcon(Dark5ID)
 #incbin "SkillIcons/SnaringRifle.dmp"
+
+ORG SkillIcon(Dark4ID)
+#incbin "SkillIcons/Isenbrand.dmp"
 
 ORG SkillIcon(BullHeadedID)
 #incbin "SkillIcons/BullHeaded.dmp"
@@ -109,9 +115,6 @@ ORG SkillIcon(AlacrityID)
 
 ORG SkillIcon(PykeUltID)
 #incbin "SkillIcons/DeathFromBelow.dmp"
-
-ORG SkillIcon(MoxieID)
-#incbin "SkillIcons/Daunt.dmp"
 
 ORG SkillIcon(HappyHourID)
 #incbin "SkillIcons/HappyHour.dmp"
@@ -606,7 +609,7 @@ ORG SkillIcon(SealDefID)
 #incbin "SkillIcons/SealDef.dmp"
 
 ORG SkillIcon(SealResID)
-#incbin "SkillIcons/SealRes.dmp"
+#incbin "SkillIcons/ShadowEye.dmp"
 
 ORG SkillIcon(DragonsBloodID)
 #incbin "SkillIcons/DragonsBlood.dmp"

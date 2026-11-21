@@ -4,7 +4,7 @@
 @r3=item, r4=defender, r5=item table
 @r2 is expected to be class id and r3 should be item id (currently is)
 
-.equ NullifyID, SkillTester+4
+.equ CalamityID, SkillTester+4
 
 push	{r14}
 mov		r0,#0xFF
@@ -16,7 +16,7 @@ ldr		r0,[r6,#0x10]		@effectiveness pointer
 cmp		r0,#0
 beq		RetFalse
 mov		r0,r4
-ldr		r1,NullifyID
+ldr		r1,CalamityID
 ldr		r3,SkillTester
 mov		r14,r3
 .short	0xF800

@@ -52,6 +52,8 @@ cmp r0, #0xA9 		 @Hunting Rifle
 beq SteelAwesome
 cmp r0, #0xAD 		 @Bodkin Rifle
 beq SteelAwesome
+cmp r0, #0xC7 		 @S rank bow
+beq MagnumAwesome
 cmp r0, #0xDF 		 @Etherbind Bow
 beq EtherbindAwesome
 cmp r0, #0x8A 		 @Shining Rifle

@@ -65,7 +65,7 @@ beq End
 mov  r1, #0x5A
 ldrh r0, [r4, r1] @strength
 ldrb r2, [r5, #0x13] @curr hp
-lsr  r2, #1 @divide this by 2
+@lsr  r2, #1 @divide this by 2
 add  r0, r2
 strh r0, [r4,r1]
 

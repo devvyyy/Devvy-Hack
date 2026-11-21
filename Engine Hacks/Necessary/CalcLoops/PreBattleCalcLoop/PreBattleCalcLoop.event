@@ -40,11 +40,11 @@ POIN DriveDef
 POIN DriveSpd DriveRes DriveStr FerricTrail SpurStr LilysPoise
 //POIN LuckySeven OddRhythm EvenRhythm
 POIN QuickBurn SlowBurn Vigilance Insight WindDisciple
-//POIN Demoiselle Gentilhomme MaleficAura Tantivy Focus Inspiration Solidarity VoiceOfPeace Anathema Hex Loyalty
+//POIN Demoiselle Gentilhomme MaleficAura Tantivy Focus Inspiration Solidarity VoiceOfPeace Hex Loyalty
 POIN Charisma Charm Shrewd AeterianFealtyAura Inspire BitterCold AoifeAura ChivalrousSoul ChainReaction RayDark Blackfire Intimidate Paranoia
 //POIN HeavyDuty Warlock Gamble Perfectionist Hawkeye LightWeight Trample Restraint AssassinateDamageBonus LifeAndDeath SoulSplitter ArcaneBlade Atlas StormBlood FieryBlood
-POIN BulletPre WreyvianHeart AeterianFealty Phase BurstFireStats AdaptivePoise ColdFlare StaticPanic NaturalCover ElbowRoom ShortShield Steadfast ShowStopper SanctuaryPre GonnaGoWild Falcon Opportunist BattleVeteran SilentPride KnightAspirant GlowRing Galestorm AshenRing Starseer Whirlwind Hasty ShiningRifleSkill Axiom PathOfBlade FinalBoss SearingSword WardRing Lunatic RupturedSky ThunderClap Bulwark Alacrity SteelSoul Megalovania Vigor ResoRing Defeatist LastResort HeavyStrikes Charge ChargePlus Warpath FairFight Keepsake RifleSkill LethalTempo Tresillo ElbowGreasePre Upgrade Hijack Vanity Leverage PureWaterEffect
-//POIN DuckPre Parry BloodTide WhitePool NightTide Prescience DefiantAvo DefiantCrit TowerShield IndoorFighter OutdoorFighter
+POIN BulletPre WreyvianHeart AeterianFealty Phase BurstFireStats AdaptivePoise ColdFlare StaticPanic NaturalCover ElbowRoom ShortShield Steadfast ShowStopper SanctuaryPre GonnaGoWild Falcon Opportunist BattleVeteran SilentPride KnightAspirant GlowRing Galestorm AshenRing Starseer Whirlwind Hasty ShiningRifleSkill Axiom PathOfBlade FinalBoss SearingSword WardRing Lunatic RupturedSky ThunderClap Bulwark Alacrity SteelSoul Megalovania Vigor ResoRing Defeatist LastResort HeavyStrikes Charge ChargePlus Warpath FairFight Keepsake RifleSkill LethalTempo Tresillo ElbowGreasePre Upgrade Hijack Vanity Leverage Prescience PureWaterEffect
+//POIN DuckPre Parry BloodTide WhitePool NightTide DefiantAvo DefiantCrit TowerShield IndoorFighter OutdoorFighter
 POIN Daunt KingMark Deadeye DoubleLion ShadowEye Daredevil CrownEffect NoctumRingEffect
 //POIN Thotslayer Thighdeology Armorboost Horseguard Skyguard ForeignPrincess
 POIN BlueFlame BlueFlameAura StandBackUp Frostbite Cultured KeepUp
@@ -53,6 +53,8 @@ POIN MoonEvoked Lionheart Maestro FlowCombat Frenzy DevilAxeSkill CurtainCallSki
 //POIN UpWithArch
 
 POIN StatusEffectsPre //adds 30 crit??
+
+POIN Anathema AnathemaEnemy //affects doubling thresholds for both teammates and enemies
 
 //stuff that recalcs via setting AS to 99 (to prevent it from being anything but 99)
 POIN Intrepid Puissance HighRoller Potent
@@ -106,6 +108,7 @@ POIN 0
 ALIGN 4
 AuraSkillTable:
 FILL 0xFF
+AuraSkillEntry(PrescienceID)
 AuraSkillEntry(MoxieID)
 AuraSkillEntry(Anima1ID)
 AuraSkillEntry(Anima2ID)
@@ -148,7 +151,7 @@ AuraSkillEntry(DauntID)
 //AuraSkillEntry(MaleficAuraID)
 AuraSkillEntry(DazzleID)
 //AuraSkillEntry(SolidarityID)
-//AuraSkillEntry(AnathemaID)
+AuraSkillEntry(AnathemaID)
 //AuraSkillEntry(VoiceOfPeaceID)
 AuraSkillEntry(CharismaID)
 //AuraSkillEntry(HexID)

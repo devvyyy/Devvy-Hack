@@ -2,7 +2,7 @@
 
 @r0=attacker's item id, r1=defender battle struct
 
-.equ NullifyID, SkillTester+4
+.equ CalamityID, SkillTester+4
 
 push	{r4-r7,r14}
 mov		r4,r0
@@ -64,7 +64,7 @@ b		EffectiveWeaponLoop
 
 NullifyCheck:
 mov		r0,r5
-ldr		r1,NullifyID
+ldr		r1,CalamityID
 ldr		r3,SkillTester
 mov		r14,r3
 .short	0xF800

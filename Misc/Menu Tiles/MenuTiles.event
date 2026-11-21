@@ -91,11 +91,11 @@ ORG 0xCCC1C
 
 // Support Viewer
 ORG 0xA14D8
-	POIN SupportScreenTSA
-//ORG 0xA2420
-//  POIN SupportListTSA
-//ORG 0xA2AA0
-//	POIN SupportListTSA
+    POIN SupportScreenTSA
+ORG 0xA2420 //first time u view
+  POIN DifficultySelectTSA //works best afaik
+ORG 0xA2AA0 //2nd time+ (like if u move right)
+    POIN DifficultySelectTSA
 
 
 // Prep Screen

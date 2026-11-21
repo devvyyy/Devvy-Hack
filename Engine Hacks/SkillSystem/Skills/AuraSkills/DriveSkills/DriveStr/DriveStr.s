@@ -25,6 +25,12 @@ ldrh    r3,[r0]     @Load the attacker's damage into r3.
 add     r3,#5    @add 4 to the attacker's damage.
 strh    r3,[r0]     @Store attacker avoid.
 
+mov r0, r4
+add     r0,#0x5E    @Move to the attacker's AS.
+ldrh    r3,[r0]     @Load the attacker's damage into r3.
+add     r3,#5    @add 4 to the attacker's damage.
+strh    r3,[r0]     @Store attacker avoid.
+
 Done:
 pop {r4-r7}
 pop {r0}

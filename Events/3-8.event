@@ -230,7 +230,7 @@ BeginningScene:
     // graham stuff
     TextCont(Part3Chapter8ActualOpening2Graham, 0x282)
     CamOn
-    MOVE 0x8 Sylveria [5, 12]
+    MOVE 0x6 Sylveria [5, 12]
     CamOff
     Text(Part3Chapter8ActualOpening2GrahamPoint5)
     GOTO 2
@@ -239,7 +239,7 @@ LABEL 1
     // raial stuff
     TextCont(Part3Chapter8ActualOpening2Raial, 0x282)
     CamOn
-    MOVE 0x8 Sylveria [5, 12]
+    MOVE 0x4 Sylveria [5, 12]
     CamOff
     Text(Part3Chapter8ActualOpening2RaialPoint5)
 LABEL 2
@@ -255,7 +255,7 @@ DISA Sylveria
 
     //warden confrontation
     CamOn
-    MOVE 0x8 0x72 [5, 11]
+    MOVE 0x5 0x72 [5, 11]
     ENUN
     CamOff
     STAL 15
@@ -327,7 +327,7 @@ LABEL 4
     // warden leaves
 
     STAL 10
-    MOVE 0xA 0x72 [5, 6]
+    MOVE 0x8 0x72 [5, 6]
     ENUN
     STAL 15
     MOVE 0xF Chiffon [5, 13]

@@ -22,10 +22,22 @@ POIN SkillTester
 WORD FrostbiteID
 
 ALIGN 4
+GorloisWT:
+#incbin "Frostbite/Gorlois.dmp"
+POIN SkillTester
+WORD NevermoreID
+
+ALIGN 4
 Sanctuary:
 #incbin "Sanctuary/Sanctuary.dmp"
 POIN SkillTester
 WORD SanctuaryID
+
+ALIGN 4
+WTAFlip:
+#incbin "Sanctuary/WTAFlip.dmp"
+POIN SkillTester
+WORD WTAFlipID
 
 ALIGN 4
 Ravenous:
@@ -43,4 +55,4 @@ ALIGN 4
 LunaticWTA:
 #incbin "LunaticWTA/LunaticWTA.dmp"
 POIN SkillTester
-WORD LunaticID
+WORD MageSlayerID

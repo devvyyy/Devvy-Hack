@@ -156,7 +156,7 @@ sent to the convoy.[N]
 Houses give experience the first[N]
 time you visit them.[N]
  [N]
-Master Seals promote any[N]
+Master Seals promote an[N]
 unpromoted unit at Lv. 10+.[N]
  [N]
 Second Seals promote any[N]
@@ -413,19 +413,19 @@ Axe Rider[N]
 Rider[N]
 1-3: Axe Armor, Soldier,[N]
 Griffon Rider[N]
-1-4: Priest, Sword Armor,[N]
+1-4: Friar, Sword Armor,[N]
 Freelancer[N]
 1-5: Artificer[N]
 1-6: Wyvern Rider, Fighter[N]
 1-7: Champion (temp.)[N]
-1-8: General, Wyvern Knight,[N]
+1-8: Colossus, Wyvern Knight,[N]
 Sword Paladin,[N]
 Griffon Knight[N]
 1-F: Monk, Parson[N]
  [N]
 Prologue: Renegade, Strategist,[N]
 Mage Rider, Cleric, Mage,[N]
-Shaman, Shaman, Mercenary,[N]
+Shaman, Shaman, Vanguard,[N]
 Lance Rider[N]
 2-1: Occultist[N]
 2-2: Thief, Warrior,[N]
@@ -436,9 +436,10 @@ Champion (temp.)[N]
 Assassin, Hunter[N]
 2-5: Bard, Pegasus Rider[N]
 2-6: Mage Knight[N]
-2-7: General[N]
+2-7: Colossus[N]
 2-8: none[N]
-2-F: ???[X]
+2-F: ???[N]
+[X]
 
 # 0x602
 Objectives[X]
@@ -629,7 +630,8 @@ or more (at time of hit).[X]
 # 0x319
 Swift outriders who command the field[N]
 from the saddle, raining deadly volleys[N]
-before fading back into the distance.[N]Equip: Bow[X]
+before fading back into the distance.[N]
+Equip: Bow[X]
 
 # 0x4EE
 [_L][_u][_c][_k][X]
@@ -647,10 +649,17 @@ Dex[X]
 Trueblade[X]
 
 # 0x36D
-Toxin Glaive[X]
+DUMMY[X]
+
+# 0x367
+Isenbrand[X]
+
+# 0x417
+A mighty Wreyvian blade. Res +5.[N]
+Follow-ups deal bonus damage = Str.[X]
 
 # 0x37D
-[_V][_e][_n][_o][_m][_SP][_L][_a][_b][_r][_y][_s][X]
+[_H][_e][_a][_r][_t][_h][_b][_r][_e][_a][_k][_e][_r][X]
 
 # 0x51A
 Stasis[X]
@@ -702,7 +711,7 @@ Last Sword[X]
 # 0x418
 Winds of finality. Ignores Str. Negates[N]
 damage taken from Ice/Wind magic.[N]
-[_Lock]: Warden[X]
+Neutralizes [ArmorIcon] effectiveness. [_Lock]: Warden[X]
 
 # 0x15
 Dexterity increased.[X]
@@ -768,7 +777,7 @@ Iron Call[X]
 
 # 0x558
 The Iron Tusks' primordial flame.[N]
-Grants Str/Eth +3, increased to +5[N]
+Grants Str/Eth +4, increased to +8[N]
 for Wreyvians; also grants Wreyvians[N]
 Movement based on movement type.[X]
 
@@ -804,7 +813,7 @@ A knight of Wreyvine's royal army.[N]
 They're loyal to their king.[X]
 
 # 0x4A5
-A rare seal that promotes any[N]
+A rare seal that promotes an[N]
 unpromoted unit at Lv. 10+.[X]
 
 # 0x4DE
@@ -1147,8 +1156,8 @@ Bearded Axe[X]
 2-8: Upon First Light[X]
 
 # 0x2b9
-An ambitious Aeterian corporal who hungers[N]
-to prove her mettle upon the bridge.[X]
+An ambitious Aeterian corporal who[N]
+hungers to prove her mettle.[X]
 
 # 0x2bb
 A timid Wreyvian acolyte whose gentle[N]
@@ -1270,12 +1279,12 @@ The blade of a king, lost in the stars.[N]
 Strikes x2 consecutively. Def +5.[X]
 
 # 0x376
-Isenbrand[X]
+Tuskpoint[X]
 
 # 0x426
-A mighty Wreyvian spear.[N]
+A mighty Wreyvian spear. Def +5.[N]
 Halves damage taken after first[N]
-being struck. Def +5.[X]
+being struck.[X]
 
 # 0x396
 Bring It Down[X]
@@ -1334,8 +1343,47 @@ to bend raw steel, crushing enemy[N]
 formations beneath barded warhorses.[N]
 Equip: [SwordIcon][LanceIcon][AxeIcon][X]
 
+# 0x28
+Hatchet[X]
+
+# 0x1B
+Ridersbane[X]
+
+# 0x360
+Claymore[X]
+
 # 0x378
-[_P][_i][_e][_r][_c][_i][_n][_g][_SP][_S][_p][_e][_a][_r][X]
+Ahlspiess[X]
+
+# 0x379
+Pilum[X]
+
+# 0x372
+Angon[X]
+
+# 0x35F
+Mortal Sword[X]
+
+# 0x36F
+Mortal Lance[X]
+
+# 0x37F
+Mortal Axe[X]
+
+# 0x35D
+Twin Blades[X]
+
+# 0x36E
+Twin Spears[X]
+
+# 0x37E
+Twin Axes[X]
+
+# 0x390
+Twin Arrows[X]
+
+# 0x365
+Dismounter[X]
 
 # 0x38E
 Dart Rifle[X]
@@ -1548,7 +1596,7 @@ Long-range moonlight blast.[X]
 Long-range holy judgement.[X]
 
 # 0x423
-Reverses and doubles Weapon Triangle.[X]
+Reverses and doubles weapon triangle.[X]
 
 # 0x476
 Resets the status of an ally[N]
@@ -1566,7 +1614,7 @@ Norlis, X = 50%; otherwise X = 25%)[X]
 
 # 0x46F
 The white eclipse; the final hour.[N]
-Neutralizes Weapon Triangle. Deals[N]
+Neutralizes weapon triangle. Deals[N]
 bonus damage = 25% of foe's max HP.[X]
 
 # 0x2ef
@@ -1597,7 +1645,7 @@ now on his own road to absolution.[X]
 Sylmeria[X]
 
 # 0x2A8
-The hidden heir to the empire,[N]
+The hidden heir to the empire[N]
 who will do anything for peace.[X]
 
 # 0x1A1

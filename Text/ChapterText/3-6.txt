@@ -413,9 +413,10 @@ Looks that way.[.6] Hell of a headline.[AN]
 
 [ML]
 I still don't like it[,] even if I never[N]
-really knew them.[AN]
-I mean[Beat] The Apostle,[.4] she[N]
-just kind of got me.[AN]
+really knew them.[AN][C]
+I mean[Beat] Even the Apostle,[.4] she[N]
+just kind of understood me in[N]
+ways others have never.[AN]
 
 [MR]
 You're allowed to not like it.[.6][N]
@@ -427,11 +428,12 @@ You ever have to do it?[.6] I mean[,] walk away[N]
 from what you were born into?[AN]
 
 [MR]
-Yeah.[.6] Once[,] Chiff.[.6] When I was twelve[,] I walked[N]
-out of a noble court and never looked back.[AN]
+Yeah.[.6] Once[,] Chiff.[.6] When I was twelve[,][N]
+I walked out of an Imperial court and never[N]
+looked back.[AN]
 
 [ML]
-Captain[Beat] You were nobility?[AN]
+Captain[Beat] You were a blueblood?[AN]
 
 [Event]
 
@@ -728,9 +730,9 @@ care for another mess like Aoife.[.6][N]
 You heard everything,[.4] soldiers?[AN]
 Protect Lord Gorlois![AN]
 
-[ML][LoadChiffon]
+[FL][LoadChiffon]
 
-[ML]
+[FL]
 Whew,[.4] it's good to be back![N]
 You ready to finish this,[.4] everyone?[AN]
 
@@ -741,18 +743,19 @@ Ready as I can be.[AN]
 Aohr and I are curious to see more[N]
 of how your power works,[.4] Princess.[AN]
 
-[ML]
+[FL]
 Heh,[.4] well I hope I won't disappoint.[N]
 C'mon,[.4] let's prepare to attack immediately![AN]
 
 [R]
 Move out,[.4] everyone![AN]
+[CSS]
 
 [R][CF]
 [FR][CF]
 [L][CF]
 
-[ML]
+[FL][MoveLeft]
 [CloseEyes][Beat]
 Consul Maynard,[.4] huh?[N]
 He's the one who killed Lady[N]
@@ -765,7 +768,7 @@ him to pay his overdue debts.[AN]
 
 [CSS]
 
-[ML]
+[L]
 Eyes on the stars,[.4] little light[Beat][N]
 Tch[Beat] what will I do,[.4] when I[N]
 finally see his face again?[AN]
@@ -1222,13 +1225,13 @@ STOP!![AN]
 [L][Chiffon][R][Sylveria2]
 [L][MoveML]
 Wh--[.4]!!![N]
-That power[Beat][AN]
+What did you do[Beat][AN]
 
 [R]
 The day Anatolius fell[Beat][N]
 The day I first called the Norlis[Beat][N]
 I never felt so strong.[AN]
-It was as if a lock had been torn[AN]
+It was as if a lock had been torn[N]
 away from a closed door[,][N]
 and[Beat] it all took form.[AN]
 I lost myself[Beat] and I have yet[N]
@@ -1302,7 +1305,7 @@ It seems I believed wrong.[AN]
 [FL][LoadRaial]
 
 [L]
-[CloseEyes][Beat]
+[CloseEyes][Beat][MoveL]
 Nngh![.6] Tch[Beat] That's[Beat][AN]
 [CSS]
 
@@ -1331,13 +1334,14 @@ It's no use--[MoveLeft][.4]Gaah![AN]
 
 ## Part3Chapter6EndingNEW5
 [3L]
-[R][LoadSylveria2]
+[MR][LoadSylveria2]
 [ML][LoadGorlois]
 
-[R]
+[MR]
 But this wound[Beat] Why am I[Beat][6N]
 How am I bleeding?[.6] You.[.6][N]
-What have you done to me?[AN]
+What have you done to me?[AN][CSS]
+[MoveRight]
 
 # Sylveria starts choking Gorlois; he flinches in her grip
 
@@ -1361,7 +1365,7 @@ Did you[Beat] No,[.4] you stole it,[.4] didn't[N]
 you?[.6] You stole it from my mother.[N]
 You tore it off her corpse[Beat][AN]
 
-[ML]
+[ML][MidBlink]
 Ngh[Beat] Can't[Beat] breathe[Beat][AN]
 [CSS][MoveFL]
 
@@ -1435,37 +1439,35 @@ the kingdom is the culprit?[AN]
 [3L]
 [FR][LoadMaynard]
 [R][LoadSylveria2]
-
-[FR]
+[.4]
+[FR][MoveRight]
+[R][MoveR]
 Back,[.4] you fiend![.6] You will[Beat][N]
 You will not harm the Apostle[Beat][AN]
 
-[R]
+[FR]
 Ahh[Beat] Aaah[Beat][AN]
 
-[FR]
-Apostle Sylveria![.6] You're hurt![N]
-Tsch[Beat] I'm too weak to[N]
-muster up a warp spell[Beat][AN]
-
-[Event]
 [R]
+Apostle![.6] Get back at once.[6N]
+Allow me to[Beat][AN]
+
+[FR]
 Rrgh[Beat] Grr[Beat] You couldn't[Beat][N]
 This can't be happening[Beat][N]
 I won't[Beat] I won't allow it[Beat][AN]
 
-[FR]
+[R]
 There's an opening in their flank,[.4][N]
 where the injured man is.[N]
 If we push through there--[.4][AN]
 
-[R]
+[FR]
 No[Beat] No,[.4] Maynard[Beat][N]
 I can still warp us out[Beat][N]
-We shall find my brother[Beat][AN]
-
-[R]
-I will not[Beat] lose you too![AN]
+We shall find my brother[Beat][AN][C]
+I will not[Beat] lose you too![6N]
+I will never lose anyone ever again[Beat]![AN]
 
 # Sylveria warps away with Maynard
 

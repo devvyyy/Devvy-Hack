@@ -1,7 +1,7 @@
 @ vantage replace 802af7c
 .equ FrostbiteID, SkillTester+4
-.equ LunaticID, FrostbiteID+4
-.equ BullHeadedID, LunaticID+4
+.equ WTAFlipID, FrostbiteID+4
+.equ BullHeadedID, WTAFlipID+4
 
 .thumb
 push {r4-r7,r14}
@@ -25,18 +25,10 @@ beq Normal
 
 @check for Vantage, Vantage+, Eye For An Eye
 
-@ is spd higher than foes spd + 3?
-ldrb r0, [r4, #0x15] @attacker spd
-ldrb r1, [r5, #0x15] @defender spd
-mov r2, #0x3
-add r1, r2
-cmp r0, r1
-ble NextSkill @skip if spd is less or equal than foes spd
-
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r5 @defender data
-ldr r1, LunaticID
+ldr r1, WTAFlipID
 .short 0xF800
 cmp r0, #0
 bne Vantage

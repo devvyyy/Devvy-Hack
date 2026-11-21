@@ -24,34 +24,33 @@ ldr r1, [r5,#4] @class data ptr
 cmp r1, #0 @if 0, this is stat screen
 beq GoBack
 
-@add res/4 speed
-mov  r1, #0x5E
-ldrh r0, [r5, r1] @speed
-ldrb r2, [r5, #0x18] @res
-@lsr  r2, #2
-add  r0, r2
-strh r0, [r4,r1]
+@ i fucking love math
+@ a = foes skill
+ldrb r1, [r5, #0x15] @ foe skill
+mul  r1, r1 @square it
 
-@add res/4 attack
-mov  r1, #0x5A
-ldrh r0, [r5, r1] @attack
-ldrb r2, [r5, #0x18] @res
-@lsr  r2, #2
-add  r0, r2
-strh r0, [r4,r1]
+@ b = foes luck
+ldrb r2, [r5, #0x19] @ foe sLUCK
+mul  r2, r2 @square it
 
-mov r0, r5       @Move attacker data into r1.
-mov r1, #0x4c    @Move to the attacker's weapon ability
-ldr r1, [r0,r1]
-mov r2, #0x42
-tst r1, r2
-bne     GoBack @do nothing if magic bit set
+@ a squared + b squared
+add  r1, r2
 
-@set attacker AS to 99
-mov r0, r4
-add r0,#0x5E
-mov r3,#99
-strh r3,[r0]
+@ c = floor(sqrt(a^2 + b^2))
+mov  r2, #0 @ rot
+SqrtLoop:
+add  r2, #1
+mov  r3, r2
+mul  r3, r2 @ r3 = r2 squared
+cmp  r3, r1
+ble  SqrtLoop
+sub  r2, #1 @ r2 should have exact floor = (sqrt(skill^2 + luck^2))
+
+@ add that to ur attack
+mov  r3, #0x5A
+ldrh r0, [r4, r3]
+add  r0, r2 @ atk + hypo
+strh r0, [r4, r3]
 
 GoBack:
 pop {r4-r7}

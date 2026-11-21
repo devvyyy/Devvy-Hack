@@ -129,8 +129,8 @@ Unit(9, 31)
 Unit(10, 31)
 Unit(11, 31)
 Unit(12, 31)
-Unit(12, 31)
 Unit(13, 31)
+Unit(11, 32)
 	UNIT
 
 WahooNewUnit: //vera vale
@@ -139,7 +139,7 @@ UNIT 0x74 Rogue 0x1 Level(11, NPC, 1)     [11,15] 0 0 1 REDA12R14 [KillingEdge,0
 
 EnemyUnits:
 // might need to change this to defeat boss + seize
-UNIT Maynard Bishop 0x1 Level(15, Enemy, 1)     [7,3] DropItem 0x0 0x0 0x0 [Longinus, 0xBC] BossAI
+UNIT Maynard Bishop 0x1 Level(15, Enemy, 1)     [7,3] DropItem 0x0 0x0 0x0 [Longinus, Elixir] BossAI
 
 UNIT Aeteria Druid 0x1 Level(14, Enemy, 1)      [7,5]   0b 0x0 0x0 0x0 [DarkTome2] TwoActionAI
 
@@ -235,7 +235,7 @@ Music(0x48)
 
 CHECK_EVENTID 0x95
 BEQ 1 0x0 0xC
-Text(Part3Chapter6Opening0Graham)
+TextCont(Part3Chapter6Opening0Graham, 0x58)
 TextCont(Part3Chapter6Opening1, 0x196)
 GOTO 2
 LABEL 1
@@ -265,18 +265,19 @@ Text(Part3Chapter6Opening3)
 	FADU 60
 
 	CameraCursor(Maynard)
+    //SetUnitItemDurability(Maynard, 1, StaffSavantID) //robes? maybe later
 	Text(Part3Chapter6MaynardAddress)
 	STAL 5
 	ENDA
 
 EndingSceneUnits:
-UNIT Maynard    Bishop      0x0 Level(15, Enemy, 0) [11, 26] 0b 0x0 0x0 0x0 [Purge] NoAI
-UNIT Chiffon    0x10        0x1 Level(12, Ally,  0) [11,30] 0b 0x0 0x0 0x0 [0xe9]   NoAI
-UNIT Graham     Valkyrie    0x1 Level(10, Ally,  0) [12, 30] 0b 0x0 0x0 0x0 [SteelBlade]     NoAI
-UNIT Raial      Warrior     0x1 Level(12, Ally,  0) [10, 30] 0b 0x0 0x0 0x0 [SilverAxe, SilverBow]  NoAI
-UNIT Ulrich     LPal        0x1 Level(12, Ally,  0) [10, 31] 0b 0x0 0x0 0x0 [SilverLance, 0x8E] NoAI
-UNIT Gorlois    Parson        0x1 Level(10, Ally,  0) [12, 31] 0b 0x0 0x0 0x0 [Purge, Aura]       NoAI
-UNIT Affogato   0x3         0x1 Level(12, Ally,  0) [11, 32] 0b 0x0 0x0 0x0 [SteelBow]    NoAI
+UNIT Maynard    Bishop      0x0 Level(15, Enemy, 1) [11, 26] 0b 0x0 0x0 0x0 [Purge] NoAI
+UNIT Chiffon    0x10        0x1 Level(12, Ally,  1) [11,30] 0b 0x0 0x0 0x0 [0xe9]   NoAI
+UNIT Graham     Valkyrie    0x1 Level(10, Ally,  1) [12, 30] 0b 0x0 0x0 0x0 [SteelBlade]     NoAI
+UNIT Raial      Warrior     0x1 Level(12, Ally,  1) [10, 30] 0b 0x0 0x0 0x0 [SilverAxe, SilverBow]  NoAI
+UNIT Ulrich     LPal        0x1 Level(12, Ally,  1) [10, 31] 0b 0x0 0x0 0x0 [SilverLance, 0x8E] NoAI
+UNIT Gorlois    Parson        0x1 Level(10, Ally,  1) [12, 31] 0b 0x0 0x0 0x0 [Purge, Aura]       NoAI
+UNIT Affogato   0x3         0x1 Level(12, Ally,  1) [11, 32] 0b 0x0 0x0 0x0 [SteelBow]    NoAI
 UNIT
 
 SylveriaWarpUnit:
@@ -300,12 +301,13 @@ STAL 5
     CAM1 [11, 28]
     FADU 12
     CamOff
+    MOVE 0x5 Chiffon [11,29]
 
     //chif counters maynard and starts yapping
-    Music(0x1C8)
+    Music(0x31F)
     Text(Part3Chapter6EndingNEW0Graham)
 
-	MOVE 0x5 Chiffon [11,29]
+	MOVE 0x9 Chiffon [11,28]
 
 	// warp moment
     LOAD2 0x1 SylveriaWarpUnit
@@ -323,17 +325,22 @@ STAL 5
     FIG1 Chiffon Sylveria 0xe9
 
 	STAL 15
+    MOVE 0x6 Chiffon [11,29]
 	CameraCursor(Chiffon)
+    Music(0x323)
 	TEXTSTART; TEXTSHOW Part3Chapter6EndingNEW1; TEXTEND; CameraCursor(Ulrich); TEXTCONT; TEXTEND; CameraCursor(Chiffon); TEXTCONT; TEXTEND; REMA
 
+    MUSI
     // white flash/blizzard stuff
     SOUN 0x122 // fimbul wind
     FAWI 4
     STAL 10
 	WORD 0x22820 //winter weather after event stuff happens!!
     FAWU 4
+    MUNO
     STAL 20
 
+    Music(0x282)
 	CameraCursor(Chiffon)
 	SetBackground(0x33)
 	Text(Part3Chapter6EndingNEW1After)
@@ -354,7 +361,7 @@ STAL 5
     ENUN
     StartBattle
     CriticalHit(0, 22)
-    SetScriptedBattle(100, 22, 6, 0, 0, 0)
+    SetScriptedBattle(100, 8, 6, 83, 0, 0)
     FIG1 Sylveria Gorlois 0xAB
 
     SetHP(1, 12, 29) //gorlois
@@ -367,7 +374,7 @@ STAL 5
     ENUN
     StartBattle
     NormalDamage(0, 0)
-    SetScriptedBattle(70, 0, 0, 100, 38, 7)
+    SetScriptedBattle(72, 0, 2, 100, 38, 7)
     FIG1 Raial Sylveria SilverAxe
 
     //raial blasts raial then chokes gorlois???
@@ -418,7 +425,7 @@ STAL 5
     Text(Part3Chapter6EndingNEW8)
 
     // they fuck off
-    SOUN 0x2F5
+    //SOUN 0x2F5 //dragon roar for aura
     SVAL 0x2 0x45
     _WARP 0xFFFF 0xFFFD [12, 28]
     CALL 0x9EE4F8
@@ -440,7 +447,9 @@ STAL 5
     STAL 15
 
     // chif monologue
+    MOVE 0x3 Chiffon [12,29]
 	CameraCursor(Chiffon)
+    Music(0x47)
 	SetBackground(0x33)
 	Text(Part3Chapter6EndingNEW10)
     // Fade out scene and progress to next chapter

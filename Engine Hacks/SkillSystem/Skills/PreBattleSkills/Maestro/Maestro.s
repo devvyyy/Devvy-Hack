@@ -46,6 +46,8 @@ cmp     r0, #0x8A         @Shining Rifle ID
 beq YesThereIsSkill
 cmp     r0, #0x30         @Dart Rifle ID
 beq YesThereIsSkill
+cmp     r0, #0xC7         @S rank bow/Atlas
+beq YesThereIsSkill
 cmp     r0, #0x84         @Magnum Rifle ID
 beq YesThereIsSkill
 b End        @If not a Rifle, end skill
@@ -110,6 +112,69 @@ add r0, #40
 strh r0, [r4,r1]
 
 AttackBuffYay:
+
+@AS check
+mov  r0, #0x5E
+ldsh r2, [r4, r0]
+ldsh r3, [r5, r0]
+cmp  r3, #0
+@ weird issues so if foe's AS is 0 check spd idk if this will work
+bne  HasAS
+ldrb r3, [r5, #0x16] @ spd in case
+HasAS:
+
+sub  r2, r3 @calc AS diff
+
+@ god this is a BAD way to do this LOL
+cmp  r2, #1
+beq  DoTheThingThree
+cmp  r2, #2
+beq  DoTheThingTwo
+cmp  r2, #3
+beq  DoTheThingOne
+b    End @ if 1-3 more AS WONT let u double dont do anything
+
+DoTheThingThree:
+@ Apply +3 AS
+
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq End
+
+mov  r0, r4
+add  r0, #0x5E         @ Move to unit's AS
+ldrh r3, [r0]
+add  r3, #3            @ Add 3 to AS
+strh r3, [r0]
+
+b End
+DoTheThingTwo:
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq End
+
+mov  r0, r4
+add  r0, #0x5E         @ Move to unit's AS
+ldrh r3, [r0]
+add  r3, #2            @ Add 3 to AS
+strh r3, [r0]
+b End
+
+DoTheThingOne:
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq End
+
+mov  r0, r4
+add  r0, #0x5E         @ Move to unit's AS
+ldrh r3, [r0]
+add  r3, #1            @ Add 3 to AS
+strh r3, [r0]
+
+
 b End @ lol this got replaced by the desperation effect
 
 @not at stat screen

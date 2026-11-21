@@ -1,7 +1,8 @@
 .thumb
 .align
 
-.equ PrescienceID,SkillTester+4
+.equ GetUnitsInRange, SkillTester+4
+.equ PrescienceID, GetUnitsInRange+4
 
 push {r4-r7,lr}
 @goes in the battle loop.
@@ -10,9 +11,15 @@ push {r4-r7,lr}
 mov r4, r0
 mov r5, r1
 
-ldr r0,=#0x203A4EC @attacker struct
-cmp r0,r4
-bne GoBack @if not attacker, dont do
+@ now works on both phases
+@ldr r0,=#0x203A4EC @attacker struct
+@cmp r0,r4
+@bne GoBack @if not attacker, dont do
+
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq GoBack
 
 ldr r0, SkillTester
 mov lr, r0
@@ -22,39 +29,38 @@ ldr r1, PrescienceID
 cmp r0, #0
 beq GoBack
 
-mov r0, r4
-@hit
-add r0,#0x60
-ldrh r3,[r0]
-add r3,#30
-strh r3,[r0]
+@ ycamilla effect
+ldr r0, GetUnitsInRange
+mov lr, r0
+mov r0, r5 @target
+mov r1, #1 @ allies of target
+mov r2, #3 @ range
+.short 0xf800
+cmp r0, #0
+beq GoBack
 
-@avoid
-add r0,#2
-ldrh r3,[r0]
-add r3,#30
-strh r3,[r0]
+@ get units in range ignores target itself?
+mov r2, #0
+CLoop: @ counting loop
+ldrb r1, [r0, r2]
+cmp  r1, #0
+beq  Done @ done counting
+add  r2, #1
+b    CLoop
 
-@check weapon for silver dagger
-mov     r0, #0x4A      @Move to attackers's weapon (before battle)
-ldrb    r0, [r4, r0]   @Load attackers weap (before battle)
-cmp     r0, #0xe1         @Silver Dagger
-bne GoBack
+Done:
+cmp  r2, #0
+beq  GoBack @ no foes within 3 spaces of target
 
-mov r0, r4
-@hit
-add r0,#0x60
-ldrh r3,[r0]
-add r3,#30
-strh r3,[r0]
+@ multiply foes by 5
+mov  r1, #5
+mul  r2, r1
 
-@avoid
-add r0,#2
-ldrh r3,[r0]
-add r3,#30
-strh r3,[r0]
-
-
+@ then addthat to attacker atk
+mov  r1, #0x5A
+ldrh r0, [r4, r1]
+add  r0, r2
+strh r0, [r4, r1]
 
 GoBack:
 pop {r4-r7}
@@ -66,4 +72,5 @@ bx r0
 
 SkillTester:
 @POIN SkillTester
+@POIN GetUnitsInRange
 @WORD PrescienceID

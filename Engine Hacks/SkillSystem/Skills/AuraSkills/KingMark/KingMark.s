@@ -40,6 +40,22 @@ ldrh r0, [ r4, r1 ]
 sub r0, r0, #100
 strh r0, [ r4, r1 ]
 
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq Done
+
+@ prevent doubles
+mov  r1, #0x5E @AS
+ldsh r0, [r4, r1]
+sub  r0, #3 @ speed diff - 1
+ldsh r2, [r5, r1]
+cmp  r2, r0
+bge  End @ dont touch AS if higher
+
+@ prevent doubles
+strh r0, [r5, r1]
+
 Done:
 pop {r4-r7}
 pop {r0}

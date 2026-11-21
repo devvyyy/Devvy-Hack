@@ -1,5 +1,5 @@
 .thumb
-.equ	LunaticID,SkillTester+4
+.equ	MageSlayerID,SkillTester+4
 
 push {r4-r6, lr}
 mov r4, r0 @atkr
@@ -8,7 +8,7 @@ mov r5, r1 @dfdr
 @ Check for skill on defender
 ldr r6,SkillTester
 mov r0,r5
-ldr r1,LunaticID
+ldr r1,MageSlayerID
 mov r14,r6
 .short 0xF800
 cmp r0,#0
@@ -40,7 +40,7 @@ strb    r1,[r5,r0]
 WhenTheImpostorIsSus:
 ldr r6,SkillTester
 mov r0,r4
-ldr r1,LunaticID
+ldr r1,MageSlayerID
 mov r14,r6
 .short 0xF800
 cmp r0,#0
@@ -77,4 +77,4 @@ bx r0
 .ltorg
 SkillTester:
 @POIN SkillTester
-@WORD LunaticID
+@WORD MageSlayerID

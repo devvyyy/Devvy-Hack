@@ -13,27 +13,78 @@ ldr r0, AuraSkillCheck
 mov lr, r0
 mov r0, r4 @attacker
 ldr r1, AnathemaID
-mov r2, #3 @are enemies
-mov r3, #3 @range
+mov r2, #0 @can_trade
+mov r3, #2 @range
 .short 0xf800
 cmp r0, #0
 beq Done
 
-mov r0, r4
-add     r0,#0x62    @Move to the attacker's avoid.
-ldrh    r3,[r0]     @Load the attacker's avoid into r3.
-sub     r3,#10    @subtract 10 from the attacker's avoid
-strh    r3,[r0]     @Store attacker avoid
+@AS check
+mov  r0, #0x5E
+ldsh r2, [r4, r0]
+ldsh r3, [r5, r0]
+cmp  r3, #0
+@ weird issues so if foe's AS is 0 check spd idk if this will work
+bne  HasAS
+ldrb r3, [r5, #0x16] @ spd in case
+HasAS:
 
-add r0, #6 @crit avoid
-ldrh    r3,[r0]     @Load the attacker's avoid into r3.
-sub     r3,#10    @subtract 10 from the attacker's avoid
-strh    r3,[r0]     @Store attacker avoid
+sub  r2, r3 @calc AS diff
+
+@ god this is a BAD way to do this LOL
+cmp  r2, #1
+beq  DoTheThingThree
+cmp  r2, #2
+beq  DoTheThingTwo
+cmp  r2, #3
+beq  DoTheThingOne
+b    Done @ if 1-3 more AS WONT let u double dont do anything
+
+DoTheThingThree:
+@ Apply +3 AS
+
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq Done
+
+mov  r0, r4
+add  r0, #0x5E         @ Move to unit's AS
+ldrh r3, [r0]
+add  r3, #3            @ Add 3 to AS
+strh r3, [r0]
+
+b Done
+DoTheThingTwo:
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq Done
+
+mov  r0, r4
+add  r0, #0x5E         @ Move to unit's AS
+ldrh r3, [r0]
+add  r3, #2            @ Add 3 to AS
+strh r3, [r0]
+b Done
+
+DoTheThingOne:
+@not at stat screen
+ldr r1, [r5,#4] @class data ptr
+cmp r1, #0 @if 0, this is stat screen
+beq Done
+
+mov  r0, r4
+add  r0, #0x5E         @ Move to unit's AS
+ldrh r3, [r0]
+add  r3, #1            @ Add 3 to AS
+strh r3, [r0]
 
 Done:
 pop {r4-r7}
 pop {r0}
 bx r0
+
 .align
 .ltorg
 AuraSkillCheck:

@@ -8,23 +8,20 @@
 .endm
 
 .equ DesperationID, SkillTester+4
-.equ MaestroID, DesperationID+4
-.equ IntrepidID, MaestroID+4
+.equ LunaticID, DesperationID+4
+.equ IntrepidID, LunaticID+4
 
 @is target opal?
 @ please dont do checks like this in the future holy fuck
-ldr  r0, [r5] @r0 = character data pointer
+ldr  r2, [sp, #4] @ r2 = defender data
+ldr  r0, [r2] @r0 = character data pointer
 ldrb r0, [r0, #0x4] @r0 = character ID
 cmp r0, #0x21
 beq NoSkill
 
 @is target opal, but as an enemy?
-ldr  r0, [r5] @r0 = character data pointer
-ldrb r0, [r0, #0x4] @r0 = character ID
 cmp r0, #0xC4
 beq NoSkill
-cmp  r0, #0xC4
-beq  NoSkill
 
 @ the unconditional stuff first bc idk why it wasnt
 @ first check ilse skill -> then desp (ring)
@@ -32,7 +29,7 @@ CheckMaestro:
 ldr  r0, SkillTester
 mov  lr, r0
 ldr  r0, [sp]@ attacker data
-ldr  r1, MaestroID
+ldr  r1, LunaticID
 .short 0xf800
 cmp  r0, #0
 bne  HasSkill @ ilse skill  uncond
@@ -65,7 +62,8 @@ bne  NoSkill
 @ AND foe's hp is full
 ldr  r2, [sp, #4] @ defende
 ldrb r0, [r2, #0x12] @ nmax hp
-ldrb r1, [r2, #0x13] @curr
+mov  r1, #0x72
+ldrb r1, [r2, r1] @ curr
 cmp  r0, r1 @ max = curr
 bne  NoSkill
 
@@ -183,5 +181,5 @@ SkillTester:
 @ Pointers filled by your installer:
 @ POIN SkillTester
 @ WORD DesperationID
-@ WORD MaestroID
+@ WORD LunaticID
 @ WORD IntrepidID

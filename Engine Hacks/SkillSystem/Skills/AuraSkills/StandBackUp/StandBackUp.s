@@ -24,34 +24,24 @@ ldr r1, [r5,#4] @class data ptr
 cmp r1, #0 @if 0, this is stat screen
 beq Done
 
-@ 50% of unit's missing hp as prt
+@ briar effect
+mov  r1, #0x5A
+ldrh r0, [r5, r1] @foes raw atk
 
-ldrb  r0,[r4,#0x12] @defender max hp
-ldrb  r1,[r4,#0x13] @defender current hp
-sub   r0,r1
-lsr   r0,#0x2     @missing hp/4
-mov   r2,#0x5C
-ldrh  r1,[r4,r2]
-add   r1,r0,r1
-strh  r1,[r4,r2]
+@ calc net base dmg = foe's atk - ally battle def
+mov  r2, #0x5C
+ldrh r2, [r4, r2]@ r2 = ally def
+sub  r0, r0, r2 @ atk - ally def
+bgt  DamPos
+mov  r0, #0 @ in case
+DamPos:
+@damage is positiv
+lsr  r0, #1 @div
 
-ldrb  r0,[r4,#0x12] @defender max hp
-ldrb  r1,[r4,#0x13] @defender current hp
-sub   r0,r1
-lsr   r0,#0x1     @missing hp/2
-mov   r2,#0x60
-ldrh  r1,[r4,r2]
-add   r1,r0,r1
-strh  r1,[r4,r2]
-
-ldrb  r0,[r4,#0x12] @defender max hp
-ldrb  r1,[r4,#0x13] @defender current hp
-sub   r0,r1
-lsr   r0,#0x1     @missing hp/2
-mov   r2,#0x62
-ldrh  r1,[r4,r2]
-add   r1,r0,r1
-strh  r1,[r4,r2]
+@ add this calced to allys damage
+ldrh r2, [r4, r1] @ally atk
+add  r2, r0
+strh r2, [r4, r1]
 
 Done:
 pop {r4-r7}

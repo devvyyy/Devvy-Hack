@@ -3,15 +3,15 @@
   mov lr, \reg
   .short 0xf800
 .endm
-.equ ShadowEyeID, SkillTester+4
-.equ CommanderID, ShadowEyeID+4
+.equ SealResID, SkillTester+4
+.equ CommanderID, SealResID+4
 .equ SoulbreakEvent, CommanderID+4
 .thumb
 push	{r4-r7,lr}
 
 @ check for skill
 mov	r0, r4
-ldr	r1, ShadowEyeID
+ldr	r1, SealResID
 ldr	r3, SkillTester
 mov	lr, r3
 .short	0xf800
@@ -101,4 +101,4 @@ bx	r0
 .align
 SkillTester:
 @POIN SkillTester
-@WORD ShadowEyeID
+@WORD SealResID

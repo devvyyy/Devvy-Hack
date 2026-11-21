@@ -31,7 +31,7 @@ beq End @if they're all 0 the enemy is not a mage
 
 mov r1, #0x5a
 ldrh r0, [r4, r1] @Attack
-add r0, #2
+add r0, #3
 strh r0, [r4,r1]
 
 mov r1, #0x60

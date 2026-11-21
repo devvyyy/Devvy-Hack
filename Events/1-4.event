@@ -32,6 +32,7 @@ CharacterEventBothWays(0x7D,AffoUlrichConvoCh4, Affogato, Ulrich)
 //CharacterEvent(0x0,YoryTurretCheck,Yory,0x3F)
 //CharacterEventBothWays(0x9, NoraFlorisConvo, Nora, Floris)
 //CharacterEventBothWays(0x10, YoryKaneConvo, Yory, Kane)
+CharacterEventBothWays(0xA, YoryKaneConvo, Yory, Affogato) //now yory affo
 CharacterEventBothWays(0x11, FlorisUlrichConvo, Floris, Ulrich)
 	END_MAIN
 	
@@ -374,6 +375,8 @@ Text(Ch4AltBlahBlah)
 
 STAL 5
 //SOUN 0xDD
+CUSE 0x7
+
 SetFlag(0x25)
 STAL 20
 MOVE 0xA Affogato [0,5]
@@ -393,6 +396,7 @@ Sound(0x2eC)
 MUSI
 FADI 30
 STAL 3
+CUSA 0x7
 _MUSICSOMETHING 32767
 MUSCSLOW 0x7FFF
 SetBackground(0x35)
@@ -579,7 +583,7 @@ NoraFlorisConvo:
 
 YoryKaneConvo:
 	MUSI
-	Text(YoryKaneTalk)
+	Text(AffoYoryTalk)
 	MUNO
 	MURE 2
 	NoFade
