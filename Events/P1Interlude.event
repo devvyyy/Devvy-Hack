@@ -1,4 +1,4 @@
-EventPointerTable(0xC5, PointerList)
+EventPointerTable(0xCD, PointerList) //maybe 0xC5?
 
 PointerList:
 	POIN TurnBasedEvents
@@ -26,7 +26,7 @@ MiscBasedEvents:
 	END_MAIN
 
 LocationBasedEvents:
-
+Armory(P1IArmoryBruh,10,2)
 	END_MAIN
 
 Dunno1:
@@ -46,14 +46,39 @@ Tutorial:
 	END_MAIN
 
 Units1:
+LoadUnit(6,4)
+LoadUnit(7,4)
+LoadUnit(8,4)
+LoadUnit(9,4)
+LoadUnit(10,4)
+LoadUnit(6,5)
+LoadUnit(7,5)
+LoadUnit(8,5)
+LoadUnit(9,5)
+LoadUnit(10,5)
+	UNIT
 
+CutsceneUnits:
+UNIT Affogato Scout 0x1 Level(1, Ally, 1)     [1,12] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Ulrich LPaladin 0x1 Level(1, Ally, 1)     [1,10] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Breve SCav 0x1 Level(1, Ally, 1)     [2,10] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Hildr ACav 0x1 Level(1, Ally, 1)     [2,11] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+UNIT Ansgar LArmor 0x1 Level(1, Ally, 1)     [1,11] 0x0 0x0 0x0 0x0 [SteelBlade,SteelBlade,SteelBlade,SteelBlade] [0x0,0x0,0x0,0x0]
+	UNIT
+
+CutsceneUnits2: //random ass NPC guy
+UNIT 0xf4 0x6D 0x1 Level(1, NPC, 1)     [7,6] 0b 0x0 0x0 0x0 [GoddessIcon] BossAI
 	UNIT
 
 EnemyUnits:
-UNIT Supplies1 0x79 0x1 Level(1, Enemy, 0)     [7,14] 0b 0x0 0x0 0x0 [0xBC,0xBC,0xBC,0xBC] [0,3,0,32] //tents
+UNIT 0x77 0x7D 0x1 Level(1, NPC, 0)     [10,1] DropItem 0x0 0x0 0x0 [0xBC] [0,3,0,32] //gus
+UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [1,2] DropItem 0x0 0x0 0x0 [0xBC] [0,3,0,32]
+UNIT CratesUnit Crates 0x1 Level(1, Enemy, 0)     [16,12] DropItem 0x0 0x0 0x0 [0xBC] [0,3,0,32]
+//UNIT Supplies1 0x79 0x1 Level(1, Enemy, 0)     [7,14] 0b 0x0 0x0 0x0 [0xBC,0xBC,0xBC,0xBC] [0,3,0,32] //tents
 	UNIT
 
 Traps1:
+BlueSigil(10,2)
 	ENDTRAP
 	ALIGN 4
 
@@ -62,9 +87,41 @@ Traps2:
 	ALIGN 4
 
 BeginningScene:
+	LOAD2 0x1 CutsceneUnits
+    LOAD2 0x1 CutsceneUnits2
+    ENUN
+	CAM1 [1, 10]
+    FADU 15
+    STAL 10
+	CamOn
+	MOVE 0x8 Ulrich [3, 6]
+    MOVE 0x8 Breve [2, 6]
+    MOVE 0x8 Ansgar [3, 7]
+    MOVE 0x8 Hildr [2, 7]
+    MOVE 0x8 Affogato [1, 7] //at back?
+    ENUN
+	CameraCursor(Ulrich)
+    Music(0x2C)
+	SetBackground(0x33)
+    Text(Part1Interlude1)
+	FADI 60
+	CLEAN
+	FADU 60
+	MOVE 0x10 0xF4 [4, 6]
+	ENUN
+	STAL 5
+	CameraCursor(0xF4)
+	Text(Part1Interlude2)
+	MOVE 0x10 0xF4 [1, 12]
+    ENUN
+    DISA 0xF4
+    STAL 15
+	Text(Part1Interlude3)
+	STAL 10
+	FADI 60
 	LOAD1 0x1 EnemyUnits
-	BYTE 0x40 0x0D 0xC3 Supplies1; POIN SilentGiveItem+1
-	SetUnitItemDurability(Supplies1, 0, CantoOneID) //boots
+	//BYTE 0x40 0x0D 0xC3 Supplies1; POIN SilentGiveItem+1
+	//SetUnitItemDurability(Supplies1, 0, CantoOneID) //boots
 	ENUN
 	GotoPrepScreen
 	ENDA
@@ -73,3 +130,7 @@ EndingScene:
 	MNC2 0x2
 	NoFade
 	ENDA
+
+P1IArmoryBruh:
+SHLI SteelSword RubySword Sagitar SteelLance SapphireLance Javelin SteelAxe EmeraldAxe HandAxe SteelBow ShortBow
+ALIGN 4

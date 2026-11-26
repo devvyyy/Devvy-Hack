@@ -326,6 +326,11 @@ HayesNorlis_Mug:
 #incext PortraitFormatter "HayesNorlis.png"
 setMugEntryExtendEyesClosed(0x12b, HayesNorlis_Mug, 2, 254, 8, 4, 6, 254, 8, 254)
 
+ALIGN 16
+GusDisguise_Mug:
+#incext PortraitFormatter "GusDisguise.png"
+setMugEntry(0x12C, GusDisguise_Mug, 4, 5, 1, 4)
+
 ALIGN 16 //rina passive
 Irene_Mug2:
 #incext PortraitFormatter "RinaPassive.png"

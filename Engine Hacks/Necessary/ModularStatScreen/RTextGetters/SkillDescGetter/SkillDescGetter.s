@@ -27,8 +27,25 @@ mov lr, r1
 cmp r1, r5
 blt NoText
 sub r5, #1
-ldrb r0,[r0,r5] @nth skill
+ldrb r0,[r0,r5] @nth skill (r0 = skill ID ???????????????)
 
+@ insanely janky hackish way to force a specific text id
+ldr  r2, =0x2003bfc @ stat screen struct
+ldr  r2, [r2, #0xc] @viewed unit
+ldr  r2, [r2] @chardata
+ldrb r2, [r2, #0x4] @char ID
+
+cmp  r2, #0x77 @ gus disguised
+bne  NormalDesc
+
+@ all skills on this unit will show new ID i think
+ cmp  r0, #0xB3 @specific skill id (bargain is 179)
+ bne  NormalDesc
+
+ldr  r0, =0x0239 @ ok so this is "Breguet" in vanilla
+b    GotText
+
+NormalDesc:
 ldr r1, SkillDescTable
 lsl r0, #1
 add r0, r1

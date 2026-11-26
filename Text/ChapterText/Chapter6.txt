@@ -445,7 +445,7 @@ and pull him back to the entrance.[AN]
 
 ## ChReinierOpening2
 # f7 is graham,[.4] f8 is yufka,[.4] they dont attack
-[OpenMidLeft][LoadFace][0xF7][0x1][OpenRight][LoadFace][0xF8][0x1][OpenFarRight][LoadGus]
+[OpenMidLeft][LoadFace][0xF7][0x1][OpenRight][LoadFace][0xF8][0x1][OpenFarRight][FakeGus]
 [3L]
 [OpenMidLeft]
 Let us observe:[.4] Does the Duke genuinely[N]
@@ -508,7 +508,7 @@ Do not engage,[.4] fall back if compromised.[AN]
 Fort Loetoft[X]
 
 ## ChReinierGrahamLeaves
-[OpenMidLeft][LoadFace][0xF7][0x1][OpenRight][LoadFace][0xF8][0x1][OpenFarRight][LoadGus]
+[OpenMidLeft][LoadFace][0xF7][0x1][OpenRight][LoadFace][0xF8][0x1][OpenFarRight][FakeGus]
 [OpenMidLeft][3L]
 Fort Loetoft no longer has any strategic[N]
 value for us.[.6] We must depart for Vale before[N]
@@ -562,7 +562,7 @@ Stay away[Beat][AN]
 
 ## ChReinierGusBossQuote
 # Atey Ateria,[.4] Ohm Omios,[.4] idk man
-[OpenMidLeft][LoadFace][0xF6][0x1]
+[OpenMidLeft][FakeGus]
 Eeeek[,] an ashboot caught[N]
 me in their sights![AN]
 You[,] uh[,] uhm[,] face[Beat][N]
@@ -1227,7 +1227,7 @@ of Imperial forces![AN]
 [ML][LoadAffoSwitch]
 We have no other choice.[.6] Run through the[N]
 back route.[.6] We must retreat towards[N]
-the North[Beat] It's the only way out.[AN][ClearFace]
+the north[Beat] It's the only way out.[AN][ClearFace]
 [R][ClearFace][FR][ClearFace]
 
 [FFR][LoadGorlois][MoveMidLeft]
@@ -1243,6 +1243,7 @@ Allow me to lead the way![AN]
 [FFR][LoadSelwyn][MoveMidRight]
 Checkmate.[.6] Victory is ours.[.6][N]
 Now[,] surrender--[.4]your life is forfeit.[AN]
+[CSS]
 
 [FL][MoveFarLeft]
 How did you--[.4]watch out[,] Your Majesty![AN]
@@ -2261,10 +2262,11 @@ Wreyvine is without a king.[.6] It would[N]
 do us no good to sow discord now.[A][C]
 We must remain calm[Beat][AN]
 
-[FL]
+[FL][MoveFL]
 Remain calm?![.6] Our king was assassinated![6N]
 Someone in OUR army is responsible for[N]
 letting the Duke get this far[Beat]![AN]
+[CSS]
 
 [L][ClearFace][Ogrim]
 Pardon me[Beat] You there.[AN]
@@ -2304,7 +2306,7 @@ other than the man I knew.[AN]
 [L]
 Please[,] I only--[AN][CSS]
 
-[FL][MoveLeft]
+[FL][MoveLeft][MoveL]
 I demand an explanation![AN]
 
 [R]
@@ -2319,6 +2321,7 @@ Why didn't you return sooner?[AN]
 
 [R]
 [Beat]I had no choice.[AN]
+[CSS]
 
 [L][MoveL]
 No choice?![.6] Twenty years is a long time[,][N]
@@ -2336,6 +2339,7 @@ Huh[Beat]?[AN][CSS]
 
 [FR][CF][LoadAffogato][.6][MoveRight]
 You have no right to continue inquisiting.[AN]
+[CSS]
 
 [L][MoveLeft]
 You dare?[.6] After such a travesty[,] you have[N]

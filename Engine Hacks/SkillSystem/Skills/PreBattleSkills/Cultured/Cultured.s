@@ -32,11 +32,11 @@ cmp r0,r4
 bne End @if not attacker, dont do
 
 @add stuff
-mov r0,r4
-add r0,#0x5A
-ldrh r1,[r0]
-add r1,#5
-strh r1,[r0]
+@mov r0,r4
+@add r0,#0x5A
+@ldrh r1,[r0]
+@add r1,#5
+@strh r1,[r0]
 
 @set brave
 mov r0,r4

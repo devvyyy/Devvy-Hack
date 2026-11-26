@@ -26,6 +26,32 @@ ldr r1, [r5,#4] @class data ptr
 cmp r1, #0 @if 0, this is stat screen
 beq End
 
+@is target WREYVIAN?
+cmp  r0, #0x38  @barbarian
+beq  Darktomeeffect
+cmp  r0, #0x4C @kevron
+beq  Darktomeeffect
+cmp  r0, #0x64 @thief
+beq  Darktomeeffect
+cmp  r0, #0x65 @thief
+beq  Darktomeeffect
+cmp  r0, #0x7F @wreyvian
+beq  Darktomeeffect
+cmp  r0, #0x80 @wreyvian
+beq  Darktomeeffect
+cmp  r0, #0x82 @barbarian
+beq  Darktomeeffect
+cmp  r0, #0x83 @pirate
+beq  Darktomeeffect
+cmp  r0, #0x86 @wreyvian
+beq  Darktomeeffect
+cmp  r0, #0x88 @barbarian
+beq  Darktomeeffect
+cmp  r0, #0x89 @pirate
+beq  Darktomeeffect
+cmp  r0, #0x8B @barbarian
+beq  Darktomeeffect
+
 @add hp/4 attack
 mov  r1, #0x5A
 ldrh r0, [r4, r1] @attack
@@ -33,6 +59,8 @@ ldrb r2, [r5, #0x12] @max hp
 lsr  r2, #2 @divide this by 4
 add  r0, r2
 strh r0, [r4,r1]
+
+Darktomeeffect:
 
 @ check if foe uses dark magic in combat
 mov     r0, #0x4A      @Move to defenders's weapon (before battle)

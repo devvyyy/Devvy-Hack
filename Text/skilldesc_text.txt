@@ -751,14 +751,6 @@ follow-ups add foe's missing HP to damage.[N]
 - If foe is defeated, ends the actions of[N]
 all foes within 5 spaces of target.[X]
 
-## HeedeSkill3
-Nail in the Coffin[N]
-- If Heede would deal over 25% of foe's max[N]
-HP on attack, executes foe (excludes bosses).[N]
-- If foe is defeated, ends the actions of[N]
-all foes within 5 spaces of target.[X]
-[X]
-
 ## SD_SideHustle
 Side Hustle: After ending an action on[N]
 turn 1, grants a 300 gold Bullion and[N]
@@ -1425,10 +1417,10 @@ status lasts 1 turn).
 
 ## SD_Sanctuary
 # Sanctuary; Tenacity; (WT disadvantage, dark magic, etc.), (rescue, staves, equippable rings, etc.); - If foe can attack 2+ times, first attack strikes x2 consecutively
-Brutalizer[N]
+Bad Blood[N]
 - Noel ignores stat penalties, reverses[N]
-weapon combat penalties, and deals bonus[N]
-damage = 25% of foe's max HP.[N]
+weapon penalties, and if foe is Aeterian,[N]
+grants Atk = 25% of foe's max HP.[N]
 - Activate to deal (5 + 1.5x) damage.[X]
 
 ## OgrimRework
@@ -3386,6 +3378,14 @@ The Right Incentive[N]
 price of inventory/1000).[N]
 - Grants Hit/Crit = (total Gold/2500).[X]
 
+## SD_Bargain2
+# disguised, this is in text_buildfile 0x239
+Compounding Interest[N]
+- Grants [OQ]Gegbert" Hit/Crit =[N]
+(enemy army's total gold/2500).[N]
+- Grants bonus Str/Spd = (total Gold[N]
+price of inventory/1000).[X]
+
 ## SD_BusinessSense
 # While The Iron's Hot; also unit is a thief
 It's Just Business[N]
@@ -3613,8 +3613,8 @@ effectiveness multipliers.[X]
 ## SD_Cultured
 Stand United[N]
 - If Therese initiates within 3 spaces of[N]
-an ally with Fling, grants Atk +5 and[N]
-strikes x2 consecutively, and if adjacent,[N]
+a physical armored ally, strikes x2[N]
+consecutively, and if adjacent, also[N]
 grants another action (once per turn).[X]
 
 ## SD_Therese2

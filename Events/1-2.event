@@ -242,6 +242,8 @@ LOMA 0x3E
 LOAD2 0x1 CutsceneUnits2
 LOAD2 0x1 CutsceneUnits
 
+VCWF 1 //6 tiles bc affogato thief vision
+
 FADU 2
 STAL 15
 Text(Ch2Flashback1)
@@ -260,6 +262,7 @@ Text(Ch2Flashback3Point5)
 STAL 20
 Sound(0x8d)
 FAWI 3
+VCWF 0
 //Sound(0x6d)
 SVAL 0xB 0x30008
 LOMA 0x2

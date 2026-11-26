@@ -1,4 +1,4 @@
-.thumb
+.thumb @ THIS ONE ISN'T USED; \Engine Hacks\Necessary\ModularStatScreen\RTextGetters\SkillDescGetter\SkillDescGetter.s
 .equ SkillGetter, SkillDescTable+4
 .equ SS_SkillsDefaultRText, SkillGetter+4
 @given a skill number in r0, get the corresponding text ID
